@@ -1462,9 +1462,34 @@ PRIMARY = {'Head Coach': 'HCcoach', 'Off Co-ord': 'OCcoach', 'Def Co-ord': 'DCco
 ATTR_GROUP = {**{r: ['HCcoach', 'OCcoach', 'DCcoach', 'STcoach'] for r in COACH_ROLES},
               **{r: ['Hscout', 'Oscout', 'Dscout'] for r in SCOUT_ROLES},
               **{r: ['Hphysio', 'Aphysio'] for r in PHYSIO_ROLES}}
-# Contract fields fitted PER ROLE, never pooled. Measured on 1,728 published
-# rostered staff: guarantee runs 52-61% for the eight non-HC roles against 76%
-# for head coaches, and eGuarantee 6-11% against 28%.
+# Contract fields fitted PER ROLE, never pooled -- but the pooled figure was
+# also the wrong target, and breaking eGuarantee down per FILE shows why:
+#
+#   eGuarantee non-zero %   1986  2004  2007  2010  2013  2017  2021
+#     Head Coach             38%    0%    6%  100%   62%    0%    0%
+#     Off Co-ord             19%    0%    0%    0%   56%    0%    0%
+#     Head Scout              3%    0%    3%    0%   31%    0%    0%
+#
+# Three files are flat zero across all nine roles, 2010 is 100% for head
+# coaches and zero for the other eight, 2013 runs 31-62% throughout, 1986 and
+# 2007 are low and scattered. Four behaviours, and the pooled 28%/6-11%
+# describes none of them. Fifth instance of the union manufacturing a
+# convention no file follows.
+#
+# RULING (Ryan, 2026-08-31): do not fit eGuarantee for staff. Ship it ZERO.
+# It matches the plurality -- three of seven files do exactly that, four
+# counting 2010's eight non-HC roles -- it is internally consistent rather than
+# an average of incompatible files, and the handoff already records eGuarantee
+# as game-computed and overwritten on import.
+#
+# The handoff's "eGuarantee is head-coach-only, 33% HC / 0% elsewhere" appears
+# to have been measured on 2010 alone: that is exactly 2010's shape, and 2010
+# is HC-only for `guarantee` too, which no other file is.
+#
+# `guarantee` IS a real field with a real convention -- non-zero in 28-100% of
+# every role in six of seven files, with only 2010 zeroing the non-HC roles --
+# so it is fitted per role on those six.
+STAFF_EGUARANTEE = 0
 ROLE_CONTRACT = {
     'Head Coach':       (915_000, 0.76, 0.28, 1_935_000),
     'Off Co-ord':       (800_000, 0.60, 0.09, 1_052_500),
