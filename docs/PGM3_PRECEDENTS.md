@@ -1935,12 +1935,45 @@ The 2000 source has no such block — `PSTA` runs 15 to 99 with no zeros and 5%
 under 60. So its genuinely-low-stamina players were being mapped onto the
 artifact.
 
+Counts depend on the cohort, so **state it**: 1,267 rostered players sit at
+stamina 1 across the seven files, or 1,622 counting every non-zero record
+including prospects; 2017 reads 24.9% rostered or 18.0% overall. Two correct
+measurements of different populations look like a disagreement otherwise.
+
 **Rule: clean the target before mapping onto it, not just the source.** "Find the
 real cohort before measuring anything" is normally applied to the input. A
 quantile map has two populations and the same discipline applies to both — the
 target is data too. The guard now drops value 1 from any target where it holds
 over 2% of non-zero values and the median is above 20, and reports what it
 dropped.
+
+### Cleaning the target is not enough — recompute everything derived from it
+
+The first version of this fix cleaned the quantile targets and then read the
+**position-gating rate off the uncleaned data**. Same defect, one step later in
+the pipeline.
+
+`OLB` `manCover` looked 32.3% populated in the published rostered cohort. 62.3%
+of those values are the fill, so the real rate is 12.2%. `OLB` `zoneCover` looked
+31.6% populated and is actually **0%** — every single non-zero value is 1.
+
+Chasing that turned up something worse. **`OLB` `manCover` takes only the values
+1, 2 and 3**, across every file that has it at all, against `MLB` `manCover`'s
+38–92. And it is absent entirely from 2004, 2007 and 2017 while 2013 and 2021
+carry it for 100% of their OLBs. Whatever that field is, it is not coverage
+skill, and mapping onto it was about to ship Derrick Brooks a `manCover` of 3.
+Both OLB coverage fields are now gated off, which matches three published files
+exactly.
+
+**Generalised rule: a "rating" whose entire observed range sits at or below 10 is
+fill, not a rating.** Check the range, not just the population share — a field
+can be 100% populated and still carry nothing.
+
+**And the general form: changing a population means rebuilding every statistic
+taken from it.** This is the same shape as the existing rule that changing a
+field means rebuilding every field derived from it. A cleaned distribution and a
+stale rate computed from the dirty version is a contradiction that no single
+check will catch, because each half is internally consistent.
 
 This is worth stating because the defect is self-propagating. Every file built by
 mapping onto the published files inherits their fill artifacts, which then makes

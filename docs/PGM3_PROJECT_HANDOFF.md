@@ -828,6 +828,32 @@ appearance rebuilt from real Madden data.
 
 **Known open items, none blocking:**
 
+0a. **PLAYABILITY DEFECT — 1,622 players across the published files have
+   `stamina` 1 and will gas out in game.** Found 2026-08-31 during the 2000
+   build; confirmed independently by Ryan. **Backlog for the master session.
+   This is a playability item, not data hygiene** — it is the same failure the
+   handoff already records for 2004's stamina scale mismatch, where 87% of
+   players would have gassed out and it was treated as a serious bug.
+
+   | file | at stamina 1 | share of non-zero |
+   |---|---|---|
+   | 2007 | 9 | 0.3% |
+   | 2010 | 0 | 0.0% |
+   | 1986 | 200 | 6.1% |
+   | 2021 | 226 | 6.9% |
+   | 2013 | 285 | 8.0% |
+   | 2004 | 267 | 8.8% |
+   | **2017** | **635** | **18.0%** |
+
+   (Counting every non-zero record. Rostered-only the total is 1,267 and 2017
+   reads 24.9% — state the cohort when quoting these.)
+
+   2017 has 635 players who gas out. The block is spread across every position
+   and concentrated in low-rated fringe players: a cohort that never got a real
+   source and took a default instead. **Same shape as item 0 below** — third
+   sighting of "a safe default is still a claim". `zoneCover`, `manCover` and
+   `greed` carry smaller blocks of the same kind.
+
 0. **1986's free agent pool never got a skin source — 198 of 201 are dark
    (98.5%).** Found 2026-08-31 while cohort-matching a distribution check for
    the 2000 build; confirmed independently by Ryan. **Backlog for the master

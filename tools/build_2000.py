@@ -687,20 +687,56 @@ def published_attr_dists():
     # the artifact and stamina failed its conditional at rho 0.810 with a
     # discontinuous first decile (32, then 75).
     dropped = collections.Counter()
+    pure_fill = []
     for k in list(vals):
         v = vals[k]
         if not v: continue
         ones = sum(1 for x in v if x == 1)
-        if ones and ones / len(v) > 0.02 and statistics.median(v) > 20:
-            vals[k] = [x for x in v if x > 1]
+        if not ones or ones / len(v) <= 0.02:
+            continue
+        rest = [x for x in v if x > 1]
+        # A "rating" whose entire observed range sits at or below 10 is not a
+        # rating. OLB manCover takes ONLY the values 1, 2 and 3 across every
+        # published file, against MLB manCover's 38-92 — and it is absent
+        # entirely from 2004, 2007 and 2017 while 2013 and 2021 carry it for
+        # 100% of their OLBs. Whatever it is, it is not coverage skill, and
+        # shipping Derrick Brooks a manCover of 3 would be shipping a number
+        # with no meaning.
+        if rest and max(v) <= 10:
+            rest = []
+        if not rest:
+            # EVERY non-zero value is 1. The field is not partly filled, it is
+            # entirely fill and the position does not use it at all. OLB
+            # zoneCover is exactly this: 31.6% "non-zero" in the published
+            # rostered cohort, 100% of which is the value 1.
+            vals[k] = []
+            pure_fill.append(k)
+            dropped[k[2]] += ones
+        elif statistics.median(rest) > 20:
+            vals[k] = rest
             dropped[k[2]] += ones
     if dropped:
         print('  target cleaned — value-1 fill blocks dropped from the published '
               'distributions:')
         for a, n in sorted(dropped.items(), key=lambda x: -x[1]):
             print(f'    {a:14} {n:5} values')
+    for k in sorted(pure_fill):
+        print(f'    {k[0]}/{k[1]} {k[2]}: ENTIRELY fill, gated off')
     for k in vals: vals[k].sort()
-    rate = {k: nz[k] / seen[k] for k in seen if seen[k]}
+    # THE GATE IS DERIVED FROM THE CLEANED POPULATION.
+    #
+    # Cleaning the target is not enough: every statistic taken off that
+    # population has to be recomputed too, and the gating rate is one. Read off
+    # the raw data, OLB manCover looked 32.3% populated; 62.3% of those values
+    # are the fill, so the real gate is 12.2%. OLB zoneCover looked 31.6% and is
+    # actually 0%. Same defect as the target contamination, one step later in
+    # the pipeline.
+    rate = {}
+    for k in seen:
+        if not seen[k]: continue
+        kept = len(vals.get(k, []))
+        raw = nz[k]
+        rate[k] = (kept / seen[k]) if (k in vals or raw == 0) else (raw / seen[k])
     return vals, rate
 
 ALL_ATTRS = ['speed','burst','power','agility','jumping','stamina','injuryProne',
