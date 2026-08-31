@@ -1,0 +1,32 @@
+team,head_coach,source
+ARI,Dave McGinnis,verified (mid-season change)
+ATL,Dan Reeves,nflverse games.csv
+BAL,Brian Billick,nflverse games.csv
+BUF,Wade Phillips,nflverse games.csv
+CAR,George Seifert,nflverse games.csv
+CHI,Dick Jauron,nflverse games.csv
+CIN,Dick LeBeau,verified (mid-season change)
+CLE,Chris Palmer,nflverse games.csv
+DAL,Dave Campo,nflverse games.csv
+DEN,Mike Shanahan,nflverse games.csv
+DET,Bobby Ross,verified (mid-season change)
+GB,Mike Sherman,nflverse games.csv
+IND,Jim Mora,nflverse games.csv
+JAX,Tom Coughlin,nflverse games.csv
+KC,Gunther Cunningham,nflverse games.csv
+MIA,Dave Wannstedt,nflverse games.csv
+MIN,Dennis Green,nflverse games.csv
+NE,Bill Belichick,nflverse games.csv
+NO,Jim Haslett,nflverse games.csv
+NYG,Jim Fassel,nflverse games.csv
+NYJ,Al Groh,nflverse games.csv
+OAK,Jon Gruden,nflverse games.csv
+PHI,Andy Reid,nflverse games.csv
+PIT,Bill Cowher,nflverse games.csv
+SD,Mike Riley,nflverse games.csv
+SEA,Mike Holmgren,nflverse games.csv
+SF,Steve Mariucci,nflverse games.csv
+STL,Mike Martz,nflverse games.csv
+TB,Tony Dungy,nflverse games.csv
+TEN,Jeff Fisher,nflverse games.csv
+WAS,Norv Turner,verified (mid-season change)
