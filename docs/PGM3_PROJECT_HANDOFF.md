@@ -1030,35 +1030,47 @@ appearance rebuilt from real Madden data.
    sighting of "a safe default is still a claim". `zoneCover`, `manCover` and
    `greed` carry smaller blocks of the same kind.
 
-0. **1986's free agent pool never got a skin source — 198 of 201 are dark
-   (98.5%).** Found 2026-08-31 while cohort-matching a distribution check for
-   the 2000 build; confirmed independently by Ryan. **Backlog for the master
-   session — do not chase it mid-build.**
+0. **1986 APPEARANCE — 47% OF THE FILE HAS NO REAL SOURCE.** Escalated
+   2026-08-31 from "the free agent pool is dark" to its actual scope. This is
+   not a defect to patch; it is a substantial unfinished piece of the 1986
+   build and should be ranked that way in the cleanup passes.
 
-   | family | n |
-   |---|---|
-   | 1 | 3 |
-   | 2 | 0 |
-   | 3 | 0 |
-   | 4 | 95 |
-   | 5 | 103 |
+   | cohort | n | f1 | f2 | f3 | f4 | f5 | state |
+   |---|---|---|---|---|---|---|---|
+   | rostered | 1,746 | 16.1 | 8.2 | 7.7 | 26.4 | 41.5 | sourced; family 1 runs hot |
+   | **Rookie** | **1,334** | 6.6 | 4.4 | **41.6** | 43.6 | **3.7** | **unsourced** |
+   | **Free Agent** | **201** | 1.5 | 0.0 | 0.0 | 47.3 | 51.2 | **unsourced** |
 
-   Families 2 and 3 are entirely unused, which is the signature of a cohort that
-   was never sourced rather than one sourced badly. The rostered 1986 cohort next
-   to it reads 67.9% dark and 16.1% family 1, so the defect is confined to the
-   free agents. Named cases: **Ralph Giacomarro** (P) is `Head4c`, **James Britt**
-   (CB) `Head4a`, **Cliff Benson** (TE) `Head4c`. The only three light players in
-   the whole pool are Joe DeLamielleure, Jan Stenerud and John Hannah.
+   **Three cohorts, three incompatible shapes, in one file.** The prospect pool
+   inverts the rostered distribution — family 3 at 41.6% against 7.7%, family 5
+   at 3.7% against 41.5%. The free agent pool is 198 of 201 dark with families 2
+   and 3 entirely unused. Neither is a distribution; both are artifacts.
 
-   This is the 1986 skin defect again, in the cohort the original repair pass did
-   not cover — the free agents were built in a separate session from the rostered
-   file. It is also the exact thing the handoff warns about under "there is no
-   safe cohort".
+   **The cause is documented rather than mysterious**: the appearance library
+   was built from the ROSTERED cohort only, and prospects and free agents "were
+   never sourced". So 1,535 of 3,281 records — **47%** — carry appearances with
+   no real source behind them.
 
-   **Consequence for anyone using a distribution band:** it inflates the top of
-   any range that includes free agents. The published rostered+FA dark band reads
-   63.8–71.1%, and the 71.1% ceiling is this bug. Do not trust that band to three
-   significant figures.
+   **Evidence, and the fourth surfacing:** building 2000 produced 132 players
+   whose skin family disagrees with 1986 while every other file agrees among
+   themselves. **131 of the 132 are against 1986's Rookie cohort.** The 2000
+   side is `PSKI`, anchor-tested at 19/20 light and 17/17 dark; the 1986 side is
+   generated.
+
+   **Ruling (Ryan, 2026-08-31): fold these into this item. Do NOT write them
+   into the registry.** Adding 132 entries would fix the subset that happens to
+   overlap 2000 and leave ~1,200 other unsourced 1986 prospects untouched — a
+   partial fix that makes the file look more consistent than it is and hides
+   the defect from whoever picks this up. The registry is the archive's source
+   of truth and must not acquire entries derived from one season's convenience.
+
+   **The operative rule is not "the newer file wins" — it is "sourced beats
+   unsourced".** That is not a tie needing arbitration once the cohort is
+   visible.
+
+   Prior surfacings, all the same root: the free agent pool at 198/201 dark; the
+   head-family distribution across files; and registry duplicates disagreeing
+   family 3 against family 5 for the same man (`william roberts`, `joe jacoby`).
 
 1. **508 players have no skin data** — scattered fringe players in no Madden
    roster. The photo route would cover them
