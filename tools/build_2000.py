@@ -55,21 +55,35 @@ def pawr_correction(gap_years):
 
 
 def norm_registry(s):
-    """The registry's OWN normalization: 'lowercase, strip punctuation and
-    Jr/Sr/II/III/IV/V, collapse initials'.
+    """The registry's key form. MEASURED against 11,069 `faces` keys and 2,231
+    `staff_faces` keys, not taken from the stated description.
 
-    This is NOT the same as norm(). norm() replaces punctuation with a space,
-    which is right for joining against nflverse and Madden but produces
-    'scott o brien' where the registry key is 'scott obrien' — so every name
-    carrying an apostrophe or hyphen silently missed the registry and got a
-    generated face instead. Accents are folded, never stripped.
+    The registry's stated rule is "lowercase, strip punctuation and
+    Jr/Sr/II/III/IV/V, collapse initials". Strip is right for periods and
+    apostrophes and WRONG for hyphens, which the registry turns into a space:
+
+        A.J. Brown            -> aj brown            (period GLUED)
+        Scott O'Brien         -> scott obrien        (apostrophe GLUED)
+        Kabeer Gbaja-Biamila  -> kabeer gbaja biamila (hyphen SPACED)
+
+    Getting that wrong in either direction costs about a thousand roster
+    records. Spacing everything (the general norm() below) missed the 758
+    period cases; gluing everything missed the 212 hyphen cases.
+
+    Suffix tokens are stripped ANYWHERE, not only trailing — measured: making
+    it trailing-only dropped the hit rate from 97.7% to 96.9%, because the
+    registry itself drops a middle "V." the same way.
+
+    Hit rate on punctuated names across the seven published rosters: 97.7%.
+    The residual 23 are genuinely absent from the registry, not mis-keyed —
+    every sampled one has no near-match under any spelling.
     """
+    SUF = {'jr', 'sr', 'ii', 'iii', 'iv', 'v'}
     t = unicodedata.normalize('NFKD', s or '')
-    t = ''.join(c for c in t if not unicodedata.combining(c))
-    t = t.lower()
-    t = ''.join(c for c in t if c.isalnum() or c.isspace())
-    parts = [w for w in t.split() if w not in ('jr', 'sr', 'ii', 'iii', 'iv', 'v')]
-    return ' '.join(parts)
+    t = ''.join(c for c in t if not unicodedata.combining(c)).lower()
+    t = t.replace('-', ' ').replace('/', ' ')          # hyphen and slash -> SPACE
+    t = ''.join(c for c in t if c.isalnum() or c.isspace())   # period/apostrophe -> GLUE
+    return ' '.join(w for w in t.split() if w not in SUF)
 
 
 def norm(s):

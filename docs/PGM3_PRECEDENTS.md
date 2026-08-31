@@ -2432,3 +2432,69 @@ The same shape appears elsewhere in this project and is worth recognising:
 
 Applied across all 31 coaches rather than only to Phillips: `reg_w + reg_l +
 reg_t` gives games directly, and the file totals **2,045**.
+
+---
+
+## Measure a normaliser against the keys, never against its own description
+
+The face registry documents its normalisation as *"lowercase, strip punctuation
+and Jr/Sr/II/III/IV/V, collapse initials"*. Implementing exactly that is wrong,
+and the error is invisible: a missed key produces a generated face, which looks
+fine.
+
+**Measured against the 11,069 `faces` keys, the real rule treats punctuation two
+different ways:**
+
+| input | registry key | punctuation |
+|---|---|---|
+| `A.J. Brown` | `aj brown` | period **glued** |
+| `Scott O'Brien` | `scott obrien` | apostrophe **glued** |
+| `Kabeer Gbaja-Biamila` | `kabeer gbaja biamila` | hyphen **spaced** |
+
+Getting it wrong in either direction costs about a thousand roster records.
+Spacing everything — the build's general `norm()` — misses the **758** period
+cases. Gluing everything, which is what the stated description says, misses the
+**212** hyphen cases. Neither single rule works and the description names
+neither.
+
+Suffix tokens are stripped **anywhere in the name, not only trailing**. That
+looks like a bug — it turns `J.R. Ambrose` into `ambrose` — but it is what the
+registry does, and enforcing trailing-only dropped the hit rate from 97.7% to
+96.9% because the registry drops a middle `V.` the same way. **Reproduce the
+artifact's behaviour, not the behaviour it ought to have.**
+
+Final hit rate on punctuated names: **97.7% roster, 100% staff.** The residual 23
+are genuinely absent from the registry — every sampled one has no near-match
+under any spelling — rather than mis-keyed.
+
+**The general rule: a normaliser is a claim about another artifact's keys, so
+test it against those keys.** Three measurements settle it in minutes — how many
+names change form, how many then find a key, and whether any two keys collide
+once normalised. The third matters because a collision is a merge: `faces_1986`
+holds `william  roberts` and `william roberts` (double space) with *different*
+faces, and both are the same man.
+
+---
+
+## You check the fields you thought of
+
+The first 2000 staff builder hand-listed which attributes each role carries. It
+set the four coaching attributes, the three scout attributes, both physio
+attributes — and left about thirty specialty fields at zero: `management`,
+`motivation`, `playcalling`, `passRush`, `playDesign`, `injPrevent`,
+`reInjuryRisk` and the rest.
+
+**That is the bug the handoff records as having crashed the game**, reproduced
+exactly, by an author who had read the warning that morning and written
+assertions against it. The assertions passed. They checked that every coach had
+four non-zero coaching attributes, because those were the fields I was thinking
+about when I wrote them.
+
+**A hand-written list of what to populate is a list of what its author
+remembered.** The fix was to stop listing and start measuring: build a per-role
+profile from the published files — which fields a role populates, at what rate,
+around what centre — and fill from that. Ten failing check groups became one.
+
+This is why the zero-pattern check exists at all. It compares against a
+reference precisely so that no one has to remember the field list, and it caught
+this in one run.

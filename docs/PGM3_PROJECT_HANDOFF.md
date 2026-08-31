@@ -875,6 +875,22 @@ appearance rebuilt from real Madden data.
 
 **Known open items, none blocking:**
 
+0g. **Two published-file name defects, both on Frank Gansz.** He and his son
+   were both Kansas City special teams coaches, which is why the collision is
+   easy to make — but the records are malformed in two DIFFERENT ways:
+
+   | file | forename | surname |
+   |---|---|---|
+   | 1986 | `Frank` | `Gansz` |
+   | **2004** | **`Frank Gansz`** | **`Jr.`** |
+   | **2007** | `Frank` | **`Gansz Jr.`** |
+
+   2004 puts the whole name in `forename` and the suffix in `surname`; 2007
+   puts the suffix in `surname`. Neither is the 1986 form. Any name-keyed
+   lookup sees three different people. Sr. is the 1986 Kansas City and 2000
+   Jacksonville coach; Jr. is the one in 2004 and 2007 (Raiders 1998-2000,
+   Chiefs 2001-05, Ravens 2006-07).
+
 0f. **THE 2000 FILE DIVERGES FROM THE PUBLISHED FILES IN THREE PLACES, ON
    PURPOSE. None of the three is visible to `pgm3_validate.py`.** Recorded here
    rather than only in a build log, because the validator will never surface
