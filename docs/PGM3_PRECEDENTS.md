@@ -1483,10 +1483,21 @@ lessons are in the sections above; this is the 2000-specific reference.
 |---|---|---|
 | 1–31 | **1,637** | the real 2000 rosters — 31 teams |
 | 32 | 52 | Houston Texans placeholder. Every name reads `Texans CB #20`. The franchise did not exist until 2002 |
-| 33, 34 | 53, 53 | invented filler |
-| 0 | 80 | Madden 08 base-roster contamination (see above) |
+| 33, 34 | 53, 53 | **Detroit Silverdome** and **Seattle Kingdome** — stadium entries, not generic filler. Structural slots that will appear in other Madden files of this era too |
+| 0 | 80 | **EA's own studio team slot, "Tiburon Sharks"** — occupied by Madden 08 base-roster contamination (see above). Both facts are true and complementary: the slot is a permanent EA placeholder, and what is sitting in it here is 2007-era players at a 90% name match to the published 2007 file. That is why the rows read like real players rather than like obvious filler |
 | 1009 | 600 | free agents |
 | 1014 | 94 | free agents |
+| 403 | 1 | **Joe Montana**, `POVR` 99, age 33, 19 years pro — a Madden legend card. He retired after 1994. The `TEAM` table names `TGID` 403 **"NFC Hall of Fame"**, which confirms the reading independently |
+| 1008 | 1 | one row named `No Name` |
+| 1023 | 4 | four rows named `New Player`, `POVR` 27 |
+
+**The table now accounts for all 2,575 rows.** It previously summed to 2,569 and
+the six-row remainder was not recorded anywhere. All six are engine artifacts and
+all six are already excluded by the `1–31` + `1009`/`1014` rule, so nothing about
+the build changes — but an unexplained remainder in a cohort table is the exact
+shape of the thing this project keeps getting caught by, and a later session
+finding six unaccounted rows has no way to tell "verified as junk" from "never
+looked at". Verified independently by Ryan, 2026-08-31.
 
 **Ruling (Ryan, 2026-08-31): drop `TGID` 32.** 52 invented players on a franchise
 that did not exist that season. Drop 0, 33 and 34 for the same reason.
@@ -1574,3 +1585,153 @@ signal" and "a correct marginal is the weakest evidence a derived field is
 right", applied to source identification rather than to derived output. A
 continuous summary statistic is the least discriminating thing available. Reach
 for the categorical structure first.
+
+---
+
+## Birth date is the namesake disambiguator — a looser position rule is the wrong fix
+
+Worked instance from the 2000 Houston selection, 2026-08-31.
+
+The 60-man core had been chosen on name-only matching against nflverse. Making
+the join position-aware dropped it to 53 and killed the known false positive —
+**Chris Miller**, whose Baylor namesake turns out not to be a quarterback at all
+but a **safety born 1997**, two years old in the season being built.
+
+Then the audit that matters: **for every player a name-only join would have taken
+and the position-aware join rejected, check whether the rejection was right.**
+Eleven such players. Four were real and were being lost:
+
+- **Van Malone** — Madden `CB`, nflverse `S`. The same man; defensive backs are
+  labelled inconsistently between sources.
+- **Brian Waters** — Madden `TE`, nflverse `G`. A real position convert who
+  entered the league as a tight end and became a Pro Bowl guard. **The handoff
+  already warns about exactly this** (Peppers DE→OLB, Klecko DT→FB) and it still
+  caught us, because the guard was written before the warning was consulted.
+- **Kevin Smith** and **Aaron Wallace** — both dropped as "ambiguous" against
+  namesakes born **1993** and **2004**.
+
+**The tempting fix is to loosen the position rule. That is wrong** — it re-admits
+Chris Miller. Position cannot separate these cases because in two of them the
+position genuinely differs for the same man, and in the other two it genuinely
+matches for different men. Position is carrying two jobs and can only do one.
+
+**The fix is a disambiguator the collision does not share: birth date.** An era
+filter (aged 20–45 in the season being built, and within six years of the Madden
+`PAGE`) removes every confirmed false positive — the 1997 safety, a 2004 Texas
+A&M defensive end, a 2002 Texas A&M tackle — and touches no real player. Position
+then goes back to being a family-level tiebreaker, which is all it was ever good
+for.
+
+Where birth date still ties, reach for the next unshared field rather than
+guessing. Two real Kevin Smiths, both defensive backs, both of the right era,
+`draft_year` empty for both — settled on **`PYRP` 8**, because Dallas's 1992
+first-round corner played 1992–99, exactly eight seasons. That is the categorical
+structure the section below on sentinels argues for, and it is stronger evidence
+than any similarity score.
+
+Final count 57, from 60. Two of the seven removed were false positives; the rest
+failed to match nflverse at all. Nine players were **gained** by splitting the
+college field on `;` — nflverse stores `Houston; Alvin Community College`, and an
+exact match had been dropping Andre Ware, the one player the whole Houston
+premise rests on.
+
+**General form: when a guard drops records, audit the drops before shipping it.**
+A join that removes false positives and real players in the same pass looks
+identical from the count alone.
+
+---
+
+## An adjacent-year source's error can be a bias rather than noise — measure the sign before damping
+
+Measured 2026-08-31 for the 2001 draft class, which has no rookie-year Madden
+export and must source from `2003 - PLAY.csv` at a two-year gap.
+
+Four independent replicates (the 2003–2006 classes, each measured against its own
+rookie-year file at gaps of one and two years), cohort defined by **nflverse draft
+year, not `PYRP`**:
+
+| | real attributes | percentile fill |
+|---|---|---|
+| gap 1 | **2.39** | 6.97 |
+| gap 2 | **3.15** | 7.26 |
+
+Gap 1 reproducing the documented 2.35 at 2.39 is the check that the method is
+sound; run that kind of control first.
+
+**Ruling (Ryan, 2026-08-31): tier 2 for the 2001 class.** Gap 2 is still 2.3×
+better than percentile fill. But the damage is not spread evenly — it sits almost
+entirely in one column:
+
+| attr | gap 1 | gap 2 | Δ |
+|---|---|---|---|
+| `PAWR` | 6.34 | **9.81** | **+3.47** |
+| `PINJ` | 2.82 | 4.59 | +1.77 |
+| every other | 0.93–3.37 | 1.19–4.17 | +0.26 to +0.90 |
+
+**Two obvious fixes for `PAWR` were both tested and both lost.** Percentile fill
+scores **13.41** against the uncorrected 9.95 — worse than the thing it was meant
+to replace. Shrinking toward the position median finds an optimum of λ = 0.05 and
+buys 0.01 MAE, i.e. nothing.
+
+They lost because the error is a **bias, not noise**: the mean signed error is
+**+9.28**, the two-years-later file reading systematically high, exactly as the
+handoff's "awareness genuinely grows" predicts. Damping and percentile fill both
+attack variance. A bias needs a shift.
+
+**A constant −9 offset takes `PAWR` from 9.95 to 6.82**, and it generalises —
+leave-one-class-out, fitting the offset on three classes and testing on the
+fourth, improves every fold: 8.77→6.16, 12.62→9.08, 7.78→6.33, 10.07→6.28.
+
+**This does not overturn the handoff's "do not age-adjust attributes."** That
+finding was measured at a one-year gap, where the bias is +5.35 and correcting it
+buys 0.6–1.5 MAE — genuinely inside the noise, as it says. At two years the bias
+doubles and the correction pays. The rule is gap-dependent, and the handoff's
+version is the gap-1 case.
+
+**Apply it at gap 2 only — not gap 1, not gap 0.** In this build that means the
+2001 class and nothing else; 2002, 2003 and 2004 source from their own or an
+adjacent year and take no correction. A correction fitted at one gap is
+meaningless at another, exactly as a bias correction fitted to one scale is
+meaningless on another. `tools/build_2000.py` asserts this.
+
+**The sign, stated so nobody applies it backwards.** The `2003 - PLAY.csv` source
+has **two seasons of awareness growth already baked in** relative to the 2001
+rookie year being built. So the source reads high and we **subtract** to recover
+the pre-rookie state. The measured mean signed error is **+9.28** (prediction
+minus truth), which is what that direction predicts. Adding the offset instead of
+subtracting it would roughly double the error.
+
+**General form: before damping a source, take the mean *signed* error.** Damping
+and percentile fill treat the error as noise. If it is a bias they make things
+worse while looking principled, and the sign is one line of arithmetic.
+
+
+---
+
+## Every tool must run from a clean clone — no absolute paths
+
+`tools/build_coaches_2000.py` carried `REPO = '/Users/ryannecci/Documents/pocketgm-rosters'`
+and wrote to `sources/pfr/`, a directory that no longer exists in the repo. Run
+from a fresh clone it would have written its output **outside the repo
+entirely**, reported success, and left `sources/coaches_2000.csv` untouched. The
+next session would have diffed a file that had never been rewritten.
+
+This is the same defect as a stale artifact and it has the same signature: **it
+works on the machine that wrote it, and only there.** The stale-CDN rule exists
+because two copies of a file drift; an absolute path is the same failure with the
+drift happening between machines instead of between fetches.
+
+**Rule: no tool in `tools/` may contain an absolute path.** Derive the repo root
+from `__file__`:
+
+```python
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+```
+
+**Corollary, and the reason `2000.ros` was committed:** a tool that depends on a
+file only present on one machine has the same defect as a hardcoded path. The
+2000 `TGID` -> team map was read out of the `TEAM` table of a `2000.ros` that
+existed in one local working copy and in no clone. The map is correct — it
+spot-checks 12/12 against known players, all three relocations included — but
+nobody could have re-derived or checked it. Commit the source, or the derivation
+is unreproducible whatever the value turns out to be.

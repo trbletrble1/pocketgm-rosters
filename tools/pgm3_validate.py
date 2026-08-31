@@ -7,6 +7,13 @@ Usage:
     python3 pgm3_validate.py staff  NEW.json REF1.json [REF2.json ...]
     python3 pgm3_validate.py faces  FILE.json [FILE.json ...]        # cross-season face checks
     python3 pgm3_validate.py faces --staff FILE.json [FILE.json ...]
+    python3 pgm3_validate.py conditional NEW.json SRC.csv OUT_FIELD SRC_FIELD
+
+The `conditional` pass is the one that catches a field derived from nothing —
+split the output by the source value and confirm the groups differ. It is
+mandatory before a file is called finished; see the handoff. It was implemented
+but missing from this usage text, which is how you end up with a documented
+mandatory check that nobody can find.
 
 Contract ceilings and the team cap are parameters, not laws — see LIMITS.
 Override per build:

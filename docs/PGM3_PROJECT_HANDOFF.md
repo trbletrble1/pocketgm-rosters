@@ -10,7 +10,10 @@
 > - **`PGM3_DATA_SOURCES.md` — read this before hand-researching anything.**
 >   Draft classes, player biographies, birth dates, physicals and combine
 >   measurements are all bulk downloads from nflverse. Birth dates solve the
->   namesake problem outright. PFR must be searched, never fetched.
+>   namesake problem outright. **PFR access depends on which client you are** —
+>   see the transport table under "Draft prospects — potential" below. From a
+>   build session it is blocked; route PFR pulls through the master session, or
+>   use Wikipedia and nflverse.
 > - **`.ros` files no longer need Windows.** `tools/rosgui.py` decodes them
 >   directly, verified exact against Xtreme on three files. Its "Screen" button
 >   gives a usable / unusable verdict in a second — see `PGM3_SOURCE_QUALITY.md`.
@@ -447,7 +450,22 @@ Column names differ every year (`First_Name` vs `FIRSTNAME` vs `First`). Always 
 
 **Draft prospects — rating:** rookie-year Madden ratings where available; otherwise derived from draft position.
 
-**Draft prospects — potential:** per-position slot baseline from log(pick), plus a career-achievement raise. Rebuilt across all five files 2026-08-28; the full method and its coefficients are in `PGM3_PRECEDENTS.md`. The career inputs come from PFR draft pages (`all_pros_first_team` as a **count**, `pro_bowls`, `years_as_primary_starter`, `career_av`) plus an MVP/DPOY/OPOY list. **PFR access — amended 1986 session, both routes now tested.** PFR blocks direct requests from a build container (curl/python in the sandbox): that finding stands. But the **platform web_fetch tool reaches PFR normally** — `/years/1986/index.htm` returned full standings with W-L-T, PF, PA and SRS split into OSRS/DSRS. The original finding was about one client, not the site. Do not read "PFR is blocked" as covering both routes. Caveat: PFR wraps most tables in HTML comments, so a fetch returns the section headings with no rows under them — strip `<!--` and `-->` before parsing. Standings tables are not comment-wrapped and come through directly.
+**Draft prospects — potential:** per-position slot baseline from log(pick), plus a career-achievement raise. Rebuilt across all five files 2026-08-28; the full method and its coefficients are in `PGM3_PRECEDENTS.md`. The career inputs come from PFR draft pages (`all_pros_first_team` as a **count**, `pro_bowls`, `years_as_primary_starter`, `career_av`) plus an MVP/DPOY/OPOY list. **PFR access is per-transport, not per-site. Retested across four clients on 2026-08-31 — do not test it a fifth time.**
+
+| transport | result |
+|---|---|
+| master session `web_fetch` | **works** — `/years/1986/index.htm` returns full standings, W-L-T, PF, PA, OSRS/DSRS |
+| Claude Code `WebFetch` (build session) | **403** |
+| `curl`, plain or with a browser User-Agent | **403** |
+| in-app browser | **Cloudflare "Performing security verification"** interstitial |
+
+Six URLs across those four transports were tested on 2026-08-31: `/years/1986/index.htm`, three `teams/{code}/2000.htm` pages and two others. Only the master session's `web_fetch` succeeded.
+
+**Consequence for a build session: PFR is blocked.** Route PFR pulls through the master session, or use Wikipedia season pages and nflverse, which is how the 31 coaching staffs in `sources/coaches_2000.csv` were actually researched — 122 of its 124 rows carry Wikipedia URLs. The Cloudflare interstitial is bot detection and is not something to work around.
+
+Two earlier versions of this note each stated half of the table as the whole truth, and each was then cited to contradict the other. The 1986 amendment was right that the original finding "was about one client, not the site" — it just drew the boundary in the wrong place, and a build session inherited "PFR works" and lost time to 403s.
+
+Caveat that still applies wherever a fetch does succeed: PFR wraps most tables in HTML comments, so a fetch returns the section headings with no rows under them — strip `<!--` and `-->` before parsing. Standings tables are not comment-wrapped and come through directly.
 
 **Potential is raise-only.** Draft position sets the baseline; career outcomes — career AV, Pro Bowls, All-Pros, years started — pull it *up* for players who exceeded their slot, and never pull it down. Verified across all three published files: no first-round pick in any of them has potential below 70, and pick dominates the fit (corr −0.68 to −0.79 against log pick).
 
