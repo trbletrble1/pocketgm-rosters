@@ -1328,6 +1328,74 @@ def contracts_report(recs):
     assert not drawn_below, 'a DRAWN salary fell below the league minimum'
     return recs
 
+# ============================================================ stage 8: staff
+# Coordinators and special teams are rated on THE SEASON BEING BUILT -- 2000's
+# own units. Head coaches are the exception: their career record runs through
+# the PRIOR season, since 2000 has not happened from their perspective at
+# hiring. The prior-season rule for coordinators applies to current-season
+# builds only, and applying it to a historical build is an error that has
+# happened once.
+#
+# Unit ranks are COMPUTED from real 2000 game results (nflverse games.csv),
+# not researched: points for and against per team over 16 games, 31 teams.
+# Special teams come from Gosselin's 2000 rankings, his earliest published year.
+GOSSELIN_2000 = ['MIA','CAR','TEN','BAL','SEA','OAK','NE','PHI','DET','DAL','TB',
+                 'GB','PIT','ATL','CHI','JAX','ARI','MIN','IND','STL','CLE','DEN',
+                 'NYJ','NYG','KC','CIN','NO','SD','WAS','SF','BUF']
+# nflverse and Gosselin both use PERIOD team codes; the build uses modern ids.
+PERIOD_TO_MODERN = {'OAK': 'LV', 'SD': 'LAC', 'STL': 'LAR'}
+def modern(t): return PERIOD_TO_MODERN.get(t, t)
+
+# A head coach rating cannot be computed here: career records through 1999 are
+# not derivable from anything in the repo. nflverse game data carries coach
+# names only from 1999, and the PFR season coaches index gives lifetime totals
+# (Andy Reid reads 437 games on the 1999 page against the 16 he had actually
+# coached). Both routes are documented as dead in the handoff.
+#
+# The gap is left as a SENTINEL THAT FAILS THE VALIDATOR LOUDLY, not as a zero.
+# A zero rating on 31 head coaches is the exact shape of the staff-attribute bug
+# that once crashed the game and passed every check that was run.
+HC_RATING_PENDING = -1
+
+def team_units_2000():
+    """Offensive and defensive rank per team from real 2000 results."""
+    path = os.path.join(REPO, 'wip', 'games_2000.csv')
+    pf, pa = collections.Counter(), collections.Counter()
+    for r in csv.DictReader(open(path, encoding='utf-8')):
+        h, a = modern(r['home_team']), modern(r['away_team'])
+        hs, as_ = int(r['home_score']), int(r['away_score'])
+        pf[h] += hs; pa[h] += as_; pf[a] += as_; pa[a] += hs
+    assert len(pf) == 31, f'expected 31 teams in 2000, got {len(pf)}'
+    off = {t: i + 1 for i, t in enumerate(sorted(pf, key=lambda x: -pf[x]))}
+    dfn = {t: i + 1 for i, t in enumerate(sorted(pa, key=lambda x: pa[x]))}
+    st = {modern(t): i + 1 for i, t in enumerate(GOSSELIN_2000)}
+    assert set(off) == set(st), 'unit ranks and Gosselin disagree on the team set'
+    return off, dfn, st, pf, pa
+
+def employed_elsewhere_2000():
+    """Every name holding a job on a real 2000 staff. Houston's eight
+    non-Glanville slots must not take any of them -- the spec names Dom Capers,
+    Chris Palmer and Vic Fangio explicitly, but the rule is mechanical and
+    covers all 124 rows, not a list of three."""
+    return {c['name'] for c in csv.DictReader(
+        open(os.path.join(REPO, 'sources', 'coaches_2000.csv'), encoding='utf-8'))
+        if c['name'].strip()}
+
+def assert_hou_staff_free(names):
+    """Assert rather than research: anyone already on another team's staff in
+    coaches_2000.csv is barred, and that is checkable mechanically."""
+    taken = employed_elsewhere_2000()
+    clash = sorted(set(names) & taken)
+    assert not clash, ('Houston staff take men employed elsewhere in '
+                       'coaches_2000.csv: ' + ', '.join(clash))
+    return len(taken)
+
+
+def rank_to_rating(rank, n=31, lo=52, hi=94):
+    """Linear rank -> rating. 31 teams, so rank 1 is the best unit in the league."""
+    return int(round(lo + (hi - lo) * (n - rank) / (n - 1)))
+
+
 SCHEMA_SRC = 'PGMRoster_2017.json'
 
 def emit(recs, path):
