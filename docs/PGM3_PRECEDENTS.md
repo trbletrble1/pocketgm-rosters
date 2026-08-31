@@ -2148,3 +2148,79 @@ extrapolating past the edge of its data. This is the same defect as fitting the
 skin map on players who appear in a published file: **the join selected for
 notability, and notability correlates with the thing being modelled.** Say so
 rather than quoting the R² alone.
+
+---
+
+## A pooled correlation averages the cohort where a field works with the cohort where it doesn't
+
+Four instances in one session, all the same shape:
+
+| field | pooled | split |
+|---|---|---|
+| `PTSA` vs real salary | **+0.417** | rookies **+0.500**, veterans **+0.020** |
+| `stamina` vs `PSTA` | 0.847 | within position **0.999** |
+| within-light skin family | union 54/25/21 | seven files, f3 from 1.8% to 46.8% |
+| `OLB` `manCover` | 32.3% populated | 62.3% of it fill, real gate 0% |
+
+**A pooled statistic is a weighted average of every sub-population it spans, and
+it is most misleading exactly when the sub-populations differ — which is the case
+you are usually trying to detect.** `PTSA` at +0.417 reads like a usable if noisy
+source. It is a good source for rookies and literally no source for veterans, and
+the pooled number is an artifact of mixing them that describes neither.
+
+Note that pooling misleads in **both directions**. `PTSA` pooled looks better than
+it is for veterans; `stamina` pooled looked worse than it is within position and
+nearly sent a correct mapping back for repair. There is no safe direction to
+assume.
+
+**Rule: before trusting a correlation, name the sub-populations it spans and
+compute it within each.** Cohort, position, and contract regime are the three
+that have mattered here. If a field is going to be used per player, it has to be
+validated in the population that player belongs to, not in the union.
+
+---
+
+## The rule fails when the lookup feels too small to matter
+
+Nineteen rostered players had no contract data. Checking whether they were real
+2000 players meant one lookup against nflverse draft data, keyed on name. **Two
+came back as retired years earlier and were about to be dropped from the file.**
+
+**Reggie Jones was a name-only match to a different man** — a defensive back from
+Memphis drafted in 1991, against a wide receiver with two years of experience.
+Position-aware matching kills it instantly.
+
+The bug was committed **in the same session that wrote the birth-date
+disambiguation precedent**, by the same author, roughly two hours later.
+
+**That is the useful part of this entry.** The rule does not fail because people
+have not read it. It fails because a lookup gets typed quickly against a cohort
+that feels too small to be worth the ceremony. Nineteen players felt small. The
+appearance library, the ratings backfill and the fullback cohort all felt large
+enough to be careful with, and were.
+
+**There is no cohort small enough.** If the join is on a name, it is
+position-aware or it is a bug, at n=19 as much as at n=1,637.
+
+---
+
+## `to` and `last season` answer a different question than a roster build asks
+
+The same nineteen produced a second false drop for an unrelated reason.
+
+**Mike Cherry** really is the man in the draft data — quarterback, Giants, 1997,
+Murray State — and that record's `to` field reads **1998**. He was nevertheless on
+the Giants' roster for all of 2000. He simply never appeared in a game.
+
+`to` and `last season` fields mean **last season in which the player recorded an
+appearance**. A roster file models who was under contract, which is a strictly
+larger set: third quarterbacks, injured reserve, practice-squad call-ups and
+four-game comebacks all belong in it.
+
+**Use a roster source to answer a roster question.** `nflverse`'s
+`rosters/roster_YYYY.csv` carries 2,046 player-team records for 2000 with a
+`status` field (`ACT`, `RES`, `CUT`, `PUP`, `SUS`), which is the right instrument.
+All nineteen appear in it; none were dropped.
+
+The near-miss is instructive on its own: the two instruments disagreed, and the
+weaker one was the one already loaded.
