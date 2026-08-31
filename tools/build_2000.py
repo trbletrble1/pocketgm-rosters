@@ -8,7 +8,7 @@ no intermediate roster files here.
 
 Run:  python3 tools/build_2000.py [--stage N]
 """
-import csv, json, os, sys, collections, unicodedata, datetime, statistics, random
+import csv, json, os, sys, collections, unicodedata, datetime, statistics, random, math
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC  = os.path.join(REPO, 'sources', 'madden', '2000_-_PLAY.csv')
@@ -885,6 +885,241 @@ def conditional_attributes(recs):
     print('  all direct-mapped attributes track their source within position.')
     return recs
 
+# ========================================================= stage 7: contracts
+# THE HEADLINE, stated here and in the build log rather than in a footnote:
+# roughly 30 veteran contracts in this file are real and roughly 1,100 are
+# DRAWN. The contract block of the 2000 Madden file carries rookie signal and
+# nothing else, measured three ways against 62 real Over The Cap figures:
+#
+#   veterans   PTSA +0.020   PSBO -0.040   PSBO/PCON -0.179
+#   rookies    PTSA +0.500   PSBO +0.410   PSBO/PCON +0.393
+#
+# So veteran salaries are not sourced and are not fitted either -- adjusted R2
+# on the anchor set is 0.127, fitted on 30 notable players whose median draft
+# pick is 24 against the cohort's 118. Extrapolating that outside its support
+# would manufacture per-player numbers with no per-player signal.
+TEAM_CAP_2000 = 62_170_000
+# 2000 minimum salary ladder by credited season.
+MIN_2000 = {0: 193_000, 1: 243_000, 2: 288_000, 3: 333_000,
+            4: 385_000, 5: 385_000, 6: 385_000,
+            7: 440_000, 8: 440_000, 9: 440_000}
+def min_salary(yrs): return MIN_2000.get(yrs, 477_000)
+
+# Rating is a FLOOR, not a fit. It explains 3% of veteran salary, so nothing is
+# predicted from it -- but the NFL does not pay a 95-rated veteran the minimum,
+# and that much weaker claim the evidence does carry.
+RATING_FLOOR = [(92, 2_200_000), (87, 1_200_000), (82, 700_000), (77, 450_000)]
+def rating_floor(r):
+    for lo, v in RATING_FLOOR:
+        if r >= lo: return v
+    return 0
+
+# The ceiling is the same weak monotone claim as the floor, in the other
+# direction: the NFL does not pay a 66-rated player top-ten money. Without it
+# the lognormal tail produced Alex Molden (rating 66) at $7.96M and Russell
+# Maryland at $17.76M against an era ceiling of $8.54M. Neither is a fit; both
+# are guards on a draw.
+RATING_CEIL = [(90, 9_000_000), (85, 6_000_000), (80, 4_500_000),
+               (75, 3_000_000), (70, 2_000_000)]
+ERA_MAX_SALARY = 9_000_000        # highest real 2000 cap number is $8.54M
+
+# Position ceilings, from the real 2000 top of market. The published files
+# cannot supply these: they put K at 1.50x the league median with a p95 of
+# $7.68M, the K/P inflation defect showing up in contracts as well as ratings.
+# The real 2000 kicker market tops out at Jason Elam, $1,071,167.
+POS_CEIL = {'QB': 8_600_000, 'OT': 5_000_000, 'DE': 5_000_000, 'WR': 5_000_000,
+            'CB': 4_600_000, 'DT': 4_600_000, 'OLB': 4_600_000, 'MLB': 4_600_000,
+            'RB': 4_300_000, 'OG': 4_000_000, 'S': 3_500_000, 'TE': 3_200_000,
+            'C': 3_200_000, 'K': 1_200_000, 'P': 1_100_000}
+def rating_ceiling(r):
+    for lo, v in RATING_CEIL:
+        if r >= lo: return v
+    return 1_200_000
+
+def load_anchors():
+    ns = {}
+    path = os.path.join(REPO, 'wip', 'otc_anchors_2000.py')
+    if not os.path.exists(path): return {}, {}
+    g = {}
+    exec(open(path).read(), g)
+    return g.get('OTC', {}), g.get('EXCLUDED', {})
+
+def stage7(recs, draft_pick):
+    otc, excluded = load_anchors()
+    ros = [p for p in recs if p['teamID'] != 'Free Agent']
+    fa = [p for p in recs if p['teamID'] == 'Free Agent']
+
+    # ---- length. PCYL is contract years REMAINING and holds <= PCON on
+    # 1637/1637. Use it directly; do not stretch it to hit the published 34-39%
+    # band, which is seven files that disagree.
+    ladder_used = fixed = 0
+    for p in ros:
+        cyl = int(p['_src']['PCYL']); con = int(p['_src']['PCON'])
+        assert cyl <= con or con == 0, 'PCYL exceeded PCON'
+        if con == 0:
+            yrs = int(p['_src']['PYRP'])
+            if yrs == 0:
+                p['length'] = 4; ladder_used += 1        # rookie ladder
+            else:
+                p['length'] = 1; fixed += 1              # no data, veteran
+        else:
+            p['length'] = max(1, cyl)
+    for p in fa: p['length'] = 0
+
+    # ---- salary
+    #
+    # The floor applies to SALARY, not to the cap hit. An earlier version put it
+    # on the hit and then divided by (1+g) to get salary, which pushed 735
+    # players back under the league minimum -- the floor and the split were each
+    # correct and the composition was not.
+    anchored = drawn_rk = drawn_vet = 0
+    for p in recs:
+        key = norm(p['forename'] + ' ' + p['surname']) + '|' + p['position']
+        rng = seeded(key, 'salary')      # deterministic: a rebuild must not
+                                         # reshuffle a player's contract
+        yrs = int(p['_src']['PYRP'])
+        pick = draft_pick.get(norm(p['forename'] + ' ' + p['surname']), 224)
+        name = p['forename'] + ' ' + p['surname']
+        # The rating floor may never exceed the position ceiling, or a
+        # 95-rated kicker inherits a quarterback's floor. The league minimum
+        # always applies regardless.
+        p['_floor'] = max(min_salary(yrs),
+                          min(rating_floor(p['rating']),
+                              POS_CEIL.get(p['position'], ERA_MAX_SALARY)))
+        if name in otc and p['teamID'] != 'Free Agent':
+            # REAL. An OTC 2000 cap figure is base + prorated bonus, the same
+            # quantity as PGM3's salary + guarantee. Assigning it to `salary`
+            # and adding a guarantee on top inflates the player by 5-16% --
+            # each field individually sane, the pair wrong.
+            p['_hit'] = float(otc[name]); p['_src_tag'] = 'OTC'; anchored += 1
+        elif yrs <= 3:
+            # Rookie tier. Slot-driven, adjusted R2 0.679 on the anchor set.
+            p['_raw'] = math.exp(-0.62 * math.log(max(1, pick))) * rng.uniform(0.80, 1.25)
+            p['_src_tag'] = 'rookie-slot'; drawn_rk += 1
+        else:
+            # Veteran tier. DRAWN, not sourced and not fitted. Right-skewed,
+            # tilted by the two things carrying what little signal exists:
+            # draft slot (rho +0.443) and years pro.
+            p['_raw'] = (math.exp(-0.45 * math.log(max(1, pick)) + 0.05 * min(yrs, 12))
+                         * rng.lognormvariate(0, 0.55))
+            p['_src_tag'] = 'veteran-drawn'; drawn_vet += 1
+
+    # guarantee ratio, matching the published convention: non-zero on 52-70% of
+    # rostered players at a median guarantee/salary of 0.055-0.160
+    for p in recs:
+        r2 = seeded(norm(p['forename'] + ' ' + p['surname']) + '|' + p['position'], 'guar')
+        p['_g'] = 0.0 if r2.random() < 0.38 else r2.uniform(0.04, 0.22)
+
+    # ---- scale each team so the aggregate lands on the real cap. Per-player
+    # accuracy is unavailable for veterans, so the aggregate is what can be
+    # validated and it is what gets calibrated.
+    byteam = collections.defaultdict(list)
+    for p in ros: byteam[p['teamID']].append(p)
+    for t, ps in byteam.items():
+        # Teams do not all spend the same share of the cap. Seeded on the team
+        # id so a rebuild reproduces it.
+        TARGET = seeded(t, 'cap').uniform(0.86, 0.99) * TEAM_CAP_2000
+        def total(k):
+            hits = []
+            for x in ps:
+                if '_hit' in x:
+                    sal = x['_hit'] / (1 + x['_g'])
+                else:
+                    sal = min(max(k * x['_raw'], x['_floor']),
+                              max(x['_floor'], rating_ceiling(x['rating'])),
+                              max(x['_floor'], POS_CEIL.get(x['position'], ERA_MAX_SALARY)),
+                              ERA_MAX_SALARY)
+                hits.append(sal * (1 + x['_g']))
+            return sum(sorted(hits, reverse=True)[:51])
+        lo, hi = 1.0, 1e9
+        for _ in range(60):
+            mid = (lo * hi) ** 0.5
+            if total(mid) < TARGET: lo = mid
+            else: hi = mid
+        k = (lo * hi) ** 0.5
+        for x in ps:
+            if '_hit' in x:
+                # REAL, never floored and never clamped. An earlier version
+                # applied the rating floor here and pushed Jason Elam's real
+                # $1,071,167 up to $2.2M -- a guard meant for drawn values
+                # overwriting sourced ones, which is the worst direction for
+                # this kind of bug because the output still looks reasonable.
+                x['_sal'] = x['_hit'] / (1 + x['_g'])
+            else:
+                x['_sal'] = min(max(k * x['_raw'], x['_floor']),
+                                max(x['_floor'], rating_ceiling(x['rating'])),
+                                max(x['_floor'], POS_CEIL.get(x['position'], ERA_MAX_SALARY)),
+                                ERA_MAX_SALARY)
+    # free agents: no team to scale against, so use the league median scale
+    kfa = statistics.median([max(p['_sal'], 1) / max(p['_raw'], 1e-9)
+                             for p in ros if '_raw' in p])
+    for p in fa:
+        p['_sal'] = min(max(kfa * p.get('_raw', 0.0), p['_floor']),
+                        max(p['_floor'], rating_ceiling(p['rating'])),
+                        max(p['_floor'], POS_CEIL.get(p['position'], ERA_MAX_SALARY)),
+                        ERA_MAX_SALARY)
+
+    for p in recs:
+        sal = int(round(p['_sal'] / 1000) * 1000)
+        p['salary'] = sal
+        p['guarantee'] = 0 if p['teamID'] == 'Free Agent' else int(round(sal * p['_g'] / 1000) * 1000)
+        assert p['salary'] > 0, 'zero salary'
+
+    # eSalary / eGuarantee / eLength are game-computed OUTPUTS and are
+    # regenerated on import. Ship sane values for first-load validity, no more.
+    for p in recs:
+        p['eSalary'] = int(p['salary'] * 1.05 / 1000) * 1000
+        p['eGuarantee'] = int(p['guarantee'] * 1.1 / 1000) * 1000
+        p['eLength'] = min(4, max(0, p['length'] - 1))
+
+    print()
+    print('STAGE 7 — contracts')
+    print(f'  anchored to REAL Over The Cap figures     {anchored:5}')
+    print(f'  rookie tier, draft-slot derived           {drawn_rk:5}   (adj R2 0.679)')
+    print(f'  veteran tier, DRAWN not sourced           {drawn_vet:5}   (adj R2 0.127 — not fitted)')
+    print(f'  -> {100*anchored/max(1,anchored+drawn_vet):.1f}% of veteran-era contracts are real, '
+          f'{100*drawn_vet/max(1,anchored+drawn_vet):.1f}% are drawn')
+    print(f'  rookie ladder used for length             {ladder_used:5}')
+    print(f'  length=1 fallback, no contract data       {fixed:5}')
+    lens = collections.Counter(p['length'] for p in ros)
+    print(f'  length: ' + '  '.join(f'{k}:{100*v/len(ros):.0f}%' for k, v in sorted(lens.items())))
+    print(f'    one-year deals {100*lens[1]/len(ros):.1f}%  (PCYL says 31.8%, published 34-39%)')
+    assert all(p['length'] >= 1 for p in ros), 'a rostered player has length 0'
+    assert all(p['length'] == 0 for p in fa), 'a free agent has a non-zero length'
+    assert not any(p['length'] > 7 for p in recs), 'length above 7'
+    return recs
+
+def contracts_report(recs):
+    ros = [p for p in recs if p['teamID'] != 'Free Agent']
+    byteam = collections.defaultdict(list)
+    for p in ros: byteam[p['teamID']].append(p)
+    tots = []
+    for t, ps in byteam.items():
+        top = sorted(ps, key=lambda x: -(x['salary'] + x['guarantee']))[:51]
+        tots.append(sum(x['salary'] + x['guarantee'] for x in top))
+    print()
+    print('  AGGREGATE VALIDATION (per-player accuracy is unavailable for veterans)')
+    print(f'    basis: top-51 cap hit = salary + guarantee, the Rule of 51 in force in 2000')
+    print(f'    real 2000 cap: ${TEAM_CAP_2000/1e6:.2f}M per team')
+    print(f'    median team   ${statistics.median(tots)/1e6:6.2f}M  '
+          f'({100*statistics.median(tots)/TEAM_CAP_2000:.0f}% of cap)')
+    print(f'    range         ${min(tots)/1e6:6.2f}M - ${max(tots)/1e6:.2f}M   '
+          f'over cap: {sum(1 for x in tots if x > TEAM_CAP_2000)}/31')
+    sal = sorted(p['salary'] for p in ros)
+    n = len(sal)
+    print(f'    salary p10 ${sal[n//10]/1000:.0f}k  median ${sal[n//2]/1000:.0f}k  '
+          f'p90 ${sal[9*n//10]/1e6:.2f}M  max ${sal[-1]/1e6:.2f}M')
+    below = [p for p in ros if p['salary'] < min_salary(int(p['_src']['PYRP']))]
+    drawn_below = [p for p in below if p.get('_src_tag') != 'OTC']
+    print(f'    below the 2000 minimum ladder: {len(below)}/{len(ros)}  '
+          f'({len(drawn_below)} drawn, {len(below)-len(drawn_below)} real and correctly not clamped)')
+    for p in below:
+        if p.get('_src_tag') == 'OTC':
+            print(f'      {p["forename"]} {p["surname"]}: real OTC cap ${p["salary"]+p["guarantee"]:,} '
+                  f'splits to ${p["salary"]:,} base — the minimum applies to base, the cap number includes bonus')
+    assert not drawn_below, 'a DRAWN salary fell below the league minimum'
+    return recs
+
 if __name__ == '__main__':
     recs = stage3()
     recs = stage4(recs)
@@ -892,3 +1127,11 @@ if __name__ == '__main__':
     recs = stage5(recs)
     recs = stage6(recs)
     conditional_attributes(recs)
+    import csv as _csv
+    _dp = {}
+    _p = os.path.join(REPO, 'wip', 'draft_picks_pre2001.csv')
+    if os.path.exists(_p):
+        for _r in _csv.DictReader(open(_p, encoding='utf-8')):
+            _dp.setdefault(_r['name'], int(_r['pick']))
+    recs = stage7(recs, _dp)
+    contracts_report(recs)
