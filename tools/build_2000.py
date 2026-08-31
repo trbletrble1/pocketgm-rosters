@@ -1355,7 +1355,55 @@ def modern(t): return PERIOD_TO_MODERN.get(t, t)
 # The gap is left as a SENTINEL THAT FAILS THE VALIDATOR LOUDLY, not as a zero.
 # A zero rating on 31 head coaches is the exact shape of the staff-attribute bug
 # that once crashed the game and passed every check that was run.
-HC_RATING_PENDING = -1
+# Career records through 1999, supplied 2026-08-31 and verified against
+# independently computed 1999 season records before use: every career total
+# contains its 1999 season, every first-year coach's career equals his 1999
+# season exactly, and the zero set is precisely the seven men who had never
+# been an NFL head coach.
+#
+# RULING (Ryan, 2026-08-31): regress toward .500 by GAMES, not seasons.
+# The regression exists to discount small samples and games is the actual
+# sample size -- a four-game interim spell and a sixteen-game season are not
+# equal evidence. It also dissolves the definitional question rather than
+# answering it: Wade Phillips's 1985 four-game New Orleans stint contributes
+# four games' worth whether or not anyone calls it a season, so his 68 games
+# stand on their own and nobody has to remember a convention.
+#
+# RULING (Ryan, 2026-08-31): Coach of the Year is AP ONLY. A clean comparable
+# standard, and it costs four men who won PFWA, UPI or Greasy Neale awards in
+# this era -- BOBBY ROSS, TOM COUGHLIN, DAVE WANNSTEDT and DENNIS GREEN all
+# show zero. Recorded by name so nobody later "fixes" it by adding the other
+# bodies.
+# Calibrated against the published head-coach distribution (224 team head
+# coaches across seven files: min 58, p25 67, median 72, p75 79, max 95).
+# A first version regressed toward .500 with no experience term and produced a
+# floor of 68 against a published 58, with TEN of thirty-one coaches tied on the
+# prior — every unproven man landing on the league median. Holding the job is
+# itself evidence, and it is what separates a first-time hire from a .500
+# veteran, so an experience term carries that and breaks the tie.
+HC_PRIOR_GAMES = 24          # regression prior, in games
+HC_BASE, HC_SPAN = 34.0, 66.0
+HC_EXP_WEIGHT, HC_EXP_FULL = 9.0, 160.0    # ~10 seasons to saturate
+
+def hc_rating(row):
+    """Career record through the PRIOR season, regressed toward .500 BY GAMES,
+    plus an experience term and Super Bowl, playoff and Coach of the Year
+    bonuses."""
+    w, l, t = int(row['reg_w']), int(row['reg_l']), int(row['reg_t'])
+    g = w + l + t
+    pct = (w + 0.5 * t + 0.5 * HC_PRIOR_GAMES) / (g + HC_PRIOR_GAMES)
+    r = HC_BASE + HC_SPAN * pct
+    r += HC_EXP_WEIGHT * min(1.0, g / HC_EXP_FULL)
+    r += 3.0 * int(row['super_bowl_wins'])
+    r += 0.55 * int(row['playoff_w'])
+    r += 2.0 * int(row['coach_of_year'])
+    return max(50, min(95, int(round(r))))
+
+
+# The sentinel that stood here is gone: hc_rating() now computes from the
+# supplied career records. Worth noting honestly that it was never exercised —
+# no PGMStaff_2000.json has been written yet, so the validator never saw it.
+# It did its job as a design decision, not as a caught failure.
 
 def team_units_2000():
     """Offensive and defensive rank per team from real 2000 results."""

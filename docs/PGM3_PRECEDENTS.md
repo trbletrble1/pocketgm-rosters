@@ -2358,3 +2358,43 @@ explicitly at the boundary. Never match on a label each side defines
 separately.** PGM3's fifteen is the project vocabulary; Madden's `PPOS` labels
 are a source encoding and must be translated once, at the point of entry, not
 carried around and compared.
+
+
+---
+
+## Give a research source a check it can run on its own output
+
+The 2000 head-coach career records came back with **no uncertain fields**, which
+is unusual for this workflow, and the reason looks identifiable rather than lucky.
+
+The standing instruction for these requests is *"say uncertain rather than
+guess"*. That only helps once the source already knows it is unsure — it does
+nothing about a confident wrong answer, which is the failure that actually
+happens. The PFR season index gives Andy Reid 437 career games on the 1999 page
+against the 16 he had really coached, and a source reading it would have no
+internal reason to doubt that number.
+
+**What was different: the prompt carried two constraints the source could verify
+against itself before answering.**
+
+1. **An expected-zeros list** — the seven men who had never been an NFL head
+   coach. Any lifetime-total source fails this instantly, because it gives
+   Belichick 302 wins where the answer must be a career that had not started.
+2. **A table of 22 single-season 1999 records.** Every returned career total must
+   contain its coach's 1999 season as a subset. Reid at 5–11 is the headline
+   case: it is the one a lifetime-total source breaks most obviously.
+
+Both are checkable by the source, on its own draft, without any outside data.
+That converts "be honest about uncertainty" into "here is an arithmetic test you
+will fail if you have misread the question".
+
+**Rule: when commissioning research, include at least one constraint the source
+can test its own answer against.** A subset relation, a known-zero set, a total
+that must reconcile. Two are better than one and they should fail in different
+directions — the zeros catch an inflated source, the 1999 subset catches a
+deflated or mismatched one.
+
+Both constraints were then re-run **on the returned file** before it was used, and
+independently: the 1999 records were recomputed from nflverse game results rather
+than taken from the prompt. Verification that reuses the prompt's own numbers is
+not verification.
