@@ -658,6 +658,144 @@ def stage5(recs):
               f'   league {med:.0f}')
     return recs
 
+# ======================================================== stage 2b: Houston
+# Ruling (Ryan, 2026-08-31): fill the vacant HOU slot with the Houston Texans
+# arriving two years early. Nothing is invented but the start date -- the
+# franchise was awarded 29-0 on 6 October 1999 and Charley Casserly was hired as
+# GM on 19 January 2000.
+#
+# The construction rule is a CONSEQUENCE, not a filter: a GM with no scouting
+# department signs what he can already evaluate, which is men the Oilers drafted
+# and men playing within a day's drive. The lopsided roster follows from that.
+# Trim the surplus, never the shortage -- the positions Casserly could evaluate
+# are fine and the ones he could not are dire, and that is the point.
+HOU_MIN = {'QB':2,'RB':2,'WR':4,'TE':2,'OT':2,'OG':2,'C':1,'DE':3,'DT':3,
+           'OLB':3,'MLB':1,'CB':4,'S':2,'K':1,'P':1}
+HOU_TARGET = 53
+# Steve Young (99) and Dan Marino (91) are in the pool and are LEFT THERE.
+# Either would make Houston's quarterback the best or second-best in the league
+# in year one and destroy the premise, and neither had any reason to un-retire
+# for an expansion team.
+HOU_FORBIDDEN = {'Steve Young', 'Dan Marino'}
+# Erik Kramer is an explicit exception to the construction rule -- N.C. State,
+# never an Oiler. The stated why is the Detroit connection: he is one of the two
+# men Detroit played ahead of Andre Ware, and signing both re-runs that
+# competition ten years later in Ware's home town.
+HOU_EXCEPTION = {'Erik Kramer': 'exception to the construction rule — N.C. State, '
+                                'never an Oiler. Signed for the Detroit connection '
+                                'with Andre Ware.'}
+
+def stage2b(recs):
+    core_path = os.path.join(REPO, 'wip', 'hou_core_2000.json')
+    core = json.load(open(core_path))['unique']
+    # The selection script and the build use different position vocabularies:
+    # the selection kept FB/FS/SS, the build collapses FB->RB and FS/SS->S to
+    # match PGM3's 15. Translate or four core players silently fail to match.
+    XLATE = {'FS': 'S', 'SS': 'S', 'FB': 'RB', 'G': 'OG'}
+    want = {(c['first'], c['last'], XLATE.get(c['mpos'], c['mpos'])) for c in core}
+    fa = [p for p in recs if p['teamID'] == 'Free Agent']
+    byname = {(p['forename'], p['surname'], p['position']): p for p in fa}
+
+    picked, missing = [], []
+    for k in sorted(want):
+        p = byname.get(k)
+        if p is None: missing.append(k)
+        else: picked.append(p)
+    print()
+    print('STAGE 2b — Houston')
+    print(f'  core selected position-aware, birth-date disambiguated: {len(core)}')
+    # A core player failing to match is a translation bug, not an absence, and
+    # it silently shrinks the premise -- Jason Layman is a 1996 Oilers second
+    # round pick, exactly the cohort this roster is built from. Assert on it.
+    assert len(missing) <= 3, (f'{len(missing)} core players did not match the pool: '
+                               + ', '.join(f'{a} {b} ({c})' for a, b, c in missing))
+    if missing:
+        print(f'  {len(missing)} core players are no longer in the pool '
+              f'(dropped as unshippable in stage 3): '
+              + ', '.join(f'{a} {b}' for a, b, _ in missing))
+
+    for nm, why in HOU_EXCEPTION.items():
+        f, l = nm.split(' ', 1)
+        for p in fa:
+            if (p['forename'], p['surname']) == (f, l) and p not in picked:
+                picked.append(p); print(f'  + {nm} — {why}')
+    for p in picked:
+        assert f"{p['forename']} {p['surname']}" not in HOU_FORBIDDEN, \
+            f"{p['forename']} {p['surname']} must be left in the pool"
+
+    have = collections.Counter(p['position'] for p in picked)
+    # fill shortages with the WORST available, per the spec: the positions
+    # Casserly could not evaluate are dire and should be the worst on the roster
+    added = []
+    for pos, need in sorted(HOU_MIN.items()):
+        short = need - have.get(pos, 0)
+        if short <= 0: continue
+        pool = sorted((p for p in fa if p['position'] == pos and p not in picked),
+                      key=lambda x: x['povr'])
+        for p in pool[:short]:
+            picked.append(p); added.append((pos, p)); have[pos] += 1
+    if added:
+        print(f'  filled {len(added)} shortage slots from the general pool, '
+              f'worst-first: ' + ', '.join(f'{pos}' for pos, _ in
+                                           sorted(collections.Counter(a[0] for a in added).items())))
+
+    # trim surplus, best-kept, never below the minimum
+    trimmed = 0
+    while len(picked) > HOU_TARGET:
+        have = collections.Counter(p['position'] for p in picked)
+        cands = [p for p in picked
+                 if have[p['position']] > HOU_MIN.get(p['position'], 0)
+                 and f"{p['forename']} {p['surname']}" not in HOU_EXCEPTION]
+        if not cands: break
+        worst = min(cands, key=lambda x: x['povr'])
+        picked.remove(worst); trimmed += 1
+    print(f'  trimmed {trimmed} surplus players, lowest-rated first, '
+          f'never below the positional minimum')
+
+    # Jerseys. These men arrive from the free agent pool carrying teamNum 0, so
+    # Houston needs numbers assigned. PJEN is real data and is preferred where
+    # it is valid and free; the rest come from the era's positional ranges,
+    # which the handoff verified on the 1986 file by position medians.
+    RANGES = {'QB': range(1, 20), 'K': range(1, 20), 'P': range(1, 20),
+              'RB': range(20, 50), 'CB': range(20, 50), 'S': range(20, 50),
+              'C': range(50, 80), 'OG': range(50, 80), 'OT': range(50, 80),
+              'MLB': range(50, 60), 'OLB': range(50, 60),
+              'TE': range(80, 90), 'WR': range(80, 90),
+              'DE': range(60, 100), 'DT': range(60, 100)}
+    used, kept = set(), 0
+    for p in sorted(picked, key=lambda x: -int(x['_src']['PYRP'])):
+        n = int(p['_src']['PJEN'])
+        if 1 <= n <= 99 and n not in used:
+            p['teamNum'] = n; used.add(n); kept += 1
+        else:
+            p['teamNum'] = 0
+    for p in picked:
+        if p['teamNum']: continue
+        for n in list(RANGES.get(p['position'], range(1, 100))) + list(range(1, 100)):
+            if n not in used:
+                p['teamNum'] = n; used.add(n); break
+    print(f'  jerseys: {kept} kept from PJEN, {len(picked)-kept} assigned '
+          f'from the positional ranges')
+    assert len({p['teamNum'] for p in picked}) == len(picked), 'duplicate HOU jersey'
+    assert all(1 <= p['teamNum'] <= 99 for p in picked), 'HOU jersey out of range'
+
+    for p in picked:
+        p['teamID'] = 'HOU'
+        p['_hou'] = True
+    assert len({id(p) for p in picked}) == len(picked), 'a player was picked twice'
+    print(f'  HOU roster: {len(picked)}')
+    shape = collections.Counter(p['position'] for p in picked)
+    print('  shape: ' + '  '.join(f'{k}{v}' for k, v in sorted(shape.items())))
+    for pos, mn in HOU_MIN.items():
+        assert shape.get(pos, 0) >= mn, f'HOU is below minimum at {pos}: {shape.get(pos,0)}/{mn}'
+    ware = [p for p in picked if (p['forename'], p['surname']) == ('Andre', 'Ware')]
+    assert ware, 'Andre Ware is not on the roster — the premise depends on him'
+    print(f"  Andre Ware: POVR {ware[0]['povr']}, age corrected to "
+          f"{[c for c in core if c['last']=='Ware'][0]['nfl_age']} from the stale Madden "
+          f"{[c for c in core if c['last']=='Ware'][0]['madden_age']}")
+    return recs
+
+
 # ========================================================= stage 6: attributes
 # Direct map where a Madden column corresponds to a PGM3 attribute, then
 # per-position QUANTILE mapping -- never a raw copy. Madden's scales do not
@@ -1227,8 +1365,8 @@ def emit(recs, path):
         assert set(r.keys()) == set(keys), 'schema key mismatch'
     json.dump(out, open(path, 'w'), separators=(',', ':'))
     print(f'\n  wrote {path}: {len(out)} records x {len(keys)} keys')
-    print('  INCOMPLETE — no draft classes (stage 9), no Houston (stage 2b), '
-          'growthType/potential are placeholders')
+    print('  INCOMPLETE — no draft classes (stage 9); growthType and potential '
+          'are placeholders until stage 10')
     return out
 
 if __name__ == '__main__':
@@ -1236,6 +1374,7 @@ if __name__ == '__main__':
     recs = stage4(recs)
     conditional_pski(recs)
     recs = stage5(recs)
+    recs = stage2b(recs)
     recs = stage6(recs)
     conditional_attributes(recs)
     import csv as _csv

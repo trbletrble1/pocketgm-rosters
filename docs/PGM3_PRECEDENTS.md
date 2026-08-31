@@ -2296,3 +2296,28 @@ input, watch it fire, restore. Two lines, once, at the moment it is written.
 The cheapest version for a set-based check is to assert the set is non-empty
 before asserting anything about its contents — a guard over zero sourced records
 passes trivially and forever.
+
+---
+
+## Two scripts in one project, two position vocabularies
+
+The Houston core was selected by one script and assembled by another. The
+selection kept Madden's own labels — `FB`, `FS`, `SS`, `G`. The build collapses
+to PGM3's fifteen — `FB`→`RB`, `FS`/`SS`→`S`, `G`→`OG`.
+
+Matching the two on `(forename, surname, position)` silently dropped **four of
+fifty-seven core players**, including **Jason Layman, a 1996 Houston Oilers
+second-round pick** — precisely the cohort the entire roster premise is built
+from. The build reported "no longer in the pool", which reads like an absence and
+was a translation failure.
+
+**It fails quietly and in the direction that looks reasonable.** A roster one
+guard short is not obviously wrong. The count was 53 either way, because the
+shortage filler simply took one more body from the general pool.
+
+**Rule: when two scripts exchange records, assert on the match rate, not just on
+the output count.** The output was the right size the whole time. What was wrong
+was who was in it.
+
+`stage2b` now asserts that at most three core players fail to match, and names
+them when any do.
