@@ -2060,11 +2060,34 @@ contaminated records excluded (616 of 3,924, 15.7%):
 
 The direction is what theory predicts — a rated-70 player carrying stamina 1
 tells the regression that stamina barely matters, so cleaning should raise its
-coefficient, and it does in 9 of 14 positions. But `stamina`'s coefficient is
-within ±0.009 of zero at every position to begin with. **The contamination sits
-in a field the model barely uses.**
+coefficient, and it does in 9 of 14 positions.
 
-Closed: no refit of `weights.json` is needed. Recorded because the question was
-worth one measurement and would otherwise recur every time a target is cleaned.
+**The reason it does not matter is relative, not absolute.** In `weights.json`
+itself, `stamina` is at most **7.9% of the largest coefficient** in any position's
+model (TE, +0.01654 against `passBlock` 0.20838) and a median of **0.6%** across
+the fifteen. Worst case, an 80-point stamina swing moves TE's computed rating by
+**1.3 points**.
+
+Closed: no refit of `weights.json` is needed.
+
+**State this as a ratio, never as an absolute bound.** An earlier version of this
+entry said the coefficient was "within ±0.009 of zero at every position". That
+was wrong twice over: the true maximum is 0.0165, and two positions exceed 0.009
+— but more importantly **an absolute threshold is meaningless without the scale
+of the model it sits in.** 0.0165 is negligible beside `passBlock` at 0.208 and
+would be enormous beside a model whose coefficients were all 0.001. The number
+also came from a fresh regression rather than from `weights.json`, which is what
+the build actually solves through; check the artifact in use, not a
+reconstruction of it.
+
 The general form is that a fit's sensitivity to a contaminated input depends on
-that input's coefficient, and the coefficient is cheap to look at.
+that input's coefficient **as a fraction of the model's largest**, and that ratio
+is cheap to look at.
+
+This is the third instance in one session of the same mistake — reading the
+obvious property instead of the informative one. `OLB` `manCover` was 100%
+populated and carried nothing, because the informative property was its range
+(1–3) not its share. `stamina` read rho 0.847 pooled and 0.999 within position,
+because the informative property was the altitude of the measurement. Here the
+informative property is the coefficient's size relative to its own model. **When
+a number is used to dismiss a concern, check what it is being compared against.**
