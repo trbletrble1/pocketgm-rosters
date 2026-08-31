@@ -2224,3 +2224,47 @@ All nineteen appear in it; none were dropped.
 
 The near-miss is instructive on its own: the two instruments disagreed, and the
 weaker one was the one already loaded.
+
+
+---
+
+## A guard must know the provenance of what it is guarding
+
+Building 2000's contracts, a rating-based salary **floor** — written to stop
+drawn values landing implausibly low — fired on Jason Elam and pushed his **real
+Over The Cap figure of $1,071,167 up to $2,200,000**.
+
+**Nothing looked wrong.** $2.2M for a top kicker is not an absurd number. No
+distribution check, no range check and no amount of reading the output would have
+caught it. It was visible only because the real figure happened to be sitting in
+the same table.
+
+**That is the defining property of this bug class: a guard overwriting a sourced
+value produces plausible output, because the guard's whole job is to produce
+plausible output.** A guard firing on a derived value is working; the same guard
+firing on a real one is destroying data, and the two are indistinguishable from
+the result.
+
+Floors, ceilings, clamps, defaults and fallbacks are all written with derived
+values in mind, and every one of them will silently overwrite a sourced value if
+it cannot tell the difference.
+
+**This is the same rule as `_verified_keys` being locked against automated
+passes**, generalised. That rule protects Ryan's hand edits from a pass that
+"scores better". This extends it to any real-data tier: an anchored contract, a
+sourced appearance, a real draft pick.
+
+**Practical form, and what the build now does:**
+
+1. Every record carries a provenance tag (`OTC`, `rookie-slot`, `veteran-drawn`).
+2. Every guard checks that tag before it fires.
+3. After the guards run, an assertion re-reads the sourced records against their
+   original values and fails the build if any moved.
+
+```python
+assert_guards_spared_sourced(recs, {id(p): original[p] for p in sourced})
+```
+
+The assertion was tested against a deliberately corrupted record before being
+trusted, because an assertion that cannot fail is worse than none — it reports
+success. All 66 anchored contracts now reproduce their real figure exactly.

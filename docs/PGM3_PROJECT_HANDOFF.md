@@ -838,6 +838,24 @@ appearance rebuilt from real Madden data.
 
 **Known open items, none blocking:**
 
+0d. **PLAYABILITY DEFECT — kicker and punter CONTRACTS are inflated, not just
+   their ratings.** Measured 2026-08-31 while building 2000's contracts;
+   confirmed independently by Ryan. Pooled across the published files, **kickers
+   reach a p95 of $7.61M and a max of $10.4M, punters $10.56M**, against a real
+   2000 top-of-market of about **$1.07M** (Jason Elam, the highest-paid kicker
+   in the league that year). Their median sits at 1.0–1.9x the league median
+   depending on the file — second only to quarterbacks in several.
+
+   This is the K/P inflation trap showing up in a **second field**. The ratings
+   version is documented and guarded against; the contract version was not.
+   **Probably the most visible of the five backlog defects in play** — a $10M
+   punter is something a user notices immediately, where a stamina-1 block or an
+   unused head family is not.
+
+   The 2000 build does not inherit it: position ceilings come from the real 2000
+   market, not from the published files. **Fifth member of the "a safe default
+   is still a claim" family.**
+
 0c. **The 2000 Madden file is a PRESEASON PROJECTION, not a performance
    rating.** Robert Brooks is rated **91 overall** in it. He retired in August
    1999, came back with Denver in 2000, played four games and caught three

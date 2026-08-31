@@ -132,19 +132,48 @@ def dedupe_jerseys(recs):
             p['teamNum'] = same[0]; used[same[0]] = p; moved += 1
     return moved
 
+def drop_unshippable(recs):
+    """Three source records cannot ship. Each is dropped on evidence, logged by
+    name, and never replaced with an invention."""
+    dropped = []
+    # (a) no forename in the source, and no offensive lineman named Bailey on
+    #     ANY 2000 roster in nflverse. Not a real 2000 player.
+    for p in list(recs):
+        if not p['forename'].strip() or not p['surname'].strip():
+            dropped.append((p, 'no forename in the source; no OL of that surname '
+                               'on any 2000 roster'))
+            recs.remove(p)
+    # (b) the source lists two men twice, once on a team and once in the free
+    #     agent pool, same position, same age, same PYRP, different POVR. Keep
+    #     the rostered copy per the handoff's dedupe rule.
+    ros = {(p['forename'], p['surname'], p['position'])
+           for p in recs if p['teamID'] != 'Free Agent'}
+    for p in list(recs):
+        if p['teamID'] == 'Free Agent' and (p['forename'], p['surname'], p['position']) in ros:
+            dropped.append((p, 'duplicated in the source; the rostered copy is kept'))
+            recs.remove(p)
+    for p, why in dropped:
+        print(f'  DROPPED  {p["forename"]!r} {p["surname"]!r} '
+              f'({p["position"]}, {p["teamID"]}) — {why}')
+    return recs, len(dropped)
+
+
 def stage3():
     rows = load_source()
     rost, fa = cohort(rows)
     recs = [base_record(r, TEAM[int(r['TGID'])]) for r in rost]
     recs += [base_record(r, 'Free Agent') for r in fa]
     assert len(recs) == len(rost) + len(fa), 'record count changed building base'
+    recs, n_dropped = drop_unshippable(recs)
+    assert len(recs) == len(rost) + len(fa) - n_dropped, 'drop count mismatch'
 
     pos = collections.Counter(p['position'] for p in recs if p['teamID'] != 'Free Agent')
     ratio = pos['CB'] / max(1, pos['S'])
     moved = dedupe_jerseys(recs)
 
     print(f'STAGE 3 — cohort, positions, team ids, jerseys')
-    print(f'  rostered {len(rost)}  free agents {len(fa)}  total {len(recs)}')
+    print(f'  rostered {len(rost)}  free agents {len(fa)}  dropped {n_dropped}  '
+          f'total {len(recs)}')
     print(f'  teams {len(set(p["teamID"] for p in recs if p["teamID"] != "Free Agent"))}')
     print(f'  CB {pos["CB"]}  S {pos["S"]}  ratio {ratio:.3f}   (published 1.058-1.302)')
     assert 1.00 <= ratio <= 1.35, f'CB/S ratio {ratio:.3f} outside the published band'
@@ -944,6 +973,26 @@ def load_anchors():
     exec(open(path).read(), g)
     return g.get('OTC', {}), g.get('EXCLUDED', {})
 
+# A GUARD MUST KNOW THE PROVENANCE OF WHAT IT IS GUARDING.
+#
+# Floors, ceilings, clamps and defaults are all written for derived values, and
+# every one of them will silently overwrite a sourced value if it cannot tell
+# the difference. The rating floor pushed Jason Elam's real $1,071,167 up to
+# $2.2M and nothing looked wrong, because $2.2M for a top kicker is not absurd.
+# It was visible only because the real number was sitting next to it.
+#
+# Same family as `_verified_keys` being locked against automated passes. That
+# rule protects hand edits; this extends it to any real-data tier.
+SOURCED_TAGS = {'OTC'}
+
+def assert_guards_spared_sourced(recs, before):
+    bad = [f"{p['forename']} {p['surname']}: {before[id(p)]:,} -> {p['salary'] + p['guarantee']:,}"
+           for p in recs
+           if p.get('_src_tag') in SOURCED_TAGS
+           and abs((p['salary'] + p['guarantee']) - before[id(p)]) > 0.01 * before[id(p)]]
+    assert not bad, ('a guard modified a SOURCED record: ' + '; '.join(bad[:5]))
+
+
 def stage7(recs, draft_pick):
     otc, excluded = load_anchors()
     ros = [p for p in recs if p['teamID'] != 'Free Agent']
@@ -1018,7 +1067,10 @@ def stage7(recs, draft_pick):
     for t, ps in byteam.items():
         # Teams do not all spend the same share of the cap. Seeded on the team
         # id so a rebuild reproduces it.
-        TARGET = seeded(t, 'cap').uniform(0.86, 0.99) * TEAM_CAP_2000
+        # Real 2000 accounting was top-51 (Rule of 51) and that is the basis
+        # reported, but the validator sums every player, so the band is set to
+        # keep the stricter all-player total under the cap too.
+        TARGET = seeded(t, 'cap').uniform(0.84, 0.95) * TEAM_CAP_2000
         def total(k):
             hits = []
             for x in ps:
@@ -1061,16 +1113,34 @@ def stage7(recs, draft_pick):
 
     for p in recs:
         sal = int(round(p['_sal'] / 1000) * 1000)
-        p['salary'] = sal
-        p['guarantee'] = 0 if p['teamID'] == 'Free Agent' else int(round(sal * p['_g'] / 1000) * 1000)
-        assert p['salary'] > 0, 'zero salary'
+        if p['teamID'] == 'Free Agent':
+            # A free agent has no current contract. 2004 and 2007 ship FA
+            # salary and guarantee at 0 with eSalary carrying the asking price;
+            # 2021 does the opposite. Two conventions again — this follows the
+            # two that agree, and it is the one consistent with length already
+            # being 0.
+            p['salary'] = 0; p['guarantee'] = 0; p['_ask'] = sal
+        else:
+            p['salary'] = sal
+            p['guarantee'] = int(round(sal * p['_g'] / 1000) * 1000)
+            assert p['salary'] > 0, 'a rostered player has zero salary'
 
     # eSalary / eGuarantee / eLength are game-computed OUTPUTS and are
     # regenerated on import. Ship sane values for first-load validity, no more.
     for p in recs:
-        p['eSalary'] = int(p['salary'] * 1.05 / 1000) * 1000
-        p['eGuarantee'] = int(p['guarantee'] * 1.1 / 1000) * 1000
-        p['eLength'] = min(4, max(0, p['length'] - 1))
+        if p['teamID'] == 'Free Agent':
+            p['eSalary'] = int(p['_ask'] / 1000) * 1000
+            p['eGuarantee'] = 0
+            p['eLength'] = 1
+        else:
+            p['eSalary'] = int(p['salary'] * 1.05 / 1000) * 1000
+            p['eGuarantee'] = int(p['guarantee'] * 1.1 / 1000) * 1000
+            p['eLength'] = min(4, max(0, p['length'] - 1))
+
+    # every guard is checked against provenance, not trusted to have behaved
+    assert_guards_spared_sourced(recs, {id(p): float(otc[p['forename'] + ' ' + p['surname']])
+                                        for p in recs
+                                        if p.get('_src_tag') in SOURCED_TAGS})
 
     print()
     print('STAGE 7 — contracts')
@@ -1120,6 +1190,47 @@ def contracts_report(recs):
     assert not drawn_below, 'a DRAWN salary fell below the league minimum'
     return recs
 
+SCHEMA_SRC = 'PGMRoster_2017.json'
+
+def emit(recs, path):
+    """Write the 52-key schema. INCOMPLETE at this point: no draft classes, no
+    Houston. Written anyway so the validator runs early -- cheap now, expensive
+    at stage 10."""
+    ref = json.load(open(os.path.join(REPO, SCHEMA_SRC)))[0]
+    keys = list(ref.keys())
+    import uuid
+    out = []
+    for i, p in enumerate(recs):
+        r = {}
+        for k in keys:
+            if k in p and k not in ('_src',):
+                r[k] = p[k]
+            elif k in p.get('_attr', {}):
+                r[k] = p['_attr'][k]
+            else:
+                r[k] = 0 if isinstance(ref[k], int) else ('' if isinstance(ref[k], str) else [])
+        r['iden'] = str(uuid.UUID(int=random.Random(f"{p['forename']}|{p['surname']}|"
+                                                    f"{p['position']}|{p['teamID']}|2000")
+                                  .getrandbits(128))).upper()
+        r['forename'] = p['forename']; r['surname'] = p['surname']
+        r['position'] = p['position']; r['teamID'] = p['teamID']
+        r['appearance'] = p['appearance']
+        r['age'] = int(p['_src']['PAGE'])
+        r['draftSeason'] = SEASON + OFFSET - int(p['_src']['PYRP'])
+        r['potential'] = max(p['rating'], min(99, p['rating'] + 5))
+        r['growthType'] = [0] * 31
+        out.append(r)
+    assert len(out) == len(recs), f'{len(recs)} in, {len(out)} out — key collision'
+    ids = {r['iden'] for r in out}
+    assert len(ids) == len(out), f'{len(out) - len(ids)} duplicate iden'
+    for r in out:
+        assert set(r.keys()) == set(keys), 'schema key mismatch'
+    json.dump(out, open(path, 'w'), separators=(',', ':'))
+    print(f'\n  wrote {path}: {len(out)} records x {len(keys)} keys')
+    print('  INCOMPLETE — no draft classes (stage 9), no Houston (stage 2b), '
+          'growthType/potential are placeholders')
+    return out
+
 if __name__ == '__main__':
     recs = stage3()
     recs = stage4(recs)
@@ -1135,3 +1246,4 @@ if __name__ == '__main__':
             _dp.setdefault(_r['name'], int(_r['pick']))
     recs = stage7(recs, _dp)
     contracts_report(recs)
+    emit(recs, os.path.join(REPO, 'PGMRoster_2000.json'))
