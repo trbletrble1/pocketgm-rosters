@@ -1,0 +1,4539 @@
+{
+ "README": "PGM3 2026 build data. Upload this file at the start of a new session. All staff research is complete; only post-cut rosters and draft boards remain.",
+ "built": "2026-08-25",
+ "weights": {
+  "C": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "rushBlock",
+    "passBlock",
+    "releaseLine"
+   ],
+   [
+    0.06326065844601127,
+    0.0850740604666557,
+    0.49797772718385613,
+    0.11282160515550822,
+    0.014997251023339792,
+    -2.218432147851591e-05,
+    -0.000314307250383828,
+    0.14015020315777932,
+    0.10189200729591746,
+    0.06267227158658698,
+    -0.005225530159934304,
+    0.3587137564051052,
+    0.3439932409640612,
+    0.06946239764150133,
+    -77.24741959070474
+   ]
+  ],
+  "CB": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "skillMove",
+    "tackle",
+    "manCover",
+    "zoneCover",
+    "releaseLine",
+    "blockShedding",
+    "ballStrip"
+   ],
+   [
+    0.18478192099096233,
+    0.19485868330678666,
+    0.09151966339062564,
+    0.13638020265799297,
+    0.09625178941333934,
+    -0.004250180381252511,
+    -0.0014734503767837848,
+    0.1539384244928416,
+    0.14518909855938575,
+    0.13761507523096236,
+    0.0024502649703970905,
+    0.010427279397283514,
+    0.37649692811549385,
+    0.16874756440490798,
+    0.15016803491517258,
+    0.05718463137246428,
+    0.0056585085663973245,
+    0.021042045225219776,
+    -83.56681135057192
+   ]
+  ],
+  "DE": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "skillMove",
+    "tackle",
+    "releaseLine",
+    "blockShedding",
+    "ballStrip"
+   ],
+   [
+    0.02824870232313556,
+    0.12682212223504435,
+    0.49562755453765533,
+    0.1258372537812506,
+    -0.011355214311422203,
+    0.0026069685892564248,
+    -0.0028849452853325153,
+    0.15134336878846566,
+    0.12695722041818033,
+    0.12400355622169651,
+    0.004954122122848578,
+    0.05797000990293579,
+    -0.0027103589737064266,
+    0.1146393208901481,
+    0.5178670704133008,
+    0.0784229466265657,
+    -84.64372461727233
+   ]
+  ],
+  "DT": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "skillMove",
+    "tackle",
+    "releaseLine",
+    "blockShedding",
+    "ballStrip"
+   ],
+   [
+    0.0490534350512333,
+    0.10519277932944793,
+    0.556380280917343,
+    0.11816270331294898,
+    -0.0020527440398781776,
+    -0.00012415193141938178,
+    -0.003130301316629215,
+    0.1547233636975771,
+    0.1340890727877056,
+    0.13292178984412084,
+    0.0029067310103276117,
+    0.03321461902101722,
+    -0.0012014623085375678,
+    0.11277756741643663,
+    0.5237234454655109,
+    0.07595850757944986,
+    -89.35737459607297
+   ]
+  ],
+  "K": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "kickAccuracy"
+   ],
+   [
+    0.007390913516465988,
+    -0.03089597918143383,
+    0.591099440392891,
+    -0.015163249134858928,
+    -0.007828671171905683,
+    -0.0058623864733067,
+    0.00021425413727076486,
+    0.06944339215816342,
+    0.09389949291660198,
+    0.1127598932931377,
+    -0.000924345329551735,
+    1.04022437287753,
+    -77.35793427187438
+   ]
+  ],
+  "MLB": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "skillMove",
+    "tackle",
+    "manCover",
+    "zoneCover",
+    "releaseLine",
+    "blockShedding",
+    "ballStrip"
+   ],
+   [
+    0.03681620680447942,
+    0.17475563586253265,
+    0.32117648070629945,
+    0.1194299242029601,
+    0.014200187665654198,
+    -0.008488007392558537,
+    -0.006671044809725586,
+    0.17211814473632434,
+    0.1687716191775562,
+    0.10984191564456042,
+    0.0009297205961282608,
+    0.030828770309682035,
+    0.24700684982542312,
+    0.047463248661428155,
+    0.04385459007450598,
+    0.0779076821175442,
+    0.2599752630398163,
+    0.06517126693199923,
+    -78.83487902908256
+   ]
+  ],
+  "OG": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "rushBlock",
+    "passBlock",
+    "releaseLine"
+   ],
+   [
+    0.10183569181954742,
+    0.08834439297299268,
+    0.5070502165303038,
+    0.11328877739645483,
+    -0.007454237581929985,
+    -0.011372358495591008,
+    -0.011935615718183327,
+    0.16035451653108646,
+    0.08536364144329407,
+    0.09329466307299453,
+    0.0072587075955605216,
+    0.36426000080781673,
+    0.3595306668498148,
+    0.042958858616157156,
+    -81.04636148180242
+   ]
+  ],
+  "OLB": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "skillMove",
+    "tackle",
+    "manCover",
+    "zoneCover",
+    "releaseLine",
+    "blockShedding",
+    "ballStrip"
+   ],
+   [
+    0.050334785057601215,
+    0.1414481927047828,
+    0.4248620932870354,
+    0.1064818557871404,
+    0.02858462653290299,
+    -0.0020869641363330618,
+    -0.0036568865708957797,
+    0.18185600741435343,
+    0.12943283207098374,
+    0.09583589334217579,
+    0.000983844276015887,
+    0.04569665126165676,
+    0.08949936251996345,
+    0.03302941260417116,
+    0.005038608083806741,
+    0.10484598799484483,
+    0.4191092202108694,
+    0.07482220838099267,
+    -82.06676963408454
+   ]
+  ],
+  "OT": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "rushBlock",
+    "passBlock",
+    "releaseLine"
+   ],
+   [
+    0.07430690988014663,
+    0.09788047128673683,
+    0.5123921489877573,
+    0.10873780034581022,
+    -0.00679834113807766,
+    -0.002922337960511895,
+    -0.0019938350590191687,
+    0.15028450962584228,
+    0.10756201383300987,
+    0.06846656509813091,
+    -0.0012911501621776136,
+    0.3601322771465513,
+    0.3570632821578302,
+    0.07172836510990004,
+    -81.12316213526766
+   ]
+  ],
+  "P": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "kickAccuracy"
+   ],
+   [
+    0.02262630574048742,
+    -0.002193285716217852,
+    0.5841408159674694,
+    0.018406895118875402,
+    -0.012409158229017787,
+    0.0021685247648117047,
+    0.00029014704275756576,
+    0.06696861397099607,
+    0.0868541538590093,
+    0.1259678749101388,
+    0.003368662946275672,
+    1.0779213900245523,
+    -86.26464100753805
+   ]
+  ],
+  "QB": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "ballSecurity",
+    "skillMove",
+    "sPassAcc",
+    "mPassAcc",
+    "dPassAcc",
+    "throwOnRun",
+    "trucking",
+    "elusiveness",
+    "rushBlock"
+   ],
+   [
+    0.0774408746882563,
+    0.16757609483740724,
+    0.11106588513207188,
+    0.04148425736907498,
+    -0.005443848215982672,
+    -0.004008330465827485,
+    -0.007157395955785516,
+    0.14795199274127388,
+    0.12326736407553865,
+    0.18340397599813038,
+    -0.002801252606012638,
+    0.051033407884950116,
+    0.017497508342215622,
+    0.34156837670500995,
+    0.3145966680884442,
+    0.2563335642562469,
+    0.05959369073983503,
+    0.018293380749916873,
+    0.014929216945653275,
+    -0.0027774674102114547,
+    -80.85345807488237
+   ]
+  ],
+  "RB": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "ballSecurity",
+    "skillMove",
+    "trucking",
+    "elusiveness",
+    "rushBlock",
+    "catching",
+    "passBlock",
+    "routeRun",
+    "releaseLine"
+   ],
+   [
+    0.16056588780113926,
+    0.24567299492546904,
+    0.2731950037041764,
+    0.11201916444186072,
+    0.03721408666232664,
+    0.004982528079152012,
+    -0.00412498454449265,
+    0.08327043703211458,
+    0.0838322775405786,
+    0.07027208539197652,
+    0.0031534756470265736,
+    0.03753421664614468,
+    0.020193205139282105,
+    0.0504201525273787,
+    0.10264700076084368,
+    -0.03407662636050603,
+    0.08809484475863429,
+    0.2549533254528415,
+    0.09174157845149093,
+    0.04685184716417903,
+    -66.22853190451548
+   ]
+  ],
+  "S": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "skillMove",
+    "tackle",
+    "manCover",
+    "zoneCover",
+    "releaseLine",
+    "blockShedding",
+    "ballStrip"
+   ],
+   [
+    0.19501152215655498,
+    0.1863888039096324,
+    0.09863332812615594,
+    0.14480677957907845,
+    0.10176813563720864,
+    -0.0012565374777365231,
+    0.0018232293762315472,
+    0.16163059391964693,
+    0.15013240902517014,
+    0.1331845394866858,
+    -0.0010876064335404235,
+    0.0027301273594456973,
+    0.37405897935345495,
+    0.19103013447581588,
+    0.17485652993430978,
+    0.030621009151074848,
+    -0.011197756593824324,
+    0.015685940363202717,
+    -85.41606847422169
+   ]
+  ],
+  "TE": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "ballSecurity",
+    "skillMove",
+    "trucking",
+    "elusiveness",
+    "rushBlock",
+    "catching",
+    "passBlock",
+    "routeRun",
+    "releaseLine"
+   ],
+   [
+    0.10339725326940374,
+    0.1330821858752634,
+    0.17824725833656865,
+    0.09097598763862737,
+    0.03855465454192557,
+    0.016536336111704658,
+    0.003955177228935815,
+    0.06051466557670099,
+    0.09977750580055678,
+    0.12627847889051652,
+    0.008864096004563907,
+    0.018382258652357233,
+    -0.02334308877049768,
+    0.0329874972737409,
+    -0.009712629802728355,
+    0.2023860559520246,
+    0.17581082433992892,
+    0.20837531201014617,
+    0.0925418644347109,
+    -0.0055491860905644095,
+    -51.420060133480966
+   ]
+  ],
+  "WR": [
+   [
+    "speed",
+    "burst",
+    "power",
+    "agility",
+    "jumping",
+    "stamina",
+    "injuryProne",
+    "intelligence",
+    "vision",
+    "decisions",
+    "discipline",
+    "ballSecurity",
+    "skillMove",
+    "trucking",
+    "elusiveness",
+    "rushBlock",
+    "catching",
+    "passBlock",
+    "routeRun",
+    "releaseLine"
+   ],
+   [
+    0.3112831288284991,
+    0.28017736760318723,
+    0.10010661224812138,
+    0.07153578790945926,
+    0.11956246290419577,
+    0.0013335233602505417,
+    0.00024345604929422156,
+    0.06452715124111877,
+    0.0568154701420179,
+    0.09115437347915042,
+    0.0002301873574977537,
+    0.04469885193422657,
+    0.0413072375751258,
+    0.01795806526534896,
+    0.049724702192492816,
+    0.015109883031347688,
+    0.4486132152567861,
+    0.0025780447059160316,
+    0.18122332836010932,
+    0.07906584604868235,
+    -87.68676334072936
+   ]
+  ]
+ },
+ "staff_schemes": {
+  "ARI": {
+   "hc": "Mike LaFleur",
+   "oc": "Nathaniel Hackett",
+   "dc": "Nick Rallis",
+   "st": "Michael Ghobrial",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": [
+    "hc",
+    "oc",
+    "dc"
+   ]
+  },
+  "ATL": {
+   "hc": "Kevin Stefanski",
+   "oc": "Tommy Rees",
+   "dc": "Jeff Ulbrich",
+   "st": "Craig Aukerman",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "hc",
+    "oc",
+    "dc"
+   ]
+  },
+  "BAL": {
+   "hc": "Jesse Minter",
+   "oc": "Declan Doyle",
+   "dc": "Anthony Weaver",
+   "st": "Anthony Levine",
+   "off": "Smashmouth",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": [
+    "hc",
+    "oc",
+    "dc"
+   ]
+  },
+  "BUF": {
+   "hc": "Joe Brady",
+   "oc": "Pete Carmichael Jr.",
+   "dc": "Jim Leonhard",
+   "st": "Jeff Rodgers",
+   "off": "Smashmouth",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": [
+    "hc",
+    "oc",
+    "dc"
+   ]
+  },
+  "CAR": {
+   "hc": "Dave Canales",
+   "oc": "Brad Idzik",
+   "dc": "Ejiro Evero",
+   "st": "Tracy Smith",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": [
+    "oc"
+   ]
+  },
+  "CHI": {
+   "hc": "Ben Johnson",
+   "oc": "Press Taylor",
+   "dc": "Dennis Allen",
+   "st": "Richard Hightower",
+   "off": "Smashmouth",
+   "front": "4-3",
+   "cov": "Man",
+   "new_roles": [
+    "dc"
+   ]
+  },
+  "CIN": {
+   "hc": "Zac Taylor",
+   "oc": "Dan Pitcher",
+   "dc": "Al Golden",
+   "st": "Darrin Simmons",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Man",
+   "new_roles": [
+    "dc"
+   ]
+  },
+  "CLE": {
+   "hc": "Todd Monken",
+   "oc": "Travis Switzer",
+   "dc": "Mike Rutenberg",
+   "st": "Byron Storer",
+   "off": "Air Raid",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "hc",
+    "oc",
+    "dc"
+   ]
+  },
+  "DAL": {
+   "hc": "Brian Schottenheimer",
+   "oc": "Klayton Adams",
+   "dc": "Christian Parker",
+   "st": "Nick Sorensen",
+   "off": "Air Raid",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "oc",
+    "dc"
+   ]
+  },
+  "DEN": {
+   "hc": "Sean Payton",
+   "oc": "Davis Webb",
+   "dc": "Vance Joseph",
+   "st": "Darren Rizzi",
+   "off": "Air Raid",
+   "front": "3-4",
+   "cov": "Man",
+   "new_roles": [
+    "oc"
+   ]
+  },
+  "DET": {
+   "hc": "Dan Campbell",
+   "oc": "Drew Petzing",
+   "dc": "Kelvin Sheppard",
+   "st": "Dave Fipp",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Man",
+   "new_roles": [
+    "oc",
+    "dc"
+   ]
+  },
+  "GB": {
+   "hc": "Matt LaFleur",
+   "oc": "Adam Stenavich",
+   "dc": "Jonathan Gannon",
+   "st": "Cameron Achord",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": [
+    "dc"
+   ]
+  },
+  "HOU": {
+   "hc": "DeMeco Ryans",
+   "oc": "Nick Caley",
+   "dc": "Matt Burke",
+   "st": "Frank Ross",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "oc",
+    "dc"
+   ]
+  },
+  "IND": {
+   "hc": "Shane Steichen",
+   "oc": "Jim Bob Cooter",
+   "dc": "Lou Anarumo",
+   "st": "Brian Mason",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "dc"
+   ]
+  },
+  "JAX": {
+   "hc": "Liam Coen",
+   "oc": "Grant Udinski",
+   "dc": "Anthony Campanile",
+   "st": "Heath Farwell",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "oc",
+    "dc"
+   ]
+  },
+  "KC": {
+   "hc": "Andy Reid",
+   "oc": "Eric Bieniemy",
+   "dc": "Steve Spagnuolo",
+   "st": "Dave Toub",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Man",
+   "new_roles": []
+  },
+  "LV": {
+   "hc": "Klint Kubiak",
+   "oc": "Andrew Janocko",
+   "dc": "Rob Leonard",
+   "st": "Joe DeCamillis",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "hc",
+    "oc",
+    "dc"
+   ]
+  },
+  "LAC": {
+   "hc": "Jim Harbaugh",
+   "oc": "Mike McDaniel",
+   "dc": "Chris O'Leary",
+   "st": "Ryan Ficken",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "oc"
+   ]
+  },
+  "LAR": {
+   "hc": "Sean McVay",
+   "oc": "Nate Scheelhaase",
+   "dc": "Chris Shula",
+   "st": "Ray Ventrone",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": [
+    "oc"
+   ]
+  },
+  "MIA": {
+   "hc": "Jeff Hafley",
+   "oc": "Bobby Slowik",
+   "dc": "Sean Duggan",
+   "st": "Chris Tabor",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "hc",
+    "oc",
+    "dc"
+   ]
+  },
+  "MIN": {
+   "hc": "Kevin O'Connell",
+   "oc": "Wes Phillips",
+   "dc": "Brian Flores",
+   "st": "Matt Daniels",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": []
+  },
+  "NE": {
+   "hc": "Mike Vrabel",
+   "oc": "Josh McDaniels",
+   "dc": "Zak Kuhr",
+   "st": "Jeremy Springer",
+   "off": "Smashmouth",
+   "front": "3-4",
+   "cov": "Man",
+   "new_roles": [
+    "dc"
+   ]
+  },
+  "NO": {
+   "hc": "Kellen Moore",
+   "oc": "Doug Nussmeier",
+   "dc": "Brandon Staley",
+   "st": "Phil Galiano",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": [
+    "dc"
+   ]
+  },
+  "NYG": {
+   "hc": "John Harbaugh",
+   "oc": "Matt Nagy",
+   "dc": "Dennard Wilson",
+   "st": "Chris Horton",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": [
+    "hc",
+    "oc",
+    "dc"
+   ]
+  },
+  "NYJ": {
+   "hc": "Aaron Glenn",
+   "oc": "Frank Reich",
+   "dc": "Brian Duker",
+   "st": "Chris Banjo",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Man",
+   "new_roles": [
+    "oc"
+   ]
+  },
+  "PHI": {
+   "hc": "Nick Sirianni",
+   "oc": "Sean Mannion",
+   "dc": "Vic Fangio",
+   "st": "Michael Clay",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": [
+    "oc"
+   ]
+  },
+  "PIT": {
+   "hc": "Mike McCarthy",
+   "oc": "Brian Angelichio",
+   "dc": "Patrick Graham",
+   "st": "Danny Crossman",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": [
+    "hc",
+    "oc",
+    "dc"
+   ]
+  },
+  "SF": {
+   "hc": "Kyle Shanahan",
+   "oc": "Klay Kubiak",
+   "dc": "Raheem Morris",
+   "st": "Brant Boyer",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "oc",
+    "dc"
+   ]
+  },
+  "SEA": {
+   "hc": "Mike Macdonald",
+   "oc": "Brian Fleury",
+   "dc": "Aden Durde",
+   "st": "Jay Harbaugh",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Zone",
+   "new_roles": [
+    "oc",
+    "dc"
+   ]
+  },
+  "TB": {
+   "hc": "Todd Bowles",
+   "oc": "Zac Robinson",
+   "dc": "George Edwards",
+   "st": "Danny Smith",
+   "off": "West Coast",
+   "front": "3-4",
+   "cov": "Zone",
+   "dc_note": "Bowles calls the defense; Edwards is pass game coordinator, senior defensive voice",
+   "new_roles": [
+    "oc"
+   ]
+  },
+  "TEN": {
+   "hc": "Robert Saleh",
+   "oc": "Brian Daboll",
+   "dc": "Gus Bradley",
+   "st": "John Fassel",
+   "off": "Smashmouth",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "hc",
+    "oc",
+    "dc"
+   ]
+  },
+  "WAS": {
+   "hc": "Dan Quinn",
+   "oc": "David Blough",
+   "dc": "Daronte Jones",
+   "st": "Larry Izzo",
+   "off": "West Coast",
+   "front": "4-3",
+   "cov": "Zone",
+   "new_roles": [
+    "oc",
+    "dc"
+   ]
+  }
+ },
+ "perf2025": {
+  "raw": {
+   "NE": [
+    490,
+    320,
+    3.7,
+    1.8
+   ],
+   "BUF": [
+    481,
+    365,
+    4.9,
+    -0.4
+   ],
+   "MIA": [
+    347,
+    424,
+    -3.8,
+    -2.5
+   ],
+   "NYJ": [
+    300,
+    503,
+    -6.0,
+    -6.5
+   ],
+   "PIT": [
+    397,
+    387,
+    -0.3,
+    0.4
+   ],
+   "BAL": [
+    424,
+    398,
+    1.8,
+    -0.7
+   ],
+   "CIN": [
+    414,
+    492,
+    1.2,
+    -6.4
+   ],
+   "CLE": [
+    279,
+    379,
+    -8.0,
+    0.6
+   ],
+   "JAX": [
+    474,
+    336,
+    5.4,
+    3.4
+   ],
+   "HOU": [
+    404,
+    295,
+    1.3,
+    7.2
+   ],
+   "IND": [
+    466,
+    412,
+    5.9,
+    -1.0
+   ],
+   "TEN": [
+    284,
+    478,
+    -4.1,
+    -3.9
+   ],
+   "DEN": [
+    401,
+    311,
+    -0.1,
+    3.5
+   ],
+   "LAC": [
+    368,
+    340,
+    -1.0,
+    1.8
+   ],
+   "KC": [
+    362,
+    328,
+    -1.9,
+    3.8
+   ],
+   "LV": [
+    241,
+    432,
+    -8.1,
+    -2.4
+   ],
+   "PHI": [
+    379,
+    325,
+    -1.8,
+    4.5
+   ],
+   "DAL": [
+    471,
+    511,
+    4.6,
+    -8.7
+   ],
+   "WAS": [
+    356,
+    451,
+    -2.1,
+    -3.6
+   ],
+   "NYG": [
+    381,
+    439,
+    -0.6,
+    -3.0
+   ],
+   "CHI": [
+    441,
+    415,
+    2.6,
+    -2.1
+   ],
+   "GB": [
+    391,
+    360,
+    -0.8,
+    1.7
+   ],
+   "MIN": [
+    344,
+    333,
+    -3.4,
+    4.2
+   ],
+   "DET": [
+    481,
+    413,
+    5.2,
+    -1.3
+   ],
+   "CAR": [
+    311,
+    380,
+    -4.9,
+    1.4
+   ],
+   "TB": [
+    380,
+    411,
+    0.3,
+    -1.3
+   ],
+   "ATL": [
+    353,
+    401,
+    -2.0,
+    -0.7
+   ],
+   "NO": [
+    306,
+    383,
+    -5.5,
+    0.6
+   ],
+   "SEA": [
+    483,
+    292,
+    6.2,
+    6.7
+   ],
+   "LAR": [
+    518,
+    346,
+    8.7,
+    3.9
+   ],
+   "SF": [
+    437,
+    371,
+    3.7,
+    2.3
+   ],
+   "ARI": [
+    355,
+    488,
+    -1.0,
+    -3.4
+   ]
+  },
+  "ranks": {
+   "NE": {
+    "off_pts": 2,
+    "def_pts": 4,
+    "off_srs": 8,
+    "def_srs": 10
+   },
+   "BUF": {
+    "off_pts": 4,
+    "def_pts": 12,
+    "off_srs": 6,
+    "def_srs": 17
+   },
+   "MIA": {
+    "off_pts": 25,
+    "def_pts": 24,
+    "off_srs": 26,
+    "def_srs": 25
+   },
+   "NYJ": {
+    "off_pts": 29,
+    "def_pts": 31,
+    "off_srs": 30,
+    "def_srs": 31
+   },
+   "PIT": {
+    "off_pts": 15,
+    "def_pts": 17,
+    "off_srs": 16,
+    "def_srs": 16
+   },
+   "BAL": {
+    "off_pts": 11,
+    "def_pts": 18,
+    "off_srs": 11,
+    "def_srs": 18
+   },
+   "CIN": {
+    "off_pts": 12,
+    "def_pts": 30,
+    "off_srs": 13,
+    "def_srs": 30
+   },
+   "CLE": {
+    "off_pts": 31,
+    "def_pts": 14,
+    "off_srs": 31,
+    "def_srs": 14
+   },
+   "JAX": {
+    "off_pts": 6,
+    "def_pts": 8,
+    "off_srs": 4,
+    "def_srs": 8
+   },
+   "HOU": {
+    "off_pts": 13,
+    "def_pts": 2,
+    "off_srs": 12,
+    "def_srs": 1
+   },
+   "IND": {
+    "off_pts": 8,
+    "def_pts": 21,
+    "off_srs": 3,
+    "def_srs": 20
+   },
+   "TEN": {
+    "off_pts": 30,
+    "def_pts": 28,
+    "off_srs": 27,
+    "def_srs": 29
+   },
+   "DEN": {
+    "off_pts": 14,
+    "def_pts": 3,
+    "off_srs": 15,
+    "def_srs": 7
+   },
+   "LAC": {
+    "off_pts": 20,
+    "def_pts": 9,
+    "off_srs": 19,
+    "def_srs": 11
+   },
+   "KC": {
+    "off_pts": 21,
+    "def_pts": 6,
+    "off_srs": 22,
+    "def_srs": 6
+   },
+   "LV": {
+    "off_pts": 32,
+    "def_pts": 25,
+    "off_srs": 32,
+    "def_srs": 24
+   },
+   "PHI": {
+    "off_pts": 19,
+    "def_pts": 5,
+    "off_srs": 21,
+    "def_srs": 3
+   },
+   "DAL": {
+    "off_pts": 7,
+    "def_pts": 32,
+    "off_srs": 7,
+    "def_srs": 32
+   },
+   "WAS": {
+    "off_pts": 22,
+    "def_pts": 27,
+    "off_srs": 24,
+    "def_srs": 28
+   },
+   "NYG": {
+    "off_pts": 17,
+    "def_pts": 26,
+    "off_srs": 17,
+    "def_srs": 26
+   },
+   "CHI": {
+    "off_pts": 9,
+    "def_pts": 23,
+    "off_srs": 10,
+    "def_srs": 23
+   },
+   "GB": {
+    "off_pts": 16,
+    "def_pts": 11,
+    "off_srs": 18,
+    "def_srs": 12
+   },
+   "MIN": {
+    "off_pts": 26,
+    "def_pts": 7,
+    "off_srs": 25,
+    "def_srs": 4
+   },
+   "DET": {
+    "off_pts": 5,
+    "def_pts": 22,
+    "off_srs": 5,
+    "def_srs": 21
+   },
+   "CAR": {
+    "off_pts": 27,
+    "def_pts": 15,
+    "off_srs": 28,
+    "def_srs": 13
+   },
+   "TB": {
+    "off_pts": 18,
+    "def_pts": 20,
+    "off_srs": 14,
+    "def_srs": 22
+   },
+   "ATL": {
+    "off_pts": 24,
+    "def_pts": 19,
+    "off_srs": 23,
+    "def_srs": 19
+   },
+   "NO": {
+    "off_pts": 28,
+    "def_pts": 16,
+    "off_srs": 29,
+    "def_srs": 15
+   },
+   "SEA": {
+    "off_pts": 3,
+    "def_pts": 1,
+    "off_srs": 2,
+    "def_srs": 2
+   },
+   "LAR": {
+    "off_pts": 1,
+    "def_pts": 10,
+    "off_srs": 1,
+    "def_srs": 5
+   },
+   "SF": {
+    "off_pts": 10,
+    "def_pts": 13,
+    "off_srs": 9,
+    "def_srs": 9
+   },
+   "ARI": {
+    "off_pts": 23,
+    "def_pts": 29,
+    "off_srs": 20,
+    "def_srs": 27
+   }
+  }
+ },
+ "hc_ratings": {
+  "ARI": {
+   "name": "Mike LaFleur",
+   "team": "ARI",
+   "rating": 82,
+   "basis": "first-time HC; ran LAR off 2025"
+  },
+  "ATL": {
+   "name": "Kevin Stefanski",
+   "team": "ATL",
+   "rating": 70,
+   "basis": "career 45-56, 1-2 playoffs, 0 SB, 2 COY"
+  },
+  "BAL": {
+   "name": "Jesse Minter",
+   "team": "BAL",
+   "rating": 82,
+   "basis": "first-time HC; ran LAC def 2025"
+  },
+  "BUF": {
+   "name": "Joe Brady",
+   "team": "BUF",
+   "rating": 87,
+   "basis": "first-time HC; ran BUF off 2025"
+  },
+  "CAR": {
+   "name": "Dave Canales",
+   "team": "CAR",
+   "rating": 65,
+   "basis": "career 13-21, 0-1 playoffs, 0 SB, 0 COY"
+  },
+  "CHI": {
+   "name": "Ben Johnson",
+   "team": "CHI",
+   "rating": 75,
+   "basis": "career 11-6, 1-1 playoffs, 0 SB, 0 COY"
+  },
+  "CIN": {
+   "name": "Zac Taylor",
+   "team": "CIN",
+   "rating": 69,
+   "basis": "career 52-63-1, 5-2 playoffs, 0 SB, 0 COY"
+  },
+  "CLE": {
+   "name": "Todd Monken",
+   "team": "CLE",
+   "rating": 81,
+   "basis": "first-time HC; ran BAL off 2025"
+  },
+  "DAL": {
+   "name": "Brian Schottenheimer",
+   "team": "DAL",
+   "rating": 68,
+   "basis": "career 7-9-1, 0-0 playoffs, 0 SB, 0 COY"
+  },
+  "DEN": {
+   "name": "Sean Payton",
+   "team": "DEN",
+   "rating": 89,
+   "basis": "career 184-108, 10-10 playoffs, 1 SB, 1 COY"
+  },
+  "DET": {
+   "name": "Dan Campbell",
+   "team": "DET",
+   "rating": 74,
+   "basis": "career 53-43-1, 2-2 playoffs, 0 SB, 0 COY"
+  },
+  "GB": {
+   "name": "Matt LaFleur",
+   "team": "GB",
+   "rating": 81,
+   "basis": "career 76-40-1, 3-6 playoffs, 0 SB, 0 COY"
+  },
+  "HOU": {
+   "name": "DeMeco Ryans",
+   "team": "HOU",
+   "rating": 78,
+   "basis": "career 32-19, 3-3 playoffs, 0 SB, 0 COY"
+  },
+  "IND": {
+   "name": "Shane Steichen",
+   "team": "IND",
+   "rating": 70,
+   "basis": "career 25-26, 0-0 playoffs, 0 SB, 0 COY"
+  },
+  "JAX": {
+   "name": "Liam Coen",
+   "team": "JAX",
+   "rating": 78,
+   "basis": "career 13-4, 0-1 playoffs, 0 SB, 0 COY"
+  },
+  "KC": {
+   "name": "Andy Reid",
+   "team": "KC",
+   "rating": 97,
+   "basis": "career 279-157-1, 28-17 playoffs, 3 SB, 1 COY"
+  },
+  "LV": {
+   "name": "Klint Kubiak",
+   "team": "LV",
+   "rating": 89,
+   "basis": "first-time HC; ran SEA off 2025"
+  },
+  "LAC": {
+   "name": "Jim Harbaugh",
+   "team": "LAC",
+   "rating": 84,
+   "basis": "career 66-31-1, 5-5 playoffs, 0 SB, 1 COY"
+  },
+  "LAR": {
+   "name": "Sean McVay",
+   "team": "LAR",
+   "rating": 87,
+   "basis": "career 92-57, 10-6 playoffs, 1 SB, 1 COY"
+  },
+  "MIA": {
+   "name": "Jeff Hafley",
+   "team": "MIA",
+   "rating": 80,
+   "basis": "first-time HC; ran GB def 2025"
+  },
+  "MIN": {
+   "name": "Kevin O'Connell",
+   "team": "MIN",
+   "rating": 79,
+   "basis": "career 43-25, 0-2 playoffs, 0 SB, 1 COY"
+  },
+  "NE": {
+   "name": "Mike Vrabel",
+   "team": "NE",
+   "rating": 80,
+   "basis": "career 68-48, 5-4 playoffs, 0 SB, 2 COY"
+  },
+  "NO": {
+   "name": "Kellen Moore",
+   "team": "NO",
+   "rating": 66,
+   "basis": "career 6-11, 0-0 playoffs, 0 SB, 0 COY"
+  },
+  "NYG": {
+   "name": "John Harbaugh",
+   "team": "NYG",
+   "rating": 89,
+   "basis": "career 180-113, 13-11 playoffs, 1 SB, 1 COY"
+  },
+  "NYJ": {
+   "name": "Aaron Glenn",
+   "team": "NYJ",
+   "rating": 61,
+   "basis": "career 3-14, 0-0 playoffs, 0 SB, 0 COY"
+  },
+  "PHI": {
+   "name": "Nick Sirianni",
+   "team": "PHI",
+   "rating": 88,
+   "basis": "career 59-26, 6-4 playoffs, 1 SB, 0 COY"
+  },
+  "PIT": {
+   "name": "Mike McCarthy",
+   "team": "PIT",
+   "rating": 86,
+   "basis": "career 174-112-2, 11-11 playoffs, 1 SB, 0 COY"
+  },
+  "SF": {
+   "name": "Kyle Shanahan",
+   "team": "SF",
+   "rating": 77,
+   "basis": "career 82-67, 9-5 playoffs, 0 SB, 0 COY"
+  },
+  "SEA": {
+   "name": "Mike Macdonald",
+   "team": "SEA",
+   "rating": 84,
+   "basis": "career 24-10, 3-0 playoffs, 1 SB, 0 COY"
+  },
+  "TB": {
+   "name": "Todd Bowles",
+   "team": "TB",
+   "rating": 67,
+   "basis": "career 61-74, 1-3 playoffs, 0 SB, 0 COY"
+  },
+  "TEN": {
+   "name": "Robert Saleh",
+   "team": "TEN",
+   "rating": 63,
+   "basis": "career 20-36, 0-0 playoffs, 0 SB, 0 COY"
+  },
+  "WAS": {
+   "name": "Dan Quinn",
+   "team": "WAS",
+   "rating": 72,
+   "basis": "career 60-59, 5-3 playoffs, 0 SB, 0 COY"
+  }
+ },
+ "coord_ratings": {
+  "ARI_OC": {
+   "name": "Nathaniel Hackett",
+   "team": "ARI",
+   "role": "OC",
+   "rating": 74,
+   "basis": "position coach / no unit in 2025"
+  },
+  "ARI_DC": {
+   "name": "Nick Rallis",
+   "team": "ARI",
+   "role": "DC",
+   "rating": 63,
+   "basis": "called ARI def in 2025"
+  },
+  "ATL_OC": {
+   "name": "Tommy Rees",
+   "team": "ATL",
+   "role": "OC",
+   "rating": 59,
+   "basis": "called CLE off in 2025"
+  },
+  "ATL_DC": {
+   "name": "Jeff Ulbrich",
+   "team": "ATL",
+   "role": "DC",
+   "rating": 74,
+   "basis": "called ATL def in 2025"
+  },
+  "BAL_OC": {
+   "name": "Declan Doyle",
+   "team": "BAL",
+   "role": "OC",
+   "rating": 80,
+   "basis": "on CHI staff 2025, not play-caller"
+  },
+  "BAL_DC": {
+   "name": "Anthony Weaver",
+   "team": "BAL",
+   "role": "DC",
+   "rating": 67,
+   "basis": "called MIA def in 2025"
+  },
+  "BUF_OC": {
+   "name": "Pete Carmichael Jr.",
+   "team": "BUF",
+   "role": "OC",
+   "rating": 76,
+   "basis": "on DEN staff 2025, not play-caller"
+  },
+  "BUF_DC": {
+   "name": "Jim Leonhard",
+   "team": "BUF",
+   "role": "DC",
+   "rating": 82,
+   "basis": "on DEN staff 2025, not play-caller"
+  },
+  "CAR_OC": {
+   "name": "Brad Idzik",
+   "team": "CAR",
+   "role": "OC",
+   "rating": 68,
+   "basis": "on CAR staff 2025, not play-caller"
+  },
+  "CAR_DC": {
+   "name": "Ejiro Evero",
+   "team": "CAR",
+   "role": "DC",
+   "rating": 79,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "CHI_OC": {
+   "name": "Press Taylor",
+   "team": "CHI",
+   "role": "OC",
+   "rating": 85,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "CHI_DC": {
+   "name": "Dennis Allen",
+   "team": "CHI",
+   "role": "DC",
+   "rating": 69,
+   "basis": "called CHI def in 2025"
+  },
+  "CIN_OC": {
+   "name": "Dan Pitcher",
+   "team": "CIN",
+   "role": "OC",
+   "rating": 81,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "CIN_DC": {
+   "name": "Al Golden",
+   "team": "CIN",
+   "role": "DC",
+   "rating": 60,
+   "basis": "called CIN def in 2025"
+  },
+  "CLE_OC": {
+   "name": "Travis Switzer",
+   "team": "CLE",
+   "role": "OC",
+   "rating": 74,
+   "basis": "position coach / no unit in 2025"
+  },
+  "CLE_DC": {
+   "name": "Mike Rutenberg",
+   "team": "CLE",
+   "role": "DC",
+   "rating": 74,
+   "basis": "on ATL staff 2025, not play-caller"
+  },
+  "DAL_OC": {
+   "name": "Klayton Adams",
+   "team": "DAL",
+   "role": "OC",
+   "rating": 81,
+   "basis": "on DAL staff 2025, not play-caller"
+  },
+  "DAL_DC": {
+   "name": "Christian Parker",
+   "team": "DAL",
+   "role": "DC",
+   "rating": 82,
+   "basis": "on PHI staff 2025, not play-caller"
+  },
+  "DEN_OC": {
+   "name": "Davis Webb",
+   "team": "DEN",
+   "role": "OC",
+   "rating": 76,
+   "basis": "on DEN staff 2025, not play-caller"
+  },
+  "DEN_DC": {
+   "name": "Vance Joseph",
+   "team": "DEN",
+   "role": "DC",
+   "rating": 90,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "DET_OC": {
+   "name": "Drew Petzing",
+   "team": "DET",
+   "role": "OC",
+   "rating": 71,
+   "basis": "called ARI off in 2025"
+  },
+  "DET_DC": {
+   "name": "Kelvin Sheppard",
+   "team": "DET",
+   "role": "DC",
+   "rating": 71,
+   "basis": "called DET def in 2025"
+  },
+  "GB_OC": {
+   "name": "Adam Stenavich",
+   "team": "GB",
+   "role": "OC",
+   "rating": 76,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "GB_DC": {
+   "name": "Jonathan Gannon",
+   "team": "GB",
+   "role": "DC",
+   "rating": 68,
+   "basis": "on ARI staff 2025, not play-caller"
+  },
+  "HOU_OC": {
+   "name": "Nick Caley",
+   "team": "HOU",
+   "role": "OC",
+   "rating": 81,
+   "basis": "called HOU off in 2025"
+  },
+  "HOU_DC": {
+   "name": "Matt Burke",
+   "team": "HOU",
+   "role": "DC",
+   "rating": 94,
+   "basis": "called HOU def in 2025"
+  },
+  "IND_OC": {
+   "name": "Jim Bob Cooter",
+   "team": "IND",
+   "role": "OC",
+   "rating": 90,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "IND_DC": {
+   "name": "Lou Anarumo",
+   "team": "IND",
+   "role": "DC",
+   "rating": 72,
+   "basis": "called IND def in 2025"
+  },
+  "JAX_OC": {
+   "name": "Grant Udinski",
+   "team": "JAX",
+   "role": "OC",
+   "rating": 82,
+   "basis": "on JAX staff 2025, not play-caller"
+  },
+  "JAX_DC": {
+   "name": "Anthony Campanile",
+   "team": "JAX",
+   "role": "DC",
+   "rating": 87,
+   "basis": "called JAX def in 2025"
+  },
+  "KC_OC": {
+   "name": "Eric Bieniemy",
+   "team": "KC",
+   "role": "OC",
+   "rating": 71,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "KC_DC": {
+   "name": "Steve Spagnuolo",
+   "team": "KC",
+   "role": "DC",
+   "rating": 89,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "LV_OC": {
+   "name": "Andrew Janocko",
+   "team": "LV",
+   "role": "OC",
+   "rating": 74,
+   "basis": "position coach / no unit in 2025"
+  },
+  "LV_DC": {
+   "name": "Rob Leonard",
+   "team": "LV",
+   "role": "DC",
+   "rating": 74,
+   "basis": "position coach / no unit in 2025"
+  },
+  "LAC_OC": {
+   "name": "Mike McDaniel",
+   "team": "LAC",
+   "role": "OC",
+   "rating": 66,
+   "basis": "called MIA off in 2025"
+  },
+  "LAC_DC": {
+   "name": "Chris O'Leary",
+   "team": "LAC",
+   "role": "DC",
+   "rating": 84,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "LAR_OC": {
+   "name": "Nate Scheelhaase",
+   "team": "LAR",
+   "role": "OC",
+   "rating": 84,
+   "basis": "on LAR staff 2025, not play-caller"
+  },
+  "LAR_DC": {
+   "name": "Chris Shula",
+   "team": "LAR",
+   "role": "DC",
+   "rating": 87,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "MIA_OC": {
+   "name": "Bobby Slowik",
+   "team": "MIA",
+   "role": "OC",
+   "rating": 70,
+   "basis": "on MIA staff 2025, not play-caller"
+  },
+  "MIA_DC": {
+   "name": "Sean Duggan",
+   "team": "MIA",
+   "role": "DC",
+   "rating": 74,
+   "basis": "position coach / no unit in 2025"
+  },
+  "MIN_OC": {
+   "name": "Wes Phillips",
+   "team": "MIN",
+   "role": "OC",
+   "rating": 66,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "MIN_DC": {
+   "name": "Brian Flores",
+   "team": "MIN",
+   "role": "DC",
+   "rating": 90,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "NE_OC": {
+   "name": "Josh McDaniels",
+   "team": "NE",
+   "role": "OC",
+   "rating": 90,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "NE_DC": {
+   "name": "Zak Kuhr",
+   "team": "NE",
+   "role": "DC",
+   "rating": 88,
+   "basis": "called NE def in 2025"
+  },
+  "NO_OC": {
+   "name": "Doug Nussmeier",
+   "team": "NO",
+   "role": "OC",
+   "rating": 62,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "NO_DC": {
+   "name": "Brandon Staley",
+   "team": "NO",
+   "role": "DC",
+   "rating": 78,
+   "basis": "called NO def in 2025"
+  },
+  "NYG_OC": {
+   "name": "Matt Nagy",
+   "team": "NYG",
+   "role": "OC",
+   "rating": 72,
+   "basis": "on KC staff 2025, not play-caller"
+  },
+  "NYG_DC": {
+   "name": "Dennard Wilson",
+   "team": "NYG",
+   "role": "DC",
+   "rating": 62,
+   "basis": "called TEN def in 2025"
+  },
+  "NYJ_OC": {
+   "name": "Frank Reich",
+   "team": "NYJ",
+   "role": "OC",
+   "rating": 74,
+   "basis": "position coach / no unit in 2025"
+  },
+  "NYJ_DC": {
+   "name": "Brian Duker",
+   "team": "NYJ",
+   "role": "DC",
+   "rating": 59,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "PHI_OC": {
+   "name": "Sean Mannion",
+   "team": "PHI",
+   "role": "OC",
+   "rating": 74,
+   "basis": "position coach / no unit in 2025"
+  },
+  "PHI_DC": {
+   "name": "Vic Fangio",
+   "team": "PHI",
+   "role": "DC",
+   "rating": 91,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "PIT_OC": {
+   "name": "Brian Angelichio",
+   "team": "PIT",
+   "role": "OC",
+   "rating": 70,
+   "basis": "on MIN staff 2025, not play-caller"
+  },
+  "PIT_DC": {
+   "name": "Patrick Graham",
+   "team": "PIT",
+   "role": "DC",
+   "rating": 67,
+   "basis": "called LV def in 2025"
+  },
+  "SF_OC": {
+   "name": "Klay Kubiak",
+   "team": "SF",
+   "role": "OC",
+   "rating": 80,
+   "basis": "on SF staff 2025, not play-caller"
+  },
+  "SF_DC": {
+   "name": "Raheem Morris",
+   "team": "SF",
+   "role": "DC",
+   "rating": 74,
+   "basis": "on ATL staff 2025, not play-caller"
+  },
+  "SEA_OC": {
+   "name": "Brian Fleury",
+   "team": "SEA",
+   "role": "OC",
+   "rating": 74,
+   "basis": "position coach / no unit in 2025"
+  },
+  "SEA_DC": {
+   "name": "Aden Durde",
+   "team": "SEA",
+   "role": "DC",
+   "rating": 84,
+   "basis": "on SEA staff 2025, not play-caller"
+  },
+  "TB_OC": {
+   "name": "Zac Robinson",
+   "team": "TB",
+   "role": "OC",
+   "rating": 68,
+   "basis": "called ATL off in 2025"
+  },
+  "TB_DC": {
+   "name": "George Edwards",
+   "team": "TB",
+   "role": "DC",
+   "rating": 71,
+   "basis": "returning \u2014 own 2025 unit"
+  },
+  "TEN_OC": {
+   "name": "Brian Daboll",
+   "team": "TEN",
+   "role": "OC",
+   "rating": 76,
+   "basis": "called NYG off in 2025"
+  },
+  "TEN_DC": {
+   "name": "Gus Bradley",
+   "team": "TEN",
+   "role": "DC",
+   "rating": 78,
+   "basis": "on SF staff 2025, not play-caller"
+  },
+  "WAS_OC": {
+   "name": "David Blough",
+   "team": "WAS",
+   "role": "OC",
+   "rating": 74,
+   "basis": "position coach / no unit in 2025"
+  },
+  "WAS_DC": {
+   "name": "Daronte Jones",
+   "team": "WAS",
+   "role": "DC",
+   "rating": 82,
+   "basis": "on MIN staff 2025, not play-caller"
+  }
+ },
+ "st_ratings": {
+  "ranks": {
+   "IND": 1,
+   "NYJ": 2,
+   "SEA": 3,
+   "BAL": 4,
+   "CIN": 5,
+   "HOU": 6,
+   "WAS": 6,
+   "MIA": 8,
+   "NYG": 9,
+   "JAX": 10,
+   "SF": 11,
+   "TEN": 12,
+   "DET": 13,
+   "MIN": 14,
+   "CHI": 15,
+   "NE": 16,
+   "PIT": 17,
+   "BUF": 17,
+   "PHI": 19,
+   "GB": 20,
+   "KC": 21,
+   "DEN": 22,
+   "CAR": 23,
+   "LV": 24,
+   "LAC": 25,
+   "LAR": 26,
+   "DAL": 27,
+   "TB": 28,
+   "CLE": 29,
+   "ARI": 30,
+   "ATL": 31,
+   "NO": 32
+  },
+  "ratings": {
+   "ARI": {
+    "name": "Michael Ghobrial",
+    "team": "ARI",
+    "rank": 30,
+    "rating": 60
+   },
+   "ATL": {
+    "name": "Craig Aukerman",
+    "team": "ATL",
+    "rank": 31,
+    "rating": 59
+   },
+   "BAL": {
+    "name": "Anthony Levine",
+    "team": "BAL",
+    "rank": 4,
+    "rating": 91
+   },
+   "BUF": {
+    "name": "Jeff Rodgers",
+    "team": "BUF",
+    "rank": 17,
+    "rating": 76
+   },
+   "CAR": {
+    "name": "Tracy Smith",
+    "team": "CAR",
+    "rank": 23,
+    "rating": 69
+   },
+   "CHI": {
+    "name": "Richard Hightower",
+    "team": "CHI",
+    "rank": 15,
+    "rating": 78
+   },
+   "CIN": {
+    "name": "Darrin Simmons",
+    "team": "CIN",
+    "rank": 5,
+    "rating": 90
+   },
+   "CLE": {
+    "name": "Byron Storer",
+    "team": "CLE",
+    "rank": 29,
+    "rating": 62
+   },
+   "DAL": {
+    "name": "Nick Sorensen",
+    "team": "DAL",
+    "rank": 27,
+    "rating": 64
+   },
+   "DEN": {
+    "name": "Darren Rizzi",
+    "team": "DEN",
+    "rank": 22,
+    "rating": 70
+   },
+   "DET": {
+    "name": "Dave Fipp",
+    "team": "DET",
+    "rank": 13,
+    "rating": 81
+   },
+   "GB": {
+    "name": "Cameron Achord",
+    "team": "GB",
+    "rank": 20,
+    "rating": 72
+   },
+   "HOU": {
+    "name": "Frank Ross",
+    "team": "HOU",
+    "rank": 6,
+    "rating": 89
+   },
+   "IND": {
+    "name": "Brian Mason",
+    "team": "IND",
+    "rank": 1,
+    "rating": 95
+   },
+   "JAX": {
+    "name": "Heath Farwell",
+    "team": "JAX",
+    "rank": 10,
+    "rating": 84
+   },
+   "KC": {
+    "name": "Dave Toub",
+    "team": "KC",
+    "rank": 21,
+    "rating": 71
+   },
+   "LV": {
+    "name": "Joe DeCamillis",
+    "team": "LV",
+    "rank": 24,
+    "rating": 68
+   },
+   "LAC": {
+    "name": "Ryan Ficken",
+    "team": "LAC",
+    "rank": 25,
+    "rating": 66
+   },
+   "LAR": {
+    "name": "Ray Ventrone",
+    "team": "LAR",
+    "rank": 26,
+    "rating": 65
+   },
+   "MIA": {
+    "name": "Chris Tabor",
+    "team": "MIA",
+    "rank": 8,
+    "rating": 87
+   },
+   "MIN": {
+    "name": "Matt Daniels",
+    "team": "MIN",
+    "rank": 14,
+    "rating": 79
+   },
+   "NE": {
+    "name": "Jeremy Springer",
+    "team": "NE",
+    "rank": 16,
+    "rating": 77
+   },
+   "NO": {
+    "name": "Phil Galiano",
+    "team": "NO",
+    "rank": 32,
+    "rating": 58
+   },
+   "NYG": {
+    "name": "Chris Horton",
+    "team": "NYG",
+    "rank": 9,
+    "rating": 85
+   },
+   "NYJ": {
+    "name": "Chris Banjo",
+    "team": "NYJ",
+    "rank": 2,
+    "rating": 94
+   },
+   "PHI": {
+    "name": "Michael Clay",
+    "team": "PHI",
+    "rank": 19,
+    "rating": 74
+   },
+   "PIT": {
+    "name": "Danny Crossman",
+    "team": "PIT",
+    "rank": 17,
+    "rating": 76
+   },
+   "SF": {
+    "name": "Brant Boyer",
+    "team": "SF",
+    "rank": 11,
+    "rating": 83
+   },
+   "SEA": {
+    "name": "Jay Harbaugh",
+    "team": "SEA",
+    "rank": 3,
+    "rating": 93
+   },
+   "TB": {
+    "name": "Danny Smith",
+    "team": "TB",
+    "rank": 28,
+    "rating": 63
+   },
+   "TEN": {
+    "name": "John Fassel",
+    "team": "TEN",
+    "rank": 12,
+    "rating": 82
+   },
+   "WAS": {
+    "name": "Larry Izzo",
+    "team": "WAS",
+    "rank": 6,
+    "rating": 89
+   }
+  }
+ },
+ "draft2027": [
+  {
+   "rank": 1,
+   "name": "Arch Manning",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Texas"
+  },
+  {
+   "rank": 2,
+   "name": "Dante Moore",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Oregon"
+  },
+  {
+   "rank": 3,
+   "name": "Jeremiah Smith",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 4,
+   "name": "Dylan Stewart",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "South Carolina"
+  },
+  {
+   "rank": 5,
+   "name": "Leonard Moore",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 6,
+   "name": "Colin Simmons",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Texas"
+  },
+  {
+   "rank": 7,
+   "name": "Cam Coleman",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Texas"
+  },
+  {
+   "rank": 8,
+   "name": "Darian Mensah",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Miami (FL)"
+  },
+  {
+   "rank": 9,
+   "name": "Jordan Seaton",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "LSU"
+  },
+  {
+   "rank": 10,
+   "name": "Trevor Goosby",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Texas"
+  },
+  {
+   "rank": 11,
+   "name": "David Stone",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Oklahoma"
+  },
+  {
+   "rank": 12,
+   "name": "Drew Mestemaker",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Oklahoma State"
+  },
+  {
+   "rank": 13,
+   "name": "Will Echoles",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Mississippi"
+  },
+  {
+   "rank": 14,
+   "name": "Julian Sayin",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 15,
+   "name": "CJ Carr",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 16,
+   "name": "Ellis Robinson IV",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Georgia"
+  },
+  {
+   "rank": 17,
+   "name": "Jamari Johnson",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Oregon"
+  },
+  {
+   "rank": 18,
+   "name": "Brauntae Johnson",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 19,
+   "name": "KJ Bolden",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Georgia"
+  },
+  {
+   "rank": 20,
+   "name": "A'Mauri Washington",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Oregon"
+  },
+  {
+   "rank": 21,
+   "name": "Charlie Becker",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Indiana"
+  },
+  {
+   "rank": 22,
+   "name": "LaNorris Sellers",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "South Carolina"
+  },
+  {
+   "rank": 23,
+   "name": "Ryan Coleman-Williams",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Alabama"
+  },
+  {
+   "rank": 24,
+   "name": "Justin Scott",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Miami (FL)"
+  },
+  {
+   "rank": 25,
+   "name": "Zabien Brown",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Alabama"
+  },
+  {
+   "rank": 26,
+   "name": "Nick Marsh",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Indiana"
+  },
+  {
+   "rank": 27,
+   "name": "Jadan Baugh",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Florida"
+  },
+  {
+   "rank": 28,
+   "name": "Trey'Dez Green",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "LSU"
+  },
+  {
+   "rank": 29,
+   "name": "Kelley Jones",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Mississippi State"
+  },
+  {
+   "rank": 30,
+   "name": "Kewan Lacy",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Mississippi"
+  },
+  {
+   "rank": 31,
+   "name": "Kade Pieper",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Iowa"
+  },
+  {
+   "rank": 32,
+   "name": "Ashton Hampton",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Clemson"
+  },
+  {
+   "rank": 33,
+   "name": "Sammy Brown",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Clemson"
+  },
+  {
+   "rank": 34,
+   "name": "Trevor Lauck",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Iowa"
+  },
+  {
+   "rank": 35,
+   "name": "Greg Johnson",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Minnesota"
+  },
+  {
+   "rank": 36,
+   "name": "Ahmad Moten Sr.",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Miami (FL)"
+  },
+  {
+   "rank": 37,
+   "name": "Carter Smith",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Indiana"
+  },
+  {
+   "rank": 38,
+   "name": "Yhonzae Pierre",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Alabama"
+  },
+  {
+   "rank": 39,
+   "name": "Quincy Rhodes Jr.",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Arkansas"
+  },
+  {
+   "rank": 40,
+   "name": "Austin Siereveld",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 41,
+   "name": "Cayden Green",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Missouri"
+  },
+  {
+   "rank": 42,
+   "name": "Kyngstonn Viliamu-Asa",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 43,
+   "name": "Matayo Uiagalelei",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Oregon"
+  },
+  {
+   "rank": 44,
+   "name": "Jacarrius Peak",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "South Carolina"
+  },
+  {
+   "rank": 45,
+   "name": "Jayden Maiava",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "USC"
+  },
+  {
+   "rank": 46,
+   "name": "Omarion Miller",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Arizona State"
+  },
+  {
+   "rank": 47,
+   "name": "Chris Cole",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Georgia"
+  },
+  {
+   "rank": 48,
+   "name": "Evan Tengesdahl",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Cincinnati"
+  },
+  {
+   "rank": 49,
+   "name": "Ahmad Hardy",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Missouri"
+  },
+  {
+   "rank": 50,
+   "name": "Kenyatta Jackson",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 51,
+   "name": "Jacob Ponton",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 52,
+   "name": "Will Heldt",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Clemson"
+  },
+  {
+   "rank": 53,
+   "name": "Brice Pollock",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 54,
+   "name": "Teitum Tuioti",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Oregon"
+  },
+  {
+   "rank": 55,
+   "name": "Jordan Ross",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "LSU"
+  },
+  {
+   "rank": 56,
+   "name": "Drake Lindsey",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Minnesota"
+  },
+  {
+   "rank": 57,
+   "name": "Anto Saka",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Texas A&M"
+  },
+  {
+   "rank": 58,
+   "name": "Melvin Siani",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Texas"
+  },
+  {
+   "rank": 59,
+   "name": "Anthonie Knapp",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 60,
+   "name": "Mario Craver",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Texas A&M"
+  },
+  {
+   "rank": 61,
+   "name": "Ezomo Oratokhai",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Northwestern"
+  },
+  {
+   "rank": 62,
+   "name": "Nyck Harbor",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "South Carolina"
+  },
+  {
+   "rank": 63,
+   "name": "Adonijah Green",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Louisville"
+  },
+  {
+   "rank": 64,
+   "name": "Bray Hubbard",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Alabama"
+  },
+  {
+   "rank": 65,
+   "name": "Boubacar Traore",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 66,
+   "name": "Bear Alexander",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Oregon"
+  },
+  {
+   "rank": 67,
+   "name": "Jelani McDonald",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Texas"
+  },
+  {
+   "rank": 68,
+   "name": "Trinidad Chambliss",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Mississippi"
+  },
+  {
+   "rank": 69,
+   "name": "Iapani Laloulu",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Oregon"
+  },
+  {
+   "rank": 70,
+   "name": "Damon Wilson Jr.",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Miami (FL)"
+  },
+  {
+   "rank": 71,
+   "name": "Andrew Rappleyea",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Penn State"
+  },
+  {
+   "rank": 72,
+   "name": "Koi Perich",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Oregon"
+  },
+  {
+   "rank": 73,
+   "name": "A.J. Holmes Jr",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 74,
+   "name": "OJ Frederique Jr.",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Miami (FL)"
+  },
+  {
+   "rank": 75,
+   "name": "Rasheem Biles",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Texas"
+  },
+  {
+   "rank": 76,
+   "name": "Ty Benefield",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "LSU"
+  },
+  {
+   "rank": 77,
+   "name": "Bryant Wesco",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Clemson"
+  },
+  {
+   "rank": 78,
+   "name": "Drew Azzopardi",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Washington"
+  },
+  {
+   "rank": 79,
+   "name": "Alex January",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Texas"
+  },
+  {
+   "rank": 80,
+   "name": "Wyatt Young",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Oklahoma State"
+  },
+  {
+   "rank": 81,
+   "name": "Christian Alliegro",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 82,
+   "name": "TJ Moore",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Clemson"
+  },
+  {
+   "rank": 83,
+   "name": "Brendan Bett",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Florida"
+  },
+  {
+   "rank": 84,
+   "name": "KJ Duff",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Rutgers"
+  },
+  {
+   "rank": 85,
+   "name": "Kris Jones",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Boston College"
+  },
+  {
+   "rank": 86,
+   "name": "Anthony Smith",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Minnesota"
+  },
+  {
+   "rank": 87,
+   "name": "Clev Lubin",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Louisville"
+  },
+  {
+   "rank": 88,
+   "name": "Vicari Swain",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "South Carolina"
+  },
+  {
+   "rank": 89,
+   "name": "Ben Roberts",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 90,
+   "name": "PJ Williams",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "SMU"
+  },
+  {
+   "rank": 91,
+   "name": "Whit Weeks",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "LSU"
+  },
+  {
+   "rank": 92,
+   "name": "Benjamin Brahmer",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Penn State"
+  },
+  {
+   "rank": 93,
+   "name": "Tavion Gadson",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Kentucky"
+  },
+  {
+   "rank": 94,
+   "name": "Ryan Wingo",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Texas"
+  },
+  {
+   "rank": 95,
+   "name": "Zach Lutmer",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Iowa"
+  },
+  {
+   "rank": 96,
+   "name": "Brandon Baker",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Texas"
+  },
+  {
+   "rank": 97,
+   "name": "Jamari Sharpe",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Indiana"
+  },
+  {
+   "rank": 98,
+   "name": "Jayden Jackson",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Oklahoma"
+  },
+  {
+   "rank": 99,
+   "name": "Jaylen McClain",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 100,
+   "name": "LJ Martin",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "BYU"
+  },
+  {
+   "rank": 101,
+   "name": "Francis Brewu",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 102,
+   "name": "Ezra Christensen",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Colorado"
+  },
+  {
+   "rank": 104,
+   "name": "Eric Singleton Jr.",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Florida"
+  },
+  {
+   "rank": 105,
+   "name": "Junior Sherrill",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Vanderbilt"
+  },
+  {
+   "rank": 108,
+   "name": "Adam Trick",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 109,
+   "name": "Princewill Umanmielen",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "LSU"
+  },
+  {
+   "rank": 110,
+   "name": "Samson Okunlola",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Miami"
+  },
+  {
+   "rank": 111,
+   "name": "Mario Landino",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Indiana"
+  },
+  {
+   "rank": 112,
+   "name": "Andrew Sprague",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Michigan"
+  },
+  {
+   "rank": 113,
+   "name": "Duce Robinson",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Florida State"
+  },
+  {
+   "rank": 114,
+   "name": "Niki Prongos",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Stanford"
+  },
+  {
+   "rank": 115,
+   "name": "Mark Fletcher Jr.",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Miami"
+  },
+  {
+   "rank": 116,
+   "name": "Xavier Scott",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Illinois"
+  },
+  {
+   "rank": 117,
+   "name": "Payton Pierce",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 118,
+   "name": "Boo Carter",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Colorado"
+  },
+  {
+   "rank": 121,
+   "name": "Marcus Neal Jr.",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Penn State"
+  },
+  {
+   "rank": 122,
+   "name": "Jay Crawford",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Ole Miss"
+  },
+  {
+   "rank": 123,
+   "name": "Mateen Ibirogba",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 124,
+   "name": "Ian Strong",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "California"
+  },
+  {
+   "rank": 125,
+   "name": "Evan Johnson",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "BYU"
+  },
+  {
+   "rank": 126,
+   "name": "Amare Ferrell",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Indiana"
+  },
+  {
+   "rank": 127,
+   "name": "Lawson Luckie",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Georgia"
+  },
+  {
+   "rank": 129,
+   "name": "Kip Lewis",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Oklahoma"
+  },
+  {
+   "rank": 130,
+   "name": "D.J. Lagway",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Baylor"
+  },
+  {
+   "rank": 131,
+   "name": "Drayk Bowen",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 132,
+   "name": "John Nestor",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Minnesota"
+  },
+  {
+   "rank": 133,
+   "name": "A.J. Harris",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Indiana"
+  },
+  {
+   "rank": 134,
+   "name": "Taylor Wein",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Oklahoma"
+  },
+  {
+   "rank": 135,
+   "name": "Tyrique Tucker",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Indiana"
+  },
+  {
+   "rank": 138,
+   "name": "D.J. McKinney",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 139,
+   "name": "Isaiah Sategna III",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Oklahoma"
+  },
+  {
+   "rank": 140,
+   "name": "Cooper Barkate",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Miami"
+  },
+  {
+   "rank": 141,
+   "name": "Raylen Wilson",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Georgia"
+  },
+  {
+   "rank": 142,
+   "name": "Christian Gray",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 143,
+   "name": "McKale Boley",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Virginia"
+  },
+  {
+   "rank": 144,
+   "name": "Brett Norfleet",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Missouri"
+  },
+  {
+   "rank": 145,
+   "name": "Jay'Vion Cole",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Arizona"
+  },
+  {
+   "rank": 146,
+   "name": "Adon Shuler",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 147,
+   "name": "C.J. Fite",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Arizona State"
+  },
+  {
+   "rank": 148,
+   "name": "Hollywood Smothers",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Texas"
+  },
+  {
+   "rank": 149,
+   "name": "John Mateer",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Oklahoma"
+  },
+  {
+   "rank": 150,
+   "name": "Alani Noa",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "USC"
+  },
+  {
+   "rank": 151,
+   "name": "Dashawn Spears",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "LSU"
+  },
+  {
+   "rank": 152,
+   "name": "Tony Rojas",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Penn State"
+  },
+  {
+   "rank": 153,
+   "name": "Raleek Brown",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Texas"
+  },
+  {
+   "rank": 154,
+   "name": "Maraad Watson",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Texas"
+  },
+  {
+   "rank": 155,
+   "name": "Tayon Holloway",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Louisville"
+  },
+  {
+   "rank": 157,
+   "name": "Rod Moore",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Michigan"
+  },
+  {
+   "rank": 158,
+   "name": "Earnest Greene III",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Georgia"
+  },
+  {
+   "rank": 159,
+   "name": "Justin Evans",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Nebraska"
+  },
+  {
+   "rank": 160,
+   "name": "Anthony Donkoh",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Penn State"
+  },
+  {
+   "rank": 161,
+   "name": "Samuel Omosigho",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "UCLA"
+  },
+  {
+   "rank": 162,
+   "name": "Mike Matthews",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Tennessee"
+  },
+  {
+   "rank": 163,
+   "name": "Xavier Chaplin",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Florida State"
+  },
+  {
+   "rank": 164,
+   "name": "Xavier Atkins",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Auburn"
+  },
+  {
+   "rank": 165,
+   "name": "Ian Foster",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Memphis"
+  },
+  {
+   "rank": 166,
+   "name": "Jyaire Hill",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Michigan"
+  },
+  {
+   "rank": 167,
+   "name": "Theo Melin Ohrstrom",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "SMU"
+  },
+  {
+   "rank": 168,
+   "name": "Bryce Thornton",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Florida"
+  },
+  {
+   "rank": 169,
+   "name": "James Smith",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 170,
+   "name": "Michael Masunas",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Texas"
+  },
+  {
+   "rank": 171,
+   "name": "Decker DeGraaf",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Washington"
+  },
+  {
+   "rank": 172,
+   "name": "Marcel Reed",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Texas A&M"
+  },
+  {
+   "rank": 173,
+   "name": "Darius Taylor",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Minnesota"
+  },
+  {
+   "rank": 174,
+   "name": "Cam Calhoun",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 175,
+   "name": "Amare Campbell",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Tennessee"
+  },
+  {
+   "rank": 176,
+   "name": "P.J. Woodland",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "LSU"
+  },
+  {
+   "rank": 177,
+   "name": "Amare Thomas",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Houston"
+  },
+  {
+   "rank": 178,
+   "name": "Dominick McKinley",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "LSU"
+  },
+  {
+   "rank": 179,
+   "name": "Terry Moore",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 180,
+   "name": "Josh Hoover",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Indiana"
+  },
+  {
+   "rank": 181,
+   "name": "Davaughn Patterson",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Wake Forest"
+  },
+  {
+   "rank": 182,
+   "name": "Carson Hinzman",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 183,
+   "name": "Nyziah Hunter",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Nebraska"
+  },
+  {
+   "rank": 184,
+   "name": "Tao Johnson",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "UCLA"
+  },
+  {
+   "rank": 185,
+   "name": "Parker Livingstone",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Oklahoma"
+  },
+  {
+   "rank": 187,
+   "name": "Tyree Adams",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Texas A&M"
+  },
+  {
+   "rank": 188,
+   "name": "Qua Russaw",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 189,
+   "name": "Shadre Hurst",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Houston"
+  },
+  {
+   "rank": 190,
+   "name": "Jermaine Mathews Jr.",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 191,
+   "name": "Austin Romaine",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 192,
+   "name": "Noah Fifita",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Arizona"
+  },
+  {
+   "rank": 193,
+   "name": "Devon Jackson",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Oregon"
+  },
+  {
+   "rank": 194,
+   "name": "Earl Little Jr.",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 195,
+   "name": "Marcus Ratcliffe",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Texas A&M"
+  },
+  {
+   "rank": 196,
+   "name": "Malachi Breland",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Arkansas"
+  },
+  {
+   "rank": 197,
+   "name": "Toby Anene",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Colorado"
+  },
+  {
+   "rank": 198,
+   "name": "Arion Carter",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Tennessee"
+  },
+  {
+   "rank": 199,
+   "name": "Nicholas Rodriguez",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Missouri"
+  },
+  {
+   "rank": 200,
+   "name": "Deshaun Lee",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Iowa"
+  },
+  {
+   "rank": 201,
+   "name": "Lance Heard",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Kentucky"
+  },
+  {
+   "rank": 202,
+   "name": "Antwan Peek Jr.",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Cincinnati"
+  },
+  {
+   "rank": 203,
+   "name": "Demond Williams Jr.",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Washington"
+  },
+  {
+   "rank": 204,
+   "name": "Isaac Smith",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Mississippi State"
+  },
+  {
+   "rank": 205,
+   "name": "Braylan Shelby",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "USC"
+  },
+  {
+   "rank": 206,
+   "name": "Fluff Bothwell",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Mississippi State"
+  },
+  {
+   "rank": 207,
+   "name": "Jayce Brown",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "LSU"
+  },
+  {
+   "rank": 208,
+   "name": "Tree Babalade",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Nebraska"
+  },
+  {
+   "rank": 209,
+   "name": "Gabe Harris Jr.",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Georgia"
+  },
+  {
+   "rank": 210,
+   "name": "Ethan O'Connor",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Miami"
+  },
+  {
+   "rank": 211,
+   "name": "Bo Mascoe",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Texas"
+  },
+  {
+   "rank": 212,
+   "name": "Charles Jagusah",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 213,
+   "name": "Nick Del Grande",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Duke"
+  },
+  {
+   "rank": 214,
+   "name": "Elija Lofton",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Miami"
+  },
+  {
+   "rank": 215,
+   "name": "Bruce Mitchell",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "BYU"
+  },
+  {
+   "rank": 216,
+   "name": "Johntay Cook",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Ole Miss"
+  },
+  {
+   "rank": 217,
+   "name": "Jayden Bellamy",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "UCF"
+  },
+  {
+   "rank": 218,
+   "name": "Bryson Washington",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Auburn"
+  },
+  {
+   "rank": 219,
+   "name": "Antonio Kite",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Ole Miss"
+  },
+  {
+   "rank": 220,
+   "name": "Howard Sampson",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 221,
+   "name": "Jeremiah Hasley",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Duke"
+  },
+  {
+   "rank": 222,
+   "name": "Antwan Raymond",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Rutgers"
+  },
+  {
+   "rank": 223,
+   "name": "Jordan Matthews",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Vanderbilt"
+  },
+  {
+   "rank": 224,
+   "name": "Drew Evans",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Indiana"
+  },
+  {
+   "rank": 225,
+   "name": "Caleb Woodson",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Alabama"
+  },
+  {
+   "rank": 226,
+   "name": "Hero Kanu",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Texas"
+  },
+  {
+   "rank": 227,
+   "name": "Daniel Harris",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "California"
+  },
+  {
+   "rank": 228,
+   "name": "Drew Bobo",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Georgia"
+  },
+  {
+   "rank": 229,
+   "name": "Evan Stewart",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Oregon"
+  },
+  {
+   "rank": 230,
+   "name": "Garrett Oakley",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Kansas State"
+  },
+  {
+   "rank": 231,
+   "name": "Peyton Bowen",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Oklahoma"
+  },
+  {
+   "rank": 232,
+   "name": "Kayin Lee",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Tennessee"
+  },
+  {
+   "rank": 233,
+   "name": "Coleton Price",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Kentucky"
+  },
+  {
+   "rank": 234,
+   "name": "C.J. Baxter",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Kentucky"
+  },
+  {
+   "rank": 235,
+   "name": "Smith Snowden",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Michigan"
+  },
+  {
+   "rank": 236,
+   "name": "Gunner Stockton",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Georgia"
+  },
+  {
+   "rank": 237,
+   "name": "Kenny Johnson",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 238,
+   "name": "Myles Graham",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Florida"
+  },
+  {
+   "rank": 239,
+   "name": "Phillip Daniels",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 240,
+   "name": "Brody Foley",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Louisville"
+  },
+  {
+   "rank": 241,
+   "name": "K.P. Price",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Boston College"
+  },
+  {
+   "rank": 242,
+   "name": "Eugene Wilson III",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "LSU"
+  },
+  {
+   "rank": 243,
+   "name": "Jeremiah Cooper",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Penn State"
+  },
+  {
+   "rank": 244,
+   "name": "Wendell Moe Jr.",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Tennessee"
+  },
+  {
+   "rank": 245,
+   "name": "D.J. Barksdale",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "UCLA"
+  },
+  {
+   "rank": 246,
+   "name": "Quintrevion Wisner",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Florida State"
+  },
+  {
+   "rank": 247,
+   "name": "Brendan Jordan",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 248,
+   "name": "Luke Hasz",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Ole Miss"
+  },
+  {
+   "rank": 249,
+   "name": "Trey White",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 250,
+   "name": "Ty Morris",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Rutgers"
+  },
+  {
+   "rank": 251,
+   "name": "Cody Sigler",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Auburn"
+  },
+  {
+   "rank": 252,
+   "name": "Will Whitson",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Mississippi State"
+  },
+  {
+   "rank": 253,
+   "name": "Robert Woodyard Jr.",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Missouri"
+  },
+  {
+   "rank": 254,
+   "name": "Isaiah Horton",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Texas A&M"
+  },
+  {
+   "rank": 255,
+   "name": "Rocco Becht",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Penn State"
+  },
+  {
+   "rank": 256,
+   "name": "Griffin Wilde",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Northwestern"
+  },
+  {
+   "rank": 257,
+   "name": "Ty Bryant",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Kentucky"
+  },
+  {
+   "rank": 258,
+   "name": "Emmanuel Oyebadejo",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Florida"
+  },
+  {
+   "rank": 259,
+   "name": "Daniel Hill",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Alabama"
+  },
+  {
+   "rank": 260,
+   "name": "Kylan Fox",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Purdue"
+  },
+  {
+   "rank": 261,
+   "name": "D.J. Hicks",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Texas A&M"
+  },
+  {
+   "rank": 262,
+   "name": "Wes King",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "West Virginia"
+  },
+  {
+   "rank": 263,
+   "name": "Luke Reynolds",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Virginia Tech"
+  },
+  {
+   "rank": 264,
+   "name": "T.J. Searcy",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Texas A&M"
+  },
+  {
+   "rank": 265,
+   "name": "Byrum Brown",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Auburn"
+  },
+  {
+   "rank": 266,
+   "name": "Addison Nichols",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "SMU"
+  },
+  {
+   "rank": 267,
+   "name": "Cam Cook",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "West Virginia"
+  },
+  {
+   "rank": 268,
+   "name": "Jaden Greathouse",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 269,
+   "name": "Qua Moss",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Tennessee"
+  },
+  {
+   "rank": 270,
+   "name": "Isaiah Jones",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Indiana"
+  },
+  {
+   "rank": 271,
+   "name": "Jordan Lyle",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Miami"
+  },
+  {
+   "rank": 272,
+   "name": "Dante Dowdell",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Georgia"
+  },
+  {
+   "rank": 273,
+   "name": "Nico Iamaleava",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "UCLA"
+  },
+  {
+   "rank": 274,
+   "name": "Kemari Copeland",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Virginia Tech"
+  },
+  {
+   "rank": 275,
+   "name": "Michael Bennett III",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Oregon"
+  },
+  {
+   "rank": 276,
+   "name": "Lendon Phillips Jr.",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Iowa"
+  },
+  {
+   "rank": 277,
+   "name": "Jeremy Payne",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "TCU"
+  },
+  {
+   "rank": 278,
+   "name": "Quay'sheed Scott",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "South Carolina"
+  },
+  {
+   "rank": 279,
+   "name": "Sheridan Wilson",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Texas Tech"
+  },
+  {
+   "rank": 280,
+   "name": "King Mack",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "NC State"
+  },
+  {
+   "rank": 281,
+   "name": "Ben Murawski",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Michigan State"
+  },
+  {
+   "rank": 282,
+   "name": "Melkart Abou-Jaoude",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "North Carolina"
+  },
+  {
+   "rank": 283,
+   "name": "Aidan Chiles",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Northwestern"
+  },
+  {
+   "rank": 284,
+   "name": "Trell Harris",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Oklahoma"
+  },
+  {
+   "rank": 285,
+   "name": "Jontez Williams",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "USC"
+  },
+  {
+   "rank": 286,
+   "name": "Dezz Ricks",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Texas A&M"
+  },
+  {
+   "rank": 287,
+   "name": "Kameryn Crawford",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "USC"
+  },
+  {
+   "rank": 288,
+   "name": "Matt Rose",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Stanford"
+  },
+  {
+   "rank": 289,
+   "name": "Rodrick Pleasant",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "UCLA"
+  },
+  {
+   "rank": 290,
+   "name": "Cayden Lee",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Missouri"
+  },
+  {
+   "rank": 291,
+   "name": "Dwight Phillips Jr.",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Georgia"
+  },
+  {
+   "rank": 292,
+   "name": "Caleb Bacon",
+   "pos_raw": "LB",
+   "position": "MLB",
+   "school": "Penn State"
+  },
+  {
+   "rank": 293,
+   "name": "Chris Corbo",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Georgia Tech"
+  },
+  {
+   "rank": 295,
+   "name": "Faletau Satuala",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "BYU"
+  },
+  {
+   "rank": 296,
+   "name": "Keanu Tanuvasa",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "BYU"
+  },
+  {
+   "rank": 297,
+   "name": "Jordan Hall",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Georgia"
+  },
+  {
+   "rank": 298,
+   "name": "Khalil Barnes",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Georgia"
+  },
+  {
+   "rank": 299,
+   "name": "Kelby Collins",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "South Carolina"
+  },
+  {
+   "rank": 300,
+   "name": "Jayden Virgin-Morgan",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Boise State"
+  }
+ ],
+ "draft2027_note": "289 prospects. Ranks 1-100 = NFL Mock Draft Database consensus board (aggregates 31 analyst boards, 122 mock drafts), updated 2026-08-24. Ranks 101-300 = Drafttek preseason Top 450, updated 2026-08-17. 11 duplicates removed where the sources overlap. Two boards stitched together, so the seam around rank 100 is approximate - fine for a draft pool where relative order is what matters. Drafttek position labels were normalized (DL1T/DL3T/DL5T->DL, ILB/OLB->LB, CBN->CB, WRS->WR, OG/OC->IOL). pos_raw is the source label; position is mapped to PGM3.",
+ "draft2028_note": "ONLY 32 PROSPECTS, AND LOW CONFIDENCE. Source is Brad Menendez 32-player first-round projection at NFL Draft Countdown, published 2026-05-04 - a MOCK DRAFT ORDER, not a big board, and the source says its team order was randomized. Treat rank as rough ordering only. No genuine overall 2028 big board existed as of late Aug 2026: the consensus board aggregates 1 mock, Tankathon lists 2028 names alphabetically without ranks, WalterFootball has 197 players but only in separate positional lists with no overall order. Schools reflect the May source and may be stale - transfers move fast this far out. RECOMMENDATION: use these 32 as the top of the 2028 class and generate the rest, or re-check for a real board closer to the season.",
+ "draft2028": [
+  {
+   "rank": 1,
+   "name": "Bryce Underwood",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Michigan"
+  },
+  {
+   "rank": 2,
+   "name": "Michael Fasusi",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Oklahoma"
+  },
+  {
+   "rank": 3,
+   "name": "Tavien St. Clair",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 4,
+   "name": "Quincy Porter",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 5,
+   "name": "Will Black",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Notre Dame"
+  },
+  {
+   "rank": 6,
+   "name": "Elijah Griffin",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Georgia"
+  },
+  {
+   "rank": 7,
+   "name": "Lance Jackson",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Texas"
+  },
+  {
+   "rank": 8,
+   "name": "David Sanders Jr.",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Texas"
+  },
+  {
+   "rank": 9,
+   "name": "Keelon Russell",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Alabama"
+  },
+  {
+   "rank": 10,
+   "name": "DJ Pickett",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "LSU"
+  },
+  {
+   "rank": 11,
+   "name": "Justus Terry",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Texas"
+  },
+  {
+   "rank": 12,
+   "name": "Tylon Lee",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Florida State"
+  },
+  {
+   "rank": 13,
+   "name": "Jerome Myles",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Texas A&M"
+  },
+  {
+   "rank": 14,
+   "name": "Na'eem Offord",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Oregon"
+  },
+  {
+   "rank": 15,
+   "name": "Michael Carroll",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "Alabama"
+  },
+  {
+   "rank": 16,
+   "name": "Talyn Taylor",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Georgia"
+  },
+  {
+   "rank": 17,
+   "name": "Isaiah Gibson",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Georgia"
+  },
+  {
+   "rank": 18,
+   "name": "Andrew Babalola",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Michigan"
+  },
+  {
+   "rank": 19,
+   "name": "Deuce Knight",
+   "pos_raw": "QB",
+   "position": "QB",
+   "school": "Ole Miss"
+  },
+  {
+   "rank": 20,
+   "name": "Amare Adams",
+   "pos_raw": "DL",
+   "position": "DT",
+   "school": "Clemson"
+  },
+  {
+   "rank": 21,
+   "name": "Devin Sanchez",
+   "pos_raw": "CB",
+   "position": "CB",
+   "school": "Ohio State"
+  },
+  {
+   "rank": 22,
+   "name": "Jonah Williams",
+   "pos_raw": "S",
+   "position": "S",
+   "school": "Texas"
+  },
+  {
+   "rank": 23,
+   "name": "Carius Curne",
+   "pos_raw": "IOL",
+   "position": "OG",
+   "school": "LSU"
+  },
+  {
+   "rank": 24,
+   "name": "Harlem Berry",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "LSU"
+  },
+  {
+   "rank": 25,
+   "name": "Andrew Olesh",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Penn State"
+  },
+  {
+   "rank": 26,
+   "name": "Dakorien Moore",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Oregon"
+  },
+  {
+   "rank": 27,
+   "name": "Nate Marshall",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Michigan"
+  },
+  {
+   "rank": 28,
+   "name": "Dallas Wilson",
+   "pos_raw": "WR",
+   "position": "WR",
+   "school": "Florida"
+  },
+  {
+   "rank": 29,
+   "name": "Elyiss Williams",
+   "pos_raw": "TE",
+   "position": "TE",
+   "school": "Georgia"
+  },
+  {
+   "rank": 30,
+   "name": "Jackson Lloyd",
+   "pos_raw": "OT",
+   "position": "OT",
+   "school": "Alabama"
+  },
+  {
+   "rank": 31,
+   "name": "Ousmane Kromah",
+   "pos_raw": "RB",
+   "position": "RB",
+   "school": "Florida State"
+  },
+  {
+   "rank": 32,
+   "name": "Hayden Lowe",
+   "pos_raw": "EDGE",
+   "position": "DE",
+   "school": "Miami"
+  }
+ ],
+ "draft_potential_note": "For historical builds, prospect potential came from what the player actually became (career AV, Pro Bowls, All-Pros, years started). That is impossible for 2027+. Potential must come from board rank instead, which means no hidden gems and no busts - the draft reflects consensus opinion. Worth mentioning in the Reddit post."
+}

@@ -1,0 +1,8528 @@
+{
+ "_what": "Registry entries where one normalized name carries two or more positions with DIFFERENT faces. Either one player who changed position (merge to one face) or two real people (leave split). Resolve per the task document.",
+ "_counts": {
+  "total": 262,
+  "guess_same_person": 215,
+  "guess_check_namesake": 47
+ },
+ "_guess_warning": "The guess column is a positional-adjacency heuristic only. It is NOT evidence. Resolve every row with the same-file test in the task document.",
+ "rows": [
+  {
+   "name": "adam carriker",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head2b",
+     "Eyes1b",
+     "Hair2j",
+     "Beard2d",
+     "Eyebrows2a",
+     "Nose2b",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head2b",
+     "Eyes1b",
+     "Hair2j",
+     "Beard2d",
+     "Eyebrows2a",
+     "Nose2b",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "adam hayward",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head2a",
+     "Eyes1c",
+     "Hair3b",
+     "Beard3a",
+     "Eyebrows3b",
+     "Nose2c",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1s",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "adam snyder",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head2d",
+     "Eyes1b",
+     "Hair3j",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose2a",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head2b",
+     "Eyes1b",
+     "Hair3j",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose2a",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "akin ayodele",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4c",
+     "Eyes1e",
+     "Hair1f",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1f",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "alex smith",
+   "positions": [
+    "QB",
+    "TE"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "QB": [
+     "Head2c",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose2c",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "TE": [
+     "Head5c",
+     "Eyes1d",
+     "Hair1k",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "alvin bowen",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head1a",
+     "Eyes1d",
+     "Hair2g",
+     "Beard2g",
+     "Eyebrows2a",
+     "Nose1c",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head3a",
+     "Eyes1a",
+     "Hair1e",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose3a",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "amon gordon",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1e",
+     "Hair1k",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "DT": [
+     "Head5b",
+     "Eyes1e",
+     "Hair1k",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "andre carter",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head5d",
+     "Eyes1b",
+     "Hair1e",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5d",
+     "Eyes1b",
+     "Hair1e",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "andrew jackson",
+   "positions": [
+    "MLB",
+    "OG"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "MLB": [
+     "Head3b",
+     "Eyes1a",
+     "Hair3h",
+     "Beard3e",
+     "Eyebrows3a",
+     "Nose3a",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head3b",
+     "Eyes1a",
+     "Hair3d",
+     "Beard3f1",
+     "Eyebrows3b",
+     "Nose3a",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "andy studebaker",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5b",
+     "Eyes1c",
+     "Hair1g",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head3a",
+     "Eyes1a",
+     "Hair5h",
+     "Beard5g",
+     "Eyebrows5a",
+     "Nose3d",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "anthony davis",
+   "positions": [
+    "OT",
+    "RB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "OT": [
+     "Head5b",
+     "Eyes1c",
+     "Hair1h",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "RB": [
+     "Head5b",
+     "Eyes1a",
+     "Hair1b",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "anthony smith",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1o",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "anthony spencer",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head3b",
+     "Eyes1e",
+     "Hair1h",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose3c",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4b",
+     "Eyes1e",
+     "Hair1h",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "antoine bethea",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head3a",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose3b",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4c",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "antrel rolle",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1f",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5c",
+     "Eyes1a",
+     "Hair1f",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "antwan barnes",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head3a",
+     "Eyes1c",
+     "Hair1r1",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose3d",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1r1",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "bernard pollard",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4b",
+     "Eyes1a",
+     "Hair1d",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1p",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "brad smith",
+   "positions": [
+    "QB",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "QB": [
+     "Head3a",
+     "Eyes1a",
+     "Hair1b",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head5c",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "brady poppinga",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5b",
+     "Eyes1e",
+     "Hair1e",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head3c",
+     "Eyes1b",
+     "Hair3b",
+     "Beard3d",
+     "Eyebrows3a",
+     "Nose3c",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "branden albert",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head5b",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head4d",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "brandon fusco",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head2b",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose2a",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head2b",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose2a",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "brandon johnson",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head3b",
+     "Eyes1b",
+     "Hair1q",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "brandon marshall",
+   "positions": [
+    "OLB",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "OLB": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1h",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head5c",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "brandon meriweather",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2a",
+     "Eyes1c",
+     "Hair3j",
+     "Beard3g",
+     "Eyebrows3a",
+     "Nose2c",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1c",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "brandon thompson",
+   "positions": [
+    "DT",
+    "RB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "DT": [
+     "Head5b",
+     "Eyes1e",
+     "Hair1g",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "RB": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1s",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "brandon williams",
+   "positions": [
+    "CB",
+    "DE",
+    "DT",
+    "WR"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head3a",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose3a",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DE": [
+     "Head3a",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose3b",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head3c",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose3a",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head5c",
+     "Eyes1a",
+     "Hair1g",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "brendon ayanbadejo",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1f",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5c",
+     "Eyes1c",
+     "Hair1f",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "brian allen",
+   "positions": [
+    "CB",
+    "OLB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "brodney pool",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head3b",
+     "Eyes1e",
+     "Hair1r2",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose3c",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "bruce carter",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head2a",
+     "Eyes1a",
+     "Hair1e",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose2b",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head2a",
+     "Eyes1a",
+     "Hair1e",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose2b",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "bruce davis",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head2b",
+     "Eyes1a",
+     "Hair4h",
+     "Beard4e",
+     "Eyebrows4b",
+     "Nose2b",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1d",
+     "Hair1q",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "bryan kehl",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head3a",
+     "Eyes1b",
+     "Hair1o",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose3d",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1o",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "bryan thomas",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1n",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4d",
+     "Eyes1b",
+     "Hair1n",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "calvin pace",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head5b",
+     "Eyes1a",
+     "Hair1r2",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head4d",
+     "Eyes1a",
+     "Hair1r2",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "carl nicks",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head5b",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head3b",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose3b",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "cc brown",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1a",
+     "Hair2b",
+     "Beard2b",
+     "Eyebrows2b",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "chad greenway",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head1b",
+     "Eyes1e",
+     "Hair4g",
+     "Beard4g",
+     "Eyebrows4b",
+     "Nose1b",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head3c",
+     "Eyes1a",
+     "Hair3f",
+     "Beard3e",
+     "Eyebrows3a",
+     "Nose3b",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "chad rinehart",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head3b",
+     "Eyes1e",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose3a",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head3b",
+     "Eyes1e",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose3a",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "chad williams",
+   "positions": [
+    "S",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "S": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1s",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1h",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "charles godfrey",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4b",
+     "Eyes1c",
+     "Hair1l",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "charlie peprah",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head1b",
+     "Eyes1e",
+     "Hair3d",
+     "Beard3e",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1s",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "chester pitts",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head5d",
+     "Eyes1d",
+     "Hair1d",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1d",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "chris baker",
+   "positions": [
+    "DT",
+    "TE"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "DT": [
+     "Head5d",
+     "Eyes1b",
+     "Hair1j",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "TE": [
+     "Head5d",
+     "Eyes1c",
+     "Hair1d",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "chris chamberlain",
+   "positions": [
+    "CB",
+    "OLB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "CB": [
+     "Head3a",
+     "Eyes1a",
+     "Hair3a",
+     "Beard3g",
+     "Eyebrows3a",
+     "Nose3a",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head3a",
+     "Eyes1c",
+     "Hair3j",
+     "Beard3e",
+     "Eyebrows3a",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "chris clemons",
+   "positions": [
+    "DE",
+    "OLB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4c",
+     "Eyes1a",
+     "Hair1s",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1d",
+     "Hair1m",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head3a",
+     "Eyes1d",
+     "Hair1d",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "chris harris",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5c",
+     "Eyes1a",
+     "Hair1a",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1a",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "chris henry",
+   "positions": [
+    "RB",
+    "WR"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "RB": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1f",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "chris horton",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4c",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head3a",
+     "Eyes1a",
+     "Hair1p",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose3c",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "chris johnson",
+   "positions": [
+    "CB",
+    "RB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "CB": [
+     "Head5c",
+     "Eyes1d",
+     "Hair1o",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "RB": [
+     "Head5c",
+     "Eyes1d",
+     "Hair1g",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "chris myers",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head1d",
+     "Eyes1c",
+     "Hair1j",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose1c",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OG": [
+     "Head1b",
+     "Eyes1c",
+     "Hair1j",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose1c",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "chris white",
+   "positions": [
+    "C",
+    "OLB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "C": [
+     "Head5b",
+     "Eyes1d",
+     "Hair1i",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head3b",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose3b",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "chris williams",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head5b",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head5b",
+     "Eyes1c",
+     "Hair1r1",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "cj mosley",
+   "positions": [
+    "DT",
+    "MLB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "DT": [
+     "Head5d",
+     "Eyes1c",
+     "Hair1o",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "MLB": [
+     "Head5b",
+     "Eyes1d",
+     "Hair1e",
+     "Beard1f2",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "cj wilson",
+   "positions": [
+    "CB",
+    "DE",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1f",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DE": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1j",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1f",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "cliff avril",
+   "positions": [
+    "DE",
+    "MLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4d",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "MLB": [
+     "Head3b",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose3b",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "clint session",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5a",
+     "Eyes1a",
+     "Hair3e",
+     "Beard3f1",
+     "Eyebrows3a",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1e",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "corey fuller",
+   "positions": [
+    "S",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "S": [
+     "Head5c",
+     "Eyes1e",
+     "Hair1e",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1p",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "corey lynch",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head3a",
+     "Eyes1c",
+     "Hair3f",
+     "Beard3g",
+     "Eyebrows3a",
+     "Nose3a",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head3a",
+     "Eyes1c",
+     "Hair3f",
+     "Beard3g",
+     "Eyebrows3a",
+     "Nose3a",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "cory redding",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head5d",
+     "Eyes1d",
+     "Hair1s",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head5d",
+     "Eyes1d",
+     "Hair1s",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "courtney brown",
+   "positions": [
+    "CB",
+    "DE"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1c",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DE": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1d",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "craig steltz",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2a",
+     "Eyes1c",
+     "Hair5c",
+     "Beard5c",
+     "Eyebrows5a",
+     "Nose2c",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head3a",
+     "Eyes1e",
+     "Hair2a",
+     "Beard2g",
+     "Eyebrows2b",
+     "Nose3c",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "danieal manning",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1e",
+     "Hair2f",
+     "Beard2c",
+     "Eyebrows2a",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4c",
+     "Eyes1e",
+     "Hair1c",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "daniel kilgore",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head2d",
+     "Eyes1b",
+     "Hair3i",
+     "Beard3e",
+     "Eyebrows3a",
+     "Nose2d",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head2b",
+     "Eyes1b",
+     "Hair3i",
+     "Beard3e",
+     "Eyebrows3a",
+     "Nose2d",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "danny clark",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1q",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head5c",
+     "Eyes1c",
+     "Hair1q",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "darnell dockett",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head5d",
+     "Eyes1d",
+     "Hair1f",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1f",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "daryn colledge",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head3d",
+     "Eyes1c",
+     "Hair1h",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose3a",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head3b",
+     "Eyes1c",
+     "Hair1h",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose3a",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "dashon goldson",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head3a",
+     "Eyes1c",
+     "Hair1r2",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose3a",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1r2",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "david baas",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head3d",
+     "Eyes1d",
+     "Hair3b",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OG": [
+     "Head3b",
+     "Eyes1d",
+     "Hair3b",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "david diehl",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head1d",
+     "Eyes1b",
+     "Hair3d",
+     "Beard3f1",
+     "Eyebrows3b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head1d",
+     "Eyes1b",
+     "Hair3d",
+     "Beard3f1",
+     "Eyebrows3b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "david johnson",
+   "positions": [
+    "RB",
+    "TE"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "RB": [
+     "Head5d",
+     "Eyes1a",
+     "Hair1m",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "TE": [
+     "Head5b",
+     "Eyes1c",
+     "Hair1a",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "dawan landry",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1e",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5c",
+     "Eyes1a",
+     "Hair1b",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "delanie walker",
+   "positions": [
+    "TE",
+    "WR"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "TE": [
+     "Head5c",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "WR": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "demarcus ware",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1k",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "derrick johnson",
+   "positions": [
+    "CB",
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1l",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "MLB": [
+     "Head5c",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "devin fuller",
+   "positions": [
+    "MLB",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "MLB": [
+     "Head4a",
+     "Eyes1d",
+     "Hair1s",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1k",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "devin hester",
+   "positions": [
+    "CB",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1l",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head5c",
+     "Eyes1e",
+     "Hair1f",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "devin mccourty",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1e",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5c",
+     "Eyes1b",
+     "Hair1e",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "dexter jackson",
+   "positions": [
+    "S",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "S": [
+     "Head5c",
+     "Eyes1d",
+     "Hair1q",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1g",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "dj williams",
+   "positions": [
+    "MLB",
+    "OLB",
+    "TE"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5c",
+     "Eyes1b",
+     "Hair1n",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1m",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "TE": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1o",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "dominique barber",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4b",
+     "Eyes1e",
+     "Hair1c",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head3a",
+     "Eyes1d",
+     "Hair1g",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "don muhlbach",
+   "positions": [
+    "C",
+    "S"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "C": [
+     "Head2d",
+     "Eyes1c",
+     "Hair3g",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose2a",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head2b",
+     "Eyes1e",
+     "Hair3k",
+     "Beard3f2",
+     "Eyebrows3b",
+     "Nose2d",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "donte whitner",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head1a",
+     "Eyes1d",
+     "Hair2g",
+     "Beard2f1",
+     "Eyebrows2a",
+     "Nose1b",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1l",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "eddie jackson",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1e",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1e",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "ej henderson",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5c",
+     "Eyes1a",
+     "Hair1k",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1k",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "elvis dumervil",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head5c",
+     "Eyes1c",
+     "Hair1d",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1d",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "eric barton",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5c",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "eric frampton",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1o",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1q",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "eric heitmann",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head1d",
+     "Eyes1a",
+     "Hair3j",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head1b",
+     "Eyes1a",
+     "Hair3j",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "eric smith",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4b",
+     "Eyes1a",
+     "Hair1e",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head3a",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose3b",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "eric weddle",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2a",
+     "Eyes1e",
+     "Hair1c",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose2c",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head1c",
+     "Eyes1e",
+     "Hair3a",
+     "Beard3f1",
+     "Eyebrows3a",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "erik walden",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head3a",
+     "Eyes1d",
+     "Hair1j",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose3d",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head3c",
+     "Eyes1d",
+     "Hair1j",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose3d",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "ernie sims",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1d",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "eugene amano",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head5b",
+     "Eyes1c",
+     "Hair1f",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OG": [
+     "Head4b",
+     "Eyes1c",
+     "Hair1f",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "evander hood",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1e",
+     "Hair1e",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head4d",
+     "Eyes1e",
+     "Hair1e",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "floyd womack",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head5d",
+     "Eyes1a",
+     "Hair1o",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head5b",
+     "Eyes1a",
+     "Hair1o",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "geno hayes",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head3a",
+     "Eyes1c",
+     "Hair1r2",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose3a",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head3a",
+     "Eyes1c",
+     "Hair1r2",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose3a",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "gerald alexander",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5c",
+     "Eyes1a",
+     "Hair1k",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1b",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "gerald hayes",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4c",
+     "Eyes1b",
+     "Hair1n",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1n",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "gerald sensabaugh",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4b",
+     "Eyes1a",
+     "Hair1p",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1h",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "gerris wilkinson",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4a",
+     "Eyes1d",
+     "Hair1s",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1c",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "glover quin",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2a",
+     "Eyes1e",
+     "Hair1l",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose2d",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head2c",
+     "Eyes1e",
+     "Hair1l",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose2d",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "hamza abdullah",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head1b",
+     "Eyes1c",
+     "Hair3g",
+     "Beard3b",
+     "Eyebrows3a",
+     "Nose1b",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1d",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "haruki nakamura",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1b",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head3a",
+     "Eyes1b",
+     "Hair1n",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "hilee taylor",
+   "positions": [
+    "DE",
+    "MLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head3a",
+     "Eyes1a",
+     "Hair1a",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose3c",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "MLB": [
+     "Head3a",
+     "Eyes1a",
+     "Hair1a",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose3c",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "jabaal sheard",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head2d",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose2a",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head2b",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose2a",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "jacob bell",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head3b",
+     "Eyes1b",
+     "Hair3i",
+     "Beard3d",
+     "Eyebrows3a",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head3b",
+     "Eyes1b",
+     "Hair3i",
+     "Beard3d",
+     "Eyebrows3a",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "jahri evans",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head5d",
+     "Eyes1a",
+     "Hair1j",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head5b",
+     "Eyes1a",
+     "Hair1j",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "jake grove",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head1d",
+     "Eyes1e",
+     "Hair3f",
+     "Beard3f2",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OG": [
+     "Head1b",
+     "Eyes1e",
+     "Hair3f",
+     "Beard3f2",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "jamar williams",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head3b",
+     "Eyes1c",
+     "Hair1q",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose3d",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1f",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "james anderson",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5a",
+     "Eyes1e",
+     "Hair1d",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4c",
+     "Eyes1a",
+     "Hair1a",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "james carpenter",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head5d",
+     "Eyes1c",
+     "Hair1k",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head5b",
+     "Eyes1c",
+     "Hair1k",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "james davis",
+   "positions": [
+    "OLB",
+    "RB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "OLB": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1c",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "RB": [
+     "Head4a",
+     "Eyes1d",
+     "Hair1s",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "james sanders",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1a",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "jarrad page",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1d",
+     "Hair1g",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1q",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "jarret johnson",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head1b",
+     "Eyes1c",
+     "Hair1f",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head1d",
+     "Eyes1c",
+     "Hair1f",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "jason babin",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head1d",
+     "Eyes1b",
+     "Hair3h",
+     "Beard3g",
+     "Eyebrows3a",
+     "Nose1b",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head1d",
+     "Eyes1b",
+     "Hair3h",
+     "Beard3g",
+     "Eyebrows3a",
+     "Nose1b",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "jason hatcher",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head5b",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head5d",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "jason kyle",
+   "positions": [
+    "OLB",
+    "RB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "OLB": [
+     "Head4c",
+     "Eyes1e",
+     "Hair3k",
+     "Beard3e",
+     "Eyebrows3a",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "RB": [
+     "Head4c",
+     "Eyes1d",
+     "Hair3e",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "jason williams",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1s",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1j",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "jay ratliff",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1q",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head4d",
+     "Eyes1b",
+     "Hair1q",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "jeremy zuttah",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head4b",
+     "Eyes1a",
+     "Hair1m",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head4b",
+     "Eyes1a",
+     "Hair1m",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "jimmy smith",
+   "positions": [
+    "CB",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "CB": [
+     "Head2c",
+     "Eyes1c",
+     "Hair1i",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose2c",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head4c",
+     "Eyes1d",
+     "Hair1j",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "jimmy williams",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1p",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "joe berger",
+   "positions": [
+    "C",
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head1d",
+     "Eyes1a",
+     "Hair3k",
+     "Beard3c",
+     "Eyebrows3a",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OG": [
+     "Head1d",
+     "Eyes1a",
+     "Hair3k",
+     "Beard3c",
+     "Eyebrows3a",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head1b",
+     "Eyes1a",
+     "Hair3k",
+     "Beard3c",
+     "Eyebrows3a",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "joe webb",
+   "positions": [
+    "QB",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "QB": [
+     "Head4c",
+     "Eyes1b",
+     "Hair1g",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "WR": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1a",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "john greco",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head2d",
+     "Eyes1c",
+     "Hair1f",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose2d",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head2b",
+     "Eyes1c",
+     "Hair1f",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose2d",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "john wendling",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2a",
+     "Eyes1c",
+     "Hair4d",
+     "Beard4f2",
+     "Eyebrows4b",
+     "Nose2a",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head3c",
+     "Eyes1d",
+     "Hair3a",
+     "Beard3b",
+     "Eyebrows3a",
+     "Nose3b",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "johnny jolly",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4d",
+     "Eyes1d",
+     "Hair1r2",
+     "Beard1f2",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "DT": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1r2",
+     "Beard1f2",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "jon dorenbos",
+   "positions": [
+    "C",
+    "TE"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "C": [
+     "Head3c",
+     "Eyes1e",
+     "Hair3h",
+     "Beard3d",
+     "Eyebrows3b",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "TE": [
+     "Head4c",
+     "Eyes1e",
+     "Hair3a",
+     "Beard3f2",
+     "Eyebrows3b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "jonathan babineaux",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head5b",
+     "Eyes1c",
+     "Hair1b",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "DT": [
+     "Head5d",
+     "Eyes1c",
+     "Hair1b",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "jonathan goodwin",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head4d",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "josh beekman",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head4b",
+     "Eyes1e",
+     "Hair1o",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head4b",
+     "Eyes1e",
+     "Hair1o",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "josh bullocks",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2a",
+     "Eyes1b",
+     "Hair1g",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose2b",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1h",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "josh evans",
+   "positions": [
+    "DT",
+    "S"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "DT": [
+     "Head4c",
+     "Eyes1c",
+     "Hair1g",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1d",
+     "Hair1e",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "josh harris",
+   "positions": [
+    "QB",
+    "TE"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "QB": [
+     "Head5c",
+     "Eyes1a",
+     "Hair1b",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "TE": [
+     "Head1c",
+     "Eyes1c",
+     "Hair1e",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose1d",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "josh shaw",
+   "positions": [
+    "CB",
+    "DT"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "CB": [
+     "Head5b",
+     "Eyes1d",
+     "Hair1r2",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head5b",
+     "Eyes1b",
+     "Hair1m",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "josh sitton",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head2d",
+     "Eyes1d",
+     "Hair2l",
+     "Beard2g",
+     "Eyebrows2a",
+     "Nose2d",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head2b",
+     "Eyes1d",
+     "Hair2l",
+     "Beard2g",
+     "Eyebrows2a",
+     "Nose2d",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "joshua moore",
+   "positions": [
+    "CB",
+    "OG"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1e",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head3b",
+     "Eyes1c",
+     "Hair1s",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "jovan haye",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1m",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1m",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "justin bannan",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head1b",
+     "Eyes1a",
+     "Hair3b",
+     "Beard3f2",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head1d",
+     "Eyes1a",
+     "Hair3b",
+     "Beard3f2",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "justin durant",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4c",
+     "Eyes1e",
+     "Hair1g",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1g",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "kamerion wimbley",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4c",
+     "Eyes1d",
+     "Hair1f",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1d",
+     "Hair1f",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "kareem brown",
+   "positions": [
+    "DT",
+    "S"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "DT": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1o",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "kareem moore",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1b",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1b",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "karlos dansby",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5c",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "kawika mitchell",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head3a",
+     "Eyes1a",
+     "Hair3j",
+     "Beard3d",
+     "Eyebrows3b",
+     "Nose3a",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head2c",
+     "Eyes1a",
+     "Hair3j",
+     "Beard3d",
+     "Eyebrows3b",
+     "Nose2a",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "keith brooking",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head3c",
+     "Eyes1a",
+     "Hair3d",
+     "Beard3e",
+     "Eyebrows3b",
+     "Nose3b",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head1a",
+     "Eyes1a",
+     "Hair3d",
+     "Beard3e",
+     "Eyebrows3b",
+     "Nose1b",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "keith rivers",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5b",
+     "Eyes1c",
+     "Hair1j",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1d",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "kendall langford",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1g",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head4d",
+     "Eyes1b",
+     "Hair1g",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "kenny phillips",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5b",
+     "Eyes1b",
+     "Hair2j",
+     "Beard2g",
+     "Eyebrows2a",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1f",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "kerry rhodes",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head1a",
+     "Eyes1d",
+     "Hair2l",
+     "Beard2e",
+     "Eyebrows2b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1q",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "kevin boothe",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head4d",
+     "Eyes1b",
+     "Hair1s",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1s",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "kevin johnson",
+   "positions": [
+    "CB",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1o",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "kevin williams",
+   "positions": [
+    "DT",
+    "QB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "DT": [
+     "Head4d",
+     "Eyes1d",
+     "Hair1g",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "QB": [
+     "Head2a",
+     "Eyes1d",
+     "Hair3g",
+     "Beard3f1",
+     "Eyebrows3a",
+     "Nose2c",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "korey hall",
+   "positions": [
+    "MLB",
+    "RB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "MLB": [
+     "Head2a",
+     "Eyes1c",
+     "Hair2b",
+     "Beard2c",
+     "Eyebrows2b",
+     "Nose2b",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "RB": [
+     "Head1a",
+     "Eyes1c",
+     "Hair2c",
+     "Beard2f1",
+     "Eyebrows2a",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "kory lichtensteiger",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head2b",
+     "Eyes1e",
+     "Hair1h",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose2b",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head2b",
+     "Eyes1e",
+     "Hair1h",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose2b",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "kroy biermann",
+   "positions": [
+    "DE",
+    "MLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1c",
+     "Hair3a",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "MLB": [
+     "Head4b",
+     "Eyes1c",
+     "Hair3a",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "kyle williams",
+   "positions": [
+    "DT",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "DT": [
+     "Head2d",
+     "Eyes1e",
+     "Hair2k",
+     "Beard2f1",
+     "Eyebrows2b",
+     "Nose2c",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head2b",
+     "Eyes1b",
+     "Hair2g",
+     "Beard2f1",
+     "Eyebrows2a",
+     "Nose2a",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "lamarr woodley",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1r2",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1r2",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "langston walker",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head4b",
+     "Eyes1a",
+     "Hair1f",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head4d",
+     "Eyes1a",
+     "Hair1f",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "laron landry",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head1c",
+     "Eyes1d",
+     "Hair2j",
+     "Beard2g",
+     "Eyebrows2a",
+     "Nose1a",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1k",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "larry grant",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1b",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1b",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "lawrence guy",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head2d",
+     "Eyes1a",
+     "Hair1a",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose2a",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "DT": [
+     "Head2b",
+     "Eyes1a",
+     "Hair1a",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose2a",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "lawrence timmons",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1r2",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5c",
+     "Eyes1d",
+     "Hair1r2",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "leonard davis",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head5d",
+     "Eyes1b",
+     "Hair1f",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head5b",
+     "Eyes1b",
+     "Hair1f",
+     "Beard1f1",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "leroy harris",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head4b",
+     "Eyes1e",
+     "Hair1b",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head4b",
+     "Eyes1e",
+     "Hair1b",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "leroy hill",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head2b",
+     "Eyes1b",
+     "Hair2j",
+     "Beard2g",
+     "Eyebrows2a",
+     "Nose2a",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1d",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "levi brown",
+   "positions": [
+    "OT",
+    "QB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "OT": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1l",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "QB": [
+     "Head4b",
+     "Eyes1a",
+     "Hair1l",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "manny lawson",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1e",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1e",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "marcus gilchrist",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2a",
+     "Eyes1b",
+     "Hair1j",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose2c",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head2a",
+     "Eyes1b",
+     "Hair1j",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose2c",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "marcus spears",
+   "positions": [
+    "DE",
+    "OG"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "DE": [
+     "Head5d",
+     "Eyes1b",
+     "Hair1m",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OG": [
+     "Head5d",
+     "Eyes1c",
+     "Hair1j",
+     "Beard1f2",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "marcus thomas",
+   "positions": [
+    "DT",
+    "RB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "DT": [
+     "Head4b",
+     "Eyes1a",
+     "Hair1n",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "RB": [
+     "Head4b",
+     "Eyes1a",
+     "Hair1f",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "marshall newhouse",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head5b",
+     "Eyes1c",
+     "Hair1g",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head5b",
+     "Eyes1c",
+     "Hair1g",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "marvin white",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head1b",
+     "Eyes1c",
+     "Hair4j",
+     "Beard4g",
+     "Eyebrows4b",
+     "Nose1d",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1m",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "matt jones",
+   "positions": [
+    "RB",
+    "WR"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "RB": [
+     "Head4a",
+     "Eyes1d",
+     "Hair5f",
+     "Beard5g",
+     "Eyebrows5a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head1a",
+     "Eyes1b",
+     "Hair5c",
+     "Beard5b",
+     "Eyebrows5a",
+     "Nose1c",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "matt mccoy",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head2a",
+     "Eyes1b",
+     "Hair2a",
+     "Beard2g",
+     "Eyebrows2b",
+     "Nose2c",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head1a",
+     "Eyes1a",
+     "Hair3l",
+     "Beard3d",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "matt ware",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "matthew bosher",
+   "positions": [
+    "K",
+    "P"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "K": [
+     "Head1a",
+     "Eyes1a",
+     "Hair5e",
+     "Beard5g",
+     "Eyebrows5b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "P": [
+     "Head1c",
+     "Eyes1a",
+     "Hair5e",
+     "Beard5g",
+     "Eyebrows5b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "michael bennett",
+   "positions": [
+    "DE",
+    "DT",
+    "RB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head5d",
+     "Eyes1a",
+     "Hair1f",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "DT": [
+     "Head5b",
+     "Eyes1a",
+     "Hair1f",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "RB": [
+     "Head5d",
+     "Eyes1c",
+     "Hair1n",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "michael boley",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4c",
+     "Eyes1b",
+     "Hair1q",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1q",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "michael griffin",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1h",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1h",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "michael huff",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head3c",
+     "Eyes1e",
+     "Hair1l",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose3c",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4c",
+     "Eyes1a",
+     "Hair1e",
+     "Beard1f2",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "michael johnson",
+   "positions": [
+    "CB",
+    "DE",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head3a",
+     "Eyes1a",
+     "Hair1p",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose3d",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DE": [
+     "Head5c",
+     "Eyes1b",
+     "Hair1b",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "michael lewis",
+   "positions": [
+    "C",
+    "S"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "C": [
+     "Head2b",
+     "Eyes1a",
+     "Hair4a",
+     "Beard4e",
+     "Eyebrows4b",
+     "Nose2d",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4c",
+     "Eyes1b",
+     "Hair1b",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "michael robinson",
+   "positions": [
+    "RB",
+    "WR"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "RB": [
+     "Head4c",
+     "Eyes1b",
+     "Hair1i",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "WR": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1e",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "mike adams",
+   "positions": [
+    "OT",
+    "S"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "OT": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1a",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5c",
+     "Eyes1c",
+     "Hair1e",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "mike gibson",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head4b",
+     "Eyes1d",
+     "Hair3h",
+     "Beard3d",
+     "Eyebrows3b",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head4b",
+     "Eyes1d",
+     "Hair3h",
+     "Beard3d",
+     "Eyebrows3b",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "mike pollak",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head2b",
+     "Eyes1e",
+     "Hair1q",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose2d",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head4b",
+     "Eyes1e",
+     "Hair1q",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "mike pouncey",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head2b",
+     "Eyes1b",
+     "Hair1a",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose2a",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head2b",
+     "Eyes1b",
+     "Hair1a",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose2a",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "mike vrabel",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head1b",
+     "Eyes1a",
+     "Hair3f",
+     "Beard3a",
+     "Eyebrows3a",
+     "Nose1a",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head1d",
+     "Eyes1a",
+     "Hair3f",
+     "Beard3a",
+     "Eyebrows3a",
+     "Nose1a",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "mike williams",
+   "positions": [
+    "OG",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "OG": [
+     "Head5a",
+     "Eyes1a",
+     "Hair1b",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "WR": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1f",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "nate garner",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head1b",
+     "Eyes1d",
+     "Hair2g",
+     "Beard2b",
+     "Eyebrows2b",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head4b",
+     "Eyes1d",
+     "Hair2g",
+     "Beard2b",
+     "Eyebrows2b",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "nedu ndukwe",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head1b",
+     "Eyes1b",
+     "Hair4c",
+     "Beard4c",
+     "Eyebrows4b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1a",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "nick collins",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5d",
+     "Eyes1e",
+     "Hair2g",
+     "Beard2g",
+     "Eyebrows2a",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1d",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "oj atogwe",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1c",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "oniel cousins",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1a",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1a",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "parys haralson",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1d",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1d",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "pat mcquistan",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head1b",
+     "Eyes1d",
+     "Hair4c",
+     "Beard4d",
+     "Eyebrows4b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head3b",
+     "Eyes1d",
+     "Hair4c",
+     "Beard4d",
+     "Eyebrows4b",
+     "Nose3a",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "pat watkins",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4b",
+     "Eyes1e",
+     "Hair1q",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1q",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "paul ernster",
+   "positions": [
+    "K",
+    "P"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "K": [
+     "Head1a",
+     "Eyes1a",
+     "Hair3l",
+     "Beard3d",
+     "Eyebrows3a",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "P": [
+     "Head1a",
+     "Eyes1a",
+     "Hair3l",
+     "Beard3d",
+     "Eyebrows3a",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "paul mcquistan",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head1b",
+     "Eyes1d",
+     "Hair4b",
+     "Beard4b",
+     "Eyebrows4b",
+     "Nose1d",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head4d",
+     "Eyes1d",
+     "Hair4b",
+     "Beard4b",
+     "Eyebrows4b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "philip wheeler",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "quentin groves",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1a",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1a",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "quincy black",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head2a",
+     "Eyes1e",
+     "Hair1h",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose2d",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1b",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "quintin demps",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5b",
+     "Eyes1b",
+     "Hair1s",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose5b",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head5c",
+     "Eyes1e",
+     "Hair1f",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "red bryant",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1c",
+     "Hair1n",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "DT": [
+     "Head4b",
+     "Eyes1c",
+     "Hair1n",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "reed doughty",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4b",
+     "Eyes1c",
+     "Hair1d",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head1c",
+     "Eyes1b",
+     "Hair3j",
+     "Beard3d",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "reggie nelson",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2b",
+     "Eyes1b",
+     "Hair3g",
+     "Beard3g",
+     "Eyebrows3a",
+     "Nose2c",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head4c",
+     "Eyes1a",
+     "Hair1l",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "reggie smith",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1e",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1e",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "renaldo hill",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1n",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head4c",
+     "Eyes1a",
+     "Hair1n",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "robert gallery",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head1d",
+     "Eyes1b",
+     "Hair3i",
+     "Beard3e",
+     "Eyebrows3b",
+     "Nose1b",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head1b",
+     "Eyes1b",
+     "Hair3i",
+     "Beard3e",
+     "Eyebrows3b",
+     "Nose1b",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "roberto garza",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head4d",
+     "Eyes1e",
+     "Hair1i",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OG": [
+     "Head4d",
+     "Eyes1e",
+     "Hair1i",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "rod wilson",
+   "positions": [
+    "CB",
+    "MLB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1j",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "MLB": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "rodger saffold",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head2d",
+     "Eyes1a",
+     "Hair1i",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose2d",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head2b",
+     "Eyes1a",
+     "Hair1i",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose2d",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "roman harper",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2c",
+     "Eyes1d",
+     "Hair2h",
+     "Beard2d",
+     "Eyebrows2b",
+     "Nose2b",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4c",
+     "Eyes1a",
+     "Hair1h",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "roy williams",
+   "positions": [
+    "S",
+    "WR"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "S": [
+     "Head5c",
+     "Eyes1d",
+     "Hair1j",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "WR": [
+     "Head5a",
+     "Eyes1b",
+     "Hair1i",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "russ hochstein",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head1b",
+     "Eyes1d",
+     "Hair3j",
+     "Beard3e",
+     "Eyebrows3b",
+     "Nose1b",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head1d",
+     "Eyes1d",
+     "Hair3j",
+     "Beard3e",
+     "Eyebrows3b",
+     "Nose1b",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "ryan grant",
+   "positions": [
+    "RB",
+    "WR"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "RB": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1l",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "WR": [
+     "Head4a",
+     "Eyes1d",
+     "Hair1d",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "ryan kerrigan",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head2d",
+     "Eyes1a",
+     "Hair3g",
+     "Beard3d",
+     "Eyebrows3a",
+     "Nose2b",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head2b",
+     "Eyes1a",
+     "Hair3g",
+     "Beard3d",
+     "Eyebrows3a",
+     "Nose2b",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "ryan mundy",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2b",
+     "Eyes1a",
+     "Hair3a",
+     "Beard3b",
+     "Eyebrows3b",
+     "Nose2c",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1f",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "sabby piscitelli",
+   "positions": [
+    "MLB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head3b",
+     "Eyes1c",
+     "Hair1m",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose3a",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head1a",
+     "Eyes1c",
+     "Hair3b",
+     "Beard3b",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "sam acho",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head2b",
+     "Eyes1d",
+     "Hair1l",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose2a",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head2b",
+     "Eyes1d",
+     "Hair1l",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose2a",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "scott shanle",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head1a",
+     "Eyes1a",
+     "Hair1b",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose1d",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head1c",
+     "Eyes1a",
+     "Hair1b",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose1d",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "scott wells",
+   "positions": [
+    "C",
+    "OG"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "C": [
+     "Head1d",
+     "Eyes1b",
+     "Hair3k",
+     "Beard3c",
+     "Eyebrows3b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OG": [
+     "Head1b",
+     "Eyes1b",
+     "Hair3k",
+     "Beard3c",
+     "Eyebrows3b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "scott young",
+   "positions": [
+    "OG",
+    "QB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "OG": [
+     "Head1b",
+     "Eyes1a",
+     "Hair3i",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose1d",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "QB": [
+     "Head2a",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose2c",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "sean considine",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head3c",
+     "Eyes1e",
+     "Hair5k",
+     "Beard5g",
+     "Eyebrows5a",
+     "Nose3c",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head1a",
+     "Eyes1b",
+     "Hair1s",
+     "Beard1f2",
+     "Eyebrows1b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "shawne merriman",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1a",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1f",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "spencer johnson",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1r1",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "DT": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1r1",
+     "Beard1c",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "spencer larsen",
+   "positions": [
+    "MLB",
+    "RB"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "MLB": [
+     "Head4a",
+     "Eyes1e",
+     "Hair3g",
+     "Beard3b",
+     "Eyebrows3b",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "RB": [
+     "Head4a",
+     "Eyes1d",
+     "Hair3l",
+     "Beard3e",
+     "Eyebrows3b",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "stacy andrews",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "stephen nicholas",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head3a",
+     "Eyes1d",
+     "Hair1d",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose3a",
+     "Mouth3b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4c",
+     "Eyes1d",
+     "Hair1m",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "tamba hali",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head5b",
+     "Eyes1a",
+     "Hair1k",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head5d",
+     "Eyes1a",
+     "Hair1k",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "tanard jackson",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4d",
+     "Eyes1e",
+     "Hair1a",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1s",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "teddy lehman",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head1a",
+     "Eyes1c",
+     "Hair3c",
+     "Beard3f1",
+     "Eyebrows3b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head1a",
+     "Eyes1c",
+     "Hair3c",
+     "Beard3f1",
+     "Eyebrows3b",
+     "Nose1a",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "terrell suggs",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head5b",
+     "Eyes1b",
+     "Hair1r2",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head4d",
+     "Eyes1b",
+     "Hair1r2",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "thomas davis",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1n",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head5c",
+     "Eyes1b",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose5c",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "thomas decoud",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1d",
+     "Hair1o",
+     "Beard1d",
+     "Eyebrows1a",
+     "Nose5d",
+     "Mouth5b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1s",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "thomas howard",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4c",
+     "Eyes1b",
+     "Hair1r1",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1r1",
+     "Beard1d",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "thomas williams",
+   "positions": [
+    "DT",
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DT": [
+     "Head4b",
+     "Eyes1d",
+     "Hair1p",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "MLB": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1j",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1j",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "todd herremans",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head1d",
+     "Eyes1e",
+     "Hair3i",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose1b",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OT": [
+     "Head1b",
+     "Eyes1e",
+     "Hair3i",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose1b",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "tom zbikowski",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2b",
+     "Eyes1e",
+     "Hair2h",
+     "Beard2g",
+     "Eyebrows2a",
+     "Nose2c",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head2a",
+     "Eyes1a",
+     "Hair3j",
+     "Beard3g",
+     "Eyebrows3a",
+     "Nose2c",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "tony brown",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1a",
+     "Hair1j",
+     "Beard1f2",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "DT": [
+     "Head4d",
+     "Eyes1a",
+     "Hair1j",
+     "Beard1f2",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "travelle wharton",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head5d",
+     "Eyes1c",
+     "Hair1b",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head5b",
+     "Eyes1c",
+     "Hair1b",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose5a",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "troy evans",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head2a",
+     "Eyes1b",
+     "Hair3g",
+     "Beard3f1",
+     "Eyebrows3a",
+     "Nose2b",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head2c",
+     "Eyes1b",
+     "Hair3g",
+     "Beard3f1",
+     "Eyebrows3a",
+     "Nose2b",
+     "Mouth2b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "turk mcbride",
+   "positions": [
+    "DE",
+    "DT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1o",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "DT": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1o",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "tyjuan hagler",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head1b",
+     "Eyes1a",
+     "Hair4b",
+     "Beard4e",
+     "Eyebrows4b",
+     "Nose1a",
+     "Mouth1a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1s",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "tyler brayton",
+   "positions": [
+    "DE",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "DE": [
+     "Head3d",
+     "Eyes1e",
+     "Hair3c",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head2b",
+     "Eyes1e",
+     "Hair3c",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose2d",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "tyrell johnson",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head5a",
+     "Eyes1c",
+     "Hair1a",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose5d",
+     "Mouth5a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1b",
+     "Beard1a",
+     "Eyebrows1b",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "tyrone culver",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4b",
+     "Eyes1b",
+     "Hair2i",
+     "Beard2c",
+     "Eyebrows2a",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1s",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "tyvon branch",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1q",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4c",
+     "Eyes1c",
+     "Hair1q",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "usama young",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1a",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1a",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "vincent fuller",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head2b",
+     "Eyes1e",
+     "Hair1b",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose2c",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4a",
+     "Eyes1b",
+     "Hair1q",
+     "Beard1b",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "will allen",
+   "positions": [
+    "CB",
+    "S"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1d",
+     "Hair1b",
+     "Beard1a",
+     "Eyebrows1a",
+     "Nose4c",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "S": [
+     "Head4c",
+     "Eyes1b",
+     "Hair1e",
+     "Beard1e",
+     "Eyebrows1b",
+     "Nose4c",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "will davis",
+   "positions": [
+    "CB",
+    "DE"
+   ],
+   "guess": "check-namesake",
+   "faces": {
+    "CB": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1l",
+     "Beard1c",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "DE": [
+     "Head4a",
+     "Eyes1c",
+     "Hair1j",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4a",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "will herring",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4c",
+     "Eyes1d",
+     "Hair3d",
+     "Beard3e",
+     "Eyebrows3a",
+     "Nose4b",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head2a",
+     "Eyes1d",
+     "Hair3d",
+     "Beard3e",
+     "Eyebrows3a",
+     "Nose2b",
+     "Mouth2a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "will witherspoon",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4c",
+     "Eyes1e",
+     "Hair1f",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "OLB": [
+     "Head4c",
+     "Eyes1e",
+     "Hair1f",
+     "Beard1b",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes2"
+    ]
+   }
+  },
+  {
+   "name": "willie colon",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head4d",
+     "Eyes1b",
+     "Hair1r2",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head4b",
+     "Eyes1b",
+     "Hair1r2",
+     "Beard1g",
+     "Eyebrows1b",
+     "Nose4a",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "xavier adibi",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head4a",
+     "Eyes1a",
+     "Hair1d",
+     "Beard1f1",
+     "Eyebrows1b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head4a",
+     "Eyes1e",
+     "Hair1h",
+     "Beard1g",
+     "Eyebrows1a",
+     "Nose4d",
+     "Mouth4a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "zach diles",
+   "positions": [
+    "MLB",
+    "OLB"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head3a",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head3a",
+     "Eyes1d",
+     "Hair1h",
+     "Beard1e",
+     "Eyebrows1a",
+     "Nose3d",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "zach strief",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head3d",
+     "Eyes1d",
+     "Hair3j",
+     "Beard3a",
+     "Eyebrows3b",
+     "Nose3b",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head3d",
+     "Eyes1d",
+     "Hair3j",
+     "Beard3a",
+     "Eyebrows3b",
+     "Nose3b",
+     "Mouth3a",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "zak deossie",
+   "positions": [
+    "MLB",
+    "OLB",
+    "TE"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "MLB": [
+     "Head1b",
+     "Eyes1d",
+     "Hair3h",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OLB": [
+     "Head1a",
+     "Eyes1b",
+     "Hair3a",
+     "Beard3a",
+     "Eyebrows3b",
+     "Nose1b",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes2"
+    ],
+    "TE": [
+     "Head1c",
+     "Eyes1c",
+     "Hair3l",
+     "Beard3b",
+     "Eyebrows3b",
+     "Nose1c",
+     "Mouth1b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  },
+  {
+   "name": "zane beadles",
+   "positions": [
+    "OG",
+    "OT"
+   ],
+   "guess": "same-person",
+   "faces": {
+    "OG": [
+     "Head4b",
+     "Eyes1b",
+     "Hair3b",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ],
+    "OT": [
+     "Head4d",
+     "Eyes1b",
+     "Hair3b",
+     "Beard3g",
+     "Eyebrows3b",
+     "Nose4b",
+     "Mouth4b",
+     "Glasses1e",
+     "Clothes1"
+    ]
+   }
+  }
+ ],
+ "_regenerated": "2026-08-31 \u2014 faces refreshed from the repaired registry (720 relabelled keys). The guess column is unchanged and is still NOT evidence."
+}
