@@ -17,6 +17,16 @@
 > - **`.ros` files no longer need Windows.** `tools/rosgui.py` decodes them
 >   directly, verified exact against Xtreme on three files. Its "Screen" button
 >   gives a usable / unusable verdict in a second — see `PGM3_SOURCE_QUALITY.md`.
+> - **REGISTRY: re-pull before applying it.** `PGM3_FACE_REGISTRY.json` gained
+>   the first entries ever in `_verified_keys.staff` on 2026-08-31 — 18 coaches
+>   Ryan hand-edited in 1986, six of which propagate into `staff_faces` and
+>   changed `PGMStaff_2004/2007/2010/2013`, 35 records across five files.
+>   **Check `_verified_keys.staff` reads 18, not 0, before any registry pass.**
+>   Note also that **the staff key is name alone and has a namesake hole**: Jim
+>   Mora Sr. (1986 New Orleans) and Jim Mora Jr. (2004 Atlanta) are two men and
+>   only the 2007 file spells the suffix. The merge blocks propagation for any
+>   name wearing a generational suffix anywhere in the archive; assume that rule
+>   applies to staff generally.
 > - **Open finding (2026-08-31):** head family 4 ranges 14–39% across the
 >   published files, worst in 2010. Not a regression — it predates the skin
 >   repair and has never been investigated. `pgm3_validate.py faces` flags it.
@@ -827,6 +837,16 @@ appearance rebuilt from real Madden data.
   length cap
 
 **Known open items, none blocking:**
+
+0b. **Salary fill artifact — the published files spike at round mid-range
+   numbers.** Found 2026-08-31 checking whether they clamp or smear at the
+   bottom. They **smear** (2004's bottom decile holds 83 distinct values of 188),
+   so there is no minimum-salary convention to inherit — but each file carries a
+   spike somewhere in the middle instead: **2007 has 384 rostered players (20.5%)
+   on exactly $1,019,000**, 2010 has 188 on $779,000, 2004 has 112 on $730,000.
+   A fifth of a roster on one salary to the dollar is a fill, not a negotiation.
+   **Fourth member of the "a safe default is still a claim" family**, after the
+   1986 free-agent skin, the stamina-1 block, and the OLB coverage 1-3 values.
 
 0a. **PLAYABILITY DEFECT — 1,622 players across the published files have
    `stamina` 1 and will gas out in game.** Found 2026-08-31 during the 2000
