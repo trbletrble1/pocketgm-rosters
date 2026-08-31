@@ -887,6 +887,19 @@ appearance rebuilt from real Madden data.
    | team payroll ~**$54M** | — | all seven ($150–250M) | the real 2000 cap was **$62.17M**; the published files are not era-scaled, which the precedents record as a defect nobody caught rather than a convention |
    | K/P salaries capped ~**$1.2M** | — | all seven (K p95 **$7.61M**, P max **$10.56M**) | the real 2000 top-of-market for a kicker was **$1,071,167** (Jason Elam) |
 
+   **Two more, on the STAFF side, both validator limitations rather than file
+   defects:**
+
+   | check | reports | why it is correct |
+   |---|---|---|
+   | `duplicate names` [2] | Dick LeBeau twice, Jim Mora twice | LeBeau held **Cincinnati HC and DC simultaneously** — a ruling, not an error. The two Moras are **different men**, father at Indianapolis and son at San Francisco. The check keys on name alone and cannot express either |
+   | `verified faces intact` [2] | `jim mora` @ 1986 and @ 2000 | Same hole. The registry holds Mora Sr. in `staff_faces_1986` and Mora Jr. in `staff_faces`; a name-alone check must call one of them an overwrite. The 1986 instance predates this build |
+
+   **The 2000 staff file adds ZERO new face inconsistencies to the archive.**
+   Measured by running `faces --staff` over the published files alone and then
+   with 2000 added: head-family, hair-style and full-face disagreement counts
+   are **21 / 38 / 40** either way.
+
    **Why the validator cannot see any of them.** `zero_pattern` pools all
    positions for rosters, so `OLB` at 0% is diluted by `MLB`/`CB`/`S` at 100%;
    and `cross_year` skips money fields by design, since they legitimately differ
