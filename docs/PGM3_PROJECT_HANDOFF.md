@@ -1072,6 +1072,39 @@ appearance rebuilt from real Madden data.
    head-family distribution across files; and registry duplicates disagreeing
    family 3 against family 5 for the same man (`william roberts`, `joe jacoby`).
 
+   **This item gets cheaper if the project keeps going — check before spending
+   a session on it.** Master-session measurement, 2026-08-31: after every
+   current export, **1,260 names remain unsourced**. (Build session measured
+   1,234 locally on a name+position key across the 23 `sources/madden` exports;
+   same finding, slightly different key.) Coverage a single additional export
+   would supply:
+
+   | export year | names it would cover |
+   |---|---|
+   | **1990** | **514** |
+   | 1989 | 459 |
+   | 1991 | 418 |
+   | 1992 | 328 |
+   | 1993 | 253 |
+   | 1995 | 130 |
+   | 1997 | 29 |
+
+   **One early-90s roster recovers more than double what all six current
+   exports manage combined.** So this is not "17% recoverable, the rest
+   unsourceable" — a 1990 or 1991 build closes roughly **40% of the gap as a
+   side effect**, before anyone does anything deliberate about it.
+
+   **Likely route is a community historical mod inside a modern Madden engine**
+   — the way `1986_Roster_Mod_v1.0.ros` was — rather than a period disc. The
+   Xtreme format only reaches back to 2000, so a period-era disc will not
+   decode. Whatever turns up gets scored before use like any other source:
+   print the `PSKI` distribution, check the middle value is under ~28%, then
+   anchor-test against known players.
+
+   **Practical consequence:** do not spend a session on the photo-measurement
+   route for this cohort until it is known whether a 1990/1991 build is coming.
+   The photo route is the expensive fallback for what no roster export covers.
+
 1. **508 players have no skin data** — scattered fringe players in no Madden
    roster. The photo route would cover them
 2. **230 players carry more than one face.** 222 are genuinely different people

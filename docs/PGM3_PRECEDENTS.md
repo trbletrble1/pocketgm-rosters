@@ -24,6 +24,51 @@ If the game rejects a value, import says so immediately. That's cheap to find ou
 
 ---
 
+## A repair scoped to the overlap improves every metric and leaves the defect
+
+**2026-08-31, building 2000.** Found 132 players whose skin family disagreed
+between 1986 and 2000 while every other file agreed among themselves. The
+obvious repair was to write those 132 into the face registry with 2000's
+anchor-tested `PSKI` value.
+
+It would have improved every signal available: the all-cohorts family
+disagreement count falls from 163 toward 31, `pgm3_validate.py faces` stays
+clean, cross-file consistency rises. **No check in this project would have
+objected.**
+
+It was still the wrong fix. 131 of the 132 sit in 1986's Rookie cohort, which
+has ~1,334 members, none of them sourced. Repairing the 132 fixes the subset
+that happens to overlap 2000, leaves ~1,200 unsourced records untouched, and
+removes the very signal by which a later session would find them.
+
+**The general form: a fix applied to the subset you can see improves every
+metric while leaving the defect intact and less visible. That is worse than
+not fixing it, because the metrics are how anyone later finds the problem.**
+
+Related to "a correct marginal is the weakest evidence a derived field is
+right" but not the same. That one is about a *field* being wrong while looking
+right. This is about a *repair* being wrong while looking right. Same
+mechanism underneath: measuring the visible subset.
+
+**The trigger to name.** The scope of that fix was "what appears in both
+files" — which has nothing to do with the defect, whose real boundary is a
+cohort inside one file. **Whenever a fix is scoped by what appears in both of
+two things, check whether that scope has any relationship to the defect.**
+Overlap is a property of how you happened to look, not of what is broken.
+
+## The proximate reason is a real finding, which is why it stops you
+
+Same investigation. Asked why the 132 disagreed, the build session answered
+that `faces_1986` keys include `teamID`, so a man on CHI in 1986 and DET in
+2000 can never match. True, specific, verifiable — and the wrong level. That
+explains **how the disagreement got through**; it does not explain **why the
+two sides disagreed**. The cause was that one side had no source at all.
+
+A proximate reason is dangerous precisely because it is a genuine finding.
+It survives checking, so it feels like the answer. **When a mechanism explains
+how something went unnoticed, ask separately what it was that went unnoticed.**
+
+
 ## Contract ceilings — TESTED, none exists
 
 **The game accepts contracts far larger than anything we have ever shipped.** Tested 2026-08-28 in a throwaway league built from the 2004 roster: salaries of $45M, $60M and $75M imported, displayed correctly, and were used in the game's own arithmetic — a $45M salary produced a $50.7M cap hit and $31.3M dead cap. Nothing was clamped or rejected.
