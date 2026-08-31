@@ -318,22 +318,39 @@ def stage4(recs):
     # Aggregate dark share. The per-family check above passes this file while
     # the aggregate does not, which is why both are needed: every family can sit
     # inside its own range while the light/dark balance sits outside.
+    # COHORT-MATCHED. The first version of this compared a rostered+FA file
+    # against a rostered-only band and reported a 0.3-point miss that was really
+    # 0.1. Cohorts present in the file being checked are the cohorts the band is
+    # built from — otherwise this fires spuriously again at stage 9, when the
+    # draft classes land and shift the mix.
+    have = {p['teamID'] if p['teamID'] in ('Free Agent', 'Rookie') else '_ROSTERED'
+            for p in recs}
     dark = 100 * (fam['4'] + fam['5']) / tot
     dk = []
     for y in (1986, 2004, 2007, 2010, 2013, 2017, 2021):
         path = os.path.join(REPO, f'PGMRoster_{y}.json')
         if not os.path.exists(path): continue
-        c = collections.Counter(q['appearance'][0].replace('Head', '')[0]
-                                for q in json.load(open(path))
-                                if q['teamID'] not in ('Free Agent', 'Rookie'))
-        t2 = sum(c.values()); dk.append(100 * (c['4'] + c['5']) / t2)
+        c = collections.Counter()
+        for q in json.load(open(path)):
+            coh = q['teamID'] if q['teamID'] in ('Free Agent', 'Rookie') else '_ROSTERED'
+            if coh in have:
+                c[q['appearance'][0].replace('Head', '')[0]] += 1
+        t2 = sum(c.values())
+        if t2: dk.append(100 * (c['4'] + c['5']) / t2)
     lo, hi = min(dk), max(dk)
-    flag = '' if lo <= dark <= hi else f'   <-- OUTSIDE published {lo:.1f}-{hi:.1f}'
-    print(f'    dark share {dark:.1f}%   published {lo:.1f} - {hi:.1f}{flag}')
+    cohorts = '+'.join(sorted(x.replace('_ROSTERED', 'rostered') for x in have))
+    flag = '' if lo <= dark <= hi else '   <-- OUTSIDE'
+    print(f'    dark share {dark:.1f}%   published {lo:.1f} - {hi:.1f} '
+          f'({cohorts}){flag}')
+    # 1986's free agent pool is 198/201 dark, an unrepaired defect in a
+    # published file (logged for the master session). It inflates the upper end
+    # of any band that includes free agents, so this band is not trustworthy to
+    # three significant figures.
     if flag:
-        print(f'    NOT failing the build on this: it is a property of the source,')
-        print(f'    not of the mapping. PSKI resolves to {100*33.1/(33.1+56.1):.1f}% light before')
-        print(f'    anything is assigned. Widening the band to make the file pass')
+        print(f'    NOT failing the build: PSKI resolves to 37.1% light before '
+              f'anything is assigned,')
+        print(f'    so this is a property of the source. Widening the band to '
+              f'make the file pass')
         print(f'    would be fitting the check to the data. NEEDS A RULING.')
     var = collections.Counter(p['appearance'][0][-1] for p in recs)
     print('  head variant: ' + '  '.join(f'{k}:{100*v/tot:.1f}%' for k, v in sorted(var.items())))

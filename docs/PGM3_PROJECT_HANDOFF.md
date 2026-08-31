@@ -828,6 +828,36 @@ appearance rebuilt from real Madden data.
 
 **Known open items, none blocking:**
 
+0. **1986's free agent pool never got a skin source — 198 of 201 are dark
+   (98.5%).** Found 2026-08-31 while cohort-matching a distribution check for
+   the 2000 build; confirmed independently by Ryan. **Backlog for the master
+   session — do not chase it mid-build.**
+
+   | family | n |
+   |---|---|
+   | 1 | 3 |
+   | 2 | 0 |
+   | 3 | 0 |
+   | 4 | 95 |
+   | 5 | 103 |
+
+   Families 2 and 3 are entirely unused, which is the signature of a cohort that
+   was never sourced rather than one sourced badly. The rostered 1986 cohort next
+   to it reads 67.9% dark and 16.1% family 1, so the defect is confined to the
+   free agents. Named cases: **Ralph Giacomarro** (P) is `Head4c`, **James Britt**
+   (CB) `Head4a`, **Cliff Benson** (TE) `Head4c`. The only three light players in
+   the whole pool are Joe DeLamielleure, Jan Stenerud and John Hannah.
+
+   This is the 1986 skin defect again, in the cohort the original repair pass did
+   not cover — the free agents were built in a separate session from the rostered
+   file. It is also the exact thing the handoff warns about under "there is no
+   safe cohort".
+
+   **Consequence for anyone using a distribution band:** it inflates the top of
+   any range that includes free agents. The published rostered+FA dark band reads
+   63.8–71.1%, and the 71.1% ceiling is this bug. Do not trust that band to three
+   significant figures.
+
 1. **508 players have no skin data** — scattered fringe players in no Madden
    roster. The photo route would cover them
 2. **230 players carry more than one face.** 222 are genuinely different people
