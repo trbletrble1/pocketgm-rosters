@@ -838,6 +838,40 @@ appearance rebuilt from real Madden data.
 
 **Known open items, none blocking:**
 
+0f. **THE 2000 FILE DIVERGES FROM THE PUBLISHED FILES IN THREE PLACES, ON
+   PURPOSE. None of the three is visible to `pgm3_validate.py`.** Recorded here
+   rather than only in a build log, because the validator will never surface
+   them and a future session would otherwise find a 2000 file that disagrees
+   with its neighbours, find no explanation, and "fix" the correct one.
+
+   | deviation | matches | diverges from | measured reason |
+   |---|---|---|---|
+   | `OLB` `manCover`/`zoneCover` gated OFF | 2004, 2007, 2017 | 2013, 2021 | where present the entire range is **1–3** against `MLB`'s 38–92, and 62–100% of the non-zero values are the fill value 1 |
+   | team payroll ~**$54M** | — | all seven ($150–250M) | the real 2000 cap was **$62.17M**; the published files are not era-scaled, which the precedents record as a defect nobody caught rather than a convention |
+   | K/P salaries capped ~**$1.2M** | — | all seven (K p95 **$7.61M**, P max **$10.56M**) | the real 2000 top-of-market for a kicker was **$1,071,167** (Jason Elam) |
+
+   **Why the validator cannot see any of them.** `zero_pattern` pools all
+   positions for rosters, so `OLB` at 0% is diluted by `MLB`/`CB`/`S` at 100%;
+   and `cross_year` skips money fields by design, since they legitimately differ
+   by era. All three are correct divergences from defective references.
+
+0e. **BACKLOG — make `zero_pattern` per-position for rosters.** It currently
+   splits **staff by role** ("a scout legitimately has zero playcalling, and
+   pooling roles hides that") but **pools roster records across positions**. The
+   same reasoning applies: a linebacker legitimately has zero `kickAccuracy`.
+   It is an inconsistency, not a design choice.
+
+   **What it actually is: a defect detector for the cleanup passes.** Three of
+   the five published-file defects queued below are fill artifacts hiding in
+   specific positions — `OLB` coverage, and the position-specific parts of the
+   stamina and salary spikes. A per-position zero-pattern check is the
+   instrument that would have found them without anyone looking.
+
+   **Do not build it mid-roster-build**: it moves the standard a file is being
+   measured against while it is being measured, and it will almost certainly
+   fire across all seven published files at once. **Run it report-only against
+   all seven first, then decide about gating.**
+
 0d. **PLAYABILITY DEFECT — kicker and punter CONTRACTS are inflated, not just
    their ratings.** Measured 2026-08-31 while building 2000's contracts;
    confirmed independently by Ryan. Pooled across the published files, **kickers

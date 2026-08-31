@@ -2268,3 +2268,31 @@ assert_guards_spared_sourced(recs, {id(p): original[p] for p in sourced})
 The assertion was tested against a deliberately corrupted record before being
 trusted, because an assertion that cannot fail is worse than none — it reports
 success. All 66 anchored contracts now reproduce their real figure exactly.
+
+
+---
+
+## An assertion that cannot fail reports success
+
+`assert_guards_spared_sourced` was written to catch a guard overwriting a sourced
+contract. Before trusting it, it was run against a **deliberately corrupted
+record** — a sourced value moved by hand — to confirm it fired, and then against
+an intact one to confirm it passed.
+
+That step is not ceremony. An assertion with a typo'd comparison, a wrong key, an
+empty input set or an unreachable branch **does not report "I could not check
+this"**. It reports success, in exactly the same words as a real pass, and it
+keeps reporting success for as long as it exists. It is worse than no check,
+because no check leaves you suspicious.
+
+This project has one instance already: the 1986 registry write that produced
+1,745 entries from 1,746 players and raised nothing, because the count assertion
+that would have caught it was not there. The failure mode being described here is
+one step worse — the assertion *is* there, and is empty.
+
+**Rule: prove an assertion fails before relying on it passing.** Corrupt an
+input, watch it fire, restore. Two lines, once, at the moment it is written.
+
+The cheapest version for a set-based check is to assert the set is non-empty
+before asserting anything about its contents — a guard over zero sourced records
+passes trivially and forever.
