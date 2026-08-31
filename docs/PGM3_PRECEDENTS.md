@@ -2544,3 +2544,77 @@ produced a **one-line diff**.
 Corollary: if a change genuinely requires reformatting, do it as a separate
 commit containing nothing else, so the substantive change stays reviewable on
 its own.
+
+---
+
+## A fifth of every draft class is in no Madden file, whatever year you reach for
+
+Building 2001-2004, the 2001 class had to come from `2003 - PLAY.csv` at a
+two-year gap, and the obvious worry was coverage. Measured:
+
+| class | source | gap | matched |
+|---|---|---|---|
+| 2001 | 2003 file | **2** | 74% |
+| 2002 | 2003 file | 1 | 79% |
+| 2003 | 2003 file | **0** | 79% |
+| 2004 | 2004 file | **0** | 78% |
+
+**The correct-year class matches at the same rate as the two-year-gap one.**
+The shortfall is not caused by reaching for a distant file — it is draftees who
+never appear in any Madden export, because they never made a roster the game
+cared about. It is uniform at roughly 22% across every class.
+
+Two consequences worth carrying:
+
+**The source-tier hierarchy is about accuracy, not coverage.** A closer year buys
+a better value for the players you already had (MAE 2.35 at gap 1, 3.15 at gap 2,
+against 7.26 for percentile fill). It buys almost no additional players. Hunting
+for a nearer source to fix coverage is hunting for something that is not there.
+
+**Percentile fill is load-bearing by design, not by failure.** Roughly a fifth of
+every draft class reaches the file through it, permanently, and no amount of
+source work changes that. It should be reported as a standing share rather than
+treated as a shortfall to be driven down — and it is the reason the match-rate
+assertion matters more than the count.
+
+---
+
+## Record the reason beside a deliberate divergence, not in the commit message
+
+2000's draft prospects carry a maximum potential gap of **40**, against **36 /
+33 / 23** in the published files. That is deliberately **looser**, and read cold
+it looks like an out-of-range defect that a later session will tighten.
+
+**The reason has to sit next to the number.** The 2013 build capped the gap at
+**14** against 29-45 elsewhere and produced **Louis Nix rated above Aaron
+Donald**. A cap is not a neutral safety measure — it compresses the top of the
+class, and the top of the class is where the recognisable players are.
+
+So the constant in `draft_potential` carries that sentence in the code, not only
+here. **A commit message is not where a future reader looks before changing a
+constant.** They look at the constant.
+
+General form: a value chosen deliberately outside a reference range needs its
+justification stored where the value is, because the reference range is what any
+reviewer will check it against first.
+
+---
+
+## Third boundary-translation bug: a vocabulary borrowed across a boundary
+
+Prospect faces were generated from the **staff** hair vocabulary, emitting
+`Hair4k` — which exists for staff and not for players. Earlier in the same build,
+staff faces were generated from the **roster** vocabulary, emitting `Hair5e`,
+`Beard3c` and `Hair4k` in the other direction.
+
+Same root as `FB`/`HB` in the fullback cohort and `G`/`OG` in the Houston
+assembly: **a vocabulary carried across a boundary where the two sides genuinely
+differ.** Three instances in one build.
+
+The tell is always the same — one side of the boundary was written by someone
+holding the other side's vocabulary in mind, and the mismatch produces a value
+that looks plausible rather than an error. `Hair4k` is a perfectly well-formed
+token. It is simply not one players use.
+
+**Derive the vocabulary from the population you are writing into, never from the
+one you happen to have loaded.**
