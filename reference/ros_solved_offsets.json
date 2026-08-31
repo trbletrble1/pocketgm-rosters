@@ -1,0 +1,521 @@
+{
+ "PLAY": {
+  "record_bytes": 104,
+  "records": 3027,
+  "data_start_delta": -8,
+  "field_defs": 110,
+  "solved": {
+   "PRL2": {
+    "header_offset": 270,
+    "real_offset": 266,
+    "bits": 6
+   },
+   "TLHA": {
+    "header_offset": 276,
+    "real_offset": 276,
+    "bits": 3
+   },
+   "PRHA": {
+    "header_offset": 279,
+    "real_offset": 273,
+    "bits": 3
+   },
+   "PSTA": {
+    "header_offset": 296,
+    "real_offset": 288,
+    "bits": 7
+   },
+   "PFPB": {
+    "header_offset": 297,
+    "real_offset": 8,
+    "bits": 1
+   },
+   "PMPC": {
+    "header_offset": 327,
+    "real_offset": 321,
+    "bits": 2
+   },
+   "PBRE": {
+    "header_offset": 371,
+    "real_offset": 373,
+    "bits": 2
+   },
+   "PEYE": {
+    "header_offset": 372,
+    "real_offset": 372,
+    "bits": 1
+   },
+   "PCPH": {
+    "header_offset": 382,
+    "real_offset": 378,
+    "bits": 3
+   },
+   "PRSH": {
+    "header_offset": 388,
+    "real_offset": 388,
+    "bits": 3
+   },
+   "PLTH": {
+    "header_offset": 396,
+    "real_offset": 396,
+    "bits": 1
+   },
+   "PRTH": {
+    "header_offset": 397,
+    "real_offset": 395,
+    "bits": 1
+   },
+   "PSKI": {
+    "header_offset": 406,
+    "real_offset": 402,
+    "bits": 2
+   },
+   "PNEK": {
+    "header_offset": 452,
+    "real_offset": 452,
+    "bits": 2
+   },
+   "PFMK": {
+    "header_offset": 456,
+    "real_offset": 448,
+    "bits": 4
+   },
+   "PBTK": {
+    "header_offset": 463,
+    "real_offset": 457,
+    "bits": 7
+   },
+   "PHCL": {
+    "header_offset": 472,
+    "real_offset": 464,
+    "bits": 3
+   },
+   "PUCL": {
+    "header_offset": 477,
+    "real_offset": 475,
+    "bits": 5
+   },
+   "TLEL": {
+    "header_offset": 485,
+    "real_offset": 483,
+    "bits": 4
+   },
+   "TREL": {
+    "header_offset": 493,
+    "real_offset": 491,
+    "bits": 4
+   },
+   "PLPL": {
+    "header_offset": 508,
+    "real_offset": 240,
+    "bits": 8
+   },
+   "PGSL": {
+    "header_offset": 511,
+    "real_offset": 505,
+    "bits": 3
+   },
+   "PCYL": {
+    "header_offset": 518,
+    "real_offset": 514,
+    "bits": 4
+   },
+   "PSTM": {
+    "header_offset": 528,
+    "real_offset": 520,
+    "bits": 7
+   },
+   "PHAN": {
+    "header_offset": 529,
+    "real_offset": 535,
+    "bits": 1
+   },
+   "PICN": {
+    "header_offset": 530,
+    "real_offset": 534,
+    "bits": 1
+   },
+   "PTEN": {
+    "header_offset": 539,
+    "real_offset": 541,
+    "bits": 2
+   },
+   "PCON": {
+    "header_offset": 543,
+    "real_offset": 537,
+    "bits": 4
+   },
+   "PVCO": {
+    "header_offset": 248,
+    "real_offset": 552,
+    "bits": 4
+   },
+   "PEGO": {
+    "header_offset": 560,
+    "real_offset": 248,
+    "bits": 8
+   },
+   "PFHO": {
+    "header_offset": 561,
+    "real_offset": 8,
+    "bits": 1
+   },
+   "PDRO": {
+    "header_offset": 565,
+    "real_offset": 563,
+    "bits": 4
+   },
+   "PYRP": {
+    "header_offset": 591,
+    "real_offset": 585,
+    "bits": 5
+   },
+   "PJER": {
+    "header_offset": 618,
+    "real_offset": 622,
+    "bits": 1
+   },
+   "PKPR": {
+    "header_offset": 632,
+    "real_offset": 624,
+    "bits": 7
+   },
+   "PSTR": {
+    "header_offset": 639,
+    "real_offset": 633,
+    "bits": 7
+   },
+   "TLWR": {
+    "header_offset": 661,
+    "real_offset": 659,
+    "bits": 4
+   },
+   "TRWR": {
+    "header_offset": 669,
+    "real_offset": 667,
+    "bits": 4
+   },
+   "PMCS": {
+    "header_offset": 704,
+    "real_offset": 696,
+    "bits": 7
+   },
+   "PFGS": {
+    "header_offset": 711,
+    "real_offset": 705,
+    "bits": 7
+   },
+   "PVIS": {
+    "header_offset": 734,
+    "real_offset": 730,
+    "bits": 2
+   },
+   "POPS": {
+    "header_offset": 744,
+    "real_offset": 736,
+    "bits": 5
+   },
+   "PLSS": {
+    "header_offset": 751,
+    "real_offset": 745,
+    "bits": 7
+   },
+   "PMUS": {
+    "header_offset": 774,
+    "real_offset": 770,
+    "bits": 2
+   },
+   "PWGT": {
+    "header_offset": 781,
+    "real_offset": 256,
+    "bits": 8
+   },
+   "PJTY": {
+    "header_offset": 812,
+    "real_offset": 812,
+    "bits": 3
+   },
+   "PSTY": {
+    "header_offset": 814,
+    "real_offset": 810,
+    "bits": 2
+   }
+  },
+  "unsolved": [
+   "PLHA",
+   "TRHA",
+   "PTHA",
+   "PTSA",
+   "PVSB",
+   "PKAC",
+   "PACC",
+   "PHED",
+   "PGID",
+   "TGID",
+   "POID",
+   "PSPD",
+   "PAGE",
+   "PTGH",
+   "PLSH",
+   "PCTH",
+   "PAGI",
+   "PDPI",
+   "PPTI",
+   "PINJ",
+   "PTAK",
+   "PPBK",
+   "PRBK",
+   "PTAL",
+   "PLEL",
+   "PREL",
+   "PCOL",
+   "PROL",
+   "PTSL",
+   "PHLM",
+   "PJEN",
+   "PSBO",
+   "PTHP",
+   "PIMP",
+   "PJMP",
+   "PSXP",
+   "PCAR",
+   "PTAR",
+   "PMOR",
+   "POVR",
+   "PAWR",
+   "PLWR",
+   "PRWR",
+   "PFAS",
+   "PMAS",
+   "PSBS",
+   "PFCS",
+   "PCHS",
+   "PFHS",
+   "PMHS",
+   "PPOS",
+   "PFTS",
+   "PMTS",
+   "PUTS",
+   "PVTS",
+   "PHGT",
+   "PCMT",
+   "PKRT",
+   "PYWT",
+   "PLHY",
+   "PFEx"
+  ]
+ },
+ "COCH": {
+  "record_bytes": 68,
+  "records": 218,
+  "data_start_delta": -8,
+  "field_defs": 68,
+  "solved": {
+   "CFDA": {
+    "header_offset": 169,
+    "real_offset": 1,
+    "bits": 1
+   },
+   "CFFA": {
+    "header_offset": 0,
+    "real_offset": 1,
+    "bits": 1
+   },
+   "CDTA": {
+    "header_offset": 184,
+    "real_offset": 176,
+    "bits": 7
+   },
+   "COTA": {
+    "header_offset": 191,
+    "real_offset": 185,
+    "bits": 7
+   },
+   "CSPC": {
+    "header_offset": 220,
+    "real_offset": 220,
+    "bits": 1
+   },
+   "CFUC": {
+    "header_offset": 226,
+    "real_offset": 0,
+    "bits": 1
+   },
+   "CHID": {
+    "header_offset": 251,
+    "real_offset": 128,
+    "bits": 8
+   },
+   "CHSD": {
+    "header_offset": 262,
+    "real_offset": 258,
+    "bits": 5
+   },
+   "CSKI": {
+    "header_offset": 320,
+    "real_offset": 312,
+    "bits": 3
+   },
+   "CSBL": {
+    "header_offset": 360,
+    "real_offset": 352,
+    "bits": 6
+   },
+   "CRDL": {
+    "header_offset": 367,
+    "real_offset": 361,
+    "bits": 7
+   },
+   "CFHL": {
+    "header_offset": 368,
+    "real_offset": 360,
+    "bits": 1
+   },
+   "CROL": {
+    "header_offset": 375,
+    "real_offset": 369,
+    "bits": 7
+   },
+   "CWPL": {
+    "header_offset": 386,
+    "real_offset": 0,
+    "bits": 1
+   },
+   "CCPM": {
+    "header_offset": 399,
+    "real_offset": 393,
+    "bits": 6
+   },
+   "CFCO": {
+    "header_offset": 403,
+    "real_offset": 0,
+    "bits": 1
+   },
+   "CFDP": {
+    "header_offset": 414,
+    "real_offset": 1,
+    "bits": 1
+   },
+   "CFRP": {
+    "header_offset": 415,
+    "real_offset": 1,
+    "bits": 1
+   },
+   "CHAR": {
+    "header_offset": 431,
+    "real_offset": 425,
+    "bits": 3
+   },
+   "CFFR": {
+    "header_offset": 432,
+    "real_offset": 1,
+    "bits": 1
+   },
+   "CFRR": {
+    "header_offset": 433,
+    "real_offset": 1,
+    "bits": 1
+   },
+   "CDTR": {
+    "header_offset": 440,
+    "real_offset": 432,
+    "bits": 7
+   },
+   "CRWR": {
+    "header_offset": 464,
+    "real_offset": 456,
+    "bits": 7
+   },
+   "CRKS": {
+    "header_offset": 471,
+    "real_offset": 465,
+    "bits": 7
+   },
+   "CRPS": {
+    "header_offset": 480,
+    "real_offset": 472,
+    "bits": 7
+   },
+   "CCWS": {
+    "header_offset": 486,
+    "real_offset": 482,
+    "bits": 6
+   },
+   "CHGT": {
+    "header_offset": 493,
+    "real_offset": 136,
+    "bits": 8
+   },
+   "CCPW": {
+    "header_offset": 513,
+    "real_offset": 144,
+    "bits": 8
+   },
+   "CFEX": {
+    "header_offset": 514,
+    "real_offset": 1,
+    "bits": 1
+   },
+   "CHTY": {
+    "header_offset": 523,
+    "real_offset": 525,
+    "bits": 2
+   },
+   "COTY": {
+    "header_offset": 152,
+    "real_offset": 521,
+    "bits": 4
+   },
+   "CBSZ": {
+    "header_offset": 160,
+    "real_offset": 152,
+    "bits": 8
+   },
+   "CThg": {
+    "header_offset": 527,
+    "real_offset": 160,
+    "bits": 8
+   },
+   "CTgw": {
+    "header_offset": 1936287831,
+    "real_offset": 520,
+    "bits": 1
+   }
+  },
+  "unsolved": [
+   "CRSA",
+   "CRDB",
+   "CRLB",
+   "CRQB",
+   "CRRB",
+   "CCTC",
+   "CCID",
+   "CDID",
+   "TGID",
+   "CPID",
+   "CAGE",
+   "CDEF",
+   "COFF",
+   "CPSF",
+   "CLTF",
+   "CFSH",
+   "CETH",
+   "CCTI",
+   "CCWI",
+   "CSAL",
+   "CCPL",
+   "CCHM",
+   "CCLN",
+   "CCLO",
+   "CSXP",
+   "CLTR",
+   "COTR",
+   "COPS",
+   "CRBT",
+   "CMOT",
+   "CSBW",
+   "CKNW",
+   "CDTY"
+  ]
+ }
+}
