@@ -886,9 +886,22 @@ appearance rebuilt from real Madden data.
       against the shipped `Head5b`. That is light against dark **for the same
       man**, not a variant difference.
 
-   The third is the most diagnostic: it means some 1986 entries were written
-   from a source that put those two men light and others from one that put them
-   dark. Whoever picks up the 1986 skin backlog should treat all three as one
+   The third suggested a provenance split inside the 1986 build — some entries
+   written from a source that put those two men light and others from one that
+   put them dark. **The double-space spelling cannot test that**: it is three
+   keys, two of them family 3 against a 10% baseline, which is suggestive at
+   n=3 and means nothing. Whatever wrote those keys may have touched only
+   three records.
+
+   **The test that CAN settle it**, and the one to run: the 1986 build had at
+   least three appearance sources — a decoded field covering 99.8% of the
+   rostered cohort, 78 hand-verified from photographs, and the free agent pool
+   built in a separate session. The free agent split is already established at
+   198/201 dark, so a provenance split inside the 1986 build is a fact for at
+   least one cohort. The open question is the rostered cohort. **Compare the
+   family distribution of 1986 rostered players present in the decoded source
+   against those absent from it** — if the 0.2% not covered look different,
+   that names the second source. Treat all three surfacings as one
    investigation.
 
 0g. **Two published-file name defects, both on Frank Gansz.** He and his son

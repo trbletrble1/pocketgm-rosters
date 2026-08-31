@@ -55,7 +55,14 @@ def main(apply=False):
         assert after[b] == exp, f'{b}: expected {exp} keys, got {after[b]}'
     assert {g: set(v) for g, v in reg['_verified_keys'].items()} == locked_before, \
         '_verified_keys changed — refusing to write'
+<<<<<<< HEAD
     json.dump(reg, open(REG, 'w'), indent=1)
+=======
+    # Preserve the file's own compact format. Writing it with indent=1 turned a
+    # six-key deletion into a 180,000-line diff, which is unreviewable and is
+    # the formatting-churn problem the handoff already records.
+    json.dump(reg, open(REG, 'w'), separators=(',', ':'), ensure_ascii=True)
+>>>>>>> main
     print(f'\nwrote {REG}')
     for b in before: print(f'  {b}: {before[b]} -> {after[b]}')
     return 0
