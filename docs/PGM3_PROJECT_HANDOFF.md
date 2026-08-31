@@ -875,6 +875,22 @@ appearance rebuilt from real Madden data.
 
 **Known open items, none blocking:**
 
+0h. **The 1986 skin defect has now surfaced THREE times, from three
+   directions.** Same root, not three curiosities:
+
+   1. The free agent pool is 198 of 201 dark, with families 2 and 3 entirely
+      unused (item 0 below).
+   2. Head-family distribution across files, which is what `faces` flags.
+   3. **Registry duplicates disagreeing on family 3 versus family 5** —
+      `william  roberts` and `joe  jacoby` each had a second key at `Head3b`
+      against the shipped `Head5b`. That is light against dark **for the same
+      man**, not a variant difference.
+
+   The third is the most diagnostic: it means some 1986 entries were written
+   from a source that put those two men light and others from one that put them
+   dark. Whoever picks up the 1986 skin backlog should treat all three as one
+   investigation.
+
 0g. **Two published-file name defects, both on Frank Gansz.** He and his son
    were both Kansas City special teams coaches, which is why the collision is
    easy to make — but the records are malformed in two DIFFERENT ways:
