@@ -1444,6 +1444,39 @@ def rank_to_rating(rank, n=31, lo=52, hi=94):
     return int(round(lo + (hi - lo) * (n - rank) / (n - 1)))
 
 
+STAFF_SCHEMA_SRC = 'PGMStaff_2017.json'
+STAFF_ROLES = ['Head Coach', 'Off Co-ord', 'Def Co-ord', 'Special Teams',
+               'Head Scout', 'Off Scout', 'Def Scout', 'Head Physio',
+               'Assistant Physio']
+COACH_ROLES = {'Head Coach', 'Off Co-ord', 'Def Co-ord', 'Special Teams'}
+SCOUT_ROLES = {'Head Scout', 'Off Scout', 'Def Scout'}
+PHYSIO_ROLES = {'Head Physio', 'Assistant Physio'}
+# Primary attribute per role — must EQUAL rating.
+PRIMARY = {'Head Coach': 'HCcoach', 'Off Co-ord': 'OCcoach', 'Def Co-ord': 'DCcoach',
+           'Special Teams': 'STcoach', 'Head Scout': 'Hscout', 'Off Scout': 'Oscout',
+           'Def Scout': 'Dscout', 'Head Physio': 'Hphysio',
+           'Assistant Physio': 'Aphysio'}
+# Every coach carries all four coaching attrs, every scout all three, every
+# physio both. The specialty-attribute bug crashed the game and passed every
+# check that was run at the time.
+ATTR_GROUP = {**{r: ['HCcoach', 'OCcoach', 'DCcoach', 'STcoach'] for r in COACH_ROLES},
+              **{r: ['Hscout', 'Oscout', 'Dscout'] for r in SCOUT_ROLES},
+              **{r: ['Hphysio', 'Aphysio'] for r in PHYSIO_ROLES}}
+# Contract fields fitted PER ROLE, never pooled. Measured on 1,728 published
+# rostered staff: guarantee runs 52-61% for the eight non-HC roles against 76%
+# for head coaches, and eGuarantee 6-11% against 28%.
+ROLE_CONTRACT = {
+    'Head Coach':       (915_000, 0.76, 0.28, 1_935_000),
+    'Off Co-ord':       (800_000, 0.60, 0.09, 1_052_500),
+    'Def Co-ord':       (750_000, 0.61, 0.09, 1_085_000),
+    'Special Teams':    (607_500, 0.55, 0.09,   817_500),
+    'Head Scout':       (490_000, 0.52, 0.06,   647_500),
+    'Off Scout':        (350_000, 0.54, 0.09,   475_000),
+    'Def Scout':        (350_000, 0.60, 0.09,   470_000),
+    'Head Physio':      (540_000, 0.57, 0.08,   650_000),
+    'Assistant Physio': (297_500, 0.55, 0.11,   390_000),
+}
+
 SCHEMA_SRC = 'PGMRoster_2017.json'
 
 def emit(recs, path):
