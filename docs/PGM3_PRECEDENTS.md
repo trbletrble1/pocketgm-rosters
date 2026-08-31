@@ -2006,3 +2006,65 @@ working code.
 **Report both numbers and assert on the within-group one.** The pooled figure is
 still informative — it measures how much position-to-position scale differences
 move a field — but it is not the test.
+
+
+---
+
+## The reference union is not a specification
+
+Three times in one session the published files were consulted as an authority and
+found to disagree with each other:
+
+- **Within-light skin family.** Seven files, seven conventions. Family 3 runs
+  from 1.8% to 46.8% of the light band.
+- **Fullback ratings.** 2004 has Alstott 76 and Neal 51; 2007 has Neal 83 at the
+  cohort ceiling. Opposite orderings of the same two men.
+- **`OLB` coverage.** Three files at exactly 0%, two at exactly 100%, one at
+  3.9%, one at 32.2% — and where present the entire range is 1–3 against `MLB`'s
+  38–92 in every file.
+
+**The union of seven outputs is not a specification. When they disagree it
+encodes the disagreement, and pooling manufactures an eighth convention that
+matches none of them.**
+
+`pgm3_validate.py` measures ranges against the union deliberately, and that is
+right for its purpose — a range wide enough to contain every published file is a
+sane guard against gross error. **It is not evidence of correctness.** "Matches
+the union" means "is not obviously broken", and on a field where the files
+disagree it can mean "reproduces the average of a defect and its absence".
+
+**When the references disagree, say which ones you match and which you diverge
+from, by name, with the reason.** For `OLB` coverage: this build matches 2004,
+2007 and 2017, which gate the field off, and diverges from 2013 and 2021, which
+populate it for 100% of their OLBs with values in a 1–3 range against a
+positional norm of 38–92. That is reviewable in ten seconds. "Deviates from the
+reference union" is not.
+
+---
+
+## When a fit's inputs turn out to be contaminated, measure the coefficients before assuming
+
+`weights.json` was fitted on the 2010 and 2017 published rosters — the uncleaned
+versions, including 2017's stamina-1 block. Having cleaned four fields out of the
+quantile targets, the refit was still solving through coefficients derived from
+the contaminated data.
+
+**Measured rather than assumed.** Refitting per position on the same cohort with
+contaminated records excluded (616 of 3,924, 15.7%):
+
+- **Largest single coefficient move across all fifteen positions: 0.0079** (K
+  `burst`). At an attribute range of 0–99 that is worth **0.79 rating points** for
+  a player at the extreme, and far less for anyone normal.
+- Median move per position: 0.0003–0.0020.
+- R² 0.9992–0.9996 before, 0.9993–0.9996 after.
+
+The direction is what theory predicts — a rated-70 player carrying stamina 1
+tells the regression that stamina barely matters, so cleaning should raise its
+coefficient, and it does in 9 of 14 positions. But `stamina`'s coefficient is
+within ±0.009 of zero at every position to begin with. **The contamination sits
+in a field the model barely uses.**
+
+Closed: no refit of `weights.json` is needed. Recorded because the question was
+worth one measurement and would otherwise recur every time a target is cleaned.
+The general form is that a fit's sensitivity to a contaminated input depends on
+that input's coefficient, and the coefficient is cheap to look at.
