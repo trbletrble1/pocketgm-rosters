@@ -1497,9 +1497,17 @@ that did not exist that season. Drop 0, 33 and 34 for the same reason.
 
 - **`PBTK` → `trucking`**, correlation **0.882**. Not in the handoff's direct-map
   list; add it.
-- **`PDRO` is a real draft round.** Correlation **0.796** with published
-  `draftNum`, and `PDRO == 15` is the undrafted sentinel (198 rows), of which
-  **96.8% carry the 224 floor**.
+- **`PDRO` is a real draft round — a cross-check, not a source.** Correlation
+  **0.796** with published `draftNum`, and `PDRO == 15` is the undrafted sentinel
+  (198 rows), of which **96.8% carry the 224 floor**.
+  **Ruling (Ryan, 2026-08-31): `draftNum` still comes from nflverse
+  `draft_picks`, which carries the actual pick number.** 0.796 is good enough to
+  identify undrafted players and to sanity-check a round. It is not good enough
+  to source a pick number from. Use `PDRO` to catch disagreements with nflverse,
+  not to fill the field.
+  Both figures reproduced independently on a fresh clone, 2026-08-31: 629 players
+  matched on name and position with any name held at more than one position
+  dropped, control `PSPD` → speed at +0.889.
 - **`PDPI` is not a pick number. Reject it.** Correlation 0.152, with 562 rows
   parked on sentinel 33. `draftNum` comes from nflverse.
 - **Personality fields do not source from this CSV.** `PEGO`, `PMOR`, `PIMP`,
@@ -1533,3 +1541,36 @@ punters at the top of the league — that is a documented past failure, and this
 file would reproduce it.
 
 ---
+
+---
+
+## A sentinel landing on a categorical value is stronger evidence than a correlation
+
+When `PDRO` was checked against published `draftNum`, the headline number was a
+correlation of **0.796**. The number that actually settled it was different:
+`PDRO == 15` is the undrafted sentinel, and **60 of those 62 players carry the
+published 224 undrafted floor — 96.8%.**
+
+The correlation is the weaker evidence. A field that is merely *related* to draft
+position — experience, age, rating, anything that drifts with seniority — will
+produce 0.7-something against pick number without being a round at all. The
+correlation says the two move together. It does not say the field means what the
+name suggests.
+
+The categorical match says more. There is no way for an unrelated field to put a
+specific value on 60 of 62 players who all share one specific published value
+unless the two encode the same fact. **A correlation is consistent with many
+explanations; an exact agreement on a sentinel is consistent with very few.**
+
+The general form: **when testing what a source field means, look for the discrete
+cases before reading the correlation.** Sentinels, floors, zero-patterns and
+saturated values are where a field either agrees with its supposed meaning or
+does not, and the answer is close to binary. `PDPI` failed exactly this test from
+the other direction — 562 rows parked on sentinel 33, which corresponds to
+nothing in `draftNum`, and its 0.152 correlation was never the point.
+
+This is the same principle as "a plausible distribution is not evidence of
+signal" and "a correct marginal is the weakest evidence a derived field is
+right", applied to source identification rather than to derived output. A
+continuous summary statistic is the least discriminating thing available. Reach
+for the categorical structure first.
