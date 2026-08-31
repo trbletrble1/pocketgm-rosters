@@ -1735,3 +1735,66 @@ existed in one local working copy and in no clone. The map is correct — it
 spot-checks 12/12 against known players, all three relocations included — but
 nobody could have re-derived or checked it. Commit the source, or the derivation
 is unreproducible whatever the value turns out to be.
+
+---
+
+## A map fitted on the players who match is fitted on the players who survive
+
+The 2000 appearance build reproduced the 1986 signature and was caught by the
+same check: **dark share in band, total light share in band, one family running
+hot.** Family 1 projected at 29.7% of the file against a published ceiling of
+27.4% (2004) and a union of 17.5%.
+
+The first hypothesis was that the map had been fitted against the two published
+files with the highest family-1 shares, 2004 and 2007. **Wrong** — refitting
+against all seven files gives 31.6% against 31.5%, indistinguishable. The choice
+of comparison files was not the problem.
+
+**The problem was who matches at all.** The map was fitted on 2000 players who
+also appear in a published roster, and that cohort is not a league:
+
+- **Compositionally** it over-weights the long-career positions. QB/K/P/OL/TE are
+  39.3% of the matched subset against 33.8% of the full 2000 cohort — kickers
+  double, punters double, quarterbacks up half again.
+- **And the skew survives conditioning on position**, which is what makes it more
+  than a mix effect. Light offensive tackles present in the 2000 source are
+  **96.7% family 1** against 63.6% for those absent; running backs 73.3% against
+  38.5%. The gap holds inside every published file, so it is not an artifact of
+  averaging files with different conventions.
+
+Fitted there, the light band came out 88/6/6 across families 1/2/3. The published
+population says 54/25/21. Refitting on the population rather than the matched
+subset brings family 1 to 24.2%, inside the published range.
+
+**The general form is the cohort rule applied to a fitted map rather than to a
+measurement.** "Find the real cohort before measuring anything" is usually read
+as a rule about the thing being measured. It applies just as hard to the *join*:
+a map calibrated on records that matched is calibrated on whatever made them
+match. Here that was career length, and career length correlates with the thing
+being mapped.
+
+**Ask what the join selected for before trusting anything fitted through it.**
+The tell is available cheaply — compare the position mix of the matched subset
+against the full cohort, then check whether the effect survives within position.
+Two lines each.
+
+### Two things worth carrying
+
+**`PSKI` decides light versus dark and nothing finer.** That is what it is scored
+for and what the conditional pass tests. It carries no information about which
+light family, so the within-band spread must come from the published population.
+Fitting the internal spread through `PSKI` is fitting noise through a biased
+join.
+
+**The published files do not agree with each other on the internal spread.**
+Within-light f1/f2/f3 runs 77.6/8.0/14.4 in 2004, 34.9/18.3/46.8 in 2010 and
+48.5/49.7/1.8 in 2021 — three incompatible conventions, not one convention with
+noise. The union is the best available target and not a stable one. This is the
+same open finding already recorded for family 4 ranging 14–39%, and it means the
+`faces` distribution check can only ever catch gross outliers.
+
+**The check is now an assertion in `tools/build_2000.py`, not a reviewer's job.**
+Every head family is compared against the min/max across the published files and
+the build fails if one falls outside. `pgm3_validate.py faces` still runs at
+stage 10, but by then the registry has been applied over the top and the defect
+is being diagnosed through two layers.

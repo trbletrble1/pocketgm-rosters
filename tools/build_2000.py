@@ -159,8 +159,31 @@ BEARD_STYLES = ['a','b','c','d','e','f1','f2','g']
 # PSKI 2 and 3 are not separable from each other (21/76 vs 18/75 across families
 # 4/5), so they get identical treatment. Inventing a distinction between them
 # would not be supported by the measurement.
-LIGHT_BAND = [('1', 0.883), ('2', 0.055), ('3', 0.061)]
-DARK_BAND  = [('4', 0.220), ('5', 0.780)]
+#
+# The WITHIN-band spread is a separate question from the band itself, and the
+# first fit of it was wrong. It was measured on 2000 players who also appear in
+# a published file, and that cohort is not representative of the 2000 league:
+#   - compositionally it over-weights the long-career, light-skewing positions,
+#     QB/K/P/OL/TE at 39.3% against the full cohort's 33.8%
+#   - and the skew persists WITHIN position: light offensive tackles present in
+#     the 2000 source are 96.7% family 1 against 63.6% for those absent, and
+#     running backs 73.3% against 38.5%
+# Fitted on that subset the light band came out 88/6/6 and projected family 1 at
+# 30.5% of the file, above the published ceiling of 27.4% (2004). Dark share and
+# total light share were both in band; one family was running hot. That is the
+# 1986 signature and the `faces` pass is the check that catches it.
+#
+# PSKI decides light vs dark — that is what it is scored for and what the
+# conditional tests. It carries no information about WHICH light family, so the
+# internal spread is taken from the published rostered population instead.
+#
+# Caveat worth carrying: the published files do not agree with each other on
+# this. Within-light f1/f2/f3 runs 77.6/8.0/14.4 in 2004, 34.9/18.3/46.8 in
+# 2010 and 48.5/49.7/1.8 in 2021 — three incompatible conventions. The union is
+# the best available target, not a stable one. This is the same open finding the
+# handoff records for family 4 ranging 14-39%.
+LIGHT_BAND = [('1', 0.540), ('2', 0.246), ('3', 0.214)]   # published union
+DARK_BAND  = [('4', 0.378), ('5', 0.622)]                 # published union
 # No skin information at all. The league-wide prior from the published files is
 # the least-wrong fill; it is not a reading of PSKI and is logged separately.
 ABSTAIN_BAND = [('1', 0.20), ('2', 0.09), ('3', 0.02), ('4', 0.16), ('5', 0.53)]
@@ -192,6 +215,21 @@ def build_library():
             k = (norm(q['forename'] + ' ' + q['surname']), q['position'])
             fams[k].add(q['appearance'][0].replace('Head', '')[0])
     return {k: next(iter(v)) for k, v in fams.items() if len(v) == 1}
+
+def published_family_ranges():
+    """min/max head-family share across the published rostered cohorts. Ranges
+    are measured against the union of known-good files, never a single one."""
+    per = collections.defaultdict(list)
+    for y in (1986, 2004, 2007, 2010, 2013, 2017, 2021):
+        path = os.path.join(REPO, f'PGMRoster_{y}.json')
+        if not os.path.exists(path): continue
+        c = collections.Counter(q['appearance'][0].replace('Head', '')[0]
+                                for q in json.load(open(path))
+                                if q['teamID'] not in ('Free Agent', 'Rookie'))
+        t = sum(c.values())
+        for k in '12345': per[k].append(100 * c[k] / t)
+    return {k: (min(v), max(v)) for k, v in per.items()}
+
 
 def stage4(recs):
     lib = build_library()
@@ -261,8 +299,24 @@ def stage4(recs):
         assert len(a) == 9
     print('  family rules, glasses, array length: all pass')
 
+    # THE 1986 CHECK, as an assertion rather than something a reviewer has to
+    # spot. 1986 passed every other test: dark share in band, total light share
+    # in band, one family running hot. `pgm3_validate.py faces` flags it, but by
+    # then the registry has been applied on top and it is being diagnosed
+    # through two layers.
     fam = collections.Counter(p['_skin'] for p in recs)
     print('  head family: ' + '  '.join(f'{k}:{100*v/tot:.1f}%' for k, v in sorted(fam.items())))
+    pub_range = published_family_ranges()
+    bad = []
+    for k in '12345':
+        share = 100 * fam[k] / tot
+        lo, hi = pub_range[k]
+        flag = '' if lo <= share <= hi else '   <-- OUTSIDE'
+        if flag: bad.append(f'family {k} at {share:.1f}% against a published {lo:.1f}-{hi:.1f}%')
+        print(f'    family {k}: {share:5.1f}%   published {lo:5.1f} - {hi:5.1f}{flag}')
+    assert not bad, 'head family distribution out of band: ' + '; '.join(bad)
+    dark = 100 * (fam['4'] + fam['5']) / tot
+    print(f'    dark share {dark:.1f}% (real NFL of the era ~65-67%)')
     var = collections.Counter(p['appearance'][0][-1] for p in recs)
     print('  head variant: ' + '  '.join(f'{k}:{100*v/tot:.1f}%' for k, v in sorted(var.items())))
     return recs
