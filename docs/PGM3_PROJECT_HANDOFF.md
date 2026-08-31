@@ -7,6 +7,10 @@
 >   list in the vocabulary section below.
 > - `PGM3_VERIFIED_FACES.md` — the two registry blocks, and the rule that hand
 >   edits are locked.
+> - **`PGM3_DATA_SOURCES.md` — read this before hand-researching anything.**
+>   Draft classes, player biographies, birth dates, physicals and combine
+>   measurements are all bulk downloads from nflverse. Birth dates solve the
+>   namesake problem outright. PFR must be searched, never fetched.
 > - **`.ros` files no longer need Windows.** `tools/rosgui.py` decodes them
 >   directly, verified exact against Xtreme on three files. Its "Screen" button
 >   gives a usable / unusable verdict in a second — see `PGM3_SOURCE_QUALITY.md`.
