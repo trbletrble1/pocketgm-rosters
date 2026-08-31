@@ -957,6 +957,7 @@ def stage6(recs):
     for p in recs:
         p['_attr'] = {a: 0 for a in ALL_ATTRS}
 
+
     filled = collections.Counter()
     for (coh, pos), group in groups.items():
         # rating percentile within the group, used for every unsourced fill
@@ -1536,7 +1537,11 @@ ROLE_CONTRACT = {
 
 SCHEMA_SRC = 'PGMRoster_2017.json'
 
-def emit(recs, path):
+_PICKS = None
+
+def emit(recs, path, prospects=None):
+    global _PICKS
+    _PICKS = load_draft_picks()
     """Write the 52-key schema. INCOMPLETE at this point: no draft classes, no
     Houston. Written anyway so the validator runs early -- cheap now, expensive
     at stage 10."""
@@ -1553,46 +1558,43 @@ def emit(recs, path):
                 r[k] = p['_attr'][k]
             else:
                 r[k] = 0 if isinstance(ref[k], int) else ('' if isinstance(ref[k], str) else [])
-        r['iden'] = str(uuid.UUID(int=random.Random(f"{p['forename']}|{p['surname']}|"
-                                                    f"{p['position']}|{p['teamID']}|2000")
-                                  .getrandbits(128))).upper()
         r['forename'] = p['forename']; r['surname'] = p['surname']
         r['position'] = p['position']; r['teamID'] = p['teamID']
         r['appearance'] = p['appearance']
         r['age'] = int(p['_src']['PAGE'])
-        r['draftSeason'] = SEASON + OFFSET - int(p['_src']['PYRP'])
-        r['potential'] = max(p['rating'], min(99, p['rating'] + 5))
-        r['growthType'] = [0] * 31
+        yrs = int(p['_src']['PYRP'])
+        r['draftSeason'] = SEASON + OFFSET - yrs
+        r['draftNum'] = resolve_draft_num(f"{p['forename']} {p['surname']}",
+                                          p['position'], yrs, _PICKS)
+        rng = seeded(f"{p['forename']}|{p['surname']}|{p['position']}", 'grow')
+        # potential and growthType built in the SAME pass, invariant asserted
+        r['potential'] = vet_potential(r['age'], p['rating'], rng)
+        r['growthType'] = build_growth(r['potential'], p['rating'], rng, 31)
+        assert sum(v for v in r['growthType'] if v > 0) == (r['potential'] - p['rating']) * 50
         out.append(r)
-    assert len(out) == len(recs), f'{len(recs)} in, {len(out)} out — key collision'
+    if prospects:
+        out += prospects
+    assert len(out) == len(recs) + len(prospects or []), 'record count changed on emit'
+    # iden must be assigned AFTER the prospects are appended, or they all keep
+    # the schema default and collide.
+    for r in out:
+        r['iden'] = str(uuid.UUID(int=random.Random(
+            f"{r['forename']}|{r['surname']}|{r['position']}|{r['teamID']}|"
+            f"{r['draftNum']}|{r['draftSeason']}|2000roster").getrandbits(128))).upper()
     ids = {r['iden'] for r in out}
     assert len(ids) == len(out), f'{len(out) - len(ids)} duplicate iden'
     for r in out:
         assert set(r.keys()) == set(keys), 'schema key mismatch'
     json.dump(out, open(path, 'w'), separators=(',', ':'))
     print(f'\n  wrote {path}: {len(out)} records x {len(keys)} keys')
-    print('  INCOMPLETE — no draft classes (stage 9); growthType and potential '
-          'are placeholders until stage 10')
+    ros = [r for r in out if r['teamID'] not in ('Free Agent', 'Rookie')]
+    print(f"  rostered {len(ros)}  free agents "
+          f"{sum(1 for r in out if r['teamID'] == 'Free Agent')}  "
+          f"prospects {sum(1 for r in out if r['teamID'] == 'Rookie')}")
+    nd = sum(1 for r in out if r['draftNum'] == 224)
+    print(f'  draftNum: real picks 1-{max(r["draftNum"] for r in out)}, '
+          f'{nd} on the 224 undrafted floor ({100*nd/len(out):.0f}%) — never clamped')
     return out
-
-if __name__ == '__main__':
-    recs = stage3()
-    recs = stage4(recs)
-    conditional_pski(recs)
-    recs = stage5(recs)
-    recs = stage2b(recs)
-    recs = stage6(recs)
-    conditional_attributes(recs)
-    import csv as _csv
-    _dp = {}
-    _p = os.path.join(REPO, 'wip', 'draft_picks_pre2001.csv')
-    if os.path.exists(_p):
-        for _r in _csv.DictReader(open(_p, encoding='utf-8')):
-            _dp.setdefault(_r['name'], int(_r['pick']))
-    recs = stage7(recs, _dp)
-    contracts_report(recs)
-    emit(recs, os.path.join(REPO, 'PGMRoster_2000.json'))
-
 
 # =========================================================== stage 8: staff
 def load_hc_careers():
@@ -1954,3 +1956,270 @@ def emit_staff(records, path):
     json.dump(records, open(path, 'w'), separators=(',', ':'))
     print(f'\n  wrote {path}: {len(records)} records x {len(keys)} keys')
     return records
+
+
+# ==================================================== stage 9: draft classes
+# Source tiers, best first. The 2001 class has no rookie-year export and comes
+# from 2003 at a TWO-YEAR gap; 2002 is one year; 2003 and 2004 are their own.
+DRAFT_SRC = {2001: ('2003 - PLAY.csv', 2), 2002: ('2003 - PLAY.csv', 1),
+             2003: ('2003 - PLAY.csv', 0), 2004: ('2004 - PLAY.csv', 0)}
+DRAFT_POS_OK = {
+    'QB': {'QB'}, 'RB': {'RB', 'HB', 'FB'}, 'WR': {'WR'}, 'TE': {'TE'},
+    'OT': {'OT', 'T', 'OL', 'G', 'OG', 'C'}, 'OG': {'G', 'OG', 'OL', 'OT', 'T', 'C'},
+    'C': {'C', 'OL', 'G', 'OG'},
+    'DE': {'DE', 'DL', 'EDGE', 'OLB', 'LB', 'DT'}, 'DT': {'DT', 'NT', 'DL', 'DE'},
+    'OLB': {'OLB', 'LB', 'MLB', 'ILB', 'DE'}, 'MLB': {'MLB', 'LB', 'ILB', 'OLB'},
+    'CB': {'CB', 'DB'}, 'S': {'S', 'SAF', 'FS', 'SS', 'DB'},
+    'K': {'K', 'PK'}, 'P': {'P'},
+}
+
+# Measured on 6,124 published prospects: the potential gap is driven by RATING,
+# not by draft round. Median gap by rating band runs 18 / 8 / 4 / 4 / 5 / 1 from
+# the 40s to the 90s, while by round it is a flat 5-8. A low-rated prospect has
+# headroom; a 90-rated one is nearly finished.
+#
+# A first version derived potential from the draft slot alone and collapsed it
+# to rating for every matched player whose Madden rating already exceeded the
+# slot baseline — median gap 0 against a published 3-8, i.e. a draft class with
+# no growth in it.
+GAP_BY_BAND = {4: 18, 5: 8, 6: 4, 7: 4, 8: 5, 9: 1}
+
+def roster_hair_vocab():
+    """Hair styles actually observed in the PLAYER files. Not the same set the
+    staff files use -- generating from the wrong one emitted Hair4k, which
+    exists for staff and not for players."""
+    v = collections.defaultdict(set)
+    for y in (1986, 2004, 2007, 2010, 2013, 2017, 2021):
+        path = os.path.join(REPO, f'PGMRoster_{y}.json')
+        if not os.path.exists(path): continue
+        for q in json.load(open(path)):
+            t = q['appearance'][2].replace('Hair', '')
+            v[t[0]].add(t[1:])
+    return {k: sorted(x) for k, x in v.items()}
+ROSTER_HAIR = None
+
+def draft_potential(pick, row, rating, rng):
+    """Potential is RAISE-ONLY: a rating-derived headroom sets the baseline and
+    career outcomes pull it UP, never down.
+
+    A bust is a player who had the ceiling and did not reach it; lowering his
+    potential conflates ceiling with achievement and bakes hindsight into innate
+    ability. No gap cap tighter than the published files -- their gaps run to
+    36, 33 and 23, and the 2013 build's cap of 14 put Louis Nix above Aaron
+    Donald.
+    """
+    band = GAP_BY_BAND.get(min(9, max(4, rating // 10)), 4)
+    headroom = max(0, band + rng.gauss(0, band * 0.45))
+    def num(k):
+        try: return float(row.get(k) or 0)
+        except (ValueError, TypeError): return 0.0
+    raise_ = (0.9 * min(6, num('probowls')) + 1.6 * min(4, num('allpro'))
+              + 0.09 * min(120, num('car_av')) + 0.30 * min(12, num('seasons_started')))
+    # Bound the gap at 40. The published files top out at 36 / 33 / 23, so this
+    # is LOOSER than any of them -- it exists to stop headroom and career raise
+    # stacking into an outlier, not to compress the class. The 2013 build capped
+    # at 14 against 29-45 elsewhere and put Louis Nix above Aaron Donald; that
+    # is the failure this must not repeat.
+    return int(round(rating + min(40.0, headroom + raise_)))
+
+def build_growth(potential, rating, rng, n_slots=31):
+    """growthType and potential are TIED by the 50x rule and must be built in
+    the SAME pass. The last time potential was rebuilt without rebuilding growth
+    alongside it, all five published files shipped broken and every individual
+    check passed, because both fields were independently plausible and the
+    defect lived in the rule connecting them.
+    """
+    gt = [0] * n_slots
+    need = (potential - rating) * 50
+    if need:
+        k = min(6, max(1, need // 150 + 1))
+        slots = rng.sample(range(0, 17), k)
+        share = need // k
+        for i, sl in enumerate(slots):
+            gt[sl] = share if i else need - share * (k - 1)
+    for sl in rng.sample(range(20, n_slots), rng.randint(3, min(8, n_slots - 21))):
+        gt[sl] = -100 * rng.randint(1, 3)
+    assert sum(v for v in gt if v > 0) == need, '50x invariant broken at construction'
+    return gt
+
+
+def stage9(schema_keys, ref, tvals, trate):
+    NFLD = os.path.join(REPO, 'wip', 'draft_picks_2001_2004.csv')
+    draft = collections.defaultdict(list)
+    for r in csv.DictReader(open(NFLD, encoding='utf-8')):
+        draft[int(r['season'])].append(r)
+
+    global ROSTER_HAIR
+    ROSTER_HAIR = roster_hair_vocab()
+    out = []
+    report = []
+    for cls in (2001, 2002, 2003, 2004):
+        fname, gap = DRAFT_SRC[cls]
+        rows = list(csv.DictReader(open(os.path.join(REPO, 'sources', 'madden', fname),
+                                        encoding='latin-1')))
+        idx = collections.defaultdict(list)
+        for r in rows:
+            idx[norm(r['PFNA'] + ' ' + r['PLNA'])].append(r)
+        # per-position source distributions, for the quantile map
+        srcd = collections.defaultdict(list)
+        for r in rows:
+            for a, col in list(DIRECT.items()) + list(INVERTED.items()):
+                try: srcd[(PPOS[int(r['PPOS'])], a)].append(int(r[col]))
+                except (ValueError, KeyError): pass
+        for k in srcd: srcd[k].sort()
+
+        matched = filled = posmis = 0
+        for d in draft[cls]:
+            pick = int(d['pick']); nm = d['pfr_player_name']
+            f, _, l = nm.partition(' ')
+            dpos = (d['position'] or '').upper()
+            pgm = DRAFT_POS_MAP.get(dpos, dpos if dpos in DRAFT_POS_OK else 'WR')
+            rng = seeded(f'{nm}|{cls}', 'draft')
+            cands = idx.get(norm(nm), [])
+            src = None
+            if len(cands) == 1:
+                mp = PPOS[int(cands[0]['PPOS'])]
+                if dpos and dpos in DRAFT_POS_OK.get(mp, set()):
+                    src, pgm = cands[0], mp
+                else:
+                    posmis += 1
+            if src is not None:
+                matched += 1
+                rating = int(src['POVR'])
+            else:
+                filled += 1
+                rating = int(round(74 - 9.5 * math.log(max(1, pick)) + rng.gauss(0, 4)))
+            rating = max(40, min(93, rating))
+
+            potential = min(99, draft_potential(pick, d, rating, rng))
+            rec = {k: (0 if isinstance(ref[k], int) else ('' if isinstance(ref[k], str) else []))
+                   for k in schema_keys}
+            rec.update(forename=f, surname=l, position=pgm, teamID='Rookie',
+                       rating=rating, potential=potential,
+                       draftNum=pick,                      # REAL pick, never clamped
+                       draftSeason=SEASON + OFFSET + (cls - SEASON),
+                       age=21 + rng.randint(0, 3), salary=0, guarantee=0,
+                       length=0, teamNum=0, eSalary=0, eGuarantee=0, eLength=0)
+            # potential and growth built together, invariant asserted here
+            rec['growthType'] = build_growth(potential, rating, rng, 31)
+            assert sum(v for v in rec['growthType'] if v > 0) == (potential - rating) * 50
+
+            for a in ALL_ATTRS:
+                tgt = tvals.get(('R', pgm, a)) or tvals.get(('R', 'WR', a))
+                if not tgt or trate.get(('R', pgm, a), 0) < 0.5:
+                    rec[a] = 0; continue
+                if src is not None and a in DIRECT:
+                    v = int(src[DIRECT[a]])
+                    if a == 'intelligence':
+                        v += pawr_correction(gap)      # gap 2 only, asserted
+                    s = srcd.get((pgm, a)) or [v]
+                    rec[a] = int(qmap([v], s, tgt)[0])
+                elif src is not None and a in INVERTED:
+                    v = -int(src[INVERTED[a]])
+                    s = [-x for x in srcd.get((pgm, a), [-v])][::-1] or [v]
+                    rec[a] = int(qmap([v], sorted(s), tgt)[0])
+                else:
+                    q = max(0.0, min(1.0, (rating - 40) / 53.0))
+                    rec[a] = int(tgt[min(len(tgt) - 1, int(round(q * (len(tgt) - 1))))])
+            # Prospects have no PSKI source of their own. Seed a valid face here
+            # so the record is complete; the registry and the appearance library
+            # run over the top at stage 10, which is where a prospect who later
+            # appears in a published file picks up his real one.
+            fr = seeded(f'{nm}|{cls}', 'face')
+            skin = draw(fr, ABSTAIN_BAND)
+            hair = fr.choice(list(HAIR_FAM.values()))
+            lb = 180 + fr.randint(0, 140)
+            variant = 'b' if lb >= 260 else 'a'          # every prospect is young
+            rec['appearance'] = [
+                f'Head{skin}{variant}', f'Eyes1{fr.choice("abcde")}',
+                f'Hair{hair}{fr.choice(ROSTER_HAIR[hair])}',
+                f'Beard{hair}{fr.choice(BEARD_STYLES)}',
+                f'Eyebrows{hair}{fr.choice("ab")}',
+                f'Nose{skin}{fr.choice("abcd")}', f'Mouth{skin}{fr.choice("ab")}',
+                'Glasses1e', f'Clothes{fr.choice("12")}']
+            out.append(rec)
+        report.append((cls, len(draft[cls]), fname, gap, matched, filled, posmis))
+    return out, report
+
+DRAFT_POS_MAP = {'HB': 'RB', 'FB': 'RB', 'T': 'OT', 'G': 'OG', 'OL': 'OG',
+                 'DL': 'DE', 'NT': 'DT', 'LB': 'OLB', 'ILB': 'MLB', 'EDGE': 'DE',
+                 'DB': 'CB', 'SAF': 'S', 'FS': 'S', 'SS': 'S', 'PK': 'K', 'LS': 'C'}
+ATTR_LIVE_FIX = ()
+
+# Rostered and free agent potential, measured on 6,356 published records: the
+# gap tracks AGE, running 5 / 4 / 1 across the early twenties, mid twenties and
+# late twenties, and is never negative. Raise-only applies here too.
+VET_GAP_BY_AGE = ((23, 5), (26, 4), (29, 1))
+def vet_potential(age, rating, rng):
+    g = 0
+    for lim, v in VET_GAP_BY_AGE:
+        if age <= lim: g = v; break
+    if g == 0: g = 0 if age > 32 else 1
+    return int(round(min(99, rating + max(0, g + rng.gauss(0, g * 0.6 if g else 0.4)))))
+
+def load_draft_picks():
+    """name -> [(pick, position, season)]. Kept as a LIST because 114 names
+    carry more than one pick, and collapsing them is the namesake bug."""
+    out = collections.defaultdict(list)
+    path = os.path.join(REPO, 'wip', 'draft_picks_pre2001.csv')
+    for r in csv.DictReader(open(path, encoding='utf-8')):
+        out[r['name']].append((int(r['pick']), (r['position'] or '').upper(), int(r['season'])))
+    return out
+
+def resolve_draft_num(name, position, yrs_pro, picks):
+    """Real pick number, position-aware, with 224 as the undrafted floor.
+
+    224 is both the floor and a real pick, so the value is overloaded and the
+    published files carry real picks to 255, 262 and 329. Never clamp.
+    """
+    cands = picks.get(norm(name), [])
+    if not cands: return 224
+    ok = [c for c in cands if not c[1] or c[1] in DRAFT_POS_OK.get(position, {c[1]})]
+    if len(ok) == 1: return ok[0][0]
+    if len(ok) > 1:
+        # a man with N years of service entered the league about that long ago
+        want = SEASON - yrs_pro
+        best = min(ok, key=lambda c: abs(c[2] - want))
+        if abs(best[2] - want) <= 2: return best[0]
+        return 224
+    return 224
+
+
+
+if __name__ == '__main__':
+    recs = stage3()
+    recs = stage4(recs)
+    conditional_pski(recs)
+    recs = stage5(recs)
+    recs = stage2b(recs)
+    recs = stage6(recs)
+    conditional_attributes(recs)
+    import csv as _csv
+    _dp = {}
+    _p = os.path.join(REPO, 'wip', 'draft_picks_pre2001.csv')
+    if os.path.exists(_p):
+        for _r in _csv.DictReader(open(_p, encoding='utf-8')):
+            _dp.setdefault(_r['name'], int(_r['pick']))
+    recs = stage7(recs, _dp)
+    contracts_report(recs)
+
+    # ---- stage 9: draft classes 2001-2004
+    _ref = json.load(open(os.path.join(REPO, SCHEMA_SRC)))[0]
+    _tv, _tr = published_attr_dists()
+    _pros, _rep = stage9(list(_ref.keys()), _ref, _tv, _tr)
+    print()
+    print('STAGE 9 — draft classes')
+    print(f'  {"class":>6}{"picks":>7}{"source":>18}{"gap":>5}{"matched":>9}{"rate":>7}'
+          f'{"filled":>8}{"posmis":>8}')
+    for cls, n, f, gap, m, fl, pm in _rep:
+        print(f'  {cls:>6}{n:>7}{f:>18}{gap:>5}{m:>9}{100*m/n:>6.0f}%{fl:>8}{pm:>8}')
+        # ASSERT ON THE MATCH RATE, not the output count. The percentile filler
+        # keeps the count right by construction, so a count check here is dead.
+        assert m / n >= 0.65, (f'{cls} class matched only {100*m/n:.0f}% of its source — '
+                               'the filler is taking over')
+    tot = sum(n for _, n, *_ in _rep); mt = sum(r[4] for r in _rep)
+    print(f'  overall {mt}/{tot} matched ({100*mt/tot:.0f}%), '
+          f'{tot-mt} percentile-filled ({100*(tot-mt)/tot:.0f}%)')
+    print(f'  PAWR shift applied at gap 2 only: 2001 -> {pawr_correction(2)}, '
+          f'2002 -> {pawr_correction(1)}, 2003/2004 -> {pawr_correction(0)}')
+    recs_out = emit(recs, os.path.join(REPO, 'PGMRoster_2000.json'), _pros)

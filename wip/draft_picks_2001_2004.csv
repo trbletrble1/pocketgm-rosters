@@ -1,0 +1,1025 @@
+season,round,pick,team,pfr_player_name,position,college,probowls,allpro,car_av,seasons_started
+2001,1,1,ATL,Michael Vick,QB,Virginia Tech,4,0,,7
+2001,1,2,ARI,Leonard Davis,T,Texas,3,0,,10
+2001,1,3,CLE,Gerard Warren,DT,Florida,0,0,,9
+2001,1,4,CIN,Justin Smith,DE,Missouri,5,1,,14
+2001,1,5,SDG,LaDainian Tomlinson,RB,TCU,5,3,,10
+2001,1,6,NWE,Richard Seymour,DE,Georgia,7,3,,11
+2001,1,7,SFO,Andre Carter,DE,California,1,0,,10
+2001,1,8,CHI,David Terrell,WR,Michigan,0,0,,1
+2001,1,9,SEA,Koren Robinson,WR,North Carolina St.,1,0,,4
+2001,1,10,GNB,Jamal Reynolds,DE,Florida St.,0,0,,0
+2001,1,11,CAR,Dan Morgan,LB,Miami (FL),1,0,,5
+2001,1,12,STL,Damione Lewis,DT,Miami (FL),0,0,,3
+2001,1,13,JAX,Marcus Stroud,DT,Georgia,3,0,,9
+2001,1,14,TAM,Kenyatta Walker,T,Florida,0,0,,5
+2001,1,15,WAS,Rod Gardner,WR,Clemson,0,0,,4
+2001,1,16,NYJ,Santana Moss,WR,Miami (FL),1,0,,9
+2001,1,17,SEA,Steve Hutchinson,G,Michigan,7,5,,11
+2001,1,18,DET,Jeff Backus,T,Michigan,0,0,,12
+2001,1,19,PIT,Casey Hampton,NT,Texas,5,0,,11
+2001,1,20,STL,Adam Archuleta,DB,Arizona St.,0,0,,7
+2001,1,21,BUF,Nate Clements,DB,Ohio St.,1,0,,11
+2001,1,22,NYG,Will Allen,DB,Syracuse,0,0,,8
+2001,1,23,NOR,Deuce McAllister,RB,Mississippi,2,0,,4
+2001,1,24,DEN,Willie Middlebrooks,DB,Minnesota,0,0,,0
+2001,1,25,PHI,Freddie Mitchell,WR,UCLA,0,0,,1
+2001,1,26,MIA,Jamar Fletcher,DB,Wisconsin,0,0,,0
+2001,1,27,MIN,Michael Bennett,RB,Wisconsin,1,0,,3
+2001,1,28,OAK,Derrick Gibson,DB,Florida St.,0,0,,2
+2001,1,29,STL,Ryan Pickett,DT,Ohio St.,0,0,,13
+2001,1,30,IND,Reggie Wayne,WR,Miami (FL),6,1,,13
+2001,1,31,BAL,Todd Heap,TE,Arizona St.,2,0,,8
+2001,2,32,SDG,Drew Brees,QB,Purdue,13,1,,19
+2001,2,33,CLE,Quincy Morgan,WR,Kansas St.,0,0,,4
+2001,2,34,ARI,Kyle Vanden Bosch,DE,Nebraska,3,0,,9
+2001,2,35,ATL,Alge Crumpler,TE,North Carolina,4,0,,10
+2001,2,36,CIN,Chad Johnson,WR,Oregon St.,6,2,,9
+2001,2,37,IND,Idrees Bashir,DB,Memphis,0,0,,4
+2001,2,38,CHI,Anthony Thomas,RB,Michigan,0,0,,3
+2001,2,39,PIT,Kendrell Bell,LB,Georgia,1,0,,5
+2001,2,40,SEA,Ken Lucas,DB,Mississippi,0,0,,7
+2001,2,41,GNB,Robert Ferguson,WR,Texas A&M,0,0,,3
+2001,2,42,STL,Tommy Polley,LB,Florida St.,0,0,,5
+2001,2,43,JAX,Maurice Williams,T,Michigan,0,0,,6
+2001,2,44,CAR,Kris Jenkins,DT,Maryland,4,2,,6
+2001,2,45,WAS,Fred Smoot,DB,Mississippi St.,0,0,,7
+2001,2,46,BUF,Aaron Schobel,DE,TCU,2,0,,8
+2001,2,47,SFO,Jamie Winborn,LB,Vanderbilt,0,0,,2
+2001,2,48,NWE,Matt Light,T,Purdue,3,1,,10
+2001,2,49,NYJ,LaMont Jordan,RB,Maryland,0,0,,2
+2001,2,50,DET,Dominic Raiola,C,Nebraska,0,0,,13
+2001,2,51,DEN,Paul Toviessi,DE,Marshall,0,0,,0
+2001,2,52,MIA,Chris Chambers,WR,Wisconsin,1,0,,8
+2001,2,53,DAL,Quincy Carter,QB,Georgia,0,0,,2
+2001,2,54,ARI,Michael Stone,DB,Memphis,0,0,,0
+2001,2,55,PHI,Quinton Caver,LB,Arkansas,0,0,,0
+2001,2,56,DAL,Tony Dixon,DB,Alabama,0,0,,0
+2001,2,57,MIN,Willie Howard,DE,Stanford,0,0,,0
+2001,2,58,BUF,Travis Henry,RB,Tennessee,1,0,,4
+2001,2,59,OAK,Marques Tuiasosopo,QB,Washington,0,0,,0
+2001,2,60,TEN,Andre Dyson,DB,Utah,0,0,,5
+2001,2,61,DET,Shaun Rogers,DT,Texas,3,0,,8
+2001,2,62,BAL,Gary Baxter,DB,Baylor,0,0,,3
+2001,3,63,PHI,Derrick Burgess,DE,Mississippi,2,0,,4
+2001,3,64,ARI,Adrian Wilson,DB,North Carolina St.,5,1,,11
+2001,3,65,CLE,James Jackson,RB,Miami (FL),0,0,,1
+2001,3,66,CIN,Sean Brewer,TE,San Jose St.,0,0,,0
+2001,3,67,SDG,Tay Cody,DB,Florida St.,0,0,,1
+2001,3,68,CHI,Mike Gandy,T,Notre Dame,0,0,,7
+2001,3,69,MIN,Eric Kelly,DB,Kentucky,0,0,,2
+2001,3,70,NOR,Sedrick Hodge,LB,North Carolina,0,0,,3
+2001,3,71,GNB,Bhawoh Jue,DB,Penn St.,0,0,,1
+2001,3,72,GNB,Torrance Marshall,LB,Oklahoma,0,0,,0
+2001,3,73,JAX,Eric Westmoreland,LB,Tennessee,0,0,,0
+2001,3,74,CAR,Steve Smith Sr.,WR,Utah,5,2,,14
+2001,3,75,KAN,Eric Downing,DT,Syracuse,0,0,,1
+2001,3,76,BUF,Ron Edwards,DT,Texas A&M,0,0,,6
+2001,3,77,KAN,Snoop Minnis,WR,Florida St.,0,0,,1
+2001,3,78,NYG,Will Peterson,DB,Western Illinois,0,0,,3
+2001,3,79,NYJ,Kareem McKenzie,T,Penn St.,0,0,,10
+2001,3,80,SFO,Kevan Barlow,RB,Pittsburgh,0,0,,2
+2001,3,81,NOR,Kenny Smith,DT,Alabama,0,0,,1
+2001,3,82,SEA,Heath Evans,FB,Auburn,0,0,,0
+2001,3,83,STL,Brian Allen,LB,Florida St.,0,0,,0
+2001,3,84,TAM,Dwight Smith,DB,Akron,0,0,,5
+2001,3,85,MIA,Travis Minor,RB,Florida St.,0,0,,0
+2001,3,86,NWE,Brock Williams,DB,Notre Dame,0,0,,0
+2001,3,87,DEN,Reggie Hayward,DE,Iowa St.,0,0,,3
+2001,3,88,MIA,Morlon Greenwood,LB,Syracuse,0,0,,8
+2001,3,89,OAK,DeLawrence Grant,DE,Oregon St.,0,0,,2
+2001,3,90,TEN,Shad Meier,TE,Kansas St.,0,0,,0
+2001,3,91,IND,Cory Bird,DB,Virginia Tech,0,0,,0
+2001,3,92,BAL,Casey Rabach,C,Wisconsin,0,0,,7
+2001,3,93,DAL,Willie Blade,DT,Mississippi St.,0,0,,1
+2001,3,94,JAX,James Boyd,DB,Penn St.,0,0,,0
+2001,3,95,BUF,Jonas Jennings,T,Georgia,0,0,,5
+2001,4,96,NWE,Kenyatta Jones,T,South Florida,0,0,,1
+2001,4,97,CLE,Anthony Henry,DB,South Florida,0,0,,5
+2001,4,98,ARI,Bill Gramatica,K,South Florida,0,0,,0
+2001,4,99,ATL,Roberto Garza,G,Texas A&M-Kingsville,0,0,,11
+2001,4,100,CIN,Rudi Johnson,RB,Auburn,1,0,,5
+2001,4,101,NYJ,Jamie Henderson,DB,Georgia,0,0,,0
+2001,4,102,ATL,Matt Stewart,LB,Vanderbilt,0,0,,4
+2001,4,103,CHI,Karon Riley,LB,Minnesota,0,0,,0
+2001,4,104,SEA,Orlando Huff,LB,Fresno St.,0,0,,3
+2001,4,105,GNB,Bill Ferrario,G,Wisconsin,0,0,,0
+2001,4,106,CAR,Chris Weinke,QB,Florida St.,0,0,,1
+2001,4,107,KAN,Monty Beisel,LB,Kansas St.,0,0,,0
+2001,4,108,KAN,George Layne,RB,TCU,0,0,,0
+2001,4,109,WAS,Sage Rosenfels,QB,Iowa St.,0,0,,0
+2001,4,110,BUF,Brandon Spoon,LB,North Carolina,0,0,,1
+2001,4,111,PIT,Mathias Nkwenti,T,Temple,0,0,,0
+2001,4,112,SDG,Carlos Polk,LB,Nebraska,0,0,,0
+2001,4,113,DEN,Ben Hamilton,G,Minnesota,0,0,,7
+2001,4,114,NYG,Cedric Scott,DE,Southern Miss,0,0,,0
+2001,4,115,NOR,Moran Norris,FB,Kansas,0,0,,4
+2001,4,116,STL,Milton Wynn,WR,Washington St.,0,0,,0
+2001,4,117,TAM,John Howell,DB,Colorado St.,0,0,,0
+2001,4,118,IND,Ryan Diem,T,Northern Illinois,0,0,,10
+2001,4,119,NWE,Jabari Holloway,TE,Notre Dame,0,0,,2
+2001,4,120,DEN,Nick Harris,P,California,0,0,,0
+2001,4,121,PHI,Correll Buckhalter,RB,Nebraska,0,0,,0
+2001,4,122,DAL,Markus Steele,LB,USC,0,0,,1
+2001,4,123,ARI,Marcus Bell,DT,Memphis,0,0,,2
+2001,4,124,TEN,Justin McCareins,WR,Northern Illinois,0,0,,5
+2001,4,125,NYG,Jesse Palmer,QB,Florida,0,0,,0
+2001,4,126,BAL,Ed Hartwell,LB,Western Illinois,0,0,,3
+2001,4,127,SEA,Curtis Fuller,DB,TCU,0,0,,0
+2001,4,128,SEA,Floyd Womack,T,Mississippi St.,0,0,,5
+2001,4,129,STL,Brandon Manumaleuna,TE,Arizona,0,0,,7
+2001,4,130,MIN,Shawn Worthen,DT,TCU,0,0,,0
+2001,4,131,MIN,Cedric James,WR,TCU,0,0,,0
+2001,5,132,SDG,Elliot Silvers,T,Washington,0,0,,0
+2001,5,133,ARI,Mario Fatafehi,DT,Kansas St.,0,0,,2
+2001,5,134,CLE,Jeremiah Pharms,LB,Washington,0,0,,0
+2001,5,135,CIN,Victor Leyva,G,Arizona St.,0,0,,0
+2001,5,136,ATL,Vinny Sutherland,WR,Purdue,0,0,,0
+2001,5,137,DAL,Matt Lehr,C,Virginia Tech,0,0,,3
+2001,5,138,CHI,Bernard Robertson,T,Tulane,0,0,,0
+2001,5,139,SDG,Zeke Moreno,LB,USC,0,0,,1
+2001,5,140,SEA,Alex Bannister,WR,Eastern Kentucky,1,0,,0
+2001,5,141,KAN,Bill Baber,TE,Virginia,0,0,,0
+2001,5,142,JAX,David Leaverton,P,Tennessee,0,0,,0
+2001,5,143,CAR,Jarrod Cooper,DB,Kansas St.,0,0,,1
+2001,5,144,BUF,Marques Sullivan,G,Illinois,0,0,,1
+2001,5,145,STL,Jerametrius Butler,DB,Kansas St.,0,0,,2
+2001,5,146,PIT,Chukky Okobi,C,Purdue,0,0,,0
+2001,5,147,PHI,Tony Stewart,TE,Penn St.,0,0,,1
+2001,5,148,DET,Scotty Anderson,WR,Grambling St.,0,0,,0
+2001,5,149,DET,Mike McMahon,QB,Rutgers,0,0,,0
+2001,5,150,KAN,Derrick Blaylock,RB,S.F. Austin,0,0,,0
+2001,5,151,TAM,Russ Hochstein,C,Nebraska,0,0,,1
+2001,5,152,IND,Raymond Walls,DB,Southern Miss,0,0,,0
+2001,5,153,NOR,Onomo Ojo,WR,UC Davis,0,0,,0
+2001,5,154,WAS,Darnerien McCants,WR,Delaware St.,0,0,,0
+2001,5,155,PHI,A.J. Feeley,QB,Oregon,0,0,,1
+2001,5,156,MIA,Shawn Draper,T,Alabama,0,0,,0
+2001,5,157,MIN,Patrick Chukwurah,LB,Wyoming,0,0,,0
+2001,5,158,OAK,Ray Perryman,DB,Northern Arizona,0,0,,0
+2001,5,159,TEN,Eddie Berlin,WR,Northern Iowa,0,0,,0
+2001,5,160,NYG,John Markham,K,Vanderbilt,0,0,,0
+2001,5,161,BAL,Chris Barnes,RB,New Mexico St.,0,0,,0
+2001,5,162,NYG,Jonathan Carter,WR,Troy,0,0,,0
+2001,5,163,NWE,Hakim Akbar,LB,Washington,0,0,,0
+2001,6,164,MIA,Brandon Winey,T,LSU,0,0,,0
+2001,6,165,CLE,Michael Jameson,DB,Texas A&M,0,0,,0
+2001,6,166,ARI,Bobby Newcombe,WR,Nebraska,0,0,,0
+2001,6,167,ATL,Randy Garner,DE,Arkansas,0,0,,0
+2001,6,168,CIN,Riall Johnson,LB,Stanford,0,0,,0
+2001,6,169,SFO,Cedrick Wilson,WR,Tennessee,0,0,,2
+2001,6,170,JAX,Chad Ward,G,Washington,0,0,,0
+2001,6,171,DAL,Daleroy Stewart,DT,Southern Miss,0,0,,0
+2001,6,172,SEA,Josh Booty,QB,LSU,0,0,,0
+2001,6,173,DET,Jason Glenn,LB,Texas A&M,0,0,,0
+2001,6,174,TAM,Jameel Cook,FB,Illinois,0,0,,2
+2001,6,175,CAR,Dee Brown,RB,Syracuse,0,0,,0
+2001,6,176,KAN,Alex Sulfsted,T,Miami (OH),0,0,,0
+2001,6,177,MIA,Josh Heupel,QB,Oklahoma,0,0,,0
+2001,6,178,BUF,Tony Driver,DB,Notre Dame,0,0,,0
+2001,6,179,SFO,Rashad Holman,DB,Louisville,0,0,,0
+2001,6,180,NWE,Arther Love,TE,South Carolina St.,0,0,,0
+2001,6,181,PIT,Rodney Bailey,DE,Ohio St.,0,0,,0
+2001,6,182,PIT,Roger Knight,LB,Wisconsin,0,0,,0
+2001,6,183,TAM,Ellis Wyms,DE,Mississippi St.,0,0,,1
+2001,6,184,OAK,Chris Cooper,DT,Nebraska-Omaha,0,0,,1
+2001,6,185,NOR,Mitch White,T,Oregon St.,0,0,,0
+2001,6,186,WAS,Mario Monds,DT,Cincinnati,0,0,,0
+2001,6,187,MIA,Otis Leverette,DE,Ala-Birmingham,0,0,,0
+2001,6,188,MIA,Rick Crowell,LB,Colorado St.,0,0,,0
+2001,6,189,MIN,Carey Scott,DB,Kentucky St.,0,0,,0
+2001,6,190,DEN,Kevin Kasper,WR,Iowa,0,0,,0
+2001,6,191,SFO,Menson Holloway,DE,Texas-El Paso,0,0,,0
+2001,6,192,TEN,Dan Alexander,RB,Nebraska,0,0,,0
+2001,6,193,IND,Jason Doering,DB,Wisconsin,0,0,,0
+2001,6,194,BAL,Joe Maese,C,New Mexico,0,0,,0
+2001,6,195,BUF,Dan O'Leary,TE,Notre Dame,0,0,,0
+2001,6,196,BUF,Jimmy Williams,DB,Vanderbilt,0,0,,0
+2001,6,197,STL,Francis St. Paul,WR,Northern Arizona,0,0,,0
+2001,6,198,GNB,David Martin,TE,Tennessee,0,0,,4
+2001,6,199,TEN,Adam Haayer,T,Minnesota,0,0,,0
+2001,6,200,NWE,Leonard Myers,DB,Miami (FL),0,0,,0
+2001,7,201,SDG,Brandon Gorin,T,Purdue,0,0,,2
+2001,7,202,ARI,Renaldo Hill,DB,Michigan St.,0,0,,8
+2001,7,203,CLE,Paul Zukauskas,G,Boston Col.,0,0,,1
+2001,7,204,CIN,T.J. Houshmandzadeh,WR,Oregon St.,1,0,,6
+2001,7,205,TAM,Dauntae' Finger,TE,North Carolina,0,0,,0
+2001,7,206,NYJ,James Reed,DT,Iowa St.,0,0,,2
+2001,7,207,DAL,Colston Weatherington,DE,Central Missouri St.,0,0,,0
+2001,7,208,CHI,John Capel,WR,Florida,0,0,,0
+2001,7,209,SFO,Alex Lincoln,LB,Auburn,0,0,,0
+2001,7,210,SEA,Harold Blackmon,DB,Northwestern,0,0,,0
+2001,7,211,CAR,Louis Williams,C,LSU,0,0,,0
+2001,7,212,KAN,Shaunard Harts,DB,Boise St.,0,0,,1
+2001,7,213,JAX,Anthony Denman,LB,Notre Dame,0,0,,0
+2001,7,214,BUF,Reggie Germany,WR,Ohio St.,0,0,,0
+2001,7,215,ATL,Corey Hall,DB,Appalachian St.,0,0,,0
+2001,7,216,NWE,Owen Pochman,K,BYU,0,0,,0
+2001,7,217,NYJ,Tupe Peko,G,Michigan St.,0,0,,0
+2001,7,218,PIT,Chris Taylor,WR,Texas A&M,0,0,,0
+2001,7,219,ATL,Kynan Forney,G,Hawaii,0,0,,5
+2001,7,220,IND,Rick DeMulling,G,Idaho,0,0,,3
+2001,7,221,NOR,Ennis Davis,DT,USC,0,0,,0
+2001,7,222,SEA,Dennis Norman,C,Princeton,0,0,,1
+2001,7,223,TAM,Than Merrill,DB,Yale,0,0,,0
+2001,7,224,SFO,Eric Johnson,TE,Yale,0,0,,5
+2001,7,225,MIN,Brian Crawford,T,Western Oregon,0,0,,0
+2001,7,226,ATL,Ronald Flemons,DE,Texas A&M,0,0,,0
+2001,7,227,CAR,Mike Roberg,TE,Idaho,0,0,,0
+2001,7,228,OAK,Derek Combs,DB,Ohio St.,0,0,,0
+2001,7,229,OAK,Ken-Yon Rambo,WR,Ohio St.,0,0,,0
+2001,7,230,NYG,Ross Kolodziej,DT,Wisconsin,0,0,,1
+2001,7,231,BAL,Dwayne Missouri,DE,Northwestern,0,0,,0
+2001,7,232,TEN,Keith Adams,LB,Clemson,0,0,,1
+2001,7,233,JAX,Marlon McCree,DB,Kentucky,0,0,,7
+2001,7,234,TAM,Joe Tafoya,DE,Arizona,0,0,,0
+2001,7,235,JAX,Richmond Flowers III,WR,Chattanooga,0,0,,0
+2001,7,236,ATL,Quentin McCord,WR,Kentucky,0,0,,0
+2001,7,237,SEA,Kris Kocurek,DT,Texas Tech,0,0,,0
+2001,7,238,BUF,Tyrone Robertson,DT,Hinds CC,0,0,,0
+2001,7,239,NWE,T.J. Turner,LB,Michigan St.,0,0,,0
+2001,7,240,DAL,John Nix,DT,Southern Miss,0,0,,0
+2001,7,241,JAX,Randy Chevrier,DT,McGill,0,0,,0
+2001,7,242,DAL,Char-ron Dorsey,T,Florida St.,0,0,,0
+2001,7,243,KAN,Terdell Sands,DT,Chattanooga,0,0,,1
+2001,7,244,SDG,Robert Carswell,DB,Clemson,0,0,,0
+2001,7,245,CLE,Andre King,WR,Miami (FL),0,0,,0
+2001,7,246,ARI,Tevita Ofahengaue,TE,BYU,0,0,,0
+2002,1,1,HOU,David Carr,QB,Fresno St.,0,0,,5
+2002,1,2,CAR,Julius Peppers,DE,North Carolina,9,3,,16
+2002,1,3,DET,Joey Harrington,QB,Oregon,0,0,,6
+2002,1,4,BUF,Mike Williams,T,Texas,0,0,,4
+2002,1,5,SDG,Quentin Jammer,DB,Texas,0,0,,10
+2002,1,6,KAN,Ryan Sims,DT,North Carolina,0,0,,3
+2002,1,7,MIN,Bryant McKinnie,T,Miami (FL),1,0,,11
+2002,1,8,DAL,Roy Williams,DB,Oklahoma,5,1,,7
+2002,1,9,JAX,John Henderson,DT,Tennessee,2,0,,8
+2002,1,10,CIN,Levi Jones,T,Arizona St.,0,0,,7
+2002,1,11,IND,Dwight Freeney,DE,Syracuse,7,3,,11
+2002,1,12,ARI,Wendell Bryant,DT,Wisconsin,0,0,,0
+2002,1,13,NOR,Donte' Stallworth,WR,Tennessee,0,0,,4
+2002,1,14,NYG,Jeremy Shockey,TE,Miami (FL),4,1,,10
+2002,1,15,TEN,Albert Haynesworth,DT,Tennessee,2,2,,7
+2002,1,16,CLE,William Green,RB,Boston Col.,0,0,,3
+2002,1,17,OAK,Phillip Buchanon,DB,Miami (FL),0,0,,5
+2002,1,18,ATL,T.J. Duckett,RB,Michigan St.,0,0,,1
+2002,1,19,DEN,Ashley Lelie,WR,Hawaii,0,0,,4
+2002,1,20,GNB,Javon Walker,WR,Florida St.,1,0,,3
+2002,1,21,NWE,Daniel Graham,TE,Colorado,0,0,,7
+2002,1,22,NYJ,Bryan Thomas,DE,Ala-Birmingham,0,0,,7
+2002,1,23,OAK,Napoleon Harris,LB,Northwestern,0,0,,6
+2002,1,24,BAL,Ed Reed,DB,Miami (FL),9,5,,11
+2002,1,25,NOR,Charles Grant,DE,Georgia,0,0,,7
+2002,1,26,PHI,Lito Sheppard,DB,Florida,2,1,,7
+2002,1,27,SFO,Mike Rumph,DB,Miami (FL),0,0,,1
+2002,1,28,SEA,Jerramy Stevens,TE,Washington,0,0,,2
+2002,1,29,CHI,Marc Colombo,T,Boston Col.,0,0,,6
+2002,1,30,PIT,Kendall Simmons,G,Auburn,0,0,,5
+2002,1,31,STL,Robert Thomas,LB,UCLA,0,0,,5
+2002,1,32,WAS,Patrick Ramsey,QB,Tulane,0,0,,1
+2002,2,33,HOU,Jabar Gaffney,WR,Florida,0,0,,6
+2002,2,34,CAR,DeShaun Foster,RB,UCLA,0,0,,3
+2002,2,35,DET,Kalimba Edwards,DE,South Carolina,0,0,,2
+2002,2,36,BUF,Josh Reed,WR,LSU,0,0,,3
+2002,2,37,DAL,Andre Gurode,G,Colorado,5,0,,8
+2002,2,38,MIN,Raonall Smith,LB,Washington St.,0,0,,0
+2002,2,39,SDG,Toniu Fonoti,G,Nebraska,0,0,,2
+2002,2,40,JAX,Mike Pearson,T,Florida,0,0,,2
+2002,2,41,CIN,Lamont Thompson,DB,Washington St.,0,0,,3
+2002,2,42,IND,Larry Tripplett,DT,Washington,0,0,,4
+2002,2,43,KAN,Eddie Freeman,DE,Ala-Birmingham,0,0,,0
+2002,2,44,NOR,LeCharles Bentley,G,Ohio St.,2,0,,4
+2002,2,45,TEN,Tank Williams,DB,Stanford,0,0,,4
+2002,2,46,NYG,Tim Carter,WR,Auburn,0,0,,0
+2002,2,47,CLE,Andre' Davis,WR,Virginia Tech,0,0,,1
+2002,2,48,SDG,Reche Caldwell,WR,Florida,0,0,,1
+2002,2,49,ARI,Levar Fisher,LB,North Carolina St.,0,0,,1
+2002,2,50,HOU,Chester Pitts,T,San Diego St.,0,0,,7
+2002,2,51,DEN,Clinton Portis,RB,Miami (FL),2,0,,7
+2002,2,52,BAL,Anthony Weaver,DE,Notre Dame,0,0,,6
+2002,2,53,OAK,Langston Walker,T,California,0,0,,4
+2002,2,54,SEA,Maurice Morris,RB,Oregon,0,0,,1
+2002,2,55,OAK,Doug Jolley,TE,BYU,0,0,,2
+2002,2,56,WAS,Ladell Betts,RB,Iowa,0,0,,1
+2002,2,57,NYJ,Jon McGraw,DB,Kansas St.,0,0,,2
+2002,2,58,PHI,Michael Lewis,DB,Colorado,1,0,,6
+2002,2,59,PHI,Sheldon Brown,DB,South Carolina,0,0,,9
+2002,2,60,SEA,Anton Palepoi,DE,UNLV,0,0,,0
+2002,2,61,BUF,Ryan Denney,DE,BYU,0,0,,2
+2002,2,62,PIT,Antwaan Randle El,WR,Indiana,0,0,,4
+2002,2,63,DAL,Antonio Bryant,WR,Pittsburgh,0,0,,6
+2002,2,64,STL,Travis Fisher,DB,Central Florida,0,0,,6
+2002,2,65,NWE,Deion Branch,WR,Louisville,0,0,,7
+2002,3,66,HOU,Fred Weary,G,Tennessee,0,0,,3
+2002,3,67,CIN,Matt Schobel,TE,TCU,0,0,,1
+2002,3,68,DET,Andre' Goodman,DB,South Carolina,0,0,,5
+2002,3,69,SFO,Saleem Rasheed,LB,Alabama,0,0,,0
+2002,3,70,MIN,Willie Offord,DB,South Carolina,0,0,,0
+2002,3,71,SDG,Ben Leber,LB,Kansas St.,0,0,,8
+2002,3,72,CHI,Roosevelt Williams,DB,Tuskegee,0,0,,0
+2002,3,73,CAR,Will Witherspoon,LB,Georgia,0,0,,8
+2002,3,74,IND,Joe Jefferson,DB,Western Kentucky,0,0,,0
+2002,3,75,DAL,Derek Ross,DB,Ohio St.,0,0,,1
+2002,3,76,CLE,Melvin Fowler,C,Maryland,0,0,,4
+2002,3,77,TEN,Rocky Calmus,LB,Oklahoma,0,0,,1
+2002,3,78,NYG,Jeff Hatch,T,Pennsylvania,0,0,,0
+2002,3,79,WAS,Rashad Bauman,DB,Oregon,0,0,,0
+2002,3,80,ATL,Will Overstreet,LB,Tennessee,0,0,,0
+2002,3,81,ARI,Josh McCown,QB,Sam Houston St.,0,0,,5
+2002,3,82,NOR,James Allen,LB,Oregon St.,0,0,,1
+2002,3,83,HOU,Charles Hill,DT,Maryland,0,0,,0
+2002,3,84,STL,Lamar Gordon,RB,North Dakota St.,0,0,,0
+2002,3,85,SEA,Kris Richard,DB,USC,0,0,,0
+2002,3,86,TAM,Marquis Walker,WR,Michigan,0,0,,0
+2002,3,87,WAS,Cliff Russell,WR,Utah,0,0,,0
+2002,3,88,NYJ,Chris Baker,TE,Michigan St.,0,0,,5
+2002,3,89,JAX,Akin Ayodele,LB,Purdue,0,0,,8
+2002,3,90,MIA,Seth McKinney,C,Texas A&M,0,0,,3
+2002,3,91,PHI,Brian Westbrook,RB,Villanova,2,1,,7
+2002,3,92,GNB,Marques Anderson,DB,UCLA,0,0,,2
+2002,3,93,CHI,Terrence Metcalf,G,Mississippi,0,0,,1
+2002,3,94,PIT,Chris Hope,DB,Florida St.,1,0,,7
+2002,3,95,STL,Eric Crouch,WR,Nebraska,0,0,,0
+2002,3,96,DEN,Dorsett Davis,DE,Mississippi St.,0,0,,0
+2002,3,97,BUF,Coy Wire,DB,Stanford,0,0,,1
+2002,3,98,ARI,Dennis Johnson,DE,Kentucky,0,0,,1
+2002,4,99,HOU,Jonathan Wells,RB,Ohio St.,0,0,,1
+2002,4,100,CAR,Dante Wesley,DB,Ark-Pine Bluff,0,0,,0
+2002,4,101,CLE,Kevin Bentley,LB,Northwestern,0,0,,2
+2002,4,102,SFO,Jeff Chandler,K,Florida,0,0,,0
+2002,4,103,SDG,Justin Peelle,TE,Oregon,0,0,,4
+2002,4,104,CHI,Alex Brown,DE,Florida,0,0,,8
+2002,4,105,MIN,Brian Williams,DB,North Carolina St.,0,0,,7
+2002,4,106,IND,David Thornton,LB,North Carolina,0,0,,7
+2002,4,107,KAN,Omar Easy,FB,Penn St.,0,0,,0
+2002,4,108,JAX,David Garrard,QB,East Carolina,1,0,,5
+2002,4,109,CIN,Travis Dorsch,P,Purdue,0,0,,0
+2002,4,110,TEN,Mike Echols,DB,Wisconsin,0,0,,0
+2002,4,111,CLE,Ben Taylor,LB,Virginia Tech,0,0,,2
+2002,4,112,BAL,Dave Zastudil,P,Ohio,0,0,,0
+2002,4,113,ARI,Nate Dwyer,DT,Kansas,0,0,,0
+2002,4,114,MIA,Randy McMichael,TE,Georgia,0,0,,10
+2002,4,115,TEN,Tony Beckham,DB,Wisconsin–Stout,0,0,,0
+2002,4,116,ATL,Martin Bibla,G,Miami (FL),0,0,,0
+2002,4,117,NWE,Rohan Davey,QB,LSU,0,0,,0
+2002,4,118,JAX,Chris Luzar,TE,Virginia,0,0,,0
+2002,4,119,TAM,Travis Stephens,RB,Tennessee,0,0,,0
+2002,4,120,SEA,Terreal Bierria,DB,Georgia,0,0,,1
+2002,4,121,NYJ,Alan Harper,DT,Fresno St.,0,0,,0
+2002,4,122,CLE,Darnell Sanders,TE,Ohio St.,0,0,,1
+2002,4,123,BAL,Ron Johnson,WR,Minnesota,0,0,,0
+2002,4,124,PHI,Scott Peters,C,Arizona St.,0,0,,0
+2002,4,125,NOR,Keyuo Craver,DB,Nebraska,0,0,,0
+2002,4,126,NWE,Jarvis Green,DE,LSU,0,0,,2
+2002,4,127,SFO,Kevin Curtis,DB,Texas Tech,0,0,,0
+2002,4,128,PIT,Larry Foote,LB,Michigan,0,0,,8
+2002,4,129,DAL,Jamar Martin,FB,Ohio St.,0,0,,0
+2002,4,130,STL,Travis Scott,G,Arizona St.,0,0,,0
+2002,4,131,DEN,Sam Brandon,DB,UNLV,0,0,,0
+2002,4,132,MIN,Edward Ta'amu,G,Utah,0,0,,0
+2002,4,133,TEN,Rocky Boiman,LB,Notre Dame,0,0,,2
+2002,4,134,DET,John Taylor,LB,Montana St.,0,0,,0
+2002,4,135,GNB,Najeh Davenport,RB,Miami (FL),0,0,,0
+2002,5,136,HOU,Jarrod Baxter,FB,New Mexico,0,0,,1
+2002,5,137,CAR,Randy Fasani,QB,Stanford,0,0,,0
+2002,5,138,DET,John Owens,TE,Notre Dame,0,0,,1
+2002,5,139,BUF,Justin Bannan,DT,Colorado,0,0,,4
+2002,5,140,CHI,Bobby Gray,DB,Louisiana Tech,0,0,,1
+2002,5,141,CLE,Andra Davis,LB,Florida,0,0,,7
+2002,5,142,SDG,Terry Charles,WR,Portland St.,0,0,,0
+2002,5,143,KAN,Scott Fujita,LB,California,0,0,,10
+2002,5,144,DEN,Herb Haygood,WR,Michigan St.,0,0,,0
+2002,5,145,CAR,Kyle Johnson,RB,Syracuse,0,0,,2
+2002,5,146,SEA,Rocky Bernard,DT,Texas A&M,0,0,,3
+2002,5,147,OAK,Kenyon Coleman,DE,UCLA,0,0,,5
+2002,5,148,ATL,Kevin McCadam,DB,Colorado St.,0,0,,0
+2002,5,149,ARI,Jason McAddley,WR,Alabama,0,0,,1
+2002,5,150,NOR,Mel Mitchell,DB,Western Kentucky,0,0,,0
+2002,5,151,TEN,Jake Schifino,WR,Akron,0,0,,0
+2002,5,152,NYG,Nick Greisen,LB,Wisconsin,0,0,,2
+2002,5,153,HOU,Ramon Walker,DB,Pittsburgh,0,0,,0
+2002,5,154,NYJ,Jonathan Goodwin,G,Michigan,1,0,,8
+2002,5,155,BAL,Terry Jones,TE,Alabama,0,0,,3
+2002,5,156,GNB,Aaron Kampman,DE,Iowa,2,0,,7
+2002,5,157,TAM,Jermaine Phillips,DB,Georgia,0,0,,6
+2002,5,158,ATL,Kurt Kittner,QB,Illinois,0,0,,0
+2002,5,159,WAS,Andre Lott,DB,Tennessee,0,0,,0
+2002,5,160,WAS,Robert Royal,TE,LSU,0,0,,6
+2002,5,161,MIA,Omare Lowe,DB,Washington,0,0,,0
+2002,5,162,PHI,Freddie Milons,WR,Alabama,0,0,,0
+2002,5,163,SFO,Brandon Doman,QB,BYU,0,0,,0
+2002,5,164,GNB,Craig Nall,QB,LSU,0,0,,0
+2002,5,165,CHI,Bryan Knight,LB,Pittsburgh,0,0,,0
+2002,5,166,PIT,Verron Haynes,RB,Georgia,0,0,,0
+2002,5,167,STL,Courtland Bullard,LB,Ohio St.,0,0,,0
+2002,5,168,DAL,Pete Hunter,DB,Virginia Union,0,0,,0
+2002,5,169,SEA,Ryan Hannam,TE,Northern Iowa,0,0,,0
+2002,5,170,MIA,Sam Simmons,WR,Northwestern,0,0,,0
+2002,5,171,SEA,Matt Hill,T,Boise St.,0,0,,0
+2002,5,172,SFO,Josh Shaw,DT,Michigan St.,0,0,,0
+2002,6,173,HOU,Demarcus Faggins,DB,Kansas St.,0,0,,3
+2002,6,174,CAR,Keith Heinrich,TE,Sam Houston St.,0,0,,0
+2002,6,175,DET,Chris Cash,DB,USC,0,0,,1
+2002,6,176,BUF,Kevin Thomas,DB,UNLV,0,0,,0
+2002,6,177,MIN,Nick Rogers,LB,Georgia Tech,0,0,,1
+2002,6,178,SDG,Matt Anderle,T,Minnesota,0,0,,0
+2002,6,179,DAL,Tyson Walter,C,Ohio St.,0,0,,1
+2002,6,180,JAX,Clenton Ballard,DT,Texas St.,0,0,,0
+2002,6,181,CIN,Marquand Manuel,DB,Florida,0,0,,3
+2002,6,182,IND,David Pugh,DT,Virginia Tech,0,0,,0
+2002,6,183,IND,James Lewis,DB,Miami (FL),0,0,,0
+2002,6,184,ATL,Kahlil Hill,WR,Iowa,0,0,,0
+2002,6,185,ARI,Josh Scobey,RB,Kansas St.,0,0,,0
+2002,6,186,NOR,J.T. O'Sullivan,QB,UC Davis,0,0,,0
+2002,6,187,TEN,Justin Hartwig,C,Kansas,0,0,,6
+2002,6,188,NYG,Wesly Mallard,LB,Oregon,0,0,,0
+2002,6,189,OAK,Keyon Nash,DB,Albany State (GA),0,0,,0
+2002,6,190,HOU,Howard Green,DT,LSU,0,0,,2
+2002,6,191,DEN,Jeb Putzier,TE,Boise St.,0,0,,1
+2002,6,192,WAS,Reggie Coleman,T,Tennessee,0,0,,0
+2002,6,193,TAM,John Stamper,DE,South Carolina,0,0,,0
+2002,6,194,SEA,Craig Jarrett,P,Michigan St.,0,0,,0
+2002,6,195,BAL,Lamont Brightful,DB,Eastern Washington,0,0,,0
+2002,6,196,NOR,John Gilmore,TE,Penn St.,0,0,,2
+2002,6,197,OAK,Larry Ned,RB,San Diego St.,0,0,,0
+2002,6,198,PHI,Tyreo Harrison,LB,Notre Dame,0,0,,0
+2002,6,199,CHI,Adrian Peterson,RB,Georgia Southern,0,0,,0
+2002,6,200,GNB,Mike Houghton,G,San Diego St.,0,0,,0
+2002,6,201,SFO,Mark Anelli,TE,Wisconsin,0,0,,0
+2002,6,202,PIT,Lee Mays,WR,Texas-El Paso,0,0,,0
+2002,6,203,CHI,Jamin Elliott,WR,Delaware,0,0,,0
+2002,6,204,IND,Brian Allen,RB,Stanford,0,0,,0
+2002,6,205,STL,Steve Bellisari,QB,Ohio St.,0,0,,0
+2002,6,206,BAL,Javin Hunter,WR,Notre Dame,0,0,,0
+2002,6,207,BAL,Chester Taylor,RB,Toledo,0,0,,1
+2002,6,208,DAL,DeVeren Johnson,WR,Sacred Heart,0,0,,0
+2002,6,209,BAL,Chad Williams,DB,Southern Miss,0,0,,0
+2002,6,210,CHI,Bryan Fletcher,TE,UCLA,0,0,,1
+2002,6,211,DAL,Bob Slowikowski,TE,Virginia Tech,0,0,,0
+2002,7,212,PIT,LaVar Glover,DB,Cincinnati,0,0,,0
+2002,7,213,CAR,Pete Campion,G,North Dakota St.,0,0,,0
+2002,7,214,DET,Luke Staley,RB,BYU,0,0,,0
+2002,7,215,BUF,Mike Pucillo,G,Auburn,0,0,,1
+2002,7,216,SDG,Seth Burford,QB,Cal Poly-San Luis Obispo,0,0,,0
+2002,7,217,ATL,Michael Coleman,WR,Widener,0,0,,0
+2002,7,218,MIN,Chad Beasley,T,Virginia Tech,0,0,,0
+2002,7,219,CIN,Joey Evans,DE,North Carolina,0,0,,0
+2002,7,220,IND,Josh Mallard,DE,Georgia,0,0,,0
+2002,7,221,KAN,Maurice Rodriguez,LB,Fresno St.,0,0,,0
+2002,7,222,JAX,Kendall Newson,WR,Middle Tenn. St.,0,0,,0
+2002,7,223,ARI,Mike Banks,TE,Iowa St.,0,0,,0
+2002,7,224,NOR,Derrius Monroe,DE,Virginia Tech,0,0,,0
+2002,7,225,TEN,Darrell Hill,WR,Northern Illinois,0,0,,0
+2002,7,226,NYG,Daryl Jones,WR,Miami (FL),0,0,,0
+2002,7,227,CLE,Joaquin Gonzalez,T,Miami (FL),0,0,,1
+2002,7,228,DEN,Chris Young,DB,Georgia Tech,0,0,,0
+2002,7,229,HOU,Stylez G. White,DE,Minnesota,0,0,,2
+2002,7,230,WAS,Jeff Grau,C,UCLA,0,0,,0
+2002,7,231,DEN,Monsanto Pope,DT,Virginia,0,0,,1
+2002,7,232,SEA,Jeff Kelly,QB,Southern Miss,0,0,,0
+2002,7,233,TAM,Tim Wansley,DB,Georgia,0,0,,0
+2002,7,234,WAS,Greg Scott,DE,Hampton,0,0,,0
+2002,7,235,OAK,Ronald Curry,WR,North Carolina,0,0,,2
+2002,7,236,BAL,Wes Pate,QB,S.F. Austin,0,0,,0
+2002,7,237,NWE,Antwoine Womack,RB,Virginia,0,0,,0
+2002,7,238,PHI,Raheem Brock,DE,Temple,0,0,,6
+2002,7,239,SFO,Eric Heitmann,G,Stanford,0,0,,7
+2002,7,240,TEN,Carlos Hall,DE,Arkansas,0,0,,2
+2002,7,241,MIA,Leonard Henry,RB,East Carolina,0,0,,0
+2002,7,242,PIT,Brett Keisel,DE,BYU,1,0,,8
+2002,7,243,STL,Chris Massey,RB,Marshall,0,0,,0
+2002,7,244,ATL,Kevin Shaffer,T,Tulsa,0,0,,5
+2002,7,245,NYG,Quincy Monk,LB,North Carolina,0,0,,0
+2002,7,246,JAX,Steve Smith,DB,Oregon,0,0,,0
+2002,7,247,JAX,Hayden Epstein,K,Michigan,0,0,,0
+2002,7,248,SFO,Kyle Kosier,G,Arizona St.,0,0,,8
+2002,7,249,BUF,Rodney Wright,WR,Fresno St.,0,0,,0
+2002,7,250,TAM,Tracey Wistrom,TE,Nebraska,0,0,,0
+2002,7,251,BUF,Jarrett Ferguson,RB,Virginia Tech,0,0,,0
+2002,7,252,DET,Matt Murphy,TE,Maryland,0,0,,0
+2002,7,253,NWE,David Givens,WR,Notre Dame,0,0,,2
+2002,7,254,TAM,Aaron Lockett,WR,Kansas St.,0,0,,0
+2002,7,255,TAM,Zack Quaccia,C,Stanford,0,0,,0
+2002,7,256,SFO,Teddy Gaines,DB,Tennessee,0,0,,0
+2002,7,257,WAS,Rock Cartwright,FB,Kansas St.,0,0,,0
+2002,7,258,CAR,Brad Franklin,DB,Louisiana,0,0,,0
+2002,7,259,DET,Victor Rogers,T,Colorado,0,0,,0
+2002,7,260,BUF,Dominique Stevenson,LB,Tennessee,0,0,,0
+2002,7,261,HOU,Ahmad Miller,DT,UNLV,0,0,,0
+2003,1,1,CIN,Carson Palmer,QB,USC,3,0,,12
+2003,1,2,DET,Charles Rogers,WR,Michigan St.,0,0,,0
+2003,1,3,HOU,Andre Johnson,WR,Miami (FL),7,2,,12
+2003,1,4,NYJ,Dewayne Robertson,DT,Kentucky,0,0,,6
+2003,1,5,DAL,Terence Newman,DB,Kansas St.,2,0,,15
+2003,1,6,NOR,Johnathan Sullivan,DT,Georgia,0,0,,1
+2003,1,7,JAX,Byron Leftwich,QB,Marshall,0,0,,3
+2003,1,8,CAR,Jordan Gross,T,Utah,3,1,,11
+2003,1,9,MIN,Kevin Williams,DT,Oklahoma St.,6,5,,12
+2003,1,10,BAL,Terrell Suggs,LB,Arizona St.,7,1,,15
+2003,1,11,SEA,Marcus Trufant,DB,Washington St.,1,0,,8
+2003,1,12,STL,Jimmy Kennedy,DT,Penn St.,0,0,,2
+2003,1,13,NWE,Ty Warren,DE,Texas A&M,0,0,,6
+2003,1,14,CHI,Michael Haynes,DE,Penn St.,0,0,,0
+2003,1,15,PHI,Jerome McDougle,DE,Miami (FL),0,0,,0
+2003,1,16,PIT,Troy Polamalu,DB,USC,8,4,,10
+2003,1,17,ARI,Bryant Johnson,WR,Penn St.,0,0,,4
+2003,1,18,ARI,Calvin Pace,DE,Wake Forest,0,0,,10
+2003,1,19,BAL,Kyle Boller,QB,California,0,0,,4
+2003,1,20,DEN,George Foster,T,Georgia,0,0,,4
+2003,1,21,CLE,Jeff Faine,C,Notre Dame,0,0,,8
+2003,1,22,CHI,Rex Grossman,QB,Florida,0,0,,3
+2003,1,23,BUF,Willis McGahee,RB,Miami (FL),2,0,,7
+2003,1,24,IND,Dallas Clark,TE,Iowa,1,1,,9
+2003,1,25,NYG,William Joseph,DT,Miami (FL),0,0,,1
+2003,1,26,SFO,Kwame Harris,T,Stanford,0,0,,3
+2003,1,27,KAN,Larry Johnson,RB,Penn St.,2,1,,4
+2003,1,28,TEN,Andre Woolfolk,DB,Oklahoma,0,0,,0
+2003,1,29,GNB,Nick Barnett,LB,Oregon St.,0,0,,9
+2003,1,30,SDG,Sammy Davis,DB,Texas A&M,0,0,,2
+2003,1,31,OAK,Nnamdi Asomugha,DB,California,3,2,,8
+2003,1,32,OAK,Tyler Brayton,DE,Colorado,0,0,,6
+2003,2,33,CIN,Eric Steinbach,G,Iowa,0,0,,8
+2003,2,34,DET,Boss Bailey,LB,Georgia,0,0,,4
+2003,2,35,CHI,Charles Tillman,DB,Louisiana,2,1,,11
+2003,2,36,NWE,Eugene Wilson,DB,Illinois,0,0,,6
+2003,2,37,NOR,Jon Stinchcomb,T,Georgia,1,0,,5
+2003,2,38,DAL,Al Johnson,C,Wisconsin,0,0,,3
+2003,2,39,JAX,Rashean Mathis,DB,Bethune-Cookman,1,1,,11
+2003,2,40,MIN,E.J. Henderson,LB,Maryland,1,0,,7
+2003,2,41,HOU,Bennie Joppru,TE,Michigan,0,0,,0
+2003,2,42,SEA,Ken Hamlin,DB,Arkansas,1,0,,6
+2003,2,43,STL,Pisa Tinoisamoa,LB,Hawaii,0,0,,7
+2003,2,44,WAS,Taylor Jacobs,WR,Florida,0,0,,0
+2003,2,45,NWE,Bethel Johnson,WR,Texas A&M,0,0,,0
+2003,2,46,SDG,Drayton Florence,DB,Tuskegee,0,0,,6
+2003,2,47,KAN,Kawika Mitchell,LB,South Florida,0,0,,6
+2003,2,48,BUF,Chris Kelsay,DE,Nebraska,0,0,,8
+2003,2,49,MIA,Eddie Moore,LB,Tennessee,0,0,,0
+2003,2,50,CAR,Bruce Nelson,G,Iowa,0,0,,0
+2003,2,51,DEN,Terry Pierce,LB,Kansas St.,0,0,,0
+2003,2,52,CLE,Chaun Thompson,LB,West Texas A&M,0,0,,2
+2003,2,53,NYJ,Victor Hobson,LB,Michigan,0,0,,4
+2003,2,54,ARI,Anquan Boldin,WR,Florida St.,3,0,,14
+2003,2,55,ATL,Bryan Scott,DB,Penn St.,0,0,,3
+2003,2,56,NYG,Osi Umenyiora,DE,Troy,2,1,,6
+2003,2,57,SFO,Anthony Adams,DT,Penn St.,0,0,,4
+2003,2,58,IND,Mike Doss,DB,Ohio St.,0,0,,3
+2003,2,59,PIT,Alonzo Jackson,LB,Florida St.,0,0,,0
+2003,2,60,TEN,Tyrone Calico,WR,Middle Tenn. St.,0,0,,0
+2003,2,61,PHI,L.J. Smith,TE,Rutgers,0,0,,4
+2003,2,62,SDG,Terrence Kiel,DB,Texas A&M,0,0,,3
+2003,2,63,OAK,Teyo Johnson,TE,Stanford,0,0,,0
+2003,2,64,TAM,Dewayne White,DE,Louisville,0,0,,2
+2003,3,65,CIN,Kelley Washington,WR,Tennessee,0,0,,0
+2003,3,66,DET,Cory Redding,DE,Texas,0,0,,10
+2003,3,67,HOU,Antwan Peek,LB,Cincinnati,0,0,,1
+2003,3,68,CHI,Lance Briggs,LB,Arizona,7,1,,12
+2003,3,69,DAL,Jason Witten,TE,Tennessee,11,2,,16
+2003,3,70,ARI,Gerald Hayes,LB,Pittsburgh,0,0,,4
+2003,3,71,MIN,Nate Burleson,WR,Nevada,0,0,,9
+2003,3,72,JAX,Vince Manuwai,G,Hawaii,0,0,,7
+2003,3,73,SEA,Wayne Hunter,T,Hawaii,0,0,,1
+2003,3,74,STL,Kevin Curtis,WR,Utah St.,0,0,,3
+2003,3,75,HOU,Seth Wand,T,NW Missouri St.,0,0,,1
+2003,3,76,CAR,Mike Seidman,TE,UCLA,0,0,,0
+2003,3,77,BAL,Musa Smith,RB,Georgia,0,0,,0
+2003,3,78,MIA,Wade Smith,T,Memphis,1,0,,6
+2003,3,79,GNB,Kenny Peterson,DT,Ohio St.,0,0,,1
+2003,3,80,SDG,Courtney Van Buren,T,Ark-Pine Bluff,0,0,,1
+2003,3,81,WAS,Derrick Dockery,G,Texas,0,0,,7
+2003,3,82,CAR,Ricky Manning,DB,UCLA,0,0,,1
+2003,3,83,OAK,Sam Williams,DE,Fresno St.,0,0,,1
+2003,3,84,CLE,Chris Crocker,DB,Marshall,0,0,,7
+2003,3,85,NYJ,B.J. Askew,FB,Michigan,0,0,,1
+2003,3,86,NOR,Cie Grant,LB,Ohio St.,0,0,,0
+2003,3,87,MIA,Taylor Whitley,G,Texas A&M,0,0,,1
+2003,3,88,HOU,Dave Ragone,QB,Louisville,0,0,,0
+2003,3,89,SFO,Andrew Williams,DE,Miami (FL),0,0,,0
+2003,3,90,IND,Donald Strickland,DB,Colorado,0,0,,0
+2003,3,91,NYG,Visanthe Shiancoe,TE,Morgan St.,0,0,,5
+2003,3,92,KAN,Julian Battle,DB,Tennessee,0,0,,0
+2003,3,93,TEN,Chris Brown,RB,Colorado,0,0,,2
+2003,3,94,BUF,Angelo Crowell,LB,Virginia,0,0,,3
+2003,3,95,PHI,Billy McMullen,WR,Virginia,0,0,,0
+2003,3,96,OAK,Justin Fargas,FB,USC,0,0,,2
+2003,3,97,TAM,Chris Simms,QB,Texas,0,0,,1
+2003,4,98,CIN,Dennis Weathersby,DB,Oregon St.,0,0,,0
+2003,4,99,DET,Artose Pinner,RB,Kentucky,0,0,,0
+2003,4,100,CHI,Todd Johnson,DB,Florida,0,0,,1
+2003,4,101,HOU,Domanick Williams,RB,LSU,0,0,,3
+2003,4,102,NOR,Montrae Holland,G,Florida St.,0,0,,4
+2003,4,103,DAL,Bradie James,LB,LSU,0,0,,8
+2003,4,104,JAX,George Wrighster,TE,Oregon,0,0,,1
+2003,4,105,MIN,Onterrio Smith,RB,Oregon,0,0,,0
+2003,4,106,STL,Shaun McDonald,WR,Arizona St.,0,0,,1
+2003,4,107,STL,DeJuan Groce,DB,Nebraska,0,0,,1
+2003,4,108,DEN,Quentin Griffin,RB,Oklahoma,0,0,,0
+2003,4,109,BAL,Jarret Johnson,DE,Alabama,0,0,,9
+2003,4,110,SEA,Seneca Wallace,QB,Iowa St.,0,0,,1
+2003,4,111,BUF,Terrence McGee,DB,Northwestern St. (LA),1,0,,7
+2003,4,112,SDG,Matt Wilhelm,LB,Ohio St.,0,0,,1
+2003,4,113,KAN,Brett Williams,T,Florida St.,0,0,,0
+2003,4,114,DEN,Nick Eason,DT,Clemson,0,0,,0
+2003,4,115,CLE,Lee Suggs,RB,Virginia Tech,0,0,,0
+2003,4,116,CHI,Ian Scott,DT,Florida,0,0,,3
+2003,4,117,NWE,Dan Klecko,DT,Temple,0,0,,0
+2003,4,118,CIN,Jeremi Johnson,FB,Western Kentucky,0,0,,4
+2003,4,119,CAR,Colin Branch,DB,Stanford,0,0,,1
+2003,4,120,NWE,Asante Samuel,DB,Central Florida,4,1,,9
+2003,4,121,ATL,Justin Griffith,FB,Mississippi St.,0,0,,6
+2003,4,122,IND,Steve Sciullo,G,Marshall,0,0,,1
+2003,4,123,NYG,Roderick Babers,DB,Texas,0,0,,0
+2003,4,124,SFO,Brandon Lloyd,WR,Illinois,1,0,,6
+2003,4,125,PIT,Ike Taylor,DB,Louisiana,0,0,,9
+2003,4,126,TEN,Rien Long,DT,Washington St.,0,0,,0
+2003,4,127,BUF,Sam Aiken,WR,North Carolina,0,0,,0
+2003,4,128,DEN,Bryant McNeal,DE,Clemson,0,0,,0
+2003,4,129,OAK,Shurron Pierson,DE,South Florida,0,0,,0
+2003,4,130,TAM,Lance Nimmo,T,West Virginia,0,0,,0
+2003,4,131,PHI,Jamaal Green,DE,Miami (FL),0,0,,0
+2003,4,132,JAX,LaBrandon Toefield,RB,LSU,0,0,,0
+2003,4,133,TAM,Austin King,C,Northwestern,0,0,,0
+2003,4,134,BAL,Ovie Mughelli,FB,Wake Forest,1,0,,5
+2003,4,135,SEA,Solomon Bates,LB,Arizona St.,0,0,,0
+2003,5,136,CIN,Khalid Abdullah,LB,Mars Hill,0,0,,0
+2003,5,137,DET,Terrence Holt,DB,North Carolina St.,0,0,,3
+2003,5,138,IND,Robert Mathis,DE,Alabama A&M,5,1,,9
+2003,5,139,CHI,Bobby Wade,WR,Arizona,0,0,,3
+2003,5,140,NYJ,Derek Pagel,DB,Iowa,0,0,,0
+2003,5,141,ARI,Kenny King,DE,Alabama,0,0,,0
+2003,5,142,CLE,Ryan Pontbriand,C,Rice,2,0,,0
+2003,5,143,CHI,Justin Gage,WR,Missouri,0,0,,3
+2003,5,144,DET,James Davis,LB,West Virginia,0,0,,2
+2003,5,145,CAR,Kindal Moorehead,DT,Alabama,0,0,,1
+2003,5,146,BAL,Aubrayo Franklin,DT,Tennessee,0,0,,7
+2003,5,147,GNB,James Lee,DT,Oregon St.,0,0,,0
+2003,5,148,STL,Dan Curley,FB,Eastern Washington,0,0,,0
+2003,5,149,SDG,Mike Scifres,P,Western Illinois,0,0,,0
+2003,5,150,NYJ,Matt Walters,DE,Miami (FL),0,0,,0
+2003,5,151,BUF,Ben Sobieski,T,Iowa,0,0,,0
+2003,5,152,CLE,Michael Lehan,DB,Minnesota,0,0,,1
+2003,5,153,KAN,Jordan Black,T,Notre Dame,0,0,,2
+2003,5,154,TEN,Donnie Nickey,DB,Ohio St.,0,0,,0
+2003,5,155,NOR,Melvin Williams,DE,Kansas St.,0,0,,0
+2003,5,156,MIA,Donald Lee,TE,Mississippi St.,0,0,,5
+2003,5,157,DEN,Ben Claxton,G,Mississippi,0,0,,0
+2003,5,158,DEN,Adrian Madise,WR,TCU,0,0,,0
+2003,5,159,ATL,Jon Olinger,WR,Cincinnati,0,0,,0
+2003,5,160,NYG,David Diehl,G,Illinois,1,0,,11
+2003,5,161,SFO,Aaron Walker,TE,Florida,0,0,,0
+2003,5,162,IND,Keyon Whiteside,LB,Tennessee,0,0,,0
+2003,5,163,PIT,Brian St. Pierre,QB,Boston Col.,0,0,,0
+2003,5,164,NWE,Dan Koppen,C,Boston Col.,1,0,,9
+2003,5,165,SEA,Chris Davis,FB,Syracuse,0,0,,0
+2003,5,166,GNB,Hunter Hillenmeyer,LB,Vanderbilt,0,0,,5
+2003,5,167,OAK,Doug Gabriel,WR,Central Florida,0,0,,1
+2003,5,168,TAM,Sean Mahan,G,Notre Dame,0,0,,3
+2003,5,169,MIA,J.R. Tolver,WR,San Diego St.,0,0,,0
+2003,5,170,STL,Shane Walton,DB,Notre Dame,0,0,,0
+2003,5,171,CHI,Tron LaFavor,DT,Florida,0,0,,0
+2003,5,172,STL,Kevin Garrett,DB,SMU,0,0,,0
+2003,5,173,BAL,Tony Pashos,T,Illinois,0,0,,5
+2003,6,174,CIN,Langston Moore,DT,South Carolina,0,0,,0
+2003,6,175,DET,David Kircus,WR,Grand Valley St.,0,0,,0
+2003,6,176,JAX,Brandon Green,DE,Rice,0,0,,0
+2003,6,177,ARI,Reggie Wells,G,Clarion,0,0,,6
+2003,6,178,DAL,B.J. Tucker,DB,Wisconsin,0,0,,0
+2003,6,179,JAX,David Young,DB,Georgia Southern,0,0,,0
+2003,6,180,MIN,Eddie Johnson,P,Idaho St.,0,0,,0
+2003,6,181,MIA,Corey Jenkins,LB,South Carolina,0,0,,0
+2003,6,182,BAL,Gerome Sapp,DB,Notre Dame,0,0,,0
+2003,6,183,SEA,Rashad Moore,DT,Tennessee,0,0,,1
+2003,6,184,STL,Scott Tercero,G,California,0,0,,0
+2003,6,185,PHI,Jeremy Bridges,G,Southern Miss,0,0,,2
+2003,6,186,DAL,Zuriel Smith,WR,Hampton,0,0,,0
+2003,6,187,BUF,Lauvale Sape,DT,Utah,0,0,,0
+2003,6,188,SDG,Hanik Milligan,DB,Houston,1,0,,0
+2003,6,189,KAN,Jimmy Wilkerson,DE,Oklahoma,0,0,,1
+2003,6,190,MIN,Mike Nattiel,LB,Florida,0,0,,0
+2003,6,191,CHI,Joe Odom,LB,Purdue,0,0,,0
+2003,6,192,HOU,Drew Henson,QB,Michigan,0,0,,0
+2003,6,193,JAX,Marques Ogden,T,Howard,0,0,,0
+2003,6,194,DEN,Aaron Hunt,DE,Texas Tech,0,0,,0
+2003,6,195,CLE,Antonio Garay,DE,Boston Col.,0,0,,2
+2003,6,196,ATL,LaTarence Dunbar,WR,TCU,0,0,,0
+2003,6,197,SFO,Arnaz Battle,WR,Notre Dame,0,0,,2
+2003,6,198,IND,Cato June,LB,Michigan,1,0,,5
+2003,6,199,NYG,Willie Ponder,WR,SE Missouri St.,0,0,,0
+2003,6,200,NYJ,Brooks Bollinger,QB,Wisconsin,0,0,,1
+2003,6,201,NWE,Kliff Kingsbury,QB,Texas Tech,0,0,,0
+2003,6,202,ATL,Waine Bacon,DB,Alabama,0,0,,0
+2003,6,203,NOR,Kareem Kelly,WR,USC,0,0,,0
+2003,6,204,OAK,Dustin Rykert,T,BYU,0,0,,0
+2003,6,205,TAM,Torrie Cox,DB,Pittsburgh,0,0,,0
+2003,6,206,CHI,Brock Forsey,RB,Boise St.,0,0,,0
+2003,6,207,NYG,Frank Walker,DB,Tuskegee,0,0,,1
+2003,6,208,IND,Makoa Freitas,T,Arizona,0,0,,0
+2003,6,209,MIA,Tim Provost,T,San Jose St.,0,0,,0
+2003,6,210,ARI,Tony Gilbert,LB,Georgia,0,0,,0
+2003,6,211,NYG,David Tyree,WR,Syracuse,1,0,,0
+2003,6,212,GNB,Brennan Curtin,T,Notre Dame,0,0,,0
+2003,6,213,MIA,Yeremiah Bell,DB,Eastern Kentucky,1,0,,7
+2003,6,214,HOU,Keith Wright,DT,Missouri,0,0,,0
+2003,7,215,CIN,Scott Kooistra,T,North Carolina St.,0,0,,0
+2003,7,216,DET,Ben Johnson,T,Wisconsin,0,0,,0
+2003,7,217,HOU,Curry Burns,DB,Louisville,0,0,,0
+2003,7,218,JAX,Malaefou MacKenzie,FB,USC,0,0,,0
+2003,7,219,DAL,Justin Bates,G,Colorado,0,0,,0
+2003,7,220,DET,Blue Adams,DB,Cincinnati,0,0,,0
+2003,7,221,MIN,Keenan Howry,WR,Oregon,0,0,,0
+2003,7,222,SEA,Josh Brown,K,Nebraska,1,0,,0
+2003,7,223,BAL,Trent Smith,TE,Oklahoma,0,0,,0
+2003,7,224,SEA,Taco Wallace,WR,Kansas St.,0,0,,0
+2003,7,225,TEN,Todd Williams,G,Florida St.,0,0,,0
+2003,7,226,CAR,Walter Young,WR,Illinois,0,0,,0
+2003,7,227,DEN,Clint Mitchell,DE,Florida,0,0,,0
+2003,7,228,BUF,Mario Haggan,LB,Mississippi St.,0,0,,2
+2003,7,229,SDG,Andrew Pinnock,FB,South Carolina,0,0,,0
+2003,7,230,KAN,Montique Sharpe,DT,Wake Forest,0,0,,0
+2003,7,231,NOR,Talman Gardner,WR,Florida St.,0,0,,0
+2003,7,232,WAS,Gibran Hamdan,QB,Indiana,0,0,,0
+2003,7,233,HOU,Chance Pearce,C,Texas A&M,0,0,,0
+2003,7,234,NWE,Spencer Nead,FB,BYU,0,0,,0
+2003,7,235,DEN,Ahmaad Galloway,RB,Alabama,0,0,,0
+2003,7,236,DET,Brandon Drumm,RB,Colorado,0,0,,0
+2003,7,237,NYJ,Dave Yovanovits,G,Temple,0,0,,0
+2003,7,238,ATL,Demetrin Veal,DE,Tennessee,0,0,,0
+2003,7,239,NWE,Tully Banta-Cain,LB,California,0,0,,2
+2003,7,240,NYG,Charles Drake,DB,Michigan,0,0,,0
+2003,7,241,SFO,Ken Dorsey,QB,Miami (FL),0,0,,0
+2003,7,242,PIT,J.T. Wall,RB,Georgia,0,0,,0
+2003,7,243,NWE,Ethan Kelley,DT,Baylor,0,0,,1
+2003,7,244,PHI,Norman LeJeune,DB,LSU,0,0,,0
+2003,7,245,GNB,Chris Johnson,DB,Louisville,0,0,,1
+2003,7,246,OAK,Siddeeq Shabazz,DB,New Mexico St.,0,0,,0
+2003,7,247,CAR,Casey Moore,RB,Stanford,0,0,,0
+2003,7,248,MIA,Davern Williams,DT,Troy,0,0,,0
+2003,7,249,NYG,Wayne Lucier,G,Colorado,0,0,,1
+2003,7,250,BAL,Mike Mabry,C,Central Florida,0,0,,0
+2003,7,251,STL,Scott Shanle,LB,Nebraska,0,0,,7
+2003,7,252,KAN,Willie Pile,DB,Virginia Tech,0,0,,0
+2003,7,253,GNB,DeAndrew Rubin,WR,South Florida,0,0,,0
+2003,7,254,STL,Richard Angulo,TE,Western New Mexico,0,0,,0
+2003,7,255,NYG,Kevin Walter,WR,Eastern Michigan,0,0,,6
+2003,7,256,GNB,Carl Ford,WR,Toledo,0,0,,0
+2003,7,257,GNB,Steve Josue,LB,Carson-Newman,0,0,,0
+2003,7,258,BAL,Antwoine Sanders,DB,Utah,0,0,,0
+2003,7,259,CIN,Elton Patterson,DE,Central Florida,0,0,,0
+2003,7,260,DET,Travis Anglin,WR,Memphis,0,0,,0
+2003,7,261,CHI,Bryan Anderson,G,Pittsburgh,0,0,,0
+2003,7,262,OAK,Ryan Hoag,WR,Gustavus Adolphus,0,0,,0
+2004,1,1,SDG,Eli Manning,QB,Mississippi,4,0,,14
+2004,1,2,OAK,Robert Gallery,T,Iowa,0,0,,7
+2004,1,3,ARI,Larry Fitzgerald,WR,Pittsburgh,11,1,,17
+2004,1,4,NYG,Philip Rivers,QB,North Carolina St.,8,0,,15
+2004,1,5,WAS,Sean Taylor,DB,Miami (FL),2,0,,4
+2004,1,6,CLE,Kellen Winslow,TE,Miami (FL),1,0,,5
+2004,1,7,DET,Roy Williams,WR,Texas,1,0,,7
+2004,1,8,ATL,DeAngelo Hall,DB,Virginia Tech,3,0,,10
+2004,1,9,JAX,Reggie Williams,WR,Washington,0,0,,3
+2004,1,10,HOU,Dunta Robinson,DB,South Carolina,0,0,,8
+2004,1,11,PIT,Ben Roethlisberger,QB,Miami (OH),6,0,,17
+2004,1,12,NYJ,Jonathan Vilma,LB,Miami (FL),3,0,,8
+2004,1,13,BUF,Lee Evans,WR,Wisconsin,0,0,,7
+2004,1,14,CHI,Tommie Harris,DT,Oklahoma,3,0,,6
+2004,1,15,TAM,Michael Clayton,WR,LSU,0,0,,5
+2004,1,16,PHI,Shawn Andrews,G,Arkansas,2,1,,3
+2004,1,17,DEN,D.J. Williams,LB,Miami (FL),0,0,,9
+2004,1,18,NOR,Will Smith,DE,Ohio St.,1,0,,7
+2004,1,19,MIA,Vernon Carey,T,Miami (FL),0,0,,7
+2004,1,20,MIN,Kenechi Udeze,DE,USC,0,0,,3
+2004,1,21,NWE,Vince Wilfork,NT,Miami (FL),5,1,,11
+2004,1,22,BUF,J.P. Losman,QB,Tulane,0,0,,1
+2004,1,23,SEA,Marcus Tubbs,DT,Texas,0,0,,1
+2004,1,24,STL,Steven Jackson,RB,Oregon St.,3,0,,10
+2004,1,25,GNB,Ahmad Carroll,DB,Arkansas,0,0,,2
+2004,1,26,CIN,Chris Perry,RB,Michigan,0,0,,0
+2004,1,27,HOU,Jason Babin,LB,Western Michigan,2,0,,5
+2004,1,28,CAR,Chris Gamble,DB,Ohio St.,0,0,,8
+2004,1,29,ATL,Michael Jenkins,WR,Ohio St.,0,0,,6
+2004,1,30,DET,Kevin Jones,RB,Virginia Tech,0,0,,4
+2004,1,31,SFO,Rashaun Woods,WR,Oklahoma St.,0,0,,0
+2004,1,32,NWE,Ben Watson,TE,Georgia,0,0,,11
+2004,2,33,ARI,Karlos Dansby,LB,Auburn,0,0,,13
+2004,2,34,NYG,Chris Snee,G,Boston Col.,4,1,,9
+2004,2,35,SDG,Igor Olshansky,DE,Oregon,0,0,,7
+2004,2,36,KAN,Junior Siavii,DT,Oregon,0,0,,0
+2004,2,37,DET,Teddy Lehman,LB,Oklahoma,0,0,,1
+2004,2,38,PIT,Ricardo Colclough,DB,Tusculum,0,0,,0
+2004,2,39,JAX,Daryl Smith,LB,Georgia Tech,0,0,,12
+2004,2,40,TEN,Ben Troupe,TE,Florida,0,0,,2
+2004,2,41,DEN,Tatum Bell,RB,Oklahoma St.,0,0,,1
+2004,2,42,TEN,Travis LaBoy,DE,Hawaii,0,0,,3
+2004,2,43,DAL,Julius Jones,RB,Notre Dame,0,0,,6
+2004,2,44,IND,Bob Sanders,DB,Iowa,2,2,,2
+2004,2,45,OAK,Jake Grove,C,Virginia Tech,0,0,,4
+2004,2,46,SFO,Justin Smiley,G,Alabama,0,0,,5
+2004,2,47,CHI,Tank Johnson,DT,Washington,0,0,,2
+2004,2,48,MIN,Dontarrious Thomas,LB,Auburn,0,0,,0
+2004,2,49,CIN,Keiwan Ratliff,DB,Florida,0,0,,0
+2004,2,50,NOR,Devery Henderson,WR,LSU,0,0,,6
+2004,2,51,BAL,Dwan Edwards,DT,Oregon St.,0,0,,5
+2004,2,52,DAL,Jacob Rogers,T,USC,0,0,,0
+2004,2,53,SEA,Michael Boulware,DB,Florida St.,0,0,,2
+2004,2,54,DEN,Darius Watts,WR,Marshall,0,0,,0
+2004,2,55,JAX,Greg Jones,RB,Florida St.,0,0,,5
+2004,2,56,CIN,Madieu Williams,DB,Maryland,0,0,,7
+2004,2,57,TEN,Antwan Odom,DE,Alabama,0,0,,4
+2004,2,58,SFO,Shawntae Spencer,DB,Pittsburgh,0,0,,5
+2004,2,59,CLE,Sean Jones,DB,Georgia,0,0,,6
+2004,2,60,NOR,Courtney Watson,LB,Notre Dame,0,0,,1
+2004,2,61,KAN,Kris Wilson,TE,Pittsburgh,0,0,,2
+2004,2,62,CAR,Keary Colbert,WR,USC,0,0,,3
+2004,2,63,NWE,Marquise Hill,DE,LSU,0,0,,0
+2004,3,64,ARI,Darnell Dockett,DT,Florida St.,3,0,,10
+2004,3,65,SDG,Nate Kaeding,K,Iowa,2,1,,0
+2004,3,66,SDG,Nick Hardwick,C,Purdue,1,0,,9
+2004,3,67,OAK,Stuart Schweigert,DB,Purdue,0,0,,3
+2004,3,68,IND,Ben Hartsock,TE,Ohio St.,0,0,,2
+2004,3,69,IND,Gilbert Gardner,LB,Purdue,0,0,,1
+2004,3,70,GNB,Joey Thomas,DB,Montana St.,0,0,,0
+2004,3,71,TEN,Randy Starks,DT,Maryland,2,0,,8
+2004,3,72,GNB,Donnell Washington,DT,Clemson,0,0,,0
+2004,3,73,DET,Keith Smith,DB,McNeese St.,0,0,,0
+2004,3,74,BUF,Tim Anderson,DT,Ohio St.,0,0,,1
+2004,3,75,PIT,Max Starks,T,Florida,0,0,,6
+2004,3,76,NYJ,Derrick Strait,DB,Oklahoma,0,0,,0
+2004,3,77,SFO,Derrick Hamilton,WR,Clemson,0,0,,0
+2004,3,78,CHI,Bernard Berrian,WR,Fresno St.,0,0,,5
+2004,3,79,TAM,Marquis Cooper,LB,Washington,0,0,,0
+2004,3,80,CIN,Caleb Miller,LB,Arkansas,0,0,,0
+2004,3,81,WAS,Chris Cooley,TE,Utah St.,2,0,,6
+2004,3,82,BAL,Devard Darling,WR,Washington St.,0,0,,1
+2004,3,83,DAL,Stephen Peterman,G,LSU,0,0,,6
+2004,3,84,SEA,Sean Locklear,T,North Carolina St.,0,0,,6
+2004,3,85,DEN,Jeremy LeSueur,DB,Michigan,0,0,,0
+2004,3,86,JAX,Jorge Cordova,LB,Nevada,0,0,,0
+2004,3,87,GNB,B.J. Sander,P,Ohio St.,0,0,,0
+2004,3,88,MIN,Darrion Scott,DE,Ohio St.,0,0,,2
+2004,3,89,PHI,Matt Ware,DB,UCLA,0,0,,0
+2004,3,90,ATL,Matt Schaub,QB,Virginia,2,0,,7
+2004,3,91,STL,Anthony Hargrove,DE,Georgia Tech,0,0,,1
+2004,3,92,TEN,Rich Gardner,DB,Penn St.,0,0,,0
+2004,3,93,KAN,Keyaron Fox,LB,Georgia Tech,0,0,,0
+2004,3,94,CAR,Travelle Wharton,T,South Carolina,0,0,,8
+2004,3,95,NWE,Guss Scott,DB,Florida,0,0,,0
+2004,3,96,CIN,Landon Johnson,LB,Purdue,0,0,,5
+2004,4,97,NYG,Reggie Torbor,LB,Auburn,0,0,,2
+2004,4,98,SDG,Shaun Phillips,DE,Purdue,1,0,,8
+2004,4,99,OAK,Carlos Francis,WR,Texas Tech,0,0,,0
+2004,4,100,ARI,Alex Stepanovich,C,Ohio St.,0,0,,1
+2004,4,101,ATL,Demorrio Williams,LB,Nebraska,0,0,,5
+2004,4,102,MIA,Will Poole,DB,USC,0,0,,0
+2004,4,103,TEN,Bo Schobel,DE,TCU,0,0,,0
+2004,4,104,SFO,Isaac Sopoaga,DT,Hawaii,0,0,,5
+2004,4,105,KAN,Samie Parker,WR,Oregon,0,0,,2
+2004,4,106,CLE,Luke McCown,QB,Louisiana Tech,0,0,,0
+2004,4,107,IND,Kendyll Pope,LB,Florida St.,0,0,,0
+2004,4,108,NYJ,Jerricho Cotchery,WR,North Carolina St.,0,0,,6
+2004,4,109,BUF,Tim Euhus,TE,Oregon St.,0,0,,0
+2004,4,110,CHI,Nathan Vasher,DB,Texas,1,0,,2
+2004,4,111,TAM,Will Allen,DB,Ohio St.,0,0,,2
+2004,4,112,CHI,Leon Joe,LB,Maryland,0,0,,0
+2004,4,113,NWE,Dexter Reid,DB,North Carolina,0,0,,0
+2004,4,114,CIN,Matthias Askew,DT,Michigan St.,0,0,,0
+2004,4,115,MIN,Nat Dorsey,T,Georgia Tech,0,0,,1
+2004,4,116,SEA,Niko Koutouvides,LB,Purdue,0,0,,0
+2004,4,117,CIN,Robert Geathers,DE,Georgia,0,0,,7
+2004,4,118,JAX,Anthony Maddox,DT,Delta St.,0,0,,1
+2004,4,119,MIN,Mewelde Moore,RB,Tulane,0,0,,1
+2004,4,120,JAX,Ernest Wilford,WR,Virginia Tech,0,0,,4
+2004,4,121,DAL,Bruce Thornton,DB,Georgia,0,0,,1
+2004,4,122,HOU,Glenn Earl,DB,Notre Dame,0,0,,2
+2004,4,123,CIN,Stacy Andrews,T,Mississippi,0,0,,3
+2004,4,124,TEN,Michael Waddell,DB,North Carolina,0,0,,0
+2004,4,125,IND,Jason David,DB,Washington St.,0,0,,5
+2004,4,126,KAN,Jared Allen,DE,Idaho St.,5,4,,12
+2004,4,127,SFO,Richard Seigler,LB,Oregon St.,0,0,,0
+2004,4,128,NWE,Cedric Cobbs,RB,Arkansas,0,0,,0
+2004,4,129,PHI,J.R. Reed,DB,South Florida,0,0,,0
+2004,4,130,STL,Brandon Chillar,LB,UCLA,0,0,,2
+2004,4,131,PHI,Trey Darilek,G,Texas-El Paso,0,0,,0
+2004,4,132,NYJ,Adrian Jones,T,Kansas,0,0,,2
+2004,5,133,SDG,Dave Ball,DE,UCLA,0,0,,1
+2004,5,134,OAK,Johnnie Morant,WR,Syracuse,0,0,,0
+2004,5,135,ARI,Antonio Smith,DE,Oklahoma St.,1,0,,8
+2004,5,136,NYG,Gibril Wilson,DB,Tennessee,0,0,,6
+2004,5,137,JAX,Josh Scobee,K,Louisiana Tech,0,0,,0
+2004,5,138,TEN,Jacob Bell,G,Miami (OH),0,0,,7
+2004,5,139,NOR,Rodney Leisle,DT,UCLA,0,0,,0
+2004,5,140,DET,Alex Lewis,LB,Wisconsin,0,0,,1
+2004,5,141,IND,Jake Scott,G,Idaho,0,0,,9
+2004,5,142,ATL,Chad Lavalais,DT,LSU,0,0,,1
+2004,5,143,NYJ,Erik Coleman,DB,Washington St.,0,0,,6
+2004,5,144,DAL,Sean Ryan,TE,Boston Col.,0,0,,0
+2004,5,145,PIT,Nathaniel Adibi,DE,Virginia Tech,0,0,,0
+2004,5,146,TAM,Jeb Terry,G,North Carolina,0,0,,0
+2004,5,147,CHI,Claude Harriott,DE,Pittsburgh,0,0,,0
+2004,5,148,CHI,Craig Krenzel,QB,Ohio St.,0,0,,0
+2004,5,149,CIN,Maurice Mann,WR,Nevada,0,0,,0
+2004,5,150,JAX,Chris Thompson,DB,Nicholls St.,0,0,,0
+2004,5,151,WAS,Mark Wilson,TE,California,0,0,,0
+2004,5,152,DEN,Jeff Shoate,DB,San Diego St.,0,0,,0
+2004,5,153,BAL,Roderick Green,LB,Central Missouri St.,0,0,,0
+2004,5,154,SDG,Michael Turner,RB,Northern Illinois,2,1,,5
+2004,5,155,MIN,Rod Davis,LB,Southern Miss,0,0,,0
+2004,5,156,NOR,Mike Karney,FB,Arizona St.,0,0,,7
+2004,5,157,SEA,D.J. Hackett,WR,Colorado,0,0,,0
+2004,5,158,STL,Jason Shivers,DB,Arizona St.,0,0,,0
+2004,5,159,JAX,Sean Bubin,T,Illinois,0,0,,0
+2004,5,160,MIA,Tony Bua,LB,Arkansas,0,0,,0
+2004,5,161,CLE,Amon Gordon,DT,Stanford,0,0,,0
+2004,5,162,PHI,Thomas Tapeh,FB,Minnesota,0,0,,2
+2004,5,163,CAR,Drew Carter,WR,Ohio St.,0,0,,0
+2004,5,164,NWE,P.K. Sam,WR,Florida St.,0,0,,0
+2004,5,165,TEN,Robert Reynolds,LB,Ohio St.,0,0,,0
+2004,6,166,OAK,Shawn Johnson,DE,Delaware,0,0,,0
+2004,6,167,ARI,Nick Leckey,C,Kansas St.,0,0,,3
+2004,6,168,NYG,Jamaar Taylor,WR,Texas A&M,0,0,,0
+2004,6,169,SDG,Ryan Krause,TE,Nebraska-Omaha,0,0,,0
+2004,6,170,HOU,Vontez Duff,DB,Notre Dame,0,0,,0
+2004,6,171,DEN,Triandos Luke,WR,Alabama,0,0,,0
+2004,6,172,DET,Kelly Butler,T,Purdue,0,0,,1
+2004,6,173,IND,Von Hutchins,DB,Mississippi,0,0,,1
+2004,6,174,MIA,Rex Hadnot,G,Houston,0,0,,5
+2004,6,175,HOU,Jammal Lord,DB,Nebraska,0,0,,0
+2004,6,176,CLE,Kirk Chambers,T,Stanford,0,0,,1
+2004,6,177,PIT,Bo Lacy,T,Arkansas,0,0,,0
+2004,6,178,NYJ,Marko Cavka,T,Sacramento St.,0,0,,0
+2004,6,179,GNB,Corey Williams,DT,Arkansas St.,0,0,,5
+2004,6,180,WAS,Jim Molinaro,T,Notre Dame,0,0,,0
+2004,6,181,TAM,Nate Lawrie,TE,Yale,0,0,,0
+2004,6,182,OAK,Cody Spencer,LB,North Texas,0,0,,0
+2004,6,183,CIN,Greg Brooks,DB,Southern Miss,0,0,,0
+2004,6,184,MIN,Deandre Eiland,DB,South Carolina,0,0,,0
+2004,6,185,PHI,Andy Hall,QB,Delaware,0,0,,0
+2004,6,186,ATL,Etric Pruitt,DB,Southern Miss,0,0,,0
+2004,6,187,BAL,Josh Harris,QB,Bowling Green,0,0,,0
+2004,6,188,SFO,Andy Lee,P,Pittsburgh,3,3,,1
+2004,6,189,SEA,Craig Terrill,DT,Purdue,0,0,,0
+2004,6,190,DEN,Josh Sewell,C,Nebraska,0,0,,0
+2004,6,191,TEN,Troy Fleming,RB,Tennessee,0,0,,0
+2004,6,192,PHI,Dexter Wynn,DB,Colorado St.,0,0,,0
+2004,6,193,IND,Jim Sorgi,QB,Wisconsin,0,0,,0
+2004,6,194,PIT,Matt Kranchick,TE,Penn St.,0,0,,0
+2004,6,195,KAN,Jeris McIntyre,WR,Auburn,0,0,,0
+2004,6,196,CAR,Sean Tufts,LB,Colorado,0,0,,0
+2004,6,197,PIT,Drew Caylor,C,Stanford,0,0,,0
+2004,6,198,SFO,Keith Lewis,DB,Oregon,0,0,,1
+2004,6,199,BAL,Clarence Moore,WR,Northern Arizona,0,0,,0
+2004,6,200,HOU,Charlie Anderson,LB,Mississippi,0,0,,0
+2004,6,201,STL,Jeff Smoker,QB,Michigan St.,0,0,,0
+2004,7,202,ARI,John Navarre,QB,Michigan,0,0,,0
+2004,7,203,NYG,Drew Strojny,T,Duke,0,0,,0
+2004,7,204,SDG,Ryon Bingham,DT,Nebraska,0,0,,0
+2004,7,205,DAL,Nate Jones,DB,Rutgers,0,0,,0
+2004,7,206,TAM,Mark Jones,WR,Tennessee,0,0,,0
+2004,7,207,BUF,Dylan McFarland,T,Montana,0,0,,0
+2004,7,208,CLE,Adimchinobe Echemandu,RB,California,0,0,,0
+2004,7,209,SDG,Shane Olivea,T,Ohio St.,0,0,,4
+2004,7,210,HOU,Raheem Orr,LB,Rutgers,0,0,,0
+2004,7,211,HOU,Sloan Thomas,WR,Texas,0,0,,0
+2004,7,212,PIT,Eric Taylor,DT,Memphis,0,0,,0
+2004,7,213,NYJ,Darrell McClover,LB,Miami (FL),0,0,,0
+2004,7,214,BUF,Jonathan Smith,WR,Georgia Tech,0,0,,0
+2004,7,215,CHI,Alfonso Marshall,DB,Miami (FL),0,0,,0
+2004,7,216,DAL,Patrick Crayton,WR,NW Oklahoma St.,0,0,,3
+2004,7,217,SFO,Cody Pickett,QB,Washington,0,0,,0
+2004,7,218,CIN,Casey Bramlet,QB,Wyoming,0,0,,0
+2004,7,219,ATL,Quincy Wilson,RB,West Virginia,0,0,,0
+2004,7,220,MIN,Jeff Dugan,TE,Maryland,0,0,,0
+2004,7,221,MIA,Tony Pape,G,Michigan,0,0,,0
+2004,7,222,MIA,Derrick Pope,LB,Alabama,0,0,,1
+2004,7,223,DAL,Jacques Reeves,DB,Purdue,0,0,,2
+2004,7,224,SEA,Donnie Jones,P,LSU,0,0,,0
+2004,7,225,DEN,Matt Mauck,QB,LSU,0,0,,0
+2004,7,226,SFO,Christian Ferrara,DT,Syracuse,0,0,,0
+2004,7,227,PHI,Adrien Clarke,G,Ohio St.,0,0,,1
+2004,7,228,TAM,Casey Cramer,RB,Dartmouth,0,0,,0
+2004,7,229,IND,David Kimball,K,Penn St.,0,0,,0
+2004,7,230,TEN,Jared Clauss,DT,Iowa,0,0,,0
+2004,7,231,KAN,Kevin Sampson,T,Syracuse,0,0,,1
+2004,7,232,CAR,Michael Gaines,TE,Central Florida,0,0,,2
+2004,7,233,NWE,Christian Morton,DB,Illinois,0,0,,0
+2004,7,234,NYJ,Trevor Johnson,DE,Nebraska,0,0,,0
+2004,7,235,NYJ,Derrick Ward,RB,Ottawa (KS),0,0,,0
+2004,7,236,NYJ,Rashad Washington,DB,Kansas St.,0,0,,0
+2004,7,237,STL,Erik Jensen,TE,Iowa,0,0,,0
+2004,7,238,STL,Larry Turner,C,Eastern Kentucky,0,0,,0
+2004,7,239,TEN,Eugene Amano,C,SE Missouri St.,0,0,,4
+2004,7,240,NOR,Colby Bockwoldt,LB,BYU,0,0,,1
+2004,7,241,TEN,Sean McHugh,FB,Penn St.,0,0,,1
+2004,7,242,PHI,Bruce Perry,RB,Maryland,0,0,,0
+2004,7,243,PHI,Dominic Furio,C,UNLV,0,0,,0
+2004,7,244,BAL,Derek Abney,WR,Kentucky,0,0,,0
+2004,7,245,OAK,Courtney Anderson,TE,San Jose St.,0,0,,2
+2004,7,246,BAL,Brian Rimpf,G,East Carolina,0,0,,0
+2004,7,247,DEN,Brandon Miree,RB,Pittsburgh,0,0,,0
+2004,7,248,HOU,B.J. Symons,QB,Texas Tech,0,0,,0
+2004,7,249,JAX,Bobby McCray,DE,Florida,0,0,,2
+2004,7,250,DEN,Bradlee Van Pelt,QB,Colorado St.,0,0,,0
+2004,7,251,GNB,Scott Wells,G,Tennessee,1,0,,9
+2004,7,252,TAM,Lenny Williams,DB,Southern,0,0,,0
+2004,7,253,NYG,Isaac Hilton,DE,Hampton,0,0,,0
+2004,7,254,SDG,Carlos Joseph,T,Miami (FL),0,0,,0
+2004,7,255,OAK,Andre Sommersell,LB,Colorado St.,0,0,,0
