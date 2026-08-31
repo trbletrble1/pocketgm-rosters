@@ -54,6 +54,24 @@ def pawr_correction(gap_years):
     return PAWR_GAP2_OFFSET
 
 
+def norm_registry(s):
+    """The registry's OWN normalization: 'lowercase, strip punctuation and
+    Jr/Sr/II/III/IV/V, collapse initials'.
+
+    This is NOT the same as norm(). norm() replaces punctuation with a space,
+    which is right for joining against nflverse and Madden but produces
+    'scott o brien' where the registry key is 'scott obrien' — so every name
+    carrying an apostrophe or hyphen silently missed the registry and got a
+    generated face instead. Accents are folded, never stripped.
+    """
+    t = unicodedata.normalize('NFKD', s or '')
+    t = ''.join(c for c in t if not unicodedata.combining(c))
+    t = t.lower()
+    t = ''.join(c for c in t if c.isalnum() or c.isspace())
+    parts = [w for w in t.split() if w not in ('jr', 'sr', 'ii', 'iii', 'iv', 'v')]
+    return ' '.join(parts)
+
+
 def norm(s):
     s = unicodedata.normalize('NFKD', s or '')
     s = ''.join(c for c in s if not unicodedata.combining(c))   # fold, not strip
@@ -1560,3 +1578,365 @@ if __name__ == '__main__':
     recs = stage7(recs, _dp)
     contracts_report(recs)
     emit(recs, os.path.join(REPO, 'PGMRoster_2000.json'))
+
+
+# =========================================================== stage 8: staff
+def load_hc_careers():
+    path = os.path.join(REPO, 'sources', 'coaches_2000_HC_career_through_1999.csv')
+    return {r['coach']: r for r in csv.DictReader(open(path, encoding='utf-8'))}
+
+def load_hou_staff():
+    g = {}
+    exec(open(os.path.join(REPO, 'wip', 'hou_staff_2000.py')).read(), g)
+    return g['HOU_COACHES']
+
+# guarantee fitted on 1986/2004/2007/2013 — the cluster 2000 sits in by era and
+# build vintage. 2017 and 2021 run 88-100% across every role, which reads as a
+# later build convention rather than an era property, and pooling all six gives
+# the midpoint of two clusters rather than the centre of one.
+GUARANTEE_FIT_FILES = (1986, 2004, 2007, 2013)
+
+def staff_record(schema_keys, ref, role, forename, surname, teamID, rating,
+                 rng, guar_fit, scheme, profile):
+    """Build a staff record from the MEASURED per-role profile.
+
+    A first version hand-listed which attributes each role carries and left
+    about thirty specialty fields at zero — management, motivation,
+    playcalling, passRush, injPrevent and the rest. That is precisely the
+    specialty-attribute bug the handoff records as having crashed the game, and
+    it passed every check I had written because I was checking the fields I had
+    thought of. The profile is measured off 1986/2004/2007/2013 instead: which
+    fields a role populates, at what rate, and around what centre.
+    """
+    prof = profile[role]
+    r = {}
+    for k in schema_keys:
+        if isinstance(ref[k], str):
+            vocab = prof['str'].get(k)
+            r[k] = vocab[0][0] if vocab else ''
+        elif isinstance(ref[k], list):
+            r[k] = []
+        else:
+            e = prof['num'][k]
+            if e['rate'] < 0.5:
+                r[k] = 0                       # this role does not carry it
+            else:
+                # centre on the role's own median, shifted by how good this
+                # person is relative to the role's typical rating
+                shift = rating - prof['num']['rating']['med']
+                v = e['med'] + 0.55 * shift + rng.gauss(0, max(2.0, e['sd'] * 0.45))
+                r[k] = max(1, min(99, int(round(v))))
+
+    r['forename'], r['surname'] = forename, surname
+    r['role'], r['teamID'] = role, teamID
+    r['rating'] = rating
+    r['potential'] = min(99, max(rating, rating + rng.randint(0, 4)))
+    for a in ATTR_GROUP[role]:
+        r[a] = max(35, min(99, r[a] if r[a] else rating - rng.randint(2, 14)))
+    r[PRIMARY[role]] = rating                  # primary MUST equal rating
+
+    r['age'] = max(30, min(72, int(round(rng.gauss(50, 8)))))
+    r['startSeason'] = max(1989, min(2026,
+        int(round(-0.881 * r['age'] + 2054.5 + rng.gauss(0, 2.5)))))
+
+    base, _, _, esal = ROLE_CONTRACT[role]
+    mult = 0.55 + 1.3 * max(0.0, (rating - 55)) / 40.0
+    if teamID == 'Free Agent':
+        # free agent staff carry no contract, as every published file does
+        r['salary'] = 0; r['guarantee'] = 0
+        r['eSalary'] = int(round(esal * mult * rng.uniform(0.85, 1.2) / 1000) * 1000)
+        r['length'] = 0
+    else:
+        r['salary'] = int(round(base * mult * rng.uniform(0.85, 1.2) / 1000) * 1000)
+        rate, ratio = guar_fit[role]
+        r['guarantee'] = (int(round(r['salary'] * ratio * rng.uniform(0.7, 1.4) / 1000) * 1000)
+                          if rng.random() < rate else 0)
+        r['eSalary'] = int(round(esal * mult * rng.uniform(0.85, 1.2) / 1000) * 1000)
+        r['length'] = max(1, r['length'] or 2)
+    r['eGuarantee'] = STAFF_EGUARANTEE
+    r['eLength'] = max(0, min(4, r['eLength'] or 2))
+
+    gt = [0] * 51
+    need = (r['potential'] - r['rating']) * 50
+    if need:
+        slots = rng.sample(range(0, 17), min(6, max(1, need // 100 + 1)))
+        share = need // len(slots)
+        for i, sl in enumerate(slots):
+            gt[sl] = share if i else need - share * (len(slots) - 1)
+    assert sum(v for v in gt if v > 0) == need, 'growthType 50x construction failed'
+    for sl in rng.sample(range(20, 51), rng.randint(5, 12)):
+        gt[sl] = -100 * rng.randint(1, 4)
+    r['growthType'] = gt
+
+    # strings: draw from the role's own observed vocabulary, then let the team
+    # scheme override the scheme fields so every coach on a team shares one
+    for k, vocab in prof['str'].items():
+        if k in ('role', 'teamID', 'forename', 'surname', 'iden'): continue
+        r[k] = rng.choices([v for v, _ in vocab], weights=[c for _, c in vocab])[0]
+    for k, v in scheme.items():
+        if k in r: r[k] = v
+    # scoutBoost is side-constrained: Off Scout offensive positions, Def Scout
+    # defensive, Head Scout either
+    if role in SCOUT_ROLES and 'scoutBoost' in r:
+        OFFP = ['QB','RB','WR','TE','OT','OG','C']
+        DEFP = ['DE','DT','OLB','MLB','CB','S']
+        r['scoutBoost'] = rng.choice(OFFP if role == 'Off Scout' else
+                                     DEFP if role == 'Def Scout' else OFFP + DEFP)
+    return r
+
+
+def stage8():
+    ref_all = json.load(open(os.path.join(REPO, STAFF_SCHEMA_SRC)))
+    ref = ref_all[0]; keys = list(ref.keys())
+    coaches = list(csv.DictReader(open(os.path.join(REPO, 'sources', 'coaches_2000.csv'),
+                                       encoding='utf-8')))
+    careers = load_hc_careers()
+    off, dfn, st, _, _ = team_units_2000()
+    guar_fit = {k: tuple(v) for k, v in
+                json.load(open(os.path.join(REPO, 'wip', 'staff_guarantee_fit.json'))).items()}
+    pool = json.load(open(os.path.join(REPO, 'wip', 'staff_name_pool.json')))
+    profile = json.load(open(os.path.join(REPO, 'wip', 'staff_profile.json')))
+    real_names = set(pool['real_coach_names'])
+
+    # Schemes are assigned PER TEAM and shared by every coach on it. The scheme
+    # itself is not researched for 2000 -- but the documented bug was coaches on
+    # one team carrying different schemes, and that is what this fixes.
+    SCHEME_FIELDS = ('offStyle', 'defStyle', 'blitzStyle', 'fourthStyle', 'rbStyle')
+    vocab = {f: sorted({p[f] for p in ref_all if p.get(f)}) for f in SCHEME_FIELDS}
+    teams = sorted({modern(c['team']) for c in coaches}) + ['HOU']
+    schemes = {t: {f: seeded(t, 'scheme').choice(vocab[f]) for f in SCHEME_FIELDS}
+               for t in teams}
+
+    out = []
+    RATED = {}
+    for c in coaches:
+        # coaches_2000.csv carries PERIOD codes (OAK/SD/STL); the roster and the
+        # unit ranks use modern ids. Translate at the boundary — two scripts
+        # exchanging records must not each define their own vocabulary.
+        t, role_key, nm = modern(c['team']), c['role'], c['name']
+        role = {'HC': 'Head Coach', 'OC': 'Off Co-ord',
+                'DC': 'Def Co-ord', 'ST': 'Special Teams'}[role_key]
+        if role_key == 'HC':
+            rating = hc_rating(careers[nm])
+        elif role_key == 'OC':
+            rating = rank_to_rating(off[t])
+        elif role_key == 'DC':
+            rating = rank_to_rating(dfn[t])
+        else:
+            rating = rank_to_rating(st[t])
+        RATED[(t, role)] = (nm, rating)
+
+    hou = load_hou_staff()
+    assert_hou_staff_free([f'{f} {l}' for _, f, l, _ in hou])
+    for role, f, l, career in hou:
+        rating = hc_rating(career) if career else 68
+        RATED[('HOU', role)] = (f'{f} {l}', rating)
+
+    for (t, role), (nm, rating) in sorted(RATED.items()):
+        f, _, l = nm.partition(' ')
+        rng = seeded(f'{nm}|{t}|{role}', 'staff')
+        out.append(staff_record(keys, ref, role, f, l, t, rating, rng, guar_fit, schemes[t], profile))
+
+    # scouts and physios: generated, the one deliberate exception to
+    # no-invented-humans. Names recombined from the published files' existing
+    # invented pool and checked against every real coach name in the archive.
+    used = set()
+    for t in teams:
+        for role in ('Head Scout', 'Off Scout', 'Def Scout', 'Head Physio', 'Assistant Physio'):
+            rng = seeded(f'{t}|{role}', 'gen')
+            for _ in range(400):
+                f = rng.choice(pool['forenames']); l = rng.choice(pool['surnames'])
+                if f'{f} {l}' not in real_names and (f, l) not in used:
+                    used.add((f, l)); break
+            else:
+                raise AssertionError(f'could not generate a free name for {t}/{role}')
+            rating = max(45, min(88, int(round(rng.gauss(66, 8)))))
+            out.append(staff_record(keys, ref, role, f, l, t, rating, rng, guar_fit, schemes[t], profile))
+
+    assert len(out) == len(teams) * 9, f'{len(out)} staff for {len(teams)} teams'
+    return out, keys, pool, real_names, guar_fit, schemes, vocab, profile
+
+
+# Real coaches for the free agent pool. The rule is that real names form a
+# clean top block and invented names sit strictly below ALL of them.
+#
+# These three are the men displaced by 2000's mid-season changes, documented in
+# the notes of coaches_2000.csv itself: each lost his job during the season and
+# is not on any 2000 staff in the file. Verified against the file rather than
+# researched separately.
+FA_REAL_COACHES = [
+    ('Head Coach', 'Vince', 'Tobin',  'Arizona games 1-7; McGinnis took the slot'),
+    ('Head Coach', 'Bruce', 'Coslet', 'Cincinnati games 1-3; LeBeau took the slot'),
+    ('Head Coach', 'Gary',  'Moeller', 'Detroit games 10-16; Ross took the slot'),
+]
+FA_POOL_SIZE = 165
+
+def stage8_free_agents(keys, ref, pool, real_names, guar_fit, used_names, profile):
+    out = []
+    scheme = {}
+    for role, f, l, why in FA_REAL_COACHES:
+        rng = seeded(f'{f} {l}', 'fa')
+        rating = max(58, min(78, int(round(rng.gauss(68, 5)))))
+        r = staff_record(keys, ref, role, f, l, 'Free Agent', rating, rng, guar_fit, scheme, profile)
+        r['_why'] = why
+        out.append(r)
+    floor = min(p['rating'] for p in out)
+    for i in range(FA_POOL_SIZE - len(out)):
+        rng = seeded(f'fa|{i}', 'gen')
+        for _ in range(400):
+            f = rng.choice(pool['forenames']); l = rng.choice(pool['surnames'])
+            if f'{f} {l}' not in real_names and (f, l) not in used_names:
+                used_names.add((f, l)); break
+        else:
+            raise AssertionError('ran out of free generated names for the FA pool')
+        role = STAFF_ROLES[i % len(STAFF_ROLES)]
+        # strictly BELOW every real coach in the pool
+        rating = max(40, min(floor - 1, int(round(rng.gauss(56, 7)))))
+        out.append(staff_record(keys, ref, role, f, l, 'Free Agent', rating, rng,
+                                guar_fit, scheme, profile))
+    reals = [p['rating'] for p in out[:len(FA_REAL_COACHES)]]
+    invs = [p['rating'] for p in out[len(FA_REAL_COACHES):]]
+    assert min(reals) > max(invs), (
+        f'invented FA coach at {max(invs)} is not strictly below the real block '
+        f'(lowest real {min(reals)})')
+    return out
+
+
+# Staff are the exception to the family-digit rule: a coach has one look and no
+# aging, so the WHOLE registry array is correct for him.
+#
+# Two cases 2000 has to get right, both crossing the 1986 boundary:
+#   Jerry Glanville sits in staff_faces_1986 and NOT in staff_faces. Same man,
+#     same city, fourteen years apart — his 1986 Houston face is his 2000 face.
+#   `jim mora` exists in BOTH blocks and they are DIFFERENT MEN. staff_faces_1986
+#     Head2c is the father, 1986 New Orleans; staff_faces Head1c is the son,
+#     2004 Atlanta. 2000 is the first file where both are active, so it is the
+#     first that can route them by team and role instead of skipping the key.
+# Father/son pairs the registry MERGES, because its normalization strips
+# Jr/Sr. Each needs routing by team and role, which is the only thing that
+# separates them.
+MORA_ROUTE = {
+    ('IND', 'Head Coach'):   'staff_faces_1986',  # Jim E. Mora, father
+    ('SF',  'Def Co-ord'):   'staff_faces',       # Jim L. Mora, son
+    # Frank Gansz Sr. joined Jacksonville in 2000 from the Rams, having been
+    # Kansas City's special teams coach and then head coach in the 1980s — the
+    # same man as the 1986 file. Frank Gansz Jr. is the one in 2004 and 2007
+    # (Raiders 1998-2000, Chiefs 2001-05, Ravens 2006-07), which is why the
+    # era rule below cannot see Sr.: the normalized key `frank gansz` appears
+    # in later files as the SON.
+    ('JAX', 'Special Teams'): 'staff_faces_1986',  # Frank Gansz Sr., father
+}
+GLANVILLE_BLOCK = 'staff_faces_1986'
+
+def era_1986_only():
+    """Staff who appear in the 1986 file and in NO later published file.
+
+    The registry holds some men in BOTH blocks with different faces — Glanville
+    and Frank Gansz are both 1986 and 2000 coaches, and their two entries
+    disagree. For a man whose only other appearance is 1986, taking the 1986
+    face is the choice that leaves him consistent across every file he is in;
+    taking staff_faces would create a fresh disagreement. For a man who also
+    appears in 2004 or later, staff_faces is the consistent choice instead.
+    Derived rather than hardcoded, so it covers whoever else turns up.
+    """
+    def names(y):
+        path = os.path.join(REPO, f'PGMStaff_{y}.json')
+        if not os.path.exists(path): return set()
+        return {norm_registry(q['forename'] + ' ' + q['surname'])
+                for q in json.load(open(path))}
+    later = set()
+    for y in (2004, 2007, 2010, 2013, 2017, 2021):
+        later |= names(y)
+    return names(1986) - later
+
+def staff_vocab():
+    """Per-slot appearance vocabulary observed in the published STAFF files."""
+    v = collections.defaultdict(set)
+    for y in (1986, 2004, 2007, 2010, 2013, 2017, 2021):
+        path = os.path.join(REPO, f'PGMStaff_{y}.json')
+        if not os.path.exists(path): continue
+        for q in json.load(open(path)):
+            for i, tok in enumerate(q['appearance']): v[i].add(tok)
+    out = {i: sorted(v[i]) for i in v}
+    out['_skin_families'] = sorted({t.replace('Head', '')[0] for t in out[0]})
+    # a hair family is usable only if every one of slots 2, 3 and 4 has it
+    fam2 = {t.replace('Hair', '')[0] for t in out[2]}
+    fam3 = {t.replace('Beard', '')[0] for t in out[3]}
+    fam4 = {t.replace('Eyebrows', '')[0] for t in out[4]}
+    out['_hair_families'] = sorted(fam2 & fam3 & fam4)
+    return out
+
+STAFF_VOCAB = None
+
+def apply_staff_registry(records):
+    global STAFF_VOCAB
+    STAFF_VOCAB = staff_vocab()
+    reg = json.load(open(os.path.join(REPO, 'reference', 'PGM3_FACE_REGISTRY.json')))
+    sf, sf86 = reg['staff_faces'], reg['staff_faces_1986']
+    locked = set(reg['_verified_keys']['staff'])
+    assert len(locked) == 18, (f'_verified_keys.staff reads {len(locked)}, expected 18 — '
+                               'the registry copy is stale, re-pull it')
+    only86 = era_1986_only()
+    stat = collections.Counter(); routed = []
+    for p in records:
+        key = norm_registry(p['forename'] + ' ' + p['surname'])
+        blk = MORA_ROUTE.get((p['teamID'], p['role']))
+        if blk is None and key in only86: blk = 'staff_faces_1986'
+        if blk:
+            face = (sf86 if blk == 'staff_faces_1986' else sf).get(key)
+            routed.append((f"{p['forename']} {p['surname']}", p['teamID'], p['role'], blk))
+        else:
+            face = sf.get(key) or sf86.get(key)
+        if face:
+            p['appearance'] = list(face)
+            stat['registry' + (' (LOCKED)' if key in locked else '')] += 1
+        else:
+            # Draw from the STAFF appearance vocabulary, which is not the
+            # roster one -- staff wear glasses and use hair families the player
+            # vocabulary does not contain. Generating plausible-looking
+            # combinations produced Hair5e, Hair4k and Beard3c, none of which
+            # exist for staff.
+            rng = seeded(key, 'staffface')
+            fam = rng.choice(sorted(STAFF_VOCAB['_skin_families']))
+            hair = rng.choice(sorted(STAFF_VOCAB['_hair_families']))
+            def pick(slot, prefix, family):
+                opts = [v for v in STAFF_VOCAB[slot]
+                        if v.startswith(f'{prefix}{family}')]
+                return rng.choice(sorted(opts)) if opts else STAFF_VOCAB[slot][0]
+            p['appearance'] = [
+                pick(0, 'Head', fam), rng.choice(sorted(STAFF_VOCAB[1])),
+                pick(2, 'Hair', hair), pick(3, 'Beard', hair),
+                pick(4, 'Eyebrows', hair), pick(5, 'Nose', fam),
+                pick(6, 'Mouth', fam), rng.choice(sorted(STAFF_VOCAB[7])),
+                rng.choice(sorted(STAFF_VOCAB[8]))]
+            stat['generated'] += 1
+    print()
+    print('  faces:')
+    for k, v in sorted(stat.items()):
+        print(f'    {k:22} {v:4}  {100*v/len(records):5.1f}%')
+    for nm, t, role, blk in routed:
+        print(f'    routed: {nm} ({t}/{role}) -> {blk}')
+    return records
+
+
+def emit_staff(records, path):
+    ref = json.load(open(os.path.join(REPO, STAFF_SCHEMA_SRC)))[0]
+    keys = set(ref.keys())
+    import uuid
+    for p in records:
+        p.pop('_why', None)
+        p['iden'] = str(uuid.UUID(int=random.Random(
+            f"{p['forename']}|{p['surname']}|{p['role']}|{p['teamID']}|2000staff"
+        ).getrandbits(128))).upper()
+    assert len({p['iden'] for p in records}) == len(records), 'duplicate staff iden'
+    for p in records:
+        assert set(p.keys()) == keys, f'schema mismatch on {p["surname"]}'
+        assert p[PRIMARY[p['role']]] == p['rating'], f'primary != rating for {p["surname"]}'
+        for a in ATTR_GROUP[p['role']]:
+            assert p[a] > 0, f'{p["surname"]} has a zero {a} — the crash bug'
+        assert len(p['growthType']) == 51, 'growthType must be 51 for staff'
+        assert sum(v for v in p['growthType'] if v > 0) == (p['potential'] - p['rating']) * 50
+        assert 1989 <= p['startSeason'] <= 2026
+    json.dump(records, open(path, 'w'), separators=(',', ':'))
+    print(f'\n  wrote {path}: {len(records)} records x {len(keys)} keys')
+    return records
