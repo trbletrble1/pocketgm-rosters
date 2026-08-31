@@ -387,7 +387,155 @@ def conditional_pski(recs):
         assert sep > 40, f'PSKI groups do not separate ({sep:+.1f}) — the source was never used'
         print()
 
+# ============================================================ stage 5: ratings
+# PS2-era Madden runs inflated and the inflation is NOT uniform. Measured on
+# this file's rostered cohort: K median POVR 93, P 92, FB 86 against a league
+# median of 78. A cohort-wide rescale preserves those gaps and puts kickers and
+# punters at the top of the league, which is a documented past failure.
+#
+# So: rescale per position, and per cohort. Rostered maps onto the published
+# rostered distribution, free agents onto the published free agent distribution
+# — the same cohort-matching discipline the dark-share check needed.
+
+def published_ratings():
+    """target rating distributions, (cohort, position) -> sorted list."""
+    out = collections.defaultdict(list)
+    for y in (1986, 2004, 2007, 2010, 2013, 2017, 2021):
+        path = os.path.join(REPO, f'PGMRoster_{y}.json')
+        if not os.path.exists(path): continue
+        for q in json.load(open(path)):
+            if q['teamID'] == 'Rookie': continue
+            coh = 'FA' if q['teamID'] == 'Free Agent' else 'R'
+            out[(coh, q['position'])].append(q['rating'])
+    for k in out: out[k].sort()
+    return out
+
+def fb_cohort_ratings():
+    """The real fullback cohort inside the published files. Madden grades FBs on
+    blocking and rates them ABOVE halfbacks; the published FB cohort sits at the
+    24th percentile of the RB pool. Mapped as ordinary RBs, Lorenzo Neal at 98
+    becomes a top-five back.
+
+    Built position-aware: a name is taken only if it is ever PPOS 2 and NEVER
+    PPOS 1 across the Madden exports, and only if it is unique within the
+    published file it is found in. 75 names appear as both FB and HB and are
+    excluded rather than guessed — a fullback cohort built by name alone is
+    where this bit last time."""
+    import glob
+    fb, hb = collections.Counter(), collections.Counter()
+    for f in glob.glob(os.path.join(REPO, 'sources', 'madden', '*PLAY*.csv')):
+        try: rows = list(csv.DictReader(open(f, encoding='latin-1')))
+        except Exception: continue
+        if not rows or 'PPOS' not in rows[0]: continue
+        for r in rows:
+            try: pp = int(r['PPOS'])
+            except (ValueError, KeyError): continue
+            n = norm(r.get('PFNA', '') + ' ' + r.get('PLNA', ''))
+            if not n.strip(): continue
+            if pp == 2: fb[n] += 1
+            elif pp == 1: hb[n] += 1
+    pure = set(fb) - set(hb)
+    out = {'R': [], 'FA': []}
+    for y in (1986, 2004, 2007, 2010, 2013, 2017, 2021):
+        path = os.path.join(REPO, f'PGMRoster_{y}.json')
+        if not os.path.exists(path): continue
+        byname = collections.defaultdict(list)
+        for q in json.load(open(path)):
+            if q['teamID'] == 'Rookie': continue
+            byname[norm(q['forename'] + ' ' + q['surname'])].append(q)
+        for n, qs in byname.items():
+            if len(qs) != 1 or n not in pure: continue
+            q = qs[0]
+            if q['position'] != 'RB': continue
+            out['FA' if q['teamID'] == 'Free Agent' else 'R'].append(q['rating'])
+    for k in out: out[k].sort()
+    return out, len(pure), len(set(fb) & set(hb))
+
+def qmap(vals, src_sorted, tgt_sorted):
+    import bisect
+    n, m = len(src_sorted), len(tgt_sorted)
+    out = []
+    for x in vals:
+        i = bisect.bisect_left(src_sorted, x); j = bisect.bisect_right(src_sorted, x)
+        q = ((i + j) / 2) / n if n else 0.0
+        out.append(tgt_sorted[min(m - 1, max(0, int(round(q * (m - 1)))))])
+    return out
+
+def stage5(recs):
+    tgt = published_ratings()
+    fbt, n_pure, n_amb = fb_cohort_ratings()
+
+    raw = collections.defaultdict(list)
+    for p in recs:
+        coh = 'FA' if p['teamID'] == 'Free Agent' else 'R'
+        key = (coh, 'FB' if p['is_fb'] else p['position'])
+        raw[key].append(p)
+
+    print()
+    print('STAGE 5 — ratings, rescaled per position and per cohort')
+    print(f'  fullback cohort: {n_pure} names only ever PPOS 2; {n_amb} appearing as '
+          f'both FB and HB were EXCLUDED rather than guessed')
+    print(f'  published FB targets: rostered n={len(fbt["R"])} median '
+          f'{statistics.median(fbt["R"]):.0f} ceiling {max(fbt["R"])}   '
+          f'(vs RB pool median {statistics.median(tgt[("R","RB")]):.0f})')
+    print()
+    print(f'  {"pos":5}{"n":>5}{"src med":>9}{"out med":>9}{"src max":>9}{"out max":>9}')
+    for key in sorted(raw, key=lambda k: (k[0], k[1])):
+        coh, pos = key
+        group = raw[key]
+        src = sorted(p['povr'] for p in group)
+        if pos == 'FB':
+            t = fbt[coh] or fbt['R']
+        else:
+            t = tgt.get(key) or tgt.get(('R', pos))
+        if not t:
+            for p in group: p['rating'] = p['povr']
+            continue
+        mapped = qmap([p['povr'] for p in group], src, t)
+        for p, v in zip(group, mapped): p['rating'] = int(v)
+        if coh != 'R': continue
+        out = sorted(p['rating'] for p in group)
+        print(f'  {pos:5}{len(group):>5}{statistics.median(src):>9.0f}'
+              f'{statistics.median(out):>9.0f}{max(src):>9}{max(out):>9}')
+
+    # Saturated tie blocks. Madden pushes the trap positions to the 99 ceiling,
+    # so the quantile map cannot order them and they all land on one value. This
+    # is the inflation trap in a second form: FB 24% at 99, K 13.5%, P 12.9%,
+    # everything else under 4.3%. UNRESOLVED — needs a ruling on what orders a
+    # fullback. Flagged rather than silently collapsed.
+    sat = []
+    for key, group in raw.items():
+        if key[0] != 'R': continue
+        c = collections.Counter(p['povr'] for p in group)
+        mx = max(c)
+        if c[mx] >= 4:
+            outs = {p['rating'] for p in group if p['povr'] == mx}
+            sat.append((key[1], c[mx], mx, sorted(outs)))
+    if sat:
+        print()
+        print('  UNRESOLVED — source ceiling ties collapsing to one rating:')
+        for pos, n, mx, outs in sorted(sat, key=lambda x: -x[1]):
+            print(f'    {pos:3} {n:3} players at POVR {mx} -> rating {outs}')
+        print('    The quantile map is arithmetically right and wastes the top of')
+        print('    each target range. Ordering them needs a second column, and')
+        print('    which column changes who is best. NEEDS A RULING.')
+
+    assert all('rating' in p for p in recs), 'a record left stage 5 without a rating'
+    ros = [p for p in recs if p['teamID'] != 'Free Agent']
+    med = statistics.median([p['rating'] for p in ros])
+    print()
+    print(f'  league median rating {med:.0f}  (source POVR median '
+          f'{statistics.median([p["povr"] for p in ros]):.0f})')
+    for pos in ('K', 'P', 'FB'):
+        g = [p for p in ros if (p['is_fb'] if pos == 'FB' else p['position'] == pos)]
+        if not g: continue
+        print(f'  {pos:3} median {statistics.median([p["rating"] for p in g]):5.0f}'
+              f'   was {statistics.median([p["povr"] for p in g]):5.0f}'
+              f'   league {med:.0f}')
+    return recs
+
 if __name__ == '__main__':
     recs = stage3()
     recs = stage4(recs)
     conditional_pski(recs)
+    recs = stage5(recs)
