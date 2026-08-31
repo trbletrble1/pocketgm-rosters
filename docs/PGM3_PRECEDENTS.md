@@ -1822,3 +1822,88 @@ Every head family is compared against the min/max across the published files and
 the build fails if one falls outside. `pgm3_validate.py faces` still runs at
 stage 10, but by then the registry has been applied over the top and the defect
 is being diagnosed through two layers.
+
+---
+
+## Name-only lookups: third sighting, and the ambiguous set is the finding
+
+This project's rule is that any lookup keyed on a player name is a bug until it
+is disambiguated. It has now been rediscovered three times, in three different
+places, by three different routes:
+
+1. **2013 build — "David Johnson".** Two real players, a running back and a
+   tight end/fullback. Caught during that build. **It was never written into the
+   repo** and lived only in a session summary, which is why it could be cited in
+   2026 as though it were documented and turn out not to be. It is written here
+   now.
+2. **2000 Houston selection.** Chris Miller's Baylor namesake is a safety born
+   1997; Anthony Lucas's Texas A&M namesake a defensive end born 2004. See the
+   birth-date precedent above.
+3. **2000 fullback cohort.** Building the FB rating target by name against the
+   Madden exports, **75 names appear as both `PPOS` 2 (FB) and `PPOS` 1 (HB)**
+   across the seventeen files, against 448 that are only ever FB.
+
+**The third one is worth dwelling on because the ambiguous set is not noise, it
+is 14% of the population.** A cohort built by taking every name ever labelled FB
+would have pulled in 75 records that are sometimes halfbacks — and since the
+whole point of that cohort is to establish that fullbacks rate *lower* than
+halfbacks, contaminating it with halfbacks biases the target in exactly the
+direction that defeats the correction. The error would have been invisible: the
+cohort would still have looked like fullbacks, just rated a little high.
+
+**Rule: when a cohort is built by name, count the ambiguous set and report it.**
+Excluding 75 of 523 is a decision worth stating; silently including them is not a
+decision at all. If the ambiguous set is large relative to the cohort, that is
+itself evidence the key is too weak.
+
+**And write the case down when it happens.** The David Johnson case was real,
+was correctly diagnosed, and cost nothing at the time — then cost a round trip
+in 2026 because it was cited from memory against a repo that did not contain it.
+A finding that lives only in a conversation is a finding that will be
+rediscovered.
+
+---
+
+## Inflation compresses the top of the source range, so trap positions arrive pre-tied
+
+The handoff describes PS2-era Madden inflation as a scale problem: median 77–80
+against a modern 71, fixed by rescaling per position. **There is a second form it
+does not describe, and a quantile map discards real information because of it.**
+
+Measured on the 2000 rostered cohort, share of each position sitting on the
+`POVR` 99 ceiling:
+
+| position | at 99 | share |
+|---|---|---|
+| FB | 12 / 50 | **24.0%** |
+| K | 5 / 37 | 13.5% |
+| P | 4 / 31 | 12.9% |
+| TE | 4 / 94 | 4.3% |
+| every other position | ≤ 3 | ≤ 3.2% |
+
+League-wide 2.5%; the published files carry 0.7–0.9% at their own maximum.
+
+**The pile-up is concentrated in exactly the three positions the inflation trap
+already names.** That is not a coincidence — it is the same cause seen from the
+other end. Madden grades kickers on leg strength and fullbacks on blocking, and
+those narrow criteria saturate: once a dozen fullbacks are all excellent blockers
+there is nowhere above 99 to put them.
+
+**Consequence: a quantile map silently discards the ordering.** A tie block maps
+to its midrank, so all twelve fullbacks landed on rating 73 against a cohort
+ceiling of 86 — arithmetically correct, and it threw away both the distinction
+between Lorenzo Neal and Larry Centers and the entire top of the target range.
+
+**No distribution check surfaces this.** The output median was right, the spread
+was right, the per-position medians reproduced the published files within a
+point. The defect is entirely inside one tie block.
+
+**Fix: rank-map with a real secondary column rather than value-map.** Sort the
+group by (primary, secondary) and assign target values by rank, so the top of the
+source lands on the top of the target. The secondary must be a column the
+position is actually played for — blocking for fullbacks, the kicking columns for
+K and P.
+
+**Check for it directly: print the size of the largest tie block per position,
+not just the median.** A block of 12 in a group of 50 is invisible to every
+summary statistic that was being computed at the time.

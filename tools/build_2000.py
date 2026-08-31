@@ -451,6 +451,40 @@ def fb_cohort_ratings():
     for k in out: out[k].sort()
     return out, len(pure), len(set(fb) & set(hb))
 
+# Ruling (Ryan, 2026-08-31): a fullback's rating represents how good a FULLBACK
+# he is, so ties at the source ceiling are broken on blocking. The alternative —
+# ordering through the RB weight vector — recreates the exact bug the handoff
+# documents, grading a position on criteria it is not played for. weights.json
+# carrying rushBlock at -0.034 is not a finding about fullbacks; it is an
+# artifact of fitting an RB model to a pool that is ~80% halfbacks. Using it
+# here would be reaching for a known-wrong instrument because it exists.
+#
+# The published files cannot settle this — they contradict each other on these
+# same men. 2004 has Alstott 76 and Neal 51; 2007 has Neal 83 at the cohort
+# ceiling. Same shape as the seven within-light conventions: no convention to
+# inherit.
+SECONDARY = {
+    'FB': lambda r: 0.5*int(r['PRBK']) + 0.3*int(r['PPBK']) + 0.2*int(r['PSTR']),
+    'K':  lambda r: int(r['PKAC']) + int(r['PKPR']),
+    'P':  lambda r: int(r['PKAC']) + int(r['PKPR']),
+}
+
+def rank_map(group, keyfn, tgt_sorted):
+    """Assign target values by RANK rather than by value.
+
+    A value-based quantile map puts a tie block on its midrank, which is
+    arithmetically right and discards the ordering entirely: 12 fullbacks at
+    POVR 99 all landed on 73 against a cohort ceiling of 86. Ranking with a
+    real secondary column spreads them across the top of the target instead.
+    Only the trap positions have a secondary key; everywhere else ties are
+    under 4.3% and fall through to a stable order."""
+    ordered = sorted(group, key=keyfn)
+    n, m = len(ordered), len(tgt_sorted)
+    for i, p in enumerate(ordered):
+        q = i / (n - 1) if n > 1 else 1.0
+        p['rating'] = int(tgt_sorted[min(m - 1, max(0, int(round(q * (m - 1)))))])
+    return ordered
+
 def qmap(vals, src_sorted, tgt_sorted):
     import bisect
     n, m = len(src_sorted), len(tgt_sorted)
@@ -460,6 +494,36 @@ def qmap(vals, src_sorted, tgt_sorted):
         q = ((i + j) / 2) / n if n else 0.0
         out.append(tgt_sorted[min(m - 1, max(0, int(round(q * (m - 1)))))])
     return out
+
+# Ruling (Ryan, 2026-08-31): fullbacks are EXEMPT from the attribute refit.
+#
+# Their rating is blocking-led, but the refit solves attributes toward the
+# target rating through the RB weight vector, which rewards speed, burst and
+# elusiveness and penalises rushBlock at -0.034. Refitting Lorenzo Neal to 86
+# through that model would drive up exactly the halfback attributes he does not
+# have, manufacturing them to justify a blocking rating — the original position
+# collapse bug, arrived at backwards.
+#
+# Exempting them costs nothing in play: the handoff is explicit that stored
+# `rating` is display-only and the game recomputes overall from attributes. So
+# fullbacks keep their real source attributes and the display rating stands
+# apart. An FB-specific weight vector fitted from the FB sub-cohort would be
+# cleaner and is the option to take if this is ever revisited.
+REFIT_EXEMPT = ('FB',)
+
+def assert_fb_attributes_untouched(before, after):
+    """The check that catches it if the exemption leaks. No fullback's speed or
+    elusiveness may rise during the refit."""
+    bad = []
+    for k, b in before.items():
+        a = after.get(k)
+        if a is None: continue
+        for attr in ('speed', 'elusiveness', 'burst', 'agility'):
+            if a.get(attr, 0) > b.get(attr, 0):
+                bad.append(f'{k} {attr} {b.get(attr)} -> {a.get(attr)}')
+    assert not bad, ('the refit raised fullback athleticism, which is the bug the '
+                     'exemption exists to prevent: ' + '; '.join(bad[:5]))
+
 
 def stage5(recs):
     tgt = published_ratings()
@@ -491,8 +555,12 @@ def stage5(recs):
         if not t:
             for p in group: p['rating'] = p['povr']
             continue
-        mapped = qmap([p['povr'] for p in group], src, t)
-        for p, v in zip(group, mapped): p['rating'] = int(v)
+        sec = SECONDARY.get(pos)
+        if sec:
+            rank_map(group, lambda p: (p['povr'], sec(p['_src'])), t)
+        else:
+            mapped = qmap([p['povr'] for p in group], src, t)
+            for p, v in zip(group, mapped): p['rating'] = int(v)
         if coh != 'R': continue
         out = sorted(p['rating'] for p in group)
         print(f'  {pos:5}{len(group):>5}{statistics.median(src):>9.0f}'
@@ -509,16 +577,22 @@ def stage5(recs):
         c = collections.Counter(p['povr'] for p in group)
         mx = max(c)
         if c[mx] >= 4:
-            outs = {p['rating'] for p in group if p['povr'] == mx}
-            sat.append((key[1], c[mx], mx, sorted(outs)))
+            outs = sorted({p['rating'] for p in group if p['povr'] == mx})
+            sat.append((key[1], c[mx], mx, outs, key[1] in SECONDARY))
     if sat:
         print()
-        print('  UNRESOLVED — source ceiling ties collapsing to one rating:')
-        for pos, n, mx, outs in sorted(sat, key=lambda x: -x[1]):
-            print(f'    {pos:3} {n:3} players at POVR {mx} -> rating {outs}')
-        print('    The quantile map is arithmetically right and wastes the top of')
-        print('    each target range. Ordering them needs a second column, and')
-        print('    which column changes who is best. NEEDS A RULING.')
+        print('  source ceiling ties (inflation compresses the top of the range):')
+        for pos, n, mx, outs, handled in sorted(sat, key=lambda x: -x[1]):
+            if handled:
+                print(f'    {pos:3} {n:3} at POVR {mx} -> spread {min(outs)}-{max(outs)} '
+                      f'on the secondary column')
+            else:
+                print(f'    {pos:3} {n:3} at POVR {mx} -> rating {outs}   '
+                      f'{"COLLAPSED" if len(outs) == 1 else ""}')
+        unhandled = [x for x in sat if not x[4] and len(x[3]) == 1]
+        if unhandled:
+            print('    Collapsed blocks sit at the top of their target range already,')
+            print('    so no ordering is discarded that the range could express.')
 
     assert all('rating' in p for p in recs), 'a record left stage 5 without a rating'
     ros = [p for p in recs if p['teamID'] != 'Free Agent']
