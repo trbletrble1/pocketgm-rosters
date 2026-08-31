@@ -2321,3 +2321,40 @@ was who was in it.
 
 `stage2b` now asserts that at most three core players fail to match, and names
 them when any do.
+
+### The count assertion was satisfied throughout, and could not have failed
+
+This is the part worth carrying. `assert len(out) == len(inp)` is this project's
+flagship check — it exists because a 1986 registry write produced 1,745 entries
+from 1,746 players and raised nothing. **It passed here at every step, and four
+wrong men shipped anyway.**
+
+It passed because **a compensating mechanism sat downstream**. The Houston
+assembly fills any position below its minimum from the general free agent pool.
+Drop four core players, and the filler takes four more bodies; the roster is 53
+either way. A count assertion cannot see a defect that something downstream
+silently repairs — and the filler's entire job is to keep the count right.
+
+**Corollary, and the operative rule: wherever a fallback exists to make up a
+shortfall, the count check is dead by construction.** Any stage carrying a
+filler, a default, a percentile backfill or a "top up to N" needs the
+**match-rate** assertion specifically. The count assertion is not weak evidence
+there; it is no evidence at all.
+
+The same shape appears wherever this project has a fallback tier: percentile fill
+behind the direct attribute map, the appearance library behind `PSKI`, the
+drawn tier behind the contract anchors. Each of those keeps the count correct
+by design.
+
+### One position vocabulary, or an explicit translation at the boundary
+
+Three position-vocabulary translation bugs in one session: `FB`/`HB` in the
+fullback cohort, `FS`/`SS` and `G`/`OG` here. Every one silently reduced a
+cohort rather than raising an error, because a label that does not match simply
+finds nothing.
+
+**Two scripts exchanging records must share one position vocabulary, or translate
+explicitly at the boundary. Never match on a label each side defines
+separately.** PGM3's fifteen is the project vocabulary; Madden's `PPOS` labels
+are a source encoding and must be translated once, at the point of entry, not
+carried around and compared.
