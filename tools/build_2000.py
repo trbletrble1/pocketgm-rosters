@@ -60,11 +60,32 @@ def norm(s):
     s = s.lower().replace('.', ' ').replace("'", ' ').replace('-', ' ')
     return ' '.join(s.split())
 
+# Every Madden column this build reads. Checked at READ time, before anything
+# maps or clips, because a clipped value is invisible downstream: PAWR at 108 is
+# ONE row in 1,637 and would not move a median, a spread or a zero-pattern.
+READ_COLUMNS = ['POVR','PPOS','PJEN','PYRP','PAGE','PWGT','PSKI','PHCL',
+                'PSPD','PACC','PSTR','PAGI','PJMP','PSTA','PTAK','PPBK','PRBK',
+                'PCAR','PKAC','PCTH','PAWR','PTHA','PINJ','PBTK','PTHP','PKPR',
+                'PCYL','PCON','PTSA','PSBO','PDRO']
+
 def load_source():
     rows = list(csv.DictReader(open(SRC, encoding='latin-1')))
-    # Print the max of every numeric column we intend to read. Nine columns in
-    # this file exceed 99 and a single clipped row is invisible to every
-    # distribution check.
+    over = []
+    for c in READ_COLUMNS:
+        vals = []
+        for r in rows:
+            try: vals.append(int(r[c]))
+            except (ValueError, KeyError, TypeError): pass
+        if not vals: continue
+        mx = max(vals)
+        if mx > 99: over.append((c, mx, sum(1 for v in vals if v > 99)))
+        # Nothing in this build may narrow a source value. Assert the read is
+        # lossless rather than trusting that no clamp was introduced later.
+        assert mx == max(vals), 'read narrowed a source column'
+    print('READ CHECK — columns exceeding 99 (never clamp these on read):')
+    for c, mx, n in sorted(over, key=lambda x: -x[1]):
+        print(f'  {c}  max {mx}  rows over 99: {n}')
+    assert over, 'expected columns over 99 in this file; the read may be clamping'
     return rows
 
 def cohort(rows):
@@ -608,8 +629,230 @@ def stage5(recs):
               f'   league {med:.0f}')
     return recs
 
+# ========================================================= stage 6: attributes
+# Direct map where a Madden column corresponds to a PGM3 attribute, then
+# per-position QUANTILE mapping -- never a raw copy. Madden's scales do not
+# match PGM3's at the low end and copying ships several attributes 20+ points
+# low (OT jumping ~30 against a working-file 68).
+DIRECT = {
+    'speed': 'PSPD', 'burst': 'PACC', 'power': 'PSTR', 'agility': 'PAGI',
+    'jumping': 'PJMP', 'stamina': 'PSTA', 'tackle': 'PTAK', 'passBlock': 'PPBK',
+    'rushBlock': 'PRBK', 'ballSecurity': 'PCAR', 'kickAccuracy': 'PKAC',
+    'catching': 'PCTH', 'intelligence': 'PAWR',
+    # PBTK -> trucking, correlation 0.882, from the 2000 audit. Newest mapping
+    # and the one with least evidence behind it, so it gets a conditional pass
+    # like every other.
+    'trucking': 'PBTK',
+    # PTHA feeds all three accuracy fields and throwOnRun.
+    'sPassAcc': 'PTHA', 'mPassAcc': 'PTHA', 'dPassAcc': 'PTHA', 'throwOnRun': 'PTHA',
+}
+# PINJ INVERTS: PGM3's higher value means more fragile. Correlation -0.52.
+# Targets come from the VANILLA export, not the published files -- this shipped
+# on the wrong scale in every published file until it was corrected against
+# vanilla. Rostered ~52, FA ~49, rookie ~34.
+INVERTED = {'injuryProne': 'PINJ'}
+INJURY_TARGET = {'R': 52, 'FA': 49, 'Rookie': 34}
+
+PERSONALITY = ('loyalty', 'greed', 'ambition')
+
+def published_attr_dists():
+    """(cohort, position, attr) -> sorted non-zero values, and the non-zero RATE.
+    The rate matters: OLB manCover/zoneCover is 24% non-zero in the published
+    files, not 0 and not 100, and the zero-pattern check compares against it."""
+    vals = collections.defaultdict(list)
+    seen = collections.Counter(); nz = collections.Counter()
+    for y in (1986, 2004, 2007, 2010, 2013, 2017, 2021):
+        path = os.path.join(REPO, f'PGMRoster_{y}.json')
+        if not os.path.exists(path): continue
+        for q in json.load(open(path)):
+            if q['teamID'] == 'Rookie': continue
+            coh = 'FA' if q['teamID'] == 'Free Agent' else 'R'
+            for a in ALL_ATTRS:
+                seen[(coh, q['position'], a)] += 1
+                if q.get(a, 0):
+                    nz[(coh, q['position'], a)] += 1
+                    vals[(coh, q['position'], a)].append(q[a])
+    # A QUANTILE MAP INHERITS ITS TARGET'S DEFECTS.
+    #
+    # Four attributes carry a block parked on value 1 in the published files:
+    # stamina 9.4% of non-zero values, zoneCover 9.1%, manCover 5.8%, greed
+    # 3.3%. It is a "no source data, default to 1" artifact, not a
+    # distribution: the players holding it are spread across every position and
+    # concentrated in low-rated fringe players, its share swings 0%-24.9%
+    # between files, and the median barely moves when it is removed (stamina
+    # 83 -> 84, zoneCover 81 -> 82, manCover 79 -> 80, greed 71 -> 73).
+    #
+    # Mapping onto a target containing it imports the defect: the 2000 source
+    # has no such block, so its genuinely-low-stamina players were landing on
+    # the artifact and stamina failed its conditional at rho 0.810 with a
+    # discontinuous first decile (32, then 75).
+    dropped = collections.Counter()
+    for k in list(vals):
+        v = vals[k]
+        if not v: continue
+        ones = sum(1 for x in v if x == 1)
+        if ones and ones / len(v) > 0.02 and statistics.median(v) > 20:
+            vals[k] = [x for x in v if x > 1]
+            dropped[k[2]] += ones
+    if dropped:
+        print('  target cleaned — value-1 fill blocks dropped from the published '
+              'distributions:')
+        for a, n in sorted(dropped.items(), key=lambda x: -x[1]):
+            print(f'    {a:14} {n:5} values')
+    for k in vals: vals[k].sort()
+    rate = {k: nz[k] / seen[k] for k in seen if seen[k]}
+    return vals, rate
+
+ALL_ATTRS = ['speed','burst','power','agility','jumping','stamina','injuryProne',
+    'intelligence','vision','decisions','discipline','ballSecurity','skillMove',
+    'trucking','elusiveness','rushBlock','catching','passBlock','routeRun',
+    'releaseLine','tackle','manCover','zoneCover','blockShedding','ballStrip',
+    'kickAccuracy','sPassAcc','mPassAcc','dPassAcc','throwOnRun',
+    'loyalty','greed','ambition']
+
+def stage6(recs):
+    tvals, trate = published_attr_dists()
+    import bisect
+
+    groups = collections.defaultdict(list)
+    for p in recs:
+        coh = 'FA' if p['teamID'] == 'Free Agent' else 'R'
+        groups[(coh, p['position'])].append(p)
+
+    for p in recs:
+        p['_attr'] = {a: 0 for a in ALL_ATTRS}
+
+    filled = collections.Counter()
+    for (coh, pos), group in groups.items():
+        # rating percentile within the group, used for every unsourced fill
+        rs = sorted(x['rating'] for x in group)
+        for x in group:
+            i = bisect.bisect_left(rs, x['rating']); j = bisect.bisect_right(rs, x['rating'])
+            x['_rq'] = ((i + j) / 2) / len(rs)
+
+        for a in ALL_ATTRS:
+            tgt = tvals.get((coh, pos, a)) or tvals.get(('R', pos, a))
+            rate = trate.get((coh, pos, a), trate.get(('R', pos, a), 0.0))
+            if not tgt or rate < 0.01:
+                continue                                   # position-gated off
+            elig = group
+            if rate < 0.99:
+                # Partly-populated field. OLB manCover/zoneCover is the real
+                # case at 24%. Reproduce the RATE, and choose who gets it from a
+                # real column rather than at random: coverage linebackers are
+                # the fast, agile ones.
+                k = int(round(rate * len(group)))
+                elig = sorted(group, key=lambda x: -(int(x['_src']['PSPD'])
+                                                     + int(x['_src']['PAGI'])))[:k]
+            if a in DIRECT:
+                col = DIRECT[a]
+                src = sorted(int(x['_src'][col]) for x in elig)
+                for x in elig:
+                    x['_attr'][a] = int(qmap([int(x['_src'][col])], src, tgt)[0])
+                filled[f'direct: {a}'] += len(elig)
+            elif a in INVERTED:
+                col = INVERTED[a]
+                src = sorted(-int(x['_src'][col]) for x in elig)
+                for x in elig:
+                    x['_attr'][a] = int(qmap([-int(x['_src'][col])], src, tgt)[0])
+                filled[f'inverted: {a}'] += len(elig)
+            else:
+                # No usable Madden source. Fill from the published per-position
+                # distribution at the player's rating percentile.
+                m = len(tgt)
+                for x in elig:
+                    x['_attr'][a] = int(tgt[min(m-1, max(0, int(round(x['_rq']*(m-1)))))])
+                filled[('personality: ' if a in PERSONALITY else 'percentile: ') + a] += len(elig)
+
+    print()
+    print('STAGE 6 — attributes')
+    for k in sorted(filled):
+        print(f'  {k:28} {filled[k]:5}')
+
+    # injuryProne against the VANILLA targets, not the published files: this
+    # shipped on the wrong scale in every published file until it was corrected.
+    print()
+    for coh, lbl in (('R', 'rostered'), ('FA', 'free agent')):
+        g = [x for x in recs if ('FA' if x['teamID'] == 'Free Agent' else 'R') == coh]
+        m = statistics.median([x['_attr']['injuryProne'] for x in g])
+        t = INJURY_TARGET[coh]
+        ok = 'ok' if abs(m - t) <= 3 else 'OFF TARGET'
+        print(f'  injuryProne {lbl:11} median {m:5.1f}   vanilla target {t}   {ok}')
+    return recs
+
+
+def _rho(pairs):
+    n = len(pairs)
+    if n < 15: return None
+    xs = sorted(range(n), key=lambda i: pairs[i][0])
+    ys = sorted(range(n), key=lambda i: pairs[i][1])
+    rx = [0]*n; ry = [0]*n
+    for r, i in enumerate(xs): rx[i] = r
+    for r, i in enumerate(ys): ry[i] = r
+    mx = sum(rx)/n; my = sum(ry)/n
+    num = sum((rx[i]-mx)*(ry[i]-my) for i in range(n))
+    den = (sum((rx[i]-mx)**2 for i in range(n)) * sum((ry[i]-my)**2 for i in range(n))) ** 0.5
+    return num/den if den else 0.0
+
+
+def conditional_attributes(recs):
+    """Run the conditional on EVERY direct-mapped attribute, not just stamina.
+    PSTA is the famous one because it failed, but the whole point of the check
+    is that a dead field looks fine until you condition on the source.
+
+    MEASURE WITHIN (cohort, position). The mapping is performed per position, so
+    that is the only population in which it can be judged. Pooling across
+    positions mixes fifteen different maps and depresses the correlation for a
+    reason that has nothing to do with the mapping: stamina reads 0.816 pooled
+    and 0.999 within group, and an earlier version of this check nearly sent me
+    to 'fix' a mapping that was already exact. The handoff's rule about
+    comparing cohort to cohort and position to position applies to the check
+    itself, not only to the data it checks."""
+    print()
+    print('CONDITIONAL — every direct-mapped attribute vs its Madden column')
+    print('  measured WITHIN (cohort, position), the group the map is performed in.')
+    print('  the pooled column is shown for contrast only and is NOT the test —')
+    print('  it mixes fifteen separate maps.')
+    print()
+    print(f'  {"attribute":14}{"column":8}{"grp":>5}{"rho med":>9}{"rho min":>9}'
+          f'{"pooled":>8}   decile medians (low -> high)')
+    bad = []
+    for a, col in sorted(list(DIRECT.items()) + list(INVERTED.items())):
+        groups = collections.defaultdict(list)
+        pooled = []
+        for x in recs:
+            if not x['_attr'][a]: continue
+            coh = 'FA' if x['teamID'] == 'Free Agent' else 'R'
+            pair = (int(x['_src'][col]), x['_attr'][a])
+            groups[(coh, x['position'])].append(pair)
+            pooled.append(pair)
+        if len(pooled) < 30: continue
+        rs = [r for r in (_rho(v) for v in groups.values()) if r is not None]
+        if not rs: continue
+        sign = -1 if a in INVERTED else 1
+        rmed = statistics.median(rs); rmin = min(rs) if sign > 0 else max(rs)
+        pooled.sort(); n = len(pooled)
+        dec = []
+        for d in range(10):
+            chunk = pooled[d*n//10:(d+1)*n//10]
+            if chunk: dec.append(statistics.median(v for _, v in chunk))
+        flag = ''
+        if sign * rmed < 0.90:
+            flag = '  <-- WEAK'; bad.append((a, col, rmed))
+        if max(dec) - min(dec) < 5:
+            flag = '  <-- FLAT, source not used'; bad.append((a, col, rmed))
+        print(f'  {a:14}{col:8}{len(rs):>5}{rmed:>9.3f}{rmin:>9.3f}'
+              f'{_rho(pooled):>8.3f}   ' + ' '.join(f'{v:.0f}' for v in dec) + flag)
+    assert not bad, ('direct-mapped attributes failed the conditional: ' +
+                     '; '.join(f'{a}<-{c} rho={r:.2f}' for a, c, r in bad))
+    print()
+    print('  all direct-mapped attributes track their source within position.')
+    return recs
+
 if __name__ == '__main__':
     recs = stage3()
     recs = stage4(recs)
     conditional_pski(recs)
     recs = stage5(recs)
+    recs = stage6(recs)
+    conditional_attributes(recs)

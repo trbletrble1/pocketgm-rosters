@@ -1907,3 +1907,69 @@ K and P.
 **Check for it directly: print the size of the largest tie block per position,
 not just the median.** A block of 12 in a group of 50 is invisible to every
 summary statistic that was being computed at the time.
+
+---
+
+## A quantile map inherits its target's defects
+
+Building 2000's attributes, `stamina` failed its conditional at rho 0.810 with a
+discontinuous first decile — 32, then 75. The source was fine. **The target was
+contaminated.**
+
+The published files carry a block of players parked on value **1**:
+
+| attribute | share of non-zero values | median | median excluding 1 |
+|---|---|---|---|
+| `stamina` | 9.4% | 83 | 84 |
+| `zoneCover` | 9.1% | 81 | 82 |
+| `manCover` | 5.8% | 79 | 80 |
+| `greed` | 3.3% | 71 | 73 |
+
+Three things identify it as a "no source data, default to 1" artifact rather than
+a distribution: the players holding it are spread across every position and
+concentrated among low-rated fringe players; **its share swings from 0% to 24.9%
+between files** (2010 has none, 2017 has a quarter); and the median barely moves
+when it is removed. A real low tail does none of those.
+
+The 2000 source has no such block — `PSTA` runs 15 to 99 with no zeros and 5%
+under 60. So its genuinely-low-stamina players were being mapped onto the
+artifact.
+
+**Rule: clean the target before mapping onto it, not just the source.** "Find the
+real cohort before measuring anything" is normally applied to the input. A
+quantile map has two populations and the same discipline applies to both — the
+target is data too. The guard now drops value 1 from any target where it holds
+over 2% of non-zero values and the median is above 20, and reports what it
+dropped.
+
+This is worth stating because the defect is self-propagating. Every file built by
+mapping onto the published files inherits their fill artifacts, which then makes
+the next target slightly worse. Nothing catches it: the output median was right,
+the spread was right, and only conditioning on the source showed the break.
+
+---
+
+## Judge a mapping in the population it was performed in
+
+After the target was cleaned, `stamina` still read rho 0.847 pooled — below the
+0.90 bar — and the next move would have been to go on adjusting a mapping that
+was already exact.
+
+**Within (cohort, position) the same mapping reads rho 0.999 median, 0.950
+worst, across 30 groups.**
+
+The map is fitted and applied per position. Pooling across positions mixes
+fifteen separate maps whose scales legitimately differ, and the correlation drops
+for a reason that has nothing to do with whether any individual map works. Speed
+shows the identical pattern — 0.930 pooled, 0.999 within group — and speed was
+never in doubt.
+
+The handoff already says to compare cohort to cohort and position to position.
+**The point here is that the rule applies to the check as much as to the data.**
+A validation pass measured at the wrong altitude produces false failures, and a
+false failure costs more than no check at all, because it sends you to modify
+working code.
+
+**Report both numbers and assert on the within-group one.** The pooled figure is
+still informative — it measures how much position-to-position scale differences
+move a field — but it is not the test.
