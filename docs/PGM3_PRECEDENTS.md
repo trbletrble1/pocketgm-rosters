@@ -2618,3 +2618,64 @@ token. It is simply not one players use.
 
 **Derive the vocabulary from the population you are writing into, never from the
 one you happen to have loaded.**
+
+---
+
+## The gate and the distribution answer different questions
+
+Third bite of "recompute everything derived from a cleaned population", and the
+first in the **opposite direction** — an over-applied correction rather than an
+under-applied one, which is why it is worth its own entry.
+
+Cleaning the value-1 fill out of the quantile targets was right. Recomputing the
+**position-gating rate** from the cleaned data was not. Stamina is 100%
+populated and roughly 9% fill, so the cleaned rate came out at 0.91, below the
+partial-field threshold — and stamina was gated **off** for the bottom 9% of
+several positions. **37 players shipped with stamina 0.**
+
+**The two numbers answer different questions:**
+
+| | question | computed from |
+|---|---|---|
+| **gate** | does this position use this field at all? | the RAW non-zero share |
+| **distribution** | what values does this field take? | the CLEANED values |
+
+Cleaning fill out of the distribution must not touch the gate. The single
+exception is a field cleaning empties entirely — `OLB` `manCover`, every
+non-zero value of which was the fill — because that genuinely means the position
+does not use it.
+
+**No structural check could see this.** The output had a plausible distribution,
+the right median, a correct zero-pattern against a reference that also carries
+zeros there, and 37 records at zero in a field where zero is a legal value. The
+**conditional pass** caught it: conditioned on `PSTA`, the 50-59 decile mapped to
+a median of 8 against 19 for the decile below it. That is the second time in one
+build the conditional found something nothing else could, which is the argument
+for its mandatory status.
+
+**Generalised: when a correction changes a population, list every statistic
+downstream of it and classify each as "describes the population" or "describes
+whether the population applies".** The first kind must be recomputed. The second
+must not.
+
+---
+
+## State the cohort with any cross-file count
+
+Face-consistency figures for the 2000 build differ by a factor of four depending
+on the cohort, and both numbers are correct:
+
+| cohort | key | family disagreements | hair |
+|---|---|---|---|
+| rostered only | normalised | 8 → 8 | 15 → 16 |
+| all cohorts | normalised | 31 → 163 | 62 → 219 |
+
+`pgm3_validate.py faces` reports the rostered-only figure. A reviewer measuring
+across every cohort gets a number four times larger and concludes something
+regressed.
+
+This is the same trap as the stamina fill counted at 1,267 rostered against
+1,622 including prospects. **Quote the cohort with the number, every time** —
+two correct measurements of different populations otherwise read as a
+disagreement, and the person who has to reconcile them is the one who did not
+take either measurement.
