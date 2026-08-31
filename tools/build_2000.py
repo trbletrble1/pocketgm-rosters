@@ -930,12 +930,23 @@ def published_attr_dists():
     # are the fill, so the real gate is 12.2%. OLB zoneCover looked 31.6% and is
     # actually 0%. Same defect as the target contamination, one step later in
     # the pipeline.
+    # THE GATE AND THE DISTRIBUTION ANSWER DIFFERENT QUESTIONS.
+    #
+    # The gate asks "does this position use this field at all". The
+    # distribution asks "what values does it take". Cleaning fill out of the
+    # second must not change the first: stamina is 100% populated and ~9% fill,
+    # and computing the rate from the cleaned values dropped it to 0.91, below
+    # the partial-field threshold. Stamina was then gated OFF for the bottom 9%
+    # of several positions -- 37 players shipped with stamina 0, which the
+    # conditional pass caught and no structural check would have.
+    #
+    # So: the rate is the ORIGINAL non-zero share, EXCEPT where cleaning
+    # emptied the field entirely, which is the OLB coverage case and means the
+    # position genuinely does not use it.
     rate = {}
     for k in seen:
         if not seen[k]: continue
-        kept = len(vals.get(k, []))
-        raw = nz[k]
-        rate[k] = (kept / seen[k]) if (k in vals or raw == 0) else (raw / seen[k])
+        rate[k] = 0.0 if (k in vals and not vals[k]) else nz[k] / seen[k]
     return vals, rate
 
 ALL_ATTRS = ['speed','burst','power','agility','jumping','stamina','injuryProne',
@@ -2186,6 +2197,112 @@ def resolve_draft_num(name, position, yrs_pro, picks):
 
 
 
+# ============================================ stage 10: library, then registry
+# ORDER IS THE THING THAT HAS COST THIS PROJECT WORK TWICE.
+#   1. the appearance library is a BULK pass -> it runs FIRST
+#   2. the face registry runs LAST, over the top, and NOTHING runs after it
+# Doing it the other way silently overwrites hand edits, which has happened and
+# took several of Ryan's hand-edited draft prospects with it.
+
+def appearance_library():
+    """name|position -> appearance, from the published ROSTERED cohorts only.
+
+    Prospects and free agents in the published files were never sourced, so
+    they are not evidence about anyone's face. Appearance is 98% stable across
+    years, which is what makes a veteran's entry usable for a prospect who
+    becomes him later.
+    """
+    lib = collections.defaultdict(set)
+    for y in (1986, 2004, 2007, 2010, 2013, 2017, 2021):
+        path = os.path.join(REPO, f'PGMRoster_{y}.json')
+        if not os.path.exists(path): continue
+        for q in json.load(open(path)):
+            if q['teamID'] in ('Free Agent', 'Rookie'): continue
+            lib[(norm_registry(q['forename'] + ' ' + q['surname']), q['position'])].add(
+                tuple(q['appearance']))
+    # a person carrying more than one face across files is the known
+    # name|position split problem; guessing which to copy risks a hand edit
+    return {k: list(v)[0] for k, v in lib.items() if len(v) == 1}
+
+def stage10_library(records):
+    lib = appearance_library()
+    stat = collections.Counter()
+    for p in records:
+        face = lib.get((norm_registry(p['forename'] + ' ' + p['surname']), p['position']))
+        if p['teamID'] not in ('Free Agent', 'Rookie'):
+            # A rostered player's SKIN is really sourced, from this file's own
+            # PSKI, and the library must not overwrite it. His HAIR is not --
+            # hair is seeded here and is constant across seasons for the same
+            # man, so taking it from the library is the only way a player
+            # absent from the registry looks the same either side of 2000.
+            if face:
+                p['appearance'][2:5] = list(face[2:5]); stat['library: hair only (skin from PSKI)'] += 1
+            else:
+                stat['rostered: PSKI skin, seeded hair'] += 1
+            continue
+        if face:
+            p['appearance'] = list(face); stat['library: whole face'] += 1
+        else:
+            stat['kept seeded'] += 1
+    print()
+    print('STAGE 10a — appearance library (BULK, runs first)')
+    for k, v in sorted(stat.items()): print(f'    {k:36} {v:5}')
+    return records
+
+def stage10_registry(records, staff=False):
+    """Apply the registry LAST. Nothing runs after this."""
+    reg = json.load(open(os.path.join(REPO, 'reference', 'PGM3_FACE_REGISTRY.json')))
+    before = {g: set(v) for g, v in reg['_verified_keys'].items()}
+    assert len(before['players']) == 84 and len(before['staff']) == 18, \
+        f'_verified_keys is {len(before["players"])}/{len(before["staff"])}, expected 84/18'
+    faces, faces86 = reg['faces'], reg['faces_1986']
+    stat = collections.Counter()
+    for p in records:
+        key = norm_registry(p['forename'] + ' ' + p['surname'])
+        ent = faces.get(f'{key}|{p["position"]}')
+        if ent is None:
+            stat['no registry entry'] += 1; continue
+        # PLAYERS TAKE THE FAMILY DIGIT ONLY. Slots 0, 5 and 6 carry a family
+        # digit and an aging variant letter, and the variant legitimately
+        # differs between seasons because players age. Writing the array
+        # wholesale flattens that, and the collapse is exactly what the `faces`
+        # pass detects. Staff are the exception and take the whole array.
+        # Take the registry array WHOLESALE, then restore this season's own
+        # variant letter in slots 0, 5 and 6. Those three carry a family digit
+        # plus an aging variant derived from weight and age, and the variant
+        # legitimately differs between seasons -- flattening it is what the
+        # `aging variant still varies` check detects.
+        #
+        # Everything else IS constant across seasons and must be copied: hair,
+        # beard and eyebrows above all. Applying only the skin family and
+        # leaving hair alone took the archive's hair-style disagreement from 15
+        # players to 638.
+        cur = p['appearance']
+        keep = [cur[i].replace(pre, '')[1:] for i, pre in
+                ((0, 'Head'), (5, 'Nose'), (6, 'Mouth'))]
+        p['appearance'] = list(ent)
+        for (i, pre), var in zip(((0, 'Head'), (5, 'Nose'), (6, 'Mouth')), keep):
+            fam = ent[i].replace(pre, '')[0]
+            p['appearance'][i] = f'{pre}{fam}{var}'
+        stat['registry applied'] += 1
+    after = {g: set(v) for g, v in
+             json.load(open(os.path.join(REPO, 'reference',
+                                         'PGM3_FACE_REGISTRY.json')))['_verified_keys'].items()}
+    assert after == before, '_verified_keys changed during the registry pass'
+    print()
+    print('STAGE 10b — face registry (LAST; nothing runs after it)')
+    for k, v in sorted(stat.items()): print(f'    {k:36} {v:5}')
+    print(f'    _verified_keys untouched: {len(before["players"])} players, '
+          f'{len(before["staff"])} staff')
+    return records
+
+
+# ---------------------------------------------------------------------------
+# ENTRY POINT MUST STAY LAST IN THIS FILE. Twice now a new stage was
+# appended after it and failed with NameError, because Python binds names
+# top to bottom and the main block ran before the stage was defined.
+# Append new stages ABOVE this line.
+# ---------------------------------------------------------------------------
 if __name__ == '__main__':
     recs = stage3()
     recs = stage4(recs)
@@ -2223,3 +2340,18 @@ if __name__ == '__main__':
     print(f'  PAWR shift applied at gap 2 only: 2001 -> {pawr_correction(2)}, '
           f'2002 -> {pawr_correction(1)}, 2003/2004 -> {pawr_correction(0)}')
     recs_out = emit(recs, os.path.join(REPO, 'PGMRoster_2000.json'), _pros)
+    # stage 10: bulk library FIRST, registry LAST, nothing after it
+    recs_out = stage10_library(recs_out)
+    recs_out = stage10_registry(recs_out)
+    _fam = collections.Counter(r['appearance'][0].replace('Head', '')[0] for r in recs_out)
+    _var = collections.Counter(r['appearance'][0][-1] for r in recs_out)
+    _t = len(recs_out)
+    print(f'    head family: ' + '  '.join(f'{k}:{100*v/_t:.1f}%' for k, v in sorted(_fam.items())))
+    print(f'    aging variant still varies: ' +
+          '  '.join(f'{k}:{100*v/_t:.1f}%' for k, v in sorted(_var.items())))
+    for r in recs_out:
+        a = r['appearance']
+        assert a[0].replace('Head','')[0] == a[5].replace('Nose','')[0] == a[6].replace('Mouth','')[0]
+    json.dump(recs_out, open(os.path.join(REPO, 'PGMRoster_2000.json'), 'w'),
+              separators=(',', ':'))
+    print(f'\n  rewrote PGMRoster_2000.json after the registry pass')
