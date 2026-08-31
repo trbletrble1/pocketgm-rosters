@@ -2398,3 +2398,37 @@ Both constraints were then re-run **on the returned file** before it was used, a
 independently: the 1999 records were recomputed from nflverse game results rather
 than taken from the prompt. Verification that reuses the prompt's own numbers is
 not verification.
+
+
+---
+
+## Prefer the convention nobody has to remember
+
+Head coach ratings regress toward .500 for small samples, which raised a
+definitional question: Wade Phillips's 1985 New Orleans spell lasted **four
+games**, so does it count as a season? Either answer is defensible, both feed the
+rating, and the file has to pick one.
+
+**Weighting the regression by games rather than by seasons does not answer the
+question. It removes it.** Four games contribute four games' worth of evidence
+whether or not anyone calls them a season, so the convention has nothing left to
+be inconsistent about. Phillips lands on his real 68 games; no future session has
+to look up a ruling before touching the formula.
+
+That is the property worth optimising for. **A convention that must be remembered
+is a defect waiting for the session that does not remember it**, and this
+document is largely a list of conventions — every one is something a later build
+can get wrong. Where two formulations are equally defensible, prefer the one that
+makes the question disappear rather than the one that answers it correctly.
+
+The same shape appears elsewhere in this project and is worth recognising:
+
+- **Birth date over position** for namesake disambiguation. Position needs a
+  compatibility table that someone must maintain and reason about; birth date is
+  a fact the collision does not share and needs no ruling.
+- **Provenance tags over guard ordering.** The alternative to tagging records was
+  to remember which guards may fire after which stage — a rule that has to be
+  held in a maintainer's head. A tag the guard reads does not.
+
+Applied across all 31 coaches rather than only to Phillips: `reg_w + reg_l +
+reg_t` gives games directly, and the file totals **2,045**.

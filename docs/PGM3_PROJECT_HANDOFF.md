@@ -511,6 +511,15 @@ An earlier version of this document said "busts are busts." That was wrong — n
 
 **Head coaches:** career record through the prior season, regressed toward .500 for small samples, plus bonuses for Super Bowls, playoff wins, Coach of the Year. **Do not use single-season records** — that rated Andy Reid 71 off one bad year.
 
+**Coach of the Year bonuses count AP awards ONLY** (ruling, 2026-08-31). A clean
+comparable standard, and the 2000 build records what it costs: **Bobby Ross**
+(1992 PFWA/UPI/Greasy Neale), **Tom Coughlin** (1996 UPI), **Dave Wannstedt**
+(1994 UPI) and **Dennis Green** (1992 UPI, 1998 Greasy Neale) all carry zero
+despite winning a Coach of the Year award in this era. Those four are the line a
+later session "fixes" by adding the other voting bodies. The convention is
+deliberate — do not widen it without a ruling, and if it ever is widened, every
+season has to be rebuilt together or the files stop being comparable.
+
 **Coordinators and special teams: rate them on the season being built, not the prior one.** 2004 used its own 2004 unit ranks and Gosselin's 2004 rankings; 2007 used 2007. **The prior season is only correct for a current-season build** where the season hasn't been played — that's why 2026 used 2025. Applying the 2026 rule to a historical build is an error and it happened once.
 
 Distinguish play-callers from title-holders — a coordinator who didn't call plays gets partial credit.
