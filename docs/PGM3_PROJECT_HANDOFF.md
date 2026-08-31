@@ -838,6 +838,15 @@ appearance rebuilt from real Madden data.
 
 **Known open items, none blocking:**
 
+0c. **The 2000 Madden file is a PRESEASON PROJECTION, not a performance
+   rating.** Robert Brooks is rated **91 overall** in it. He retired in August
+   1999, came back with Denver in 2000, played four games and caught three
+   passes for 51 yards, then retired for good. Madden is rating his 1995 peak,
+   not his 2000 season. Implications well beyond contracts: any check that
+   assumes the source reflects what a player did that year is measuring the
+   wrong thing, and a player's rating carries no information about whether he
+   actually played.
+
 0b. **Salary fill artifact — the published files spike at round mid-range
    numbers.** Found 2026-08-31 checking whether they clamp or smear at the
    bottom. They **smear** (2004's bottom decile holds 83 distinct values of 188),

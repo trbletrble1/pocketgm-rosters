@@ -2091,3 +2091,60 @@ populated and carried nothing, because the informative property was its range
 because the informative property was the altitude of the measurement. Here the
 informative property is the coefficient's size relative to its own model. **When
 a number is used to dismiss a concern, check what it is being compared against.**
+
+---
+
+## Salary is not predictable from rating — split the cohort before fitting
+
+Measured 2026-08-31 against 62 real 2000 cap numbers from Over The Cap, matched
+into the rostered cohort.
+
+**Rating explains almost nothing.** Predicting log of the real 2000 cap number:
+
+| cohort | n | rating alone | rating + yrs + log(pick) | log(pick) alone |
+|---|---|---|---|---|
+| all | 62 | R² 0.294 (adj 0.282) | 0.572 (adj **0.549**) | 0.297 |
+| **rookie deals** (≤3 yrs) | 32 | 0.120 | 0.710 (adj **0.679**) | 0.610 |
+| **veterans** (>3 yrs) | 30 | 0.032 (adj **−0.003**) | 0.218 (adj **0.127**) | 0.215 |
+
+**For veterans, rating has an adjusted R² of −0.003 — it is worse than useless.**
+The single number hides two regimes: rookie contracts are slot-driven and largely
+predictable, veteran contracts are not predictable from anything in this project.
+
+**The mechanism, from the residuals:** NFL salary tracks contract timing and draft
+pedigree, not current performance. Tim Couch, rating 71, first overall pick, real
+2000 cap **$5.25M**; Tom Brady, rating 73, sixth round, **$0.21M**. Marshall Faulk
+at rating 98 earned less than Troy Aikman at 93 because one was mid-rookie-deal
+and the other was a declining franchise quarterback on an old contract.
+
+Even among veterans, **draft slot orders salary better than rating does** —
+Spearman +0.443 against +0.171. Where you were drafted predicts what you earn
+better than how good you are, years later.
+
+**And `PTSA` is not a fallback.** Its overall Spearman of +0.417 against real cap
+numbers comes entirely from the rookie tier (+0.500). **On veterans it is
++0.020 — zero.** A field can carry real signal in one cohort and none in another,
+and a pooled correlation will average the two into something that looks usable.
+
+**Rule: split by contract regime before fitting a salary model, and report each
+tier separately.** A pooled adjusted R² of 0.549 reads as a mediocre model. The
+truth is one good model (0.679) and one that does not exist (0.127), and only the
+split shows which players the file will get right.
+
+### The anchor set is not the league
+
+Over The Cap's 2000 coverage is position leaders only — 62 usable players against
+1,637 roster spots, and skewed hard:
+
+| draft band | anchors | full cohort |
+|---|---|---|
+| round 1 | **54.8%** | 16.2% |
+| rounds 5–7 | 8.1% | 21.4% |
+| undrafted | 6.5% | 24.8% |
+| *median pick* | **24** | **118** |
+
+A model fitted on picks 1–31 and applied to pick 118 and undrafted players is
+extrapolating past the edge of its data. This is the same defect as fitting the
+skin map on players who appear in a published file: **the join selected for
+notability, and notability correlates with the thing being modelled.** Say so
+rather than quoting the R² alone.
