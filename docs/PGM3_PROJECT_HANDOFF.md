@@ -366,10 +366,38 @@ Save as "Webpage, HTML Only". Give them the `open -a "Google Chrome" <urls>` com
 | Historical rosters | Pro Football Reference season roster pages |
 | Player ratings/attributes | maddenratings.net — per-team `.xlsx` per year, or one combined file for recent years |
 | Historical contracts | Madden disc `PLAY` table CSV (`PTSA` field is **total contract value** — divide by `PCON` for annual) |
-| Coach records | PFR individual coach pages (`coaching_ranks` + `coaching_results` tables). **The season coaches index gives lifetime totals — inflated for historical builds. Use individual pages** |
+| Coach records | PFR individual coach pages (`coaching_ranks` + `coaching_results` tables). **The season coaches index gives lifetime totals — inflated for historical builds. Use individual pages.** See the worked instance below; do not re-try the index |
 | Coordinator performance | PFR season pages, unit rank in points and yards |
 | Special teams | Gosselin's rankings **through 2023 only — he stopped**. 2024+ successor: Bill Huber's Packers On SI annual rankings (published as a chart image; ask the person to read it) |
+| Career records, coordinator units, special teams — what is and is not computable | see the two notes immediately below |
 | Draft classes | PFR draft listing pages — includes career AV, Pro Bowls, All-Pros, years started |
+
+**The PFR season coaches index is CONFIRMED UNUSABLE for career records. Do not
+re-try it.** Verified on the 1999 index, 2026-08-31. It carries three columns and
+none of them is "career through this season":
+
+| column | Andy Reid on the 1999 page | what it actually is |
+|---|---|---|
+| season | 16 G, 5–11 | correct — his rookie year |
+| w/ Team | 224 G, 130–93 | his **entire** 1999–2012 Philadelphia run |
+| Career | 437 G, 279–157 | his record **through 2025** |
+
+Reid had coached exactly 16 games when the 2000 season began; the page says 437.
+Cowher's "w/ Team" 240 games is all of 1992–2006 the same way. The only usable
+column is the single season — **which is precisely the figure the rating rule
+forbids**, and the one that rated Reid 71 off a bad year.
+
+Routes that do work: individual PFR coach pages, or summing seasons of the index
+across the years before the build year (~19 fetches for a 2000 build, and it
+yields a reusable career-record table since coordinator ratings and the
+free-agent coach pool need the same data).
+
+**Team unit ranks for coordinators ARE computable without PFR.** nflverse
+`games.csv` carries every game result back to 1922 — points for and against per
+team-season, which gives offensive and defensive ranks directly. Verified for
+2000: St. Louis 540 points scored, Baltimore 165 allowed, 31 teams at 16 games
+each. **Its `home_coach`/`away_coach` fields only begin in 1999**, so it cannot
+supply career records, only current-season units.
 
 **`norm()` must PRESERVE generational suffixes on any build reaching back more
 than ~20 years.** The documented rule — strip `Jr/Sr/II/III/IV/V` and collapse
