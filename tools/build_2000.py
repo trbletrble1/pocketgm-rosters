@@ -35,6 +35,25 @@ PPOS = {0:'QB',1:'RB',2:'RB',3:'WR',4:'TE',5:'OT',6:'OG',7:'C',8:'OG',9:'OT',
         18:'S',19:'K',20:'P'}
 IS_FB = {2}
 
+# --------------------------------------------------- adjacent-year correction
+# Measured 2026-08-31 on four replicates (2003-2006 classes), leave-one-class-out.
+# PAWR is the only attribute that degrades badly with source distance, because
+# awareness genuinely grows: a source two years later has two seasons of growth
+# baked in and reads HIGH, mean signed error +9.28. So we SUBTRACT to recover
+# the rookie-year state. Adding would roughly double the error.
+#
+# GAP 2 ONLY. At gap 1 the bias is +5.35 and correcting it lands inside the
+# noise, which is what the handoff records. A correction fitted at one gap is
+# meaningless at another.
+PAWR_GAP2_OFFSET = -9
+
+def pawr_correction(gap_years):
+    assert gap_years in (0, 1, 2), f'unsupported source gap {gap_years}'
+    if gap_years != 2:
+        return 0
+    return PAWR_GAP2_OFFSET
+
+
 def norm(s):
     s = unicodedata.normalize('NFKD', s or '')
     s = ''.join(c for c in s if not unicodedata.combining(c))   # fold, not strip
@@ -121,5 +140,165 @@ def stage3():
           f'{sum(1 for p in recs if p["teamID"]=="Free Agent" and p["teamNum"]==0)}/{len(fa)}')
     return recs
 
+# ============================================================ stage 4: faces
+# Appearances are built EARLY, not last — the handoff records three of four
+# files shipping with random faces because this was left to the end.
+
+HAIR_FAM = {0:'1', 1:'5', 2:'3', 3:'4', 4:'2'}      # PHCL -> hair family
+HAIR_STYLES = {'1':list('abcdefghijklmnopqs')+['r1','r2'],
+               '2':list('abcdefghijkl'), '3':list('abcdefghijkl'),
+               '4':list('abcdefghijk'),  '5':list('abcdefghijkl')}
+BEARD_STYLES = ['a','b','c','d','e','f1','f2','g']
+
+# Measured 2026-08-31 against the published 2004/2007 rostered cohorts, 629
+# players matched on name+position and unique on both sides:
+#   PSKI 0 -> 75.0% family 1, 85% in families 1-3          => light
+#   PSKI 1 -> 30.8% family 1, 66.1% families 4-5           => BIMODAL, abstain
+#   PSKI 2 -> 97.1% families 4-5                           => dark
+#   PSKI 3 -> 92.6% families 4-5                           => dark
+# PSKI 2 and 3 are not separable from each other (21/76 vs 18/75 across families
+# 4/5), so they get identical treatment. Inventing a distinction between them
+# would not be supported by the measurement.
+LIGHT_BAND = [('1', 0.883), ('2', 0.055), ('3', 0.061)]
+DARK_BAND  = [('4', 0.220), ('5', 0.780)]
+# No skin information at all. The league-wide prior from the published files is
+# the least-wrong fill; it is not a reading of PSKI and is logged separately.
+ABSTAIN_BAND = [('1', 0.20), ('2', 0.09), ('3', 0.02), ('4', 0.16), ('5', 0.53)]
+
+def seeded(key, salt):
+    """Stable per-player randomness. Seeded on the name so a rebuild never
+    reshuffles a face — the documented convention, and the reason hand edits
+    survive. Not a source of data; every seeded field is counted and reported."""
+    return random.Random(f'{key}|{salt}|2000')
+
+def draw(rng, band):
+    x = rng.random(); acc = 0.0
+    for fam, w in band:
+        acc += w
+        if x <= acc: return fam
+    return band[-1][0]
+
+def build_library():
+    """Head family per person from the published rostered cohorts. A person
+    carrying more than one family across files is ambiguous and is NOT copied —
+    that is the known name|position split problem and guessing which face to
+    keep risks overwriting a hand edit."""
+    fams = collections.defaultdict(set)
+    for y in (1986, 2004, 2007, 2010, 2013, 2017, 2021):
+        path = os.path.join(REPO, f'PGMRoster_{y}.json')
+        if not os.path.exists(path): continue
+        for q in json.load(open(path)):
+            if q['teamID'] in ('Free Agent', 'Rookie'): continue
+            k = (norm(q['forename'] + ' ' + q['surname']), q['position'])
+            fams[k].add(q['appearance'][0].replace('Head', '')[0])
+    return {k: next(iter(v)) for k, v in fams.items() if len(v) == 1}
+
+def stage4(recs):
+    lib = build_library()
+    stat = collections.Counter()
+    for p in recs:
+        r = p['_src']
+        key = norm(p['forename'] + ' ' + p['surname']) + '|' + p['position']
+        rng = seeded(key, 'skin')
+        pski = int(r['PSKI'])
+
+        libfam = lib.get((norm(p['forename'] + ' ' + p['surname']), p['position']))
+        if libfam:
+            skin = libfam; src = 'library'; stat['skin: library'] += 1
+        elif pski == 0:
+            skin = draw(rng, LIGHT_BAND);  src = 'pski'; stat['skin: PSKI light'] += 1
+        elif pski in (2, 3):
+            skin = draw(rng, DARK_BAND);   src = 'pski'; stat['skin: PSKI dark'] += 1
+        else:
+            skin = draw(rng, ABSTAIN_BAND); src = 'abstain'; stat['skin: ABSTAINED (PSKI 1)'] += 1
+        p['_skin_src'] = src
+
+        # Face shape from REAL weight and age. PWGT + 160 = pounds (verified
+        # exactly on Brady 225, Donald 280, Joe Thomas 312). Thresholds 260 lb
+        # and age 30: a thin young, b thick young, c thin old, d thick old.
+        lb = int(r['PWGT']) + 160
+        age = int(r['PAGE'])
+        variant = ('d' if lb >= 260 else 'c') if age >= 30 else ('b' if lb >= 260 else 'a')
+        p['weight_lb'] = lb
+
+        phcl = int(r['PHCL'])
+        hair = HAIR_FAM.get(phcl)
+        if hair is None:
+            hair = '1'; stat['hair: PHCL out of range -> black'] += 1
+        else:
+            stat['hair: PHCL'] += 1
+
+        hr = seeded(key, 'hair')
+        p['appearance'] = [
+            f'Head{skin}{variant}',
+            f'Eyes1{hr.choice("abcde")}',
+            f'Hair{hair}{hr.choice(HAIR_STYLES[hair])}',
+            f'Beard{hair}{hr.choice(BEARD_STYLES)}',
+            f'Eyebrows{hair}{hr.choice("ab")}',
+            f'Nose{skin}{hr.choice("abcd")}',
+            f'Mouth{skin}{hr.choice("ab")}',
+            'Glasses1e',
+            f'Clothes{hr.choice("12")}',
+        ]
+        p['_skin'] = skin
+
+    print()
+    print('STAGE 4 — appearances')
+    tot = len(recs)
+    for k, v in sorted(stat.items()):
+        print(f'  {k:34} {v:5}  {100*v/tot:5.1f}%')
+    sourced = tot - stat['skin: ABSTAINED (PSKI 1)']
+    print(f'  skin sourced or library-backed       {sourced:5}  {100*sourced/tot:5.1f}%')
+
+    # --- structural rules, asserted rather than eyeballed
+    for p in recs:
+        a = p['appearance']
+        assert a[0].replace('Head','')[0] == a[5].replace('Nose','')[0] == a[6].replace('Mouth','')[0], \
+            f'head/nose/mouth family split for {p["forename"]} {p["surname"]}'
+        assert a[2].replace('Hair','')[0] == a[3].replace('Beard','')[0] == a[4].replace('Eyebrows','')[0], \
+            f'hair/beard/eyebrows family split for {p["forename"]} {p["surname"]}'
+        assert a[7] == 'Glasses1e', 'players never wear glasses'
+        assert len(a) == 9
+    print('  family rules, glasses, array length: all pass')
+
+    fam = collections.Counter(p['_skin'] for p in recs)
+    print('  head family: ' + '  '.join(f'{k}:{100*v/tot:.1f}%' for k, v in sorted(fam.items())))
+    var = collections.Counter(p['appearance'][0][-1] for p in recs)
+    print('  head variant: ' + '  '.join(f'{k}:{100*v/tot:.1f}%' for k, v in sorted(var.items())))
+    return recs
+
+def conditional_pski(recs):
+    """THE mandatory check. Split the output by the source value and confirm the
+    groups differ. A face generator seeded on a name produces a perfectly
+    reasonable spread of skin tones and fails only here — that bug shipped in
+    2007 and passed every distribution check."""
+    print()
+    print('CONDITIONAL — appearance skin family vs source PSKI')
+    print('  (the validator runs its own `conditional` pass on the finished')
+    print('   file at stage 10; this is the same computation, in memory, so no')
+    print('   parallel artifact exists to drift)')
+    print()
+    for label, subset in (('all records', recs),
+                          ('PSKI-sourced only (library excluded)',
+                           [p for p in recs if p['_skin_src'] != 'library'])):
+        print(f'  {label}:')
+        print(f'    {"PSKI":>5}{"n":>6}   ' + '  '.join(f'fam{f}' for f in '12345') + '     light%')
+        rows = collections.defaultdict(collections.Counter)
+        for p in subset:
+            rows[int(p['_src']['PSKI'])][p['_skin']] += 1
+        lights = {}
+        for k in sorted(rows):
+            tot = sum(rows[k].values())
+            cells = '  '.join(f'{100*rows[k][f]/tot:5.1f}' for f in '12345')
+            light = 100 * sum(rows[k][f] for f in '123') / tot
+            lights[k] = light
+            print(f'    {k:>5}{tot:>6}   {cells}   {light:6.1f}%')
+        sep = lights.get(0, 0) - max(lights.get(2, 0), lights.get(3, 0))
+        print(f'    separation, PSKI 0 light% minus darkest of 2/3: {sep:+.1f} points')
+        assert sep > 40, f'PSKI groups do not separate ({sep:+.1f}) — the source was never used'
+        print()
+
 if __name__ == '__main__':
     recs = stage3()
+    recs = stage4(recs)
+    conditional_pski(recs)
