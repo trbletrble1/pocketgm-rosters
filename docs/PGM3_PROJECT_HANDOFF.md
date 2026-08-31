@@ -7,6 +7,9 @@
 >   list in the vocabulary section below.
 > - `PGM3_VERIFIED_FACES.md` — the two registry blocks, and the rule that hand
 >   edits are locked.
+> - **`.ros` files no longer need Windows.** `tools/rosgui.py` decodes them
+>   directly, verified exact against Xtreme on three files. Its "Screen" button
+>   gives a usable / unusable verdict in a second — see `PGM3_SOURCE_QUALITY.md`.
 > - **Open finding (2026-08-31):** head family 4 ranges 14–39% across the
 >   published files, worst in 2010. Not a regression — it predates the skin
 >   repair and has never been investigated. `pgm3_validate.py faces` flags it.

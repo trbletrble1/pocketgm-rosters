@@ -250,3 +250,50 @@ and the registry's own 24.1%.
 The registry's staff faces were audited against it and found correct in 135 of
 135. Where the file disagreed it was the file that was wrong, including calling
 Belichick dark and Leslie Frazier light.
+
+
+---
+
+## Reading `.ros` files without Windows
+
+`tools/rosgui.py` (GUI) and `tools/rosdump.py` (command line) decode Madden
+`.ros` binaries directly. Verified exact against Xtreme DB Editor's own exports
+on three files — 2000, 2008 and 2020 ROJO — both `PLAY` and `COCH`, roughly
+900,000 values, every one matching.
+
+Build a double-clickable Mac app with `tools/build_mac.sh`.
+
+**The screen is the point.** `rosgui`'s "Screen (usable?)" button runs the tests
+in this document — middle-value gate on `PSKI`, dark share, `PHCL` band — in
+about a second, without exporting anything. Drop a new `.ros` on it and you know
+whether it is worth using before you spend any time on it. That is the check
+that would have caught 2003, 2004 and 2013 before they were trusted for months.
+
+It measures shape, not correctness. A file can pass the screen and still be
+wrong. Anchor-testing remains the real check.
+
+### All known exports share one schema
+
+All 18 `PLAY` exports in `sources/madden/` carry an identical 110-column schema,
+and all 5 `COCH` exports an identical 68-column one — 2000 through 2025, EA-derived
+and fan-made alike. Community modders swap rosters inside a single game build;
+they do not change the format. The decoder reads each file's own schema anyway,
+so a genuinely different layout would still work, but in practice the case does
+not arise.
+
+The one different layout available is `template.dbt` shipped with Xtreme DB
+Editor, which has 131 `PLAY` fields against these files' 110. It contains no
+records, so it can only exercise schema reading, not value decoding.
+
+### `2020ROJOROSTER_V22` has out-of-range coach skin
+
+Its `CSKI` carries values of **4 and 7** on about 7% of coaches. No other file
+does; 2000 and 2005 use only 0, 1 and 2. Xtreme reads the same values, so this
+is real data rather than a decoding fault — a modder artefact.
+
+It does not change ROJO's verdict. Recorded here because it looks exactly like a
+parser bug and will be re-investigated as one otherwise.
+
+**Coach skin has no middle value.** `CSKI` 0 is light and anything above it is
+dark, unlike player `PSKI` where 1 means unknown and must abstain. Counting
+coach dark as `>= 2` undercounts — it read ROJO at 17% against a true 20%.
