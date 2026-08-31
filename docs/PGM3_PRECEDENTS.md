@@ -1342,3 +1342,194 @@ current value.
 
 The operation was two rows. It was the smallest write of the session and the only
 one that was wrong.
+
+---
+
+## Scouts and physios are generated — a deliberate exception to no-invented-humans
+
+**Ruling (Ryan, 2026-08-31): keep generating them.** Real NFL scouting and medical
+staffs are not documented for any season this project covers, and inventing a
+plausible name is better than shipping an empty slot or attaching a real coach's
+name to a job he never held.
+
+This is the one place the no-invented-humans principle is deliberately set aside,
+and it has been the practice since the first build without ever being written
+down. The measurement that establishes it was already true: **1,687 distinct
+scout and physio names across seven published seasons, 0–7% recurrence between
+seasons, and almost no overlap with the real coach pool.** Roughly 160 invented
+people per season.
+
+The reason to record it rather than leave it implicit: a future session finding
+1,687 undocumented humans in the files will either re-litigate the question or
+quietly start researching them. Both waste a session. The exception is narrow —
+**scouts and physios only.** Coaches are researched, and the free-agent coaching
+pool rule (real names form a clean top block, invented names strictly below)
+still stands.
+
+---
+
+## A source file's tables can come from different seasons — date each one independently
+
+The 2000 Madden export ships two tables. `PLAY` is genuinely the 2000 season.
+`COCH` is the **stock Madden 08 coach table** — 2007 staffs, sitting in a file
+named for 2000, in the same archive, in the same 68-column schema every other
+`COCH` export uses.
+
+It was caught by reading the head coaches out and recognising them: Tomlin at
+Pittsburgh, McCarthy at Green Bay, Kiffin at Oakland, Petrino at Atlanta, Payton
+at New Orleans. Every identifiable name is 2007. Nothing structural was wrong
+with the file — the schema validated, the row count was normal, the ratings were
+in range. Only the identities gave it away.
+
+**Date every table in a source file against known facts of the season it claims,
+before using any of it.** The filename dates the archive, not its contents. A
+community modder replacing the player table and leaving the coach table at stock
+produces exactly this, and it is invisible to every structural check.
+
+Consequence for 2000: all 31 coaching staffs were researched from PFR team season
+pages instead. That work is in `sources/coaches_2000.csv` and cost most of a
+session. Finding it after the staff file was built would have cost the build too.
+
+The same shape has now appeared twice. `TGID 0` in the same `PLAY` table is 80
+rows of 2007-era players — **90% name-match against the published 2007 file,
+against 3.7% for the real free agent pool.** A brief described it as the free
+agent pool. It is Madden 08 base-roster contamination. Contamination in one table
+is a reason to suspect the others.
+
+---
+
+## Two columns holding the same field are not interchangeable — pick one and record why
+
+The 2000 `PLAY` table carries three such pairs, and they behave differently:
+
+- **`PTSA` vs `PVTS`** — total contract value. They **disagree on 449 rows**,
+  median 563 against 498. Not a duplicate; one is stale. **Use `PTSA`.**
+- **`PVSB` vs `PSBO`** — signing bonus. Identical on every row of the file.
+  Either works; use `PSBO`, which the handoff already names.
+- **`PGID` vs `POID`** — identical on **2,469 of 2,575 rows (95.9%)**. Every one
+  of the 106 differences sits in `TGID` 33 and 34, the invented filler teams. On
+  the real cohort the pair is exact.
+
+That last one is why the check has to be scoped. Measured across the whole file,
+`PGID == POID` reads as false and looks like a finding. Measured on the cohort
+actually being built, it is true. **Run the comparison on the real cohort, not
+the raw file** — the same rule as "find the real cohort before measuring
+anything", applied to column identity rather than correlation.
+
+Where two columns disagree, the choice is a ruling and belongs in the build log
+with the row count and the direction of the difference. A later session that
+finds `PVTS` and doesn't know why it was passed over will try it.
+
+---
+
+## Check the top of every numeric column before assuming 0–99
+
+**Nine columns in the 2000 `PLAY` table exceed 99.** A parser that clamps or
+`uint8`s an attribute silently truncates them, and the result is a plausible
+value in the right range for the wrong player.
+
+| column | max | rows over 99 |
+|---|---|---|
+| `PCHS` | 109 | 22 |
+| `PLSS` | 109 | 76 |
+| `PAWR` | 108 | 1 |
+| `PSBS` | 107 | 10 |
+| `PTGH` | 104 | 1 |
+| `PTHP` | 104 | 1 |
+| `PFCS` | 103 | 2 |
+| `PLPL` | 100 | 510 |
+| `PMOR` | 100 | 915 |
+
+`PLPL` and `PMOR` are personality fields the build derives rather than sources,
+so they do not affect 2000 — but they are on a 0–100 scale, not 0–99, and a
+future build that does try to source them will clip nearly a thousand rows.
+
+The single-row cases are the dangerous ones. `PAWR` at 108 is one player, and one
+clipped value in 1,637 will never show up in a distribution check, a zero-pattern
+comparison, or a median. **Print the max of every column you intend to read.**
+
+---
+
+## When the handoff names a recurring bug, check whether the source already solves it
+
+Contract length has bitten this project repeatedly — the handoff documents it as
+a shipped defect with an in-game symptom (the game refuses extensions when
+`length` contradicts `draftSeason`). The fix has been reconstruction from a
+rookie ladder every time.
+
+**`PCYL` is contract years remaining. It was in the source all along.**
+`PCYL ≤ PCON` holds on **1,637 of 1,637** rostered rows, and **31.8% sit at one
+year remaining against a published target of 34–39%** — close enough that the
+field is real and only lightly off the target distribution.
+
+`PCON` is total length and is the field previous builds took at face value. That
+is the bug: the remaining-years field existed, was never read, and the value that
+was read meant something else.
+
+**Before reconstructing a field, audit the source for a column that already holds
+it.** The recurring-bug list in the handoff is a list of fields worth searching
+the source for, not just a list of things to check afterwards.
+
+---
+
+## 2000 build — audit findings
+
+Findings from the source audit, recorded because they exist nowhere else. General
+lessons are in the sections above; this is the 2000-specific reference.
+
+### Cohort
+
+| `TGID` | rows | what it is |
+|---|---|---|
+| 1–31 | **1,637** | the real 2000 rosters — 31 teams |
+| 32 | 52 | Houston Texans placeholder. Every name reads `Texans CB #20`. The franchise did not exist until 2002 |
+| 33, 34 | 53, 53 | invented filler |
+| 0 | 80 | Madden 08 base-roster contamination (see above) |
+| 1009 | 600 | free agents |
+| 1014 | 94 | free agents |
+
+**Ruling (Ryan, 2026-08-31): drop `TGID` 32.** 52 invented players on a franchise
+that did not exist that season. Drop 0, 33 and 34 for the same reason.
+
+**Ruling (Ryan, 2026-08-31): keep all 694 free agents** — `TGID` 1009 + 1014.
+
+### Fields
+
+- **`PBTK` → `trucking`**, correlation **0.882**. Not in the handoff's direct-map
+  list; add it.
+- **`PDRO` is a real draft round.** Correlation **0.796** with published
+  `draftNum`, and `PDRO == 15` is the undrafted sentinel (198 rows), of which
+  **96.8% carry the 224 floor**.
+- **`PDPI` is not a pick number. Reject it.** Correlation 0.152, with 562 rows
+  parked on sentinel 33. `draftNum` comes from nflverse.
+- **Personality fields do not source from this CSV.** `PEGO`, `PMOR`, `PIMP`,
+  `PLPL`, `PTEN`, `PVCO`, `PKRT`, `PYWT`, `PFEx` and `PTAL` were tested against
+  `loyalty`, `greed`, `ambition`, `discipline` and the five unsourceable
+  attributes. **Nothing above 0.34, most under 0.1.** Keep deriving them.
+
+### Skin
+
+`PSKI` is **four-level** in this file, not three:
+
+| value | share | reading |
+|---|---|---|
+| 0 | 32.4% | light |
+| 1 | 11.1% | **bimodal, ~54% dark — abstain** |
+| 2 | 30.0% | dark |
+| 3 | 26.5% | dark |
+
+Anchor-tested at **19/20 light and 17/17 dark**. Value 1 is not a middle tone;
+forcing it to one side is the exact error recorded under "Value 1 means don't
+know". Abstain, per `PGM3_SOURCE_QUALITY.md`.
+
+### Ratings — the inflation traps are live
+
+PS2-era inflation is present and concentrated where the handoff says it will be.
+Measured on the rostered cohort: the kicker/punter group sits at **median
+`POVR` 93** and fullbacks at **86.5**, against a league median of 78.
+
+Rescale **per position**, not cohort-wide. A cohort-wide rescale puts kickers and
+punters at the top of the league — that is a documented past failure, and this
+file would reproduce it.
+
+---
