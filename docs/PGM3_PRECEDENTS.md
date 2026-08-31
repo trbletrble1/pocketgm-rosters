@@ -2498,3 +2498,49 @@ around what centre — and fill from that. Ten failing check groups became one.
 This is why the zero-pattern check exists at all. It compares against a
 reference precisely so that no one has to remember the field list, and it caught
 this in one run.
+
+### Second instance, same session, different domain
+
+Two commits after writing the paragraph above, the same author merged `main`
+into a build branch, hit a reported `CONFLICT`, and committed through it —
+twice. The first fix then restored **only the file the error message named**,
+leaving a 4.7MB registry equally broken through another commit.
+
+Both halves are the same failure as the attribute list:
+
+- **Checked the thing I did, not the thing the tool said it had done.** The
+  output being read was a doc edit; `CONFLICT` was on screen and unacted on.
+- **Fixed the instance shown rather than sweeping for the class.** `grep -rl
+  '^<<<<<<< '` across the tree takes one second and catches every damaged file
+  at once. Restoring one file by name catches one.
+
+**Two independent sightings in one session, in unrelated domains, by an author
+who had just written the rule.** That is the argument for structural checks over
+care: the knowledge was present, recent, and self-authored, and it did not
+prevent either instance. The fix in both cases was the same shape — stop
+enumerating what you remember, run something that enumerates for you.
+
+---
+
+## Format churn defeats review, and review is the control that catches everything else
+
+Deleting six keys from the face registry produced a **180,323-line diff**,
+because the write used `json.dump(..., indent=1)` on a file stored compact. The
+data change was correct. The diff was unreviewable.
+
+That is not cosmetic. **The conflict damage described above went unnoticed
+through two commits, and a reviewable diff is exactly what would have shown
+it.** An unreviewable diff disables the control that catches the mistakes no
+specific check anticipates — which is most of them.
+
+The handoff records the 2007 rewrite as a formatting note: *"expect a whole-file
+diff rather than a clean one."* This is the version that says what it costs.
+
+**Rule: match the file's existing format when writing it back.** Read the first
+bytes and reproduce them — compact stays compact, indented stays indented,
+`ensure_ascii` stays as found. Rewritten that way, the same six deletions
+produced a **one-line diff**.
+
+Corollary: if a change genuinely requires reformatting, do it as a separate
+commit containing nothing else, so the substantive change stays reviewable on
+its own.
