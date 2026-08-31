@@ -315,8 +315,26 @@ def stage4(recs):
         if flag: bad.append(f'family {k} at {share:.1f}% against a published {lo:.1f}-{hi:.1f}%')
         print(f'    family {k}: {share:5.1f}%   published {lo:5.1f} - {hi:5.1f}{flag}')
     assert not bad, 'head family distribution out of band: ' + '; '.join(bad)
+    # Aggregate dark share. The per-family check above passes this file while
+    # the aggregate does not, which is why both are needed: every family can sit
+    # inside its own range while the light/dark balance sits outside.
     dark = 100 * (fam['4'] + fam['5']) / tot
-    print(f'    dark share {dark:.1f}% (real NFL of the era ~65-67%)')
+    dk = []
+    for y in (1986, 2004, 2007, 2010, 2013, 2017, 2021):
+        path = os.path.join(REPO, f'PGMRoster_{y}.json')
+        if not os.path.exists(path): continue
+        c = collections.Counter(q['appearance'][0].replace('Head', '')[0]
+                                for q in json.load(open(path))
+                                if q['teamID'] not in ('Free Agent', 'Rookie'))
+        t2 = sum(c.values()); dk.append(100 * (c['4'] + c['5']) / t2)
+    lo, hi = min(dk), max(dk)
+    flag = '' if lo <= dark <= hi else f'   <-- OUTSIDE published {lo:.1f}-{hi:.1f}'
+    print(f'    dark share {dark:.1f}%   published {lo:.1f} - {hi:.1f}{flag}')
+    if flag:
+        print(f'    NOT failing the build on this: it is a property of the source,')
+        print(f'    not of the mapping. PSKI resolves to {100*33.1/(33.1+56.1):.1f}% light before')
+        print(f'    anything is assigned. Widening the band to make the file pass')
+        print(f'    would be fitting the check to the data. NEEDS A RULING.')
     var = collections.Counter(p['appearance'][0][-1] for p in recs)
     print('  head variant: ' + '  '.join(f'{k}:{100*v/tot:.1f}%' for k, v in sorted(var.items())))
     return recs

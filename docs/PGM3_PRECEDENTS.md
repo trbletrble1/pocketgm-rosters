@@ -1786,12 +1786,36 @@ light family, so the within-band spread must come from the published population.
 Fitting the internal spread through `PSKI` is fitting noise through a biased
 join.
 
-**The published files do not agree with each other on the internal spread.**
-Within-light f1/f2/f3 runs 77.6/8.0/14.4 in 2004, 34.9/18.3/46.8 in 2010 and
-48.5/49.7/1.8 in 2021 — three incompatible conventions, not one convention with
-noise. The union is the best available target and not a stable one. This is the
-same open finding already recorded for family 4 ranging 14–39%, and it means the
-`faces` distribution check can only ever catch gross outliers.
+**The published files do not agree with each other on the internal spread — and
+it is seven conventions, not three.** Within-light f1/f2/f3:
+
+| file | f1 | f2 | f3 |
+|---|---|---|---|
+| 1986 | 50.2 | 25.7 | 24.1 |
+| 2004 | 77.6 | 8.0 | 14.4 |
+| 2007 | 66.8 | 10.1 | 23.1 |
+| 2010 | 34.9 | 18.3 | 46.8 |
+| 2013 | 34.3 | 23.6 | 42.1 |
+| 2017 | 64.6 | 30.2 | 5.2 |
+| 2021 | 48.5 | 49.7 | 1.8 |
+
+**Family 3 runs from 1.8% to 46.8% of the light band.** That is not one
+convention with noise; every file did something different.
+
+**So 54/25/21 is an ARBITRARY DEFAULT, not a fit, and must not be read as one.**
+It is the pooled union of seven incompatible populations, which makes it a
+manufactured eighth convention matching none of them — the same
+pooling-manufactures-a-rule failure this document records elsewhere, in a new
+place. It was chosen because there is no source for within-light family, `PSKI`
+does not carry it, and every alternative is equally arbitrary. **The evidence
+says the target is undefined.** A later session must not treat the union as
+authoritative or build anything on it; if a real source for within-light family
+ever appears, it supersedes this outright with no argument needed.
+
+Consequence: the `faces` distribution check can only ever catch gross outliers
+like 1986, and the build-time assertion added here inherits that weakness — with
+family 3 spanning 0.7–14.6% overall, the band passes almost anything. It is a
+floor, not a substitute for looking.
 
 **The check is now an assertion in `tools/build_2000.py`, not a reviewer's job.**
 Every head family is compared against the min/max across the published files and
