@@ -3346,37 +3346,40 @@ reconciles to the source needs no explanation; one that merely sounds
 reasonable is not closed.
 
 
-## The archive's coverage is U-shaped around 2004, not thin toward the present
+## Pre-2000 is the archive's weak cohort — and that is ALL that survives the cut
 
 Asked what distinguishes the drift cases the archive cannot resolve. Position
-does not — the front seven is 69% of the unsolvable set and 71% of the
-solvable one. **Era does, and not in the direction that seems obvious.**
+does not: the front seven is 69% of the unsolvable set and 71% of the solvable
+one. Era does — but **only one era claim survives a change of denominator.**
 
-Source count per entry, all 25,364 archive records:
+Share of archive entries sitting at 1-2 sources, by the entry's era:
 
-    era        entries   median sources   share at 1-2 sources
-    <2000       11,277          1                 69%
-    2000-09      4,554          4                 33%
-    2010-19      4,899          2                 60%
-    2020+        3,665          2                 63%
+    bucket by     <2000   2000-09   2010-19   2020+
+    first_seen      69%       33%       60%      63%
+    last_seen       70%       49%       56%      47%
 
-**Coverage peaks at 2000-09 and falls away in BOTH directions.** The archive is
-built from ESPN NFL 2K5 community rosters and the game shipped in 2004, so its
-own era is the best documented; earlier players are retroactive additions and
-later ones are forward projections by modders. The pre-2000 cohort is the
-worst covered of all, and it is also the largest.
+`era_certain` changes nothing. **The date field changes everything between the
+three modern bands** — under `first_seen` coverage looks U-shaped with 2020+
+second-worst; under `last_seen` 2020+ is the best-covered band. Both are
+defensible, because a player active 2018-2026 belongs to both buckets and the
+choice decides which one counts him.
 
-**Two wrong characterisations preceded this one and both were stated before
-the number was read.** First "the unsolvable share rises toward the present",
-from a per-FILE rate that is not monotone and reads 92% on a cohort of 13.
-Then "the archive holds fewer sources the more recent the player", printed as
-a conclusion in the same script whose output contradicts it.
+**What holds either way: pre-2000 is much worse than everything else — 69-70%
+against 33-63% — and it is also the largest cohort at ~11,200 entries.**
+Nothing else about the era ordering is safe to state.
 
-The per-file rate mixes cohorts; the per-entry rate does not. **Choose the
-denominator before looking at the answer, and read the table before writing the
-sentence under it.**
+**Three wrong characterisations preceded this, each written before the number
+under it was read.** "Rises steadily toward the present", from a per-file rate
+that is not monotone and reads 92% on a cohort of 13. Then "fewer sources the
+more recent the player", printed as a conclusion in the same script output that
+refutes it. Then "U-shaped, 2020+ second-worst", which is one denominator's
+artifact presented as a property of the data.
 
-Practical consequence for future builds: **a modern-season build has the
-archive's second-worst coverage**, and the current 2026 cohort has 74% of its
-drift cases unsolvable from the archive. Photo checks and hand verification are
-load-bearing for recent players in a way they are not for 2004.
+**A finding that moves when you change the denominator is a property of the
+cut, not of the archive.** Run the alternative before writing the sentence —
+here it was one extra field and four numbers.
+
+Kept separate deliberately: **74% of the 2026 cohort's DRIFT cases are
+unsolvable from the archive.** That is a different measurement on a selected
+subset — drift cases are not the general population — and it stands on its own
+without the era claim.
