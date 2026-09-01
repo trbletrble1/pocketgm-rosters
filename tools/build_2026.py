@@ -106,8 +106,42 @@ def load_madden(path):
         r['_fam']   = FAMILY_FROM_MADDEN[r['Position']]
     return rows
 
+# ------------------------------------------------- manual source additions
+# Players who fell through a SOURCE GAP, not through a rule. Each is a real
+# free agent the pipeline could not see because no input carries him: absent
+# from Madden 27 and from nflverse's 2026 roster, though present in the 2025
+# JINX file that tier 2 already uses for exactly this case.
+#
+# Injected as source rows rather than hand-built records, so they go through
+# the ordinary tier-2 path -- conversion onto the M27 scale, attributes,
+# contracts, faces, and every assertion -- instead of bypassing it.
+#
+# NOT a place for players the rules deliberately exclude. Aaron Donald was
+# raised and declined: he is retired, and every published season's pool holds
+# men who were in the league last year and out of it now. An unretirement
+# would make him a declared exception, the way the 2000 Texans are.
+MANUAL_FREE_AGENTS = [
+    dict(full_name='Bobby Wagner', first_name='Bobby', last_name='Wagner',
+         position='LB', depth_chart_position='MLB', status='CUT',
+         team='', birth_date='1990-06-27', height='72', weight='242',
+         years_exp='14', draft_number='47', entry_year='2012',
+         rookie_year='2012', draft_club='SEA', jersey_number='54',
+         season='2026', college='Utah State',
+         _reason='played 2025, contract expired, pursued by Dallas; absent '
+                 'from Madden 27 and nflverse 2026. Source gap, not a rule.'),
+]
+
 def load_nflverse(path):
     rows = load_csv(path)
+    have = {norm(r['full_name']) for r in rows}
+    for extra in MANUAL_FREE_AGENTS:
+        if norm(extra['full_name']) in have:
+            raise AssertionFailed(
+                f"{extra['full_name']} is a manual addition but the source now "
+                f"carries him -- remove the entry rather than shipping a duplicate")
+        row = {k: '' for k in (rows[0].keys() if rows else ())}
+        row.update({k: v for k, v in extra.items() if not k.startswith('_')})
+        rows.append(row)
     for r in rows:
         r['_team'] = TEAM_FROM_NFLVERSE.get(r['team'], r['team'])
         r['_norm'] = norm(r['full_name'])
