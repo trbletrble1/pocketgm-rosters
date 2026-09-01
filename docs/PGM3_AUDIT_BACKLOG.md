@@ -89,3 +89,30 @@ independently excludes most of the legends anyway (Gibbs would be 87, Seifert
 
 - **Teach the `faces` gate both `_verified_keys` formats** — prerequisite for §2.
 - **The 170 thin drift cases** — see §3.
+
+---
+
+## 6. Found at the `main` merge
+
+**The faces gate cannot tell namesakes apart, and reports them as drift.**
+Adding 2026 to the cross-season faces run took head-family disagreements 7 -> 8
+and hair 16 -> 17. Both extras are one person: `chris brazzell|WR`.
+
+    2000   Chris Brazzell      age 22  DAL  rating 58   Head4a / Hair1o
+    2026   Chris Brazzell II   age 22  CAR  rating 72   Head5a / Hair1n
+
+Two different people. `norm()` strips suffixes anywhere — correct and necessary
+for the join layer — so father and son collapse to the same `name|position`
+key in the checker. Both faces sit in the dark band (4 and 5), so nothing is
+visibly wrong; the gate is reporting a false positive, not a defect.
+
+This is the same namesake problem the join layer already solved with birth
+dates (Michael Carter vs Michael Carter II). The faces gate never got that
+treatment. **Fix belongs with the "teach the gate both key formats" work in
+§2** — the key is the shared weakness.
+
+**Staff faces failures (21 head family / 38 hair / 40 face / 2 verified-key
+overwrites, Jim Mora in `PGMStaff_1986` and `PGMStaff_2000`) are ALL
+pre-existing.** No staff file except 2026 was modified by this build, and the
+gate returns byte-identical output on the old `main`. They belong to the
+archive, not to this work.
