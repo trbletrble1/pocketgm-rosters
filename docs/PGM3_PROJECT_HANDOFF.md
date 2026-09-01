@@ -240,6 +240,7 @@ Important refinement: position-specific attributes (QB accuracy, kick accuracy, 
 - `growthType` — **31 elements** for players. Sum of positive values must equal `(potential - rating) × 50` exactly. Correlation checks are not sufficient
 - `draftNum` — **real pick number for everyone**. Prospects carry their actual slot; rostered and free agent players carry their real pick, with **224 as the undrafted floor**. No file uses 0 or −1 anywhere. Verified across all four
 - `draftSeason` — game's internal clock has current season = **2026**. Historical builds offset by (2026 − season year). Prospects land 2027–2030
+- **THE INTERNAL CLOCK APPLIES TO `startSeason` TOO, and to any season-valued field.** Every published file treats the current season as **2026**, whatever year the file models. `PGMStaff_2013` carries `startSeason` up to 2026 and `PGMStaff_2010` up to 2024; `draftSeason` reads 2027–2030 in both 2013 and 2021. A 2013 file containing coaches who start in 2026 is **not** a defect. Treating either field as a real-world year manufactures offsets, and the failure is silent — subtracting the file year gave a 2013 coach an offset of "+13" and put 52% of a staff build onto the 2026 ceiling *while reporting a perfect age/startSeason correlation*. A derived field agreeing with its source proves the derivation, never the source
 - Rosters run 53–69 per team. The game flags anything over 53 but all three files ship this way — built from everyone who played that season
 - Cap ceiling ~$280M; no team should exceed it
 - `length` — remaining contract years. **Two constraints, both required.** (1) It must be consistent with `draftSeason`: a recently drafted player is still on a rookie deal and the game will refuse extensions if `length` says otherwise — the ladder runs 4, 3, 2, 1 by years pro. (2) The overall distribution is heavily weighted short: ~34–39% of rostered players are on 1-year deals, and nothing exceeds 7. Fit both, not just the ladder. Rostered players need `length ≥ 1`; free agents need `length = 0`. Distributions for both are in `PGM3_SCHEMA_REFERENCE.json`
@@ -558,9 +559,24 @@ The figures long treated as hard caps — $27,600,000 salary, $34,100,000 eSalar
 
 Caveat on the test: one player's age changed between import and export, so a small amount of game time passed. Not enough to explain a 65% rewrite of `eSalary`, but it is not a perfectly clean round trip. The salary result is unaffected — 100% identical is 100% identical.
 
-**Team payroll cap is a parameter, not a constant.** It is the real NFL cap for the season being built and moves every year — 2026 is $301.2M. The old hardcoded $280M was stale. Pass `--team_cap=` explicitly for any build. Note the check measures salary+guarantee, which the published files already exceed by design, so it is a sanity guard rather than a true cap check.
+**PAYROLL BASIS — pinned by measurement, reproducible on a clean clone.** Rank by **salary+guarantee**, take the **top 53**, sum **salary+guarantee**, take the median across the 32 teams. That reproduces every published file to the dollar:
 
-**On era scaling:** the published files are not scaled to their seasons — 2004 runs $179M salary against a real $80.6M cap. That's a defect nobody noticed rather than a convention. New builds should ship real numbers; don't inflate accurate data to match.
+| file | median top-53 | file | median top-53 |
+|---|---|---|---|
+| 1986 | 197,400,001 | 2010 | 197,428,500 |
+| 2000 | 197,399,997 | 2013 | 197,399,995 |
+| 2004 | 197,424,500 | 2017 | 197,400,004 |
+| 2007 | 197,426,500 | 2021 | 197,426,500 |
+
+$29k of spread on $197.4M. **The basis matters:** ranking by salary instead of salary+guarantee reads 2017 $20.4M low, and top-51 scatters by $1M, which is why this read as arguable for years.
+
+**Scale to that constant, not to the real NFL cap.** The engine cap is a fixed ~$280M with **no cap field anywhere in the schema**, so the game cannot know what year it is. Era-accurate dollars leave every team ~$225M of room and the financial layer goes inert — that shipped once and was found only by starting a season with Green Bay. **0 of 256 published team-seasons exceed $280M**; the highest ever shipped is 2017 at $277.6M.
+
+`--team_cap=` in `pgm3_validate.py` is a loose secondary guard, NOT the target. The real gate is `median team payroll` against the published band, plus the hardcoded $280M engine check.
+
+**On era scaling:** era accuracy governs everything EXCEPT the dollar scale. Ratios, orderings, who is paid more than whom, sourced anchors and the league minimum are all era-accurate; the scale alone is set by the engine, because the engine is all there is. One uniform factor preserves every relationship while making the economy live, which is why the fix is a multiply and not a refit.
+
+*(An earlier version of this paragraph said new builds should ship era-real numbers. That is the half that shipped the broken 2000 file. It is deleted rather than qualified — see `PGM3_PRECEDENTS.md`, "Accuracy vs. matching the existing files", amended 2026-08-31.)*
 
 ---
 

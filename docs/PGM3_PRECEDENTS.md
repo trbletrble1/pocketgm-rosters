@@ -2906,3 +2906,181 @@ This is the same trap as the stamina fill counted at 1,267 rostered against
 two correct measurements of different populations otherwise read as a
 disagreement, and the person who has to reconcile them is the one who did not
 take either measurement.
+
+---
+
+## Fixing the instance you were shown, not the class
+
+**Third sighting, and the 2026 build produced two of them an hour apart.**
+
+`stage_contracts` re-ran `stage_attributes` instead of taking the caller's
+cohort. That created new objects, so every `id()`-keyed salary lookup missed
+and the file shipped with **median team payroll $0.0M** — and a perfectly
+correct record count, because the count was never the thing that broke. Found,
+diagnosed, fixed.
+
+**The identical bug was sitting in `stage_appearances` and I walked past it.**
+It surfaced two gates later: 2,107 records had taken a placeholder face and the
+file contained **five distinct appearances across 2,635 records**.
+
+The earlier instances have the same shape. The merge-conflict damage was
+repaired by restoring only the file the error message named, leaving a 4.7MB
+registry equally broken. The degeneracy test was corrected for its threshold
+and then found to have a second fault one step later, running on the inverted
+rather than the raw column.
+
+**The trigger is that a fix feels finished when the symptom goes away.** It is
+finished when you have looked for the same mistake everywhere else it could
+live. `grep` for the pattern, not the instance.
+
+**The practical form is a structural guard, not care.** Both identity bugs are
+now impossible to repeat silently, because the lookup asserts on its own MATCH
+RATE:
+
+```python
+hit = sum(1 for n, m, pos in rows if id(n) in face_of)
+if hit < 0.99 * len(rows):
+    raise AssertionFailed(...)
+```
+
+A miss does not error — it substitutes a default, which is exactly how five
+faces reached 2,635 records. **Wherever a lookup has a fallback, assert the
+rate.** The count assertion is not weak evidence there; it is no evidence.
+
+**And do not key across independently built cohorts.** `id()` is not a value.
+Pass the cohort through, or key on something stable.
+
+
+## `startSeason` and `draftSeason` run on the GAME'S clock, not the season's
+
+**Every published file treats the current season as 2026**, whatever year the
+file models. The handoff states this for `draftSeason`. It is equally true of
+`startSeason` and that was written down nowhere:
+
+    file            startSeason range      draftSeason (prospects)
+    PGMStaff_2010   1989-2024              -
+    PGMStaff_2013   1989-2026              2027-2030
+    PGMStaff_2017   1988-2024              -
+    PGMStaff_2021   1989-2026              2027-2030
+
+A 2013 file containing coaches who start in 2026 is not a defect. Treating
+either field as a real-world year manufactures offsets — subtracting the file
+year gave a 2013 coach an offset of "+13", and fitting on those offsets put
+**52% of a staff build onto the 2026 ceiling** while reporting a perfect
+age/startSeason correlation.
+
+**The failure is silent because the derived field still fits its input.**
+
+## A bound at the reference p90 is a commitment to clipping the top decile
+
+The same operation with the opposite outcome, depending on which statistic it
+is anchored to.
+
+**2013 capped prospect `potential - rating` at 14.** The reference p90 is 12
+and its max is 23-28. A cap at the 90th percentile does not leave a safety
+margin — it removes the top decile by construction. That is why Louis Nix
+shipped above Aaron Donald.
+
+**2026 bounds the same quantity at 28, the reference MAXIMUM.** The first cut
+had produced a rating-52 tackle with a 94 ceiling, a 42-point gap wider than
+anything the archive contains, so a bound was genuinely needed. Bounded at the
+max, the non-hit population lands median 7 / p90 13 / max 23 — matching the
+archive — while the deliberate tail survives.
+
+**Anchor a bound to the reference's extreme, never to its p90.** If the p90
+looks like the right place, what you actually want is a different distribution,
+not a clipped one.
+
+## Calibrate a probability against the population that can produce the outcome
+
+Late-round prospects were given a chance of a large potential gap, calibrated
+to the measured 4.9% of pick-106+ players who reach rating 85. It came out at
+**1.6%**.
+
+The gap is bounded at 28, so a prospect rated 56 **cannot reach 85 at all**.
+Only ~60% of the cohort was eligible, and calibrating against all of them was
+calibrating against a population that could not produce the outcome. Scaling by
+1/0.60 landed it at 5.4%.
+
+Same shape as measuring a correlation within position rather than pooled: the
+denominator has to be the population the thing can actually happen in.
+
+## A check must measure only the population it applies to, or it manufactures doubt
+
+Three instances in one build, all in the same direction — **correct work
+reported as broken**, which is rarer than the reverse and arguably worse,
+because it invites someone to "fix" something that is not broken.
+
+- `conditional_pass` scored tier-2 and tier-3 players against source columns
+  they do not carry. A percentile fill measured against a source it never saw
+  reports a working map as dead.
+- The seam check compared the tier-2 cohort's output against tier-1's and
+  fired on `CB`/`WR` intelligence. Tier-2 players are late signings and IR
+  bodies, genuinely 5-10 rating points worse, and EVERY attribute ran negative.
+  A cohort-quality gap is not a scale error. The fix was to hold the cohort
+  fixed: convert the players who have BOTH representations and compare against
+  their own real values.
+- A `MAD` computed with an `or 1.0` divide-guard that was never divided by
+  printed 1.0 where the truth was 0.0, so a perfect conversion read as though
+  it had spread.
+
+**Before trusting a failing check, ask whether it is measuring the population
+it claims to.** Same root as the pooled-correlation trap: the altitude of the
+measurement is part of the measurement.
+
+## Point a suspect instrument at data whose answer you already know
+
+The staff build put 21% of records on the `startSeason` ceiling against a
+published 1-5%. That is a plausible property of a young coaching cohort, and
+tuning the noise until it went away was the obvious next move.
+
+**Instead, the published 2021 ages were fed through the new formula.** They
+produced 18% against their own actual 3% — which proved the formula was wrong
+independently of the cohort, and sent the search somewhere else entirely,
+where it found that the file-year offset should never have been subtracted.
+
+Same move as running a new spike detector against a file whose provenance is
+known before trusting what it says about files that are not. **A detector that
+misreads data you already understand is measuring the wrong thing, and that is
+cheap to discover and expensive to miss.**
+
+## Independent draws give the right expectation and the wrong counts
+
+Splitting the draft board's coarse `LB` and `EDGE` labels into PGM3 positions
+was done by drawing each prospect independently against a probability. Twenty-
+six linebackers came out 65/35 instead of the intended 54/46, putting OLB at
+17.5% of the LB+EDGE group against a published 32.2%.
+
+That is not bad luck; it is what independent draws do at n=26. Allocating by
+**sorted hash** — order the group by a hash of the name, take the first N for
+each target — gives exact counts, stays reproducible, and does not correlate
+with rank. The result landed 24.6 / 31.6 / 43.9 against a published
+24.3 / 32.2 / 43.5.
+
+**Any small-cohort split in this project has the same exposure.**
+
+## Published-file defects found in 2026, none of them previously noticed
+
+Logged rather than fixed; each is invisible to every existing check.
+
+**2013 team payroll is inversely related to roster cost.** Ranking on real
+contract money, 2026 shows team payroll tracking roster cost at **+0.67**.
+2013 reads **-0.57** — expensive rosters got cheaper payrolls, backwards rather
+than merely absent — and 2021 reads +0.08. Both come from ranking salary on
+rating instead of money. Invisible because every team's payroll is individually
+plausible; only the relationship across teams is wrong.
+
+**2017 carries 37 rostered records at `salary` 0** — 1.9% of that file, 0.0% of
+2010/2013/2021. Now dropped from the 2026 quantile target: a map inherits its
+target's defects, and `log(1)=0` outliers had crushed the measured
+`corr(log salary, rating)` from +0.42 to +0.15, making the reference band look
+far wider than it is.
+
+**The 2026 data bundle collapses both linebacker labels.** Every board `LB`
+maps to MLB and every `EDGE` to DE, leaving the draft pool with **zero OLBs**
+and failing the validator's "missing a LB type" gate. Caught by a gate, not by
+anyone reading the bundle — an input approved as complete.
+
+**The handoff's `growthType` shape is imprecise for staff.** Slots 17-19 are
+*nearly* always zero (19 of 1,152 records, not always) and positives trail to
+slot 26, not 16.
