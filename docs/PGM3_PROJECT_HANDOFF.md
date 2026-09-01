@@ -625,9 +625,75 @@ This was never written down and cost a session to reconstruct. Three tiers, then
 
 **`PSTM` is not stamina.** `PSTA` is. An earlier version of this document had `PSTM`, which is ~54% zeros with a median of 0 in the 2007 file and correlates 0.16 against a known stamina column. `PSTA` runs median 80–85 and correlates 0.86. Following the wrong one ships most of a file with stamina 0, or — if you then rescale to fix the distribution — with a plausible-looking distribution and no real per-player signal. The 2004 file had exactly that: correct median, correlation 0.116 with the true source. Verify any field code against a named column in another year before trusting it.
 
+**The Madden 27 spreadsheet uses full column names, not `.ros` field codes.**
+Both sources are live, so the map has two columns. All sixteen confirmed present
+2026-09-01:
+
+| PGM3 | `.ros` code | Madden 27 spreadsheet |
+|---|---|---|
+| `speed` | `PSPD` | `SpeedRating` |
+| `burst` | `PACC` | `AccelerationRating` |
+| `power` | `PSTR` | `StrengthRating` |
+| `agility` | `PAGI` | `AgilityRating` |
+| `jumping` | `PJMP` | `JumpingRating` |
+| `stamina` | `PSTA` | `StaminaRating` |
+| `tackle` | `PTAK` | `TackleRating` |
+| `passBlock` | `PPBK` | `PassBlockRating` |
+| `rushBlock` | `PRBK` | `RunBlockRating` |
+| `ballSecurity` | `PCAR` | `CarryingRating` |
+| `kickAccuracy` | `PKAC` | `KickAccuracyRating` |
+| `catching` | `PCTH` | `CatchingRating` |
+| `intelligence` | `PAWR` | `AwarenessRating` |
+| `trucking` | `PBTK` | `BreakTackleRating` |
+| `injuryProne` | `PINJ` (inverts) | `InjuryRating` (inverts) |
+
+**The spreadsheet splits fields the `.ros` map collapses.** Two rulings needed and
+now made:
+
+- **Pass accuracy.** `.ros` maps `PTHA` to all three PGM3 accuracy fields. The
+  spreadsheet has `ThrowAccuracyShort/Mid/DeepRating` separately, QB medians
+  84/80/76. **Map them one to one.** Three real columns beat one column copied
+  three times.
+- **Route running.** PGM3 has one `routeRun`; the spreadsheet has Short, Medium
+  and Deep. They correlate 0.977–0.992 with each other and WR medians are
+  identical at 74, so the choice barely matters — **use `ShortRouteRunningRating`**
+  and record it, so a later session does not silently pick a different one. This
+  is the `PVTS`/`PTSA` situation with a much smaller gap.
+
+`ToughnessRating` is NOT stamina. `StaminaRating` is. Same trap as `PSTM`/`PSTA`,
+different labels.
+
 **Direct-mapped attributes still need quantile-mapping per position.** Madden's scales don't match PGM3's at the low end — raw Madden gives offensive tackles jumping ~30 against a working-file 68, kickers power ~34 against 74, QB rushBlock 20 against 40. Copying values across ships several attributes 20+ points low. Let Madden supply the ordering and the working files supply the scale, exactly as with the rating rescale.
 
-**2. No usable Madden source.** Several attributes have no equivalent — vision, decisions, releaseLine, manCover/zoneCover all correlate below ~0.5 against anything in Madden. Fill these from the donor's per-position distribution at the player's rating percentile. That's what `per_position_attr_percentiles_from_2010_2017` in the schema reference is for.
+**2. No usable Madden source — TRUE OF THE `.ros` EXPORTS, NOT OF THE MADDEN 27
+SPREADSHEET.** In the `.ros` files, vision, decisions, releaseLine and
+manCover/zoneCover all correlate below ~0.5 against anything available, and are
+filled from the donor's per-position distribution at the player's rating
+percentile — that's what `per_position_attr_percentiles_from_2010_2017` is for.
+
+**The Madden 27 launch spreadsheet has named columns for all five, 100%
+populated, with correct positional structure.** Measured 2026-09-01:
+
+| PGM3 attribute | spreadsheet column | populated | median |
+|---|---|---|---|
+| `vision` | `BCVisionRating` | 100% | 57 |
+| `decisions` | `PlayRecognitionRating` | 100% | 44 |
+| `releaseLine` | `ReleaseRating` | 100% | 25 |
+| `manCover` | `ManCoverageRating` | 100% | 22 |
+| `zoneCover` | `ZoneCoverageRating` | 100% | 27 |
+| `routeRun` | `ShortRouteRunningRating` | 100% | 26 |
+
+`ManCoverageRating` runs a median of 71 for CB, 67–68 for FS/SS, and 12 for QB
+and C. That is real positional signal, not noise.
+
+**Use them.** A directly named source column beats an inferred field, and filling
+these from percentiles when the column exists throws away real per-player signal
+for a generic spread — the same failure the `PSTM`/`PSTA` section above exists to
+prevent. **Anchor-test each one before trusting it**; a named column is a strong
+prior, not proof.
+
+This does not retroactively change any historical build. Those used `.ros` files
+which genuinely lack the columns.
 
 **Source tiers, best first.** Post-season CSV for the target season → the same season's launch spreadsheet for anyone the CSV misses → an adjacent year's file with a damped age adjustment → derived from draft position and experience. Real data from the right season always beats derivation, even when it means adding a tier. Any value carried between tiers must be re-derived through the current map, never copied — a bias correction fitted to one scale is meaningless on another.
 
