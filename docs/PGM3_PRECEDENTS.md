@@ -10,6 +10,43 @@ If a precedent looks wrong, say so and make the case. Don't quietly do something
 
 **Ship real numbers even when the published files don't.** Payrolls in 2004, 2010 and 2017 aren't scaled to their eras — 2004 runs $179M salary against a real $80.6M cap. That was never a decision, just contracts fitted to PGM3's ceiling with nobody checking. 2007 ships at ~$100M against a real $109M cap, and that's correct. Don't inflate accurate data to match a defect.
 
+**AMENDED 2026-08-31 — the general rule stands, the classification was wrong.**
+"Don't inflate accurate data to match a defect" is still right. What was wrong
+was calling the ~$196M payroll target a defect. **It is a game constraint.**
+PGM3's salary cap is a fixed engine constant of about **$280M** and there is
+**no cap field anywhere in the schema** — the game cannot know what year it
+is. Ship era-accurate dollars and every team has ~$225M of room: nobody is cap
+strapped, every signing is affordable, extensions never bind, and the whole
+financial layer is inert.
+
+**The evidence that it is a convention and not seven independent accidents:**
+on the **top-53** basis the seven files read 197,400,001 / 197,424,500 /
+197,426,500 / 197,428,500 / 197,429,000 / 197,427,000 / 197,426,500 — a **$29k
+spread on $197.4M**, 0.015%, 1986 exact to the dollar. Seven eras agreeing to
+0.015% is not a convention, it is a fitted constant. **Measure on the basis the
+files were built on**: top-51 scatters by $1M and reads like a loose habit;
+top-53 collapses to a single number. The wrong basis turned a fitted target
+into something that looked arguable. The old note read that same spread
+as "contracts fitted to PGM3's ceiling with nobody checking", which is the
+right observation and the wrong conclusion — fitted to the ceiling **is** the
+convention, because the ceiling is all the engine has.
+
+**The narrowing: era accuracy governs everything except the dollar SCALE.**
+Ratios, orderings, who is paid more than whom, the sourced anchors, the league
+minimum — all era-accurate. The scale alone is set by the engine. One uniform
+factor preserves every relationship while making the economy live, which is
+why the fix is a multiply and not a refit.
+
+**Cost of the misclassification:** the 2000 build shipped at $54.6M, was
+flagged correctly by the build session as a divergence from all seven files,
+and was signed off as deliberate. It took an in-game test — Green Bay with
+$200M of room — to find it. **No check could have caught it**: `cross_year`
+skips money fields by design because "they legitimately differ by era", which
+is exactly the assumption at fault, and the `team_cap` guard passed because it
+was handed the real 2000 cap as its parameter. A guard given the wrong
+parameter passes and reads as evidence. Now gated by `median team payroll` in
+`check_roster`, which compares against the published band.
+
 **But first check whether it *is* a defect.** Draft potential looked like the same situation — the handoff said busts should be busts, no file did it. Checking showed the files were right and the handoff was wrong. Verify before overriding.
 
 **Observed range is not accepted range.** Min/max derived from three files describes those files, not what the game accepts. Keep real values that fall outside it:
@@ -23,6 +60,102 @@ If a precedent looks wrong, say so and make the case. Don't quietly do something
 If the game rejects a value, import says so immediately. That's cheap to find out.
 
 ---
+
+## Internal consistency finds impossibility, never wrongness
+
+**2026-08-31, staff ages.** The 2000 staff file carried ages with essentially
+no relationship to the men — Tony Dungy at 70 against a real 45, Jeff Fisher at
+61 against 42, only 13 of 89 checkable coaches within ±2 years. Every check in
+the suite passed.
+
+The reason is worth stating exactly. The internal check available was
+"age minus seasons coached ≥ 28", and it caught **two** records — Reeves
+coaching 19 seasons by age 44, Mora 13 by 30. Those were the only *impossible*
+ones. **Dungy at 70 with four seasons coached is perfectly consistent and 25
+years wrong.** Consistency constrains a value against other values in the same
+record; it cannot reach outside the file to the person.
+
+**The distribution was the disguise:** median 49.5, range 30–72, sitting right
+next to the published files. A plausible marginal with no per-person signal —
+the same shape as the stamina bug (`PSTM` vs `PSTA`) and the appearance bug.
+**Third instance of this exact failure mode. When a field's marginal looks
+right, that is not weak evidence, it is no evidence, and the test is always to
+check individuals against something outside the file.**
+
+**And it propagated silently.** `startSeason` is a fitted function of age
+(r ≈ −0.96 in every modern published file). A wrong age produced a wrong
+`startSeason` **while the correlation stayed perfect**, because a function of a
+bad input still fits its input. A derived field agreeing with its source proves
+the derivation, never the source.
+
+## Match on the occupation, not the name
+
+Same investigation. nflverse `players.csv` looked like the obvious source for
+coach birth dates and it is a trap: it matched 22 of 128 coaches and **4 were
+false positives** — Marvin Lewis, Andy Reid, Bill Callahan and Jimmy Raye never
+played in the NFL, and the Raye match was his son, the father/son merge this
+project has logged before. An 18% false rate on the matches it did make.
+
+**No mechanical discriminator separates them.** Career length fails: the false
+hits had one-season careers, and so do Sylvester Croom and Sean Payton, who are
+true matches.
+
+**What worked was a source that carries the occupation.** One bulk Wikidata
+SPARQL query filtered on `occupation = American football coach` resolved 98 of
+126 in a single request, and the occupation filter is exactly the discriminator
+a name lookup lacks — it separated both Moras, both Ken Andersons and both Jim
+Johnsons without a judgement call. **Prefer a source with a role field over a
+larger source without one.**
+
+Operational note: Wikidata's `wbsearchentities` endpoint rate-limits hard
+(HTTP 429 within ~15 requests, and backoff to 10s did not clear it). The SPARQL
+endpoint takes a `VALUES` block of 126 names in one request and does not.
+
+
+## A repair scoped to the overlap improves every metric and leaves the defect
+
+**2026-08-31, building 2000.** Found 132 players whose skin family disagreed
+between 1986 and 2000 while every other file agreed among themselves. The
+obvious repair was to write those 132 into the face registry with 2000's
+anchor-tested `PSKI` value.
+
+It would have improved every signal available: the all-cohorts family
+disagreement count falls from 163 toward 31, `pgm3_validate.py faces` stays
+clean, cross-file consistency rises. **No check in this project would have
+objected.**
+
+It was still the wrong fix. 131 of the 132 sit in 1986's Rookie cohort, which
+has ~1,334 members, none of them sourced. Repairing the 132 fixes the subset
+that happens to overlap 2000, leaves ~1,200 unsourced records untouched, and
+removes the very signal by which a later session would find them.
+
+**The general form: a fix applied to the subset you can see improves every
+metric while leaving the defect intact and less visible. That is worse than
+not fixing it, because the metrics are how anyone later finds the problem.**
+
+Related to "a correct marginal is the weakest evidence a derived field is
+right" but not the same. That one is about a *field* being wrong while looking
+right. This is about a *repair* being wrong while looking right. Same
+mechanism underneath: measuring the visible subset.
+
+**The trigger to name.** The scope of that fix was "what appears in both
+files" — which has nothing to do with the defect, whose real boundary is a
+cohort inside one file. **Whenever a fix is scoped by what appears in both of
+two things, check whether that scope has any relationship to the defect.**
+Overlap is a property of how you happened to look, not of what is broken.
+
+## The proximate reason is a real finding, which is why it stops you
+
+Same investigation. Asked why the 132 disagreed, the build session answered
+that `faces_1986` keys include `teamID`, so a man on CHI in 1986 and DET in
+2000 can never match. True, specific, verifiable — and the wrong level. That
+explains **how the disagreement got through**; it does not explain **why the
+two sides disagreed**. The cause was that one side had no source at all.
+
+A proximate reason is dangerous precisely because it is a genuine finding.
+It survives checking, so it feels like the answer. **When a mechanism explains
+how something went unnoticed, ask separately what it was that went unnoticed.**
+
 
 ## Contract ceilings — TESTED, none exists
 
@@ -1483,10 +1616,21 @@ lessons are in the sections above; this is the 2000-specific reference.
 |---|---|---|
 | 1–31 | **1,637** | the real 2000 rosters — 31 teams |
 | 32 | 52 | Houston Texans placeholder. Every name reads `Texans CB #20`. The franchise did not exist until 2002 |
-| 33, 34 | 53, 53 | invented filler |
-| 0 | 80 | Madden 08 base-roster contamination (see above) |
+| 33, 34 | 53, 53 | **Detroit Silverdome** and **Seattle Kingdome** — stadium entries, not generic filler. Structural slots that will appear in other Madden files of this era too |
+| 0 | 80 | **EA's own studio team slot, "Tiburon Sharks"** — occupied by Madden 08 base-roster contamination (see above). Both facts are true and complementary: the slot is a permanent EA placeholder, and what is sitting in it here is 2007-era players at a 90% name match to the published 2007 file. That is why the rows read like real players rather than like obvious filler |
 | 1009 | 600 | free agents |
 | 1014 | 94 | free agents |
+| 403 | 1 | **Joe Montana**, `POVR` 99, age 33, 19 years pro — a Madden legend card. He retired after 1994. The `TEAM` table names `TGID` 403 **"NFC Hall of Fame"**, which confirms the reading independently |
+| 1008 | 1 | one row named `No Name` |
+| 1023 | 4 | four rows named `New Player`, `POVR` 27 |
+
+**The table now accounts for all 2,575 rows.** It previously summed to 2,569 and
+the six-row remainder was not recorded anywhere. All six are engine artifacts and
+all six are already excluded by the `1–31` + `1009`/`1014` rule, so nothing about
+the build changes — but an unexplained remainder in a cohort table is the exact
+shape of the thing this project keeps getting caught by, and a later session
+finding six unaccounted rows has no way to tell "verified as junk" from "never
+looked at". Verified independently by Ryan, 2026-08-31.
 
 **Ruling (Ryan, 2026-08-31): drop `TGID` 32.** 52 invented players on a franchise
 that did not exist that season. Drop 0, 33 and 34 for the same reason.
@@ -1574,3 +1718,1097 @@ signal" and "a correct marginal is the weakest evidence a derived field is
 right", applied to source identification rather than to derived output. A
 continuous summary statistic is the least discriminating thing available. Reach
 for the categorical structure first.
+
+---
+
+## Birth date is the namesake disambiguator — a looser position rule is the wrong fix
+
+Worked instance from the 2000 Houston selection, 2026-08-31.
+
+The 60-man core had been chosen on name-only matching against nflverse. Making
+the join position-aware dropped it to 53 and killed the known false positive —
+**Chris Miller**, whose Baylor namesake turns out not to be a quarterback at all
+but a **safety born 1997**, two years old in the season being built.
+
+Then the audit that matters: **for every player a name-only join would have taken
+and the position-aware join rejected, check whether the rejection was right.**
+Eleven such players. Four were real and were being lost:
+
+- **Van Malone** — Madden `CB`, nflverse `S`. The same man; defensive backs are
+  labelled inconsistently between sources.
+- **Brian Waters** — Madden `TE`, nflverse `G`. A real position convert who
+  entered the league as a tight end and became a Pro Bowl guard. **The handoff
+  already warns about exactly this** (Peppers DE→OLB, Klecko DT→FB) and it still
+  caught us, because the guard was written before the warning was consulted.
+- **Kevin Smith** and **Aaron Wallace** — both dropped as "ambiguous" against
+  namesakes born **1993** and **2004**.
+
+**The tempting fix is to loosen the position rule. That is wrong** — it re-admits
+Chris Miller. Position cannot separate these cases because in two of them the
+position genuinely differs for the same man, and in the other two it genuinely
+matches for different men. Position is carrying two jobs and can only do one.
+
+**The fix is a disambiguator the collision does not share: birth date.** An era
+filter (aged 20–45 in the season being built, and within six years of the Madden
+`PAGE`) removes every confirmed false positive — the 1997 safety, a 2004 Texas
+A&M defensive end, a 2002 Texas A&M tackle — and touches no real player. Position
+then goes back to being a family-level tiebreaker, which is all it was ever good
+for.
+
+Where birth date still ties, reach for the next unshared field rather than
+guessing. Two real Kevin Smiths, both defensive backs, both of the right era,
+`draft_year` empty for both — settled on **`PYRP` 8**, because Dallas's 1992
+first-round corner played 1992–99, exactly eight seasons. That is the categorical
+structure the section below on sentinels argues for, and it is stronger evidence
+than any similarity score.
+
+Final count 57, from 60. Two of the seven removed were false positives; the rest
+failed to match nflverse at all. Nine players were **gained** by splitting the
+college field on `;` — nflverse stores `Houston; Alvin Community College`, and an
+exact match had been dropping Andre Ware, the one player the whole Houston
+premise rests on.
+
+**General form: when a guard drops records, audit the drops before shipping it.**
+A join that removes false positives and real players in the same pass looks
+identical from the count alone.
+
+---
+
+## An adjacent-year source's error can be a bias rather than noise — measure the sign before damping
+
+Measured 2026-08-31 for the 2001 draft class, which has no rookie-year Madden
+export and must source from `2003 - PLAY.csv` at a two-year gap.
+
+Four independent replicates (the 2003–2006 classes, each measured against its own
+rookie-year file at gaps of one and two years), cohort defined by **nflverse draft
+year, not `PYRP`**:
+
+| | real attributes | percentile fill |
+|---|---|---|
+| gap 1 | **2.39** | 6.97 |
+| gap 2 | **3.15** | 7.26 |
+
+Gap 1 reproducing the documented 2.35 at 2.39 is the check that the method is
+sound; run that kind of control first.
+
+**Ruling (Ryan, 2026-08-31): tier 2 for the 2001 class.** Gap 2 is still 2.3×
+better than percentile fill. But the damage is not spread evenly — it sits almost
+entirely in one column:
+
+| attr | gap 1 | gap 2 | Δ |
+|---|---|---|---|
+| `PAWR` | 6.34 | **9.81** | **+3.47** |
+| `PINJ` | 2.82 | 4.59 | +1.77 |
+| every other | 0.93–3.37 | 1.19–4.17 | +0.26 to +0.90 |
+
+**Two obvious fixes for `PAWR` were both tested and both lost.** Percentile fill
+scores **13.41** against the uncorrected 9.95 — worse than the thing it was meant
+to replace. Shrinking toward the position median finds an optimum of λ = 0.05 and
+buys 0.01 MAE, i.e. nothing.
+
+They lost because the error is a **bias, not noise**: the mean signed error is
+**+9.28**, the two-years-later file reading systematically high, exactly as the
+handoff's "awareness genuinely grows" predicts. Damping and percentile fill both
+attack variance. A bias needs a shift.
+
+**A constant −9 offset takes `PAWR` from 9.95 to 6.82**, and it generalises —
+leave-one-class-out, fitting the offset on three classes and testing on the
+fourth, improves every fold: 8.77→6.16, 12.62→9.08, 7.78→6.33, 10.07→6.28.
+
+**This does not overturn the handoff's "do not age-adjust attributes."** That
+finding was measured at a one-year gap, where the bias is +5.35 and correcting it
+buys 0.6–1.5 MAE — genuinely inside the noise, as it says. At two years the bias
+doubles and the correction pays. The rule is gap-dependent, and the handoff's
+version is the gap-1 case.
+
+**Apply it at gap 2 only — not gap 1, not gap 0.** In this build that means the
+2001 class and nothing else; 2002, 2003 and 2004 source from their own or an
+adjacent year and take no correction. A correction fitted at one gap is
+meaningless at another, exactly as a bias correction fitted to one scale is
+meaningless on another. `tools/build_2000.py` asserts this.
+
+**The sign, stated so nobody applies it backwards.** The `2003 - PLAY.csv` source
+has **two seasons of awareness growth already baked in** relative to the 2001
+rookie year being built. So the source reads high and we **subtract** to recover
+the pre-rookie state. The measured mean signed error is **+9.28** (prediction
+minus truth), which is what that direction predicts. Adding the offset instead of
+subtracting it would roughly double the error.
+
+**General form: before damping a source, take the mean *signed* error.** Damping
+and percentile fill treat the error as noise. If it is a bias they make things
+worse while looking principled, and the sign is one line of arithmetic.
+
+
+---
+
+## Every tool must run from a clean clone — no absolute paths
+
+`tools/build_coaches_2000.py` carried `REPO = '/Users/ryannecci/Documents/pocketgm-rosters'`
+and wrote to `sources/pfr/`, a directory that no longer exists in the repo. Run
+from a fresh clone it would have written its output **outside the repo
+entirely**, reported success, and left `sources/coaches_2000.csv` untouched. The
+next session would have diffed a file that had never been rewritten.
+
+This is the same defect as a stale artifact and it has the same signature: **it
+works on the machine that wrote it, and only there.** The stale-CDN rule exists
+because two copies of a file drift; an absolute path is the same failure with the
+drift happening between machines instead of between fetches.
+
+**Rule: no tool in `tools/` may contain an absolute path.** Derive the repo root
+from `__file__`:
+
+```python
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+```
+
+**Corollary, and the reason `2000.ros` was committed:** a tool that depends on a
+file only present on one machine has the same defect as a hardcoded path. The
+2000 `TGID` -> team map was read out of the `TEAM` table of a `2000.ros` that
+existed in one local working copy and in no clone. The map is correct — it
+spot-checks 12/12 against known players, all three relocations included — but
+nobody could have re-derived or checked it. Commit the source, or the derivation
+is unreproducible whatever the value turns out to be.
+
+---
+
+## A map fitted on the players who match is fitted on the players who survive
+
+The 2000 appearance build reproduced the 1986 signature and was caught by the
+same check: **dark share in band, total light share in band, one family running
+hot.** Family 1 projected at 29.7% of the file against a published ceiling of
+27.4% (2004) and a union of 17.5%.
+
+The first hypothesis was that the map had been fitted against the two published
+files with the highest family-1 shares, 2004 and 2007. **Wrong** — refitting
+against all seven files gives 31.6% against 31.5%, indistinguishable. The choice
+of comparison files was not the problem.
+
+**The problem was who matches at all.** The map was fitted on 2000 players who
+also appear in a published roster, and that cohort is not a league:
+
+- **Compositionally** it over-weights the long-career positions. QB/K/P/OL/TE are
+  39.3% of the matched subset against 33.8% of the full 2000 cohort — kickers
+  double, punters double, quarterbacks up half again.
+- **And the skew survives conditioning on position**, which is what makes it more
+  than a mix effect. Light offensive tackles present in the 2000 source are
+  **96.7% family 1** against 63.6% for those absent; running backs 73.3% against
+  38.5%. The gap holds inside every published file, so it is not an artifact of
+  averaging files with different conventions.
+
+Fitted there, the light band came out 88/6/6 across families 1/2/3. The published
+population says 54/25/21. Refitting on the population rather than the matched
+subset brings family 1 to 24.2%, inside the published range.
+
+**The general form is the cohort rule applied to a fitted map rather than to a
+measurement.** "Find the real cohort before measuring anything" is usually read
+as a rule about the thing being measured. It applies just as hard to the *join*:
+a map calibrated on records that matched is calibrated on whatever made them
+match. Here that was career length, and career length correlates with the thing
+being mapped.
+
+**Ask what the join selected for before trusting anything fitted through it.**
+The tell is available cheaply — compare the position mix of the matched subset
+against the full cohort, then check whether the effect survives within position.
+Two lines each.
+
+### Two things worth carrying
+
+**`PSKI` decides light versus dark and nothing finer.** That is what it is scored
+for and what the conditional pass tests. It carries no information about which
+light family, so the within-band spread must come from the published population.
+Fitting the internal spread through `PSKI` is fitting noise through a biased
+join.
+
+**The published files do not agree with each other on the internal spread — and
+it is seven conventions, not three.** Within-light f1/f2/f3:
+
+| file | f1 | f2 | f3 |
+|---|---|---|---|
+| 1986 | 50.2 | 25.7 | 24.1 |
+| 2004 | 77.6 | 8.0 | 14.4 |
+| 2007 | 66.8 | 10.1 | 23.1 |
+| 2010 | 34.9 | 18.3 | 46.8 |
+| 2013 | 34.3 | 23.6 | 42.1 |
+| 2017 | 64.6 | 30.2 | 5.2 |
+| 2021 | 48.5 | 49.7 | 1.8 |
+
+**Family 3 runs from 1.8% to 46.8% of the light band.** That is not one
+convention with noise; every file did something different.
+
+**So 54/25/21 is an ARBITRARY DEFAULT, not a fit, and must not be read as one.**
+It is the pooled union of seven incompatible populations, which makes it a
+manufactured eighth convention matching none of them — the same
+pooling-manufactures-a-rule failure this document records elsewhere, in a new
+place. It was chosen because there is no source for within-light family, `PSKI`
+does not carry it, and every alternative is equally arbitrary. **The evidence
+says the target is undefined.** A later session must not treat the union as
+authoritative or build anything on it; if a real source for within-light family
+ever appears, it supersedes this outright with no argument needed.
+
+Consequence: the `faces` distribution check can only ever catch gross outliers
+like 1986, and the build-time assertion added here inherits that weakness — with
+family 3 spanning 0.7–14.6% overall, the band passes almost anything. It is a
+floor, not a substitute for looking.
+
+**The check is now an assertion in `tools/build_2000.py`, not a reviewer's job.**
+Every head family is compared against the min/max across the published files and
+the build fails if one falls outside. `pgm3_validate.py faces` still runs at
+stage 10, but by then the registry has been applied over the top and the defect
+is being diagnosed through two layers.
+
+---
+
+## Name-only lookups: third sighting, and the ambiguous set is the finding
+
+This project's rule is that any lookup keyed on a player name is a bug until it
+is disambiguated. It has now been rediscovered three times, in three different
+places, by three different routes:
+
+1. **2013 build — "David Johnson".** Two real players, a running back and a
+   tight end/fullback. Caught during that build. **It was never written into the
+   repo** and lived only in a session summary, which is why it could be cited in
+   2026 as though it were documented and turn out not to be. It is written here
+   now.
+2. **2000 Houston selection.** Chris Miller's Baylor namesake is a safety born
+   1997; Anthony Lucas's Texas A&M namesake a defensive end born 2004. See the
+   birth-date precedent above.
+3. **2000 fullback cohort.** Building the FB rating target by name against the
+   Madden exports, **75 names appear as both `PPOS` 2 (FB) and `PPOS` 1 (HB)**
+   across the seventeen files, against 448 that are only ever FB.
+
+**The third one is worth dwelling on because the ambiguous set is not noise, it
+is 14% of the population.** A cohort built by taking every name ever labelled FB
+would have pulled in 75 records that are sometimes halfbacks — and since the
+whole point of that cohort is to establish that fullbacks rate *lower* than
+halfbacks, contaminating it with halfbacks biases the target in exactly the
+direction that defeats the correction. The error would have been invisible: the
+cohort would still have looked like fullbacks, just rated a little high.
+
+**Rule: when a cohort is built by name, count the ambiguous set and report it.**
+Excluding 75 of 523 is a decision worth stating; silently including them is not a
+decision at all. If the ambiguous set is large relative to the cohort, that is
+itself evidence the key is too weak.
+
+**And write the case down when it happens.** The David Johnson case was real,
+was correctly diagnosed, and cost nothing at the time — then cost a round trip
+in 2026 because it was cited from memory against a repo that did not contain it.
+A finding that lives only in a conversation is a finding that will be
+rediscovered.
+
+---
+
+## Inflation compresses the top of the source range, so trap positions arrive pre-tied
+
+The handoff describes PS2-era Madden inflation as a scale problem: median 77–80
+against a modern 71, fixed by rescaling per position. **There is a second form it
+does not describe, and a quantile map discards real information because of it.**
+
+Measured on the 2000 rostered cohort, share of each position sitting on the
+`POVR` 99 ceiling:
+
+| position | at 99 | share |
+|---|---|---|
+| FB | 12 / 50 | **24.0%** |
+| K | 5 / 37 | 13.5% |
+| P | 4 / 31 | 12.9% |
+| TE | 4 / 94 | 4.3% |
+| every other position | ≤ 3 | ≤ 3.2% |
+
+League-wide 2.5%; the published files carry 0.7–0.9% at their own maximum.
+
+**The pile-up is concentrated in exactly the three positions the inflation trap
+already names.** That is not a coincidence — it is the same cause seen from the
+other end. Madden grades kickers on leg strength and fullbacks on blocking, and
+those narrow criteria saturate: once a dozen fullbacks are all excellent blockers
+there is nowhere above 99 to put them.
+
+**Consequence: a quantile map silently discards the ordering.** A tie block maps
+to its midrank, so all twelve fullbacks landed on rating 73 against a cohort
+ceiling of 86 — arithmetically correct, and it threw away both the distinction
+between Lorenzo Neal and Larry Centers and the entire top of the target range.
+
+**No distribution check surfaces this.** The output median was right, the spread
+was right, the per-position medians reproduced the published files within a
+point. The defect is entirely inside one tie block.
+
+**Fix: rank-map with a real secondary column rather than value-map.** Sort the
+group by (primary, secondary) and assign target values by rank, so the top of the
+source lands on the top of the target. The secondary must be a column the
+position is actually played for — blocking for fullbacks, the kicking columns for
+K and P.
+
+**Check for it directly: print the size of the largest tie block per position,
+not just the median.** A block of 12 in a group of 50 is invisible to every
+summary statistic that was being computed at the time.
+
+---
+
+## A quantile map inherits its target's defects
+
+Building 2000's attributes, `stamina` failed its conditional at rho 0.810 with a
+discontinuous first decile — 32, then 75. The source was fine. **The target was
+contaminated.**
+
+The published files carry a block of players parked on value **1**:
+
+| attribute | share of non-zero values | median | median excluding 1 |
+|---|---|---|---|
+| `stamina` | 9.4% | 83 | 84 |
+| `zoneCover` | 9.1% | 81 | 82 |
+| `manCover` | 5.8% | 79 | 80 |
+| `greed` | 3.3% | 71 | 73 |
+
+Three things identify it as a "no source data, default to 1" artifact rather than
+a distribution: the players holding it are spread across every position and
+concentrated among low-rated fringe players; **its share swings from 0% to 24.9%
+between files** (2010 has none, 2017 has a quarter); and the median barely moves
+when it is removed. A real low tail does none of those.
+
+The 2000 source has no such block — `PSTA` runs 15 to 99 with no zeros and 5%
+under 60. So its genuinely-low-stamina players were being mapped onto the
+artifact.
+
+Counts depend on the cohort, so **state it**: 1,267 rostered players sit at
+stamina 1 across the seven files, or 1,622 counting every non-zero record
+including prospects; 2017 reads 24.9% rostered or 18.0% overall. Two correct
+measurements of different populations look like a disagreement otherwise.
+
+**Rule: clean the target before mapping onto it, not just the source.** "Find the
+real cohort before measuring anything" is normally applied to the input. A
+quantile map has two populations and the same discipline applies to both — the
+target is data too. The guard now drops value 1 from any target where it holds
+over 2% of non-zero values and the median is above 20, and reports what it
+dropped.
+
+### Cleaning the target is not enough — recompute everything derived from it
+
+The first version of this fix cleaned the quantile targets and then read the
+**position-gating rate off the uncleaned data**. Same defect, one step later in
+the pipeline.
+
+`OLB` `manCover` looked 32.3% populated in the published rostered cohort. 62.3%
+of those values are the fill, so the real rate is 12.2%. `OLB` `zoneCover` looked
+31.6% populated and is actually **0%** — every single non-zero value is 1.
+
+Chasing that turned up something worse. **`OLB` `manCover` takes only the values
+1, 2 and 3**, across every file that has it at all, against `MLB` `manCover`'s
+38–92. And it is absent entirely from 2004, 2007 and 2017 while 2013 and 2021
+carry it for 100% of their OLBs. Whatever that field is, it is not coverage
+skill, and mapping onto it was about to ship Derrick Brooks a `manCover` of 3.
+Both OLB coverage fields are now gated off, which matches three published files
+exactly.
+
+**Generalised rule: a "rating" whose entire observed range sits at or below 10 is
+fill, not a rating.** Check the range, not just the population share — a field
+can be 100% populated and still carry nothing.
+
+**And the general form: changing a population means rebuilding every statistic
+taken from it.** This is the same shape as the existing rule that changing a
+field means rebuilding every field derived from it. A cleaned distribution and a
+stale rate computed from the dirty version is a contradiction that no single
+check will catch, because each half is internally consistent.
+
+This is worth stating because the defect is self-propagating. Every file built by
+mapping onto the published files inherits their fill artifacts, which then makes
+the next target slightly worse. Nothing catches it: the output median was right,
+the spread was right, and only conditioning on the source showed the break.
+
+---
+
+## Judge a mapping in the population it was performed in
+
+After the target was cleaned, `stamina` still read rho 0.847 pooled — below the
+0.90 bar — and the next move would have been to go on adjusting a mapping that
+was already exact.
+
+**Within (cohort, position) the same mapping reads rho 0.999 median, 0.950
+worst, across 30 groups.**
+
+The map is fitted and applied per position. Pooling across positions mixes
+fifteen separate maps whose scales legitimately differ, and the correlation drops
+for a reason that has nothing to do with whether any individual map works. Speed
+shows the identical pattern — 0.930 pooled, 0.999 within group — and speed was
+never in doubt.
+
+The handoff already says to compare cohort to cohort and position to position.
+**The point here is that the rule applies to the check as much as to the data.**
+A validation pass measured at the wrong altitude produces false failures, and a
+false failure costs more than no check at all, because it sends you to modify
+working code.
+
+**Report both numbers and assert on the within-group one.** The pooled figure is
+still informative — it measures how much position-to-position scale differences
+move a field — but it is not the test.
+
+
+---
+
+## The reference union is not a specification
+
+Three times in one session the published files were consulted as an authority and
+found to disagree with each other:
+
+- **Within-light skin family.** Seven files, seven conventions. Family 3 runs
+  from 1.8% to 46.8% of the light band.
+- **Fullback ratings.** 2004 has Alstott 76 and Neal 51; 2007 has Neal 83 at the
+  cohort ceiling. Opposite orderings of the same two men.
+- **`OLB` coverage.** Three files at exactly 0%, two at exactly 100%, one at
+  3.9%, one at 32.2% — and where present the entire range is 1–3 against `MLB`'s
+  38–92 in every file.
+
+**The union of seven outputs is not a specification. When they disagree it
+encodes the disagreement, and pooling manufactures an eighth convention that
+matches none of them.**
+
+`pgm3_validate.py` measures ranges against the union deliberately, and that is
+right for its purpose — a range wide enough to contain every published file is a
+sane guard against gross error. **It is not evidence of correctness.** "Matches
+the union" means "is not obviously broken", and on a field where the files
+disagree it can mean "reproduces the average of a defect and its absence".
+
+**When the references disagree, say which ones you match and which you diverge
+from, by name, with the reason.** For `OLB` coverage: this build matches 2004,
+2007 and 2017, which gate the field off, and diverges from 2013 and 2021, which
+populate it for 100% of their OLBs with values in a 1–3 range against a
+positional norm of 38–92. That is reviewable in ten seconds. "Deviates from the
+reference union" is not.
+
+---
+
+## When a fit's inputs turn out to be contaminated, measure the coefficients before assuming
+
+`weights.json` was fitted on the 2010 and 2017 published rosters — the uncleaned
+versions, including 2017's stamina-1 block. Having cleaned four fields out of the
+quantile targets, the refit was still solving through coefficients derived from
+the contaminated data.
+
+**Measured rather than assumed.** Refitting per position on the same cohort with
+contaminated records excluded (616 of 3,924, 15.7%):
+
+- **Largest single coefficient move across all fifteen positions: 0.0079** (K
+  `burst`). At an attribute range of 0–99 that is worth **0.79 rating points** for
+  a player at the extreme, and far less for anyone normal.
+- Median move per position: 0.0003–0.0020.
+- R² 0.9992–0.9996 before, 0.9993–0.9996 after.
+
+The direction is what theory predicts — a rated-70 player carrying stamina 1
+tells the regression that stamina barely matters, so cleaning should raise its
+coefficient, and it does in 9 of 14 positions.
+
+**The reason it does not matter is relative, not absolute.** In `weights.json`
+itself, `stamina` is at most **7.9% of the largest coefficient** in any position's
+model (TE, +0.01654 against `passBlock` 0.20838) and a median of **0.6%** across
+the fifteen. Worst case, an 80-point stamina swing moves TE's computed rating by
+**1.3 points**.
+
+Closed: no refit of `weights.json` is needed.
+
+**State this as a ratio, never as an absolute bound.** An earlier version of this
+entry said the coefficient was "within ±0.009 of zero at every position". That
+was wrong twice over: the true maximum is 0.0165, and two positions exceed 0.009
+— but more importantly **an absolute threshold is meaningless without the scale
+of the model it sits in.** 0.0165 is negligible beside `passBlock` at 0.208 and
+would be enormous beside a model whose coefficients were all 0.001. The number
+also came from a fresh regression rather than from `weights.json`, which is what
+the build actually solves through; check the artifact in use, not a
+reconstruction of it.
+
+The general form is that a fit's sensitivity to a contaminated input depends on
+that input's coefficient **as a fraction of the model's largest**, and that ratio
+is cheap to look at.
+
+This is the third instance in one session of the same mistake — reading the
+obvious property instead of the informative one. `OLB` `manCover` was 100%
+populated and carried nothing, because the informative property was its range
+(1–3) not its share. `stamina` read rho 0.847 pooled and 0.999 within position,
+because the informative property was the altitude of the measurement. Here the
+informative property is the coefficient's size relative to its own model. **When
+a number is used to dismiss a concern, check what it is being compared against.**
+
+---
+
+## Salary is not predictable from rating — split the cohort before fitting
+
+Measured 2026-08-31 against 62 real 2000 cap numbers from Over The Cap, matched
+into the rostered cohort.
+
+**Rating explains almost nothing.** Predicting log of the real 2000 cap number:
+
+| cohort | n | rating alone | rating + yrs + log(pick) | log(pick) alone |
+|---|---|---|---|---|
+| all | 62 | R² 0.294 (adj 0.282) | 0.572 (adj **0.549**) | 0.297 |
+| **rookie deals** (≤3 yrs) | 32 | 0.120 | 0.710 (adj **0.679**) | 0.610 |
+| **veterans** (>3 yrs) | 30 | 0.032 (adj **−0.003**) | 0.218 (adj **0.127**) | 0.215 |
+
+**For veterans, rating has an adjusted R² of −0.003 — it is worse than useless.**
+The single number hides two regimes: rookie contracts are slot-driven and largely
+predictable, veteran contracts are not predictable from anything in this project.
+
+**The mechanism, from the residuals:** NFL salary tracks contract timing and draft
+pedigree, not current performance. Tim Couch, rating 71, first overall pick, real
+2000 cap **$5.25M**; Tom Brady, rating 73, sixth round, **$0.21M**. Marshall Faulk
+at rating 98 earned less than Troy Aikman at 93 because one was mid-rookie-deal
+and the other was a declining franchise quarterback on an old contract.
+
+Even among veterans, **draft slot orders salary better than rating does** —
+Spearman +0.443 against +0.171. Where you were drafted predicts what you earn
+better than how good you are, years later.
+
+**And `PTSA` is not a fallback.** Its overall Spearman of +0.417 against real cap
+numbers comes entirely from the rookie tier (+0.500). **On veterans it is
++0.020 — zero.** A field can carry real signal in one cohort and none in another,
+and a pooled correlation will average the two into something that looks usable.
+
+**Rule: split by contract regime before fitting a salary model, and report each
+tier separately.** A pooled adjusted R² of 0.549 reads as a mediocre model. The
+truth is one good model (0.679) and one that does not exist (0.127), and only the
+split shows which players the file will get right.
+
+### The anchor set is not the league
+
+Over The Cap's 2000 coverage is position leaders only — 62 usable players against
+1,637 roster spots, and skewed hard:
+
+| draft band | anchors | full cohort |
+|---|---|---|
+| round 1 | **54.8%** | 16.2% |
+| rounds 5–7 | 8.1% | 21.4% |
+| undrafted | 6.5% | 24.8% |
+| *median pick* | **24** | **118** |
+
+A model fitted on picks 1–31 and applied to pick 118 and undrafted players is
+extrapolating past the edge of its data. This is the same defect as fitting the
+skin map on players who appear in a published file: **the join selected for
+notability, and notability correlates with the thing being modelled.** Say so
+rather than quoting the R² alone.
+
+---
+
+## A pooled correlation averages the cohort where a field works with the cohort where it doesn't
+
+Four instances in one session, all the same shape:
+
+| field | pooled | split |
+|---|---|---|
+| `PTSA` vs real salary | **+0.417** | rookies **+0.500**, veterans **+0.020** |
+| `stamina` vs `PSTA` | 0.847 | within position **0.999** |
+| within-light skin family | union 54/25/21 | seven files, f3 from 1.8% to 46.8% |
+| `OLB` `manCover` | 32.3% populated | 62.3% of it fill, real gate 0% |
+
+**A pooled statistic is a weighted average of every sub-population it spans, and
+it is most misleading exactly when the sub-populations differ — which is the case
+you are usually trying to detect.** `PTSA` at +0.417 reads like a usable if noisy
+source. It is a good source for rookies and literally no source for veterans, and
+the pooled number is an artifact of mixing them that describes neither.
+
+Note that pooling misleads in **both directions**. `PTSA` pooled looks better than
+it is for veterans; `stamina` pooled looked worse than it is within position and
+nearly sent a correct mapping back for repair. There is no safe direction to
+assume.
+
+**Rule: before trusting a correlation, name the sub-populations it spans and
+compute it within each.** Cohort, position, and contract regime are the three
+that have mattered here. If a field is going to be used per player, it has to be
+validated in the population that player belongs to, not in the union.
+
+---
+
+## The rule fails when the lookup feels too small to matter
+
+Nineteen rostered players had no contract data. Checking whether they were real
+2000 players meant one lookup against nflverse draft data, keyed on name. **Two
+came back as retired years earlier and were about to be dropped from the file.**
+
+**Reggie Jones was a name-only match to a different man** — a defensive back from
+Memphis drafted in 1991, against a wide receiver with two years of experience.
+Position-aware matching kills it instantly.
+
+The bug was committed **in the same session that wrote the birth-date
+disambiguation precedent**, by the same author, roughly two hours later.
+
+**That is the useful part of this entry.** The rule does not fail because people
+have not read it. It fails because a lookup gets typed quickly against a cohort
+that feels too small to be worth the ceremony. Nineteen players felt small. The
+appearance library, the ratings backfill and the fullback cohort all felt large
+enough to be careful with, and were.
+
+**There is no cohort small enough.** If the join is on a name, it is
+position-aware or it is a bug, at n=19 as much as at n=1,637.
+
+---
+
+## `to` and `last season` answer a different question than a roster build asks
+
+The same nineteen produced a second false drop for an unrelated reason.
+
+**Mike Cherry** really is the man in the draft data — quarterback, Giants, 1997,
+Murray State — and that record's `to` field reads **1998**. He was nevertheless on
+the Giants' roster for all of 2000. He simply never appeared in a game.
+
+`to` and `last season` fields mean **last season in which the player recorded an
+appearance**. A roster file models who was under contract, which is a strictly
+larger set: third quarterbacks, injured reserve, practice-squad call-ups and
+four-game comebacks all belong in it.
+
+**Use a roster source to answer a roster question.** `nflverse`'s
+`rosters/roster_YYYY.csv` carries 2,046 player-team records for 2000 with a
+`status` field (`ACT`, `RES`, `CUT`, `PUP`, `SUS`), which is the right instrument.
+All nineteen appear in it; none were dropped.
+
+The near-miss is instructive on its own: the two instruments disagreed, and the
+weaker one was the one already loaded.
+
+
+---
+
+## A guard must know the provenance of what it is guarding
+
+Building 2000's contracts, a rating-based salary **floor** — written to stop
+drawn values landing implausibly low — fired on Jason Elam and pushed his **real
+Over The Cap figure of $1,071,167 up to $2,200,000**.
+
+**Nothing looked wrong.** $2.2M for a top kicker is not an absurd number. No
+distribution check, no range check and no amount of reading the output would have
+caught it. It was visible only because the real figure happened to be sitting in
+the same table.
+
+**That is the defining property of this bug class: a guard overwriting a sourced
+value produces plausible output, because the guard's whole job is to produce
+plausible output.** A guard firing on a derived value is working; the same guard
+firing on a real one is destroying data, and the two are indistinguishable from
+the result.
+
+Floors, ceilings, clamps, defaults and fallbacks are all written with derived
+values in mind, and every one of them will silently overwrite a sourced value if
+it cannot tell the difference.
+
+**This is the same rule as `_verified_keys` being locked against automated
+passes**, generalised. That rule protects Ryan's hand edits from a pass that
+"scores better". This extends it to any real-data tier: an anchored contract, a
+sourced appearance, a real draft pick.
+
+**Practical form, and what the build now does:**
+
+1. Every record carries a provenance tag (`OTC`, `rookie-slot`, `veteran-drawn`).
+2. Every guard checks that tag before it fires.
+3. After the guards run, an assertion re-reads the sourced records against their
+   original values and fails the build if any moved.
+
+```python
+assert_guards_spared_sourced(recs, {id(p): original[p] for p in sourced})
+```
+
+The assertion was tested against a deliberately corrupted record before being
+trusted, because an assertion that cannot fail is worse than none — it reports
+success. All 66 anchored contracts now reproduce their real figure exactly.
+
+
+---
+
+## An assertion that cannot fail reports success
+
+`assert_guards_spared_sourced` was written to catch a guard overwriting a sourced
+contract. Before trusting it, it was run against a **deliberately corrupted
+record** — a sourced value moved by hand — to confirm it fired, and then against
+an intact one to confirm it passed.
+
+That step is not ceremony. An assertion with a typo'd comparison, a wrong key, an
+empty input set or an unreachable branch **does not report "I could not check
+this"**. It reports success, in exactly the same words as a real pass, and it
+keeps reporting success for as long as it exists. It is worse than no check,
+because no check leaves you suspicious.
+
+This project has one instance already: the 1986 registry write that produced
+1,745 entries from 1,746 players and raised nothing, because the count assertion
+that would have caught it was not there. The failure mode being described here is
+one step worse — the assertion *is* there, and is empty.
+
+**Rule: prove an assertion fails before relying on it passing.** Corrupt an
+input, watch it fire, restore. Two lines, once, at the moment it is written.
+
+The cheapest version for a set-based check is to assert the set is non-empty
+before asserting anything about its contents — a guard over zero sourced records
+passes trivially and forever.
+
+---
+
+## Two scripts in one project, two position vocabularies
+
+The Houston core was selected by one script and assembled by another. The
+selection kept Madden's own labels — `FB`, `FS`, `SS`, `G`. The build collapses
+to PGM3's fifteen — `FB`→`RB`, `FS`/`SS`→`S`, `G`→`OG`.
+
+Matching the two on `(forename, surname, position)` silently dropped **four of
+fifty-seven core players**, including **Jason Layman, a 1996 Houston Oilers
+second-round pick** — precisely the cohort the entire roster premise is built
+from. The build reported "no longer in the pool", which reads like an absence and
+was a translation failure.
+
+**It fails quietly and in the direction that looks reasonable.** A roster one
+guard short is not obviously wrong. The count was 53 either way, because the
+shortage filler simply took one more body from the general pool.
+
+**Rule: when two scripts exchange records, assert on the match rate, not just on
+the output count.** The output was the right size the whole time. What was wrong
+was who was in it.
+
+`stage2b` now asserts that at most three core players fail to match, and names
+them when any do.
+
+### The count assertion was satisfied throughout, and could not have failed
+
+This is the part worth carrying. `assert len(out) == len(inp)` is this project's
+flagship check — it exists because a 1986 registry write produced 1,745 entries
+from 1,746 players and raised nothing. **It passed here at every step, and four
+wrong men shipped anyway.**
+
+It passed because **a compensating mechanism sat downstream**. The Houston
+assembly fills any position below its minimum from the general free agent pool.
+Drop four core players, and the filler takes four more bodies; the roster is 53
+either way. A count assertion cannot see a defect that something downstream
+silently repairs — and the filler's entire job is to keep the count right.
+
+**Corollary, and the operative rule: wherever a fallback exists to make up a
+shortfall, the count check is dead by construction.** Any stage carrying a
+filler, a default, a percentile backfill or a "top up to N" needs the
+**match-rate** assertion specifically. The count assertion is not weak evidence
+there; it is no evidence at all.
+
+The same shape appears wherever this project has a fallback tier: percentile fill
+behind the direct attribute map, the appearance library behind `PSKI`, the
+drawn tier behind the contract anchors. Each of those keeps the count correct
+by design.
+
+### One position vocabulary, or an explicit translation at the boundary
+
+Three position-vocabulary translation bugs in one session: `FB`/`HB` in the
+fullback cohort, `FS`/`SS` and `G`/`OG` here. Every one silently reduced a
+cohort rather than raising an error, because a label that does not match simply
+finds nothing.
+
+**Two scripts exchanging records must share one position vocabulary, or translate
+explicitly at the boundary. Never match on a label each side defines
+separately.** PGM3's fifteen is the project vocabulary; Madden's `PPOS` labels
+are a source encoding and must be translated once, at the point of entry, not
+carried around and compared.
+
+
+---
+
+## Give a research source a check it can run on its own output
+
+The 2000 head-coach career records came back with **no uncertain fields**, which
+is unusual for this workflow, and the reason looks identifiable rather than lucky.
+
+The standing instruction for these requests is *"say uncertain rather than
+guess"*. That only helps once the source already knows it is unsure — it does
+nothing about a confident wrong answer, which is the failure that actually
+happens. The PFR season index gives Andy Reid 437 career games on the 1999 page
+against the 16 he had really coached, and a source reading it would have no
+internal reason to doubt that number.
+
+**What was different: the prompt carried two constraints the source could verify
+against itself before answering.**
+
+1. **An expected-zeros list** — the seven men who had never been an NFL head
+   coach. Any lifetime-total source fails this instantly, because it gives
+   Belichick 302 wins where the answer must be a career that had not started.
+2. **A table of 22 single-season 1999 records.** Every returned career total must
+   contain its coach's 1999 season as a subset. Reid at 5–11 is the headline
+   case: it is the one a lifetime-total source breaks most obviously.
+
+Both are checkable by the source, on its own draft, without any outside data.
+That converts "be honest about uncertainty" into "here is an arithmetic test you
+will fail if you have misread the question".
+
+**Rule: when commissioning research, include at least one constraint the source
+can test its own answer against.** A subset relation, a known-zero set, a total
+that must reconcile. Two are better than one and they should fail in different
+directions — the zeros catch an inflated source, the 1999 subset catches a
+deflated or mismatched one.
+
+Both constraints were then re-run **on the returned file** before it was used, and
+independently: the 1999 records were recomputed from nflverse game results rather
+than taken from the prompt. Verification that reuses the prompt's own numbers is
+not verification.
+
+
+---
+
+## Prefer the convention nobody has to remember
+
+Head coach ratings regress toward .500 for small samples, which raised a
+definitional question: Wade Phillips's 1985 New Orleans spell lasted **four
+games**, so does it count as a season? Either answer is defensible, both feed the
+rating, and the file has to pick one.
+
+**Weighting the regression by games rather than by seasons does not answer the
+question. It removes it.** Four games contribute four games' worth of evidence
+whether or not anyone calls them a season, so the convention has nothing left to
+be inconsistent about. Phillips lands on his real 68 games; no future session has
+to look up a ruling before touching the formula.
+
+That is the property worth optimising for. **A convention that must be remembered
+is a defect waiting for the session that does not remember it**, and this
+document is largely a list of conventions — every one is something a later build
+can get wrong. Where two formulations are equally defensible, prefer the one that
+makes the question disappear rather than the one that answers it correctly.
+
+The same shape appears elsewhere in this project and is worth recognising:
+
+- **Birth date over position** for namesake disambiguation. Position needs a
+  compatibility table that someone must maintain and reason about; birth date is
+  a fact the collision does not share and needs no ruling.
+- **Provenance tags over guard ordering.** The alternative to tagging records was
+  to remember which guards may fire after which stage — a rule that has to be
+  held in a maintainer's head. A tag the guard reads does not.
+
+Applied across all 31 coaches rather than only to Phillips: `reg_w + reg_l +
+reg_t` gives games directly, and the file totals **2,045**.
+
+---
+
+## Measure a normaliser against the keys, never against its own description
+
+The face registry documents its normalisation as *"lowercase, strip punctuation
+and Jr/Sr/II/III/IV/V, collapse initials"*. Implementing exactly that is wrong,
+and the error is invisible: a missed key produces a generated face, which looks
+fine.
+
+**Measured against the 11,069 `faces` keys, the real rule treats punctuation two
+different ways:**
+
+| input | registry key | punctuation |
+|---|---|---|
+| `A.J. Brown` | `aj brown` | period **glued** |
+| `Scott O'Brien` | `scott obrien` | apostrophe **glued** |
+| `Kabeer Gbaja-Biamila` | `kabeer gbaja biamila` | hyphen **spaced** |
+
+Getting it wrong in either direction costs about a thousand roster records.
+Spacing everything — the build's general `norm()` — misses the **758** period
+cases. Gluing everything, which is what the stated description says, misses the
+**212** hyphen cases. Neither single rule works and the description names
+neither.
+
+Suffix tokens are stripped **anywhere in the name, not only trailing**. That
+looks like a bug — it turns `J.R. Ambrose` into `ambrose` — but it is what the
+registry does, and enforcing trailing-only dropped the hit rate from 97.7% to
+96.9% because the registry drops a middle `V.` the same way. **Reproduce the
+artifact's behaviour, not the behaviour it ought to have.**
+
+Final hit rate on punctuated names: **97.7% roster, 100% staff.** The residual 23
+are genuinely absent from the registry — every sampled one has no near-match
+under any spelling — rather than mis-keyed.
+
+**The general rule: a normaliser is a claim about another artifact's keys, so
+test it against those keys.** Three measurements settle it in minutes — how many
+names change form, how many then find a key, and whether any two keys collide
+once normalised. The third matters because a collision is a merge: `faces_1986`
+holds `william  roberts` and `william roberts` (double space) with *different*
+faces, and both are the same man.
+
+---
+
+## You check the fields you thought of
+
+The first 2000 staff builder hand-listed which attributes each role carries. It
+set the four coaching attributes, the three scout attributes, both physio
+attributes — and left about thirty specialty fields at zero: `management`,
+`motivation`, `playcalling`, `passRush`, `playDesign`, `injPrevent`,
+`reInjuryRisk` and the rest.
+
+**That is the bug the handoff records as having crashed the game**, reproduced
+exactly, by an author who had read the warning that morning and written
+assertions against it. The assertions passed. They checked that every coach had
+four non-zero coaching attributes, because those were the fields I was thinking
+about when I wrote them.
+
+**A hand-written list of what to populate is a list of what its author
+remembered.** The fix was to stop listing and start measuring: build a per-role
+profile from the published files — which fields a role populates, at what rate,
+around what centre — and fill from that. Ten failing check groups became one.
+
+This is why the zero-pattern check exists at all. It compares against a
+reference precisely so that no one has to remember the field list, and it caught
+this in one run.
+
+### Second instance, same session, different domain
+
+Two commits after writing the paragraph above, the same author merged `main`
+into a build branch, hit a reported `CONFLICT`, and committed through it —
+twice. The first fix then restored **only the file the error message named**,
+leaving a 4.7MB registry equally broken through another commit.
+
+Both halves are the same failure as the attribute list:
+
+- **Checked the thing I did, not the thing the tool said it had done.** The
+  output being read was a doc edit; `CONFLICT` was on screen and unacted on.
+- **Fixed the instance shown rather than sweeping for the class.** `grep -rl
+  '^<<<<<<< '` across the tree takes one second and catches every damaged file
+  at once. Restoring one file by name catches one.
+
+**Two independent sightings in one session, in unrelated domains, by an author
+who had just written the rule.** That is the argument for structural checks over
+care: the knowledge was present, recent, and self-authored, and it did not
+prevent either instance. The fix in both cases was the same shape — stop
+enumerating what you remember, run something that enumerates for you.
+
+---
+
+## Format churn defeats review, and review is the control that catches everything else
+
+Deleting six keys from the face registry produced a **180,323-line diff**,
+because the write used `json.dump(..., indent=1)` on a file stored compact. The
+data change was correct. The diff was unreviewable.
+
+That is not cosmetic. **The conflict damage described above went unnoticed
+through two commits, and a reviewable diff is exactly what would have shown
+it.** An unreviewable diff disables the control that catches the mistakes no
+specific check anticipates — which is most of them.
+
+The handoff records the 2007 rewrite as a formatting note: *"expect a whole-file
+diff rather than a clean one."* This is the version that says what it costs.
+
+**Rule: match the file's existing format when writing it back.** Read the first
+bytes and reproduce them — compact stays compact, indented stays indented,
+`ensure_ascii` stays as found. Rewritten that way, the same six deletions
+produced a **one-line diff**.
+
+Corollary: if a change genuinely requires reformatting, do it as a separate
+commit containing nothing else, so the substantive change stays reviewable on
+its own.
+
+---
+
+## A fifth of every draft class is in no Madden file, whatever year you reach for
+
+Building 2001-2004, the 2001 class had to come from `2003 - PLAY.csv` at a
+two-year gap, and the obvious worry was coverage. Measured:
+
+| class | source | gap | matched |
+|---|---|---|---|
+| 2001 | 2003 file | **2** | 74% |
+| 2002 | 2003 file | 1 | 79% |
+| 2003 | 2003 file | **0** | 79% |
+| 2004 | 2004 file | **0** | 78% |
+
+**The correct-year class matches at the same rate as the two-year-gap one.**
+The shortfall is not caused by reaching for a distant file — it is draftees who
+never appear in any Madden export, because they never made a roster the game
+cared about. It is uniform at roughly 22% across every class.
+
+Two consequences worth carrying:
+
+**The source-tier hierarchy is about accuracy, not coverage.** A closer year buys
+a better value for the players you already had (MAE 2.35 at gap 1, 3.15 at gap 2,
+against 7.26 for percentile fill). It buys almost no additional players. Hunting
+for a nearer source to fix coverage is hunting for something that is not there.
+
+**Percentile fill is load-bearing by design, not by failure.** Roughly a fifth of
+every draft class reaches the file through it, permanently, and no amount of
+source work changes that. It should be reported as a standing share rather than
+treated as a shortfall to be driven down — and it is the reason the match-rate
+assertion matters more than the count.
+
+---
+
+## Record the reason beside a deliberate divergence, not in the commit message
+
+2000's draft prospects carry a maximum potential gap of **40**, against **36 /
+33 / 23** in the published files. That is deliberately **looser**, and read cold
+it looks like an out-of-range defect that a later session will tighten.
+
+**The reason has to sit next to the number.** The 2013 build capped the gap at
+**14** against 29-45 elsewhere and produced **Louis Nix rated above Aaron
+Donald**. A cap is not a neutral safety measure — it compresses the top of the
+class, and the top of the class is where the recognisable players are.
+
+So the constant in `draft_potential` carries that sentence in the code, not only
+here. **A commit message is not where a future reader looks before changing a
+constant.** They look at the constant.
+
+General form: a value chosen deliberately outside a reference range needs its
+justification stored where the value is, because the reference range is what any
+reviewer will check it against first.
+
+---
+
+## Third boundary-translation bug: a vocabulary borrowed across a boundary
+
+Prospect faces were generated from the **staff** hair vocabulary, emitting
+`Hair4k` — which exists for staff and not for players. Earlier in the same build,
+staff faces were generated from the **roster** vocabulary, emitting `Hair5e`,
+`Beard3c` and `Hair4k` in the other direction.
+
+Same root as `FB`/`HB` in the fullback cohort and `G`/`OG` in the Houston
+assembly: **a vocabulary carried across a boundary where the two sides genuinely
+differ.** Three instances in one build.
+
+The tell is always the same — one side of the boundary was written by someone
+holding the other side's vocabulary in mind, and the mismatch produces a value
+that looks plausible rather than an error. `Hair4k` is a perfectly well-formed
+token. It is simply not one players use.
+
+**Derive the vocabulary from the population you are writing into, never from the
+one you happen to have loaded.**
+
+---
+
+## The gate and the distribution answer different questions
+
+Third bite of "recompute everything derived from a cleaned population", and the
+first in the **opposite direction** — an over-applied correction rather than an
+under-applied one, which is why it is worth its own entry.
+
+Cleaning the value-1 fill out of the quantile targets was right. Recomputing the
+**position-gating rate** from the cleaned data was not. Stamina is 100%
+populated and roughly 9% fill, so the cleaned rate came out at 0.91, below the
+partial-field threshold — and stamina was gated **off** for the bottom 9% of
+several positions. **37 players shipped with stamina 0.**
+
+**The two numbers answer different questions:**
+
+| | question | computed from |
+|---|---|---|
+| **gate** | does this position use this field at all? | the RAW non-zero share |
+| **distribution** | what values does this field take? | the CLEANED values |
+
+Cleaning fill out of the distribution must not touch the gate. The single
+exception is a field cleaning empties entirely — `OLB` `manCover`, every
+non-zero value of which was the fill — because that genuinely means the position
+does not use it.
+
+**No structural check could see this.** The output had a plausible distribution,
+the right median, a correct zero-pattern against a reference that also carries
+zeros there, and 37 records at zero in a field where zero is a legal value. The
+**conditional pass** caught it: conditioned on `PSTA`, the 50-59 decile mapped to
+a median of 8 against 19 for the decile below it. That is the second time in one
+build the conditional found something nothing else could, which is the argument
+for its mandatory status.
+
+**Generalised: when a correction changes a population, list every statistic
+downstream of it and classify each as "describes the population" or "describes
+whether the population applies".** The first kind must be recomputed. The second
+must not.
+
+---
+
+## State the cohort with any cross-file count
+
+Face-consistency figures for the 2000 build differ by a factor of four depending
+on the cohort, and both numbers are correct:
+
+| cohort | key | family disagreements | hair |
+|---|---|---|---|
+| rostered only | normalised | 8 → 8 | 15 → 16 |
+| all cohorts | normalised | 31 → 163 | 62 → 219 |
+
+`pgm3_validate.py faces` reports the rostered-only figure. A reviewer measuring
+across every cohort gets a number four times larger and concludes something
+regressed.
+
+This is the same trap as the stamina fill counted at 1,267 rostered against
+1,622 including prospects. **Quote the cohort with the number, every time** —
+two correct measurements of different populations otherwise read as a
+disagreement, and the person who has to reconcile them is the one who did not
+take either measurement.

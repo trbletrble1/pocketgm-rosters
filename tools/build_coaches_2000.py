@@ -103,11 +103,16 @@ D = {
  'IND': {'OC': ('Tom Moore', '', None),
          'DC': ('Vic Fangio', '', None),
          'ST': ('Kevin Spencer', '', None)},
- 'JAX': {'OC': ('',
-                'No offensive coordinator. The source lists a complete offensive '
-                'staff (QB Petrino, RB Ingram, WR McNulty, TE Hoaglin, OL Maser, '
-                'QC McGee) with no OC among them; Coughlin ran the offense. This is '
-                'an absence in the season, not a gap in the research.', None),
+ 'JAX': {'OC': ('Bobby Petrino',
+                'PROMOTION, not a title he held. Jacksonville had no offensive '
+                'coordinator in 2000 — Coughlin ran the offense and the source '
+                'lists a complete offensive staff (QB Petrino, RB Ingram, WR '
+                'McNulty, TE Hoaglin, OL Maser, QC McGee) with no OC among them. '
+                'Ruling (Ryan, 2026-08-31): the slot cannot be left empty — all '
+                '224 team-coordinator slots across the seven published files are '
+                'filled with a distinct real person — and an invented name is '
+                'barred for coaches. Petrino was the senior offensive assistant '
+                'and is promoted into the slot. He did not hold the title.', None),
          'DC': ('Dom Capers', '', None),
          'ST': ('Frank Gansz', '', None)},
  'KC':  {'OC': ('Jimmy Raye', '', None),
@@ -120,11 +125,13 @@ D = {
          'DC': ('Emmitt Thomas', '', None),
          'ST': ('Gary Zauner', '', None)},
  'NE':  {'OC': ('Charlie Weis', 'listed as "Offensive coordinator/running backs"', None),
-         'DC': ('',
-                'No defensive coordinator. The source lists a complete defensive '
-                'staff (DL Melvin, LB Ryan, asst LB Johnson, DB Mangini, asst '
-                'Walker) with no DC among them; Belichick ran the defense. This is '
-                'an absence in the season, not a gap in the research.', None),
+         'DC': ('Eric Mangini',
+                'PROMOTION, not a title he held. New England had no defensive '
+                'coordinator in 2000 — Belichick ran the defense and the source '
+                'lists a complete defensive staff (DL Melvin, LB Ryan, asst LB '
+                'Johnson, DB Mangini, asst Walker) with no DC among them. Ruling '
+                '(Ryan, 2026-08-31): same reasoning as JAX/OC. Mangini is promoted '
+                'into the slot. He did not hold the title.', None),
          'ST': ('Brad Seely', '', None)},
  'NO':  {'OC': ('Mike McCarthy', '', None),
          'DC': ('Ron Zook', '', None),
@@ -191,10 +198,12 @@ HC_NOTE = {
         'page prose confirms Campo was promoted to head coach.',
 }
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-REPO = '/Users/ryannecci/Documents/pocketgm-rosters'
-HC_FILE = os.path.join(REPO, 'sources/pfr/coaches_2000_HC.csv')
-OUT = os.path.join(REPO, 'sources/pfr/coaches_2000.csv')
+# Repo-relative, so this runs from any clone. It previously carried an absolute
+# path to one machine's working copy plus the old sources/pfr/ layout, and would
+# have written outside the repo after the files moved to sources/.
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+HC_FILE = os.path.join(REPO, 'sources', 'coaches_2000_HC.csv')
+OUT = os.path.join(REPO, 'sources', 'coaches_2000.csv')
 
 hc = {}
 with open(HC_FILE, encoding='utf-8') as fh:
@@ -224,9 +233,11 @@ for r in rows:
     seen[key] = r
     assert r['source'].startswith('https://'), f'{key} has no source URL'
     assert r['role'] in ('HC', 'OC', 'DC', 'ST'), key
-    # An empty name must be explained, never silently blank.
-    if not r['name']:
-        assert r['note'], f'{key} is blank with no note explaining why'
+    # Every slot must now carry a real person: 224/224 in the published files.
+    assert r['name'], f'{key} has no name — the published files never leave a slot empty'
+    # Promotions must say so, so nobody later reads them as held titles.
+    if 'PROMOTION' in r['note']:
+        assert 'did not hold the title' in r['note'], f'{key} promotion note is incomplete'
 for team in SEASON:
     for role in ('HC', 'OC', 'DC', 'ST'):
         assert (team, role) in seen, f'missing {team}/{role}'

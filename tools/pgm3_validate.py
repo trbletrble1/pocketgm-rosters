@@ -7,6 +7,13 @@ Usage:
     python3 pgm3_validate.py staff  NEW.json REF1.json [REF2.json ...]
     python3 pgm3_validate.py faces  FILE.json [FILE.json ...]        # cross-season face checks
     python3 pgm3_validate.py faces --staff FILE.json [FILE.json ...]
+    python3 pgm3_validate.py conditional NEW.json SRC.csv OUT_FIELD SRC_FIELD
+
+The `conditional` pass is the one that catches a field derived from nothing —
+split the output by the source value and confirm the groups differ. It is
+mandatory before a file is called finished; see the handoff. It was implemented
+but missing from this usage text, which is how you end up with a documented
+mandatory check that nobody can find.
 
 Contract ceilings and the team cap are parameters, not laws — see LIMITS.
 Override per build:
@@ -20,7 +27,7 @@ legitimate in 2010 will look out of range against 2017 alone.
 
 Every check here exists because it caught a real bug. See the handoff.
 """
-import sys, json, re, collections
+import sys, json, re, collections, statistics
 
 # ------------------------------------------------------------------ limits
 # Sanity guards, NOT limits the game enforces.
@@ -247,6 +254,34 @@ def check_roster(new, refs):
         out.append(('draft pool has no safeties', 1 if rc['S'] == 0 else 0))
         out.append(('draft pool missing a LB type',
                     1 if (rc['MLB'] == 0 or rc['OLB'] == 0) else 0))
+
+    # ---- team payroll must sit on the published convention --------------
+    # PGM3's cap is a fixed engine constant of ~$280M with no field in the
+    # schema, so era-accurate dollars are NOT playable: a 2000-dollar file
+    # leaves ~$225M of room on every team and the financial layer goes inert.
+    # On a TOP-53 basis all seven published files read $197.4M with a spread
+    # of $29k -- 0.015%, 1986 landing on the round number to the dollar. Top-51
+    # scatters by $1M, so top-53 is the real basis and top-51 the derived view. cross_year deliberately skips money fields ("they differ by era"),
+    # which is exactly the assumption that hides this, so it is checked here.
+    # Found by in-game test only, after a build shipped at $54.6M.
+    def _top53(recs):
+        by = collections.defaultdict(list)
+        for q in recs:
+            if cohort(q) == 'T':
+                by[q['teamID']].append(q['salary'] + q['guarantee'])
+        return [sum(sorted(v, reverse=True)[:53]) for v in by.values()]
+    # NB true median, not med(): med() returns the upper-middle element, which
+    # on 32 teams reads ~$1.2M high and would compare two different conventions.
+    ref_meds = [statistics.median(_top53(r)) for r in refs if _top53(r)]
+    mine = _top53(on)
+    if ref_meds and mine:
+        lo, hi = min(ref_meds) - 1e6, max(ref_meds) + 1e6
+        m = statistics.median(mine)
+        out.append((f'median team payroll ${m/1e6:.1f}M vs published '
+                    f'${lo/1e6:.1f}-{hi/1e6:.1f}M',
+                    0 if lo <= m <= hi else 1))
+        out.append(('teams over the ~$280M engine cap',
+                    sum(1 for x in mine if x > 280_000_000)))
     return out
 
 # ----------------------------------------------------------------- staff

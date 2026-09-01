@@ -10,10 +10,23 @@
 > - **`PGM3_DATA_SOURCES.md` — read this before hand-researching anything.**
 >   Draft classes, player biographies, birth dates, physicals and combine
 >   measurements are all bulk downloads from nflverse. Birth dates solve the
->   namesake problem outright. PFR must be searched, never fetched.
+>   namesake problem outright. **PFR access depends on which client you are** —
+>   see the transport table under "Draft prospects — potential" below. From a
+>   build session it is blocked; route PFR pulls through the master session, or
+>   use Wikipedia and nflverse.
 > - **`.ros` files no longer need Windows.** `tools/rosgui.py` decodes them
 >   directly, verified exact against Xtreme on three files. Its "Screen" button
 >   gives a usable / unusable verdict in a second — see `PGM3_SOURCE_QUALITY.md`.
+> - **REGISTRY: re-pull before applying it.** `PGM3_FACE_REGISTRY.json` gained
+>   the first entries ever in `_verified_keys.staff` on 2026-08-31 — 18 coaches
+>   Ryan hand-edited in 1986, six of which propagate into `staff_faces` and
+>   changed `PGMStaff_2004/2007/2010/2013`, 35 records across five files.
+>   **Check `_verified_keys.staff` reads 18, not 0, before any registry pass.**
+>   Note also that **the staff key is name alone and has a namesake hole**: Jim
+>   Mora Sr. (1986 New Orleans) and Jim Mora Jr. (2004 Atlanta) are two men and
+>   only the 2007 file spells the suffix. The merge blocks propagation for any
+>   name wearing a generational suffix anywhere in the archive; assume that rule
+>   applies to staff generally.
 > - **Open finding (2026-08-31):** head family 4 ranges 14–39% across the
 >   published files, worst in 2010. Not a regression — it predates the skin
 >   repair and has never been investigated. `pgm3_validate.py faces` flags it.
@@ -233,7 +246,7 @@ Important refinement: position-specific attributes (QB accuracy, kick accuracy, 
 - `eLength` — years on the expected/next contract. Working-file range is 0–4
 
 ### Staff records
-- Staff contract fields are **role-specific, not pooled**. `eGuarantee` is head-coach-only among rostered staff — 33% for HCs, 0% for all eight other roles. `guarantee` varies too (HC 81%, others 44–54%). Fitting a pooled rate across all roles produces a field that looks plausible and is wrong
+- Staff contract fields are **role-specific, not pooled**. But **amended 2026-08-31: the pooled figure is also the wrong target for `eGuarantee`, and the "head-coach-only, 33%/0%" reading appears to have been measured on 2010 alone.** Per file, `eGuarantee` non-zero rates are four incompatible behaviours: 2004, 2017 and 2021 are flat zero across all nine roles; 2010 is 100% for head coaches and 0% for the other eight; 2013 runs 31–62% throughout; 1986 and 2007 are low and scattered. **2010 is also HC-only for `guarantee`, which no other file is** — so the documented shape is 2010's, not the archive's. **Ruling: ship staff `eGuarantee` at ZERO.** It matches the plurality, it is internally consistent rather than an average of incompatible files, and `eGuarantee` is game-computed and overwritten on import anyway. **`guarantee` is different and should be fitted per role** — it is non-zero in 28–100% of every role in six of seven files, with only 2010 zeroing the non-HC roles. Fitting a pooled rate across all roles still produces a field that looks plausible and is wrong
 - **Observed range is not accepted range.** The min/max derived from three files describes what those files happen to contain, not what the game accepts. Lane Kiffin was genuinely 32 in 2007 and Josh McDaniels 31, both below the observed staff floor. Keep real values rather than clamping to a range you derived yourself — if the game rejects it, import will say so immediately
 - `growthType` — **51 elements** for staff (not 31). **The 50× rule applies to draft prospects only** (see the authoritative section above — vanilla veterans obey it 0% of the time). Our built files enforce it everywhere and pass validation on that basis: positive values must sum to exactly `(potential − rating) × 50`, same as roster players. An earlier version of this document said the rule didn't apply to staff — that was wrong, derived from misreading the donor's 90% compliance as evidence of no rule. All three staff files now obey it at 100%. Curve shape: positives in slots 0–16, negatives in slots 20–50 (always multiples of 100), slots 17–19 always zero
 - `startSeason` — must be 1989–2026
@@ -353,10 +366,38 @@ Save as "Webpage, HTML Only". Give them the `open -a "Google Chrome" <urls>` com
 | Historical rosters | Pro Football Reference season roster pages |
 | Player ratings/attributes | maddenratings.net — per-team `.xlsx` per year, or one combined file for recent years |
 | Historical contracts | Madden disc `PLAY` table CSV (`PTSA` field is **total contract value** — divide by `PCON` for annual) |
-| Coach records | PFR individual coach pages (`coaching_ranks` + `coaching_results` tables). **The season coaches index gives lifetime totals — inflated for historical builds. Use individual pages** |
+| Coach records | PFR individual coach pages (`coaching_ranks` + `coaching_results` tables). **The season coaches index gives lifetime totals — inflated for historical builds. Use individual pages.** See the worked instance below; do not re-try the index |
 | Coordinator performance | PFR season pages, unit rank in points and yards |
 | Special teams | Gosselin's rankings **through 2023 only — he stopped**. 2024+ successor: Bill Huber's Packers On SI annual rankings (published as a chart image; ask the person to read it) |
+| Career records, coordinator units, special teams — what is and is not computable | see the two notes immediately below |
 | Draft classes | PFR draft listing pages — includes career AV, Pro Bowls, All-Pros, years started |
+
+**The PFR season coaches index is CONFIRMED UNUSABLE for career records. Do not
+re-try it.** Verified on the 1999 index, 2026-08-31. It carries three columns and
+none of them is "career through this season":
+
+| column | Andy Reid on the 1999 page | what it actually is |
+|---|---|---|
+| season | 16 G, 5–11 | correct — his rookie year |
+| w/ Team | 224 G, 130–93 | his **entire** 1999–2012 Philadelphia run |
+| Career | 437 G, 279–157 | his record **through 2025** |
+
+Reid had coached exactly 16 games when the 2000 season began; the page says 437.
+Cowher's "w/ Team" 240 games is all of 1992–2006 the same way. The only usable
+column is the single season — **which is precisely the figure the rating rule
+forbids**, and the one that rated Reid 71 off a bad year.
+
+Routes that do work: individual PFR coach pages, or summing seasons of the index
+across the years before the build year (~19 fetches for a 2000 build, and it
+yields a reusable career-record table since coordinator ratings and the
+free-agent coach pool need the same data).
+
+**Team unit ranks for coordinators ARE computable without PFR.** nflverse
+`games.csv` carries every game result back to 1922 — points for and against per
+team-season, which gives offensive and defensive ranks directly. Verified for
+2000: St. Louis 540 points scored, Baltimore 165 allowed, 31 teams at 16 games
+each. **Its `home_coach`/`away_coach` fields only begin in 1999**, so it cannot
+supply career records, only current-season units.
 
 **`norm()` must PRESERVE generational suffixes on any build reaching back more
 than ~20 years.** The documented rule — strip `Jr/Sr/II/III/IV/V` and collapse
@@ -447,13 +488,37 @@ Column names differ every year (`First_Name` vs `FIRSTNAME` vs `First`). Always 
 
 **Draft prospects — rating:** rookie-year Madden ratings where available; otherwise derived from draft position.
 
-**Draft prospects — potential:** per-position slot baseline from log(pick), plus a career-achievement raise. Rebuilt across all five files 2026-08-28; the full method and its coefficients are in `PGM3_PRECEDENTS.md`. The career inputs come from PFR draft pages (`all_pros_first_team` as a **count**, `pro_bowls`, `years_as_primary_starter`, `career_av`) plus an MVP/DPOY/OPOY list. **PFR access — amended 1986 session, both routes now tested.** PFR blocks direct requests from a build container (curl/python in the sandbox): that finding stands. But the **platform web_fetch tool reaches PFR normally** — `/years/1986/index.htm` returned full standings with W-L-T, PF, PA and SRS split into OSRS/DSRS. The original finding was about one client, not the site. Do not read "PFR is blocked" as covering both routes. Caveat: PFR wraps most tables in HTML comments, so a fetch returns the section headings with no rows under them — strip `<!--` and `-->` before parsing. Standings tables are not comment-wrapped and come through directly.
+**Draft prospects — potential:** per-position slot baseline from log(pick), plus a career-achievement raise. Rebuilt across all five files 2026-08-28; the full method and its coefficients are in `PGM3_PRECEDENTS.md`. The career inputs come from PFR draft pages (`all_pros_first_team` as a **count**, `pro_bowls`, `years_as_primary_starter`, `career_av`) plus an MVP/DPOY/OPOY list. **PFR access is per-transport, not per-site. Retested across four clients on 2026-08-31 — do not test it a fifth time.**
+
+| transport | result |
+|---|---|
+| master session `web_fetch` | **works** — `/years/1986/index.htm` returns full standings, W-L-T, PF, PA, OSRS/DSRS |
+| Claude Code `WebFetch` (build session) | **403** |
+| `curl`, plain or with a browser User-Agent | **403** |
+| in-app browser | **Cloudflare "Performing security verification"** interstitial |
+
+Six URLs across those four transports were tested on 2026-08-31: `/years/1986/index.htm`, three `teams/{code}/2000.htm` pages and two others. Only the master session's `web_fetch` succeeded.
+
+**Consequence for a build session: PFR is blocked.** Route PFR pulls through the master session, or use Wikipedia season pages and nflverse, which is how the 31 coaching staffs in `sources/coaches_2000.csv` were actually researched — 122 of its 124 rows carry Wikipedia URLs. The Cloudflare interstitial is bot detection and is not something to work around.
+
+Two earlier versions of this note each stated half of the table as the whole truth, and each was then cited to contradict the other. The 1986 amendment was right that the original finding "was about one client, not the site" — it just drew the boundary in the wrong place, and a build session inherited "PFR works" and lost time to 403s.
+
+Caveat that still applies wherever a fetch does succeed: PFR wraps most tables in HTML comments, so a fetch returns the section headings with no rows under them — strip `<!--` and `-->` before parsing. Standings tables are not comment-wrapped and come through directly.
 
 **Potential is raise-only.** Draft position sets the baseline; career outcomes — career AV, Pro Bowls, All-Pros, years started — pull it *up* for players who exceeded their slot, and never pull it down. Verified across all three published files: no first-round pick in any of them has potential below 70, and pick dominates the fit (corr −0.68 to −0.79 against log pick).
 
 An earlier version of this document said "busts are busts." That was wrong — no file has ever done it, and the raise-only behaviour is correct on its own terms. **Potential is a ceiling, not an outcome.** A bust is a player who had the ceiling and didn't reach it; lowering his potential conflates ceiling with achievement and bakes hindsight into innate ability. It also preserves the interesting half of the draft — late-round hits stay findable (Jamaal Charles at pick 73, Carl Nicks at 164) while you aren't punished for a pick a real GM couldn't have called. For future classes this is impossible; potential has to come from scouting projection instead.
 
 **Head coaches:** career record through the prior season, regressed toward .500 for small samples, plus bonuses for Super Bowls, playoff wins, Coach of the Year. **Do not use single-season records** — that rated Andy Reid 71 off one bad year.
+
+**Coach of the Year bonuses count AP awards ONLY** (ruling, 2026-08-31). A clean
+comparable standard, and the 2000 build records what it costs: **Bobby Ross**
+(1992 PFWA/UPI/Greasy Neale), **Tom Coughlin** (1996 UPI), **Dave Wannstedt**
+(1994 UPI) and **Dennis Green** (1992 UPI, 1998 Greasy Neale) all carry zero
+despite winning a Coach of the Year award in this era. Those four are the line a
+later session "fixes" by adding the other voting bodies. The convention is
+deliberate — do not widen it without a ruling, and if it ever is widened, every
+season has to be rebuilt together or the files stop being comparable.
 
 **Coordinators and special teams: rate them on the season being built, not the prior one.** 2004 used its own 2004 unit ranks and Gosselin's 2004 rankings; 2007 used 2007. **The prior season is only correct for a current-season build** where the season hasn't been played — that's why 2026 used 2025. Applying the 2026 rule to a historical build is an error and it happened once.
 
@@ -809,6 +874,323 @@ appearance rebuilt from real Madden data.
   length cap
 
 **Known open items, none blocking:**
+
+0h. **The 1986 skin defect has now surfaced THREE times, from three
+   directions.** Same root, not three curiosities:
+
+   1. The free agent pool is 198 of 201 dark, with families 2 and 3 entirely
+      unused (item 0 below).
+   2. Head-family distribution across files, which is what `faces` flags.
+   3. **Registry duplicates disagreeing on family 3 versus family 5** —
+      `william  roberts` and `joe  jacoby` each had a second key at `Head3b`
+      against the shipped `Head5b`. That is light against dark **for the same
+      man**, not a variant difference.
+
+   The third suggested a provenance split inside the 1986 build — some entries
+   written from a source that put those two men light and others from one that
+   put them dark. **The double-space spelling cannot test that**: it is three
+   keys, two of them family 3 against a 10% baseline, which is suggestive at
+   n=3 and means nothing. Whatever wrote those keys may have touched only
+   three records.
+
+   **The test that CAN settle it**, and the one to run: the 1986 build had at
+   least three appearance sources — a decoded field covering 99.8% of the
+   rostered cohort, 78 hand-verified from photographs, and the free agent pool
+   built in a separate session. The free agent split is already established at
+   198/201 dark, so a provenance split inside the 1986 build is a fact for at
+   least one cohort. The open question is the rostered cohort. **Compare the
+   family distribution of 1986 rostered players present in the decoded source
+   against those absent from it** — if the 0.2% not covered look different,
+   that names the second source. Treat all three surfacings as one
+   investigation.
+
+0g. **Two published-file name defects, both on Frank Gansz.** He and his son
+   were both Kansas City special teams coaches, which is why the collision is
+   easy to make — but the records are malformed in two DIFFERENT ways:
+
+   | file | forename | surname |
+   |---|---|---|
+   | 1986 | `Frank` | `Gansz` |
+   | **2004** | **`Frank Gansz`** | **`Jr.`** |
+   | **2007** | `Frank` | **`Gansz Jr.`** |
+
+   2004 puts the whole name in `forename` and the suffix in `surname`; 2007
+   puts the suffix in `surname`. Neither is the 1986 form. Any name-keyed
+   lookup sees three different people. Sr. is the 1986 Kansas City and 2000
+   Jacksonville coach; Jr. is the one in 2004 and 2007 (Raiders 1998-2000,
+   Chiefs 2001-05, Ravens 2006-07).
+
+0f. **THE 2000 FILE DIVERGES FROM THE PUBLISHED FILES IN TWO PLACES, ON
+   PURPOSE. None of the three is visible to `pgm3_validate.py`.** Recorded here
+   rather than only in a build log, because the validator will never surface
+   them and a future session would otherwise find a 2000 file that disagrees
+   with its neighbours, find no explanation, and "fix" the correct one.
+
+   | deviation | matches | diverges from | measured reason |
+   |---|---|---|---|
+   | `OLB` `manCover`/`zoneCover` gated OFF | 2004, 2007, 2017 | 2013, 2021 | where present the entire range is **1–3** against `MLB`'s 38–92, and 62–100% of the non-zero values are the fill value 1 |
+   | K/P contracts not inflated | 2004, 2007, 2021 | 1986, 2010, 2013, 2017 | K/P median cap hit **$2.68M**, inside the published median range of $1.08–$2.85M; the correction shows in the TAIL, p95 **$5.00M** against a published median p95 of **$6.43M** and a 2010 p95 of $12.59M. The real 2000 top-of-market for a kicker was **$1,071,167** (Jason Elam) |
+
+   **Team payroll was a THIRD entry here until 2026-08-31 and it was wrong.**
+   It shipped at a median top-51 of **$54.6M**, era-accurate for 2000, and was
+   signed off as a deliberate deviation. In-game test: Green Bay had over
+   **$200M** of cap room and the financial layer was inert. PGM3's cap is a
+   fixed engine constant of ~**$280M** with **no field anywhere in the schema**
+   — the game does not know what year it is.
+
+   **The basis is the top 53, and on that basis the published files do not
+   merely agree, they are identical:** 197,400,001 / 197,424,500 / 197,426,500
+   / 197,428,500 / 197,429,000 / 197,427,000 / 197,426,500 — a **$29k spread on
+   $197.4M**, 0.015%, with 1986 landing on the round number to the dollar. On
+   top-51 the same files scatter by $1M, which is why top-51 reads like a loose
+   convention and top-53 reveals a fitted target. **This was already written at
+   line 864** — "each era is scaled so the median top-53 cap hit is 197.4M
+   against a 280M cap" — and was not read against the contradicting precedent.
+   Fixed by one uniform **×3.5879** factor over `salary` and `guarantee`,
+   landing on $197,399,997; see `scale_to_engine()`.
+   The gate that now catches it is `median team payroll` in `check_roster`.
+
+   **Two more, on the STAFF side, both validator limitations rather than file
+   defects:**
+
+   | check | reports | why it is correct |
+   |---|---|---|
+   | `duplicate names` [2] | Dick LeBeau twice, Jim Mora twice | LeBeau held **Cincinnati HC and DC simultaneously** — a ruling, not an error. The two Moras are **different men**, father at Indianapolis and son at San Francisco. The check keys on name alone and cannot express either |
+   | `verified faces intact` [2] | `jim mora` @ 1986 and @ 2000 | Same hole. The registry holds Mora Sr. in `staff_faces_1986` and Mora Jr. in `staff_faces`; a name-alone check must call one of them an overwrite. The 1986 instance predates this build |
+
+   **The 2000 staff file adds ZERO new face inconsistencies to the archive.**
+   Measured by running `faces --staff` over the published files alone and then
+   with 2000 added: head-family, hair-style and full-face disagreement counts
+   are **21 / 38 / 40** either way.
+
+   **Why the validator cannot see any of them.** `zero_pattern` pools all
+   positions for rosters, so `OLB` at 0% is diluted by `MLB`/`CB`/`S` at 100%;
+   and `cross_year` skips money fields by design, since they legitimately differ
+   by era. All three are correct divergences from defective references.
+
+0e. **BACKLOG — make `zero_pattern` per-position for rosters.** It currently
+   splits **staff by role** ("a scout legitimately has zero playcalling, and
+   pooling roles hides that") but **pools roster records across positions**. The
+   same reasoning applies: a linebacker legitimately has zero `kickAccuracy`.
+   It is an inconsistency, not a design choice.
+
+   **What it actually is: a defect detector for the cleanup passes.** Three of
+   the five published-file defects queued below are fill artifacts hiding in
+   specific positions — `OLB` coverage, and the position-specific parts of the
+   stamina and salary spikes. A per-position zero-pattern check is the
+   instrument that would have found them without anyone looking.
+
+   **Do not build it mid-roster-build**: it moves the standard a file is being
+   measured against while it is being measured, and it will almost certainly
+   fire across all seven published files at once. **Run it report-only against
+   all seven first, then decide about gating.**
+
+0d. **PLAYABILITY DEFECT — kicker and punter CONTRACTS are inflated, not just
+   their ratings.** Measured 2026-08-31 while building 2000's contracts;
+   confirmed independently by Ryan. Pooled across the published files, **kickers
+   reach a p95 of $7.61M and a max of $10.4M, punters $10.56M**, against a real
+   2000 top-of-market of about **$1.07M** (Jason Elam, the highest-paid kicker
+   in the league that year). Their median sits at 1.0–1.9x the league median
+   depending on the file — second only to quarterbacks in several.
+
+   This is the K/P inflation trap showing up in a **second field**. The ratings
+   version is documented and guarded against; the contract version was not.
+   **Probably the most visible of the five backlog defects in play** — a $10M
+   punter is something a user notices immediately, where a stamina-1 block or an
+   unused head family is not.
+
+   The 2000 build does not inherit it: position ceilings come from the real 2000
+   market, not from the published files. **Fifth member of the "a safe default
+   is still a claim" family.**
+
+0c. **The 2000 Madden file is a PRESEASON PROJECTION, not a performance
+   rating.** Robert Brooks is rated **91 overall** in it. He retired in August
+   1999, came back with Denver in 2000, played four games and caught three
+   passes for 51 yards, then retired for good. Madden is rating his 1995 peak,
+   not his 2000 season. Implications well beyond contracts: any check that
+   assumes the source reflects what a player did that year is measuring the
+   wrong thing, and a player's rating carries no information about whether he
+   actually played.
+
+0b. **Salary fill artifact — the published files spike at round mid-range
+   numbers.** Found 2026-08-31 checking whether they clamp or smear at the
+   bottom. They **smear** (2004's bottom decile holds 83 distinct values of 188),
+   so there is no minimum-salary convention to inherit — but each file carries a
+   spike somewhere in the middle instead: **2007 has 384 rostered players (20.5%)
+   on exactly $1,019,000**, 2010 has 188 on $779,000, 2004 has 112 on $730,000.
+   A fifth of a roster on one salary to the dollar is a fill, not a negotiation.
+   **Fourth member of the "a safe default is still a claim" family**, after the
+   1986 free-agent skin, the stamina-1 block, and the OLB coverage 1-3 values.
+
+0a. **PLAYABILITY DEFECT — 1,622 players across the published files have
+   `stamina` 1 and will gas out in game.** Found 2026-08-31 during the 2000
+   build; confirmed independently by Ryan. **Backlog for the master session.
+   This is a playability item, not data hygiene** — it is the same failure the
+   handoff already records for 2004's stamina scale mismatch, where 87% of
+   players would have gassed out and it was treated as a serious bug.
+
+   | file | at stamina 1 | share of non-zero |
+   |---|---|---|
+   | 2007 | 9 | 0.3% |
+   | 2010 | 0 | 0.0% |
+   | 1986 | 200 | 6.1% |
+   | 2021 | 226 | 6.9% |
+   | 2013 | 285 | 8.0% |
+   | 2004 | 267 | 8.8% |
+   | **2017** | **635** | **18.0%** |
+
+   (Counting every non-zero record. Rostered-only the total is 1,267 and 2017
+   reads 24.9% — state the cohort when quoting these.)
+
+   2017 has 635 players who gas out. The block is spread across every position
+   and concentrated in low-rated fringe players: a cohort that never got a real
+   source and took a default instead. **Same shape as item 0 below** — third
+   sighting of "a safe default is still a claim". `zoneCover`, `manCover` and
+   `greed` carry smaller blocks of the same kind.
+
+0. **1986 APPEARANCE — 47% OF THE FILE HAS NO REAL SOURCE.** Escalated
+   2026-08-31 from "the free agent pool is dark" to its actual scope. This is
+   not a defect to patch; it is a substantial unfinished piece of the 1986
+   build and should be ranked that way in the cleanup passes.
+
+   | cohort | n | f1 | f2 | f3 | f4 | f5 | state |
+   |---|---|---|---|---|---|---|---|
+   | rostered | 1,746 | 16.1 | 8.2 | 7.7 | 26.4 | 41.5 | sourced; family 1 runs hot |
+   | **Rookie** | **1,334** | 6.6 | 4.4 | **41.6** | 43.6 | **3.7** | **unsourced** |
+   | **Free Agent** | **201** | 1.5 | 0.0 | 0.0 | 47.3 | 51.2 | **unsourced** |
+
+   **Three cohorts, three incompatible shapes, in one file.** The prospect pool
+   inverts the rostered distribution — family 3 at 41.6% against 7.7%, family 5
+   at 3.7% against 41.5%. The free agent pool is 198 of 201 dark with families 2
+   and 3 entirely unused. Neither is a distribution; both are artifacts.
+
+   **The cause is documented rather than mysterious**: the appearance library
+   was built from the ROSTERED cohort only, and prospects and free agents "were
+   never sourced". So 1,535 of 3,281 records — **47%** — carry appearances with
+   no real source behind them.
+
+   **Evidence, and the fourth surfacing:** building 2000 produced 132 players
+   whose skin family disagrees with 1986 while every other file agrees among
+   themselves. **131 of the 132 are against 1986's Rookie cohort.** The 2000
+   side is `PSKI`, anchor-tested at 19/20 light and 17/17 dark; the 1986 side is
+   generated.
+
+   **Ruling (Ryan, 2026-08-31): fold these into this item. Do NOT write them
+   into the registry.** Adding 132 entries would fix the subset that happens to
+   overlap 2000 and leave ~1,200 other unsourced 1986 prospects untouched — a
+   partial fix that makes the file look more consistent than it is and hides
+   the defect from whoever picks this up. The registry is the archive's source
+   of truth and must not acquire entries derived from one season's convenience.
+
+   **The operative rule is not "the newer file wins" — it is "sourced beats
+   unsourced".** That is not a tie needing arbitration once the cohort is
+   visible.
+
+   Prior surfacings, all the same root: the free agent pool at 198/201 dark; the
+   head-family distribution across files; and registry duplicates disagreeing
+   family 3 against family 5 for the same man (`william roberts`, `joe jacoby`).
+
+   **This item gets cheaper if the project keeps going — check before spending
+   a session on it.** Master-session measurement, 2026-08-31: after every
+   current export, **1,260 names remain unsourced**. (Build session measured
+   1,234 locally on a name+position key across the 23 `sources/madden` exports;
+   same finding, slightly different key.) Coverage a single additional export
+   would supply:
+
+   | export year | names it would cover |
+   |---|---|
+   | **1990** | **514** |
+   | 1989 | 459 |
+   | 1991 | 418 |
+   | 1992 | 328 |
+   | 1993 | 253 |
+   | 1995 | 130 |
+   | 1997 | 29 |
+
+   **One early-90s roster recovers more than double what all six current
+   exports manage combined.** So this is not "17% recoverable, the rest
+   unsourceable" — a 1990 or 1991 build closes roughly **40% of the gap as a
+   side effect**, before anyone does anything deliberate about it.
+
+   **Likely route is a community historical mod inside a modern Madden engine**
+   — the way `1986_Roster_Mod_v1.0.ros` was — rather than a period disc. The
+   Xtreme format only reaches back to 2000, so a period-era disc will not
+   decode. Whatever turns up gets scored before use like any other source:
+   print the `PSKI` distribution, check the middle value is under ~28%, then
+   anchor-test against known players.
+
+   **Practical consequence:** do not spend a session on the photo-measurement
+   route for this cohort until it is known whether a 1990/1991 build is coming.
+   The photo route is the expensive fallback for what no roster export covers.
+
+0i. **STAFF AGES ARE NOT SOURCED, ARCHIVE-WIDE.** Found 2026-08-31 in the 2000
+   build and confirmed in the published files. The ages have essentially no
+   relationship to the men.
+
+   | file | HCs checkable | within ±2 yrs | off by ≥10 | error range |
+   |---|---|---|---|---|
+   | 2000 (before fix) | 89 coaches | 13 | 35 | −19 to +26 |
+   | 2004 | 28 | 4 | 11 | −19 to +15 |
+   | 2010 | 28 | 5 | 11 | −21 to +24 |
+
+   Examples: Tony Dungy shipped at **70** against a real 45; Sean Payton at
+   **71** in 2010 against 47; Tom Coughlin at **43** against 64.
+
+   **Why nothing caught it.** The distribution is entirely plausible — median
+   49.5, range 30–72, sitting right beside the published files — with no
+   per-person signal. Same shape as the stamina and appearance bugs. Internal
+   consistency checks can only see **impossibility**, not **wrongness**: only
+   two records in 2000 were impossible (Reeves coaching 19 seasons by 44, Mora
+   13 by 30), while Dungy at 70 with 4 seasons is perfectly consistent and 25
+   years out.
+
+   **It poisons `startSeason`,** which is a fitted function of age (r ≈ −0.96,
+   residual sd ≈ 2, in every modern published file). Wrong age gives a wrong
+   start season **and the correlation still looks perfect**, because the field
+   is a function of the bad input.
+
+   **2000 is fixed** — 124 of 128 real coaches carry sourced birth years in
+   `sources/coaches_2000_birth_years.csv` with per-row provenance, the other 4
+   derived from the Special Teams role median and tagged. All seven of Ryan's
+   independently known ages now match exactly. **The published files are not
+   fixed** and this is the sixth backlog item.
+
+   Route that worked: **one bulk Wikidata SPARQL query** filtered on occupation
+   `American football coach`, which is the disambiguator plain name matching
+   lacks — 98 of 126 in a single request. Wikipedia intro extracts covered most
+   of the rest. **nflverse is a trap here**: it matched only 22 of 128 and 4 of
+   those were false positives (Marvin Lewis, Andy Reid, Bill Callahan and Jimmy
+   Raye never played in the NFL; the Raye hit was his son). An 18% false rate,
+   and career length does not separate them — Croom and Payton each played one
+   season and are true matches.
+
+   Sources, reproducible: Wikidata SPARQL endpoint
+   `https://query.wikidata.org/sparql` with a `VALUES` block of the coach
+   names; Wikipedia `action=query&prop=extracts&exintro`. The nflverse file
+   tested was `players.csv` from the `players` release,
+   sha256 `3d05857e0ac77208b0b331bda5a3da4580ef2feb2fe78088566f9306dd6b658e`
+   (7,176,512 bytes, 25,064 rows) — not committed, it is gitignored, and it is
+   recorded only because the 18% false-positive figure should be reproducible.
+
+0j. **TEAM PAYROLL SPREAD IS DELIBERATELY TIGHTER THAN THE PUBLISHED FILES.**
+   Ruling 2026-08-31: leave it, do not chase the published shape.
+
+   | | min/median | max/median |
+   |---|---|---|
+   | published files | 0.63 | 1.40 |
+   | 2000 | 0.96 | 1.08 |
+
+   **The published spread is the one that is wrong.** Contemporary reporting on
+   the 2000 cap climate has teams sitting **$0.2M to $2.1M under a $62.17M
+   cap** — every team within about 3% of the ceiling. That is a hard cap doing
+   what hard caps do. The published ±40% is not era-accurate; it is what falls
+   out of building contracts without a cap constraint.
+
+   **Gameplay cost, stated honestly:** no team is cap-strapped and no team is
+   unusually flush, which removes some texture a player might expect from the
+   financial layer. Preferring that texture to the accuracy is a legitimate
+   call and not a bug either way — but it is Ryan's call, not a defect to fix
+   silently.
 
 1. **508 players have no skin data** — scattered fringe players in no Madden
    roster. The photo route would cover them
