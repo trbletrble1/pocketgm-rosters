@@ -1402,6 +1402,15 @@ eight published seasons, where the registry had the wrong skin band. 195 of them
 were family 2 called light. Ryan confirmed 14 in game before any of it was
 applied, and all 14 went the archive's way.
 
+**Coach records in the 2K5 files — no skin, but career records are in there.**
+Coaches carry a single `Photo` portrait ID and no skin/face/dreads fields, so the
+player archive covers players only. They DO carry Wins/Losses/Ties, seasons,
+playoff and Super Bowl records at documented offsets, *as of that season* — which
+is the input that cost most of a session on the 2000 build. We know the layout
+and cannot yet locate the records; three approaches failed. Everything known is
+in `docs/PGM3_2K5_COACH_RECORDS.md`, including what to try next and how to
+validate it against the verified 2000 coach data.
+
 **Coverage of the 1986 file**, unanimous entries only: 64% of the unsourced
 cohort, 85% of the rostered cohort, **75% of the whole file**. It was 17% that
 morning.
