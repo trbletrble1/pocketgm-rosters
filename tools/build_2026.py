@@ -2298,6 +2298,9 @@ def build_prospect(rank, position, season, rt_curve, gp_curve, rng):
 # 32 teams x 9 roles in every published file, no exceptions: Head Coach, Off
 # Co-ord, Def Co-ord, Special Teams, Head Scout, Off Scout, Def Scout, Head
 # Physio, Assistant Physio. A vacant real-world coordinator still needs a body.
+ALL_STAFF_PUBLISHED = ['PGMStaff_1986.json', 'PGMStaff_2000.json', 'PGMStaff_2004.json',
+                       'PGMStaff_2007.json', 'PGMStaff_2010.json', 'PGMStaff_2013.json',
+                       'PGMStaff_2017.json', 'PGMStaff_2021.json']
 STAFF_ROLES = ['Head Coach', 'Off Co-ord', 'Def Co-ord', 'Special Teams',
                'Head Scout', 'Off Scout', 'Def Scout',
                'Head Physio', 'Assistant Physio']
@@ -2403,7 +2406,9 @@ def donor_growth(donors, role, gap, rng):
 def assert_staff_structure(staff, real_names):
     """Every gate the archive enforces, checked here rather than at import."""
     by_team = collections.defaultdict(list)
-    for s in staff: by_team[s['teamID']].append(s)
+    for s in staff:
+        if s['teamID'] == FA_TEAM_ID: continue   # the pool is not a team
+        by_team[s['teamID']].append(s)
     bad = [t for t, v in by_team.items() if len(v) != 9]
     if bad: raise AssertionFailed(f'teams without exactly 9 staff: {bad[:5]}')
     for t, v in by_team.items():
@@ -2446,6 +2451,143 @@ def load_staff_ages(path, roles_by_name):
         else:
             missing.append(r['name'])
     return got, missing
+
+# ---------------------------------------------------------------- FA staff
+# The 2026 file shipped 288 team staff and NO free agent pool. Every published
+# file carries 165, so a user who fires a coordinator has nobody to hire.
+#
+# MEASURED before building, not assumed:
+#   role mix        every file: HC 20-33, one block of equal counts for the
+#                   other eight roles. 2021's mix (27/18/18/17/17x5) = 165.
+#   who is real     proven-real rate by role, where "proven real" means the
+#                   name holds a team job in some modelled season:
+#                     Head Coach 36.0% (73 of 203) | every other role 0-3%.
+#                   The precedent's claim -- FA head coaches real, the rest
+#                   invented -- survives the check.
+#   direction       FA head coaches come from the PAST, not the future:
+#                   2004 12 past vs 1 future, 2010 24 vs 3. They are coaches
+#                   who held a job in an earlier season and are now out of work.
+#   age ceiling     no FA staff record in any published file exceeds age 72.
+#   contract        salary/guarantee/length are ZERO in 1145 of 1145 FA
+#                   records; eSalary/eGuarantee/eLength are populated. A free
+#                   agent has no contract but does have an asking price.
+#
+# A recombination test was run as a second discriminator and DISCARDED: real
+# team-side staff score 34-60% on it against a leave-one-out vocabulary, so it
+# does not separate invented from real. Its first form scored the control at
+# 0.0% on all eight files because the control names had been used to build the
+# vocabulary they were tested against -- a check that could not fail.
+FA_TEAM_ID = 'Free Agent'
+FA_ROLE_MIX = [('Head Coach', 27), ('Off Co-ord', 18), ('Def Co-ord', 18),
+               ('Special Teams', 17), ('Head Scout', 17), ('Off Scout', 17),
+               ('Def Scout', 17), ('Head Physio', 17), ('Assistant Physio', 17)]
+FA_AGE_CAP = 72
+
+def build_free_agent_staff(team_staff, real_names, verbose=False):
+    paths = [P(f) for f in STAFF_FILES]
+    pubfa = [r for p in [P(f) for f in ALL_STAFF_PUBLISHED]
+             for r in json.load(open(p)) if r['teamID'] == FA_TEAM_ID]
+    by_role = collections.defaultdict(list)
+    for r in pubfa: by_role[r['role']].append(r)
+    live, donors, _ = fit_staff_profile(paths)
+    pool = json.load(open(P('wip', 'staff_name_pool.json')))
+    prof = json.load(open(P('wip', 'staff_profile.json')))
+    gate_vocab = collections.defaultdict(set)
+    for f in ('PGMStaff_2021.json', 'PGMStaff_2017.json'):
+        for r in json.load(open(P(f))):
+            for k, v in r.items():
+                if isinstance(v, str): gate_vocab[k].add(v)
+    template = json.load(open(P('PGMStaff_2021.json')))[0]
+    SCHEMA = {k: (0 if isinstance(v, int) else ('' if isinstance(v, str) else []))
+              for k, v in template.items()}
+
+    # real out-of-work head coaches: newest team-side HC record per name,
+    # excluding anyone employed in 2026, age-capped at the observed ceiling.
+    employed = {norm(f"{s['forename']} {s['surname']}") for s in team_staff}
+    last = {}
+    for f in ALL_STAFF_PUBLISHED:
+        yr = int(f[9:13])
+        for r in json.load(open(P(f))):
+            if r['teamID'] != FA_TEAM_ID and r['role'] == 'Head Coach':
+                k = norm(f"{r['forename']} {r['surname']}")
+                if k not in last or last[k][0] < yr: last[k] = (yr, r)
+    cands = [(yr, r) for k, (yr, r) in last.items() if k not in employed
+             and r['age'] + (CUR_SEASON - yr) <= FA_AGE_CAP]
+    cands.sort(key=lambda x: -x[0])
+    want_hc = dict(FA_ROLE_MIX)['Head Coach']
+    real_hc = cands[:want_hc]
+    shortfall = want_hc - len(real_hc)
+
+    staff, used, src = [], set(), collections.Counter()
+    for role, n in FA_ROLE_MIX:
+        for i in range(n):
+            rng = random.Random(int(hashlib.sha256(
+                f'FA|{role}|{i}'.encode()).hexdigest()[:12], 16))
+            rec = dict(SCHEMA)
+            real = real_hc[i] if (role == 'Head Coach' and i < len(real_hc)) else None
+            if real:
+                yr, r0 = real
+                fore, sur = r0['forename'], r0['surname']
+                rating, pot = r0['rating'], r0['potential']
+                age = r0['age'] + (CUR_SEASON - yr)
+                for k, v in r0.items():
+                    if k in SCHEMA and isinstance(v, int): rec[k] = v
+                rec['growthType'] = list(r0['growthType'])
+                rec['appearance'] = list(r0['appearance'])
+                for k, v in r0.items():
+                    if isinstance(v, str) and k not in ('role','teamID','forename','surname','iden'):
+                        rec[k] = v
+                src['real'] += 1
+            else:
+                donor = rng.choice(by_role[role])
+                rating, pot = donor['rating'], donor['potential']
+                age = donor['age']
+                for _ in range(400):
+                    fore = rng.choice(pool['forenames']); sur = rng.choice(pool['surnames'])
+                    k = norm(f'{fore} {sur}')
+                    if k not in real_names and k not in used: break
+                used.add(k)
+                pool_r = sorted(x['rating'] for x in by_role[role])
+                q = percentile_of(pool_r, rating)
+                for field, vals in live[role].items():
+                    rec[field] = int(round(_target_at(vals, q)))
+                rec['growthType'] = donor_growth(donors, role, pot - rating, rng)
+                rec['appearance'] = list(donor['appearance'])
+                for f_, counts in prof[role]['str'].items():
+                    if f_ in ('role','teamID','forename','surname','iden','appearance'): continue
+                    pairs = [(x[0], x[1]) for x in counts
+                             if not gate_vocab.get(f_) or x[0] in gate_vocab[f_]]
+                    if pairs:
+                        rec[f_] = rng.choices([x[0] for x in pairs],
+                                              weights=[x[1] for x in pairs])[0]
+                src['generated'] += 1
+            rec[PRIMARY_ATTR[role]] = rating
+            # growthType must satisfy the 50x rule against the shipped pair
+            pos = sum(x for x in rec['growthType'] if x > 0)
+            pot = rating + pos // 50
+            rec.update({
+                'rating': rating, 'potential': min(99, pot), 'age': age,
+                'role': role, 'teamID': FA_TEAM_ID,
+                'forename': fore, 'surname': sur, 'iden': _uuid(rng),
+                'startSeason': rng.choice([x['startSeason'] for x in by_role[role]]),
+                # a free agent has no contract; the asking price is what he carries
+                'salary': 0, 'guarantee': 0, 'length': 0,
+            })
+            q2 = percentile_of(sorted(x['rating'] for x in by_role[role]), rating)
+            rec['eSalary'] = int(round(_target_at(
+                sorted(x['eSalary'] for x in by_role[role]), q2)))
+            eg = [x['eGuarantee'] for x in by_role[role]]
+            rec['eGuarantee'] = (int(round(_target_at(sorted(v for v in eg if v), q2)))
+                                 if rng.random() < sum(1 for v in eg if v) / len(eg) else 0)
+            rec['eLength'] = rng.choice([x['eLength'] for x in by_role[role]])
+            staff.append(rec)
+    if verbose:
+        print(f'   free agent pool: {len(staff)} records  '
+              f'real {src["real"]}  generated {src["generated"]}')
+        if shortfall:
+            print(f'   LOGGED: {shortfall} head coach slots short of real supply, '
+                  f'filled from the generated path rather than invented as real')
+    return staff, src, shortfall
 
 def build_staff(verbose=False):
     bundle, front, mad, nfl = load_all()
@@ -2947,6 +3089,64 @@ def seam_report():
     scale = fit_jinx_scale(overlap, front)
     return assert_tier_seam(overlap, scale, front)
 
+def stage_fa_staff(verbose=True):
+    """Append the free agent pool to PGMStaff_2026.json. The 288 team records
+    are loaded and NOT rebuilt -- the missing cohort is the only defect, and a
+    regenerated team side would be an unrequested change to a shipped file."""
+    path = P('PGMStaff_2026.json')
+    team = json.load(open(path))
+    if any(s['teamID'] == FA_TEAM_ID for s in team):
+        raise AssertionFailed('PGMStaff_2026.json already carries a free agent pool')
+    if len(team) != 288:
+        raise AssertionFailed(f'expected 288 team staff, found {len(team)}')
+    before = json.dumps(team, sort_keys=True)
+    pool = json.load(open(P('wip', 'staff_name_pool.json')))
+    real_names = {norm(n) for n in pool['real_coach_names']}
+    fa, src, shortfall = build_free_agent_staff(team, real_names, verbose=verbose)
+    out = team + fa
+    assert_staff_structure(out, real_names)
+    assert_fa_pool(fa, team)
+    if json.dumps(json.loads(json.dumps(out[:288])), sort_keys=True) != before:
+        raise AssertionFailed('the 288 team records changed; they must not')
+    with open(path, 'w') as f: json.dump(out, f, separators=(', ', ': '))
+    if verbose:
+        print(f'   PGMStaff_2026.json: {len(out)} records '
+              f'({len(team)} team + {len(fa)} free agent)')
+    return out
+
+def assert_fa_pool(fa, team):
+    """Gates specific to the pool, each measured against the published files."""
+    if len(fa) != 165:
+        raise AssertionFailed(f'free agent pool has {len(fa)}, published files carry 165')
+    got = collections.Counter(s['role'] for s in fa)
+    for role, n in FA_ROLE_MIX:
+        if got[role] != n:
+            raise AssertionFailed(f'FA role mix: {role} {got[role]} != {n}')
+    for s in fa:
+        if s['teamID'] != FA_TEAM_ID:
+            raise AssertionFailed(f"FA record with teamID {s['teamID']}")
+        if s['salary'] or s['guarantee'] or s['length']:
+            raise AssertionFailed(f"{s['surname']}: free agent carries a contract "
+                                  f"({s['salary']}/{s['guarantee']}/{s['length']}); "
+                                  f"zero in 1145 of 1145 published FA records")
+        if not s['eSalary']:
+            raise AssertionFailed(f"{s['surname']}: no asking price; eSalary is "
+                                  f"populated in every published FA record")
+        if s['age'] > FA_AGE_CAP:
+            raise AssertionFailed(f"{s['surname']} aged {s['age']}, above the "
+                                  f"observed FA ceiling of {FA_AGE_CAP}")
+        if len(s['appearance']) != 9:
+            raise AssertionFailed(f"{s['surname']}: appearance has {len(s['appearance'])}")
+    emp = {norm(f"{s['forename']} {s['surname']}") for s in team}
+    dup = [s for s in fa if norm(f"{s['forename']} {s['surname']}") in emp]
+    if dup:
+        raise AssertionFailed(f'{len(dup)} free agents are also employed in 2026: '
+                              f'{[s["surname"] for s in dup][:5]}')
+    names = [norm(f"{s['forename']} {s['surname']}") for s in fa]
+    if len(set(names)) != len(names):
+        raise AssertionFailed('duplicate names within the free agent pool')
+    return len(fa)
+
 # ----------------------------------------------------------------- main
 if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else 'join'
@@ -2969,4 +3169,5 @@ if __name__ == '__main__':
     elif cmd == 'refit': stage_refit()
     elif cmd == 'contracts': stage_contracts()
     elif cmd == 'assemble': stage_build()
+    elif cmd == 'fastaff': stage_fa_staff()
     else: print(__doc__); sys.exit(2)

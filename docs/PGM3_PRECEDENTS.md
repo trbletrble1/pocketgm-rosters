@@ -3383,3 +3383,64 @@ Kept separate deliberately: **74% of the 2026 cohort's DRIFT cases are
 unsolvable from the archive.** That is a different measurement on a selected
 subset — drift cases are not the general population — and it stands on its own
 without the era claim.
+
+## The free agent staff pool (2026)
+
+**Every published file carries 165 free agent staff; 2026 shipped 0.** A user
+who fires a coordinator had nobody to hire. The pool is `teamID == 'Free Agent'`,
+and 453 = 288 team (32 x 9) + 165.
+
+**Head coaches are real, every other role is invented.** Measured, not assumed,
+by asking whether a free agent's name holds a team job in some modelled season
+(a lower bound: it has false negatives, never false positives):
+
+| role | FA n | proven real |
+|---|---|---|
+| Head Coach | 203 | **36.0%** |
+| Off Co-ord / Def Co-ord | 141 each | 0.7% |
+| Special Teams | 135 | 0.0% |
+| scouts, physios | 135 each | 0.7-3.0% |
+
+The precedent's claim survived the check. It would have been easy to assume.
+
+**The pool draws from the past, not the future.** Free agent head coaches are
+men who held a team job in an *earlier* season and are now out of work — 2004
+is 12 past vs 1 future, 2010 is 24 vs 3. 2026 follows the same rule.
+
+**2021 is the outlier and was not followed.** Its 27 free agent head coaches
+match nothing in any direction, including the 2026 team side — that pool is
+fully invented. Six of eight files source real coaches; the dominant precedent
+plus *never invent data when real data exists* settles it against the newest file.
+
+**A free agent has no contract but does have an asking price.** `salary`,
+`guarantee` and `length` are zero in **1145 of 1145** published FA records,
+while `eSalary` / `eGuarantee` / `eLength` are populated. Shipping a free agent
+with a salary would have looked plausible and been wrong.
+
+**Age ceiling 72**, the observed maximum across every published FA record.
+Without it the real-coach supply reaches an implied age of 102 in 2026.
+
+### Three ways this measurement nearly went wrong
+
+**A control that could not fail.** A name-recombination test scored the
+team-side control at exactly 0.0% on all eight files — because the control
+names had been used to build the vocabulary they were then tested against.
+Rebuilt leave-one-out, real staff score **34-60%** on that same test, so
+recombination does not separate invented from real at all. The test was
+discarded, not reported. *An assertion that cannot fail reports success* — and
+so does a control that cannot fail, which is the more comfortable version
+because the number it prints is the one you wanted.
+
+**`teamId` vs `teamID`.** The first probe read `r.get('teamId')`, which is not
+the field. It returned `None` for all 453 records and was one step from
+reporting a clean, confident, entirely fictional split. Checking the key list
+before trusting the aggregate is what caught it.
+
+**`min()` as a sentinel finder.** The second probe took `min(teamID)` as "the
+free agent bucket". `teamID` is a team abbreviation, so it returned `'ARI'` —
+nine Arizona staff reported as the league's free agent pool, in a table that
+looked entirely reasonable at 9 per file.
+
+**A gate can pass vacuously.** `free agent salary != 0` was reported `ok` on
+every run of the 288-record file. There were no free agents in it. A green gate
+over an empty set is not evidence, and it read identically to a real pass.
