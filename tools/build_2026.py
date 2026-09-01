@@ -722,7 +722,7 @@ def name_seed(nrow, position):
     """Seed on the player's name so a rebuild does not reshuffle faces."""
     return int(hashlib.sha256(f"{nrow['_norm']}|{position}".encode()).hexdigest()[:16], 16)
 
-def stage_appearances(verbose=True):
+def stage_appearances(verbose=True, precomputed=None):
     bundle, front, mad, nfl = load_all()
     refs   = [P(f) for f in MODERN_REFS]
     lib    = fit_appearance_library(refs)
@@ -731,18 +731,30 @@ def stage_appearances(verbose=True):
     arc    = json.load(open(P('reference','PGM3_PLAYER_ARCHIVE.json')))['players']
     reg    = json.load(open(P('reference','PGM3_FACE_REGISTRY.json')))['faces']
 
-    res  = join([r for r in nfl if r['status'] == 'ACT'], mad)
-    pmap = fit_position_map([(n, m) for n, m, _ in res.pairs], front)
-
-    cohort = []
-    for n, m, _ in res.pairs:
-        pos = madden_pgm3_position(m, front)
-        if pos is None: continue                      # long snappers, cut
-        cohort.append((n, pos, float(m['Weight']), int(m['Age'])))
-    for n in res.unmatched:
-        pos = apply_position_map(n, front, pmap)
-        w = _weight(n)
-        cohort.append((n, pos, w, None))
+    if precomputed is not None:
+        # REUSE the caller's rows. Re-deriving them here creates new objects,
+        # so every id()-keyed lookup in the assembly missed and 2,107 records
+        # fell through to a placeholder face -- five distinct appearances in
+        # the whole file. Second instance of this identity bug in one
+        # assembly; the first was contracts shipping salary 0.
+        cohort = []
+        for n, m, pos in precomputed:
+            try: wt = float(m['Weight'])
+            except (KeyError, ValueError, TypeError): wt = _weight(n)
+            try: ag = int(m['Age'])
+            except (KeyError, ValueError, TypeError): ag = None
+            cohort.append((n, pos, wt, ag))
+    else:
+        res  = join([r for r in nfl if r['status'] == 'ACT'], mad)
+        pmap = fit_position_map([(n, m) for n, m, _ in res.pairs], front)
+        cohort = []
+        for n, m, _ in res.pairs:
+            pos = madden_pgm3_position(m, front)
+            if pos is None: continue                  # long snappers, cut
+            cohort.append((n, pos, float(m['Weight']), int(m['Age'])))
+        for n in res.unmatched:
+            pos = apply_position_map(n, front, pmap)
+            cohort.append((n, pos, _weight(n), None))
 
     src = collections.Counter(); built = []
     for n, pos, w, age in cohort:
@@ -916,15 +928,26 @@ def stage_attributes(verbose=True):
 
     act  = [r for r in nfl if r['status'] == 'ACT']
     resv = [r for r in nfl if r['status'] == 'RES']
+    fa_raw = [r for r in nfl if r['status'] in ('CUT', 'W04')]
     res  = join(act, mad)
     rres = join(resv, mad)
+    rfa  = join(fa_raw, mad, use_team_pass=False)
     pmap = fit_position_map([(n, m) for n, m, _ in res.pairs], front)
+
+    # RULING D: free agents are those with a Madden record OR >= 2 years of
+    # experience. 471 kept of 855, 132 derived = 28.0% of the pool.
+    fa_matched = {id(n) for n, _, _ in rfa.pairs}
+    fa_keep = [n for n in fa_raw if id(n) in fa_matched or n['_exp'] >= 2]
+    fa_keep_ids = {id(n) for n in fa_keep}
+    cohort_of_id = {}
+    for n in fa_keep: cohort_of_id[id(n)] = 'FA'
 
     # ---- tier 1: a real Madden 27 row -----------------------------------
     rows, tier_of = [], {}
-    for n, m, _ in list(res.pairs) + list(rres.pairs):
-        pos = madden_pgm3_position(m, front)
-        if pos: rows.append((n, m, pos)); tier_of[id(n)] = 1
+    for n, m, _ in list(res.pairs) + list(rres.pairs) + list(rfa.pairs):
+        if id(n) in cohort_of_id or id(n) not in fa_keep_ids:
+            pos = madden_pgm3_position(m, front)
+            if pos: rows.append((n, m, pos)); tier_of[id(n)] = 1
 
     # ---- tier 2: 2025 JINX, converted onto the Madden 27 scale -----------
     jinx = load_jinx(P(JINX_2025))
@@ -936,7 +959,7 @@ def stage_attributes(verbose=True):
     scale = fit_jinx_scale(overlap, front)
 
     t2 = 0
-    for n in list(res.unmatched) + list(rres.unmatched):
+    for n in list(res.unmatched) + list(rres.unmatched) + [x for x in rfa.unmatched if id(x) in fa_keep_ids]:
         j = jinx.get(n['_norm'])
         if not j: continue
         pos = apply_position_map(n, front, pmap)
@@ -947,7 +970,7 @@ def stage_attributes(verbose=True):
     # ---- tier 3: no source at all --------------------------------------
     fine, coarse = fit_tier3_reference(refs)
     t3 = 0
-    for n in list(res.unmatched) + list(rres.unmatched):
+    for n in list(res.unmatched) + list(rres.unmatched) + [x for x in rfa.unmatched if id(x) in fa_keep_ids]:
         if n['_norm'] in jinx: continue
         pos = apply_position_map(n, front, pmap)
         rng = random.Random(name_seed(n, pos))
@@ -1019,7 +1042,7 @@ def stage_attributes(verbose=True):
               f'({100*nf/max(1,tot_cells):.1f}%)')
         top = sorted(filled.items(), key=lambda x: -x[1])[:6]
         print(f'   most-filled attributes: ' + ', '.join(f'{a} {c}' for a, c in top))
-    return rows, built, targets, weights, tier_of, filled_keys
+    return rows, built, targets, weights, tier_of, filled_keys, cohort_of_id
 
 def conditional_pass(rows, built, verbose=True):
     """Mandatory. Split the output by the SOURCE value and confirm the groups
@@ -1349,13 +1372,19 @@ def build_derived(rows, built, weights, pools, ratpool, verbose=False):
         rp = percentile_of(ratpool[pos], rt) if ratpool.get(pos) else 0.5
         rng = random.Random(name_seed(n, pos) ^ 0x9E3779B9)
         for a in DERIVED_ATTRS:
-            if a not in live or a in attrs: continue
+            # greed, loyalty and ambition are NOT in weights.json -- they do
+            # not feed the rating -- but they ARE schema fields and every
+            # published record populates them. Gating on `live` left all three
+            # at 100% zero across every position.
+            if a in attrs: continue
+            if a not in live and a not in DERIVED_INDEPENDENT: continue
             pool = pools.get((pos, a))
             if not pool: continue
             if a in DERIVED_BY_RATING:
-                attrs[a] = int(round(_target_at(pool, rp)))
+                v = int(round(_target_at(pool, rp)))
             else:
-                attrs[a] = pool[min(len(pool) - 1, int(rng.random() * len(pool)))]
+                v = pool[min(len(pool) - 1, int(rng.random() * len(pool)))]
+            attrs[a] = max(0, min(99, v))
             made[a] += 1
     return made
 
@@ -1682,7 +1711,8 @@ def calibrate_positions(rows, built, weights, bounds):
             for k in names:
                 if k not in a: continue
                 b = bounds.get((pos, k)); v = a[k] + sh
-                a[k] = int(round(min(b[1], max(b[0], v)) if b else v))
+                v = min(b[1], max(b[0], v)) if b else v
+                a[k] = max(0, min(99, int(round(v))))
     return shifts
 
 def assert_conditional_after_refit(rows, after, floor=0.95):
@@ -1744,7 +1774,7 @@ def assert_refit_bounds(before, after, rows, tier_of, filled_keys, bounds,
     return {k: (len(v), statistics.median(v)) for k, v in sorted(disp.items())}
 
 def stage_refit(verbose=True):
-    rows, built, targets, weights, tier_of, filled_keys = stage_attributes(verbose=False)
+    rows, built, targets, weights, tier_of, filled_keys, coh = stage_attributes(verbose=False)
     refs   = [P(f) for f in MODERN_REFS]
     bounds = fit_attr_bounds(refs)
     _, ratpool = fit_percentile_fill(refs)
@@ -1787,7 +1817,7 @@ def stage_refit(verbose=True):
             print(f'   {t:4d} {kind:>11s} {nn:7d} {med:15.1f}')
     return rows, after, tier_of
 
-def stage_contracts(verbose=True):
+def stage_contracts(verbose=True, precomputed=None):
     """length -> salary/guarantee -> scale to $197.4M -> compress under the cap.
     Every money value carries a provenance tag and the guard assertion runs
     after all guards, against the pre-guard snapshot."""
@@ -1795,10 +1825,18 @@ def stage_contracts(verbose=True):
     refs = [P(f) for f in MODERN_REFS]
     dist, corr = fit_length_reference(refs)
     ref_sal, ref_gte = fit_money_reference(refs)
-    rows, built, _, weights, tier_of, _ = stage_attributes(verbose=False)
+    # REUSE the caller's rows when given. Re-running stage_attributes here
+    # creates new objects, so every id()-keyed lookup in the assembly missed
+    # and the whole file shipped with salary 0 -- correct record count, no
+    # money. Identity is not a value; do not key across independent builds.
+    if precomputed is not None:
+        rows, built, _, weights, tier_of, _fk, coh = precomputed
+    else:
+        rows, built, _, weights, tier_of, _fk, coh = stage_attributes(verbose=False)
 
     players = []
     for n, m, pos in rows:
+        if id(n) in coh: continue          # free agents: salary/length/teamNum 0
         try: rt = float(m['OverallRating'])
         except (KeyError, ValueError): continue
         players.append((n, m, pos, rt))
@@ -2195,6 +2233,18 @@ def build_staff(verbose=True):
     pool = json.load(open(P('wip', 'staff_name_pool.json')))
     real_names = {norm(n) for n in pool['real_coach_names']}
     prof = json.load(open(P('wip', 'staff_profile.json')))
+    gate_vocab = collections.defaultdict(set)
+    for f in ('PGMStaff_2021.json', 'PGMStaff_2017.json'):
+        for r in json.load(open(P(f))):
+            for k, v in r.items():
+                if isinstance(v, str): gate_vocab[k].add(v)
+    # The full 72-key schema, in the published order. A field a role does not
+    # use is present at 0, NOT absent -- the validator reads every key on every
+    # record, and this is the same class as the 2000 builder leaving ~30
+    # specialty fields unset.
+    template = json.load(open(P('PGMStaff_2021.json')))[0]
+    SCHEMA = {k: (0 if isinstance(v, int) else ('' if isinstance(v, str) else []))
+              for k, v in template.items()}
     gfit = json.load(open(P('wip', 'staff_guarantee_fit.json')))
     schemes = bundle['staff_schemes']
 
@@ -2218,11 +2268,12 @@ def build_staff(verbose=True):
     for r in pubrecs: by_role_rating[r['role']].append(r)
 
     staff, used_names, tags = [], set(), collections.Counter()
+    promotions = []
     for team in sorted(schemes):
         sc = schemes[team]
         for slot, role in enumerate(STAFF_ROLES):
             rng = random.Random(int(hashlib.sha256(f'{team}|{role}'.encode()).hexdigest()[:12], 16))
-            rec = {}
+            rec = dict(SCHEMA)
             info = named.get((team, role))
             if info:
                 nm = info['name']; rating = int(info['rating'])
@@ -2271,18 +2322,324 @@ def build_staff(verbose=True):
             # categorical fields
             for f, counts in prof[role]['str'].items():
                 if f in ('role', 'teamID', 'forename', 'surname', 'iden', 'appearance'): continue
-                vals = [x[0] for x in counts]; wts = [x[1] for x in counts]
-                rec[f] = rng.choices(vals, weights=wts)[0]
+                pairs = [(x[0], x[1]) for x in counts
+                         if not gate_vocab.get(f) or x[0] in gate_vocab[f]]
+                if not pairs: continue
+                rec[f] = rng.choices([x[0] for x in pairs], weights=[x[1] for x in pairs])[0]
             if role == 'Head Coach':
                 rec['offStyle'] = sc['off']
                 rec['defStyle'] = sc.get('cov_style', rec.get('defStyle'))
             if role == 'Off Co-ord':  rec['offStyle'] = sc['off']
             if role == 'Def Co-ord' and sc.get('dc_note'):
-                rec['note'] = ('PROMOTION, not a title he held. ' + sc['dc_note'])
+                promotions.append((team, role, f"{fore} {sur}",
+                                   'PROMOTION, not a title he held. ' + sc['dc_note']))
             donor2 = rng.choice(by_role_rating[role])
             rec['appearance'] = list(donor2['appearance'])
             staff.append(rec)
-    return staff, tags, unresolved, real_names
+    return staff, tags, unresolved, real_names, promotions
+
+# ================================================================== assembly
+ROSTER_KEYS = ['speed','vision','jumping','decisions','dPassAcc','ballStrip','burst',
+ 'rushBlock','releaseLine','discipline','intelligence','zoneCover','catching','throwOnRun',
+ 'mPassAcc','skillMove','blockShedding','sPassAcc','routeRun','tackle','ballSecurity',
+ 'passBlock','agility','injuryProne','power','trucking','elusiveness','stamina','manCover',
+ 'kickAccuracy','forename','surname','position','teamID','age','rating','potential',
+ 'growthType','appearance','salary','guarantee','length','eSalary','eGuarantee','eLength',
+ 'greed','loyalty','ambition','draftNum','draftSeason','teamNum','iden']
+UNDRAFTED_FLOOR = 224
+
+def fit_player_growth(paths):
+    """Whole 31-element donor curves keyed on (cohort, potential - rating), so
+    the 50x rule holds by construction. Every player must be able to DECLINE:
+    2013 shipped with no negative entry for any of its 2,531 veterans and a
+    52-year-old Tony Gonzalez was still rated 97 after twenty simulated
+    seasons."""
+    d = collections.defaultdict(list)
+    for path in paths:
+        for r in json.load(open(path)):
+            c = cohort_of(r)
+            if len(r['growthType']) == 31:
+                d[(c, r['potential'] - r['rating'])].append(r['growthType'])
+    return d
+
+def fit_potential_gap(paths):
+    """(cohort, position) -> sorted published potential-minus-rating."""
+    d = collections.defaultdict(list)
+    for path in paths:
+        for r in json.load(open(path)):
+            d[(cohort_of(r), r['position'])].append(r['potential'] - r['rating'])
+    return {k: sorted(v) for k, v in d.items()}
+
+def _rescale_positives(curve, target):
+    """Keep the donor's DECLINE, rescale its growth slots to the required sum.
+    The 2000 build's fix for gaps with no exact donor. Every player must be
+    able to decline: 2013 shipped with no negative entry for any of its 2,531
+    veterans and a 52-year-old Tony Gonzalez was still rated 97 after twenty
+    simulated seasons."""
+    out = list(curve)
+    idx = [i for i, v in enumerate(out) if v > 0]
+    if target <= 0:
+        for i in idx: out[i] = 0
+        return out
+    if not idx:                      # donor has no growth slots -- make one
+        out[0] = target
+        return out
+    cur = sum(out[i] for i in idx)
+    for i in idx: out[i] = int(out[i] * target / cur)
+    drift = target - sum(out[i] for i in idx)
+    out[idx[0]] += drift             # put the rounding remainder in one slot
+    return out
+
+def player_growth(pool, cohort, gap, rng):
+    """Whole 31-element donor curve keyed on (cohort, potential - rating), so
+    the 50x rule holds by construction where an exact donor exists. Where it
+    does not, the nearest donor is taken and its positives rescaled."""
+    target = gap * 50
+    if pool.get((cohort, gap)):
+        return list(rng.choice(pool[(cohort, gap)]))
+    near = sorted((k for k in pool if k[0] == cohort and pool[k]),
+                  key=lambda k: abs(k[1] - gap))
+    if not near:
+        near = sorted((k for k in pool if pool[k]), key=lambda k: abs(k[1] - gap))
+    if not near:
+        return [0] * 31
+    return _rescale_positives(rng.choice(pool[near[0]]), target)
+
+def assert_roster_record(r, seen_iden):
+    if set(r) != set(ROSTER_KEYS):
+        raise AssertionFailed(f'schema mismatch: extra {sorted(set(r)-set(ROSTER_KEYS))}, '
+                              f'missing {sorted(set(ROSTER_KEYS)-set(r))}')
+    if len(r['growthType']) != 31:
+        raise AssertionFailed(f"growthType {len(r['growthType'])} elements, expected 31")
+    pos = sum(x for x in r['growthType'] if x > 0)
+    if pos != (r['potential'] - r['rating']) * 50:
+        raise AssertionFailed(f"50x rule: {pos} != {(r['potential']-r['rating'])*50} "
+                              f"for {r['forename']} {r['surname']}")
+    if r['iden'] in seen_iden:
+        raise AssertionFailed(f"duplicate iden {r['iden']}")
+    seen_iden.add(r['iden'])
+    c = cohort_of(r)
+    hi = 256 if c == 'Rookie' else UNDRAFTED_FLOOR
+    if r['draftNum'] < 1 or r['draftNum'] > hi:
+        raise AssertionFailed(f"draftNum {r['draftNum']} outside 1-{hi} for cohort {c}")
+    if c == 'FA' and (r['salary'] or r['length'] or r['teamNum']):
+        raise AssertionFailed(f"free agent {r['surname']} must have salary/length/teamNum 0")
+    if c == 'T' and r['length'] < 1:
+        raise AssertionFailed(f"rostered {r['surname']} has length {r['length']}")
+    if c == 'Rookie' and (r['eSalary'] or r['eLength']):
+        raise AssertionFailed(f"prospect {r['surname']} must have eSalary/eLength 0")
+    return True
+
+def _prospect_face(pr, pos, rng, lib, prior, vocab, archive, med_wt):
+    """Prospects get a real generated face, not a placeholder. They are draft
+    boards, so the archive rarely covers them and the band comes from the
+    position prior -- a flat league-wide fill is wrong in both directions at
+    once, since 52.9% of kickers sit in the lightest family against 1.5% of
+    cornerbacks. Age 22 and the position's median weight drive the variant."""
+    key = f"{norm(pr['name'])}|{pos}"
+    band = archive_band(key, archive)
+    if band is None:
+        band = _draw(rng, prior[pos]) if prior.get(pos) else 'dark'
+    app = build_appearance(rng, pos, band, 22, med_wt.get(pos), lib)
+    assert_appearance_valid(app, vocab)
+    return app
+
+def stage_build(verbose=True):
+    """Assemble PGMRoster_2026.json. The face registry is applied LAST, over
+    the top, and nothing after it -- family digit only for players, because the
+    variant letter is a function of age and weight IN THAT SEASON."""
+    bundle, front, mad, nfl = load_all()
+    refs   = [P(f) for f in MODERN_REFS]
+    rows, built, _, weights, tier_of, filled, coh = stage_attributes(verbose=False)
+    bounds = fit_attr_bounds(refs)
+    _, ratpool = fit_percentile_fill(refs)
+    build_derived(rows, built, weights, fit_derived_pools(refs), ratpool)
+    calibrate_positions(rows, built, weights, bounds)
+    for n, m, pos in rows:
+        a = built.get(id(n))
+        if not a or 'OverallRating' not in m: continue
+        built[id(n)], _ = refit_player(a, pos, float(m['OverallRating']), weights, bounds)
+    assert_conditional_after_refit(rows, {id(n): built[id(n)] for n, _, _ in rows if id(n) in built})
+
+    pre = (rows, built, None, weights, tier_of, filled, coh)
+    plist, salary, guarantee, prov_of, lengths, team_of, _ = stage_contracts(
+        verbose=False, precomputed=pre)
+    faces, _, _, _ = stage_appearances(verbose=False, precomputed=rows)
+    face_of = {id(n): app for n, pos, band, app in faces}
+    # ASSERT THE LOOKUP LANDS. A miss here does not error -- it silently
+    # substitutes a placeholder, which is exactly how five distinct faces
+    # reached 2,635 records. Assert on the match RATE, never the output count.
+    hit = sum(1 for n, m, pos in rows if id(n) in face_of)
+    if hit < 0.99 * len(rows):
+        raise AssertionFailed(f'appearance lookup covered {hit}/{len(rows)} rows '
+                              f'({100*hit/len(rows):.1f}%) — identity mismatch, '
+                              f'records would silently take a placeholder face')
+
+    gpool = fit_player_growth(refs); gapref = fit_potential_gap(refs)
+    face_lib = fit_appearance_library([P(f) for f in MODERN_REFS])
+    face_prior = band_prior([P(f) for f in MODERN_REFS])
+    face_vocab = published_vocabulary([P(f) for f in MODERN_REFS])
+    arc_players = json.load(open(P('reference','PGM3_PLAYER_ARCHIVE.json')))['players']
+    med_wt = collections.defaultdict(list)
+    for n_, m_, p_ in rows:
+        w_ = None
+        try: w_ = float(m_['Weight'])
+        except (KeyError, ValueError, TypeError): w_ = _weight(n_)
+        if w_: med_wt[p_].append(w_)
+    med_wt = {k: statistics.median(v) for k, v in med_wt.items()}
+    pools, rp = fit_percentile_fill(refs)      # hoisted: these load six files
+    dpools    = fit_derived_pools(refs)        # each, and the loop runs 321x
+    rt_curve, gp_curve = fit_prospect_curve(refs)
+    reg = json.load(open(P('reference', 'PGM3_FACE_REGISTRY.json')))
+    fk = reg['faces']; verified = set(reg['_verified_keys'].get('players', []))
+
+    out, seen = [], set()
+    for n, m, pos in rows:
+        a = built.get(id(n))
+        if not a: continue
+        k = id(n)
+        is_fa = k in coh
+        rng = random.Random(name_seed(n, pos))
+        # `iden` needs its own stream: name+position collides across cohorts
+        # (a prospect and a rostered player, or two real namesakes), and the
+        # uniqueness assertion caught exactly that.
+        irng = random.Random(name_seed(n, pos) ^ (0xFA if is_fa else 0x7) ^ (len(out) << 8))
+        rating = int(round(float(m['OverallRating'])))
+        gaps = gapref.get(('T', pos)) or [0]
+        gap  = gaps[min(len(gaps) - 1, int(rng.random() * len(gaps)))]
+        potential = min(99, rating + gap)
+        exp = n['_exp']
+        rec = {kk: 0 for kk in ROSTER_KEYS}
+        for attr, v in a.items():
+            if attr in rec: rec[attr] = int(v)
+        parts = n['full_name'].split()
+        rec.update({
+            'forename': parts[0], 'surname': ' '.join(parts[1:]) or parts[0],
+            'position': pos, 'teamID': 'Free Agent' if is_fa else n['_team'],
+            'age': int(m['Age']) if 'Age' in m else max(21, CUR_SEASON - int((n.get('birth_date') or '2000')[:4])),
+            'rating': rating, 'potential': potential,
+            'growthType': player_growth(gpool, 'FA' if is_fa else 'T', potential - rating, rng),
+            'appearance': face_of.get(k) or ['Head5a','Eyes1a','Hair1d','Beard1b',
+                                             'Eyebrows1a','Nose5d','Mouth5a','Glasses1e','Clothes1'],
+            # 224 is both the undrafted floor AND the ceiling: no published
+            # file uses a value above it, though modern drafts run to ~257
+            # picks. Real picks past 224 clamp onto it.
+            'draftNum': min(UNDRAFTED_FLOOR, int(n['draft_number']))
+                        if n['draft_number'] not in ('', 'NA') else UNDRAFTED_FLOOR,
+            'draftSeason': max(1989, CUR_SEASON - exp),
+            'iden': _uuid(irng),
+        })
+        if is_fa:
+            rec.update({'salary': 0, 'guarantee': 0, 'length': 0, 'teamNum': 0,
+                        'eSalary': 0, 'eGuarantee': 0, 'eLength': 0})
+        else:
+            rec.update({'salary': salary.get(k, 0), 'guarantee': guarantee.get(k, 0),
+                        'length': max(1, lengths.get(k, 1)),
+                        'teamNum': int(n['jersey_number']) if str(n.get('jersey_number','')).isdigit() else 0,
+                        'eSalary': int(salary.get(k, 0) * 1.2), 'eGuarantee': 0,
+                        'eLength': min(4, max(0, lengths.get(k, 1) - 1))})
+        out.append(rec)
+
+    # a player can appear ACT on one team and CUT on another; the rostered
+    # record wins and the free-agent copy is dropped.
+    rostered_keys = {(norm(r['forename'] + ' ' + r['surname']), r['position'])
+                     for r in out if cohort_of(r) == 'T'}
+    before = len(out)
+    out = [r for r in out if not (cohort_of(r) == 'FA' and
+           (norm(r['forename'] + ' ' + r['surname']), r['position']) in rostered_keys)]
+    dropped_dupe_fa = before - len(out)
+
+    # jersey numbers unique within a team: reserve/IR players share numbers
+    # with the active man who inherited them.
+    taken = collections.defaultdict(set)
+    for r in out:
+        if cohort_of(r) != 'T': continue
+        t = r['teamID']; j = r['teamNum']
+        if j and j not in taken[t]: taken[t].add(j); continue
+        for cand in list(range(1, 100)):
+            if cand not in taken[t]: r['teamNum'] = cand; taken[t].add(cand); break
+
+    # --- prospects -------------------------------------------------------
+    # A draft class is capped at 256, the published convention (2013 ships
+    # 256/256/253/253) and roughly a real 257-pick draft. The 2027 board runs
+    # to 289, so ranks 257-289 are dropped -- the bottom of the Drafttek
+    # 101-450 tail, the least confident part of the board.
+    MAX_CLASS = 256
+    allrec, seasons = [], []
+    for season, key in ((2027, 'draft2027'), (2028, 'draft2028')):
+        for pr in bundle[key]:
+            if pr['rank'] > MAX_CLASS: continue
+            allrec.append(pr); seasons.append(season)
+    for pr, season, pos in zip(allrec, seasons, prospect_positions(allrec)):
+        rng = random.Random(name_seed({'_norm': norm(pr['name'])}, pos) + season)
+        rating, potential = build_prospect(pr['rank'], pos, season, rt_curve, gp_curve, rng)
+        parts = pr['name'].split()
+        rec = {kk: 0 for kk in ROSTER_KEYS}
+        q = percentile_of(rp[pos], rating) if rp.get(pos) else 0.5
+        for attr in ATTR_MAP:
+            if attr not in set(weights[pos][0]) or (pos, attr) in GATE_OFF: continue
+            pl = pools.get((pos, attr))
+            if pl: rec[attr] = int(round(_target_at(pl, q)))
+        for attr in DERIVED_ATTRS:
+            # greed, loyalty and ambition are not in weights.json but every
+            # published prospect carries them -- gating on the weights list
+            # left the whole Rookie cohort at zero.
+            if attr not in set(weights[pos][0]) and attr not in DERIVED_INDEPENDENT:
+                continue
+            pl = pools.get((pos, attr)) or dpools.get((pos, attr))
+            if not pl: continue
+            if attr in DERIVED_BY_RATING:
+                rec[attr] = max(0, min(99, int(round(_target_at(sorted(pl), q)))))
+            else:
+                pl = sorted(pl)
+                rec[attr] = pl[min(len(pl) - 1, int(rng.random() * len(pl)))]
+        rec.update({
+            'forename': parts[0], 'surname': ' '.join(parts[1:]) or parts[0],
+            'position': pos, 'teamID': 'Rookie', 'age': 22,
+            'rating': rating, 'potential': potential,
+            'growthType': player_growth(gpool, 'Rookie', potential - rating, rng),
+            'appearance': _prospect_face(pr, pos, rng, face_lib, face_prior,
+                                         face_vocab, arc_players, med_wt),
+            'salary': 0, 'guarantee': 0, 'length': 0, 'teamNum': 0,
+            'eSalary': 0, 'eGuarantee': 0, 'eLength': 0,
+            'draftNum': pr['rank'], 'draftSeason': season,
+            'iden': _uuid(random.Random(name_seed({'_norm': norm(pr['name'])}, pos)
+                                        ^ 0xB0 ^ (len(out) << 8))),
+        })
+        out.append(rec)
+
+    # --- FACE REGISTRY LAST, family digit only for players ---------------
+    # A person gets ONE face across every season. The registry supplies it:
+    # slots 0/5/6 take its FAMILY DIGIT while keeping this season's variant
+    # letter -- that letter is a function of age and weight IN THIS SEASON, so
+    # writing the array wholesale flattens the aging. Everything else --
+    # eyes, hair, beard, eyebrows, glasses, clothes -- is copied EXACTLY,
+    # because hair is a fact about the man and must not drift between files.
+    # That is the rule the standing check enforces: family constant, hair
+    # constant, variant free to vary.
+    applied = 0
+    for rec in out:
+        key = f"{norm(rec['forename'] + ' ' + rec['surname'])}|{rec['position']}"
+        want = fk.get(key)
+        if not want: continue
+        fam = tok_family(want[0])
+        app = list(rec['appearance'])
+        for i, tag in ((0, 'Head'), (5, 'Nose'), (6, 'Mouth')):
+            app[i] = f'{tag}{fam}{tok_variant(app[i])}'
+        for i in (1, 2, 3, 4, 7, 8):
+            app[i] = want[i]
+        rec['appearance'] = app; applied += 1
+
+    for rec in out: assert_roster_record(rec, seen)
+    if verbose:
+        c = collections.Counter(cohort_of(r) for r in out)
+        print(f'ROSTER assembled: {len(out)} records')
+        print(f'   rostered {c["T"]}   free agents {c["FA"]}   prospects {c["Rookie"]}')
+        print(f'   face registry applied (family digit only): {applied}')
+        tm = collections.Counter(r['teamID'] for r in out if cohort_of(r) == 'T')
+        print(f'   teams {len(tm)}  sizes {min(tm.values())}-{max(tm.values())}')
+        print(f'   all {len(out)} records pass the schema and 50x assertions')
+    return out
 
 def seam_report():
     bundle, front, mad, nfl = load_all()
@@ -2303,7 +2660,7 @@ if __name__ == '__main__':
     elif cmd == 'join':   stage_join()
     elif cmd == 'faces':  stage_appearances()
     elif cmd == 'attrs':
-        rows, built, _, weights, tier_of, _fk = stage_attributes()
+        rows, built, _, weights, tier_of, _fk, _co = stage_attributes()
         assert_no_gated_values(built, rows)
         nlive = assert_attribute_coverage(built, rows, weights)
         print(f'   coverage assertion: every live cell populated for every'
@@ -2317,5 +2674,5 @@ if __name__ == '__main__':
         conditional_pass(rows, built)
     elif cmd == 'refit': stage_refit()
     elif cmd == 'contracts': stage_contracts()
-    elif cmd == 'staff': stage_staff()
+    elif cmd == 'assemble': stage_build()
     else: print(__doc__); sys.exit(2)
