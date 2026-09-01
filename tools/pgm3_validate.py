@@ -372,6 +372,12 @@ def check_staff(new, refs):
 
 # ------------------------------------------------------------ zero pattern
 
+# roster fields that legitimately differ between files and would fire on every
+# build if compared: money moves with the era, identity fields are per-season.
+# Same purpose as STAFF_SKIP below.
+ROSTER_SKIP = {'salary','guarantee','eSalary','eGuarantee','length','eLength',
+               'draftSeason','draftNum','teamNum','iden'}
+
 # staff fields that legitimately differ between files — see precedents
 STAFF_SKIP = {'guarantee','eGuarantee','salary','eSalary','length','eLength','startSeason','age',
               'greed','loyalty','ambition'}
@@ -397,11 +403,23 @@ def zero_pattern(new, refs, kind):
                 if abs(nz - rz) > 0.30:
                     bad.append(f'[{role}] {k}: new {100*nz:.0f}% zero vs ref {100*rz:.0f}%')
         return bad
-    for k in NUM:
-        rz = sum(1 for p in pool if p[k] == 0) / len(pool)
-        nz = sum(1 for p in new if p[k] == 0) / len(new)
-        if abs(nz - rz) > 0.30:
-            bad.append(f'{k}: new {100*nz:.0f}% zero vs ref {100*rz:.0f}%')
+    # Rosters are compared WITHIN POSITION, for exactly the reason staff are
+    # compared within role: a linebacker legitimately has zero kickAccuracy,
+    # and pooling positions hides it. Pooled, this check missed OLB coverage
+    # being gated off in 2000 because MLB/CB/S at 100% diluted OLB at 0%.
+    # Added 2026-09-01 after that gap was found by hand.
+    for pos in sorted({p['position'] for p in pool}):
+        n = [p for p in new if p['position'] == pos]
+        r = [p for p in pool if p['position'] == pos]
+        if len(n) < 15 or len(r) < 15:
+            continue                      # too few to say anything
+        for k in NUM:
+            if k in ROSTER_SKIP:
+                continue
+            rz = sum(1 for p in r if p[k] == 0) / len(r)
+            nz = sum(1 for p in n if p[k] == 0) / len(n)
+            if abs(nz - rz) > 0.30:
+                bad.append(f'[{pos}] {k}: new {100*nz:.0f}% zero vs ref {100*rz:.0f}%')
     return bad
 
 # --------------------------------------------------------- cross-year meds
