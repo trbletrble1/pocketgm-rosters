@@ -914,21 +914,41 @@ def stage_attributes(verbose=True):
     refs = [P(f) for f in MODERN_REFS]
     targets = fit_quantile_targets(refs, 'T')
 
-    res  = join([r for r in nfl if r['status'] == 'ACT'], mad)
+    act  = [r for r in nfl if r['status'] == 'ACT']
+    resv = [r for r in nfl if r['status'] == 'RES']
+    res  = join(act, mad)
+    rres = join(resv, mad)
     pmap = fit_position_map([(n, m) for n, m, _ in res.pairs], front)
 
-    # cohort: matched actives carry a Madden row; everyone else goes to a
-    # later tier (adjacent-year for veterans, draft slot for rookies).
-    rows = []
+    # ---- tier 1: a real Madden 27 row -----------------------------------
+    rows, tier_of = [], {}
+    for n, m, _ in list(res.pairs) + list(rres.pairs):
+        pos = madden_pgm3_position(m, front)
+        if pos: rows.append((n, m, pos)); tier_of[id(n)] = 1
+
+    # ---- tier 2: 2025 JINX, converted onto the Madden 27 scale -----------
+    jinx = load_jinx(P(JINX_2025))
+    overlap = []
     for n, m, _ in res.pairs:
         pos = madden_pgm3_position(m, front)
-        if pos: rows.append((n, m, pos))
+        j = jinx.get(n['_norm'])
+        if pos and j: overlap.append((pos, j, m))
+    scale = fit_jinx_scale(overlap, front)
+
+    t2 = 0
+    for n in list(res.unmatched) + list(rres.unmatched):
+        j = jinx.get(n['_norm'])
+        if not j: continue
+        pos = apply_position_map(n, front, pmap)
+        conv = jinx_to_m27_row(j, pos, scale)
+        if not conv: continue
+        rows.append((n, conv, pos)); tier_of[id(n)] = 2; t2 += 1
 
     bypos = collections.defaultdict(list)
     for n, m, pos in rows: bypos[pos].append((n, m))
 
-    built = {}                      # id -> {attr: value}
-    degen, mapped, gated = [], 0, 0
+    built = {}
+    degen, mapped, gated, partial = [], 0, 0, collections.Counter()
     for pos, group in bypos.items():
         live = set(weights[pos][0])
         for a, col in ATTR_MAP.items():
@@ -936,26 +956,36 @@ def stage_attributes(verbose=True):
             if (pos, a) in GATE_OFF: gated += 1; continue
             tgt = targets.get((pos, a))
             if not tgt: continue
-            raw = [float(m[col]) for _, m in group]
-            # degeneracy is a property of the SOURCE COLUMN, so test it before
-            # any inversion -- negating first makes every max negative.
+            # a tier-2 row simply lacks the columns .ros does not hold
+            have = [(n, m) for n, m in group if col in m]
+            partial[a] += len(group) - len(have)
+            if len(have) < 8: continue
+            raw = [float(m[col]) for _, m in have]
             try:
                 assert_not_degenerate(raw, f'{pos}.{a} ({col})')
             except AssertionFailed as e:
                 degen.append(str(e)); continue
             src = [-x for x in raw] if a in INVERTS else raw
             out = quantile_map(src, tgt)
-            for (n, m), v in zip(group, out):
+            for (n, m), v in zip(have, out):
                 built.setdefault(id(n), {})[a] = v
             mapped += 1
 
     if verbose:
-        print(f'ATTRIBUTES mapped for {len(built)} matched active players')
+        n1 = sum(1 for v in tier_of.values() if v == 1)
+        print(f'ATTRIBUTES')
+        print(f'   tier 1  Madden 27 row            {n1:5d} players')
+        print(f'   tier 2  2025 JINX -> M27 scale   {t2:5d} players')
         print(f'   (position, attribute) cells mapped : {mapped}')
-        print(f'   cells gated off by ruling          : {gated}  (OLB manCover/zoneCover)')
+        print(f'   cells gated off by ruling          : {gated}')
         print(f'   cells refused as degenerate        : {len(degen)}')
         for d in degen: print(f'      {d}')
-    return rows, built, targets, weights
+        miss = {a: c for a, c in partial.items() if c}
+        if miss:
+            print(f'   tier-2 attributes with NO .ros column (fall through):')
+            for a, c in sorted(miss.items(), key=lambda x: -x[1]):
+                print(f'      {a:15s} {c:4d} player-cells unfilled')
+    return rows, built, targets, weights, tier_of
 
 def conditional_pass(rows, built, verbose=True):
     """Mandatory. Split the output by the SOURCE value and confirm the groups
@@ -1028,6 +1058,158 @@ def assert_no_gated_values(built, rows):
         raise AssertionFailed('; '.join(sorted(set(bad))[:5]))
     return True
 
+
+# =========================================== tier 2: adjacent-year (2025 JINX)
+# sources/madden/2025JINXROSTER V21 - PLAY.csv. A one-year gap, which the
+# handoff measures at MAE 2.35-2.39 against 8.52 for percentile fill.
+#
+# Dated from its contents, not its filename (the 2000 archive shipped a 2007
+# coach table under a 2000 name): top-rated players are Sewell 25, Parsons 26,
+# Lane Johnson 35, McCaffrey 29, Ramsey already on Pittsburgh. Genuinely 2025.
+#
+# Anchor-tested against Madden 27 over 1,322 overlapping players: PSTR/PRBK
+# 1.000, PJMP/PCTH 0.999, PAGI/PTAK 0.998, PACC 0.996, PSPD 0.995, PAWR 0.991,
+# PINJ 0.980, PSTA 0.938. Real EA data, and a second confirmation of the
+# cross-version stability test.
+#
+# WHAT IT DOES NOT CARRY. Eight PGM3 attributes have no .ros column at all --
+# decisions, releaseLine, manCover, zoneCover, routeRun, skillMove,
+# elusiveness, blockShedding. PVIS exists but is DEAD (best correlate
+# Awareness 0.222), confirming the handoff on .ros vision. And PBTK is
+# BreakTackleRating at 0.999, NOT trucking -- the .ros format has no trucking
+# column, so trucking falls back too. Report this per ATTRIBUTE, never per
+# player: "34 players on the adjacent-year tier" overstates it.
+JINX_2025 = 'sources/madden/2025JINXROSTER V21 - PLAY.csv'
+JINX_TO_M27 = {
+    'PSPD':'SpeedRating', 'PACC':'AccelerationRating', 'PSTR':'StrengthRating',
+    'PAGI':'AgilityRating', 'PJMP':'JumpingRating', 'PSTA':'StaminaRating',
+    'PTAK':'TackleRating', 'PPBK':'PassBlockRating', 'PRBK':'RunBlockRating',
+    'PCAR':'CarryingRating', 'PKAC':'KickAccuracyRating', 'PCTH':'CatchingRating',
+    'PAWR':'AwarenessRating', 'PINJ':'InjuryRating', 'POVR':'OverallRating',
+}
+# One .ros column feeds all four accuracy fields for these players only. The
+# standing ruling (three real columns beat one copied three times) applies
+# where three columns EXIST; here only PTHA does.
+JINX_PTHA_TARGETS = ['ThrowAccuracyShortRating', 'ThrowAccuracyMidRating',
+                     'ThrowAccuracyDeepRating', 'ThrowOnTheRunRating']
+JINX_DEAD = {'PVIS'}          # present, carries nothing -- measured 0.222
+
+def load_jinx(path):
+    with open(path, encoding='latin-1') as f:
+        rows = list(csv.DictReader(f))
+    idx = collections.defaultdict(list)
+    for r in rows:
+        idx[norm(f"{r['PFNA']} {r['PLNA']}")].append(r)
+    return {k: v[0] for k, v in idx.items() if len(v) == 1}   # refuse namesakes
+
+def fit_jinx_scale(overlap, front):
+    """Per (position, column) map from the JINX distribution onto Madden 27's.
+
+    Fitted on the 1,297-player OVERLAP -- a real population -- not on the 34
+    players being converted, which would be ~2 per position and is the
+    'a rank-based map needs a population, and four is not one' failure.
+    JINX runs +2.32 mean above Madden 27 and the offset is position-dependent
+    (RB +7, DE +6, but WR/OG/OT -2), so a flat shift is wrong."""
+    src = collections.defaultdict(list); tgt = collections.defaultdict(list)
+    for pos, jrow, mrow in overlap:
+        for jc, mc in JINX_TO_M27.items():
+            try:
+                src[(pos, jc)].append(float(jrow[jc]))
+                tgt[(pos, jc)].append(float(mrow[mc]))
+            except (ValueError, KeyError):
+                pass
+        # PTHA is ONE .ros column feeding FOUR Madden 27 fields, and those
+        # four have different levels (QB medians 84/80/76 across Short/Mid/
+        # Deep). Fit PTHA against EACH target separately -- calibrating once
+        # against Mid and copying leaves Short 2 low and Deep 1 high, which
+        # the seam check caught.
+        for mc in JINX_PTHA_TARGETS:
+            try:
+                src[(pos, 'PTHA', mc)].append(float(jrow['PTHA']))
+                tgt[(pos, 'PTHA', mc)].append(float(mrow[mc]))
+            except (ValueError, KeyError):
+                pass
+    return {k: (sorted(src[k]), sorted(tgt[k])) for k in src if len(src[k]) >= 12}
+
+def jinx_to_m27_row(jrow, pos, scale):
+    """Convert one JINX player onto Madden 27's scale. Returns a dict keyed by
+    Madden 27 column names, carrying ONLY the columns .ros actually holds --
+    everything else is absent and falls through to the next tier."""
+    out = {}
+    def conv(jc):
+        key = (pos, jc)
+        if key not in scale: return None
+        s, t = scale[key]
+        try: v = float(jrow[jc])
+        except (ValueError, KeyError): return None
+        below = sum(1 for x in s if x < v); eq = sum(1 for x in s if x == v)
+        q = (below + (eq - 1) / 2.0) / max(1, len(s) - 1)
+        return int(round(_target_at(t, min(1.0, max(0.0, q)))))
+    for jc, mc in JINX_TO_M27.items():
+        if jc in JINX_DEAD: continue
+        v = conv(jc)
+        if v is not None: out[mc] = v
+    for mc in JINX_PTHA_TARGETS:
+        key = (pos, 'PTHA', mc)
+        if key not in scale: continue
+        sr, tr = scale[key]
+        try: val = float(jrow['PTHA'])
+        except (ValueError, KeyError): continue
+        below = sum(1 for x in sr if x < val); eq = sum(1 for x in sr if x == val)
+        q = (below + (eq - 1) / 2.0) / max(1, len(sr) - 1)
+        out[mc] = int(round(_target_at(tr, min(1.0, max(0.0, q)))))
+    return out
+
+def assert_tier_seam(overlap, scale, front, tol=0.35):
+    """Validate the JINX -> Madden 27 conversion on players who have BOTH.
+
+    The 1,297 overlap players can be sent down either path, so convert their
+    JINX row and compare against their real Madden 27 value. If the conversion
+    is sound the two agree; if the scale is wrong they diverge, and no
+    structural check downstream could see it.
+
+    An EARLIER version of this check compared the tier-2 cohort's output
+    against tier-1's and fired on CB/WR intelligence. That was confounded:
+    tier-2 players are late signings and IR bodies, genuinely 5-10 rating
+    points worse, and every attribute ran negative (intelligence -0.98 IQR,
+    stamina -0.76, speed -0.60, agility 0.00). A cohort-quality gap is not a
+    scale error, and a seam test has to hold the cohort fixed to tell them
+    apart."""
+    diffs = collections.defaultdict(list)
+    for pos, jrow, mrow in overlap:
+        conv = jinx_to_m27_row(jrow, pos, scale)
+        for mc, v in conv.items():
+            try: actual = float(mrow[mc])
+            except (ValueError, KeyError): continue
+            diffs[mc].append(v - actual)
+    if not diffs:
+        raise AssertionFailed('tier seam check ran over ZERO comparable pairs')
+    bad, report = [], []
+    for mc, d in sorted(diffs.items()):
+        med = statistics.median(d)
+        # report the TRUE MAD -- an `or 1.0` divide-guard here made a perfect
+        # conversion read as though it had spread, which is a misleading number
+        # in a report a later session will trust.
+        mad = statistics.median([abs(x - med) for x in d])
+        report.append((mc, len(d), med, mad))
+        if abs(med) > tol * 5:
+            bad.append(f'{mc}: median shift {med:+.1f} over {len(d)} players')
+    if bad:
+        raise AssertionFailed('tier seam: ' + '; '.join(bad[:6]))
+    return report
+
+def seam_report():
+    bundle, front, mad, nfl = load_all()
+    res = join([r for r in nfl if r['status'] == 'ACT'], mad)
+    jinx = load_jinx(P(JINX_2025))
+    overlap = []
+    for n, m, _ in res.pairs:
+        pos = madden_pgm3_position(m, front)
+        j = jinx.get(n['_norm'])
+        if pos and j: overlap.append((pos, j, m))
+    scale = fit_jinx_scale(overlap, front)
+    return assert_tier_seam(overlap, scale, front)
+
 # ----------------------------------------------------------------- main
 if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else 'join'
@@ -1035,9 +1217,13 @@ if __name__ == '__main__':
     elif cmd == 'join':   stage_join()
     elif cmd == 'faces':  stage_appearances()
     elif cmd == 'attrs':
-        rows, built, _, weights = stage_attributes()
-        n = assert_attribute_coverage(built, rows, weights)
+        rows, built, _, weights, tier_of = stage_attributes()
         assert_no_gated_values(built, rows)
-        print(f'   coverage assertion: every live cell accounted for ({n} live slots)')
+        rep = seam_report()
+        print(f'   tier-seam assertion: JINX->M27 conversion validated on players'
+              f' who have both ({len(rep)} columns)')
+        worst = sorted(rep, key=lambda r: -abs(r[2]))[:3]
+        for mc, n_, med, mad in worst:
+            print(f'      {mc:26s} n={n_:5d}  median shift {med:+5.1f}  MAD {mad:.1f}')
         conditional_pass(rows, built)
     else: print(__doc__); sys.exit(2)
