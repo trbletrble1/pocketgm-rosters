@@ -944,6 +944,17 @@ def stage_attributes(verbose=True):
         if not conv: continue
         rows.append((n, conv, pos)); tier_of[id(n)] = 2; t2 += 1
 
+    # ---- tier 3: no source at all --------------------------------------
+    fine, coarse = fit_tier3_reference(refs)
+    t3 = 0
+    for n in list(res.unmatched) + list(rres.unmatched):
+        if n['_norm'] in jinx: continue
+        pos = apply_position_map(n, front, pmap)
+        rng = random.Random(name_seed(n, pos))
+        rt = tier3_rating(n, pos, fine, coarse, rng)
+        if rt is None: continue
+        rows.append((n, {'OverallRating': rt}, pos)); tier_of[id(n)] = 3; t3 += 1
+
     bypos = collections.defaultdict(list)
     for n, m, pos in rows: bypos[pos].append((n, m))
 
@@ -971,6 +982,24 @@ def stage_attributes(verbose=True):
                 built.setdefault(id(n), {})[a] = v
             mapped += 1
 
+    # ---- percentile fill for every live cell still empty ----------------
+    # tier 2 lacks the attributes .ros has no column for; tier 3 lacks
+    # everything. Fill at the player's rating percentile WITHIN his position.
+    fillt, ratpool = fit_percentile_fill(refs)
+    filled = collections.Counter()
+    for n, m, pos in rows:
+        live = set(weights[pos][0])
+        try: rt = float(m['OverallRating'])
+        except (KeyError, ValueError): continue
+        rp = percentile_of(ratpool[pos], rt) if ratpool.get(pos) else 0.5
+        for a in ATTR_MAP:
+            if a not in live or (pos, a) in GATE_OFF: continue
+            if a in built.get(id(n), {}): continue
+            pool = fillt.get((pos, a))
+            if not pool: continue
+            built.setdefault(id(n), {})[a] = int(round(_target_at(pool, rp)))
+            filled[a] += 1
+
     if verbose:
         n1 = sum(1 for v in tier_of.values() if v == 1)
         print(f'ATTRIBUTES')
@@ -980,11 +1009,16 @@ def stage_attributes(verbose=True):
         print(f'   cells gated off by ruling          : {gated}')
         print(f'   cells refused as degenerate        : {len(degen)}')
         for d in degen: print(f'      {d}')
-        miss = {a: c for a, c in partial.items() if c}
-        if miss:
-            print(f'   tier-2 attributes with NO .ros column (fall through):')
-            for a, c in sorted(miss.items(), key=lambda x: -x[1]):
-                print(f'      {a:15s} {c:4d} player-cells unfilled')
+        tot_cells = sum(len(v) for v in built.values())
+        nf = sum(filled.values())
+        print(f'   tier 3  no source, percentile fill {t3:5d} players')
+        print(f'   attribute cells total              : {tot_cells}')
+        print(f'   of which SOURCED                   : {tot_cells-nf} '
+              f'({100*(tot_cells-nf)/max(1,tot_cells):.1f}%)')
+        print(f'   of which percentile-filled         : {nf} '
+              f'({100*nf/max(1,tot_cells):.1f}%)')
+        top = sorted(filled.items(), key=lambda x: -x[1])[:6]
+        print(f'   most-filled attributes: ' + ', '.join(f'{a} {c}' for a, c in top))
     return rows, built, targets, weights, tier_of
 
 def conditional_pass(rows, built, verbose=True):
@@ -999,8 +1033,13 @@ def conditional_pass(rows, built, verbose=True):
     for a, col in sorted(ATTR_MAP.items()):
         within, pooled_s, pooled_o = [], [], []
         for pos, group in bypos.items():
-            pairs = [(float(m[col]), built.get(id(n), {}).get(a))
-                     for n, m in group if a in built.get(id(n), {})]
+            # only players who actually carry the source column: a tier-2 row
+            # lacks the columns .ros has no field for, and tier-3 rows carry
+            # no source at all. Measuring a percentile fill against a source it
+            # never saw would report a real map as broken.
+            pairs = [(float(m[col]), built[id(n)][a])
+                     for n, m in group
+                     if col in m and a in built.get(id(n), {})]
             if len(pairs) < 8: continue
             s = [x for x, _ in pairs]; o = [y for _, y in pairs]
             if a in INVERTS: s = [-x for x in s]
@@ -1198,6 +1237,74 @@ def assert_tier_seam(overlap, scale, front, tol=0.35):
         raise AssertionFailed('tier seam: ' + '; '.join(bad[:6]))
     return report
 
+# ========================================= tier 3: no source, percentile fill
+# 72 players reach the file this way. The task brief expects rookies to take
+# DRAFT POSITION -- that is not available, and the reason is worth stating:
+# EA ships 100% of the drafted class (215 of 215 drafted 2026 first-year
+# players are in Madden 27). The rookies that are missing are the UNDRAFTED
+# ones who made rosters after the file locked, and they have no pick number
+# to tier on. draft_number is empty for every one of them.
+#
+# So the conditioning variables are draft status and experience, both of which
+# are real and monotone in the published archive:
+#
+#              0-1 yr    2-3 yr    4-6 yr     7+ yr
+#   undrafted      62        66        70        75
+#   drafted        69        74        77        80
+#
+# Percentile fill is load-bearing by design here, not a failure -- roughly a
+# fifth of every draft class reaches every build this way and no amount of
+# source work changes it. It is reported as a standing share.
+EXP_BANDS = [(1, '0-1 yr'), (3, '2-3 yr'), (6, '4-6 yr'), (99, '7+ yr')]
+
+def exp_band(yrs):
+    for hi, _ in EXP_BANDS:
+        if yrs <= hi: return hi
+    return 99
+
+def fit_tier3_reference(paths):
+    """(position, undrafted, band) -> sorted published ratings, with a
+    position-pooled fallback for thin cells. A rank drawn against a cohort
+    this small would carry no information about level, so the reference has to
+    be a real population."""
+    fine = collections.defaultdict(list); coarse = collections.defaultdict(list)
+    for path in paths:
+        for r in json.load(open(path)):
+            if cohort_of(r) != 'T' or not r.get('draftSeason'): continue
+            yrs = CUR_SEASON - r['draftSeason']
+            if yrs < 0 or yrs > 20: continue
+            key = (r['draftNum'] >= 224, exp_band(yrs))
+            fine[(r['position'],) + key].append(r['rating'])
+            coarse[key].append(r['rating'])
+    return ({k: sorted(v) for k, v in fine.items() if len(v) >= 20},
+            {k: sorted(v) for k, v in coarse.items()})
+
+def tier3_rating(nrow, pos, fine, coarse, rng):
+    ud = nrow['draft_number'] in ('', 'NA')
+    key = (pos, ud, exp_band(nrow['_exp']))
+    pool = fine.get(key) or coarse.get((ud, exp_band(nrow['_exp'])))
+    if not pool: return None
+    return pool[min(len(pool) - 1, int(rng.random() * len(pool)))]
+
+def fit_percentile_fill(paths):
+    """(position, attribute) -> sorted values, used to fill at the player's
+    rating percentile within his position. The documented fallback when no
+    source covers the player at all."""
+    t = collections.defaultdict(list); rat = collections.defaultdict(list)
+    for path in paths:
+        for r in json.load(open(path)):
+            if cohort_of(r) != 'T': continue
+            rat[r['position']].append(r['rating'])
+            for a in ATTR_MAP:
+                if r.get(a): t[(r['position'], a)].append(r[a])
+    return ({k: sorted(v) for k, v in t.items()},
+            {k: sorted(v) for k, v in rat.items()})
+
+def percentile_of(sorted_vals, v):
+    below = sum(1 for x in sorted_vals if x < v)
+    eq    = sum(1 for x in sorted_vals if x == v)
+    return (below + (eq - 1) / 2.0) / max(1, len(sorted_vals) - 1)
+
 def seam_report():
     bundle, front, mad, nfl = load_all()
     res = join([r for r in nfl if r['status'] == 'ACT'], mad)
@@ -1219,6 +1326,9 @@ if __name__ == '__main__':
     elif cmd == 'attrs':
         rows, built, _, weights, tier_of = stage_attributes()
         assert_no_gated_values(built, rows)
+        nlive = assert_attribute_coverage(built, rows, weights)
+        print(f'   coverage assertion: every live cell populated for every'
+              f' player ({nlive} live slots)')
         rep = seam_report()
         print(f'   tier-seam assertion: JINX->M27 conversion validated on players'
               f' who have both ({len(rep)} columns)')
