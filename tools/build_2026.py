@@ -2034,6 +2034,256 @@ def build_prospect(rank, position, season, rt_curve, gp_curve, rng):
     potential = min(99, max(rating, rating + gap))   # raise-only
     return rating, potential
 
+# ===================================================================== staff
+# 32 teams x 9 roles in every published file, no exceptions: Head Coach, Off
+# Co-ord, Def Co-ord, Special Teams, Head Scout, Off Scout, Def Scout, Head
+# Physio, Assistant Physio. A vacant real-world coordinator still needs a body.
+STAFF_ROLES = ['Head Coach', 'Off Co-ord', 'Def Co-ord', 'Special Teams',
+               'Head Scout', 'Off Scout', 'Def Scout',
+               'Head Physio', 'Assistant Physio']
+STAFF_FILES = ['PGMStaff_2010.json', 'PGMStaff_2013.json',
+               'PGMStaff_2017.json', 'PGMStaff_2021.json']
+PRIMARY_ATTR = {'Head Coach': 'HCcoach', 'Off Co-ord': 'OCcoach',
+                'Def Co-ord': 'DCcoach', 'Special Teams': 'STcoach',
+                'Head Scout': 'Hscout', 'Off Scout': 'Oscout',
+                'Def Scout': 'Dscout', 'Head Physio': 'Hphysio',
+                'Assistant Physio': 'Aphysio'}
+
+def fit_staff_profile(paths, live_threshold=0.5):
+    """role -> {field: sorted published values} for every field the role
+    actually populates, plus the donor pool of whole growthType arrays.
+
+    MEASURED, never hand-listed. The first 2000 staff builder hand-listed which
+    attributes each role carries and left ~30 specialty fields at zero --
+    management, motivation, playcalling, passRush, playDesign, injPrevent,
+    reInjuryRisk. That is the bug the handoff records as having CRASHED THE
+    GAME, and its assertions passed because they checked the fields their
+    author was thinking of."""
+    recs = []
+    for path in paths:
+        for r in json.load(open(path)):
+            if r.get('teamID') not in ('Free Agent', ''): recs.append(r)
+    skip = {'age', 'rating', 'potential', 'startSeason', 'salary', 'guarantee',
+            'length', 'eSalary', 'eGuarantee', 'eLength'}
+    numeric = [k for k, v in recs[0].items() if isinstance(v, int) and k not in skip]
+    by = collections.defaultdict(lambda: collections.defaultdict(list))
+    cnt = collections.Counter()
+    donors = collections.defaultdict(list)
+    for r in recs:
+        role = r['role']; cnt[role] += 1
+        for k in numeric:
+            if r.get(k): by[role][k].append(r[k])
+        donors[(role, r['potential'] - r['rating'])].append(r['growthType'])
+    live = {}
+    for role in cnt:
+        live[role] = {k: sorted(v) for k, v in by[role].items()
+                      if len(v) / cnt[role] > live_threshold}
+    return live, donors, recs
+
+def fit_startseason(paths, bin_w=3):
+    """age bucket -> sorted published ABSOLUTE startSeason values.
+
+    ABSOLUTE, not offset by the file's season. Every published file runs on
+    the GAME'S internal clock where the current season is 2026, whatever year
+    the file models -- the handoff states this for draftSeason and startSeason
+    behaves identically: 2010, 2013, 2017 and 2021 all top out at 2024-2026.
+    Subtracting the file year manufactured offsets up to +14 (a 2013 coach
+    reading "season + 13") and put 47% of the build on the clamp.
+
+    startSeason is a function of age (r -0.95 to -0.99 in every modern file),
+    which is exactly why a wrong age is dangerous: it produces a wrong
+    startSeason WHILE THE CORRELATION STAYS PERFECT. A derived field agreeing
+    with its source proves the derivation, never the source.
+
+    NOT a linear fit plus gaussian noise. That was tried and it piles records
+    onto the clamp: feeding the PUBLISHED 2021 ages through the fitted line
+    produced 18% sitting at the season against their actual 3%, so the
+    parametric form was wrong independently of the cohort. Sampling the
+    reference's own conditional distribution reproduces the real shape,
+    including how it behaves near the ceiling, without my having to guess a
+    functional form.
+
+    (The pooled-fit version was worse still -- files' intercepts genuinely
+    differ, 47.2 in 2010 against 35.5 in 2021, so a pooled residual reports
+    BETWEEN-file spread as within-file noise: sd 4.69 against 2.04 per file,
+    and 52% on the clamp.)"""
+    by = collections.defaultdict(list)
+    for path in paths:
+        yr = int(re.search(r'(\d{4})', os.path.basename(path)).group(1))
+        for r in json.load(open(path)):
+            if r.get('teamID') in ('Free Agent', ''): continue
+            by[r['age'] // bin_w].append(r['startSeason'])
+    return {k: sorted(v) for k, v in by.items()}, bin_w
+
+def draw_startseason(age, table, bin_w, rng):
+    key = age // bin_w
+    pool = table.get(key)
+    if not pool:
+        near = sorted(table, key=lambda k: abs(k - key))
+        pool = table[near[0]]
+    return pool[min(len(pool) - 1, int(rng.random() * len(pool)))]
+
+def donor_growth(donors, role, gap, rng):
+    """Copy a whole published growthType array matched on (role, potential
+    minus rating). Donor copying is SAFE here -- a growth curve is a fact about
+    the job, not about the man -- and matching on the gap makes the 50x rule
+    hold by construction rather than by arithmetic I have to get right.
+    It also reproduces slot structure the handoff describes imprecisely:
+    slots 17-19 are NEARLY always zero (19 of 1152 records, not always) and
+    positives trail to slot 26 rather than stopping at 16."""
+    for key in ((role, gap), (None, gap)):
+        pool = donors.get(key) if key[0] else [v for (r_, g_), vs in donors.items()
+                                               if g_ == gap for v in vs]
+        if pool: return list(rng.choice(pool))
+    near = sorted(donors, key=lambda k: abs(k[1] - gap))
+    for k in near:
+        if donors[k]: return list(rng.choice(donors[k]))
+    return [0] * 51
+
+def assert_staff_structure(staff, real_names):
+    """Every gate the archive enforces, checked here rather than at import."""
+    by_team = collections.defaultdict(list)
+    for s in staff: by_team[s['teamID']].append(s)
+    bad = [t for t, v in by_team.items() if len(v) != 9]
+    if bad: raise AssertionFailed(f'teams without exactly 9 staff: {bad[:5]}')
+    for t, v in by_team.items():
+        got = collections.Counter(x['role'] for x in v)
+        missing = [r for r in STAFF_ROLES if got[r] != 1]
+        if missing: raise AssertionFailed(f'{t} role slots wrong: {missing}')
+    for s in staff:
+        pa = PRIMARY_ATTR[s['role']]
+        if s.get(pa) != s['rating']:
+            raise AssertionFailed(f"{s['forename']} {s['surname']}: primary attr "
+                                  f"{pa}={s.get(pa)} != rating {s['rating']}")
+        if len(s['growthType']) != 51:
+            raise AssertionFailed(f"growthType has {len(s['growthType'])} elements, expected 51")
+        pos = sum(x for x in s['growthType'] if x > 0)
+        if pos != (s['potential'] - s['rating']) * 50:
+            raise AssertionFailed(f"50x rule broken for {s['surname']}: {pos} != "
+                                  f"{(s['potential']-s['rating'])*50}")
+        if not (1989 <= s['startSeason'] <= 2026):
+            raise AssertionFailed(f"startSeason {s['startSeason']} outside 1989-2026")
+    invented = {norm(f"{s['forename']} {s['surname']}") for s in staff
+                if s['role'] in ('Head Scout', 'Off Scout', 'Def Scout',
+                                 'Head Physio', 'Assistant Physio')}
+    clash = invented & real_names
+    if clash:
+        raise AssertionFailed(f'{len(clash)} invented scout/physio names collide with real '
+                              f'coaches: {sorted(clash)[:5]}')
+    return len(staff)
+
+def _uuid(rng):
+    h = '%032X' % rng.getrandbits(128)
+    return f'{h[:8]}-{h[8:12]}-{h[12:16]}-{h[16:20]}-{h[20:32]}'
+
+def load_staff_ages(path, roles_by_name):
+    """Sourced ages, with the unresolved TAGGED rather than silently drawn."""
+    got, missing = {}, []
+    for r in csv.DictReader(open(path, encoding='utf-8')):
+        k = norm(r['name'])
+        if r['birth_year']:
+            got[k] = (CUR_SEASON - int(r['birth_year']), r['source'])
+        else:
+            missing.append(r['name'])
+    return got, missing
+
+def build_staff(verbose=True):
+    bundle, front, mad, nfl = load_all()
+    paths = [P(f) for f in STAFF_FILES]
+    live, donors, pubrecs = fit_staff_profile(paths)
+    ss_table, ss_bin = fit_startseason(paths)
+    pool = json.load(open(P('wip', 'staff_name_pool.json')))
+    real_names = {norm(n) for n in pool['real_coach_names']}
+    prof = json.load(open(P('wip', 'staff_profile.json')))
+    gfit = json.load(open(P('wip', 'staff_guarantee_fit.json')))
+    schemes = bundle['staff_schemes']
+
+    # named staff from the bundle
+    named = {}
+    for t, v in bundle['hc_ratings'].items():   named[(t, 'Head Coach')] = v
+    for v in bundle['coord_ratings'].values():
+        named[(v['team'], 'Off Co-ord' if v['role'] == 'OC' else 'Def Co-ord')] = v
+    for t, v in bundle['st_ratings']['ratings'].items(): named[(t, 'Special Teams')] = v
+
+    ages, unresolved = load_staff_ages(P('sources', 'coach_birth_years_2026.csv'), None)
+    # role medians for the unresolved, from the published files
+    role_age = collections.defaultdict(list)
+    for r in pubrecs: role_age[r['role']].append(r['age'])
+    role_age = {k: int(statistics.median(v)) for k, v in role_age.items()}
+
+    # published pools for the generated roles, stratified so the draws reach
+    # the tails -- 32 random draws from 192 rarely hit the extremes, which
+    # once left Def Scout topping out at 77 against a published 82-92.
+    by_role_rating = collections.defaultdict(list)
+    for r in pubrecs: by_role_rating[r['role']].append(r)
+
+    staff, used_names, tags = [], set(), collections.Counter()
+    for team in sorted(schemes):
+        sc = schemes[team]
+        for slot, role in enumerate(STAFF_ROLES):
+            rng = random.Random(int(hashlib.sha256(f'{team}|{role}'.encode()).hexdigest()[:12], 16))
+            rec = {}
+            info = named.get((team, role))
+            if info:
+                nm = info['name']; rating = int(info['rating'])
+                parts = nm.split(); fore, sur = parts[0], ' '.join(parts[1:]) or parts[0]
+                k = norm(nm)
+                if k in ages: age, tag = ages[k][0], 'sourced'
+                else:         age, tag = role_age.get(role, 50), 'role-median'
+                tags[tag] += 1
+            else:
+                # generated: scouts and physios, the one deliberate exception
+                donor = rng.choice(by_role_rating[role])
+                rating = donor['rating']
+                for _ in range(200):
+                    fore = rng.choice(pool['forenames']); sur = rng.choice(pool['surnames'])
+                    k = norm(f'{fore} {sur}')
+                    if k not in real_names and k not in used_names: break
+                used_names.add(k)
+                age, tag = donor['age'], 'generated'
+                tags[tag] += 1
+            # attributes: quantile position by rating within the role
+            pool_r = sorted(x['rating'] for x in by_role_rating[role])
+            q = percentile_of(pool_r, rating)
+            for field, vals in live[role].items():
+                rec[field] = int(round(_target_at(vals, q)))
+            rec[PRIMARY_ATTR[role]] = rating
+            gaps = [x['potential'] - x['rating'] for x in by_role_rating[role]]
+            gap = sorted(gaps)[int(rng.random() * len(gaps))]
+            rec.update({
+                'rating': rating, 'potential': min(99, rating + gap),
+                'age': age, 'role': role, 'teamID': team,
+                'forename': fore, 'surname': sur, 'iden': _uuid(rng),
+                'startSeason': max(1989, min(CUR_SEASON,
+                                   draw_startseason(age, ss_table, ss_bin, rng))),
+                'growthType': donor_growth(donors, role, gap, rng),
+            })
+            # contracts from the published role distribution
+            sal = sorted(x['salary'] for x in by_role_rating[role])
+            rec['salary'] = int(round(_target_at(sal, q)))
+            grate, gratio = gfit.get(role, [0.5, 0.22])
+            rec['guarantee'] = int(round(rec['salary'] * gratio)) if rng.random() < grate else 0
+            ln = sorted(x['length'] for x in by_role_rating[role])
+            rec['length'] = int(round(_target_at(ln, rng.random())))
+            rec['eSalary'] = int(rec['salary'] * 1.15)
+            rec['eGuarantee'] = 0        # ruled: ship staff eGuarantee at ZERO
+            rec['eLength'] = min(4, max(0, rec['length'] - 1))
+            # categorical fields
+            for f, counts in prof[role]['str'].items():
+                if f in ('role', 'teamID', 'forename', 'surname', 'iden', 'appearance'): continue
+                vals = [x[0] for x in counts]; wts = [x[1] for x in counts]
+                rec[f] = rng.choices(vals, weights=wts)[0]
+            if role == 'Head Coach':
+                rec['offStyle'] = sc['off']
+                rec['defStyle'] = sc.get('cov_style', rec.get('defStyle'))
+            if role == 'Off Co-ord':  rec['offStyle'] = sc['off']
+            if role == 'Def Co-ord' and sc.get('dc_note'):
+                rec['note'] = ('PROMOTION, not a title he held. ' + sc['dc_note'])
+            donor2 = rng.choice(by_role_rating[role])
+            rec['appearance'] = list(donor2['appearance'])
+            staff.append(rec)
+    return staff, tags, unresolved, real_names
+
 def seam_report():
     bundle, front, mad, nfl = load_all()
     res = join([r for r in nfl if r['status'] == 'ACT'], mad)
@@ -2067,4 +2317,5 @@ if __name__ == '__main__':
         conditional_pass(rows, built)
     elif cmd == 'refit': stage_refit()
     elif cmd == 'contracts': stage_contracts()
+    elif cmd == 'staff': stage_staff()
     else: print(__doc__); sys.exit(2)
