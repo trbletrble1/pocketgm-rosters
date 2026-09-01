@@ -1153,6 +1153,45 @@ appearance rebuilt from real Madden data.
    row per name with provenance, carrying forward the 2000 build's
    hand-verified rows, which take precedence over the bulk query.
 
+0l. **B2 WAS NOT RUN — the "mid-range salary spikes" are minimum-salary
+   tiers, not a no-data default.** Investigated 2026-08-31 and rejected before
+   any record was written.
+
+   The brief called 684 records on three files "the same family as the stamina
+   fill — a no-data default sitting at a round mid-range number", on the
+   grounds that the published files smear rather than clamp at the bottom.
+
+   **The control that settles it is our own 2000 file**, built with an explicit
+   `min_salary()` floor whose provenance is known:
+
+   | 2000 salary | records | equals |
+   |---|---|---|
+   | $871,856 | 60 | `min_salary(1 yr)` × 3.5879 = $871,860 |
+   | $1,033,311 | 61 | `min_salary(2 yr)` = $1,033,315 |
+   | $1,194,765 | 76 | `min_salary(3 yr)` = $1,194,771 |
+
+   A single exact salary held by 60–161 players is **what a correctly built
+   file looks like**, because that is how the real league works — hundreds of
+   players sit on the minimum for their accrued seasons. A spike detector
+   (n ≥ 50 and n > 3× the neighbours within ±2%) flags 2000 at a ratio of 14.6,
+   and 2000 is right.
+
+   The published spikes carry the same signature: **guarantee is 0 for
+   essentially every record** (383/384 in 2007, 123/123 and 187/188 in 2010,
+   112/112 in 2004), ages cluster at 23–25, `draftSeason` clusters on the most
+   recent entries, and consecutive spike values sit in the 1.14–1.26 ratio band
+   that real consecutive minimum tiers occupy. That is a coherent population,
+   not a default.
+
+   **The bottom smear does not contradict this.** It is below the tiers, not
+   instead of them — 2000 has both.
+
+   Redistributing these would have replaced real minimum-salary contracts with
+   an invented spread across 1,423 records (not the 684 briefed; the same
+   scope-to-what-you-looked-at pattern). **Do not run B2.** If it is revisited,
+   the question to answer first is whether each spike value equals that file's
+   scaled minimum for an accrued-season tier.
+
 0j. **ADDITIONAL LOW-VALUE STAMINA FILL BLOCKS — found during Pass A1, not
    repaired, needs a ruling.** Fixing `stamina == 1` surfaced a second layer.
    2010 and 2004, the two files with no stamina-1 block, have essentially
