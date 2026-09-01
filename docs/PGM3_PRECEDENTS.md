@@ -3283,3 +3283,49 @@ raise NameError, and it never ran because the block it sat in was reached only
 after the failure. **An assertion that cannot fail reports success**; one that
 cannot run reports nothing at all, which is the same defect wearing a
 different face.
+
+## Quantifying "the reference union is not a specification"
+
+Asked to gate roster composition on **the range every reference spans** —
+calibrated to the archive's own disagreement rather than an invented band, and
+so passing every published file by construction.
+
+**Measured, it does not.** Leave-one-out, on a top-53 basis, every published
+file falls outside the span of the other seven:
+
+    1986  5 positions     2004  1     2010  5     2017  1
+    2000  4               2007  1     2013  5     2021  5
+
+    2026  1  (RB 3.9/team vs a spanned 4.2-5.4)
+
+So a gate calibrated on the archive fails the archive, and **2026 is more
+conformant than six of the eight published files** against their own siblings.
+That is the union-is-not-a-specification precedent with a number on it.
+
+**What CAN be a gate is the unanimous property.** No team in any of 256
+published team-seasons is empty at any position. That is not a band, it is
+0 versus not-0, and it catches the real defect — 16 teams with no defensive end
+— on its own. Composition rates are a warning beside it.
+
+**The distinction worth carrying: a reference set supports a gate on properties
+its members share unanimously, and only a warning on properties they merely
+cluster around.** Check which one you have before choosing the severity.
+
+## The cohort trap, fourth instance in one build
+
+The RB count read 128 against a published 172-209 — 4.0 per team where every
+file carries 5.2-6.5, in a build with the same roster size. That looks like a
+mapping defect and it is not.
+
+The published files carry **59-67 players per team**, built from everyone who
+played that season. 2026 is a point-in-time 53-man roster. On a like-for-like
+**top-53 slice** the same published files read 4.2-5.4 and 2026 reads 3.9 — the
+apparent 1.5/team shortfall is 0.3, and the residual is the real decline in
+running-back roster share.
+
+Fourth instance in this build alone: the rating p10 comparison, the position
+totals, RB, and QB — where 92 looks wrong against three modern references and
+is inside the full archive's 69-96, because 1986 carries 93 and 2000 carries 96.
+
+**Any count compared across files must be taken on the same cohort basis, and
+"rostered" is not one basis — it means 53 in one file and 67 in another.**

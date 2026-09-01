@@ -276,28 +276,52 @@ def check_roster(new, refs):
         out.append((f'team empty at a position every reference fills '
                     f'({len(ref_never_empty)} positions checked)'
                     + (': ' + '; '.join(gaps[:5]) if gaps else ''), len(gaps)))
-        # Per-team position RATE against the archive's own observed spread,
-        # reported as a WARNING rather than a failure. The published files
-        # disagree with EACH OTHER by 26-77% on these rates -- DT runs 3.2 to
-        # 5.6 per team, MLB 2.5 to 4.1 -- so any tight band would fail most of
-        # them against one another, and a legitimate cohort difference reads
-        # identically to a defect. It is a prompt to look, not a gate.
-        nt = len({q['teamID'] for q in on}) or 1
-        cnt = collections.Counter(q['position'] for q in on)
+        # Per-team position RATE, on a TOP-53 slice, against the range every
+        # reference spans. Two calibration points, both learned the hard way:
+        #
+        # 1. UNANIMITY, not a percentage band. The published files disagree
+        #    with each other by 26-77% on these rates, so a +/-15% rule fails
+        #    most of them against one another. The range they SPAN passes every
+        #    published file by construction and still catches a real defect --
+        #    DE at 3.1/team against a spanned 3.8-5.0 fires immediately.
+        #
+        # 2. TOP-53, because the references are not 53-man rosters. They carry
+        #    53-67 per team, built from everyone who played that season, and on
+        #    an all-rostered basis RB reads 5.2-6.5 against a modern roster's
+        #    4. On a top-53 slice the same files read 4.2-5.4 and the apparent
+        #    1.5/team shortfall is 0.3. Comparing a point-in-time roster to a
+        #    season-long cohort manufactures a defect that is not there.
+        def _rate53(recs):
+            by = collections.defaultdict(list)
+            for q in recs:
+                if cohort(q) == 'T': by[q['teamID']].append(q)
+            n = len(by) or 1
+            c = collections.Counter()
+            for t, ps in by.items():
+                for q in sorted(ps, key=lambda x: -x['rating'])[:53]: c[q['position']] += 1
+            return {p: c[p] / n for p in set(c) | set(ref_never_empty)}
+        mine = _rate53(new)
+        refr = [_rate53(r) for r in refs]
         odd = []
         for p in sorted(ref_never_empty):
-            rates = []
-            for r in refs:
-                t2 = len({q['teamID'] for q in r if cohort(q) == 'T'}) or 1
-                rates.append(collections.Counter(
-                    q['position'] for q in r if cohort(q) == 'T')[p] / t2)
-            lo, hi = min(rates), max(rates)
-            mine = cnt[p] / nt
-            if not (lo <= mine <= hi):
-                odd.append(f'{p} {mine:.1f}/team vs ref {lo:.1f}-{hi:.1f}')
+            vals = [r.get(p, 0) for r in refr]
+            lo, hi = min(vals), max(vals)
+            if not (lo <= mine.get(p, 0) <= hi):
+                odd.append(f'{p} {mine.get(p,0):.1f}/team vs the range every reference spans, {lo:.1f}-{hi:.1f}')
+        # WARNING, not a gate, and the reason is measured rather than assumed.
+        # Leave-one-out, EVERY published file falls outside the span of the
+        # other seven -- 1986 on 5 positions, 2000 on 4, 2010 on 5, 2013 on 5,
+        # 2021 on 5, and 2004/2007/2017 on 1 each. So "the span of every
+        # reference" cannot pass the references by construction; the archive is
+        # too heterogeneous with itself. A gate calibrated to it would fail the
+        # files it is calibrated on.
+        # The TEAM-EMPTY check above IS a gate: 0 of 256 published team-seasons
+        # leave a position empty, which is unanimous, and it catches the real
+        # defect (16 teams with no DE) on its own.
         if odd:
-            print(f'  WARN  {len(odd)} position rates outside the reference spread '
-                  f'(cohorts differ by era — check, do not auto-correct)')
+            print(f'  WARN  {len(odd)} position rates outside the span of every '
+                  f'reference, top-53 basis (the references do not span each '
+                  f'other either — leave-one-out, all 8 fail 1-5 positions)')
             for o in odd[:6]: print(f'          {o}')
 
     # ---- team payroll must sit on the published convention --------------
