@@ -196,6 +196,35 @@ fires on sourced ones.
 **Divergence, stated not tuned:** team spread $162M against a published
 $93-152M, because the mapping is more faithful, not less.
 
+**Divergence, measured and closed: payroll tracks roster quality weakly.**
+Ranking on real `_TotalSalary` decouples payroll from rating the way real cap
+situations do, and the file inherits that from the source rather than creating
+it. The Madden 27 source itself, before the build touches it:
+
+| real 2026 source, team level, top-53 by real money | Pearson | Spearman |
+|---|---|---|
+| real payroll vs mean overall | +0.300 | +0.328 |
+| real payroll vs median overall | +0.171 | +0.206 |
+
+Well below the published files under matched definitions. Two mechanisms were
+ruled out rather than assumed:
+
+- **The p=0.90 compression is not the cause.** Inverting it on the shipped file
+  moves the figure by at most **0.045** across eight definitions, and every
+  delta is *negative* — removing compression makes the correlation weaker.
+  `compress_top` is monotone, so it reaches a rank statistic only through the
+  nonlinearity of a top-53 sum.
+- **No published bound is breached.** 2026 ranks 1st-3rd weakest of nine, but
+  **2000 occupies the same territory under every one of eight definitions**
+  (2000 ranks 1st-2nd). "Below the published minimum" holds under only 2 of 8
+  cuts and is not a robust reading.
+
+**Open, and not holding the file:** under median-based definitions the build
+attenuates to **-0.030** against a source **+0.206** — a 0.24 gap, where
+mean-based definitions lose only 0.06 and compression accounts for 0.03.
+Something in the quantile map or the refit flattens the median measure
+specifically. On the audit list, unexplained.
+
 ---
 
 ## Draft classes

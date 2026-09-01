@@ -2687,6 +2687,44 @@ of the 27, which the same read-back caught immediately.
 
 ---
 
+## Test a headline reading under every defensible cut BEFORE reporting it
+
+Three times in this build, a single-definition result was reported as a robust
+finding. Every one was cheap to check and none was checked until challenged.
+
+| # | claim | what broke it |
+|---|---|---|
+| 1 | archive coverage is U-shaped, 2020+ second-worst | `first_seen` vs `last_seen` — a player active 2018-2026 is in both buckets, so the shape between modern bands was a denominator artifact |
+| 2 | every published file is positive on payroll vs quality | 2000 reads **-0.62** and **-0.65** under the two top-53 Pearson cuts |
+| 3 | 2026 falls below the published minimum | holds under **2 of 8** definitions; under the other six it sits above 2000 |
+
+Claims 2 and 3 came from the **same table**, reported in the same breath.
+
+**Where it happens is the diagnostic.** All three arrived as numbers that fit a
+story already forming — a coverage narrative, then a faithful-money-mapping
+narrative. The measurement returned something that confirmed the expectation,
+and the search stopped there. **A result that fits the story is not
+corroboration; it is the moment the next cut is least likely to be run and most
+likely to matter.** This is the same mechanism as the confirmatory vacuous pass
+(see *Vacuous pass is this project's dominant failure mode*), operating on a
+real number instead of an empty one.
+
+**Rule: enumerate the defensible cuts first, run all of them, and report the
+statements that survive.** The cuts are usually obvious and mechanical — bucket
+by first or last, mean or median, top-53 or whole roster, Pearson or Spearman,
+pooled or per-file. Eight variants of a correlation cost one script.
+
+**And report the sensitivity, not just the survivor.** "Positive across the
+archive under 6 of 8 definitions; 2000 goes negative under top-53 Pearson" is a
+usable statement. "Every published file is positive" is not, and reads stronger
+— which is precisely why it is the one that gets written.
+
+A finding that flips between two defensible definitions **is not a weaker
+finding, it is an absent one.** The correct output in that case is the
+sensitivity table, and nothing else.
+
+---
+
 ## Two scripts in one project, two position vocabularies
 
 The Houston core was selected by one script and assembled by another. The
