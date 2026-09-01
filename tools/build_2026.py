@@ -1878,6 +1878,162 @@ def stage_contracts(verbose=True):
         print(f'   guarantee/salary by length: ' + '  '.join(f'{L}yr {ratios[L]:.2f}' for L in ks))
     return plist, salary, guarantee, prov_of, lengths, team_of, snapshot
 
+# =============================================================== draft classes
+# RULING (Ryan, 2026-09-01): ship 2027 and 2028 ONLY. 2029 and 2030 are
+# dropped -- they would have been ~600 fully invented people with no real
+# names behind them. This DIVERGES from every published file, which all carry
+# four classes, and belongs in the Reddit post's "what's not real" section
+# because anyone used to the historical files will expect four.
+#
+# POTENTIAL: level from board rank, plus a rank-scaled PROBABILITY of a large
+# gap. Not rank-scaled variance -- that was the original proposal and the
+# archive refutes it.
+#
+# MEASURED, on rostered players by the slot they were drafted at (what they
+# actually became, NOT the published `potential` field, which was itself built
+# by slot-baseline-plus-career-raise and would only measure the method):
+#
+#   band        n     median  IQR   max   share >=85
+#   1-10      382         83   11    98      40.3%
+#   11-32     753         81   12    98      33.2%
+#   33-64     901         77   12    98      22.2%
+#   65-105    991         73   12    98      12.3%
+#   106-150   907         71   11    98       8.4%
+#   151-200   852         68   10    98       4.7%
+#   201-223   313         67    9    96       5.4%
+#   224 UDFA 2879         65   12    98       3.8%
+#
+# The IQR is FLAT at 9-12 across every band and the ceiling is 98 everywhere,
+# including undrafted. What falls with draft position is the MEDIAN (83->65)
+# and the HIT RATE (40.3%->3.8%). So uncertainty is roughly constant and
+# widening variance at the bottom would fit an assumption rather than the data
+# -- and would quietly fill round six with decent players.
+#
+# CAVEAT, and it must travel with the finding: this measures ROSTERED players,
+# so busts are not in the archive to be measured. The flat IQR is CONDITIONAL
+# ON MAKING A ROSTER; unconditionally the spread at low picks is wider. It is
+# still the right read for a CEILING -- the game simulates the bust when
+# potential is not reached -- but "spread is flat by draft position" is false
+# without that conditioning.
+#
+# THE HOLE THIS FIXES: published prospects have 0.0-0.1% with potential >= 85
+# below pick 64, against a real rostered outcome of 4.9% at pick 106+. The
+# published files contain no late steals at all.
+#
+# Late-round hits also CLUSTER by position (pick 106+, rating >= 85):
+#   C 8.7%  OG 7.6%  QB 6.7%  OT/CB 5.3%  WR 4.4%  DE 4.2%  MLB 3.9%
+#   TE 3.7%  DT/S 3.6%  RB 2.2%  OLB 1.7%
+# K and P read 15.0% and 13.1% and are EXCLUDED as an artifact -- kickers are
+# almost never drafted early, so every good one counts as a late hit. The 2027
+# board carries no K/P prospects in any case.
+#
+# GAP CONSTRAINT: the archive runs median 6, p90 12, max 23-28 (2000 is the
+# documented divergence at 40). No cap tighter than that. The 2013 build
+# capped the gap at 14 -- EXACTLY the reference p90 -- which is why it
+# compressed the top and put Louis Nix above Aaron Donald. A cap set at the
+# 90th percentile of the reference is not a safety margin, it is a guarantee
+# of clipping the tail. That generalises well past 2013.
+DRAFT_CLASSES = [2027, 2028]
+LATE_HIT_RATE = 0.049          # pick 106+, measured
+HIT_POTENTIAL = (85, 95)
+# The archive's own maximum prospect gap is 23-28 (2000 diverges at 40). A hit
+# must therefore be a good player who SLID, not a bad one leaping 42 points --
+# the first cut of this produced a rating-52 tackle with a 94 ceiling, a gap of
+# 42, wider than anything the archive contains. Bounding the gap at the
+# reference maximum is not the 2013 mistake: 28 is the archive MAX, where 2013
+# capped at 14, its p90.
+MAX_PROSPECT_GAP = 28
+
+POSITION_HIT_RATE = {           # pick 106+, rating >=85; K/P excluded
+    'C': 8.7, 'OG': 7.6, 'QB': 6.7, 'OT': 5.3, 'CB': 5.3, 'WR': 4.4,
+    'DE': 4.2, 'MLB': 3.9, 'TE': 3.7, 'DT': 3.6, 'S': 3.6, 'RB': 2.2,
+    'OLB': 1.7,
+}
+
+# The bundle maps the boards' coarse labels wholesale -- every `LB` becomes
+# MLB and every `EDGE` becomes DE -- which leaves the draft pool with ZERO
+# OLBs and fails the validator's "draft pool missing a LB type" check. PGM3's
+# OLB carries both 3-4 edge rushers and weak-side backers, so both source
+# labels feed it. Published prospect pools run MLB 24.3% / OLB 32.2% /
+# DE 43.5% across 2013+2017+2021, and the split below reproduces that while
+# respecting the semantics: MLB can only come from `LB`, DE only from `EDGE`,
+# OLB from either. Allocation is seeded on the player's name so it is
+# reproducible and NOT correlated with board rank.
+PROSPECT_LB_SPLIT = {'LB': (('MLB', 0.54), ('OLB', 0.46)),
+                     'EDGE': (('DE', 0.81), ('OLB', 0.19))}
+
+def prospect_positions(records):
+    """Assign by SORTED HASH so the counts are exact. Drawing each prospect
+    independently against a probability leaves small-sample variance -- 26
+    linebackers split 65/35 instead of 54/46 on the first attempt, which put
+    OLB at 17.5% of the LB+EDGE group against a published 32.2%."""
+    out = {}
+    groups = collections.defaultdict(list)
+    for i, rec in enumerate(records):
+        raw = rec.get('pos_raw')
+        if raw in PROSPECT_LB_SPLIT: groups[raw].append(i)
+        else: out[i] = rec['position']
+    for raw, idxs in groups.items():
+        idxs = sorted(idxs, key=lambda i: hashlib.sha256(
+            norm(records[i]['name']).encode()).hexdigest())
+        n = len(idxs); start = 0
+        rule = PROSPECT_LB_SPLIT[raw]
+        for j, (pos, share) in enumerate(rule):
+            take = n - start if j == len(rule) - 1 else int(round(share * n))
+            for i in idxs[start:start + take]: out[i] = pos
+            start += take
+    return [out[i] for i in range(len(records))]
+
+def fit_prospect_curve(paths):
+    """slot -> sorted published prospect ratings and gaps, for the LEVEL."""
+    rt = collections.defaultdict(list); gp = collections.defaultdict(list)
+    for path in paths:
+        for r in json.load(open(path)):
+            if cohort_of(r) != 'Rookie' or not r.get('draftNum'): continue
+            b = _slot_band(r['draftNum'])
+            rt[b].append(r['rating']); gp[b].append(r['potential'] - r['rating'])
+    return ({k: sorted(v) for k, v in rt.items()},
+            {k: sorted(v) for k, v in gp.items()})
+
+def _slot_band(pick):
+    for hi in (10, 32, 64, 105, 150, 200, 223, 300):
+        if pick <= hi: return hi
+    return 300
+
+def hit_probability(pick, position):
+    """Rank-scaled probability of a large gap, weighted by the position's
+    measured late-hit rate. Calibrated to the pick-106+ figure specifically --
+    round seven and undrafted behave differently from round four."""
+    # Calibrated against the ELIGIBLE population, not everyone: with the gap
+    # bounded at 28, only ~60% of pick-106+ prospects are rated high enough to
+    # reach 85 at all, so the raw probability has to be scaled up by ~1.67x to
+    # land the observed rate. Result: 106+ hits at 5.4% against a measured
+    # 4.9%, with 5.6% of the whole class carrying a hit.
+    if pick <= 32:   base = 0.0        # the top is already high by level
+    elif pick <= 64: base = 0.024
+    elif pick <= 105: base = 0.048
+    elif pick <= 150: base = 0.096
+    elif pick <= 200: base = 0.056
+    else:            base = 0.048
+    mean_rate = sum(POSITION_HIT_RATE.values()) / len(POSITION_HIT_RATE)
+    w = POSITION_HIT_RATE.get(position, mean_rate) / mean_rate
+    return min(0.35, base * w)
+
+def build_prospect(rank, position, season, rt_curve, gp_curve, rng):
+    """rating from the slot curve; potential = rating + gap, raise-only."""
+    b = _slot_band(rank)
+    rts = rt_curve.get(b) or rt_curve[max(rt_curve)]
+    gps = gp_curve.get(b) or gp_curve[max(gp_curve)]
+    q = rng.random()
+    rating = int(round(_target_at(rts, q)))
+    gap = int(round(_target_at(gps, rng.random())))
+    if rng.random() < hit_probability(rank, position):
+        target = rng.randint(*HIT_POTENTIAL)
+        gap = max(gap, target - rating)
+    gap = min(gap, MAX_PROSPECT_GAP)
+    potential = min(99, max(rating, rating + gap))   # raise-only
+    return rating, potential
+
 def seam_report():
     bundle, front, mad, nfl = load_all()
     res = join([r for r in nfl if r['status'] == 'ACT'], mad)
