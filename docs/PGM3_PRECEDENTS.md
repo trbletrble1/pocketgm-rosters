@@ -2750,6 +2750,53 @@ sensitivity table, and nothing else.
 
 ---
 
+## A fix that moves players can regenerate the class it resolves
+
+The registry-drift list was built against the scrambled positions and should
+have largely dissolved once positions were real. **70 became 60, not 10.**
+
+Edmunds, Bush, Travis Hunter and Van Ness all resolved — they were on the list
+precisely because the build read them as OLB while the registry had them at
+MLB. But the residual is dominated by **OT/OG/C** and **DE/OLB**: exactly the
+positions the convention shift moves. The fix traded one drift population for
+another of the same shape.
+
+This is the fourth time position labelling has bitten this build — the
+vocabulary mismatch at the archive lookup, the same mismatch at the registry
+lookup, the scheme-versus-body-type allocation, and now this.
+
+**Rule: when a fix works by MOVING records between categories, re-measure the
+mismatch it was meant to resolve. A net improvement can hide a regenerated
+population, and the count alone will not show it** — 70 to 60 looks like slow
+progress and is actually near-total resolution plus near-total regeneration.
+
+---
+
+## A ceiling check finds more than the thing it was written for
+
+`assert_free_agent_ceiling` was added because Bobby Wagner shipped at 97 against
+a published free-agent maximum of 93. It fired on its first run — **on someone
+else.**
+
+Christian Jones, a Cincinnati rookie offensive tackle born in 2003, was carrying
+**94** and a listed age of 32. The nickname tier matches `chris` as a prefix of
+`christian`, so he had been joined to **Chris Jones**, the Kansas City defensive
+tackle. `assert_one_to_one` holds *within* each join, and the build runs three
+of them (ACT, RES, free agents) — so a Madden row already claimed by the active
+pass could be claimed again by the free-agent pass. Chris Jones's 94 shipped
+twice, once correctly and once as a phantom free agent.
+
+Five rows were being double-claimed, **DeVonta Smith among them.**
+
+**Two rules.** A uniqueness assertion must span every pass that can consume the
+resource, not each pass separately; scoping it per-call is how it passes while
+the invariant it names is broken. And **a check written for one suspect record
+is worth running across the whole population** — the value here was not
+confirming Wagner, which was already known, but the four names nobody was
+looking at.
+
+---
+
 ## Two scripts in one project, two position vocabularies
 
 The Houston core was selected by one script and assembled by another. The

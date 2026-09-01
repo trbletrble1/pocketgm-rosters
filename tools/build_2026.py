@@ -106,6 +106,77 @@ def load_madden(path):
         r['_fam']   = FAMILY_FROM_MADDEN[r['Position']]
     return rows
 
+# ------------------------------------------------------- ageing, measured
+# A player carried from an ARCHIVE rating needs the years between applied.
+# Wagner arrived from tier 2 at 97 -- above every free agent in eight published
+# files (maxima 77-93) and third or fourth in the whole league at 36 -- because
+# quantile mapping preserves rank, he is rank 1 among JINX middle linebackers,
+# and he is absent from Madden 27, so that rank was mapped onto a population he
+# was never ranked within.
+#
+# NOT fixed by capping at the reference maximum: that is what put Louis Nix
+# above Aaron Donald, and the precedent stands.
+#
+# Fitted from players appearing in two consecutive published files at different
+# ages, attributing the change to each year crossed. Position-specific cells
+# are too thin to use (MLB has n=2 at ages 33-35); the pooled curve carries
+# n>=134 at every age Wagner crosses.
+#
+# SURVIVORSHIP TRAVELS WITH THIS FIGURE: only 16% of players aged 30-32 appear
+# in the next published file at all, so this is the decline of men who REMAINED
+# in the league, not of the average thirty-year-old. That is the right curve
+# for Wagner, who was playing in 2025, and the wrong one for a general forecast.
+_AGE_DECAY = {}
+
+def fit_age_decay(paths, min_n=30):
+    key = tuple(paths)
+    if key in _AGE_DECAY: return _AGE_DECAY[key]
+    seen = collections.defaultdict(dict)
+    for p in paths:
+        yr = int(os.path.basename(p)[10:14])
+        for r in json.load(open(p)):
+            if cohort_of(r) == 'Rookie': continue
+            seen[(norm(r['forename'] + ' ' + r['surname']), r['position'])][yr] = (r['age'], r['rating'])
+    per = collections.defaultdict(list)
+    for v in seen.values():
+        ys = sorted(v)
+        for a, b in zip(ys, ys[1:]):
+            (a1, r1), (a2, r2) = v[a], v[b]
+            dy = a2 - a1
+            if dy <= 0 or dy != b - a: continue
+            for age in range(a1, a2): per[age].append((r2 - r1) / dy)
+    out = {a: statistics.median(v) for a, v in per.items() if len(v) >= min_n}
+    if not out: raise AssertionFailed('age-decay fit produced no usable cells')
+    _AGE_DECAY[key] = out
+    return out
+
+def age_adjusted_rating(rating, from_age, to_age, paths):
+    """Carry an archive rating forward through the measured curve."""
+    curve = fit_age_decay(paths)
+    if not curve: raise AssertionFailed('no age curve')
+    lo, hi = min(curve), max(curve)
+    for age in range(from_age, to_age):
+        rating += curve.get(max(lo, min(hi, age)), 0.0)
+    return int(round(rating))
+
+def assert_free_agent_ceiling(out, refs):
+    """No free agent may exceed the highest free agent in any published file
+    without an explicit ruling. Wagner shipped at 97 against a published 77-93
+    and nothing objected."""
+    pub = 0
+    for p in refs:
+        for r in json.load(open(p)):
+            if cohort_of(r) == 'FA': pub = max(pub, r['rating'])
+    over = [r for r in out if cohort_of(r) == 'FA' and r['rating'] > pub
+            and norm(r['forename'] + ' ' + r['surname']) not in FA_CEILING_RULED]
+    if over:
+        raise AssertionFailed(
+            f'{len(over)} free agent(s) above the published maximum {pub}: ' +
+            ', '.join(f"{r['forename']} {r['surname']} {r['rating']}" for r in over[:5]))
+    return pub
+
+FA_CEILING_RULED = set()      # names Ryan has explicitly allowed above the max
+
 # ------------------------------------------------- manual source additions
 # Players who fell through a SOURCE GAP, not through a rule. Each is a real
 # free agent the pipeline could not see because no input carries him: absent
@@ -120,6 +191,7 @@ def load_madden(path):
 # raised and declined: he is retired, and every published season's pool holds
 # men who were in the league last year and out of it now. An unretirement
 # would make him a declared exception, the way the 2000 Texans are.
+MANUAL_ANCHOR = {}   # norm -> (archive rating, archive age); filled below
 MANUAL_FREE_AGENTS = [
     dict(full_name='Bobby Wagner', first_name='Bobby', last_name='Wagner',
          position='LB', depth_chart_position='MLB', status='CUT',
@@ -127,9 +199,15 @@ MANUAL_FREE_AGENTS = [
          years_exp='14', draft_number='47', entry_year='2012',
          rookie_year='2012', draft_club='SEA', jersey_number='54',
          season='2026', college='Utah State',
+         # carried from his last ARCHIVE rating through the measured curve,
+         # not from the tier-2 quantile map -- see fit_age_decay above.
+         _archive_rating=93, _archive_age=31,
          _reason='played 2025, contract expired, pursued by Dallas; absent '
                  'from Madden 27 and nflverse 2026. Source gap, not a rule.'),
 ]
+for _e in MANUAL_FREE_AGENTS:
+    if '_archive_rating' in _e:
+        MANUAL_ANCHOR[norm(_e['full_name'])] = (_e['_archive_rating'], _e['_archive_age'])
 
 def load_nflverse(path):
     rows = load_csv(path)
@@ -1357,6 +1435,25 @@ def stage_attributes(verbose=True):
     res  = join(act, mad)
     rres = join(resv, mad)
     rfa  = join(fa_raw, mad, use_team_pass=False)
+    # A Madden row may be claimed by ONE nflverse player, across every join --
+    # not once per join. assert_one_to_one holds inside each call, so nothing
+    # objected when the free-agent pass claimed Chris Jones (KC, DT, 94) a
+    # second time for a Cincinnati rookie tackle named Christian Jones: the
+    # nickname tier matches "chris" as a prefix of "christian", and his 94
+    # shipped twice, once correctly and once as a phantom free agent.
+    _used = {id(m) for _, m, _ in list(res.pairs) + list(rres.pairs)}
+    _stolen = [(n, m) for n, m, _ in rfa.pairs if id(m) in _used]
+    rfa.pairs = [(n, m, t) for n, m, t in rfa.pairs if id(m) not in _used]
+    for n, _m in _stolen: rfa.unmatched.append(n)
+    if verbose and _stolen:
+        print(f'   released {len(_stolen)} Madden row(s) double-claimed by the '
+              f'free-agent pass: ' + ', '.join(n['full_name'] for n, _ in _stolen[:4]))
+    _all = collections.Counter(id(m) for _, m, _ in
+                               list(res.pairs) + list(rres.pairs) + list(rfa.pairs))
+    _dupe = [k for k, v in _all.items() if v > 1]
+    if _dupe:
+        raise AssertionFailed(f'{len(_dupe)} Madden row(s) claimed by more than '
+                              f'one nflverse player across the three joins')
     pmap = fit_position_map([(n, m) for n, m, _ in res.pairs], front, front_seven_allocation(mad))
 
     # RULING D: free agents are those with a Madden record OR >= 2 years of
@@ -1390,6 +1487,12 @@ def stage_attributes(verbose=True):
         pos = apply_position_map(n, front, pmap)
         conv = jinx_to_m27_row(j, pos, scale)
         if not conv: continue
+        anchor = MANUAL_ANCHOR.get(n['_norm'])
+        if anchor:
+            ar, aa = anchor
+            try:    age_now = CUR_SEASON - int(str(n.get('birth_date'))[:4])
+            except (TypeError, ValueError): age_now = aa
+            conv['OverallRating'] = age_adjusted_rating(ar, aa, age_now, refs)
         rows.append((n, conv, pos)); tier_of[id(n)] = 2; t2 += 1
 
     # ---- tier 3: no source at all --------------------------------------
@@ -3328,6 +3431,7 @@ def stage_build(verbose=True):
     for rec in out: assert_roster_record(rec, seen)
     assert_no_empty_position(out)
     assert_front_seven_totals(out)
+    assert_free_agent_ceiling(out, refs)
     if verbose:
         c = collections.Counter(cohort_of(r) for r in out)
         print(f'ROSTER assembled: {len(out)} records')

@@ -1,52 +1,52 @@
-name,build_pos,built_band,registry_band,registry_pos,era_evidence
-Aireontae Ersery,OT,light,dark,OG,archive era 2026-2026 overlaps 2026
-Alex Forsyth,C,light,dark,OT,archive era 2024-2024 overlaps 2026
-Andrew Vorhees,OG,light,dark,OT,archive era 2024-2026 overlaps 2026
-Barrett Carter,MLB,light,dark,OLB,archive era 2026-2026 overlaps 2026
-Branson Taylor,OG,light,dark,C,archive era 2026-2026 overlaps 2026
-Brian Parker II,OG,dark,light,TE,"2026-only name, absent from the archive"
-Bryce Cabeldue,OG,light,dark,OT,"2026-only name, absent from the archive"
-Caedan Wallace,OG,light,dark,OT,archive era 2025-2026 overlaps 2026
-Carson Schwesinger,MLB,light,dark,OLB,archive era 2026-2026 overlaps 2026
-Christian Gonzalez,CB,dark,light,S,archive era 2024-2024 overlaps 2026
-Christian Haynes,OG,light,dark,OT,archive era 2025-2026 overlaps 2026
-Christian Mahogany,OG,light,dark,OT,archive era 2026-2026 overlaps 2026
-Cody Simon,MLB,light,dark,OLB,archive era 2026-2026 overlaps 2026
-Cooper Beebe,C,light,dark,OT,archive era 2025-2026 overlaps 2026
-Danny Stutsman,MLB,dark,light,OLB,archive era 2026-2026 overlaps 2026
-Devin Moore,CB,dark,light,RB,"2026-only name, absent from the archive"
-Donovan Ezeiruaku,OLB,light,dark,DE,archive era 2026-2026 overlaps 2026
-Dylan Fairchild,OG,light,dark,OT,archive era 2026-2026 overlaps 2026
-Dylan McMahon,C,light,dark,OT,"2026-only name, absent from the archive"
-Edgerrin Cooper,MLB,light,dark,OLB,archive era 2025-2026 overlaps 2026
-Francisco Mauigoa,MLB,light,dark,OLB,archive era 2026-2026 overlaps 2026
-Graham Barton,C,light,dark,OT,archive era 2025-2026 overlaps 2026
-Grey Zabel,OG,light,dark,OT,archive era 2026-2026 overlaps 2026
-Hayden Conner,OG,light,dark,OT,archive era 2026-2026 overlaps 2026
-Jackson Powers-Johnson,OG,dark,light,OT,archive era 2026-2026 overlaps 2026
-Jackson Slater,OG,light,dark,C,archive era 2026-2026 overlaps 2026
-Jacob Monk,C,light,dark,OT,archive era 2025-2025 overlaps 2026
-Jake Andrews,C,light,dark,OT,archive era 2025-2025 overlaps 2026
-Jalon Walker,OLB,light,dark,DE,archive era 2026-2026 overlaps 2026
-James Pearce Jr.,OLB,light,dark,DE,archive era 2026-2026 overlaps 2026
-Javon Solomon,OLB,light,dark,DE,archive era 2025-2025 overlaps 2026
-Joe Alt,OT,light,dark,OG,archive era 2025-2026 overlaps 2026
-Jonah Elliss,OLB,light,dark,DE,archive era 2025-2025 overlaps 2026
-Jonah Monheim,C,light,dark,OT,archive era 2026-2026 overlaps 2026
-Jordan Magee,OLB,light,dark,MLB,archive era 2025-2026 overlaps 2026
-Josh Conerly Jr.,OT,light,dark,OG,archive era 2026-2026 overlaps 2026
-Jovaughn Gwyn,C,light,dark,OG,archive era 2024-2026 overlaps 2026
-Jowon Briggs,DT,dark,light,DE,archive era 2026-2026 overlaps 2026
-Keion White,DE,light,dark,DT,archive era 2024-2026 overlaps 2026
-Khristian Boyd,DT,light,dark,DE,archive era 2025-2025 overlaps 2026
-Mason McCormick,OG,light,dark,OT,archive era 2025-2026 overlaps 2026
-Michael Jurgens,C,light,dark,OG,archive era 2026-2026 overlaps 2026
-Nathan Thomas,OT,light,dark,OG,archive era 2025-2026 overlaps 2026
-Ozzy Trapilo,OT,light,dark,C,archive era 2026-2026 overlaps 2026
-Ryan Miller,WR,light,dark,OT/OG,archive era 2025-2025 overlaps 2026
-Shemar James,OLB,light,dark,MLB,archive era 2026-2026 overlaps 2026
-Tanor Bortolini,C,light,dark,OT,archive era 2025-2025 overlaps 2026
-Tate Ratledge,OG,light,dark,C,"2026-only name, absent from the archive"
-Tyler Baron,OLB,light,dark,DE,archive era 2026-2026 overlaps 2026
-Tyler Booker,OG,light,dark,OT,archive era 2026-2026 overlaps 2026
-Wyatt Milum,OG,light,dark,OT,archive era 2026-2026 overlaps 2026
+name,build_pos,built_band,registry_band,registry_pos,era_evidence,check_priority
+Aireontae Ersery,OT,light,dark,OG,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Alex Forsyth,C,light,dark,OT,archive era 2024-2024,"HIGH — light->dark, the skewed direction"
+Andrew Vorhees,OG,light,dark,OT,archive era 2024-2026,"HIGH — light->dark, the skewed direction"
+Barrett Carter,MLB,light,dark,OLB,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Branson Taylor,OG,light,dark,C,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Bryce Cabeldue,OG,light,dark,OT,"2026-only name, absent from the archive","HIGH — light->dark, the skewed direction"
+Caedan Wallace,OG,light,dark,OT,archive era 2025-2026,"HIGH — light->dark, the skewed direction"
+Carson Schwesinger,MLB,light,dark,OLB,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Christian Haynes,OG,light,dark,OT,archive era 2025-2026,"HIGH — light->dark, the skewed direction"
+Christian Mahogany,OG,light,dark,OT,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Cody Simon,MLB,light,dark,OLB,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Cooper Beebe,C,light,dark,OT,archive era 2025-2026,"HIGH — light->dark, the skewed direction"
+Donovan Ezeiruaku,OLB,light,dark,DE,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Dylan Fairchild,OG,light,dark,OT,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Dylan McMahon,C,light,dark,OT,"2026-only name, absent from the archive","HIGH — light->dark, the skewed direction"
+Edgerrin Cooper,MLB,light,dark,OLB,archive era 2025-2026,"HIGH — light->dark, the skewed direction"
+Francisco Mauigoa,MLB,light,dark,OLB,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Graham Barton,C,light,dark,OT,archive era 2025-2026,"HIGH — light->dark, the skewed direction"
+Grey Zabel,OG,light,dark,OT,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Hayden Conner,OG,light,dark,OT,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Jackson Slater,OG,light,dark,C,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Jacob Monk,C,light,dark,OT,archive era 2025-2025,"HIGH — light->dark, the skewed direction"
+Jake Andrews,C,light,dark,OT,archive era 2025-2025,"HIGH — light->dark, the skewed direction"
+Jalon Walker,OLB,light,dark,DE,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+James Pearce Jr.,OLB,light,dark,DE,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Javon Solomon,OLB,light,dark,DE,archive era 2025-2025,"HIGH — light->dark, the skewed direction"
+Joe Alt,OT,light,dark,OG,archive era 2025-2026,"HIGH — light->dark, the skewed direction"
+Jonah Elliss,OLB,light,dark,DE,archive era 2025-2025,"HIGH — light->dark, the skewed direction"
+Jonah Monheim,C,light,dark,OT,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Jordan Magee,OLB,light,dark,MLB,archive era 2025-2026,"HIGH — light->dark, the skewed direction"
+Josh Conerly Jr.,OT,light,dark,OG,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Jovaughn Gwyn,C,light,dark,OG,archive era 2024-2026,"HIGH — light->dark, the skewed direction"
+Keion White,DE,light,dark,DT,archive era 2024-2026,"HIGH — light->dark, the skewed direction"
+Khristian Boyd,DT,light,dark,DE,archive era 2025-2025,"HIGH — light->dark, the skewed direction"
+Mason McCormick,OG,light,dark,OT,archive era 2025-2026,"HIGH — light->dark, the skewed direction"
+Michael Jurgens,C,light,dark,OG,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Nathan Thomas,OT,light,dark,OG,archive era 2025-2026,"HIGH — light->dark, the skewed direction"
+Ozzy Trapilo,OT,light,dark,C,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Ryan Miller,WR,light,dark,OT/OG,archive era 2025-2025,"HIGH — light->dark, the skewed direction"
+Shemar James,OLB,light,dark,MLB,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Tanor Bortolini,C,light,dark,OT,archive era 2025-2025,"HIGH — light->dark, the skewed direction"
+Tate Ratledge,OG,light,dark,C,"2026-only name, absent from the archive","HIGH — light->dark, the skewed direction"
+Tyler Baron,OLB,light,dark,DE,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Tyler Booker,OG,light,dark,OT,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Wyatt Milum,OG,light,dark,OT,archive era 2026-2026,"HIGH — light->dark, the skewed direction"
+Brian Parker II,OG,dark,light,TE,"2026-only name, absent from the archive",control — dark->light
+Christian Gonzalez,CB,dark,light,S,archive era 2024-2024,control — dark->light
+Danny Stutsman,MLB,dark,light,OLB,archive era 2026-2026,control — dark->light
+Devin Moore,CB,dark,light,RB,"2026-only name, absent from the archive",control — dark->light
+Jackson Powers-Johnson,OG,dark,light,OT,archive era 2026-2026,control — dark->light
+Jowon Briggs,DT,dark,light,DE,archive era 2026-2026,control — dark->light
