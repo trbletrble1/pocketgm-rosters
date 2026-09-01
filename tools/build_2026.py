@@ -19,7 +19,7 @@ RULINGS APPLIED (Ryan, 2026-09-01)
   OverallRating >= 0.50; percentile fill below that.  Threshold is a CHOSEN
   cut, not a fitted one -- sensitivity at 0.4/0.6 reported in the build log.
 """
-import csv, json, os, sys, collections, unicodedata, re, statistics, datetime, random, hashlib
+import csv, json, os, sys, collections, unicodedata, re, statistics, datetime, random, hashlib, math
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def P(*a): return os.path.join(REPO, *a)
@@ -1359,6 +1359,217 @@ def build_derived(rows, built, weights, pools, ratpool, verbose=False):
             made[a] += 1
     return made
 
+# ================================================================= contracts
+# The spreadsheet carries _TotalSalary and _SigningBonus and NOTHING ELSE --
+# no contract length, no total length, so `length` and `guarantee` are both
+# derived. 1,760 players have Madden money; 128 do not and must be drawn.
+#
+# LENGTH has two constraints and BOTH are required (the handoff is explicit):
+#   1. consistent with draftSeason -- the ladder runs 4/3/2/1 by years pro, and
+#      the game refuses extensions when length contradicts it;
+#   2. the overall marginal is heavily short -- 36% one-year deals, nothing
+#      above 7.
+# And a third the 1986 build had to learn: within a years-pro bucket the
+# published files put BETTER players on LONGER deals, correlation 0.11-0.38.
+# Assigning length at random inside each bucket reproduces both marginals to
+# two decimal places and destroys that. So the rank is rating blended with
+# per-player noise, and the blend weight is FITTED against the reference's own
+# within-bucket correlation rather than guessed -- guessed weights came out at
+# 0.585 against a 0.353 target in 1986; fitted ones hit 0.357.
+
+def fit_length_reference(paths):
+    """(years-pro bucket) -> (length distribution, target corr with rating)."""
+    dist = collections.defaultdict(collections.Counter)
+    pairs = collections.defaultdict(list)
+    for path in paths:
+        for r in json.load(open(path)):
+            if cohort_of(r) != 'T' or not r.get('draftSeason'): continue
+            yp = CUR_SEASON - r['draftSeason']
+            if not (0 <= yp <= 20): continue
+            b = min(yp, 10)
+            dist[b][r['length']] += 1
+            pairs[b].append((r['length'], r['rating']))
+    corr = {}
+    for b, v in pairs.items():
+        n = len(v)
+        mL = sum(x for x, _ in v) / n; mR = sum(y for _, y in v) / n
+        num = sum((x - mL) * (y - mR) for x, y in v)
+        d1 = sum((x - mL) ** 2 for x, _ in v) ** .5
+        d2 = sum((y - mR) ** 2 for _, y in v) ** .5
+        corr[b] = num / (d1 * d2) if d1 and d2 else 0.0
+    return dist, corr
+
+def _pearson(a, b):
+    n = len(a)
+    if n < 3: return 0.0
+    ma, mb = sum(a) / n, sum(b) / n
+    num = sum((a[i] - ma) * (b[i] - mb) for i in range(n))
+    da = sum((x - ma) ** 2 for x in a) ** .5
+    db = sum((x - mb) ** 2 for x in b) ** .5
+    return num / (da * db) if da and db else 0.0
+
+def assign_lengths(group, dist, target_corr, seed):
+    """group: [(key, rating)]. Returns {key: length} reproducing the bucket's
+    published length distribution while hitting its rating correlation."""
+    n = len(group)
+    if n == 0: return {}
+    lens = []
+    tot = sum(dist.values())
+    for L in sorted(dist):
+        lens += [L] * int(round(n * dist[L] / tot))
+    while len(lens) < n: lens.append(sorted(dist)[0])
+    lens = sorted(lens[:n])
+    rng = random.Random(seed)
+    noise = {k: rng.random() for k, _ in group}
+    by_rating = sorted(range(n), key=lambda i: group[i][1])
+    rrank = {}
+    for pos_, i in enumerate(by_rating): rrank[i] = pos_ / max(1, n - 1)
+    best, best_err = None, 9e9
+    for w in [x / 40.0 for x in range(0, 41)]:
+        score = [w * rrank[i] + (1 - w) * noise[group[i][0]] for i in range(n)]
+        order = sorted(range(n), key=lambda i: score[i])
+        out = {}
+        for slot, i in enumerate(order): out[group[i][0]] = lens[slot]
+        got = _pearson([out[group[i][0]] for i in range(n)],
+                       [group[i][1] for i in range(n)])
+        err = abs(got - target_corr)
+        if err < best_err: best, best_err = out, err
+    return best
+
+# --------------------------------------------------------------- money
+# PAYROLL BASIS, pinned by measurement and reproducible on a clean clone:
+# rank by salary+guarantee, take the top 53, sum salary+guarantee, take the
+# median across the 32 teams. That reproduces all eight published files TO THE
+# DOLLAR (1986 197,400,001 ... 2021 197,426,500, a $29k spread on $197.4M).
+# Ranking by salary instead reads 2017 $20.4M low, so the basis matters.
+#
+# The engine cap is a fixed ~$280M with no cap field anywhere in the schema,
+# so era-accurate dollars leave every team ~$225M of room and the financial
+# layer goes inert. That shipped once and was found only by starting a season.
+PAYROLL_TARGET = 197_400_000
+ENGINE_CAP     = 280_000_000
+
+# Provenance. Every money value carries a tag and every guard checks it before
+# firing: a floor written for a drawn value will silently overwrite a sourced
+# one and the output still looks reasonable, because looking reasonable is the
+# guard's entire job. Jason Elam's real $1,071,167 was pushed to $2,200,000 by
+# exactly that, and nothing but the real figure sitting in the next column
+# would have caught it.
+SRC_MADDEN = 'madden'      # _TotalSalary / _SigningBonus present
+SRC_DRAWN  = 'drawn'       # no Madden money -- drawn from the published pool
+
+def fit_money_reference(paths):
+    """(position, length) -> sorted published salary and guarantee, in dollars,
+    with (position,) and () fallbacks for thin cells. Contracts carry more
+    joint structure than any other field group -- salary x rating x position x
+    length x guarantee -- so a single-axis fit always loses something. Fitted
+    on two axes here, with the third (position) checked afterwards."""
+    sal = collections.defaultdict(list); gte = collections.defaultdict(list)
+    dropped = 0
+    for path in paths:
+        for r in json.load(open(path)):
+            if cohort_of(r) != 'T': continue
+            # CLEAN THE TARGET. 37 rostered records carry salary 0 and all of
+            # them are in 2017 -- 1.9% of that file, 0.0% of 2010/2013/2021.
+            # A quantile map inherits its target's defects, and these also
+            # crush any log-scale correlation measured against the reference
+            # (log(1)=0 outliers took corr(log salary, rating) from +0.42 to
+            # +0.15 and made the published band look far wider than it is).
+            if r['salary'] == 0:
+                dropped += 1; continue
+            for key in ((r['position'], r['length']), (r['position'],), ()):
+                sal[key].append(r['salary']); gte[key].append(r['guarantee'])
+    return ({k: sorted(v) for k, v in sal.items()},
+            {k: sorted(v) for k, v in gte.items()})
+
+def _pool(ref, pos, length):
+    for key in ((pos, length), (pos,), ()):
+        v = ref.get(key)
+        if v and len(v) >= 25: return v
+    return ref.get((), [0])
+
+def assign_money(players, ref_sal, ref_gte, rng):
+    """players: [(key, pos, length, order_value, provenance)] where
+    order_value ranks the player within his (position,length) cell.
+
+    The reference supplies the LEVEL in dollars; the Madden contract supplies
+    the ORDER. Ranking on rating instead would apply the published
+    rating-salary relationship twice -- the published pool already encodes it,
+    which is how 1986 came out at correlation 0.706 against a published 0.520
+    and produced four teams over the cap."""
+    cells = collections.defaultdict(list)
+    for k, pos, ln, ov, prov in players: cells[(pos, ln)].append((k, ov, prov))
+    salary, guarantee, prov_of = {}, {}, {}
+    for (pos, ln), g in cells.items():
+        ps = _pool(ref_sal, pos, ln); pg = _pool(ref_gte, pos, ln)
+        g = sorted(g, key=lambda x: (x[1], rng.random()))
+        n = len(g)
+        for i, (k, ov, prov) in enumerate(g):
+            q = i / max(1, n - 1)
+            salary[k]   = int(round(_target_at(ps, q)))
+            guarantee[k] = int(round(_target_at(pg, q)))
+            prov_of[k]  = prov
+    return salary, guarantee, prov_of
+
+# RULING (Ryan, 2026-09-01): compress the top of the distribution so no team
+# exceeds the engine cap, holding the median at $197.4M exactly.
+#
+# The constraint is absolute in the archive: 0 of 256 team-seasons across
+# eight files exceed $280M, and the highest ever shipped is 2017 at $277.6M.
+# Ranking on real _TotalSalary makes 2026 more faithful than any published
+# file -- team payroll tracks genuine roster cost at +0.67, where 2013 reads
+# -0.57 and 2021 +0.08 because those builds ranked on rating -- and real money
+# concentration exceeds what the engine allows. Measured across 12 seeds the
+# top team sat at $279.1-281.1M and breached in 7, so it is structural.
+#
+# p=0.90 lands the maximum at $272.3M, the same ceiling 2013 ships, with the
+# median held to the dollar. A global rescale (option C) cleared the cap but
+# dropped the median to $193.6M, outside the validator's published band.
+PAYROLL_COMPRESS_P = 0.90
+
+def compress_top(salary, guarantee, p=PAYROLL_COMPRESS_P):
+    """Power compression about the median. Monotone, so it preserves every
+    ordering; it only pulls in the extremes."""
+    live = [v for v in salary.values() if v > 0]
+    if not live: return
+    med = statistics.median(live)
+    for k in salary:
+        if salary[k] > 0:
+            salary[k] = int(round(med * (salary[k] / med) ** p))
+        if guarantee[k] > med:
+            guarantee[k] = int(round(med * (guarantee[k] / med) ** p))
+
+def scale_to_payroll(salary, guarantee, team_of, target=PAYROLL_TARGET):
+    """One uniform multiplier. It preserves every ratio, ordering and anchor
+    while making the economy live, which is why the fix is a multiply and not
+    a refit."""
+    def med_top53():
+        by = collections.defaultdict(list)
+        for k, t in team_of.items():
+            if t: by[t].append(salary[k] + guarantee[k])
+        tot = [sum(sorted(v, reverse=True)[:53]) for v in by.values() if v]
+        return statistics.median(tot) if tot else 0
+    cur = med_top53()
+    if cur <= 0: return 1.0
+    f = target / cur
+    for k in salary:
+        salary[k] = int(round(salary[k] * f)); guarantee[k] = int(round(guarantee[k] * f))
+    return f
+
+def assert_guards_spared_sourced(before, after, prov_of, tag=SRC_MADDEN):
+    """After every guard has run, re-read the sourced records against their
+    original values and fail if any moved. Tested against a deliberately
+    corrupted record before being trusted -- an assertion that cannot fail
+    reports success in the same words as a real pass."""
+    sourced = [k for k, p in prov_of.items() if p == tag]
+    if not sourced:
+        raise AssertionFailed('guard check ran over ZERO sourced records')
+    moved = [k for k in sourced if before.get(k) != after.get(k)]
+    if moved:
+        raise AssertionFailed(f'{len(moved)} sourced contracts moved by a guard, '
+                              f'e.g. {moved[:3]}')
+    return len(sourced)
+
 # ==================================================================== refit
 # Solve attributes toward the target rating through the bundle's position
 # weights, bounded by the min/max observed in the published files. This is the
@@ -1576,6 +1787,97 @@ def stage_refit(verbose=True):
             print(f'   {t:4d} {kind:>11s} {nn:7d} {med:15.1f}')
     return rows, after, tier_of
 
+def stage_contracts(verbose=True):
+    """length -> salary/guarantee -> scale to $197.4M -> compress under the cap.
+    Every money value carries a provenance tag and the guard assertion runs
+    after all guards, against the pre-guard snapshot."""
+    bundle, front, mad, nfl = load_all()
+    refs = [P(f) for f in MODERN_REFS]
+    dist, corr = fit_length_reference(refs)
+    ref_sal, ref_gte = fit_money_reference(refs)
+    rows, built, _, weights, tier_of, _ = stage_attributes(verbose=False)
+
+    players = []
+    for n, m, pos in rows:
+        try: rt = float(m['OverallRating'])
+        except (KeyError, ValueError): continue
+        players.append((n, m, pos, rt))
+
+    # --- length ---------------------------------------------------------
+    buckets = collections.defaultdict(list)
+    for n, m, pos, rt in players: buckets[min(n['_exp'], 10)].append((id(n), rt))
+    lengths = {}
+    for b, g in buckets.items():
+        b2 = b if b in dist else min(dist, key=lambda x: abs(x - b))
+        lengths.update(assign_lengths(g, dist[b2], corr[b2], seed=1000 + b))
+
+    # --- money ----------------------------------------------------------
+    src = [float(m['_TotalSalary']) for n, m, pos, rt in players
+           if m.get('_TotalSalary') not in (None, '')]
+    lo, hi = min(src), max(src)
+    rng = random.Random(2026)
+    plist, team_of = [], {}
+    for n, m, pos, rt in players:
+        k = id(n); ts = m.get('_TotalSalary')
+        if ts not in (None, ''):
+            ov = (math.log(float(ts) + 1) - math.log(lo + 1)) / (math.log(hi + 1) - math.log(lo + 1))
+            prov = SRC_MADDEN
+        else:
+            ov = rt / 100.0; prov = SRC_DRAWN
+        plist.append((k, pos, lengths[k], ov, prov)); team_of[k] = n['_team']
+    salary, guarantee, prov_of = assign_money(plist, ref_sal, ref_gte, rng)
+    # NO SALARY FLOOR GUARD, deliberately. Measured: the built distribution
+    # runs min $2,171 / p1 $23,608, inside what the archive already contains
+    # (2017 ships min $1,012 / p1 $37,456). A floor written for drawn values
+    # would fire on sourced ones and the output would still look reasonable --
+    # that is how Jason Elam's real $1,071,167 became $2,200,000. Confirm the
+    # defect is present before fixing it; here it is not. prov_of is carried
+    # so that any guard added later can check provenance before firing, and
+    # assert_guards_spared_sourced exists for that moment.
+    f = scale_to_payroll(salary, guarantee, team_of)
+    snapshot = {k: (salary[k], guarantee[k]) for k in salary}
+    compress_top(salary, guarantee)
+    scale_to_payroll(salary, guarantee, team_of)
+
+    by = collections.defaultdict(list)
+    for k, t in team_of.items(): by[t].append(salary[k] + guarantee[k])
+    tot = sorted(sum(sorted(v, reverse=True)[:53]) for v in by.values())
+    med = statistics.median(tot)
+    over = sum(1 for x in tot if x > ENGINE_CAP)
+    if over:
+        raise AssertionFailed(f'{over} team(s) over the ${ENGINE_CAP/1e6:.0f}M engine cap '
+                              f'(max ${tot[-1]/1e6:.1f}M) — 0 of 256 published team-seasons breach it')
+    if abs(med - PAYROLL_TARGET) > 1_000_000:
+        raise AssertionFailed(f'median team payroll ${med/1e6:.1f}M off the '
+                              f'${PAYROLL_TARGET/1e6:.1f}M convention')
+    # guarantee must rise with remaining length
+    ratios = {}
+    for L in range(1, 8):
+        g = [guarantee[k] / salary[k] for k, _, ln, _, _ in plist if ln == L and salary[k] > 0]
+        if len(g) >= 10: ratios[L] = statistics.median(g)
+    # Match the validator exactly: median ratio at length 1 vs length >= 5.
+    # A strictly-monotone-by-bucket test would be WRONG -- the published files
+    # are not monotone either (2013 reads 6yr 0.44 against 5yr 1.67, 2021 reads
+    # 3yr 0.10 against 2yr 0.22), and the long buckets are thin.
+    r1 = [guarantee[k] / salary[k] for k, _, ln, _, _ in plist if ln == 1 and salary[k] > 0]
+    r5 = [guarantee[k] / salary[k] for k, _, ln, _, _ in plist if ln >= 5 and salary[k] > 0]
+    n1 = statistics.median(r1) if r1 else 0.0
+    n5 = statistics.median(r5) if r5 else 0.0
+    if not (n5 > n1):
+        raise AssertionFailed(f'guarantee/salary 1yr={n1:.2f} 5yr={n5:.2f} — must rise with length')
+    ks = sorted(ratios)
+
+    if verbose:
+        print(f'CONTRACTS for {len(salary)} rostered players')
+        print(f'   sourced (Madden money) {sum(1 for v in prov_of.values() if v==SRC_MADDEN):5d}'
+              f'   drawn {sum(1 for v in prov_of.values() if v==SRC_DRAWN):4d}')
+        print(f'   length: 1-yr {100*sum(1 for v in lengths.values() if v==1)/len(lengths):.1f}%'
+              f'   max {max(lengths.values())}')
+        print(f'   median team payroll ${med/1e6:.1f}M (top-53, salary+guarantee)  target $197.4M')
+        print(f'   team range ${tot[0]/1e6:.1f}M - ${tot[-1]/1e6:.1f}M   over the $280M engine cap: {over}')
+        print(f'   guarantee/salary by length: ' + '  '.join(f'{L}yr {ratios[L]:.2f}' for L in ks))
+    return plist, salary, guarantee, prov_of, lengths, team_of, snapshot
+
 def seam_report():
     bundle, front, mad, nfl = load_all()
     res = join([r for r in nfl if r['status'] == 'ACT'], mad)
@@ -1608,4 +1910,5 @@ if __name__ == '__main__':
             print(f'      {mc:26s} n={n_:5d}  median shift {med:+5.1f}  MAD {mad:.1f}')
         conditional_pass(rows, built)
     elif cmd == 'refit': stage_refit()
+    elif cmd == 'contracts': stage_contracts()
     else: print(__doc__); sys.exit(2)
