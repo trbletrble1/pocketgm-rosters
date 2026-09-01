@@ -1123,6 +1123,75 @@ appearance rebuilt from real Madden data.
    route for this cohort until it is known whether a 1990/1991 build is coming.
    The photo route is the expensive fallback for what no roster export covers.
 
+0i. **STAFF AGES ARE NOT SOURCED, ARCHIVE-WIDE.** Found 2026-08-31 in the 2000
+   build and confirmed in the published files. The ages have essentially no
+   relationship to the men.
+
+   | file | HCs checkable | within ±2 yrs | off by ≥10 | error range |
+   |---|---|---|---|---|
+   | 2000 (before fix) | 89 coaches | 13 | 35 | −19 to +26 |
+   | 2004 | 28 | 4 | 11 | −19 to +15 |
+   | 2010 | 28 | 5 | 11 | −21 to +24 |
+
+   Examples: Tony Dungy shipped at **70** against a real 45; Sean Payton at
+   **71** in 2010 against 47; Tom Coughlin at **43** against 64.
+
+   **Why nothing caught it.** The distribution is entirely plausible — median
+   49.5, range 30–72, sitting right beside the published files — with no
+   per-person signal. Same shape as the stamina and appearance bugs. Internal
+   consistency checks can only see **impossibility**, not **wrongness**: only
+   two records in 2000 were impossible (Reeves coaching 19 seasons by 44, Mora
+   13 by 30), while Dungy at 70 with 4 seasons is perfectly consistent and 25
+   years out.
+
+   **It poisons `startSeason`,** which is a fitted function of age (r ≈ −0.96,
+   residual sd ≈ 2, in every modern published file). Wrong age gives a wrong
+   start season **and the correlation still looks perfect**, because the field
+   is a function of the bad input.
+
+   **2000 is fixed** — 124 of 128 real coaches carry sourced birth years in
+   `sources/coaches_2000_birth_years.csv` with per-row provenance, the other 4
+   derived from the Special Teams role median and tagged. All seven of Ryan's
+   independently known ages now match exactly. **The published files are not
+   fixed** and this is the sixth backlog item.
+
+   Route that worked: **one bulk Wikidata SPARQL query** filtered on occupation
+   `American football coach`, which is the disambiguator plain name matching
+   lacks — 98 of 126 in a single request. Wikipedia intro extracts covered most
+   of the rest. **nflverse is a trap here**: it matched only 22 of 128 and 4 of
+   those were false positives (Marvin Lewis, Andy Reid, Bill Callahan and Jimmy
+   Raye never played in the NFL; the Raye hit was his son). An 18% false rate,
+   and career length does not separate them — Croom and Payton each played one
+   season and are true matches.
+
+   Sources, reproducible: Wikidata SPARQL endpoint
+   `https://query.wikidata.org/sparql` with a `VALUES` block of the coach
+   names; Wikipedia `action=query&prop=extracts&exintro`. The nflverse file
+   tested was `players.csv` from the `players` release,
+   sha256 `3d05857e0ac77208b0b331bda5a3da4580ef2feb2fe78088566f9306dd6b658e`
+   (7,176,512 bytes, 25,064 rows) — not committed, it is gitignored, and it is
+   recorded only because the 18% false-positive figure should be reproducible.
+
+0j. **TEAM PAYROLL SPREAD IS DELIBERATELY TIGHTER THAN THE PUBLISHED FILES.**
+   Ruling 2026-08-31: leave it, do not chase the published shape.
+
+   | | min/median | max/median |
+   |---|---|---|
+   | published files | 0.63 | 1.40 |
+   | 2000 | 0.96 | 1.08 |
+
+   **The published spread is the one that is wrong.** Contemporary reporting on
+   the 2000 cap climate has teams sitting **$0.2M to $2.1M under a $62.17M
+   cap** — every team within about 3% of the ceiling. That is a hard cap doing
+   what hard caps do. The published ±40% is not era-accurate; it is what falls
+   out of building contracts without a cap constraint.
+
+   **Gameplay cost, stated honestly:** no team is cap-strapped and no team is
+   unusually flush, which removes some texture a player might expect from the
+   financial layer. Preferring that texture to the accuracy is a legitimate
+   call and not a bug either way — but it is Ryan's call, not a defect to fix
+   silently.
+
 1. **508 players have no skin data** — scattered fringe players in no Madden
    roster. The photo route would cover them
 2. **230 players carry more than one face.** 222 are genuinely different people

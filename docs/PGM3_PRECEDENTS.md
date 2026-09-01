@@ -61,6 +61,57 @@ If the game rejects a value, import says so immediately. That's cheap to find ou
 
 ---
 
+## Internal consistency finds impossibility, never wrongness
+
+**2026-08-31, staff ages.** The 2000 staff file carried ages with essentially
+no relationship to the men — Tony Dungy at 70 against a real 45, Jeff Fisher at
+61 against 42, only 13 of 89 checkable coaches within ±2 years. Every check in
+the suite passed.
+
+The reason is worth stating exactly. The internal check available was
+"age minus seasons coached ≥ 28", and it caught **two** records — Reeves
+coaching 19 seasons by age 44, Mora 13 by 30. Those were the only *impossible*
+ones. **Dungy at 70 with four seasons coached is perfectly consistent and 25
+years wrong.** Consistency constrains a value against other values in the same
+record; it cannot reach outside the file to the person.
+
+**The distribution was the disguise:** median 49.5, range 30–72, sitting right
+next to the published files. A plausible marginal with no per-person signal —
+the same shape as the stamina bug (`PSTM` vs `PSTA`) and the appearance bug.
+**Third instance of this exact failure mode. When a field's marginal looks
+right, that is not weak evidence, it is no evidence, and the test is always to
+check individuals against something outside the file.**
+
+**And it propagated silently.** `startSeason` is a fitted function of age
+(r ≈ −0.96 in every modern published file). A wrong age produced a wrong
+`startSeason` **while the correlation stayed perfect**, because a function of a
+bad input still fits its input. A derived field agreeing with its source proves
+the derivation, never the source.
+
+## Match on the occupation, not the name
+
+Same investigation. nflverse `players.csv` looked like the obvious source for
+coach birth dates and it is a trap: it matched 22 of 128 coaches and **4 were
+false positives** — Marvin Lewis, Andy Reid, Bill Callahan and Jimmy Raye never
+played in the NFL, and the Raye match was his son, the father/son merge this
+project has logged before. An 18% false rate on the matches it did make.
+
+**No mechanical discriminator separates them.** Career length fails: the false
+hits had one-season careers, and so do Sylvester Croom and Sean Payton, who are
+true matches.
+
+**What worked was a source that carries the occupation.** One bulk Wikidata
+SPARQL query filtered on `occupation = American football coach` resolved 98 of
+126 in a single request, and the occupation filter is exactly the discriminator
+a name lookup lacks — it separated both Moras, both Ken Andersons and both Jim
+Johnsons without a judgement call. **Prefer a source with a role field over a
+larger source without one.**
+
+Operational note: Wikidata's `wbsearchentities` endpoint rate-limits hard
+(HTTP 429 within ~15 requests, and backoff to 10s did not clear it). The SPARQL
+endpoint takes a `VALUES` block of 126 names in one request and does not.
+
+
 ## A repair scoped to the overlap improves every metric and leaves the defect
 
 **2026-08-31, building 2000.** Found 132 players whose skin family disagreed
