@@ -217,6 +217,63 @@ men on LAC #0 — no published file has a single rostered player wearing 0.
 
 ---
 
+## Ratings — store the computed value
+
+**The archive's invariant is that a player's stored rating is whatever his
+attributes compute to.** Four published files hold it across **11,737 records**:
+median 0.26, max 3.45, **zero** players more than 5 off. Two rulings had been
+spent tuning a refit cap to trade stored-rating accuracy against attribute
+fidelity. The trade did not exist — storing the computed value costs zero
+displacement and zero conditional-pass degradation.
+
+Confirmation the reconstructed weights ARE the formula: Najee Harris was
+reported in play at 89. The file stored 80; the weights compute 86.9; storing
+computed puts him at **89**.
+
+Result: invariant holds at **max 0.50** (published max 3.45), and the file is
+distribution-neutral — median rostered rating and p10 unchanged.
+
+### The tails were the attributes, not the rating
+
+An attribute set computing to 104 or to 18 is one the archive has never
+produced. **Only FILLED cells were rescaled**; a tier-1 player carries real
+Madden attributes and is left alone even when he lands outside the range.
+Measured, the split is total:
+
+| | filled share of rating weight |
+|---|---|
+| tier 1 outliers | **0.0%** |
+| tier 3 outliers | **96-99.9%** |
+
+Filled cells carry no source column, so the conditional pass does not measure
+them and the repair costs it nothing. Scaling is monotone, so ordering within
+each player survives, and cells are held inside the published per-attribute
+range.
+
+| | before | after |
+|---|---|---|
+| rostered below 40 | 13 | **1** |
+| free agents above 93 | 4 | **0** |
+| rostered above 98 | 15 | 15 (all tier 1, refused) |
+
+**22 outliers refused and reported, every one tier 1 with zero filled cells** —
+Garrett 102.7, Anderson 104.7, Parsons 102.1, Chase 100.6, and Ryan McCollum at
+37.6 on the other end. Rescaling sourced data to hit a target is what this
+project refuses; they need individual rulings, not a solver.
+
+**Two traps recorded.** The rating must be computed from the STORED INTEGERS,
+not the float attributes — `int()` truncates, and a rating computed from values
+that differ from what shipped is not the invariant, it only looks like one
+(Will Anderson Jr. was 5.7 adrift of his own attributes). And the rescale had to
+aim 1.5 points INSIDE the range rather than at its edge, for the same reason:
+nine players landed on 39 against a target of 40 purely from the rounding step
+between the solve and the file.
+
+**Nine players' attributes exceed the field ceiling of 99.** That is a schema
+limit, not drift, and is reported apart from the invariant check.
+
+---
+
 ## Contracts
 
     median team payroll   $197.4M exact    team range $107.5M - $269.9M

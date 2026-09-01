@@ -3152,6 +3152,47 @@ def player_growth(pool, cohort, gap, rng):
 # nothing in the suite looks at roster composition, only at attribute values.
 NEVER_EMPTY = ['QB','RB','WR','TE','OT','OG','C','DE','DT','OLB','MLB','S','CB','K','P']
 
+# ------------------------------------------- tail repair, FILLED cells only
+# The tails mean the ATTRIBUTES are wrong, not the stored rating. An attribute
+# set computing to 104 or to 18 is one the archive has never produced.
+#
+# Only FILLED cells may move. A tier-1 player carries real Madden attributes
+# and is left alone even when he lands outside the range -- rescaling sourced
+# data to hit a target is the thing this project refuses. Measured, the split
+# is total: tier 1 outliers are 0.0% filled, tier 3 outliers are 96-99.9%.
+#
+# Filled cells carry no source column, so the conditional pass does not measure
+# them and this costs it nothing. Scaling is monotone, so ordering within the
+# player survives.
+ARCHIVE_RATING_RANGE = (40, 98)      # published rostered, five files
+FA_RATING_CEILING     = 93           # published free agent maximum
+
+def rescale_filled_to_range(attrs, pos, weights, filled_attrs, lo, hi, bounds=None):
+    """Move a player's FILLED cells until his computed rating lands in [lo,hi].
+    Returns (new attrs, moved?) -- False when the filled cells do not carry
+    enough of the rating to get there, which is a REPORT, not a silent clamp."""
+    names, coef = weights[pos]
+    cur = computed_rating(attrs, pos, weights)
+    if lo <= cur <= hi: return attrs, True
+    # Aim INSIDE the range, not at its edge. The record writes attributes with
+    # int(), which truncates, so a set landing exactly on 40.0 stores as 39 --
+    # nine players sat one point outside on the first attempt for no reason
+    # other than the rounding step between the solve and the file.
+    target = (lo + 1.5) if cur < lo else (hi - 1.5)
+    mov = [(a, c) for a, c in zip(names, coef) if a in filled_attrs and a in attrs]
+    base = sum(c * attrs[a] for a, c in mov)
+    if abs(base) < 1e-9: return attrs, False
+    need = target - cur
+    f = 1.0 + need / base
+    out = dict(attrs)
+    for a, _c in mov:
+        v = attrs[a] * f
+        b = (bounds or {}).get((pos, a))
+        if b: v = max(b[0], min(b[1], v))     # stay inside the published range
+        out[a] = max(1.0, min(99.0, v))
+    got = computed_rating(out, pos, weights)
+    return out, (lo - 0.75 <= got <= hi + 0.75)
+
 def assert_rating_matches_attributes(out, weights, tol=5):
     """The archive's invariant, now a gate. Published 2004-2021 keeps every one
     of 11,737 rostered players within 3.45 points of the value its attributes
@@ -3273,6 +3314,26 @@ def stage_build(verbose=True):
     # satisfies the invariant exactly. It also dissolves the tier-3 problem --
     # attributes each filled at percentile p combine above p, and an 11-point
     # gap on a sourceless rookie becomes no gap at all.
+    # tail repair, before contracts and before anything reads the rating
+    fb = collections.defaultdict(set)
+    for _pid, _a in filled: fb[_pid].add(_a)
+    TAIL_REFUSED = []
+    lo_r, hi_r = ARCHIVE_RATING_RANGE
+    for n, m, pos in rows:
+        a = built.get(id(n))
+        if not a: continue
+        hi = FA_RATING_CEILING if id(n) in coh else hi_r
+        c = computed_rating(a, pos, weights)
+        if lo_r <= c <= hi: continue
+        newa, ok = rescale_filled_to_range(a, pos, weights, fb.get(id(n), set()),
+                                           lo_r, hi, bounds)
+        if ok: built[id(n)] = newa
+        else:  TAIL_REFUSED.append((n['full_name'], pos, tier_of.get(id(n)), c,
+                                   len(fb.get(id(n), set()))))
+    if verbose and TAIL_REFUSED:
+        print(f'   tail outliers REFUSED (sourced attributes, not rescaled): {len(TAIL_REFUSED)}')
+        for nm, p_, t_, c_, nf in TAIL_REFUSED[:20]:
+            print(f'      {nm:24s} {p_:4s} tier {t_}  computed {c_:6.1f}  filled cells {nf}')
     assert_conditional_after_refit(rows, {id(n): built[id(n)] for n, _, _ in rows if id(n) in built})
 
     pre = (rows, built, None, weights, tier_of, filled, coh)
