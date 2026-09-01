@@ -116,3 +116,24 @@ overwrites, Jim Mora in `PGMStaff_1986` and `PGMStaff_2000`) are ALL
 pre-existing.** No staff file except 2026 was modified by this build, and the
 gate returns byte-identical output on the old `main`. They belong to the
 archive, not to this work.
+
+---
+
+## 7. Files that break the computed-rating invariant
+
+The archive's rule is that a player's stored rating is whatever his attributes
+compute to. Four published files hold it across **11,737 records** — median
+0.26, max 3.45, **zero** players more than 5 off. Three files break it:
+
+| file | median | max | >5 points | >10 |
+|---|---|---|---|---|
+| 1986 | 3.60 | 22.9 | **632** | 122 |
+| 2000 | 2.95 | 24.2 | **481** | 81 |
+| 2026 (pre-ruling) | 1.75 | 30.2 | 359 | 81 |
+
+2026 is fixed by storing the computed value. **1986 and 2000 are deliberately
+not fixed** — this is the fourth and fifth piece of evidence that both were
+built to a different standard, alongside 2000's known defects and 1986's
+1,745-of-1,746 registry write. `assert_rating_matches_attributes` now gates
+this, so no future build can reintroduce it.
+

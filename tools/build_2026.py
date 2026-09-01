@@ -3152,6 +3152,31 @@ def player_growth(pool, cohort, gap, rng):
 # nothing in the suite looks at roster composition, only at attribute values.
 NEVER_EMPTY = ['QB','RB','WR','TE','OT','OG','C','DE','DT','OLB','MLB','S','CB','K','P']
 
+def assert_rating_matches_attributes(out, weights, tol=5):
+    """The archive's invariant, now a gate. Published 2004-2021 keeps every one
+    of 11,737 rostered players within 3.45 points of the value its attributes
+    compute to, and NONE more than 5. 2026 shipped at median 1.75 / max 30.2
+    and nothing objected. 1986 (632 over) and 2000 (481 over) break it too --
+    logged on the audit list, deliberately not fixed here."""
+    bad, over99 = [], []
+    for r in out:
+        if cohort_of(r) != 'T' or r['position'] not in weights: continue
+        # The stored value is the computed one SUBJECT TO THE FIELD'S CEILING:
+        # Will Anderson Jr.'s attributes compute to 104.7 and the rating field
+        # stops at 99, which is a schema limit, not an inconsistency. Players
+        # in that state are reported separately rather than counted as drift.
+        c = computed_rating(r, r['position'], weights)
+        d = abs(max(1, min(99, c)) - r['rating'])
+        if d > tol: bad.append((r, d))
+        elif c > 99.5: over99.append((r, c))
+    if bad:
+        bad.sort(key=lambda x: -x[1])
+        raise AssertionFailed(
+            f'{len(bad)} rostered player(s) more than {tol} points from the value '
+            f'their attributes compute to: ' +
+            ', '.join(f"{r['forename']} {r['surname']} {d:.1f}" for r, d in bad[:4]))
+    return len(out), over99
+
 def assert_front_seven_totals(out):
     """The shipped ROSTERED counts, against the published per-file ranges.
     The convention shift is fitted, so this is the check that the fit actually
@@ -3233,10 +3258,21 @@ def stage_build(verbose=True):
     _, ratpool = fit_percentile_fill(refs)
     build_derived(rows, built, weights, fit_derived_pools(refs), ratpool)
     calibrate_positions(rows, built, weights, bounds)
-    for n, m, pos in rows:
-        a = built.get(id(n))
-        if not a or 'OverallRating' not in m: continue
-        built[id(n)], _ = refit_player(a, pos, float(m['OverallRating']), weights, bounds)
+    # RULING (Ryan): STORE THE COMPUTED VALUE. The refit is gone.
+    #
+    # The archive's invariant is not "the stored rating is Madden's overall" --
+    # it is "the stored rating is whatever the attributes compute to". Four
+    # published files agree with the reconstructed weights to within 3.45
+    # points across 11,737 records, with ZERO players more than 5 off. That is
+    # a rule, not a coincidence, and Madden's OverallRating was being preserved
+    # in a field that was never meant to hold it.
+    #
+    # Two rulings were spent tuning a refit cap to trade stored-rating accuracy
+    # against attribute fidelity. The trade did not exist: storing the computed
+    # value costs zero displacement and zero conditional-pass degradation, and
+    # satisfies the invariant exactly. It also dissolves the tier-3 problem --
+    # attributes each filled at percentile p combine above p, and an 11-point
+    # gap on a sourceless rookie becomes no gap at all.
     assert_conditional_after_refit(rows, {id(n): built[id(n)] for n, _, _ in rows if id(n) in built})
 
     pre = (rows, built, None, weights, tier_of, filled, coh)
@@ -3282,7 +3318,13 @@ def stage_build(verbose=True):
         # (a prospect and a rostered player, or two real namesakes), and the
         # uniqueness assertion caught exactly that.
         irng = random.Random(name_seed(n, pos) ^ (0xFA if is_fa else 0x7) ^ (len(out) << 8))
-        rating = int(round(float(m['OverallRating'])))
+        # Compute from the values ACTUALLY STORED, not from the float dict.
+        # The record writes each attribute with int(), which truncates, and
+        # computing from the floats left Will Anderson Jr. 5.7 points adrift of
+        # his own attributes -- the invariant broken by the rounding step that
+        # sits between the two.
+        _stored = {aa: int(v) for aa, v in a.items() if aa in ROSTER_KEYS}
+        rating = max(1, min(99, int(round(computed_rating(_stored, pos, weights)))))
         gaps = gapref.get(('T', pos)) or [0]
         gap  = gaps[min(len(gaps) - 1, int(rng.random() * len(gaps)))]
         potential = min(99, rating + gap)
@@ -3452,6 +3494,7 @@ def stage_build(verbose=True):
     assert_no_empty_position(out)
     assert_front_seven_totals(out)
     assert_free_agent_ceiling(out, refs)
+    assert_rating_matches_attributes(out, weights)
     if verbose:
         c = collections.Counter(cohort_of(r) for r in out)
         print(f'ROSTER assembled: {len(out)} records')
