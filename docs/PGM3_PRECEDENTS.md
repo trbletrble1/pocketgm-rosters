@@ -3164,3 +3164,30 @@ agreement 0.50. With the agreement floor the archive now abstains, but the
 registry still drives it. **That is a registry data defect and belongs in a
 registry correction pass**, not in a build patching three names. Fixing the
 symptom would leave the other 888.
+
+## A lock keyed in a format the checker cannot read is not a lock
+
+`_verified_keys['players']` holds **two key formats**: 78 entries as
+`name|position|teamID` and 26 as `name|position`. The `faces` gate builds its
+lookup key as `name|position`.
+
+**So 78 of the 104 locked faces are structurally unreachable by the check that
+exists to protect them.** The gate's own line — "verified faces intact (93
+checked, 104 in registry)" — reads like near-complete coverage and is 93
+*record* comparisons against just 26 distinct keys. The 11 it appears to miss
+are not absent from the files; they are unmatchable.
+
+Two verified keys, `doug flutie|QB|CHI` and `jerry rice|WR|SF`, are in fact
+already inconsistent with the registry in the 1986 file, and the gate has never
+reported it because it cannot reach them.
+
+The 3-part keys came from the 1986 batch, where team was needed to separate two
+men of the same name and position — which is correct, and is the rule this
+project already has about keys needing enough fields for the widest population
+they will be queried against. **The defect is that the consumer was never
+taught the key format the producer used.** Same shape as a vocabulary carried
+across a boundary, applied to a key rather than a value.
+
+Aidan Hutchinson's 2026 entry is therefore keyed 2-part deliberately, so his
+lock actually engages. Fixing the gate to accept both formats — and
+re-examining whatever the 78 have been free to drift into — is its own task.
