@@ -667,12 +667,123 @@ def build_appearance(rng, position, band, age, weight, lib, head_family=None):
     out[8] = _draw(rng, lib['clothes'])
     return out
 
+# ============================ position vocabulary at the LOOKUP boundary
+# FOURTH boundary-translation bug, found by Ryan in play: three faces wrong,
+# 891 lookups silently lost.
+#
+# The two face sources speak DIFFERENT vocabularies and neither is PGM3's
+# build vocabulary at the point of query:
+#
+#   PGM3_PLAYER_ARCHIVE  2K5's 17 labels — T, G, SS, FS, ILB, FB where PGM3
+#                        has OT, OG, S, MLB, RB. A genuine vocabulary gap.
+#   PGM3_FACE_REGISTRY   PGM3's exact 15. Its misses are POSITION DRIFT for
+#                        the same man (Cameron Jordan DE->OLB), not vocabulary.
+#
+# Measured before the fix, on 1,888 rostered:
+#     archive  832 hit / 583 position-differs / 473 absent
+#     registry 1033 hit / 308 position-differs / 547 absent
+# Every one of those 891 fell through to a GENERATED face while real data sat
+# in the file. Nothing objected, because the build produced a face for every
+# record — the identity-mismatch shape a third time, and the reason the guard
+# below asserts on the MATCH RATE rather than on output completeness.
+POS_FROM_ARCHIVE = {'T': 'OT', 'G': 'OG', 'SS': 'S', 'FS': 'S',
+                    'ILB': 'MLB', 'FB': 'RB'}
+
+def index_by_name(index):
+    by = collections.defaultdict(set)
+    for k in index:
+        nm, _, pos = k.rpartition('|')
+        by[nm].add(pos)
+    return by
+
+def fit_published_appearances(paths):
+    """name|position -> the seasons it is attested in a published file, used
+    as the ERA TEST. A prospect record is a FUTURE player, so it is dated by
+    draftSeason on the game clock, not by the file's nominal year."""
+    seen = collections.defaultdict(set)
+    for path in paths:
+        yr = int(re.search(r'(\d{4})', os.path.basename(path)).group(1))
+        for r in json.load(open(path)):
+            k = f"{norm(r['forename'] + ' ' + r['surname'])}|{r['position']}"
+            seen[k].add(r['draftSeason'] if cohort_of(r) == 'Rookie' else yr)
+    return seen
+
+def lookup_by_position(index, by_name, nm, pos, exp, seen):
+    """Exact key, then vocabulary translation, then position drift verified by
+    ERA. Returns (value, how).
+
+    Position ADJACENCY on its own is refused: applied blindly it merges
+    fathers and sons — Antoine Winfield, Jon Runyan, Kris Jenkins, Jeremiah
+    Trotter and Michael Pittman are all adjacent-position pairs. The era test
+    is a discriminator the collision cannot share, and where several positions
+    survive it the answer is REFUSED, not the arbiter's best guess."""
+    k = f'{nm}|{pos}'
+    if k in index: return index[k], 'exact'
+    stored = by_name.get(nm)
+    if not stored: return None, 'absent'
+    for q in stored:
+        if POS_FROM_ARCHIVE.get(q, q) == pos:
+            return index[f'{nm}|{q}'], 'translated'
+    debut = CUR_SEASON - (exp or 0)
+    good = [q for q in stored
+            if any(debut - 2 <= s <= CUR_SEASON + 1 for s in seen.get(f'{nm}|{q}', ()))]
+    if len(good) == 1: return index[f'{nm}|{good[0]}'], 'era-verified'
+    return None, 'ambiguous' if len(good) > 1 else 'unverifiable'
+
+def assert_face_lookup_rate(stats, floor=0.80):
+    """Assert on the MATCH RATE, never on output completeness. The build emits
+    a face for every record whether the lookup landed or not, so a count check
+    is dead by construction here -- that is exactly how 891 losses shipped.
+
+    The denominator is records whose NAME IS PRESENT in the source. A name the
+    source has never heard of is not a lookup failure and including it would
+    measure the source's coverage instead of the lookup's correctness -- the
+    two answer different questions, and mixing them is what let the original
+    defect hide.
+
+    Measured: exact-key-only resolves 0.640 of names the sources hold; with
+    translation and the era test it resolves 0.864. The floor is 0.80 -- above
+    the pre-fix rate by a wide margin and below the achieved rate, so a
+    vocabulary regression fires it. The residual 13.6% are DELIBERATE
+    refusals: position drift with no published appearance to verify against,
+    plus one genuinely ambiguous name."""
+    resolvable = sum(v for k, v in stats.items() if k != 'absent')
+    if not resolvable:
+        raise AssertionFailed('face lookup ran over ZERO resolvable records')
+    hit = stats['exact'] + stats['translated'] + stats['era-verified']
+    rate = hit / resolvable
+    if rate < floor:
+        raise AssertionFailed(f'face lookup resolved {rate:.3f} of names the sources '
+                              f'hold, below {floor:.3f} ({hit}/{resolvable}) '
+                              f'— position vocabulary mismatch?')
+    return rate, hit, resolvable
+
+# The documented rule is "light calls reliable at any source count, dark calls
+# need 3+ sources". It omits AGREEMENT, and agreement is a real quality signal
+# the archive already carries. Scored against the registry as an independent
+# check:
+#
+#   band   agreement      n     matches registry
+#   dark   0.50-0.74    176        54.5%   <- a coin flip
+#   dark   0.75-0.99     77        75.3%
+#   dark   1.00        7800        89.3%
+#   light  0.50-0.74    164        64.0%
+#   light  1.00         2410       87.6%
+#
+# Aidan Hutchinson is the case that exposed it: archive `dark`, 4 sources, but
+# unanimous False and agreement 0.50. He is exactly the profile the source
+# quality doc names -- a recent, prominent player, where a fan setting values
+# by eye makes visible errors while getting obscure players right by default.
+# Myles Garrett by contrast reads 10 sources, unanimous, agreement 1.00.
+ARCHIVE_MIN_AGREEMENT = 0.75
+
 def archive_band(key, archive):
-    """Light calls are reliable at any source count; dark calls need 3+.
-    Measured: applying this tightens dark into families 4/5 from 96.3% to
-    99.0%, dropping 955 low-confidence calls."""
+    """Light at any source count; dark at 3+ sources; and EITHER band only
+    above the agreement floor. A call the archive itself records as a coin
+    flip is not a call."""
     a = archive.get(key)
     if not a: return None
+    if a.get('agreement', 1.0) < ARCHIVE_MIN_AGREEMENT: return None
     if a['band'] == 'dark' and a.get('n_sources', 0) < 3: return None
     return a['band']
 
@@ -730,6 +841,9 @@ def stage_appearances(verbose=True, precomputed=None):
     prior  = band_prior(refs)
     arc    = json.load(open(P('reference','PGM3_PLAYER_ARCHIVE.json')))['players']
     reg    = json.load(open(P('reference','PGM3_FACE_REGISTRY.json')))['faces']
+    arc_by, reg_by = index_by_name(arc), index_by_name(reg)
+    seen   = fit_published_appearances([P(f) for f in ALL_PUBLISHED])
+    how    = collections.Counter(); how_reg = collections.Counter()
 
     if precomputed is not None:
         # REUSE the caller's rows. Re-deriving them here creates new objects,
@@ -761,8 +875,17 @@ def stage_appearances(verbose=True, precomputed=None):
         key  = f"{n['_norm']}|{pos}"
         # precedence: the registry knows this man's actual family; the archive
         # knows his band; position is the last resort.
-        rf   = tok_family(reg[key][0]) if key in reg else None
-        band = ('light' if rf <= 3 else 'dark') if rf else archive_band(key, arc)
+        rv, hr = lookup_by_position(reg, reg_by, n['_norm'], pos, n['_exp'], seen)
+        how_reg[hr] += 1
+        rf = tok_family(rv[0]) if rv else None
+        av, ha = lookup_by_position(arc, arc_by, n['_norm'], pos, n['_exp'], seen)
+        how[ha] += 1
+        band = None
+        if rf: band = 'light' if rf <= 3 else 'dark'
+        elif av:
+            if av.get('agreement', 1.0) >= ARCHIVE_MIN_AGREEMENT and not (
+                    av['band'] == 'dark' and av.get('n_sources', 0) < 3):
+                band = av['band']
         src['registry' if rf else ('archive' if band else 'position-prior')] += 1
         rng  = random.Random(name_seed(n, pos))
         if band is None:
@@ -781,6 +904,10 @@ def stage_appearances(verbose=True, precomputed=None):
             print(f'   family from {k:16s} {src[k]:5d}  ({100*src[k]/len(built):5.1f}%)')
         print(f'   SOURCED total            {src["registry"]+src["archive"]:5d}  '
               f'({100*(src["registry"]+src["archive"])/len(built):5.1f}%)')
+        print(f'   archive  lookup: ' + '  '.join(f'{k} {v}' for k, v in how.most_common()))
+        print(f'   registry lookup: ' + '  '.join(f'{k} {v}' for k, v in how_reg.most_common()))
+        r_, h_, t_ = assert_face_lookup_rate(how_reg + how)
+        print(f'   match-rate assertion: {100*r_:.1f}% ({h_}/{t_}) of face lookups landed')
         print(f'   all {len(built)} pass the structural + vocabulary assertions')
     return built, lib, vocab, arc
 
@@ -2225,7 +2352,7 @@ def load_staff_ages(path, roles_by_name):
             missing.append(r['name'])
     return got, missing
 
-def build_staff(verbose=True):
+def build_staff(verbose=False):
     bundle, front, mad, nfl = load_all()
     paths = [P(f) for f in STAFF_FILES]
     live, donors, pubrecs = fit_staff_profile(paths)
@@ -2269,6 +2396,10 @@ def build_staff(verbose=True):
 
     staff, used_names, tags = [], set(), collections.Counter()
     promotions = []
+    face_src = collections.Counter()
+    reg_all = json.load(open(P('reference', 'PGM3_FACE_REGISTRY.json')))
+    staff_faces = reg_all['staff_faces']
+    verified_staff = set(reg_all['_verified_keys'].get('staff', []))
     for team in sorted(schemes):
         sc = schemes[team]
         for slot, role in enumerate(STAFF_ROLES):
@@ -2333,12 +2464,29 @@ def build_staff(verbose=True):
             if role == 'Def Co-ord' and sc.get('dc_note'):
                 promotions.append((team, role, f"{fore} {sur}",
                                    'PROMOTION, not a title he held. ' + sc['dc_note']))
-            donor2 = rng.choice(by_role_rating[role])
-            rec['appearance'] = list(donor2['appearance'])
+            # THE REGISTRY'S staff_faces BLOCK, which this build was not using
+            # at all -- 2,231 entries, covering 72 of the 128 real coaches, all
+            # of whom were taking a donor face instead. Its keys are BARE NAMES,
+            # not name|position, so no vocabulary translation applies.
+            # The WHOLE ARRAY is written for staff, unlike players: coaches have
+            # one look and no aging variant -- 244 staff appear in two or more
+            # published files and not one byte of the appearance array differs.
+            sk = norm(f'{fore} {sur}')
+            if sk in staff_faces:
+                rec['appearance'] = list(staff_faces[sk]); face_src['registry'] += 1
+            else:
+                rec['appearance'] = list(rng.choice(by_role_rating[role])['appearance'])
+                face_src['donor'] += 1
             staff.append(rec)
+    if verbose:
+        vhit = sum(1 for s_ in staff
+                   if norm(f"{s_['forename']} {s_['surname']}") in verified_staff)
+        print(f'   staff faces: registry {face_src["registry"]}  donor {face_src["donor"]}'
+              f'   ({vhit} of the 18 locked _verified_keys present)')
     return staff, tags, unresolved, real_names, promotions
 
 # ================================================================== assembly
+ALL_PUBLISHED = ['PGMRoster_1986.json', 'PGMRoster_2000.json', 'PGMRoster_2004.json', 'PGMRoster_2007.json', 'PGMRoster_2010.json', 'PGMRoster_2013.json', 'PGMRoster_2017.json', 'PGMRoster_2021.json']
 ROSTER_KEYS = ['speed','vision','jumping','decisions','dPassAcc','ballStrip','burst',
  'rushBlock','releaseLine','discipline','intelligence','zoneCover','catching','throwOnRun',
  'mPassAcc','skillMove','blockShedding','sPassAcc','routeRun','tackle','ballSecurity',
@@ -2617,10 +2765,14 @@ def stage_build(verbose=True):
     # because hair is a fact about the man and must not drift between files.
     # That is the rule the standing check enforces: family constant, hair
     # constant, variant free to vary.
-    applied = 0
+    fk_by = index_by_name(fk)
+    seen_pub = fit_published_appearances([P(f) for f in ALL_PUBLISHED])
+    applied = 0; write_how = collections.Counter()
     for rec in out:
-        key = f"{norm(rec['forename'] + ' ' + rec['surname'])}|{rec['position']}"
-        want = fk.get(key)
+        nm = norm(rec['forename'] + ' ' + rec['surname'])
+        exp = CUR_SEASON - rec['draftSeason'] if rec['draftSeason'] else 0
+        want, hw = lookup_by_position(fk, fk_by, nm, rec['position'], exp, seen_pub)
+        write_how[hw] += 1
         if not want: continue
         fam = tok_family(want[0])
         app = list(rec['appearance'])
@@ -2635,7 +2787,8 @@ def stage_build(verbose=True):
         c = collections.Counter(cohort_of(r) for r in out)
         print(f'ROSTER assembled: {len(out)} records')
         print(f'   rostered {c["T"]}   free agents {c["FA"]}   prospects {c["Rookie"]}')
-        print(f'   face registry applied (family digit only): {applied}')
+        print(f'   face registry applied: {applied}  ' +
+              '  '.join(f'{k} {v}' for k, v in write_how.most_common()))
         tm = collections.Counter(r['teamID'] for r in out if cohort_of(r) == 'T')
         print(f'   teams {len(tm)}  sizes {min(tm.values())}-{max(tm.values())}')
         print(f'   all {len(out)} records pass the schema and 50x assertions')

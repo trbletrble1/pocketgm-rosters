@@ -3084,3 +3084,83 @@ anyone reading the bundle — an input approved as complete.
 **The handoff's `growthType` shape is imprecise for staff.** Slots 17-19 are
 *nearly* always zero (19 of 1,152 records, not always) and positives trail to
 slot 26, not 16.
+
+## Fourth boundary-translation bug — and it was found in play, not by a gate
+
+**Ryan reported three wrong faces after importing the 2026 file.** Aidan
+Hutchinson and Drew Allar built dark and should be light; Myles Garrett built
+light and should be dark. Traced, the cause was **891 silently discarded
+lookups**, not three records.
+
+The two face sources speak different vocabularies, and neither is the build's:
+
+    PGM3_PLAYER_ARCHIVE   2K5's 17 labels — T, G, SS, FS, ILB, FB
+    PGM3_FACE_REGISTRY    PGM3's exact 15
+    the build queried both with PGM3's 15
+
+Measured on 1,888 rostered before the fix:
+
+    archive   832 hit / 583 position-differs / 473 absent
+    registry 1033 hit / 308 position-differs / 547 absent
+
+Every one of those 891 fell through to a **generated** face while real data
+sat in the file. `Trent Williams` build `OT` / archive `T`. `Kyle Juszczyk`
+build `RB` / archive `FB`. `Tony Jefferson` build `S` / archive `SS`.
+
+**The two halves needed different fixes and conflating them would have been
+the error.** The archive gap is genuine vocabulary and translates
+deterministically. The registry's is POSITION DRIFT for the same man — Cameron
+Jordan `DE`->`OLB` — and blind position adjacency is exactly what merges
+fathers and sons. The era test settles it: accept a drifted position only when
+that name+position is attested in a published file in a season overlapping the
+player's career, and REFUSE where several positions survive. 131 recovered, 1
+ambiguous refused, 176 unverifiable and refused.
+
+**This is the third appearance of the identity-mismatch shape** — after
+contracts shipping salary 0 and appearances taking a placeholder — and it
+shipped for the same reason both of those did: **the build produced a face for
+every record, so nothing objected.** The guard is now a match-rate assertion,
+and the denominator matters: it counts records whose NAME IS PRESENT in the
+source, because a name the source never held is not a lookup failure and
+including it measures the source's coverage instead of the lookup's
+correctness. Exact-key-only resolves 0.677 of resolvable names; with
+translation and the era test, 0.864.
+
+**And the same question, asked of every other name-keyed lookup, found a
+second miss:** the registry's `staff_faces` block — 2,231 entries, covering 72
+of the 128 real coaches — **was never read at all.** Not a vocabulary problem;
+its keys are bare names. An unused source, invisible because donor-copied
+faces are perfectly valid faces.
+
+## The archive carries its own confidence and the documented rule ignores it
+
+The rule is "light calls reliable at any source count, dark calls need 3+
+sources". It says nothing about `agreement`, which the archive stores per
+person. Scored against the registry as an independent check:
+
+    band   agreement       n    matches registry
+    dark   0.50-0.74     176         54.5%   <- a coin flip
+    dark   0.75-0.99      77         75.3%
+    dark   1.00         7800         89.3%
+    light  0.50-0.74     164         64.0%
+    light  1.00         2410         87.6%
+
+**Aidan Hutchinson is the case that exposed it:** archive `dark`, 4 sources —
+passing the documented rule — but `unanimous: False` and `agreement: 0.50`.
+Myles Garrett reads 10 sources, unanimous, agreement 1.00, and is correct.
+
+Hutchinson is precisely the profile `PGM3_SOURCE_QUALITY.md` describes: a fan
+setting values by eye gets obscure players right by default and makes visible
+errors on the ones they have an opinion about. The errors cluster on recent
+prominent players — Burrow, Mayfield, Crosby, Wirfs, and now Hutchinson.
+
+**A source that publishes its own confidence should be read at that
+confidence.** `n_sources` counts votes; `agreement` says whether they agreed,
+and four sources at 0.50 is not four sources.
+
+**Hutchinson remains wrong in the built file and must not be hand-corrected.**
+Both sources call him dark — the registry at `Head5a`, the archive at
+agreement 0.50. With the agreement floor the archive now abstains, but the
+registry still drives it. **That is a registry data defect and belongs in a
+registry correction pass**, not in a build patching three names. Fixing the
+symptom would leave the other 888.
