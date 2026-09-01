@@ -4,7 +4,8 @@ rosdump — read Madden .ros / .dbt and ESPN NFL 2K5 gamesaves without Windows.
 
 Pure Python 3, standard library only. Nothing to install.
 
-    python3 rosdump.py tables FILE.ros
+    python3 rosdump.py tables  FILE.ros
+    python3 rosdump.py offsets FILE.ros -o reference/ros_solved_offsets.json
     python3 rosdump.py dump   FILE.ros PLAY -o play.csv
     python3 rosdump.py dump   FILE.ros --all -o outdir/
     python3 rosdump.py verify FILE.ros PLAY reference.csv
@@ -86,7 +87,7 @@ strings and negative numbers included. `verify` re-runs that comparison.
 Only ONE .ros is in the repo, so the decoder has not yet been tested against a
 second game year. Run `verify` on one before trusting `check` on old files.
 """
-import sys, os, csv, struct, collections
+import sys, os, csv, json, struct, collections
 
 STRING, SIGNED, UNSIGNED = 0, 2, 3
 
@@ -424,6 +425,50 @@ def cmd_check(path):
     return 0 if ok else 1
 
 
+
+def cmd_offsets(path, out, note=None):
+    """Emit the full verified field layout as JSON.
+
+    This exists so reference/ros_solved_offsets.json is DERIVED, not curated.
+    A hand-maintained artifact with no regeneration path goes stale and
+    nothing notices: the committed copy sat at 2 tables / 47 PLAY offsets for
+    months while the superseding 10-table version lived only in an untracked
+    working directory. Regenerate rather than restore."""
+    ros = Roster(path)
+    tables = {}
+    for tag in sorted(ros.tables):
+        t = ros.table(tag)
+        tables[tag] = {
+            'record_bytes':       t.record_bytes,
+            'record_bits_header': t.record_bits,
+            'records':            t.record_count,
+            'capacity':           t.capacity,
+            'field_count':        t.field_count,
+            'unreadable_field_defs': [
+                {'tag': f.tag, 'offset': f.offset, 'bits': f.bits, 'type': f.type}
+                for f in t.bad_fields],
+            'fields': [
+                {'tag': f.tag, 'offset': f.offset, 'bits': f.bits, 'type': f.type}
+                for f in t.fields],
+        }
+    doc = {
+        '_note': note or (
+            'Full verified field layout of ' + os.path.basename(path) + ', produced by '
+            'tools/rosdump.py offsets. `offset` is the bit offset up from the LOW end '
+            'of the record read as a little-endian integer, exactly as stored in the '
+            'file. type 0 = string, 2 = signed, 3 = unsigned.'),
+        '_source': path,
+        '_tables': sorted(ros.tables),
+        'tables': tables,
+    }
+    # match the artifact's existing on-disk format (indent=1) so the diff stays
+    # reviewable -- format churn disables the control that catches everything else
+    with open(out, 'w') as f:
+        json.dump(doc, f, indent=1)
+        f.write('\n')
+    n = sum(v['field_count'] for v in tables.values())
+    print(f'{out}: {len(tables)} tables, {n} fields')
+
 def cmd_gui():
     import tkinter as tk
     from tkinter import filedialog, messagebox, scrolledtext
@@ -513,6 +558,8 @@ def main():
     try:
         if cmd == 'gui' and len(a) == 1:
             return cmd_gui()
+        if cmd == 'offsets' and len(a) >= 3 and a[2] == '-o' and len(a) == 4:
+            return cmd_offsets(a[1], a[3])
         if cmd == 'tables' and len(a) == 2:
             return (cmd_tables_2k5 if detect_format(a[1]) == 'nfl2k5'
                     else cmd_tables)(a[1])

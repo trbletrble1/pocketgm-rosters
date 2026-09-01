@@ -2526,6 +2526,205 @@ passes trivially and forever.
 
 ---
 
+## Vacuous pass is this project's dominant failure mode
+
+Counted across the build, **a check reporting green over nothing has caused more
+wrong conclusions than anything in the data itself.** Not a tendency — the
+leading category, ahead of bad joins, bad thresholds and bad sources. Every
+instance below reached a confident, plausible, wrong answer, and every one of
+them printed the same word a real pass prints.
+
+| # | instance | what was empty or unreachable | what it reported |
+|---|---|---|---|
+| 1 | `free agent salary != 0` | the file had **no free agents** | `ok`, on every run, for the life of the 288-record file |
+| 2 | recombination control | vocabulary built from the very names being tested | `0.0%` on all eight files — the number wanted |
+| 3 | `teamId` probe | field is `teamID`; `.get` returned `None` for all 453 | a clean team/free-agent split, entirely fictional |
+| 4 | `min(teamID)` as sentinel | `teamID` is an abbreviation; `min` returned `'ARI'` | nine Arizona staff as the league's free agent pool |
+| 5 | dead validator block | appended to a `warn` list that did not exist, read a deleted `cnt` | nothing — could only `NameError`, so never ran |
+| 6 | conditional pass | scored records whose **source was absent** | a pass on cells derived from nothing |
+| 7 | `assert_refit_bounds` | medians 1.0 while one cell moved 92 points | bounds intact, with a 92-point error inside them |
+| 8 | MAD display | MAD 1.0 printed as agreement | a seam that looked converged |
+| 9 | guarantee assertion | over-strict, so it fired on clean input | the mirror case: a check that cannot *pass* is also uninformative |
+| 10 | 1986 registry write | count assertion absent entirely | 1,745 entries from 1,746 players, silently |
+
+Instances 2, 3 and 4 all occurred **inside a single measurement**, minutes apart,
+while deliberately trying to be careful. That is the base rate to plan for, not
+an unlucky day.
+
+### Why this family is specifically dangerous here
+
+A wrong number invites scrutiny. A green check ends it. Worse, several of these
+were *confirmatory*: the recombination control returned exactly the tidy 0.0%
+that made the hypothesis look proven, so there was no felt reason to look again.
+**The vacuous pass is most likely to survive precisely when it tells you what
+you hoped.**
+
+### The rule
+
+**Every check is run twice before it is trusted: once against a population where
+it MUST fail, and once against an empty one.**
+
+- *Must-fail run.* Corrupt an input by hand, watch it fire, restore. Two lines,
+  once, at the moment the check is written. The 14 free-agent gates were each
+  put through this; all 14 fired, and the table above is why that was not
+  ceremony.
+- *Empty run.* Feed it nothing and see what it says. If it says `ok`, it needs a
+  non-empty guard. Assert the population size **before** asserting anything
+  about its contents.
+- *Report the denominator, always.* `ok` is not a result; `ok, n=165` is. Four of
+  the ten above would have been visible on sight with the count printed beside
+  the verdict.
+- *A control is a check.* It gets both runs too. Instance 2 was a control, not an
+  assertion, and it was the most persuasive of all of them.
+- *Never build a reference set from the members you intend to test against it.*
+  That is instance 2's exact mechanism, and it is easy to write by accident.
+
+### Adjacent, not the same
+
+A **comment that misdescribes its code** is the same disease outside the test
+harness. While adding Cowher, the comment claimed the displacement dropped the
+lowest-rated coach; the code dropped the least recent. Both were defensible, so
+nothing looked wrong, and the documented reason for a data decision was simply
+false. Fixed by making the code do what the comment said — verified by reading
+back which name was actually dropped, not by trusting the diff.
+
+---
+
+## Payroll and quality: measured, and what survives the definition
+
+A claim that team payroll is uncorrelated with roster quality across all eight
+published files was generalised from three, and conflated two different
+measurements — payroll vs **cost** with payroll vs **quality**. Measured
+properly, across all nine files and **eight defensible definitions** (top-53 or
+whole roster x mean or median rating x Pearson or Spearman):
+
+**What survives every definition:**
+
+- **The relationship is positive in the published archive.** Better rosters cost
+  more. Under six of eight definitions every published file is positive.
+- **2026 and 2000 are the weakest pair, always.** 2026 ranks 1st-3rd weakest of
+  nine (median rank 2); 2000 ranks 1st-2nd (median rank 1).
+- **The p=0.90 payroll compression is NOT the cause.** Inverting it moves the
+  figure by at most **0.045** across all eight definitions, and every delta is
+  *negative* — removing compression makes the correlation slightly **weaker**.
+  `compress_top` is a monotone power transform about the median, so it cannot
+  reorder anything; it reaches a rank statistic only through the nonlinearity
+  of a top-53 sum, and that turns out to be worth almost nothing.
+- **The weakness is real 2026 cap money.** In the Madden 27 source itself, real
+  team payroll against real mean overall is **+0.300** Pearson / **+0.328**
+  Spearman, and against median overall **+0.171** / **+0.206** — far below the
+  published files under matched definitions. Real teams overpay and underpay,
+  and ranking on real money inherits that.
+
+**What does NOT survive the definition:**
+
+- *"Every published file is positive."* **2000 goes to -0.62 and -0.65** under
+  the two top-53 Pearson definitions.
+- *"2026 falls below the published minimum."* True under **2 of 8** definitions.
+  Under the other six it sits inside the range, above 2000.
+
+**Ruling: logged as a deliberate divergence, and it is within the archive's
+range.** Ranking on real `_TotalSalary` is the more faithful choice and the
+reason the figure is low; 2000 already occupies the same territory, so no
+published bound is breached in any robust reading.
+
+**One residual worth an audit line.** Under median-based definitions the build
+attenuates further than the source justifies — shipped **-0.030** against a real
+**+0.206**, a gap of 0.24, where mean-based definitions lose only 0.06. The
+compression accounts for 0.03 of that. Something in the quantile mapping or the
+refit flattens the median measure specifically, and it has not been chased.
+
+**The methodological point, which is the same one the coverage claim taught.**
+Two of these three headline readings flipped between defensible definitions. A
+single number with no sensitivity check around it is not a finding — and the
+temptation is strongest when the number is the one you expected. The durable
+statements here are the ones quantified across all eight cuts, not the sharpest
+one available from any single cut.
+
+---
+
+## A fix that looks like an improvement and imports fiction
+
+The head-coach pool sourced candidates only from **team-side** records. The
+obvious widening — also source from published **free agent** records, which is
+where the archive keeps Cowher, Parcells and Dungy for decades — is wrong, and
+it looks right.
+
+Those pools are **mostly the archive's own invented coaches.** The widened
+candidate list came back led by Jocelyn Lyndhurst, Quill Kestrel, Caspian
+Thornbury and Denholm Fairholm, interleaved with the real names at
+indistinguishable ratings.
+
+**A team-side record is what makes a name real.** A free agent record proves
+only that the file contained the name.
+
+This is the hardest class to catch, because the change is a genuine improvement
+in coverage and its failure mode is invisible in every count: the pool still has
+27 head coaches, still passes every gate, still shows a plausible rating spread.
+Only reading the names reveals it. **When a fix widens a source, check what the
+new material IS, not how much of it arrived.**
+
+---
+
+## A comment that disagrees with its code is a silent defect
+
+While adding Cowher, the comment stated that a named inclusion displaces the
+**lowest-rated** of the recency picks. The code displaced the **least recent**.
+Both are defensible rules, both produce a valid 27-coach pool, and every gate
+passed either way — so nothing looked wrong, and the recorded justification for
+a data decision was simply false.
+
+This is the vacuous-pass family relocated into the documentation layer: the
+check that should have caught it is a human reading the comment and believing
+it. Nothing executable disagrees.
+
+Caught by **reading back which name actually left** rather than reviewing the
+diff. Fixed by making the code do what the comment said (Hue Jackson at 59
+displaced, not Jay Gruden at 66) — and the first attempt at that fix rebuilt 16
+of the 27, which the same read-back caught immediately.
+
+**Rule: when a comment states a selection rule, print what the rule selected.**
+
+---
+
+## Test a headline reading under every defensible cut BEFORE reporting it
+
+Three times in this build, a single-definition result was reported as a robust
+finding. Every one was cheap to check and none was checked until challenged.
+
+| # | claim | what broke it |
+|---|---|---|
+| 1 | archive coverage is U-shaped, 2020+ second-worst | `first_seen` vs `last_seen` — a player active 2018-2026 is in both buckets, so the shape between modern bands was a denominator artifact |
+| 2 | every published file is positive on payroll vs quality | 2000 reads **-0.62** and **-0.65** under the two top-53 Pearson cuts |
+| 3 | 2026 falls below the published minimum | holds under **2 of 8** definitions; under the other six it sits above 2000 |
+
+Claims 2 and 3 came from the **same table**, reported in the same breath.
+
+**Where it happens is the diagnostic.** All three arrived as numbers that fit a
+story already forming — a coverage narrative, then a faithful-money-mapping
+narrative. The measurement returned something that confirmed the expectation,
+and the search stopped there. **A result that fits the story is not
+corroboration; it is the moment the next cut is least likely to be run and most
+likely to matter.** This is the same mechanism as the confirmatory vacuous pass
+(see *Vacuous pass is this project's dominant failure mode*), operating on a
+real number instead of an empty one.
+
+**Rule: enumerate the defensible cuts first, run all of them, and report the
+statements that survive.** The cuts are usually obvious and mechanical — bucket
+by first or last, mean or median, top-53 or whole roster, Pearson or Spearman,
+pooled or per-file. Eight variants of a correlation cost one script.
+
+**And report the sensitivity, not just the survivor.** "Positive across the
+archive under 6 of 8 definitions; 2000 goes negative under top-53 Pearson" is a
+usable statement. "Every published file is positive" is not, and reads stronger
+— which is precisely why it is the one that gets written.
+
+A finding that flips between two defensible definitions **is not a weaker
+finding, it is an absent one.** The correct output in that case is the
+sensitivity table, and nothing else.
+
+---
+
 ## Two scripts in one project, two position vocabularies
 
 The Houston core was selected by one script and assembled by another. The
@@ -2906,3 +3105,533 @@ This is the same trap as the stamina fill counted at 1,267 rostered against
 two correct measurements of different populations otherwise read as a
 disagreement, and the person who has to reconcile them is the one who did not
 take either measurement.
+
+---
+
+## Fixing the instance you were shown, not the class
+
+**Third sighting, and the 2026 build produced two of them an hour apart.**
+
+`stage_contracts` re-ran `stage_attributes` instead of taking the caller's
+cohort. That created new objects, so every `id()`-keyed salary lookup missed
+and the file shipped with **median team payroll $0.0M** — and a perfectly
+correct record count, because the count was never the thing that broke. Found,
+diagnosed, fixed.
+
+**The identical bug was sitting in `stage_appearances` and I walked past it.**
+It surfaced two gates later: 2,107 records had taken a placeholder face and the
+file contained **five distinct appearances across 2,635 records**.
+
+The earlier instances have the same shape. The merge-conflict damage was
+repaired by restoring only the file the error message named, leaving a 4.7MB
+registry equally broken. The degeneracy test was corrected for its threshold
+and then found to have a second fault one step later, running on the inverted
+rather than the raw column.
+
+**The trigger is that a fix feels finished when the symptom goes away.** It is
+finished when you have looked for the same mistake everywhere else it could
+live. `grep` for the pattern, not the instance.
+
+**The practical form is a structural guard, not care.** Both identity bugs are
+now impossible to repeat silently, because the lookup asserts on its own MATCH
+RATE:
+
+```python
+hit = sum(1 for n, m, pos in rows if id(n) in face_of)
+if hit < 0.99 * len(rows):
+    raise AssertionFailed(...)
+```
+
+A miss does not error — it substitutes a default, which is exactly how five
+faces reached 2,635 records. **Wherever a lookup has a fallback, assert the
+rate.** The count assertion is not weak evidence there; it is no evidence.
+
+**And do not key across independently built cohorts.** `id()` is not a value.
+Pass the cohort through, or key on something stable.
+
+
+## `startSeason` and `draftSeason` run on the GAME'S clock, not the season's
+
+**Every published file treats the current season as 2026**, whatever year the
+file models. The handoff states this for `draftSeason`. It is equally true of
+`startSeason` and that was written down nowhere:
+
+    file            startSeason range      draftSeason (prospects)
+    PGMStaff_2010   1989-2024              -
+    PGMStaff_2013   1989-2026              2027-2030
+    PGMStaff_2017   1988-2024              -
+    PGMStaff_2021   1989-2026              2027-2030
+
+A 2013 file containing coaches who start in 2026 is not a defect. Treating
+either field as a real-world year manufactures offsets — subtracting the file
+year gave a 2013 coach an offset of "+13", and fitting on those offsets put
+**52% of a staff build onto the 2026 ceiling** while reporting a perfect
+age/startSeason correlation.
+
+**The failure is silent because the derived field still fits its input.**
+
+## A bound at the reference p90 is a commitment to clipping the top decile
+
+The same operation with the opposite outcome, depending on which statistic it
+is anchored to.
+
+**2013 capped prospect `potential - rating` at 14.** The reference p90 is 12
+and its max is 23-28. A cap at the 90th percentile does not leave a safety
+margin — it removes the top decile by construction. That is why Louis Nix
+shipped above Aaron Donald.
+
+**2026 bounds the same quantity at 28, the reference MAXIMUM.** The first cut
+had produced a rating-52 tackle with a 94 ceiling, a 42-point gap wider than
+anything the archive contains, so a bound was genuinely needed. Bounded at the
+max, the non-hit population lands median 7 / p90 13 / max 23 — matching the
+archive — while the deliberate tail survives.
+
+**Anchor a bound to the reference's extreme, never to its p90.** If the p90
+looks like the right place, what you actually want is a different distribution,
+not a clipped one.
+
+## Calibrate a probability against the population that can produce the outcome
+
+Late-round prospects were given a chance of a large potential gap, calibrated
+to the measured 4.9% of pick-106+ players who reach rating 85. It came out at
+**1.6%**.
+
+The gap is bounded at 28, so a prospect rated 56 **cannot reach 85 at all**.
+Only ~60% of the cohort was eligible, and calibrating against all of them was
+calibrating against a population that could not produce the outcome. Scaling by
+1/0.60 landed it at 5.4%.
+
+Same shape as measuring a correlation within position rather than pooled: the
+denominator has to be the population the thing can actually happen in.
+
+## A check must measure only the population it applies to, or it manufactures doubt
+
+Three instances in one build, all in the same direction — **correct work
+reported as broken**, which is rarer than the reverse and arguably worse,
+because it invites someone to "fix" something that is not broken.
+
+- `conditional_pass` scored tier-2 and tier-3 players against source columns
+  they do not carry. A percentile fill measured against a source it never saw
+  reports a working map as dead.
+- The seam check compared the tier-2 cohort's output against tier-1's and
+  fired on `CB`/`WR` intelligence. Tier-2 players are late signings and IR
+  bodies, genuinely 5-10 rating points worse, and EVERY attribute ran negative.
+  A cohort-quality gap is not a scale error. The fix was to hold the cohort
+  fixed: convert the players who have BOTH representations and compare against
+  their own real values.
+- A `MAD` computed with an `or 1.0` divide-guard that was never divided by
+  printed 1.0 where the truth was 0.0, so a perfect conversion read as though
+  it had spread.
+
+**Before trusting a failing check, ask whether it is measuring the population
+it claims to.** Same root as the pooled-correlation trap: the altitude of the
+measurement is part of the measurement.
+
+## Point a suspect instrument at data whose answer you already know
+
+The staff build put 21% of records on the `startSeason` ceiling against a
+published 1-5%. That is a plausible property of a young coaching cohort, and
+tuning the noise until it went away was the obvious next move.
+
+**Instead, the published 2021 ages were fed through the new formula.** They
+produced 18% against their own actual 3% — which proved the formula was wrong
+independently of the cohort, and sent the search somewhere else entirely,
+where it found that the file-year offset should never have been subtracted.
+
+Same move as running a new spike detector against a file whose provenance is
+known before trusting what it says about files that are not. **A detector that
+misreads data you already understand is measuring the wrong thing, and that is
+cheap to discover and expensive to miss.**
+
+## Independent draws give the right expectation and the wrong counts
+
+Splitting the draft board's coarse `LB` and `EDGE` labels into PGM3 positions
+was done by drawing each prospect independently against a probability. Twenty-
+six linebackers came out 65/35 instead of the intended 54/46, putting OLB at
+17.5% of the LB+EDGE group against a published 32.2%.
+
+That is not bad luck; it is what independent draws do at n=26. Allocating by
+**sorted hash** — order the group by a hash of the name, take the first N for
+each target — gives exact counts, stays reproducible, and does not correlate
+with rank. The result landed 24.6 / 31.6 / 43.9 against a published
+24.3 / 32.2 / 43.5.
+
+**Any small-cohort split in this project has the same exposure.**
+
+## Published-file defects found in 2026, none of them previously noticed
+
+Logged rather than fixed; each is invisible to every existing check.
+
+**2013 team payroll is inversely related to roster cost.** Ranking on real
+contract money, 2026 shows team payroll tracking roster cost at **+0.67**.
+2013 reads **-0.57** — expensive rosters got cheaper payrolls, backwards rather
+than merely absent — and 2021 reads +0.08. Both come from ranking salary on
+rating instead of money. Invisible because every team's payroll is individually
+plausible; only the relationship across teams is wrong.
+
+**2017 carries 37 rostered records at `salary` 0** — 1.9% of that file, 0.0% of
+2010/2013/2021. Now dropped from the 2026 quantile target: a map inherits its
+target's defects, and `log(1)=0` outliers had crushed the measured
+`corr(log salary, rating)` from +0.42 to +0.15, making the reference band look
+far wider than it is.
+
+**The 2026 data bundle collapses both linebacker labels.** Every board `LB`
+maps to MLB and every `EDGE` to DE, leaving the draft pool with **zero OLBs**
+and failing the validator's "missing a LB type" gate. Caught by a gate, not by
+anyone reading the bundle — an input approved as complete.
+
+**The handoff's `growthType` shape is imprecise for staff.** Slots 17-19 are
+*nearly* always zero (19 of 1,152 records, not always) and positives trail to
+slot 26, not 16.
+
+## Fourth boundary-translation bug — and it was found in play, not by a gate
+
+**Ryan reported three wrong faces after importing the 2026 file.** Aidan
+Hutchinson and Drew Allar built dark and should be light; Myles Garrett built
+light and should be dark. Traced, the cause was **891 silently discarded
+lookups**, not three records.
+
+The two face sources speak different vocabularies, and neither is the build's:
+
+    PGM3_PLAYER_ARCHIVE   2K5's 17 labels — T, G, SS, FS, ILB, FB
+    PGM3_FACE_REGISTRY    PGM3's exact 15
+    the build queried both with PGM3's 15
+
+Measured on 1,888 rostered before the fix:
+
+    archive   832 hit / 583 position-differs / 473 absent
+    registry 1033 hit / 308 position-differs / 547 absent
+
+Every one of those 891 fell through to a **generated** face while real data
+sat in the file. `Trent Williams` build `OT` / archive `T`. `Kyle Juszczyk`
+build `RB` / archive `FB`. `Tony Jefferson` build `S` / archive `SS`.
+
+**The two halves needed different fixes and conflating them would have been
+the error.** The archive gap is genuine vocabulary and translates
+deterministically. The registry's is POSITION DRIFT for the same man — Cameron
+Jordan `DE`->`OLB` — and blind position adjacency is exactly what merges
+fathers and sons. The era test settles it: accept a drifted position only when
+that name+position is attested in a published file in a season overlapping the
+player's career, and REFUSE where several positions survive. 131 recovered, 1
+ambiguous refused, 176 unverifiable and refused.
+
+**This is the third appearance of the identity-mismatch shape** — after
+contracts shipping salary 0 and appearances taking a placeholder — and it
+shipped for the same reason both of those did: **the build produced a face for
+every record, so nothing objected.** The guard is now a match-rate assertion,
+and the denominator matters: it counts records whose NAME IS PRESENT in the
+source, because a name the source never held is not a lookup failure and
+including it measures the source's coverage instead of the lookup's
+correctness. Exact-key-only resolves 0.677 of resolvable names; with
+translation and the era test, 0.864.
+
+**And the same question, asked of every other name-keyed lookup, found a
+second miss:** the registry's `staff_faces` block — 2,231 entries, covering 72
+of the 128 real coaches — **was never read at all.** Not a vocabulary problem;
+its keys are bare names. An unused source, invisible because donor-copied
+faces are perfectly valid faces.
+
+## The archive carries its own confidence and the documented rule ignores it
+
+The rule is "light calls reliable at any source count, dark calls need 3+
+sources". It says nothing about `agreement`, which the archive stores per
+person. Scored against the registry as an independent check:
+
+    band   agreement       n    matches registry
+    dark   0.50-0.74     176         54.5%   <- a coin flip
+    dark   0.75-0.99      77         75.3%
+    dark   1.00         7800         89.3%
+    light  0.50-0.74     164         64.0%
+    light  1.00         2410         87.6%
+
+**Aidan Hutchinson is the case that exposed it:** archive `dark`, 4 sources —
+passing the documented rule — but `unanimous: False` and `agreement: 0.50`.
+Myles Garrett reads 10 sources, unanimous, agreement 1.00, and is correct.
+
+Hutchinson is precisely the profile `PGM3_SOURCE_QUALITY.md` describes: a fan
+setting values by eye gets obscure players right by default and makes visible
+errors on the ones they have an opinion about. The errors cluster on recent
+prominent players — Burrow, Mayfield, Crosby, Wirfs, and now Hutchinson.
+
+**A source that publishes its own confidence should be read at that
+confidence.** `n_sources` counts votes; `agreement` says whether they agreed,
+and four sources at 0.50 is not four sources.
+
+**Hutchinson remains wrong in the built file and must not be hand-corrected.**
+Both sources call him dark — the registry at `Head5a`, the archive at
+agreement 0.50. With the agreement floor the archive now abstains, but the
+registry still drives it. **That is a registry data defect and belongs in a
+registry correction pass**, not in a build patching three names. Fixing the
+symptom would leave the other 888.
+
+## A lock keyed in a format the checker cannot read is not a lock
+
+`_verified_keys['players']` holds **two key formats**, and each is internally
+correct:
+
+    78 keys as name|position|teamID  ->  0 resolve against `faces`
+                                         ALL 78 live in `faces_1986`
+    27 keys as name|position         ->  27 of 27 resolve against `faces`
+
+The `faces` gate builds its lookup as `name|position` against the `faces`
+block. **So it reaches 27 of 105 locked players — 26%.** The other 78 are not
+missing from the files; they are unreachable, and they are exactly the ones
+`faces_1986` protects.
+
+**Both halves are right.** The 3-part keys carry team because 1986 genuinely
+needs it — two James Joneses, both RB, both in that season — which is this
+project's own rule that a key needs enough fields to be unique in the widest
+population it will be queried against. The gate is right for the modern block.
+**The defect lives entirely in the seam**, which is why both sides looked fine
+and no check ever objected. A producer and a consumer of the same key must
+share its format, and neither side being correct protects you.
+
+**The proof is that it already failed silently.** `doug flutie|QB|CHI` and
+`jerry rice|WR|SF` are both 3-part 1986 keys, both inconsistent with the
+registry in the 1986 file, and the gate has never reported it in any run.
+They were found only because an assertion written for a different purpose
+tripped over them.
+
+**And the reporting shape is the trap.** The gate prints "93 checked, 104 in
+registry", which reads as 90% coverage. It is 93 RECORD comparisons against 26
+distinct KEYS. **A count that conflates records with keys will always flatter
+itself** — quote both, or quote the one the reader will act on.
+
+Aidan Hutchinson's 2026 entry is keyed 2-part deliberately, so his lock
+actually engages.
+
+---
+
+## Backlog
+
+> The full audit list, including everything this build surfaced and the ruling
+> that 2026 ships before any of it is touched, is in
+> **`docs/PGM3_AUDIT_BACKLOG.md`**. What follows is the subset that predates it.
+
+
+**Teach the `faces` gate both key formats, then audit the 78.** Two jobs, and
+the second is the interesting one.
+
+    scope        every published file, not 2026
+    unreachable  78 of 105 verified players (74%)
+    known drift  2 confirmed (doug flutie, jerry rice), both 1986
+    unknown      the other 76 have never been checked by any gate
+
+The audit is where more Fluties would be. It needs its own review pass rather
+than being folded into a build.
+
+**Tranche 2 of the registry correction: 247 position-drift disagreements**
+(`DT`<->`DE`, `OLB`<->`DE`, `CB`<->`FS`) reachable only by accepting a
+different position for the same name. **Method: the era test** — accept a
+drifted position only where that name+position is attested in a published file
+in a season overlapping the player's career, and refuse where several survive.
+Deferred deliberately: tranche 1 was sampled at 80% and vindicated, but drift
+is inherently riskier than vocabulary because adjacent positions merge fathers
+and sons. Own pass, own review.
+
+## Faithful to real football, wrong for the file
+
+**Found in play on a depth chart: 16 of 32 teams had ZERO defensive ends.**
+No published file leaves any team empty at any position, in any of eight files
+and 256 team-seasons.
+
+The handoff says to map edge players by each team's real front — 3-4 edges to
+OLB, 4-3 to DE — and the build did exactly that. **Measured, the archive does
+not do this.** For players present in both a published file and Madden 27:
+
+    LEDG on a 3-4 team -> DE 60%      LEDG on a 4-3 team -> DE 69%
+    REDG on a 3-4 team -> DE 58%      REDG on a 4-3 team -> DE 65%
+
+The front barely moves it. PGM3 has fifteen slots and does not simulate
+fronts; the archive treats edge as a **body type**, roughly 62/38 DE:OLB.
+
+**A rule can be true about football and false about the file.** The scheme
+mapping is good football and the wrong model for a fifteen-slot schema, and
+nothing about it looked wrong — every record was valid, every attribute in
+range, the team sizes correct.
+
+Comparing per-position TOTALS against the archive found two more errors
+pushing the same way, both invisible in isolation:
+
+    DT   -> DT 72% / DE 28%      the build sent 100% to DT
+    MIKE -> OLB 52% / MLB 48%    the build sent 100% to MLB
+    WILL -> MLB 62% / OLB 29%    the build sent 100% to OLB — BACKWARDS
+
+**Allocate per team, not globally.** Shares set the level, weight sets the
+order within a team, and a team can never reach zero because the allocation
+starts from its own players.
+
+## A composition check, and why a tight band on it is wrong
+
+`zero_pattern` compares attribute VALUES against the reference. **Nothing in
+the suite looked at roster composition**, which is why a person opening a
+depth chart found this and no gate did.
+
+Added to `pgm3_validate.py`: no team may be empty at a position every
+reference file fills. It FAILS on the broken build (18 gaps) and passes on the
+fixed one.
+
+**The per-position TOTALS half is a warning, not a gate, and the reason
+matters.** The published files disagree with EACH OTHER by 26-77% on per-team
+position rates — DT runs 3.2 to 5.6 per team, MLB 2.5 to 4.1, WR 5.5 to 8.5.
+A tight band would fail most published files against one another. Worse, a
+legitimate cohort difference is indistinguishable from a defect: 2026 carries
+exactly one kicker and one punter per team while the published files carry
+1.1-1.3, because they were built from everyone who played that season and 2026
+is a 53-man roster. **A check whose reference disagrees with itself by 77%
+cannot be a gate.** It is a prompt to look.
+
+The first version of that check was also DEAD — it appended to a `warn` list
+that does not exist and read a `cnt` I had deleted, so it could only ever
+raise NameError, and it never ran because the block it sat in was reached only
+after the failure. **An assertion that cannot fail reports success**; one that
+cannot run reports nothing at all, which is the same defect wearing a
+different face.
+
+## Quantifying "the reference union is not a specification"
+
+Asked to gate roster composition on **the range every reference spans** —
+calibrated to the archive's own disagreement rather than an invented band, and
+so passing every published file by construction.
+
+**Measured, it does not.** Leave-one-out, per-team position rate on a top-53
+slice, counting all fifteen positions:
+
+    1986  5     2004  1     2010  5     2017  1
+    2000  4     2007  1     2013  5     2021  5      2026  1
+
+Excluding K and P, whose rate is ~1.0 everywhere: 5 / 3 / 1 / 1 / 4 / 4 / 1 / 5,
+and 2026 still 1. Re-running with randomised tie-breaks at the 53-man cut moves
+each count by at most 1 — 105 players sit on the exact boundary rating in 2017
+alone, so the slice is tie-sensitive and the COUNT should be quoted as a range,
+not a point.
+
+**State the method with the number.** The master session measured the same
+thing and got 3/1/0/1/1/1/0/2 — a different basis or position set, never
+reconciled. The ORDERING was identical under every variant either of us tried,
+and that is what the conclusion rests on: **the archive disagrees with itself
+substantially more than 2026 disagrees with the archive**, and a gate
+calibrated on the archive would fail most of the archive while passing the new
+file.
+
+**What CAN be a gate is the unanimous property.** No team in any of 256
+published team-seasons is empty at any position. That is not a band, it is
+0 versus not-0, and it catches the real defect — 16 teams with no defensive end
+— on its own.
+
+**The rule worth carrying: a reference set supports a GATE on properties its
+members share unanimously, and only a WARNING on properties they merely cluster
+around. Check which one you have before choosing the severity.**
+
+## Rostered is not a basis
+
+`rostered` means 53 players per team in one file and 67 in another. Every
+cross-file count taken on it is comparing different things, and the resulting
+gap looks exactly like a defect.
+
+Four instances in the 2026 build alone:
+
+- **Rating p10.** Madden read "compressed" against the published files — p10 63-74
+  against 45-63 — and it was a 53-man cohort against a 59-68-man one. On top-53
+  the gap is 1 point.
+- **The registry-covered subset**, which over-weights long-career positions and
+  is not a league.
+- **RB count.** 128 against a published 172-209, 4.0 per team against 5.2-6.5.
+  The published files are built from everyone who PLAYED that season. On a
+  top-53 slice they read 4.2-5.4 against 2026's 3.9 — the apparent 1.5/team
+  shortfall is 0.3.
+- **QB count.** 92 looks wrong against three modern references (69-82) and sits
+  inside the full archive's 69-96, because 1986 carries 93 and 2000 carries 96.
+
+**Both of the last two closed on an arithmetic identity rather than a plausible
+story**, which is the standard to hold: QB is 88 ACT + 4 RES = 92 exactly, and
+RB is 113 ACT + 17 RES − 2 long snappers = 128 exactly. A number that
+reconciles to the source needs no explanation; one that merely sounds
+reasonable is not closed.
+
+
+## Pre-2000 is the archive's weak cohort — and that is ALL that survives the cut
+
+Asked what distinguishes the drift cases the archive cannot resolve. Position
+does not: the front seven is 69% of the unsolvable set and 71% of the solvable
+one. Era does — but **only one era claim survives a change of denominator.**
+
+Share of archive entries sitting at 1-2 sources, by the entry's era:
+
+    bucket by     <2000   2000-09   2010-19   2020+
+    first_seen      69%       33%       60%      63%
+    last_seen       70%       49%       56%      47%
+
+`era_certain` changes nothing. **The date field changes everything between the
+three modern bands** — under `first_seen` coverage looks U-shaped with 2020+
+second-worst; under `last_seen` 2020+ is the best-covered band. Both are
+defensible, because a player active 2018-2026 belongs to both buckets and the
+choice decides which one counts him.
+
+**What holds either way: pre-2000 is much worse than everything else — 69-70%
+against 33-63% — and it is also the largest cohort at ~11,200 entries.**
+Nothing else about the era ordering is safe to state.
+
+**Three wrong characterisations preceded this, each written before the number
+under it was read.** "Rises steadily toward the present", from a per-file rate
+that is not monotone and reads 92% on a cohort of 13. Then "fewer sources the
+more recent the player", printed as a conclusion in the same script output that
+refutes it. Then "U-shaped, 2020+ second-worst", which is one denominator's
+artifact presented as a property of the data.
+
+**A finding that moves when you change the denominator is a property of the
+cut, not of the archive.** Run the alternative before writing the sentence —
+here it was one extra field and four numbers.
+
+Kept separate deliberately: **74% of the 2026 cohort's DRIFT cases are
+unsolvable from the archive.** That is a different measurement on a selected
+subset — drift cases are not the general population — and it stands on its own
+without the era claim.
+
+## The free agent staff pool (2026)
+
+**Every published file carries 165 free agent staff; 2026 shipped 0.** A user
+who fires a coordinator had nobody to hire. The pool is `teamID == 'Free Agent'`,
+and 453 = 288 team (32 x 9) + 165.
+
+**Head coaches are real, every other role is invented.** Measured, not assumed,
+by asking whether a free agent's name holds a team job in some modelled season
+(a lower bound: it has false negatives, never false positives):
+
+| role | FA n | proven real |
+|---|---|---|
+| Head Coach | 203 | **36.0%** |
+| Off Co-ord / Def Co-ord | 141 each | 0.7% |
+| Special Teams | 135 | 0.0% |
+| scouts, physios | 135 each | 0.7-3.0% |
+
+The precedent's claim survived the check. It would have been easy to assume.
+
+**The pool draws from the past, not the future.** Free agent head coaches are
+men who held a team job in an *earlier* season and are now out of work — 2004
+is 12 past vs 1 future, 2010 is 24 vs 3. 2026 follows the same rule.
+
+**2021 is the outlier and was not followed.** Its 27 free agent head coaches
+match nothing in any direction, including the 2026 team side — that pool is
+fully invented. Six of eight files source real coaches; the dominant precedent
+plus *never invent data when real data exists* settles it against the newest file.
+
+**A free agent has no contract but does have an asking price.** `salary`,
+`guarantee` and `length` are zero in **1145 of 1145** published FA records,
+while `eSalary` / `eGuarantee` / `eLength` are populated. Shipping a free agent
+with a salary would have looked plausible and been wrong.
+
+**Age ceiling 72**, the observed maximum across every published FA record.
+Without it the real-coach supply reaches an implied age of 102 in 2026.
+
+### How this measurement nearly went wrong
+
+Three separate vacuous passes occurred while measuring these pools — a control
+built from the names it was testing, a `teamId` probe returning `None` for all
+453 records, and `min(teamID)` reporting nine Arizona staff as the league pool.
+They are catalogued with the rest in **Vacuous pass is this project's dominant
+failure mode**, which is where that family now lives rather than scattered.
+
+The recombination test itself was **discarded, not reported**: rebuilt
+leave-one-out, real team-side staff score 34-60% on it, so it does not separate
+invented from real at all.
