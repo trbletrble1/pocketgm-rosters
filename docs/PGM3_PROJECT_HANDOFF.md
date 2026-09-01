@@ -1123,7 +1123,57 @@ appearance rebuilt from real Madden data.
    route for this cohort until it is known whether a 1990/1991 build is coming.
    The photo route is the expensive fallback for what no roster export covers.
 
-0i. **STAFF AGES ARE NOT SOURCED, ARCHIVE-WIDE.** Found 2026-08-31 in the 2000
+0i. **RESOLVED 2026-08-31 (Pass A2) — staff ages, and the correction to how
+   this was framed.** It was NOT archive-wide in the sense of all seven files
+   being drawn. Measured against sourced birth years before any repair:
+
+   | file | checkable | exact | within ±2 | off by ≥10 |
+   |---|---|---|---|---|
+   | 1986 | 99 | 69 | 77 | 15 |
+   | **2004** | 101 | **0** | 20 | **41** |
+   | 2007 | 97 | 86 | 87 | 7 |
+   | **2010** | 79 | **2** | 11 | **35** |
+   | 2013 | 106 | **102** | 104 | 2 |
+   | **2017** | 103 | **4** | 16 | **52** |
+   | 2021 | 105 | 83 | 86 | 9 |
+
+   **1986, 2007, 2013 and 2021 were largely correct** — 2013 at 102 of 106
+   exact. Only **2004, 2010 and 2017** were broadly drawn. Bill Belichick was
+   right in four files and wrong in three, and the "ages three years in six"
+   drift was those three files, not a uniform draw. (2021's second Belichick at
+   34 is Steve Belichick, a real coach, not a duplicate.)
+
+   The repair was therefore **targeted, not wholesale**: a record was rewritten
+   only where a sourced birth year existed *and disagreed*. 368 of 896 records
+   changed. Overwriting the four correct files wholesale would have replaced
+   right answers with whatever the source said, including any false positive.
+   Belichick now reads 34/52/55/58/61/65/69 across the seven files.
+
+   Sourced birth years for 388 names in `sources/coach_birth_years.csv`, one
+   row per name with provenance, carrying forward the 2000 build's
+   hand-verified rows, which take precedence over the bulk query.
+
+0j. **ADDITIONAL LOW-VALUE STAMINA FILL BLOCKS — found during Pass A1, not
+   repaired, needs a ruling.** Fixing `stamina == 1` surfaced a second layer.
+   2010 and 2004, the two files with no stamina-1 block, have essentially
+   nothing below 40 (1 and 7 records). The others carry blocks:
+
+   | file | block | tell |
+   |---|---|---|
+   | 2021 | 29 records at exactly **5**, all WR | single position, single value |
+   | 2021 | 9 at **16** all OT, 8 at **34** all DT | same |
+   | 2013 | 44 at **2**, 23 at 4, 18 at 3 | 11 positions, low smear |
+   | 1986 | 14 at **2** | 8 positions |
+   | 2007 | ~305 records under 40 spread across ~30 values | a whole shifted low population, different shape |
+
+   **A single value held by one position is fill; a genuine tail spreads across
+   positions.** These were excluded from the draw pool in Pass A1 but left in
+   place. A first run that did not exclude them **propagated** the
+   contamination — 2021's stamina-2 block grew from 37 records to 51, and the
+   `PSTA` deciles came out non-monotonic with 30 and 13 mid-range. That is the
+   measurement that found this.
+
+0k. **STAFF AGES ARE NOT SOURCED, ARCHIVE-WIDE.** Found 2026-08-31 in the 2000
    build and confirmed in the published files. The ages have essentially no
    relationship to the men.
 
