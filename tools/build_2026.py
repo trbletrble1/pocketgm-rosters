@@ -53,6 +53,10 @@ POS_FROM_MADDEN = {
     'LS':None,                      # long snappers are cut (locked decision)
     'LEDG':'EDGE','REDG':'EDGE',    # resolved per team front below
 }
+# Opening jersey number per position, measured as the published modal band;
+# the search walks upward from here to the first number the team is not using.
+POS_JERSEY = {'QB':10,'RB':20,'WR':80,'TE':85,'OT':70,'OG':60,'C':50,
+              'DE':90,'DT':90,'OLB':50,'MLB':50,'S':20,'CB':20,'K':1,'P':1}
 PGM3_POSITIONS = ['QB','RB','WR','TE','OT','OG','C','DE','DT','OLB','MLB','S','CB','K','P']
 
 # Coarse family, used only as a join guard. nflverse already ships this
@@ -152,6 +156,68 @@ LB_LABELS   = ('MIKE', 'WILL', 'SAM')
 GUARD_LABELS = ('LG', 'RG')
 GUARD_TO_OT  = 0.10
 
+# ------------------------------------------------- real position, per player
+# The proportional allocator below fixed the TOTALS and the zero-DE teams and
+# had no idea who anyone was: measured against nflverse depth charts it put
+# more than half of real MLBs at OLB and split real ILBs almost evenly. The
+# aggregate was optimised and the individual was never checked.
+#
+# nflverse ships depth_chart_position for 2800 of 2800 rows in a vocabulary
+# that is already PGM3-adjacent, so it is used DIRECTLY. Allocation survives
+# only as the fallback for players with no usable depth-chart entry.
+NFLVERSE_TO_PGM3 = {
+    'QB':'QB','RB':'RB','FB':'RB','WR':'WR','TE':'TE',
+    'T':'OT','G':'OG','C':'C',
+    'DE':'DE','DT':'DT','NT':'DT',
+    'MLB':'MLB','ILB':'MLB',
+    'CB':'CB','FS':'S','SS':'S','S':'S',
+    'K':'K','P':'P',
+    'LS':None,                  # long snappers are cut, as before
+    # 'OLB' is deliberately absent -- nflverse lumps 3-4 edge rushers in with
+    # off-ball linebackers, and it is resolved by weight below.
+    # 'DB' and 'LB' are absent too: 3 and 2 rows, genuinely ambiguous, and
+    # they fall through to the allocator rather than being guessed.
+}
+# Verified against Madden's own edge/off-ball labels on the 174 joined players
+# whose depth chart reads OLB: edge median 256 lb, off-ball 232 lb. A cut at
+# 241 is 90.2% accurate; the best available cut (237) is 90.8%, so 241 stands.
+# NOTE: this does NOT reproduce the 97.7% figure carried in the task notes --
+# see the build log.
+OLB_EDGE_WEIGHT = 241
+
+def nflverse_pgm3_position(nrow):
+    """Real depth-chart position -> PGM3, or None to fall back."""
+    dc = (nrow.get('depth_chart_position') or '').strip()
+    if not dc: return None
+    if dc == 'OLB':
+        try: w = float(nrow.get('weight') or 0)
+        except (TypeError, ValueError): w = 0.0
+        if not w: return None
+        return 'DE' if w >= OLB_EDGE_WEIGHT else 'OLB'
+    return NFLVERSE_TO_PGM3.get(dc, None) if dc in NFLVERSE_TO_PGM3 else None
+
+_DC_CACHE = {}
+
+def depth_chart_index(nfl, mad):
+    """madden _idx -> PGM3 position, resolved THROUGH THE JOIN.
+
+    An earlier version keyed this on the Madden row's normalised name. That is
+    wrong at the nickname tier, where the two sides normalise differently by
+    construction: Pooh Paul Jr. joins to a Madden row normalising to
+    "chris paul", and a name lookup then returned the depth chart of a
+    DIFFERENT real Chris Paul (a Washington guard) -- an off-ball linebacker
+    shipped at offensive guard. The join is what establishes identity; nothing
+    downstream may re-derive it from a string.
+    """
+    key = (id(nfl), id(mad))
+    if key in _DC_CACHE: return _DC_CACHE[key]
+    out = {}
+    for n, m, _tier in join(nfl, mad).pairs:
+        p = nflverse_pgm3_position(n)
+        if p: out[m['_idx']] = p
+    _DC_CACHE[key] = out
+    return out
+
 def allocate_front_seven(rows_for_team):
     """rows_for_team: [(key, madden_label, weight)] -> {key: PGM3 position}.
     Heaviest edges become DE, lightest interior linemen become DE, heaviest
@@ -178,10 +244,12 @@ def allocate_front_seven(rows_for_team):
     return out
 
 _FRONT7_CACHE = {}
+_DC_LOOKUP = None   # madden _idx -> real position; set by load_all
 
 def front_seven_allocation(mad):
     """Compute the per-team edge/interior/linebacker allocation once for the
-    whole Madden file, keyed on row identity."""
+    whole Madden file, keyed on row identity. FALLBACK ONLY since the depth
+    chart became the position source -- it now covers ~28 players, not 2,105."""
     key = id(mad)
     if key in _FRONT7_CACHE: return _FRONT7_CACHE[key]
     byteam = collections.defaultdict(list)
@@ -202,6 +270,12 @@ def madden_pgm3_position(mrow, front_by_team, alloc=None):
     is NOT consulted, because the archive does not use it (see the note above).
     Everything else is a fixed translation."""
     lab = mrow['Position']
+    # REAL POSITION FIRST. The allocator is a fallback, not the source.
+    if _DC_LOOKUP:
+        got = _DC_LOOKUP.get(mrow['_idx'])
+        if got:
+            if lab == 'LS': return None          # long snappers stay cut
+            return got
     if lab in EDGE_LABELS + LB_LABELS + GUARD_LABELS + ('DT',) and alloc is not None:
         got = alloc.get(mrow['_idx'])
         if got: return got
@@ -439,6 +513,8 @@ def load_all():
     mad    = load_madden(MADDEN_CSV)
     nfl    = load_nflverse(NFLVERSE_CSV)
     _FRONT7_CACHE.clear()
+    global _DC_LOOKUP
+    _DC_LOOKUP = depth_chart_index(nfl, mad)
     return bundle, front, mad, nfl
 
 # ---------------------------------------------------------------- selftest
@@ -3012,7 +3088,18 @@ def stage_build(verbose=True):
                           key=lambda x: -x['rating'])
             if not pool: continue
             pick = pool[0]
-            pick['teamID'] = team; pick['length'] = 1; pick['teamNum'] = 0
+            # A promoted free agent needs a JERSEY. Free agents carry 0, and
+            # writing that straight onto a roster put two men on LAC #0 the
+            # first time two promotions landed on one team. No published file
+            # has a single rostered player wearing 0 (2013/2017/2021 all zero),
+            # so 0 is not a legal roster value here at all.
+            taken = {x['teamNum'] for x in out
+                     if cohort_of(x) == 'T' and x['teamID'] == team}
+            num = next((j for j in range(POS_JERSEY.get(pos, 40), 100)
+                        if j not in taken), None)
+            if num is None:
+                num = next((j for j in range(1, 100) if j not in taken), 0)
+            pick['teamID'] = team; pick['length'] = 1; pick['teamNum'] = num
             pick['salary'] = pick['salary'] or 1_000_000
             byteam[team][pos] += 1
             promoted.append((team, pos, f"{pick['forename']} {pick['surname']}"))
@@ -3106,6 +3193,15 @@ def stage_build(verbose=True):
         tm = collections.Counter(r['teamID'] for r in out if cohort_of(r) == 'T')
         print(f'   teams {len(tm)}  sizes {min(tm.values())}-{max(tm.values())}')
         print(f'   all {len(out)} records pass the schema and 50x assertions')
+    # WRITE IT. For the whole build this stage assembled 2,635 records in
+    # memory, printed "ROSTER assembled", and persisted nothing -- every
+    # correction that reached the shipped file did so through a separate
+    # script writing it directly. A build command that reports success and
+    # leaves the artefact untouched is the vacuous pass with a production
+    # step attached; it read exactly like a real build for a full day.
+    path = P('PGMRoster_2026.json')
+    with open(path, 'w') as f: json.dump(out, f, separators=(',', ':'))
+    if verbose: print(f'   written: {path} ({len(out)} records)')
     return out
 
 def seam_report():
