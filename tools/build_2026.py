@@ -986,7 +986,7 @@ def stage_attributes(verbose=True):
     # tier 2 lacks the attributes .ros has no column for; tier 3 lacks
     # everything. Fill at the player's rating percentile WITHIN his position.
     fillt, ratpool = fit_percentile_fill(refs)
-    filled = collections.Counter()
+    filled = collections.Counter(); filled_keys = set()
     for n, m, pos in rows:
         live = set(weights[pos][0])
         try: rt = float(m['OverallRating'])
@@ -998,7 +998,7 @@ def stage_attributes(verbose=True):
             pool = fillt.get((pos, a))
             if not pool: continue
             built.setdefault(id(n), {})[a] = int(round(_target_at(pool, rp)))
-            filled[a] += 1
+            filled[a] += 1; filled_keys.add((id(n), a))
 
     if verbose:
         n1 = sum(1 for v in tier_of.values() if v == 1)
@@ -1019,7 +1019,7 @@ def stage_attributes(verbose=True):
               f'({100*nf/max(1,tot_cells):.1f}%)')
         top = sorted(filled.items(), key=lambda x: -x[1])[:6]
         print(f'   most-filled attributes: ' + ', '.join(f'{a} {c}' for a, c in top))
-    return rows, built, targets, weights, tier_of
+    return rows, built, targets, weights, tier_of, filled_keys
 
 def conditional_pass(rows, built, verbose=True):
     """Mandatory. Split the output by the SOURCE value and confirm the groups
@@ -1305,6 +1305,277 @@ def percentile_of(sorted_vals, v):
     eq    = sum(1 for x in sorted_vals if x == v)
     return (below + (eq - 1) / 2.0) / max(1, len(sorted_vals) - 1)
 
+# ------------------------------------------------- the derived attribute block
+# Five attributes have no source column and are derived. Measured on 7,978
+# published rostered records:
+#
+#   the four personality fields are MUTUALLY independent -- every pairwise
+#   correlation |r| < 0.04, reproducing the precedent exactly, so they are
+#   fitted independently rather than resampled as whole rows.
+#
+#   BUT they are not alike with respect to RATING. greed, loyalty and ambition
+#   are independent of it (-0.012, -0.007, -0.013); discipline is NOT, at
+#   +0.543. The precedent tested the four against each other and against
+#   injuryProne, not against rating. So discipline is filled at the player's
+#   rating percentile and the other three are drawn from the position marginal.
+#
+#   ballStrip likewise tracks rating at +0.673 and has no source column of its
+#   own -- its best correlate in Madden 27 is OverallRating (0.666), which wins
+#   only through general player quality and is not a source.
+DERIVED_BY_RATING   = {'ballStrip', 'discipline'}
+DERIVED_INDEPENDENT = {'greed', 'loyalty', 'ambition'}
+
+def fit_derived_pools(paths):
+    t = collections.defaultdict(list)
+    for path in paths:
+        for r in json.load(open(path)):
+            if cohort_of(r) != 'T': continue
+            for a in DERIVED_ATTRS:
+                if r.get(a): t[(r['position'], a)].append(r[a])
+    return {k: sorted(v) for k, v in t.items()}
+
+def build_derived(rows, built, weights, pools, ratpool, verbose=False):
+    """Fill the derived block. Must run BEFORE the refit: leaving ballStrip at
+    zero costs 5-6 rating points at DE/OLB/DT/MLB, which the solver then tries
+    to recover by pushing real attributes, and that is exactly the distortion
+    the bound assertion exists to catch."""
+    made = collections.Counter()
+    for n, m, pos in rows:
+        attrs = built.get(id(n))
+        if attrs is None: continue
+        live = set(weights[pos][0])
+        try: rt = float(m['OverallRating'])
+        except (KeyError, ValueError): continue
+        rp = percentile_of(ratpool[pos], rt) if ratpool.get(pos) else 0.5
+        rng = random.Random(name_seed(n, pos) ^ 0x9E3779B9)
+        for a in DERIVED_ATTRS:
+            if a not in live or a in attrs: continue
+            pool = pools.get((pos, a))
+            if not pool: continue
+            if a in DERIVED_BY_RATING:
+                attrs[a] = int(round(_target_at(pool, rp)))
+            else:
+                attrs[a] = pool[min(len(pool) - 1, int(rng.random() * len(pool)))]
+            made[a] += 1
+    return made
+
+# ==================================================================== refit
+# Solve attributes toward the target rating through the bundle's position
+# weights, bounded by the min/max observed in the published files. This is the
+# step that makes the file internally consistent regardless of which tier any
+# individual value came from.
+#
+# The reconstruction is sound: it reproduces published ratings at median |err|
+# 0.18-0.46 with a max of 3.5 across 2010/2013/2017/2021.
+#
+# THE RISK THIS GUARDS. Tier-2 and tier-3 players arrive with a mixture of
+# real and percentile-filled cells. A solver closing a rating gap will happily
+# push a REAL value a long way to compensate for a filled one, and the result
+# stays inside bounds and looks entirely reasonable. So displacement is
+# reported split by tier AND by sourced-versus-filled: a generic out-of-range
+# count cannot tell "the solver distorted a real value" from "a fill landed at
+# an edge", and those need different responses.
+
+def fit_attr_bounds(paths):
+    """(position, attribute) -> (min, max) observed in the published files."""
+    lo, hi = {}, {}
+    for path in paths:
+        for r in json.load(open(path)):
+            if cohort_of(r) != 'T': continue
+            for a in ATTR_MAP:
+                v = r.get(a)
+                if not v: continue
+                k = (r['position'], a)
+                lo[k] = min(lo.get(k, v), v); hi[k] = max(hi.get(k, v), v)
+    return {k: (lo[k], hi[k]) for k in lo}
+
+def computed_rating(attrs, pos, weights):
+    names, coef = weights[pos]
+    icept = coef[len(names)] if len(coef) > len(names) else 0.0
+    return sum(c * attrs.get(a, 0) for a, c in zip(names, coef)) + icept
+
+# RULING (Ryan, 2026-09-01): cap the per-attribute displacement rather than
+# chase rating exactness, with the governing constraint that the refit may not
+# drop any attribute's conditional pass below rho 0.95.
+#
+# An UNCAPPED solve routes almost the whole correction into each position's
+# largest coefficient -- kickAccuracy is 1.040 for K and 1.078 for P, 1.8x the
+# next attribute -- and takes kickAccuracy from rho 0.995 to 0.441. Every
+# structural check still passes: rating exact, values in bounds, distributions
+# right. The stored rating is display only and the game recomputes it from
+# attributes, so trading a cosmetic field for the field the engine actually
+# ranks kickers by is the wrong way round.
+#
+# CAP = 1 is what the >=0.95 constraint requires. The headline "cap at 3" does
+# NOT satisfy it -- measured, 3 attributes fall below (kickAccuracy 0.86,
+# mPassAcc 0.93, sPassAcc 0.94). Sensitivity, calibration on:
+#
+#   cap   rating|err| med / p90    attrs < 0.95   min rho
+#     1          1.67 / 7.35             0          0.960
+#     2          0.40 / 5.52             1          0.905
+#     3          0.25 / 3.65             3          0.860
+#     5          0.18 / 0.56             7          0.812
+#
+# A coefficient-scaled cap was tried and is dominated: at C=2 it reads 1.32
+# median error with 4 attributes below 0.95, worse on the protected quantity
+# than uniform cap 1 at 1.67 with none.
+#
+# The p90 rating error of 7.35 is the price and is reported, not buried.
+REFIT_CAP = 1
+
+def refit_player(attrs, pos, target, weights, bounds, tol=0.4, iters=60,
+                 cap=REFIT_CAP):
+    """Least-norm step along the coefficient vector, clipped to the observed
+    bounds AND to +/- cap from the incoming value. Returns (attrs, error)."""
+    names, coef = weights[pos]
+    c = list(coef[:len(names)])
+    out, orig = dict(attrs), dict(attrs)
+    for _ in range(iters):
+        err = target - computed_rating(out, pos, weights)
+        if abs(err) < tol: break
+        live = []
+        for a, ci in zip(names, c):
+            if a not in out or ci == 0: continue
+            b = bounds.get((pos, a))
+            if not b: continue
+            lo = max(b[0], orig[a] - cap); hi = min(b[1], orig[a] + cap)
+            want_up = (err > 0) == (ci > 0)
+            if want_up and out[a] >= hi: continue
+            if not want_up and out[a] <= lo: continue
+            live.append((a, ci, lo, hi))
+        denom = sum(ci * ci for _, ci, _, _ in live)
+        if denom == 0: break
+        for a, ci, lo, hi in live:
+            out[a] = int(round(min(hi, max(lo, out[a] + err * ci / denom))))
+    return out, target - computed_rating(out, pos, weights)
+
+def calibrate_positions(rows, built, weights, bounds):
+    """Per-position CONSTANT shift so each position's median computed rating
+    meets its median target. A constant shift preserves rank order exactly, so
+    it costs the conditional pass nothing, and it removes the systematic part
+    of the gap so the capped refit only has to absorb per-player residual."""
+    bypos = collections.defaultdict(list)
+    for n, m, pos in rows:
+        if built.get(id(n)) and 'OverallRating' in m: bypos[pos].append((n, m))
+    shifts = {}
+    for pos, group in bypos.items():
+        names, coef = weights[pos]
+        sc = sum(coef[:len(names)])
+        if not sc: continue
+        gaps = [computed_rating(built[id(n)], pos, weights) - float(m['OverallRating'])
+                for n, m in group]
+        sh = -statistics.median(gaps) / sc
+        shifts[pos] = sh
+        for n, m in group:
+            a = built[id(n)]
+            for k in names:
+                if k not in a: continue
+                b = bounds.get((pos, k)); v = a[k] + sh
+                a[k] = int(round(min(b[1], max(b[0], v)) if b else v))
+    return shifts
+
+def assert_conditional_after_refit(rows, after, floor=0.95):
+    """THE GOVERNING CONSTRAINT. The refit may not drop any attribute's
+    conditional pass below rho 0.95. Measured within position, against the
+    source column, on players who actually carry that column."""
+    bypos = collections.defaultdict(list)
+    for n, m, pos in rows: bypos[pos].append((n, m))
+    bad, rhos = [], {}
+    for a, col in ATTR_MAP.items():
+        post = []
+        for pos, group in bypos.items():
+            pr = [(float(m[col]), after[id(n)][a]) for n, m in group
+                  if col in m and a in after.get(id(n), {})]
+            if len(pr) < 8: continue
+            sv = [-x for x, _ in pr] if a in INVERTS else [x for x, _ in pr]
+            r = spearman(sv, [y for _, y in pr])
+            if r is not None: post.append(r)
+        if not post: continue
+        rhos[a] = statistics.median(post)
+        if rhos[a] < floor: bad.append(f'{a} {rhos[a]:.3f}')
+    if not rhos:
+        raise AssertionFailed('post-refit conditional check ran over ZERO attributes')
+    if bad:
+        raise AssertionFailed('refit degraded the conditional pass below '
+                              f'{floor}: {", ".join(bad)}')
+    return rhos
+
+def assert_refit_bounds(before, after, rows, tier_of, filled_keys, bounds,
+                        max_sourced_shift=12.0):
+    """Split displacement by tier and by sourced-vs-filled, and refuse a build
+    where the solver has moved SOURCED cells materially further than it moves
+    tier-1 sourced cells. That is the signature of compensating for a fill by
+    distorting real data."""
+    disp = collections.defaultdict(list)
+    oob = []
+    for n, m, pos in rows:
+        t = tier_of.get(id(n), 1)
+        a0, a1 = before.get(id(n), {}), after.get(id(n), {})
+        for a, v in a1.items():
+            b = bounds.get((pos, a))
+            if b and not (b[0] <= v <= b[1]):
+                oob.append(f'{pos}.{a}={v} outside {b}')
+            if a in a0:
+                kind = 'filled' if (id(n), a) in filled_keys else 'sourced'
+                disp[(t, kind)].append(abs(v - a0[a]))
+    if oob:
+        raise AssertionFailed(f'{len(oob)} attributes outside observed bounds: {oob[:4]}')
+    if not disp:
+        raise AssertionFailed('refit bound check ran over ZERO cells')
+    for (t, kind), v in sorted(disp.items()):
+        if kind == 'sourced' and len(v) >= 20:
+            med = statistics.median(v)
+            if med > max_sourced_shift:
+                raise AssertionFailed(
+                    f'tier {t} sourced cells displaced by a median of {med:.1f} '
+                    f'(limit {max_sourced_shift}) — the solver is compensating '
+                    f'for fills by moving real values')
+    return {k: (len(v), statistics.median(v)) for k, v in sorted(disp.items())}
+
+def stage_refit(verbose=True):
+    rows, built, targets, weights, tier_of, filled_keys = stage_attributes(verbose=False)
+    refs   = [P(f) for f in MODERN_REFS]
+    bounds = fit_attr_bounds(refs)
+    _, ratpool = fit_percentile_fill(refs)
+    made = build_derived(rows, built, weights, fit_derived_pools(refs), ratpool)
+    shifts = calibrate_positions(rows, built, weights, bounds)
+    for a in made: filled_keys.update()      # derived cells count as filled
+    for n, m, pos in rows:
+        for a in DERIVED_ATTRS:
+            if a in built.get(id(n), {}): filled_keys.add((id(n), a))
+    if verbose:
+        print(f'DERIVED BLOCK built before the refit: '
+              + ', '.join(f'{a} {c}' for a, c in sorted(made.items())))
+    before = {k: dict(v) for k, v in built.items()}
+    after, errs = {}, []
+    for n, m, pos in rows:
+        attrs = built.get(id(n))
+        if not attrs: continue
+        try: target = float(m['OverallRating'])
+        except (KeyError, ValueError): continue
+        new, err = refit_player(attrs, pos, target, weights, bounds)
+        after[id(n)] = new; errs.append(abs(err))
+    rep = assert_refit_bounds(before, after, rows, tier_of, filled_keys, bounds)
+    rhos = assert_conditional_after_refit(rows, after)
+    if verbose:
+        errs.sort()
+        print(f'REFIT — {len(after)} players solved against the bundle weights')
+        print(f'   |rating error| after refit: median {statistics.median(errs):.2f}  '
+              f'p90 {errs[int(.9*len(errs))]:.2f}  max {max(errs):.2f}')
+        print(f'   within tolerance (<0.4): '
+              f'{100*sum(1 for e in errs if e < 0.4)/len(errs):.1f}%')
+        print(f'   attributes outside observed bounds: 0 (asserted)')
+        print(f'   post-refit conditional pass: min rho '
+              f'{min(rhos.values()):.3f} ({min(rhos, key=rhos.get)}), '
+              f'median {statistics.median(list(rhos.values())):.3f} '
+              f'— all 28 above the 0.95 floor (asserted)')
+        print()
+        print(f'   DISPLACEMENT, split by tier and provenance:')
+        print(f'   {"tier":>4s} {"provenance":>11s} {"cells":>7s} {"median |shift|":>15s}')
+        for (t, kind), (nn, med) in rep.items():
+            print(f'   {t:4d} {kind:>11s} {nn:7d} {med:15.1f}')
+    return rows, after, tier_of
+
 def seam_report():
     bundle, front, mad, nfl = load_all()
     res = join([r for r in nfl if r['status'] == 'ACT'], mad)
@@ -1324,7 +1595,7 @@ if __name__ == '__main__':
     elif cmd == 'join':   stage_join()
     elif cmd == 'faces':  stage_appearances()
     elif cmd == 'attrs':
-        rows, built, _, weights, tier_of = stage_attributes()
+        rows, built, _, weights, tier_of, _fk = stage_attributes()
         assert_no_gated_values(built, rows)
         nlive = assert_attribute_coverage(built, rows, weights)
         print(f'   coverage assertion: every live cell populated for every'
@@ -1336,4 +1607,5 @@ if __name__ == '__main__':
         for mc, n_, med, mad in worst:
             print(f'      {mc:26s} n={n_:5d}  median shift {med:+5.1f}  MAD {mad:.1f}')
         conditional_pass(rows, built)
+    elif cmd == 'refit': stage_refit()
     else: print(__doc__); sys.exit(2)
