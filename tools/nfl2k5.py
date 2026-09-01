@@ -34,6 +34,26 @@ Player records:
 
 Strings are UTF-16-ish: one ASCII byte every two bytes, NUL terminated.
 
+STOCK CONTAMINATION
+-------------------
+These are community edits of a 2004 base roster, and a modder edits the players
+who matter. Slots he never touches keep their STOCK 2004 identity - name and
+all. Every retro file carries between 59 and 352 of them, scattered through real
+data rather than grouped:
+
+    1979  334 of 1942     1986  352 of 1932     1990  300 of 1915
+    1981   59 of 1741     1983   70 of 1728     1994  181 of 1746
+
+They are not detectable by name shape, position or attributes; Andre Johnson is
+a perfectly plausible record. The only reliable test is cross-reference: a man
+cannot appear on a 1979 roster and a 2021 one. `stock_names()` builds that
+reference from files known to be modern, and `Save.clean()` filters against it.
+
+This does NOT make the skin values wrong - a stock record of Aeneas Williams is
+still a correct record of Aeneas Williams. What it corrupts is ERA: without the
+filter, the archive believes he was active in 1979, and era is the disambiguator
+the whole namesake defence rests on.
+
 SKIN
 ----
 Values and their meaning are the tool author's own, from DebugDialog.cs where
@@ -222,6 +242,25 @@ class Save:
         d = self.default_blocks()
         return [p for p in self.players
                 if (p['position'], p['weight'], p['height']) not in d]
+
+
+def stock_names(paths):
+    """Union of player names from files known to be modern. Any of those names
+    appearing in a retro file is a stock slot the modder never edited."""
+    out = set()
+    for p in paths:
+        try:
+            out |= {norm(r['fname'] + ' ' + r['lname']) for r in Save(p).players}
+        except Exception:
+            continue
+    return out
+
+
+def clean(save, stock):
+    """Hand-edited players with the stock-modern leftovers removed. This is the
+    cohort to build a season from, and the only one whose era can be trusted."""
+    return [p for p in save.edited()
+            if norm(p['fname'] + ' ' + p['lname']) not in stock]
 
 
 def write_csv(save, dest):

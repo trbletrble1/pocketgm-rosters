@@ -67,9 +67,18 @@ def season_of(filename):
     return lo, kind, stem
 
 
+# Files known to be modern. Any name appearing in one of these AND in a retro
+# file is a stock slot the modder never edited - see nfl2k5.py, STOCK
+# CONTAMINATION. Used only to decide whether a record can vouch for an ERA.
+MODERN_REFERENCE = ['2004-2005SAVEGAME.DAT', '2010-2011SAVEGAME.DAT',
+                    '2016-2017SAVEGAME.DAT', '2021SAVEGAME.DAT']
+
+
 def build(src_dir):
     people = {}
     files = []
+    stock = nfl2k5.stock_names([os.path.join(src_dir, f) for f in MODERN_REFERENCE])
+    print(f'stock-modern reference: {len(stock)} names')
     for path in sorted(glob.glob(os.path.join(src_dir, '*.DAT'))):
         year, kind, stem = season_of(path)
         try:
@@ -92,12 +101,18 @@ def build(src_dir):
             if p['skin_band'] not in ('light', 'dark'):
                 continue
             key = norm(p['fname'] + ' ' + p['lname']) + '|' + p['position']
+            # A stock leftover still describes the right man, so its SKIN vote
+            # counts. It says nothing about when he played, so it must not
+            # contribute to the era range.
+            is_stock = (kind in ('season', 'span') and year and year < 2000
+                        and norm(p['fname'] + ' ' + p['lname']) in stock)
             e = people.setdefault(key, dict(
                 name=f"{p['fname']} {p['lname']}", position=p['position'],
                 votes=[], years=[]))
             e['votes'].append(dict(src=stem, kind=kind, year=year,
-                                   band=p['skin_band'], skin=p['skin']))
-            if year:
+                                   band=p['skin_band'], skin=p['skin'],
+                                   stock=is_stock))
+            if year and not is_stock:
                 e['years'].append(year)
 
     # summarise each person without destroying the votes
@@ -111,6 +126,7 @@ def build(src_dir):
         e['n_sources'] = len(e['votes'])
         e['first_seen'] = min(e['years']) if e['years'] else None
         e['last_seen'] = max(e['years']) if e['years'] else None
+        e['era_certain'] = bool(e['years'])
         del e['years']
     return people, files
 
@@ -134,7 +150,10 @@ def main():
             'disagreeing sources manufactured a rule none of them followed. '
             'DISAMBIGUATE ON ERA: this spans 1958-2026 and name+position matching '
             'across that range gave an 81% false-match rate on the 1986 cohort. '
-            'Check first_seen/last_seen against the season being built.'),
+            'Check first_seen/last_seen against the season being built - but only '
+            'where era_certain is true. Retro files carry 59-352 STOCK 2004 slots '
+            'the modder never edited; those votes are good for skin and worthless '
+            'for era, and are marked stock=true.'),
         '_provenance': (
             'Read with tools/nfl2k5.py, ported from BAD_AL NFL2K5Tool. Skin value '
             'meanings are the tool author\'s own, not fitted here. Anchor-tested '
