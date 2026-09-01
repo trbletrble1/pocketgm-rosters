@@ -1,1 +1,3 @@
 sources/nflverse/
+__pycache__/
+*.pyc
