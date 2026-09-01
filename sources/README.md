@@ -1,4 +1,4 @@
-# `sources/pfr/` — 2000 coaching staffs
+# `sources/` — 2000 coaching staffs
 
 ## Files
 

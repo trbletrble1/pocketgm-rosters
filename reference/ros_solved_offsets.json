@@ -1,521 +1,2432 @@
 {
- "PLAY": {
-  "record_bytes": 104,
-  "records": 3027,
-  "data_start_delta": -8,
-  "field_defs": 110,
-  "solved": {
-   "PRL2": {
-    "header_offset": 270,
-    "real_offset": 266,
-    "bits": 6
-   },
-   "TLHA": {
-    "header_offset": 276,
-    "real_offset": 276,
-    "bits": 3
-   },
-   "PRHA": {
-    "header_offset": 279,
-    "real_offset": 273,
-    "bits": 3
-   },
-   "PSTA": {
-    "header_offset": 296,
-    "real_offset": 288,
-    "bits": 7
-   },
-   "PFPB": {
-    "header_offset": 297,
-    "real_offset": 8,
-    "bits": 1
-   },
-   "PMPC": {
-    "header_offset": 327,
-    "real_offset": 321,
-    "bits": 2
-   },
-   "PBRE": {
-    "header_offset": 371,
-    "real_offset": 373,
-    "bits": 2
-   },
-   "PEYE": {
-    "header_offset": 372,
-    "real_offset": 372,
-    "bits": 1
-   },
-   "PCPH": {
-    "header_offset": 382,
-    "real_offset": 378,
-    "bits": 3
-   },
-   "PRSH": {
-    "header_offset": 388,
-    "real_offset": 388,
-    "bits": 3
-   },
-   "PLTH": {
-    "header_offset": 396,
-    "real_offset": 396,
-    "bits": 1
-   },
-   "PRTH": {
-    "header_offset": 397,
-    "real_offset": 395,
-    "bits": 1
-   },
-   "PSKI": {
-    "header_offset": 406,
-    "real_offset": 402,
-    "bits": 2
-   },
-   "PNEK": {
-    "header_offset": 452,
-    "real_offset": 452,
-    "bits": 2
-   },
-   "PFMK": {
-    "header_offset": 456,
-    "real_offset": 448,
-    "bits": 4
-   },
-   "PBTK": {
-    "header_offset": 463,
-    "real_offset": 457,
-    "bits": 7
-   },
-   "PHCL": {
-    "header_offset": 472,
-    "real_offset": 464,
-    "bits": 3
-   },
-   "PUCL": {
-    "header_offset": 477,
-    "real_offset": 475,
-    "bits": 5
-   },
-   "TLEL": {
-    "header_offset": 485,
-    "real_offset": 483,
-    "bits": 4
-   },
-   "TREL": {
-    "header_offset": 493,
-    "real_offset": 491,
-    "bits": 4
-   },
-   "PLPL": {
-    "header_offset": 508,
-    "real_offset": 240,
-    "bits": 8
-   },
-   "PGSL": {
-    "header_offset": 511,
-    "real_offset": 505,
-    "bits": 3
-   },
-   "PCYL": {
-    "header_offset": 518,
-    "real_offset": 514,
-    "bits": 4
-   },
-   "PSTM": {
-    "header_offset": 528,
-    "real_offset": 520,
-    "bits": 7
-   },
-   "PHAN": {
-    "header_offset": 529,
-    "real_offset": 535,
-    "bits": 1
-   },
-   "PICN": {
-    "header_offset": 530,
-    "real_offset": 534,
-    "bits": 1
-   },
-   "PTEN": {
-    "header_offset": 539,
-    "real_offset": 541,
-    "bits": 2
-   },
-   "PCON": {
-    "header_offset": 543,
-    "real_offset": 537,
-    "bits": 4
-   },
-   "PVCO": {
-    "header_offset": 248,
-    "real_offset": 552,
-    "bits": 4
-   },
-   "PEGO": {
-    "header_offset": 560,
-    "real_offset": 248,
-    "bits": 8
-   },
-   "PFHO": {
-    "header_offset": 561,
-    "real_offset": 8,
-    "bits": 1
-   },
-   "PDRO": {
-    "header_offset": 565,
-    "real_offset": 563,
-    "bits": 4
-   },
-   "PYRP": {
-    "header_offset": 591,
-    "real_offset": 585,
-    "bits": 5
-   },
-   "PJER": {
-    "header_offset": 618,
-    "real_offset": 622,
-    "bits": 1
-   },
-   "PKPR": {
-    "header_offset": 632,
-    "real_offset": 624,
-    "bits": 7
-   },
-   "PSTR": {
-    "header_offset": 639,
-    "real_offset": 633,
-    "bits": 7
-   },
-   "TLWR": {
-    "header_offset": 661,
-    "real_offset": 659,
-    "bits": 4
-   },
-   "TRWR": {
-    "header_offset": 669,
-    "real_offset": 667,
-    "bits": 4
-   },
-   "PMCS": {
-    "header_offset": 704,
-    "real_offset": 696,
-    "bits": 7
-   },
-   "PFGS": {
-    "header_offset": 711,
-    "real_offset": 705,
-    "bits": 7
-   },
-   "PVIS": {
-    "header_offset": 734,
-    "real_offset": 730,
-    "bits": 2
-   },
-   "POPS": {
-    "header_offset": 744,
-    "real_offset": 736,
-    "bits": 5
-   },
-   "PLSS": {
-    "header_offset": 751,
-    "real_offset": 745,
-    "bits": 7
-   },
-   "PMUS": {
-    "header_offset": 774,
-    "real_offset": 770,
-    "bits": 2
-   },
-   "PWGT": {
-    "header_offset": 781,
-    "real_offset": 256,
-    "bits": 8
-   },
-   "PJTY": {
-    "header_offset": 812,
-    "real_offset": 812,
-    "bits": 3
-   },
-   "PSTY": {
-    "header_offset": 814,
-    "real_offset": 810,
-    "bits": 2
-   }
-  },
-  "unsolved": [
-   "PLHA",
-   "TRHA",
-   "PTHA",
-   "PTSA",
-   "PVSB",
-   "PKAC",
-   "PACC",
-   "PHED",
-   "PGID",
-   "TGID",
-   "POID",
-   "PSPD",
-   "PAGE",
-   "PTGH",
-   "PLSH",
-   "PCTH",
-   "PAGI",
-   "PDPI",
-   "PPTI",
-   "PINJ",
-   "PTAK",
-   "PPBK",
-   "PRBK",
-   "PTAL",
-   "PLEL",
-   "PREL",
-   "PCOL",
-   "PROL",
-   "PTSL",
-   "PHLM",
-   "PJEN",
-   "PSBO",
-   "PTHP",
-   "PIMP",
-   "PJMP",
-   "PSXP",
-   "PCAR",
-   "PTAR",
-   "PMOR",
-   "POVR",
-   "PAWR",
-   "PLWR",
-   "PRWR",
-   "PFAS",
-   "PMAS",
-   "PSBS",
-   "PFCS",
-   "PCHS",
-   "PFHS",
-   "PMHS",
-   "PPOS",
-   "PFTS",
-   "PMTS",
-   "PUTS",
-   "PVTS",
-   "PHGT",
-   "PCMT",
-   "PKRT",
-   "PYWT",
-   "PLHY",
-   "PFEx"
-  ]
+ "_note": "Full verified field layout of 2020ROJOROSTER V22.ros, produced by tools/rosdump.py. Replaces the earlier partial file, which recorded 47 PLAY and 34 COCH offsets found by brute force against the Xtreme CSVs. Those offsets were correct but were being compared against a misread schema; see docs/PGM3_PRECEDENTS.md, 'The .ros field definition array starts at +0x28'. `offset` here is the bit offset up from the LOW end of the record read as a little-endian integer, exactly as stored in the file. type 0 = string, 2 = signed, 3 = unsigned.",
+ "_source": "sources/ros/2020ROJOROSTER V22.ros",
+ "_verified_against": {
+  "PLAY": "sources/madden/2020ROJOROSTER_V22_-_PLAY.csv",
+  "COCH": "sources/madden/2020ROJOROSTER_V22_-_COCH.csv"
  },
- "COCH": {
-  "record_bytes": 68,
-  "records": 218,
-  "data_start_delta": -8,
-  "field_defs": 68,
-  "solved": {
-   "CFDA": {
-    "header_offset": 169,
-    "real_offset": 1,
-    "bits": 1
-   },
-   "CFFA": {
-    "header_offset": 0,
-    "real_offset": 1,
-    "bits": 1
-   },
-   "CDTA": {
-    "header_offset": 184,
-    "real_offset": 176,
-    "bits": 7
-   },
-   "COTA": {
-    "header_offset": 191,
-    "real_offset": 185,
-    "bits": 7
-   },
-   "CSPC": {
-    "header_offset": 220,
-    "real_offset": 220,
-    "bits": 1
-   },
-   "CFUC": {
-    "header_offset": 226,
-    "real_offset": 0,
-    "bits": 1
-   },
-   "CHID": {
-    "header_offset": 251,
-    "real_offset": 128,
-    "bits": 8
-   },
-   "CHSD": {
-    "header_offset": 262,
-    "real_offset": 258,
-    "bits": 5
-   },
-   "CSKI": {
-    "header_offset": 320,
-    "real_offset": 312,
-    "bits": 3
-   },
-   "CSBL": {
-    "header_offset": 360,
-    "real_offset": 352,
-    "bits": 6
-   },
-   "CRDL": {
-    "header_offset": 367,
-    "real_offset": 361,
-    "bits": 7
-   },
-   "CFHL": {
-    "header_offset": 368,
-    "real_offset": 360,
-    "bits": 1
-   },
-   "CROL": {
-    "header_offset": 375,
-    "real_offset": 369,
-    "bits": 7
-   },
-   "CWPL": {
-    "header_offset": 386,
-    "real_offset": 0,
-    "bits": 1
-   },
-   "CCPM": {
-    "header_offset": 399,
-    "real_offset": 393,
-    "bits": 6
-   },
-   "CFCO": {
-    "header_offset": 403,
-    "real_offset": 0,
-    "bits": 1
-   },
-   "CFDP": {
-    "header_offset": 414,
-    "real_offset": 1,
-    "bits": 1
-   },
-   "CFRP": {
-    "header_offset": 415,
-    "real_offset": 1,
-    "bits": 1
-   },
-   "CHAR": {
-    "header_offset": 431,
-    "real_offset": 425,
-    "bits": 3
-   },
-   "CFFR": {
-    "header_offset": 432,
-    "real_offset": 1,
-    "bits": 1
-   },
-   "CFRR": {
-    "header_offset": 433,
-    "real_offset": 1,
-    "bits": 1
-   },
-   "CDTR": {
-    "header_offset": 440,
-    "real_offset": 432,
-    "bits": 7
-   },
-   "CRWR": {
-    "header_offset": 464,
-    "real_offset": 456,
-    "bits": 7
-   },
-   "CRKS": {
-    "header_offset": 471,
-    "real_offset": 465,
-    "bits": 7
-   },
-   "CRPS": {
-    "header_offset": 480,
-    "real_offset": 472,
-    "bits": 7
-   },
-   "CCWS": {
-    "header_offset": 486,
-    "real_offset": 482,
-    "bits": 6
-   },
-   "CHGT": {
-    "header_offset": 493,
-    "real_offset": 136,
-    "bits": 8
-   },
-   "CCPW": {
-    "header_offset": 513,
-    "real_offset": 144,
-    "bits": 8
-   },
-   "CFEX": {
-    "header_offset": 514,
-    "real_offset": 1,
-    "bits": 1
-   },
-   "CHTY": {
-    "header_offset": 523,
-    "real_offset": 525,
-    "bits": 2
-   },
-   "COTY": {
-    "header_offset": 152,
-    "real_offset": 521,
-    "bits": 4
-   },
-   "CBSZ": {
-    "header_offset": 160,
-    "real_offset": 152,
-    "bits": 8
-   },
-   "CThg": {
-    "header_offset": 527,
-    "real_offset": 160,
-    "bits": 8
-   },
-   "CTgw": {
-    "header_offset": 1936287831,
-    "real_offset": 520,
-    "bits": 1
-   }
+ "tables": {
+  "CITY": {
+   "record_bytes": 116,
+   "record_bits_header": 927,
+   "records": 123,
+   "capacity": 200,
+   "field_count": 21,
+   "unreadable_field_defs": [],
+   "fields": [
+    {
+     "tag": "OWRC",
+     "offset": 800,
+     "bits": 15,
+     "type": 3
+    },
+    {
+     "tag": "CYID",
+     "offset": 0,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "CTMD",
+     "offset": 815,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CREG",
+     "offset": 822,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "CYAJ",
+     "offset": 825,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CYNM",
+     "offset": 8,
+     "bits": 128,
+     "type": 0
+    },
+    {
+     "tag": "CYOM",
+     "offset": 832,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CYFP",
+     "offset": 833,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CYNP",
+     "offset": 136,
+     "bits": 512,
+     "type": 0
+    },
+    {
+     "tag": "CPOP",
+     "offset": 648,
+     "bits": 24,
+     "type": 3
+    },
+    {
+     "tag": "CYRP",
+     "offset": 840,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CYSP",
+     "offset": 847,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CYWP",
+     "offset": 854,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CYAS",
+     "offset": 861,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "OROT",
+     "offset": 868,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "CYST",
+     "offset": 672,
+     "bits": 120,
+     "type": 0
+    },
+    {
+     "tag": "CYTV",
+     "offset": 878,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CYFW",
+     "offset": 792,
+     "bits": 8,
+     "type": 2
+    },
+    {
+     "tag": "CYWW",
+     "offset": 885,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "OWRY",
+     "offset": 892,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CTIZ",
+     "offset": 896,
+     "bits": 3,
+     "type": 3
+    }
+   ]
   },
-  "unsolved": [
-   "CRSA",
-   "CRDB",
-   "CRLB",
-   "CRQB",
-   "CRRB",
-   "CCTC",
-   "CCID",
-   "CDID",
-   "TGID",
-   "CPID",
-   "CAGE",
-   "CDEF",
-   "COFF",
-   "CPSF",
-   "CLTF",
-   "CFSH",
-   "CETH",
-   "CCTI",
-   "CCWI",
-   "CSAL",
-   "CCPL",
-   "CCHM",
-   "CCLN",
-   "CCLO",
-   "CSXP",
-   "CLTR",
-   "COTR",
-   "COPS",
-   "CRBT",
-   "CMOT",
-   "CSBW",
-   "CKNW",
-   "CDTY"
-  ]
+  "COCH": {
+   "record_bytes": 68,
+   "record_bits_header": 543,
+   "records": 218,
+   "capacity": 428,
+   "field_count": 68,
+   "unreadable_field_defs": [],
+   "fields": [
+    {
+     "tag": "CFDA",
+     "offset": 168,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CFFA",
+     "offset": 169,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CLNA",
+     "offset": 0,
+     "bits": 128,
+     "type": 0
+    },
+    {
+     "tag": "CRSA",
+     "offset": 170,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CDTA",
+     "offset": 177,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "COTA",
+     "offset": 184,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CRDB",
+     "offset": 191,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CRLB",
+     "offset": 198,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CRQB",
+     "offset": 205,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CRRB",
+     "offset": 212,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CSPC",
+     "offset": 219,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CCTC",
+     "offset": 220,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "CFUC",
+     "offset": 225,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CCID",
+     "offset": 226,
+     "bits": 9,
+     "type": 3
+    },
+    {
+     "tag": "CDID",
+     "offset": 235,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "TGID",
+     "offset": 241,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "CHID",
+     "offset": 128,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "CPID",
+     "offset": 251,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "CHSD",
+     "offset": 257,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "CAGE",
+     "offset": 262,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CDEF",
+     "offset": 269,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "COFF",
+     "offset": 276,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CPSF",
+     "offset": 283,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "CLTF",
+     "offset": 293,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "CFSH",
+     "offset": 303,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CETH",
+     "offset": 310,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CSKI",
+     "offset": 317,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "CCTI",
+     "offset": 320,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "CCWI",
+     "offset": 330,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "CSAL",
+     "offset": 340,
+     "bits": 14,
+     "type": 3
+    },
+    {
+     "tag": "CSBL",
+     "offset": 354,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "CRDL",
+     "offset": 360,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CFHL",
+     "offset": 367,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CROL",
+     "offset": 368,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CCPL",
+     "offset": 375,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "CWPL",
+     "offset": 385,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CCHM",
+     "offset": 386,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CCPM",
+     "offset": 393,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "CCLN",
+     "offset": 399,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "CFCO",
+     "offset": 402,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CCLO",
+     "offset": 403,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "CFDP",
+     "offset": 413,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CFRP",
+     "offset": 414,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CSXP",
+     "offset": 415,
+     "bits": 13,
+     "type": 3
+    },
+    {
+     "tag": "CHAR",
+     "offset": 428,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "CFFR",
+     "offset": 431,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CFRR",
+     "offset": 432,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CDTR",
+     "offset": 433,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CLTR",
+     "offset": 440,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "COTR",
+     "offset": 450,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CRWR",
+     "offset": 457,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CRKS",
+     "offset": 464,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "COPS",
+     "offset": 471,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "CRPS",
+     "offset": 473,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CCWS",
+     "offset": 480,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "CRBT",
+     "offset": 486,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CHGT",
+     "offset": 136,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "CMOT",
+     "offset": 493,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CSBW",
+     "offset": 500,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "CKNW",
+     "offset": 506,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CCPW",
+     "offset": 144,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "CFEX",
+     "offset": 513,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CDTY",
+     "offset": 514,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "CHTY",
+     "offset": 521,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "COTY",
+     "offset": 523,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CBSZ",
+     "offset": 152,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "CThg",
+     "offset": 160,
+     "bits": 8,
+     "type": 2
+    },
+    {
+     "tag": "CTgw",
+     "offset": 527,
+     "bits": 1,
+     "type": 3
+    }
+   ]
+  },
+  "CTMP": {
+   "record_bytes": 68,
+   "record_bits_header": 543,
+   "records": 0,
+   "capacity": 64,
+   "field_count": 18,
+   "unreadable_field_defs": [],
+   "fields": [
+    {
+     "tag": "CTPA",
+     "offset": 0,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPB",
+     "offset": 32,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPC",
+     "offset": 64,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "TGID",
+     "offset": 512,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "CTPD",
+     "offset": 96,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPE",
+     "offset": 128,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPF",
+     "offset": 160,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPG",
+     "offset": 192,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPH",
+     "offset": 224,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPI",
+     "offset": 256,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPJ",
+     "offset": 288,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPK",
+     "offset": 320,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPL",
+     "offset": 352,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPM",
+     "offset": 384,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPN",
+     "offset": 416,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPO",
+     "offset": 448,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "CTPP",
+     "offset": 480,
+     "bits": 32,
+     "type": 2
+    },
+    {
+     "tag": "OWRT",
+     "offset": 522,
+     "bits": 1,
+     "type": 3
+    }
+   ]
+  },
+  "CTMU": {
+   "record_bytes": 12,
+   "record_bits_header": 95,
+   "records": 0,
+   "capacity": 256,
+   "field_count": 21,
+   "unreadable_field_defs": [],
+   "fields": [
+    {
+     "tag": "CTHA",
+     "offset": 0,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "CTHB",
+     "offset": 3,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CTFC",
+     "offset": 7,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CTHC",
+     "offset": 11,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CHSC",
+     "offset": 15,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CTHD",
+     "offset": 19,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "TGID",
+     "offset": 23,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "CTHE",
+     "offset": 33,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "CTHH",
+     "offset": 36,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CTHJ",
+     "offset": 40,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CTHN",
+     "offset": 44,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "TUCO",
+     "offset": 48,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CTHO",
+     "offset": 52,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CTSO",
+     "offset": 56,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CTHP",
+     "offset": 57,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CTHS",
+     "offset": 61,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "CTHT",
+     "offset": 65,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "OWRT",
+     "offset": 68,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CTHX",
+     "offset": 69,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "CTHY",
+     "offset": 72,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "CTHZ",
+     "offset": 75,
+     "bits": 3,
+     "type": 3
+    }
+   ]
+  },
+  "DCHT": {
+   "record_bytes": 8,
+   "record_bits_header": 63,
+   "records": 2905,
+   "capacity": 27300,
+   "field_count": 4,
+   "unreadable_field_defs": [],
+   "fields": [
+    {
+     "tag": "PGID",
+     "offset": 0,
+     "bits": 15,
+     "type": 3
+    },
+    {
+     "tag": "TGID",
+     "offset": 15,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "PPOS",
+     "offset": 25,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "ddep",
+     "offset": 30,
+     "bits": 5,
+     "type": 3
+    }
+   ]
+  },
+  "INJY": {
+   "record_bytes": 8,
+   "record_bits_header": 63,
+   "records": 39,
+   "capacity": 2464,
+   "field_count": 5,
+   "unreadable_field_defs": [],
+   "fields": [
+    {
+     "tag": "PGID",
+     "offset": 16,
+     "bits": 15,
+     "type": 3
+    },
+    {
+     "tag": "TGID",
+     "offset": 31,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "INJL",
+     "offset": 0,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "INIR",
+     "offset": 41,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "INJT",
+     "offset": 8,
+     "bits": 8,
+     "type": 3
+    }
+   ]
+  },
+  "PLAY": {
+   "record_bytes": 104,
+   "record_bits_header": 831,
+   "records": 3027,
+   "capacity": 16756,
+   "field_count": 110,
+   "unreadable_field_defs": [],
+   "fields": [
+    {
+     "tag": "PRL2",
+     "offset": 264,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "PLHA",
+     "offset": 270,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "TLHA",
+     "offset": 273,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "PRHA",
+     "offset": 276,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "TRHA",
+     "offset": 279,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "PTHA",
+     "offset": 282,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PFNA",
+     "offset": 48,
+     "bits": 88,
+     "type": 0
+    },
+    {
+     "tag": "PLNA",
+     "offset": 136,
+     "bits": 104,
+     "type": 0
+    },
+    {
+     "tag": "PTSA",
+     "offset": 0,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "PSTA",
+     "offset": 289,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PFPB",
+     "offset": 296,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "PVSB",
+     "offset": 297,
+     "bits": 14,
+     "type": 3
+    },
+    {
+     "tag": "PKAC",
+     "offset": 311,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PACC",
+     "offset": 318,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PMPC",
+     "offset": 325,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "PHED",
+     "offset": 327,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "PGID",
+     "offset": 331,
+     "bits": 15,
+     "type": 3
+    },
+    {
+     "tag": "TGID",
+     "offset": 346,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "POID",
+     "offset": 16,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "PSPD",
+     "offset": 356,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PAGE",
+     "offset": 363,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "PBRE",
+     "offset": 369,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "PEYE",
+     "offset": 371,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "PTGH",
+     "offset": 372,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PCPH",
+     "offset": 379,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "PLSH",
+     "offset": 382,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "PRSH",
+     "offset": 385,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "PCTH",
+     "offset": 388,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PLTH",
+     "offset": 395,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "PRTH",
+     "offset": 396,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "PAGI",
+     "offset": 397,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PSKI",
+     "offset": 404,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "PDPI",
+     "offset": 406,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "PPTI",
+     "offset": 412,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "PINJ",
+     "offset": 422,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PTAK",
+     "offset": 429,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PPBK",
+     "offset": 436,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PRBK",
+     "offset": 443,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PNEK",
+     "offset": 450,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "PFMK",
+     "offset": 452,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "PBTK",
+     "offset": 456,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PTAL",
+     "offset": 463,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "PHCL",
+     "offset": 469,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "PUCL",
+     "offset": 472,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "PLEL",
+     "offset": 477,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "TLEL",
+     "offset": 481,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "PREL",
+     "offset": 485,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "TREL",
+     "offset": 489,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "PCOL",
+     "offset": 493,
+     "bits": 9,
+     "type": 3
+    },
+    {
+     "tag": "PROL",
+     "offset": 502,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "PLPL",
+     "offset": 240,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "PGSL",
+     "offset": 508,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "PTSL",
+     "offset": 511,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "PCYL",
+     "offset": 514,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "PHLM",
+     "offset": 518,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "PSTM",
+     "offset": 521,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PHAN",
+     "offset": 528,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "PICN",
+     "offset": 529,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "PJEN",
+     "offset": 530,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PTEN",
+     "offset": 537,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "PCON",
+     "offset": 539,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "PSBO",
+     "offset": 543,
+     "bits": 13,
+     "type": 3
+    },
+    {
+     "tag": "PVCO",
+     "offset": 556,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "PEGO",
+     "offset": 248,
+     "bits": 8,
+     "type": 2
+    },
+    {
+     "tag": "PFHO",
+     "offset": 560,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "PDRO",
+     "offset": 561,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "PTHP",
+     "offset": 565,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PIMP",
+     "offset": 572,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PJMP",
+     "offset": 579,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PYRP",
+     "offset": 586,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "PSXP",
+     "offset": 591,
+     "bits": 13,
+     "type": 3
+    },
+    {
+     "tag": "PCAR",
+     "offset": 604,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PTAR",
+     "offset": 611,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "PJER",
+     "offset": 617,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "PMOR",
+     "offset": 618,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PKPR",
+     "offset": 625,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PSTR",
+     "offset": 632,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "POVR",
+     "offset": 639,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PAWR",
+     "offset": 646,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PLWR",
+     "offset": 653,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "TLWR",
+     "offset": 657,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "PRWR",
+     "offset": 661,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "TRWR",
+     "offset": 665,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "PFAS",
+     "offset": 669,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PMAS",
+     "offset": 676,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PSBS",
+     "offset": 683,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PFCS",
+     "offset": 690,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PMCS",
+     "offset": 697,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PFGS",
+     "offset": 704,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PCHS",
+     "offset": 711,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PFHS",
+     "offset": 718,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PMHS",
+     "offset": 725,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PVIS",
+     "offset": 732,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "PPOS",
+     "offset": 734,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "POPS",
+     "offset": 739,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "PLSS",
+     "offset": 744,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PFTS",
+     "offset": 751,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PMTS",
+     "offset": 758,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PUTS",
+     "offset": 765,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PVTS",
+     "offset": 32,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "PMUS",
+     "offset": 772,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "PHGT",
+     "offset": 774,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PWGT",
+     "offset": 256,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "PCMT",
+     "offset": 781,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "PKRT",
+     "offset": 791,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "PYWT",
+     "offset": 798,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "PLHY",
+     "offset": 803,
+     "bits": 6,
+     "type": 2
+    },
+    {
+     "tag": "PJTY",
+     "offset": 809,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "PSTY",
+     "offset": 812,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "PFEx",
+     "offset": 814,
+     "bits": 10,
+     "type": 3
+    }
+   ]
+  },
+  "STAD": {
+   "record_bytes": 120,
+   "record_bits_header": 959,
+   "records": 93,
+   "capacity": 332,
+   "field_count": 68,
+   "unreadable_field_defs": [],
+   "fields": [
+    {
+     "tag": "SP00",
+     "offset": 784,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP10",
+     "offset": 787,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP20",
+     "offset": 790,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "SP01",
+     "offset": 795,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP11",
+     "offset": 798,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP21",
+     "offset": 801,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP02",
+     "offset": 804,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP12",
+     "offset": 807,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP22",
+     "offset": 810,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "SP03",
+     "offset": 814,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP13",
+     "offset": 817,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP23",
+     "offset": 820,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "SP04",
+     "offset": 824,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP14",
+     "offset": 827,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP24",
+     "offset": 830,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP05",
+     "offset": 833,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP15",
+     "offset": 836,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP25",
+     "offset": 839,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "ST35",
+     "offset": 843,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "SP06",
+     "offset": 853,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP16",
+     "offset": 856,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP07",
+     "offset": 859,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP17",
+     "offset": 862,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP08",
+     "offset": 865,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP18",
+     "offset": 868,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP09",
+     "offset": 871,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "SP19",
+     "offset": 874,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "TMNA",
+     "offset": 288,
+     "bits": 144,
+     "type": 0
+    },
+    {
+     "tag": "SFBB",
+     "offset": 879,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "SCLB",
+     "offset": 880,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "SGID",
+     "offset": 890,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "SUID",
+     "offset": 0,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "CYID",
+     "offset": 432,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "SORD",
+     "offset": 897,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "SCUE",
+     "offset": 16,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "SFWE",
+     "offset": 904,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "SORI",
+     "offset": 906,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "SFTI",
+     "offset": 908,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "SCLL",
+     "offset": 32,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "SCML",
+     "offset": 48,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "SCUL",
+     "offset": 64,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "SNAM",
+     "offset": 440,
+     "bits": 320,
+     "type": 0
+    },
+    {
+     "tag": "SYRO",
+     "offset": 910,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "SCAP",
+     "offset": 760,
+     "bits": 24,
+     "type": 3
+    },
+    {
+     "tag": "STYP",
+     "offset": 917,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "STPR",
+     "offset": 919,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "SCCS",
+     "offset": 920,
+     "bits": 14,
+     "type": 3
+    },
+    {
+     "tag": "SRES",
+     "offset": 80,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "SRAT",
+     "offset": 934,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "SGRT",
+     "offset": 941,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "STRY",
+     "offset": 944,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "SFTY",
+     "offset": 946,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "SKTY",
+     "offset": 950,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "SFbb",
+     "offset": 952,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "STfc",
+     "offset": 96,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "STlc",
+     "offset": 112,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "Stlc",
+     "offset": 128,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "SUTf",
+     "offset": 955,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "STrf",
+     "offset": 144,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "STri",
+     "offset": 160,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "STcl",
+     "offset": 176,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "STll",
+     "offset": 192,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "STrl",
+     "offset": 208,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "STRr",
+     "offset": 224,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "stcr",
+     "offset": 240,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "STlr",
+     "offset": 256,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "STrr",
+     "offset": 272,
+     "bits": 16,
+     "type": 3
+    },
+    {
+     "tag": "SSft",
+     "offset": 956,
+     "bits": 2,
+     "type": 3
+    }
+   ]
+  },
+  "TUNI": {
+   "record_bytes": 4,
+   "record_bits_header": 31,
+   "records": 437,
+   "capacity": 3000,
+   "field_count": 3,
+   "unreadable_field_defs": [],
+   "fields": [
+    {
+     "tag": "UFID",
+     "offset": 0,
+     "bits": 9,
+     "type": 3
+    },
+    {
+     "tag": "TGID",
+     "offset": 9,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "TUCO",
+     "offset": 19,
+     "bits": 4,
+     "type": 3
+    }
+   ]
+  },
+  "TEAM": {
+   "record_bytes": 148,
+   "record_bits_header": 1183,
+   "records": 42,
+   "capacity": 301,
+   "field_count": 69,
+   "unreadable_field_defs": [],
+   "fields": [
+    {
+     "tag": "TRV1",
+     "offset": 816,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "TEZ1",
+     "offset": 826,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "TRV2",
+     "offset": 836,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "TEZ2",
+     "offset": 846,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "TRV3",
+     "offset": 856,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "TDNA",
+     "offset": 0,
+     "bits": 136,
+     "type": 0
+    },
+    {
+     "tag": "TLNA",
+     "offset": 136,
+     "bits": 144,
+     "type": 0
+    },
+    {
+     "tag": "TSNA",
+     "offset": 280,
+     "bits": 56,
+     "type": 0
+    },
+    {
+     "tag": "TLSA",
+     "offset": 866,
+     "bits": 9,
+     "type": 3
+    },
+    {
+     "tag": "TMSA",
+     "offset": 875,
+     "bits": 19,
+     "type": 3
+    },
+    {
+     "tag": "TB2B",
+     "offset": 336,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "TBCB",
+     "offset": 344,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "TRDB",
+     "offset": 894,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TRLB",
+     "offset": 901,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TDPB",
+     "offset": 908,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "TOPB",
+     "offset": 914,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "TRQB",
+     "offset": 920,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TRRB",
+     "offset": 927,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TMNC",
+     "offset": 352,
+     "bits": 136,
+     "type": 0
+    },
+    {
+     "tag": "CGID",
+     "offset": 934,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "DGID",
+     "offset": 936,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "LGID",
+     "offset": 941,
+     "bits": 2,
+     "type": 3
+    },
+    {
+     "tag": "SGID",
+     "offset": 943,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TGID",
+     "offset": 950,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "TOID",
+     "offset": 960,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "FRID",
+     "offset": 970,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TSID",
+     "offset": 977,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "CYID",
+     "offset": 488,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "TORD",
+     "offset": 987,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "TRDE",
+     "offset": 997,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TCHE",
+     "offset": 1004,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "TROF",
+     "offset": 1005,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TB2G",
+     "offset": 496,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "TBCG",
+     "offset": 504,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "TDRI",
+     "offset": 1012,
+     "bits": 9,
+     "type": 3
+    },
+    {
+     "tag": "TRDL",
+     "offset": 1021,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TMFL",
+     "offset": 1028,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "TLGL",
+     "offset": 1038,
+     "bits": 9,
+     "type": 3
+    },
+    {
+     "tag": "TROL",
+     "offset": 1047,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TPSL",
+     "offset": 1054,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "TFTL",
+     "offset": 1060,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "DISN",
+     "offset": 1067,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "TCDO",
+     "offset": 512,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "TUHO",
+     "offset": 1070,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "TFLO",
+     "offset": 1074,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "TAUO",
+     "offset": 1075,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "TREP",
+     "offset": 1080,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "TCRP",
+     "offset": 520,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "TGRP",
+     "offset": 1090,
+     "bits": 10,
+     "type": 3
+    },
+    {
+     "tag": "TTYP",
+     "offset": 1100,
+     "bits": 5,
+     "type": 3
+    },
+    {
+     "tag": "TB2R",
+     "offset": 528,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "TBCR",
+     "offset": 536,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "TWRR",
+     "offset": 1105,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TLGS",
+     "offset": 1112,
+     "bits": 9,
+     "type": 3
+    },
+    {
+     "tag": "TVIS",
+     "offset": 1121,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "TVQS",
+     "offset": 1122,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "TFET",
+     "offset": 1123,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "CTHT",
+     "offset": 1124,
+     "bits": 3,
+     "type": 3
+    },
+    {
+     "tag": "TGPT",
+     "offset": 544,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "CART",
+     "offset": 552,
+     "bits": 256,
+     "type": 0
+    },
+    {
+     "tag": "TPST",
+     "offset": 1127,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "TRST",
+     "offset": 1133,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TROV",
+     "offset": 1140,
+     "bits": 7,
+     "type": 3
+    },
+    {
+     "tag": "TUAW",
+     "offset": 1147,
+     "bits": 4,
+     "type": 3
+    },
+    {
+     "tag": "TSOW",
+     "offset": 1151,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "TPSW",
+     "offset": 1152,
+     "bits": 6,
+     "type": 3
+    },
+    {
+     "tag": "TCTX",
+     "offset": 808,
+     "bits": 8,
+     "type": 3
+    },
+    {
+     "tag": "TAth",
+     "offset": 1158,
+     "bits": 1,
+     "type": 3
+    },
+    {
+     "tag": "TAss",
+     "offset": 1159,
+     "bits": 1,
+     "type": 3
+    }
+   ]
+  }
  }
 }
