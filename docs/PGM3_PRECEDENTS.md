@@ -3290,42 +3290,58 @@ Asked to gate roster composition on **the range every reference spans** —
 calibrated to the archive's own disagreement rather than an invented band, and
 so passing every published file by construction.
 
-**Measured, it does not.** Leave-one-out, on a top-53 basis, every published
-file falls outside the span of the other seven:
+**Measured, it does not.** Leave-one-out, per-team position rate on a top-53
+slice, counting all fifteen positions:
 
-    1986  5 positions     2004  1     2010  5     2017  1
-    2000  4               2007  1     2013  5     2021  5
+    1986  5     2004  1     2010  5     2017  1
+    2000  4     2007  1     2013  5     2021  5      2026  1
 
-    2026  1  (RB 3.9/team vs a spanned 4.2-5.4)
+Excluding K and P, whose rate is ~1.0 everywhere: 5 / 3 / 1 / 1 / 4 / 4 / 1 / 5,
+and 2026 still 1. Re-running with randomised tie-breaks at the 53-man cut moves
+each count by at most 1 — 105 players sit on the exact boundary rating in 2017
+alone, so the slice is tie-sensitive and the COUNT should be quoted as a range,
+not a point.
 
-So a gate calibrated on the archive fails the archive, and **2026 is more
-conformant than six of the eight published files** against their own siblings.
-That is the union-is-not-a-specification precedent with a number on it.
+**State the method with the number.** The master session measured the same
+thing and got 3/1/0/1/1/1/0/2 — a different basis or position set, never
+reconciled. The ORDERING was identical under every variant either of us tried,
+and that is what the conclusion rests on: **the archive disagrees with itself
+substantially more than 2026 disagrees with the archive**, and a gate
+calibrated on the archive would fail most of the archive while passing the new
+file.
 
 **What CAN be a gate is the unanimous property.** No team in any of 256
 published team-seasons is empty at any position. That is not a band, it is
 0 versus not-0, and it catches the real defect — 16 teams with no defensive end
-— on its own. Composition rates are a warning beside it.
+— on its own.
 
-**The distinction worth carrying: a reference set supports a gate on properties
-its members share unanimously, and only a warning on properties they merely
-cluster around.** Check which one you have before choosing the severity.
+**The rule worth carrying: a reference set supports a GATE on properties its
+members share unanimously, and only a WARNING on properties they merely cluster
+around. Check which one you have before choosing the severity.**
 
-## The cohort trap, fourth instance in one build
+## Rostered is not a basis
 
-The RB count read 128 against a published 172-209 — 4.0 per team where every
-file carries 5.2-6.5, in a build with the same roster size. That looks like a
-mapping defect and it is not.
+`rostered` means 53 players per team in one file and 67 in another. Every
+cross-file count taken on it is comparing different things, and the resulting
+gap looks exactly like a defect.
 
-The published files carry **59-67 players per team**, built from everyone who
-played that season. 2026 is a point-in-time 53-man roster. On a like-for-like
-**top-53 slice** the same published files read 4.2-5.4 and 2026 reads 3.9 — the
-apparent 1.5/team shortfall is 0.3, and the residual is the real decline in
-running-back roster share.
+Four instances in the 2026 build alone:
 
-Fourth instance in this build alone: the rating p10 comparison, the position
-totals, RB, and QB — where 92 looks wrong against three modern references and
-is inside the full archive's 69-96, because 1986 carries 93 and 2000 carries 96.
+- **Rating p10.** Madden read "compressed" against the published files — p10 63-74
+  against 45-63 — and it was a 53-man cohort against a 59-68-man one. On top-53
+  the gap is 1 point.
+- **The registry-covered subset**, which over-weights long-career positions and
+  is not a league.
+- **RB count.** 128 against a published 172-209, 4.0 per team against 5.2-6.5.
+  The published files are built from everyone who PLAYED that season. On a
+  top-53 slice they read 4.2-5.4 against 2026's 3.9 — the apparent 1.5/team
+  shortfall is 0.3.
+- **QB count.** 92 looks wrong against three modern references (69-82) and sits
+  inside the full archive's 69-96, because 1986 carries 93 and 2000 carries 96.
 
-**Any count compared across files must be taken on the same cohort basis, and
-"rostered" is not one basis — it means 53 in one file and 67 in another.**
+**Both of the last two closed on an arithmetic identity rather than a plausible
+story**, which is the standard to hold: QB is 88 ACT + 4 RES = 92 exactly, and
+RB is 113 ACT + 17 RES − 2 long snappers = 128 exactly. A number that
+reconciles to the source needs no explanation; one that merely sounds
+reasonable is not closed.
+
