@@ -49,7 +49,8 @@ Flutie, Jerry Rice, both 1986). The 76 unexamined are where more would be.
 
 | defect | measured | notes |
 |---|---|---|
-| **team payroll vs roster cost** | 2026 **+0.67**, 2013 **-0.57**, 2021 **+0.08** | 2013 is backwards, not merely absent. Ryan's framing — uncorrelated across all eight — is broader than what has been measured; the audit should measure all eight rather than inherit the three figures above. |
+| **team payroll vs roster QUALITY** | measured, all nine files, eight definitions — see the precedent *Payroll and quality: measured, and what survives the definition* | **Closed, not an audit item.** 2026 is at the low end (rank 1-3 of 9) but 2000 occupies the same territory under every definition, so 2026 is not outside the archive's range in any robust sense. |
+| **team payroll vs roster COST** | 2026 **+0.67**; 2013 **-0.57**; 2021 **+0.08** | **A different measurement from the row above** — cost, not quality. Only three files measured. The remaining five are still open. Keep the two apart: conflating them is what produced a wrong claim about all eight. |
 | **`trucking` means different things in different files** | not yet quantified | the handoff mapped it to `BreakTackleRating`; 2026 uses `TruckingRating`. Whether earlier files agree is unchecked. |
 | **K/P contract inflation** | not yet quantified | a `fix_kp_contracts.py` exists, which implies a known past instance |
 | **OLB coverage values are junk in 2013 and 2021** | not yet quantified | the same two files that fail the payroll relationship |

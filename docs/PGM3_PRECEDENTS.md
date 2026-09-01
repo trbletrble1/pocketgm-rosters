@@ -2590,6 +2590,103 @@ back which name was actually dropped, not by trusting the diff.
 
 ---
 
+## Payroll and quality: measured, and what survives the definition
+
+A claim that team payroll is uncorrelated with roster quality across all eight
+published files was generalised from three, and conflated two different
+measurements — payroll vs **cost** with payroll vs **quality**. Measured
+properly, across all nine files and **eight defensible definitions** (top-53 or
+whole roster x mean or median rating x Pearson or Spearman):
+
+**What survives every definition:**
+
+- **The relationship is positive in the published archive.** Better rosters cost
+  more. Under six of eight definitions every published file is positive.
+- **2026 and 2000 are the weakest pair, always.** 2026 ranks 1st-3rd weakest of
+  nine (median rank 2); 2000 ranks 1st-2nd (median rank 1).
+- **The p=0.90 payroll compression is NOT the cause.** Inverting it moves the
+  figure by at most **0.045** across all eight definitions, and every delta is
+  *negative* — removing compression makes the correlation slightly **weaker**.
+  `compress_top` is a monotone power transform about the median, so it cannot
+  reorder anything; it reaches a rank statistic only through the nonlinearity
+  of a top-53 sum, and that turns out to be worth almost nothing.
+- **The weakness is real 2026 cap money.** In the Madden 27 source itself, real
+  team payroll against real mean overall is **+0.300** Pearson / **+0.328**
+  Spearman, and against median overall **+0.171** / **+0.206** — far below the
+  published files under matched definitions. Real teams overpay and underpay,
+  and ranking on real money inherits that.
+
+**What does NOT survive the definition:**
+
+- *"Every published file is positive."* **2000 goes to -0.62 and -0.65** under
+  the two top-53 Pearson definitions.
+- *"2026 falls below the published minimum."* True under **2 of 8** definitions.
+  Under the other six it sits inside the range, above 2000.
+
+**Ruling: logged as a deliberate divergence, and it is within the archive's
+range.** Ranking on real `_TotalSalary` is the more faithful choice and the
+reason the figure is low; 2000 already occupies the same territory, so no
+published bound is breached in any robust reading.
+
+**One residual worth an audit line.** Under median-based definitions the build
+attenuates further than the source justifies — shipped **-0.030** against a real
+**+0.206**, a gap of 0.24, where mean-based definitions lose only 0.06. The
+compression accounts for 0.03 of that. Something in the quantile mapping or the
+refit flattens the median measure specifically, and it has not been chased.
+
+**The methodological point, which is the same one the coverage claim taught.**
+Two of these three headline readings flipped between defensible definitions. A
+single number with no sensitivity check around it is not a finding — and the
+temptation is strongest when the number is the one you expected. The durable
+statements here are the ones quantified across all eight cuts, not the sharpest
+one available from any single cut.
+
+---
+
+## A fix that looks like an improvement and imports fiction
+
+The head-coach pool sourced candidates only from **team-side** records. The
+obvious widening — also source from published **free agent** records, which is
+where the archive keeps Cowher, Parcells and Dungy for decades — is wrong, and
+it looks right.
+
+Those pools are **mostly the archive's own invented coaches.** The widened
+candidate list came back led by Jocelyn Lyndhurst, Quill Kestrel, Caspian
+Thornbury and Denholm Fairholm, interleaved with the real names at
+indistinguishable ratings.
+
+**A team-side record is what makes a name real.** A free agent record proves
+only that the file contained the name.
+
+This is the hardest class to catch, because the change is a genuine improvement
+in coverage and its failure mode is invisible in every count: the pool still has
+27 head coaches, still passes every gate, still shows a plausible rating spread.
+Only reading the names reveals it. **When a fix widens a source, check what the
+new material IS, not how much of it arrived.**
+
+---
+
+## A comment that disagrees with its code is a silent defect
+
+While adding Cowher, the comment stated that a named inclusion displaces the
+**lowest-rated** of the recency picks. The code displaced the **least recent**.
+Both are defensible rules, both produce a valid 27-coach pool, and every gate
+passed either way — so nothing looked wrong, and the recorded justification for
+a data decision was simply false.
+
+This is the vacuous-pass family relocated into the documentation layer: the
+check that should have caught it is a human reading the comment and believing
+it. Nothing executable disagrees.
+
+Caught by **reading back which name actually left** rather than reviewing the
+diff. Fixed by making the code do what the comment said (Hue Jackson at 59
+displaced, not Jay Gruden at 66) — and the first attempt at that fix rebuilt 16
+of the 27, which the same read-back caught immediately.
+
+**Rule: when a comment states a selection rule, print what the rule selected.**
+
+---
+
 ## Two scripts in one project, two position vocabularies
 
 The Houston core was selected by one script and assembled by another. The
