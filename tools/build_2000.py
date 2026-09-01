@@ -1341,6 +1341,80 @@ def stage7(recs, draft_pick):
     assert not any(p['length'] > 7 for p in recs), 'length above 7'
     return recs
 
+# PGM3's salary cap is a fixed engine constant of ~$280M. There is no cap field
+# anywhere in the schema -- the game does not know what year it is. Shipping
+# era-accurate 2000 dollars (median top-51 $54.6M) leaves ~$225M of room on
+# every team and makes the whole financial layer inert: nobody is ever cap
+# strapped, every signing is affordable, extensions never bind.
+#
+# All seven published files land within $1M of each other:
+#   1986 196.4   2004 196.0   2007 195.4   2010 195.8
+#   2013 195.7   2017 195.4   2021 195.8
+# Seven files across seven eras agreeing to 0.5% is a deliberate convention,
+# not the defect the handoff used to call it. Era accuracy governs everything
+# except the dollar SCALE, because the cap is fixed and unscaled dollars make
+# the economy inert.
+#
+# One uniform factor over salary and guarantee on every record. Uniform is the
+# whole point: it preserves every relationship in the file. The 66 OTC-anchored
+# contracts keep their true proportions to each other and to everyone else,
+# Brady stays at the bottom of the roster, the K/P correction survives, and the
+# league-minimum floor scales with everything else.
+#
+# eSalary / eGuarantee / eLength are game-computed and are NOT touched.
+# The basis is the TOP 53, not the top 51. On top-53 the seven published files
+# read 197,400,001 / 197,424,500 / 197,426,500 / 197,428,500 / 197,429,000 /
+# 197,427,000 / 197,426,500 -- a spread of $29k on $197.4M, 0.015%, with 1986
+# landing on the round number to the dollar. That is a fitted target, and the
+# handoff has stated it since the 2026-08-29 rebuild: "each era is scaled so
+# the median top-53 cap hit is 197.4M against a 280M cap". On top-51 the same
+# files scatter by $1M, so top-51 is the derived view and top-53 the real one.
+PGM3_ENGINE_PAYROLL = 197_400_000
+PAYROLL_TOP_N = 53
+
+def _topN(recs):
+    byteam = collections.defaultdict(list)
+    for p in recs:
+        if p['teamID'] in ('Free Agent', 'Rookie'): continue
+        byteam[p['teamID']].append(p['salary'] + p['guarantee'])
+    return [sum(sorted(v, reverse=True)[:PAYROLL_TOP_N]) for v in byteam.values()]
+
+def scale_to_engine(recs):
+    """One uniform factor -> median top-51 lands on the published convention."""
+    tots = _topN(recs)
+    med = statistics.median(tots)
+    assert med > 0, 'zero median team payroll before scaling'
+    f = PGM3_ENGINE_PAYROLL / med
+    assert 2.0 < f < 6.0, f'engine scale factor {f:.3f} outside the sane range'
+
+    n_in  = len(recs)
+    frozen = [(p['eSalary'], p['eGuarantee'], p['eLength']) for p in recs]
+    before = [(p['salary'], p['guarantee']) for p in recs]
+
+    for p in recs:
+        p['salary']    = int(round(p['salary']    * f))
+        p['guarantee'] = int(round(p['guarantee'] * f))
+
+    assert len(recs) == n_in, 'scaling changed the record count'
+    assert [(p['eSalary'], p['eGuarantee'], p['eLength']) for p in recs] == frozen, \
+        'scaling touched a game-computed field'
+    # uniform means every non-zero record moved by the same factor, to rounding
+    worst = 0.0
+    for (s0, g0), p in zip(before, recs):
+        for v0, v1 in ((s0, p['salary']), (g0, p['guarantee'])):
+            if v0 > 0:
+                worst = max(worst, abs((v1 / v0) - f) / f)
+    assert worst < 1e-4, f'scaling was not uniform: {worst:.2e} relative drift'
+
+    med2 = statistics.median(_topN(recs))
+    assert abs(med2 - PGM3_ENGINE_PAYROLL) < 1_000_000, \
+        f'median top-51 ${med2/1e6:.1f}M missed the target'
+    over = sum(1 for x in _topN(recs) if x > 280_000_000)
+    assert over == 0, f'{over} teams over the ~$280M engine cap after scaling'
+    print(f'    engine scale   x{f:.4f}  median top-{PAYROLL_TOP_N} '
+          f'${med/1e6:.1f}M -> ${med2/1e6:.1f}M  (max drift {worst:.1e})')
+    return recs
+
 def contracts_report(recs):
     ros = [p for p in recs if p['teamID'] != 'Free Agent']
     byteam = collections.defaultdict(list)
@@ -2343,6 +2417,7 @@ if __name__ == '__main__':
     # stage 10: bulk library FIRST, registry LAST, nothing after it
     recs_out = stage10_library(recs_out)
     recs_out = stage10_registry(recs_out)
+    recs_out = scale_to_engine(recs_out)
     _fam = collections.Counter(r['appearance'][0].replace('Head', '')[0] for r in recs_out)
     _var = collections.Counter(r['appearance'][0][-1] for r in recs_out)
     _t = len(recs_out)

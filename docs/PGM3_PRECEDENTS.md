@@ -10,6 +10,43 @@ If a precedent looks wrong, say so and make the case. Don't quietly do something
 
 **Ship real numbers even when the published files don't.** Payrolls in 2004, 2010 and 2017 aren't scaled to their eras — 2004 runs $179M salary against a real $80.6M cap. That was never a decision, just contracts fitted to PGM3's ceiling with nobody checking. 2007 ships at ~$100M against a real $109M cap, and that's correct. Don't inflate accurate data to match a defect.
 
+**AMENDED 2026-08-31 — the general rule stands, the classification was wrong.**
+"Don't inflate accurate data to match a defect" is still right. What was wrong
+was calling the ~$196M payroll target a defect. **It is a game constraint.**
+PGM3's salary cap is a fixed engine constant of about **$280M** and there is
+**no cap field anywhere in the schema** — the game cannot know what year it
+is. Ship era-accurate dollars and every team has ~$225M of room: nobody is cap
+strapped, every signing is affordable, extensions never bind, and the whole
+financial layer is inert.
+
+**The evidence that it is a convention and not seven independent accidents:**
+on the **top-53** basis the seven files read 197,400,001 / 197,424,500 /
+197,426,500 / 197,428,500 / 197,429,000 / 197,427,000 / 197,426,500 — a **$29k
+spread on $197.4M**, 0.015%, 1986 exact to the dollar. Seven eras agreeing to
+0.015% is not a convention, it is a fitted constant. **Measure on the basis the
+files were built on**: top-51 scatters by $1M and reads like a loose habit;
+top-53 collapses to a single number. The wrong basis turned a fitted target
+into something that looked arguable. The old note read that same spread
+as "contracts fitted to PGM3's ceiling with nobody checking", which is the
+right observation and the wrong conclusion — fitted to the ceiling **is** the
+convention, because the ceiling is all the engine has.
+
+**The narrowing: era accuracy governs everything except the dollar SCALE.**
+Ratios, orderings, who is paid more than whom, the sourced anchors, the league
+minimum — all era-accurate. The scale alone is set by the engine. One uniform
+factor preserves every relationship while making the economy live, which is
+why the fix is a multiply and not a refit.
+
+**Cost of the misclassification:** the 2000 build shipped at $54.6M, was
+flagged correctly by the build session as a divergence from all seven files,
+and was signed off as deliberate. It took an in-game test — Green Bay with
+$200M of room — to find it. **No check could have caught it**: `cross_year`
+skips money fields by design because "they legitimately differ by era", which
+is exactly the assumption at fault, and the `team_cap` guard passed because it
+was handed the real 2000 cap as its parameter. A guard given the wrong
+parameter passes and reads as evidence. Now gated by `median team payroll` in
+`check_roster`, which compares against the published band.
+
 **But first check whether it *is* a defect.** Draft potential looked like the same situation — the handoff said busts should be busts, no file did it. Checking showed the files were right and the handoff was wrong. Verify before overriding.
 
 **Observed range is not accepted range.** Min/max derived from three files describes those files, not what the game accepts. Keep real values that fall outside it:

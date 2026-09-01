@@ -920,7 +920,7 @@ appearance rebuilt from real Madden data.
    Jacksonville coach; Jr. is the one in 2004 and 2007 (Raiders 1998-2000,
    Chiefs 2001-05, Ravens 2006-07).
 
-0f. **THE 2000 FILE DIVERGES FROM THE PUBLISHED FILES IN THREE PLACES, ON
+0f. **THE 2000 FILE DIVERGES FROM THE PUBLISHED FILES IN TWO PLACES, ON
    PURPOSE. None of the three is visible to `pgm3_validate.py`.** Recorded here
    rather than only in a build log, because the validator will never surface
    them and a future session would otherwise find a 2000 file that disagrees
@@ -929,8 +929,26 @@ appearance rebuilt from real Madden data.
    | deviation | matches | diverges from | measured reason |
    |---|---|---|---|
    | `OLB` `manCover`/`zoneCover` gated OFF | 2004, 2007, 2017 | 2013, 2021 | where present the entire range is **1–3** against `MLB`'s 38–92, and 62–100% of the non-zero values are the fill value 1 |
-   | team payroll ~**$54M** | — | all seven ($150–250M) | the real 2000 cap was **$62.17M**; the published files are not era-scaled, which the precedents record as a defect nobody caught rather than a convention |
-   | K/P salaries capped ~**$1.2M** | — | all seven (K p95 **$7.61M**, P max **$10.56M**) | the real 2000 top-of-market for a kicker was **$1,071,167** (Jason Elam) |
+   | K/P contracts not inflated | 2004, 2007, 2021 | 1986, 2010, 2013, 2017 | K/P median cap hit **$2.68M**, inside the published median range of $1.08–$2.85M; the correction shows in the TAIL, p95 **$5.00M** against a published median p95 of **$6.43M** and a 2010 p95 of $12.59M. The real 2000 top-of-market for a kicker was **$1,071,167** (Jason Elam) |
+
+   **Team payroll was a THIRD entry here until 2026-08-31 and it was wrong.**
+   It shipped at a median top-51 of **$54.6M**, era-accurate for 2000, and was
+   signed off as a deliberate deviation. In-game test: Green Bay had over
+   **$200M** of cap room and the financial layer was inert. PGM3's cap is a
+   fixed engine constant of ~**$280M** with **no field anywhere in the schema**
+   — the game does not know what year it is.
+
+   **The basis is the top 53, and on that basis the published files do not
+   merely agree, they are identical:** 197,400,001 / 197,424,500 / 197,426,500
+   / 197,428,500 / 197,429,000 / 197,427,000 / 197,426,500 — a **$29k spread on
+   $197.4M**, 0.015%, with 1986 landing on the round number to the dollar. On
+   top-51 the same files scatter by $1M, which is why top-51 reads like a loose
+   convention and top-53 reveals a fitted target. **This was already written at
+   line 864** — "each era is scaled so the median top-53 cap hit is 197.4M
+   against a 280M cap" — and was not read against the contradicting precedent.
+   Fixed by one uniform **×3.5879** factor over `salary` and `guarantee`,
+   landing on $197,399,997; see `scale_to_engine()`.
+   The gate that now catches it is `median team payroll` in `check_roster`.
 
    **Two more, on the STAFF side, both validator limitations rather than file
    defects:**
