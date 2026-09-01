@@ -3167,27 +3167,60 @@ symptom would leave the other 888.
 
 ## A lock keyed in a format the checker cannot read is not a lock
 
-`_verified_keys['players']` holds **two key formats**: 78 entries as
-`name|position|teamID` and 26 as `name|position`. The `faces` gate builds its
-lookup key as `name|position`.
+`_verified_keys['players']` holds **two key formats**, and each is internally
+correct:
 
-**So 78 of the 104 locked faces are structurally unreachable by the check that
-exists to protect them.** The gate's own line — "verified faces intact (93
-checked, 104 in registry)" — reads like near-complete coverage and is 93
-*record* comparisons against just 26 distinct keys. The 11 it appears to miss
-are not absent from the files; they are unmatchable.
+    78 keys as name|position|teamID  ->  0 resolve against `faces`
+                                         ALL 78 live in `faces_1986`
+    27 keys as name|position         ->  27 of 27 resolve against `faces`
 
-Two verified keys, `doug flutie|QB|CHI` and `jerry rice|WR|SF`, are in fact
-already inconsistent with the registry in the 1986 file, and the gate has never
-reported it because it cannot reach them.
+The `faces` gate builds its lookup as `name|position` against the `faces`
+block. **So it reaches 27 of 105 locked players — 26%.** The other 78 are not
+missing from the files; they are unreachable, and they are exactly the ones
+`faces_1986` protects.
 
-The 3-part keys came from the 1986 batch, where team was needed to separate two
-men of the same name and position — which is correct, and is the rule this
-project already has about keys needing enough fields for the widest population
-they will be queried against. **The defect is that the consumer was never
-taught the key format the producer used.** Same shape as a vocabulary carried
-across a boundary, applied to a key rather than a value.
+**Both halves are right.** The 3-part keys carry team because 1986 genuinely
+needs it — two James Joneses, both RB, both in that season — which is this
+project's own rule that a key needs enough fields to be unique in the widest
+population it will be queried against. The gate is right for the modern block.
+**The defect lives entirely in the seam**, which is why both sides looked fine
+and no check ever objected. A producer and a consumer of the same key must
+share its format, and neither side being correct protects you.
 
-Aidan Hutchinson's 2026 entry is therefore keyed 2-part deliberately, so his
-lock actually engages. Fixing the gate to accept both formats — and
-re-examining whatever the 78 have been free to drift into — is its own task.
+**The proof is that it already failed silently.** `doug flutie|QB|CHI` and
+`jerry rice|WR|SF` are both 3-part 1986 keys, both inconsistent with the
+registry in the 1986 file, and the gate has never reported it in any run.
+They were found only because an assertion written for a different purpose
+tripped over them.
+
+**And the reporting shape is the trap.** The gate prints "93 checked, 104 in
+registry", which reads as 90% coverage. It is 93 RECORD comparisons against 26
+distinct KEYS. **A count that conflates records with keys will always flatter
+itself** — quote both, or quote the one the reader will act on.
+
+Aidan Hutchinson's 2026 entry is keyed 2-part deliberately, so his lock
+actually engages.
+
+---
+
+## Backlog
+
+**Teach the `faces` gate both key formats, then audit the 78.** Two jobs, and
+the second is the interesting one.
+
+    scope        every published file, not 2026
+    unreachable  78 of 105 verified players (74%)
+    known drift  2 confirmed (doug flutie, jerry rice), both 1986
+    unknown      the other 76 have never been checked by any gate
+
+The audit is where more Fluties would be. It needs its own review pass rather
+than being folded into a build.
+
+**Tranche 2 of the registry correction: 247 position-drift disagreements**
+(`DT`<->`DE`, `OLB`<->`DE`, `CB`<->`FS`) reachable only by accepting a
+different position for the same name. **Method: the era test** — accept a
+drifted position only where that name+position is attested in a published file
+in a season overlapping the player's career, and refuse where several survive.
+Deferred deliberately: tranche 1 was sampled at 80% and vindicated, but drift
+is inherently riskier than vocabulary because adjacent positions merge fathers
+and sons. Own pass, own review.
