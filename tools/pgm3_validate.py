@@ -255,6 +255,51 @@ def check_roster(new, refs):
         out.append(('draft pool missing a LB type',
                     1 if (rc['MLB'] == 0 or rc['OLB'] == 0) else 0))
 
+    # ---- ROSTER COMPOSITION: no team empty at a position the references
+    # always fill. `zero_pattern` is about attribute VALUES, not roster
+    # composition, so nothing in this suite looked at depth charts. 2026
+    # shipped with 16 of 32 teams carrying no defensive end at all, every
+    # other check green, and it was found by a person opening a depth chart.
+    ref_never_empty = None
+    for r in refs:
+        bt = collections.defaultdict(collections.Counter)
+        for q in r:
+            if cohort(q) == 'T': bt[q['teamID']][q['position']] += 1
+        filled = {p for p in {x['position'] for x in r if cohort(x) == 'T'}
+                  if all(c[p] for c in bt.values())}
+        ref_never_empty = filled if ref_never_empty is None else (ref_never_empty & filled)
+    if ref_never_empty:
+        bt = collections.defaultdict(collections.Counter)
+        for q in on: bt[q['teamID']][q['position']] += 1
+        gaps = [f'{t} has no {p}' for t in sorted(bt) for p in sorted(ref_never_empty)
+                if bt[t][p] == 0]
+        out.append((f'team empty at a position every reference fills '
+                    f'({len(ref_never_empty)} positions checked)'
+                    + (': ' + '; '.join(gaps[:5]) if gaps else ''), len(gaps)))
+        # Per-team position RATE against the archive's own observed spread,
+        # reported as a WARNING rather than a failure. The published files
+        # disagree with EACH OTHER by 26-77% on these rates -- DT runs 3.2 to
+        # 5.6 per team, MLB 2.5 to 4.1 -- so any tight band would fail most of
+        # them against one another, and a legitimate cohort difference reads
+        # identically to a defect. It is a prompt to look, not a gate.
+        nt = len({q['teamID'] for q in on}) or 1
+        cnt = collections.Counter(q['position'] for q in on)
+        odd = []
+        for p in sorted(ref_never_empty):
+            rates = []
+            for r in refs:
+                t2 = len({q['teamID'] for q in r if cohort(q) == 'T'}) or 1
+                rates.append(collections.Counter(
+                    q['position'] for q in r if cohort(q) == 'T')[p] / t2)
+            lo, hi = min(rates), max(rates)
+            mine = cnt[p] / nt
+            if not (lo <= mine <= hi):
+                odd.append(f'{p} {mine:.1f}/team vs ref {lo:.1f}-{hi:.1f}')
+        if odd:
+            print(f'  WARN  {len(odd)} position rates outside the reference spread '
+                  f'(cohorts differ by era — check, do not auto-correct)')
+            for o in odd[:6]: print(f'          {o}')
+
     # ---- team payroll must sit on the published convention --------------
     # PGM3's cap is a fixed engine constant of ~$280M with no field in the
     # schema, so era-accurate dollars are NOT playable: a 2000-dollar file

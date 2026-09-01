@@ -3224,3 +3224,62 @@ in a season overlapping the player's career, and refuse where several survive.
 Deferred deliberately: tranche 1 was sampled at 80% and vindicated, but drift
 is inherently riskier than vocabulary because adjacent positions merge fathers
 and sons. Own pass, own review.
+
+## Faithful to real football, wrong for the file
+
+**Found in play on a depth chart: 16 of 32 teams had ZERO defensive ends.**
+No published file leaves any team empty at any position, in any of eight files
+and 256 team-seasons.
+
+The handoff says to map edge players by each team's real front — 3-4 edges to
+OLB, 4-3 to DE — and the build did exactly that. **Measured, the archive does
+not do this.** For players present in both a published file and Madden 27:
+
+    LEDG on a 3-4 team -> DE 60%      LEDG on a 4-3 team -> DE 69%
+    REDG on a 3-4 team -> DE 58%      REDG on a 4-3 team -> DE 65%
+
+The front barely moves it. PGM3 has fifteen slots and does not simulate
+fronts; the archive treats edge as a **body type**, roughly 62/38 DE:OLB.
+
+**A rule can be true about football and false about the file.** The scheme
+mapping is good football and the wrong model for a fifteen-slot schema, and
+nothing about it looked wrong — every record was valid, every attribute in
+range, the team sizes correct.
+
+Comparing per-position TOTALS against the archive found two more errors
+pushing the same way, both invisible in isolation:
+
+    DT   -> DT 72% / DE 28%      the build sent 100% to DT
+    MIKE -> OLB 52% / MLB 48%    the build sent 100% to MLB
+    WILL -> MLB 62% / OLB 29%    the build sent 100% to OLB — BACKWARDS
+
+**Allocate per team, not globally.** Shares set the level, weight sets the
+order within a team, and a team can never reach zero because the allocation
+starts from its own players.
+
+## A composition check, and why a tight band on it is wrong
+
+`zero_pattern` compares attribute VALUES against the reference. **Nothing in
+the suite looked at roster composition**, which is why a person opening a
+depth chart found this and no gate did.
+
+Added to `pgm3_validate.py`: no team may be empty at a position every
+reference file fills. It FAILS on the broken build (18 gaps) and passes on the
+fixed one.
+
+**The per-position TOTALS half is a warning, not a gate, and the reason
+matters.** The published files disagree with EACH OTHER by 26-77% on per-team
+position rates — DT runs 3.2 to 5.6 per team, MLB 2.5 to 4.1, WR 5.5 to 8.5.
+A tight band would fail most published files against one another. Worse, a
+legitimate cohort difference is indistinguishable from a defect: 2026 carries
+exactly one kicker and one punter per team while the published files carry
+1.1-1.3, because they were built from everyone who played that season and 2026
+is a 53-man roster. **A check whose reference disagrees with itself by 77%
+cannot be a gate.** It is a prompt to look.
+
+The first version of that check was also DEAD — it appended to a `warn` list
+that does not exist and read a `cnt` I had deleted, so it could only ever
+raise NameError, and it never ran because the block it sat in was reached only
+after the failure. **An assertion that cannot fail reports success**; one that
+cannot run reports nothing at all, which is the same defect wearing a
+different face.

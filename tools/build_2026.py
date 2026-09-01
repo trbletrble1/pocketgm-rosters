@@ -110,11 +110,104 @@ def load_nflverse(path):
         r['_exp']  = int(r['years_exp']) if r['years_exp'] not in ('', 'NA') else 0
     return rows
 
-def madden_pgm3_position(mrow, front_by_team):
-    """Madden label -> PGM3 position, resolving edge by the team's real front."""
-    p = POS_FROM_MADDEN[mrow['Position']]
+# ===================== edge / interior / linebacker allocation
+# Found by Ryan in play, on a depth chart: 16 of 32 teams had ZERO defensive
+# ends. No published file has a single team empty at any position.
+#
+# The handoff says to map edge by each team's real front -- 3-4 edges to OLB,
+# 4-3 to DE. That is faithful to real football and WRONG FOR THIS FILE. PGM3
+# has fifteen slots and does not simulate fronts. Measured on players present
+# in both a published file and Madden 27, the archive's assignment barely
+# moves with the front at all:
+#
+#   LEDG on a 3-4 team -> DE 60%      LEDG on a 4-3 team -> DE 69%
+#   REDG on a 3-4 team -> DE 58%      REDG on a 4-3 team -> DE 65%
+#
+# The archive treats edge as a BODY TYPE, roughly 62/38 DE:OLB regardless of
+# scheme. Two more errors were pushing the same way and were invisible until
+# the totals were compared:
+#
+#   DT   -> DT 72% / DE 28%    the build sent 100% to DT
+#   MIKE -> OLB 52% / MLB 48%  the build sent 100% to MLB
+#   WILL -> MLB 62% / OLB 29%  the build sent 100% to OLB -- backwards
+#
+# Shares below are the feasible point closest to the centre of the published
+# ranges, and they land within a few points of the measured archive shares
+# (65 / 28 / 45). The small difference is forced by this cohort's composition:
+# 2026 carries 183 Madden DTs and 164 linebackers, more interior and fewer
+# off-ball than the published files.
+#
+# Allocation is PER TEAM and ordered by weight, so a team cannot end at zero
+# and the heavier men land where the archive puts heavier men. Weight is a
+# weak discriminator here -- 62-79% against a 52-72% modal baseline -- so it
+# sets the ORDER within a team while the measured shares set the LEVEL.
+EDGE_TO_DE  = 0.60
+DT_TO_DE    = 0.25
+LB_TO_OLB   = 0.47
+EDGE_LABELS = ('LEDG', 'REDG')
+LB_LABELS   = ('MIKE', 'WILL', 'SAM')
+# Guards also move: the archive puts 32% of Madden RGs and 14% of LGs at
+# tackle. Without it OG lands at 138 against a published 112-129 while OT sits
+# low in its range. Heaviest guards go to tackle, matching the direction.
+GUARD_LABELS = ('LG', 'RG')
+GUARD_TO_OT  = 0.10
+
+def allocate_front_seven(rows_for_team):
+    """rows_for_team: [(key, madden_label, weight)] -> {key: PGM3 position}.
+    Heaviest edges become DE, lightest interior linemen become DE, heaviest
+    linebackers become OLB. At least one DE wherever a team has any edge or
+    interior body to give, which is what stops the zero-DE teams."""
+    out = {}
+    def split(items, n_first, first, second, heavy_first=True):
+        items = sorted(items, key=lambda x: -x[2] if heavy_first else x[2])
+        for i, (k, _, _) in enumerate(items):
+            out[k] = first if i < n_first else second
+    edge = [x for x in rows_for_team if x[1] in EDGE_LABELS]
+    dts  = [x for x in rows_for_team if x[1] == 'DT']
+    lbs  = [x for x in rows_for_team if x[1] in LB_LABELS]
+    n_de_edge = int(round(len(edge) * EDGE_TO_DE))
+    if edge and n_de_edge == 0: n_de_edge = 1        # never leave a team at zero
+    split(edge, n_de_edge, 'DE', 'OLB', heavy_first=True)
+    n_de_dt = int(round(len(dts) * DT_TO_DE))
+    if dts and n_de_dt == 0 and n_de_edge == 0: n_de_dt = 1
+    split(dts, n_de_dt, 'DE', 'DT', heavy_first=False)   # LIGHTEST interior -> DE
+    n_olb = int(round(len(lbs) * LB_TO_OLB))
+    split(lbs, n_olb, 'OLB', 'MLB', heavy_first=True)
+    gds = [x for x in rows_for_team if x[1] in GUARD_LABELS]
+    split(gds, int(round(len(gds) * GUARD_TO_OT)), 'OT', 'OG', heavy_first=True)
+    return out
+
+_FRONT7_CACHE = {}
+
+def front_seven_allocation(mad):
+    """Compute the per-team edge/interior/linebacker allocation once for the
+    whole Madden file, keyed on row identity."""
+    key = id(mad)
+    if key in _FRONT7_CACHE: return _FRONT7_CACHE[key]
+    byteam = collections.defaultdict(list)
+    for m in mad:
+        if m['Position'] in EDGE_LABELS + LB_LABELS + GUARD_LABELS + ('DT',):
+            try: wt = float(m['Weight'])
+            except (ValueError, KeyError): wt = 0.0
+            byteam[m['_team']].append((m['_idx'], m['Position'], wt))
+    out = {}
+    for team, items in byteam.items(): out.update(allocate_front_seven(items))
+    _FRONT7_CACHE[key] = out
+    return out
+
+def madden_pgm3_position(mrow, front_by_team, alloc=None):
+    """Madden label -> PGM3 position.
+
+    Edge, interior and linebacker go through the per-team allocator; the front
+    is NOT consulted, because the archive does not use it (see the note above).
+    Everything else is a fixed translation."""
+    lab = mrow['Position']
+    if lab in EDGE_LABELS + LB_LABELS + GUARD_LABELS + ('DT',) and alloc is not None:
+        got = alloc.get(mrow['_idx'])
+        if got: return got
+    p = POS_FROM_MADDEN[lab]
     if p == 'EDGE':
-        return 'OLB' if front_by_team[mrow['_team']] == '3-4' else 'DE'
+        return 'DE'          # fallback only; the allocator normally decides
     return p
 
 # ---------------------------------------------------------------- the join
@@ -321,7 +414,8 @@ def assert_birthdates_agree(res, floor=0.90):
                               f'({disagree}/{checked} disagree)')
     return rate, checked, bad
 
-def assert_positions_translated(mad, front_by_team):
+def assert_positions_translated(mad, front_by_team, alloc=None):
+    alloc = alloc if alloc is not None else front_seven_allocation(mad)
     """Every Madden label must land in PGM3's fifteen or be an explicit cut."""
     bad = set()
     for r in mad:
@@ -344,6 +438,7 @@ def load_all():
     front  = {t: v['front'] for t, v in bundle['staff_schemes'].items()}
     mad    = load_madden(MADDEN_CSV)
     nfl    = load_nflverse(NFLVERSE_CSV)
+    _FRONT7_CACHE.clear()
     return bundle, front, mad, nfl
 
 # ---------------------------------------------------------------- selftest
@@ -488,12 +583,12 @@ def _weight(nrow):
     try: return float(nrow['weight'])
     except (ValueError, KeyError, TypeError): return None
 
-def fit_position_map(pairs, front):
+def fit_position_map(pairs, front, alloc=None):
     """Returns {(dcp, front): ('mode', pos) | ('weight', thresh, heavy, light)}"""
     cells = collections.defaultdict(list)
     for n, m in pairs:
         d = (n.get('depth_chart_position') or '').strip()
-        p = madden_pgm3_position(m, front)
+        p = madden_pgm3_position(m, front, alloc)
         if d and p: cells[(d, front[n['_team']])].append((p, _weight(n)))
     rule = {}
     for key, obs in cells.items():
@@ -860,10 +955,10 @@ def stage_appearances(verbose=True, precomputed=None):
             cohort.append((n, pos, wt, ag))
     else:
         res  = join([r for r in nfl if r['status'] == 'ACT'], mad)
-        pmap = fit_position_map([(n, m) for n, m, _ in res.pairs], front)
+        pmap = fit_position_map([(n, m) for n, m, _ in res.pairs], front, front_seven_allocation(mad))
         cohort = []
         for n, m, _ in res.pairs:
-            pos = madden_pgm3_position(m, front)
+            pos = madden_pgm3_position(m, front, front_seven_allocation(mad))
             if pos is None: continue                  # long snappers, cut
             cohort.append((n, pos, float(m['Weight']), int(m['Age'])))
         for n in res.unmatched:
@@ -1059,7 +1154,7 @@ def stage_attributes(verbose=True):
     res  = join(act, mad)
     rres = join(resv, mad)
     rfa  = join(fa_raw, mad, use_team_pass=False)
-    pmap = fit_position_map([(n, m) for n, m, _ in res.pairs], front)
+    pmap = fit_position_map([(n, m) for n, m, _ in res.pairs], front, front_seven_allocation(mad))
 
     # RULING D: free agents are those with a Madden record OR >= 2 years of
     # experience. 471 kept of 855, 132 derived = 28.0% of the pool.
@@ -1073,14 +1168,14 @@ def stage_attributes(verbose=True):
     rows, tier_of = [], {}
     for n, m, _ in list(res.pairs) + list(rres.pairs) + list(rfa.pairs):
         if id(n) in cohort_of_id or id(n) not in fa_keep_ids:
-            pos = madden_pgm3_position(m, front)
+            pos = madden_pgm3_position(m, front, front_seven_allocation(mad))
             if pos: rows.append((n, m, pos)); tier_of[id(n)] = 1
 
     # ---- tier 2: 2025 JINX, converted onto the Madden 27 scale -----------
     jinx = load_jinx(P(JINX_2025))
     overlap = []
     for n, m, _ in res.pairs:
-        pos = madden_pgm3_position(m, front)
+        pos = madden_pgm3_position(m, front, front_seven_allocation(mad))
         j = jinx.get(n['_norm'])
         if pos and j: overlap.append((pos, j, m))
     scale = fit_jinx_scale(overlap, front)
@@ -2553,6 +2648,26 @@ def player_growth(pool, cohort, gap, rng):
         return [0] * 31
     return _rescale_positives(rng.choice(pool[near[0]]), target)
 
+# Positions the archive NEVER leaves empty on any team, in any of the eight
+# published files. Ryan found 16 teams with zero DE by opening a depth chart;
+# nothing in the suite looks at roster composition, only at attribute values.
+NEVER_EMPTY = ['QB','RB','WR','TE','OT','OG','C','DE','DT','OLB','MLB','S','CB','K','P']
+
+def assert_no_empty_position(recs):
+    """No team may be empty at a position the archive never leaves empty."""
+    byteam = collections.defaultdict(collections.Counter)
+    for r in recs:
+        if cohort_of(r) == 'T': byteam[r['teamID']][r['position']] += 1
+    if not byteam:
+        raise AssertionFailed('per-team position check ran over ZERO teams')
+    gaps = []
+    for t, c in sorted(byteam.items()):
+        for pos in NEVER_EMPTY:
+            if c[pos] == 0: gaps.append(f'{t} has no {pos}')
+    if gaps:
+        raise AssertionFailed(f'{len(gaps)} team/position gaps: ' + '; '.join(gaps[:8]))
+    return len(byteam)
+
 def assert_roster_record(r, seen_iden):
     if set(r) != set(ROSTER_KEYS):
         raise AssertionFailed(f'schema mismatch: extra {sorted(set(r)-set(ROSTER_KEYS))}, '
@@ -2707,6 +2822,31 @@ def stage_build(verbose=True):
         for cand in list(range(1, 100)):
             if cand not in taken[t]: r['teamNum'] = cand; taken[t].add(cand); break
 
+    # ---- fill any position the archive never leaves empty ---------------
+    # nflverse lists NO active punter for SF or LAC -- 30 of 32 teams have one,
+    # so it is a gap in the source, not in the build. No published file leaves
+    # any team empty at any position, and a team that cannot punt is broken in
+    # play. Promote the best REAL free agent at that position rather than
+    # inventing anyone, and log every promotion.
+    byteam = collections.defaultdict(collections.Counter)
+    for rec in out:
+        if cohort_of(rec) == 'T': byteam[rec['teamID']][rec['position']] += 1
+    promoted = []
+    for team in sorted(byteam):
+        for pos in NEVER_EMPTY:
+            if byteam[team][pos]: continue
+            pool = sorted([x for x in out if cohort_of(x) == 'FA' and x['position'] == pos],
+                          key=lambda x: -x['rating'])
+            if not pool: continue
+            pick = pool[0]
+            pick['teamID'] = team; pick['length'] = 1; pick['teamNum'] = 0
+            pick['salary'] = pick['salary'] or 1_000_000
+            byteam[team][pos] += 1
+            promoted.append((team, pos, f"{pick['forename']} {pick['surname']}"))
+    if verbose and promoted:
+        print(f'   promoted from free agency to fill an empty slot: {len(promoted)}')
+        for t, p_, nm in promoted: print(f'      {t} {p_}: {nm}')
+
     # --- prospects -------------------------------------------------------
     # A draft class is capped at 256, the published convention (2013 ships
     # 256/256/253/253) and roughly a real 257-pick draft. The 2027 board runs
@@ -2783,6 +2923,7 @@ def stage_build(verbose=True):
         rec['appearance'] = app; applied += 1
 
     for rec in out: assert_roster_record(rec, seen)
+    assert_no_empty_position(out)
     if verbose:
         c = collections.Counter(cohort_of(r) for r in out)
         print(f'ROSTER assembled: {len(out)} records')
@@ -2800,7 +2941,7 @@ def seam_report():
     jinx = load_jinx(P(JINX_2025))
     overlap = []
     for n, m, _ in res.pairs:
-        pos = madden_pgm3_position(m, front)
+        pos = madden_pgm3_position(m, front, front_seven_allocation(mad))
         j = jinx.get(n['_norm'])
         if pos and j: overlap.append((pos, j, m))
     scale = fit_jinx_scale(overlap, front)
