@@ -2526,6 +2526,70 @@ passes trivially and forever.
 
 ---
 
+## Vacuous pass is this project's dominant failure mode
+
+Counted across the build, **a check reporting green over nothing has caused more
+wrong conclusions than anything in the data itself.** Not a tendency — the
+leading category, ahead of bad joins, bad thresholds and bad sources. Every
+instance below reached a confident, plausible, wrong answer, and every one of
+them printed the same word a real pass prints.
+
+| # | instance | what was empty or unreachable | what it reported |
+|---|---|---|---|
+| 1 | `free agent salary != 0` | the file had **no free agents** | `ok`, on every run, for the life of the 288-record file |
+| 2 | recombination control | vocabulary built from the very names being tested | `0.0%` on all eight files — the number wanted |
+| 3 | `teamId` probe | field is `teamID`; `.get` returned `None` for all 453 | a clean team/free-agent split, entirely fictional |
+| 4 | `min(teamID)` as sentinel | `teamID` is an abbreviation; `min` returned `'ARI'` | nine Arizona staff as the league's free agent pool |
+| 5 | dead validator block | appended to a `warn` list that did not exist, read a deleted `cnt` | nothing — could only `NameError`, so never ran |
+| 6 | conditional pass | scored records whose **source was absent** | a pass on cells derived from nothing |
+| 7 | `assert_refit_bounds` | medians 1.0 while one cell moved 92 points | bounds intact, with a 92-point error inside them |
+| 8 | MAD display | MAD 1.0 printed as agreement | a seam that looked converged |
+| 9 | guarantee assertion | over-strict, so it fired on clean input | the mirror case: a check that cannot *pass* is also uninformative |
+| 10 | 1986 registry write | count assertion absent entirely | 1,745 entries from 1,746 players, silently |
+
+Instances 2, 3 and 4 all occurred **inside a single measurement**, minutes apart,
+while deliberately trying to be careful. That is the base rate to plan for, not
+an unlucky day.
+
+### Why this family is specifically dangerous here
+
+A wrong number invites scrutiny. A green check ends it. Worse, several of these
+were *confirmatory*: the recombination control returned exactly the tidy 0.0%
+that made the hypothesis look proven, so there was no felt reason to look again.
+**The vacuous pass is most likely to survive precisely when it tells you what
+you hoped.**
+
+### The rule
+
+**Every check is run twice before it is trusted: once against a population where
+it MUST fail, and once against an empty one.**
+
+- *Must-fail run.* Corrupt an input by hand, watch it fire, restore. Two lines,
+  once, at the moment the check is written. The 14 free-agent gates were each
+  put through this; all 14 fired, and the table above is why that was not
+  ceremony.
+- *Empty run.* Feed it nothing and see what it says. If it says `ok`, it needs a
+  non-empty guard. Assert the population size **before** asserting anything
+  about its contents.
+- *Report the denominator, always.* `ok` is not a result; `ok, n=165` is. Four of
+  the ten above would have been visible on sight with the count printed beside
+  the verdict.
+- *A control is a check.* It gets both runs too. Instance 2 was a control, not an
+  assertion, and it was the most persuasive of all of them.
+- *Never build a reference set from the members you intend to test against it.*
+  That is instance 2's exact mechanism, and it is easy to write by accident.
+
+### Adjacent, not the same
+
+A **comment that misdescribes its code** is the same disease outside the test
+harness. While adding Cowher, the comment claimed the displacement dropped the
+lowest-rated coach; the code dropped the least recent. Both were defensible, so
+nothing looked wrong, and the documented reason for a data decision was simply
+false. Fixed by making the code do what the comment said — verified by reading
+back which name was actually dropped, not by trusting the diff.
+
+---
+
 ## Two scripts in one project, two position vocabularies
 
 The Houston core was selected by one script and assembled by another. The
@@ -3205,6 +3269,11 @@ actually engages.
 
 ## Backlog
 
+> The full audit list, including everything this build surfaced and the ruling
+> that 2026 ships before any of it is touched, is in
+> **`docs/PGM3_AUDIT_BACKLOG.md`**. What follows is the subset that predates it.
+
+
 **Teach the `faces` gate both key formats, then audit the 78.** Two jobs, and
 the second is the interesting one.
 
@@ -3420,27 +3489,14 @@ with a salary would have looked plausible and been wrong.
 **Age ceiling 72**, the observed maximum across every published FA record.
 Without it the real-coach supply reaches an implied age of 102 in 2026.
 
-### Three ways this measurement nearly went wrong
+### How this measurement nearly went wrong
 
-**A control that could not fail.** A name-recombination test scored the
-team-side control at exactly 0.0% on all eight files — because the control
-names had been used to build the vocabulary they were then tested against.
-Rebuilt leave-one-out, real staff score **34-60%** on that same test, so
-recombination does not separate invented from real at all. The test was
-discarded, not reported. *An assertion that cannot fail reports success* — and
-so does a control that cannot fail, which is the more comfortable version
-because the number it prints is the one you wanted.
+Three separate vacuous passes occurred while measuring these pools — a control
+built from the names it was testing, a `teamId` probe returning `None` for all
+453 records, and `min(teamID)` reporting nine Arizona staff as the league pool.
+They are catalogued with the rest in **Vacuous pass is this project's dominant
+failure mode**, which is where that family now lives rather than scattered.
 
-**`teamId` vs `teamID`.** The first probe read `r.get('teamId')`, which is not
-the field. It returned `None` for all 453 records and was one step from
-reporting a clean, confident, entirely fictional split. Checking the key list
-before trusting the aggregate is what caught it.
-
-**`min()` as a sentinel finder.** The second probe took `min(teamID)` as "the
-free agent bucket". `teamID` is a team abbreviation, so it returned `'ARI'` —
-nine Arizona staff reported as the league's free agent pool, in a table that
-looked entirely reasonable at 9 per file.
-
-**A gate can pass vacuously.** `free agent salary != 0` was reported `ok` on
-every run of the 288-record file. There were no free agents in it. A green gate
-over an empty set is not evidence, and it read identically to a real pass.
+The recombination test itself was **discarded, not reported**: rebuilt
+leave-one-out, real team-side staff score 34-60% on it, so it does not separate
+invented from real at all.

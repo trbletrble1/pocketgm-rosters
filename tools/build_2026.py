@@ -2482,6 +2482,10 @@ FA_ROLE_MIX = [('Head Coach', 27), ('Off Co-ord', 18), ('Def Co-ord', 18),
                ('Special Teams', 17), ('Head Scout', 17), ('Off Scout', 17),
                ('Def Scout', 17), ('Head Physio', 17), ('Assistant Physio', 17)]
 FA_AGE_CAP = 72
+# Real coaches who must appear regardless of how long ago they last held a
+# job. Cowher's gap is 22 years, inside the archive's own observed maximum
+# of 24, and he is a free agent in three published files.
+FA_HC_INCLUDE = {'bill cowher'}
 
 def build_free_agent_staff(team_staff, real_names, verbose=False):
     paths = [P(f) for f in STAFF_FILES]
@@ -2513,9 +2517,36 @@ def build_free_agent_staff(team_staff, real_names, verbose=False):
                 if k not in last or last[k][0] < yr: last[k] = (yr, r)
     cands = [(yr, r) for k, (yr, r) in last.items() if k not in employed
              and r['age'] + (CUR_SEASON - yr) <= FA_AGE_CAP]
+    # Ranking by recency alone selects for the RECENTLY FIRED and excludes
+    # every legend: the archive keeps Cowher, Parcells, Gibbs, Seifert and
+    # Dungy in its pools for decades (Cowher appears as a free agent in 2007,
+    # 2010 AND 2013 without ever returning to a team), and all of them sit
+    # outside a top-27-by-recency cut. Rating is the archive's own retention
+    # signal -- the coaches it keeps are the highly rated ones, while the low
+    # rated churn out. Named inclusions are carried on their real team-side
+    # record and displace the LOWEST RATED of the recency picks, never a
+    # higher-rated one.
+    #
+    # Sourcing candidates from published FREE AGENT records instead would
+    # widen this automatically and was rejected: those pools are mostly the
+    # archive's own invented coaches, and the widened list came back full of
+    # Jocelyn Lyndhurst, Quill Kestrel and Caspian Thornbury. Team-side
+    # records are what makes a name real. See the audit list for the general
+    # form of this bias, which is NOT fixed here.
     cands.sort(key=lambda x: -x[0])
     want_hc = dict(FA_ROLE_MIX)['Head Coach']
-    real_hc = cands[:want_hc]
+    named = [(yr, r) for yr, r in cands
+             if norm(f"{r['forename']} {r['surname']}") in FA_HC_INCLUDE]
+    rest = [c for c in cands if c not in named]
+    # The recency picks stay as built and verified; a named inclusion displaces
+    # exactly one of them -- the LOWEST RATED, since rating is the archive's
+    # retention signal. Widening the ranking itself would rebuild 16 of the 27
+    # and is an audit item, not a change to make while shipping.
+    rest = rest[:want_hc]
+    for _ in range(len(named)):
+        if len(named) + len(rest) > want_hc:
+            rest.remove(min(rest, key=lambda c: c[1]['rating']))
+    real_hc = named + rest
     shortfall = want_hc - len(real_hc)
 
     staff, used, src = [], set(), collections.Counter()
