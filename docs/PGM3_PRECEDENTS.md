@@ -2790,7 +2790,17 @@ Five rows were being double-claimed, **DeVonta Smith among them.**
 
 **Two rules.** A uniqueness assertion must span every pass that can consume the
 resource, not each pass separately; scoping it per-call is how it passes while
-the invariant it names is broken. And **a check written for one suspect record
+the invariant it names is broken. This is now
+`assert_no_cross_pass_reuse(*results)` rather than an inline guard, and it is
+called at **both** sites that run multiple joins — the fix belongs to the class,
+not to the instance that exposed it.
+
+A sweep for the same exposure elsewhere came back clean: `iden` (players, staff,
+and the two pooled), jersey within team, draft pick within a class, cohort
+membership, and staff team+role slots are all singly-claimed. Worth noting that
+**the shipped file looked clean during the bug too** — no duplicate `iden`, no
+duplicate jersey. The double-claim was in the SOURCE, and only a check on source
+consumption could see it. Auditing outputs for uniqueness does not test this. And **a check written for one suspect record
 is worth running across the whole population** — the value here was not
 confirming Wagner, which was already known, but the four names nobody was
 looking at.

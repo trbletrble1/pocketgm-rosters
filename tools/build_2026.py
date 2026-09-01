@@ -634,6 +634,30 @@ def join(nfl_pool, mad, use_team_pass=True):
 # ---------------------------------------------------------------- assertions
 class AssertionFailed(Exception): pass
 
+def assert_no_cross_pass_reuse(*results, label='join'):
+    """A scarce source row may be claimed by ONE consumer across EVERY pass.
+
+    assert_one_to_one holds inside a single call, and this build runs three
+    joins (ACT, RES, free agents). Nothing checked across them, so Chris Jones
+    (KC, DT, 94) was claimed by the active pass and again by the free-agent
+    pass, shipping his rating twice -- once correctly and once as a phantom
+    free agent named Christian Jones, matched through the nickname tier.
+    Five rows were double-claimed, DeVonta Smith among them.
+
+    Scope a uniqueness assertion to every pass that can consume the resource,
+    never to each pass separately: per-call scoping passes while the invariant
+    it names is broken.
+    """
+    seen = collections.defaultdict(list)
+    for r in results:
+        for n, m, _t in r.pairs: seen[id(m)].append(n)
+    dupe = {k: v for k, v in seen.items() if len(v) > 1}
+    if dupe:
+        ex = ', '.join(n['full_name'] for v in list(dupe.values())[:3] for n in v[:2])
+        raise AssertionFailed(f'{len(dupe)} {label} row(s) claimed by more than one '
+                              f'consumer across {len(results)} passes: {ex}')
+    return len(seen)
+
 def assert_one_to_one(res):
     """No Madden record may be claimed by two nflverse players. This is the
     guard that stopped Francis Mauigoa's ratings landing on Francisco."""
@@ -828,6 +852,7 @@ def stage_join(verbose=True):
     # free agents: RULING D -- Madden record AND years_exp >= 2
     fres = join(fa_raw, mad, use_team_pass=False)
     assert_one_to_one(fres)
+    assert_no_cross_pass_reuse(res, fres, label='Madden')
     matched_fa = {n['gsis_id'] for n, _, _ in fres.pairs}
     fa_keep = [r for r in fa_raw if r['gsis_id'] in matched_fa or r['_exp'] >= 2]
     fa_derived = [r for r in fa_keep if r['gsis_id'] not in matched_fa]
@@ -1448,12 +1473,7 @@ def stage_attributes(verbose=True):
     if verbose and _stolen:
         print(f'   released {len(_stolen)} Madden row(s) double-claimed by the '
               f'free-agent pass: ' + ', '.join(n['full_name'] for n, _ in _stolen[:4]))
-    _all = collections.Counter(id(m) for _, m, _ in
-                               list(res.pairs) + list(rres.pairs) + list(rfa.pairs))
-    _dupe = [k for k, v in _all.items() if v > 1]
-    if _dupe:
-        raise AssertionFailed(f'{len(_dupe)} Madden row(s) claimed by more than '
-                              f'one nflverse player across the three joins')
+    assert_no_cross_pass_reuse(res, rres, rfa, label='Madden')
     pmap = fit_position_map([(n, m) for n, m, _ in res.pairs], front, front_seven_allocation(mad))
 
     # RULING D: free agents are those with a Madden record OR >= 2 years of
