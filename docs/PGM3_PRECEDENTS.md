@@ -3345,3 +3345,38 @@ RB is 113 ACT + 17 RES − 2 long snappers = 128 exactly. A number that
 reconciles to the source needs no explanation; one that merely sounds
 reasonable is not closed.
 
+
+## The archive's coverage is U-shaped around 2004, not thin toward the present
+
+Asked what distinguishes the drift cases the archive cannot resolve. Position
+does not — the front seven is 69% of the unsolvable set and 71% of the
+solvable one. **Era does, and not in the direction that seems obvious.**
+
+Source count per entry, all 25,364 archive records:
+
+    era        entries   median sources   share at 1-2 sources
+    <2000       11,277          1                 69%
+    2000-09      4,554          4                 33%
+    2010-19      4,899          2                 60%
+    2020+        3,665          2                 63%
+
+**Coverage peaks at 2000-09 and falls away in BOTH directions.** The archive is
+built from ESPN NFL 2K5 community rosters and the game shipped in 2004, so its
+own era is the best documented; earlier players are retroactive additions and
+later ones are forward projections by modders. The pre-2000 cohort is the
+worst covered of all, and it is also the largest.
+
+**Two wrong characterisations preceded this one and both were stated before
+the number was read.** First "the unsolvable share rises toward the present",
+from a per-FILE rate that is not monotone and reads 92% on a cohort of 13.
+Then "the archive holds fewer sources the more recent the player", printed as
+a conclusion in the same script whose output contradicts it.
+
+The per-file rate mixes cohorts; the per-entry rate does not. **Choose the
+denominator before looking at the answer, and read the table before writing the
+sentence under it.**
+
+Practical consequence for future builds: **a modern-season build has the
+archive's second-worst coverage**, and the current 2026 cohort has 74% of its
+drift cases unsolvable from the archive. Photo checks and hand verification are
+load-bearing for recent players in a way they are not for 2004.
