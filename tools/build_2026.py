@@ -183,20 +183,95 @@ NFLVERSE_TO_PGM3 = {
 # 241 is 90.2% accurate; the best available cut (237) is 90.8%, so 241 stands.
 # NOTE: this does NOT reproduce the 97.7% figure carried in the task notes --
 # see the build log.
-OLB_EDGE_WEIGHT = 241
+# Retired: the fixed 241 lb cut is replaced by the fitted OLB->DE share above.
+# Recorded because the figure it was chosen from does not reproduce -- against
+# Madden's own edge/off-ball labels a 241 cut is 90.2% accurate, not 97.7%,
+# and the best available cut (237) is 90.8%.
 
 def nflverse_pgm3_position(nrow):
     """Real depth-chart position -> PGM3, or None to fall back."""
     dc = (nrow.get('depth_chart_position') or '').strip()
     if not dc: return None
     if dc == 'OLB':
-        try: w = float(nrow.get('weight') or 0)
-        except (TypeError, ValueError): w = 0.0
-        if not w: return None
-        return 'DE' if w >= OLB_EDGE_WEIGHT else 'OLB'
+        # kept as OLB here; the measured convention shift moves the heaviest
+        # of them to DE, replacing the fixed 241 lb cut with a fitted share.
+        return 'OLB'
     return NFLVERSE_TO_PGM3.get(dc, None) if dc in NFLVERSE_TO_PGM3 else None
 
+# ---------------------------------------------- convention shift, measured
+# nflverse and the archive draw the same lines in different places: men
+# nflverse calls DT the archive calls DE, and men it calls ILB the archive
+# calls OLB. Total front seven is in range either way (branch 564 against a
+# published 573-625), so nobody is missing -- it is a LABELLING CONVENTION
+# difference, which is why the old builder carried DT_TO_DE = 0.25.
+#
+# The shares are FITTED to the published per-file ranges, not reused. Who
+# moves is decided by WEIGHT, never at random: the lightest "defensive
+# tackles" become DEs and the lightest MLBs become OLBs, so a 250 lb interior
+# man reads as an edge and a 320 lb one never does.
+#
+# Ranges are per-file sums. Summing independent minima and maxima across files
+# overstates the span -- it gave DE+OLB 286-337 where the real per-file span
+# is 296-331.
+CONV_TARGETS = {'DE': (143, 184), 'DT': (134, 179), 'OLB': (143, 153), 'MLB': (110, 132),
+                'OT': (120, 157), 'OG': (112, 129)}
+# The fit runs on the JOINED population, but the published ranges describe the
+# ROSTERED one, and retention is not uniform: DE keeps 95.9% of its joined
+# players while DT keeps 86.5%. Fitting without this put OLB at 135 against a
+# published 143-153 while every other position landed. Measured from the build
+# itself; assert_front_seven_totals below fails if the shipped file drifts out
+# of range, so a stale factor here cannot pass silently.
+# MEASURED, every one of them. The first version of this table carried 0.900
+# for OT and OG because they were added late and the number was assumed rather
+# than read; OT is actually 0.835, and the wrong value silently produced a
+# zero-sized guard shift that left OG out of range. assert_front_seven_totals
+# is what caught it.
+CONV_RETENTION = {'DE': 0.956, 'DT': 0.869, 'OLB': 0.877, 'MLB': 0.895,
+                  'OT': 0.835, 'OG': 0.909}
+
+def fit_convention_shift(base, weights):
+    """base: {key: position} for ACTIVE players only. weights: {key: lb}.
+    Returns (olb_to_de, dt_to_de, mlb_to_olb) as COUNTS, chosen by grid search
+    to sit closest to the middle of every published range at once."""
+    grp = collections.defaultdict(list)
+    for k, p in base.items():
+        if p in CONV_TARGETS: grp[p].append(k)
+    n_de, n_dt = len(grp['DE']), len(grp['DT'])
+    n_olb, n_mlb = len(grp['OLB']), len(grp['MLB'])
+    n_ot, n_og = len(grp['OT']), len(grp['OG'])
+    def band(p):
+        lo, hi = CONV_TARGETS[p]; r = CONV_RETENTION[p]
+        return lo / r, hi / r          # what the JOINED count must be
+    def mid(p): return sum(band(p)) / 2.0
+    best = None
+    for a in range(0, n_olb + 1):                       # OLB -> DE (heaviest)
+        for b in range(0, n_mlb + 1):                   # MLB -> OLB (lightest)
+            olb = n_olb - a + b
+            if not (band('OLB')[0] <= olb <= band('OLB')[1]): continue
+            mlb = n_mlb - b
+            if not (band('MLB')[0] <= mlb <= band('MLB')[1]): continue
+            for c in range(0, n_dt + 1):                # DT -> DE (lightest)
+                de, dt = n_de + a + c, n_dt - c
+                if not (band('DE')[0] <= de <= band('DE')[1]): continue
+                if not (band('DT')[0] <= dt <= band('DT')[1]): continue
+                cost = ((de-mid('DE'))**2 + (dt-mid('DT'))**2 +
+                        (olb-mid('OLB'))**2 + (mlb-mid('MLB'))**2)
+                if best is None or cost < best[0]: best = (cost, a, b, c)
+    if best is None:
+        raise AssertionFailed('no convention shift lands every position in range')
+    # guards -> tackle, the same convention difference on the offensive line.
+    # The archive puts a share of Madden guards at tackle; without it OG lands
+    # at 130 against a published 112-129 while OT sits low in its own range.
+    d = 0
+    for dd in range(0, n_og + 1):
+        og, ot = n_og - dd, n_ot + dd
+        if (band('OG')[0] <= og <= band('OG')[1] and
+            band('OT')[0] <= ot <= band('OT')[1]):
+            d = dd; break
+    return best[1], best[2], best[3], d
+
 _DC_CACHE = {}
+_DC_SHIFT = {}
 
 def depth_chart_index(nfl, mad):
     """madden _idx -> PGM3 position, resolved THROUGH THE JOIN.
@@ -211,10 +286,28 @@ def depth_chart_index(nfl, mad):
     """
     key = (id(nfl), id(mad))
     if key in _DC_CACHE: return _DC_CACHE[key]
-    out = {}
+    out, wt, act = {}, {}, {}
     for n, m, _tier in join(nfl, mad).pairs:
         p = nflverse_pgm3_position(n)
-        if p: out[m['_idx']] = p
+        if not p: continue
+        out[m['_idx']] = p
+        try: w = float(n.get('weight') or m.get('Weight') or 0)
+        except (TypeError, ValueError): w = 0.0
+        wt[m['_idx']] = w
+        if n.get('status') == 'ACT': act[m['_idx']] = p
+    # Fit on the WHOLE joined population, not the ACTIVE subset. ACT
+    # front-seven is 459 against a published per-file 573-625, so fitting
+    # there has no feasible solution at all; the joined set is 613, inside it.
+    a, b, c, d = fit_convention_shift(out, wt)
+    def move(frm, to, count, heaviest):
+        ks = sorted([k for k, p in out.items() if p == frm],
+                    key=lambda k: -wt.get(k, 0) if heaviest else wt.get(k, 0))
+        for k in ks[:count]: out[k] = to
+    move('OLB', 'DE',  a, True)     # heaviest edge-shaped linebackers
+    move('DT',  'DE',  c, False)    # lightest interior linemen
+    move('MLB', 'OLB', b, False)    # lightest off-ball linebackers
+    move('OG',  'OT',  d, True)     # heaviest guards
+    _DC_SHIFT[key] = (a, b, c, d)
     _DC_CACHE[key] = out
     return out
 
@@ -2902,6 +2995,22 @@ def player_growth(pool, cohort, gap, rng):
 # nothing in the suite looks at roster composition, only at attribute values.
 NEVER_EMPTY = ['QB','RB','WR','TE','OT','OG','C','DE','DT','OLB','MLB','S','CB','K','P']
 
+def assert_front_seven_totals(out):
+    """The shipped ROSTERED counts, against the published per-file ranges.
+    The convention shift is fitted, so this is the check that the fit actually
+    landed -- without it a stale retention factor would ship silently."""
+    c = collections.Counter(r['position'] for r in out if cohort_of(r) == 'T')
+    bad = [(p, c[p], CONV_TARGETS[p]) for p in CONV_TARGETS
+           if not (CONV_TARGETS[p][0] <= c[p] <= CONV_TARGETS[p][1])]
+    if bad:
+        raise AssertionFailed('front seven outside published range: ' +
+            ', '.join(f'{p} {v} vs {lo}-{hi}' for p, v, (lo, hi) in bad))
+    n0 = [r for r in out if cohort_of(r) == 'T' and r['teamNum'] == 0]
+    if n0:
+        raise AssertionFailed(f'{len(n0)} rostered players wearing jersey 0; no '
+                              f'published file has a single one')
+    return {p: c[p] for p in CONV_TARGETS}
+
 def assert_no_empty_position(recs):
     """No team may be empty at a position the archive never leaves empty."""
     byteam = collections.defaultdict(collections.Counter)
@@ -3184,6 +3293,7 @@ def stage_build(verbose=True):
 
     for rec in out: assert_roster_record(rec, seen)
     assert_no_empty_position(out)
+    assert_front_seven_totals(out)
     if verbose:
         c = collections.Counter(cohort_of(r) for r in out)
         print(f'ROSTER assembled: {len(out)} records')

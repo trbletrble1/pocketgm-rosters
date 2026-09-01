@@ -167,6 +167,56 @@ see concentrated damage**, which is why the constraint measures rho.
 
 ---
 
+## Positions — real depth charts, then a fitted convention shift
+
+**The proportional allocator was scrambling the front seven.** Measured against
+nflverse depth charts it put more than half of real MLBs at OLB and split real
+ILBs almost evenly. It optimised the aggregate and never checked the individual.
+
+nflverse ships `depth_chart_position` for **2800 of 2800** rows, so it is now
+the position source, resolved **through the join** — a name-keyed lookup sent
+Pooh Paul Jr. to a different real Chris Paul's depth chart and shipped an
+off-ball linebacker at offensive guard.
+
+**The two sources label differently, they do not disagree about who exists.**
+Total front seven is in range under both (552 against a published 543-625), so
+the gap is a convention difference: nflverse calls men DT and ILB that the
+archive calls DE and OLB. Shares are **fitted to the published per-file ranges**,
+not reused from the old fixed 0.25:
+
+| shift | count | share | chosen by |
+|---|---|---|---|
+| OLB -> DE | 45 | 25.9% | heaviest |
+| DT -> DE | 24 | 12.8% | lightest |
+| MLB -> OLB | 24 | 15.9% | lightest |
+| OG -> OT | fitted | — | heaviest |
+
+Weight separates the shifted from the unshifted cleanly in every direction:
+DT->DE median 280 lb against DT->DT 305; OLB->DE 270 against OLB->OLB 246;
+MLB->OLB 222 against MLB->MLB 234.
+
+Result: **DE 151, DT 146, OLB 144, MLB 110, OT 139, OG 128 — all six inside
+their published ranges**, and unshifted rows stay exact (real DE -> DE 115/115,
+NT -> DT 22/22, C -> C 92/92).
+
+**Confirmation the shortfall was the cause:** free-agent promotions to fill
+empty slots fell from **13 OLBs to zero**. The two remaining promotions are
+punters, a genuine nflverse gap (no active punter listed for SF or LAC).
+
+**Ranges are per-file sums.** Summing independent minima and maxima across
+files overstates the span: it gave DE+OLB 286-337 where the real per-file span
+is 296-331.
+
+**Corrected figure.** The retired 241 lb OLB cut was chosen from a 97.7%
+separation that does not reproduce. Against Madden's own edge/off-ball labels
+a 241 cut is **90.2%** accurate and the best available cut (237) is 90.8%.
+
+**Two bugs found here, both now asserted:** `stage_build` never wrote the file
+(see the precedents), and promoted free agents kept `teamNum` 0, putting two
+men on LAC #0 — no published file has a single rostered player wearing 0.
+
+---
+
 ## Contracts
 
     median team payroll   $197.4M exact    team range $107.5M - $269.9M
