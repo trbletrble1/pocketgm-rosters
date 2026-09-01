@@ -305,3 +305,48 @@ means adding team and era to the registry key, repo-wide.
     guarantee vs remaining length           0.06/0.10/0.12/0.25/0.29 rising
 
 **Not run: the last gate.** Ryan imports the file and plays it.
+
+---
+
+## The last gate
+
+Ryan imported the file and found three wrong faces: Aidan Hutchinson and Drew
+Allar built dark and should be light, Myles Garrett built light and should be
+dark.
+
+Those three led to **891 lost lookups**, an entire unused `staff_faces` block,
+an unread confidence field, **154 registry corrections across eight files**,
+and a protection gate covering a quarter of what it claimed. **None of it was
+visible to any automated check.**
+
+That has now held for every in-play report on this project — the stamina fill,
+the cap bug, Jordy Nelson, and this. Each time the automated suite was green
+and each time the thing was real.
+
+**The mechanism is worth stating, because "test it in play" is advice everyone
+already agrees with and ignores.** The checks verify that values are
+*structurally valid*, and every one of these defects produced structurally
+valid values:
+
+- A generated face is a valid face.
+- A donor face is a valid face.
+- A light-skinned Myles Garrett is a valid record.
+
+Every family digit was consistent, every token was in the vocabulary, every
+distribution sat inside the reference band, and the record count was right at
+every step. **Only someone who knows what Myles Garrett looks like can see it.**
+
+That is also why the fixes are structural rather than corrective. The three
+players were symptoms; hand-correcting them would have left the other 888.
+What went in instead was a match-rate assertion on the lookup, a translation at
+the boundary, and an agreement floor on the source — so the next instance fails
+loudly rather than substituting a default.
+
+### What this build owes to that report
+
+    891   lookups recovered by translating position at the lookup boundary
+    2231  staff_faces entries, never read, now applied
+    154   registry corrections, seven of eight published files touched
+    291   face records rewritten
+      2   verified faces found already drifted, unreported for years
+     26%  the share of locked faces the protection gate can actually reach
