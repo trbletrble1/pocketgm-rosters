@@ -875,6 +875,32 @@ appearance rebuilt from real Madden data.
 
 **Known open items, none blocking:**
 
+> **STATUS 2026-09-01 — most of this list is now closed.** Read this block
+> before the entries below it; several are described as open and are not.
+>
+> **CLOSED:**
+> - `0a` stamina fill — all 1,622 records repaired (Pass A1)
+> - `0b` salary spikes — **measured and REJECTED, not a defect.** They are real
+>   minimum-salary ladders. Do not reopen; see the closure note below
+> - `0d` K/P contract inflation — 33 records capped, 2013/2017 rescaled (Pass B1)
+> - `0i` / `0k` staff ages — 368 records sourced from Wikidata (Pass A2)
+> - `0h` 1986 skin, prospects and free agents — **largely solved.** A new source
+>   (ESPN NFL 2K5 community rosters) now covers 75% of the 1986 file. See the
+>   player archive section below
+> - `0g` Gansz name malformation — fixed during Pass A
+>
+> **STILL OPEN:**
+> - `0e` per-position `zero_pattern` — never built. Would have caught the
+>   stamina and OLB coverage fills automatically
+> - `0j` low-value stamina blocks (2021's 29 receivers at 5) — left in place
+> - `0j` payroll spread — Ryan's call, realism vs texture, not a defect
+> - `0c` the 2000 Madden file is a preseason projection — reference, not a task
+> - **NEW:** 343 skin-band corrections backed by only 1-2 archive sources,
+>   deferred pending review. See `wip/archive_deferred_1_2_sources.json`
+> - **NEW:** head family 2. 195 of our family-2 assignments were confirmed wrong
+>   in one direction on 2026-09-01. That is systematic, not 195 accidents, and
+>   nobody has looked at why
+
 0h. **The 1986 skin defect has now surfaced THREE times, from three
    directions.** Same root, not three curiosities:
 
@@ -1336,3 +1362,47 @@ The person is direct and concise — single-word approvals are normal. They push
 - Asking "is there anything else you decided was okay?" — which surfaced three more real bugs
 
 When they ask for a document from another AI, give them a precise prompt including an instruction to say "uncertain" rather than guess. That workflow has produced excellent, verifiable data three times. **Verify a sample of what comes back before building on it.**
+
+---
+
+## The player appearance archive — a second source, added 2026-09-01
+
+`reference/PGM3_PLAYER_ARCHIVE.json` — **25,364 people, 1958 to 2026**, indexed
+from 42 ESPN NFL 2K5 community rosters. Read with `tools/nfl2k5.py`; rebuilt
+with `tools/build_archive.py`. `rosdump.py` reads both Madden and 2K5 files now
+and routes on the header, so `check`, `dump` and `tables` work on either.
+
+**Why it matters.** Madden exports only reach back to 2000. These rosters reach
+1958, and they carry a **named, documented `Skin` field** rather than a decoded
+byte — 14 values whose meanings are the tool author's own, not fitted here.
+
+**How good it is:**
+
+- **93.4%** against 166 known players across four eras
+- **92.0%** cross-file agreement over 23,346 overlapping pairs, from modders who
+  never coordinated
+- **19/19** agreement with Ryan's in-game verified entries
+- dark share climbs 41% (1958-1980) to 81% (2024), which is real NFL
+  demographic history and no one arranged it
+
+**It is an INPUT layer. The face registry is an OUTPUT layer.** The archive says
+light or dark and nothing finer; the registry owns which family, which variant,
+and cross-season consistency. `_verified_keys` outranks the archive absolutely.
+
+**Never merge the votes.** Each source keeps its own, tagged with the file. Six
+times in this project pooling disagreeing sources manufactured a rule none of
+them followed. A disagreement is evidence about which source is wrong.
+
+**DISAMBIGUATE ON ERA.** Name-plus-position across 68 years gave an **81%
+false-match rate** on the 1986 cohort. Every entry carries `first_seen` and
+`last_seen`; check them against the season being built.
+
+**What it fixed on the day it was built:** 287 people, 534 records across all
+eight published seasons, where the registry had the wrong skin band. 195 of them
+were family 2 called light. Ryan confirmed 14 in game before any of it was
+applied, and all 14 went the archive's way.
+
+**Coverage of the 1986 file**, unanimous entries only: 64% of the unsourced
+cohort, 85% of the rostered cohort, **75% of the whole file**. It was 17% that
+morning.
+
