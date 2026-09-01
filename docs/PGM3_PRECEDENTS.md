@@ -61,6 +61,67 @@ If the game rejects a value, import says so immediately. That's cheap to find ou
 
 ---
 
+## A single value held by one position is fill; a real tail spreads
+
+**2026-08-31, Pass A1.** New detector, sharper than the `≤10 range` rule and it
+catches cases that rule misses.
+
+Repairing the `stamina == 1` block surfaced a second layer underneath it. The
+tell was not the value's magnitude — it was its **position concentration**:
+
+| file | block | positions |
+|---|---|---|
+| 2021 | 29 records at exactly **5** | **all WR** |
+| 2021 | 9 at 16 / 8 at 34 | all OT / all DT |
+| 2013 | 44 at 2, 23 at 4 | 11 positions — a smear, ambiguous |
+| 2010, 2004 | nothing under 40 | the clean controls |
+
+**2021's 29 receivers at stamina 5 are nowhere near the range floor**, so the
+`≤10 range` detector does not see them. But a genuine low tail is produced by
+individual players being bad at something, and bad players occur at every
+position. A single value held by a single position is a default that was
+written once and applied to a group.
+
+Apply it to any field: group by value, and for values with a meaningful count,
+count the distinct positions. One or two positions at a single exact value is
+fill regardless of where the value sits in the range.
+
+## Find the real cohort applies to a repair's SOURCE, not just its target
+
+Same pass, and the more instructive half. The first run of the stamina repair
+drew replacement values from "every record that is not 1" — and **that pool
+still contained the other fill blocks**. The repair therefore *propagated* the
+defect it was cleaning: 2021's stamina-2 block grew from 37 records to 51.
+
+**What caught it was the conditional pass, not any distribution check.** The
+`PSTA` deciles came out `[56, 63, 30, 65, 13, 68, 71, 66, 76, 89]` — 30 and 13
+sitting mid-range. The marginal was fine; a distribution check passes this,
+which is how the original defect shipped in the first place.
+
+**"Find the real cohort before measuring anything" has always been stated about
+the thing being measured. It applies with equal force to the population a
+repair samples from.** A fix that draws from contaminated data launders the
+contamination into records that did not have it, and every count still looks
+right because the counts were never the problem.
+
+## Scope fixed to the instances you happened to look at
+
+**2026-08-31, third instance in one day.** The Pass A2 brief said staff ages
+were wrong "archive-wide", generalised from Belichick reading 40, 43 and 52 in
+2004, 2010 and 2017. The four files where he was **already exactly right** —
+34, 55, 61, 69 — were not checked.
+
+Measured, 1986, 2007, 2013 and 2021 were largely correct, 2013 at **102 of 106
+exact**. A wholesale rewrite would have overwritten those with whatever the
+source returned, false positives included. The targeted repair — rewrite only
+where a sourced value exists *and disagrees* — moved 368 records instead of 896.
+
+Same shape as the 132-face overlap and the 1986 Rookie cohort: **the boundary of
+the evidence you gathered is not the boundary of the defect.** Before accepting
+a scope, check the cases the evidence did not cover — especially the ones that
+would show the scope is smaller, since those are the ones a repair destroys.
+
+
 ## Internal consistency finds impossibility, never wrongness
 
 **2026-08-31, staff ages.** The 2000 staff file carried ages with essentially
