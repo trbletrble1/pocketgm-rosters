@@ -772,10 +772,272 @@ def stage_appearances(verbose=True):
         print(f'   all {len(built)} pass the structural + vocabulary assertions')
     return built, lib, vocab, arc
 
+
+# ================================================================= attributes
+# THE MAP. Two entries differ from the handoff as written on 2026-09-01 and
+# both changes were measured, not inferred:
+#
+#   trucking -> TruckingRating, NOT BreakTackleRating.  Within position against
+#   published trucking: RB 0.863/0.417, WR 0.969/0.619, TE 0.927/0.594,
+#   QB 0.643/0.383. Anchor: Derrick Henry (247lb) reads Trucking 91 /
+#   BreakTackle 92; Christian McCaffrey (205lb) reads 67 / 93. Trucking is
+#   running THROUGH people; break-tackle includes evasion.
+#   The position MEDIANS point the other way (published WR trucking 74,
+#   BreakTackle WR 75, Trucking WR 50) and cannot settle it: a per-position
+#   quantile map forces output medians onto the target whichever column feeds
+#   it, so only within-position ORDERING distinguishes them.
+#
+#   skillMove/elusiveness/blockShedding gain named columns the handoff lacks,
+#   at within-position 0.885 / 0.827 / 0.608.
+#
+# ballStrip and discipline stay DERIVED: their best correlate is OverallRating
+# (0.666 / 0.652), which wins only because good players score high on
+# everything. A column that correlates through overall quality is not a source.
+ATTR_MAP = {
+    'speed':'SpeedRating', 'burst':'AccelerationRating', 'power':'StrengthRating',
+    'agility':'AgilityRating', 'jumping':'JumpingRating', 'stamina':'StaminaRating',
+    'tackle':'TackleRating', 'passBlock':'PassBlockRating', 'rushBlock':'RunBlockRating',
+    'ballSecurity':'CarryingRating', 'kickAccuracy':'KickAccuracyRating',
+    'catching':'CatchingRating', 'intelligence':'AwarenessRating',
+    'trucking':'TruckingRating',
+    'injuryProne':'InjuryRating',
+    'sPassAcc':'ThrowAccuracyShortRating', 'mPassAcc':'ThrowAccuracyMidRating',
+    'dPassAcc':'ThrowAccuracyDeepRating', 'throwOnRun':'ThrowOnTheRunRating',
+    'routeRun':'ShortRouteRunningRating',
+    'vision':'BCVisionRating', 'decisions':'PlayRecognitionRating',
+    'releaseLine':'ReleaseRating', 'manCover':'ManCoverageRating',
+    'zoneCover':'ZoneCoverageRating',
+    'skillMove':'SpinMoveRating', 'elusiveness':'JukeMoveRating',
+    'blockShedding':'BlockSheddingRating',
+}
+INVERTS = {'injuryProne'}          # PGM3 higher = more fragile; Madden the reverse
+DERIVED_ATTRS = {'ballStrip', 'discipline', 'greed', 'loyalty', 'ambition'}
+
+# Gated off despite weights.json listing them live. OLB manCover/zoneCover in
+# the published files spans 1-3 and 1-1 against MLB's 38-92 and 44-97, and
+# every value-1 record in the whole archive for these two fields is an OLB
+# (184 and 290 of them, 100%). That is fill, not a rating. Matches 2004, 2007
+# and 2017, which gate it off; diverges from 2013 and 2021, which populate it
+# with junk. Gating it here also leaves the CB/MLB/S quantile targets clean
+# with no separate target-cleaning step.
+GATE_OFF = {('OLB', 'manCover'), ('OLB', 'zoneCover')}
+
+def assert_not_degenerate(values, label):
+    """A column is fill, not a rating, when its values sit on the floor.
+
+    The precedent is precise and easy to misread: "a rating whose ENTIRE
+    OBSERVED RANGE SITS AT OR BELOW 10 is fill". That is max <= 10, not
+    max - min <= 10. Published OLB manCover runs 1-3 and zoneCover 1-1 -- floor
+    values. Madden CB speed runs 84-96 and WR burst 84-98 -- real values in a
+    homogeneous population, because every corner is fast.
+
+    A narrow-spread test rejects the second along with the first. It is the
+    same mistake as scoring a column by its correlation with OverallRating:
+    both confuse "this population is uniform on this attribute" with "this
+    column is not real". Written out because the first implementation here
+    made exactly that error and refused CB speed, WR burst and 12 other
+    genuine cells."""
+    v = sorted(values)
+    if len(v) < 8:
+        return None
+    hi, nd = v[-1], len(set(v))
+    if hi <= 10 or nd <= 4:
+        raise AssertionFailed(
+            f'{label}: degenerate source (max {hi:.0f}, {nd} distinct) — floor values, not a rating')
+    return (v[0], hi, nd)
+
+def _target_at(sorted_target, q):
+    n = len(sorted_target)
+    if n == 1: return sorted_target[0]
+    i = q * (n - 1)
+    lo = int(i); hi = min(lo + 1, n - 1)
+    return sorted_target[lo] + (sorted_target[hi] - sorted_target[lo]) * (i - lo)
+
+def quantile_map(src, target_sorted):
+    """Rank-map src onto the target distribution, COLLAPSING TIES.
+
+    Every player sharing a source value gets the target at the block's midpoint
+    quantile. Ranking tied values consecutively hands them different targets and
+    manufactures separation the source does not contain -- it hit 76% of players
+    in the 2013 build, and the overall distribution looks perfect throughout
+    because the shape is right. Only checking inside a tied block catches it."""
+    n = len(src)
+    if n == 0: return []
+    blocks = collections.defaultdict(list)
+    for i, v in enumerate(src): blocks[v].append(i)
+    out = [0] * n
+    pos = 0
+    for v in sorted(blocks):
+        k = len(blocks[v])
+        mid = pos + (k - 1) / 2.0
+        q = mid / (n - 1) if n > 1 else 0.5
+        tv = int(round(_target_at(target_sorted, q)))
+        for i in blocks[v]: out[i] = tv
+        pos += k
+    return out
+
+def fit_quantile_targets(paths, cohort='T'):
+    """(position, attribute) -> sorted published values. The LEVEL comes from
+    here; the ORDER comes from the Madden column."""
+    t = collections.defaultdict(list)
+    for p in paths:
+        for r in json.load(open(p)):
+            if cohort_of(r) != cohort: continue
+            for a in ATTR_MAP:
+                v = r.get(a)
+                if v: t[(r['position'], a)].append(v)
+    return {k: sorted(v) for k, v in t.items()}
+
+def cohort_of(r):
+    tid = r.get('teamID')
+    return 'Rookie' if tid == 'Rookie' else ('FA' if tid == 'Free Agent' else 'T')
+
+def spearman(a, b):
+    def rk(x):
+        o = sorted(range(len(x)), key=lambda i: x[i]); r = [0]*len(x); i = 0
+        while i < len(o):
+            j = i
+            while j+1 < len(o) and x[o[j+1]] == x[o[i]]: j += 1
+            for k in range(i, j+1): r[o[k]] = (i+j)/2.0 + 1
+            i = j+1
+        return r
+    n = len(a)
+    if n < 3: return None
+    ra, rb = rk(a), rk(b); ma, mb = sum(ra)/n, sum(rb)/n
+    num = sum((ra[i]-ma)*(rb[i]-mb) for i in range(n))
+    da = sum((x-ma)**2 for x in ra)**.5; db = sum((x-mb)**2 for x in rb)**.5
+    return num/(da*db) if da and db else None
+
+def stage_attributes(verbose=True):
+    bundle, front, mad, nfl = load_all()
+    weights = bundle['weights']
+    refs = [P(f) for f in MODERN_REFS]
+    targets = fit_quantile_targets(refs, 'T')
+
+    res  = join([r for r in nfl if r['status'] == 'ACT'], mad)
+    pmap = fit_position_map([(n, m) for n, m, _ in res.pairs], front)
+
+    # cohort: matched actives carry a Madden row; everyone else goes to a
+    # later tier (adjacent-year for veterans, draft slot for rookies).
+    rows = []
+    for n, m, _ in res.pairs:
+        pos = madden_pgm3_position(m, front)
+        if pos: rows.append((n, m, pos))
+
+    bypos = collections.defaultdict(list)
+    for n, m, pos in rows: bypos[pos].append((n, m))
+
+    built = {}                      # id -> {attr: value}
+    degen, mapped, gated = [], 0, 0
+    for pos, group in bypos.items():
+        live = set(weights[pos][0])
+        for a, col in ATTR_MAP.items():
+            if a not in live: continue
+            if (pos, a) in GATE_OFF: gated += 1; continue
+            tgt = targets.get((pos, a))
+            if not tgt: continue
+            raw = [float(m[col]) for _, m in group]
+            # degeneracy is a property of the SOURCE COLUMN, so test it before
+            # any inversion -- negating first makes every max negative.
+            try:
+                assert_not_degenerate(raw, f'{pos}.{a} ({col})')
+            except AssertionFailed as e:
+                degen.append(str(e)); continue
+            src = [-x for x in raw] if a in INVERTS else raw
+            out = quantile_map(src, tgt)
+            for (n, m), v in zip(group, out):
+                built.setdefault(id(n), {})[a] = v
+            mapped += 1
+
+    if verbose:
+        print(f'ATTRIBUTES mapped for {len(built)} matched active players')
+        print(f'   (position, attribute) cells mapped : {mapped}')
+        print(f'   cells gated off by ruling          : {gated}  (OLB manCover/zoneCover)')
+        print(f'   cells refused as degenerate        : {len(degen)}')
+        for d in degen: print(f'      {d}')
+    return rows, built, targets, weights
+
+def conditional_pass(rows, built, verbose=True):
+    """Mandatory. Split the output by the SOURCE value and confirm the groups
+    differ. Reported within (position) -- a pooled figure mixes fifteen maps
+    whose scales legitimately differ and reads low for a reason that has
+    nothing to do with whether any individual map works."""
+    bundle, front, mad, nfl = load_all()
+    bypos = collections.defaultdict(list)
+    for n, m, pos in rows: bypos[pos].append((n, m))
+    out = []
+    for a, col in sorted(ATTR_MAP.items()):
+        within, pooled_s, pooled_o = [], [], []
+        for pos, group in bypos.items():
+            pairs = [(float(m[col]), built.get(id(n), {}).get(a))
+                     for n, m in group if a in built.get(id(n), {})]
+            if len(pairs) < 8: continue
+            s = [x for x, _ in pairs]; o = [y for _, y in pairs]
+            if a in INVERTS: s = [-x for x in s]
+            r = spearman(s, o)
+            if r is not None: within.append((pos, r))
+            pooled_s += s; pooled_o += o
+        if not within: continue
+        rs = sorted(r for _, r in within)
+        worst = min(within, key=lambda x: x[1])
+        pool = spearman(pooled_s, pooled_o)
+        out.append((a, len(within), rs[len(rs)//2], worst, pool))
+    if verbose:
+        print(f'\nCONDITIONAL PASS — output vs SOURCE, within position')
+        print(f'{"attribute":15s} {"pos":>4s} {"median rho":>11s} {"worst":>22s} {"pooled":>8s}')
+        for a, n, med, worst, pool in out:
+            flag = '' if med > 0.95 else '   <-- CHECK'
+            print(f'{a:15s} {n:4d} {med:11.3f} {f"{worst[0]} {worst[1]:.3f}":>22s} '
+                  f'{pool if pool is not None else 0:8.3f}{flag}')
+    return out
+
+
+def assert_attribute_coverage(built, rows, weights):
+    """Every live (position, attribute) must be accounted for: mapped from a
+    source, gated off by ruling, or on the derived list. Nothing may be live
+    and silently absent.
+
+    This exists because a hand-written list of what to populate is a list of
+    what its author remembered -- the 2000 staff builder left ~30 specialty
+    fields at zero and its assertions passed, because they checked the fields
+    their author was thinking about."""
+    bypos = collections.defaultdict(list)
+    for n, m, pos in rows: bypos[pos].append(n)
+    missing = []
+    for pos, players in bypos.items():
+        live = set(weights[pos][0])
+        for a in live:
+            if (pos, a) in GATE_OFF or a in DERIVED_ATTRS: continue
+            have = sum(1 for n in players if a in built.get(id(n), {}))
+            if have == 0:
+                missing.append(f'{pos}.{a} live but never populated')
+            elif have < len(players):
+                missing.append(f'{pos}.{a} populated for only {have}/{len(players)}')
+    if missing:
+        raise AssertionFailed('attribute coverage gaps: ' + '; '.join(missing[:8]))
+    return sum(len(set(weights[p][0])) for p in bypos)
+
+def assert_no_gated_values(built, rows):
+    """A gated-off cell must be absent, not zero-valued-but-present, and no
+    player may carry an attribute his position does not use."""
+    bad = []
+    for n, m, pos in rows:
+        for a in built.get(id(n), {}):
+            if (pos, a) in GATE_OFF: bad.append(f'{pos}.{a} present despite being gated off')
+    if bad:
+        raise AssertionFailed('; '.join(sorted(set(bad))[:5]))
+    return True
+
 # ----------------------------------------------------------------- main
 if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else 'join'
     if cmd == 'selftest': selftest()
     elif cmd == 'join':   stage_join()
     elif cmd == 'faces':  stage_appearances()
+    elif cmd == 'attrs':
+        rows, built, _, weights = stage_attributes()
+        n = assert_attribute_coverage(built, rows, weights)
+        assert_no_gated_values(built, rows)
+        print(f'   coverage assertion: every live cell accounted for ({n} live slots)')
+        conditional_pass(rows, built)
     else: print(__doc__); sys.exit(2)
