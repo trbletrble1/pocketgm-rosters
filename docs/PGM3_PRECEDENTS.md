@@ -2528,6 +2528,30 @@ passes trivially and forever.
 
 ## Vacuous pass is this project's dominant failure mode
 
+### The worst class: a production step that reports success without producing output
+
+**`stage_build` never wrote the roster file.** For the entire build it
+assembled 2,635 records, ran every assertion over them, printed
+`ROSTER assembled: 2635 records`, and persisted nothing. Every correction that
+reached the shipped file all session did so through a *separate* script writing
+it directly. The build command reported success and produced no output, all
+day, and read exactly like a real build.
+
+It surfaced only because a position overhaul that moved hundreds of players
+between DE/DT/OLB/MLB came back with **all fifteen position counts identical to
+the digit**. That is not a plausible result, and the choice was to investigate
+it rather than accept a convenient one.
+
+This is the sharpest form of the family: the other instances check nothing and
+say `ok`; this one *does* the work, verifies the work, and throws it away. Every
+assertion in it passed, honestly, on records that never left memory.
+
+**Rule: after any step that is supposed to produce an artefact, assert the
+artefact CHANGED — a differing hash or mtime — not merely that the step ran
+without error.** Record counts, assertion passes and log lines all describe the
+in-memory object; only the file on disk is the deliverable.
+
+
 Counted across the build, **a check reporting green over nothing has caused more
 wrong conclusions than anything in the data itself.** Not a tendency — the
 leading category, ahead of bad joins, bad thresholds and bad sources. Every
@@ -2536,6 +2560,7 @@ them printed the same word a real pass prints.
 
 | # | instance | what was empty or unreachable | what it reported |
 |---|---|---|---|
+| 0 | **`stage_build` writing nothing** | the whole output step — records built, verified, discarded | `ROSTER assembled: 2635 records`, every session |
 | 1 | `free agent salary != 0` | the file had **no free agents** | `ok`, on every run, for the life of the 288-record file |
 | 2 | recombination control | vocabulary built from the very names being tested | `0.0%` on all eight files — the number wanted |
 | 3 | `teamId` probe | field is `teamID`; `.get` returned `None` for all 453 | a clean team/free-agent split, entirely fictional |
