@@ -61,6 +61,39 @@ If the game rejects a value, import says so immediately. That's cheap to find ou
 
 ---
 
+## A fill and a floor look identical from the outside
+
+**2026-08-31, Pass B2, rejected before any record was written.** Both are a
+large block of records sharing one exact value. Nothing about the *value* tells
+you which you are looking at — not its size, not its roundness, not how many
+records hold it, not how sparse its neighbourhood is.
+
+**What separates them is whether the population sharing the value has anything
+else in common.**
+
+- The stamina-1 block: no shared anything. An absence of data.
+- The 2010 salary block: shared age (median 23), shared zero guarantee (99%),
+  shared draft recency, and it sits in a **six-value monotone ladder** whose
+  ratios decay 1.166 → 1.099 exactly as real minimum scales do. A coherent
+  cohort — players on the league minimum for their accrued seasons.
+
+**So the test is to characterise the population, not the value.** Group the
+records holding the value and ask what else they share. A fill block is
+heterogeneous in everything except the filled field; a floor block is
+homogeneous in the thing that *causes* the floor.
+
+This is the sharper form of the single-position detector written the same day —
+that one asks whether a block is concentrated in one position, and this asks the
+general question the position case is one instance of.
+
+**Corollary, and the reason this nearly went wrong:** the spike detector built
+for B2 flags our own 2000 file at ratio 14.6, and 2000 was built with an
+explicit `min_salary()` floor whose values it reproduces to within $4. **Run a
+new detector against a file whose provenance you know before trusting what it
+says about files you do not.** A detector that condemns a known-good file is
+measuring the wrong thing, and that is cheap to discover and expensive to miss.
+
+
 ## A single value held by one position is fill; a real tail spreads
 
 **2026-08-31, Pass A1.** New detector, sharper than the `≤10 range` rule and it
