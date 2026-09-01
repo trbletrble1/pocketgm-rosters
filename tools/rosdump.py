@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-rosdump — read Madden .ros / .dbt roster files without Windows.
+rosdump — read Madden .ros / .dbt and ESPN NFL 2K5 gamesaves without Windows.
 
 Pure Python 3, standard library only. Nothing to install.
 
@@ -10,6 +10,13 @@ Pure Python 3, standard library only. Nothing to install.
     python3 rosdump.py verify FILE.ros PLAY reference.csv
     python3 rosdump.py check  FILE.ros
     python3 rosdump.py gui
+
+The same commands work on ESPN NFL 2K5 console saves (Xbox SAVEGAME.DAT).
+The format is detected from the file header and routed to nfl2k5.py, which
+must sit alongside this file. 2K5 saves expose a single table, PLAY.
+That backend matters because it reaches seasons Madden exports do not:
+community rosters exist back to 1958, and the 1986/1988/1990 files carry
+real skin data at 93% against known players.
 
 The point of `check` is to answer, in about a second, the question that
 otherwise costs a trip to the Windows machine: is this file worth using?
@@ -190,6 +197,63 @@ def write_csv(t, out, limit=None):
         for row in t.rows(limit):
             w.writerow(row)
     return cols
+
+
+def detect_format(path):
+    """Which backend reads this file. Madden containers open with 'DB',
+    2K5 console saves with 'ROST'."""
+    with open(path, 'rb') as fh:
+        head = fh.read(8)
+    if head[:2] == b'DB':
+        return 'madden'
+    if head[:4] == b'ROST':
+        return 'nfl2k5'
+    return 'unknown'
+
+
+def _load2k5(path):
+    try:
+        import nfl2k5
+    except ImportError:
+        raise OSError('nfl2k5.py must sit next to rosdump.py to read 2K5 saves')
+    s = nfl2k5.Save(path)
+    if not s.players:
+        raise ValueError('no player records found — is this a 2K5 roster save?')
+    return nfl2k5, s
+
+
+def cmd_tables_2k5(path):
+    m, s = _load2k5(path)
+    print(f'{os.path.basename(path)}  —  NFL 2K5 gamesave')
+    print(f'{"tag":<6}{"records":>9}{"edited":>9}{"fields":>8}{"rec bytes":>11}')
+    print(f'{"PLAY":<6}{len(s.players):>9}{len(s.edited()):>9}'
+          f'{len(s.players[0]):>8}{m.PLAYER_LEN:>11}')
+    return 0
+
+
+def cmd_dump_2k5(path, tag, out):
+    m, s = _load2k5(path)
+    if tag not in ('PLAY', '--all'):
+        print(f'2K5 saves expose one table, PLAY (asked for {tag})'); return 1
+    stem = os.path.splitext(os.path.basename(path))[0]
+    dest = out or f'{stem}_-_PLAY.csv'
+    if tag == '--all':
+        os.makedirs(out or '.', exist_ok=True)
+        dest = os.path.join(out or '.', f'{stem}_-_PLAY.csv')
+    n = m.write_csv(s, dest)
+    print(f'PLAY: wrote {n} records x {len(s.players[0])} fields -> {dest}')
+    return 0
+
+
+def cmd_check_2k5(path):
+    m, s = _load2k5(path)
+    lines, verdict = m.check(s)
+    print(f'{os.path.basename(path)}  —  NFL 2K5 gamesave  (players at 0x{s.player_start:X})')
+    for l in lines:
+        print('   ' + l)
+    print(f'\nscreen {verdict}' + ('' if verdict == 'FAILED' else
+          ' — still anchor-test it against known players before trusting it'))
+    return 0 if verdict == 'pass' else 1
 
 
 def cmd_tables(path):
@@ -450,15 +514,19 @@ def main():
         if cmd == 'gui' and len(a) == 1:
             return cmd_gui()
         if cmd == 'tables' and len(a) == 2:
-            return cmd_tables(a[1])
+            return (cmd_tables_2k5 if detect_format(a[1]) == 'nfl2k5'
+                    else cmd_tables)(a[1])
         if cmd == 'check' and len(a) == 2:
-            return cmd_check(a[1])
+            return (cmd_check_2k5 if detect_format(a[1]) == 'nfl2k5'
+                    else cmd_check)(a[1])
         if cmd == 'verify' and len(a) == 4:
             return cmd_verify(a[1], a[2], a[3])
         if cmd == 'dump' and len(a) >= 3:
             out = None
             if '-o' in a:
                 i = a.index('-o'); out = a[i + 1]; a = a[:i] + a[i + 2:]
+            if detect_format(a[1]) == 'nfl2k5':
+                return cmd_dump_2k5(a[1], a[2], out)
             return cmd_dump(a[1], a[2], out)
     except (ValueError, KeyError, OSError) as e:
         # KeyError stringifies to its repr, which quotes the whole message.
