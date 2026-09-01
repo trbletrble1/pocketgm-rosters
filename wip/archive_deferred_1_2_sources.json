@@ -1,0 +1,1717 @@
+[
+ {
+  "key": "josh palmer|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "vincent burns|DE",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "harold morrow|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "chris kern|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "brian smith|DE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jorge cordova|OLB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "joe zelenka|C",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "greg jones|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "rabih abdullah|RB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "nate poole|WR",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jason horton|CB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "brad pyatt|WR",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "tony bua|OLB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "keenan howry|WR",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "roderick bryant|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jammal lord|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "luis castillo|DE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "chad owens|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "craig davis|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "travis williams|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "eric bassey|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jeff faine|C",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "matt katula|C",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "freddy keiaho|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "andre woodson|QB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "atiyyah ellison|DT",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "torrance daniels|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "gijon robinson|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "christian gaddis|C",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "geoffrey pope|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "deangelo smith|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "shane andrus|K",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "chad simpson|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "alvin bowen|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "david herron|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "rhett bomar|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "alex hall|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "john parker wilson|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "brooks foster|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "edwin williams|C",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "davon drew|TE",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "bj raji|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "alex magee|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "john nalbone|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "dominique edison|WR",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "zach potter|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "tom santi|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "cary harris|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jason pociask|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "raymond ventrone|CB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jamey richard|C",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "seth olsen|C",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jon cooper|C",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "glover quin|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "matt sherry|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "slade norris|OLB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "marvin philip|C",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jay moore|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "chris jennings|RB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "sam giguere|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "cody glenn|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "cyril obiozor|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jonathan crompton|QB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "nate davis|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "cameron sheffield|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "charles scott|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "taylor mehlhaff|K",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "david veikune|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "zack follett|OLB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "tony pike|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "kevin matthews|C",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "derrick roberson|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "sean canfield|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "jamar wall|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "darryl sharpton|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "amari spievey|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "max komar|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "anthony allen|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "donald jones|WR",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "nathan enderle|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "dontay moch|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "kevin kowalski|C",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "john estes|C",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "ryan baker|DT",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "dj ware|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "brian rolle|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "austin pettis|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jabara williams|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "marcus gilchrist|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "colin kaepernick|QB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "allen bradford|RB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "anthony gaitor|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "rusty smith|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "niles paul|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "brandyn thompson|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "richmond mcgee|P",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jon weeks|C",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "dimitri nance|RB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jake ingram|C",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "max hall|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "jonathan stupar|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "chris brooks|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "matt kroul|DT",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "mike windt|C",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "britt davis|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "damik scafe|DE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jeremy horne|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "matt dodge|P",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "will yeatman|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jamar newsome|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "dominique davis|QB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "curtis brinkley|RB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "danny noble|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "cj davis|C",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "corey wootton|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "bryce brown|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "greg salas|WR",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "kyle adams|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "alfonzo dennard|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "demarco sampson|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "charly martin|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "tank carder|OLB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "eric foster|DT",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "fili moala|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "damien berry|RB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "deangelo tyson|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "david gettis|WR",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "brandon king|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "armon binns|WR",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "mike brewster|C",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "shawn powell|P",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "isaiah trufant|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "tj conley|P",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "david ausberry|TE",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jamell fleming|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "nick mcdonald|C",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "chris greenwood|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "alfonso smith|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "armando allen|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "ryan lindley|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "adrien robinson|TE",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jim cordle|C",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "pat devlin|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "miles burris|OLB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "mike caussin|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "mike mcneill|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "fernando velasco|C",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "john potter|K",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "matt conrath|DE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "konrad reuland|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "baron batch|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "robert malone|P",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "drake nevis|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "chris rainey|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "evan royster|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "curtis marsh|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "taylor thompson|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "tommy gallarda|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "emmanuel acho|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "ace sanders|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "aaron mellette|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "devonte holloman|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jeff maehl|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "andre smith|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "anthony toribio|DT",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "dennis johnson|RB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jeff tuel|QB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "zach sudfeld|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "ben bass|DT",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "brandon ghee|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "greg childs|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "caesar rayford|DE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "josh cooper|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "nate palmer|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "peter konz|C",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "eric page|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "eric martin|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "nick kasa|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "spencer lanning|P",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "tim shaw|OLB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "james dockery|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "dc jefferson|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "bruce carter|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "doug hogue|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "josh mauro|DE",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "matt overton|TE",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "carson tinker|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "kevin mcdermott|TE",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "mike windt|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "cody riggs|CB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "andy gallik|C",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "frank kearse|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "rashad ross|WR",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "james ferentz|C",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "charley hughlett|C",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "zack sanchez|CB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "lawrence guy|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "chase allen|OLB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "david harris|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jehu chesson|WR",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "marvin hall|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jamal agnew|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "raekwon mcmillan|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "hakeem butler|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "keesean johnson|WR",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jordan scarlett|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "reggie bonnafon|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "christian miller|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "riley ridley|WR",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "james daniels|C",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "justin march|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "chris westry|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "dexter williams|RB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "ryquell armstead|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "devine ozigbo|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jake ryan|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "darwin thompson|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "garrett griffin|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "lac edwards|P",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "emeke egbule|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "tim harris|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "gary jennings|WR",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "bobo wilson|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "antony auclair|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "treyvon hester|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "lonnie johnson|CB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "bryce love|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "patrick laird|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "andrew beck|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "colin holba|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "destiny vaeao|DT",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "josh carraway|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "ken webster|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "chris streveler|QB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "lamont gaillard|C",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "john cominsky|DE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "ryan nall|RB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "joe thomas|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "albert okwuegbunam|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "trey burton|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "devin asiasi|TE",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "zack baun|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "quinnen williams|DT",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "kendal vickers|DE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "austin walter|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "raymond calais|RB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "vyncint smith|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "david sills|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jp holtz|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "austin bryant|OLB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jack heflin|DT",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "cody barton|OLB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "trevon coley|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "abdullah anderson|DE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "trenton gill|P",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "dante pettis|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "justin zimmer|DT",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "ben ellefson|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "tyree jackson|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "poona ford|DT",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "godwin igwebuike|RB",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jake camarda|P",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "cody hollister|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "dax milne|WR",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "cade york|K",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "terry godwin|WR",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "brad robbins|P",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "liljordan humphrey|WR",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jonathan harris|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "sean clifford|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "anders carlson|K",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "armon watts|DT",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jake moody|K",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "greg gaines|DT",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "efe obada|DE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "jaren hall|QB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "zach davidson|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "chris myarick|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "brandon dillon|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "kevin rader|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "robert hainsey|C",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "keith ismael|C",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "troy apke|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "tip reiman|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "baylon spector|OLB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "tory taylor|P",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "bo nix|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "david long|OLB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "cam little|K",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "jared wiley|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "matt araiza|P",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "jj mccarthy|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "will reichard|K",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "drake maye|QB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "brock bowers|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "will shipley|RB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "cooper dejean|CB",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "blake corum|RB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "joshua karty|K",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "ladd mcconkey|WR",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "ricky pearsall|WR",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "aj barner|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "byron murphy|DE",
+  "sources": 2,
+  "archive_band": "dark"
+ },
+ {
+  "key": "luke mccaffrey|WR",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "ben sinnott|TE",
+  "sources": 2,
+  "archive_band": "light"
+ },
+ {
+  "key": "tanner mclachlan|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "troy andersen|OLB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "devin leary|QB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "maxwell hairston|CB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jj jansen|C",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "shemar turner|DE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "colston loveland|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "luther burden|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "shavon revel|CB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jahdae barron|CB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "zach allen|DE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "saivion jones|DE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jeremy crawshaw|P",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "elgton jenkins|C",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "byron murphy|CB",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "josh oliver|TE",
+  "sources": 1,
+  "archive_band": "dark"
+ },
+ {
+  "key": "gavin bartholomew|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "andres borregales|K",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "tyler shough|QB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jaxson dart|QB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "mason taylor|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jonah laulu|DE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "braden fiske|DE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "oronde gadsden|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "tre harris|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "keandre lambert smith|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jordan james|RB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "rylie mills|DE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "damien martinez|RB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "elijah arroyo|TE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jacob parrish|CB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "elic ayomanor|WR",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jowon briggs|DE",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "jaylin smith|CB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "graham mertz|QB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "dillon gabriel|QB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "dylan laube|RB",
+  "sources": 1,
+  "archive_band": "light"
+ },
+ {
+  "key": "matt lee|C",
+  "sources": 1,
+  "archive_band": "light"
+ }
+]
