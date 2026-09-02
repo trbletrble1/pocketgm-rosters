@@ -1,3 +1,4 @@
+import sys
 """Replace drawn staff ages with sourced birth years, and recompute startSeason.
 
 The 2000 staff ages had essentially no relationship to the men: only 13 of 89
@@ -13,11 +14,13 @@ modern published file), so a wrong age produced a wrong startSeason while the
 correlation still looked perfect. Each record's own residual is preserved here
 so only the age-driven shift moves.
 
-Sources in sources/coaches_2000_birth_years.csv, one row per record with
+Sources in $PGM3_SOURCES/coaches_2000_birth_years.csv, one row per record with
 provenance. Jim Mora is keyed on (team, role) because the file holds two
 different men, father at Indianapolis and son at San Francisco.
 """
 import json, csv, sys, statistics, collections
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from pgm3_paths import sources, require
 
 COACH = {'Head Coach', 'Off Co-ord', 'Def Co-ord', 'Special Teams'}
 PATH  = 'PGMStaff_2000.json'
@@ -26,7 +29,7 @@ def main():
     recs = json.load(open(PATH, encoding='utf-8'))
     n_in = len(recs)
     src = {}
-    for r in csv.DictReader(open('sources/coaches_2000_birth_years.csv', encoding='utf-8')):
+    for r in csv.DictReader(open(require('coaches_2000_birth_years.csv'), encoding='utf-8')):
         src[(r['name'], r['team'], r['role'])] = (int(r['age_2000']), r['source'])
     assert len(src) == 124, f'expected 124 sourced rows, got {len(src)}'
 

@@ -1,9 +1,10 @@
+import sys
 #!/usr/bin/env python3
 """rfm.py — read appearance data out of a Realistic Franchise Mod CAREER file.
 
-    python3 rfm.py dump  sources/madden/CAREER-RFM -o wip/rfm_faces.csv
-    python3 rfm.py probe  sources/madden/CAREER-RFM
-    python3 rfm.py anchor sources/madden/CAREER-RFM wip/rfm_faces.csv < anchors.csv
+    python3 rfm.py dump  $PGM3_SOURCES/madden/CAREER-RFM -o wip/rfm_faces.csv
+    python3 rfm.py probe  $PGM3_SOURCES/madden/CAREER-RFM
+    python3 rfm.py anchor $PGM3_SOURCES/madden/CAREER-RFM wip/rfm_faces.csv < anchors.csv
 
 Format, as supplied and verified here:
 

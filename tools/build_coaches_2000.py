@@ -1,5 +1,6 @@
+import sys
 #!/usr/bin/env python3
-"""Build sources/pfr/coaches_2000.csv from the fetched Wikipedia staff sections.
+"""Build $PGM3_SOURCES/pfr/coaches_2000.csv from the fetched Wikipedia staff sections.
 
 Every name here came off a page fetched 2026-08-31 and cached in raw.jsonl.
 Nothing is filled in from memory: where a source names no one, the name is left
@@ -16,7 +17,7 @@ def u(slug):
     PFR pages cannot be fetched directly — every transport returns 403 or a
     Cloudflare bot check — but their coaching block is readable through search
     result snippets, which is where the two PFR-sourced rows came from.
-    See sources/pfr/README.md.
+    See $PGM3_SOURCES/pfr/README.md.
     """
     if slug.startswith('PFR:'):
         return PFR.format(slug[4:])
@@ -199,8 +200,8 @@ HC_NOTE = {
 }
 
 # Repo-relative, so this runs from any clone. It previously carried an absolute
-# path to one machine's working copy plus the old sources/pfr/ layout, and would
-# have written outside the repo after the files moved to sources/.
+# path to one machine's working copy plus the old $PGM3_SOURCES/pfr/ layout, and would
+# have written outside the repo after the files moved out of the repo.
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HC_FILE = os.path.join(REPO, 'sources', 'coaches_2000_HC.csv')
 OUT = os.path.join(REPO, 'sources', 'coaches_2000.csv')

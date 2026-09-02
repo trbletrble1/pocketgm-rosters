@@ -1,3 +1,4 @@
+import sys
 #!/usr/bin/env python3
 """
 build_2026.py — PGMRoster_2026.json / PGMStaff_2026.json
@@ -9,8 +10,8 @@ clone). Run stages individually or `all`:
     python3 tools/build_2026.py selftest
 
 INPUTS
-  sources/nflverse/roster_2026.csv   who is on a roster   (authority: cohort)
-  sources/madden/madden_27_launch.csv  how good they are  (authority: ratings)
+  $PGM3_SOURCES/nflverse/roster_2026.csv   who is on a roster   (authority: cohort)
+  $PGM3_SOURCES/madden/madden_27_launch.csv  how good they are  (authority: ratings)
   wip/PGM3_2026_build_data.json      staff, schemes, weights, draft boards
 
 RULINGS APPLIED (Ryan, 2026-09-01)
@@ -20,6 +21,8 @@ RULINGS APPLIED (Ryan, 2026-09-01)
   cut, not a fitted one -- sensitivity at 0.4/0.6 reported in the build log.
 """
 import csv, json, os, sys, collections, unicodedata, re, statistics, datetime, random, hashlib, math
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from pgm3_paths import sources, require
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def P(*a): return os.path.join(REPO, *a)
@@ -1700,7 +1703,7 @@ def assert_no_gated_values(built, rows):
 
 
 # =========================================== tier 2: adjacent-year (2025 JINX)
-# sources/madden/2025JINXROSTER V21 - PLAY.csv. A one-year gap, which the
+# $PGM3_SOURCES/madden/2025JINXROSTER V21 - PLAY.csv. A one-year gap, which the
 # handoff measures at MAE 2.35-2.39 against 8.52 for percentile fill.
 #
 # Dated from its contents, not its filename (the 2000 archive shipped a 2007
@@ -1719,7 +1722,7 @@ def assert_no_gated_values(built, rows):
 # BreakTackleRating at 0.999, NOT trucking -- the .ros format has no trucking
 # column, so trucking falls back too. Report this per ATTRIBUTE, never per
 # player: "34 players on the adjacent-year tier" overstates it.
-JINX_2025 = 'sources/madden/2025JINXROSTER V21 - PLAY.csv'
+JINX_2025 = sources('madden', '2025JINXROSTER V21 - PLAY.csv')
 JINX_TO_M27 = {
     'PSPD':'SpeedRating', 'PACC':'AccelerationRating', 'PSTR':'StrengthRating',
     'PAGI':'AgilityRating', 'PJMP':'JumpingRating', 'PSTA':'StaminaRating',

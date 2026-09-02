@@ -1,10 +1,11 @@
+import sys
 #!/usr/bin/env python3
 """
 build_1979_roster - deduplicate the 28 footballdb 1979 rosters into one table.
 
     python3 tools/build_1979_roster.py
 
-Reads  sources/1979footballdb/*.txt   (jersey|name|pos|games|age|college)
+Reads  $PGM3_SOURCES/1979footballdb/*.txt   (jersey|name|pos|games|age|college)
 Writes wip/roster_1979_dedup.csv
 
 THE THREE RULES, all ruled by Ryan 2026-09-02:
@@ -20,10 +21,12 @@ THE THREE RULES, all ruled by Ryan 2026-09-02:
    one player between teams carrying 46-60, so it is not worth buying a source
    for - but it should not read as more principled than it is.
 """
-import sys, os, glob, csv, collections, unicodedata, re
+import os, sys, os, glob, csv, collections, unicodedata, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import nfl2k5
 from nfl2k5 import norm as knorm
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from pgm3_paths import sources, require, repo
 
 BLOCKS = {'st-louis-cardinals':(0,52),'atlanta-falcons':(54,105),'buffalo-bills':(159,211),
 'chicago-bears':(265,317),'cincinnati-bengals':(318,369),'dallas-cowboys':(371,423),
@@ -47,7 +50,7 @@ def norm(s):
 
 def load():
     rows = []
-    for f in sorted(glob.glob('sources/1979footballdb/*.txt')):
+    for f in sorted(glob.glob(sources('1979footballdb','*.txt'))):
         team = os.path.basename(f)[:-4]
         for line in open(f):
             c = line.rstrip('\n').split('|')
@@ -60,7 +63,7 @@ def load():
 def main():
     rows = load()
     assert len(rows) == 1438, f'expected 1438 source rows, got {len(rows)}'
-    save = nfl2k5.Save('sources/NFL2k25 Year Saves/1979-1980SAVEGAME.DAT')
+    save = nfl2k5.Save(require('NFL2k25 Year Saves','1979-1980SAVEGAME.DAT'))
     k5 = collections.defaultdict(list)
     for i, p in enumerate(save.players):
         k5[knorm(p['fname'] + ' ' + p['lname'])].append(i)
@@ -123,8 +126,8 @@ def main():
     unresolved = [l for l in log if l[0] == 'mover' and l[2][1] == 'UNRESOLVED TIE']
     assert not unresolved, f'unresolved mover ties: {unresolved}'
 
-    os.makedirs('wip', exist_ok=True)
-    with open('wip/roster_1979_dedup.csv', 'w', newline='') as fh:
+    os.makedirs(repo('wip'), exist_ok=True)
+    with open(repo('wip','roster_1979_dedup.csv'), 'w', newline='') as fh:
         w = csv.DictWriter(fh, fieldnames=['team','jersey','name','pos','games',
                                            'age','college','mover','also','resolved'])
         w.writeheader()

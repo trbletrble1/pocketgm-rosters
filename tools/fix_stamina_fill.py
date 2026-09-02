@@ -1,3 +1,4 @@
+import sys
 """Pass A1 -- replace the `stamina == 1` fill block in the published files.
 
 1,622 records all-cohort (1,267 rostered) across six of seven files carry
@@ -27,12 +28,14 @@ import json, csv, sys, os, hashlib, collections, statistics
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_2000 as b
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from pgm3_paths import sources, require
 
-SRC = {2004: 'sources/madden/2004 - PLAY.csv',
-       2007: 'sources/madden/2007 - PLAY.csv',
-       2013: 'sources/madden/2013 - PLAY.csv',
-       2017: 'sources/madden/2017JINXROSTER_V21.0 - PLAY.csv',
-       2021: 'sources/madden/2021JINXROSTER V23 - PLAY.csv'}
+SRC = {2004: sources('madden', '2004 - PLAY.csv'),
+       2007: sources('madden', '2007 - PLAY.csv'),
+       2013: sources('madden', '2013 - PLAY.csv'),
+       2017: sources('madden', '2017JINXROSTER_V21.0 - PLAY.csv'),
+       2021: sources('madden', '2021JINXROSTER V23 - PLAY.csv')}
 FILES = [1986, 2004, 2007, 2010, 2013, 2017, 2021]
 FILL  = 1
 

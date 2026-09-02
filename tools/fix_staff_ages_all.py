@@ -1,3 +1,4 @@
+import sys
 """Pass A2 -- replace drawn staff ages with sourced birth years, archive-wide.
 
 MEASURED CORRECTION TO THE TASK BRIEF: this is NOT archive-wide in the sense of
@@ -29,6 +30,8 @@ startSeason is refitted per file on that file's own age relationship, each
 record keeping its own residual, clamped to that file's own observed range.
 """
 import json, csv, sys, os, statistics, collections
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from pgm3_paths import sources, require
 
 COACH = {'Head Coach', 'Off Co-ord', 'Def Co-ord', 'Special Teams'}
 FILES = [1986, 2004, 2007, 2010, 2013, 2017, 2021]
@@ -50,7 +53,7 @@ def detect_format(path):
 
 def load_births():
     out = {}
-    for r in csv.DictReader(open('sources/coach_birth_years.csv', encoding='utf-8')):
+    for r in csv.DictReader(open(require('coach_birth_years.csv'), encoding='utf-8')):
         out[r['name']] = int(r['birth_year'])
     return out
 

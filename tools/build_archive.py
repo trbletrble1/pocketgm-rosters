@@ -1,9 +1,10 @@
+import sys
 #!/usr/bin/env python3
 """
 build_archive — index every ESPN NFL 2K5 community roster into one per-person
 appearance record, for use as a source in PGM3 builds.
 
-    python3 build_archive.py "sources/NFL2k25 Year Saves" -o reference/PGM3_PLAYER_ARCHIVE.json
+    python3 build_archive.py "$PGM3_SOURCES/NFL2k25 Year Saves" -o reference/PGM3_PLAYER_ARCHIVE.json
 
 WHY AN INDEX AND NOT A MERGE
 ----------------------------
@@ -45,7 +46,7 @@ on era: each entry records the years its sources saw the man, and a lookup whose
 target season falls outside that span by more than a career length is a
 different person.
 """
-import sys, os, glob, json, collections, argparse
+import os, sys, os, glob, json, collections, argparse
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import nfl2k5

@@ -131,13 +131,44 @@ was the only thing that caught it.
     PGMStaff_YYYY.json      published staff, repo root
     docs/                   handoff, precedents, source quality, vocabularies
     reference/              face registry, schema, vanilla sample, change log
-    sources/madden/         Xtreme DB Editor CSV exports, 2000-2025
-    sources/photos/         measured.csv — NFL headshot pixel measurements
-    sources/1986/           1986 build intermediates
+    $PGM3_SOURCES/          NOT IN THE REPO — see below
+      madden/               Xtreme DB Editor CSV exports, 2000-2025
+      photos/               measured.csv — NFL headshot pixel measurements
+      1986/                 1986 build intermediates
     tools/                  pgm3_validate.py
     wip/                    in-progress build data
 
 ---
+
+## `sources/` is NOT in the repo
+
+**Removed 2026-09-02 by Ryan's ruling. Nothing was deleted.** The tree holds
+third-party community files — Madden and 2K5 roster mods, Nza's Editor draft
+classes, cached pages from other people's sites. They are inputs, not our work,
+and committing them republished someone else's material under this repo's name.
+Kept on disk and backed up; `sources/` is gitignored so it cannot return by
+accident. The files remain in git history deliberately — rewriting a published
+branch breaks every clone for a harm that does not warrant it.
+
+**Resolve it through `tools/pgm3_paths.py`, never a literal path:**
+
+```python
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from pgm3_paths import sources, require, repo
+
+glob.glob(sources('1979footballdb', '*.txt'))   # input
+open(require('coach_birth_years.csv'))          # input; failure names the fix
+open(repo('wip', 'out.csv'), 'w')               # OUTPUT — see the trap
+```
+
+`PGM3_SOURCES` if set, else `../pgm3-sources` beside the repo root.
+
+**The trap, found during the move.** The old hardcoded `'sources/...'` strings
+only worked when a tool ran from the repo root. Routing inputs through
+`sources()` made the tools runnable from anywhere — so a bare
+`open('wip/out.csv','w')` began writing wherever the caller stood. Running
+`build_1979_roster.py` from `/tmp` created `/tmp/wip/`. **Fixing one side of a
+path problem exposed the other.** Outputs go through `repo()`.
 
 ## How the work is split
 

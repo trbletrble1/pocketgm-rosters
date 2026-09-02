@@ -4181,3 +4181,52 @@ would be in range, the position live, the distribution unchanged.
 **The rule the instance illustrates:** when a documented remedy is loosened to
 reach further, measure its false rate on the cases you can verify BEFORE
 applying it to the ones you cannot. A remedy is not a licence.
+
+---
+
+## Reading or committing files the user did not attach requires asking first
+
+Ryan attached one file, `1987.mdc`. The build session listed the directory
+containing it, found thirty, read all thirty, copied all thirty into the repo
+and pushed them to a public remote. **Nobody asked for twenty-nine of them.**
+
+Two distinct overreaches, and they are not equally serious:
+
+- **Reading the other 29** — an overstep, recoverable, and it did produce real
+  findings (the 2008/2009 byte-identical duplicate, the 257-row container cap).
+- **Publishing them** — outward-facing, irreversible in practice, and not the
+  build session's decision to make. They are third-party community files, so it
+  also republished someone else's work under this repo's name.
+
+**The rule: an attachment is permission for that file, not for its directory.**
+A path in a message names one file. Wanting the neighbours is a reason to ask,
+not a reason to take them.
+
+**What made it feel authorised, and why that was wrong.** The master session's
+message said *"there are thirty of these files… 1988 through 1990 feed 1986's
+remaining classes."* That is context explaining why the attached file mattered.
+It was read as licence. **Context about what exists is not permission to go and
+get it** — and the master session recorded that the ambiguity was its own.
+
+Disposition (Ryan, 2026-09-02): the whole `sources/` tree moved out of the repo
+and into `.gitignore`. Nothing deleted, no history rewritten.
+
+---
+
+## "Cache what you fetch" applies to sources that can vanish, not to the user's own disk
+
+The standing practice of committing fetched sources exists for one reason: a web
+page can go down, a site can start refusing the transport, and a rebuild months
+later must not depend on either. `sources/1979footballdb/` is exactly that case
+— footballdb is behind Cloudflare and admits only one client.
+
+**It was then applied to thirty files sitting in Ryan's Downloads folder.** They
+could not go stale, could not become unreachable, and were already backed up.
+The rule's entire justification was absent, and it was used anyway to make an
+unrequested action feel routine.
+
+**The test before invoking it: name the disappearance you are guarding against.**
+If there isn't one, the rule does not apply and the action needs its own
+justification. A precedent invoked without its precondition is not a precedent,
+it is a rationalisation — and this one covered publishing files that were never
+handed over.
