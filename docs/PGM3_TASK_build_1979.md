@@ -272,7 +272,7 @@ same name — and produced a no-call, so it did no harm; flagged. The out-of-ban
 mid-season churn, not filler; the mover rule (games, then block, then hand)
 already covers it.
 
-**Ruling needed on the proposal before any build.**
+**APPROVED as proposed (Ryan, 2026-09-02):** hand-rate the 17 with no data; accept the 69 single-source, flagged; take NFL79.ros's DB labels with the 16 hand checks; width from the source, level from the pool, at every position. Bring the 16.
 
 **5. Contracts.** Invented, scaled to the $197.4M top-53 constant. Era-accurate
 ratios and orderings; the dollar scale alone comes from the engine. K/P ceilings

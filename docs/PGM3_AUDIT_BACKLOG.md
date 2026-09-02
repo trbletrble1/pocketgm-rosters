@@ -1537,7 +1537,7 @@ staff file, so it waits for a ruling. The probe that first looked at it assumed
 the field's meaning instead of reading the vocabulary — the inference about
 the field was the error, not the gate.
 
-## 28. The 2026 write skipped every free agent — by a scope accident, not a decision
+## 28. The 2026 write skipped every free agent — by a scope accident, not a decision — CLOSED by write 2
 
 Ryan asked whether stage 8 scoped to rostered on purpose. **It did not, and it is
 not only stage 8.** `fix_2026_spread_potential.py` line 69 sets
@@ -1564,3 +1564,23 @@ nothing touched them; they are exactly as published.
 rostered + free agents; stage 5 (first-year rescale) and stage 7 unchanged. It
 would be the second write to 2026 tonight — the whole reason for "one write" —
 so it waits.
+
+
+### 29. Write 2 — the tool read its own output, and the fix that came with it
+
+**Reverted before commit.** The first build of write 2 read `PGMRoster_2026.json`
+— write 1's output — and ran every stage again. Double-mapping drifted 1,204
+records by +1/+2, and stage 5 re-ranked already-rescaled rookies: **Jager Burton
+77 → 67 → 41**, Kadyn Proctor (pick 12) 81 → 73 → 62, Francis Mauigoa (pick 10)
+83 → 79 → 69. Caught by the re-verification Ryan asked for; never staged.
+
+**Two fixes.** The tool takes an explicit `--source`, defaulting to
+`wip/PGMRoster_2026.source.json` (the pre-write published file, md5 `0878a5d0`),
+and asserts source ≠ output — the guard fires. And **stage 5 ranks the rookie
+class on the source rating**, not the post-stage-1 one: write 1 had ranked on a
+value the stretch had already inflated (Lemon at 86 sat 31 of 32 WRs; by the
+source, 28). The widened build then moves 26 rostered ratings by ≥5, **all 26
+first-year rookies, zero veterans** — the rank correction, not a defect.
+
+**Write-1 misreport, corrected.** Its commit said Cousins 58 → 67, Dalton 59 → 66;
+the shipped file had 73 and 71. Two names quoted from a pre-stage-8 artifact.

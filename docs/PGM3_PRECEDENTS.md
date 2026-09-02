@@ -4280,3 +4280,35 @@ low," and the sentence said the opposite.
 reading them, by the person, in the report. A tell composed before the run is a
 prediction, and printing it beside the result makes a prediction look like a
 finding — whichever way the numbers went.
+
+
+---
+
+## A scope defined for one purpose becomes the scope for everything downstream unless each stage re-decides it
+
+One variable, set at line 69 of the 2026 tool for the rookie and potential
+questions — rostered questions — was inherited by every stage through the QB
+level. Nothing chose it; each stage used what was there. 465 free agents with
+real Madden ratings and the same stretch went untouched by a write built to fix
+the stretch. **A variable named for one cohort became the scope for eight stages
+that never chose it.**
+
+Ruled fix: each stage states its own cohort, in its own variable, even where the
+answer is the same — the bug was the absence of a decision, not the wrong one.
+Same family as the derived-field rule: a value set once and reused without
+reconsideration. And its sibling, found the same night: **a tool that reads the
+file it writes will run its stages twice** — take an explicit source, assert it
+is not the output.
+
+---
+
+## An in-band aggregate can hide wrong records — read the names inside it
+
+1979's CB/S ratio came in at 1.02, out of the published 1.06–1.30. The 2K5 save,
+labelling independently, read 1.28 — in band — and was recommended as the
+tiebreak. The 20 records in one direction of the disagreement included **Roger
+Wehrli, Raymond Clayborn, Lemar Parrish and Neal Colzie, labelled FS** by the
+in-band source. The recommendation was retracted; Wikipedia career positions
+then backed the out-of-band source **24 to 2**. No ratio test finds a Hall of
+Fame corner filed as a safety. Look at the names inside the number before
+trusting the number.
