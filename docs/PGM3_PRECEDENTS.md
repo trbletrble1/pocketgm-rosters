@@ -2841,6 +2841,56 @@ separated "my change did this" from "this was always true".
 
 ---
 
+## You can tier a file from its output alone
+
+1986 has no build script — it was uploaded — so there is no `filled` set, no
+tier map, no provenance of any kind. The instruction was to fix it the way 2026
+was fixed, which requires knowing which attributes are sourced and which are
+percentile-filled.
+
+**A percentile fill is a monotone function of rating within position.** So rank
+correlation exposes it with no pipeline metadata at all:
+
+| file | median \|rho\| over 28 attributes | attributes above 0.95 |
+|---|---|---|
+| 1986 | 0.595 | **0** |
+| 2000 | 0.693 | **9** (six at exactly 1.000) |
+| 2013 | 0.451 | 1 |
+
+A fill reads ~1.0; 1986's highest is 0.935 and most sit at 0.2-0.8. **Nothing in
+1986 is filled** — its attributes are authored throughout, so the 2026 tail
+repair, which works by rescaling filled cells only, has nothing to act on.
+
+**Rule: a file with no provenance can still be tiered, from the output.** Do it
+before applying any fix that distinguishes sourced from filled data.
+
+---
+
+## The direction of trust is a property of the file, not of the fix
+
+In 2026 the attributes were Madden-sourced and the stored rating was an
+imported stranger that had never seen them. Recomputing the rating from the
+attributes was strictly an improvement.
+
+**In 1986 it is the reverse, and applying the same fix would have been the same
+class of error we refuse elsewhere** — adjusting measured data to hit a target.
+
+    quantile            min  p10  median  p90  max
+    published rostered   40   59      71   86   98
+    1986 rostered now    40   59      71   86   98   <- identical at every quantile
+    1986 if computed     31   55      72   88   99
+
+1986's ratings were authored against the published distribution and match it to
+the digit. Its attributes are the noisy half. Recomputing would import
+attribute noise into the one field that is currently right, move 506 ratings by
+more than 10 points and 90 by more than 20, and put **134 prospects below 40,
+the worst at 6**.
+
+**Ask which half of a record is trustworthy before deciding which half to
+recompute.** The answer differed between two files with the identical symptom.
+
+---
+
 ## Two scripts in one project, two position vocabularies
 
 The Houston core was selected by one script and assembled by another. The

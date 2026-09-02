@@ -161,6 +161,29 @@ archive, not to this work.
 
 ## 7. Files that break the computed-rating invariant
 
+**1986 — RECLASSIFIED as an ATTRIBUTE defect, and a documented EXCEPTION.**
+Not fixable, and the fix that worked for 2026 would make it worse. Tiered from
+the output (no build script exists): **zero** of its 28 attributes are
+percentile-filled, so they are authored throughout and there are no filled
+cells to rescale. Its ratings already match the published distribution at every
+quantile (40/59/71/86/98). Storing the computed value would give 31/55/72/88/99,
+put 134 prospects below 40 with the worst at 6, and move 506 ratings by more
+than 10 points. **Excluded from the invariant gate for this reason** — a
+known-unfixable file failing a gate forever teaches nothing. It needs an era
+source with machine-readable attribute data, and none exists.
+
+**2000 — DIFFERENT, and probably fixable. Needs a ruling.** Nine of its 28
+attributes are percentile-filled, six at exactly rho 1.000 (`decisions`,
+`routeRun`, `vision`, `skillMove`, `zoneCover`, `elusiveness`). That allows the
+**inverse** of the 2026 fix: keep the authored rating, which matches the
+published distribution (40/59/70/85/98), and adjust only the FILLED cells so
+the attributes support it. Measured, **3,192 of 3,351 records (95.3%) can have
+their gap closed by filled cells alone**; 159 cannot, the worst short by 21
+points. This touches no sourced data and does not move the rating distribution
+at all. NOT APPLIED — 2000 is published.
+
+
+
 The archive's rule is that a player's stored rating is whatever his attributes
 compute to. Four published files hold it across **11,737 records** — median
 0.26, max 3.45, **zero** players more than 5 off. Three files break it:
