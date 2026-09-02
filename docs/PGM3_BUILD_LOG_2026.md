@@ -233,6 +233,52 @@ computed puts him at **89**.
 Result: invariant holds at **max 0.50** (published max 3.45), and the file is
 distribution-neutral — median rostered rating and p10 unchanged.
 
+### The fill: one real player's whole vector, not twenty independent draws
+
+Storing the computed value made the file honest about tier-3 inflation; it did
+not remove it. DJ Herman, an undrafted rookie with no snaps, read 97 overall in
+play on 99 speed, 99 burst and 99 agility.
+
+**The root cause is independent draws.** Twenty attributes each drawn at
+percentile p produce a player with NO WEAKNESSES, and a no-weakness player
+computes far above p. Measured against 167 published RBs rated 60-66: their
+median within-player spread is 53 points with 2 elite and 2 weak cells, and
+**not one of the 167 carries ten elite cells.** Herman carried seventeen, with
+one trough beside nineteen peaks.
+
+Within-player spread is **flat across the whole rating range** -- 52 to 58 in
+every band from 40 to 99 -- so a compressed profile is wrong at any rating, not
+just a low one.
+
+**Fix: draw one real player's whole vector** from the same position and rating,
+then rescale onto the player's own rating. Structure comes across intact and
+scaling is monotone, so the peaks and troughs survive. Same reasoning as
+copying growthType whole to guarantee the 50x rule by construction.
+
+**Two things the first attempt got wrong**, both caught by re-measuring rather
+than by a gate:
+
+- A +/-12 rating band picked uniformly let a rookie drawn at 83 take a 95-rated
+  player's numbers wholesale and become a 98. Narrowed, and the vector is now
+  rescaled onto the drawn rating.
+- Copying a whole vector cannot produce a no-weakness player **unless the donor
+  is one**. Herman then drew a genuinely elite back whose twenty cells ran
+  72-99, spread 27 against a published 56, and rescaling preserved that
+  flatness. Donors below their own band's 25th-percentile spread are now
+  redrawn.
+
+| tier-3 cohort (n=73) | before | after |
+|---|---|---|
+| computed rating >= 90 | 4 | **0** |
+| players with >= 10 elite cells | many | **1** |
+| median within-player spread | 24 | **69** (published ~56) |
+| computed vs stored, median | -4.56 | **+0.03** |
+
+DJ Herman: **97 -> 87**, spread 50, two weak cells, stdev 17.6 against a
+published 14-16. His residual is the draw, not the fill -- `tier3_rating` gave
+him 83, the top 1.4% of a 214-player undrafted-rookie pool. Unlikely, faithful,
+and the remaining driver.
+
 ### The tails were the attributes, not the rating
 
 An attribute set computing to 104 or to 18 is one the archive has never

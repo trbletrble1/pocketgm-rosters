@@ -1557,19 +1557,49 @@ def stage_attributes(verbose=True):
     # tier 2 lacks the attributes .ros has no column for; tier 3 lacks
     # everything. Fill at the player's rating percentile WITHIN his position.
     fillt, ratpool = fit_percentile_fill(refs)
+    donors = fit_donor_vectors(refs)
     filled = collections.Counter(); filled_keys = set()
     for n, m, pos in rows:
         live = set(weights[pos][0])
         try: rt = float(m['OverallRating'])
         except (KeyError, ValueError): continue
         rp = percentile_of(ratpool[pos], rt) if ratpool.get(pos) else 0.5
-        for a in ATTR_MAP:
-            if a not in live or (pos, a) in GATE_OFF: continue
-            if a in built.get(id(n), {}): continue
-            pool = fillt.get((pos, a))
-            if not pool: continue
-            built.setdefault(id(n), {})[a] = int(round(_target_at(pool, rp)))
+        need = [a for a in ATTR_MAP
+                if a in live and (pos, a) not in GATE_OFF
+                and a not in built.get(id(n), {})]
+        if not need: continue
+        # ONE real player supplies every missing cell, so the internal
+        # structure -- peaks, troughs, the correlations between them -- comes
+        # across whole instead of being reassembled from independent draws.
+        rng = random.Random(name_seed(n, pos))
+        vec = pick_donor_vector(donors, pos, rt, rng, weights)
+        for a in need:
+            if vec and a in vec:
+                built.setdefault(id(n), {})[a] = float(vec[a])
+            else:
+                pool = fillt.get((pos, a))
+                if not pool: continue
+                built.setdefault(id(n), {})[a] = float(round(_target_at(pool, rp)))
             filled[a] += 1; filled_keys.add((id(n), a))
+        # RESCALE onto the player's own rating. Copying the vector alone is not
+        # enough: the donor band is +/-12, so a rookie drawn at 83 could take a
+        # 95-rated player's numbers wholesale and become a 95. Scaling is
+        # monotone, so the peaks and troughs that came with the donor survive.
+        cur = built.get(id(n))
+        if cur:
+            got = computed_rating(cur, pos, weights)
+            mov = [(a, c) for a, c in zip(*weights[pos])
+                   if (id(n), a) in filled_keys and a in cur]
+            base = sum(c * cur[a] for a, c in mov)
+            if abs(base) > 1e-9 and abs(got - rt) > 0.5:
+                f = 1.0 + (rt - got) / base
+                for a, _c in mov:
+                    b = bounds.get((pos, a)) if 'bounds' in dir() else None
+                    v = cur[a] * f
+                    if b: v = max(b[0], min(b[1], v))
+                    cur[a] = max(1.0, min(99.0, v))
+        for a in list(built.get(id(n), {})):
+            built[id(n)][a] = int(round(built[id(n)][a]))
 
     if verbose:
         n1 = sum(1 for v in tier_of.values() if v == 1)
@@ -1856,6 +1886,63 @@ def tier3_rating(nrow, pos, fine, coarse, rng):
     pool = fine.get(key) or coarse.get((ud, exp_band(nrow['_exp'])))
     if not pool: return None
     return pool[min(len(pool) - 1, int(rng.random() * len(pool)))]
+
+_DONOR_VEC = {}
+
+def fit_donor_vectors(paths):
+    """position -> [(rating, {attribute: value})] from real published players.
+
+    Independent per-attribute draws at percentile p produce a player with NO
+    WEAKNESSES, and a no-weakness player computes far above p. DJ Herman, an
+    undrafted rookie drawn at 63, came out with nineteen elite values and one
+    trough and computed 96 -- the best player in the file. Measured against
+    167 published RBs rated 60-66: their median within-player spread is 53
+    points with 2 elite and 2 weak cells, and NOT ONE of the 167 carries ten
+    elite cells. Herman carried seventeen.
+
+    Drawing a real player's WHOLE vector cannot produce that, because the
+    internal structure is preserved by construction. Same reasoning as copying
+    growthType whole to guarantee the 50x rule.
+    """
+    key = tuple(paths)
+    if key in _DONOR_VEC: return _DONOR_VEC[key]
+    out = collections.defaultdict(list)
+    for p in paths:
+        for r in json.load(open(p)):
+            if cohort_of(r) != 'T': continue
+            vec = {a: r[a] for a in ATTR_MAP if r.get(a)}
+            if len(vec) >= 10: out[r['position']].append((r['rating'], vec))
+    for pos in out: out[pos].sort(key=lambda x: x[0])
+    _DONOR_VEC[key] = out
+    return out
+
+def pick_donor_vector(donors, pos, target, rng, weights=None, band=5):
+    """A real player at the same position and rating, WITH TYPICAL SPREAD.
+
+    Copying a whole vector preserves internal structure, but not if the donor
+    himself has none: DJ Herman drew an elite back whose twenty rating cells
+    ran 72-99, spread 27 against a published median of 56, and rescaling that
+    down to 83 produced an 83 with no weaknesses. Within-player spread is flat
+    across the rating range (52-58 in every band from 40 to 99), so a donor
+    below the band's own 25th percentile is redrawn.
+    """
+    pool = donors.get(pos)
+    if not pool: return None
+    near = [v for rt, v in pool if abs(rt - target) <= band]
+    if not near:
+        near = [min(pool, key=lambda x: abs(x[0] - target))[1]]
+    if weights is None or len(near) < 8:
+        return near[int(rng.random() * len(near))]
+    names = weights[pos][0]
+    def spread(v):
+        vals = [v[a] for a in names if a in v]
+        return (max(vals) - min(vals)) if len(vals) >= 8 else 0
+    sp = sorted(spread(v) for v in near)
+    floor = sp[len(sp) // 4]                      # the band's own p25
+    for _ in range(12):
+        c = near[int(rng.random() * len(near))]
+        if spread(c) >= floor: return c
+    return near[int(rng.random() * len(near))]
 
 def fit_percentile_fill(paths):
     """(position, attribute) -> sorted values, used to fill at the player's
