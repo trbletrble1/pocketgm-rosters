@@ -242,10 +242,13 @@ file, 1.11). The position-mix table says it is a **corner shortfall** (−2.1 pe
 team against the published mean) rather than a safety surplus. The source's
 positions are specific, so the handoff's fix — resolve generic `DB` through
 Madden — does not apply; the labels are already Madden's. The 2K5 save, which
-labels CB/FS/SS independently, was read to arbitrate between *the era* and *one
-modder's labelling*; its answer is in the session log and decides which reading
-the build takes. **Needs a ruling either way**: accept 1.02 as 1979 (fewer
-nickel packages), or hold the band.
+labels CB/FS/SS independently, arbitrates: **its 28 verified team blocks give
+CB/S = 1.28, inside the band.** Two independent 1979 sources disagreeing means
+**labelling, not the era** — the NFL79 modder calls more men safeties than the
+2K5 modder does, and the individual disagreements on the shared DBs are named in
+the session log. **Recommendation, needing a ruling:** where the two sources
+disagree on CB vs S, take the 2K5 label (its ratio is in band); take NFL79.ros
+everywhere else. Position is a tiebreaker, not a filter, per the handoff.
 
 *Six teams carry two or more kickers* (NYJ four: Leahy, Jacobs, Linhart, Szaro
 — footballdb confirms all four played) and New Orleans two punters. Real
