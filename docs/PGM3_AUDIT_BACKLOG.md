@@ -11,6 +11,26 @@ review pass of its own — which is how the defects below got in.
 
 ## 1. 2021 was built to a different standard
 
+**MEASURED AGAINST ITS SIBLINGS — the case is weaker than this section claimed.**
+Two of the four defects do not survive the comparison:
+
+| claim | 2021 | siblings | verdict |
+|---|---|---|---|
+| free agent salary non-zero | **103** | 0 in all seven | **holds, unique** |
+| prospects break the rating invariant | **105** | 0 in 2004/07/10/13/17 | **holds** (1986 627, 2000 366) |
+| `eGuarantee` populated | 1425 | 2013 **1500**, 2010 1364, 2007 1213 | **does not hold** — 2021 is mid-pack |
+| family-2 skin share | 9.2% | 1986 8.2%, 2017 8.0%, 2013 7.2% | **weak** — a continuum, not an outlier |
+
+And 2021 **holds** the rostered rating invariant (0 players over 5), where 1986
+(629) and 2000 (476) break it badly. On that measure 2021 is with the good
+files, not the bad ones.
+
+The invented free-agent coach pool (0 of 27 head coaches real) still stands.
+So the honest count is **two or three defects, not four to six**, and 1986 and
+2000 are the worse files on every invariant measured. Any decision to rebuild
+2021 should start from this table rather than from the earlier count.
+
+
 Four independent defects now, in one file, each found by a different route and
 none by any existing check. That is no longer a run of bad luck; it is evidence
 about how the file was produced, and it should be audited as a whole rather
