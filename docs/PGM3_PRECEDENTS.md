@@ -3951,3 +3951,99 @@ failure mode**, which is where that family now lives rather than scattered.
 The recombination test itself was **discarded, not reported**: rebuilt
 leave-one-out, real team-side staff score 34-60% on it, so it does not separate
 invented from real at all.
+
+---
+
+## Guidance embedded in a generated artifact cannot be corrected by editing documentation
+
+Found 2026-09-02. A new failure shape, and the reason the `era_certain` defect
+survived being written down correctly elsewhere.
+
+`build_archive.py` writes a `_README` string *into*
+`reference/PGM3_PLAYER_ARCHIVE.json`, telling any reader to "check
+first_seen/last_seen against the season being built - but only where era_certain
+is true." That instruction is wrong. It was corrected in
+`PGM3_PROJECT_HANDOFF.md` and `PGM3_TASK_build_2026.md` the same day.
+
+**The copy inside the artifact could not be corrected**, because fixing it means
+regenerating the artifact — which was the repair ruled out for the same session.
+
+**An instruction inside a generated artifact supersedes nothing and is superseded
+by nothing.** A session that opens the archive to use it reads the embedded
+guidance as though it came from the source of truth, with no signal that a
+document three directories away corrects it. Documentation has a precedence
+order; an artifact's own README sits outside it.
+
+**Consequences:**
+
+- **Prefer a pointer to a claim.** An artifact's embedded README should say where
+  the current guidance lives, not restate it. A stale pointer is still a working
+  pointer; a stale claim is a wrong claim asserted by the source of truth.
+- **A generator that emits guidance is emitting a second copy of documentation**
+  that no doc edit can reach, and that will not be re-read when the doc changes.
+- **When correcting an instruction, grep the artifacts too**, not just `docs/`.
+  The defective sentence existed in three places and only two were editable.
+
+Recorded as backlog item 18's third copy. Fix in the same pass that fixes
+`stock_names()`.
+
+---
+
+## A field name can assert a confidence the code never computes
+
+`era_certain` reads as a verified flag. Its implementation is
+`build_archive.py:129`:
+
+```python
+e['era_certain'] = bool(e['years'])
+```
+
+It is a **null check**. It means "at least one vote survived the stock filter",
+never "the era is known". For a man whose only era-bearing votes were filtered
+out and whose remaining votes come from another era entirely, it reads `True`
+while the window it certifies is built from the wrong person — D.D. Lewis, a
+1979 Cowboys linebacker, `era_certain` True over a window of 2004-2009.
+
+An empty window abstains and is safe. **A wrongly-populated window asserts, and
+the flag named `certain` is what makes it credible.**
+
+**The name is documentation, and this one was wrong.** Three separate documents
+told build sessions to trust the field, all three written by people who had read
+the name and not the line. The general rule:
+
+- **A boolean whose name claims correctness must be checked against its
+  implementation before it is trusted**, especially where it gates a decision.
+- **Prefer names that describe the computation** — `has_dated_votes` cannot
+  mislead the way `era_certain` does.
+- This is the "a safe default is still a claim" family, moved into the naming
+  layer: a confident name is a claim about the data, made by whoever typed it.
+
+---
+
+## A file checked for one field and found wanting has not been checked
+
+Twice in two sessions a file already in the repo turned out to hold what a build
+needed, after being dismissed.
+
+- **The 1986 retro mod** was opened for faces, found unhelpful, and set aside.
+- **`1979-1980SAVEGAME.DAT`** was indexed into the player archive for **skin band
+  only**. The build session read the archive's schema, saw one appearance field,
+  and reported to Ryan that *no attribute source exists for 1979* — naming
+  ratings as the build's largest open question. The underlying file carries
+  **height, weight, jersey, years pro and eleven attributes** with real
+  per-player signal: Dorsett 98 speed against Payton 89, Blount top corner
+  coverage, Lambert and Ham top the tacklers, kickers at 39 speed.
+
+**The index is not the file.** An indexer extracts what its author needed on the
+day. Its output describes that intent, not the source's contents — and a later
+session reading only the index inherits the earlier session's question, not the
+data.
+
+**The rule: before declaring a field unsourceable, open the source, not the
+artifact derived from it.** `nfl2k5.Save(path).players[0].keys()` is one line and
+it was never run.
+
+Related but distinct from the stale-artifact rule, which is about a file that
+*changed*. Here nothing changed and nothing was stale — the file always held the
+attributes. What was stale was a **conclusion about the file**, and conclusions
+about sources need re-deriving when the question changes.

@@ -1,0 +1,51 @@
+85|Julius Adams|DE|16|31|Texas Southern
+61|Sam Adams|OG|15|31|Prairie View A&M
+27|Doug Beaudoin|DB|10|25|Minnesota
+64|Richard Bishop|DT|14|29|Louisville
+58|Pete Brock|C|16|25|Colorado
+63|Mark Buben|DE|16|22|Tufts
+44|Don Calhoun|RB|16|27|Kansas State
+12|Matt Cavanaugh|QB|13|23|Pittsburgh
+82|Al Chandler|TE|7|28|Oklahoma
+35|Allan Clark|RB|16|22|Northern Arizona
+26|Raymond Clayborn|DB|16|24|Texas
+22|Dick Conn|DB|1|28|Georgia
+55|Ray Costict|LB|16|24|Mississippi State
+75|Bob Cryder|OG|16|23|Alabama
+39|Sam Cunningham|RB|12|29|Southern California
+68|Terry Falcon|OG|10|24|Montana
+48|Tim Fox|DB|16|26|Ohio State
+81|Russ Francis|TE|12|26|Oregon
+51|Bob Golic|DT|1|22|Notre Dame
+14|Steve Grogan|QB|16|26|Kansas State
+71|Ray Hamilton|DT|16|28|Oklahoma
+73|John Hannah|OG|16|28|Alabama
+8|Eddie Hare|P|16|22|Tulsa
+80|Don Hasselbeck|TE|16|24|Colorado
+59|Mike Hawkins|LB|16|24|Texas A&M-Kingsville
+40|Mike Haynes|DB|16|26|Arizona State
+50|Sam Hunt|LB|15|28|Stephen F. Austin
+23|Horace Ivory|RB|11|25|Oklahoma
+29|Harold Jackson|WR|16|33|Jackson State
+87|Ray Jarvis|WR|7|30|Norfolk State
+32|Andy Johnson|RB|5|27|Georgia
+74|Shelby Jordan|OT|14|27|Washington (MO)
+52|Steve King|LB|16|28|Tulsa
+67|Bill Lenkaitis|C|16|33|Penn State
+72|Mel Lunsford|DT|16|29|Central State
+53|Bill Matthews|LB|16|23|South Dakota State
+34|Prentice McCray|DB|14|28|Arizona State
+78|Tony McGee|DE|16|30|Bishop
+86|Stanley Morgan|WR|16|24|Tennessee
+57|Steve Nelson|LB|15|28|North Dakota State
+17|Tom Owen|QB|6|27|Wichita State
+88|Carlos Pennywell|WR|6|23|Grambling
+77|Garry Puetz|OG|5|27|Valparaiso
+25|Rick Sanford|DB|16|22|South Carolina
+56|Rod Shoate|LB|14|26|Oklahoma
+1|John Smith|K|16|29|Southampton (England)
+30|Mosi Tatupu|RB|16|24|Southern California
+46|Mark Washington|DB|12|31|Morgan State
+83|Donald Westbrook|WR|16|27|Nebraska
+62|Dwight Wheeler|C|13|24|Tennessee State
+54|John Zamberlin|LB|16|23|Pacific Lutheran

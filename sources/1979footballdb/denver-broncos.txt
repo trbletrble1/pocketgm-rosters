@@ -1,0 +1,49 @@
+24|Otis Armstrong|RB|15|28|Purdue
+47|George Atkinson|DB|6|32|Morris Brown
+55|Ken Brown|C|16|25|New Mexico
+64|Billy Bryan|C|16|24|Duke
+35|Larry Canada|RB|16|24|Wisconsin
+68|Rubin Carter|DT|15|26|Miami
+79|Barney Chavous|DE|16|28|South Carolina State
+73|Kelvin Clark|OT|15|23|Nebraska
+31|Zachary Dixon|RB|5|23|Temple
+82|Jack Dolbin|WR|4|31|Wake Forest
+85|Ron Egloff|TE|15|24|Wisconsin
+56|Larry Evans|LB|16|26|Mississippi College
+43|Steve Foley|DB|16|25|Tulane
+62|Tom Glassic|OG|16|25|Virginia
+53|Randy Gradishar|LB|16|27|Ohio State
+63|John Grant|DE|16|29|Southern California
+60|Paul Howard|OG|16|29|Brigham Young
+65|Glenn Hyde|C|16|28|Pittsburgh
+29|Bernard Jackson|DB|12|29|Washington State
+57|Tom Jackson|LB|13|28|Louisville
+30|Jim Jensen|RB|16|25|Iowa
+32|Jon Keyworth|RB|16|28|Colorado
+84|Vince Kinney|WR|15|23|Maryland
+75|Kit Lathrop|DE|9|23|Arizona State
+72|Don Latimer|DT|15|24|Miami
+41|Rob Lytle|RB|15|24|Michigan
+66|Brison Manor|DE|16|27|Arkansas
+71|Claudie Minor|OT|16|28|San Diego State
+7|Craig Morton|QB|14|36|California
+25|Haven Moses|WR|16|33|San Diego State
+58|Rob Nairne|LB|10|25|Oregon State
+88|Riley Odoms|TE|13|29|Houston
+23|Chris Pane|DB|16|26|Cal State-Chico
+12|Craig Penrose|QB|2|26|San Diego State
+46|Dave Preston|RB|10|24|Bowling Green
+11|Luke Prestridge|P|16|23|Baylor
+78|Bruce Radford|DT|16|24|Grambling
+59|Joe Rizzo|LB|13|28|Merchant Marine
+50|Jim Ryan|LB|16|22|William & Mary
+19|Fred Steinfort|K|1|26|Boston College
+70|Dave Studdard|OT|16|23|Texas
+51|Bob Swenson|LB|16|26|California
+36|Billy Thompson|DB|16|33|Maryland Eastern Shore
+15|Jim Turner|K|16|38|Utah State
+80|Rick Upchurch|WR|16|27|Minnesota
+81|Steve Watson|WR|16|22|Temple
+14|Norris Weese|QB|16|28|Mississippi
+40|Charlie West|DB|16|33|Texas-El Paso
+20|Louis Wright|DB|16|26|San Jose State

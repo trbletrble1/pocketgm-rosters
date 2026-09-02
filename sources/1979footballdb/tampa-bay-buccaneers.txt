@@ -1,0 +1,46 @@
+69|Darrell Austin|OG|16|27|South Carolina
+42|Ricky Bell|RB|16|24|Southern California
+36|Rick Berns|RB|16|23|Nebraska
+16|Tom Blanchard|P|16|31|Oregon
+53|Rik Bonness|LB|16|25|Nebraska
+55|Aaron Brown|LB|12|23|Ohio State
+34|Cedric Brown|DB|16|25|Kent State
+70|Darryl Carlton|OT|16|26|Tampa
+44|Billy Cesare|DB|16|24|Miami
+60|Wally Chambers|DE|16|28|Eastern Kentucky
+33|Mark Cotney|DB|16|27|Cameron
+71|Randy Crowder|DT|16|26|Penn State
+38|Johnny Davis|RB|16|23|Alabama
+27|Tony Davis|RB|16|26|Nebraska
+43|Jerry Eckwood|RB|16|24|Arkansas
+14|Chuck Fusina|QB|1|22|Penn State
+88|Jimmie Giles|TE|16|24|Alcorn State
+81|Isaac Hagins|WR|16|25|Southern
+73|Charley Hannah|OG|14|24|Alabama
+64|Greg Horton|OG|16|28|Colorado
+56|Cecil Johnson|LB|15|24|Pittsburgh
+84|Gordon Jones|WR|12|22|Pittsburgh
+25|Curtis Jordan|DB|16|25|Texas Tech
+77|Bill Kollar|DT|15|26|Montana State
+57|Dave Lewis|LB|16|25|Southern California
+79|Reggie Lewis|DE|12|23|North Texas
+76|David Logan|DT|5|23|Pittsburgh
+87|Larry Mucker|WR|16|24|Arizona State
+51|Dana Nafziger|LB|16|26|Cal Poly-S.L.O.
+6|Neil O'Donoghue|K|16|26|Auburn
+86|Jim Obradovich|TE|16|26|Southern California
+85|Morris Owens|WR|16|26|Arizona State
+15|Mike Rae|QB|5|28|Southern California
+23|George Ragsdale|RB|15|26|North Carolina A&T
+75|Dave Reavis|OT|16|29|Arkansas
+46|Danny Reece|DB|16|24|Southern California
+61|Greg Roberts|OG|16|22|Oklahoma
+74|Gene Sanders|OT|16|22|Texas A&M
+58|Dewey Selmon|LB|15|25|Oklahoma
+63|Lee Roy Selmon|DE|16|25|Oklahoma
+40|Mike Washington|DB|15|26|Alabama
+45|Jeris White|DB|16|27|Hawaii
+12|Doug Williams|QB|16|24|Grambling
+50|Steve Wilson|C|16|25|Georgia
+54|Richard Wood|LB|16|26|Southern California
+68|George Yarno|OG|15|22|Washington State

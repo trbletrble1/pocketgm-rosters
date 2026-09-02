@@ -145,15 +145,27 @@ against the published band (1.06-1.30) before moving on.
 **3. Appearances — early, not last.** From the `1979-1980` archive file under the
 vote-presence rule. Run the conditional pass the moment they are built.
 
-**4. Ratings and attributes — THE OPEN QUESTION.** There is no Madden or 2K5
-attribute data for 1979; the archive is skin-band only. **Ruling (Ryan,
-2026-09-02): bring a measured proposal, do not settle the method in advance.**
-The proposal must carry:
+**4. Ratings and attributes — SOURCE FOUND 2026-09-02.** An earlier version of
+this brief said no attribute data exists for 1979 and named ratings the build's
+biggest unknown. **That was wrong** — it read the archive's schema (skin band
+only) instead of the source file. `1979-1980SAVEGAME.DAT` carries **height,
+weight, jersey, years pro and eleven attributes**: Speed, Strength, Agility,
+Jumping, Stamina, Tackle, Coverage, RunRoute, KickPower, PassArmStrength,
+Durability. See the precedent "a file checked for one field and found wanting
+has not been checked."
 
-- what production data actually exists **per position** — kickers and punters are
-  well served, offensive linemen are not
-- how players with **no stat line at all** are handled
-- an **anchor test against known 1979 quality** before anything is built
+Anchor test passes — Dorsett 98 speed against Payton 89, Stallworth/Carmichael/
+Swann/Largent top the route runners, Blount top corner coverage, Lambert 92 and
+Ham 90 top the tacklers, Bradshaw 90 and Staubach 86 top the arms, Stenerud and
+Moseley top the kickers, kickers 39 speed against receivers 87. Real per-player
+signal, not positional defaults.
+
+Maps to roughly half of PGM3's live attributes, including the physical half.
+The remainder still needs percentile fill. Ratings are now a **filtering and
+merging problem**, not a derivation problem.
+
+Still owed in the proposal: how players with **no 2K5 record** are handled
+(~18%), and whether that cohort correlates with obscurity or is random.
 
 **5. Contracts.** Invented, scaled to the $197.4M top-53 constant. Era-accurate
 ratios and orderings; the dollar scale alone comes from the engine. K/P ceilings
@@ -165,6 +177,118 @@ documented inflation defect.
 **7. The four invented franchises** — `CAR`, `IND`, `JAX`, `TEN`. See below.
 
 **8. Draft classes 1980-1983**, then the face registry **last**, then all gates.
+
+---
+
+## The 2K5 source file — structure, and the filter that falls out of it
+
+**File position encodes team.** VERIFIED 2026-09-02 against all 28 full
+footballdb rosters (1,438 players) — not against PFR stat-line players, which was
+the earlier and weaker check. **Zero overlapping blocks.** Widths 50-53.
+
+    team                   lo    hi   w  cover      team                   lo    hi   w  cover
+    st-louis-cardinals      0    52  53   74%       new-york-giants       954  1003  50   67%
+    atlanta-falcons        54   105  52   80%       new-york-jets        1007  1059  53   74%
+    [STOCK]               106   158  53    -        oakland-raiders      1060  1111  52   73%
+    buffalo-bills         159   211  53   75%       philadelphia-eagles  1113  1165  53   82%
+    [STOCK]               212   264  53    -        pittsburgh-steelers  1167  1216  50   83%
+    chicago-bears         265   317  53   77%       los-angeles-rams     1219  1271  53   73%
+    cincinnati-bengals    318   369  52   83%       san-diego-chargers   1274  1324  51   78%
+    dallas-cowboys        371   423  53   77%       san-francisco-49ers  1325  1376  52   72%
+    denver-broncos        424   476  53   80%       seattle-seahawks     1378  1429  52   82%
+    detroit-lions         477   529  53   78%       tampa-bay-buccaneers 1431  1483  53   85%
+    green-bay-packers     530   582  53   64%       houston-oilers       1484  1535  52   68%
+    baltimore-colts       584   635  52   80%       washington-redskins  1537  1589  53   78%
+    [STOCK]               636   688  53    -        cleveland-browns     1590  1640  51   81%
+    kansas-city-chiefs    689   740  52   85%
+    miami-dolphins        742   793  52   74%       [1641-1673] tail
+    minnesota-vikings     796   847  52   82%       [1674-1943] STOCK 2004, five blocks
+    new-england-patriots  849   900  52   82%       [1944-1997] SECOND PITTSBURGH, novelty
+    new-orleans-saints    901   953  53   80%
+
+**Three interior STOCK blocks** sit inside the sequence at 106-158, 212-264 and
+636-688 — 53 slots each, zero 1979 players. The 2K5 base carries more team slots
+than 1979 had teams; the modder left three unedited.
+
+**`nfl2k5.py` decodes no team pointers**, so this index structure is the only
+team signal the file carries. It is what makes the source usable per team, and
+it resolves namesakes: scoping a match to the team's own block removed a
+Pittsburgh name that name-only matching had placed in Miami's block.
+
+**An earlier version of this table was measured with a sliding window anchored
+at multiples of 54.** That window reports 54-wide blocks whether or not they
+exist — the measurement contained its own answer. Real starts are not at
+multiples of 54; the widths were roughly right and the alignment was an
+artifact. **Blocks are internally position-ordered** (CB, DE/DT, FB, FS, G, ILB,
+K, OLB, P, QB, RB, SS, T, TE, WR, C), so a team begins where that sequence
+resets. That detector is derived from the data rather than imposed on it.
+
+### Coverage, and the cohort with no 2K5 record
+
+**1,107 of 1,438 rostered players, 77%**, appear in their own team's block.
+Per team it runs 64% (Green Bay) to 85% (Tampa Bay, Kansas City).
+
+**The missing cohort correlates with obscurity, measured — it is not random:**
+
+    games played    present   absent   absent rate
+       1 - 4            59       75        56%
+       5 - 9            82       61        43%
+      10 - 13          157       34        18%
+      14 - 16          809      161        17%
+
+Absent median 13 games against present 16. The 2K5 blocks hold ~52 slots and a
+1979 roster with churn runs to 60, so the men who fall out are the ones who
+played least. **Filling this cohort from position and games played is therefore
+defensible** rather than a guess at a random hole.
+
+**But the correlation is not the whole story: 161 absent players started 14-16
+games.** A 17% floor persists across every games band, so obscurity explains the
+gradient, not the entire gap.
+
+### Contamination: the positional filter clears the tail and NOT the blocks
+
+Three kinds of junk sit in the tail region, index 1674 onward:
+
+- **Stock 2004 players** — David Carr, Jeff Garcia, Jared DeVries, Lewis Sanders
+- **Joke entries** — Chris Berman at 99 arm strength, Mel Kiper at receiver,
+  "Arquette Steve-O", "Gay Flex"
+- **Placeholders** — "Steelers Center", "Steelers Half Back"
+
+Density of real 1979 players is 28-40 per block through index 1673 and **0 per
+block from 1674 to 1943**, so discarding `index >= 1674` removes the tail with no
+name lookup.
+
+**It does NOT remove all contamination, and an earlier version of this section
+wrongly said it did.** Modern players also sit INSIDE real team blocks. The 1979
+Pittsburgh block at 1167-1216 contains **Chad Scott** (Steelers 1997-2006),
+**Oliver Ross** (1999-2003), **Chukky Okobi** (2001-2006) and **Mike Schneck**
+(1999-2004) — four 2000s Steelers among the 1979 ones.
+
+**So footballdb membership is load-bearing.** The block answers *which team*;
+only the roster answers *was he actually there*. Those are different claims, and
+collapsing them into one is what produced the wrong version of this paragraph.
+Use blocks for team assignment and contamination in the tail; use footballdb for
+membership.
+
+### The duplicate rule — measured, and it is NOT "take the higher"
+
+55 duplicate names; 38 same-position. **28 of those 38 are 1979 Pittsburgh
+Steelers**, in two contiguous blocks (~1167-1216 and ~1944-1997). This is one
+duplicated team, not a modder revising marquee players across the league.
+
+**"Take the higher record" splits 19/17 between the first and second block** —
+a coin flip, so there is no later-and-better pass to prefer. And the trailing
+block is the novelty roster: the same 54 slots holding "Steelers Center" and
+"Arquette Steve-O". Taking the higher would import novelty data for the Super
+Bowl champion in 17 of 36 cases.
+
+**Rule: take the record inside the in-sequence team block. Discard everything at
+index >= 1674.** Position and build still separate genuine namesakes — Kenny
+King is a 285 lb DE and a 203 lb rookie RB, two men, and the RB is the Oiler.
+
+*Kept because it is the worked example of "cut on the defect's signature, not
+the category that contains it." The category is "duplicate names"; the signature
+is "one team appears twice, and the second copy is a joke roster."*
 
 ---
 

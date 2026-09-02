@@ -1,0 +1,50 @@
+25|Nate Allen|DB|5|31|Texas Southern
+47|Tim Baylor|DB|16|25|Morgan State
+59|Matt Blair|LB|16|29|Iowa State
+23|Ted Brown|RB|14|22|North Carolina State
+20|Bobby Bryant|DB|14|35|South Carolina
+8|Greg Coleman|P|16|25|Florida A&M
+89|Douglas Cunningham|WR|6|23|Rice
+7|Rick Danmeier|K|16|27|Sioux Falls
+12|Steve Dils|QB|1|23|Stanford
+32|Jimmy Edwards|RB|14|27|Northeast Louisiana
+44|Chuck Foreman|RB|12|29|Miami
+68|Charlie Goodrum|OT|15|29|Florida A&M
+61|Wes Hamilton|OG|16|26|Tulsa
+45|Tom Hannon|DB|16|24|Michigan State
+52|Joe Harris|LB|2|26|Georgia Tech
+58|Wally Hilgenberg|LB|8|37|Iowa
+75|Randy Holloway|DE|16|24|Pittsburgh
+51|Jim Hough|OG|16|23|Utah State
+56|Dave Huffman|OG|13|22|Notre Dame
+25|Kurt Knoff|DB|10|25|Kansas
+9|Tommy Kramer|QB|16|24|Rice
+22|Paul Krause|DB|16|37|Iowa
+80|Terry LeCount|WR|12|23|Florida
+57|Derrel Luce|LB|16|27|Baylor
+70|Jim Marshall|DE|16|41|Ohio State
+33|Brent McClanahan|RB|16|28|Arizona State
+54|Fred McNeill|LB|16|27|UCLA
+87|Kevin Miller|WR|3|24|Louisville
+35|Robert Miller|RB|16|26|Kansas
+77|Mark Mullaney|DE|16|26|Colorado State
+74|Frank Myers|OT|14|23|Texas A&M
+71|Steve Niehaus|DT|3|25|Notre Dame
+49|Keith Nord|DB|16|22|St. Cloud State
+28|Ahmad Rashad|WR|16|29|Oregon
+78|Steve Riley|OT|16|26|Southern California
+76|Dave Roller|DT|15|30|Kentucky
+50|Jeff Siemon|LB|16|29|Stanford
+82|Robert Steele|WR|16|23|North Alabama
+55|Scott Studwell|LB|14|25|Illinois
+69|Doug Sutherland|DT|16|31|Wisconsin-Superior
+67|Dennis Swilley|C|16|24|North Texas
+38|Bob Tucker|TE|16|34|Bloomsburg
+27|John Turner|DB|16|23|Miami
+83|Stu Voigt|TE|16|31|Wisconsin
+72|James White|DT|16|26|Oklahoma State
+85|Sammy White|WR|15|25|Grambling
+29|Phillip Wise|DB|1|30|Nebraska-Omaha
+43|Nate Wright|DB|10|32|San Diego State
+73|Ron Yary|OT|16|33|Southern California
+34|Rickey Young|RB|16|25|Jackson State

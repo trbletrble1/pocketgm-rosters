@@ -1,0 +1,60 @@
+60|Brad Benson|OT|10|23|Penn State
+45|Alan Caldwell|DB|16|23|North Carolina
+53|Harry Carson|LB|16|25|South Carolina State
+41|Todd Christensen|TE|1|23|Brigham Young
+56|Jim Clack|C|16|32|Wake Forest
+59|Randy Coffield|LB|9|25|Florida State
+78|Gus Coppens|OT|9|24|UCLA
+18|Joe Danelo|K|16|26|Washington State
+15|Randy Dean|QB|16|24|Northwestern
+84|Al Dixon|TE|5|25|Iowa State
+34|Zachary Dixon|RB|3|23|Temple
+58|Keith Eck|C|13|23|UCLA
+65|Dan Fowler|OG|1|23|Kentucky
+71|Gordon Gravelle|OT|4|30|Brigham Young
+83|Earnest Gray|WR|16|22|Memphis
+34|Tony Green|RB|4|23|Florida
+33|Bobby Hammond|RB|4|27|Morgan State
+29|Eddie Hicks|RB|14|24|East Carolina
+81|Cleveland Jackson|TE|2|23|Nevada-Las Vegas
+24|Terry Jackson|DB|16|23|San Diego State
+13|Dave Jennings|P|16|27|St. Lawrence
+70|Gary Jeter|DE|16|24|Southern California
+48|Ken Johnson|RB|9|22|Miami
+31|Ernie Jones|DB|5|26|Miami
+55|Brian Kelley|LB|16|28|California Lutheran
+72|Gordon King|OT|7|23|Stanford
+44|Doug Kotar|RB|16|28|Kentucky
+54|Dan Lloyd|LB|13|25|Washington
+51|Frank Marion|LB|16|28|Florida A&M
+75|George Martin|DE|16|26|Oregon
+79|Mike McCoy|DT|3|31|Notre Dame
+89|Loaird McCreary|TE|11|26|Tennessee State
+23|Odis McKinney|DB|15|22|Colorado
+64|John Mendenhall|DT|13|30|Grambling
+62|Ron Mikolajczyk|OT|1|29|Tampa
+76|Calvin Miller|DT|11|26|Oklahoma State
+80|Emery Moorehead|TE|13|25|Colorado
+81|Tom Mullady|WR|2|22|Rhodes
+74|Tom Neville|OT|14|36|Mississippi State
+84|Steve Odom|WR|6|27|Utah
+25|Ray Oldham|DB|15|28|Middle Tennessee State
+86|Johnny Perkins|WR|13|26|Abilene Christian
+76|Jim Pietrzak|C|3|26|Eastern Michigan
+9|Joe Pisarcik|QB|4|27|New Mexico State
+28|Beasley Reece|DB|16|25|North Texas
+22|Ray Rhodes|DB|15|29|Tulsa
+85|Jim Robinson|WR|11|26|Georgia Tech
+88|Dwight Scales|WR|15|26|Grambling
+87|Gary Shirk|TE|16|29|Morehead State
+69|Roy Simmons|OG|16|22|Georgia Tech
+11|Phil Simms|QB|12|23|Morehead State
+57|John Skorupan|LB|14|28|Penn State
+80|Philip Tabor|DE|15|22|Oklahoma
+38|Billy Taylor|RB|16|23|Texas Tech
+39|Bob Torrey|RB|6|22|Penn State
+68|J.T. Turner|OG|16|26|Duke
+63|Doug Van Horn|OG|15|35|Ohio State
+10|Brad Van Pelt|LB|16|28|Michigan State
+84|Gene Washington|WR|2|26|Georgia
+73|Jeff Weston|OT|16|23|Notre Dame

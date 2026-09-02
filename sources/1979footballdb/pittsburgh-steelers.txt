@@ -1,0 +1,46 @@
+33|Anthony Anderson|RB|16|23|Temple
+30|Larry Anderson|DB|16|23|Louisiana Tech
+9|Matt Bahr|K|16|23|Penn State
+76|John Banaszak|DT|16|29|Eastern Michigan
+65|Tom Beasley|DE|13|25|Virginia Tech
+83|Theo Bell|WR|13|25|Arizona
+20|Rocky Bleier|RB|16|33|Notre Dame
+47|Mel Blount|DB|16|31|Southern
+12|Terry Bradshaw|QB|16|31|Louisiana Tech
+79|Larry Brown|OT|15|30|Kansas
+56|Robin Cole|LB|13|24|New Mexico
+5|Craig Colquitt|P|16|25|Tennessee
+77|Steve Courson|OG|16|24|South Carolina
+89|Bennie Cunningham|TE|15|24|Clemson
+57|Sam Davis|OG|13|35|Allen
+35|Jack Deloplaine|RB|1|25|Salem International
+63|Thom Dornbrook|OG|16|22|Kentucky
+67|Gary Dunn|DT|16|26|Miami
+64|Steve Furness|DE|12|28|Rhode Island
+50|Tom Graves|LB|11|23|Michigan State
+75|Joe Greene|DT|15|33|North Texas
+68|L.C. Greenwood|DE|12|33|Arkansas-Pine Bluff
+84|Randy Grossman|TE|16|27|Temple
+59|Jack Ham|LB|15|30|Penn State
+32|Franco Harris|RB|15|29|Penn State
+27|Greg Hawthorne|RB|15|23|Baylor
+29|Ron Johnson|DB|11|23|Eastern Michigan
+55|Jon Kolb|OT|14|32|Oklahoma State
+15|Mike Kruczek|QB|8|26|Boston College
+58|Jack Lambert|LB|16|27|Kent State
+39|Rick Moser|RB|16|22|Rhode Island
+72|Gerry Mullins|OG|15|30|Southern California
+66|Ted Petersen|OT|16|24|Eastern Illinois
+31|Donnie Shell|DB|16|27|South Carolina State
+86|Jim Smith|WR|15|24|Michigan
+82|John Stallworth|WR|16|27|Alabama A&M
+88|Lynn Swann|WR|13|27|Southern California
+24|J.T. Thomas|DB|14|28|Florida State
+38|Sidney Thornton|RB|13|25|Northwestern State
+51|Loren Toews|LB|11|27|California
+54|Zack Valentine|LB|16|22|East Carolina
+23|Mike Wagner|DB|8|30|Western Illinois
+52|Mike Webster|C|16|27|Wisconsin
+78|Dwight White|DE|11|30|Texas A&M-Commerce
+53|Dennis Winston|LB|16|24|Arkansas
+49|Dwayne Woodruff|DB|16|22|Louisville

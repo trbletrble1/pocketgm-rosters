@@ -1,0 +1,59 @@
+40|Jimmy Allen|DB|16|27|UCLA
+42|Nate Allen|DB|3|31|Texas Southern
+47|John Arnold|WR|7|24|Wyoming
+60|Al Baker|DE|16|22|Colorado State
+76|Karl Baldischwiler|OT|16|23|Oklahoma
+89|Luther Blue|WR|9|25|Iowa State
+73|Russ Bolinger|OG|16|25|Long Beach State
+27|Luther Bradley|DB|16|24|Notre Dame
+53|Jon Brooks|LB|15|22|Clemson
+24|Dexter Bussey|RB|16|27|Texas-Arlington
+31|Ken Callicutt|RB|16|24|Clemson
+66|Karl Chandler|C|1|27|Princeton
+63|Garry Cobb|LB|8|22|Southern California
+50|Eddie Cole|LB|15|22|Mississippi
+70|Keith Dorney|OT|16|21|Penn State
+72|Cleveland Elam|DT|8|27|Tennessee State
+61|Homer Elias|OG|15|24|Tennessee State
+48|Ken Ellis|DB|7|32|Southern
+78|Doug English|DT|16|26|Texas
+57|Ken Fantetti|LB|16|22|Wyoming
+65|Amos Fowler|C|12|23|Southern Mississippi
+58|Dennis Franks|C|13|26|Michigan
+38|Lawrence Gaines|RB|16|25|Wyoming
+71|Dave Gallagher|DE|10|27|Michigan
+79|William Gay|DE|15|24|Southern California
+17|Jerry Golsteyn|QB|1|25|Northern Illinois
+51|James Harrell|LB|9|22|Florida
+81|David Hill|TE|16|25|Texas A&M-Kingsville
+28|James Hunter|DB|15|25|Grambling
+10|Scott Hunter|QB|13|31|Alabama
+44|Ernie Jackson|DB|2|29|Duke
+46|Doug Jones|DB|10|29|Cal State-Northridge
+32|Rick Kane|RB|16|24|San Jose State
+25|Horace King|RB|16|26|Georgia
+19|Jeff Komlo|QB|16|23|Delaware
+26|Tony Leonard|DB|1|26|Virginia Union
+48|Eddie Lewis|DB|8|25|Kansas
+62|Don Morrison|OT|15|29|Texas-Arlington
+80|Ulysses Norris|TE|16|22|Georgia
+55|Ed O'Neil|LB|16|27|Penn State
+44|Dave Parkin|DB|9|23|Utah State
+43|Don Patterson|DB|2|22|Georgia Tech
+67|Wally Pesuit|OG|16|25|Kentucky
+75|Dave Pureifory|DE|15|30|Eastern Michigan
+14|Joe Reed|QB|2|31|Mississippi State
+1|Benny Ricardo|K|16|25|San Diego State
+36|Bo Robinson|RB|14|23|West Texas A&M
+82|Ken Sanders|DE|5|29|Howard Payne
+87|Freddie Scott|WR|14|27|Amherst
+15|Tom Skladany|P|2|24|Ohio State
+46|Jimmy Stewart|DB|5|25|Tulsa
+12|Larry Swider|P|14|24|Pittsburgh
+54|Larry Tearry|C|11|23|Wake Forest
+39|Leonard Thompson|WR|15|27|Oklahoma State
+52|Dave Washington|LB|7|31|Alcorn State
+18|Gene Washington|WR|16|32|Stanford
+59|Charlie Weaver|LB|8|30|Southern California
+21|Walt Williams|DB|12|25|New Mexico State
+47|Robert Woods|WR|1|24|Grambling

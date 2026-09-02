@@ -1,0 +1,47 @@
+80|Willis Adams|WR|16|23|Houston
+77|Lyle Alzado|DE|15|30|Yankton
+52|Dick Ambrose|LB|15|26|Virginia
+28|Ron Bolton|DB|16|29|Norfolk State
+91|Henry Bradley|DT|5|26|Alcorn State
+64|George Buehler|OG|11|32|Stanford
+49|Clinton Burrell|DB|16|23|Louisiana State
+12|Don Cockroft|K|16|34|Adams State
+27|Thom Darden|DB|16|29|Michigan
+21|Oliver Davis|DB|16|25|Tennessee State
+54|Tom DeLeone|C|16|29|Ohio State
+73|Doug Dieken|OT|16|30|Illinois
+92|Rich Dimler|DT|12|23|Southern California
+8|Johnny Evans|P|16|23|North Carolina State
+83|Ricky Feacher|WR|16|25|Mississippi Valley State
+55|Dave Graf|LB|16|26|Penn State
+81|Jack Gregory|DE|16|35|Delta State
+59|Charlie Hall|LB|16|30|Houston
+1|Dino Hall|RB|11|23|Rowan
+35|Calvin Hill|RB|14|32|Yale
+86|Gerald Irons|LB|16|32|Maryland Eastern Shore
+68|Robert Jackson|OG|16|26|Duke
+56|Robert Jackson|LB|16|25|Texas A&M
+48|Lawrence Johnson|DB|16|22|Wisconsin
+47|Ricky Jones|LB|16|24|Tuskegee
+85|Dave Logan|WR|16|25|Colorado
+57|Clay Matthews|LB|16|23|Southern California
+30|Cleo Miller|RB|16|27|Arkansas-Pine Bluff
+15|Mark Miller|QB|2|23|Bowling Green
+77|Matt Miller|OT|16|23|Colorado
+25|Pat Moriarty|RB|16|24|Georgia Tech
+82|Ozzie Newsome|TE|16|23|Alabama
+34|Greg Pruitt|RB|6|28|Oklahoma
+43|Mike Pruitt|RB|16|25|Purdue
+24|Randy Rich|DB|16|25|New Mexico
+63|Cody Risien|OT|16|22|Texas A&M
+33|Reggie Rucker|WR|16|32|Boston University
+22|Clarence Scott|DB|16|30|Kansas State
+65|Henry Sheppard|OG|16|26|Southern Methodist
+72|Jerry Sherk|DT|10|31|Oklahoma State
+78|Mickey Sims|DT|16|24|South Carolina State
+17|Brian Sipe|QB|16|30|San Diego State
+88|John Smith|WR|6|23|Tennessee State
+74|Mike St. Clair|DE|16|26|Grambling
+79|Gerry Sullivan|C|16|27|Illinois
+87|Curtis Weathers|LB|16|23|Mississippi
+89|Keith Wright|WR|5|23|Memphis

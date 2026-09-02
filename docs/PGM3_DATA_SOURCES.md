@@ -402,3 +402,43 @@ record attempted to enter **two** different files and would have shipped him
 light in both. Excluded once at extraction rather than remembered in every
 consumer.
 
+
+---
+
+## footballdb.com — 1979 roster spine (added 2026-09-02)
+
+    https://www.footballdb.com/teams/nfl/{period-team-slug}/roster/1979
+
+**Slugs are the PERIOD team name**, not the modern franchise: `houston-oilers`,
+`baltimore-colts`, `st-louis-cardinals`, `oakland-raiders`, `san-diego-chargers`,
+`washington-redskins`. All 28 resolve.
+
+**Transport matters — the site is behind Cloudflare.** Tested 2026-09-02:
+
+| transport | result |
+|---|---|
+| `curl`, browser User-Agent | **403** — Cloudflare "Attention Required!" |
+| Claude Code `WebFetch` | **403** |
+| **in-app browser (`mcp__Claude_Browser__navigate`)** | **works** |
+| in-page `fetch()` from footballdb's own origin | **403** — XHR is blocked even same-origin |
+
+So it is navigate-and-extract, one page at a time. **The pages are cached in
+`sources/1979footballdb/`** (28 files, 1,438 players, pipe-delimited
+`jersey|name|pos|games|age|college`) so no rebuild depends on the site still
+admitting us — same reason the PFR pages are in the repo.
+
+**What it gives:** jersey, name, position, games played, age, college.
+**What it does not:** height, weight, games started (all blank). Height and
+weight come from the 2K5 save instead.
+
+**Do not source anything but the roster table.** The page header carries MODERN
+metadata pasted onto a historical page — the 1979 Houston Oilers page reads
+"AFC South, 3-14, Head Coach: Robert Saleh" and Pittsburgh reads "Mike
+McCarthy". The table itself is clean and anchor-checked: 42 of Pittsburgh's 46
+appear on the PFR 1979 Pittsburgh page with **zero contradictions**, and the 11
+Houston players absent from PFR are the entire interior offensive line plus
+low-snap backups — men who cannot record a stat.
+
+**A batch's tab title lags one navigation behind the extracted content.** Verify
+by extracting `document.title` in the same call as the table, not from the tab
+context line.

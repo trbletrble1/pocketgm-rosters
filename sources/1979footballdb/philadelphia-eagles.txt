@@ -1,0 +1,50 @@
+38|Larry Barnes|RB|16|25|Tennessee State
+66|Bill Bergey|LB|3|34|Arkansas State
+27|Richard Blackmore|DB|16|23|Mississippi State
+95|John Bunting|LB|15|29|North Carolina
+67|Lem Burnham|DE|16|32|U.S. International
+37|Billy Campfield|RB|16|23|Kansas
+17|Harold Carmichael|WR|16|30|Southern
+32|Earl Carr|RB|1|24|Florida
+59|Al Chesley|LB|16|22|Pittsburgh
+71|Ken Clarke|DT|16|23|Syracuse
+46|Herman Edwards|DB|16|25|San Diego State
+81|Scott Fitzkee|WR|15|22|Penn State
+1|Tony Franklin|K|16|22|Texas A&M
+33|Louie Giammona|RB|15|26|Utah State
+78|Carl Hairston|DE|15|26|Maryland Eastern Shore
+20|Leroy Harris|RB|15|25|Arkansas State
+68|Dennis Harrison|DE|12|23|Vanderbilt
+89|Wally Henry|WR|12|25|UCLA
+23|Bob Howard|DB|16|34|San Diego State
+87|Claude Humphrey|DE|16|35|Tennessee State
+7|Ron Jaworski|QB|16|28|Youngstown State
+65|Charlie Johnson|DT|16|27|Colorado
+72|Wade Key|OG|12|33|Texas State
+84|Keith Krepfle|TE|16|27|Iowa State
+29|Al Latimer|DB|13|22|Clemson
+55|Frank LeMaster|LB|16|27|Kentucky
+41|Randy Logan|DB|16|28|Michigan
+77|Rufus Mayes|OT|16|31|Ohio State
+82|Jerrold McRae|WR|5|24|Tennessee State
+24|Henry Monroe|DB|3|22|Mississippi State
+31|Wilbert Montgomery|RB|16|25|Abilene Christian
+50|Guy Morriss|C|16|28|Texas Christian
+69|Woody Peoples|OG|16|36|Grambling
+62|Petey Perot|OG|14|22|Northwestern State
+52|Ray Phillips|LB|11|25|Nebraska
+64|Garry Puetz|OG|2|27|Valparaiso
+56|Jerry Robinson|LB|16|22|UCLA
+4|Max Runager|P|16|23|South Carolina
+26|Deac Sanders|DB|1|29|South Dakota
+21|John Sciarra|DB|16|25|UCLA
+76|Jerry Sisemore|OT|16|28|Texas
+79|Manny Sistrunk|DT|16|32|Arkansas-Pine Bluff
+61|Mark Slater|C|16|24|Minnesota
+85|Charlie Smith|WR|16|29|Grambling
+88|John Spagnola|TE|16|22|Yale
+58|Terry Tautolo|LB|16|25|UCLA
+75|Stan Walters|OT|16|31|Syracuse
+10|John Walton|QB|8|32|Elizabeth City State
+51|Reggie Wilkes|LB|16|23|Georgia Tech
+22|Brenard Wilson|DB|14|24|Vanderbilt

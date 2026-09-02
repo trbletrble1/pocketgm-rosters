@@ -1,0 +1,49 @@
+79|Coy Bacon|DE|16|37|Jackson State
+4|Mike Bragg|P|16|33|Richmond
+69|Perry Brooks|DT|12|24|Southern
+88|Danny Buggs|WR|16|26|West Virginia
+65|Dave Butz|DT|15|29|Purdue
+51|Monte Coleman|LB|16|21|Central Arkansas
+63|Fred Dean|OG|15|24|Texas Southern
+81|Chris DeFrance|WR|4|23|Arizona State
+67|Greg Dubinetz|OG|15|25|Yale
+86|Phil DuBois|TE|15|22|San Diego State
+59|Brad Dusek|LB|16|28|Texas A&M
+30|Ike Forte|RB|11|25|Arkansas
+66|Ted Fritsch|C|16|29|St. Norbert
+84|Jean Fugett|TE|11|27|Amherst
+80|Kris Haines|WR|1|22|Notre Dame
+34|Bobby Hammond|RB|5|27|Morgan State
+22|Buddy Hardeman|RB|10|25|Iowa State
+38|Clarence Harmon|RB|16|23|Mississippi State
+26|Don Harris|DB|16|25|Rutgers
+72|Terry Hermeling|OT|16|33|Nevada
+82|Dallas Hickman|DE|16|27|California
+27|Ken Houston|DB|13|34|Prairie View A&M
+58|Don Hover|LB|16|24|Washington State
+77|Joe Jones|DE|16|31|Tennessee State
+54|Bob Kuziel|C|16|29|Pittsburgh
+20|Joe Lavender|DB|16|30|San Diego State
+71|Karl Lorch|DE|15|29|Southern California
+25|Benny Malone|RB|16|27|Arizona State
+80|Johnnie McDaniel|WR|15|28|Lincoln (MO)
+11|Kim McQuilken|QB|3|28|Lehigh
+57|Rich Milot|LB|14|22|Penn State
+3|Mark Moseley|K|16|31|Stephen F. Austin
+29|Mark Murphy|DB|16|24|Colgate
+52|Neal Olkewicz|LB|16|22|Maryland
+24|Lemar Parrish|DB|16|31|Lincoln (MO)
+35|Lonnie Perrin|RB|5|27|Illinois
+23|Tony Peters|DB|16|26|Oklahoma
+89|Grady Richardson|TE|3|27|Cal State-Fullerton
+44|John Riggins|RB|16|30|Kansas
+64|Ron Saul|OG|15|31|Michigan State
+78|Paul Smith|DT|15|34|New Mexico
+74|George Starke|OT|16|31|Columbia
+72|Diron Talbert|DT|16|35|Texas
+7|Joe Theismann|QB|16|30|Notre Dame
+83|Ricky Thompson|WR|15|25|Baylor
+47|Ray Waddy|DB|16|23|Texas A&M-Kingsville
+85|Don Warren|TE|16|23|San Diego State
+73|Jeff Williams|OG|16|24|Rhode Island
+50|Pete Wysocki|LB|16|31|Western Michigan
