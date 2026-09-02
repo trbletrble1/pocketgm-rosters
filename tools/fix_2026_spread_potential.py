@@ -50,7 +50,7 @@ def load_weights():
 def overall(r,pos,W):
     w=W.get(pos); return None if not w else sum(r.get(n,0)*c for n,c in zip(w[0],w[1]))+w[1][-1]
 
-def build(out_path, W=None, selftest=False):
+def build(out_path, W=None, selftest=False, qb_cap=None):
     W=W if W is not None else load_weights()   # {} must stay {} — `or` reloaded the real table and made the negative test vacuous
     src=list(csv.DictReader(open(sources('madden','madden_27_launch.csv'),encoding='utf-8-sig',errors='replace')))
     by=collections.defaultdict(list)
@@ -152,6 +152,88 @@ def build(out_path, W=None, selftest=False):
                 for i,s_ in enumerate(pos_slots): newgt[s_]=per+(1 if i<rem else 0)
             x['growthType']=newgt; st4+=1
             assert sum(v for v in newgt if v>0)==g*50, 'growthType invariant'
+    # ---- stage 6: offensive decisions from the ARCHIVE curve (source is inverted at QB/RB/WR/TE/C). Ruled ON by the sequence.
+    NORMAL=['PGMRoster_1986.json','PGMRoster_2000.json','PGMRoster_2004.json','PGMRoster_2007.json','PGMRoster_2010.json','PGMRoster_2013.json','PGMRoster_2017.json','PGMRoster_2021.json']
+    dcurve=collections.defaultdict(list)
+    for f in NORMAL:
+        for r in json.load(open(repo(f))):
+            if r['teamID'] in('Rookie','Free Agent') or yrs(r) is None or not r.get('decisions'): continue
+            dcurve[(r['position'],min(yrs(r),10))].append(r['decisions'])
+    st6=0
+    for x in ro:
+        pos=x['position']; y=yrs(x)
+        if pos not in OFFENSE_DECISIONS_OFF or y is None or not x.get('decisions'): continue
+        c=dcurve.get((pos,min(y,10)))
+        if not c or len(c)<15: continue
+        x['_dec_bucket']=(pos,min(y,10))
+    # Per-BUCKET assignment, not a cohort-wide rank map. The source order at these positions is inverted noise, so
+    # rank-preserving it across buckets handed rookies the veteran values (78 vs 72). Each player takes his own
+    # experience bucket: the archive median, plus a rank-preserved spread WITHIN the bucket from the archive p10-p90.
+    for key in {x['_dec_bucket'] for x in ro if '_dec_bucket' in x}:
+        grp=[x for x in ro if x.get('_dec_bucket')==key]; c=sorted(dcurve[key])
+        lo,hi=c[int(.1*len(c))],c[int(.9*len(c))]
+        order=sorted(grp,key=lambda x:x['decisions'])
+        for i,x in enumerate(order):
+            qq=i/(len(order)-1) if len(order)>1 else .5
+            nv=int(round(lo+qq*(hi-lo)))
+            if nv!=x['decisions']: x['decisions']=nv; x['_dec_touched']=True; st6+=1
+    for x in ro: x.pop('_dec_bucket',None)
+    for x in ro: x.pop('_dec_target',None)
+    # ---- stage 7: prospect injuryProne re-drawn to the archive rookie level (~34); no source exists (2 of 278). Ruled ON.
+    st7=0; pros=[x for x in d if x['teamID']=='Rookie']
+    if pros:
+        order=sorted(pros,key=lambda x:x['injuryProne'])
+        # rank-preserving remap of the prospect cohort onto the pooled archive prospect distribution
+        tgt=sorted(r['injuryProne'] for f in NORMAL for r in json.load(open(repo(f))) if r['teamID']=='Rookie' and r.get('injuryProne') is not None)
+        for i,x in enumerate(order):
+            nv=tgt[min(len(tgt)-1,int(i/(len(order)-1)*(len(tgt)-1)))]
+            if nv!=x['injuryProne']: x['injuryProne']=nv; st7+=1
+    # ---- stage 6/7 CONSEQUENCE: decisions feeds the overall (0.183 at QB). Recompute rating, then re-derive potential and
+    # growthType, for every rostered record stage 6 touched — otherwise the invariant falls (measured: 99.9% -> 91.0%).
+    def rederive(x):
+        pos=x['position']; y=yrs(x)
+        if pos in W: x['rating']=int(round(overall(x,pos,W)))
+        if y is not None:
+            x['potential']=x['rating']+int(st.median(curve.get(min(y,8)) or curve[8]))
+        g=x['potential']-x['rating']; gt=x['growthType']; pos_slots=[i for i,v in enumerate(gt) if v>0] or list(range(min(17,len(gt))))
+        newgt=[v if v<=0 else 0 for v in gt]
+        if g>0:
+            per=g*50//len(pos_slots); rem=g*50-per*len(pos_slots)
+            for i,s_ in enumerate(pos_slots): newgt[s_]=per+(1 if i<rem else 0)
+        x['growthType']=newgt; assert sum(v for v in newgt if v>0)==g*50
+    for x in ro:
+        if x.get('_dec_touched'): rederive(x)
+    for x in ro: x.pop('_dec_touched',None)
+    # ---- stage 8: QB LEVEL, last. Close the gap to Madden's overall by a uniform shift across live attributes,
+    # bounded by (a) the source's observed range per attribute and (b) qb_cap per attribute. Residual reported.
+    st8=0; qb_report=[]
+    if qb_cap is not None and 'QB' in W:
+        # decisions is EXCLUDED here: at QB its Madden range is 10-68, an unpopulated defensive field, and stage 6 has just
+        # drawn it from the archive. Including it made stage 8 clamp the archive draw back down — 41 moves over 10, max 31.
+        live=[n for n in W['QB'][0] if n in MAP and n!='decisions']; coef=dict(zip(W['QB'][0],W['QB'][1][:-1]))
+        wsum=sum(coef[n] for n in live)
+        rng_src={}
+        for a in live:
+            v=[int(float(b[MAP[a]])) for x in ro if x['position']=='QB' and x['iden'] in J for b in [J[x['iden']]] if str(b.get(MAP[a],'')).strip()]
+            if len(v)>=15: rng_src[a]=(min(v),max(v))
+        for x in ro:
+            if x['position']!='QB' or x['iden'] not in J: continue
+            target=int(float(J[x['iden']]['OverallRating'])); before=overall(x,'QB',W)
+            k=(target-before)/wsum if wsum else 0
+            k=max(-qb_cap,min(qb_cap,k))
+            moved={}
+            for a in live:
+                if not x.get(a,0): continue
+                lo,hi=rng_src.get(a,(1,99)); nv=int(round(max(lo,min(hi,x[a]+k))))
+                if nv!=x[a]: moved[a]=nv-x[a]; x[a]=nv
+            after=overall(x,'QB',W)
+            if moved: x['rating']=int(round(after)); st8+=1
+            qb_report.append(dict(name=f"{x['forename']} {x['surname']}",madden=target,before=before,after=after,k=k,maxmove=max((abs(v) for v in moved.values()),default=0)))
+        # potential and growthType re-derived for QBs whose rating moved (potential is a function of rating)
+        for x in ro:
+            if x['position']=='QB': rederive(x)
+    build.qb_report=qb_report
+    print(f'stage6 decisions {st6}  stage7 injuryProne {st7}  stage8 QB level {st8} (cap {qb_cap})')
     assert len(d)==n_in, f'{n_in} in, {len(d)} out'
     assert st1>0 and st2>0 and st3>0 and st4>0 and st5>0, f'a stage ran empty: {st1},{st2},{st3},{st4},{st5}'
     json.dump(d,open(out_path,'w'))
@@ -159,7 +241,7 @@ def build(out_path, W=None, selftest=False):
     return d
 
 if __name__=='__main__':
-    ap=argparse.ArgumentParser(); ap.add_argument('--out',default='/tmp/scratch_2026_onewrite.json'); ap.add_argument('--selftest',action='store_true')
+    ap=argparse.ArgumentParser(); ap.add_argument('--out',default='/tmp/scratch_2026_onewrite.json'); ap.add_argument('--selftest',action='store_true'); ap.add_argument('--qb-cap',type=float,default=None)
     a=ap.parse_args()
     if a.selftest:
         # must FAIL: an empty weights table makes every stage empty
@@ -170,4 +252,4 @@ if __name__=='__main__':
         r['growthType'][0]+=50
         bad=[x for x in d if x['teamID'] not in('Rookie','Free Agent') and sum(v for v in x['growthType'] if v>0)!=(x['potential']-x['rating'])*50]
         print(f'selftest 2 ok — tampered invariant is detectable: {len(bad)} record(s) flagged' if bad else 'SELFTEST FAIL: tampered growthType not detected'); sys.exit(0 if bad else 1)
-    build(a.out)
+    build(a.out, qb_cap=a.qb_cap)

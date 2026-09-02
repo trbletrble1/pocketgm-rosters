@@ -4230,3 +4230,35 @@ If there isn't one, the rule does not apply and the action needs its own
 justification. A precedent invoked without its precondition is not a precedent,
 it is a rationalisation — and this one covered publishing files that were never
 handed over.
+
+---
+
+## A derived field is re-derived after EVERY stage that moves its input — three instances in one build
+
+Building the one 2026 write, the same bug surfaced three times in one evening,
+each caught only by measuring the gated artifact:
+
+1. **potential vs rookies.** Potential was drawn from 2017's curve, then the
+   rookie rescale lowered rating and left potential where it was. Rookie headroom
+   read 10 against 2017's 6.
+2. **decisions vs the QB range rule.** Stage 6 drew offensive `decisions` from
+   the archive; stage 8 then clamped it back to Madden's range for that field —
+   which at QB is 10-68, the unpopulated noise the draw had just replaced. 41
+   moves over the cap, max 31, all in one field.
+3. **decisions vs rating.** Stage 6 moved a field with weight 0.183 at QB and did
+   not recompute the overall. The rating invariant fell from 99.9% to 91.0%.
+
+**One rule:** a field that is a *function* of others — `rating` of attributes,
+`potential` of rating, `growthType` of potential − rating — is re-derived
+after every stage that touches any input, never once at a fixed point in the
+sequence. A stage order that reads "potential → rookies" cannot be honoured
+literally; it is honoured by re-deriving potential after rookies.
+
+**Corollary for range rules:** a clamp built from a source field must not apply
+to a value that was deliberately drawn from somewhere else. The source's range
+for an unpopulated field is the range of its noise.
+
+**And the probe caught itself once:** the "max move 19" that looked like a cap
+failure was the measurement diffing against a baseline that predated stage 6 —
+it was the archive draw, doing its job. Isolate a stage by building the artifact
+without it, not by assuming the last scratch file is the right baseline.

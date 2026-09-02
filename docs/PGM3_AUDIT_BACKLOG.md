@@ -1401,3 +1401,69 @@ pool" residual Ryan accepted as legitimate disagreement.
    909 cells and lift stamina min 2→62. A floor, not a map. OFF until ruled.
 3. **Offensive `decisions`** (25b): draw from the archive curve, or leave and log.
 4. **Prospect `injuryProne`** (25b): re-draw to ~34, or leave.
+
+### 25d. QB level, the full re-measure, and what the baseline claim actually was
+
+**Ruled:** stretch fix everywhere, quarterback handled separately — close QB overall
+to Madden's as far as the attributes allow, nothing outside the source range, a
+stated per-attribute cap, spread across fields, residual reported. Sequence:
+attributes → potential → rookies → decisions → injuryProne → QB level last.
+
+**One thing the sequence cannot hold literally, and how it is honoured:**
+`potential` is a function of `rating`, so it is re-derived after *every* stage
+that moves rating (rookies, decisions, QB level), not run once. `growthType`
+follows it each time. That is the rule below.
+
+**The cap, measured on scratch builds before anything was applied:**
+
+    cap   QB MAE 5.6 ->   median |gap|   Spearman 0.842 ->   Goff (Madden 88)
+     8          1.1            0.5            0.984           79 -> 87 / pot 87
+    10          0.8            0.0            0.991           79 -> 87 / pot 87
+    15          0.9            0.4            0.995           same
+    none        0.9            0.4            0.995           same
+
+Beyond 10 buys nothing. **Recommend 10.** Stage 8 isolated against a stages-1-7
+baseline: max per-attribute move at cap 10 is **10, zero over**. At cap 8 one
+record reads 10 — **Josh Allen, power 91 → 81** — which is the source *ceiling*
+of 81, not the shift: he sat above Madden's own QB range. The range rule, doing
+its job. **QB attributes outside the source range on the final artifact: 0.**
+
+**Goff: 79 → 87, potential 87, against Madden's 88.** The residual 1 is five of
+his twelve live attributes at the source ceiling (intelligence 99, decisions,
+power, ballSecurity, stamina). PGM3 values legs; that is the disagreement Ryan
+said to leave.
+
+**The re-measure, on the final artifact, with the published column beside it —
+because the "14 of 15 within a point" baseline was never true of the published
+file.** Eight positions were already off before tonight:
+
+    pos   madden   published   new     spearman pub -> new    verdict
+    QB      70        76       71        0.842 -> 0.991      fixed  (+6 -> +1)
+    K       78        74       78        0.736 -> 0.701      fixed
+    DT      73        75       74        0.786 -> 0.856      fixed
+    S       74        76       73        0.926 -> 0.953      fixed
+    TE      69        72       70        0.866 -> 0.834      fixed
+    OG      72        75       75        0.894 -> 0.886      already off (+3)
+    OT      72        78       76        0.905 -> 0.884      already off (+6 -> +4)
+    RB      75        72       70        0.750 -> 0.803      already off (-3 -> -5)
+    CB      75        75       72        0.890 -> 0.908      MOVED OUT (-3)
+    WR      74        74       72        0.917 -> 0.910      MOVED OUT (-2)
+    OLB     71        72       73        0.795 -> 0.825      MOVED OUT (+2)
+    P       76        77       79        0.426 -> 0.529      MOVED OUT (+3)
+    C, DE, MLB                                                within 1 both
+
+**5 fixed, 3 already off, 4 moved out.** The four are stage 1 — candidate 1
+takes level from the six-file pool, and the pool's CB/WR median sits below
+Madden's while OLB/P sit above. Ryan accepted that as legitimate disagreement
+and asked for drift as a finding: **this is the finding.** RB at −5 is the
+worst residual in the file and is not new. Spearman rises at 8 positions and
+falls at 7; the two largest falls are DE (0.899 → 0.859) and TE (0.866 → 0.834).
+
+**Stages 6 and 7 verified on the artifact:** offensive `decisions` now rises
+rookie → veteran at all five positions (QB 65 → 77, RB 62 → 70, WR 59 → 69,
+TE 68 → 75, C 64 → 73) against the archive's 66 → 80; prospect `injuryProne`
+median 47 → 32 against the archive's 28-34. The `[Rookie] injuryProne` gate row
+that published 2026 fails now **passes**; the gate reads ALL CLEAR.
+
+**Invariants on the final artifact:** growthType 1890/1890; |stored − computed|
+within 1 on 99.9%; both negative tests fail on purpose; published file untouched.
