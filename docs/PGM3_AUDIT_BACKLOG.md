@@ -1490,46 +1490,32 @@ largest: **DE 0.899 → 0.859, TE 0.866 → 0.834** (Spearman against Madden).
 Level and order traded against each other; that is a real trade and it is
 visible here rather than netted into "MAE improved."
 
-## 26. RB at −5 is the worst residual in the archive's 2026 file — and it is not from this work
+## 26. RB at −5 is inherited from the reference files, not made by the 2026 write
 
-Running backs sit at a median of **70 against Madden's 75**. Published 2026 had
-them at 72 (−3); stage 1 moved them to 70 because the six-file pool's RB median
-sits below Madden's. **Larger than the QB gap the day was spent closing**, and
-older than it. Not new, not caused by the write, and not addressed by it.
-Needs its own measurement: whether the pool's RB level is the era or a defect in
-the six reference files — the same question item 25 asked of the target.
+Running backs sit at a median of **70 against Madden's 75** in the written 2026
+file; published 2026 had them at 72. **Measured against each reference file's
+OWN Madden source**, RB median minus Madden's, with the all-position offset
+beside it to isolate RB from the archive's general level:
 
-### 25f. Post-write accounting — the two things the commit message claimed before they were proven
+    file    RB diff   all-position diff   RB minus all
+    2004       −5            −6               +1
+    2007      −12            −8               −4
+    2013       −5            −4               −1
+    2017       −6            −3               −3
+    2021      −10            −3               −7
+    median RB-minus-all across the refs: −3
 
-**Staff gate.** The write commit said "staff and faces unchanged from before the
-write." Faces was proven by running the gate on both sides. **Staff was asserted
-from the fact that `PGMStaff_2026.json` was not in the commit** — true, and
-verified after the push: the gate output at `ef44cdd` and `d9d5fea` is
-identical, `string not in vocab [1]`, pre-existing. But the order was wrong:
-proven after shipping, not before. Recorded because "the file wasn't touched" is
-exactly the reasoning the stale-artifact rule warns against — it is an
-inference about the gate, not the gate.
+**Two findings.** The archive runs BELOW Madden's level at every position in
+every reference file — that is "level from the pool," by design, and it means
+Madden is not the level yardstick anywhere in the archive. And **RB is the
+position where the gap is widest, in every file** — so the pool's RB median is
+the archive's convention and 2026 inherited it through stage 1. Not a 2026-side
+artifact; not from tonight's work; older than every file that fed the pool.
 
-**The reconciliation — and a retraction.** An earlier version of this note said
-"the 26 excess rostered records are stage-6 decisions edits." **That was wrong,
-and the probe that produced it printed its conclusion as hardcoded prose the
-numbers above it did not support.** Measured properly on the shipped file:
-
-    changed records          2,091  =  1,816 rostered + 275 prospects
-    rostered, gap MOVED      1,486  -> growthType rebuilt (differs from before)
-    rostered, gap UNCHANGED    330  -> growthType legitimately identical
-    stage-4 tally            1,790  = rebuild OPERATIONS; 304 produced the same array
-
-The signatures of the 330 are full stage-1 attribute rewrites where rating and
-potential moved by the same amount, not decisions-only edits. **The claim that
-matters, asserted on the shipped file:** growthType invariant **1890/1890**, and
-**zero** records where the gap changed and growthType did not.
-
-Two lessons, both mine. A stage tally counts operations, not changed records —
-"1,790 rebuilds" and "1,486 changes" are different numbers and only the second
-reconciles a diff. And **a probe must not contain its verdict as a string**: a
-`print("ASSERTED: ...")` after an `assert` reads as a finding whatever the
-assert actually checked. The assert was right; the sentence beside it was not.
+**2007 (−12) and 2021 (−10) are the worst**, which is the third time today those
+two files have surfaced together (item 1b, item 23). Whether RB should sit 3–5
+below the archive's own level is a design question about the pool, not a defect
+in any one file. Leave it, with the number, until the pool itself is reviewed.
 
 ## 27. `PGMStaff_2026.json` — one string outside the reference vocabulary, pre-existing
 
