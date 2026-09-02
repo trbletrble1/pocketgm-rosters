@@ -519,3 +519,46 @@ rule is used again.
 (pre-existing), Kyle Williams, Morgan Cox, Corey Levin, Austen Pleasants,
 Ka'imi Fairbairn.
 
+---
+
+## 16. The constancy check is blind to men who change position
+
+`head FAMILY constant across seasons` keys on `name|position`, so a player who
+moves from guard to centre is **never compared to himself**. Re-keyed on name
+alone and split by whether age advances with the seasons:
+
+    cross-band cases hidden by the position key   128
+       SAME MAN, changed position                  61   <- genuine
+       different men (namesakes)                   65   <- the key doing its job
+       two records in one season                    2   <- ambiguous
+
+**61 genuine cross-band flips that nothing has ever flagged.** They are
+long-standing, not from this session:
+
+    brad meester      2000:OG/fam5(dark) -> 2004-2013:C/fam1(light)
+    aeneas williams   2000:CB/fam1(light) -> 2004:S/fam5(dark)
+    david harris      2007-2013:MLB/fam5(dark) -> 2017:OLB/fam3(light)
+    bj raji           2010:DT/fam3(light) -> 2013:DE/fam5(dark)
+
+The 65 namesakes are why the key includes position in the first place -- Gary
+Anderson's 1986 running back and kicker land in that group. **The position key
+is not wrong; it is doing two jobs and only succeeding at one.** A correct
+check needs identity resolution (age progression, team continuity) rather than
+a composite key.
+
+Measured, NOT fixed. 61 records across six published files is a ruling.
+
+---
+
+## 17. RFM was applied to the ROSTERED cohort only
+
+The last two cross-band cases -- Austen Pleasants and Corey Levin -- are both
+**free agents** in the file that was not corrected, and rostered in the file
+that was. Both read RFM skin 2, decisively light, and their FA records still
+carry family 4.
+
+The RFM application scoped to `cohort_of(r) == 'T'` throughout. Free agents and
+prospects were never touched in any file, so a man who is a free agent in one
+season and rostered in another can disagree with himself. Scope decision, not a
+rule problem. Not extended without a ruling.
+
