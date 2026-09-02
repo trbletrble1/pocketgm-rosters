@@ -407,7 +407,40 @@ players. Not usable, and the 1986 faces item stays closed.
 **Precedence, now recorded:** an 1986-era key reads `faces_1986` first. Where a
 bare name cannot distinguish two men, the consumer refuses rather than choosing.
 
-**The 23 (and the 40) are NOT reconciled.** Two values for one player is a
+**NARROWED: 17 of the 23 are namesakes, 3 are aging, 3 need a ruling.**
+
+Sorted by whether age advances with the seasons (tolerance 3 years, since these
+files carry known age noise):
+
+    NAMESAKES, no ruling needed   17   Clay Matthews, Kellen Winslow, Marion
+                                       Barber, Mark Clayton, Stanley Morgan,
+                                       Joe Montana, Mike Richardson, James
+                                       Wilder, Eric Wright, Mickey Shuler,
+                                       Ricky Williams, Aaron Brown, Eric
+                                       Wilson, Mark Brown, Jan Stenerud, John
+                                       Hannah, John Stallworth
+    AGING, same head family        3   Reggie White 5b->5d, Ray Brown 5b->5d,
+                                       Morten Andersen 1a->1c
+    HEAD FAMILY CHANGED            3   Doug Flutie 1->3, Gary Anderson 4->1,
+                                       Jerry Rice 5->4
+
+**The blocks are era-specific by design, not in conflict.** All six same-man
+cases carry `faces_1986` in the 1986 file and `faces` in 2004+, which is a
+young face and an old face for one man. Only the three where the HEAD FAMILY
+changes are questionable, since the project's rule is family constant and
+variant free to age.
+
+**Only those three need Ryan**, and Gary Anderson (4 -> 1, dark to light) is
+the one that matters most.
+
+**Jerry Rice was NOT overwritten, and the guard did not fail.** Every file
+carries the era-correct face: 1986 `Head5a` at age 23, 2004 `Head4c` at 41.
+The verified key `jerry rice|WR|SF` is 1986-scoped, but he was still on SF in
+2000 at 37, so the gate applied a 23-year-old's face to a 37-year-old and
+called it an overwrite. Gate now scopes 1986 keys to the 1986 file. **Both
+verified-face checks pass; there is no drift anywhere in the 105.**
+
+**The 40 staff conflicts are NOT reconciled.** Two values for one player is a
 question about which edit was later and which was intended, and that is Ryan's
 to answer. Some are certainly legitimate — the Moras are two people — and
 others are probably stale. Nothing should be merged by inference.

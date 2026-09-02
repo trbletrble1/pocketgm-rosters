@@ -746,6 +746,15 @@ def faces(paths, kind='roster'):
                 # six as drifted when every one matches faces_1986 exactly --
                 # six false positives, four of which were reported as newly
                 # discovered drift.
+                # An 1986-scoped key is scored against the 1986 FILE ONLY.
+                # `jerry rice|WR|SF` also matches the 2000 record (he was still
+                # on SF at 37), so the gate was comparing a 23-year-old's face
+                # against a 37-year-old's and calling it an overwrite. Every
+                # file carries the era-correct value; the key is era-scoped and
+                # the comparison was not.
+                if vkey == k3 and k3 in (reg.get('faces_1986') or {}) \
+                   and '1986' not in p:
+                    continue
                 want = alt.get(k3) if vkey == k3 else None
                 if want is None: want = block.get(k2)
                 if want is None: want = alt.get(k3)
