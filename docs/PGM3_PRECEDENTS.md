@@ -2807,6 +2807,40 @@ looking at.
 
 ---
 
+## Iterating an unordered collection that consumes a random stream
+
+`DERIVED_ATTRS` is a **set**. Two of its members are drawn with
+`rng.random()`. Iterating in set order made *which draw each attribute
+received* depend on Python's hash seed, so `greed` and `ambition` swapped
+between runs.
+
+**Two consecutive builds of identical input differed on 2,500 and 2,570
+records.** The build could not be run twice with the same result.
+
+Nothing about the output looks wrong. Every value is in range, every
+distribution is right, every gate passes, and the file is plausible — it is
+simply a different plausible file each time. This is the vacuous-pass family
+turned inside out: not a check that cannot fail, but an output that cannot be
+compared.
+
+**Why it matters more than its size.** A rebuild diffed against the shipped
+file would carry **2,500 rows of noise**, and anyone chasing a real change
+would have been reading through it. It defeats every future investigation
+silently, and it defeats reproducibility from a clean clone — the exact
+property the pinned source provenance exists to provide.
+
+**Rule: any iteration that consumes a random stream must be over a SORTED
+sequence.** Sets and dicts are fine to store; they are not fine to draw from in
+order. The test is two lines — build twice, diff — and it had never been run.
+
+**How it was found.** Not by a gate. By a claim of mine that turned out to be
+false: I wrote that `appearance` was the only field RFM changed, checked it,
+and found `greed` and `ambition` moving on 2,500 records. The available
+explanation was that RFM had caused it. Building twice and diffing was what
+separated "my change did this" from "this was always true".
+
+---
+
 ## Two scripts in one project, two position vocabularies
 
 The Houston core was selected by one script and assembled by another. The

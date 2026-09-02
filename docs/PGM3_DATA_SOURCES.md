@@ -299,3 +299,18 @@ A file that cannot be rebuilt the same way twice is not reproducible from a
 clean clone, which is the property the pinned RFM provenance exists to give.
 The claim that surfaced it was mine and it was wrong.
 
+### Band split after RFM — measured, and NOT a divergence
+
+    1986 32.1%   2000 35.6%   2004 34.7%   2007 30.6%
+    2010 30.8%   2013 30.5%   2017 29.8%   2021 27.2%
+    2026 28.7%   (27.0% before RFM)
+
+The published range across all eight files is **27.2% to 35.6%**, and 2026 at
+**28.7% sits inside it**, between 2021 and 2017. RFM moved the file from 27.0%
+to 28.7% — **toward the middle of the range, not away from it**.
+
+A narrower reading of the range as 30.5-35.6% excludes 2017 (29.8%) and 2021
+(27.2%) and makes 28.7% look like an undershoot. It is not. Which files count
+as "the published range" is the same pooling question that has produced a wrong
+claim four times in this build; the answer here is all eight.
+
