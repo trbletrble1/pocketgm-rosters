@@ -1536,3 +1536,31 @@ fifteen. Add it to the schema vocabulary, or set Cowher's to a listed token
 staff file, so it waits for a ruling. The probe that first looked at it assumed
 the field's meaning instead of reading the vocabulary — the inference about
 the field was the error, not the gate.
+
+## 28. The 2026 write skipped every free agent — by a scope accident, not a decision
+
+Ryan asked whether stage 8 scoped to rostered on purpose. **It did not, and it is
+not only stage 8.** `fix_2026_spread_potential.py` line 69 sets
+`ro = [x for x in d if x['teamID'] not in ('Rookie','Free Agent')]`, and every
+stage from the attribute map (line 73) to the QB level (line 233) iterates that
+one variable. Only stage 7, prospect `injuryProne` (line 183), chooses its own
+cohort. The variable was set for the rookie and potential questions, which are
+rostered questions, and every later stage inherited it without the scope being
+re-decided. **An accident of variable reuse.** Nothing changed here — report only.
+
+**What that left on the shipped file, 465 free agents, changed by the write: 0:**
+
+    S  stamina p5    FA  23   rostered 85       QB speed floor   FA 47   rostered 54
+    CB stamina p5    FA  18   rostered 80       FA QB MAE vs Madden 4.8   rostered 0.8
+    headroom by years pro, FA:  2 3 2 3 2 8 0 2 0   — the flat-2 curve stage 3 never reached
+
+Prospects are right to skip: no Madden rating to align to. **Free agents are not**
+— they are real players with real Madden ratings, 277 of 465 with a unique match,
+carrying the same stretch, the same flat potential, and at QB the same level gap.
+Their invariants hold (growthType 465/465, rating within 1 on 100%) only because
+nothing touched them; they are exactly as published.
+
+**The fix is the scope line, and it is one ruling:** stages 1–6 and 8 over
+rostered + free agents; stage 5 (first-year rescale) and stage 7 unchanged. It
+would be the second write to 2026 tonight — the whole reason for "one write" —
+so it waits.
