@@ -152,9 +152,22 @@ each position's live attributes.
 - **`guarantee = PSBO × (length ÷ PCON)`.** `PSBO` is the full original bonus,
   not the remainder.
 - Rostered `length ≥ 1`, free agents `length = 0`, nothing above 7.
-- **Ship real 2000 numbers. Do not era-scale.** The precedent is explicit:
-  published files inflating 2004 to $179M against a real $80.6M cap is a defect
-  nobody caught, not a convention. Pass `--team_cap=` for the real 2000 figure.
+- **Scale to the engine constant: median top-53 payroll of $197.4M against the
+  ~$280M engine cap.** Era accuracy governs ratios, orderings, sourced anchors
+  and the league minimum; the dollar SCALE alone is set by the engine, which has
+  no cap field and cannot know what year it is. One uniform factor. 2000 shipped
+  at ×3.5879, landing on $197,399,997 against the seven-file band:
+
+      1986 197,400,001   2004 197,424,500   2007 197,426,500   2010 197,428,500
+      2013 197,399,995   2017 197,400,004   2021 197,426,500
+
+  *(This bullet previously read "Ship real 2000 numbers. Do not era-scale." That
+  instruction shipped the broken 2000 file — every team ~$224M under the cap and
+  the financial layer inert, found only by starting a season with Green Bay. It
+  is deleted rather than qualified, per `PGM3_BUILD_FRICTION.md` Cause 1 and
+  `PGM3_PRECEDENTS.md`, "Accuracy vs. matching the existing files", amended
+  2026-08-31. The figure carries its evidence so a later opinion cannot
+  contradict it.)*
 - **`eSalary`, `eGuarantee`, `eLength` are game-computed.** Ship sane values for
   first-load validity and spend no time fitting them.
 

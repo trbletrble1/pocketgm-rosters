@@ -235,6 +235,39 @@ Important refinement: position-specific attributes (QB accuracy, kick accuracy, 
 
 ### Roster records
 - **`teamID` uses MODERN team IDs for every season, regardless of where the franchise played that year.** The fixed set is: ARI ATL BAL BUF CAR CHI CIN CLE DAL DEN DET GB HOU IND JAX KC LAC LAR LV MIA MIN NE NO NYG NYJ PHI PIT SEA SF TB TEN WAS, plus `Rookie` and `Free Agent`. So the 2004 San Diego Chargers are `LAC`, the 2004 St. Louis Rams are `LAR`, and the 2004 Oakland Raiders are `LV`. Using period-correct IDs (SD, STL, OAK) breaks those three teams on import. All three published files follow this; verify it early in any new build
+- **WHICH modern slot a relocating franchise takes — CITY where a PGM3 slot
+  exists, LINEAGE where it does not.** Recorded 2026-09-02 during the 1979
+  build. Three published files already depend on this and it had never been
+  written down, so it read as a conflict between them. It is not one.
+
+  | season | franchise | slot | why |
+  |---|---|---|---|
+  | 2004 | San Diego Chargers | `LAC` | no `SD` slot exists → lineage |
+  | 2004 | Oakland Raiders | `LV` | no `OAK` slot exists → lineage |
+  | 1986 | Houston Oilers | `HOU` | they were in Houston, and `HOU` exists → city |
+  | 2000 | Tennessee Titans | `TEN` | they were in Tennessee, and `TEN` exists → city |
+  | 1979 | Houston Oilers | `HOU` | city — Earl Campbell displays as Houston |
+  | 1979 | Baltimore Colts | `BAL` | city — Bert Jones displays as Baltimore |
+
+  **Same rule, different answers, because the franchise moved.** Verified in the
+  files: Warren Moon 1986 → `HOU`, Eddie George 2000 → `TEN`, LaDainian
+  Tomlinson 2004 → `LAC`, Warren Sapp 2004 → `LV`.
+
+  **City wins because `teamID` is the only team column in the schema** — there is
+  no team-name field, so the slot IS the display name. A 1979 Oiler parked in
+  `TEN` would read as a Tennessee player twenty-eight years early. Lineage is the
+  fallback for franchises whose city has no slot at all, not the primary rule.
+
+  **The Colts are the worked example, and they invert between two files.** 1986
+  puts the *real* Indianapolis Colts in `IND` (Ray Donaldson, Chris Hinton, Ron
+  Solt) and uses `BAL` for one of that build's four invented franchises. 1979
+  puts the *real* Baltimore Colts in `BAL`, and `IND` is one of that build's four
+  vacant slots. One franchise, two slots, opposite assignments — correct in both,
+  because in 1979 they played in Baltimore and by 1986 they did not.
+
+  **Consequence: the vacant slots are a function of the season, so recompute them
+  per build.** 1986 vacates `BAL`/`CAR`/`JAX`/`TEN`; 1979 vacates
+  `CAR`/`IND`/`JAX`/`TEN`; 2000 vacates `HOU` alone
 - Schema must exactly match the working files (52 keys). Copy key set from `PGMRoster_2017.json`
 - `iden` — uppercase UUID, unique within file
 - `growthType` — **31 elements** for players. Sum of positive values must equal `(potential - rating) × 50` exactly. Correlation checks are not sufficient
@@ -1476,8 +1509,29 @@ times in this project pooling disagreeing sources manufactured a rule none of
 them followed. A disagreement is evidence about which source is wrong.
 
 **DISAMBIGUATE ON ERA.** Name-plus-position across 68 years gave an **81%
-false-match rate** on the 1986 cohort. Every entry carries `first_seen` and
-`last_seen`; check them against the season being built.
+false-match rate** on the 1986 cohort.
+
+**CORRECTED 2026-09-02 — do NOT disambiguate on `first_seen`/`last_seen` or
+`era_certain`.** This paragraph previously said to check those fields against
+the season being built. They are derived, and they carry a known defect on
+exactly the cohort a historical build queries: the `stock` flag that gates them
+is keyed on **name alone**, so a genuine pre-2000 player with a modern namesake
+gets an era window built only from files that do not contain him — **and
+`era_certain` reads `True` anyway.** D.D. Lewis, a 1979 Cowboys linebacker,
+reads `first_seen` 2004, `last_seen` 2009, `era_certain` True.
+
+**Use the direct observation instead: the presence of a season vote from that
+year's file.**
+
+```python
+in_era = any(v['src'] == '1979-1980' for v in entry['votes'])   # 1979 build
+```
+
+1,952 archive entries carry at least one `stock` vote and 1,453 of them assert
+a confident era window built from the wrong man. Mechanism, measurements and
+the position-aware re-test are in `PGM3_AUDIT_BACKLOG.md` item 18. **Not
+repaired — repairing it rebuilds era metadata for every pre-2000 file and needs
+its own review pass.**
 
 **What it fixed on the day it was built:** 287 people, 534 records across all
 eight published seasons, where the registry had the wrong skin band. 195 of them

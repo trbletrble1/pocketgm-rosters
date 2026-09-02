@@ -3860,6 +3860,34 @@ choice decides which one counts him.
 against 33-63% — and it is also the largest cohort at ~11,200 entries.**
 Nothing else about the era ordering is safe to state.
 
+**AMENDED 2026-09-02 (1979 build) — the cohort claim holds; do not read it as a
+claim about every FILE in the cohort.** Pre-2000 is the weak cohort, and
+`2000-09` is the best-covered band on either denominator. But coverage is a
+property of the file, not of the era, and one pre-2000 file is the archive's
+strongest single source:
+
+| file | players | edited | note |
+|---|---|---|---|
+| **`1979-1980`** | **1,999** | **1,999 (100%)** | the only file of 42 at 100% |
+| `1958-1980` (span) | 1,837 | 1,773 (96.5%) | |
+| `1996-1997` | 1,921 | 832 (43.3%) | the weak end of the same era |
+
+Measured for the 1979 build: **1,921 archive entries carry a `1979-1980` season
+vote, against a 1979 league of roughly 1,260 rostered players**, 93.4% of them
+unanimous. So a 1979 build is well served by the archive while sitting inside
+the worst-covered era.
+
+**The two statements are compatible and both are needed.** "Pre-2000 is the weak
+cohort" is true of the ~11,200 entries and false as a prediction about 1979.
+Neither sentence should be deleted in favour of the other; a session that reads
+only the first will skip a source that covers its whole file. **Check the file,
+not the era band** — `_files` in the archive carries `players` and `edited` per
+source and answers this in one read.
+
+*(A claim that the 1979 cohort is "better than any other era" was made in
+conversation and is wrong: `2000-09` beats it on the archive-wide cut. Usable,
+and the exception inside its band — not the best band.)*
+
 **Three wrong characterisations preceded this, each written before the number
 under it was read.** "Rises steadily toward the present", from a per-file rate
 that is not monotone and reads 92% on a cohort of 13. Then "fewer sources the

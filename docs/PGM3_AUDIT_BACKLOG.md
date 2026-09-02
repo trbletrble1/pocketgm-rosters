@@ -579,3 +579,130 @@ season and rostered in another can disagree with himself. **Extended on Ryan's r
 2026's free agents already agreed with RFM on all 364 covered. Same precedence,
 same boundary handling. **Cross-band same-man changes across every cohort: 0.**
 
+
+---
+
+## 18. The archive's `stock` flag is keyed on NAME ALONE, and it poisons the era metadata
+
+Found 2026-09-02 during the 1979 build, while following the handoff's own
+instruction to "check `era_certain`". **Affects every historical build, not just
+1979.** Measured, not fixed.
+
+### The mechanism
+
+`tools/build_archive.py:107` decides whether a pre-2000 vote is a modern "stock"
+leftover:
+
+```python
+is_stock = (kind in ('season', 'span') and year and year < 2000
+            and norm(p['fname'] + ' ' + p['lname']) in stock)
+```
+
+`stock` comes from `nfl2k5.stock_names()`, which is a **set of names** — no
+position, no team. This is the project's most-documented recurring bug ("any
+lookup keyed on name alone is a bug until it is position-aware"), applied to a
+1958-2026 population where the handoff already measures an 81% cross-era
+false-match rate.
+
+Line 115 then compounds it:
+
+```python
+if year and not is_stock:
+    e['years'].append(year)
+```
+
+A flagged vote never contributes to `first_seen`/`last_seen`. So a genuine
+1970s player whose name recurs in the modern era gets his era window built
+**only from files that do not contain him** — and `era_certain` is computed from
+that window, so it reads `True`.
+
+The comment above line 107 is correct about the intent ("a stock leftover still
+describes the right man, so its SKIN vote counts. It says nothing about when he
+played"). The defect is that the *test* for stock-ness cannot tell a leftover
+from a namesake.
+
+### The failure mode is a confident wrong answer, not a gap
+
+| | |
+|---|---|
+| archive entries carrying at least one `stock` vote | **1,952** |
+| of those, era window is empty (`first_seen` None) | 499 |
+| of those, window exists and excludes the flagged year | **1,453** |
+| …and `era_certain` reads **True** anyway | **1,453** |
+
+**The 1,453 is definitional, not itself the defect** — a flagged vote cannot
+feed the window by construction, so of course the window excludes it. Do not
+quote it as a defect count. What makes it dangerous is that `era_certain` is
+`True` on all of them: an empty window abstains, a window built from the wrong
+man asserts.
+
+Worked instances, all confirmed on their own 1979 PFR team pages:
+
+    dd lewis|OLB        Cowboys LB       window reads 2004-2009  era_certain True
+    stanley morgan|WR   Patriots WR      window reads 2021-2023  era_certain True
+    ted washington|OLB  Oilers LB        window empty
+    steve foley|FS      Broncos S        window empty
+    william gay|DE      Lions DE         window empty
+
+### What a position-aware key actually buys — measured
+
+Re-derived the flag from the source `.DAT` files on `name|position`:
+
+| | 1979-1980 file |
+|---|---|
+| edited players | 1,999 |
+| flagged by name only (current) | 338 |
+| flagged by name+position (proposed) | 279 |
+| **freed** | **59** |
+
+Against the 33 flagged men independently confirmed in the 1979 PFR stat tables:
+
+- **29 of 33 recovered** by name+position (88%)
+- **4 not recovered** — same-position cross-era namesakes: D.D. Lewis (OLB),
+  Stanley Morgan (WR), Kellen Winslow (TE), plus one false match on the PFR side
+
+**Kellen Winslow is the canonical case the handoff already names** (father TE /
+Winslow II TE) and it is the proof that position cannot finish the job. Per
+precedent — "a composite key cannot both exclude namesakes and follow a man who
+moves" — the residual needs identity resolution (birth year, team continuity),
+not a wider key.
+
+The 33 is a **floor**: PFR stat tables list only the 1,144 players who recorded
+a stat in 1979, so linemen and backups are invisible to that test. The
+position-aware re-test against the full ultimate70s rosters is owed, per Ryan's
+ruling.
+
+### Ruling (Ryan, 2026-09-02) and what a build should do meanwhile
+
+**Do not repair the archive mid-build.** For a historical build, take era
+membership from **the presence of a season vote from that year's file**, not
+from `first_seen`/`last_seen`/`era_certain`. The vote is a direct observation;
+the window is a derived field with a known defect on exactly this cohort.
+
+    # correct for a 1979 build
+    in_era = any(v['src'] == '1979-1980' for v in entry['votes'])
+    # NOT: entry['era_certain'] and entry['first_seen'] <= 1979 <= entry['last_seen']
+
+When this is picked up: fix `stock_names()` to key on `name|position`, rebuild,
+and re-measure the residual. **Rebuilding changes era metadata for every
+pre-2000 file**, so it is a whole-archive pass with its own review, not a patch.
+
+*Provenance: `stock_names()` was written 2026-09-01 to strip 2004 leftovers out
+of retro files, which it does correctly. Nobody checked what it did to era
+metadata. Recorded per the standing rule that a deliberate divergence carries
+its reason beside it.*
+
+### Two further copies of the defective instruction
+
+`era_certain` is computed as `bool(e['years'])` (`build_archive.py:129`) — it
+means "at least one non-stock vote exists", **not** "the era is known". Three
+documents told a build session to trust it. Corrected 2026-09-02 in
+`PGM3_PROJECT_HANDOFF.md` and `PGM3_TASK_build_2026.md`.
+
+**The third copy cannot be corrected without the rebuild.** The same instruction
+is baked into `_README` *inside* `reference/PGM3_PLAYER_ARCHIVE.json`
+(`build_archive.py:153-154`): *"Check first_seen/last_seen against the season
+being built - but only where era_certain is true."* A session reading the
+archive directly gets the wrong instruction from the artifact itself, with no
+way to know a doc supersedes it. **Fix it in the same pass that fixes
+`stock_names()`.**

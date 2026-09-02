@@ -185,7 +185,14 @@ for staff. `_verified_keys` is locked: 104 players, 18 staff.
 
 `reference/PGM3_PLAYER_ARCHIVE.json` covers 25,364 people and can supply or check
 skin band. Its **light** calls are reliable at any source count; its **dark** calls
-need 3+ sources. Check `era_certain` before trusting any era field.
+need 3+ sources. ~~Check `era_certain` before trusting any era field.~~
+
+**CORRECTED 2026-09-02: `era_certain` does not mean what this line assumed.** It
+is `bool(non-stock votes exist)`, and the `stock` flag that feeds it is keyed on
+name alone, so a man with a namesake in another era gets a confident window
+built from the wrong files. Low risk for 2026 (the flag only fires on pre-2000
+votes) but the field is not a trust signal in any build. Use the presence of a
+season vote from the target year. See `PGM3_AUDIT_BACKLOG.md` item 18.
 
 ---
 
