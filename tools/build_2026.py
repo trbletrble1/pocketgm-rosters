@@ -3338,7 +3338,10 @@ def rescale_filled_to_range(attrs, pos, weights, filled_attrs, lo, hi, bounds=No
     # int(), which truncates, so a set landing exactly on 40.0 stores as 39 --
     # nine players sat one point outside on the first attempt for no reason
     # other than the rounding step between the solve and the file.
-    target = (lo + 1.5) if cur < lo else (hi - 1.5)
+    # The 1.5-point margin here was a defensive patch for int() truncation.
+    # With one rounding convention at the boundary, aiming at the edge is
+    # enough -- a half-point of rounding either way, not a full point down.
+    target = (lo + 0.5) if cur < lo else (hi - 0.5)
     mov = [(a, c) for a, c in zip(names, coef) if a in filled_attrs and a in attrs]
     base = sum(c * attrs[a] for a, c in mov)
     if abs(base) < 1e-9: return attrs, False
@@ -3354,14 +3357,14 @@ def rescale_filled_to_range(attrs, pos, weights, filled_attrs, lo, hi, bounds=No
     return out, (lo - 0.75 <= got <= hi + 0.75)
 
 def assert_rating_matches_attributes(out, weights, tol=5):
-    """The archive's invariant, now a gate. Published 2004-2021 keeps every one
+    """The archive's invariant, now a gate on EVERY cohort. Published 2004-2021 keeps every one
     of 11,737 rostered players within 3.45 points of the value its attributes
     compute to, and NONE more than 5. 2026 shipped at median 1.75 / max 30.2
     and nothing objected. 1986 (632 over) and 2000 (481 over) break it too --
     logged on the audit list, deliberately not fixed here."""
     bad, over99 = [], []
     for r in out:
-        if cohort_of(r) != 'T' or r['position'] not in weights: continue
+        if r['position'] not in weights: continue
         # The stored value is the computed one SUBJECT TO THE FIELD'S CEILING:
         # Will Anderson Jr.'s attributes compute to 104.7 and the rating field
         # stops at 99, which is a schema limit, not an inconsistency. Players
@@ -3570,8 +3573,14 @@ def stage_build(verbose=True):
         potential = min(99, rating + gap)
         exp = n['_exp']
         rec = {kk: 0 for kk in ROSTER_KEYS}
+        # ONE ROUNDING CONVENTION, applied once, where attributes become
+        # integers. int() TRUNCATES, and that single choice produced three
+        # separate defects: Will Anderson Jr. 5.7 points adrift of his own
+        # attributes, nine rescaled players landing on 39 against a target of
+        # 40, and DJ Herman gaining four rating points from a +/-0.5 shift.
+        # Each was patched where it surfaced; this is the cause.
         for attr, v in a.items():
-            if attr in rec: rec[attr] = int(v)
+            if attr in rec: rec[attr] = int(round(v))
         parts = n['full_name'].split()
         rec.update({
             'forename': parts[0], 'surname': ' '.join(parts[1:]) or parts[0],
@@ -3666,16 +3675,41 @@ def stage_build(verbose=True):
         for pr in bundle[key]:
             if pr['rank'] > MAX_CLASS: continue
             allrec.append(pr); seasons.append(season)
+    pdonors = fit_donor_vectors(refs)
     for pr, season, pos in zip(allrec, seasons, prospect_positions(allrec)):
         rng = random.Random(name_seed({'_norm': norm(pr['name'])}, pos) + season)
         rating, potential = build_prospect(pr['rank'], pos, season, rt_curve, gp_curve, rng)
         parts = pr['name'].split()
         rec = {kk: 0 for kk in ROSTER_KEYS}
         q = percentile_of(rp[pos], rating) if rp.get(pos) else 0.5
-        for attr in ATTR_MAP:
-            if attr not in set(weights[pos][0]) or (pos, attr) in GATE_OFF: continue
-            pl = pools.get((pos, attr))
-            if pl: rec[attr] = int(round(_target_at(pl, q)))
+        # Prospects carried the SAME two defects the rostered cohort did, in a
+        # cohort nobody had looked at: attributes drawn independently at one
+        # percentile (which yields a player with no weaknesses), and a stored
+        # rating that never saw them -- 185 of 278 more than 5 points from what
+        # their own attributes compute to, one stored at 49 computing to 7.5.
+        # 2010, 2013 and 2017 hold the invariant for prospects; only 2021 does
+        # not. Same fix as the rostered cohort: one real player's whole vector,
+        # rescaled onto the slot-derived rating, then store what it computes.
+        live_attrs = [a for a in ATTR_MAP
+                      if a in set(weights[pos][0]) and (pos, a) not in GATE_OFF]
+        vec = pick_donor_vector(pdonors, pos, rating, rng, weights)
+        for attr in live_attrs:
+            if vec and attr in vec:
+                rec[attr] = float(vec[attr])
+            else:
+                pl = pools.get((pos, attr))
+                if pl: rec[attr] = float(round(_target_at(pl, q)))
+        names_, coef_ = weights[pos]
+        got = computed_rating(rec, pos, weights)
+        base = sum(c * rec[a] for a, c in zip(names_, coef_) if a in rec and rec[a])
+        if abs(base) > 1e-9 and abs(got - rating) > 0.5:
+            f = 1.0 + (rating - got) / base
+            for a in live_attrs:
+                if not rec.get(a): continue
+                b = bounds.get((pos, a)); v = rec[a] * f
+                if b: v = max(b[0], min(b[1], v))
+                rec[a] = max(1.0, min(99.0, v))
+        for a in live_attrs: rec[a] = int(round(rec[a]))
         for attr in DERIVED_ATTRS:
             # greed, loyalty and ambition are not in weights.json but every
             # published prospect carries them -- gating on the weights list
@@ -3689,6 +3723,11 @@ def stage_build(verbose=True):
             else:
                 pl = sorted(pl)
                 rec[attr] = pl[min(len(pl) - 1, int(rng.random() * len(pl)))]
+        # AFTER the derived block: several derived attributes carry rating
+        # weight, so computing before it left 53 prospects more than 5 points
+        # from their own numbers. The rating is the LAST thing decided.
+        rating = max(1, min(99, int(round(computed_rating(rec, pos, weights)))))
+        potential = max(rating, potential)        # raise-only
         rec.update({
             'forename': parts[0], 'surname': ' '.join(parts[1:]) or parts[0],
             'position': pos, 'teamID': 'Rookie', 'age': 22,

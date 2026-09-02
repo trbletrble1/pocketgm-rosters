@@ -164,6 +164,9 @@ defending the first claim is what located the real step.
 
 ## 9. Integer rounding at the attribute boundary — one cause, three bugs
 
+**RESOLVED.** One rounding convention now applies at the boundary where attributes become integers (`int(round(v))`, not `int(v)`). The three defensive margins added downstream were patches for it; the rescale margin is back to half a point. Invariant unchanged at 0.60 across every cohort.
+
+
 Attributes are written as integers while the rating is computed from floats,
 and the boundary between them has now produced three separate defects:
 
@@ -182,6 +185,9 @@ rather than three defensive margins. Own item.
 ---
 
 ## 10. Draft prospects break the computed-rating invariant
+
+**RESOLVED.** Prospects now take one real donor vector rescaled onto the slot-derived rating, and the rating is computed from the attributes -- decided LAST, after the derived block, which is what the first attempt got wrong (53 players still adrift because derived cells carry rating weight). Rookie cohort: max gap 41.46 -> 0.50, 185 over 5 -> 0.
+
 
 Rostered players and free agents both hold it at **max 0.50**. The Rookie
 cohort does not:
