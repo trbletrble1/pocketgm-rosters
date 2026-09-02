@@ -521,7 +521,7 @@ Ka'imi Fairbairn.
 
 ---
 
-## 16. The constancy check is blind to men who change position
+## 16. The constancy check is blind to men who change position — RECORDED, NOT FIXED
 
 `head FAMILY constant across seasons` keys on `name|position`, so a player who
 moves from guard to centre is **never compared to himself**. Re-keyed on name
@@ -550,7 +550,7 @@ Measured, NOT fixed. 61 records across six published files is a ruling.
 
 ---
 
-## 17. RFM was applied to the ROSTERED cohort only
+## 17. RFM was applied to the ROSTERED cohort only — CLOSED
 
 The last two cross-band cases -- Austen Pleasants and Corey Levin -- are both
 **free agents** in the file that was not corrected, and rostered in the file
@@ -559,6 +559,7 @@ carry family 4.
 
 The RFM application scoped to `cohort_of(r) == 'T'` throughout. Free agents and
 prospects were never touched in any file, so a man who is a free agent in one
-season and rostered in another can disagree with himself. Scope decision, not a
-rule problem. Not extended without a ruling.
+season and rostered in another can disagree with himself. **Extended on Ryan's ruling: 4 records (2017 one, 2021 three, 2026 none).**
+2026's free agents already agreed with RFM on all 364 covered. Same precedence,
+same boundary handling. **Cross-band same-man changes across every cohort: 0.**
 

@@ -2981,6 +2981,38 @@ the available evidence is reported, not resolved by inference.
 
 ---
 
+## A composite key cannot both exclude namesakes and follow a man who moves
+
+The faces gate keys cross-season checks on `name|position`. That key does two
+jobs and succeeds at one.
+
+It **correctly excludes namesakes** — Gary Anderson's 1986 file holds a
+Chargers running back and a Steelers kicker, and comparing their faces would be
+meaningless. Re-keying on name alone surfaces 65 such false positives.
+
+It **hides every man who changes position**. Re-keyed on name and split by
+whether age advances with the seasons, **61 genuine cross-band skin flips** have
+never been flagged by anything: Brad Meester goes guard/dark in 2000 to
+centre/light in 2004 and stays there for four files; Aeneas Williams goes
+corner/light to safety/dark; David Harris is a dark middle linebacker for three
+files and a light outside linebacker in the fourth.
+
+**No composite key can do both.** Position is exactly the field that separates
+two men with one name AND changes for one man over a career. The information
+needed is identity — age progression, team continuity, draft position — not a
+wider or narrower key.
+
+**This is the same conclusion the join layer reached from the opposite
+direction.** There, matching on normalised name merged Michael Carter and
+Michael Carter II, and the fix was birth dates: identity resolution, not a
+better string. Two independent parts of this project arrived at the same
+answer, which makes it a property of the data rather than a quirk of either.
+
+**Rule: when a key is doing identity work, it will fail in one of the two
+directions. Decide which failure you are choosing, and measure the other.**
+
+---
+
 ## Two scripts in one project, two position vocabularies
 
 The Houston core was selected by one script and assembled by another. The
