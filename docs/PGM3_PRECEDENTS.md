@@ -4262,3 +4262,21 @@ for an unpopulated field is the range of its noise.
 failure was the measurement diffing against a baseline that predated stage 6 —
 it was the archive draw, doing its job. Isolate a stage by building the artifact
 without it, not by assuming the last scratch file is the right baseline.
+
+
+---
+
+## A probe must not carry its verdict as a string — second instance in one day
+
+Audit 25f recorded a `print("ASSERTED: ...")` that stated a conclusion the
+assert beside it had not checked. The same evening a second probe ended with a
+hardcoded tell — *"weighted agreement well above the naive mean means the source
+ORDER is fine"* — printed under numbers reading 0.12 to 0.54, which the
+adjoining column explained as the 2K5 file covering only 21–75% of each
+position's weight mass. The correct reading was "inconclusive where coverage is
+low," and the sentence said the opposite.
+
+**The rule:** a probe prints numbers and labels. The verdict is written *after*
+reading them, by the person, in the report. A tell composed before the run is a
+prediction, and printing it beside the result makes a prediction look like a
+finding — whichever way the numbers went.

@@ -167,6 +167,57 @@ merging problem**, not a derivation problem.
 Still owed in the proposal: how players with **no 2K5 record** are handled
 (~18%), and whether that cohort correlates with obscurity or is random.
 
+**4a. THE MEASURED PROPOSAL — 2026-09-02, brought before building, per the ruling.**
+
+*The source.* `NFL79.ros` `POVR` covers **97% of the 1,408 spine** (1,114 with the
+2K5 save too, 256 alone). **17 players have no data of any kind** — named below —
+and **69 of the 256 rest on one modder's opinion alone** (in NFL79.ros, not in the
+2K5 save, no 1979 stat line). Prospects: none carry a rating; draft classes are a
+separate step.
+
+*The anchor, formal.* 1979 All-Pro team from Wikipedia, 53 matched to NFL79.ros:
+**median 94th percentile within position, 3 below the 75th** — Rick Upchurch
+(69%), Tony Nathan (65%), Ira Matthews (41%), all return men whose All-Pro
+selection was for returns. The source knows 1979. (Bradshaw 99th, Payton 99th,
+Campbell 96th, Blount 98th, Ham 98th, Greene 97th.)
+
+*The scale.* PS2-era inflation: median 79, 8.5% at 90+. Per-position quantile map
+onto the six-file union, shifts −3 (QB, K) to −12 (FB, DE). The documented traps
+behave: Ray Guy 99 → published-P 92, Moseley 99 → 93, Payton 99 → 95, Campbell
+88 → 88. **Owed:** FB must map against the published FB *cohort* (found by name,
+per the handoff), not the RB pool — the trap check above used the RB pool and is
+mislabelled to that extent.
+
+*Attributes.* `NFL79.ros` PLAY direct-map plus per-position quantile, **using
+tonight's spread rule** — width from the source, level from the pool — so the
+stretch defect is not rebuilt into 1979. The 2K5 save cross-checks physicals
+(speed r=+0.84, tackle +0.89, weight +0.97 on 1,132 shared).
+
+*Ordering — INCONCLUSIVE, and stated as such.* PGM3 position weights applied to
+the 2K5 attributes, Spearman against `POVR`: S 0.51, WR 0.54, CB 0.49, MLB 0.48
+where the 2K5 fields cover 53–75% of the weight mass; QB 0.12 at 21%, K/P ~0 at
+~31%. **Agreement tracks coverage, so this measures the 2K5 file's reach, not the
+source's order.** It supports the order where it can see it and says nothing
+where it cannot. (A probe printed "source ORDER is fine" over these numbers —
+retracted; second instance today of a verdict written into a print.)
+
+*Production data, per position.* Stat lines exist for 92–100% of every skill
+position, 83–87% of the front seven and secondary, **37% of the offensive line**
+— Ryan's prediction exactly. 282 players (20%) have no stat line, 157 of them
+linemen. A stat-based rating is a cross-check for skill positions and nothing
+for the line; `POVR` is the rating source at every position.
+
+*The 17 with no data of any kind:* Ronnie McCartney (ATL LB, 16g), Joseph Shipp
+(BUF TE, 16), Billy Thompson (DEN DB, 16), Timothy Stokes (GB OT, 16), Donald
+Westbrook (NE WR, 16), Thomas Seabron (SF LB, 16), Howie Kurnick (CIN LB, 15),
+Philip Tabor (NYG DE, 15), Johnnie McDaniel (WAS WR, 15), Donald Schwartz (NO
+DB, 14), Sidney Justin (LAR DB, 13), Walt Landers (GB RB, 9), Art Whittington
+(OAK RB, 9), Steve Stewart (GB LB, 3), Phillip Wise (MIN DB, 1), Richie Szaro
+(NYJ K, 1), Deac Sanders (PHI DB, 1). **Hand-rate from position and games, and
+log each.** Billy Thompson was a Pro Bowl safety; do not let him fall out.
+
+**Ruling needed on the proposal before any build.**
+
 **5. Contracts.** Invented, scaled to the $197.4M top-53 constant. Era-accurate
 ratios and orderings; the dollar scale alone comes from the engine. K/P ceilings
 from the era's real market, not from the published files — they carry a
