@@ -314,3 +314,31 @@ A narrower reading of the range as 30.5-35.6% excludes 2017 (29.8%) and 2021
 as "the published range" is the same pooling question that has produced a wrong
 claim four times in this build; the answer here is all eight.
 
+### Precedence revised — RFM outranks the archive at any source count
+
+Ryan photo-checked all six contested cases: RFM correct on 5 of 5 decided,
+with Fairbairn genuinely mid-tone.
+
+**The sample was only the disagreements**, so it establishes that RFM wins when
+the two differ — not that the archive is unreliable. Measured, they agree
+**316 of 322 (98.1%)** at 5+ sources.
+
+**The proposed mechanism is refuted.** "Five 2K5 rosters carrying the same
+default for a modern player" predicts the archive is weak on modern players.
+Split by era, agreement at 5+ sources is:
+
+    career starts after 2005    98.1%   (n=697)
+    career overlaps the 2K5 era 77.8%   (n=27)
+
+The archive is **strongest** exactly where the mechanism said it would be
+weakest. The revised rule is right; the reason is that RFM wins the 1.9% of
+cases where they disagree, not that the gradient fails to transfer.
+
+**Four records changed, not the one predicted.** The dry run counted only
+RFM/archive disagreements and missed a hole in the old rule 2: "archive wins"
+conferred AUTHORITY without ever writing the archive's ANSWER. Michael Burton
+(archive light, n=9) and Ben Skowronek (archive light, n=6) were shipping
+**dark against both sources**. Gunner Olszewski moves dark -> light as ruled,
+and Ka'imi Fairbairn goes to family 3, the boundary, rather than being forced
+to a side.
+

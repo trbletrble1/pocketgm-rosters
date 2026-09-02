@@ -3472,7 +3472,24 @@ def _prospect_face(pr, pos, rng, lib, prior, vocab, archive, med_wt):
 # 2026 ONLY. RFM is a Madden 27 source covering current players; it has no
 # bearing on 1986 or 2000, and 2021 is a separate ruling that has not been made.
 RFM_FACES = 'wip/rfm_faces.csv'
-RFM_ARCHIVE_FLOOR = 5          # archive wins at or above this many sources
+# REVISED (Ryan, after photo-checking all six contested cases): RFM outranks
+# the archive at ANY source count. _verified_keys still first.
+#
+# The six were photo-checked 5 of 5 decided in RFM's favour, with Fairbairn
+# genuinely mid-tone. But the sample was ONLY the disagreements, so it says
+# RFM wins when they differ -- not that the archive is unreliable. Measured,
+# they agree 316 of 322 (98.1%) at 5+ sources, and the revised rule changes
+# exactly ONE record.
+#
+# The proposed mechanism -- five 2K5 rosters carrying the same default for a
+# modern player -- is NOT supported. Split by era, agreement at 5+ sources is
+# 98.1% for players whose careers start after 2005 (n=697) and 77.8% for those
+# overlapping the 2K5 era (n=27). The archive is strongest exactly where the
+# mechanism said it would be weakest.
+RFM_ARCHIVE_FLOOR = 0          # 0 = RFM always outranks the archive
+# Genuinely mid-tone players, photo-confirmed as neither band. Forcing them to
+# a side is the error avoided elsewhere; family 3 is the boundary.
+MID_TONE = {'kaimi fairbairn'}
 
 def load_rfm(path):
     out = {}
@@ -3509,10 +3526,19 @@ def apply_rfm_bands(out, verbose=False):
         if f'{nm}|{pos}' in vk or f'{nm}|{pos}|{rec.get("teamID") or ""}' in vk:
             stat['verified, untouched'] += 1; continue
         a, n = arc_lookup(nm, pos); f = rfm.get(nm)
-        if a and n >= RFM_ARCHIVE_FLOOR:
-            stat['archive 5+, untouched'] += 1
+        if nm in MID_TONE:
+            app = list(rec['appearance'])
+            for i, tag in ((0, 'Head'), (5, 'Nose'), (6, 'Mouth')):
+                app[i] = f'{tag}3{tok_variant(app[i])}'
+            rec['appearance'] = app
+            stat['mid-tone, family 3'] += 1
+            continue
+        if a and RFM_ARCHIVE_FLOOR and n >= RFM_ARCHIVE_FLOOR:
+            stat['archive floor, untouched'] += 1
             if f and f != a: contested.append((nm, pos, a, n, f, cur))
             continue
+        if a and f and f != a and n >= 5:
+            contested.append((nm, pos, a, n, f, cur))
         if not f:
             stat['no RFM entry'] += 1; continue
         stat['RFM applied'] += 1
