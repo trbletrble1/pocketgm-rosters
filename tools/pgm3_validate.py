@@ -719,11 +719,23 @@ def faces(paths, kind='roster'):
         for p, recs in files.items():
             for r in recs:
                 if kind == 'roster' and cohort(r) != 'T': continue
-                k = _norm(r['forename']) + ' ' + _norm(r['surname'])
-                if kind == 'roster': k += '|' + r.get('position','')
-                if k not in vk or k not in block: continue
+                nm = _norm(r['forename']) + ' ' + _norm(r['surname'])
+                # BOTH KEY FORMATS. _verified_keys.players is keyed
+                # name|POS|TEAM while this check built name|POS, so not one
+                # verified player ever matched -- the gate was reporting clean
+                # over 26% of what it protects. faces is keyed name|POS and
+                # faces_1986 name|POS|TEAM, so the lock and the value can live
+                # in different formats for the same man.
+                k2 = nm + '|' + r.get('position','') if kind == 'roster' else nm
+                k3 = k2 + '|' + (r.get('teamID') or '')
+                vkey = k3 if k3 in vk else (k2 if k2 in vk else None)
+                if vkey is None: continue
+                want = block.get(k2)
+                if want is None: want = (reg.get('faces_1986') or {}).get(k3)
+                if want is None: continue
+                k = vkey
                 checked += 1
-                want, got = block[k], r['appearance']
+                got = r['appearance']
                 # family must match everywhere; variant may differ (players age)
                 same = all(split_tok(want[i])[1] == split_tok(got[i])[1] for i in (0,5,6)) \
                        and all(want[i] == got[i] for i in (1,2,3,4,7,8))
