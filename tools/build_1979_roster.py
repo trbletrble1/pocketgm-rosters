@@ -50,6 +50,7 @@ def norm(s):
 
 def load():
     rows = []
+    require('1979footballdb')          # name the fix instead of asserting 0 rows
     for f in sorted(glob.glob(sources('1979footballdb','*.txt'))):
         team = os.path.basename(f)[:-4]
         for line in open(f):
