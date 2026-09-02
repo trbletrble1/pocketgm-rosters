@@ -1,0 +1,52 @@
+Bill Adams|OG|6|28|Holy Cross
+Doug Becker|LB|8|22|Notre Dame
+Jim Braxton|RB|6|29|West Virginia
+Curtis Brown|RB|15|23|Missouri
+Mario Celotto|LB|4|22|Southern California
+Bob Chandler|WR|16|29|Southern California
+Mario Clark|DB|16|24|Oregon
+Joe DeLamielleure|OG|16|27|Michigan State
+Tom Dempsey|K|16|37|Palomar College JC (CA)
+Joe Devlin|OT|14|24|Iowa
+Phil Dokes|DT|10|23|Oklahoma State
+Elbert Drungo|OT|13|35|Tennessee State
+Tom Ehlers|LB|8|26|Kentucky
+Joe Ferguson|QB|16|28|Arkansas
+Mike Franckowiak|RB|16|25|Central Michigan
+Steve Freeman|DB|16|25|Mississippi State
+Reuben Gant|TE|16|26|Oklahoma State
+Tom Graham|LB|11|28|Oregon
+Will Grant|C|16|24|Kentucky
+Tony Greene|DB|16|29|Maryland
+Dee Hardison|DE|16|22|North Carolina
+Roland Hooks|RB|16|25|North Carolina State
+Scott Hutchinson|DE|16|22|Florida
+Mekeli Ieremia|DT|2|24|Brigham Young
+Rusty Jackson|P|16|27|Louisiana State
+Dan Jilek|LB|15|24|Michigan
+Dennis Johnson|RB|16|22|Mississippi State
+Dennis Johnson|DT|14|27|Delaware
+Doug Jones|DB|12|28|Cal State-Northridge
+Ken Jones|OT|16|25|Arkansas State
+Mike Kadish|DT|11|28|Notre Dame
+Merv Krakau|LB|5|27|Iowa State
+Mike Levenseller|WR|2|22|Washington State
+Frank Lewis|WR|15|31|Grambling
+Dave Mays|QB|1|29|Texas Southern
+Randy McClanahan|LB|16|23|Southwestern Louisiana
+Reggie McKenzie|OG|16|28|Michigan
+Eddie McMillan|DB|14|26|Florida State
+Terry Miller|RB|16|22|Oklahoma State
+Keith Moody|DB|14|25|Syracuse
+Bill Munson|QB|4|37|Utah State
+Shane Nelson|LB|16|23|Baylor
+Willie Parker|C|16|29|North Texas
+Lou Piccone|WR|16|29|West Liberty State
+Steve Powell|RB|10|22|Northeast Missouri State
+Charles Romes|DB|16|23|North Carolina Central
+Lucius Sanford|LB|16|22|Georgia Tech
+Marvin Switzer|DB|10|24|Kansas State
+Larry Walton|WR|12|31|Arizona State
+Sherman White|DE|16|30|California
+Ben Williams|DE|16|24|Mississippi
+Leonard Willis|WR|4|25|Ohio State

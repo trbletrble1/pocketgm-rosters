@@ -1,0 +1,48 @@
+Fred Anderson|DE|16|24|Prairie View A&M
+Larry Anderson|DB|16|22|Louisiana Tech
+John Banaszak|DT|16|28|Eastern Michigan
+Tom Beasley|DE|15|24|Virginia Tech
+Theo Bell|WR|16|24|Arizona
+Rocky Bleier|RB|16|32|Notre Dame
+Mel Blount|DB|16|30|Southern
+Terry Bradshaw|QB|16|30|Louisiana Tech
+Larry Brown|OT|8|29|Kansas
+Robin Cole|LB|16|23|New Mexico
+Craig Colquitt|P|16|24|Tennessee
+Steve Courson|OG|16|23|South Carolina
+Bennie Cunningham|TE|6|23|Clemson
+Sam Davis|OG|16|34|Allen
+Jack Deloplaine|RB|10|24|Salem International
+Tony Dungy|DB|16|23|Minnesota
+Gary Dunn|DT|16|25|Miami
+Steve Furness|DE|10|27|Rhode Island
+Wentford Gaines|DB|1|25|Cincinnati
+Roy Gerela|K|16|30|New Mexico State
+Joe Greene|DT|16|32|North Texas
+L.C. Greenwood|DE|14|32|Arkansas-Pine Bluff
+Randy Grossman|TE|16|26|Temple
+Jack Ham|LB|14|29|Penn State
+Franco Harris|RB|16|28|Penn State
+Ron Johnson|DB|16|22|Eastern Michigan
+Jon Kolb|OT|16|31|Oklahoma State
+Mike Kruczek|QB|9|25|Boston College
+Jack Lambert|LB|16|26|Kent State
+Jim Mandich|TE|10|30|Michigan
+Alvin Maxson|RB|5|26|Southern Methodist
+Rick Moser|RB|15|21|Rhode Island
+Gerry Mullins|OG|16|29|Southern California
+Ray Oldham|DB|4|27|Middle Tennessee State
+Ted Petersen|OT|15|23|Eastern Illinois
+Ray Pinney|OT|13|24|Washington
+Randy Reutershan|WR|11|23|Pittsburgh
+Donnie Shell|DB|16|26|South Carolina State
+Jim Smith|WR|9|23|Michigan
+John Stallworth|WR|16|26|Alabama A&M
+Lynn Swann|WR|16|26|Southern California
+Nat Terry|DB|6|22|Florida State
+Sidney Thornton|RB|16|24|Northwestern State
+Loren Toews|LB|11|26|California
+Mike Wagner|DB|14|29|Western Illinois
+Mike Webster|C|16|26|Wisconsin
+Dwight White|DE|15|29|Texas A&M-Commerce
+Dennis Winston|LB|16|23|Arkansas

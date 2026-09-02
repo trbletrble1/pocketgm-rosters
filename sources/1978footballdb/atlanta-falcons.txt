@@ -1,0 +1,52 @@
+Jim Bailey|DT|16|30|Kansas
+Steve Bartkowski|QB|14|25|California
+Bubba Bean|RB|15|24|Texas A&M
+Greg Brezina|LB|16|32|Houston
+Warren Bryant|OT|13|22|Kentucky
+Rick Byas|DB|16|28|Wayne State (MI)
+Ray Easterling|DB|2|29|Richmond
+Mike Esposito|RB|16|25|Boston College
+Wilson Faumuina|DT|16|24|San Jose State
+Edgar Fields|DE|16|24|Texas A&M
+Wally Francis|WR|16|26|Arkansas-Pine Bluff
+George Franklin|RB|15|24|Texas A&M-Kingsville
+Lewis Gilbert|TE|4|22|Florida
+Bob Glazebrook|DB|8|22|Fresno State
+Claude Humphrey|DE|4|34|Tennessee State
+Alfred Jackson|WR|15|23|Texas
+Ernie Jackson|DB|16|28|Duke
+John James|P|16|29|Florida
+Alfred Jenkins|WR|1|26|Morris Brown
+June Jones|QB|7|25|Portland State
+Mike Kenn|OT|16|22|Michigan
+Fulton Kuykendall|LB|16|25|UCLA
+Rolland Lawrence|DB|16|27|Tabor
+Mike Lewis|DT|16|29|Arkansas-Pine Bluff
+Tim Mazzetti|K|10|22|Pennsylvania
+Ronnie McCartney|LB|15|24|Tennessee
+Dewey McClain|LB|16|24|East Central (OK)
+Phil McKinnely|OT|14|24|UCLA
+Jeff Merrow|DE|14|25|West Virginia
+Jim Mitchell|TE|16|31|Prairie View A&M
+Marv Montgomery|OT|1|30|Southern California
+Ken Moore|TE|6|24|Northern Illinois
+Tom Moriarty|DB|14|25|Bowling Green
+Ralph Ortega|LB|15|25|Florida
+Ricky Patton|RB|16|24|Jackson State
+Dennis Pearson|WR|13|23|San Diego State
+Robert Pennywell|LB|15|23|Grambling
+Tom Pridemore|DB|16|22|West Virginia
+Frank Reed|DB|16|24|Washington
+Billy Ryckman|WR|16|23|Louisiana Tech
+Paul Ryczek|C|16|26|Virginia
+Dave Scott|OG|16|24|Kansas
+Haskel Stanback|RB|15|26|Tennessee
+Fred Steinfort|K|6|25|Boston College
+Steve Stewart|LB|12|22|Minnesota
+Jim Stienke|DB|5|27|Texas State
+Ray Strong|RB|14|22|Nevada-Las Vegas
+Garth Ten Napel|LB|1|24|Texas A&M
+R.C. Thielemann|OG|16|23|Arkansas
+Jeff Van Note|C|16|32|Kentucky
+James Wright|TE|15|22|Texas Christian
+Jeff Yeates|DE|16|27|Boston College

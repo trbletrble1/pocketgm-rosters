@@ -1,0 +1,49 @@
+Troy Archer|DT|10|23|Colorado
+Brad Benson|OT|16|22|Penn State
+Bill Bryant|DB|11|27|Grambling
+Harry Carson|LB|16|24|South Carolina State
+Jim Clack|C|16|31|Wake Forest
+Randy Coffield|LB|2|24|Florida State
+Larry Csonka|RB|14|31|Syracuse
+Joe Danelo|K|16|25|Washington State
+Randy Dean|QB|6|23|Northwestern
+Al Dixon|TE|15|24|Iowa State
+Dan Doornink|RB|12|22|Washington State
+Jerry Golsteyn|QB|7|24|Northern Illinois
+Gordon Gravelle|OT|16|29|Brigham Young
+Jack Gregory|DE|16|34|Delta State
+Bobby Hammond|RB|14|26|Morgan State
+Terry Jackson|DB|15|22|San Diego State
+Dave Jennings|P|16|26|St. Lawrence
+Gary Jeter|DE|13|23|Southern California
+Ernie Jones|DB|16|25|Miami
+Brian Kelley|LB|16|27|California Lutheran
+Gordon King|OT|11|22|Stanford
+Doug Kotar|RB|15|27|Kentucky
+Jim Krahl|DT|16|24|Texas Tech
+Dan Lloyd|LB|16|24|Washington
+Larry Mallory|DB|16|26|Tennessee State
+Frank Marion|LB|16|27|Florida A&M
+George Martin|DE|16|25|Oregon
+Alvin Maxson|RB|1|26|Southern Methodist
+Odis McKinney|DB|14|21|Colorado
+John Mendenhall|DT|16|29|Grambling
+Ron Mikolajczyk|OT|8|28|Tampa
+Emery Moorehead|TE|10|24|Colorado
+Johnny Perkins|WR|14|25|Abilene Christian
+Jim Pietrzak|C|16|25|Eastern Michigan
+Joe Pisarcik|QB|15|26|New Mexico State
+Ernest Pough|WR|12|26|Texas Southern
+Beasley Reece|DB|8|24|North Texas
+Ray Rhodes|DB|13|28|Tulsa
+Jim Robinson|WR|16|25|Georgia Tech
+Gary Shirk|TE|16|28|Morehead State
+John Skorupan|LB|16|27|Penn State
+Willie Spencer|RB|15|25|
+Billy Taylor|RB|13|22|Texas Tech
+James Thompson|WR|13|25|Memphis
+Leo Tierney|C|5|24|Georgia Tech
+J.T. Turner|OG|16|25|Duke
+Maurice Tyler|DB|8|28|Morgan State
+Doug Van Horn|OG|16|34|Ohio State
+Brad Van Pelt|LB|14|27|Michigan State

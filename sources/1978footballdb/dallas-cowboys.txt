@@ -1,0 +1,48 @@
+Benny Barnes|DB|14|27|Stanford
+Larry Bethea|DT|16|22|Michigan State
+Alois Blackwell|RB|13|23|Houston
+Bob Breunig|LB|16|25|Arizona State
+Larry Brinson|RB|10|24|Florida
+Guy Brown|LB|15|23|Houston
+Glenn Carano|QB|2|22|Nevada-Las Vegas
+Larry Cole|DE|16|31|Hawaii
+Jim Cooper|OT|14|23|Temple
+Doug Dennison|RB|5|26|Kutztown
+Pat Donovan|OT|16|25|Stanford
+Tony Dorsett|RB|16|24|Pittsburgh
+Billy Joe DuPree|TE|16|28|Michigan State
+John Fitzgerald|C|14|30|Boston College
+Andy Frederick|OT|16|24|New Mexico
+Cliff Harris|DB|16|29|Ouachita Baptist
+Mike Hegman|LB|16|25|Tennessee State
+Thomas Henderson|LB|15|25|Langston
+Tony Hill|WR|16|22|Stanford
+Randy Hughes|DB|16|25|Oklahoma
+Bruce Huther|LB|16|24|New Hampshire
+Butch Johnson|WR|16|24|California-Riverside
+Too Tall Jones|DE|16|27|Tennessee State
+Aaron Kyle|DB|16|24|Wyoming
+Scott Laidlaw|RB|16|25|Stanford
+Burton Lawless|OG|16|25|Florida
+D.D. Lewis|LB|16|33|Mississippi State
+Harvey Martin|DE|16|27|Texas A&M-Commerce
+Robert Newhouse|RB|13|28|Houston
+Drew Pearson|WR|16|27|Tulsa
+Preston Pearson|RB|16|33|Illinois
+Jethro Pugh|DT|13|34|Elizabeth City State
+Tom Rafferty|C|16|24|Penn State
+Tom Randall|OG|11|22|Iowa State
+Golden Richards|WR|1|27|Brigham Young
+Jay Saldi|TE|4|24|South Carolina
+Herbert Scott|OG|16|25|Virginia Union
+Rafael Septien|K|16|24|Southwestern Louisiana
+Jackie Smith|TE|12|38|Northwestern State
+Dave Stalls|DE|16|23|Northern Colorado
+Roger Staubach|QB|15|36|Navy
+Robert Steele|WR|14|22|North Alabama
+Dennis Thurman|DB|16|22|Southern California
+Mark Washington|DB|13|30|Morgan State
+Charlie Waters|DB|16|30|Clemson
+Danny White|QB|16|26|Arizona State
+Randy White|DT|16|25|Maryland
+Rayfield Wright|OT|15|33|Fort Valley State

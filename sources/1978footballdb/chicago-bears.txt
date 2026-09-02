@@ -1,0 +1,49 @@
+Ted Albrecht|OT|15|24|California
+Lionel Antoine|OT|9|28|Southern Illinois
+Bob Avellini|QB|13|25|Maryland
+Brian Baschnagel|WR|16|24|Ohio State
+Doug Becker|LB|1|22|Notre Dame
+Art Best|RB|16|25|Kent State
+Doug Buffone|LB|15|34|Louisville
+Gary Campbell|LB|16|26|Colorado
+Mike Cobb|TE|13|22|Michigan State
+Chris Devlin|LB|6|24|Penn State
+Robin Earl|RB|16|23|Washington
+Vince Evans|QB|3|23|Southern California
+Gary Fencik|DB|16|24|Yale
+Wentford Gaines|DB|11|25|Cincinnati
+Roland Harper|RB|16|25|Louisiana Tech
+Tommy Hart|DE|16|33|Morris Brown
+Mike Hartenstine|DE|16|25|Penn State
+Bruce Herron|LB|15|24|New Mexico
+Tom Hicks|LB|9|25|Illinois
+Noah Jackson|OG|16|27|Tampa
+Dan Jiggetts|OT|16|24|Harvard
+Greg Latta|TE|16|26|Morgan State
+Dennis Lick|OT|16|24|Wisconsin
+Virgil Livers|DB|13|26|Western Kentucky
+Jerry Meyers|DE|16|24|Northern Illinois
+Mike Morgan|RB|5|22|Wisconsin
+Jon Morris|C|10|36|Holy Cross
+Jerry Muckensturm|LB|16|25|Arkansas State
+Dan Neal|C|16|29|Kentucky
+Jim Osborne|DT|15|29|Southern
+Alan Page|DT|10|33|Notre Dame
+Bob Parsons|P|16|28|Penn State
+Walter Payton|RB|16|24|Jackson State
+Mike Phipps|QB|6|30|Purdue
+Doug Plank|DB|14|25|Ohio State
+Bo Rather|WR|6|28|Michigan
+Golden Richards|WR|15|27|Brigham Young
+Don Rives|LB|16|27|Texas Tech
+Ron Rydalch|DT|12|26|Utah
+Terry Schmidt|DB|16|26|Ball State
+Steve Schubert|WR|13|27|Massachusetts
+James Scott|WR|15|26|Trinity Valley CC (TX)
+Jeff Sevy|OT|14|27|California
+Brad Shearer|DT|15|23|Texas
+John Skibinski|RB|16|23|Purdue
+Revie Sorey|OG|16|25|Illinois
+Mike Spivey|DB|16|24|Colorado
+Bob Thomas|K|16|26|Notre Dame
+Len Walterscheid|DB|14|24|Southern Utah

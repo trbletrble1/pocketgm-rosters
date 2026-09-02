@@ -1,0 +1,51 @@
+Charles Aiu|OG|6|24|Hawaii
+Rickey Anderson|RB|16|25|South Carolina State
+Dan Audick|OT|1|23|Hawaii
+Larry Barnes|RB|4|24|Tennessee State
+Hank Bauer|RB|16|24|California Lutheran
+Rolf Benirschke|K|15|23|California-Davis
+Larry Burton|WR|3|26|Purdue
+Pat Curran|TE|14|33|Lakeland
+Fred Dean|DE|15|26|Louisiana Tech
+Charles DeJurnett|DT|15|26|San Jose State
+Jerome Dove|DB|14|25|Colorado State
+Glen Edwards|DB|14|31|Florida A&M
+Dan Fouts|QB|15|27|Oregon
+Mike Fuller|DB|16|25|Auburn
+Don Goode|LB|14|27|Kansas
+Buddy Hardaway|OT|12|23|Oklahoma State
+James Harris|QB|9|31|Grambling
+Bob Horn|LB|16|24|Oregon State
+John Jefferson|WR|14|22|Arizona State
+Gary Johnson|DT|15|26|Grambling
+Charlie Joiner|WR|16|31|Grambling
+Leroy Jones|DE|16|28|Norfolk State
+Louie Kelcher|DT|15|25|Southern Methodist
+Linden King|LB|14|23|Colorado State
+Bob Klein|TE|16|31|Southern California
+Jim Laslavic|LB|16|27|Penn State
+John Lee|DE|1|25|Nebraska
+Woodrow Lowe|LB|16|24|Alabama
+Don Macek|C|14|24|Boston College
+Bo Matthews|RB|11|26|Colorado
+Greg McCrary|TE|8|26|Clark Atlanta
+Dwight McDonald|WR|12|27|San Diego State
+Rick Middleton|LB|12|26|Ohio State
+Lydell Mitchell|RB|16|29|Penn State
+Cliff Olander|QB|9|23|New Mexico State
+Artie Owens|RB|13|25|West Virginia
+Ralph Perretta|C|15|25|Purdue
+Ray Preston|LB|16|24|Syracuse
+Johnny Rodgers|WR|6|27|Nebraska
+Pete Shaw|DB|16|24|Northwestern
+Billy Shields|OT|16|25|Georgia Tech
+Mark Slater|C|9|23|Minnesota
+Hal Stringert|DB|13|26|Willamette
+Russ Washington|OT|16|31|Missouri
+Jeff West|P|16|25|Cincinnati
+Ed White|OG|15|31|California
+Doug Wilkerson|OG|16|31|North Carolina Central
+Clarence Williams|RB|10|23|South Carolina
+Mike Williams|DB|16|24|Louisiana State
+Don Woods|RB|16|27|New Mexico
+Wilbur Young|DE|10|29|William Penn

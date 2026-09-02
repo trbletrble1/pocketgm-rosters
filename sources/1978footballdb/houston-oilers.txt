@@ -1,0 +1,51 @@
+Willie Alexander|DB|16|29|Alcorn State
+Mike Barber|TE|16|25|Louisiana Tech
+Steve Baumgartner|DE|16|27|Purdue
+Elvin Bethea|DE|16|32|North Carolina A&T
+Gregg Bingham|LB|16|27|Purdue
+Robert Brazile|LB|16|25|Jackson State
+Ken Burrough|WR|16|30|Texas Southern
+Earl Campbell|RB|15|23|Texas
+Rob Carpenter|RB|11|23|Miami (OH)
+David Carter|C|16|24|Western Kentucky
+Rich Caster|TE|14|30|Jackson State
+Ronnie Coleman|RB|15|27|Alabama A&M
+Curley Culp|DT|16|32|Arizona State
+Bill Currier|DB|14|23|South Carolina
+Anthony Davis|RB|2|26|Southern California
+Jimmy Dean|DE|3|23|Texas A&M
+Johnnie Dirden|WR|16|26|Sam Houston State
+Andy Dorris|DE|16|27|New Mexico State
+Brian Duncan|RB|5|26|Southern Methodist
+Ed Fisher|OG|16|29|Arizona State
+Toni Fritsch|K|16|33|
+Conway Hayman|OG|16|29|Delaware
+Al Johnson|RB|7|28|Cincinnati
+Billy Johnson|WR|5|26|Widener
+Ken Kennard|DT|16|24|Angelo State
+Steve Kiner|LB|16|31|Tennessee
+Kurt Knoff|DB|16|24|Kansas
+Carl Mauck|C|16|31|Southern Illinois
+Alvin Maxson|RB|1|26|Southern Methodist
+Guido Merkens|QB|12|23|Sam Houston State
+Gifford Nielsen|QB|2|24|Brigham Young
+Cliff Parsley|P|16|23|Oklahoma State
+Dan Pastorini|QB|16|29|Santa Clara
+Larry Poole|RB|9|26|Kent State
+George Reihner|OG|9|23|Penn State
+Mike Reinfeldt|DB|16|25|Wisconsin-Milwaukee
+Mike Renfro|WR|14|23|Texas Christian
+Conrad Rucker|TE|13|23|Southern
+Greg Sampson|OT|16|28|Stanford
+John Schuhmacher|OG|11|23|Southern California
+Greg Stemrick|DB|16|27|Colorado State
+Art Stringer|LB|7|24|Ball State
+Ted Thompson|LB|16|25|Southern Methodist
+Morris Towns|OT|16|24|Missouri
+Robert Turner|RB|4|24|Oklahoma State
+Ted Washington|LB|16|30|Mississippi Valley State
+C.L. Whittington|DB|12|26|Prairie View A&M
+J.C. Wilson|DB|16|22|Pittsburgh
+Tim Wilson|RB|16|24|Maryland
+Robert Woods|WR|3|23|Grambling
+Jim Young|DE|16|28|Texas Southern

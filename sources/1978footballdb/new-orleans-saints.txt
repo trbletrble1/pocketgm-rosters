@@ -1,0 +1,55 @@
+Gary Anderson|OG|2|23|Stanford
+Barry Bennett|DT|16|22|Concordia-Moorhead
+Tom Blanchard|P|16|30|Oregon
+Ray Brown|DB|16|29|West Texas A&M
+Joe Campbell|DE|16|23|Maryland
+Wes Chandler|WR|16|22|Florida
+Clarence Chapman|DB|14|24|Eastern Michigan
+Henry Childs|TE|16|27|Kansas State
+Ron Crosby|LB|14|23|Penn State
+Conrad Dobler|OG|3|28|Wyoming
+Joe Federspiel|LB|16|28|Kentucky
+Eric Felton|DB|16|23|Texas Tech
+Bill Fifer|OT|4|23|West Texas A&M
+Mike Fultz|DT|12|24|Nebraska
+Tony Galbreath|RB|16|24|Missouri
+Elois Grooms|DE|16|25|Tennessee Tech
+Larry Hardy|TE|16|22|Jackson State
+Ike Harris|WR|15|25|Iowa State
+John Hill|C|16|28|Lehigh
+Jack Holmes|RB|11|25|Texas Southern
+Pat Hughes|LB|16|31|Boston University
+Kevin Hunt|OT|10|29|Doane
+Kim Jones|RB|16|26|Colorado State
+Tom Jurich|K|1|22|Northern Arizona
+Rick Kingrea|LB|1|29|Tulane
+Dave Lafary|OT|15|23|Purdue
+John Leypoldt|K|2|32|Northern Virginia CC
+Archie Manning|QB|16|29|Mississippi
+Rich Mauti|WR|16|24|Penn State
+Ralph McGill|DB|16|28|Tulsa
+Jim Merlo|LB|16|27|Stanford
+Mark Meseroll|OT|16|23|Florida State
+Steve Mike-Mayer|K|9|31|Maryland
+Derland Moore|DT|15|27|Oklahoma
+Chuck Muncie|RB|13|25|California
+Tom Myers|DB|16|28|Syracuse
+Richard Neal|DE|2|31|Southern
+Tinker Owens|WR|14|24|Oklahoma
+Elex Price|DT|16|28|Alcorn State
+Rusty Rebowe|LB|1|22|Nicholls State
+Don Reese|DE|14|27|Jackson State
+Floyd Rice|LB|15|29|Alcorn State
+Donald Schwartz|DB|16|22|Washington State
+Bobby Scott|QB|1|29|Tennessee
+Mo Spencer|DB|16|26|North Carolina Central
+Michael Strachan|RB|15|25|Iowa State
+Fred Sturt|OG|12|27|Bowling Green
+Richie Szaro|K|4|30|Harvard
+J.T. Taylor|OT|16|22|Missouri
+James Van Wagner|RB|5|23|Michigan Tech
+Skip Vanderbundt|LB|15|31|Oregon State
+John Watson|OT|5|29|Oklahoma
+Brooks Williams|TE|16|23|North Carolina
+Robert Woods|OT|16|28|Tennessee State
+Emanuel Zanders|OG|3|27|Jackson State

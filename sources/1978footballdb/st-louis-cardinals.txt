@@ -1,0 +1,58 @@
+Carl Allen|DB|15|22|Southern Mississippi
+Kurt Allerman|LB|15|23|Penn State
+Warren Anderson|WR|2|23|West Virginia State
+Mark Arneson|LB|16|29|Arizona
+Jim Bakken|K|16|37|Wisconsin
+Tom Banks|C|16|30|Auburn
+John Barefield|LB|9|23|Texas A&M-Kingsville
+Larry Barnes|RB|2|24|Tennessee State
+Bob Bell|DT|15|30|Cincinnati
+Gordon Bell|RB|6|24|Michigan
+Tom Brahaney|C|16|27|Oklahoma
+Al Chandler|TE|11|27|Oklahoma
+Jimmy Childs|WR|8|22|Cal Poly-S.L.O.
+George Collins|OG|13|22|Georgia
+Charles Davis|DT|1|26|Texas Christian
+Mike Dawson|DT|16|25|Arizona
+Dan Dierdorf|OT|16|29|Michigan
+Teddy Farmer|RB|2|25|Oregon
+Roger Finnie|OT|7|32|Florida A&M
+Randy Gill|LB|7|22|San Jose State
+Mel Gray|WR|13|30|Missouri
+Doug Greene|DB|15|22|Texas A&M-Kingsville
+Ken Greene|DB|16|22|Washington State
+Willard Harrell|RB|13|26|Pacific
+Jim Hart|QB|15|34|Southern Illinois
+Steve Jones|RB|16|27|Duke
+Tim Kearney|LB|15|27|Northern Michigan
+Jerry Latin|RB|2|25|Northern Illinois
+Steve Little|P|11|22|Arkansas
+Mark Manges|QB|1|22|Maryland
+Wayne Morris|RB|13|24|Southern Methodist
+Tom Mullen|OG|7|26|Southwest Missouri State
+Steve Neils|LB|16|27|Minnesota
+Lee Nelson|DB|16|24|Florida State
+Jim Otis|RB|15|30|Ohio State
+Steve Pisarkiewicz|QB|3|24|Missouri
+Bob Pollard|DT|15|29|Weber State
+Eason Ramson|TE|15|22|Washington State
+Mike Sensibaugh|DB|5|29|Ohio State
+Willie Shelby|RB|3|25|Alabama
+Keith Simons|DT|13|24|Minnesota
+Perry Smith|DB|16|27|Colorado State
+Tommy Southard|WR|2|23|Furman
+Dave Stief|WR|15|22|Portland State
+Terry Stieve|OG|16|24|Wisconsin
+Ken Stone|DB|14|28|Vanderbilt
+Jim Thaxton|TE|5|29|Tennessee State
+Pat Tilley|WR|16|25|Louisiana Tech
+Curtis Townsend|LB|9|23|Arkansas
+Roger Wehrli|DB|16|30|Missouri
+Greg Westbrooks|LB|10|25|Colorado
+Eric Williams|LB|13|23|Southern California
+Mike Wood|K|8|24|Southeast Missouri State
+Roland Woolsey|DB|2|25|Boise State
+Keith Wortman|OG|14|28|Nebraska
+Ron Yankowski|DE|16|32|Kansas State
+Bob Young|OG|16|36|Howard Payne
+John Zook|DE|16|31|Kansas
