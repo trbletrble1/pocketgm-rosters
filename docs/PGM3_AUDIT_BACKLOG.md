@@ -447,7 +447,7 @@ others are probably stale. Nothing should be merged by inference.
 
 ---
 
-## 14. This session created 21 cross-season head-family changes
+## 14. This session created 21 cross-season head-family changes — CLOSED
 
 The faces gate's `head FAMILY constant across seasons` check was right all
 along, and I closed the thread around it as a tooling artifact. It is not.
@@ -477,10 +477,26 @@ calling it a regression. The per-player accuracy gain is real; so is the
 cross-season breakage, and only one of the two got reported.
 
 **The rule assumes one source of truth per person across files.** Applying a
-better source to two files of nine necessarily breaks it. The options are to
-apply RFM everywhere (declined on a twelve-player sample), accept the
-inconsistency as the cost of per-player accuracy, or revert. **That is a
-ruling, and it has not been made.**
+better source to two files of nine necessarily breaks it.
+
+**RESOLVED. Trajectory: 3 pre-existing -> 24 after the RFM work -> 0.**
+
+    back-applied the boundary rule to 2026        6 closed
+    corrected the boundary target, family 3 -> 4  the band-flip cause
+    three photo verdicts (Anderson, Williams, Cox)
+    Morgan Cox 2013, a position-change case
+    extended RFM to free agents                   the last 2
+
+Fifteen within-band variant differences remain, which is the aging rule working
+as intended.
+
+**How it was caught matters more than how it was fixed.** The 19 were reported
+at the time as "expected, and 2026 is the one that is right" -- a framing that
+sounded like analysis and was a rationalisation. It was accepted. What exposed
+it was a measurement run after a pushback on an unrelated claim, not a gate and
+not a review. **A plausible explanation offered alongside a real improvement is
+the hardest kind of error to catch, because both halves are true and only one
+gets counted.**
 
 ---
 
