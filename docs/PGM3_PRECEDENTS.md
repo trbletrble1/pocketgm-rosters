@@ -2921,6 +2921,31 @@ tiebreaker, it is noise.*
 
 ---
 
+## Cut on the defect's signature, not on the category that contains it
+
+The OLB coverage fix was specified as "zero `manCover` and `zoneCover` for every
+OLB in the four affected files." Applied literally, that **destroyed 52 real
+values**: the PROSPECT cohort carries genuine coverage ratings (45-76, the
+plausible range) mixed in with the fill, and 2010's prospect `zoneCover` is
+entirely real — 58 to 70, without a single fill value in it.
+
+The scope table the instruction came from measured **rostered players only**,
+where the contamination is total. Extending the rule to a cohort nobody had
+measured extended it past the evidence.
+
+Re-cut on the fill vocabulary instead — `manCover` in {1,2,3}, `zoneCover` in
+{1}, against an MLB range of 38-92 — and the defect is removed while every real
+value survives. **The signature identifies the defect; the category merely
+contains it.**
+
+Caught by diffing what had been overwritten against git rather than by a gate.
+The assertions all passed: only the two named fields moved, only on OLB records,
+counts unchanged. **Every one of them was true, and the write was still wrong**
+— they constrained the shape of the edit and said nothing about whether the
+data being replaced was fill.
+
+---
+
 ## Two scripts in one project, two position vocabularies
 
 The Houston core was selected by one script and assembled by another. The
