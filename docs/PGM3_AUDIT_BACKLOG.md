@@ -179,3 +179,30 @@ Each was patched where it appeared. **The boundary itself has not been fixed** �
 one rounding convention applied once, at the point attributes become integers,
 rather than three defensive margins. Own item.
 
+---
+
+## 10. Draft prospects break the computed-rating invariant
+
+Rostered players and free agents both hold it at **max 0.50**. The Rookie
+cohort does not:
+
+| cohort | n | median | p90 | max | >5 |
+|---|---|---|---|---|---|
+| rostered | 1890 | 0.25 | 0.44 | **0.50** | 0 |
+| free agents | 465 | 0.24 | 0.44 | **0.50** | 0 |
+| **prospects** | 278 | **8.12** | **20.85** | **41.46** | **185** |
+
+This is not an archive convention. Three of four published files hold the
+invariant for prospects as tightly as for anyone:
+
+    2010  max 3.82  >5: 0        2017  max 4.42  >5: 0
+    2013  max 1.46  >5: 0        2021  max 23.95 >5: 105
+
+Only 2021 breaks it — a sixth piece of evidence for §1. A.J. Harris is stored
+at 49 and computes to **7.5**, so the game will display a number bearing no
+relation to the file's.
+
+Prospects have their own build path (`fit_prospect_curve`) which the
+stored-equals-computed ruling never reached. Not fixed: it needs the same
+decision the rostered cohort got, and the draft class is a distinct deliverable.
+
