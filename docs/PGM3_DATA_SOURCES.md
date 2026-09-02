@@ -156,3 +156,56 @@ the only relevant repository is a script that scrapes PFR team-by-team.
   that continues is an open ruling.
 - **Contracts before ~2005** in any usable density.
 - **Combine data before 2000.**
+
+## Realistic Franchise Mod (RFM) — appearance source, Madden 27
+
+**Credit: Realistic Franchise Mod (RFM), a community Madden 27 mod.** Extracted
+with `tools/rfm.py` from `sources/madden/CAREER-RFM`, committed so the
+extraction is reproducible from a clean clone.
+
+    sha256      cda3782991cbceeac8803c197137eb576cf4de82b5bcb30037fd3eeb80d3a7ae
+    bytes       5662392
+    extracted   2026-09-02
+    players     2955
+
+Same class of source as the 2K5 community rosters: a work in progress whose
+accuracy varies with how much attention a given player got. **Pinned and dated
+above; re-extract only against a recorded hash.**
+
+### What it is worth, measured
+
+Against the registry's hand-verified players it agrees **10 of 11** reachable.
+The miss is **Aaron Donald, whom RFM has as light** — plainly wrong, and a
+reminder that it is a source and not an oracle. Against Ryan's photo
+confirmations, 8 of 9.
+
+Against the player archive, 2,055 players in common, **86.9% agreement**. The
+discriminating axis is NOT era -- every RFM player is current, so there is no
+historical overlap to test -- but the **archive's own confidence**:
+
+| archive sources | n | agreement |
+|---|---|---|
+| 1-2 (thin) | 911 | **77.4%** |
+| 3-4 | 465 | 88.6% |
+| 5+ | 679 | **98.5%** |
+
+Monotone. Where the archive is well-corroborated the two agree almost
+perfectly, so **the disagreements concentrate where the archive is admittedly
+weak** -- which is the cohort that has defeated every other approach.
+
+### Coverage of the 2026 rostered file (1,885 players)
+
+    RFM        1,662   88%
+    archive    1,366   72%
+    RFM only     424
+    neither       95
+
+### Recommended precedence — NOT YET APPLIED, needs a ruling
+
+1. registry `_verified_keys` above everything (Donald shows RFM errs)
+2. archive where it has **5+ sources** (98.5% agreement makes this near-moot)
+3. **RFM for the 424 players the archive cannot reach at all** — the clear win
+4. RFM as the tie-break in the thin 1-2 source band, where the two agree only
+   77.4% and one of them is wrong a fifth of the time. Photo confirmation is
+   still the only thing that settles those.
+
