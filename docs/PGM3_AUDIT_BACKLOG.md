@@ -1467,3 +1467,34 @@ that published 2026 fails now **passes**; the gate reads ALL CLEAR.
 
 **Invariants on the final artifact:** growthType 1890/1890; |stored − computed|
 within 1 on 99.9%; both negative tests fail on purpose; published file untouched.
+
+### 25e. WRITTEN — cap 10, and two items Ryan must see as costs, not footnotes
+
+`PGMRoster_2026.json` rewritten 2026-09-02 by
+`tools/fix_2026_spread_potential.py --qb-cap 10`. The written file is
+md5-identical to the scratch artifact every figure in 25c/25d was measured on.
+2,633 records in and out, identities and order unchanged.
+
+**The premise of the QB-only ruling was a claim that was wrong.** "14 of 15
+positions within a point of Madden" was measured earlier the same day, quoted
+in the ruling, and never checked against the published file. **Eight were
+already off.** The master session owns that. Ryan agreed to treat quarterback
+as the sole exception believing the rest of the file was aligned; it was not.
+
+**Cost 1 — four positions moved OUT of line by stage 1**, the level-from-the-pool
+step: **CB −3, WR −2, OLB +2, P +3.** Ryan accepted level drift as legitimate
+disagreement, but accepted it on the wrong premise. Stated here as a cost.
+
+**Cost 2 — ordering fell at 7 of 15 positions while level improved.** The two
+largest: **DE 0.899 → 0.859, TE 0.866 → 0.834** (Spearman against Madden).
+Level and order traded against each other; that is a real trade and it is
+visible here rather than netted into "MAE improved."
+
+## 26. RB at −5 is the worst residual in the archive's 2026 file — and it is not from this work
+
+Running backs sit at a median of **70 against Madden's 75**. Published 2026 had
+them at 72 (−3); stage 1 moved them to 70 because the six-file pool's RB median
+sits below Madden's. **Larger than the QB gap the day was spent closing**, and
+older than it. Not new, not caused by the write, and not addressed by it.
+Needs its own measurement: whether the pool's RB level is the era or a defect in
+the six reference files — the same question item 25 asked of the target.
