@@ -730,8 +730,16 @@ def faces(paths, kind='roster'):
                 k3 = k2 + '|' + (r.get('teamID') or '')
                 vkey = k3 if k3 in vk else (k2 if k2 in vk else None)
                 if vkey is None: continue
-                want = block.get(k2)
-                if want is None: want = (reg.get('faces_1986') or {}).get(k3)
+                # PRECEDENCE: the 3-part block wins for a 3-part verified key.
+                # 23 keys live in BOTH blocks with DIFFERENT values, and six of
+                # those are verified. Preferring the 2-part block reported all
+                # six as drifted when every one matches faces_1986 exactly --
+                # six false positives, four of which were reported as newly
+                # discovered drift.
+                f86 = (reg.get('faces_1986') or {})
+                want = f86.get(k3) if vkey == k3 else None
+                if want is None: want = block.get(k2)
+                if want is None: want = f86.get(k3)
                 if want is None: continue
                 k = vkey
                 checked += 1

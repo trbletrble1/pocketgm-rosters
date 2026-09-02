@@ -80,8 +80,26 @@ checker cannot read. The gate reports clean over the quarter it can see. This
 is the largest single instance of the vacuous-pass family and it is still live.
 See *Vacuous pass is this project's dominant failure mode* in the precedents.
 
-**Audit the 78.** Two confirmed drifts already among the reachable ones (Doug
-Flutie, Jerry Rice, both 1986). The 76 unexamined are where more would be.
+**The 78 are audited. Almost nothing has drifted.**
+
+    head family changed    1 person   Jerry Rice, WR SF, in 2000 (family 5 -> 4)
+    hair/beard/brow        0
+    variant only          24 people, 55 records   expected, not drift
+
+They are the marquee players -- Montana, Taylor, Reggie White, Marino, Munoz,
+Payton, Elway, Lott, Rice at 94-98 -- and their hand-set faces have held.
+
+**CORRECTION.** An earlier pass reported six drifts, all in 1986, four of them
+described as newly discovered. **All six were false**, and the cause was the
+gate I had just widened: `faces` (2-part keys) and `faces_1986` (3-part) hold
+**23 keys in common, every one with a different value**, and six of those are
+verified. The gate preferred the 2-part block, so it compared an 1986-era
+verified face against the wrong entry. Precedence fixed -- a 3-part verified
+key reads `faces_1986` first -- and the six resolve to zero.
+
+**The real finding is about the registry, not the file.** Two blocks carry
+conflicting values for 23 players with no precedence ever defined between them.
+That is a history artifact and it is where a future error will come from.
 
 ---
 
