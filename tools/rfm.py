@@ -39,6 +39,13 @@ def decompress(path):
         raise SystemExit(f'{path}: not an FBCHUNKS container')
     return zlib.decompressobj().decompress(raw[82:]), raw
 
+# Records excluded at SOURCE, not in each consumer. A retired player carried in
+# the asset database with an untouched placeholder head has now tried to enter
+# two different files: `donaldAaron_10852` reads gen_2_H_B_005 (skin 2,
+# ethnicity H) for Aaron Donald, who retired in 2024. It would have shipped him
+# light in 2026 and again in 2021. One fix here beats remembering every time.
+EXCLUDE_IDS = {'10852'}          # Aaron Donald — retired, placeholder head
+
 def band(skin):
     """1-2 light, 4-7 dark, 3 abstains. Returns None for the middle band."""
     if skin in (1, 2): return 'light'
@@ -82,9 +89,12 @@ def cmd_dump(path, out):
     dec, raw = decompress(path)
     rows = list(records(dec))
     seen, uniq = set(), []
+    excluded = 0
     for r in rows:
+        if r[6] in EXCLUDE_IDS: excluded += 1; continue
         if r[6] in seen: continue
         seen.add(r[6]); uniq.append(r)
+    if excluded: print(f'excluded {excluded} placeholder record(s): {sorted(EXCLUDE_IDS)}')
     os.makedirs(os.path.dirname(out) or '.', exist_ok=True)
     with open(out, 'w', newline='', encoding='utf-8') as f:
         w = csv.writer(f)

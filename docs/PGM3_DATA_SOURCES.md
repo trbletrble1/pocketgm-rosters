@@ -378,3 +378,27 @@ cross-season disagreements — one fewer, because 2021 and 2026 now share a
 source. NOT extended to the other published files: twelve players from one file
 is not evidence about seven others.
 
+### The skin 4-5 boundary rule — independently confirmed, with one false positive
+
+Tested against 2026's photo-checked cases, which were decided before the rule
+existed:
+
+    mid-tone identified      1 of 1   (Fairbairn, skin 4)
+    decisive misclassified   1 of 13  (Tristan Wirfs, skin 4)
+
+Combined with 2021: **6 of 6 mid-tone identified, 1 of 18 decisive misread.**
+Wirfs is decisively dark and the rule calls him boundary; he escaped only
+because routing fires on disagreements and RFM already agreed with the file.
+
+**A working rule, not a settled one.** It identifies mid-tone reliably and
+carries a small false-positive rate on decisive dark players at skin 4. Use it
+to route disagreements, not to reclassify agreements.
+
+### Placeholder records excluded at source
+
+`EXCLUDE_IDS` in `tools/rfm.py` drops `10852` — Aaron Donald, retired 2024,
+carried with an untouched placeholder head (`gen_2_H_B_005`, ethnicity H). That
+record attempted to enter **two** different files and would have shipped him
+light in both. Excluded once at extraction rather than remembered in every
+consumer.
+
