@@ -236,6 +236,22 @@ DB, 14), Sidney Justin (LAR DB, 13), Walt Landers (GB RB, 9), Art Whittington
 (NYJ K, 1), Deac Sanders (PHI DB, 1). **Hand-rate from position and games, and
 log each.** Billy Thompson was a Pro Bowl safety; do not let him fall out.
 
+*The step-2 gate, run early — CB/S is OUT OF BAND.* `NFL79.ros` rostered: CB 120,
+S 118, **ratio 1.02** against the published 1.06–1.30 (1986, the nearest era
+file, 1.11). The position-mix table says it is a **corner shortfall** (−2.1 per
+team against the published mean) rather than a safety surplus. The source's
+positions are specific, so the handoff's fix — resolve generic `DB` through
+Madden — does not apply; the labels are already Madden's. The 2K5 save, which
+labels CB/FS/SS independently, was read to arbitrate between *the era* and *one
+modder's labelling*; its answer is in the session log and decides which reading
+the build takes. **Needs a ruling either way**: accept 1.02 as 1979 (fewer
+nickel packages), or hold the band.
+
+*Six teams carry two or more kickers* (NYJ four: Leahy, Jacobs, Linhart, Szaro
+— footballdb confirms all four played) and New Orleans two punters. Real
+mid-season churn, not filler; the mover rule (games, then block, then hand)
+already covers it.
+
 **Ruling needed on the proposal before any build.**
 
 **5. Contracts.** Invented, scaled to the $197.4M top-53 constant. Era-accurate
