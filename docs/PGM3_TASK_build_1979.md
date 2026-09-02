@@ -246,9 +246,17 @@ labels CB/FS/SS independently, arbitrates: **its 28 verified team blocks give
 CB/S = 1.28, inside the band.** Two independent 1979 sources disagreeing means
 **labelling, not the era** — the NFL79 modder calls more men safeties than the
 2K5 modder does, and all **53 individual disagreements** on the shared 192 DBs are in
-`wip/cbs_disagreements_1979.csv` (33 NFL79=S/2K5=CB, 20 the other way). **Recommendation, needing a ruling:** where the two sources
-disagree on CB vs S, take the 2K5 label (its ratio is in band); take NFL79.ros
-everywhere else. Position is a tiebreaker, not a filter, per the handoff.
+`wip/cbs_disagreements_1979.csv` (33 NFL79=S/2K5=CB, 20 the other way). **A recommendation was made here and is RETRACTED.** "Take the 2K5 label where
+the two differ" was written before the 20 names in that direction were read.
+They include **Roger Wehrli, Raymond Clayborn, Lemar Parrish, Neal Colzie** —
+corners, three of them Pro Bowl or Hall of Fame corners — whom the 2K5 modder
+labels FS. The rule would have moved Wehrli to safety. **Both sources are wrong
+in different directions**: NFL79.ros over-labels safeties (33), the 2K5 save
+mislabels famous corners as FS (20), and no third source names DB sub-positions
+— footballdb and PFR say `DB`. **The 53 are a hand worklist**, one man at a
+time against what he actually played, not a rule. A ratio in band is not
+evidence the labels under it are right — the second time today an in-band
+aggregate hid wrong records.
 
 *Six teams carry two or more kickers* (NYJ four: Leahy, Jacobs, Linhart, Szaro
 — footballdb confirms all four played) and New Orleans two punters. Real
