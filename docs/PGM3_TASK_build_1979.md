@@ -192,10 +192,26 @@ map against ~86, not the RB pool's 94.** Median percentile within RB is 59% at
 n=22 against the handoff's 28% on a fuller cohort — the named list is biased
 toward the famous ones, so the ceiling is confirmed and the percentile is not.
 
-*Attributes.* `NFL79.ros` PLAY direct-map plus per-position quantile, **using
-tonight's spread rule** — width from the source, level from the pool — so the
-stretch defect is not rebuilt into 1979. The 2K5 save cross-checks physicals
-(speed r=+0.84, tackle +0.89, weight +0.97 on 1,132 shared).
+*Attributes — THE SPREAD RULE IS THE BUILD, NOT AN OPTION.* Measured: `NFL79.ros`
+is a **narrower source than Madden 27 at nearly every position and attribute.**
+Source p5–p95 width against the six-file published union:
+
+    RB speed   5 vs 30   6.00x        TE speed    9 vs 34   3.78x
+    CB power  13 vs 38   2.92x        QB power   15 vs 39   2.60x
+    DE speed  14 vs 36   2.57x        QB speed   19 vs 40   2.11x
+
+The 2026 defect (item 25) was a 2.4x stretch at ONE position. 1979 is at or above
+1.4x on **26 of 29** position/attribute pairs measured. A plain per-position
+quantile map would manufacture floors across the entire file — the 2026 bug,
+everywhere at once. **Width from the source, level from the pool**, at every
+position, is the only map that can be run here. The 2K5 save cross-checks
+physicals (speed r=+0.84, tackle +0.89, weight +0.97 on 1,132 shared).
+
+*The 69 single-source, no-stat players are real ratings, not filler.* 26 distinct
+`POVR` values, the mode held by 6; attribute distinct-value counts (31–38 of 69)
+match a random 69 from the rest of the spine (29–40). They sit lower (median 73
+against 80) because they are backups — 12 OG, 8 DT, 8 OT. **Accept `POVR`, flag
+as single-source.**
 
 *Ordering — INCONCLUSIVE, and stated as such.* PGM3 position weights applied to
 the 2K5 attributes, Spearman against `POVR`: S 0.51, WR 0.54, CB 0.49, MLB 0.48
