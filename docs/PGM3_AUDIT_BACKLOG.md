@@ -1534,10 +1534,19 @@ assert actually checked. The assert was right; the sentence beside it was not.
 ## 27. `PGMStaff_2026.json` — one string outside the reference vocabulary, pre-existing
 
 `pgm3_validate.py staff` fails `string not in vocab [1]` at every commit checked
-today, before and after the roster write. Not introduced by this work. **Named:
-Bill Cowher, Free Agent, `physBoost` = "Foot Sprain".** That is an injury name
-sitting in a physio's specialty-boost field, on a record that is a head coach in
-the free-agent pool — two questions, not one: the value is not a boost token,
-and the field should not be populated on a coach at all. Either the vocabulary
-is missing a token or the record is malformed; check which before touching it.
-A five-minute item that has been failing a gate silently.
+today, before and after the roster write. Not introduced by this work.
+
+**Named, then over-diagnosed, then corrected.** The record is **Bill Cowher, Free
+Agent, `physBoost` = "Foot Sprain"**. An earlier version of this item called it
+"an injury name in a physio's field on a coach — two questions." **Both were
+wrong.** Measured: `physBoost` is populated on **453 of 453** 2026 staff records,
+every role, and the reference files' vocabulary for it IS injury names —
+`Torn ACL`, `Concussion`, `Turf Toe`, fifteen tokens. An injury name on a coach
+is the archive's convention, not a malformation.
+
+**The defect is one token on one record:** "Foot Sprain" is not one of the
+fifteen. Add it to the schema vocabulary, or set Cowher's to a listed token
+(`Ankle Sprain` is the nearest). Either is a one-line change to a published
+staff file, so it waits for a ruling. The probe that first looked at it assumed
+the field's meaning instead of reading the vocabulary — the inference about
+the field was the error, not the gate.
