@@ -946,3 +946,96 @@ the prospect cohort's *attribute* defect, and item 0's remaining Rookie gap is
 the largest single block of unsourced data in the archive. The 30 files also
 cover every published season's draft classes, so the same test should be run for
 2000, 2004, 2007, 2010, 2013, 2017 and 2021 before any of them is reopened.
+
+---
+
+## 23. The prospect defect, measured across every published season
+
+Generalisation of item 22, run 2026-09-02. **Report only — no published file
+touched.** Two numbers per season: how far the prospect cohort's own fields are
+a function of draft slot, and how much of that cohort the `.mdc` classes reach.
+
+| file | prospects | `rating` r vs log(pick) | attributes mean abs r | mdc coverage | classes available |
+|---|---|---|---|---|---|
+| 1986 | 1,334 | **−0.899** | **0.698** | 70.6% | 1987-1990 |
+| 2000 | 1,024 | −0.611 | 0.402 | **81.7%** | 2001-2004 |
+| 2004 | 1,017 | −0.646 | 0.219 | 80.7% | 2005-2008 |
+| 2007 | 1,017 | −0.681 | 0.237 | 53.5% | 2008, 2010, 2011 — **2009 absent** |
+| 2010 | 1,017 | −0.857 | 0.199 | 52.4% | 2011-2014 |
+| 2013 | 1,018 | −0.785 | 0.412 | 62.4% | 2014-2016 — 2017 not in the set |
+| 2017 | 1,024 | −0.724 | 0.206 | **0%** | none |
+| 2021 | 1,033 | **−0.899** | 0.452 | **0%** | none |
+| 2026 | 278 | −0.778 | 0.182 | **0%** | none |
+
+Class mapping was measured by name-matching, not assumed from the file year.
+
+### Finding 1 — the RATING defect is archive-wide, not historical
+
+**Every one of the nine files** carries a prospect `rating` between **−0.611 and
+−0.899** against log draft pick. The newer files are no different: 2017 −0.724,
+2021 −0.899, 2026 −0.778. Prospect rating is a function of where the player was
+picked in every file this project has ever shipped.
+
+**The `.mdc` set does not fix this** — it carries no overall column (item 22).
+
+### Finding 2 — the ATTRIBUTE defect is NOT archive-wide, and 1986 is the outlier
+
+Mean abs r across 17 attributes: **1986 at 0.698** stands alone. 2021 (0.452),
+2013 (0.412) and 2000 (0.402) are moderate; 2004, 2007, 2010, 2017 and 2026 sit
+at 0.18-0.24, which is consistent with attributes genuinely sourced from a
+Madden export rather than derived from slot.
+
+### Finding 3 — 2021 breaks the "newer files were built better" expectation
+
+2017 (0.206) and 2026 (0.182) behave as expected. **2021 does not**: at 0.452 it
+is worse than 2004, 2007 and 2010, with a rating correlation of −0.899 that ties
+1986 for the worst in the archive. That is consistent with audit item 1b, which
+records 2021 as the least-reviewed file and the only published file whose
+prospects break the computed-rating invariant (105 records). **Do not treat
+recency as evidence of quality here.**
+
+### The 2009 gap belongs to 2007
+
+`2009.mdc` is a byte-identical copy of `2008.mdc`, so the real 2009 class does
+not exist in the set. **2007 is the file that needs it** — its cohort spans
+2008-2011. Coverage from the three real classes is 544 of 1,017 = **53.5%**, and
+the 473-record gap is dominated by 2009. No amount of matching improves this
+without a genuine 2009 class.
+
+### The 257-row container — corrected, and it only bites on 1986
+
+An earlier note said the missing rows were "late-round picks" cut at 257.
+**Measured, that is wrong about the mechanism**: matched players span pick 1 to
+**335**, so the file is a 257-row *sample* of the class, not a truncation at
+pick 257.
+
+| class | real size (from matched picks) | 257 rows cover |
+|---|---|---|
+| 1987 | ~335 | 77% |
+| 1988 | ~329 | 78% |
+| 1989 | ~334 | 77% |
+| 1990 | ~329 | 78% |
+| 2001, 2004, 2008, 2014, 2016 | ~246-256 | **100-104%** |
+
+**The 12-round drafts of the 1980s exceed the container; the 7-round drafts from
+2001 on do not.** So the cap costs 1986 about 78 men per class and costs every
+other file nothing — their coverage gaps are match failures, not truncation.
+
+**The direction of the original concern still holds for 1986**: its uncovered
+prospects have a median draft pick of **243 against 129 for the covered**, p75
+at 293. The men the fix would not reach are the late picks — exactly the
+population a slot-derived fill serves worst.
+
+### Where a fix would actually pay
+
+Ranked by slot-dependence times coverage:
+
+    1986   attr 0.698  coverage 70.6%   product 0.493
+    2000   attr 0.402  coverage 81.7%   product 0.329
+    2013   attr 0.412  coverage 62.4%   product 0.257
+    2004   attr 0.219  coverage 80.7%   product 0.177   attributes already sourced
+    2007   attr 0.237  coverage 53.5%   product 0.127   attributes already sourced
+    2010   attr 0.199  coverage 52.4%   product 0.104   attributes already sourced
+    2017 / 2021 / 2026                  no mdc coverage at all
+
+**Three candidates: 1986, 2000, 2013.** 2021 has the defect and no source.
