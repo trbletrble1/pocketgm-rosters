@@ -2,7 +2,8 @@
 """rfm.py — read appearance data out of a Realistic Franchise Mod CAREER file.
 
     python3 rfm.py dump  sources/madden/CAREER-RFM -o wip/rfm_faces.csv
-    python3 rfm.py probe sources/madden/CAREER-RFM
+    python3 rfm.py probe  sources/madden/CAREER-RFM
+    python3 rfm.py anchor sources/madden/CAREER-RFM wip/rfm_faces.csv < anchors.csv
 
 Format, as supplied and verified here:
 
@@ -112,10 +113,50 @@ def cmd_probe(path):
     print(f'{n} records; skin tone distribution:')
     for k in sorted(c): print(f'   {k}: {c[k]:5d}  {band(k) or "ABSTAIN"}')
 
+def present(dec, forename, surname):
+    """EXISTENCE ASSERTION. Before an anchor is scored as a MISS, confirm the
+    name is actually in the source: a name that is absent scores as a
+    disagreement and makes a good source look worse than it is.
+
+    This is the third false-join class in the build -- after Chris Jones cloned
+    onto a Cincinnati rookie and Christian Jones cross-claimed between passes.
+    Returns True only if the composite <surname><forename>_<id> is really
+    there, compared on letters so punctuation and case cannot fake a miss.
+    """
+    key = ''.join(c for c in (surname + forename) if c.isalpha()).lower()
+    return key.encode() in _flat(dec)
+
+_FLAT = {}
+def _flat(dec):
+    if 'v' not in _FLAT:
+        _FLAT['v'] = bytes(c for c in dec.lower() if 97 <= c <= 122 or 48 <= c <= 57)
+    return _FLAT['v']
+
+def cmd_anchor(path, csvpath):
+    """Score anchors, separating ABSENT from DISAGREE."""
+    dec, _ = decompress(path)
+    got = {}
+    for r in csv.DictReader(open(csvpath, encoding='utf-8')):
+        got[(r['forename'].lower(), r['surname'].lower())] = r['band']
+    ag = dis = absent = ab = 0
+    for r in csv.DictReader(sys.stdin):
+        k = (r['forename'].lower(), r['surname'].lower())
+        if not present(dec, r['forename'], r['surname']): absent += 1; continue
+        b = got.get(k)
+        if b is None or b == 'abstain': ab += 1; continue
+        if b == r['band']: ag += 1
+        else:
+            dis += 1
+            print(f"   DISAGREE {r['forename']} {r['surname']}: expected {r['band']}, RFM {b}")
+    n = ag + dis
+    print(f'agree {ag}  disagree {dis}  rate {ag/n:.1%}' if n else 'no scorable anchors')
+    print(f'   not in the source at all: {absent}   abstain band: {ab}')
+
 if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else ''
     if cmd == 'dump':
         out = sys.argv[sys.argv.index('-o') + 1] if '-o' in sys.argv else 'wip/rfm_faces.csv'
         cmd_dump(sys.argv[2], out)
     elif cmd == 'probe': cmd_probe(sys.argv[2])
+    elif cmd == 'anchor': cmd_anchor(sys.argv[2], sys.argv[3])
     else: print(__doc__); sys.exit(2)

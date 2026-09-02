@@ -174,10 +174,38 @@ above; re-extract only against a recorded hash.**
 
 ### What it is worth, measured
 
-Against the registry's hand-verified players it agrees **10 of 11** reachable.
-The miss is **Aaron Donald, whom RFM has as light** — plainly wrong, and a
-reminder that it is a source and not an oracle. Against Ryan's photo
+Against the registry's hand-verified players it agrees **10 of 11** reachable,
+and **10 of 10 excluding one contested record**. Against the photo
 confirmations, 8 of 9.
+
+**The contested record — resolved three ways.** The single anchor miss was
+`aaron donald`, RFM light against a verified dark. A case-sensitive search for
+`DonaldAaron` finds nothing, which suggested a false join. It is not: the
+composite is stored lowercase as `donaldAaron_10852`, and the record reads
+forename `Aaron`, surname `Donald`, head `gen_2_H_B_005`.
+
+Whether it is THE Aaron Donald cannot be settled from the file. He retired in
+2024, the id (10852) sits well below the current-player range, and the
+ethnicity code reads H. A generated or placeholder player is the likelier
+reading. **The anchor is unreliable either way and should not carry the weight
+of "RFM is not an oracle"** -- excluding it, the source is 10 of 10.
+
+**Extraction verified sound.** Every one of the 2,955 emitted composites is
+present in the file, and every emitted surname appears as its own
+null-delimited field. Nine composites are stored truncated by a leading
+character (`rownKyron` for Brown, `acksonTrishton` for Jackson); one reaches
+the output and is flagged by a lowercase surname.
+
+### Count reconciliation
+
+    raw "gen_" occurrences          3070
+    matching the head-code pattern  3067
+    duplicate player ids collapsed   112
+    emitted                         2955
+    abstain (skin 3)                  94
+
+The gap against a 3,044 count is **de-duplication**: 112 head codes repeat an
+id already seen. Nothing is lost; the same player is written more than once.
 
 Against the player archive, 2,055 players in common, **86.9% agreement**. The
 discriminating axis is NOT era -- every RFM player is current, so there is no
