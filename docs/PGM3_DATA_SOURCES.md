@@ -342,3 +342,39 @@ conferred AUTHORITY without ever writing the archive's ANSWER. Michael Burton
 and Ka'imi Fairbairn goes to family 3, the boundary, rather than being forced
 to a side.
 
+### RFM applied to 2021 — with a boundary band
+
+Ryan photo-checked twelve of the 78 disagreements. RFM correct on 5 of 5
+decisive cases, but **seven of the twelve are genuinely mid-tone**. The finding
+is not that RFM is right about 2021; it is that a binary split disagrees most
+about people who are actually in between.
+
+**RFM's own scale identifies them — but not at the values expected.** The
+proposed cut (2 and 4, adjacent to the abstain band) does not separate: 3 of 6
+mid-tone against 3 of 5 decisive. The cut that does is **4-5**, the light end
+of RFM's dark range:
+
+    mid-tone in skin 4-5     5 of 5
+    decisive in skin 4-5     0 of 5
+
+(Mahomes is absent from RFM; Aaron Donald is excluded — his RFM record is the
+untouched placeholder established earlier, and applying it would have shipped
+him light.)
+
+So mid-tone is **machine-readable after all**, at 4-5 rather than 2-4, and no
+longer needs a photo per player.
+
+**The boundary family holds.** Family 3 runs 0.7% to 12.5% across the archive,
+and 2021's 0.7% is the lowest of any file. Routing 22 players there takes it to
+**1.7%** — inside the range, and toward the middle rather than away.
+
+    disagreements handled          74
+    boundary (skin 4-5) -> family 3  22
+    decisive flips                   52   (35 light, 17 dark)
+    light share            27.2% -> 28.1%   (published 27.2-35.6%)
+
+Only `appearance` changed, asserted. The faces gate went **27 -> 26**
+cross-season disagreements — one fewer, because 2021 and 2026 now share a
+source. NOT extended to the other published files: twelve players from one file
+is not evidence about seven others.
+
