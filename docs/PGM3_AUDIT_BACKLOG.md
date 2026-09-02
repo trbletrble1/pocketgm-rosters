@@ -1510,19 +1510,34 @@ proven after shipping, not before. Recorded because "the file wasn't touched" is
 exactly the reasoning the stale-artifact rule warns against — it is an
 inference about the gate, not the gate.
 
-**The 26.** 2,091 records changed against 2,068 claimed by stage tallies. The 26
-excess rostered records are stage-6 `decisions` edits where `rederive()` then
-recomputed rating and potential and both landed on values leaving the gap
-unchanged, so `growthType` legitimately did not move and no stage tally counted
-them. **Asserted on the shipped file:** growthType invariant 1890/1890; zero
-records where the gap changed without a growthType rebuild. Intended edits, but
-the tally that would have caught a real leak here did not exist — a stage's
-count should be "records I changed," not "records I rebuilt one field of."
+**The reconciliation — and a retraction.** An earlier version of this note said
+"the 26 excess rostered records are stage-6 decisions edits." **That was wrong,
+and the probe that produced it printed its conclusion as hardcoded prose the
+numbers above it did not support.** Measured properly on the shipped file:
+
+    changed records          2,091  =  1,816 rostered + 275 prospects
+    rostered, gap MOVED      1,486  -> growthType rebuilt (differs from before)
+    rostered, gap UNCHANGED    330  -> growthType legitimately identical
+    stage-4 tally            1,790  = rebuild OPERATIONS; 304 produced the same array
+
+The signatures of the 330 are full stage-1 attribute rewrites where rating and
+potential moved by the same amount, not decisions-only edits. **The claim that
+matters, asserted on the shipped file:** growthType invariant **1890/1890**, and
+**zero** records where the gap changed and growthType did not.
+
+Two lessons, both mine. A stage tally counts operations, not changed records —
+"1,790 rebuilds" and "1,486 changes" are different numbers and only the second
+reconciles a diff. And **a probe must not contain its verdict as a string**: a
+`print("ASSERTED: ...")` after an `assert` reads as a finding whatever the
+assert actually checked. The assert was right; the sentence beside it was not.
 
 ## 27. `PGMStaff_2026.json` — one string outside the reference vocabulary, pre-existing
 
 `pgm3_validate.py staff` fails `string not in vocab [1]` at every commit checked
-today, before and after the roster write. Not introduced by this work; not in
-any item until now. Needs the offending value named and either added to the
-schema vocabulary or corrected — a five-minute item that has been failing a
-gate silently.
+today, before and after the roster write. Not introduced by this work. **Named:
+Bill Cowher, Free Agent, `physBoost` = "Foot Sprain".** That is an injury name
+sitting in a physio's specialty-boost field, on a record that is a head coach in
+the free-agent pool — two questions, not one: the value is not a boost token,
+and the field should not be populated on a coach at all. Either the vocabulary
+is missing a token or the record is malformed; check which before touching it.
+A five-minute item that has been failing a gate silently.
