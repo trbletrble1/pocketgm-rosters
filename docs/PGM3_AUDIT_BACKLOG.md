@@ -385,3 +385,30 @@ are identifiable by signature; none has been decoded into a usable 0-99 scale.
 **Skin (`c2cced`) rejected** — see the precedent on thresholds fitted to famous
 players. Not usable, and the 1986 faces item stays closed.
 
+---
+
+## 13. The registry's two blocks conflict, with no precedence defined
+
+    faces        11,068 keys      faces_1986        2,115
+    staff_faces   2,231           staff_faces_1986    438
+
+    roster keys in both blocks: 23   ALL 23 hold different values
+    staff  keys in both blocks: 46   40 hold different values
+
+**Consumer audit — every reader of these blocks:**
+
+| consumer | behaviour | verdict |
+|---|---|---|
+| `apply_registry_all.py` | selects by file year | **correct** |
+| `build_2000.py` | explicit per-(team, role) map, documents the Mora father/son | **correct** |
+| `build_2026.py` | reads `faces` / `staff_faces` only | **safe** — no 1986-era key can reach a 2026 build |
+| `pgm3_validate.py` | preferred the 2-part block | **was wrong; fixed** — 3-part key reads the 3-part block, and keys ambiguous across blocks are refused rather than scored |
+
+**Precedence, now recorded:** an 1986-era key reads `faces_1986` first. Where a
+bare name cannot distinguish two men, the consumer refuses rather than choosing.
+
+**The 23 (and the 40) are NOT reconciled.** Two values for one player is a
+question about which edit was later and which was intended, and that is Ryan's
+to answer. Some are certainly legitimate — the Moras are two people — and
+others are probably stale. Nothing should be merged by inference.
+

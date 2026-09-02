@@ -2946,6 +2946,41 @@ data being replaced was fill.
 
 ---
 
+## A widened check reports its own reach errors as findings
+
+Widening the faces gate took its coverage from **27 to 103** of 105 verified
+players — a genuine improvement — and **created a false-positive class in the
+same change**. It immediately reported six drifts in 1986, four of them
+described as newly discovered. All six were false. Every one matched
+`faces_1986` byte for byte; the widened gate was reading `faces` instead.
+
+Then the staff path did it again: two more "drifts", both `jim mora`, which are
+**two different men** — Jim E. Mora (1986 NO, 2000 IND) and Jim L. Mora (2000
+SF) — split across the two blocks, with each file carrying the correct face.
+`build_2000.py` had documented that years ago.
+
+**Both things are true at once, and that is what makes it hard.** A fix that
+simply fails is obvious. A fix that improves the headline number while
+generating errors that *look like discoveries* is not: the new findings arrive
+with the credibility of the improvement that produced them.
+
+**Rule: the first results from a widened check are verified against the raw
+source before they are believed, not treated as newly surfaced defects.** Ask
+"could the change I just made have manufactured this?" before reporting it.
+
+Eight false positives were passed on as confirmed drift before that question
+got asked.
+
+### And refuse what the key cannot distinguish
+
+`staff_faces` and `staff_faces_1986` share 46 keys with 40 different values,
+because a bare name cannot separate a father from a son. The gate now reports
+those as **ambiguous and declines to score them** rather than guessing a block.
+Same discipline as the tier-1 tail refusals: a case that cannot be decided from
+the available evidence is reported, not resolved by inference.
+
+---
+
 ## Two scripts in one project, two position vocabularies
 
 The Houston core was selected by one script and assembled by another. The

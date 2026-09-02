@@ -714,8 +714,18 @@ def faces(paths, kind='roster'):
     else:
         vk = (reg.get('_verified_keys') or {}).get('players' if kind=='roster' else 'staff', {})
         block = reg['faces'] if kind == 'roster' else reg['staff_faces']
-        checked = viol = 0
+        checked = viol = ambig = 0
         names = []
+        # AMBIGUOUS KEYS ARE REFUSED, NOT SCORED. staff_faces and
+        # staff_faces_1986 share 46 keys and 40 hold different values, because
+        # a bare name cannot separate two men: `jim mora` is Jim E. Mora
+        # (1986 NO, 2000 IND, Head2c) in one block and Jim L. Mora (2000 SF,
+        # Head1c) in the other. Both files carry the RIGHT face for each; the
+        # gate was comparing the father against the son and calling it drift.
+        # build_2000.py resolves this per (team, role); the gate cannot, so it
+        # declines to score rather than guessing.
+        alt = (reg.get('faces_1986') if kind == 'roster'
+               else reg.get('staff_faces_1986')) or {}
         for p, recs in files.items():
             for r in recs:
                 if kind == 'roster' and cohort(r) != 'T': continue
@@ -736,10 +746,12 @@ def faces(paths, kind='roster'):
                 # six as drifted when every one matches faces_1986 exactly --
                 # six false positives, four of which were reported as newly
                 # discovered drift.
-                f86 = (reg.get('faces_1986') or {})
-                want = f86.get(k3) if vkey == k3 else None
+                want = alt.get(k3) if vkey == k3 else None
                 if want is None: want = block.get(k2)
-                if want is None: want = f86.get(k3)
+                if want is None: want = alt.get(k3)
+                other = alt.get(k2) if kind != 'roster' else None
+                if other is not None and want is not None and other != want:
+                    ambig += 1; continue
                 if want is None: continue
                 k = vkey
                 checked += 1
@@ -750,7 +762,8 @@ def faces(paths, kind='roster'):
                 if not same:
                     viol += 1
                     if len(names) < 4: names.append(f'{k} @ {p}')
-        res.append((f'verified faces intact ({checked} checked, {len(vk)} in registry)',
+        res.append((f'verified faces intact ({checked} checked, {len(vk)} in registry'
+                    + (f', {ambig} ambiguous' if ambig else '') + ')',
                     f'{viol} overwritten: ' + ', '.join(names) if viol else ''))
 
     # ---- 4. head-family distribution per position, against the reference band.
