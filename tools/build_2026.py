@@ -3408,7 +3408,18 @@ def stage_build(verbose=True):
     bounds = fit_attr_bounds(refs)
     _, ratpool = fit_percentile_fill(refs)
     build_derived(rows, built, weights, fit_derived_pools(refs), ratpool)
-    calibrate_positions(rows, built, weights, bounds)
+    # calibrate_positions REMOVED. Its own docstring said it existed "so the
+    # capped refit only has to absorb per-player residual" -- a pre-step for a
+    # refit that no longer exists once the stored rating IS the computed value.
+    #
+    # It moved 14,382 of 32,923 tier-1 attribute cells (44%) by a mean of 1.31
+    # points: real Madden data adjusted to hit a target we had abandoned. It
+    # earned nothing -- median 73 unchanged, p90 86->87, max 99 unchanged.
+    #
+    # It also carried a rounding artifact. The per-position shifts are tiny
+    # (+/-0.5) but were applied and RE-ROUNDED to integers, so each of a
+    # player's twenty cells moved 0 or 1 and enough rounded up to add nearly
+    # four rating points to DJ Herman alone.
     # RULING (Ryan): STORE THE COMPUTED VALUE. The refit is gone.
     #
     # The archive's invariant is not "the stored rating is Madden's overall" --

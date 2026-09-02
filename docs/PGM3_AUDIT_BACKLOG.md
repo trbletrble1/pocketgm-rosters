@@ -137,3 +137,45 @@ built to a different standard, alongside 2000's known defects and 1986's
 1,745-of-1,746 registry write. `assert_rating_matches_attributes` now gates
 this, so no future build can reintroduce it.
 
+---
+
+## 8. `build_derived` inflates the tier-3 residual — cause unknown
+
+Decomposed by stage, the tier-3 gap between the stored rating and the DRAWN
+rating comes almost entirely from one step:
+
+| stage | tier-3 residual (median / p90) |
+|---|---|
+| after the donor fill | **-0.1 / +0.3** |
+| after `build_derived` | +0.9 / **+5.6** |
+| after `calibrate_positions` | +1.2 / +6.1 |
+
+The fill is exact. `build_derived` contributes **+5.6 of the +6.1** p90.
+`calibrate_positions` has since been removed and accounted for only 0.5 of it.
+
+Not opened. Logged with the decomposition so the next pass starts from the
+measurement rather than the symptom.
+
+**Correction recorded:** this residual was first attributed to
+`calibrate_positions`. It causes 0.5 of 6.1. Decomposing by stage rather than
+defending the first claim is what located the real step.
+
+---
+
+## 9. Integer rounding at the attribute boundary — one cause, three bugs
+
+Attributes are written as integers while the rating is computed from floats,
+and the boundary between them has now produced three separate defects:
+
+1. **Will Anderson Jr. 5.7 points adrift of his own attributes** — the rating
+   was computed from the float dict, the file stored `int()`-truncated values.
+2. **Nine rescaled players landing on 39 against a target of 40** — the solve
+   hit 40.0 exactly and truncation took it below.
+3. **DJ Herman gaining nearly four rating points from a +/-0.5 shift** —
+   `calibrate_positions` added a fraction to twenty cells and re-rounded, and
+   enough rounded up to move the rating four points.
+
+Each was patched where it appeared. **The boundary itself has not been fixed** —
+one rounding convention applied once, at the point attributes become integers,
+rather than three defensive margins. Own item.
+
