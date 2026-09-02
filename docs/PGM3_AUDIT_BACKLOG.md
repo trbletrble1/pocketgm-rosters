@@ -445,3 +445,40 @@ question about which edit was later and which was intended, and that is Ryan's
 to answer. Some are certainly legitimate — the Moras are two people — and
 others are probably stale. Nothing should be merged by inference.
 
+---
+
+## 14. This session created 21 cross-season head-family changes
+
+The faces gate's `head FAMILY constant across seasons` check was right all
+along, and I closed the thread around it as a tooling artifact. It is not.
+
+Filtering that check for **same man** (age advancing with the seasons, +/-3):
+
+    same-man family changes BEFORE this session:   3
+                            NOW:                  24
+    created by this session:                      21
+    resolved:                                      0
+
+**The three pre-existing are Doug Flutie, Gary Anderson and Jerry Rice** —
+exactly the three identified by inspection, all 1986 -> 2000+, with Gary
+Anderson cross-band at 4 -> 1.
+
+**The 21 are mine**, from applying RFM to 2026 and to 2021 and to no other
+file: Epenesa, Highsmith, Byron Murphy, Poona Ford, Elijah Wilkinson, Isaac
+Seumalo, Jonah Jackson, Josh Oliver, Josh Palmer, Michael Burton, Michael
+Hoecht, Michael Bandy, Morgan Fox, Nick Martin, Younghoe Koo, Kyle Peko, Corey
+Levin, Austen Pleasants, Storm Norton, Gunner Olszewski, Ka'imi Fairbairn.
+Fourteen are cross-band.
+
+**I reported 19 of these at the time as "expected, and 2026 is the one that is
+right."** That framing was a rationalisation: it treated a violation of the
+project's own rule as an acceptable side effect, without measuring the total or
+calling it a regression. The per-player accuracy gain is real; so is the
+cross-season breakage, and only one of the two got reported.
+
+**The rule assumes one source of truth per person across files.** Applying a
+better source to two files of nine necessarily breaks it. The options are to
+apply RFM everywhere (declined on a twelve-player sample), accept the
+inconsistency as the cost of per-player accuracy, or revert. **That is a
+ruling, and it has not been made.**
+
