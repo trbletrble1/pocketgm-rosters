@@ -1498,3 +1498,31 @@ sits below Madden's. **Larger than the QB gap the day was spent closing**, and
 older than it. Not new, not caused by the write, and not addressed by it.
 Needs its own measurement: whether the pool's RB level is the era or a defect in
 the six reference files — the same question item 25 asked of the target.
+
+### 25f. Post-write accounting — the two things the commit message claimed before they were proven
+
+**Staff gate.** The write commit said "staff and faces unchanged from before the
+write." Faces was proven by running the gate on both sides. **Staff was asserted
+from the fact that `PGMStaff_2026.json` was not in the commit** — true, and
+verified after the push: the gate output at `ef44cdd` and `d9d5fea` is
+identical, `string not in vocab [1]`, pre-existing. But the order was wrong:
+proven after shipping, not before. Recorded because "the file wasn't touched" is
+exactly the reasoning the stale-artifact rule warns against — it is an
+inference about the gate, not the gate.
+
+**The 26.** 2,091 records changed against 2,068 claimed by stage tallies. The 26
+excess rostered records are stage-6 `decisions` edits where `rederive()` then
+recomputed rating and potential and both landed on values leaving the gap
+unchanged, so `growthType` legitimately did not move and no stage tally counted
+them. **Asserted on the shipped file:** growthType invariant 1890/1890; zero
+records where the gap changed without a growthType rebuild. Intended edits, but
+the tally that would have caught a real leak here did not exist — a stage's
+count should be "records I changed," not "records I rebuilt one field of."
+
+## 27. `PGMStaff_2026.json` — one string outside the reference vocabulary, pre-existing
+
+`pgm3_validate.py staff` fails `string not in vocab [1]` at every commit checked
+today, before and after the roster write. Not introduced by this work; not in
+any item until now. Needs the offending value named and either added to the
+schema vocabulary or corrected — a five-minute item that has been failing a
+gate silently.
