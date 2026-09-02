@@ -783,3 +783,98 @@ absent from our published file (Ed "Too Tall" Jones, 35, who did play in 1986).
 
 **`PSKI` is dead at 63% on the middle value**, so it does not reopen the 1986
 appearance problem. That stays closed.
+
+---
+
+## 20. The 1986 mod's COCH table — 128 period-correct coaches, and the first independent check on `PGMStaff_1986.json`
+
+Separate from item 19, which rejected the same file as a *player* source.
+**This is a different question and the answer is different.**
+
+`1986_Roster_Mod_v1.0.ros` carries **four coaches per team across all 32 slots,
+all period-correct**, unlike `NFL79.ros` which wrapped 28 real head coaches
+around ~190 records from 2007-08:
+
+    CHI  Ditka, Kazor, Hughes, Tobin          NYG  Belichick, Crennel, Erhardt, Parcells
+    PIT  Dungy, Moore, Hoak, Noll             SF   Holmgren, vonAppen, Seifert, Walsh
+    DAL  Hackett, Lowry, Landry, Stautner     GB   Jauron, Coughlin, Gregg, Modzelewski
+    MIA  Westhoff, Shula, Studley, Sandusky
+
+**`PGMStaff_1986.json` has never had an independent check.** This is one. The
+file spells Belichick **"B.Beilicheck"**, so any join must be on surname +
+initial, not exact match.
+
+The 53-record pool at `TGID 1023` is modern (Heimerdinger, Donatell, Chris
+Palmer, Zauner) and is junk. `CSKI` reads 14% dark against a real coaching
+population of ~21% and a registry figure of 24.1% — **do not use it for coach
+skin.**
+
+**Not applied. 1986 is published.** Recorded so the check is available when 1986
+is next opened.
+
+---
+
+## 21. Two more historical `.ros` files — one real find, one closed door
+
+Both screened, lineage-checked first, and neither is a copy of anything held.
+Cross-file identical-value rates against every other file we hold run 4-28% on
+`POVR`, against 98.4% for the two 1979 files that ARE one roster.
+
+### `1983-SB-XVIII.ros` — the FIRST usable historical `.ros` skin source
+
+1,974 players, 1,641 rostered. **`PSKI` passes the screen** at 14.3% on the
+middle value (rostered cohort) against a 28% threshold. Anchor-tested against
+1,202 players carrying an unanimous multi-source label in the 2K5 archive:
+
+    PSKI 0   n=488    9.6% dark
+    PSKI 1   n=150   56.7% dark      <- the documented abstain value
+    PSKI 2   n=564   96.8% dark
+
+Clean monotone separation. **Rule: 0 = light, 2 = dark, 1 abstains** — that
+covers 1,052 of 1,202 at ~93.5% accuracy. A two-way split at `PSKI >= 1` gives
+89.2%.
+
+For comparison on the same anchor method: **`NFL79.ros` reaches only 83.9%** with
+the same abstain rule (its ordering is real but weaker — 0/1/2/3 at
+17.5/46.2/83.8/93.5% dark), and **the 1986 mod is dead** at 65.3% with 82.4% of
+the file on the middle value. The 2K5 archive's 93.4% remains the better source
+for 1979, so this changes nothing there.
+
+**Incremental value is modest and should not be oversold.** Of its 1,630
+rostered names, 74.2% already carry a strong archive label. It could add a
+usable vote for 421, of which 233 are absent from the archive entirely. Against
+the 1986 file's open appearance gap (backlog item 0):
+
+    1986 rostered    460 uncovered ->  99 the 1983 file could vote for
+    1986 Rookie      749 uncovered ->   0
+    1986 Free Agent   48 uncovered ->  13
+
+**112 of 1,257, about 9%.** The Rookie cohort gets nothing, because 1986's
+prospect pool is the 1987-1990 draft classes who were not in the league in 1983.
+
+### `1990-SB-XXV.ros` — a real 1990 roster whose skin field is dead
+
+12,075 players across 227 team slots. **It is not a season roster; it is a
+Madden all-time collection**: 32 base teams plus **146 historical season-teams
+spanning 1957-2002**, including five 1979 teams and three 1986 teams.
+
+**Those historical teams are worthless as data.** They are anonymised for
+licensing — forename holds the position and surname holds the jersey number
+(`"QB" "#5"`, `"HB" "#30"`), the numbers do not match the real rosters, and the
+ratings are inflated (the 1979 Dallas line reads 96-99 straight across). 7,684
+of the 12,075 records are nameless in this way. **The five 1979 teams cannot
+cross-validate `NFL79.ros`: there are no names to join on.**
+
+**The 32 base teams ARE a genuine 1990 season roster**, 1,730 players, verified
+by cohort: Barry Sanders 22 / `PYRP` 1, Deion Sanders 23 / 1, Derrick Thomas
+23 / 1, Thurman Thomas 24 / 2, Montana 34, Rice 28, Elway 30, Marino 29, Warren
+Moon in the Oilers slot.
+
+**But `PSKI` is 99.6% on a single value — completely dead.**
+
+**This closes the route backlog item 0 was hoping for.** That item measures a
+1990 export as covering 514 of the 1,260 unsourced 1986 names and concludes "a
+1990 or 1991 build closes roughly 40% of the gap as a side effect." **This 1990
+file cannot do that.** It is a usable 1990 *attribute and identity* source and
+not a skin source. Item 0's estimate should be read as conditional on finding a
+1990 file whose skin field survives, which this one does not.
