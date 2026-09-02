@@ -339,3 +339,31 @@ populations differ: his includes undrafted players WITH experience, who do not
 go through the hit-rate mechanism at all. The strict cohort is the one the
 mechanism acts on and the one to re-measure.)*
 
+---
+
+## 12. The 1986/1990 retro mods — parsed, not usable
+
+`ROSTER-1986V1` and `ROSTER-1990` (Madden 25 retro mods) both decode: FBCHUNKS,
+zlib at offset 74, key-value records anchored on `c25c33`, **identical 170-key
+schema**. 1986 holds **1,679 real players**, 1990 holds 1,945 — a season this
+project does not cover at all.
+
+**Record classes** (3,111 anchors in 1986): 1,679 real, 616 blank `"0 0"`,
+556 named `"."`, 235 generic `"POS #NN"`. Any share computed on 3,111 is wrong.
+
+**163 is an unset default, not a ceiling** — it appears on 61 keys, one holds
+it on every record, and Montana alone has 17 fields at it.
+
+**Confirmed fields:** height = `c289f4 - 64` (r=0.954 against real heights, and
+the thing that validates the parse). `c2bcb4` is speed-shaped — zero zeros on
+the real roster, and its top values are Braziel, Hill, Cade, Minnifield, Fryar,
+all CB/WR. `c2fdb2` is a **QB** field, not overall rating: its top values are
+Kenney, Krieg, Esiason, Lomax. My earlier reading of it as a rating was wrong.
+
+**Blocked on the value scale.** Dividing by 1.606 (159/99) puts the maximum at
+99 but the median at 36-39, far too low for an attribute distribution. Fields
+are identifiable by signature; none has been decoded into a usable 0-99 scale.
+
+**Skin (`c2cced`) rejected** — see the precedent on thresholds fitted to famous
+players. Not usable, and the 1986 faces item stays closed.
+

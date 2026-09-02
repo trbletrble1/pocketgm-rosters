@@ -2891,6 +2891,36 @@ recompute.** The answer differed between two files with the identical symptom.
 
 ---
 
+## A threshold fitted on famous players will beat its own scale test
+
+A skin field in the 1986 retro mod (`c2cced`) scored **95% against 43 anchors**
+at threshold >= 53. At scale against the published file's own head families —
+1,210 players — it scored **80.7%**, and the best threshold was 44, not 53.
+
+**Anchors skew toward the well-known, and the well-known are the players every
+source gets right.** A threshold chosen on them is fitted to the easy cases and
+inherits none of the difficulty of the rest. The check that caught it was the
+aggregate share, not the anchor accuracy: predicted 60-65% dark, delivered 43.8%
+at the chosen threshold.
+
+**And the multiple-comparisons trap sits right behind it.** Scanning all 170
+keys for the best skin predictor returned `c27a25` at **87.0%** — better than
+the hypothesised field. That number is the maximum of roughly 6,800
+key-and-threshold combinations, and **a search that wide returns something near
+87% even when no field encodes skin at all**. It was reported as untrustworthy
+rather than as an improvement.
+
+**Rule: a source is scored at scale, on a stated field and a stated threshold,
+before it is believed.** An anchor set proposes; only the population decides.
+
+**Triangulation is what settled it.** The mod agreed with the published 1986
+file 80.9%, and with the player archive **72.8%** — less than the archive
+agrees with the file we already distrust (79.5%). RFM scores 98.1% on that same
+test. *A third source that sits further from both of the first two is not a
+tiebreaker, it is noise.*
+
+---
+
 ## Two scripts in one project, two position vocabularies
 
 The Houston core was selected by one script and assembled by another. The
