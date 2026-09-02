@@ -285,6 +285,17 @@ Byron Murphy, Josh Palmer and Poona Ford move to dark; Michael Hoecht, Brock
 Wright and Michael Bandy move to light. Applying RFM to the published files is
 a separate ruling and has not been made.
 
-**2026 ONLY.** No published file is touched; verified, and the only field that
-differs anywhere in the roster is `appearance`.
+**2026 ONLY.** No published file is touched — verified.
+
+**Correction.** This section first claimed `appearance` was the only field that
+differed. It was not: `greed` and `ambition` differed on ~2,500 records, and
+the cause was not RFM at all. **The build was non-deterministic.**
+`DERIVED_ATTRS` is a set, two of its members are drawn with `rng.random()`, and
+iterating in set order made which draw each one received depend on Python's
+hash seed. Two consecutive builds of identical input differed on 2,500 and
+2,570 records. Now sorted, and two consecutive builds are byte-identical.
+
+A file that cannot be rebuilt the same way twice is not reproducible from a
+clean clone, which is the property the pinned RFM provenance exists to give.
+The claim that surfaced it was mine and it was wrong.
 

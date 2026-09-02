@@ -2079,7 +2079,12 @@ def build_derived(rows, built, weights, pools, ratpool, verbose=False):
         except (KeyError, ValueError): continue
         rp = percentile_of(ratpool[pos], rt) if ratpool.get(pos) else 0.5
         rng = random.Random(name_seed(n, pos) ^ 0x9E3779B9)
-        for a in DERIVED_ATTRS:
+        # SORTED. DERIVED_ATTRS is a set, and two of its members are drawn
+        # with rng.random(); iterating in set order made which draw each one
+        # got depend on Python's hash seed, so greed and ambition swapped
+        # between runs and the build was NOT REPRODUCIBLE -- 2,500 and 2,570
+        # records differing between two consecutive builds of identical input.
+        for a in sorted(DERIVED_ATTRS):
             # greed, loyalty and ambition are NOT in weights.json -- they do
             # not feed the rating -- but they ARE schema fields and every
             # published record populates them. Gating on `live` left all three
@@ -3788,7 +3793,7 @@ def stage_build(verbose=True):
                 if b: v = max(b[0], min(b[1], v))
                 rec[a] = max(1.0, min(99.0, v))
         for a in live_attrs: rec[a] = int(round(rec[a]))
-        for attr in DERIVED_ATTRS:
+        for attr in sorted(DERIVED_ATTRS):
             # greed, loyalty and ambition are not in weights.json but every
             # published prospect carries them -- gating on the weights list
             # left the whole Rookie cohort at zero.
