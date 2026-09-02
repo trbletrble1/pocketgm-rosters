@@ -253,7 +253,7 @@ weak** -- which is the cohort that has defeated every other approach.
     RFM only     424
     neither       95
 
-### Recommended precedence — NOT YET APPLIED, needs a ruling
+### Precedence — APPLIED to 2026 (Ryan, 2026-09-02)
 
 1. registry `_verified_keys` above everything (Donald shows RFM errs)
 2. archive where it has **5+ sources** (98.5% agreement makes this near-moot)
@@ -261,4 +261,30 @@ weak** -- which is the cohort that has defeated every other approach.
 4. RFM as the tie-break in the thin 1-2 source band, where the two agree only
    77.4% and one of them is wrong a fifth of the time. Photo confirmation is
    still the only thing that settles those.
+
+### Applied — the change set
+
+| rule | records |
+|---|---|
+| 1 `_verified_keys`, untouched | 7 |
+| 2 archive at 5+ sources, untouched | 355 |
+| 3-4 RFM applied | 1705 |
+| no RFM entry | 566 |
+
+**384 bands changed** (207 dark->light, 177 light->dark). The bulk is players
+the archive cannot reach at all (208); the rest sit in the thin band (n=1: 97,
+n=2: 38, n=3: 29, n=4: 12). **Zero overturned at 5+ archive sources.**
+
+Lukas Van Ness resolves dark -> light. Nothing else could reach him: 1-2
+archive sources, below every floor.
+
+**Nineteen people now have a 2026 face that differs from every earlier season**
+— an unavoidable consequence of applying a better source to one file only.
+Spot-reading them, 2026 is the one that is right: AJ Epenesa, Alex Highsmith,
+Byron Murphy, Josh Palmer and Poona Ford move to dark; Michael Hoecht, Brock
+Wright and Michael Bandy move to light. Applying RFM to the published files is
+a separate ruling and has not been made.
+
+**2026 ONLY.** No published file is touched; verified, and the only field that
+differs anywhere in the roster is `appearance`.
 

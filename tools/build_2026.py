@@ -3451,6 +3451,84 @@ def _prospect_face(pr, pos, rng, lib, prior, vocab, archive, med_wt):
     assert_appearance_valid(app, vocab)
     return app
 
+# ------------------------------------------------------------- RFM faces
+# Realistic Franchise Mod, a community Madden 27 mod. Best coverage this
+# project has: 88% of the rostered file against the archive's 72%, and 424
+# players it alone reaches. Cohort-scoped anchor test 7 of 7.
+#
+# The measurement that decided precedence is the ARCHIVE'S OWN CONFIDENCE:
+# RFM and the archive agree 77.4% where the archive has 1-2 sources, 88.6% at
+# 3-4, and 98.5% at 5+. They agree almost perfectly wherever the archive is
+# corroborated, so the disagreements sit exactly where the archive is thin.
+#
+# PRECEDENCE (Ryan): _verified_keys first, archive at 5+ sources second, RFM
+# for everything else, RFM as tie-break in the thin band.
+#
+# 2026 ONLY. RFM is a Madden 27 source covering current players; it has no
+# bearing on 1986 or 2000, and 2021 is a separate ruling that has not been made.
+RFM_FACES = 'wip/rfm_faces.csv'
+RFM_ARCHIVE_FLOOR = 5          # archive wins at or above this many sources
+
+def load_rfm(path):
+    out = {}
+    try: rows = list(csv.DictReader(open(P(path), encoding='utf-8')))
+    except FileNotFoundError: return out
+    for r in rows:
+        if r['band'] in ('light', 'dark'):
+            out[norm(r['forename'] + ' ' + r['surname'])] = r['band']
+    return out
+
+def apply_rfm_bands(out, verbose=False):
+    """Rewrite the head-family digit where RFM outranks what shipped."""
+    rfm = load_rfm(RFM_FACES)
+    if not rfm: return collections.Counter(), []
+    reg = json.load(open(P('reference', 'PGM3_FACE_REGISTRY.json')))
+    vk = set(reg['_verified_keys'].get('players', []))
+    arc = json.load(open(P('reference', 'PGM3_PLAYER_ARCHIVE.json')))['players']
+    def arc_lookup(nm, pos):
+        for p in (pos,) + tuple(k for k, v in POS_FROM_ARCHIVE.items() if v == pos):
+            e = arc.get(f'{nm}|{p}')
+            if e and e.get('band') in ('light', 'dark'):
+                return e['band'], e.get('n_sources') or 0
+        return None, 0
+    spread = collections.defaultdict(collections.Counter)
+    for y in ALL_PUBLISHED:
+        for r in json.load(open(P(y))):
+            if cohort_of(r) != 'T': continue
+            f = tok_family(r['appearance'][0])
+            spread[(r['position'], 'light' if f <= 3 else 'dark')][f] += 1
+    stat, contested = collections.Counter(), []
+    for rec in out:
+        nm = norm(rec['forename'] + ' ' + rec['surname']); pos = rec['position']
+        cur = 'dark' if tok_family(rec['appearance'][0]) > 3 else 'light'
+        if f'{nm}|{pos}' in vk or f'{nm}|{pos}|{rec.get("teamID") or ""}' in vk:
+            stat['verified, untouched'] += 1; continue
+        a, n = arc_lookup(nm, pos); f = rfm.get(nm)
+        if a and n >= RFM_ARCHIVE_FLOOR:
+            stat['archive 5+, untouched'] += 1
+            if f and f != a: contested.append((nm, pos, a, n, f, cur))
+            continue
+        if not f:
+            stat['no RFM entry'] += 1; continue
+        stat['RFM applied'] += 1
+        if f == cur: continue
+        c = spread.get((pos, f)) or collections.Counter(
+            {1: 1, 2: 1, 3: 1} if f == 'light' else {4: 1, 5: 1})
+        rng = random.Random(int(hashlib.sha256(f'rfm|{nm}|{pos}'.encode()).hexdigest()[:12], 16))
+        x = rng.random() * sum(c.values()); fam = sorted(c)[-1]
+        for k, v in sorted(c.items()):
+            x -= v
+            if x <= 0: fam = k; break
+        app = list(rec['appearance'])
+        for i, tag in ((0, 'Head'), (5, 'Nose'), (6, 'Mouth')):
+            app[i] = f'{tag}{fam}{tok_variant(app[i])}'
+        rec['appearance'] = app
+        stat[f'band changed {cur}->{f}'] += 1
+    if verbose:
+        print('   RFM faces: ' + '  '.join(f'{k} {v}' for k, v in sorted(stat.items())))
+        print(f'   contested (RFM vs archive 5+, NOT applied): {len(contested)}')
+    return stat, contested
+
 def stage_build(verbose=True):
     """Assemble PGMRoster_2026.json. The face registry is applied LAST, over
     the top, and nothing after it -- family digit only for players, because the
@@ -3769,6 +3847,7 @@ def stage_build(verbose=True):
             app[i] = want[i]
         rec['appearance'] = app; applied += 1
 
+    _rfm_stat, _rfm_contested = apply_rfm_bands(out, verbose=verbose)
     for rec in out: assert_roster_record(rec, seen)
     assert_no_empty_position(out)
     assert_front_seven_totals(out)
