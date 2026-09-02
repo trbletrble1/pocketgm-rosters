@@ -1039,3 +1039,82 @@ Ranked by slot-dependence times coverage:
     2017 / 2021 / 2026                  no mdc coverage at all
 
 **Three candidates: 1986, 2000, 2013.** 2021 has the defect and no source.
+
+---
+
+## 24. 2026 drafted rookies are inflated — the rookie fix reached the undrafted only
+
+Reader report via Ryan: **Fernando Mendoza reads 84 and has never taken an NFL
+snap.** Investigated 2026-09-02. **Report only — nothing changed. 2026 is
+published.**
+
+Cohort: rostered players with `draftSeason` 2026 (the game clock's current
+season), i.e. first-year players on a team rather than in the prospect pool.
+**304 records: 215 drafted, 89 undrafted.**
+
+### The undrafted group is fine. The drafted group is not.
+
+    2026 undrafted first-year   median 63   mean 62.8   max 78    >=80  0.0%
+    2026 drafted first-year     median 73   mean 73.0   max 88    >=80 15.8%
+
+Against every other published file's first-year rostered cohort:
+
+| file | drafted med | drafted >=80 | undrafted med |
+|---|---|---|---|
+| 1986 | 66 | 6.8% | 62 |
+| 2000 | 65 | 3.8% | 61 |
+| 2004 | 69 | 11.8% | 62 |
+| 2007 | 66 | 4.4% | 59 |
+| 2010 | 67 | 4.8% | 59 |
+| 2013 | 67 | 3.4% | 62 |
+| 2017 | 71 | 3.2% | 63 |
+| 2021 | 68 | 10.2% | 59.5 |
+| **2026** | **73** | **15.8%** | 63 |
+
+**A drafted/undrafted gap is normal** — every file has one, 4 to 8 points. 2026's
+is 10, the largest but not out of family. **The anomaly is the level of the
+drafted group**: highest median in the archive and the highest `>=80` share by a
+clear margin.
+
+### The inflation is OURS, not the source's
+
+    Madden 27 source, our drafted cohort   median 71.0   >=80   2.4%
+    our file, same players                 median 73.0   >=80  16.0%
+    Madden 27 whole file                   median 71.0   >=80  16.3%
+    Madden 27 rows with YearsPro = 0       median 68.0   >=80   1.2%
+
+**`>=80` goes from 2.4% in the source to 16.0% in our file — a 6.7x increase —
+and lands almost exactly on the whole-file rate of 16.3%.** The source knows
+these are rookies and rates them low within its own population; the per-position
+quantile rescale mapped them onto the general distribution and erased that.
+
+It is not a pass-through: only 6.6% of drafted rookie ratings are identical to
+the source overall, median delta +2. The rescale ran; it ran against the wrong
+target population.
+
+**This is the shape Ryan predicted.** The undrafted group sits at median 63 with
+0% at `>=80`, squarely inside the archive band — the age-conditioned draw reached
+them. The drafted group did not get it.
+
+### A second, independent defect: no growth headroom
+
+**85 of 215 drafted first-year rookies have `rating == potential`** — 39.5%,
+spread evenly by round (13/32 in round 1, 13/32 in round 2, 11/32 in round 3).
+
+    Mendoza      pick  1   rating 84  potential 84    no headroom at all
+    Peter Woods  pick 29   rating 87  potential 95    correct shape
+
+Against the archive: 2017 0.0%, 2021 0.0%, 2010 1.1%, 2007 3.3%, 2000 5.9%,
+2004 8.0%, 1986 11.2%, **2013 50.0%**. So 2026 and 2013 are the two outliers, and
+**2013 is worse** — that file should be checked in the same pass.
+
+A rookie who cannot develop is arguably the more visible problem in play than one
+rated two points high, and the #1 overall pick having zero headroom is the worst
+single instance.
+
+### What a fix would need
+
+Both defects are in the same cohort but are not the same bug: one is a rescale
+target, the other a `potential` draw. **Neither should be repaired without
+re-running the gates on 2026 and re-checking 2013's 50%**, and this would be the
+fifth write to 2026 today.
