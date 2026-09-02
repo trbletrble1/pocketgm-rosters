@@ -184,9 +184,13 @@ Campbell 96th, Blount 98th, Ham 98th, Greene 97th.)
 *The scale.* PS2-era inflation: median 79, 8.5% at 90+. Per-position quantile map
 onto the six-file union, shifts −3 (QB, K) to −12 (FB, DE). The documented traps
 behave: Ray Guy 99 → published-P 92, Moseley 99 → 93, Payton 99 → 95, Campbell
-88 → 88. **Owed:** FB must map against the published FB *cohort* (found by name,
-per the handoff), not the RB pool — the trap check above used the RB pool and is
-mislabelled to that extent.
+88 → 88. **The FB cohort, located by the handoff's named fullbacks** (Leach, Kuhn,
+Neal, Alstott, Richardson, Strong, Reece, Juszczyk, Ricard — 22 appearances at
+position RB across the six refs): **rating median 71, ceiling 86**, with Leach and
+Kuhn at 45 in 2010 confirming the documented floor. So **Riggins 95 and Harris 93
+map against ~86, not the RB pool's 94.** Median percentile within RB is 59% at
+n=22 against the handoff's 28% on a fuller cohort — the named list is biased
+toward the famous ones, so the ceiling is confirmed and the percentile is not.
 
 *Attributes.* `NFL79.ros` PLAY direct-map plus per-position quantile, **using
 tonight's spread rule** — width from the source, level from the pool — so the
