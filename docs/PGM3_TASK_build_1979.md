@@ -245,8 +245,8 @@ Madden — does not apply; the labels are already Madden's. The 2K5 save, which
 labels CB/FS/SS independently, arbitrates: **its 28 verified team blocks give
 CB/S = 1.28, inside the band.** Two independent 1979 sources disagreeing means
 **labelling, not the era** — the NFL79 modder calls more men safeties than the
-2K5 modder does, and the individual disagreements on the shared DBs are named in
-the session log. **Recommendation, needing a ruling:** where the two sources
+2K5 modder does, and all **53 individual disagreements** on the shared 192 DBs are in
+`wip/cbs_disagreements_1979.csv` (33 NFL79=S/2K5=CB, 20 the other way). **Recommendation, needing a ruling:** where the two sources
 disagree on CB vs S, take the 2K5 label (its ratio is in band); take NFL79.ros
 everywhere else. Position is a tiebreaker, not a filter, per the handoff.
 
