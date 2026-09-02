@@ -5,7 +5,10 @@ fix_2026_spread_potential — the ONE write to PGMRoster_2026.json, per Ryan's r
     python3 tools/fix_2026_spread_potential.py --out /tmp/x.json      # scratch (default)
     python3 tools/fix_2026_spread_potential.py --out PGMRoster_2026.json  # the write, only when ruled
 
-Stages, in the order the interaction table (audit item 25) requires:
+Cohorts are decided PER STAGE (see the block at the top of build()) — rostered + free agents for the source-mapped
+  stages, first-year drafted rostered players for the rookie rescale, prospects for injuryProne only.
+
+  Stages, in the order the interaction table (audit item 25) requires:
 
   1. ATTRIBUTES  candidate 1: spread-preserving map. Level from the six-file
      pooled median, width from the SOURCE's own values. No clamp of potential.
@@ -50,13 +53,19 @@ def load_weights():
 def overall(r,pos,W):
     w=W.get(pos); return None if not w else sum(r.get(n,0)*c for n,c in zip(w[0],w[1]))+w[1][-1]
 
-def build(out_path, W=None, selftest=False, qb_cap=None):
+def build(out_path, W=None, selftest=False, qb_cap=None, source=None):
     W=W if W is not None else load_weights()   # {} must stay {} — `or` reloaded the real table and made the negative test vacuous
     src=list(csv.DictReader(open(sources('madden','madden_27_launch.csv'),encoding='utf-8-sig',errors='replace')))
     by=collections.defaultdict(list)
     for r in src: by[(norm(r['Name']),MP.get(r['Position'],r['Position']))].append(r)
-    d=json.load(open(repo('PGMRoster_2026.json')))
+    # INPUT IS AN EXPLICIT SOURCE, NEVER THE FILE THIS TOOL WRITES. The second write read the first write's output and
+    # applied every stage again: +1/+2 drift on 1,204 records from double-mapping, and stage 5 re-ranking already-rescaled
+    # rookies sent a center from 67 to 41 and two first-round picks down 10. The source is the pre-write published file.
+    source=source or repo('wip','PGMRoster_2026.source.json')
+    assert os.path.abspath(source)!=os.path.abspath(out_path), 'source and output are the same file — this tool must not read its own output'
+    d=json.load(open(source))
     n_in=len(d)
+    src_rating={x['iden']:x['rating'] for x in d}   # stage 5 ranks rookies on THIS, the source rating, so a stage-1 shift cannot reorder them
     # pooled level, and FIRST-YEAR pooled level for the rookie stage
     pool=collections.defaultdict(list); pool_rk=collections.defaultdict(list)
     for f in REFS:
@@ -66,7 +75,13 @@ def build(out_path, W=None, selftest=False, qb_cap=None):
                 if r.get(a): pool[(r['position'],a)].append(r[a])
             if yrs(r)==0: pool_rk[r['position']].append(r['rating'])
     # source medians per (pos, attr) over the players we can join
-    ro=[x for x in d if x['teamID'] not in('Rookie','Free Agent')]
+    # COHORTS, decided per stage (Ryan's ruling 2026-09-02, after item 28). One variable set at this line for a rostered
+    # question was inherited by every stage through the QB level without any of them choosing it. Each stage below now
+    # names the cohort it runs on; the names are deliberately different so a stage cannot silently reuse another's.
+    ROSTERED=[x for x in d if x['teamID'] not in('Rookie','Free Agent')]
+    FREE_AGENTS=[x for x in d if x['teamID']=='Free Agent']
+    PLAYERS_WITH_A_SOURCE=ROSTERED+FREE_AGENTS          # stages 1,2,3,4,6,8: anyone with a Madden rating to map from
+    ro=PLAYERS_WITH_A_SOURCE                             # (name kept so the stage code below reads unchanged; scope is now explicit above)
     J={x['iden']:by[(norm(x['forename']+' '+x['surname']),x['position'])][0] for x in ro
        if len(by.get((norm(x['forename']+' '+x['surname']),x['position']),[]))==1}
     smed=collections.defaultdict(list)
@@ -101,11 +116,12 @@ def build(out_path, W=None, selftest=False, qb_cap=None):
         # stage 3/4 deferred: potential and growthType run AFTER the rookie rescale, so the two cannot fight.
         x['_touched']=touched
     # stage 5 (now runs before potential): rookies against a first-year target, WITH an attribute refit so the invariant holds
-    for pos in {x['position'] for x in ro}:
-        rk=[x for x in ro if x['position']==pos and yrs(x)==0 and x.get('draftNum',999)<224]
+    # stage 5 cohort: FIRST-YEAR DRAFTED players ON A ROSTER. Not free agents — an undrafted or cut rookie is not the population item 24 measured.
+    for pos in {x['position'] for x in ROSTERED}:
+        rk=[x for x in ROSTERED if x['position']==pos and yrs(x)==0 and x.get('draftNum',999)<224]
         tgt=sorted(pool_rk.get(pos,[]))
         if len(rk)<3 or len(tgt)<10 or pos not in W: continue
-        order=sorted(rk,key=lambda x:x['rating'])
+        order=sorted(rk,key=lambda x:src_rating[x['iden']])   # rank on the SOURCE rating — stable across runs and cohort changes
         live=[n for n in W[pos][0] if n in MAP]
         wsum=sum(c for n,c in zip(W[pos][0],W[pos][1][:-1]) if n in MAP)
         for i,x in enumerate(order):
@@ -180,6 +196,7 @@ def build(out_path, W=None, selftest=False, qb_cap=None):
     for x in ro: x.pop('_dec_bucket',None)
     for x in ro: x.pop('_dec_target',None)
     # ---- stage 7: prospect injuryProne re-drawn to the archive rookie level (~34); no source exists (2 of 278). Ruled ON.
+    # stage 7 cohort: PROSPECTS only — no Madden rating exists to align to; prospects stay excluded from every other stage.
     st7=0; pros=[x for x in d if x['teamID']=='Rookie']
     if pros:
         order=sorted(pros,key=lambda x:x['injuryProne'])
@@ -241,15 +258,15 @@ def build(out_path, W=None, selftest=False, qb_cap=None):
     return d
 
 if __name__=='__main__':
-    ap=argparse.ArgumentParser(); ap.add_argument('--out',default='/tmp/scratch_2026_onewrite.json'); ap.add_argument('--selftest',action='store_true'); ap.add_argument('--qb-cap',type=float,default=None)
+    ap=argparse.ArgumentParser(); ap.add_argument('--out',default='/tmp/scratch_2026_onewrite.json'); ap.add_argument('--selftest',action='store_true'); ap.add_argument('--qb-cap',type=float,default=None); ap.add_argument('--source',default=None,help='the pre-write published file; defaults to wip/PGMRoster_2026.source.json')
     a=ap.parse_args()
     if a.selftest:
         # must FAIL: an empty weights table makes every stage empty
-        try: build('/tmp/_st.json',W={}); print('SELFTEST FAIL: empty weights did not trip the stage assert'); sys.exit(1)
+        try: build('/tmp/_st.json',W={},source=None); print('SELFTEST FAIL: empty weights did not trip the stage assert'); sys.exit(1)
         except AssertionError as e: print(f'selftest 1 ok — empty population fails: {e}')
         # must FAIL: a tampered growthType breaks the invariant the file must hold
-        d=build('/tmp/_st2.json'); r=next(x for x in d if x['teamID'] not in('Rookie','Free Agent') and x['potential']>x['rating'])
+        d=build('/tmp/_st2.json',source=None); r=next(x for x in d if x['teamID'] not in('Rookie','Free Agent') and x['potential']>x['rating'])
         r['growthType'][0]+=50
         bad=[x for x in d if x['teamID'] not in('Rookie','Free Agent') and sum(v for v in x['growthType'] if v>0)!=(x['potential']-x['rating'])*50]
         print(f'selftest 2 ok — tampered invariant is detectable: {len(bad)} record(s) flagged' if bad else 'SELFTEST FAIL: tampered growthType not detected'); sys.exit(0 if bad else 1)
-    build(a.out, qb_cap=a.qb_cap)
+    build(a.out, qb_cap=a.qb_cap, source=a.source)
