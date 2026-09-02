@@ -706,3 +706,80 @@ being built - but only where era_certain is true."* A session reading the
 archive directly gets the wrong instruction from the artifact itself, with no
 way to know a doc supersedes it. **Fix it in the same pass that fixes
 `stock_names()`.**
+
+---
+
+## 19. The 1986 mod is the ANCESTOR of our 1986 file, not an era source for it
+
+Evaluated 2026-09-02 against audit item 7, which says 1986's broken
+computed-rating invariant "needs an era source with machine-readable attribute
+data, and none exists." `1986_Roster_Mod_v1.0.ros` was offered as that source.
+
+**It is not one. It is where our 1986 file came from.**
+
+| | |
+|---|---|
+| mod rostered | **1,746** |
+| `PGMRoster_1986.json` rostered | **1,746** |
+| shared names | **1,734** |
+| in published only / mod only | 1 / 1 |
+
+`1986v1.0 - raidermike.ros` is **byte-identical** to it — md5
+`f7038e9711f1d237a3a1b56fc8feade5` for both. One mod under two names; the second
+copy is not kept.
+
+**So agreement with it is lineage, not corroboration** — the standing rule that
+files descending from each other share their errors. It cannot say what 1986
+quality truly was.
+
+### What it CAN settle, and does
+
+Our rating and our attributes both descend from this file **through different
+transformations**: the rating through a per-position rescale (median 77 -> 71),
+the attributes through quantile mapping plus a bounded refit (speed 75 -> 83,
+passBlock 57 -> 75). Both halves had equal opportunity to preserve the source's
+ordering. **One did and one did not.**
+
+Correlation of the mod's `POVR` against each half:
+
+| cohort | vs our STORED rating | vs our COMPUTED-from-attributes |
+|---|---|---|
+| all 1,745 shared | **+0.9329** | +0.8598 |
+| the 630 invariant-breakers | **+0.9216** | +0.8156 |
+
+Unanimous per position on the breaking subset, every one with n>=15:
+
+    RB  +0.977 / +0.698     OLB +0.982 / +0.931     CB  +0.994 / +0.902
+    DE  +0.993 / +0.941     OT  +0.984 / +0.959     S   +0.976 / +0.891
+    WR  +0.988 / +0.912     MLB +0.993 / +0.910     DT  +0.990 / +0.930
+
+**The stored rating is the faithful half; the attributes are the drifted half.**
+Item 7 ruled that on other grounds — that the ratings already match the
+published distribution at every quantile and storing the computed value would
+move 506 ratings by more than 10. This is independent support for the same
+conclusion from the pipeline's own ancestry.
+
+**It is NOT a licence to repair 1986.** The claim is only "our rating stayed
+closer to what we built from", not "our rating is right". A true repair still
+needs a source outside our own lineage, and this is not one. **Item 7's
+exception stands.**
+
+### What the file IS good for
+
+**Its `COCH` table is genuinely 1986** — and unlike `NFL79.ros`, which wrapped 28
+real head coaches around ~190 records from 2007-08, all four coaches per team
+are period-correct:
+
+    CHI  Ditka, Kazor, Hughes, Tobin        NYG  Belichick, Crennel, Erhardt, Parcells
+    PIT  Dungy, Moore, Hoak, Noll           SF   Holmgren, vonAppen, Seifert, Walsh
+    DAL  Hackett, Lowry, Landry, Stautner   GB   Jauron, Coughlin, Gregg, Modzelewski
+
+128 real 1986 coaches, four per team. (The 53-man pool at TGID 1023 is modern —
+Heimerdinger, Donatell, Chris Palmer, Zauner — and is junk.) Note the file
+spells Belichick "B.Beilicheck".
+
+**Contamination is essentially nil**: exactly one player on its real teams is
+absent from our published file (Ed "Too Tall" Jones, 35, who did play in 1986).
+
+**`PSKI` is dead at 63% on the middle value**, so it does not reopen the 1986
+appearance problem. That stays closed.

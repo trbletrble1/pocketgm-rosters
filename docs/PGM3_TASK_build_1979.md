@@ -245,6 +245,43 @@ defensible** rather than a guess at a random hole.
 games.** A 17% floor persists across every games band, so obscurity explains the
 gradient, not the entire gap.
 
+### `1979-SB-XIV.ros` is the SAME roster as `NFL79.ros`, not a second one
+
+Evaluated 2026-09-02. It looked like independent corroboration and is not.
+
+| | |
+|---|---|
+| shared names | **2,038 — the entire name set of both files** |
+| in one file only | **0 / 0** |
+| `PTAK`, `PWGT`, `PAGE`, `PSTR` identical | **100%** |
+| `PSPD` identical | 99.8% |
+| `POVR` identical | 98.4% |
+
+**Weight by lineage, not file count.** Two files agreeing at 98-100%
+value-for-value is one vote, not two, and the cross-file test that gave
+r = +0.84 against the 2K5 save gives nothing here.
+
+**The two real differences, both deliberate revisions:**
+
+- **A different invented franchise.** `NFL79.ros` has Charlotte and Memphis;
+  SB-XIV renames the slots and carries **Memphis and Honolulu**. Confirms these
+  four teams are the modder's own invention, not a fixed historical set.
+- **A quarterback rebalancing pass.** 32 ratings changed and they are almost all
+  QBs, all upward: Bert Jones 77->89, Stabler 81->89, Landry 76->84, Theismann
+  84->91, Dickey 77->83, Manning 81->87, DeBerg 79->85, Grogan 84->89. Jim
+  Jensen 86->77 is the only large fall.
+
+**Use `NFL79.ros` as the primary and treat SB-XIV as a variant.** Where they
+disagree the difference is a judgement call by the same author, not evidence.
+Bert Jones is the case that matters: 77 against 89 for a man who played four
+games in 1979.
+
+**CORRECTION to an earlier inference.** Neither file carries Biletnikoff or
+Tarkenton, and that was read as two independent modders converging on a
+convention. **They are one file, so it is one vote.** The conclusion that both
+men need a hand-assigned rating is unchanged; the evidence for a *convention* is
+weaker than it looked.
+
 ### Contamination: the positional filter clears the tail and NOT the blocks
 
 Three kinds of junk sit in the tail region, index 1674 onward:
