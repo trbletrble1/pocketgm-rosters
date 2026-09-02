@@ -1118,3 +1118,70 @@ Both defects are in the same cohort but are not the same bug: one is a rescale
 target, the other a `potential` draw. **Neither should be repaired without
 re-running the gates on 2026 and re-checking 2013's 50%**, and this would be the
 fifth write to 2026 today.
+
+### 24b. The potential defect: 2013 and 2026 share a symptom, not a cause
+
+Extended 2026-09-02 on Ryan's instruction to measure `rating == potential` across
+every file rather than the two that surfaced. **Report only.**
+
+**First correction: the raw rate is not the measurement.** `rating == potential`
+runs 9.5-52.5% in the rostered cohort of every published file, including the ones
+called clean. That is *correct* — a 33-year-old has no growth left. The defect
+only exists conditioned on experience.
+
+**The archive has a designed curve.** Median headroom by years pro
+(2026 − `draftSeason`), rostered:
+
+    file      yr0   yr1   yr2   yr3   yr4   yr6   yr8  yr12   max
+    1986        4     4     3     2     1     0     0     0    32
+    2000        5     5     5     4     3     1     1     0    14
+    2004        4     3     3     3     3     2     1     0    43
+    2007        5     4     3     2     1     0     0     0    30
+    2010        4     4     3     2     1     0     0     0    46
+    2017        6     4     2     0     0     0     0     0    28
+    2021        6     6     7     7     2     2     2     4    10
+    2013        0     0     0     0     0     1     0     0     6
+    2026        2     3     2     2     2     2     2     1    32
+
+**Six files decay 4-6 at year zero to 0 by year 6-8. Three do not.**
+
+### The clean files: 2017 by design, 2021 by accident
+
+Both read 0.0% zero-headroom among first-year drafted players, but for opposite
+reasons. **2017 has a real curve** — 6 at year 0 falling to 0 by year 3, max 20.
+**2021 has a flat one** — ~6 at year 0 and still 4 at year 12, capped at max 10.
+It gives twelve-year veterans growth they should not have. **Copy 2017's shape,
+not 2021's.**
+
+### 2013 and 2026 are different bugs
+
+| | 2013 | 2026 | 2017 |
+|---|---|---|---|
+| drafted first-year n | 178 | 215 | 190 |
+| rating median | **67 (normal)** | **73 (inflated)** | 71 |
+| rating >= 80 | **3.4% (normal)** | **15.8%** | 3.2% |
+| headroom median | 0 | 2 | 6 |
+| **headroom max, whole file** | **6** | 32 | 28 |
+| rating == potential | 50.0% | 39.5% | 0.0% |
+| growthType invariant holds | 100% | 100% | 100% |
+
+**2013 is a ceiling.** Not one of its 1,903 rostered players has more than **6
+points** of headroom. Its ratings are entirely normal. The potential field was
+compressed against the rating, so nobody in the file can develop much and half
+the rookies cannot develop at all. One cause, and it is not 2026's.
+
+**2026 is an unconditioned draw plus the rescale inflation.** Its headroom
+reaches 32, so nothing is capped — the distribution simply has no age term, and
+sits flat at 2 from rookies to twelve-year veterans. On top of that its drafted
+rookies are rated 73 against a source median of 71 and an archive band of 65-71.
+
+**Two files, one number in common, two causes. They need separate fixes.**
+
+### The constraint any fix must respect
+
+**`growthType` holds its invariant at 100% in all three files** — positive values
+sum to exactly `(potential − rating) × 50`. So potential cannot be moved without
+rebuilding `growthType` in the same pass. This is the documented failure that
+broke five files once already: a `potential` rebuild shipped without the
+`growthType` that depends on it, and every individual check passed because both
+fields were separately plausible.
