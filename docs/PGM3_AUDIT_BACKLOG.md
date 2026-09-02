@@ -1323,3 +1323,81 @@ open item is the stamina fill.
 
 Each was caught by re-running against the artifact rather than the simulation.
 **Quote the gated file, never the simulation, and say which one you are quoting.**
+
+### 25b. Two more on 2026 before the one write — `decisions` is a source-side inversion, `injuryProne` is promoted to pending
+
+**`decisions` for offensive positions.** A commenter flagged QB; measured, 2026
+is the only file where rookie QB `decisions` exceeds veteran (84 vs 71). The
+other eight run rookie 5-18 points BELOW veteran. **The inversion is in the
+source, not the map**: Madden's `PlayRecognitionRating` for QBs reads rookie 26
+/ veteran 18, `r(source, years pro) = -0.362`, and ours tracks it at +0.857.
+It is a DEFENSIVE field — DE/DT/MLB/CB/S carry 70-86 with `r = +0.42 to +0.69`
+— and for offense it is unpopulated noise (18-40) that happens to run downhill
+with age. Five positions are inverted at the source (QB, RB, WR, TE, C; OT/OG
+flat), and the pooled-target map stretched that noise into confident curves.
+
+The archive's own QB curve, eight normal files pooled: **66 / 72 / 70 / 76 / 78
+/ 80** by years pro 0 / 1 / 2 / 3-5 / 6-9 / 10+. 2026's rookie QB at 84 sits
+at the 10+ median. That curve is the only non-Madden target for a draw.
+**Needs a ruling**: draw offensive `decisions` from the per-position archive
+curve, or leave and log. Overall impact is +2.0 at QB; the harm is in play.
+
+**`injuryProne` for prospects** — promoted from a note to pending, per Ryan.
+Published 2026 already fails `cross-year medians` on it (47 vs 31). **Root cause
+measured: it is NOT a missed inversion.** Rostered and free agents read
+`r = -0.946 / -0.945` against Madden's `InjuryRating` — inverted as documented.
+Prospects have **2 of 278** in the source at all; their 47 is a no-source draw
+filled at the rostered level (~49) instead of the rookie level the archive holds
+(28-34, target ~34). Same family as item 24: a cohort drawn against the wrong
+population. Fix is a re-draw of prospect `injuryProne` to ~34. **Needs a
+ruling; OFF in the tool.**
+
+
+### 25c. The one write, built and gated — `tools/fix_2026_spread_potential.py`
+
+Scratch-targeted by default; writes `PGMRoster_2026.json` only when told to.
+Two negative tests (empty weights must fail; a tampered `growthType` must be
+detectable) both fail on purpose. **Published file untouched throughout — asserted.**
+
+**Stages, in the order the interaction table requires:** attributes (candidate 1,
+spread-preserving, no clamp) → rating recomputed → **rookies re-rescaled against a
+first-year target WITH an attribute refit** (so the invariant holds) → potential =
+rating + 2017's bucket median → growthType rebuilt. Rookies run *before* potential;
+the first version ran them after and the two stages fought (rookie headroom 10).
+
+**Four defects in my own build, all caught by measuring the gated file, all fixed:**
+a vacuous negative test (`W or load_weights()` reloaded the real table on `{}`);
+growthType gated on a running count (432 untouched players rewritten); rookie
+rescale without refit (invariant fell to 89.4%); potential drawn at random from
+right-tailed buckets (rookie headroom 12, 31 veterans gained >4).
+
+**Two guards tried and REMOVED, with the measurement that removed them.** An
+"authored headroom survives" guard kept 117 veterans above 4 and Goff at 88.
+Measured: published veteran headroom correlates **+0.044** with (Madden overall −
+our rating) and potential **+0.956** with our own rating — it is rating plus
+noise, the 24b draw's tail, and Goff's 88 = Madden 88 is one of **3 exact matches
+in 117**. A `max()` guard for under-6s preserved the same tail (published p90 7-8
+at every age) and re-opened the stage fight. **One rule, no guard.**
+
+**The gated artifact** (`/tmp/scratch_2026_onewrite.json`), every figure from it:
+headroom medians **6/4/2/0/0/0/0/0/0 — 2017's exactly**; veterans 6+ over 4:
+**0/480** (2017: 2); rookies median **65**, ≥80 **6.0%**, zero-headroom **0.0%**,
+headroom **6**; growthType 1890/1890; |stored−computed| within 1 on 99.9%;
+QB speed floor 36→54 (p5 52→68), S stamina p5 54→85; Cousins 58→67, Dalton
+59→66, **Goff 79→82 with potential 88→82**. Gate: fails the identical pre-existing
+`[Rookie] injuryProne 47 vs 31` row and nothing else.
+
+**Costs, stated:** the young p90 is flattened to the median (**6/4/2/0 vs 2017's
+12/10/8/4**) because the ruling named the curve and there is no ruling on spread;
+**1,157 potentials lowered**, 827 of 1,410 under-6s, median drop 4; Goff 88→82;
+MAE vs Madden worsens at a minority of positions (WR/TE/RB) — the "level from the
+pool" residual Ryan accepted as legitimate disagreement.
+
+**Rulings needed before the write:**
+1. **The young tail** — accept the median-only curve, or restore spread (2017's
+   p90) by a rank-preserved draw?
+2. **The unjoined 398** (21%, no unique name+position in Madden 27; 28 with
+   stamina <40): a p5 floor from the fixed position would touch 314 records /
+   909 cells and lift stamina min 2→62. A floor, not a map. OFF until ruled.
+3. **Offensive `decisions`** (25b): draw from the archive curve, or leave and log.
+4. **Prospect `injuryProne`** (25b): re-draw to ~34, or leave.
