@@ -1863,6 +1863,25 @@ def exp_band(yrs):
         if yrs <= hi: return hi
     return 99
 
+def age_band(age):
+    """Undrafted rating depends strongly on AGE, not just draft status and
+    experience. Published undrafted rostered players:
+
+        <=24   n=1348  median 62  p90 70  >=80:  1%
+        25-27  n=1562  median 65  p90 76  >=80:  5%
+        28-30  n= 716  median 70  p90 83  >=80: 17%
+        31+    n= 448  median 74  p90 86  >=80: 29%
+
+    Monotone in every column. The 80-rated undrafted player is someone who
+    went undrafted years ago and earned it since, not a rookie -- so a pool
+    that mixes them puts a 24-year-old's ceiling at 84 when his own cohort
+    stops at 71. DJ Herman drew 83 from that mixed pool: the top 1.4% of the
+    wrong population.
+    """
+    try: age = int(age)
+    except (TypeError, ValueError): return 1
+    return 0 if age <= 24 else (1 if age <= 27 else (2 if age <= 30 else 3))
+
 def fit_tier3_reference(paths):
     """(position, undrafted, band) -> sorted published ratings, with a
     position-pooled fallback for thin cells. A rank drawn against a cohort
@@ -1874,16 +1893,20 @@ def fit_tier3_reference(paths):
             if cohort_of(r) != 'T' or not r.get('draftSeason'): continue
             yrs = CUR_SEASON - r['draftSeason']
             if yrs < 0 or yrs > 20: continue
-            key = (r['draftNum'] >= 224, exp_band(yrs))
+            key = (r['draftNum'] >= 224, exp_band(yrs), age_band(r.get('age')))
             fine[(r['position'],) + key].append(r['rating'])
             coarse[key].append(r['rating'])
+            coarse[key[:2]].append(r['rating'])          # age-blind fallback
     return ({k: sorted(v) for k, v in fine.items() if len(v) >= 20},
-            {k: sorted(v) for k, v in coarse.items()})
+            {k: sorted(v) for k, v in coarse.items() if len(v) >= 20})
 
 def tier3_rating(nrow, pos, fine, coarse, rng):
     ud = nrow['draft_number'] in ('', 'NA')
-    key = (pos, ud, exp_band(nrow['_exp']))
-    pool = fine.get(key) or coarse.get((ud, exp_band(nrow['_exp'])))
+    eb = exp_band(nrow['_exp'])
+    try:    ag = age_band(CUR_SEASON - int(str(nrow.get('birth_date'))[:4]))
+    except (TypeError, ValueError): ag = 1
+    pool = (fine.get((pos, ud, eb, ag)) or coarse.get((ud, eb, ag))
+            or fine.get((pos, ud, eb)) or coarse.get((ud, eb)))
     if not pool: return None
     return pool[min(len(pool) - 1, int(rng.random() * len(pool)))]
 

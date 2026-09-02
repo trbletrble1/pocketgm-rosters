@@ -279,6 +279,32 @@ published 14-16. His residual is the draw, not the fill -- `tier3_rating` gave
 him 83, the top 1.4% of a 214-player undrafted-rookie pool. Unlikely, faithful,
 and the remaining driver.
 
+**The draw is conditioned on AGE as well as draft status and experience.**
+Published undrafted rostered players:
+
+| age band | n | median | p90 | >=80 |
+|---|---|---|---|---|
+| <=24 | 1348 | 62 | 70 | **1%** |
+| 25-27 | 1562 | 65 | 76 | 5% |
+| 28-30 | 716 | 70 | 83 | 17% |
+| 31+ | 448 | 74 | 86 | **29%** |
+
+Monotone in every column. The 80-rated undrafted player went undrafted years
+ago and earned it since; he is not a rookie. Pooling them put a 24-year-old's
+ceiling at 84 when his own cohort stops there only at the 99.4th percentile.
+
+Drawn ratings now match the published distribution WITHIN band, which is the
+check the pooled figure could not make -- the same pooling trap that has bitten
+this build four times:
+
+| band | published med/p90/>=80 | 2026 drawn |
+|---|---|---|
+| <=24 | 62 / 70 / 1% | **62 / 67 / 2%** |
+| 25-27 | 65 / 76 / 5% | **62 / 76 / 6%** |
+
+Nothing is crushed at the other end: the 28-30 and 31+ pools are untouched and
+still reach p90 83 and 86.
+
 ### The tails were the attributes, not the rating
 
 An attribute set computing to 104 or to 18 is one the archive has never
