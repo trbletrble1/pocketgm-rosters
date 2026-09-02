@@ -482,3 +482,40 @@ apply RFM everywhere (declined on a twelve-player sample), accept the
 inconsistency as the cost of per-player accuracy, or revert. **That is a
 ruling, and it has not been made.**
 
+---
+
+## 15. The boundary rule, back-applied — and why it cannot be widened
+
+The mid-tone rule (RFM skin 4-5 -> family 3) was introduced for 2021 and never
+back-applied to 2026, which had been done first. Six players were therefore
+routed one way in 2021 and another in 2026 from the identical source value:
+Epenesa, Highsmith, Byron Murphy, Seumalo, Jonah Jackson, Josh Oliver.
+
+Back-applied. **Cross-band same-man changes 12 -> 6; same-man total 23 -> 17.**
+Light share 28.9% -> 29.3%, inside the published 27.2-35.6%.
+
+**The wider version — route every skin-4/5 player, not only disagreements —
+was MEASURED AND REFUSED.** Family 3 sits in the LIGHT band (<=3), while RFM
+skin 4-5 is the light end of its DARK range. Routing every such player to
+family 3 converts them from dark to light:
+
+    file   skin 4-5   would move   light now -> after
+    2017        37           34      29.8% -> 31.5%
+    2021       147          125      28.1% -> 33.9%
+    2026       341          340      28.9% -> 46.9%   <- against a published max of 35.6%
+
+RFM covers 91.6% of 2026 against 44% of 2021, so the same rule has a wildly
+different blast radius per file. **Applied broadly it would make nearly half
+the 2026 league light.** The disagreement-scoped version is the correct one.
+
+**This also means the boundary family is arguably wrong.** If skin 4-5 denotes
+the lighter end of dark, family 4 (the lightest DARK family) is the faithful
+target, not family 3. Family 3 was chosen for Fairbairn, whom Ryan called
+genuinely mid-tone, and it works for a handful of hand-checked cases -- but it
+flips the band, and that is why it cannot scale. Worth revisiting before the
+rule is used again.
+
+**Six cross-band cases remain, small enough for one photo pass:** Gary Anderson
+(pre-existing), Kyle Williams, Morgan Cox, Corey Levin, Austen Pleasants,
+Ka'imi Fairbairn.
+
