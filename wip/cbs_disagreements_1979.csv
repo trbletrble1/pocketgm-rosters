@@ -1,54 +1,54 @@
-name,team,nfl79_pos,k5_pos,povr
-Larry Braziel,BAL,CB,FS,81
-Reggie Pinkney,BAL,CB,FS,77
-Mike Spivey,CHI,CB,SS,78
-Ray Griffin,CIN,CB,FS,77
-Clinton Burrell,CLE,CB,SS,70
-Steve Foley,DEN,CB,FS,91
-Estus Hood,GB,CB,FS,80
-Tim Collier,KC,CB,FS,82
-Horace Perkins,KC,CB,FS,74
-Neal Colzie,MIA,CB,FS,82
-Raymond Clayborn,NE,CB,FS,91
-Alan Caldwell,NYG,CB,FS,70
-Ray Rhodes,NYG,CB,FS,80
-Bobby Jackson,NYJ,CB,SS,84
-Al Latimer,PHI,CB,FS,74
-Melvin Morgan,SF,CB,SS,72
-Gerard Williams,SF,CB,FS,82
-Roger Wehrli,STL,CB,FS,89
-Danny Reece,TB,CB,SS,84
-Lemar Parrish,WAS,CB,FS,89
-Tom Pridemore,ATL,S,CB,83
-Bruce Laird,BAL,S,CB,96
-Steve Freeman,BUF,S,CB,84
-Jim Browner,CIN,S,CB,67
-Marvin Cobb,CIN,S,CB,84
-Lawrence Johnson,CLE,S,CB,76
-Ricky Jones,CLE,S,CB,73
-Bernard Jackson,DEN,S,CB,95
-Johnnie Gray,GB,S,CB,89
-Steve Wagner,GB,S,CB,74
-Herb Christopher,KC,S,CB,82
-Eddie Brown,LA,S,CB,80
-Don Bessillieu,MIA,S,CB,77
-Glenn Blackwood,MIA,S,CB,78
-Mike Kozlowski,MIA,S,CB,76
-Tom Hannon,MIN,S,CB,85
-Keith Nord,MIN,S,CB,79
-Prentice McCray,NE,S,CB,84
-Ray Brown,NO,S,CB,85
-Ernie Jones,NYG,S,CB,77
-Beasley Reece,NYG,S,CB,78
-Burgess Owens,NYJ,S,CB,89
-Mike Davis,OAK,S,CB,86
-J.T. Thomas,PIT,S,CB,85
-Frank Duncan,SD,S,CB,73
-Don Dufek,SEA,S,CB,76
-John Bristor,SF,S,CB,65
-Tim Gray,SF,S,CB,82
-Dwight Hicks,SF,S,CB,80
-Ken Greene,STL,S,CB,84
-Curtis Jordan,TB,S,CB,85
-Ken Houston,WAS,S,CB,91
-Tony Peters,WAS,S,CB,82
+name,team,nfl79_pos,k5_pos,povr,wiki_position,wiki_call,supports
+Larry Braziel,BAL,CB,FS,81,Cornerback,CB,NFL79
+Reggie Pinkney,BAL,CB,FS,77,[[Safety (gridiron football position),S,2K5
+Mike Spivey,CHI,CB,SS,78,,,no call
+Ray Griffin,CIN,CB,FS,77,Defensive back,DB,no call
+Clinton Burrell,CLE,CB,SS,70,Defensive back,DB,no call
+Steve Foley,DEN,CB,FS,91,,,no call
+Estus Hood,GB,CB,FS,80,"Cornerback, [[Safety (football position)",CB/S,no call
+Tim Collier,KC,CB,FS,82,Cornerback,CB,NFL79
+Horace Perkins,KC,CB,FS,74,Defensive back,DB,no call
+Neal Colzie,MIA,CB,FS,82,Cornerback,CB,NFL79
+Raymond Clayborn,NE,CB,FS,91,Cornerback,CB,NFL79
+Alan Caldwell,NYG,CB,FS,70,Defensive back,DB,no call
+Ray Rhodes,NYG,CB,FS,80,Cornerback,CB,NFL79
+Bobby Jackson,NYJ,CB,SS,84,Assistant coach,?,no call
+Al Latimer,PHI,CB,FS,74,Cornerback,CB,NFL79
+Melvin Morgan,SF,CB,SS,72,Defensive back,DB,no call
+Gerard Williams,SF,CB,FS,82,,,no call
+Roger Wehrli,STL,CB,FS,89,Cornerback,CB,NFL79
+Danny Reece,TB,CB,SS,84,Defensive back,DB,no call
+Lemar Parrish,WAS,CB,FS,89,"Cornerback, return specialist",CB,NFL79
+Tom Pridemore,ATL,S,CB,83,,,no call
+Bruce Laird,BAL,S,CB,96,,,no call
+Steve Freeman,BUF,S,CB,84,,,no call
+Jim Browner,CIN,S,CB,67,Defensive back,DB,no call
+Marvin Cobb,CIN,S,CB,84,[[Safety (gridiron football position),S,NFL79
+Lawrence Johnson,CLE,S,CB,76,,,no call
+Ricky Jones,CLE,S,CB,73,,,no call
+Bernard Jackson,DEN,S,CB,95,,,no call
+Johnnie Gray,GB,S,CB,89,[[Safety (football position),S,NFL79
+Steve Wagner,GB,S,CB,74,,,no call
+Herb Christopher,KC,S,CB,82,,,no call
+Eddie Brown,LA,S,CB,80,,,no call
+Don Bessillieu,MIA,S,CB,77,[[Safety (football position),S,NFL79
+Glenn Blackwood,MIA,S,CB,78,[[Safety (gridiron football position),S,NFL79
+Mike Kozlowski,MIA,S,CB,76,[[Safety (gridiron football position),S,NFL79
+Tom Hannon,MIN,S,CB,85,[[Safety (gridiron football position),S,NFL79
+Keith Nord,MIN,S,CB,79,[[Safety (gridiron football position),S,NFL79
+Prentice McCray,NE,S,CB,84,[[Safety (American football position),S,NFL79
+Ray Brown,NO,S,CB,85,,,no call
+Ernie Jones,NYG,S,CB,77,,,no call
+Beasley Reece,NYG,S,CB,78,Defensive back,DB,no call
+Burgess Owens,NYJ,S,CB,89,[[Safety (gridiron football position),S,NFL79
+Mike Davis,OAK,S,CB,86,,,no call
+J.T. Thomas,PIT,S,CB,85,,,no call
+Frank Duncan,SD,S,CB,73,,,no call
+Don Dufek,SEA,S,CB,76,[[Safety (gridiron football position),S,NFL79
+John Bristor,SF,S,CB,65,Cornerback,CB,2K5
+Tim Gray,SF,S,CB,82,[[Safety (American football position),S,NFL79
+Dwight Hicks,SF,S,CB,80,[[Safety (gridiron football position),S,NFL79
+Ken Greene,STL,S,CB,84,[[Safety (gridiron football position),S,NFL79
+Curtis Jordan,TB,S,CB,85,[[Safety (American football position),S,NFL79
+Ken Houston,WAS,S,CB,91,[[Safety (gridiron football position),S,NFL79
+Tony Peters,WAS,S,CB,82,[[Safety (American football position),S,NFL79
