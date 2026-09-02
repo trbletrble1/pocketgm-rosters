@@ -172,7 +172,25 @@ than 10 points. **Excluded from the invariant gate for this reason** — a
 known-unfixable file failing a gate forever teaches nothing. It needs an era
 source with machine-readable attribute data, and none exists.
 
-**2000 — DIFFERENT, and probably fixable. Needs a ruling.** Nine of its 28
+**2000 — FIXED, through filled cells only (Ryan, 2026-09-02).**
+
+    invariant        median 3.10 -> 0.08      over 5: 1026 -> 298
+    rating dist      40/59/70/85/98  ->  40/59/70/85/98   (identical)
+    fields changed   the 9 filled attributes, nothing else
+    records changed  2,727
+
+Both properties that make this the better trade were **asserted, not assumed**:
+no rating moved, and no sourced attribute moved. The faces gate and the full
+roster gate are byte-identical before and after — 2000's pre-existing warnings
+and its `zero-pattern` failure are untouched.
+
+**336 records refused and left broken**, the same rule as 2026's tier-1
+refusals: a record that cannot be fixed without touching sourced data stays
+broken and documented. They are dominated by long snappers carried at position
+C with a structural +37 gap, and by DT/DE/CB/OLB. `tools/fix_2000_invariant.py`
+is reproducible and re-derives the filled set from the output each run.
+
+**Original assessment, retained.** Nine of its 28
 attributes are percentile-filled, six at exactly rho 1.000 (`decisions`,
 `routeRun`, `vision`, `skillMove`, `zoneCover`, `elusiveness`). That allows the
 **inverse** of the 2026 fix: keep the authored rating, which matches the
