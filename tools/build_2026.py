@@ -1863,6 +1863,53 @@ def exp_band(yrs):
         if yrs <= hi: return hi
     return 99
 
+# ------------------------------------------- zero-information rookies
+# An undrafted rookie who has never played should not be a good player on day
+# one, however faithful the draw is to a pooled distribution. DJ Herman drew
+# 84 -- the maximum of a 156-player pool -- and that will happen to someone in
+# every build.
+#
+# RATING is drawn TIGHT AND LOW. We are not modelling what undrafted rookies
+# become, we are modelling what is known about THIS one, which is nothing. The
+# zero-information pool (undrafted, <=1 year, age <=24, n=1214) runs
+# min 40 / p25 58 / median 62 / p75 65 / p90 69 / max 98; the draw is truncated
+# at p75, so the long tail -- which belongs to players who earned it later --
+# is not available on day one.
+#
+# POTENTIAL carries the upside instead, the same mechanism as the 2027 class.
+# MEASURED, not reused from the pick-224 figure: of 5,683 undrafted players
+# tracked across the published files, 8.3% ever reach 80+, 4.0% reach 85+ and
+# 1.3% reach 90+. Survivorship travels with it -- these are players who appear
+# in at least one published file, so it is the rate among those who stuck.
+ZERO_INFO_TRUNCATE = 0.75      # draw below the pool's p75
+UNDRAFTED_HIT_RATE = 0.083     # ever reach 80+
+UNDRAFTED_GAP_MAX  = 26        # published undrafted <=24 maximum, not the p90
+# The ceilings undrafted players ACTUALLY reach, from the published files:
+# 393 peaks at 80+, median 84, max 98. Drawn from, rather than set to a
+# constant, so the successful ones do not all land on the same number.
+def _fit_undrafted_ceilings():
+    seen = collections.defaultdict(list)
+    for f in ALL_PUBLISHED:
+        for r in json.load(open(P(f))):
+            if cohort_of(r) == 'Rookie': continue
+            if r.get('draftNum', 0) >= UNDRAFTED_FLOOR:
+                seen[(norm(r['forename'] + ' ' + r['surname']), r['position'])].append(r['rating'])
+    return sorted(max(v) for v in seen.values() if max(v) >= 80) or [84]
+
+_UNDRAFTED_CEIL = []
+
+def undrafted_ceilings():
+    if not _UNDRAFTED_CEIL: _UNDRAFTED_CEIL.extend(_fit_undrafted_ceilings())
+    return _UNDRAFTED_CEIL
+
+def is_zero_information(nrow):
+    """Undrafted, no experience, and young: nothing is known about him."""
+    if nrow.get('draft_number') not in ('', 'NA'): return False
+    if int(nrow.get('_exp') or 0) > 0: return False
+    try: age = CUR_SEASON - int(str(nrow.get('birth_date'))[:4])
+    except (TypeError, ValueError): return True
+    return age <= 24
+
 def age_band(age):
     """Undrafted rating depends strongly on AGE, not just draft status and
     experience. Published undrafted rostered players:
@@ -1908,6 +1955,9 @@ def tier3_rating(nrow, pos, fine, coarse, rng):
     pool = (fine.get((pos, ud, eb, ag)) or coarse.get((ud, eb, ag))
             or fine.get((pos, ud, eb)) or coarse.get((ud, eb)))
     if not pool: return None
+    if is_zero_information(nrow):
+        cut = pool[min(len(pool) - 1, int(ZERO_INFO_TRUNCATE * len(pool)))]
+        pool = [x for x in pool if x <= cut] or pool
     return pool[min(len(pool) - 1, int(rng.random() * len(pool)))]
 
 _DONOR_VEC = {}
@@ -3509,6 +3559,14 @@ def stage_build(verbose=True):
         rating = max(1, min(99, int(round(computed_rating(_stored, pos, weights)))))
         gaps = gapref.get(('T', pos)) or [0]
         gap  = gaps[min(len(gaps) - 1, int(rng.random() * len(gaps)))]
+        if is_zero_information(n):
+            # the upside lives in POTENTIAL, not in the rating. Raise-only, and
+            # bounded at the published undrafted maximum rather than its p90.
+            if rng.random() < UNDRAFTED_HIT_RATE:
+                _uc = undrafted_ceilings()
+                ceiling = _uc[int(rng.random() * len(_uc))]
+                gap = max(gap, min(UNDRAFTED_GAP_MAX, ceiling - rating))
+            gap = max(0, min(UNDRAFTED_GAP_MAX, gap))
         potential = min(99, rating + gap)
         exp = n['_exp']
         rec = {kk: 0 for kk in ROSTER_KEYS}

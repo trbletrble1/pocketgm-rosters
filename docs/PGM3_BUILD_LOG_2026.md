@@ -305,6 +305,44 @@ this build four times:
 Nothing is crushed at the other end: the 28-30 and 31+ pools are untouched and
 still reach p90 83 and 86.
 
+### Sourceless rookies: the upside goes in POTENTIAL, not the rating
+
+An undrafted rookie who has never played should not be a good player on day
+one, however faithful the draw is to a pooled distribution. DJ Herman drew 84,
+the maximum of a 156-player pool -- which will happen to someone in every build.
+
+**Rating is drawn tight and low.** The zero-information pool (undrafted,
+<=1 year, age <=24, n=1214) runs min 40 / p25 58 / median 62 / p75 65 /
+p90 69 / max 98. The draw is truncated at p75: the long tail belongs to players
+who earned it later, and is not available on day one.
+
+**Potential carries the upside**, the same mechanism as the 2027 class and
+MEASURED rather than reused from the pick-224 figure. Of 5,683 undrafted
+players tracked across the published files:
+
+| ever reach | rate |
+|---|---|
+| 80+ | **8.3%** |
+| 85+ | 4.0% |
+| 90+ | 1.3% |
+
+Survivorship travels with it: these are players appearing in at least one
+published file, so it is the rate among those who stuck. Ceilings are drawn
+from the 393 peaks actually observed at 80+ (median 84, max 98) rather than set
+to a constant. Potential is raise-only and the gap is bounded at the published
+undrafted maximum of **26**, not its p90, per the Louis Nix precedent.
+
+Result on the 54-player cohort: rating min 49 / median 62 / p90 68 / max 70;
+gap median 3 / p90 17 / max 26; 8 of 54 reach an 80+ ceiling. **DJ Herman is
+now a 65 with a potential of 91** -- an ordinary rookie who might become very
+good, and you have to develop him to find out which.
+
+Two honest notes. The realised hit rate is 14.8% against a target of 8.3%, but
+n=54 gives that wide error bars (expected 4.5, sd 2.0), and some non-hits reach
+80 through the ordinary gap draw. And the gap distribution is deliberately more
+bimodal than the published one -- median 3 against 4, p90 17 against 9 -- which
+is what a hit-rate mechanism produces and is the intended shape, not drift.
+
 ### The tails were the attributes, not the rating
 
 An attribute set computing to 104 or to 18 is one the archive has never
