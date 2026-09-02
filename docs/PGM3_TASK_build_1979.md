@@ -292,6 +292,72 @@ is "one team appears twice, and the second copy is a joke roster."*
 
 ---
 
+## The cohort — SETTLED 2026-09-02
+
+**1,408 real players across 28 teams.** Built by `tools/build_1979_roster.py`
+from the 28 cached footballdb rosters into `wip/roster_1979_dedup.csv`.
+Per team: min 45 (Pittsburgh), max 57 (Detroit, Green Bay), mean 50.3.
+
+**This is the number the build is measured against.** Establish it once; do not
+let it drift. 1,438 source rows minus 30 collapsed movers = 1,408.
+
+### Movers and namesakes — split on COLLEGE
+
+41 names appear more than once. College + age separates them:
+
+| | n |
+|---|---|
+| genuine movers (same college, age within 1) | **30** |
+| namesakes (different colleges) — kept as separate men | **10** |
+| same-team namesake pair (Cleveland's two Robert Jacksons) | 1 |
+
+**Position does NOT work as the discriminator here.** Larry Brown (OT/Miami/24
+at Kansas City vs OT/Kansas/30 at Pittsburgh) and Gene Washington (WR/Stanford
+at Detroit vs WR/Georgia at the Giants) share a name, a position and a season.
+See the precedent "the field that resolves identity varies by dataset".
+
+### The mover rule
+
+**Most games played → the 2K5 block on an exact tie → hand call, logged.**
+Resolved 28 by games, 1 by block (Henry Monroe, 3-3, to Green Bay), 1 by hand
+(**Jerry Golsteyn to Baltimore** — 1 game each, no 2K5 record, started the
+season there). A mover's `games` is the SUM across his teams.
+
+**Stated plainly because it is thin: 15 of the 30 are decided by a margin of two
+games or fewer.** Median margin 2.5. Neither the 2K5 block (10 agree / 7
+disagree / 13 absent) nor footballdb player pages (collapse to "2 TMS", no team
+order) give a better tiebreak. Each case moves one player between teams carrying
+46-60, so it is not worth buying a source for — but it must not read as more
+principled than it is.
+
+### The 161 full-season absentees — a COMPOSITION mismatch, not obscurity
+
+The 2K5 gap is 77% covered overall with a clean obscurity gradient (56% absent
+at 1-4 games down to 17% at 14-16). **But the 161 absentees who started 14-16
+games are not fringe players and not offensive linemen** — OL are 17% of the 161
+against 19% of all full-season players, slightly UNDER-represented.
+
+They are LB (25% of the 161), RB (18%), TE (8%). The cause is the 2K5 template's
+slot allocation, not roster size — a block holds 52.2 slots against a 51.4-man
+average roster:
+
+    position   2K5 slots/team   real roster/team   surplus
+    RB                    5.4                6.7      +1.3
+    LB                    6.5                7.5      +1.0
+    DT                    4.5                3.2      -1.2
+    DB                    8.9                8.2      -0.7
+
+**Build consequence (ruling, Ryan 2026-09-02): rate this cohort from games
+played and the team's use of the position, NOT from a position-wide floor.**
+They are surplus at positions the template under-allocates. Filling them from
+the low end would systematically thin exactly what 1979 teams stocked most.
+
+**OPEN — do not reach for a reason.** TE runs a 25% absent rate with no capacity
+pressure against it. That does not fit the mechanism above and is deliberately
+left unexplained.
+
+---
+
 ## The four invented franchises
 
 **Do not reuse the 1986 stories.** The Baltimore Stars, Jacksonville Bulls,

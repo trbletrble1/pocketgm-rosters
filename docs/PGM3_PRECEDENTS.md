@@ -4047,3 +4047,73 @@ Related but distinct from the stale-artifact rule, which is about a file that
 *changed*. Here nothing changed and nothing was stale — the file always held the
 attributes. What was stale was a **conclusion about the file**, and conclusions
 about sources need re-deriving when the question changes.
+
+---
+
+## The field that resolves identity varies by dataset — third independent route
+
+A composite key cannot do identity work. This project has now reached that
+conclusion three times, from three datasets, each needing a **different** extra
+field:
+
+| build | the discriminator | what it separates |
+|---|---|---|
+| 2026 | **birth date** | fathers and sons, namesakes across a career gap |
+| the 2K5 archive | **era** (`first_seen`/`last_seen`, or better, a season vote) | 68 years of namesakes, 81% false-match rate on name+position |
+| **1979 rosters** | **college** | two men who share a name, a position AND a season |
+
+**The 1979 case is the strongest, because position fails inside a single
+season.** Splitting 41 repeated names on college + age gave 30 genuine
+mid-season movers and 10 namesakes, and **two of the namesakes share a
+position**:
+
+    Larry Brown      OT, Miami, 24   Kansas City   |  OT, Kansas, 30      Pittsburgh
+    Gene Washington  WR, Stanford, 32 Detroit      |  WR, Georgia, 26     NY Giants
+
+Name+position merges both men. There is no era gap to exploit — it is one
+season. Only college separates them.
+
+There is also a **same-team** pair: Cleveland carried two Robert Jacksons in
+1979, an offensive guard (#68, Duke) and a linebacker (#56, Texas A&M). Any key
+built on `name|team` merges them, and `name|position|team` — the key this
+project settled on as "unique in the widest population" — happens to work here
+only because their positions differ.
+
+**The rule to carry:** do not reach for position by habit, and do not assume the
+key that worked on the last dataset transfers. **Ask what field the specific
+collision does not share**, and check that the dataset actually carries it. The
+1979 rosters carry college for free; the Madden exports do not.
+
+**Corollary — the discriminator is a property of the SOURCE, not of the
+project.** A build that changes source changes discriminators. Recording which
+field did the work, per build, is cheaper than rediscovering it.
+
+---
+
+## Record a coin flip as a coin flip
+
+The 1979 mover rule assigns a player to the team he played the most games for.
+It resolves 28 of 30 cases, which reads as a clean rule — and **15 of the 30 are
+decided by a margin of two games or fewer**, two of them exact ties.
+
+Median margin is 2.5 games. Only 8 of 30 have a margin of 5 or more.
+
+Two sources were tested as a principled tiebreak and neither works: the 2K5
+block agrees with the games leader 10 times, disagrees 7 and is absent 13; and
+footballdb's player pages collapse a mover to "2 TMS" with no team order at all.
+
+**Ruling (Ryan, 2026-09-02): keep the rule, and state plainly that it is thin.**
+Each case moves one player between teams carrying 46-60, so the cost of being
+wrong is a single roster slot and it is not worth buying a source to resolve.
+
+**The precedent is about the writing, not the rule.** A rule that resolves 28 of
+30 will be read by a later session as well-founded unless the margin is recorded
+beside it. Documenting the resolution rate without the margin distribution would
+have made a coin flip look like a finding — the same shape as quoting a
+correlation without its cohort, or a gate without the population it ran against.
+
+**Where a rule reaches no answer at all, make it a hand call and log the
+reason.** Jerry Golsteyn played one game for Baltimore and one for Detroit and
+has no 2K5 record. He is assigned to Baltimore because that is where he started
+the season, recorded in `build_1979_roster.py` as a named exception rather than
+absorbed into the rule.
