@@ -206,3 +206,31 @@ Prospects have their own build path (`fit_prospect_curve`) which the
 stored-equals-computed ruling never reached. Not fixed: it needs the same
 decision the rostered cohort got, and the draft class is a distinct deliverable.
 
+---
+
+## 11. The undrafted hit rate runs above its target — re-measure, do not tune
+
+The zero-information cohort draws an 80+ ceiling at a measured archive rate of
+**8.3%**. The realised rate on the 2026 build:
+
+| | n | reached 80+ potential | rate |
+|---|---|---|---|
+| target (archive) | 5683 | 469 | **8.3%** |
+| 2026 cohort | 54 | 8 | **14.8%** |
+
+Inside noise — at n=54 the expected count is 4.5 with sd 2.0, so 8 is about
+1.7 sd high. But the bias is also **real by construction**: the hit draw raises
+potential, while a non-hit can still reach 80 through the ordinary gap draw, so
+the two paths add rather than partition.
+
+**Deliberately not tuned.** Adjusting a rate to fit a 54-player sample is
+fitting to noise, which is the worse error. Re-measure on a larger cohort — a
+future season with more sourceless players, or the cohort pooled across
+several builds — and separate the two paths before changing the constant.
+
+*(Ryan's independent check of the live file read n=154 for undrafted age <=24
+at 8.4%, against n=54 for the strict zero-information cohort at 14.8%. The two
+populations differ: his includes undrafted players WITH experience, who do not
+go through the hit-rate mechanism at all. The strict cohort is the one the
+mechanism acts on and the one to re-measure.)*
+
