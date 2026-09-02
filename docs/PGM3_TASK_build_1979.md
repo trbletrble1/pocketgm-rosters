@@ -250,13 +250,22 @@ CB/S = 1.28, inside the band.** Two independent 1979 sources disagreeing means
 the two differ" was written before the 20 names in that direction were read.
 They include **Roger Wehrli, Raymond Clayborn, Lemar Parrish, Neal Colzie** —
 corners, three of them Pro Bowl or Hall of Fame corners — whom the 2K5 modder
-labels FS. The rule would have moved Wehrli to safety. **Both sources are wrong
-in different directions**: NFL79.ros over-labels safeties (33), the 2K5 save
-mislabels famous corners as FS (20), and no third source names DB sub-positions
-— footballdb and PFR say `DB`. **The 53 are a hand worklist**, one man at a
-time against what he actually played, not a rule. A ratio in band is not
-evidence the labels under it are right — the second time today an in-band
-aggregate hid wrong records.
+labels FS. The rule would have moved Wehrli to safety. **A third signal settles most of it.** Wikipedia's career position for the 53,
+via the API: **supports the NFL79 label 24 times, the 2K5 label twice, neither
+never**; 27 give no call (blank, or just "Defensive back"). Wehrli, Clayborn,
+Parrish and Colzie all read "Cornerback" — NFL79 had them right, the 2K5 save
+wrong. So the sources are NOT symmetrically wrong: **where checkable, NFL79.ros
+is right 24:2**, and the 2K5 modder's DB labels are the unreliable ones — behind
+an aggregate ratio that sat comfortably in band. A ratio in band is not evidence
+the labels under it are right.
+
+**Recommendation, needing a ruling:** take NFL79.ros's DB label everywhere. The
+residual hand list is the 27 no-calls in `wip/cbs_disagreements_1979.csv` —
+and given the 24:2 prior, only the **16 where NFL79 says S and the 2K5 save says
+CB** carry real risk (the direction that would lose corners). One namesake leaked
+into the Wikipedia join — the Jets' Bobby Jackson resolved to a coach of the
+same name — and produced a no-call, so it did no harm; flagged. The out-of-band
+1.02 then stands as **the era as this modder saw it**, with 16 men to check.
 
 *Six teams carry two or more kickers* (NYJ four: Leahy, Jacobs, Linhart, Szaro
 — footballdb confirms all four played) and New Orleans two punters. Real
