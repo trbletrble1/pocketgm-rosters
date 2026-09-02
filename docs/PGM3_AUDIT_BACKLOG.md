@@ -9,7 +9,24 @@ review pass of its own — which is how the defects below got in.
 
 ---
 
-## 1. 2021 was built to a different standard
+## 1. 1986 is the rebuild candidate, not 2021
+
+Where the day started, 2021 looked like the badly-built file. Measured side by
+side, **1986 is worse on every invariant**:
+
+| | 1986 | 2000 | 2021 |
+|---|---|---|---|
+| rostered rating invariant, >5 | **629** | 476 | **0** |
+| prospect invariant, >5 | **627** | 366 | 105 |
+| verified faces drifted | **6** | 0 | 0 |
+| unsourced prospect + FA cohorts | **yes** | — | — |
+
+2021 holds the rostered invariant that 1986 and 2000 break badly. A rebuild
+decision, if one is made, points at 1986.
+
+---
+
+## 1b. 2021 was built to a different standard
 
 **MEASURED AGAINST ITS SIBLINGS — the case is weaker than this section claimed.**
 Two of the four defects do not survive the comparison:
@@ -19,6 +36,9 @@ Two of the four defects do not survive the comparison:
 | free agent salary non-zero | **103** | 0 in all seven | **holds, unique** |
 | prospects break the rating invariant | **105** | 0 in 2004/07/10/13/17 | **holds** (1986 627, 2000 366) |
 | `eGuarantee` populated | 1425 | 2013 **1500**, 2010 1364, 2007 1213 | **does not hold** — 2021 is mid-pack |
+
+*(Ryan's independent read gave 2021 at 0 and 2013 at 144 — a different field or cohort from mine. The conclusion is the same either way: 2021 is not uniquely bad on it. The disagreement is unresolved and the claim rests on it not holding under EITHER measurement.)*
+
 | family-2 skin share | 9.2% | 1986 8.2%, 2017 8.0%, 2013 7.2% | **weak** — a continuum, not an outlier |
 
 And 2021 **holds** the rostered rating invariant (0 players over 5), where 1986
@@ -70,7 +90,7 @@ Flutie, Jerry Rice, both 1986). The 76 unexamined are where more would be.
 | defect | measured | notes |
 |---|---|---|
 | **team payroll vs roster QUALITY** | measured, all nine files, eight definitions — see the precedent *Payroll and quality: measured, and what survives the definition* | **Closed, not an audit item.** 2026 is at the low end (rank 1-3 of 9) but 2000 occupies the same territory under every definition, so 2026 is not outside the archive's range in any robust sense. |
-| **team payroll vs roster COST** | 2026 **+0.67**; 2013 **-0.57**; 2021 **+0.08** | **A different measurement from the row above** — cost, not quality. Only three files measured. The remaining five are still open. Keep the two apart: conflating them is what produced a wrong claim about all eight. |
+| ~~team payroll vs roster COST~~ | **STRUCK** | Not measurable as specified. On the files' own fields it is a tautology (payroll = salary+guarantee vs cost = salary, r>=0.86 in all nine). The original +0.67/-0.57/+0.08 used real SOURCE contract money, which exists for 2026 only; historical files have no equivalent. A measurement that cannot be defined is not a task -- if it matters later, the definition comes first. |
 | **`trucking` means different things in different files** | not yet quantified | the handoff mapped it to `BreakTackleRating`; 2026 uses `TruckingRating`. Whether earlier files agree is unchecked. |
 | **K/P contract inflation** | not yet quantified | a `fix_kp_contracts.py` exists, which implies a known past instance |
 | **OLB coverage values are junk in 2013 and 2021** | not yet quantified | the same two files that fail the payroll relationship |
@@ -159,7 +179,25 @@ this, so no future build can reintroduce it.
 
 ---
 
-## 8. `build_derived` inflates the tier-3 residual — cause unknown
+## 8. `build_derived` — the FIFTH dependency-order instance
+
+**Not moot, and not closed.** Re-measured after the rating became a function of
+the attributes: median +0.66, p90 +6.44, max +8.25 on tier 1. Most of that is
+legitimate -- it populates derived cells that were zero, and a zero cell
+contributes nothing to the computed rating.
+
+The defect is ORDER, not magnitude. It runs **after** the fill's rescale, so
+zero-information rookies drift up to **+6.2** past the draw that was
+deliberately truncated to keep them low. Median drift is +0.19, small enough to
+leave.
+
+Dependency-order bugs in this build, in sequence: registry before hair,
+degeneracy before inversion, derived block before refit, rating before the
+derived block, and now the fill's rescale before the derived block. **The rule
+that keeps emerging: whatever a value is computed FROM must be final before it
+is computed.**
+
+### Original decomposition, retained
 
 Decomposed by stage, the tier-3 gap between the stored rating and the DRAWN
 rating comes almost entirely from one step:
