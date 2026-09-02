@@ -190,6 +190,31 @@ ethnicity code reads H. A generated or placeholder player is the likelier
 reading. **The anchor is unreliable either way and should not carry the weight
 of "RFM is not an oracle"** -- excluding it, the source is 10 of 10.
 
+**Anchor against the cohort the source is for.** `rfm.py anchor` takes an
+optional roster file and skips anchors not on it. Aaron Donald retired in 2024
+and sits in the asset database with an untouched placeholder head; he is in the
+registry only because it carries him from an older season, and he can never
+reach a build because lookups fire on 2026 rosters. Scoring him made a
+10-of-10 source read 10 of 11:
+
+    unscoped                 agree 10  disagree 1  90.9%   (74 absent, 20 abstain)
+    scoped to 2026 cohort    agree  7  disagree 0   100%   (0 absent, 97 out of scope)
+
+A stale record scoring as a miss is the phantom-match problem one layer up.
+
+**The lowercase composite is NOT a staleness filter — hypothesis tested and
+refuted.** Exactly 9 of 3,068 null-delimited composites start lowercase, and
+they are two unrelated things:
+
+- **seven are truncated** by a leading character (`rownKyron` for Brown,
+  `acksonTrishton` for Jackson, `anielsJalon` for Daniels). Only two of the
+  nine reach the output at all.
+- **two are genuine**: `donaldAaron` (retired) and `vandenBergJordan` — Jordan
+  van den Berg, a real lowercase Dutch surname particle, **who is on a 2026
+  roster**. One current, one stale, on a population of two.
+
+The signal is a file artifact, not a currency marker.
+
 **Extraction verified sound.** Every one of the 2,955 emitted composites is
 present in the file, and every emitted surname appears as its own
 null-delimited field. Nine composites are stored truncated by a leading

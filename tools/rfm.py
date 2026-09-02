@@ -132,15 +132,31 @@ def _flat(dec):
         _FLAT['v'] = bytes(c for c in dec.lower() if 97 <= c <= 122 or 48 <= c <= 57)
     return _FLAT['v']
 
-def cmd_anchor(path, csvpath):
-    """Score anchors, separating ABSENT from DISAGREE."""
+def cmd_anchor(path, csvpath, cohort=None):
+    """Score anchors, separating ABSENT from DISAGREE.
+
+    ANCHOR AGAINST THE COHORT THE SOURCE IS FOR. Pass a roster file as the
+    third argument and anchors not on it are skipped as OUT OF SCOPE. Aaron
+    Donald retired in 2024 and sits in the asset database with an untouched
+    placeholder head (gen_2_H_B_005, reading Hispanic); he is in the registry
+    only because it carries him from an older season, and he can never reach a
+    build because lookups fire on 2026 rosters. Scored against everything the
+    registry holds, he was the single miss and made a 10-of-10 source read
+    10 of 11. A stale record scoring as a miss is the phantom-match problem
+    one layer up.
+    """
     dec, _ = decompress(path)
     got = {}
     for r in csv.DictReader(open(csvpath, encoding='utf-8')):
         got[(r['forename'].lower(), r['surname'].lower())] = r['band']
-    ag = dis = absent = ab = 0
+    scope = None
+    if cohort:
+        scope = {(x['forename'].lower(), x['surname'].lower())
+                 for x in json.load(open(cohort))}
+    ag = dis = absent = ab = oos = 0
     for r in csv.DictReader(sys.stdin):
         k = (r['forename'].lower(), r['surname'].lower())
+        if scope is not None and k not in scope: oos += 1; continue
         if not present(dec, r['forename'], r['surname']): absent += 1; continue
         b = got.get(k)
         if b is None or b == 'abstain': ab += 1; continue
@@ -150,7 +166,8 @@ def cmd_anchor(path, csvpath):
             print(f"   DISAGREE {r['forename']} {r['surname']}: expected {r['band']}, RFM {b}")
     n = ag + dis
     print(f'agree {ag}  disagree {dis}  rate {ag/n:.1%}' if n else 'no scorable anchors')
-    print(f'   not in the source at all: {absent}   abstain band: {ab}')
+    print(f'   not in the source at all: {absent}   abstain band: {ab}'
+          + (f'   out of cohort scope: {oos}' if cohort else ''))
 
 if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else ''
@@ -158,5 +175,6 @@ if __name__ == '__main__':
         out = sys.argv[sys.argv.index('-o') + 1] if '-o' in sys.argv else 'wip/rfm_faces.csv'
         cmd_dump(sys.argv[2], out)
     elif cmd == 'probe': cmd_probe(sys.argv[2])
-    elif cmd == 'anchor': cmd_anchor(sys.argv[2], sys.argv[3])
+    elif cmd == 'anchor': cmd_anchor(sys.argv[2], sys.argv[3],
+                                     sys.argv[4] if len(sys.argv) > 4 else None)
     else: print(__doc__); sys.exit(2)
