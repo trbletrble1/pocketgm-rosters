@@ -378,6 +378,94 @@ cold, not four months.
 Four separate stories, not one shared premise. The 1986 post's franchises read
 as separate campaigns and that is deliberate.
 
+### The pool — computed, not guessed. 308 men.
+
+**Ruling (Ryan): real rosters stay real. Expansion teams are stocked ONLY from
+men genuinely out of football in 1979.** So the pool is a diff, not the Madden
+file's 372 free agents — those are one modder's opinion of availability.
+
+**Method:** men on a 1978 footballdb roster and on no 1979 one.
+`sources/1978footballdb/` (28 rosters, 1,439) minus the 1,408 spine = **308**.
+261 carry a `POVR` from `NFL79.ros`.
+
+**1977 was NOT fetched. Ruled 2026-09-02.** 308 with 261 rated covers four
+rosters of ~50, and what 1977 adds is depth at the OLD end specifically —
+Biletnikoff, Tarkenton, Kilmer, Hanburger — which is the shape Ryan moved away
+from. He wants a handful of real names on ordinary rosters, not four teams of
+old men. 28 fetches saved.
+
+**Independent validation:** 117 of the 308 (38%) sit on the modder's four
+invented franchises in `NFL79.ros`, and another 106 (34%) in his FA pool. He
+computed the same diff from the other direction. Only 35 (11%) are on a real
+1979 team in his file — see the accuracy note below.
+
+### `wip/expansion_pool_1979_top40.csv` — the 40 with researched reasons
+
+Researched individually via the Wikipedia API (reachable from the build
+container with a User-Agent; `urllib` without one gets 403).
+
+| status | n |
+|---|---|
+| career ended after 1978 (from career span) | 14 |
+| injury — missed 1979 specifically | 6 |
+| retired | 5 |
+| **source conflict** | 3 |
+| gap year, reason not in source | 2 |
+| released, then CFL | 2 |
+| released / left the game / career ended | 3 |
+| unresolved | 7 |
+
+The ones a franchise story can be built on:
+
+    Charlie Waters   DB 30 ovr 94  torn ACL in a 1979 preseason game, back in 1980
+    Cappelletti      RB 26 ovr 93  groin injury, whole year, traded to SD for 1980
+    Roland Harper    RB 25 ovr 92  knee, whole year, back in 1980 blocking for Payton
+    Too Tall Jones   DE 27 ovr 88  quit to box professionally, went 6-0, back in 1980
+    Jim Otis         RB 30 ovr 90  retired after 1978
+    Otis Sistrunk    DT 32 ovr 87  retired after 1978
+    George Kunz      OT 31 ovr 81  back injury cost him 1978 AND 1979
+    Ray Pinney       OT 24 ovr 80  injured all of 1979, back in 1980 at guard
+    Andrusyshyn      P  31 ovr 81  waived behind Bob Grupp, signed in the CFL
+    Tarkenton        QB 38    -    retired as the NFL's career passing leader
+    Biletnikoff      WR 35    -    released by Oakland, played 1980 in the CFL
+
+**Tarkenton and Biletnikoff are named exceptions (Ryan).** Both are in the 308.
+Neither is in `NFL79.ros`, so neither has a `POVR` and both need rating by hand
+or from another source — do not let them fall out for lack of a number.
+
+### `wip/expansion_pool_1979_rest.csv` — the other 266, MEASURED ONLY
+
+No inferred reason. Age band x 1978 games played, which is all the roster data
+supports:
+
+    age        fringe 1-7   part 8-13   full 14-16   total
+    33+                 1          10           13      24
+    30-32               7           6            6      19
+    27-29              18          10           20      48
+    <=26               72          38           65     175
+
+221 of 266 carry a `POVR`. **Do not proxy a reason from age and games** — the
+thing that matters (retired at peak vs released vs injured) is exactly what
+those two fields cannot separate. Charlie Waters reads identically to a man
+simply cut.
+
+### Two accuracy notes on the sources
+
+**`NFL79.ros` rosters 35 of the 308 on real 1979 teams — men who never played
+that season.** 11.4%, so its team assignment is ~89% reliable for this cohort.
+The list is heavily offensive line and camp bodies, consistent with the file
+being built from a preseason projection (`PYRP` already showed it is a
+season-START roster). Charlie Waters is the headline case: rated 94 on Dallas in
+a season he missed entirely.
+
+**footballdb's 1979 rosters omit some late-season men.** Three of the 42
+researched — **Bo Rather** (Wikipedia: last 3 games for Miami), **John
+Woodcock** (a Lion 1976-1980) and **Reggie Haynes** (Washington 1977-1979) —
+appear on no cached 1979 roster. The 2K5 cross-check found the same shape
+earlier: 88 real period players on real teams that footballdb does not list.
+**So 1,408 is a floor, not a census, and a few of the 308 may not be available
+at all.** Not repaired; recorded.
+
 ### The structural rule, from the 2000 Houston build
 
 **The roster falls out of the franchise's situation rather than being designed.**

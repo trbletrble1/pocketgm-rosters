@@ -4117,3 +4117,67 @@ reason.** Jerry Golsteyn played one game for Baltimore and one for Detroit and
 has no 2K5 record. He is assigned to Baltimore because that is where he started
 the season, recorded in `build_1979_roster.py` as a named exception rather than
 absorbed into the rule.
+
+---
+
+## An anchor that FAILS for the wrong reason is worth more than one that passes
+
+Two instances in one session, 2026-09-02.
+
+**Instance 1 — Ed "Too Tall" Jones.** Ryan supplied him as the anchor for the
+1979 expansion pool: out of football that year to box, rated 88 in the Madden
+file, "ten points clear of any other free agent." Both facts were true. But the
+first run returned `POVR: None`, because **footballdb spells him "Too Tall
+Jones" and the Madden file spells him "Ed Jones"** — the documented
+rename-between-sources bug. A silent match would have confirmed the anchor and
+hidden the defect. The failure exposed a name-normalisation gap affecting 50 of
+308 pool members.
+
+**Instance 2 — Fred Biletnikoff and Fran Tarkenton.** Supplied as men who must
+be in the pool. They were. But checking them found a **third** defect by
+adjacency: chasing career spans for the same cohort surfaced Bo Rather, John
+Woodcock and Reggie Haynes, all of whom Wikipedia places in the NFL in 1979 and
+none of whom appear on any cached footballdb 1979 roster.
+
+**The general form:** an anchor is chosen because its answer is already known,
+so a pass conveys almost no information — it confirms what was already believed.
+A failure is the only informative outcome, and the first question is always
+**"is the anchor wrong, or is the pipeline wrong?"** Here it was the pipeline
+both times.
+
+**Consequence for choosing anchors:** prefer ones whose *identity* is awkward —
+nicknames, suffixes, position changes, cross-source spelling — over ones whose
+value is merely famous. A famous player with a plain name tests nothing but the
+happy path.
+
+---
+
+## Instance: the widened retry that manufactured its own findings
+
+Recorded as a worked instance of "a widened check reports its own reach errors
+as findings", which had no example attached.
+
+50 of the 308 pool members had no Madden rating. The documented remedy is to
+"scan the unmatched list for names that look almost right", so the retry was
+loosened from `first + last` to `surname + age within one year`. It produced 13
+candidates. **Ten of them are different men:**
+
+    Too Tall Jones   -> Ed Jones        88   GENUINE (nickname)
+    Roland Woolsey   -> Rolly Woolsey   73   GENUINE (nickname)
+    John McKay       -> J.K. McKay      77   GENUINE (initials)
+    Danny Johnson    -> Ezra Johnson    88   WRONG
+    Larry Franklin   -> Tony Franklin   92   WRONG - a kicker for a receiver
+    Ken Moore        -> Dean Moore      64   WRONG
+    James Van Wagner -> Steve Wagner    74   WRONG - surname split differently
+
+**77% false.** The tell is that the wrong matches are not near-misses: a
+92-rated kicker offered for a 23-year-old receiver is not a spelling variant.
+
+**Ruling: the three confirmed aliases are hard-coded by name; the other 37 stay
+unmatched and logged.** Applying the retry would have attached real ratings to
+the wrong men in a file where nothing downstream could detect it — the rating
+would be in range, the position live, the distribution unchanged.
+
+**The rule the instance illustrates:** when a documented remedy is loosened to
+reach further, measure its false rate on the cases you can verify BEFORE
+applying it to the ones you cannot. A remedy is not a licence.
