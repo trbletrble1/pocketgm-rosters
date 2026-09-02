@@ -1185,3 +1185,141 @@ rebuilding `growthType` in the same pass. This is the documented failure that
 broke five files once already: a `potential` rebuild shipped without the
 `growthType` that depends on it, and every individual check passed because both
 fields were separately plausible.
+
+---
+
+## 25. The per-position quantile map discards the source's spread — and it is a defect, not a symptom
+
+Opened 2026-09-02 from a reader question about QB overalls. **Report only. No
+published file touched.** Every figure below was reproduced by the master
+session or comes from one named artifact.
+
+### The symptom, reproduced to the point
+
+    QB speed        min   p25   median   p75   max   p5-95
+    Madden 27        69    78      83     86    95      26
+    our 2026 file    36    66      78     84    99      63     stretch 2.42x
+
+    Kirk Cousins  madden 69 ours 36 (-33)    Andy Dalton  73 -> 48 (-25)
+    Cooper Rush   73 -> 48 (-25)             Jared Goff   74 -> 52 (-22)
+
+### Q1 — QB-only, or everywhere?  EVERYWHERE
+
+188 position x attribute cells, p5-p95 width ratio file/source, 2026 rostered:
+
+    stretch >= 2.0x : 87 of 188      median 1.93x      compressed (<=0.8x): 1
+    worst attributes by median stretch: ballSecurity 3.36x, stamina 2.79x,
+    speed 2.41x, burst 2.15x, releaseLine 2.12x, passBlock 2.10x, power 2.00x
+
+Stamina is worse than speed. S and CB stamina floors drop by **-78 and -79
+points** (source min 80 / 81 -> file min 2). The low tail is a smear across 19
+values and 13 positions — a stretch, not a fill block.
+
+### Q2 — where did the wide target come from?  THE MAP, NOT A REFERENCE FILE
+
+**First answer given was wrong and is retracted.** The initial read blamed 2021,
+because 2021 stretches its own source 1.69x and sits in the six-file union
+`MODERN_REFS`. Measured, dropping 2021 from the pool changes the pooled target
+width by a **median 1.00x** across all 188 cells — QB speed is 53-93 with or
+without it. (2021 does own one cell: S stamina narrows 0.63x without it.)
+
+The width is intrinsic to the construction. `fit_quantile_targets` POOLS six
+files into one sorted list per (position, attribute); `quantile_map` takes only
+the source's RANK and hands rank 0 to the pool's absolute minimum. Level from
+the pool, order from Madden — **spread from neither**. Any union of files with
+different populations is wider than any one source, so the source is always
+stretched to fill it. The docstring's own tie-collapse warning is the other
+half: 85 QBs carry only 23 distinct source speeds, so blocks of 4-8 QBs at
+source 75/76/77/78 land on 53/59/63/66 — a 3-point source band fanned to 13.
+
+Which files preserve their own source width (all cells, median): 2004 1.00x,
+2007 1.05x, 2013 1.14x, 2017 1.17x, **2021 1.69x, 2026 1.93x**. The two newest
+files are the defective ones, and 2013 is clean on speed (QB min 63; its only
+stretched cells are stamina, which is the already-open fill item 0j).
+
+### Why it reaches the overall — and why that is 2026-specific
+
+`|stored rating - computed from attributes|` median 0.25, within 1 on 99.6% of
+2026 rostered. **The stored rating IS the attribute-computed overall** (the
+item-7 fix). So stretched speed -> low computed overall -> stored rating.
+Cousins 58 is exactly what weights.json produces from speed 36.
+
+Order damage, Spearman of our rating vs Madden overall, position-aware join:
+QB 0.842, RB 0.750, DT 0.786, K 0.736, P 0.426; best S 0.926, WR 0.917.
+Worst displacements (Madden rank -> ours, 0 = worst): Cousins 53 -> 1 of 85,
+Patrick Ricard 86 -> 3 of 112, Tutu Atwell 102 -> 22 of 190. **16.8% of
+players shift by >= 20% of their position's rank range, and middle-of-band
+players shift MORE than tail players (0.130 vs 0.079)** — the tie-collapse
+signature, not just pooled tails.
+
+**2021 has the attribute stretch but NOT the order damage** — Spearman 0.986 at
+QB, 0.89-0.98 elsewhere — because its rating was ranked from source POVR and
+its attributes were stretched afterwards. It also holds the invariant (median
+0.18). Consequence: **a 2021 fix must hold rating fixed and refit attributes to
+it**; a 2026 fix rewrites rating.
+
+### Q3 — what does correcting it do?  Two constructions, two artifacts
+
+**Candidate 1 — spread-preserving map** (level = pooled median, width = the
+source's own). Written to `/tmp/scratch_2026_spreadfix.json` and gated:
+
+- QB speed floor 36 -> 65, S/CB stamina floor 2 -> 83/81. The absurd values go.
+- Cousins 58 -> 70, Dalton 59 -> 69, Rush 62 -> 66, Goff 79 -> 82 (Madden 73/71/65/88).
+- **MAE vs Madden improves at 10 of 15 positions; worsens at OT (+2.1), OG, QB, TE.**
+  Spearman improves at 13 of 15.
+- **Moves 1,277 ratings; forces `potential` up for 520 of them, and 142 of those
+  are >= 6-year veterans** — manufacturing the exact headroom shape item 24b
+  calls a defect in 2021. Not shippable as written for that reason alone.
+- **Gate-neutral**: the published 2026 ALREADY fails `cross-year medians by
+  cohort` against 2021/2017/2013 on `[Rookie] injuryProne 47 vs 31`, and the
+  scratch file fails on the identical row with identical numbers. The fix
+  neither causes nor cures it.
+- **Barely touches item 24**: drafted-rookie >= 80 goes 12.3% -> 10.6% on the
+  gated artifact. (An earlier simulation said 3.4%; the difference is 7 rookies
+  sitting in [79, 80) and rounding — the stored rating is authoritative.)
+
+**Candidate 2 — same map plus a per-position LEVEL anchor to Madden's median**
+(simulated, not gated; no potential forcing applied):
+
+    pos   MAE now   spread-only   spread+level     med(ours-madden)
+    QB      5.6        5.1            3.2                 0
+    OT      4.6        4.2            2.1                 0
+    OG      4.5        3.6            2.0                 0
+    RB      5.6        5.8            3.4                 0
+    S       3.0        1.4            1.4                -1
+    TE      3.8        4.1            3.9                 0    <- the one that worsens
+
+**Improves MAE at 14 of 15 positions**, Spearman at 13 of 15, residual median
+0 or +-1 everywhere. Cousins 58 -> 65, Dalton 59 -> 65. **Goff 79 -> 78 against
+Madden 88** — anchoring the QB level down costs the good QBs. The middle ground
+exists; it is not free.
+
+The two constructions are NOT interchangeable and the write-up must not blend
+their numbers: candidate 1's figures come from a gated file with potential
+forced; candidate 2's from a simulation without it.
+
+### The four defects pending on 2026, and how they interact
+
+| defect | item | mechanism | touched by the spread fix? |
+|---|---|---|---|
+| drafted rookies rated ~73, >=80 at 15.8% | 24 | rescale ran against the whole-file population | **barely** (12.3 -> 10.6%) — separate target-population fix |
+| 39.5% of drafted rookies with zero headroom | 24b | potential draw has no age term | **made worse** if potential is force-clamped (520 forced, 142 veterans) |
+| attributes stretched 1.93x, order damage | 25 | rank-only map onto a pooled union | this |
+| prospect injuryProne median 47 vs archive 28-34 | NEW | not investigated | no — and it is what the gate is currently failing on |
+
+**Sequencing that follows from the table:** the potential fix (24b, the 2017
+curve) must run AFTER the attribute fix and BEFORE any clamp, or the clamp
+manufactures veteran headroom. The rookie rescale (24) is a separate target and
+runs on its own. One write, in that order. And 2013 needs none of this — its
+open item is the stamina fill.
+
+### Three corrections to earlier statements, recorded
+
+- *"The wide target came from 2021."* Wrong — median 1.00x without it.
+- *"This fix does not address the rookie inflation"* then *"it does, 10.1 -> 3.4%."*
+  Both wrong; the gated artifact says 12.3 -> 10.6%. Threshold rounding.
+- *"MAE improves at 12 of 15."* That was the simulation; the gated file is 10 of
+  15, with OT worse by 2.1.
+
+Each was caught by re-running against the artifact rather than the simulation.
+**Quote the gated file, never the simulation, and say which one you are quoting.**
