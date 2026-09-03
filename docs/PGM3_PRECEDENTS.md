@@ -4312,3 +4312,25 @@ in-band source. The recommendation was retracted; Wikipedia career positions
 then backed the out-of-band source **24 to 2**. No ratio test finds a Hall of
 Fame corner filed as a safety. Look at the names inside the number before
 trusting the number.
+
+---
+
+## A two-way disagreement can have a third answer
+
+1979's DB arbitration was framed as NFL79.ros says safety versus the 2K5 save
+says corner. Sixteen cases were left after the career-article check, and the
+ruling was to take NFL79's label for the twelve unresolved ones — cheap, and
+the direction was 24-2 plus 4-0 on the names that mattered.
+
+A scripted pass over the Wikipedia 1979 season rosters — one fetch per team,
+minutes — settled ten of the twelve in NFL79's favour and found two it could
+not have found: **Lawrence Johnson is a cornerback**, and **Ricky Jones is an
+outside linebacker**. Jones is the one that matters. Both sources called him a
+defensive back and the question "corner or safety?" had no room for the true
+answer. The framing of a disagreement silently asserts that one of the two
+sides is right.
+
+Sibling of the in-band-aggregate precedent: there the number hid the wrong
+records, here the question hid the right answer. **And a ruling made to avoid an
+expensive check is worth re-testing when the check turns out to be cheap** — the
+ruling's stated basis was cost, not evidence.

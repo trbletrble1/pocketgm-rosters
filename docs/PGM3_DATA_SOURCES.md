@@ -442,3 +442,25 @@ low-snap backups — men who cannot record a stat.
 **A batch's tab title lags one navigation behind the extracted content.** Verify
 by extracting `document.title` in the same call as the table, not from the tab
 context line.
+
+## Wikipedia 1979 season pages — roster templates (NOT depth charts)
+
+Reachable from the container with a User-Agent header, same as the career
+articles. **There is no depth chart and no starter marking on any 1979 season
+page** — searched all 15 tested for `Starters` / `Depth chart` / `Lineup`
+headers (0 of 15) and for the word "start" anywhere (only prose and PFR
+citations). What the pages carry is a **flat roster**: jersey number, name,
+and a position label, grouped by unit. Two formats:
+
+- `{{NFLplayer|NUM|Name|d=disambiguator|POS|STATUS}}` — most teams. `POS` is
+  the last unnamed parameter, but **`IR` / `PUP` / `rookie=y` also sit there**;
+  a parser that takes the last token reads `IR` as a position. Skip status tokens.
+- A hand-built wikitable with `'''Group'''` headings and `* NUM Name POS` lines
+  — Cleveland, and others. Italics mark rookies.
+
+**Value:** jersey numbers, and DB labels at CB/FS/SS granularity where
+footballdb gives only `DB`. **Not** a rating signal — nothing marks starters.
+
+**Lineage caveat:** the Cincinnati, Washington and Pittsburgh pages cite PFR's
+1979 roster page as their source; Denver does not. Treat as PFR-derived unless
+checked. It is independent of NFL79.ros and of the 2K5 save.

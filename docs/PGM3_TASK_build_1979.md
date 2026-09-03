@@ -662,3 +662,31 @@ real pass.
 **Assert the count on every keyed write.** `assert len(out) == len(inp)`.
 
 **Say which commit you are holding.**
+
+
+## DB labels — closed (2026-09-02)
+
+Sequence: NFL79.ros CB/S ratio 1.02 (out of the published 1.06–1.30 band) vs the
+2K5 save's 1.28 (in band) → the in-band source was recommended, then retracted
+when the names inside it turned out to include Wehrli, Clayborn, Parrish and
+Colzie filed at FS → Wikipedia career articles backed NFL79 **24 to 2**, leaving
+16 with no call → Ryan settled four by hand (Laird, Jackson, Davis, Thomas: all
+safeties) and ruled the remaining twelve source-assigned to NFL79 → a scripted
+pass over the Wikipedia 1979 season roster templates, **anchor-tested 4/4 against
+Ryan's four**, resolved ten more to safety and found two the framing had hidden.
+
+**Final:** 14 of 16 safety (NFL79 correct), **1 cornerback (Lawrence Johnson,
+CLE — NFL79 wrong, 2K5 right)**, **1 outside linebacker (Ricky Jones, CLE —
+both sources wrong)**. Recorded in `wip/cbs_disagreements_1979.csv` under
+`season_page_pos` and `resolution`. Take NFL79's DB labels for 1979 with those
+two overridden.
+
+## The 17 with no rating data — position refined, rating still unsourced
+
+The season pages carry no depth chart and no starter marking, so **they do not
+give a rating signal**; the 17 still need hand-rating. They do give jersey
+numbers and finer positions for 14 of 17 (three are not named at all): Billy
+Thompson DB→**SS**, Deac Sanders DB→**FS**, Don Schwartz DB→**SS**, Sidney
+Justin DB→**CB**, McCartney/Seabron/Kurnick LB→**OLB**, Stokes OT→**T**, and
+Phil Tabor DE→**DT** (his draft entry says DE — a conflict, low stakes).
+Written to `wip/no_data_17_1979.csv` as `jersey` and `season_page_pos`.

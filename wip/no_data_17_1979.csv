@@ -1,18 +1,18 @@
-name,team,pos,games,wiki_position,wiki_years,verdict
-Ronnie McCartney,ATL,LB,16,Linebacker,1977-1979,OK — 1979 in span
-Joseph Shipp,BUF,TE,16,Tight end,1978-1979,OK — 1979 in span
-Billy Thompson,DEN,DB,16,Defensive back,1969-1981,OK — 1979 in span
-Timothy Stokes,GB,OT,16,[[Offensive tackle,1974-1982,OK — 1979 in span
-Donald Westbrook,NE,WR,16,Wide receiver,1975-1981,OK — 1979 in span
-Thomas Seabron,SF,LB,16,Linebacker,1979-1980,OK — 1979 in span
-Howie Kurnick,CIN,LB,15,Linebacker,1979-1980,OK — 1979 in span
-Philip Tabor,NYG,DE,15,"Defensive end, defensive tackle",1979-1982,OK — 1979 in span
-Johnnie McDaniel,WAS,WR,15,,,no article
-Donald Schwartz,NO,DB,14,Defensive back,1978-1981,OK — 1979 in span
-Sidney Justin,LAR,DB,13,Defensive back,1978-1984,OK — 1979 in span
-Walt Landers,GB,RB,9,Running back,1978-1978,"OK — on the 1979 Packers per footballdb (9 g); Wikipedia span stops at 1978, a source gap"
-Art Whittington,OAK,RB,9,Running back,1978-1985,OK — 1979 in span
-Steve Stewart,GB,LB,3,,,OK — no span parsed
-Phillip Wise,MIN,DB,1,,,OK — no span parsed
-Richie Szaro,NYJ,K,1,,,no article
-Deac Sanders,PHI,DB,1,"Cornerback, [[Safety (gridiron football position)",1974-1979,OK — 1979 in span
+name,team,pos,games,wiki_position,wiki_years,verdict,jersey,season_page_pos
+Ronnie McCartney,ATL,LB,16,Linebacker,1977-1979,OK — 1979 in span,56,OLB
+Joseph Shipp,BUF,TE,16,Tight end,1978-1979,OK — 1979 in span,87,tight_ends
+Billy Thompson,DEN,DB,16,Defensive back,1969-1981,OK — 1979 in span,36,SS
+Timothy Stokes,GB,OT,16,[[Offensive tackle,1974-1982,OK — 1979 in span,76,T
+Donald Westbrook,NE,WR,16,Wide receiver,1975-1981,OK — 1979 in span,83,wide_receivers
+Thomas Seabron,SF,LB,16,Linebacker,1979-1980,OK — 1979 in span,53,OLB
+Howie Kurnick,CIN,LB,15,Linebacker,1979-1980,OK — 1979 in span,59,OLB
+Philip Tabor,NYG,DE,15,"Defensive end, defensive tackle",1979-1982,OK — 1979 in span,80,DT
+Johnnie McDaniel,WAS,WR,15,,,no article,80,wide_receivers
+Donald Schwartz,NO,DB,14,Defensive back,1978-1981,OK — 1979 in span,48,SS
+Sidney Justin,LAR,DB,13,Defensive back,1978-1984,OK — 1979 in span,29,CB
+Walt Landers,GB,RB,9,Running back,1978-1978,"OK — on the 1979 Packers per footballdb (9 g); Wikipedia span stops at 1978, a source gap",42,Running Backs
+Art Whittington,OAK,RB,9,Running back,1978-1985,OK — 1979 in span,22,running_backs
+Steve Stewart,GB,LB,3,,,OK — no span parsed,,
+Phillip Wise,MIN,DB,1,,,OK — no span parsed,,
+Richie Szaro,NYJ,K,1,,,no article,,
+Deac Sanders,PHI,DB,1,"Cornerback, [[Safety (gridiron football position)",1974-1979,OK — 1979 in span,26,FS
