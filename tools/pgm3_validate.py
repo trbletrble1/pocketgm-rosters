@@ -453,8 +453,13 @@ def check_staff(new, refs):
     # 100-114. If the engine generates it, it reads it. Our files capped at 95-97
     # by convention until batch 3; this check exists so the range is checked
     # rather than assumed, in either direction.
-    out.append(('staff potential outside the game\'s observed 63-114',
-                sum(1 for p in new if not 63 <= p['potential'] <= 114)))
+    # Only the UPPER bound is a fact about potential. Vanilla's floor of 63 is its
+    # rating floor (57, and 60-66 for sitting non-HC roles) plus headroom; our
+    # files carry sitting coordinators, scouts and physios at 45-56, so their
+    # potential legitimately sits under 63. That is a rating finding (item 43),
+    # not a potential defect, and potential >= rating is checked below.
+    out.append(('staff potential above the game\'s observed maximum 114',
+                sum(1 for p in new if p['potential'] > 114)))
     out.append(('staff potential < rating',
                 sum(1 for p in new if p['potential'] < p['rating'])))
     out.append(('growthType length != 51', sum(1 for p in new if len(p['growthType']) != 51)))

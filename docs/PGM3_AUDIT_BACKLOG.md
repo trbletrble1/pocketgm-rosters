@@ -2019,6 +2019,48 @@ So the shared identity is the population, not a repeated sample, and **item 39 i
 CONFIRMED rather than provisional.** It also means our staff builders invent names
 for a cast the game keeps fixed, which is worth knowing before rebuilding the pool.
 
+#### FIXED on all ten files, 2026-09-03 — `tools/staff_vanilla_curve.py`
+
+Three changes from the game's own staff export (three exports of one league; the
+game ships a fixed staff — 290 of 432 records differ only in team and contract —
+so n = 1 is all there is).
+
+**Potential.** Vanilla's headroom is unconditional: r with age +0.02, with rating
++0.02, median 7, p90 14, max 27, nobody locked. Every staff member now draws his
+headroom from those 432 values, seeded on his identity. **Potential may exceed
+99, as the game's does** — vanilla runs to 114 and its 98-rated head coaches carry
+100-114 — trimmed at the observed 114. The 50x growthType rule stays: it is ours
+(vanilla holds it exactly on 43 of 432, median ratio 0.95, range 0.24-1.98) but
+sits inside the game's range.
+
+| | headroom med | p90 | locked | potential max | above 99 |
+|---|---|---|---|---|---|
+| vanilla | 7 | 14 | 0% | 114 | 24 |
+| ours before | 0-3 | 2-6 | **12-68%** (2013 worst) | 94-97 | 0 |
+| ours after | 7-8 | 14-15 | **0%** | 106-114 | 3-26 |
+
+**Floor.** 26 sitting head coaches under 64 across ten files, rank-mapped onto
+vanilla's employed ramp (64, 65, 65, 66 ...) rather than piled on 64. **Pat Dye
+63 -> 66**, ruled: the placement carries the story, and he is still the
+lowest-placed of the four franchise hires.
+
+**Pool.** Size and floor from vanilla, composition real. 16 per role; generated
+filler dropped weakest-first; **a named man is never dropped and ratings are
+untouched**, so 2007 keeps Cowher 90, Parcells 90 and Jimmy Johnson 86. The pool
+reads 57-90 against the game's 57-64 — an accepted divergence with the same
+reasoning as the prospects: vanilla invents its pool, we have real men. 1986 (20),
+2010 (27) and 2026 (27) stay over 16 at head coach because every man there is
+real; that is the ruling working.
+
+**Ambiguity resolves at the level of the set, not the name.** 2017's head-coach
+pool carried five Hoffmans, four Whitfields, three Vances and two each of Osborne,
+Marsh, Sullivan and Lockhart, none of whom had held any role on any team in any of
+the ten files. Individually ambiguous; collectively a name generator. Dropped.
+Jim Mora Sr. (2007) and Douglas Henderson (2004) — one name each — stay.
+
+**1979 has no pool** (288 records, 32 x 9). Potential and floor applied; the pool
+is created in batch 4.
+
 ### 38. The position-multiplier "band" is our convention, not the game's
 
 Built from the eight conforming files to gate the contract-compression work.
@@ -2269,3 +2311,31 @@ is an absent one, and it is already scheduled — batch 4 opens that file anyway
 `[FA] injuryProne: new 34 vs ref 51` — the only remaining roster-gate failure on
 2021 after the payroll write, and it predates that write. Unrelated to money.
 Free-agent cohort only; the rostered men pass. Not investigated.
+
+---
+
+### 43. Sitting coordinators, scouts and physios are rated below anything the game fields
+
+**Found 2026-09-03**, when the staff-potential gate's first draft used vanilla's
+observed floor of 63 and fired on every file. The floor was a rating fact, not a
+potential one.
+
+Vanilla's sitting-staff rating minimum by role: **HC 64, OC 60, DC 61, ST 65,
+Head Scout 66, Off Scout 65, Def Scout 64, Head Physio 64, Assistant 66.** Ours:
+
+| | OC | DC | ST | H Scout | O Scout | D Scout | H Physio | Asst |
+|---|---|---|---|---|---|---|---|---|
+| vanilla | 60 | 61 | 65 | 66 | 65 | 64 | 64 | 66 |
+| 1979 | 50 | 50 | 51 | 50 | 52 | 51 | 50 | 51 |
+| 2000 | 52 | 52 | 52 | 51 | 50 | **45** | 51 | 54 |
+
+Batch 3 raised the head-coach floor to 64 because that was the ruling. **The
+other eight roles were never in scope and sit 10-20 points under the game's
+floor.** 1979 has 14 sitting men under potential 63 and 2000 has 27, all in these
+roles. Same shape as the head-coach floor before it: a convention mistaken for
+the engine's. Measure and log; the fix is the head-coach fix applied per role.
+
+### 44. 2000's staff file carries two duplicate names — pre-existing
+
+`FAIL duplicate names [2]` on the staff gate, identical at HEAD before batch 3.
+Not investigated.

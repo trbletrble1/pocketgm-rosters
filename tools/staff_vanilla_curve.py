@@ -162,10 +162,25 @@ def run(y, dry, van, van_hc, real, fore, sur):
     if not fa:
         print('  pool   NONE — 1979 carries no free-agent staff; created in batch 4')
     dropped = []
+    cls_all = {id(x): classify(x, real, fore, sur) for x in fa}
     for role in ROLES:
         men = [x for x in fa if x['role'] == role]
         if not men: continue
         cls = {id(x): classify(x, real, fore, sur) for x in men}
+        # AMBIGUITY RESOLVES AT THE LEVEL OF THE SET, NOT THE NAME. Ruled
+        # 2026-09-03. 2017's head-coach pool held five Hoffmans, three Vances,
+        # two Osbornes, two Sullivans and two Lockharts, none of whom had ever
+        # held any role on any team in any of the ten files. Individually each
+        # was ambiguous; collectively they were a name generator drawing on a
+        # small surname pool, and no researched list of real coaches looks like
+        # that. Jim Mora Sr. (2007) and Douglas Henderson (2004) are ambiguous
+        # individually — one name each, no pattern — and stay kept. So: an
+        # ambiguous man whose surname is shared with another non-real man in the
+        # same file's pool is generated.
+        surn = collections.Counter(x['surname'] for x in fa if cls_all[id(x)] != 'real')
+        for x in men:
+            if cls[id(x)] == 'ambiguous' and surn[x['surname']] >= 2:
+                cls[id(x)] = 'generated'
         gen_low = sorted([x for x in men if cls[id(x)] == 'generated' and x['rating'] < 57], key=lambda x: x['rating'])
         gen_hi = sorted([x for x in men if cls[id(x)] == 'generated' and x['rating'] >= 57], key=lambda x: x['rating'])
         keep = list(men)
