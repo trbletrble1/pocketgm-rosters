@@ -1095,6 +1095,53 @@ Charlie Waters's healthy 87, and it is still an **upper bound** — the curve is
 measured on men who were playing in 1979 and Lane was not. Deliberate rather than
 default: the coarse bucket would have shipped 94 silently.
 
+## Step 8 — draft classes BUILT 2026-09-02, one of them fully and three provisionally. `tools/build_1979_draft.py`, `wip/draft_class_{1980..1983}.csv`.
+
+**The convention, read off every historical file:** four future classes,
+`draftSeason` **2027 to 2030**, 250–335 men each, `draftNum` 1–n, **age at draft
+for all four** (median 22–23 in the 2030 class as in the 2027), contracts zero,
+`teamNum` 0. So 1980 → 2027, 1981 → 2028, 1982 → 2029, 1983 → 2030. A first
+version aged later classes younger — seniors, juniors — and the published files
+contradict it; that went.
+
+**1980 is fully sourced.** The PFR listing was already on disk from the 1979
+fetch: 335 picks with round, pick, position, age, college, last season played,
+career AV and Pro Bowls. Potential follows the handoff's historical-build rule
+verbatim from `build_2000.draft_potential` — a rating-band baseline (18/8/4/4/5/1
+from the 40s up, measured on 6,124 published prospects) **raised** by career
+outcome, raise-only, gap capped at 40 — with the random draw removed per the 2026
+ruling. It works: **Munoz 99, Sims 98, Haynes 90, Monk 90, Green 89** at the top,
+124 of 335 raised, headroom median 8 against a published 5–7.
+
+**1981–83 come from the 2K5 archive, and the archive can carry attributes but
+not membership.** A draftee is a `years_pro==1` man in his rookie-season save
+(1982 is `==2` in 1983-84, there being no 1982-83 save). Anchored — Rogers,
+Taylor, Lott, Easley, Elway, Marino, Dickerson, Matthews all read exactly right,
+and Jim Kelly is *absent* from 1983-84, which is the source knowing he went to
+the USFL. But **`years_pro` is stock junk for a minority of men and that minority
+includes stars**: Kenneth Sims, the **first overall pick of 1982**, reads 4; Curt
+Warner, third in 1983, reads 7; Andre Tippett 7; Earl Cooper reads 11 in one save
+and 5 in the next. Measured against the 1980 listing, the filter reaches **124 of
+the 209 draftees who played**; a first-appearance rule reaches 166, but with no
+1980-81 or 1982-83 save it cannot tell a rookie from a veteran the earlier file
+lacked, and returns a 670-man superset. **That superset is not a class and is not
+used.** The 1982 and 1983 classes therefore ship **without Sims, Warner and
+Tippett**, by name, and `wip/draft_1982_1983_ambiguous.csv` lists every man who
+could be either a junk-`years_pro` 1982/83 rookie or a veteran both earlier saves
+lacked. **Ryan's pending PFR fetch for 1981–83 resolves membership, pick order,
+age and career raise in one pass; until it lands these three are board-rank
+classes with no hidden gems, exactly as the 2026 build's future classes are.**
+
+**Ordering within an archive class**: calibrated attributes through the
+per-position model, **as a percentile within position**. Sorted on raw output the
+top of every class was a punter or kicker. As a pick-order proxy it is good at
+running back, receiver and corner — Rogers #1, Allen #1, Dickerson #2 — and it
+**fails at quarterback**, ranking Elway 62nd and McMahon 78th, because the model's
+veteran-fitted speed and durability terms drown the one QB attribute the archive
+has. **Quarterbacks order on `PassArmStrength` alone**: Marino 92 and Elway 90
+lead 1983, Lomax 93 leads 1981. A per-position exception, stated and self-tested.
+
 ### Still to build
 
-Draft classes 1980-1983, then the face registry, then all gates.
+The face registry, then all gates. The 1981–83 classes are upgraded when the PFR
+pages arrive.
