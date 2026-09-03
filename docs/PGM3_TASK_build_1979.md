@@ -899,12 +899,30 @@ ratio; the engine cap does.
 | payroll spread, max/median | 1.39 | 1.23–1.38 |
 | salary max/median | 7.1 | 17.8–36.9 |
 
-**Stated cost.** Payroll tracks team quality at **r = +0.82** against the
-published **+0.28 to +0.47**. Salary here is a deterministic function of rating,
-position and service, so a good team is expensive with no exceptions. Published
-files are looser because they carry contract noise — old cheap deals, overpaid
-signings. That noise is not manufactured here, on the same principle that removed
-the random draws from the 2026 build.
+**Stated cost, and it was tested rather than assumed.** Payroll tracks team
+quality at **r = +0.82** against the published **+0.28 to +0.47**.
+
+Ryan's instruction was to measure whether **service** explains the published
+spread before accepting a divergence: a veteran on an old deal is a real
+mechanism, and reproducing a real mechanism is faithful where manufacturing
+scatter is not. It was measured, and **it does not.**
+
+Service *is* real and strong in the published six, and it runs the **opposite way
+to the guess** — salary relative to what rating alone predicts rises from **0.79**
+in a player's first year to **1.50** by his seventh. Veterans are paid *above*
+their rating, not below; the modern mechanism is a cheap rookie deal followed by
+free agency, not an old contract going stale. But applying that curve at full
+strength moves the correlation only **+0.82 → +0.77**.
+
+What actually loosens the published files is **contract history the file does not
+record**. Within one file, one service year and a five-point rating band, the p10
+to p90 salary spread is **3.5x** (quartiles 2.0x / 3.5x / 5.4x across 170 cells
+of 25 or more). Two identical players differ threefold in pay. That residual is
+not rating and not service, and it cannot be reproduced without inventing it.
+
+**So the deterministic version stands and the correlation is a stated
+divergence.** The service curve was left out on the era argument as well: 1979 had
+no free agency, so the modern veteran premium had no mechanism to work through.
 
 ### Still to build
 
