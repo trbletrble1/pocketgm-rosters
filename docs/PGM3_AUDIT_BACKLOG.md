@@ -2556,3 +2556,42 @@ Hollway from COCH skin) plus 16 generated men in each of the eight other roles.
 **84 real coaches are left out for want of skin**, listed in
 `wip/staff_pool_1979_faces_unsourced.csv`. A smaller real pool beats a full
 invented one. Faces-staff gate unchanged at 21 / 38 / 40.
+
+---
+
+### 47. Six 2026 men computed above 98 — capped, and the ceiling is now a gate
+
+**Ruled 2026-09-03.** Not a data defect: attributes clamp at 99 but the rating
+computed from them never did, and Folk (accuracy 99 at weight 1.04, power 92 at
+0.59), Lane Johnson, Myles Garrett, Vita Vea, Will Anderson and Micah Parsons
+were elite in exactly the fields their positions weight hardest. No file had
+ever exceeded 98 and the game's own export tops at 98 (potential 99), so the
+ceiling was real and unchecked — **that gap is what let it ship**, and the
+roster gate now checks rating ≤ 98 and potential ≤ 99.
+
+`tools/cap_rating_98.py`: stored rating 98, and enough low-weight attribute
+moved for the formula to compute 98 — lowest |weight| first, in whichever
+direction lowers the rating (a negative weight is raised, not shaved).
+**Bounded**: nothing moves more than 10, and `injuryProne` and `discipline` are
+never touched — the first draft drove Garrett's injuryProne 13 → 99 and Parsons'
+discipline 99 → 1 to buy two points, which is meaningful even at zero rating
+weight. Folk's accuracy and power are untouched. Parsons needed the largest
+footprint (six fields including speed 97 → 87 and tackle 99 → 89) because he
+computed 101.3.
+
+**To verify in-game**, the way the quarterback work was: stored and displayed
+rating should both read 98 for all six.
+
+### DOCUMENTED CHARACTERISTIC — 59-man rosters, by ruling
+
+Our files carry **59.1 men per team against the game's 53**: the active 53 plus
+injured reserve, a deliberate convention already stated in the post. Dropping to
+53 would remove ~190 real players, and the injured are often the good ones.
+**The cost, accepted: a user cuts to 53 on import.**
+
+**Cross-reference — this is the roster-size confound.** It is why every file's
+bottom six per team map onto vanilla's per-position minimum in the contract
+transform, why a second floor pass was needed, and why p10 lands at $0.65M on
+the three deepest files against the game's $0.70M (item 37). It is also why
+top-53 is the project's payroll basis and full-roster totals run higher. One
+characteristic, several symptoms; do not investigate them separately.

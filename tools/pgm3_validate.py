@@ -144,6 +144,11 @@ def check_roster(new, refs):
                 sum(1 for p in new for k in NUM if k not in MONEY and not 0 <= p[k] <= 99)))
 
     # --- growth
+    # THE CEILING, checked rather than assumed (2026-09-03). Attributes clamp at 99
+    # but the computed rating never did; six 2026 men shipped at 99-100. No file
+    # has ever exceeded 98 and the game's own export tops at 98 (potential 99).
+    out.append(('rating above 98 (no file or the game has ever exceeded it)', sum(1 for p in new if p['rating'] > 98)))
+    out.append(('potential above 99 (the game\'s maximum)', sum(1 for p in new if p['potential'] > 99)))
     out.append(('growthType length != 31', sum(1 for p in new if len(p['growthType']) != 31)))
     # 50x applies in EVERY cohort. A fresh game export shows veterans obeying
     # it 0% of the time — their curve is a career arc whose positive portion
