@@ -2559,28 +2559,26 @@ invented one. Faces-staff gate unchanged at 21 / 38 / 40.
 
 ---
 
-### 47. Six 2026 men computed above 98 — capped, and the ceiling is now a gate
+### 47. The 98 ceiling was wrong — REVERTED the same day; the ceiling is 99
 
-**Ruled 2026-09-03.** Not a data defect: attributes clamp at 99 but the rating
-computed from them never did, and Folk (accuracy 99 at weight 1.04, power 92 at
-0.59), Lane Johnson, Myles Garrett, Vita Vea, Will Anderson and Micah Parsons
-were elite in exactly the fields their positions weight hardest. No file had
-ever exceeded 98 and the game's own export tops at 98 (potential 99), so the
-ceiling was real and unchecked — **that gap is what let it ship**, and the
-roster gate now checks rating ≤ 98 and potential ≤ 99.
+**Ruled and reverted 2026-09-03.** Six 2026 men computed above 98 and were capped
+at 98 on the premise that no file and not the game had ever exceeded it. **The
+premise was the snapshot, not the engine.** Ryan loaded 2026: Lane Johnson (98 in
+our file), Jalen Ramsey and Pat Surtain (never in the six) all read **99** in
+game, and men reach 99 in normal play. A week-one vanilla league has nobody at 99
+because nobody has developed yet. **Fifth instance this session of reading our
+data's shape as the engine's rule** — see the precedent.
 
-`tools/cap_rating_98.py`: stored rating 98, and enough low-weight attribute
-moved for the formula to compute 98 — lowest |weight| first, in whichever
-direction lowers the rating (a negative weight is raised, not shaved).
-**Bounded**: nothing moves more than 10, and `injuryProne` and `discipline` are
-never touched — the first draft drove Garrett's injuryProne 13 → 99 and Parsons'
-discipline 99 → 1 to buy two points, which is meaningful even at zero rating
-weight. Folk's accuracy and power are untouched. Parsons needed the largest
-footprint (six fields including speed 97 → 87 and tackle 99 → 89) because he
-computed 101.3.
+All six restored byte-for-byte from the pre-cap commit (a95c793). Parsons is the
+one that mattered: the shave took speed 97 → 87 on a pass rusher and overshot
+anyway — he read 97 in game against the 98 aimed at.
 
-**To verify in-game**, the way the quarterback work was: stored and displayed
-rating should both read 98 for all six.
+**The gate keeps a ceiling at 99**: reached in game, legitimate. 100 is seen
+nowhere and is caught. **Open**: after the revert Folk, Lane Johnson and Garrett
+carry a STORED rating and potential of 100, which the 99 gate fails. Ruling
+needed — a stored-only clamp to 99 with no attribute moved would clear it (the
+game computes from attributes and displays 99 regardless), but that touches
+values just ruled restored.
 
 ### DOCUMENTED CHARACTERISTIC — 59-man rosters, by ruling
 

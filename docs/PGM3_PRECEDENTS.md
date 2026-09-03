@@ -4692,3 +4692,16 @@ Each time the supplied number was true, and each time it was a symptom of a
 larger defect it could not see. **Measure the population before scoping the fix,
 and report the population beside the supplied count** — "282, of which your 96"
 — so the gap is visible and nobody plans against the smaller number.
+
+---
+
+## A snapshot's maximum is not the engine's ceiling — the fifth instance
+
+**2026-09-03.** Our ten files top at rating 98; the game's week-one export tops at
+98. A cap at 98 was inferred and applied to six men. Ryan loaded the file and
+three men read 99 — one of ours at 98, two never touched. A fresh league has
+nobody at 99 because nobody has developed yet: **the maximum of a snapshot is a
+fact about when the snapshot was taken.** Reverted the same day. The rule from
+the earlier precedent stands and gets a corollary: **a game-generated file
+supports a claim about what the engine PRODUCES at that moment, not about what
+it permits.** Play, or a simmed-forward export, is the evidence for a ceiling.
