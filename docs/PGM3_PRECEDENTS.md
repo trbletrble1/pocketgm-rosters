@@ -4368,3 +4368,22 @@ built, the ratio is **1.14**, mid-band.
 The label work was not wasted; it found two real errors. But **check that a
 failing aggregate was computed over the population you are shipping** before
 concluding the data is wrong. Sibling of "read the names inside the number."
+
+---
+
+## A gate must measure the population the file will contain, not the population the source contains
+
+**Ruled by Ryan, 2026-09-02.** The 1979 CB/S gate read 1.02 against a published
+band of 1.06-1.30 and triggered three arbitration passes. It was computed over
+the mod's own 28 rosters. Over the 1,408-player spine the file is actually built
+from, the same source reads **1.17** — mid-band. The mod carries 44 men who were
+not on a 1979 roster, 13 safeties against 3 corners, and they were the whole
+discrepancy.
+
+Same class as the OLB coverage write: **a check run on a cohort adjacent to the
+one being shipped.** Before escalating a gate, state which population it was
+computed over and confirm it is the one going into the file.
+
+The passes earned their place regardless — they found Lawrence Johnson at corner
+and Ricky Jones at outside linebacker. **A binary escalation cannot surface a
+third option**; only reading the roster did.
