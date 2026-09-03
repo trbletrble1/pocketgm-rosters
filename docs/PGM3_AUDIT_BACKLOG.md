@@ -2709,3 +2709,13 @@ asking $5.49M/3. No free-agent record touched. Staff gate ALL CLEAR on 1979;
 2000 its pre-existing item 44. Sweep clean.
 
 `tools/fix_staff_sitting.py`.
+
+**Confirmed in play, with a display note for the record.** Ryan's screenshots
+show the game reads `eSalary` and displays it — nothing is computed at runtime —
+so the going-rate asks display. The earlier free-agent screens had "Free Only"
+unchecked and were mixing sitting coaches in (B. Ayers at $11.9M on 4 years is an
+employed head coach); checked, vanilla shows 16 free agents at 61–64 asking
+$0.2–0.4M, matching the export. **The game scales the stored value on display**:
+the export stores a flat $0.2M for all 144 and the screen shows $0.4M, $0.3M and
+$0.2M. Our going-rate numbers will be scaled the same way, so the displayed figure
+will not equal the stored one. Does not change the fix.
