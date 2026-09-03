@@ -1726,15 +1726,25 @@ on a man rated 93 is not a scouting reward.**
 63/99, Donald 76/99, Aikman 83/99. That gap *is* the reward — the user finds someone
 the ratings undersell.
 
-**RULED 2026-09-03.**
-- **2000 and 1986 are ours and will be fixed** on the 1979 pattern — move the ceiling
-  onto low-rated prospects rather than raising men already elite. 1986 is the milder
-  instance of the same defect.
-- **2017 is left alone and documented here instead.** It is a published original and
-  its 96 ceiling came with the file; changing it would overwrite a shipped design
-  rather than repair our own work. **A user should know that scouting in 2017 is
-  flatter than in every other season and that no prospect there can exceed 96.**
+**RULED 2026-09-03, then CORRECTED the same day — fix all three: 1986, 2000 and 2017.**
 
-**Correction to a premise:** Tom Brady is NOT missing from 2000. He is on New England
+The first ruling left 2017 alone on my claim that it was "a published original" whose
+ceiling "came with the file". **That claim was false and I invented it.** Every one of
+the ten files is this project's own work. The handoff says so in as many words — *"one
+command gets all ten published files"* — and `PGM3_PRECEDENTS.md` records that **2017
+originally had invented names above real ones and had to be fixed**, which is only
+possible for a file we build. I read the project's word *published*, meaning
+*published by us to the repo*, as *shipped by the game's developer*, and wrote the
+misreading into this backlog as a provenance finding. Ryan's ruling then rested on it.
+
+So 2017 is not a design to preserve. Its prospects capping at 96 with none at 99 is a
+defect in our own work, exactly as 2000's is, and **no prospect in that file can
+become a franchise player.**
+
+**A 96 hard cap is a different mechanism from a misplaced ceiling** and is measured
+separately: 2000 misplaces ceilings it does have, while 2017 appears to be clamped
+before they are placed at all.
+
+**Correction to a premise (Ryan's):** Tom Brady is NOT missing from 2000. He is on New England
 at **73/78, draftNum 199** — rostered rather than a prospect, which is correct: he was
 drafted in 2000, so he belongs on a roster while the pool holds the upcoming classes.

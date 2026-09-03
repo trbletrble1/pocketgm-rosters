@@ -4525,3 +4525,32 @@ change should produce a one-line diff. Both write tools now pass
 `separators=(', ', ': ')`, and the semantic diff — records added, fields changed —
 is printed alongside, so the two can be compared.
 
+
+
+---
+
+## Do not assert provenance from a word you have not checked the meaning of
+
+**2026-09-03.** Asked which prospect-ceiling defects were ours, I reported that
+2004, 2007, 2010, 2013, 2017 and 2021 were "published originals" and 1986, 2000,
+2026 and 1979 were ours. **The first half was invented.** All ten files are this
+project's own work.
+
+The error was reading one word two ways. This project says *published* to mean
+*published by us to the repo* — the handoff's own sentence is **"one command gets
+all ten published files"** — and I read it as *shipped by the game's developer*.
+Nothing in the record ever claimed 2017 was inherited. `PGM3_PRECEDENTS.md` in fact
+records that **2017 originally had invented names above real ones and had to be
+fixed**, which is only possible for a file we build; I had the disproof in the same
+document I was writing into.
+
+**It changed a decision.** Ryan ruled to leave 2017 alone *because* it was
+inherited, and the ruling rested entirely on my claim. A false provenance statement
+is worse than a wrong measurement: a measurement gets re-run, while provenance is
+taken on trust and then cited.
+
+**Rule: provenance is a claim like any other and needs a source.** Before saying a
+file, field or convention came from somewhere, point at the thing that says so. And
+when a project word carries a specific local meaning — *published*, *donor*,
+*vanilla*, *archive* — check which sense the record is using rather than the sense
+it has elsewhere.
