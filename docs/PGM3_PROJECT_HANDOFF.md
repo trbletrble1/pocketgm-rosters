@@ -301,6 +301,28 @@ Important refinement: position-specific attributes (QB accuracy, kick accuracy, 
 
 ---
 
+## `draftSeason` is a GAME-CLOCK field, not a historical one — READ THIS BEFORE MEASURING EXPERIENCE
+
+Every roster file, however old the season it depicts, carries `draftSeason` on
+the **2026 game clock**. The 2004 file's rostered players read **2007 to 2026**.
+The 1986 and 2000 files behave the same way. There is no file in which
+`draftSeason` is the real draft year.
+
+**Therefore:**
+
+    years_pro = 2026 - x['draftSeason']          # correct, in EVERY file
+    years_pro = int(file_year) - x['draftSeason'] # WRONG, and silently empty
+
+The wrong form is negative for **100% of the 2004 roster**, so any filter of the
+shape `if 0 <= yrs <= 12` drops the whole file without raising anything. A
+headroom curve computed that way rested on **243 players instead of 1,990** and
+looked entirely plausible — the buckets were populated, the medians were
+sensible, nothing was empty.
+
+This project keeps asking experience questions: potential curves, rookie cohorts,
+contract length by service time, growth. **Derive experience from the game clock
+every time, and state which population the measurement ran over.**
+
 ## Rating mechanics
 
 **The game recomputes overall from attributes.** The stored `rating` field is display only. Changing a rating without refitting attributes does nothing in-game.

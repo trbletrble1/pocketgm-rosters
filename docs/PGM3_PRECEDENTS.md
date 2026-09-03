@@ -4387,3 +4387,26 @@ computed over and confirm it is the one going into the file.
 The passes earned their place regardless — they found Lawrence Johnson at corner
 and Ricky Jones at outside linebacker. **A binary escalation cannot surface a
 third option**; only reading the roster did.
+
+
+---
+
+## When a new measurement contradicts an old one on the same data, the contradiction is the signal
+
+The 1979 potential curve was computed from the published six and the 2017 column
+came out **all zeros**. The 2026 build had used **6/4/2** from that same file, on
+that same field. Nothing failed: the buckets were populated, the medians were
+plausible, no assert fired and no test existed that would have caught it.
+
+The defect was that `draftSeason` sits on the 2026 game clock in every file, so
+*(file year − draftSeason)* is negative for 100% of the 2004 roster and the
+filter dropped it. The curve rested on 243 players instead of 1,990.
+
+**What caught it was disagreement with our own prior work, not a test.** Both
+numbers came from the same file and the same field, so one of them had to be
+wrong. That is a stronger signal than plausibility, and it is available for free
+whenever a measurement has been made before — so **when you re-measure something
+the project has already measured, compare against the old number and treat any
+gap as a defect until you know which side it is on.**
+
+Ryan's framing: *one of them is wrong, and the contradiction is the signal.*
