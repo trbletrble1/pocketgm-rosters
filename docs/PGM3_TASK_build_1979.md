@@ -1330,9 +1330,59 @@ the file, which is the honest consequence of rating on winning percentage. It is
 overridden: the coordinator term exists to inform the ALLOCATION, which it just did,
 not to rewrite the rating. Raising him is a separate ruling.
 
-**Jacksonville and Indianapolis wait on tier 3.** Jacksonville needs a Southern
-college man. Indianapolis needs a young first-timer, and the 99-man pool **cannot
-supply one by construction** — every man in it has already been an NFL head coach. A
-college coach who never coached professionally is a first-time NFL head coach by
-definition, which is exactly the shape the doctrine asks for.
+**Jacksonville — Pat Dye, 50.** Nine years under Bryant at Alabama, then East
+Carolina, 7-3-1 in 1979. Southern, unproven at the top level, cheap — the ownership's
+own profile. He later built Auburn, which makes the bet look good in hindsight
+without the file pretending to know it.
+
+**Indianapolis — John Madden, 95.** He retired in January 1979 at 42 — ulcer,
+burnout, a fear of flying — on 103-32-7, the best record of any coach with 100 games,
+and was universally assumed to be finished. What gets him back is not money or a
+contender: it is a job with no pressure, a brand new team in a city with no football
+where losing in year one is expected, and the league's most central city, which is
+the shortest travel for a man who will not fly.
+
+That reframes the franchise slightly — from *a young coach getting a chance* to *a
+great coach who needed somewhere with no expectations*. **The roster logic is
+untouched**: still patient, still carrying the injured stars nobody else will.
+
+**Two roster consequences, and only two.** Willie Brown was already an Indianapolis
+Racer — a Hall of Fame corner who played his last season for Madden in 1978, placed
+there by the doctrine before Madden was in the picture. And **Clarence Davis is added
+from the free agent pool**: Madden's starting back in the Super Bowl season, 29,
+rating 67. An addition, not a raid on another franchise.
+
+**Nobody else moves, deliberately.** Seven more former Raiders sit across the four
+teams and the pool — Sistrunk and Hall at Memphis, Biletnikoff, Ginn and Banaszak at
+Charlotte, Mann and Watts at Jacksonville. Leaving them there is the point: the
+doctrines placed everyone, and assembling a Raiders reunion would be designing the
+rosters instead of letting them fall out.
+
+### The college band, and why there is no mapping
+
+**Ruled: hold college men in a lower band, reason stated.** Pat Dye's 50 is that
+band. The reason is measured, not assumed:
+
+- **47 clean pairs** of men who were head coaches in both college and the NFL —
+  far more than the four expected. College winning percentage correlates with NFL
+  winning percentage at **r = +0.11**, and **+0.08** restricted to men whose NFL
+  careers ended by 1985. It explains about one percent. This is not a sample
+  problem; the sample is adequate and there is no relationship to fit.
+- **A contamination found before it was reported.** Eight of the original 55 had a
+  "college" record identical to their NFL one, because the infobox field holds
+  whichever career the article treats as primary — Arnsparger's read 7-28, his NFL
+  record, not his 26-8-2 at LSU. Removing them took r from +0.19 to +0.11: the
+  contamination was inflating the relationship.
+- **The pairs cannot extrapolate downward.** They bottom out at **.273** in college
+  with only five below .400, because a coach who lost badly in college never got an
+  NFL job and so never became a pair. Even a real relationship could not reach the
+  part of the distribution most college hires occupy.
+
+It suits the doctrine anyway: an unproven college hire should rate low, and
+Jacksonville's whole identity is signing cheap and unproven.
+
+**A distinction recorded rather than resolved.** The player pool was men *genuinely
+out of football*. Hiring Dye takes him off a job he currently holds — poaching an
+employed man, not signing an available one. That is historically normal for an
+expansion team, and it is a different act.
 - ~~The two era teams~~ — ruled: left as they were, `--era` added.

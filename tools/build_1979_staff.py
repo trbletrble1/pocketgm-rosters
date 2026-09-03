@@ -35,6 +35,46 @@ import importlib.util as _ilu
 _rs=_ilu.spec_from_file_location('_r', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'build_1979_ratings.py')); _R=_ilu.module_from_spec(_rs); _rs.loader.exec_module(_R)
 
 
+# THE FOUR FRANCHISE HEAD COACHES, named by Ryan 2026-09-03. Real men, and each
+# is the franchise's doctrine in a person.
+#
+#   Memphis      George Allen 93     'the future is now' was literally his
+#                                    philosophy; he traded picks for veterans
+#                                    relentlessly and never had a losing season.
+#   Charlotte    Bill Arnsparger 40  bottom seventh of the pool on his head-
+#                                    coaching record, top fifth on what his
+#                                    defences did. The rating tension is LEFT:
+#                                    40 makes him the lowest-rated coach in the
+#                                    file, which is the honest consequence of
+#                                    rating on winning percentage. The
+#                                    coordinator term informed the ALLOCATION,
+#                                    not the rating.
+#   Jacksonville Pat Dye 50          nine years under Bryant at Alabama, then
+#                                    East Carolina, 7-3-1 in 1979. Southern,
+#                                    unproven at the top level, cheap.
+#   Indianapolis John Madden 95      retired January 1979 at 42 — ulcer, burnout,
+#                                    fear of flying — on 103-32-7, the best record
+#                                    of any coach with 100 games. What gets him
+#                                    back is not money: it is a job where losing
+#                                    in year one is expected, in the league's most
+#                                    central city, which is the shortest travel
+#                                    for a man who will not fly.
+#
+# PAT DYE'S 50 IS THE COLLEGE BAND, and the reason is measured. Across 47 clean
+# pairs of men who coached in both, college winning percentage correlates with
+# NFL winning percentage at r = +0.11 (+0.08 within the era). It explains about
+# one percent. Nor can the pairs extrapolate downward: they bottom out at .273
+# with five below .400, because a coach who lost badly in college never got an
+# NFL job and so never became a pair. So college men take the same lower-band
+# disposition as a man whose record is too short to rank — and it suits the
+# doctrine, since Jacksonville's identity is signing cheap and unproven.
+#
+# NOTE THE DISTINCTION, unresolved on purpose: the player pool was men genuinely
+# out of football, while hiring Dye takes him off a job he holds. That is
+# historically normal for an expansion team and it is a different act.
+NAMED = {'TEN': ('George Allen', 93, 61), 'CAR': ('Bill Arnsparger', 40, 53),
+         'JAX': ('Pat Dye', 50, 40), 'IND': ('John Madden', 95, 43)}
+
 ROLES = ['Head Coach', 'Off Co-ord', 'Def Co-ord', 'Special Teams', 'Head Scout',
          'Off Scout', 'Def Scout', 'Head Physio', 'Assistant Physio']
 TEAMID = {'TEN': 'TEN', 'CAR': 'CAR', 'JAX': 'JAX', 'IND': 'IND', 'ATL': 'ATL', 'BAL': 'BAL', 'BUF': 'BUF', 'CHI': 'CHI', 'CIN': 'CIN',
@@ -93,7 +133,9 @@ def main():
     # kind — they did not exist. Every one of their 36 is generated and flagged,
     # exactly as the scouts and physios of the real teams are. Rostering real
     # players who were out of football is one thing; putting a real coach into a
-    # job he never held is another, and it is not done here. Ryan may name them.
+    # job he never held is another, and it was not done here — until Ryan named
+    # the four head coaches himself on 2026-09-03. See NAMED. The other 32 staff
+    # on these franchises remain generated and flagged.
     for code, nm in (('TEN', 'Memphis Southmen'), ('CAR', 'Charlotte Hornets'), ('JAX', 'Jacksonville Sharks'), ('IND', 'Indianapolis Racers')):
         src.append(dict(team=code, head_coach='', born='', w1979='', l1979='', t1979='', wiki_off_coord='', wiki_def_coord='', wiki_special_teams='', wiki_personnel='', _invented=nm))
     coch = {x['CLNA']: x for x in csv.DictReader(open(_R.dump_path('n79', 'COCH')))}
@@ -132,6 +174,9 @@ def main():
             t = x['team']
             if role == 'Head Coach' and not x.get('_invented'):
                 name, rating, age, real = x['head_coach'], hc_rating[i], 1979 - int(x['born']), 'sourced'
+            elif role == 'Head Coach' and t in NAMED:
+                nm_, rt_, ag_ = NAMED[t]
+                name, rating, age, real = nm_, rt_, ag_, 'named by Ryan'
             elif role == 'Head Coach':
                 h = int(hashlib.md5(f'{t}HC'.encode()).hexdigest(), 16)
                 name, rating, age, real = f'{fores[h % len(fores)]} {surs[(h // 7) % len(surs)]}', hc_rating[i], 38 + h % 20, 'invented (expansion franchise)'

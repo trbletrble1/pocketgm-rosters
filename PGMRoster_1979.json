@@ -41463,7 +41463,7 @@
   "eSalary": 2704601,
   "eGuarantee": 162276,
   "eLength": 1,
-  "greed": 86,
+  "greed": 87,
   "loyalty": 87,
   "ambition": 90,
   "draftNum": 224,
@@ -50872,7 +50872,7 @@
   "eGuarantee": 247993,
   "eLength": 3,
   "greed": 83,
-  "loyalty": 82,
+  "loyalty": 83,
   "ambition": 88,
   "draftNum": 224,
   "draftSeason": 2025,
@@ -60850,11 +60850,11 @@
    "Clothes1"
   ],
   "salary": 10028323,
-  "guarantee": 2105948,
-  "length": 4,
+  "guarantee": 3309347,
+  "length": 5,
   "eSalary": 10028323,
-  "eGuarantee": 2105948,
-  "eLength": 4,
+  "eGuarantee": 3309347,
+  "eLength": 5,
   "greed": 20,
   "loyalty": 15,
   "ambition": 33,
@@ -91480,7 +91480,7 @@
   "eGuarantee": 890573,
   "eLength": 2,
   "greed": 85,
-  "loyalty": 85,
+  "loyalty": 86,
   "ambition": 90,
   "draftNum": 224,
   "draftSeason": 2023,
@@ -94169,7 +94169,7 @@
   "eLength": 3,
   "greed": 85,
   "loyalty": 85,
-  "ambition": 89,
+  "ambition": 90,
   "draftNum": 224,
   "draftSeason": 2025,
   "teamNum": 31,
@@ -94359,7 +94359,7 @@
   "eSalary": 6398817,
   "eGuarantee": 511905,
   "eLength": 3,
-  "greed": 85,
+  "greed": 86,
   "loyalty": 86,
   "ambition": 90,
   "draftNum": 224,
@@ -99257,7 +99257,7 @@
   "eLength": 2,
   "greed": 87,
   "loyalty": 88,
-  "ambition": 90,
+  "ambition": 91,
   "draftNum": 224,
   "draftSeason": 2025,
   "teamNum": 48,
@@ -104439,7 +104439,7 @@
   "eSalary": 8463814,
   "eGuarantee": 2793059,
   "eLength": 5,
-  "greed": 84,
+  "greed": 85,
   "loyalty": 83,
   "ambition": 89,
   "draftNum": 224,
@@ -148892,7 +148892,7 @@
   "ambition": 83,
   "draftNum": 224,
   "draftSeason": 2023,
-  "teamNum": 34,
+  "teamNum": 35,
   "iden": "A2946CCB-1D8D-1A45-0D86-4A57A8431842"
  },
  {
@@ -149084,7 +149084,7 @@
   "ambition": 88,
   "draftNum": 224,
   "draftSeason": 2016,
-  "teamNum": 38,
+  "teamNum": 39,
   "iden": "CE5A4F1F-E15D-D2A9-23F6-8B045CE0E83F"
  },
  {
@@ -149276,7 +149276,7 @@
   "ambition": 86,
   "draftNum": 224,
   "draftSeason": 2023,
-  "teamNum": 40,
+  "teamNum": 41,
   "iden": "BB5DEE4C-2EBC-8094-C4EB-5BFA2A501F84"
  },
  {
@@ -150140,7 +150140,7 @@
   "ambition": 79,
   "draftNum": 224,
   "draftSeason": 2017,
-  "teamNum": 28,
+  "teamNum": 29,
   "iden": "837BC7B8-CEC6-998A-80C4-CAB62FAEA4B3"
  },
  {
@@ -150332,7 +150332,7 @@
   "ambition": 75,
   "draftNum": 224,
   "draftSeason": 2025,
-  "teamNum": 32,
+  "teamNum": 33,
   "iden": "6EB5FAF3-A92E-FBCD-AB1A-469B133C66AB"
  },
  {
@@ -150428,7 +150428,7 @@
   "ambition": 6,
   "draftNum": 224,
   "draftSeason": 2025,
-  "teamNum": 36,
+  "teamNum": 37,
   "iden": "038D1EAA-35BC-6940-6EB0-1D9622F4CF41"
  },
  {
@@ -150524,7 +150524,7 @@
   "ambition": 88,
   "draftNum": 224,
   "draftSeason": 2024,
-  "teamNum": 33,
+  "teamNum": 34,
   "iden": "D0DB7265-A6F8-57D3-BC4D-2984A67ADFD1"
  },
  {
@@ -150620,7 +150620,7 @@
   "ambition": 67,
   "draftNum": 224,
   "draftSeason": 2023,
-  "teamNum": 30,
+  "teamNum": 31,
   "iden": "5276DD98-03A8-AD7C-CC80-876294011BCA"
  },
  {
@@ -150711,12 +150711,12 @@
   "eSalary": 2824374,
   "eGuarantee": 169462,
   "eLength": 1,
-  "greed": 87,
+  "greed": 88,
   "loyalty": 88,
   "ambition": 91,
   "draftNum": 224,
   "draftSeason": 2023,
-  "teamNum": 31,
+  "teamNum": 32,
   "iden": "E19ED73C-8B19-B596-CDC4-195F8180025E"
  },
  {
@@ -150812,7 +150812,7 @@
   "ambition": 37,
   "draftNum": 224,
   "draftSeason": 2020,
-  "teamNum": 37,
+  "teamNum": 38,
   "iden": "26F16CE4-AF90-8FB0-9526-4623F573B13C"
  },
  {
@@ -150908,7 +150908,7 @@
   "ambition": 8,
   "draftNum": 224,
   "draftSeason": 2025,
-  "teamNum": 35,
+  "teamNum": 36,
   "iden": "05F9181D-D99C-6FA4-EB22-0A1BAE6CE83A"
  },
  {
@@ -151004,7 +151004,7 @@
   "ambition": 41,
   "draftNum": 224,
   "draftSeason": 2025,
-  "teamNum": 42,
+  "teamNum": 43,
   "iden": "2B0FAF52-C4A2-158C-2935-CB8151F28564"
  },
  {
@@ -151196,7 +151196,7 @@
   "ambition": 89,
   "draftNum": 224,
   "draftSeason": 2023,
-  "teamNum": 41,
+  "teamNum": 42,
   "iden": "D76CC619-7A3D-7365-F9F8-4F0C1D92D40C"
  },
  {
@@ -151292,7 +151292,7 @@
   "ambition": 87,
   "draftNum": 224,
   "draftSeason": 2021,
-  "teamNum": 29,
+  "teamNum": 30,
   "iden": "C0AABC6B-6622-97CF-38AE-56C89BFF3136"
  },
  {
@@ -151388,7 +151388,7 @@
   "ambition": 89,
   "draftNum": 224,
   "draftSeason": 2021,
-  "teamNum": 45,
+  "teamNum": 46,
   "iden": "D8EB5E82-37B0-3859-1B20-1A47510A2F85"
  },
  {
@@ -151484,7 +151484,7 @@
   "ambition": 69,
   "draftNum": 224,
   "draftSeason": 2024,
-  "teamNum": 43,
+  "teamNum": 44,
   "iden": "59F6F9C6-7DEE-9A8E-512A-D23616B740FD"
  },
  {
@@ -151580,7 +151580,7 @@
   "ambition": 78,
   "draftNum": 224,
   "draftSeason": 2024,
-  "teamNum": 44,
+  "teamNum": 45,
   "iden": "7FD8FFA1-2ED6-D952-8A3C-A49A0B228447"
  },
  {
@@ -151676,7 +151676,7 @@
   "ambition": 9,
   "draftNum": 224,
   "draftSeason": 2023,
-  "teamNum": 46,
+  "teamNum": 47,
   "iden": "06F2EF09-9E1A-589F-9C71-62391A72526F"
  },
  {
@@ -151868,7 +151868,7 @@
   "ambition": 88,
   "draftNum": 224,
   "draftSeason": 2025,
-  "teamNum": 39,
+  "teamNum": 40,
   "iden": "D349C6C7-1DFE-1454-9B8D-CE37ADF5B44B"
  },
  {
@@ -153825,7 +153825,7 @@
   "forename": "Clarence",
   "surname": "Davis",
   "position": "RB",
-  "teamID": "Free Agent",
+  "teamID": "IND",
   "age": 29,
   "rating": 67,
   "potential": 67,
@@ -153863,29 +153863,29 @@
    0
   ],
   "appearance": [
-   "Head4a",
-   "Eyes1c",
-   "Hair1q",
-   "Beard1g",
-   "Eyebrows1a",
-   "Nose4b",
-   "Mouth4a",
+   "Head5a",
+   "Eyes1b",
+   "Hair1s",
+   "Beard1f1",
+   "Eyebrows1b",
+   "Nose5b",
+   "Mouth5a",
    "Glasses1e",
-   "Clothes2"
+   "Clothes1"
   ],
-  "salary": 0,
-  "guarantee": 0,
-  "length": 0,
-  "eSalary": 0,
-  "eGuarantee": 0,
-  "eLength": 0,
-  "greed": 89,
-  "loyalty": 89,
-  "ambition": 91,
+  "salary": 4193255,
+  "guarantee": 251595,
+  "length": 1,
+  "eSalary": 4193255,
+  "eGuarantee": 251595,
+  "eLength": 1,
+  "greed": 83,
+  "loyalty": 82,
+  "ambition": 88,
   "draftNum": 224,
   "draftSeason": 2018,
-  "teamNum": 0,
-  "iden": "E533A94B-B946-EA10-3F15-7A8F3B7FF75F"
+  "teamNum": 28,
+  "iden": "D0CD4DF2-3961-F1CB-D435-F5848E59215C"
  },
  {
   "speed": 72,
@@ -164824,7 +164824,7 @@
   "eGuarantee": 0,
   "eLength": 0,
   "greed": 85,
-  "loyalty": 83,
+  "loyalty": 84,
   "ambition": 89,
   "draftNum": 1,
   "draftSeason": 2027,
@@ -197463,7 +197463,7 @@
   "eSalary": 0,
   "eGuarantee": 0,
   "eLength": 0,
-  "greed": 83,
+  "greed": 84,
   "loyalty": 83,
   "ambition": 88,
   "draftNum": 8,
@@ -207927,7 +207927,7 @@
   "eSalary": 0,
   "eGuarantee": 0,
   "eLength": 0,
-  "greed": 88,
+  "greed": 89,
   "loyalty": 89,
   "ambition": 91,
   "draftNum": 117,
@@ -215801,7 +215801,7 @@
   "eLength": 0,
   "greed": 84,
   "loyalty": 83,
-  "ambition": 88,
+  "ambition": 89,
   "draftNum": 199,
   "draftSeason": 2028,
   "teamNum": 0,
@@ -225592,7 +225592,7 @@
   "eGuarantee": 0,
   "eLength": 0,
   "greed": 88,
-  "loyalty": 88,
+  "loyalty": 89,
   "ambition": 91,
   "draftNum": 15,
   "draftSeason": 2029,
@@ -239416,7 +239416,7 @@
   "eGuarantee": 0,
   "eLength": 0,
   "greed": 86,
-  "loyalty": 86,
+  "loyalty": 87,
   "ambition": 90,
   "draftNum": 159,
   "draftSeason": 2029,
@@ -251608,7 +251608,7 @@
   "eGuarantee": 0,
   "eLength": 0,
   "greed": 85,
-  "loyalty": 84,
+  "loyalty": 85,
   "ambition": 89,
   "draftNum": 68,
   "draftSeason": 2030,
@@ -262552,7 +262552,7 @@
   "eGuarantee": 0,
   "eLength": 0,
   "greed": 87,
-  "loyalty": 87,
+  "loyalty": 88,
   "ambition": 90,
   "draftNum": 182,
   "draftSeason": 2030,

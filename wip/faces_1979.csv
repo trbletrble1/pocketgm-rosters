@@ -1601,7 +1601,7 @@ fa_pool,Donnie Green,OT,(free agent pool),Head5c Eyes1b Hair1j Beard1e Eyebrows1
 fa_pool,Jim Carter,MLB,(free agent pool),Head5c Eyes1b Hair2k Beard2e Eyebrows2a Nose5c Mouth5b Glasses1e Clothes1,"PSKI 1 bimodal -> abstain, league prior",0.00,PHCL NFL79,dark
 fa_pool,Al Johnson,RB,(free agent pool),Head1a Eyes1d Hair1b Beard1d Eyebrows1b Nose1d Mouth1a Glasses1e Clothes2,archive season-majority,0.88,PHCL NFL79,light
 fa_pool,Ernie Holmes,DT,(free agent pool),Head5d Eyes1c Hair1g Beard1f2 Eyebrows1b Nose5a Mouth5b Glasses1e Clothes2,archive all-time tiebreak,1.00,PHCL NFL79,dark
-fa_pool,Clarence Davis,RB,(free agent pool),Head4a Eyes1c Hair1q Beard1g Eyebrows1a Nose4b Mouth4a Glasses1e Clothes2,archive all-time tiebreak,1.00,PHCL NFL79,dark
+franchise,Clarence Davis,RB,Indianapolis Racers,Head5a Eyes1b Hair1s Beard1f1 Eyebrows1b Nose5b Mouth5a Glasses1e Clothes1,archive all-time tiebreak,1.00,PHCL NFL79,dark
 fa_pool,Ken Geddes,OLB,(free agent pool),Head5c Eyes1a Hair1f Beard1f1 Eyebrows1a Nose5a Mouth5a Glasses1e Clothes2,"PSKI 1 bimodal -> abstain, league prior",0.00,PHCL NFL79,dark
 fa_pool,Rocky Freitas,OT,(free agent pool),Head3d Eyes1b Hair1n Beard1f1 Eyebrows1b Nose3b Mouth3a Glasses1e Clothes1,archive all-time tiebreak,1.00,PHCL NFL79,light
 fa_pool,Bob Babich,MLB,(free agent pool),Head5c Eyes1d Hair3a Beard3c Eyebrows3b Nose5b Mouth5b Glasses1e Clothes2,"PSKI 1 bimodal -> abstain, league prior",0.00,PHCL NFL79,dark
@@ -2809,10 +2809,10 @@ staff,Bill Walsh,Head Coach,SF,Head1c Eyes1d Hair6g Beard6g Eyebrows6a Nose1d Mo
 staff,Bud Wilkinson,Head Coach,STL,Head2a Eyes1e Hair1b Beard1e Eyebrows1a Nose2d Mouth2a Glasses1a Clothes1,"generated (staff vocabulary, league prior)",0.00,generated,light
 staff,John McKay,Head Coach,TB,Head2c Eyes1e Hair6j Beard6d Eyebrows6b Nose2a Mouth2a Glasses1a Clothes1,registry staff_faces_1986,1.00,registry,light
 staff,Jack Pardee,Head Coach,WAS,Head2c Eyes1d Hair6a Beard6g Eyebrows6a Nose2b Mouth2b Glasses1a Clothes1,registry staff_faces_1986,1.00,registry,light
-staff,Monte Pear,Head Coach,TEN,Head1a Eyes1e Hair2b Beard2c Eyebrows2a Nose1a Mouth1a Glasses1c Clothes2,"generated (staff vocabulary, league prior)",0.00,generated,light
-staff,Max Myer,Head Coach,CAR,Head2b Eyes1a Hair2a Beard2c Eyebrows2b Nose2c Mouth2b Glasses1d Clothes2,"generated (staff vocabulary, league prior)",0.00,generated,light
-staff,Franco Weaver,Head Coach,JAX,Head2b Eyes1e Hair2b Beard2d Eyebrows2a Nose2c Mouth2a Glasses1a Clothes2,"generated (staff vocabulary, league prior)",0.00,generated,light
-staff,Richie Beamon,Head Coach,IND,Head1c Eyes1c Hair5j Beard5c Eyebrows5b Nose1c Mouth1b Glasses1b Clothes2,"generated (staff vocabulary, league prior)",0.00,generated,light
+staff,George Allen,Head Coach,TEN,Head1c Eyes1a Hair3l Beard3g Eyebrows3a Nose1a Mouth1b Glasses1b Clothes2,registry staff_faces,1.00,registry,light
+staff,Bill Arnsparger,Head Coach,CAR,Head1d Eyes1c Hair2j Beard2a Eyebrows2a Nose1b Mouth1b Glasses1c Clothes2,"generated (staff vocabulary, league prior)",0.00,generated,light
+staff,Pat Dye,Head Coach,JAX,Head1b Eyes1a Hair1r2 Beard1e Eyebrows1a Nose1a Mouth1b Glasses1d Clothes2,"generated (staff vocabulary, league prior)",0.00,generated,light
+staff,John Madden,Head Coach,IND,Head2b Eyes1b Hair2d Beard2a Eyebrows2a Nose2b Mouth2b Glasses1e Clothes2,"generated (staff vocabulary, league prior)",0.00,generated,light
 staff,Kevin Thornton,Off Co-ord,ATL,Head5a Eyes1a Hair5i Beard5b Eyebrows5b Nose5c Mouth5b Glasses1e Clothes2,"generated (staff vocabulary, league prior)",0.00,generated,dark
 staff,Elvin Thurman,Off Co-ord,BAL,Head5c Eyes1b Hair3g Beard3f1 Eyebrows3a Nose5d Mouth5b Glasses1d Clothes2,"generated (staff vocabulary, league prior)",0.00,generated,dark
 staff,Garo Whitehurst,Off Co-ord,BUF,Head5d Eyes1a Hair5l Beard5a Eyebrows5a Nose5d Mouth5b Glasses1d Clothes1,"generated (staff vocabulary, league prior)",0.00,generated,dark
