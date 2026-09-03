@@ -43,10 +43,19 @@ SOURCES.
   2000 (2001-04): PFR picks with car_av FILLED FROM NFLVERSE CAREER SPAN, the
         +0.76 substitute for wAV's +0.94. Same mechanism, weaker signal, and the
         file says so. 5 of 1,024 miss the listing and are left as they are.
+  1986 (1987-90), 2021 (2022-25): PFR listings from the pages Ryan saved
+        2026-09-03, 0 misses. 1986 gains modestly (+0.80 -> +0.86) and stays
+        the archive's best file. 2021 gains the most (+0.73 -> +0.91) — WITH
+        THE CAVEAT that its 2025 class carries at most one season of outcome,
+        which is mostly draft slot; per-class ranking stops that class being
+        punished against older ones but cannot make the signal real.
 NOT HERE, by ruling:
-  2007  two of its four classes (2009, 2010) have no listing. Held for the pages.
-  1986, 2021  no listings; nflverse span exists but 1986 is the archive's best
-        file at +0.70 and is not touched on a weaker signal than the others get.
+  2007  its pages exist and every man joins, but the map can place only two
+        thirds of the file — 36% land on the +3 floor — and reaches +0.78, the
+        weakest of the seven. It is also the file closest to vanilla's shape
+        (31% locked, one man at 99), the one property treated as a deliberate
+        divergence elsewhere. Changing it costs its best feature to gain the
+        least. HELD by ruling, with these numbers.
   2026  its classes are 2027 and 2028. No outcome can exist and none is invented.
         Its ceilings are consensus scouting, which is the honest thing for a
         future class.

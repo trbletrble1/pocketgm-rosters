@@ -2210,9 +2210,9 @@ star supply, the measure that matters, does not move.
 
 | file | classes | reason |
 |---|---|---|
-| **2007** | 2008-11 | 2008 and 2011 join 100%; **2009 and 2010 have no listing**. Two of four is too thin. Ryan is saving the two pages. |
-| **1986** | 1987-90 | No listing. nflverse span exists, but 1986 is the archive's best file at +0.70 and is not touched on a weaker signal than the others got. Ryan is saving four pages. |
-| **2021** | 2022-25 | No listing, and the 2025 class has at most one season. Four pages. |
+| ~~1986~~ | 1987-90 | **DONE 2026-09-03** on the saved pages, 0 misses: +0.80 → +0.86, 90+ 2.8% → 2.9%, at 99 12 → 12, 20% floored. Stays the archive's best file. |
+| ~~2021~~ | 2022-25 | **DONE 2026-09-03**, 0 misses: +0.73 → +0.91, the largest gain available; 90+ 3.5% → 3.7%, at 99 8 → 8. **Caveat in the tool**: the 2025 class carries at most one season, mostly draft slot; per-class ranking stops it being punished but cannot make the signal real. |
+| **2007** | 2008-11 | Pages saved, every man joins — and **HELD by ruling with the numbers**: the map places only two thirds of the file (36% land on the +3 floor), reaches +0.78, the weakest of the seven, and 2007 is the file closest to vanilla's shape at 31% locked with one man at 99 — the property treated as a deliberate divergence elsewhere. Changing it costs its best feature to gain the least. |
 | **2026** | 2027-28 | **The game's future. No outcome can exist and none is invented.** Its ceilings are consensus scouting, which is the honest thing for a future class. **Not touched, by ruling.** |
 
 This also resolves the contradiction between this item's "+0.70 for 1986" and the
@@ -2412,8 +2412,28 @@ economy they give p90:p10 of 54x, p10 $0.21M, and 39 stars still under $2M —
 Madden had Zack Baun at $2.4M when he had signed for $17M a year. It is a proxy,
 and a stale one.
 
-**Not fixed.** Contracts are held pending the transform ruling; this item says what
-the placeholders are so the transform is not blamed for them.
+**Source (1) FIXED on 2026, 2026-09-03 — `tools/fix_2026_small_cells.py`.**
+Measured across all ten files first: only 2026 was built with `assign_money` and
+only 2026 shows it. 41 rostered men sit in 22 (position, length) cells of fewer
+than five; 22 of them are under $500K — **10 of 10 singletons, 7 of 14 in cells of
+two, 3 of 9 in three, 2 of 8 in four** — and the other nine files have zero
+sub-$500K men in small cells (theirs are the inherited pool floor). The fix: a
+cell with no rank to preserve is not mapped to a quantile; a man in a cell under
+five whose pay sits below **the game's** median for his position and rating band
+is lifted to it, **lift only** — the man at q = 1 in a cell of two is at worst
+generous, and the first draft's mistake was cutting Maxx Crosby from $37.5M to a
+band median. Vanilla's median, not the file's, because the file's 85+ median is
+the compressed top (source 3) and would have put Josh Allen at $10.5M against
+the game's $20.8M for his band. 26 men lifted: **Allen $0.12M → $43.8M,
+Hutchinson $0.08M → $18.9M, Trey Smith $0.01M → $11.5M**; Madden's value printed
+beside each for the record and not used. `raise_payroll` re-run afterwards puts
+the level back on the game's exactly. Under $500K 115 → 94; 85+/26+/under $2M
+21 → 13. **Sources (2) and (3) remain**: the 94 are the pool floor, and the
+compressed top is item 37's shape question on the eight files not yet
+transformed.
+
+The contract transform is not blamed for any of this; this item says what the
+placeholders are.
 
 ---
 
