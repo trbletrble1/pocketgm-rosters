@@ -1311,5 +1311,28 @@ and the final build was run **with the dumps deleted first** to prove it.
   three classes in one pass; `wip/draft_1982_1983_ambiguous.csv` (174 men, including
   first-rounders Gerald Riggs and Mike Pitts) resolves by name.
 - **A 1958–1979 draft-pick source**: every rostered man carries `draftNum` 224.
-- **The four franchise head coaches** are generated and flagged; Ryan may name them.
+- ~~The four franchise head coaches~~ — **two named 2026-09-03** (below); Jacksonville
+  and Indianapolis wait on tier 3 of the coaching pool.
+
+## The four franchise head coaches — two settled 2026-09-03
+
+**Memphis — George Allen, 93.** "The future is now" was literally his philosophy; he
+traded draft picks for veterans relentlessly and never had a losing season. The coach
+and the doctrine are the same decision. Tier 1, last coached 1977, career 116-47-5.
+
+**Charlotte — Bill Arnsparger, 40.** The coordinator term made the case: bottom
+seventh of the pool on his head-coaching record, top fifth on what his defences did,
+over six seasons. Charlotte's doctrine is a coach whose record was worse than he was,
+and he is the literal instance of it.
+
+**The rating tension is noted and LEFT.** At 40 he is the lowest-rated head coach in
+the file, which is the honest consequence of rating on winning percentage. It is not
+overridden: the coordinator term exists to inform the ALLOCATION, which it just did,
+not to rewrite the rating. Raising him is a separate ruling.
+
+**Jacksonville and Indianapolis wait on tier 3.** Jacksonville needs a Southern
+college man. Indianapolis needs a young first-timer, and the 99-man pool **cannot
+supply one by construction** — every man in it has already been an NFL head coach. A
+college coach who never coached professionally is a first-time NFL head coach by
+definition, which is exactly the shape the doctrine asks for.
 - ~~The two era teams~~ — ruled: left as they were, `--era` added.
