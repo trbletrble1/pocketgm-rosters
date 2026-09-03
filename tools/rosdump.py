@@ -396,8 +396,8 @@ def cmd_check(path):
                 # The discriminator is the MIDDLE value, not the largest. The
                 # largest is supposed to be large — most of the league is dark.
                 if mid > 28:
-                    print(f'        FAIL — {mid:.0f}% on the middle value (>28%). '
-                          f'Field is collapsed; unusable for skin.')
+                    print(f'        {mid:.0f}% on the middle value (>28%). '
+                          f'REJECT at the 28% screen. Files rejected here have scored 57-77% on the anchor: weak, not dead. Run tools/skin_anchor.py before discarding.')
                     ok = False
                 else:
                     dark = sum(v for k, v in dist.items() if k >= 2)
