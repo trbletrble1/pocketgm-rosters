@@ -1,10 +1,20 @@
 #!/usr/bin/env python3
 """
-raise_payroll_2026 — lift 2026's team payroll from the archive's $197.4M toward
-the game's $242.9M. 2026 ONLY; Ryan plays it before the other nine follow.
+raise_payroll — lift a file's team payroll from the archive's $197.4M to the
+game's $242.9M.
 
-  python3 tools/raise_payroll_2026.py --dry-run
-  python3 tools/raise_payroll_2026.py
+  python3 tools/raise_payroll.py 2026 --dry-run
+  python3 tools/raise_payroll.py 1979 1986 2000 2004 2007 2010 2013 2017 2021
+
+2026 went first and RYAN'S PLAY TEST PASSED, 2026-09-03: at week 1 of free agency
+Green Bay had $71M of space against a vanilla league's $87.0M at the same moment.
+Our file is TIGHTER than the game, not looser. The earlier "I could sign five free
+agents" reading was taken against an untouched week-1 market, which a vanilla GM
+can do too — the wrong baseline. That unblocked the other nine.
+
+One real friction, noted and NOT fixed: importing needs low-rated men cut, because
+we carry 59.1 per team against the game's 53.0. That is the injured-reserve
+convention — a one-time annoyance, not an economic defect.
 
 THE TARGET IS MEASURED, THE EXPECTATION IS NOT. Two independently generated fresh
 vanilla leagues — zero shared player identifiers — agree to the dollar: 1,696
@@ -59,9 +69,8 @@ def pos_ratios(ros):
         p[x['position']].append(x['salary'] / md)
     return {k: st.median(v) for k, v in p.items()}
 
-def main():
-    dry = '--dry-run' in sys.argv
-    d = json.load(open(repo('PGMRoster_2026.json')))
+def run(year, dry):
+    d = json.load(open(repo(f'PGMRoster_{year}.json')))
     ros = rostered(d)
     van = rostered(json.load(open(VAN)))
     vpay = sorted(top53(ps) for ps in team_pay(van).values())
@@ -77,8 +86,16 @@ def main():
         cur = before_pay[t]
         k = tgt / cur if cur else 1.0
         for z in by[t]:
-            z['_s'] = int(round(z['salary'] * k))
+            # Round the TOTAL, then split, so the transform is monotone in
+            # salary+guarantee. Rounding the two parts independently let a pair
+            # that was EXACTLY TIED before come out $1 apart after, which the
+            # pairwise guard correctly refused: 652 such pairs in 2007, 98 in
+            # 2004, 0 in 1979/2017/2026. Every one had a before-gap of $0 (2013
+            # had a single $1 pair). No man's real position moved; the arithmetic
+            # was breaking ties. This way ordering is EXACT on all ten files.
+            tot_z = int(round((z['salary'] + z['guarantee']) * k))
             z['_g'] = int(round(z['guarantee'] * k))
+            z['_s'] = tot_z - z['_g']
         got = sum(sorted((z['_s'] + z['_g'] for z in by[t]), reverse=True)[:53])
         rows.append((t, cur, got, k))
     after_pay = {t: g for t, _, g, _ in rows}
@@ -134,9 +151,17 @@ def main():
     for t, cur, got, k in sorted(rows, key=lambda r: -abs(r[2] - r[1]))[:6]:
         print(f"    {t:<5}${cur/1e6:>6.1f}M -> ${got/1e6:>6.1f}M   x{k:.3f}")
     if dry:
-        print('\n--dry-run: nothing written'); return
-    json.dump(d, open(repo('PGMRoster_2026.json'), 'w'), separators=(', ', ': '))
-    print('\nwrote PGMRoster_2026.json')
+        print('  --dry-run: nothing written\n'); return
+    json.dump(d, open(repo(f'PGMRoster_{year}.json'), 'w'), separators=(', ', ': '))
+    print(f'  wrote PGMRoster_{year}.json\n')
+
+def main():
+    years = [a for a in sys.argv[1:] if a.isdigit()]
+    dry = '--dry-run' in sys.argv
+    assert years, 'give one or more years'
+    for y in years:
+        print(f'=== {y} ===')
+        run(y, dry)
 
 if __name__ == '__main__':
     main()
