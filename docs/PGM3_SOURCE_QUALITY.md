@@ -299,34 +299,84 @@ dark, unlike player `PSKI` where 1 means unknown and must abstain. Counting
 coach dark as `>= 2` undercounts — it read ROJO at 17% against a true 20%.
 
 
-## The `PSKI` middle-value screen measures collapse, not accuracy — anchor-test as well
+## THE SKIN SOURCE TABLE — read this before the screen. `tools/skin_anchor.py`, `docs/skin_anchor_table.csv`
 
-Ryan flagged that a user of the site praised these classic rosters for "skin tone,
-approximate hairstyle" and named the 1976 file specifically, against a screen that
-read it as collapsed at 29.2%. Both were tested against the same ground truth: the
-**8,226 men the 2K5 archive labels unanimously across three or more saves**.
+Every skin source this project holds, scored against one ground truth: the
+**8,138 men the 2K5 archive labels unanimously across three or more of its
+42 saves.** A `.ros` file is scored against the whole archive. A 2K5 save is
+scored against the archive **without itself** — leave-one-out — because scoring a
+save against a consensus it helped form makes every save look better than it is.
+Ryan asked for this table after a five-file sample showed the screen rejecting
+usable files; it now covers all 66 sources by design rather than by accident.
 
-| file | matched | agrees with the archive | `PSKI` middle value |
-|---|---|---|---|
-| **1983** | 989 | **90%** | 24% |
-| `NFL79.ros` | 709 | 74% | 43% |
-| 1990 | 1,689 | 69% | 31% |
-| 1986 | 1,064 | 67% | 63% |
-| **1976 raidermike** | 439 | **57%** | 29% |
+### The `.ros` files, 24 of them
 
-A coin flip is 50%.
+| source | matched | accuracy | middle | screen |
+|---|---|---|---|---|
+| `ros/2008.ros` | 1,548 | **98%** | 6% | pass |
+| `ros/2007.ros` | 1,629 | **98%** | 6% | pass |
+| `ros/2016JINXROSTER_V8.1.ros` | 1,406 | **98%** | 4% | pass |
+| `ros/2006.ros` | 1,561 | **98%** | 6% | pass |
+| `ros/2005.ros` | 1,545 | **97%** | 7% | pass |
+| `ros/2017JINXROSTER_V21.0.ros` | 1,389 | **97%** | 11% | pass |
+| `ros/2020ROJOROSTER V22.ros` | 1,460 | **92%** | 25% | pass |
+| `ros/2021JINXROSTER V23.ros` | 1,591 | **92%** | 25% | pass |
+| `ros/2023JINXROSTER V1.0.ros` | 1,639 | **92%** | 15% | pass |
+| `ros/2000.ros` | 1,380 | **90%** | 10% | pass |
+| `ros/2025JINXROSTER V21.ros` | 1,070 | **90%** | 8% | pass |
+| `1983madden/1983-SB-XVIII.ros` | 990 | **90%** | 24% | pass |
+| `ros/2015-SB-50 (2).ros` | 3,350 | **77%** | 69% | REJECT |
+| `ros/2012 - BKGiantsFan.ros` | 2,183 | **74%** | 39% | REJECT |
+| `1979madden/1979-SB-XIV.ros` | 701 | **73%** | 43% | REJECT |
+| `1979madden/NFL79.ros` | 701 | **73%** | 42% | REJECT |
+| `ros/2013.ros` | 2,446 | **73%** | 79% | REJECT |
+| `ros/2011 - NickyJ.ros` | 2,205 | **71%** | 83% | REJECT |
+| `ros/2014-SB-XLIX.ros` | 2,451 | **71%** | 92% | REJECT |
+| `1990madden/1990-SB-XXV.ros` | 1,654 | **70%** | 31% | REJECT |
+| `ros/2004.ros` | 1,583 | **69%** | 32% | REJECT |
+| `1986madden/1986_Roster_Mod_v1.0.ros` | 1,063 | **67%** | 63% | REJECT |
+| `ros/2003.ros` | 1,480 | **67%** | 29% | REJECT |
+| `1976madden/1976_raidermike.ros` | 429 | **57%** | 29% | REJECT |
 
-**The 1976 file is the worst of the five and barely above chance**, so the screen's
-verdict stands and the praise does not extend to its skin data. It cannot
-cross-check 1979's faces.
+**What the screen is, precisely.** The 28% middle-value threshold works as a
+**two-bin sort and nothing more**: every file it passes scores **90–99%**
+(12 files), every file it rejects scores **57–77%** (12 files), and
+the two ranges do not overlap. That is a real relationship, and it corrects an
+earlier line in this document — written on five files — that called middle share
+and accuracy "close to unrelated." On 24 files they are not unrelated. **They
+are related at the threshold and unrelated within a bin**: inside the rejected
+group, 1976 at 29% middle scores 57% while 2014 at 92% middle scores 71%, and
+2003 at the same 29% scores 67%. The middle share says which bin; it says nothing
+about where in the bin.
 
-**But the screen itself does not predict accuracy.** At a 28% threshold it rejects
-`NFL79.ros` (43% middle, 74% accurate), 1986 (63%, 67%) and 1990 (31%, 69%) while
-passing 1983 (24%, 90%) — and 1976 fails on accuracy at a middle share *below*
-three of the files it rejects. **Middle-value share and anchor agreement are
-close to unrelated across these five.** Treat the screen as a cheap first pass,
-never as the usability gate: run the anchor before discarding a file for faces.
+**What the screen is not: a usability gate.** 67–77% is a weak source, not a dead
+one. `NFL79.ros` at 73% on 701 men is real signal — weaker than the archive's 95%
+and it must not outrank it, but it is corroboration, and the earlier reading of
+"FAIL — unusable" was wrong for it and for eleven other files here. The `check`
+command's wording has been changed to say so.
 
-**1979's appearances therefore still rest on the 2K5 archive alone**, with no
-independent confirmation. `NFL79.ros` at 74% is the nearest thing to a second
-opinion and it is not independent enough to be one.
+**The one file the screen rejects for the right outcome and the wrong reason** is
+1976 raidermike: 57%, near a coin flip, at a middle share *lower* than three files
+that score 67–71%.
+
+### The 2K5 archive, leave-one-out
+
+Internally consistent at **92–100%**, median 98%. The weakest:
+
+| save | matched | leave-one-out accuracy |
+|---|---|---|
+| `2026SAVEGAME.DAT` | 824 | 92% |
+| `1997-1998SAVEGAME.DAT` | 974 | 94% |
+| `1981-1982SAVEGAME.DAT` | 804 | 94% |
+| `1979-1980SAVEGAME.DAT` | 854 | 95% |
+| `1986-1987AVEGAME.DAT` | 1,047 | 95% |
+| `1989-1990SAVEGAME.DAT` | 1,101 | 96% |
+| *(36 more)* | | 95–100% |
+
+**Consequence for 1979's faces.** They do not rest on the archive "alone with no
+cross-check": the 1979-1980 save scores **95% on 854 men** against the other 41
+saves, which is a cross-check, and the two saves used for the 21 old expansion
+men score 97% (1958-1980) and 99% (GOATs). The rule for the faces step is
+therefore: **archive first; where archive and `NFL79.ros` disagree, the archive
+wins; where the archive has no vote and `NFL79.ros` does, take it at 73% and flag
+it single-source-weak.** 1976 raidermike contributes nothing at 57%.
