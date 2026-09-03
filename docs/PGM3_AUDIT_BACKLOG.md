@@ -1839,3 +1839,51 @@ a secondary term. Pro Bowls at 9% coverage was never going to carry one.
 Note that `seasons_started` is itself capped at 12 and Brees's real figure is 19 —
 but by the evidence above, raising that cap should be measured before it is
 assumed to help.
+
+### 37. The $197.4M payroll constant is inherited, not measured — the game runs $242.9M
+
+Ryan exported a **full fresh vanilla league** on 2026-09-03: 3,441 roster records,
+432 staff, 32 teams of exactly 53. Now in `sources/vanilla/`. It is the only
+complete authoritative reference the project holds — the previous one was a
+45-player stratified sample.
+
+**Every one of our ten files reads a median top-53 of exactly $197.4M. The game
+reads $242.9M.**
+
+Ten files agreeing to the dollar is not ten measurements; it is one ancestor. The
+same pattern as the contract-ceiling finding already in the precedents, where five
+files agreeing to the dollar turned out to be the donor file's highest-paid player
+rather than an engine limit. **$197.4M appears never to have been checked against a
+game-generated file** — it could not have been, because none existed until today.
+
+**Measure and log, do not act.** Every file is internally consistent at $197.4M and
+nothing is broken; moving it is a ten-file decision with playtesting behind it.
+
+### 38. The position-multiplier "band" is our convention, not the game's
+
+Built from the eight conforming files to gate the contract-compression work.
+Against the vanilla export, **seven of ten positions fall outside it**:
+
+| position | vanilla | our band | |
+|---|---|---|---|
+| K | **0.59** | 1.00–1.92 | outside |
+| P | **0.71** | 0.87–1.40 | outside |
+| CB | 2.18 | 0.83–1.01 | outside |
+| WR | 1.97 | 0.83–0.95 | outside |
+| S | 1.32 | 0.83–1.00 | outside |
+| OT | 0.86 | 1.06–1.26 | outside |
+| QB | 2.25 | 1.45–2.14 | outside |
+| RB | 0.92 | 0.82–1.08 | in |
+| TE | 0.88 | 0.75–1.00 | in |
+| DE | 1.18 | 0.83–1.19 | in |
+
+**The kicker result vindicates the 1979 era ruling from the other direction.** We
+paid 1979's kickers 0.77 of the field median as a deliberate era departure from a
+"modern" band of 1.00–1.92. **The game itself pays them 0.59.** 1979 is closer to
+the engine than the eight files we called conforming, and the premium we treated as
+normal is the divergence.
+
+**Consequence for the compression gate:** a relative band built from our own files
+would enforce our own convention. The gate should be rebuilt against vanilla, or
+restricted to the one property it was written to catch — a transform making a ratio
+*worse* — without claiming the band describes anything.
