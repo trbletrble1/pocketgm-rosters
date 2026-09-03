@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-fix_2026_contracts — three contract defects in 2026, one pass, in order.
+fix_contracts — three contract defects, one pass, in order. Built on 2026; generalised to any file.
 Ruled 2026-09-03.
 
-  python3 tools/fix_2026_contracts.py --dry-run
-  python3 tools/fix_2026_contracts.py
+  python3 tools/fix_contracts.py 2026 --dry-run
+  python3 tools/fix_contracts.py 1986 2004 2007 2013 2017 2021
 
 1. THE FLOOR (item 45 source 2). 2026's cheap end is the archive's inherited
    placeholders — 96 rostered men under $500K, a minimum of $2K — where the
@@ -50,15 +50,14 @@ def asks(r):
     v = [x['eSalary'] / x['salary'] for x in r if x['salary'] > 0]
     return st.median(v), sum(1 for z in v if z > 1.05) / len(v), sum(1 for z in v if z < 0.95) / len(v)
 
-def main():
-    dry = '--dry-run' in sys.argv
-    head = subprocess.run(['git', 'show', 'HEAD:PGMRoster_2026.json'], capture_output=True, text=True, cwd=repo('')).stdout
-    assert json.dumps(json.loads(head), separators=(', ', ': ')) == head
+def run(y, dry):
+    head = subprocess.run(['git', 'show', f'HEAD:PGMRoster_{y}.json'], capture_output=True, text=True, cwd=repo('')).stdout
+    ser = (lambda d: json.dumps(d, indent=1) + ('\n' if head.endswith('\n') else '')) if head.count('\n') > 1 else (lambda d: json.dumps(d, separators=(', ', ': ')))
+    assert ser(json.loads(head)) == head, f'{y}: stored formatting not reproduced'
     van_all = json.load(open(rp.VAN)); van = rp.rostered(van_all); vfa = [x for x in van_all if x['teamID'] == 'Free Agent']
-    d = json.load(open(repo('PGMRoster_2026.json'))); ros = rp.rostered(d); fa = [x for x in d if x['teamID'] == 'Free Agent']
-    watch = {n: None for n in ('Josh Allen', 'Aidan Hutchinson', 'Trey Smith', 'Maxx Crosby')}
-    for x in ros:
-        if x['forename'] + ' ' + x['surname'] in watch: watch[x['forename'] + ' ' + x['surname']] = x
+    d = json.load(open(repo(f'PGMRoster_{y}.json'))); ros = rp.rostered(d); fa = [x for x in d if x['teamID'] == 'Free Agent']
+    # watch the file's four highest-rated men (in 2026 that was Allen, Hutchinson, Smith, Crosby)
+    watch = {x['forename'] + ' ' + x['surname']: x for x in sorted(ros, key=lambda x: -x['rating'])[:4]}
     w0 = {n: pay(x) for n, x in watch.items()}
     vp10, vmed, vp90 = shape(van); vmin = min(pay(x) for x in van)
     print(f"{'':<26}{'p10':>8}{'median':>9}{'p90':>8}{'<$500K':>8}{'mean dist':>11}")
@@ -67,7 +66,8 @@ def main():
         print(f"{tag:<26}${p10/1e6:>6.2f}M ${med/1e6:>6.2f}M ${p90/1e6:>6.2f}M{sum(1 for x in ros if pay(x) < 5e5):>8}{md:>11.3f}")
     vr = rp.pos_ratios(van)
     print(f"{'vanilla':<26}${vp10/1e6:>6.2f}M ${vmed/1e6:>6.2f}M ${vp90/1e6:>6.2f}M{0:>8}{'':>11}")
-    row('2026 before')
+    print(f'=== {y} ===')
+    row(f'{y} before')
 
     # ---- 1. floor from vanilla, lift only
     floor = collections.defaultdict(list)
@@ -129,22 +129,27 @@ def main():
     def draw(x):
         k = (x['length'], band(x['rating']))
         if len(cell[k]['ratio']) < 20: k = min((kk for kk in cell if len(cell[kk]['ratio']) >= 20), key=lambda kk: (abs(kk[0] - x['length']), kk[1] != band(x['rating'])))
-        c = cell[k]; rng = random.Random(f"{x['iden']}|2026|ext")
+        c = cell[k]; rng = random.Random(f"{x['iden']}|{y}|ext")
         return sorted(c['ratio'])[min(len(c['ratio']) - 1, int(rng.random() * len(c['ratio'])))], rng.choice(c['elen']), rng.choice(c['eg'])
     vmax_s = max(x['eSalary'] for x in van); vmax_g = max(x['eGuarantee'] for x in van)
     for x in ros:
         if x['salary'] <= 0: continue
         r_, el, eg = draw(x); es = min(int(round(x['salary'] * r_)), vmax_s); x['eSalary'], x['eLength'], x['eGuarantee'] = es, el, min(int(round(es * eg)), vmax_g)
-    m, up, dn = asks(ros); print(f"   rostered asks: median {m:.2f}, want a raise {up:.0%}, want less {dn:.0%}   (vanilla 1.00 / 27% / 22%)")
+    m, up, dn = asks(ros); v = [x['eSalary'] / x['salary'] for x in ros if x['salary'] > 0]
+    print(f"   rostered asks: median {m:.2f}, ±5%: up {up:.0%} / down {dn:.0%} (vanilla 27% / 22%);  any: up {sum(1 for z in v if z > 1)/len(v):.0%} / down {sum(1 for z in v if z < 1)/len(v):.0%} / flat {sum(1 for z in v if z == 1)/len(v):.0%} (vanilla 36% / 31% / 33%)")
     # free agents: absolute asking price by rating band, from vanilla's free agents
     fask = collections.defaultdict(list)
     for x in vfa: fask[band(x['rating'])].append((x['eSalary'], x['eGuarantee'], x['eLength']))
     for x in fa:
-        rng = random.Random(f"{x['iden']}|2026|fa"); pool = fask.get(band(x['rating'])) or [v for b in fask for v in fask[b]]
+        rng = random.Random(f"{x['iden']}|{y}|fa"); pool = fask.get(band(x['rating'])) or [v for b in fask for v in fask[b]]
         x['eSalary'], x['eGuarantee'], x['eLength'] = rng.choice(pool)
     print(f"   free agents: {len(fa)} now carry an asking price, median ${st.median(x['eSalary'] for x in fa)/1e6:.2f}M, eLength {dict(collections.Counter(x['eLength'] for x in fa))}   (vanilla FA median ${st.median(x['eSalary'] for x in vfa)/1e6:.2f}M, eLength 1)")
     if dry: print('  --dry-run: nothing written'); return
-    open(repo('PGMRoster_2026.json'), 'w').write(json.dumps(d, separators=(', ', ': '))); print('  wrote PGMRoster_2026.json — now run tools/raise_payroll.py 2026')
+    open(repo(f'PGMRoster_{y}.json'), 'w').write(ser(d)); print(f'  wrote PGMRoster_{y}.json — now run tools/raise_payroll.py {y}')
+
+def main():
+    dry = '--dry-run' in sys.argv; years = [a for a in sys.argv[1:] if a.isdigit()]; assert years
+    for y in years: run(y, dry)
 
 if __name__ == '__main__':
     main()
