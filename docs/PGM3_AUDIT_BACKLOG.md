@@ -1584,3 +1584,21 @@ first-year rookies, zero veterans** — the rank correction, not a defect.
 
 **Write-1 misreport, corrected.** Its commit said Cousins 58 → 67, Dalton 59 → 66;
 the shipped file had 73 and 71. Two names quoted from a pre-stage-8 artifact.
+
+
+### 30. The 1986 build pays kickers like a modern league
+
+Position multipliers, median salary against the file median:
+
+| | K | P | QB | RB |
+|---|---|---|---|---|
+| published six | 1.36 | 1.16 | 1.87 | 0.94 |
+| **1986 build** | **1.40** | **1.22** | 2.07 | 0.88 |
+| 2000 build | 0.68 | 1.26 | 1.24 | 1.01 |
+| 1979 build | 0.83 | 0.80 | 2.02 | 1.22 |
+
+1986 tracks the published six almost exactly at every position, specialists
+included. The modern game pays kickers above the median; 1986 did not, and 1979
+certainly did not. The 2000 build set K to 0.68 but left P at 1.26, so it is half
+corrected. Low stakes — it moves a few contracts, not a rating — but it is an
+era claim the file makes and gets wrong.

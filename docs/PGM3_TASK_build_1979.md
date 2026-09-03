@@ -855,6 +855,57 @@ The 99 ceiling binds on exactly one man, Mike Haynes at 98 with two years of
 headroom. That is the field's observed range in all six files, not a guard of the
 kind removed from the 2026 build.
 
+## Step 5 — contracts BUILT 2026-09-02. `wip/contracts_1979.csv`, `tools/build_1979_contracts.py`.
+
+**Measured from the published six, not invented:**
+
+- **Length by years pro** is their own median: **4, 3, 2, 1, 1, 1, 1, 2, 1, 1** —
+  a four-year rookie deal counting down, then short veteran deals.
+- **`guarantee` / salary by remaining length** is their median at each length:
+  0.06, 0.09, 0.08, 0.21, 1.25. Money still owed, collapsing as a deal runs out.
+- **greed, loyalty and ambition correlate with nothing** — |r| < 0.02 against
+  rating, age and salary in the published six. Reproduced as a distribution,
+  deterministically, carrying no per-player meaning here because they carry none
+  there. The opposite call to the attributes, and for the opposite reason.
+
+**Sourced:** the floor. The **1977 collective bargaining agreement**, the one in
+force in 1979, set minimums of $12,500 for rookies and $13,000 for veterans.
+
+**The era departure, which is the point of the step.** The published six pay
+kickers **1.36x** the file median and punters **1.16x** — above the field. This
+project's own **1986 build inherited that wholesale: K 1.40, P 1.22.** In 1979
+specialists were paid at or below the average. This build ships **K 0.83, P
+0.80**. Backlog item 30.
+
+**A first pass put nine quarterbacks ahead of Walter Payton.** That is a modern
+league's pay table. 1979's marquee earners were quarterbacks *and* running backs,
+so QB came down to 1.75 and RB up to 1.35; Payton now sits fifth, Dorsett eighth.
+
+**The compression ratio is solved, not chosen.** It began as a judgement at 10x —
+more compressed than the published six (17.8x to 36.9x), 1986 (26.9x) or 2000
+(12.8x), which is the era claim, since 1979 had no free agency and the Rozelle
+Rule held the top of the market down. It **broke the engine cap twice**: at 10x
+Pittsburgh reached $293.3M and Dallas $285.5M, and 8x broke again the moment the
+running-back multiplier was raised. Payroll tracks team quality, and those were
+the two best teams in the league. So the tool now **solves for the largest ratio
+that keeps every team under $275M** — it lands on **7.15x**. The median top-53
+holds at $197.4M at every value, so the payroll constant does not choose the
+ratio; the engine cap does.
+
+| | 1979 build | published |
+|---|---|---|
+| median top-53 | $197,400,000 | $197.4M ± $29k |
+| max team payroll | $275.0M | under the $280M engine cap |
+| payroll spread, max/median | 1.39 | 1.23–1.38 |
+| salary max/median | 7.1 | 17.8–36.9 |
+
+**Stated cost.** Payroll tracks team quality at **r = +0.82** against the
+published **+0.28 to +0.47**. Salary here is a deterministic function of rating,
+position and service, so a good team is expensive with no exceptions. Published
+files are looser because they carry contract noise — old cheap deals, overpaid
+signings. That noise is not manufactured here, on the same principle that removed
+the random draws from the 2026 build.
+
 ### Still to build
 
-Contracts, staff, the four invented franchises, draft classes, faces.
+Staff, the four invented franchises, draft classes, faces.
