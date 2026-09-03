@@ -4483,3 +4483,21 @@ checking position or whether the record was already claimed, and a defensive end
 shipped with a running back's attributes. Found five steps later by a uniqueness
 assert in assembly. **Bind the strongest tier first and consume; assert one-to-one
 on the source side; and read a coverage number as what it measures.**
+
+---
+
+## Match the artifact's formatting, or the diff stops being a check
+
+Two files in this project are stored as a single line of compact JSON. Writing
+them back with `indent=1` produced **252,866 lines** for a two-record change to
+the 2026 roster, and **180,072** for a thirty-nine-face change to the registry.
+
+Nothing was wrong with either file. But `git diff` is the last check before a
+push — the one that catches a tool touching records it was never asked to touch —
+and a diff that large cannot be read, so the check silently stops working at
+exactly the moment the change is largest.
+
+**Write back in the format the file is stored in**, and confirm it: a two-record
+change should produce a one-line diff. Both write tools now pass
+`separators=(', ', ': ')`, and the semantic diff — records added, fields changed —
+is printed alongside, so the two can be compared.

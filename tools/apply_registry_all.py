@@ -17,8 +17,13 @@ YEARS = (1986, 2000, 2004, 2007, 2010, 2013, 2017, 2021)
 def main(apply=False):
     reg = json.load(open(os.path.join(REPO, 'reference', 'PGM3_FACE_REGISTRY.json')))
     before = {g: set(v) for g, v in reg['_verified_keys'].items()}
-    assert len(before['players']) == 84 and len(before['staff']) == 18, \
-        f'_verified_keys is {len(before["players"])}/{len(before["staff"])}, expected 84/18'
+    # A FLOOR, NOT A FIXED COUNT. This read 84/18 and the registry has held more
+    # than that since; a hardcoded count goes stale the first time Ryan sends
+    # hand edits and then fails for the wrong reason. What matters is that
+    # verified keys are never LOST — the run's own `after == before` check below
+    # is what proves this pass did not touch them.
+    assert len(before['players']) >= 84 and len(before['staff']) >= 18, \
+        f'_verified_keys shrank to {len(before["players"])}/{len(before["staff"])}, floor is 84/18'
     total = 0
     for y in YEARS:
         path = os.path.join(REPO, f'PGMRoster_{y}.json')
