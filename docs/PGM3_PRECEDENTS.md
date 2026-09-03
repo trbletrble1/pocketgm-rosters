@@ -4410,3 +4410,28 @@ the project has already measured, compare against the old number and treat any
 gap as a defect until you know which side it is on.**
 
 Ryan's framing: *one of them is wrong, and the contradiction is the signal.*
+
+---
+
+## A missing value that sorts is worse than one that errors
+
+The 1979 expansion allocation ordered Jacksonville's roster "cheapest first",
+which for 47 of the 308 pool members — men with no Madden record — meant a rating
+of **zero**. Zero is a valid rating, so the sort worked, raised nothing, and
+returned a plausible-looking roster. **30 of Jacksonville's 46 arrived that way,
+including Jackie Smith, Mick Tingelhoff, Emmitt Thomas, Chris Hanburger, Willie
+Brown and Jake Scott.** The franchise whose entire doctrine is never signing
+anyone expensive was handed the Hall of Fame.
+
+Nothing failed. The defect was visible only in the *shape* of the result.
+
+**Fix: hold the missing out of the comparison, do not rank them last.** A sort key
+that returns `(is_missing, value)` keeps them from competing on a number they do
+not have. Ranking them at the bottom is the same bug wearing a seatbelt — it still
+asserts an ordering the data cannot support.
+
+**And a fix that respects one constraint can violate another silently.** Splitting
+the unrated by doctrine left two rosters half unsourced; capping that sent the
+overflow to Memphis and aged it from 24 to 27, costing the one thing its doctrine
+asks for. Both were caught by re-reading the shape, not by a gate. Ryan's framing:
+*it was the shape check that caught it, not a gate.*
