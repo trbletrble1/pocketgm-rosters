@@ -1767,8 +1767,13 @@ to a man rated in the 40s and **1 point** to a man in the 90s. Defensible in
 isolation — an unproven low-rated prospect has room — but with no career signal to
 counterweight it, the baseline decides everything and the lowest-rated men win.
 
-**Four files share the flat gradient**, and the same mechanism is the likely cause
-in all of them:
+**THE FOUR FILES WERE NEVER CALIBRATED, which is a better explanation than
+miscalibration.** There is no draft source file for 2004, 2010, 2013 or 2017 —
+their prospects were built with **no career input of any kind**. Nothing was ever
+placing those ceilings, which is why all four are flat rather than inverted: 2000
+had a signal and used it backwards, these four had none. All four do carry a real
+pick number on 100% of prospects, so a PFR listing joins by name and pick exactly
+as 1979's did.
 
 | file | r(gap, career span) | never | 1-3 yr | 4-7 | 8-11 | 12+ |
 |---|---|---|---|---|---|---|
@@ -1789,13 +1794,48 @@ including 1979, which works and is verified; changing a shared formula to improv
 one file is how three break. It belongs in the four-file proposal, measured across
 the files it affects.
 
-### 35. `probowls` is capped at 6, which truncates the best careers
+### 35. The `probowls` cap is NOT a defect — CLOSED, and my claim was wrong
 
-Found while fixing 2000. `raise_for` and `draft_potential` both use
-`0.9 * min(6, probowls)`, so **Drew Brees's 13 Pro Bowls score the same as six**,
-as do Jason Witten's 11. The men the cap flattens are exactly the ones a scouting
-ceiling should distinguish.
+I reported that `0.9 * min(6, probowls)` truncated the best careers, since Brees's
+13 Pro Bowls score as six and Witten's 11 likewise. **Tested against PFR `wAV` on
+the 1,339 men of the 1980-83 classes, every treatment that credits Pro Bowls above
+six makes the whole raise term WORSE:**
 
-`probowls` is populated on 117 of 1,019 and `allpro` on 41 — thin, but present
-precisely for the men career span misleads. **Worth testing as a better
-substitution for `car_av` than span, before the four-file work.**
+| treatment | r vs career value |
+|---|---|
+| **current, `min(6, pb)`** | **+0.9032** |
+| two-tier, extra 0.4 for 7-12 | +0.8992 |
+| raised cap, `min(12, pb)` | +0.8915 |
+| uncapped | +0.8900 |
+
+**And the tiers were never collapsed.** The twelve men above six already take a
+median raise of **12.9** against **9.0** for men at four to six — the separation
+comes from `allpro` and `seasons_started`, which move with Pro Bowls. My "two real
+tiers collapsed into one" was wrong.
+
+**Brees is also not an anomaly.** His raise decomposes as probowls 5.4, allpro 1.6,
+`car_av` 4.6, seasons started 3.6 — total 15.2, against Ed Reed's 20.0 and
+Peppers's 20.8. He has **one** first-team All-Pro to Reed's five. At 69/89 he
+carries a 20-point discovery, which is a defensible placement for a second-round
+pick who became great, not a truncation.
+
+**Left as it is.** Ryan authorised fixing the cap; the measurement says do not.
+
+### 36. `seasons_started` is the strongest signal available, at r = +0.94
+
+Measured on the same 1,339 men, against PFR `wAV`:
+
+| signal | r | coverage |
+|---|---|---|
+| **seasons started** | **+0.94** | 35% |
+| career span (nflverse) | +0.76 | 70% |
+| Pro Bowls | +0.74 | 9% |
+| All-Pros | +0.54 | 4% |
+| all three combined | +0.86 | — |
+
+**1979 works partly because it leans on this hardest**, and it had been treated as
+a secondary term. Pro Bowls at 9% coverage was never going to carry one.
+
+Note that `seasons_started` is itself capped at 12 and Brees's real figure is 19 —
+but by the evidence above, raising that cap should be measured before it is
+assumed to help.
