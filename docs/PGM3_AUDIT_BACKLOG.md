@@ -1602,3 +1602,18 @@ included. The modern game pays kickers above the median; 1986 did not, and 1979
 certainly did not. The 2000 build set K to 0.68 but left P at 1.26, so it is half
 corrected. Low stakes — it moves a few contracts, not a rating — but it is an
 era claim the file makes and gets wrong.
+
+### 31. The 1986 build reads seven points darker than its own era's archive
+
+| | dark share |
+|---|---|
+| published `PGMRoster_1986`, rostered | **67.8%** |
+| 1986-87 2K5 save, all 1,954 men | 60.7% |
+| 1986-87 save restricted to the published 1986 names, 1,200 men | 58.6% |
+
+The archive and the published files agree within a point for 1999-2013, so the
+archive is not the thing that is off. Found while re-basing the 1979 face gate
+(precedent above). Alongside item 30 it is a second sign that 1986 inherited more
+of the modern files' shape than anyone realised. **Log, do not fix** — it is
+published and it is the file we understand least. (2021 shows the same gap the
+other way: 72.9% against its save's 65.6%.)

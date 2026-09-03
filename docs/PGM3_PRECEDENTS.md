@@ -4435,3 +4435,26 @@ the unrated by doctrine left two rosters half unsourced; capping that sent the
 overflow to Memphis and aged it from 24 to 27, costing the one thing its doctrine
 asks for. Both were caught by re-reading the shape, not by a gate. Ryan's framing:
 *it was the shape check that caught it, not a gate.*
+
+---
+
+## A gate built from later files, applied to an earlier era, fails the correct file
+
+The 1979 face step asserted its rostered dark share against the published files'
+range, **64.4-72.9%**, and failed at **55.9%**. The published range is a
+1986-2021 population. The era's own archive says 1979 sat at **53.6%** over this
+file's names and **57.3%** over all 1,999 men in the 1979-80 save; 1981-82 reads
+48.2%, 1983-84 53.6%. The file was right.
+
+**The calibration is what made it decidable.** The archive and the published
+files agree within a point wherever both are trustworthy — 64.3 vs 64.4 in 1999,
+65.7 vs 65.3 in 2004, 68.1 vs 69.5 in 2012 — and diverge by about seven points at
+both ends: the published **1986** file reads 67.8% against its own era's save at
+58.6-60.7%, and **2021** reads 72.9 against 65.6. So the gate's floor was set by a
+file that itself runs seven points darker than its source.
+
+Same family as *a gate must measure the population the file will contain*, one
+step further: **a published range is a range over the eras that were published.
+Before applying it to a season outside them, measure the era's own source and
+gate on that** — and print the published range beside it, so the divergence is
+seen rather than smoothed.
