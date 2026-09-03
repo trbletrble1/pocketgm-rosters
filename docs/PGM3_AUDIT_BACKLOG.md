@@ -1971,6 +1971,39 @@ moves centre 1.06 → 1.16 against vanilla's 0.55 while the mean distance worsen
 0.514 → 0.521 — the guard doing its job, and not the 2007 trade. It stays at
 $197.4M; `--payroll=vanilla` is not the flag for it.
 
+#### ALL TEN DONE, 2026-09-03 — `tools/fix_contracts.py`, and the 2010 hold REVERSED
+
+The three-stage tool built on 2026 (floor from vanilla by position and band,
+lift-only; position-aware transform; second floor pass; extension terms from the
+final salary, rostered from the joint table and free agents from vanilla's own
+free-agent asks), then `raise_payroll` to re-true. **The floor binds on SALARY
+alone**, ruled: the payroll basis is salary+guarantee, but the floor exists so a
+man does not read as unpaid on his contract screen, and that screen shows salary
+(Christen Miller, $0.452M salary on $1.08M total, was the case).
+
+| | p10 | median | p90 | salary <$500K | mean dist. | team median |
+|---|---|---|---|---|---|---|
+| vanilla | 0.70 | 1.27 | 7.50 | 0 | — | 242.9 |
+| 1979 / 2000 / 2026 | 0.70–0.72 | 1.34–1.70 | 7.1–10.6 | 0 | 0.124–0.140 | 242.9 |
+| 1986 / 2004 / 2007 / 2010 | 0.68–0.69 | 1.30–1.38 | 6.9–8.1 | 0 | 0.108–0.147 | 242.9 |
+| 2013 / 2017 / 2021 | **0.65** | 1.20–1.24 | 5.7–7.3 | 0 | 0.108–0.146 | 242.9 |
+
+**p10 after the re-true lands at $0.65–0.72M** against the game's $0.70M. The
+three at $0.65M are the deepest rosters, where the 59-vs-53 confound is largest;
+the re-true's per-team scale takes a few floor-lifted men back under $0.70M. A
+third floor pass would close it and was offered; not run.
+
+**2010's hold is reversed.** The hold was against `raise_payroll`'s uniform
+per-team scale, which moved centre 0.10 further from vanilla while the mean
+worsened. This transform is a different mechanism, and it gives 2010 the best
+gain of the nine — 0.514 → 0.135. The hold was against a transform, not the file.
+
+**2021 is the poorest landing** — 0.146, and the only file whose p90 falls
+(6.57 → 5.67). Its salary ordering was built on rating, so the map has nothing
+better to work with. Shipped and logged; 2021 has surfaced as the least-well-
+built file repeatedly this week (items 4, 42, and here). Its recognisable drops:
+Fred Warner $23.6M → $13.7M, Derrick Henry $15.3M → $9.4M (salary+guarantee).
+
 #### RULED: all ten get tuned, as its own piece of work, after two checks
 
 1. ~~Confirm $242.9M from more than one vanilla export.~~ **CLOSED 2026-09-03.**
@@ -2316,9 +2349,22 @@ bargains and overpays, and both exist.
 3. **The other seven are one-sided by degree**, running from 2004 at 7%/91% to
    2017 at 89%/3%. None resembles vanilla's balance.
 
-**Measure and log, do not act.** This is a ten-file shape question of exactly the
-same kind as item 37, and it should be ruled on with the same care rather than
-folded into a payroll pass. It is also unmeasured in one important respect: **we do
+**ALL TEN DONE, 2026-09-03**, inside `tools/fix_contracts.py`: rostered men draw
+from vanilla's joint (length, rating band) table off the final salary; free
+agents — a different structure in the game (salary 0, length 0, eLength 1, an
+absolute ask in eSalary, median $0.70M) — draw from vanilla's own free agents by
+rating band. Every free agent in every file now carries an ask.
+
+**One divergence in the draw, logged.** At ±5% every file reads 29–35% up and
+25–33% down against the game's 27% / 22% — six or seven points hotter on both
+sides. Measured on any difference the same gap shows, and the cause is visible:
+**the game has 33% of men asking exactly what they earn; ours have 12–19%.** The
+joint table reproduces each cell's ratio distribution, but the cell fallback and
+our band mix (more 80+ men on long deals, where flat asks are rarer) halve the
+mass point at 1.00. Real, mild, and not acted on.
+
+This was a ten-file shape question of exactly the same kind as item 37, and it
+was ruled on with the same care rather than folded into a payroll pass. It is also unmeasured in one important respect: **we do
 not know whether the engine reads `eSalary` directly or treats it as a starting
 point for negotiation**, and the difference matters for how far off these numbers
 actually put us.

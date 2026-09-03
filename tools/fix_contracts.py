@@ -63,7 +63,7 @@ def run(y, dry):
     print(f"{'':<26}{'p10':>8}{'median':>9}{'p90':>8}{'<$500K':>8}{'mean dist':>11}")
     def row(tag):
         p10, med, p90 = shape(ros); md = st.mean(abs(rp.pos_ratios(ros)[k] - vr[k]) for k in rp.pos_ratios(ros) if k in vr)
-        print(f"{tag:<26}${p10/1e6:>6.2f}M ${med/1e6:>6.2f}M ${p90/1e6:>6.2f}M{sum(1 for x in ros if pay(x) < 5e5):>8}{md:>11.3f}")
+        print(f"{tag:<26}${p10/1e6:>6.2f}M ${med/1e6:>6.2f}M ${p90/1e6:>6.2f}M{sum(1 for x in ros if x['salary'] < 5e5):>8}{md:>11.3f}")
     vr = rp.pos_ratios(van)
     print(f"{'vanilla':<26}${vp10/1e6:>6.2f}M ${vmed/1e6:>6.2f}M ${vp90/1e6:>6.2f}M{0:>8}{'':>11}")
     print(f'=== {y} ===')
@@ -71,17 +71,21 @@ def run(y, dry):
 
     # ---- 1. floor from vanilla, lift only
     floor = collections.defaultdict(list)
-    for x in van: floor[(x['position'], band(x['rating']))].append(pay(x))
+    for x in van: floor[(x['position'], band(x['rating']))].append(x['salary'])
     fband = collections.defaultdict(list)
-    for x in van: fband[band(x['rating'])].append(pay(x))
+    for x in van: fband[band(x['rating'])].append(x['salary'])
     def vfloor(x):
         v = floor.get((x['position'], band(x['rating'])))
         return min(v) if v and len(v) >= 5 else min(fband[band(x['rating'])])
+    # THE FLOOR BINDS ON SALARY ALONE, ruled 2026-09-03. The payroll basis is
+    # salary+guarantee, but the floor exists so a man does not read as unpaid on
+    # his contract screen, and that screen shows salary: Christen Miller at
+    # $0.452M salary / $0.631M guarantee read wrong though his $1.08M was fine.
+    # vfloor is measured on vanilla's SALARY.
     lifted = 0
     for x in ros:
         f = vfloor(x)
-        if pay(x) < f:
-            g = x['guarantee'] / pay(x) if pay(x) else 0.05; x['guarantee'] = int(round(f * g)); x['salary'] = int(round(f)) - x['guarantee']; lifted += 1
+        if x['salary'] < f: x['salary'] = int(round(f)); lifted += 1
     row(f'after floor ({lifted} lifted)')
 
     # ---- 2. position-aware onto the game
@@ -115,8 +119,7 @@ def run(y, dry):
     lifted2 = 0
     for x in ros:
         f = vfloor(x)
-        if pay(x) < f:
-            g = x['guarantee'] / pay(x) if pay(x) else 0.05; x['guarantee'] = int(round(f * g)); x['salary'] = int(round(f)) - x['guarantee']; lifted2 += 1
+        if x['salary'] < f: x['salary'] = int(round(f)); lifted2 += 1
     row(f'after 2nd floor ({lifted2} lifted)')
     print(f"   within-team cross-position pairs reordered {inv:,} of {tot:,} ({inv/tot:.1%}); QB ratio {rp.pos_ratios(ros)['QB']:.2f} (vanilla {vr['QB']:.2f})")
     print("   the watched men: " + '; '.join(f"{n} ${w0[n]/1e6:.1f}M -> ${pay(x)/1e6:.1f}M" for n, x in watch.items()))
