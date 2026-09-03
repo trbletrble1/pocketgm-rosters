@@ -4586,3 +4586,41 @@ not of correctness — the same shape as ten files reporting a $197.4M payroll
 constant to the dollar against the game's $242.9M, and as five files reporting a
 contract ceiling that turned out to be one donor record. When the check is a
 guard against a specific failure, assert the failure and not the norm.
+
+
+---
+
+## THE ARCHIVE IS INTERNALLY CONSISTENT AND REPEATEDLY WRONG ABOUT THE GAME
+
+**The general form of four findings in two days, 2026-09-02 to 09-03.** State this
+one rather than the four.
+
+| what we believed | our ten files | the game |
+|---|---|---|
+| payroll constant | $197.4M, to the dollar | **$242.9M** |
+| position multipliers | a band from eight "conforming" files | **7 of 10 positions outside it** |
+| coach potential | median headroom 2, up to a third locked | **median 7, none locked** |
+| sitting head-coach floor | 58 | **64** |
+| free-agent coach pool | 21–33 men, down to rating 32 | **16 men, floored at 57** |
+| 2017's provenance | "a published original" | ours, like all ten |
+
+**Every one was reached by measuring our own files against each other**, finding
+tight agreement, and reading that agreement as evidence about the engine. It never
+was. Ten files agreeing to the dollar is **one ancestor wearing ten coats** — the
+donor file — and the tightness of the agreement is the tell, not the reassurance.
+
+**The cost is not academic.** Ryan asked whether a young coach could develop; I told
+him the two-point ceiling was PGM3's design and he ruled against widening it on
+that basis. It was ours. Pat Dye sits at 63 with two points of room because of a
+convention we invented and then mistook for a constraint.
+
+**Rules:**
+1. **A statement about the engine needs a game-generated file behind it.** Since
+   2026-09-03 one exists, in `sources/vanilla/`. Before that, no such claim could
+   be supported and several were made anyway.
+2. **Agreement among our own files is evidence of shared ancestry, never of
+   correctness** — and the closer the agreement, the stronger that reading.
+3. **Independent samples, not repeated exports.** The payroll constant earned its
+   confidence from two leagues with zero shared identifiers. The coach finding rests
+   on three exports of ONE league sharing all 432 identifiers, so it is n = 1 and
+   is labelled as such until a second lands.

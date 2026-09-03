@@ -1945,12 +1945,21 @@ position band, and the 2017 provenance claim.
 **So the tension logged in item 32 — that hiring a young coach cannot pay off — is
 ours and fixable, not the engine's.**
 
-**Two more staff findings from the same export:**
-- **Sitting head coaches floor at 64** in vanilla, against the 58 we derived and
-  applied to 1979.
-- **The free-agent coach pool is 16 men rated 57 to 64** — a narrow band just below
-  the sitting men. Ours carry 21 to 33 men rated down to 32. We are generating a
-  much larger and much worse pool than the game does.
+**Two more staff findings from the same export, both against work already shipped:**
+
+**The sitting head-coach floor is 64, not 58.** Commit `7fd6391` remapped 1979's
+sitting coaches onto a floor of **58**, derived from our own nine files, and that
+fix was correct as far as it went — it lifted Neill Armstrong off 32. But the
+target was our convention again, and **the game floors sitting coaches at 64**.
+1979 currently reads a minimum of 58 and should read 64 or above. Logged against
+that commit rather than left reading as correct.
+
+**Our free-agent coach pools are much larger and much worse than the game's.**
+Vanilla carries **16** free-agent head coaches rated **57 to 64** — a narrow band
+just below the sitting men, so a user firing a coach hires a plausible replacement.
+Ours carry **21 to 33** men rated down to **32**. The 1979 pool built at `b69ed98`
+holds 99 men across two tiers on the same assumption. **Worth settling before that
+pool is used as a template for anything.**
 
 **CAVEAT ON THE SAMPLE: the three staff exports share all 432 identifiers.** They
 are one league exported three times, so this is **n = 1** for staff, against n = 2
