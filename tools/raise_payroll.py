@@ -69,6 +69,28 @@ def pos_ratios(ros):
         p[x['position']].append(x['salary'] / md)
     return {k: st.median(v) for k, v in p.items()}
 
+# DOCUMENTED EXCEPTIONS, ruled by Ryan 2026-09-03. The guards are NOT loosened:
+# each waiver is pinned to the exact number measured when it was granted, and if
+# the data drifts the waiver stops matching and the guard bites again.
+#
+#   2010  mean distance 0.514 -> 0.521, a rise of +0.007. The guard's own comment
+#         records that it was calibrated against a transform that sent
+#         quarterbacks 1.18 away; 0.007 is the jostle it was explicitly tuned not
+#         to catch. Overridden as noise, with the number stated.
+#   2007  mean distance IMPROVES, 0.422 -> 0.414, and quarterback alone degrades
+#         by 0.11 — 2.14 -> 2.03 against vanilla's 2.25. This is the guard's
+#         design working: it catches one position going bad even when the
+#         aggregate gets better, which is the 5.9x failure in miniature. Ryan
+#         took the improvement. Recorded as an ACCEPTED EXCEPTION, not a pass.
+#
+# 1979 and 2000 are NOT here. They fail because of contract compression showing
+# through the level change, and both move to the compression work so that level
+# and shape land in one write and one gate pass.
+EXCEPTIONS = {
+    2010: {'mean': (0.514, 0.521)},
+    2007: {'mean': (0.422, 0.414), 'pos': ('QB', 2.142, 2.035)},
+}
+
 def run(year, dry):
     d = json.load(open(repo(f'PGMRoster_{year}.json')))
     ros = rostered(d)
@@ -96,6 +118,14 @@ def run(year, dry):
             tot_z = int(round((z['salary'] + z['guarantee']) * k))
             z['_g'] = int(round(z['guarantee'] * k))
             z['_s'] = tot_z - z['_g']
+            # eSalary/eGuarantee are SEPARATE FIELDS, not mirrors. Vanilla has
+            # 1,144 of 1,696 rostered men where salary != eSalary and 791 where
+            # the guarantees differ; eight of our ten files carry the same
+            # distinction. An earlier version of this tool assigned them FROM
+            # salary/guarantee and destroyed it. Scale them on their own totals.
+            e_tot = int(round((z['eSalary'] + z['eGuarantee']) * k))
+            z['_eg'] = int(round(z['eGuarantee'] * k))
+            z['_es'] = e_tot - z['_eg']
         got = sum(sorted((z['_s'] + z['_g'] for z in by[t]), reverse=True)[:53])
         rows.append((t, cur, got, k))
     after_pay = {t: g for t, _, g, _ in rows}
@@ -108,10 +138,10 @@ def run(year, dry):
         assert all((b[i] < b[j]) == (a[i] < a[j]) for i in range(len(ps)) for j in range(i + 1, len(ps))), t
     for x in ros:
         x['salary'], x['guarantee'] = x['_s'], x['_g']
-        x['eSalary'], x['eGuarantee'] = x['_s'], x['_g']
+        x['eSalary'], x['eGuarantee'] = x['_es'], x['_eg']
     after_rat = pos_ratios(ros)
     for x in ros:
-        for k2 in ('_s', '_g', '_after'):
+        for k2 in ('_s', '_g', '_es', '_eg', '_after'):
             x.pop(k2, None)
 
     ap = sorted(after_pay.values()); bp = sorted(before_pay.values())
@@ -145,8 +175,21 @@ def run(year, dry):
            and abs(after_rat[q] - van_rat[q]) - abs(before_rat[q] - van_rat[q]) > 0.10}
     print(f"  mean distance to vanilla: {md_b:.3f} -> {md_a:.3f}"
           f"   worst single move: {max((abs(after_rat[q]-van_rat[q])-abs(before_rat[q]-van_rat[q])) for q in after_rat if q in van_rat and q in before_rat):+.3f}")
-    assert md_a <= md_b + 1e-9, f'mean distance to vanilla increased: {md_b:.3f} -> {md_a:.3f}'
-    assert not big, big
+    exc = EXCEPTIONS.get(int(year), {})
+    def waived(kind, *vals):
+        want = exc.get(kind)
+        return want is not None and all(abs(a - b) < 5e-4 if isinstance(b, float) else a == b
+                                        for a, b in zip(vals, want))
+    if md_a > md_b + 1e-9:
+        assert waived('mean', md_b, md_a), \
+            f'mean distance to vanilla increased: {md_b:.3f} -> {md_a:.3f}'
+        print(f"  ACCEPTED EXCEPTION (ruled 2026-09-03): mean distance {md_b:.3f} -> {md_a:.3f}, "
+              f"+{md_a - md_b:.3f} — noise below the 1.18 move the guard was calibrated on")
+    for q, (rb2, ra2) in big.items():
+        assert waived('pos', q, rb2, ra2), {q: (rb2, ra2)}
+        print(f"  ACCEPTED EXCEPTION (ruled 2026-09-03): {q} {rb2:.2f} -> {ra2:.2f} against vanilla "
+              f"{van_rat[q]:.2f}, moving {abs(ra2 - van_rat[q]) - abs(rb2 - van_rat[q]):+.2f} AWAY, "
+              f"while the mean improves {md_b:.3f} -> {md_a:.3f}")
     print(f"\n  per-team, largest moves:")
     for t, cur, got, k in sorted(rows, key=lambda r: -abs(r[2] - r[1]))[:6]:
         print(f"    {t:<5}${cur/1e6:>6.1f}M -> ${got/1e6:>6.1f}M   x{k:.3f}")
