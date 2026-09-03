@@ -1233,6 +1233,35 @@ gate.** A validator run after a crashed build step reports on the *previous* fil
 gate that greps for "FAIL" counts the summary line "1 CHECK GROUP(S) FAILED" too. Read
 the check lines, inside the chain that wrote the file.
 
+### The mandatory conditional pass, run by the validator itself on the written file
+
+`pgm3_validate.py conditional` on `PGMRoster_1979.json`, every direct-mapped
+field split by its source value:
+
+- **skin, conditioned on the archive band — the file's actual source:** dark →
+  families 4:41% / 5:59% and nothing else; light → 1:52% / 2:28% / 3:20%, family 5
+  at **0%**. 1,068 matched. Complete separation.
+- **skin, conditioned on NFL79 `PSKI`** (the 2000 build's test; here a cross-source
+  check, since `PSKI` decided only 90 men): family 1 runs 41% → 25% → 8% → 6% from
+  `PSKI` 0 to 3, family 5 runs 16% → 30% → 53% → 55%. Direction agrees at 73%, as
+  the anchor table said it would.
+- **rating on `POVR`:** 43 / 50 / 58 / 67 / 77 / 89 by decile, monotone.
+- **speed, burst, agility, jumping, stamina, intelligence:** monotone across every
+  source decile (speed 62 → 93, burst 28 → 98, jumping 32 → 99, intelligence 42 → 91).
+- **injuryProne on `PINJ`:** **falls** 99 → 45 as durability rises. The inversion is
+  in the shipped file.
+- **tackle, catching, rushBlock, passBlock, kickAccuracy, sPassAcc, ballSecurity,
+  trucking:** zero across the buckets that belong to the positions which do not
+  carry them, rising with the source above — the zero-pattern convention and the map
+  visible in one table (tackle 0 for `PTAK` 0–49, then 61 → 95; `sPassAcc` 0 except
+  quarterbacks, 73 → 99).
+- Two wobbles, both single low-count buckets where positions mix: `power` 68/74/70 at
+  `PSTR` 10–39 (n 8/15/30 — kickers, whose `power` is leg strength, not bench), and
+  `rushBlock` 85 at `PRBK` 60–69 (n 16). Not a source unused.
+
+**Every gate the standing rules name has now run on the written files.** What is
+left is Ryan's: import it and play it.
+
 ### For Ryan — the fetch list
 
 - **1981–83 PFR draft listings**: membership, pick order, age and career raise for
