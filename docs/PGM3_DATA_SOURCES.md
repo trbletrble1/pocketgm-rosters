@@ -512,3 +512,35 @@ revisiting before anyone concludes the expansion pool is exhausted.**
 definition one who did not survive. The curve therefore understates his decline
 and the result is an **upper bound**. Same selection trap as the league's rising
 age curve.
+
+## PFR: the in-app browser does NOT get through, and the fix is a saved file
+
+Tested 2026-09-03 on `https://www.pro-football-reference.com/years/1981/draft.htm`.
+The browser reaches Cloudflare's "Performing security verification" interstitial
+and **the challenge does not clear** — two navigations and 26 seconds of waiting,
+title still "Just a moment...". That is bot detection, so it is not worked around.
+
+This is **not** the footballdb case. There, `curl` and `WebFetch` returned 403 and a
+real browser engine was simply admitted. PFR issues an active challenge that the
+in-app browser does not satisfy, so the transport table now reads:
+
+| source | curl / WebFetch | in-app browser | works |
+|---|---|---|---|
+| Wikipedia API | yes, with a User-Agent | yes | **API** |
+| footballdb | 403 | **yes** | in-app browser |
+| PFR | 403 | **challenge never clears** | **a file saved by Ryan** |
+
+**The working transport costs one "Save Page As" per year.** The 1980 listing in
+`sources/1979PFR/` arrived exactly that way — 738KB of saved HTML — and a file on
+disk sidesteps the context limit that truncated a pasted 1981 fetch at pick 185.
+Fetching in halves by round is unnecessary.
+
+`tools/extract_pfr_draft.py` parses that format. Verified against the 1980 listing:
+335 picks, names agreeing with the existing `wip/draft_1980_pfr.csv` on all 335. It
+finds the file by year and reports what is missing, so the moment 1981-83 land it is
+one command.
+
+The listing carries `Rnd, Pick, Tm, Player, Pos, Age, To, AP1, PB, St, wAV, DrAV,
+College`. **The hindsight signal is `wAV` and `DrAV` directly**, no derivation, and
+a man who never played reads blank — which is itself the signal. In the 1980 class
+`wAV` is present on 208 of 349 rows.
