@@ -479,3 +479,36 @@ Bill Walsh.
 
 The same test should be run before trusting the 1983, 1986 or 1990 mods' coach
 tables — see backlog item 20.
+
+## `1976_raidermike.ros` — an adjacent-year mod, three years before the build
+
+In `sources/1976madden/`. 2,299 players, 110 fields, and it **screens FAIL for
+faces**: `PSKI` is collapsed at 29% on the middle value, over the 28% threshold.
+`COCH` is the same ~2007 Madden stock pool as `NFL79.ros` — D. LeBeau and
+G. Williams are both in it — so its coach table is worthless for 1976 the same
+way, and by the same age test.
+
+**It is INDEPENDENT of `NFL79.ros`, not a copy.** Of the 964 men in both, `POVR`
+agrees on 11% and the live attributes on 30-51%. Height agrees on 97%, which is
+not lineage — height does not change.
+
+**Its value is ratings for men gone before 1979.** It closed the last three of the
+1979 expansion pool that no other source reached — MacArthur Lane 96, Pat Curran
+78, Vince Papale 63 — and being three years back it reaches men active in 1976 and
+retired by 1979, which is deeper than the 1977-78 difference goes. **Worth
+revisiting before anyone concludes the expansion pool is exhausted.**
+
+**Age-forward, measured on those 964 rather than assumed:**
+
+| age in 1976 | median POVR change by 1979 | n |
+|---|---|---|
+| 22-25 | +2.0 | 551 |
+| 26-29 | 0.0 | 325 |
+| 30-33 | −1.5 | 70 |
+| 34-40 | −8.0 | 7 |
+
+**Caveat that no statistic shows:** those 964 are men who were *still playing* in
+1979. A man being aged forward *because he is in the expansion pool* is by
+definition one who did not survive. The curve therefore understates his decline
+and the result is an **upper bound**. Same selection trap as the league's rising
+age curve.

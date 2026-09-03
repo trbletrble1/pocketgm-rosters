@@ -1073,10 +1073,23 @@ carry.
 
 **Result:** old 24 at 55 to 90, median 76. Young 23 at 51 to 77, median 61.
 
-**Papale is rated as what he was**, not as the story: three NFL seasons, primarily
-special teams, and a **55** — the lowest of the 24. He is on Charlotte because its
-doctrine picked him, and if he sits there as a reclamation that mostly does not
-work, that is honest.
+**The last three are sourced after all.** Ryan found `1976_raidermike.ros`, an
+adjacent-year mod three years back — the same tier the 2025 JINX file was for
+2026. It carries all three, so nothing here is hand-rated: **MacArthur Lane 96 at
+33, Pat Curran 78 at 30, Vince Papale 63 at 30**, aged forward on a curve measured
+from the 964 men in both mods.
+
+**Papale is the check on the calibration, and it passes.** Hand-rated at 55 from
+his career, sourced at 61 — a 6-point gap, inside the calibration's own 3-to-5
+point error. Two methods, roughly one answer. He is still the lowest of the 24 and
+still on Charlotte because the doctrine picked him.
+
+**Lane is the opposite, and it is the number to look at.** Hand-rated 78, sourced
+**94** — a 16-point correction at running back, the position where the fit was
+weakest at 0.44. He is now the best player on Indianapolis, above Charlie Waters's
+healthy 87. That follows from a real 1976 rating (he led the NFL in receptions
+that year) and it is an upper bound, because the age curve is measured on men who
+were still playing in 1979 and Lane was not.
 
 ### Still to build
 

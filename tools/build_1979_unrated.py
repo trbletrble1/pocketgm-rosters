@@ -45,15 +45,44 @@ SEASON_FILE = '1979-1980SAVEGAME.DAT'   # first preference: the right season AND
 ERA_FILE = '1958-1980SAVEGAME.DAT'      # second: the right era, wrong season
 GOATS = 'GOATSSAVEGAME.DAT'             # fallback: runs ~5 hot on speed
 
-# Hand-rated, with the basis stated. Careers fetched from their own articles.
-# Rate the man, not the story: Papale is a three-season special-teams player and
-# comes out near the floor, which is honest and still a good detail for anyone
-# who spots him on Charlotte's roster.
-HAND = {
-    'Vince Papale':   (55, 'three NFL seasons, Eagles 1976-78, primarily special teams'),
-    'Pat Curran':     (72, 'ten seasons at tight end, Rams and Chargers 1969-78, a starter'),
-    'MacArthur Lane': (78, 'eleven seasons 1968-78; at 36 the oldest back to rush for 100 yards in a game'),
+# The three the archive missed are SOURCED after all, from the 1976 mod Ryan
+# found — an adjacent-year file three years back, the same tier the 2025 JINX
+# file was for 2026. Aged forward and the gap stated.
+#
+# The 1976 and 1979 mods are INDEPENDENT work, not copies: of the 964 men in
+# both, POVR agrees on 11% and the attributes on 30-51%. (Height agrees on 97%,
+# which is not lineage — height does not change.)
+#
+# AGE FORWARD, measured on those 964 rather than assumed:
+#     ages 22-25 in 1976   +2.0     ages 30-33   -1.5
+#     ages 26-29            0.0     ages 34-40   -8.0  (n=7, thin)
+#
+# CAVEAT, stated because no statistic shows it: those 964 are men who were still
+# playing in 1979. Our three were NOT — they are the men who did not survive, the
+# same selection problem that made the league's rising age curve the wrong
+# population for the archive men. So this curve UNDERSTATES their decline and the
+# numbers below are upper bounds.
+#
+# Kept hand ratings for comparison: Papale 55, Curran 72, Lane 78. Papale's
+# sourced figure lands within 6 of the hand rating, which is inside the
+# calibration's own 3-5 point error — a real check on the method. Lane's does not,
+# and the difference is 16 points at the position where the fit was weakest.
+SOURCE_1976 = {
+    'Vince Papale':   (63, 30, 'special teams, Eagles'),
+    'Pat Curran':     (78, 30, 'tight end, Chargers'),
+    'MacArthur Lane': (96, 33, 'led the NFL in receptions in 1976, his best season'),
 }
+AGE_FORWARD = {(22, 25): +2, (26, 29): 0, (30, 33): -2, (34, 40): -8}
+VETERAN_MAX = 94        # the observed top of the pool's own 30+ men
+
+def age_forward(povr, age76):
+    for (lo, hi), d in AGE_FORWARD.items():
+        if lo <= age76 <= hi:
+            return max(40, min(VETERAN_MAX, povr + d))
+    return povr
+
+HAND = {n: (age_forward(v, a), f'1976 mod, POVR {v} at {a}, aged forward three years — {why}')
+        for n, (v, a, why) in SOURCE_1976.items()}
 
 def norm(s):
     s = unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode()
@@ -219,8 +248,8 @@ def main():
                 rec, src = arc[f][norm(nm)][0], f
                 break
         if nm in HAND:
-            rating, basis, r_, e_ = HAND[nm][0], f'hand: {HAND[nm][1]}', '', ''
-            done['hand'] += 1
+            rating, basis, r_, e_ = HAND[nm][0], HAND[nm][1], '', ''
+            done['from the 1976 mod'] += 1
         elif rec is not None and pos in models and not young:
             ww, r_, e_, _ = models[pos]
             v = sum(a * b for a, b in zip([rec[f] for f in F], ww[:-1])) + ww[-1]
