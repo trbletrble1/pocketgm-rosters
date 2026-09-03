@@ -129,3 +129,16 @@ So the rule is symmetrical and it is not about who asks:
 
 A question with a measurement attached usually answers itself, and when it
 doesn't, it is answered in one line instead of four.
+
+---
+
+## "Committed" and "pushed" read identically in a report unless one is stated
+
+**2026-09-03.** Four batch-1 commits — the payroll rollout, the extension-term
+repair, two precedents — were reported as done. None had been pushed. Ryan found it
+by fetching `main` and seeing 2026 still carrying the broken extension fields; nothing
+in the report could have told him, because the report said "committed" and meant it.
+
+The fix is a reporting rule, not a git rule: **a report that says a thing is on
+`main` names the SHA that `git ls-remote` returns for `main`**, not the local HEAD.
+The REST API and `raw.githubusercontent.com` both cache; `ls-remote` does not.

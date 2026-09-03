@@ -448,6 +448,15 @@ def check_staff(new, refs):
                 sum(1 for p in new if 'Scout' in p['role']
                     for f in ('Hscout','Oscout','Dscout') if p[f] == 0)))
 
+    # POTENTIAL RANGE, measured on the game's own staff export 2026-09-03: potential
+    # runs 63-114 and 24 of 432 sit ABOVE 99 — the 98-rated head coaches carry
+    # 100-114. If the engine generates it, it reads it. Our files capped at 95-97
+    # by convention until batch 3; this check exists so the range is checked
+    # rather than assumed, in either direction.
+    out.append(('staff potential outside the game\'s observed 63-114',
+                sum(1 for p in new if not 63 <= p['potential'] <= 114)))
+    out.append(('staff potential < rating',
+                sum(1 for p in new if p['potential'] < p['rating'])))
     out.append(('growthType length != 51', sum(1 for p in new if len(p['growthType']) != 51)))
     out.append(('growthType 50x rule (DOES apply to staff)',
                 sum(1 for p in new
