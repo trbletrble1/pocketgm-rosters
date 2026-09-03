@@ -1748,3 +1748,54 @@ before they are placed at all.
 **Correction to a premise (Ryan's):** Tom Brady is NOT missing from 2000. He is on New England
 at **73/78, draftNum 199** — rostered rather than a prospect, which is correct: he was
 drafted in 2000, so he belongs on a roster while the pool holds the upcoming classes.
+
+### 34. 2017's raises land on long snappers — and `GAP_BY_BAND`'s low band is why
+
+**The four-file proposal's opening evidence. Not fixed here.**
+
+2017 produces **nine prospect raises of 20 points or more** — the same count as
+2013. 2013's go to Myles Garrett and Aaron Donald. 2017's go to **Blake Ferguson
+(+25), Thomas Fletcher (+23), Hunter Bradley (+23) and Austin Cutting (+22)** —
+long snappers rated 40 — with Daniel Jones at +27 the largest in the file.
+
+**It is not a cap.** A clamp piles up at the ceiling; 2017 thins out — one man at
+96, one at 94, two at 93, three at 91, seven at 90. **2000 is the file with the
+pile-up**, eighteen men at exactly 99. My clamp hypothesis was wrong.
+
+**The mechanism is `GAP_BY_BAND`**, which hands **18 points** of baseline headroom
+to a man rated in the 40s and **1 point** to a man in the 90s. Defensible in
+isolation — an unproven low-rated prospect has room — but with no career signal to
+counterweight it, the baseline decides everything and the lowest-rated men win.
+
+**Four files share the flat gradient**, and the same mechanism is the likely cause
+in all of them:
+
+| file | r(gap, career span) | never | 1-3 yr | 4-7 | 8-11 | 12+ |
+|---|---|---|---|---|---|---|
+| 1986 | **+0.70** | 5 | 5 | 7 | 10 | 14 |
+| 2021 | +0.43 | 6 | 4 | 10 | 8 | 6 |
+| **2013** | +0.09 | 7 | 7 | 7 | 7 | 9 |
+| **2010** | +0.09 | 6 | 7 | 6 | 6 | 7 |
+| **2004** | −0.05 | 9 | 8 | 7 | 7 | 8 |
+| **2017** | −0.06 | 7 | 7 | 7 | 6 | 6 |
+
+**Rodgers 63/99 and Donald 76/99 are isolated cases, not a working mechanism.**
+Donald's +23 sits in a file where twelve-year men and never-played men both get 7.
+A handful of correct cases in a file with no signal is the plausible-distribution
+trap.
+
+**`GAP_BY_BAND` is shared and deliberately untouched here.** It reaches every file
+including 1979, which works and is verified; changing a shared formula to improve
+one file is how three break. It belongs in the four-file proposal, measured across
+the files it affects.
+
+### 35. `probowls` is capped at 6, which truncates the best careers
+
+Found while fixing 2000. `raise_for` and `draft_potential` both use
+`0.9 * min(6, probowls)`, so **Drew Brees's 13 Pro Bowls score the same as six**,
+as do Jason Witten's 11. The men the cap flattens are exactly the ones a scouting
+ceiling should distinguish.
+
+`probowls` is populated on 117 of 1,019 and `allpro` on 41 — thin, but present
+precisely for the men career span misleads. **Worth testing as a better
+substitution for `car_av` than span, before the four-file work.**
