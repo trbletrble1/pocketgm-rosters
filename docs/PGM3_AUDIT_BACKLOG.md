@@ -2054,3 +2054,51 @@ Rodgers and Peterson were cited as evidence 2004's mechanism worked, and with a
 real signal applied Peterson rises to 99 while Rodgers falls to 95 — they were the
 flat baseline landing well twice, not a mechanism. **Individual names are not
 evidence about a distribution.**
+
+#### 2026 raised to the game's level, 2026-09-03 — the play test decides the rest
+
+**Second prerequisite closed by Ryan's measurement, not mine.** He exported a
+league simmed into its second season: **1,259 rostered, payroll median $210.7M,
+min $99.9M, max $257.4M**. Rosters shrink by 437 as contracts expire before teams
+refill, so **payroll falls rather than rising** — $242.9M is what a full roster of
+fresh contracts costs, a level and not a curve. *That export is not on disk in the
+build session; the figures are Ryan's.*
+
+**2026 only.** Team payroll raised from $197.4M to $242.9M on the **top-53 basis**,
+which is the project's documented convention and what the gate measures.
+
+| | min | p25 | median | max |
+|---|---|---|---|---|
+| before | 109.9M | 178.7M | **197.4M** | 266.6M |
+| after | 155.3M | 208.9M | **242.9M** | 276.6M |
+| vanilla | 155.3M | 208.9M | 242.9M | 276.6M |
+
+**A single global factor could not do it.** Hitting the median needs 1.2245x, which
+sends **12 of 32 teams past vanilla's observed maximum** and our richest to $329.6M.
+Our team spread is wider than the game's — 2.42x against 1.78x — so team totals are
+mapped onto vanilla's own distribution by rank and each team scaled uniformly.
+**Ordering inside every team is exact, asserted pairwise.**
+
+**THE ROSTER-SIZE CONFOUND, noted and NOT fixed — this is the honest limit of the
+write.** We carry **59.1** men per team against vanilla's **53.0**, because the
+archive includes injured reserve alongside the active 53. So the same team total
+buys **$4.11M per man where vanilla pays $4.58M**, leaving individual salaries about
+**10% low**. If the play test says signings still feel cheap, this is the first
+place to look. Matching per-man cost is a different and larger decision.
+
+Two consequences of carrying six extra men, both stated rather than smoothed:
+- Matching *whole-roster* totals instead left the top-53 median at $241.2M and
+  failed the gate. The project's basis is top-53 and that is what was matched.
+- On the **full-roster** basis our maximum is now **$283.7M**, above the $280M
+  engine constant. The gate checks the top-53 basis, where we read $276.6M — and
+  **2017 already ships at $280.2M full-roster** and plays, so this is not new
+  territory. Flagged because it is outside anything previously shipped.
+
+**`--payroll=vanilla` added to the validator**, opt-in. Comparing a raised file to
+the unraised band is a real failure, so the band moves only when asked, and the
+other nine still fail if raised by accident. Verified both ways.
+
+**WHAT IS STILL UNKNOWN.** Two independent leagues agree the generator *produces*
+$242.9M. Whether the engine *expects* it is not something any file can answer —
+those are indistinguishable from outside. **Ryan imports and plays this before the
+other nine follow.**

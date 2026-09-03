@@ -20,6 +20,10 @@ Override per build:
 
     python3 pgm3_validate.py roster NEW.json REF1.json --team_cap=301.2M
     python3 pgm3_validate.py roster NEW.json REF1.json --era=1979
+    python3 pgm3_validate.py roster NEW.json REF1.json --payroll=vanilla
+
+`--payroll=vanilla` compares team payroll against the GAME's $242.9M rather than
+the archive's $197.4M. Opt-in, because only 2026 has been raised — see the check.
 
 `--era=YEAR` states which season the file models. Its only effect today is to
 exempt K/P from the empty-position check before 1980, where a team really could
@@ -370,6 +374,16 @@ def check_roster(new, refs):
     # on 32 teams reads ~$1.2M high and would compare two different conventions.
     ref_meds = [statistics.median(_top53(r)) for r in refs if _top53(r)]
     mine = _top53(on)
+    # --payroll=vanilla: the file deliberately targets the GAME'S level rather than
+    # the archive's. Two independently generated fresh vanilla leagues agree to the
+    # dollar at a $242.9M team payroll; all ten of our files read $197.4M, which is
+    # one donor ancestor rather than ten measurements (backlog item 37). 2026 was
+    # raised on 2026-09-03 pending a play test, and until that test says the engine
+    # EXPECTS $242.9M rather than merely producing it, the other nine stay where
+    # they are and this flag stays opt-in. Comparing a raised file against the
+    # unraised band is a real failure, so the band moves only when asked.
+    if LIMITS.get('payroll') == 'vanilla':
+        ref_meds = [242_900_000]
     if ref_meds and mine:
         lo, hi = min(ref_meds) - 1e6, max(ref_meds) + 1e6
         m = statistics.median(mine)
@@ -832,6 +846,8 @@ def main():
     # Accepts plain numbers or shorthand: --team_cap=301.2M
     argv = []
     for a in sys.argv:
+        if a == '--payroll=vanilla':
+            LIMITS['payroll'] = 'vanilla'; continue
         me = re.match(r'--era=(\d{4})$', a)
         if me:
             LIMITS['era'] = int(me.group(1)); continue
