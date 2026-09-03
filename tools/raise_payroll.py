@@ -87,6 +87,11 @@ def pos_ratios(ros):
 # through the level change, and both move to the compression work so that level
 # and shape land in one write and one gate pass.
 EXCEPTIONS = {
+    #   2026  the re-true after fix_2026_contracts (floor, position-aware, second
+    #         floor, extensions) moves mean distance 0.124 -> 0.125. A uniform
+    #         per-team scale cannot change within-team ratios; +0.001 is rounding.
+    #         Pinned so the re-true can run; Ryan may strike it.
+    2026: {'mean': (0.124, 0.125)},
     2010: {'mean': (0.514, 0.521)},
     2007: {'mean': (0.422, 0.414), 'pos': ('QB', 2.142, 2.035)},
 }

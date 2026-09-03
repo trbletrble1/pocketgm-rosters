@@ -2432,8 +2432,31 @@ the level back on the game's exactly. Under $500K 115 → 94; 85+/26+/under $2M
 compressed top is item 37's shape question on the eight files not yet
 transformed.
 
-The contract transform is not blamed for any of this; this item says what the
-placeholders are.
+**Sources (2) and (3) FIXED on 2026, 2026-09-03 — `tools/fix_2026_contracts.py`**,
+in order: floor from vanilla by (position, rating band), lift-only — **282
+lifted**, not the 96 under $500K, because the floor sits at $0.60M–$1.09M and
+the sub-$500K count was the symptom; position-aware transform (mean position
+distance 0.385 → 0.124, 14.5% cross-position pairs reordered); a **second floor
+pass** ruled in because 59 men per team against the game's 53 map each team's
+bottom six onto vanilla's per-position minimum and the per-team scale takes
+some under $600K — **369 lifted**, again the population and not the twelve
+under $500K; extension terms from the final salary. Then `raise_payroll`
+re-trues the medians, with a pinned exception for a +0.001 mean-distance move.
+
+| | p10 | median | p90 | under $500K | asks up / down |
+|---|---|---|---|---|---|
+| vanilla | $0.70M | $1.27M | $7.50M | 0 | 27% / 22% |
+| 2026 before | $0.78M | $1.48M | $6.92M | 94 | 100% / 0% |
+| **2026 after** | **$0.70M** | $1.35M | $7.29M | **0** | **33% / 25%** |
+
+Josh Allen $43.2M, Hutchinson $20.1M (both hold from the singleton fix); Trey
+Smith $11.4M → $8.0M by ruling (an 89-rated guard placed among vanilla's guards
+by rank, better information than the band median). **Free agents were a
+different distribution and were checked first**: vanilla's carry salary 0,
+length 0, eLength 1 and an absolute asking price in eSalary (median $0.70M), so
+2026's 465 draw from that by rating band — the joint table would have given
+them nothing. This closes item 41's 2026 half. Remaining: item 41 on the other
+eight files; source (3) on the eight files not yet transformed (item 37).
 
 ---
 
