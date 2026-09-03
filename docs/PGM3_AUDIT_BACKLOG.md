@@ -1904,11 +1904,59 @@ and the position band have turned out to be ours rather than the engine's.
 
 #### RULED: all ten get tuned, as its own piece of work, after two checks
 
-1. **Confirm $242.9M from more than one vanilla export.** One file is one sample,
-   and this constant has already fooled us by agreeing with itself ten times.
-2. **Check whether the game raises the cap across seasons.** If vanilla's payroll
-   rises year on year, $242.9M is a starting point rather than a constant, and
-   matching it needs to know which.
+1. ~~Confirm $242.9M from more than one vanilla export.~~ **CLOSED 2026-09-03.**
+   Ryan exported a second league. **Zero shared identifiers**, 63% shared names
+   from a common name pool — independently generated — and the economy is
+   **identical on every measure**:
+
+   | export | md5 | rostered | payroll median | min | max | p25 | top 20% |
+   |---|---|---|---|---|---|---|---|
+   | 1 | `1f1cf614` | 1,696 | $242.9M | $155.3M | $276.6M | $1.03M | 58% |
+   | 2 | `81c4c07a` | 1,696 | $242.9M | $155.3M | $276.6M | $1.03M | 58% |
+
+   Two independent leagues agreeing to the dollar, including per-team minimum and
+   maximum, means the game generates its economy from a fixed template. **$242.9M
+   is the engine's number, not one sample's variance** — and the archive's $197.4M
+   is definitively ours: two measurements of the game against ten copies of one guess.
+2. **STILL OPEN — does the cap rise across seasons?** A fresh league cannot answer
+   it; this needs a vanilla league **simmed forward a year or two** and exported.
+   If payroll rises, $242.9M is a starting point rather than a constant and
+   matching it needs to know which. **That export is the remaining blocker.**
+
+### 39. Coach potential IS a defect after all — item 32's ruling rested on a false premise
+
+**Item 32 concluded that coach headroom of 2 with a quarter locked was "PGM3's
+convention, not our defect", and Ryan ruled not to widen it on that basis. The
+vanilla staff export refutes it.**
+
+| | median headroom | p90 | max | locked |
+|---|---|---|---|---|
+| **vanilla (the game)** | **7** | **14** | **27** | **0%** |
+| 2017 | 3 | 6 | 6 | 12% |
+| 1986, 2000, 2021, 2026, 1979 | 2 | 4–5 | 4–8 | 19–32% |
+| 2013 | 0 | 2 | 2 | **68%** |
+
+**The game gives a coach the same room a player gets. Our files give him two
+points and lock a quarter of them.** Every one of the ten agrees with the others
+and disagrees with the engine — the fourth time in two days that a "convention" has
+turned out to be one ancestor wearing ten coats, after the payroll constant, the
+position band, and the 2017 provenance claim.
+
+**So the tension logged in item 32 — that hiring a young coach cannot pay off — is
+ours and fixable, not the engine's.**
+
+**Two more staff findings from the same export:**
+- **Sitting head coaches floor at 64** in vanilla, against the 58 we derived and
+  applied to 1979.
+- **The free-agent coach pool is 16 men rated 57 to 64** — a narrow band just below
+  the sitting men. Ours carry 21 to 33 men rated down to 32. We are generating a
+  much larger and much worse pool than the game does.
+
+**CAVEAT ON THE SAMPLE: the three staff exports share all 432 identifiers.** They
+are one league exported three times, so this is **n = 1** for staff, against n = 2
+for rosters. The direction is unambiguous — median 7 against 2 is not sampling
+noise — but a second independent staff league should be exported before anything is
+rebuilt on it.
 
 ### 38. The position-multiplier "band" is our convention, not the game's
 
