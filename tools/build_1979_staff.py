@@ -72,8 +72,15 @@ _rs=_ilu.spec_from_file_location('_r', os.path.join(os.path.dirname(os.path.absp
 # NOTE THE DISTINCTION, unresolved on purpose: the player pool was men genuinely
 # out of football, while hiring Dye takes him off a job he holds. That is
 # historically normal for an expansion team and it is a different act.
-NAMED = {'TEN': ('George Allen', 93, 61), 'CAR': ('Bill Arnsparger', 40, 53),
-         'JAX': ('Pat Dye', 50, 40), 'IND': ('John Madden', 95, 43)}
+# THE TWO LOW RATINGS ARE ON THE SITTING BAND, not the full one. Arnsparger's 40
+# and Dye's 50 were set against a band that included unemployed coaches, which is
+# the same defect the 28 real coaches had — see published(). Ryan's ruling put
+# Arnsparger at 65; Dye takes the sitting band's lower sixth, which is the same
+# 'lower band' disposition his college record earned, expressed in the right
+# population. Arnsparger is still the lowest-rated sitting coach in the file,
+# which is what Charlotte's doctrine wants, without being outside anything shipped.
+NAMED = {'TEN': ('George Allen', 93, 61), 'CAR': ('Bill Arnsparger', 65, 53),
+         'JAX': ('Pat Dye', 63, 40), 'IND': ('John Madden', 95, 43)}
 
 ROLES = ['Head Coach', 'Off Co-ord', 'Def Co-ord', 'Special Teams', 'Head Scout',
          'Off Scout', 'Def Scout', 'Head Physio', 'Assistant Physio']
@@ -94,12 +101,30 @@ SLUG = {'TEN': 'Memphis Southmen', 'CAR': 'Charlotte Hornets', 'JAX': 'Jacksonvi
         'SF': 'san-francisco-49ers', 'STL': 'st-louis-cardinals', 'TB': 'tampa-bay-buccaneers',
         'WAS': 'washington-redskins'}
 
-def published(field, role=None):
+def published(field, role=None, employed=None):
+    """`employed=True` restricts to men IN A JOB, which for head coaches is a
+    different population with a hard floor.
+
+    THE PUBLISHED FILES SEPARATE THE TWO AND ONLY THE POOL GOES LOW. Across nine
+    files and 288 sitting head coaches the minimum is 58, without exception; the
+    men rated in the thirties exist but are never employed. Mapping our ranking
+    across the WHOLE band — free agents included — and handing the result to
+    sitting coaches put eight of ours below that floor and Neill Armstrong, who
+    took Chicago to the playoffs in 1979, on 32: the lowest-rated coach in any
+    file this project has produced.
+
+    Win percentage was never the problem — published coach ratings track it at
+    r = +0.66 over 373 matched men. The band was."""
     out = []
     for y in ['2004', '2007', '2010', '2013', '2017', '2021']:
         for x in json.load(open(repo(f'PGMStaff_{y}.json'))):
-            if role is None or x['role'] == role:
-                out.append(x[field])
+            if role is not None and x['role'] != role:
+                continue
+            if employed is True and x['teamID'] == 'Free Agent':
+                continue
+            if employed is False and x['teamID'] != 'Free Agent':
+                continue
+            out.append(x[field])
     return sorted(out) if out and isinstance(out[0], (int, float)) else out
 
 def spread(n, pool):
@@ -147,7 +172,7 @@ def main():
     # head coach rating: the mod's own view, quantile-mapped onto the published
     # Head Coach distribution. Anchored by age, so it is the modder's 1979
     # judgement and not a stock record.
-    hc_pool = published('rating', 'Head Coach')
+    hc_pool = published('rating', 'Head Coach', employed=True)   # sitting men only; see published()
     hcv = []
     for x in src:
         if x.get('_invented'):

@@ -1659,3 +1659,37 @@ rating recompute.
 build), and whether the eleven inherited 99s come down with it. **Not folded into
 the Donald write — different cause, and mixing them makes both harder to reason
 about.**
+
+### 32. Coach potential relates to nothing, and a coach can gain two points in a career
+
+**PGM3's convention, not ours — measured across all nine published files.**
+
+| file | median headroom | max | locked | r with age | r with rating |
+|---|---|---|---|---|---|
+| 2004 | 2 | 5 | 21% | −0.21 | −0.10 |
+| 2010 | 2 | 6 | 27% | −0.27 | −0.14 |
+| 2013 | 0 | 2 | **68%** | +0.03 | +0.09 |
+| 2017 | 3 | 6 | 12% | +0.01 | −0.01 |
+| 2021 | 2 | 5 | 20% | −0.07 | −0.02 |
+| 2026 | 2 | 4 | 29% | +0.06 | +0.03 |
+| 1979 | 2 | 4 | 19% | +0.06 | +0.04 |
+
+Median headroom is **2 at every age band from 30 to 69** across 2017, 2021 and 2026,
+and the locked share moves between 14% and 27% with no pattern. Homer Rice locked at
+52 while Walt Michaels has headroom at 50 is the general case, not an oddity.
+
+**The tension, logged rather than resolved.** A coach gains two or three points over
+a career and a quarter of them cannot move at all, while a rookie player carries up
+to 28 and an injured veteran like Charlie Waters carries 14. **Hiring a young coach
+cannot pay off in this engine.** Pat Dye reaches 65 whatever we do. Worth knowing
+before anyone builds a doctrine around coach development.
+
+**Not widened.** Departing from all nine published files to model something the
+engine itself does not model is not worth it, and it was not asked for.
+
+**And the mechanism, stated honestly:** `build_1979_roster_file.py` sets coach
+potential as `rating + randint(0, 4)` — a random draw of exactly the kind removed
+from the 2026 player build. It is kept here because it reproduces a published
+convention that is itself apparently random: there is no signal to fit, so a draw
+matching the marginal distribution is the honest choice. Written down as a decision
+so it is not discovered later and mistaken for an oversight.

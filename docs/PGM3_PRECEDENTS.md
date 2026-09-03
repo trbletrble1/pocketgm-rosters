@@ -2167,6 +2167,29 @@ stamina 1 across the seven files, or 1,622 counting every non-zero record
 including prospects; 2017 reads 24.9% rostered or 18.0% overall. Two correct
 measurements of different populations look like a disagreement otherwise.
 
+### Third instance: the target can be the wrong POPULATION, not the wrong width
+
+**2026-09-03, the 1979 coach floor.** The published files separate head coaches
+**in a job** from head coaches **in the pool**: across nine files and 288 sitting
+men the minimum rating is **58, without exception**, while the free-agent pool runs
+down to 32. Ranking our 32 sitting coaches by win percentage and mapping them
+across the *whole* published head-coach band — free agents included — put eight
+below that floor, and **Neill Armstrong, who took Chicago to the playoffs in 1979,
+on 32**: the lowest-rated coach this project has produced. Mapping onto the sitting
+band alone fixes it and leaves the ordering untouched.
+
+The metric was never wrong. Published coach ratings track real win percentage at
+**r = +0.66** across 373 matched men; the guess that they rated on something else
+was checked and refuted. **It was the band.**
+
+So the family now has three members, and they fail differently:
+- the 2026 stretch and the 1979 expansion pool — a source too NARROW to span its target;
+- the 2000 stamina block — a target CONTAMINATED by an artifact;
+- the 1979 coach floor — a target drawn from the wrong POPULATION.
+
+**Check that the target band comes from the population you are assigning to, not
+merely from the right field of the right file.**
+
 **Rule: clean the target before mapping onto it, not just the source.** "Find the
 real cohort before measuring anything" is normally applied to the input. A
 quantile map has two populations and the same discipline applies to both — the
@@ -4501,3 +4524,4 @@ exactly the moment the change is largest.
 change should produce a one-line diff. Both write tools now pass
 `separators=(', ', ': ')`, and the semantic diff — records added, fields changed —
 is printed alongside, so the two can be compared.
+

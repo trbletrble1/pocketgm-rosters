@@ -1,35 +1,35 @@
 team,teamID,role,forename,surname,rating,age,provenance,defensive_front,w1979,l1979
-ATL,ATL,Head Coach,Leeman,Bennett,81,41,sourced,4-3,6,10
-BAL,BAL,Head Coach,Ted,Marchibroda,76,48,sourced,4-3,5,11
-BUF,BUF,Head Coach,Chuck,Knox,72,47,sourced,4-3,7,9
-CHI,CHI,Head Coach,Neill,Armstrong,32,53,sourced,4-3,10,6
-CIN,CIN,Head Coach,Homer,Rice,38,52,sourced,4-3,4,12
-CLE,CLE,Head Coach,Sam,Rutigliano,65,48,sourced,4-3,9,7
-DAL,DAL,Head Coach,Tom,Landry,90,55,sourced,4-3,11,5
-DEN,DEN,Head Coach,Red,Miller,83,52,sourced,4-3,10,6
-DET,DET,Head Coach,Monte,Clark,50,42,sourced,4-3,2,14
-GB,GB,Head Coach,Bart,Starr,58,45,sourced,4-3,5,11
-HOU,HOU,Head Coach,Bum,Phillips,73,56,sourced,4-3,11,5
-KC,KC,Head Coach,Marv,Levy,70,54,sourced,4-3,7,9
-LA,LAR,Head Coach,Ray,Malavasi,68,49,sourced,4-3,9,7
+ATL,ATL,Head Coach,Leeman,Bennett,83,41,sourced,4-3,6,10
+BAL,BAL,Head Coach,Ted,Marchibroda,78,48,sourced,4-3,5,11
+BUF,BUF,Head Coach,Chuck,Knox,74,47,sourced,4-3,7,9
+CHI,CHI,Head Coach,Neill,Armstrong,58,53,sourced,4-3,10,6
+CIN,CIN,Head Coach,Homer,Rice,62,52,sourced,4-3,4,12
+CLE,CLE,Head Coach,Sam,Rutigliano,69,48,sourced,4-3,9,7
+DAL,DAL,Head Coach,Tom,Landry,93,55,sourced,4-3,11,5
+DEN,DEN,Head Coach,Red,Miller,86,52,sourced,4-3,10,6
+DET,DET,Head Coach,Monte,Clark,66,42,sourced,4-3,2,14
+GB,GB,Head Coach,Bart,Starr,67,45,sourced,4-3,5,11
+HOU,HOU,Head Coach,Bum,Phillips,75,56,sourced,4-3,11,5
+KC,KC,Head Coach,Marv,Levy,73,54,sourced,4-3,7,9
+LA,LAR,Head Coach,Ray,Malavasi,71,49,sourced,4-3,9,7
 MIA,MIA,Head Coach,Don,Shula,95,49,sourced,4-3,10,6
-MIN,MIN,Head Coach,Bud,Grant,85,52,sourced,4-3,7,9
-NE,NE,Head Coach,Ron,Erhardt,57,48,sourced,4-3,9,7
-NO,NO,Head Coach,Dick,Nolan,41,47,sourced,4-3,8,8
-NYG,NYG,Head Coach,Ray,Perkins,66,38,sourced,4-3,6,10
-NYJ,NYJ,Head Coach,Walt,Michaels,35,50,sourced,4-3,8,8
-OAK,LV,Head Coach,Tom,Flores,69,42,sourced,4-3,9,7
-PHI,PHI,Head Coach,Dick,Vermeil,75,43,sourced,4-3,11,5
-PIT,PIT,Head Coach,Chuck,Noll,87,47,sourced,4-3,12,4
-SD,LAC,Head Coach,Don,Coryell,61,55,sourced,4-3,12,4
-SEA,SEA,Head Coach,Jack,Patera,67,46,sourced,4-3,9,7
-SF,SF,Head Coach,Bill,Walsh,78,48,sourced,4-3,2,14
-STL,ARI,Head Coach,Bud,Wilkinson,74,63,sourced,4-3,5,11
-TB,TB,Head Coach,John,McKay,77,56,sourced,4-3,10,6
-WAS,WAS,Head Coach,Jack,Pardee,64,43,sourced,4-3,10,6
+MIN,MIN,Head Coach,Bud,Grant,87,52,sourced,4-3,7,9
+NE,NE,Head Coach,Ron,Erhardt,66,48,sourced,4-3,9,7
+NO,NO,Head Coach,Dick,Nolan,64,47,sourced,4-3,8,8
+NYG,NYG,Head Coach,Ray,Perkins,70,38,sourced,4-3,6,10
+NYJ,NYJ,Head Coach,Walt,Michaels,61,50,sourced,4-3,8,8
+OAK,LV,Head Coach,Tom,Flores,72,42,sourced,4-3,9,7
+PHI,PHI,Head Coach,Dick,Vermeil,77,43,sourced,4-3,11,5
+PIT,PIT,Head Coach,Chuck,Noll,89,47,sourced,4-3,12,4
+SD,LAC,Head Coach,Don,Coryell,67,55,sourced,4-3,12,4
+SEA,SEA,Head Coach,Jack,Patera,70,46,sourced,4-3,9,7
+SF,SF,Head Coach,Bill,Walsh,82,48,sourced,4-3,2,14
+STL,ARI,Head Coach,Bud,Wilkinson,76,63,sourced,4-3,5,11
+TB,TB,Head Coach,John,McKay,79,56,sourced,4-3,10,6
+WAS,WAS,Head Coach,Jack,Pardee,68,43,sourced,4-3,10,6
 TEN,TEN,Head Coach,George,Allen,93,61,named by Ryan,4-3,,
-CAR,CAR,Head Coach,Bill,Arnsparger,40,53,named by Ryan,4-3,,
-JAX,JAX,Head Coach,Pat,Dye,50,40,named by Ryan,4-3,,
+CAR,CAR,Head Coach,Bill,Arnsparger,65,53,named by Ryan,4-3,,
+JAX,JAX,Head Coach,Pat,Dye,63,40,named by Ryan,4-3,,
 IND,IND,Head Coach,John,Madden,95,43,named by Ryan,4-3,,
 ATL,ATL,Off Co-ord,Kevin,Thornton,63,32,invented,4-3,6,10
 BAL,BAL,Off Co-ord,Elvin,Thurman,72,49,invented,4-3,5,11
