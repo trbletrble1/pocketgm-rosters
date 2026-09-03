@@ -1,287 +1,335 @@
 year,name,pos,age,rating,potential,draft_pick,round,college,career_av,pro_bowls,ever_played,source,ordering,raise_basis
-1981,George Rogers,RB,21,85,90,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Everson Walls,CB,23,81,86,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Cris Collinsworth,WR,22,80,85,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Lawrence Taylor,OLB,21,79,83,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Carlton Williamson,S,23,78,82,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Dexter Manley,DT,22,78,82,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Singletary,MLB,22,77,81,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Howie Long,DE,23,77,81,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Roger Taylor,OT,22,76,80,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Greg Lafleur,TE,22,76,80,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Larry Coombs,OG,23,76,80,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Joe Delaney,RB,22,76,80,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Bobby Butler,CB,22,75,79,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Kevin Williams,WR,24,75,79,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Neil Lomax,QB,23,75,79,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1981,Rickey Jackson,OLB,22,75,79,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Kenny Hill,S,21,75,79,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Mat Mendenhall,DT,23,74,78,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Ray Stachowicz,P,22,74,78,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1981,James Brooks,RB,21,74,78,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Glen Redd,MLB,23,74,78,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Eric Wright,CB,22,74,78,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,John Harty,DE,22,74,78,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Mark Nichols,WR,23,74,78,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Wilson Alvarez,K,22,74,78,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.65),NONE — no career outcome on disk; PFR fetch pending
-1981,Freeman McNeil,RB,22,74,78,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Leonard Mitchell,OT,23,74,78,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,E.J. Junior,OLB,22,73,77,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Lloyd Burruss,S,22,73,77,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Jim Wilks,DT,24,73,77,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Eric Sievers,TE,23,73,77,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Todd Thomas,C,22,73,77,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1981,Larry Lee,OG,21,73,77,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Ronnie Lott,CB,23,73,77,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Ken Margerum,WR,22,72,76,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Amos Lawrence,RB,22,72,76,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Dave Ahrens,MLB,23,72,76,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Byron Hunt,OLB,22,72,76,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,John Simmons,S,22,72,76,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Darryl Grant,DE,23,72,76,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Donnell Thompson,DT,22,72,76,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,James Wilder,RB,22,71,75,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Deron Cherry,CB,23,71,75,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,David Verser,WR,23,71,75,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Wade Wilson,QB,22,71,75,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1981,Keith Van Horne,OT,26,71,75,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Hoby Brenner,TE,23,71,75,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,David Hughes,RB,22,71,75,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Don Blackmon,OLB,21,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Bobby Kemp,S,23,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Tim Huffman,OG,22,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Byron Braggs,DT,22,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Hanford Dixon,CB,23,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Dave Shula,WR,22,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Randy Scott,MLB,22,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Carl Birdsong,P,23,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1981,Jerry Boyarsky,DE,22,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Tommy Vigorito,RB,22,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Kenny Easley,S,24,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Mel Kaufman,OLB,23,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Johnnie Poe,CB,22,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Matt Bouza,WR,21,70,74,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Ken Lanier,OT,23,69,73,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Curtis Green,DT,22,69,73,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Jim Culbreath,RB,21,69,73,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Willie Scott,TE,23,69,73,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Angelo King,MLB,22,69,73,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Larry Flowers,CB,22,69,73,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Mel Owens,OLB,23,69,73,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Leslie Frazier,S,22,69,73,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Ben Rudolph,DE,22,69,73,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Leo Lewis,WR,23,68,72,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Eric Lane,RB,22,68,72,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Dave Wilson,QB,22,68,72,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1981,David Trout,K,24,68,72,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.65),NONE — no career outcome on disk; PFR fetch pending
-1981,Jimmy Moore,OG,23,68,72,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Frank Warren,DT,22,68,72,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Tony Collins,RB,21,68,72,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Mark May,OT,23,68,72,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Jeff Griffin,CB,22,68,72,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Robbie Martin,WR,22,67,71,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Michael Downs,S,23,67,71,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Greg Gaines,OLB,22,67,71,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Jim Collins,MLB,22,67,71,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Ken Poole,DT,23,67,71,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Steve Folsom,TE,22,67,71,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,John Scully,C,22,67,71,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1981,Frank Hawkins,RB,23,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Jim Burt,DE,22,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Garrett,P,22,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1981,John Holt,CB,26,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Jim Jenson,WR,23,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Billy Ard,OG,22,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Russell Gary,S,21,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Lyman White,OLB,23,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Leon Bright,RB,22,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Robinson,DT,22,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Humiston,MLB,23,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Sam Claphan,OT,22,66,70,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Reuben Henderson,CB,22,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Tracy Porter,WR,23,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Jeff Kemp,QB,22,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1981,Billy Jackson,RB,22,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Greg Meisner,DE,24,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Robin Sendlein,OLB,23,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Steinfort,S,22,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Tice,TE,21,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Keith Ferguson,DT,23,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Andra Franklin,RB,22,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,John Swain,CB,21,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Mardye McDole,WR,23,65,69,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Bill Dugan,OG,22,64,68,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Buddy Curry,MLB,22,64,68,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Doak Field,OLB,23,64,68,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Dennis Smith,S,22,64,68,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Allan Kennedy,OT,22,64,68,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Augustyniak,RB,23,64,68,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Todd Bell,CB,22,64,68,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Kenneth Toler,WR,22,64,68,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Mick Luckhurst,K,24,64,68,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.65),NONE — no career outcome on disk; PFR fetch pending
-1981,Monte Bennett,DE,23,64,68,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Greg Brown,DT,22,64,68,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Pete Holohan,TE,21,63,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Rick Parros,RB,23,63,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Tom Orosz,P,22,63,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1981,Bob Gregor,S,22,63,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Steve Potter,OLB,23,63,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,John Gillen,MLB,22,63,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Blane Gaison,CB,22,63,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Holston,WR,23,63,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Matthew Teague,DT,22,63,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Randy McMillan,RB,22,63,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Howard Richards,OG,23,63,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Nick Eyre,OT,22,62,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Bill Neill,DE,22,62,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Ray Ellis,S,25,62,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Neal Musser,OLB,23,62,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,James Marshall,CB,22,62,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Byron Franklin,WR,21,62,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Stump Mitchell,RB,23,62,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Paul Davis,MLB,22,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Doug McDougald,DT,22,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Tim Sherwin,TE,23,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Jay Hilgenberg,C,22,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1981,Vince Thompson,RB,22,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Ted Watts,CB,23,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Kurt Sohn,WR,22,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Anthony Washington,S,22,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Guy Prather,OLB,24,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Don Smerek,DE,23,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Art Plunkett,OT,22,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Russ Grimm,OG,21,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Toussaint Tyler,RB,23,61,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Neil Elshire,DT,22,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Alvin Hall,CB,21,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Harold Bailey,WR,23,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Tom Flick,QB,22,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1981,Turk Schonert,QB,22,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1981,Dave Klug,MLB,23,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Frank Wattelet,S,22,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Scott Pelluer,OLB,22,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Steve Cox,P,23,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1981,Jarvis Redwine,RB,22,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Buster Barnett,TE,22,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Chris Linnin,DT,24,60,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Lynn Thomas,CB,23,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Marcus Anderson,WR,22,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Johnny Robinson,DE,21,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,John Roveto,K,23,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.65),NONE — no career outcome on disk; PFR fetch pending
-1981,Hubie Oliver,RB,22,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Tim Irwin,OT,22,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Eric Hurt,S,23,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Howard Carson,OLB,22,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Milt McColl,MLB,22,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Glen Titensor,OG,23,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Scott Woerner,CB,22,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Malcolm Barnwell,WR,22,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Calvin Murray,RB,23,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Bob Cobb,DT,22,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Lin Dawson,TE,22,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Avon Riley,OLB,24,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Rick Gervais,S,23,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Pat Ogrin,DE,22,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Bill Ring,RB,21,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Hector Gray,CB,23,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Virgil Seay,WR,22,59,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Frank Giddens,OT,22,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Guy Frazier,MLB,23,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Ralph DeLoach,DT,22,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Chester Willis,RB,22,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Gary Woolford,S,23,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,John Woodring,OLB,22,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Edwin Bailey,OG,22,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Keith Lee,CB,24,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,James Murphy,WR,23,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Ken Hartley,P,22,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1981,Daryle Skaugstad,DE,21,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Otis Wonsley,RB,23,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Gary Lewis,TE,22,58,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Daryl Wilkerson,DT,21,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,John Choma,C,23,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1981,Quentin Lowry,MLB,22,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Danny Spradlin,OLB,22,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Jeff Fisher,S,23,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Kirk Springs,CB,22,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Alvin Hooks,WR,22,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Steve Wright,OT,23,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Sam Harrell,RB,22,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Kenny Neil,DT,22,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Steve Busick,OLB,24,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Kirk Collins,S,23,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Willie Tullis,CB,22,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Pete Kugler,DE,21,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Levenseller,WR,23,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Jeff Knapple,QB,22,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1981,Bill Capece,K,21,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.65),NONE — no career outcome on disk; PFR fetch pending
-1981,Jim Hargrove,RB,23,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Rich Campbell,QB,22,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1981,Melvin Jones,OG,22,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Kervin Wyatt,MLB,23,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Dave Young,TE,22,57,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Curtis Bledsoe,RB,22,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,John Goodman,DT,23,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Eric Sanders,OT,22,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Bill Kay,CB,22,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Paul Johns,WR,24,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Irvin Phillips,S,23,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Al Washington,OLB,22,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Louie Jackson,RB,21,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Bubba Green,DE,23,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Rich Camarillo,P,22,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Curcio,MLB,22,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Fulton Walker,CB,23,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Jeff Lee,WR,22,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Hosea Taylor,DT,22,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Nat Hudson,OG,23,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Wyatt Henderson,S,22,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Rodell Thomas,OLB,22,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Robb Riddick,RB,24,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Marvin Harvey,TE,23,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Joe Jacoby,OT,22,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Steve Trimble,CB,21,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Bill Troup,QB,23,56,64,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1981,Nate Johnson,WR,22,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Jairo Penaranda,RB,21,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Frank Case,DT,23,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Ray Yakavonis,DE,22,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Cliff Lewis,OLB,22,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Bill Whitaker,S,23,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Marty Wetzel,MLB,22,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Ray Williams,RB,22,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Gregg Johnson,CB,23,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,John Arnold,WR,22,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Curt Marsh,OG,22,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Bob Kohrs,DT,24,55,63,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Ron Battle,TE,23,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Steve Alvers,C,22,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1981,Darrell Wilson,S,21,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Carlos Bradley,OLB,23,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Brian Holloway,OT,22,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Scott Stauch,RB,21,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Trent Bryant,CB,23,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,John Mistler,WR,22,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Richard Turner,DE,22,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Hans Nielson,K,23,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.65),NONE — no career outcome on disk; PFR fetch pending
-1981,Brian Flones,MLB,22,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Mickey Fitzgerald,RB,22,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Jeff Gossett,P,23,54,62,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Clark,DT,22,53,61,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Jeff Schuh,OLB,22,53,61,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Ron Fellows,S,24,53,61,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,LeCharls McDaniel,CB,23,53,61,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Rick Trocano,QB,22,53,61,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1981,Mark McGrath,WR,21,52,60,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Jerry Aldridge,RB,23,52,60,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1981,Bobby Whitten,OG,22,52,60,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Steve Stephens,TE,22,52,60,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Mike Obrovac,OT,23,51,59,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Brad White,DE,22,51,59,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1981,Jim Looney,MLB,22,51,59,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1981,Stevan Clark,DT,23,51,59,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,Carl McGee,OLB,22,50,58,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1981,Kevin Donnalley,S,22,49,67,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1981,David Petway,CB,24,48,66,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1981,Doug Donley,WR,23,47,65,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1981,Rich Thomaselli,RB,22,40,58,,,,,,,2K5 1981-1982SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
+1981,George Rogers,RB,22,85,99,1,1,South Carolina,46,2,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Lawrence Taylor,OLB,22,82,99,2,1,North Carolina,146,10,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Freeman McNeil,RB,22,81,99,3,1,UCLA,75,3,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Kenny Easley,S,22,80,99,4,1,UCLA,65,5,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,E.J. Junior,OLB,21,79,94,5,1,Alabama,59,2,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Rich Campbell,QB,22,78,82,6,1,California,2,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Hugh Green,OLB,22,78,92,7,1,Pittsburgh,61,2,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ronnie Lott,S,22,77,99,8,1,USC,123,10,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mel Owens,OLB,22,77,87,9,1,Michigan,42,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,David Verser,WR,23,77,82,10,1,Kansas,6,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Keith Van Horne,OT,23,76,89,11,1,USC,61,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Randy McMillan,RB,22,76,85,12,1,Pittsburgh,32,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,David Overstreet,RB,22,76,80,13,1,Oklahoma,4,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Willie Scott,TE,22,76,81,14,1,South Carolina,6,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Dennis Smith,S,22,75,95,15,1,USC,74,6,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mark Nichols,WR,21,75,82,16,1,San Jose St.,21,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Keith Gary,DE,21,75,82,17,1,Oklahoma,21,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Donnell Thompson,DE,22,75,87,18,1,North Carolina,50,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Brian Holloway,OT,22,75,88,19,1,Stanford,45,3,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mark May,OG,21,75,89,20,1,Pittsburgh,64,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ted Watts,S,23,74,80,21,1,Texas Tech,16,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Hanford Dixon,S,22,74,93,22,1,Southern Miss,70,3,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Curt Marsh,OG,22,74,80,23,1,Washington,17,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,James Brooks,RB,22,74,91,24,1,Auburn,82,4,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bobby Butler,S,22,74,85,25,1,Florida St.,45,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Howard Richards,OG,22,74,80,26,1,Missouri,16,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Leonard Mitchell,DE,22,74,81,27,1,Houston,22,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Booker Moore,RB,22,74,79,28,1,Penn St.,6,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Russell Gary,S,22,74,82,29,2,Nebraska,29,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Marion Barber Jr.,RB,21,74,79,30,2,Minnesota,5,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,David Hughes,RB,22,74,80,31,2,Boise St.,15,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Dave Young,TE,22,73,77,32,2,Purdue,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Neil Lomax,QB,22,73,87,33,2,Portland St.,70,2,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,James Wilder,RB,23,73,86,34,2,Missouri,63,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Gary Lewis,TE,22,73,77,35,2,Texas-Arlington,2,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Harty,DT,22,73,78,36,2,Iowa,11,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Cris Collinsworth,WR,22,73,87,37,2,Florida,63,3,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Singletary,MLB,22,73,99,38,2,Baylor,124,10,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mardye McDole,WR,22,73,77,39,2,Mississippi St.,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Eric Wright,S,22,73,88,40,2,Missouri,62,2,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Joe Delaney,RB,22,72,79,41,2,Northwestern St. (LA),17,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Clay Brown,TE,22,72,76,42,2,BYU,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jim Collins,MLB,23,72,82,43,2,Syracuse,40,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Anthony Washington,S,23,72,77,44,2,Fresno St.,8,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Robin Sendlein,OLB,22,72,77,45,2,Texas,8,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Curtis Green,DE,24,72,79,46,2,Alabama St.,24,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Tony Collins,RB,22,72,83,47,2,East Carolina,47,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Howie Long,DE,21,71,95,48,2,Villanova,95,8,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Chris Williams,S,22,71,75,49,2,LSU,5,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Byron Franklin,WR,23,71,77,50,2,Auburn,16,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Rickey Jackson,OLB,23,71,94,51,2,Pittsburgh,112,6,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jarvis Redwine,RB,24,71,75,52,2,Nebraska,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Doug Donley,WR,22,71,76,53,2,Ohio St.,7,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Lyman White,OLB,22,71,75,54,2,LSU,2,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Dean Miraldi,OT,23,71,77,55,2,Utah,14,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Andra Franklin,RB,22,71,78,56,2,Nebraska,18,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Frank Warren,DE,21,71,81,57,3,Auburn,47,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bill Dugan,OG,22,70,75,58,3,Penn St.,7,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Mistler,WR,22,70,75,59,3,Arizona St.,7,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ben Rudolph,DT,24,70,75,60,3,Long Beach St.,12,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jeff Griffin,S,23,70,76,61,3,Utah,14,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ray Stachowicz,P,22,70,74,62,3,Michigan St.,4,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Greg Meisner,DT,22,70,77,63,3,Pittsburgh,23,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Simmons,S,22,70,75,64,3,SMU,6,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Carlton Williamson,S,23,70,82,65,3,Pittsburgh,45,2,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Robert Cobb,DE,23,70,74,66,3,Arizona,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ken Margerum,WR,22,70,76,67,3,Stanford,11,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Randy Van Divier,OT,23,70,74,68,3,Washington,2,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Russ Grimm,OG,22,70,92,69,3,Pittsburgh,78,4,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Marvin Harvey,TE,21,70,74,70,3,Southern Miss,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Hoby Brenner,TE,22,70,81,71,3,USC,31,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Don Greco,OG,22,70,76,72,3,Western Illinois,20,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Rick Donnalley,C,22,69,76,73,3,North Carolina,24,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Tim Irwin,OT,22,69,83,74,3,Tennessee,69,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Roger Taylor,OT,23,69,73,75,3,Oklahoma St.,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Mosley,WR,23,69,73,76,3,Texas A&M,3,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Irvin Phillips,S,21,69,73,77,3,Arkansas Tech,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Lloyd Burruss,S,23,69,80,78,3,Maryland,45,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Holston,WR,23,69,74,79,3,Morgan St.,9,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Scott Woerner,S,22,69,73,80,3,Georgia,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Glen Titensor,OG,23,69,76,81,3,BYU,23,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Greg LaFleur,TE,22,69,74,82,3,LSU,6,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Robert Geathers,DT,22,69,73,83,3,South Carolina St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Sam Greene,WR,22,68,72,84,4,UNLV,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Cliff Chatman,RB,22,68,72,85,4,Central Oklahoma,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Al Washington,OLB,22,68,72,86,4,Ohio St.,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Scott Phillips,WR,22,68,72,87,4,BYU,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Steve Rhodes,WR,22,68,72,88,4,Oklahoma,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Holt,S,22,68,75,89,4,West Texas A&M,23,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Tom Flick,QB,23,68,72,90,4,Washington,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Scott Pelluer,MLB,22,68,73,91,4,Washington St.,6,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Robinson,DE,25,68,73,92,4,Arizona,7,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Guy Frazier,OLB,22,68,74,93,4,Wyoming,17,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Tim Sherwin,TE,23,67,72,94,4,Boston Col.,8,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Todd Bell,S,22,67,77,95,4,Ohio St.,38,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Brad Wright,QB,22,67,71,96,4,New Mexico,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ron Washington,WR,22,67,71,97,4,Arizona St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mark Herrmann,QB,22,67,72,98,4,Purdue,11,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Tracy Porter,WR,22,67,72,99,4,LSU,11,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Robbie Martin,WR,22,67,71,100,4,Cal Poly-San Luis Obispo,4,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Swain,S,22,67,74,101,4,Miami (FL),19,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Don Blackmon,OLB,23,67,76,102,4,Tulsa,39,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Amos Lawrence,RB,23,66,70,103,4,North Carolina,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,George Lilja,OG,23,66,71,104,4,Michigan,11,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Richard Turner,DT,22,66,70,105,4,Oklahoma,4,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Nick Eyre,OT,22,66,70,106,4,BYU,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Eric Sievers,TE,23,66,73,107,4,Maryland,21,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Derrie Nelson,OLB,23,66,70,108,4,Nebraska,3,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Scully,OG,23,66,74,109,4,Notre Dame,32,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Calvin Murray,RB,22,66,70,110,4,Ohio St.,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Johnny Robinson,DT,22,66,71,111,4,Louisiana Tech,9,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Louis Oubre,OG,23,66,72,112,5,Oklahoma,16,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Tyrone Keys,DE,20,66,71,113,5,Mississippi St.,13,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Edwin Bailey,OG,22,66,77,114,5,South Carolina St.,51,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bill Neill,DT,22,66,72,115,5,Pittsburgh,15,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Gillen,MLB,22,66,70,116,5,Illinois,3,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Byron Braggs,DE,21,65,70,117,5,Alabama,9,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,James Davis,S,24,65,70,118,5,Southern,8,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Dexter Manley,DE,22,65,80,119,5,Oklahoma St.,66,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Benjie Pryor,TE,22,65,69,120,5,Pittsburgh,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Lynn Thomas,S,22,65,69,121,5,Pittsburgh,3,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Arrington Jones,RB,21,65,69,122,5,Winston-Salem St.,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Wendell Ray,DE,22,65,69,123,5,Missouri,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Todd Thomas,C,21,65,69,124,5,North Dakota,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ken Lanier,OT,22,65,78,125,5,Florida St.,62,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ken Poole,DE,22,65,69,126,5,La-Monroe,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ricky Martin,WR,22,65,69,127,5,New Mexico,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jerry Boyarsky,DT,22,65,71,128,5,Pittsburgh,17,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Larry Lee,OG,21,65,71,129,5,UCLA,18,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Steve Clark,DE,21,65,69,130,5,Kansas St.,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Keith Ferguson,DE,22,64,74,131,5,Ohio St.,40,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Gary Sayre,OG,22,64,68,132,5,Cameron,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Delbert Fowler,OLB,22,64,68,133,5,West Virginia,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Steve Cox,P,23,64,69,134,5,Arkansas,12,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Calvin Clark,DE,22,64,68,135,5,Purdue,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Eric Sanders,OT,22,64,70,136,5,Nevada,23,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Danny Spradlin,OLB,22,64,68,137,5,Tennessee,5,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Tommy Vigorito,RB,21,64,69,138,5,Virginia,11,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Nat Hudson,OG,23,64,68,139,6,Georgia,2,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Steve Durham,DE,22,64,68,140,6,Clemson,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Andrew Gissinger,OT,22,64,70,141,6,Syracuse,14,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Woodring,MLB,22,64,69,142,6,Brown,12,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Dave Ahrens,MLB,22,63,70,143,6,Wisconsin,26,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Johnnie Poe,S,22,63,72,144,6,Missouri,40,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Melvin Hoover,WR,21,63,67,145,6,Arizona St.,3,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Rex Robinson,K,22,63,67,146,6,Georgia,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Pete Kugler,DT,22,63,69,147,6,Penn St.,20,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Larry Kubin,MLB,22,63,67,148,6,Penn St.,4,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bubba Green,DT,23,63,67,149,6,North Carolina St.,2,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Reuben Henderson,S,22,63,68,150,6,San Diego St.,13,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Alvin Lewis,RB,22,63,67,151,6,Colorado St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mack Moore,DE,22,63,67,152,6,Texas A&M,2,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Dock Luckie,DT,22,63,67,153,6,Florida,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Fulton Walker,S,23,63,67,154,6,West Virginia,5,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Sam Johnson,S,22,63,67,155,6,Maryland,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bryan Hinkle,OLB,22,62,74,156,6,Oregon,57,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ron Wooten,OG,22,62,71,157,6,North Carolina,37,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,William Daniels,DT,22,62,66,158,6,Alabama St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bill Kay,S,21,62,67,159,6,Purdue,7,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ron Simmons,DT,22,62,66,160,6,Florida St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Robert Holt,WR,21,62,66,161,6,Baylor,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bobby Duckworth,WR,22,62,67,162,6,Arkansas,16,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Vince Skillings,S,22,62,66,163,6,Ohio St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Harry Stanback,DE,23,61,65,164,6,North Carolina,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Edward O'Neal,RB,22,61,65,165,6,Tuskegee,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Glen Redd,MLB,23,61,67,166,6,BYU,14,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Kevin Williams,WR,23,61,65,167,7,USC,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Louis Jackson,RB,23,61,65,168,7,Cal Poly-San Luis Obispo,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Kenny Neil,DE,22,61,67,169,7,Iowa St.,16,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ron Johnson,WR,22,61,66,170,7,Long Beach St.,10,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Kevin Donnalley,S,23,61,65,171,7,North Dakota St.,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bill Whitaker,S,22,61,65,172,7,Missouri,2,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ron Fellows,S,22,61,69,173,7,Missouri,29,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Alan Duncan,K,22,61,65,174,7,Tennessee,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ron Battle,TE,22,61,65,175,7,North Texas,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jeff Schuh,OLB,23,61,67,176,7,Minnesota,13,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jeff Fisher,S,23,61,65,177,7,USC,3,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Obed Ariri,K,25,61,65,178,7,Clemson,3,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Daum,OT,22,61,65,179,7,Cal Poly-San Luis Obispo,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Billy Jackson,RB,21,60,66,180,7,Alabama,13,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Steve Busick,MLB,22,60,67,181,7,USC,26,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Lee Spivey,OT,22,60,64,182,7,SMU,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,David Little,MLB,22,60,73,183,7,Florida,63,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Don Shaver,RB,22,60,64,184,7,Kutztown (PA),,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ken Toler,WR,22,60,64,185,7,Mississippi,2,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Brad Scovill,TE,22,60,64,186,7,Penn St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Eddie Johnson,MLB,22,60,69,187,7,Louisville,37,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Steve Doolittle,OLB,22,60,64,188,7,Colorado,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Pete Holohan,TE,22,60,67,189,7,Notre Dame,29,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Clark,DE,22,60,64,190,7,Florida,2,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ken Miller,S,22,60,64,191,7,Eastern Michigan,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Doak Field,OLB,22,60,64,192,7,Baylor,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Don Washington,S,22,59,67,193,7,Texas A&M-Kingsville,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ken Naber,K,22,59,67,194,8,Stanford,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Lloyd Jones,WR,22,59,67,195,8,BYU,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Eric Lane,RB,22,59,68,196,8,BYU,6,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Powers,OG,22,59,67,197,8,Michigan,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Fisher,WR,23,59,67,198,8,Baylor,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Denver Johnson,OT,22,59,67,199,8,Tulsa,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Larry Werts,OLB,22,59,67,200,8,Jackson St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Charlie Brown,WR,22,59,73,201,8,South Carolina St.,38,2,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bobby Kemp,S,22,59,72,202,8,Cal State-Fullerton,29,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Garry White,RB,22,59,67,203,8,Minnesota,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ken Sitton,S,22,59,67,204,8,Oklahoma,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Scott Zettek,DT,22,59,67,205,8,Notre Dame,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,David Dorn,WR,22,59,67,206,8,Rutgers,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mark Reed,QB,22,59,67,207,8,Moorhead State (MN),0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,William Judson,S,22,59,72,208,8,South Carolina St.,37,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Frank Wilson,TE,22,59,67,209,8,Rice,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Wade Wilson,QB,22,59,74,210,8,East Texas A&M,49,1,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bob Niziolek,TE,23,59,67,211,8,Colorado,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Lin Dawson,TE,22,59,70,212,8,North Carolina St.,12,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,J.C. Watts,S,22,59,67,213,8,Oklahoma,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Gene Gladys,OLB,22,59,67,214,8,Penn St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Kevin Evans,S,22,59,67,215,8,Arkansas,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Art Plunkett,OT,22,59,68,216,8,UNLV,8,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Willie Tullis,S,23,59,71,217,8,Troy,26,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Paul Piurowski,OLB,22,58,66,218,8,Florida St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Clifford Toney,S,22,58,66,219,8,Auburn,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Hosea Taylor,DE,22,58,66,220,8,Houston,3,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Billy Ard,OG,22,58,73,221,8,Wake Forest,51,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Toussaint Tyler,RB,22,58,66,222,9,Washington,3,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jim Stone,RB,22,58,66,223,9,Notre Dame,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Byron Hunt,OLB,22,58,68,224,9,SMU,18,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Admiral Dewey Larry,S,22,58,66,225,9,UNLV,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Stump Mitchell,RB,22,58,71,226,9,The Citadel,43,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Tim Huffman,OG,22,58,68,227,9,Notre Dame,15,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Ford,QB,22,58,66,228,9,SMU,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jim Hannula,OT,22,58,66,229,9,Northern Illinois,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Samoa Samoa,RB,22,58,66,230,9,Washington St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Darryl Grant,DT,21,58,73,231,9,Rice,49,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Frank Ditta,OG,22,58,66,232,9,Baylor,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Tim Gooch,DT,22,58,66,233,9,Kentucky,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Rusty Olsen,DE,22,57,65,234,9,Washington,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Noonan,WR,22,57,65,235,9,Nebraska,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jim Whatley,WR,22,57,65,236,9,Washington St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Anthony Vereen,S,22,57,65,237,9,Southeastern Louisiana,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Hugh Jernigan,S,22,57,65,238,9,Arkansas,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,James Hunter,DT,23,57,65,239,9,USC,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,David Martin,S,22,57,65,240,9,Villanova,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Robb Riddick,RB,24,57,67,241,9,Millersville,17,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ron Seawell,OLB,22,57,65,242,9,Portland St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Avon Riley,OLB,23,57,68,243,9,UCLA,25,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Randy Schleusener,OG,22,57,65,244,9,Nebraska,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Calvin Fance,RB,22,57,65,245,9,Rice,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Wilson,WR,22,57,68,246,9,Washington St.,22,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Chuck Commiskey,OG,23,57,66,247,9,Mississippi,9,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Curt Mohl,OT,22,57,65,248,9,UCLA,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Hokie Gajan,RB,22,57,67,249,10,LSU,15,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Barker,DT,22,57,65,250,10,Grambling St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Marty Wetzel,MLB,23,57,65,251,10,Tulane,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ken Dawson,RB,22,57,65,252,10,Savannah St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,James Mallard,WR,22,57,65,253,10,Alabama,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ken McCune,DE,22,57,65,254,10,Texas,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Nickie Hall,QB,22,57,65,255,10,Tulane,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Gregg Gerken,OLB,22,57,65,256,10,Northern Arizona,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Phil Kessel,QB,22,57,65,257,10,Northern Michigan,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Hubert Simpson,RB,22,57,65,258,10,Tennessee,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Trent Bryant,S,22,56,64,259,10,Arkansas,4,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Tim Clifford,QB,22,56,64,260,10,Indiana,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Steve Folsom,TE,23,56,65,261,10,Utah,3,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Les Studdard,C,22,56,64,262,10,Texas,3,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jim Joiner,WR,22,56,64,263,10,Miami (FL),,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Andy Cannavino,OLB,22,56,64,264,10,Michigan,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Mayock,S,23,56,64,265,10,Boston Col.,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,James Murphy,WR,21,56,64,266,10,Utah St.,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Allan Kennedy,OT,23,56,64,267,10,Washington St.,4,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Robert Parham,RB,22,56,64,268,10,Grambling St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Robert Alexander,RB,23,56,64,269,10,West Virginia,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Larry Jones,RB,22,56,64,270,10,Colorado St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Dean Prater,DE,22,56,65,271,10,Oklahoma St.,6,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Justin Cross,OT,22,56,65,272,10,Western St. (CO),8,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Pat Graham,DT,22,56,64,273,10,California,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Robert Murphy,S,22,56,64,274,10,Ohio St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Hubie Oliver,RB,23,56,66,275,10,Arizona,12,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Frank Hawkins,RB,22,56,66,276,10,Nevada,15,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Lester Mickens,WR,22,56,64,277,11,Kansas,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ed Gall,DT,22,56,64,278,11,Maryland,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Lance Olander,RB,22,56,64,279,11,Colorado,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Matt Petrzelka,OT,22,56,64,280,11,Iowa,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Sherrod,TE,22,56,64,281,11,Illinois,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Forrest Valora,OLB,22,56,64,282,11,Oklahoma,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Johnny Ray Smith,S,24,56,64,283,11,Lamar,4,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jerry Hill,WR,22,56,64,284,11,North Alabama,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Robert Jackson,S,22,55,66,285,11,Central Michigan,23,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ronnie DeBose,TE,22,55,63,286,11,UCLA,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Lonnie Johnson,RB,22,55,63,287,11,Indiana,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Holden Smith,WR,22,55,63,288,11,California,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Frank Case,DE,23,55,63,289,11,Penn St.,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Pat Walker,WR,22,55,63,290,11,Miami (FL),,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jim Jensen,WR,22,55,65,291,11,Boston Univ.,20,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Rick Trocano,QB,22,55,63,292,11,Pittsburgh,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bill Stephanos,OT,22,55,63,293,11,Boston Col.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Willie Jackson,S,22,55,63,294,11,Mississippi St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Brian Buckley,QB,22,55,63,295,11,Harvard,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Marcellus Greene,S,23,55,63,296,11,Arizona,1,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Claude Mathews,OG,22,55,63,297,11,Auburn,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Larry Friday,S,23,55,63,298,11,Mississippi St.,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Buster Barnett,TE,22,54,62,299,11,Jackson St.,2,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Carlos Bradley,OLB,21,54,63,300,11,Wake Forest,6,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Keith Chappelle,WR,22,54,62,301,11,Iowa,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Tim Morrison,OG,22,54,62,302,11,Georgia,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Gail Davis,OT,22,54,62,303,11,Virginia Union,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Chester Willis,RB,23,54,62,304,11,Auburn,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jim Wilks,DE,23,54,71,305,12,San Diego St.,63,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jeff Bednarek,DT,22,54,62,306,12,Pacific,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Maher,TE,22,54,62,307,12,Western Illinois,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mike Moeller,OT,22,54,62,308,12,Drake,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Joe Adams,OG,22,54,62,309,12,Nebraska,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Brad White,DT,23,54,63,310,12,Tennessee,10,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Cliff Lewis,OLB,21,54,62,311,12,Southern Miss,4,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mark O'Connell,QB,22,54,62,312,12,Ball St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Major Ogilvie,RB,22,53,61,313,12,Alabama,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Clint Didier,TE,22,53,64,314,12,Portland St.,18,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Eric Scoggins,OLB,22,53,61,315,12,USC,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bob Shupryt,OLB,22,53,61,316,12,New Mexico,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Hankerd,OLB,22,53,61,317,12,Notre Dame,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,John Alford,DT,22,53,61,318,12,South Carolina St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bob Gagliano,QB,23,53,62,319,12,Utah St.,13,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Brian Williams,TE,23,52,60,320,12,Southern,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mandel Robinson,RB,22,52,60,321,12,Wyoming,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Joe Adams,QB,22,52,60,322,12,Tennessee St.,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Cris Crissy,S,22,52,60,323,12,Princeton,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Bill Capece,K,22,51,60,324,12,Florida St.,6,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Kevin McGill,OT,22,51,59,325,12,Oregon,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Keith Clark,OLB,22,51,59,326,12,Memphis,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Stacy Charles,WR,22,51,59,327,12,Bethune-Cookman,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Jairo Penaranda,RB,23,51,59,328,12,UCLA,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Nate Lundy,WR,22,50,58,329,12,Indiana,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Mark McCants,S,22,50,58,330,12,Temple,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Ray Ellis,S,22,49,71,331,12,Ohio St.,30,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Phil Nelson,TE,22,48,66,332,12,Delaware,,0,no,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Dave Wilson,QB,22,46,66,333,S,Illinois,16,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1981,Chy Davidson,WR,22,40,58,334,S,Rhode Island,0,0,yes,PFR 1981 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"

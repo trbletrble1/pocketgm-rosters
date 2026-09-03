@@ -1,0 +1,335 @@
+round,pick,team,name,pos,age,last_season,all_pro,pro_bowls,seasons_started,career_av,draft_av,college
+1,1,NOR,George Rogers,RB,22,1987,1,2,6,46,28,South Carolina
+1,2,NYG,Lawrence Taylor,LB,22,1993,8,10,13,146,146,North Carolina
+1,3,NYJ,Freeman McNeil,RB,22,1992,1,3,8,75,75,UCLA
+1,4,SEA,Kenny Easley,DB,22,1987,3,5,7,65,65,UCLA
+1,5,STL,E.J. Junior,LB,21,1993,1,2,9,59,54,Alabama
+1,6,GNB,Rich Campbell,QB,22,1984,0,0,0,2,2,California
+1,7,TAM,Hugh Green,LB,22,1991,0,2,8,61,37,Pittsburgh
+1,8,SFO,Ronnie Lott,DB,22,1994,6,10,14,123,105,USC
+1,9,RAM,Mel Owens,LB,22,1989,0,0,6,42,42,Michigan
+1,10,CIN,David Verser,WR,23,1987,0,0,0,6,6,Kansas
+1,11,CHI,Keith Van Horne,T,23,1993,0,0,12,61,61,USC
+1,12,BAL,Randy McMillan,RB,22,1986,0,0,6,32,32,Pittsburgh
+1,13,MIA,David Overstreet,RB,22,1983,0,0,0,4,4,Oklahoma
+1,14,KAN,Willie Scott,TE,22,1988,0,0,3,6,6,South Carolina
+1,15,DEN,Dennis Smith,DB,22,1994,0,6,13,74,74,USC
+1,16,DET,Mark Nichols,WR,21,1987,0,0,3,21,21,San Jose St.
+1,17,PIT,Keith Gary,DE,21,1988,0,0,3,21,21,Oklahoma
+1,18,BAL,Donnell Thompson,DE,22,1991,0,0,11,50,50,North Carolina
+1,19,NWE,Brian Holloway,T,22,1988,0,3,6,45,41,Stanford
+1,20,WAS,Mark May,G,21,1993,0,1,10,64,55,Pittsburgh
+1,21,OAK,Ted Watts,DB,23,1987,0,0,2,16,14,Texas Tech
+1,22,CLE,Hanford Dixon,DB,22,1989,2,3,9,70,70,Southern Miss
+1,23,OAK,Curt Marsh,G,22,1986,0,0,2,17,17,Washington
+1,24,SDG,James Brooks,RB,22,1992,0,4,8,82,15,Auburn
+1,25,ATL,Bobby Butler,DB,22,1992,0,0,9,45,45,Florida St.
+1,26,DAL,Howard Richards,G,22,1987,0,0,1,16,15,Missouri
+1,27,PHI,Leonard Mitchell,DE,22,1987,0,0,4,22,18,Houston
+1,28,BUF,Booker Moore,RB,22,1985,0,0,2,6,6,Penn St.
+2,29,NOR,Russell Gary,DB,22,1987,0,0,4,29,28,Nebraska
+2,30,NYJ,Marion Barber Jr.,RB,21,1988,0,0,1,5,5,Minnesota
+2,31,SEA,David Hughes,RB,22,1986,0,0,1,15,15,Boise St.
+2,32,NYG,Dave Young,TE,22,1984,0,0,1,1,0,Purdue
+2,33,STL,Neil Lomax,QB,22,1988,0,2,7,70,70,Portland St.
+2,34,TAM,James Wilder,RB,23,1990,0,1,7,63,63,Missouri
+2,35,GNB,Gary Lewis,TE,22,1984,0,0,0,2,2,Texas-Arlington
+2,36,SFO,John Harty,NT,22,1986,0,0,1,11,11,Iowa
+2,37,CIN,Cris Collinsworth,WR,22,1988,0,3,7,63,63,Florida
+2,38,CHI,Mike Singletary,LB,22,1992,7,10,12,124,124,Baylor
+2,39,MIN,Mardye McDole,WR,22,1983,0,0,0,0,0,Mississippi St.
+2,40,SFO,Eric Wright,DB,22,1990,1,2,6,62,62,Missouri
+2,41,KAN,Joe Delaney,RB,22,1982,0,1,2,17,17,Northwestern St. (LA)
+2,42,DEN,Clay Brown,TE,22,1983,0,0,0,0,0,BYU
+2,43,RAM,Jim Collins,LB,23,1989,0,1,4,40,39,Syracuse
+2,44,PIT,Anthony Washington,DB,23,1984,0,0,0,8,3,Fresno St.
+2,45,MIN,Robin Sendlein,LB,22,1985,0,0,0,8,7,Texas
+2,46,DET,Curtis Green,DE,24,1989,0,0,2,24,24,Alabama St.
+2,47,NWE,Tony Collins,RB,22,1990,0,1,6,47,47,East Carolina
+2,48,OAK,Howie Long,DE,21,1993,2,8,11,95,95,Villanova
+2,49,BUF,Chris Williams,DB,22,1983,0,0,0,5,5,LSU
+2,50,BUF,Byron Franklin,WR,23,1987,0,0,1,16,10,Auburn
+2,51,NOR,Rickey Jackson,LB,23,1995,0,6,15,112,108,Pittsburgh
+2,52,MIN,Jarvis Redwine,RB,24,1983,0,0,0,0,0,Nebraska
+2,53,DAL,Doug Donley,WR,22,1984,0,0,0,7,7,Ohio St.
+2,54,ATL,Lyman White,LB,22,1982,0,0,0,2,2,LSU
+2,55,PHI,Dean Miraldi,T,23,1987,0,0,2,14,9,Utah
+2,56,MIA,Andra Franklin,RB,22,1984,0,1,3,18,18,Nebraska
+3,57,NOR,Frank Warren,DE,21,1994,0,0,5,47,47,Auburn
+3,58,SEA,Bill Dugan,G,22,1987,0,0,0,7,6,Penn St.
+3,59,NYG,John Mistler,WR,22,1984,0,0,1,7,7,Arizona St.
+3,60,NYJ,Ben Rudolph,DT,24,1986,0,0,0,12,12,Long Beach St.
+3,61,STL,Jeff Griffin,DB,23,1987,0,0,2,14,13,Utah
+3,62,GNB,Ray Stachowicz,P,22,1983,0,0,0,4,4,Michigan St.
+3,63,RAM,Greg Meisner,NT,22,1991,0,0,3,23,22,Pittsburgh
+3,64,CIN,John Simmons,DB,22,1987,0,0,0,6,6,SMU
+3,65,SFO,Carlton Williamson,DB,23,1987,0,2,6,45,45,Pittsburgh
+3,66,RAM,Robert Cobb,DE,23,1984,0,0,0,0,0,Arizona
+3,67,CHI,Ken Margerum,WR,22,1987,0,0,2,11,11,Stanford
+3,68,BAL,Randy Van Divier,T,23,1981,0,0,0,2,2,Washington
+3,69,WAS,Russ Grimm,G,22,1991,3,4,9,78,78,Pittsburgh
+3,70,KAN,Marvin Harvey,TE,21,1981,0,0,0,0,0,Southern Miss
+3,71,NOR,Hoby Brenner,TE,22,1993,0,1,12,31,31,USC
+3,72,DET,Don Greco,G,22,1985,0,0,2,20,20,Western Illinois
+3,73,PIT,Rick Donnalley,C,22,1987,0,0,2,24,4,North Carolina
+3,74,MIN,Tim Irwin,T,22,1994,0,0,12,69,68,Tennessee
+3,75,KAN,Roger Taylor,T,23,1981,0,0,0,1,1,Oklahoma St.
+3,76,BUF,Mike Mosley,WR,23,1984,0,0,0,3,3,Texas A&M
+3,77,SDG,Irvin Phillips,DB,21,1983,0,0,0,0,0,Arkansas Tech
+3,78,KAN,Lloyd Burruss,DB,23,1991,0,1,8,45,45,Maryland
+3,79,HOU,Mike Holston,WR,23,1985,0,0,1,9,9,Morgan St.
+3,80,ATL,Scott Woerner,DB,22,1987,0,0,0,0,0,Georgia
+3,81,DAL,Glen Titensor,G,23,1988,0,0,3,23,23,BYU
+3,82,PHI,Greg LaFleur,TE,22,1986,0,0,1,6,,LSU
+3,83,BUF,Robert Geathers,DT,,,0,0,0,,,South Carolina St.
+4,84,MIA,Sam Greene,WR,,,0,0,0,,,UNLV
+4,85,NYG,Cliff Chatman,RB,22,1982,0,0,0,1,1,Central Oklahoma
+4,86,NYJ,Al Washington,LB,22,1981,0,0,0,1,1,Ohio St.
+4,87,SEA,Scott Phillips,WR,,,0,0,0,,,BYU
+4,88,STL,Steve Rhodes,WR,,,0,0,0,,,Oklahoma
+4,89,TAM,John Holt,DB,22,1988,0,0,3,23,19,West Texas A&M
+4,90,WAS,Tom Flick,QB,23,1986,0,0,0,1,0,Washington
+4,91,DAL,Scott Pelluer,LB,22,1985,0,0,0,6,,Washington St.
+4,92,CLE,Mike Robinson,DE,25,1982,0,0,1,7,7,Arizona
+4,93,CIN,Guy Frazier,LB,22,1986,0,0,1,17,7,Wyoming
+4,94,BAL,Tim Sherwin,TE,23,1988,0,0,2,8,8,Boston Col.
+4,95,CHI,Todd Bell,DB,22,1989,0,1,4,38,29,Ohio St.
+4,96,MIA,Brad Wright,QB,,,0,0,0,,,New Mexico
+4,97,KAN,Ron Washington,WR,,,0,0,0,,,Arizona St.
+4,98,DEN,Mark Herrmann,QB,22,1992,0,0,0,11,2,Purdue
+4,99,DET,Tracy Porter,WR,22,1984,0,0,1,11,3,LSU
+4,100,PIT,Robbie Martin,WR,22,1986,0,0,0,4,,Cal Poly-San Luis Obispo
+4,101,MIN,John Swain,DB,22,1987,0,0,4,19,14,Miami (FL)
+4,102,NWE,Don Blackmon,LB,23,1987,0,0,5,39,39,Tulsa
+4,103,SDG,Amos Lawrence,RB,23,1982,0,0,0,1,,North Carolina
+4,104,RAM,George Lilja,G,23,1987,0,0,1,11,1,Michigan
+4,105,GNB,Richard Turner,NT,22,1983,0,0,0,4,4,Oklahoma
+4,106,HOU,Nick Eyre,T,22,1981,0,0,0,0,0,BYU
+4,107,SDG,Eric Sievers,TE,23,1990,0,0,4,21,16,Maryland
+4,108,DAL,Derrie Nelson,LB,23,1986,0,0,0,3,,Nebraska
+4,109,ATL,John Scully,G,23,1990,0,0,5,32,32,Notre Dame
+4,110,PHI,Calvin Murray,RB,22,1982,0,0,0,1,1,Ohio St.
+4,111,OAK,Johnny Robinson,NT,22,1983,0,0,1,9,9,Louisiana Tech
+5,112,NOR,Louis Oubre,G,23,1987,0,0,2,16,15,Oklahoma
+5,113,NYJ,Tyrone Keys,DE,20,1988,0,0,1,13,,Mississippi St.
+5,114,SEA,Edwin Bailey,G,22,1991,0,0,8,51,51,South Carolina St.
+5,115,NYG,Bill Neill,NT,22,1984,0,0,2,15,14,Pittsburgh
+5,116,STL,John Gillen,LB,22,1983,0,0,0,3,2,Illinois
+5,117,GNB,Byron Braggs,DE,21,1984,0,0,1,9,8,Alabama
+5,118,OAK,James Davis,DB,24,1987,0,0,0,8,8,Southern
+5,119,WAS,Dexter Manley,DE,22,1991,1,1,9,66,64,Oklahoma St.
+5,120,CIN,Benjie Pryor,TE,,,0,0,0,,,Pittsburgh
+5,121,SFO,Lynn Thomas,DB,22,1982,0,0,0,3,3,Pittsburgh
+5,122,SFO,Arrington Jones,RB,21,1981,0,0,0,0,0,Winston-Salem St.
+5,123,MIN,Wendell Ray,DE,,,0,0,0,,,Missouri
+5,124,KAN,Todd Thomas,C,21,1981,0,0,0,1,1,North Dakota
+5,125,DEN,Ken Lanier,T,22,1994,0,0,11,62,62,Florida St.
+5,126,MIA,Ken Poole,DE,22,1981,0,0,0,1,1,La-Monroe
+5,127,PIT,Ricky Martin,WR,,,0,0,0,,,New Mexico
+5,128,NOR,Jerry Boyarsky,NT,22,1989,0,0,3,17,3,Pittsburgh
+5,129,DET,Larry Lee,G,21,1988,0,0,0,18,12,UCLA
+5,130,NWE,Steve Clark,DE,21,1981,0,0,0,0,0,Kansas St.
+5,131,SDG,Keith Ferguson,DE,22,1990,0,0,7,40,18,Ohio St.
+5,132,WAS,Gary Sayre,G,,,0,0,0,,,Cameron
+5,133,HOU,Delbert Fowler,LB,,,0,0,0,,,West Virginia
+5,134,CLE,Steve Cox,P,23,1988,0,0,0,12,5,Arkansas
+5,135,BUF,Calvin Clark,DE,,,0,0,0,,,Purdue
+5,136,ATL,Eric Sanders,T,22,1992,0,0,1,23,10,Nevada
+5,137,DAL,Danny Spradlin,LB,22,1985,0,0,0,5,2,Tennessee
+5,138,MIA,Tommy Vigorito,RB,21,1985,0,0,0,11,11,Virginia
+6,139,NOR,Nat Hudson,G,23,1982,0,0,0,2,1,Georgia
+6,140,SEA,Steve Durham,DE,22,1982,0,0,0,1,,Clemson
+6,141,SDG,Andrew Gissinger,T,22,1984,0,0,1,14,14,Syracuse
+6,142,NYJ,John Woodring,LB,22,1985,0,0,0,12,12,Brown
+6,143,STL,Dave Ahrens,LB,22,1990,0,0,3,26,15,Wisconsin
+6,144,NOR,Johnnie Poe,DB,22,1987,0,0,6,40,40,Missouri
+6,145,NYG,Melvin Hoover,WR,21,1987,0,0,0,3,,Arizona St.
+6,146,CIN,Rex Robinson,K,22,1982,0,0,0,0,,Georgia
+6,147,SFO,Pete Kugler,NT,22,1990,0,0,2,20,20,Penn St.
+6,148,WAS,Larry Kubin,LB,22,1985,0,0,0,4,4,Penn St.
+6,149,BAL,Bubba Green,DT,23,1981,0,0,1,2,2,North Carolina St.
+6,150,CHI,Reuben Henderson,DB,22,1984,0,0,1,13,10,San Diego St.
+6,151,DEN,Alvin Lewis,RB,,,0,0,0,,,Colorado St.
+6,152,MIA,Mack Moore,DE,22,1986,0,0,0,2,2,Texas A&M
+6,153,KAN,Dock Luckie,DT,,,0,0,0,,,Florida
+6,154,MIA,Fulton Walker,DB,23,1986,0,0,0,5,4,West Virginia
+6,155,DET,Sam Johnson,DB,,,0,0,0,,,Maryland
+6,156,PIT,Bryan Hinkle,LB,22,1993,0,0,8,57,57,Oregon
+6,157,NWE,Ron Wooten,G,22,1988,0,0,7,37,37,North Carolina
+6,158,RAM,William Daniels,DT,,,0,0,0,,,Alabama St.
+6,159,HOU,Bill Kay,DB,21,1984,0,0,0,7,6,Purdue
+6,160,CLE,Ron Simmons,DT,,,0,0,0,,,Florida St.
+6,161,BUF,Robert Holt,WR,21,1982,0,0,0,1,1,Baylor
+6,162,SDG,Bobby Duckworth,WR,22,1986,0,0,0,16,12,Arkansas
+6,163,DAL,Vince Skillings,DB,,,0,0,0,,,Ohio St.
+6,164,ATL,Harry Stanback,DE,23,1982,0,0,0,1,,North Carolina
+6,165,NYG,Edward O'Neal,RB,,,0,0,0,,,Tuskegee
+6,166,NOR,Glen Redd,LB,23,1986,0,0,2,14,14,BYU
+7,167,NOR,Kevin Williams,WR,23,1981,0,0,0,0,,USC
+7,168,NYG,Louis Jackson,RB,23,1981,0,0,0,1,1,Cal Poly-San Luis Obispo
+7,169,NYJ,Kenny Neil,DE,22,1987,0,0,2,16,16,Iowa St.
+7,170,SEA,Ron Johnson,WR,22,1989,0,0,1,10,,Long Beach St.
+7,171,STL,Kevin Donnalley,DB,23,1981,0,0,0,0,,North Dakota St.
+7,172,GNB,Bill Whitaker,DB,22,1984,0,0,0,2,2,Missouri
+7,173,DAL,Ron Fellows,DB,22,1988,0,0,4,29,24,Missouri
+7,174,PHI,Alan Duncan,K,,,0,0,0,,,Tennessee
+7,175,RAM,Ron Battle,TE,22,1982,0,0,0,1,1,North Texas
+7,176,CIN,Jeff Schuh,LB,23,1986,0,0,2,13,12,Minnesota
+7,177,CHI,Jeff Fisher,DB,23,1984,0,0,0,3,3,USC
+7,178,BAL,Obed Ariri,K,25,1987,0,0,0,3,,Clemson
+7,179,MIA,Mike Daum,T,,,0,0,0,,,Cal Poly-San Luis Obispo
+7,180,KAN,Billy Jackson,RB,21,1984,0,0,2,13,13,Alabama
+7,181,DEN,Steve Busick,LB,22,1987,0,0,3,26,25,USC
+7,182,DET,Lee Spivey,T,,,0,0,0,,,SMU
+7,183,PIT,David Little,LB,22,1992,0,1,9,63,63,Florida
+7,184,MIN,Don Shaver,RB,,,0,0,0,,,Kutztown (PA)
+7,185,NWE,Ken Toler,WR,22,1982,0,0,0,2,2,Mississippi
+7,186,SEA,Brad Scovill,TE,,,0,0,0,,,Penn St.
+7,187,CLE,Eddie Johnson,LB,22,1990,0,0,5,37,37,Louisville
+7,188,BUF,Steve Doolittle,LB,,,0,0,0,,,Colorado
+7,189,SDG,Pete Holohan,TE,22,1992,0,0,0,29,14,Notre Dame
+7,190,RAM,Mike Clark,DE,22,1987,0,0,0,2,,Florida
+7,191,DAL,Ken Miller,DB,,,0,0,0,,,Eastern Michigan
+7,192,PHI,Doak Field,LB,22,1981,0,0,0,0,,Baylor
+7,193,HOU,Don Washington,DB,,,0,0,0,,,Texas A&M-Kingsville
+8,194,NWE,Ken Naber,K,,,0,0,0,,,Stanford
+8,195,NYJ,Lloyd Jones,WR,,,0,0,0,,,BYU
+8,196,SEA,Eric Lane,RB,22,1987,0,0,1,6,6,BYU
+8,197,NYG,John Powers,G,,,0,0,0,,,Michigan
+8,198,STL,Mike Fisher,WR,23,1981,0,0,0,0,0,Baylor
+8,199,TAM,Denver Johnson,T,,,0,0,0,,,Tulsa
+8,200,GNB,Larry Werts,LB,,,0,0,0,,,Jackson St.
+8,201,WAS,Charlie Brown,WR,22,1987,0,2,4,38,28,South Carolina St.
+8,202,CIN,Bobby Kemp,DB,22,1987,0,0,7,29,26,Cal State-Fullerton
+8,203,SFO,Garry White,RB,,,0,0,0,,,Minnesota
+8,204,BAL,Ken Sitton,DB,,,0,0,0,,,Oklahoma
+8,205,CHI,Scott Zettek,DT,,,0,0,0,,,Notre Dame
+8,206,KAN,David Dorn,WR,,,0,0,0,,,Rutgers
+8,207,NYG,Mark Reed,QB,22,1983,0,0,0,0,,Moorhead State (MN)
+8,208,MIA,William Judson,DB,22,1989,0,0,7,37,37,South Carolina St.
+8,209,PIT,Frank Wilson,TE,22,1982,0,0,0,0,0,Rice
+8,210,MIN,Wade Wilson,QB,22,1998,0,1,4,49,33,East Texas A&M
+8,211,DET,Bob Niziolek,TE,23,1981,0,0,0,0,0,Colorado
+8,212,NWE,Lin Dawson,TE,22,1990,0,0,5,12,12,North Carolina St.
+8,213,NYJ,J.C. Watts,DB,,,0,0,0,,,Oklahoma
+8,214,NOR,Gene Gladys,LB,,,0,0,0,,,Penn St.
+8,215,NOR,Kevin Evans,DB,,,0,0,0,,,Arkansas
+8,216,RAM,Art Plunkett,T,22,1987,0,0,0,8,,UNLV
+8,217,HOU,Willie Tullis,DB,23,1988,0,0,4,26,12,Troy
+8,218,DAL,Paul Piurowski,LB,,,0,0,0,,,Florida St.
+8,219,ATL,Clifford Toney,DB,,,0,0,0,,,Auburn
+8,220,BAL,Hosea Taylor,DE,22,1983,0,0,0,3,3,Houston
+8,221,NYG,Billy Ard,G,22,1991,0,0,8,51,46,Wake Forest
+9,222,NOR,Toussaint Tyler,RB,22,1982,0,0,0,3,3,Washington
+9,223,SEA,Jim Stone,RB,,,0,0,0,,,Notre Dame
+9,224,NYG,Byron Hunt,LB,22,1988,0,0,2,18,18,SMU
+9,225,NYJ,Admiral Dewey Larry,DB,,,0,0,0,,,UNLV
+9,226,STL,Stump Mitchell,RB,22,1989,0,0,3,43,43,The Citadel
+9,227,GNB,Tim Huffman,G,22,1985,0,0,1,15,15,Notre Dame
+9,228,TAM,Mike Ford,QB,,,0,0,0,,,SMU
+9,229,CIN,Jim Hannula,T,22,1983,0,0,0,1,1,Northern Illinois
+9,230,CIN,Samoa Samoa,RB,,,0,0,0,,,Washington St.
+9,231,WAS,Darryl Grant,DT,21,1991,0,0,8,49,49,Rice
+9,232,CHI,Frank Ditta,G,,,0,0,0,,,Baylor
+9,233,BAL,Tim Gooch,DT,,,0,0,0,,,Kentucky
+9,234,DEN,Rusty Olsen,DE,,,0,0,0,,,Washington
+9,235,MIA,John Noonan,WR,,,0,0,0,,,Nebraska
+9,236,SEA,Jim Whatley,WR,,,0,0,0,,,Washington St.
+9,237,KAN,Anthony Vereen,DB,,,0,0,0,,,Southeastern Louisiana
+9,238,DET,Hugh Jernigan,DB,,,0,0,0,,,Arkansas
+9,239,PIT,James Hunter,NT,23,1982,0,0,0,1,,USC
+9,240,DET,David Martin,DB,22,1987,0,0,0,1,,Villanova
+9,241,BUF,Robb Riddick,RB,24,1988,0,0,1,17,17,Millersville
+9,242,RAM,Ron Seawell,LB,,,0,0,0,,,Portland St.
+9,243,HOU,Avon Riley,LB,23,1987,0,0,4,25,24,UCLA
+9,244,CLE,Randy Schleusener,G,,,0,0,0,,,Nebraska
+9,245,ATL,Calvin Fance,RB,,,0,0,0,,,Rice
+9,246,DAL,Mike Wilson,WR,22,1990,0,0,2,22,,Washington St.
+9,247,PHI,Chuck Commiskey,G,23,1988,0,0,1,9,,Mississippi
+9,248,OAK,Curt Mohl,T,,,0,0,0,,,UCLA
+10,249,NOR,Hokie Gajan,RB,22,1985,0,0,2,15,15,LSU
+10,250,NYG,Mike Barker,DT,,,0,0,0,,,Grambling St.
+10,251,NYJ,Marty Wetzel,LB,23,1981,0,0,0,0,0,Tulane
+10,252,SEA,Ken Dawson,RB,,,0,0,0,,,Savannah St.
+10,253,STL,James Mallard,WR,,,0,0,0,,,Alabama
+10,254,TAM,Ken McCune,DE,,,0,0,0,,,Texas
+10,255,GNB,Nickie Hall,QB,,,0,0,0,,,Tulane
+10,256,BAL,Gregg Gerken,LB,,,0,0,0,,,Northern Arizona
+10,257,WAS,Phil Kessel,QB,,,0,0,0,,,Northern Michigan
+10,258,CIN,Hubert Simpson,RB,,,0,0,0,,,Tennessee
+10,259,BAL,Trent Bryant,DB,22,1987,0,0,0,4,,Arkansas
+10,260,CHI,Tim Clifford,QB,,,0,0,0,,,Indiana
+10,261,MIA,Steve Folsom,TE,23,1990,0,0,1,3,,Utah
+10,262,KAN,Les Studdard,C,22,1983,0,0,0,3,3,Texas
+10,263,STL,Jim Joiner,WR,,,0,0,0,,,Miami (FL)
+10,264,DET,Andy Cannavino,LB,,,0,0,0,,,Michigan
+10,265,PIT,Mike Mayock,DB,23,1983,0,0,0,0,,Boston Col.
+10,266,MIN,James Murphy,WR,21,1981,0,0,0,0,,Utah St.
+10,267,WAS,Allan Kennedy,T,23,1984,0,0,0,4,,Washington St.
+10,268,SDG,Robert Parham,RB,,,0,0,0,,,Grambling St.
+10,269,RAM,Robert Alexander,RB,23,1983,0,0,0,0,0,West Virginia
+10,270,HOU,Larry Jones,RB,,,0,0,0,,,Colorado St.
+10,271,CLE,Dean Prater,DE,22,1988,0,0,0,6,,Oklahoma St.
+10,272,BUF,Justin Cross,T,22,1986,0,0,1,8,8,Western St. (CO)
+10,273,DAL,Pat Graham,DT,,,0,0,0,,,California
+10,274,ATL,Robert Murphy,DB,,,0,0,0,,,Ohio St.
+10,275,PHI,Hubie Oliver,RB,23,1986,0,0,3,12,12,Arizona
+10,276,OAK,Frank Hawkins,RB,22,1987,0,0,2,15,15,Nevada
+11,277,NOR,Lester Mickens,WR,,,0,0,0,,,Kansas
+11,278,NYJ,Ed Gall,DT,,,0,0,0,,,Maryland
+11,279,SEA,Lance Olander,RB,,,0,0,0,,,Colorado
+11,280,SDG,Matt Petrzelka,T,,,0,0,0,,,Iowa
+11,281,STL,Mike Sherrod,TE,,,0,0,0,,,Illinois
+11,282,GNB,Forrest Valora,LB,,,0,0,0,,,Oklahoma
+11,283,TAM,Johnny Ray Smith,DB,24,1984,0,0,0,4,4,Lamar
+11,284,WAS,Jerry Hill,WR,,,0,0,0,,,North Alabama
+11,285,CIN,Robert Jackson,DB,22,1989,0,0,3,23,23,Central Michigan
+11,286,SFO,Ronnie DeBose,TE,,,0,0,0,,,UCLA
+11,287,CHI,Lonnie Johnson,RB,,,0,0,0,,,Indiana
+11,288,BAL,Holden Smith,WR,22,1982,0,0,0,0,0,California
+11,289,KAN,Frank Case,DE,23,1981,0,0,0,1,1,Penn St.
+11,290,DEN,Pat Walker,WR,,,0,0,0,,,Miami (FL)
+11,291,MIA,Jim Jensen,WR,22,1992,0,0,0,20,20,Boston Univ.
+11,292,PIT,Rick Trocano,QB,22,1982,0,0,0,0,,Pittsburgh
+11,293,MIN,Bill Stephanos,T,,,0,0,0,,,Boston Col.
+11,294,DET,Willie Jackson,DB,,,0,0,0,,,Mississippi St.
+11,295,NWE,Brian Buckley,QB,,,0,0,0,,,Harvard
+11,296,RAM,Marcellus Greene,DB,23,1984,0,0,0,1,,Arizona
+11,297,HOU,Claude Mathews,G,,,0,0,0,,,Auburn
+11,298,CLE,Larry Friday,DB,23,1987,0,0,0,0,,Mississippi St.
+11,299,BUF,Buster Barnett,TE,22,1984,0,0,0,2,2,Jackson St.
+11,300,SDG,Carlos Bradley,LB,21,1987,0,0,0,6,6,Wake Forest
+11,301,ATL,Keith Chappelle,WR,,,0,0,0,,,Iowa
+11,302,DAL,Tim Morrison,G,,,0,0,0,,,Georgia
+11,303,PHI,Gail Davis,T,,,0,0,0,,,Virginia Union
+11,304,OAK,Chester Willis,RB,23,1984,0,0,0,0,0,Auburn
+12,305,NOR,Jim Wilks,DE,23,1993,0,0,11,63,63,San Diego St.
+12,306,SEA,Jeff Bednarek,DT,,,0,0,0,,,Pacific
+12,307,NYG,Mike Maher,TE,,,0,0,0,,,Western Illinois
+12,308,NYJ,Mike Moeller,T,,,0,0,0,,,Drake
+12,309,STL,Joe Adams,G,,,0,0,0,,,Nebraska
+12,310,TAM,Brad White,NT,23,1987,0,0,1,10,3,Tennessee
+12,311,GNB,Cliff Lewis,LB,21,1984,0,0,0,4,4,Southern Miss
+12,312,CIN,Mark O'Connell,QB,,,0,0,0,,,Ball St.
+12,313,SFO,Major Ogilvie,RB,,,0,0,0,,,Alabama
+12,314,WAS,Clint Didier,TE,22,1989,0,0,3,18,17,Portland St.
+12,315,BAL,Eric Scoggins,LB,22,1982,0,0,0,0,,USC
+12,316,CHI,Bob Shupryt,LB,,,0,0,0,,,New Mexico
+12,317,DEN,John Hankerd,LB,,,0,0,0,,,Notre Dame
+12,318,MIA,John Alford,DT,,,0,0,0,,,South Carolina St.
+12,319,KAN,Bob Gagliano,QB,23,1992,0,0,0,13,0,Utah St.
+12,320,MIN,Brian Williams,TE,23,1982,0,0,0,0,,Southern
+12,321,DEN,Mandel Robinson,RB,,,0,0,0,,,Wyoming
+12,322,SFO,Joe Adams,QB,,,0,0,0,,,Tennessee St.
+12,323,NWE,Cris Crissy,DB,22,1981,0,0,0,0,,Princeton
+12,324,HOU,Bill Capece,K,22,1983,0,0,0,6,,Florida St.
+12,325,CLE,Kevin McGill,T,,,0,0,0,,,Oregon
+12,326,BUF,Keith Clark,LB,,,0,0,0,,,Memphis
+12,327,SDG,Stacy Charles,WR,,,0,0,0,,,Bethune-Cookman
+12,328,RAM,Jairo Penaranda,RB,23,1985,0,0,0,0,0,UCLA
+12,329,DAL,Nate Lundy,WR,,,0,0,0,,,Indiana
+12,330,ATL,Mark McCants,DB,,,0,0,0,,,Temple
+12,331,PHI,Ray Ellis,DB,22,1987,0,0,4,30,20,Ohio St.
+12,332,OAK,Phil Nelson,TE,,,0,0,0,,,Delaware
+1,1,NOR,Dave Wilson,QB,22,1988,0,0,2,16,16,Illinois
+11,2,NWE,Chy Davidson,WR,22,1985,0,0,0,0,,Rhode Island

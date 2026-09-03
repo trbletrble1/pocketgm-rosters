@@ -24,10 +24,15 @@ import re, html, csv, sys, os, glob
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pgm3_paths import repo, sources
 
-FIELDS = ['round', 'pick', 'team', 'name', 'pos', 'age', 'last_year', 'all_pro',
+# `last_season`, not `last_year` — build_1979_draft.py reads that name, and the
+# 1980 CSV it was written against uses it. All four classes must carry the SAME
+# columns or they are rated on different bases: the original 1980 CSV lacked
+# all_pro and seasons_started entirely, so raise_for() silently scored those two
+# as zero for that class alone.
+FIELDS = ['round', 'pick', 'team', 'name', 'pos', 'age', 'last_season', 'all_pro',
           'pro_bowls', 'seasons_started', 'career_av', 'draft_av', 'college']
 STAT = {'round': 'draft_round', 'pick': 'draft_pick', 'team': 'team', 'name': 'player',
-        'pos': 'pos', 'age': 'age', 'last_year': 'year_max', 'all_pro': 'all_pros_first_team',
+        'pos': 'pos', 'age': 'age', 'last_season': 'year_max', 'all_pro': 'all_pros_first_team',
         'pro_bowls': 'pro_bowls', 'seasons_started': 'years_as_primary_starter',
         'career_av': 'career_av', 'draft_av': 'draft_av', 'college': 'college_id'}
 

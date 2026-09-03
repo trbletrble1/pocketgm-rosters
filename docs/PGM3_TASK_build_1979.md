@@ -1307,9 +1307,8 @@ and the final build was run **with the dumps deleted first** to prove it.
 
 ### For Ryan — the fetch list
 
-- **1981–83 PFR draft listings**: membership, pick order, age and career raise for
-  three classes in one pass; `wip/draft_1982_1983_ambiguous.csv` (174 men, including
-  first-rounders Gerald Riggs and Mike Pitts) resolves by name.
+- ~~1981–83 PFR draft listings~~ — **closed 2026-09-03**. Ryan saved the three pages;
+  all four classes now come from their real listings. See below.
 - **A 1958–1979 draft-pick source**: every rostered man carries `draftNum` 224.
 - ~~The four franchise head coaches~~ — **two named 2026-09-03** (below); Jacksonville
   and Indianapolis wait on tier 3 of the coaching pool.
@@ -1386,3 +1385,65 @@ out of football*. Hiring Dye takes him off a job he currently holds — poaching
 employed man, not signing an available one. That is historically normal for an
 expansion team, and it is a different act.
 - ~~The two era teams~~ — ruled: left as they were, `--era` added.
+
+
+## Draft classes 1980-1983 — all four from the real PFR listings, 2026-09-03
+
+**The 1980 class worked and the other three did not**, and the gap was visible in
+exactly the place a user would look. Anthony Munoz reached a 99 ceiling because his
+class had real `wAV` behind it; John Elway topped out at **75** and Dan Marino at
+**79**, because 1981-83 were derived from the 2K5 archive saves, which carry
+membership and ordering but nothing about what a man became. The whole derived
+cohort sat at a flat gap of 4-5 regardless.
+
+**PFR cannot be fetched from this session and the in-app browser does not change
+that** — it reaches Cloudflare's challenge and it never clears. Ryan saved the three
+listings as HTML, which is how the 1980 page arrived, and a file on disk sidesteps
+the context limit that truncated a pasted fetch at pick 185.
+
+**The 1980 method is applied, not a similar one — and making that true was a fix.**
+The original 1980 CSV lacked `all_pro` and `seasons_started`, so `raise_for()`
+silently scored those two as zero for that class alone. All four listings are now
+extracted by the same tool with the same columns; re-extracting 1980 reproduces its
+335 names exactly and adds the two missing signals.
+
+### Before and after
+
+| class | n before | median gap | max | → | n after | median gap | p90 | max | at 99 |
+|---|---|---|---|---|---|---|---|---|---|
+| 1980 | 333 | 8 | 19 | | 333 | 8 | 12 | 24 | 2 |
+| 1981 | 286 | 4 | 18 | | 334 | 8 | 13 | 26 | 6 |
+| 1982 | 218 | 4 | 18 | | 335 | 8 | 11 | 23 | 3 |
+| 1983 | 229 | 4 | 18 | | 335 | 8 | 14 | 30 | 6 |
+
+| player | was | now |
+|---|---|---|
+| John Elway | 71 / 75 | **85 / 99** |
+| Dan Marino | 75 / 79 | 74 / **99** |
+| Eric Dickerson | 81 / 86 | 82 / **99** |
+| Lawrence Taylor | 79 / 83 | 82 / **99** |
+| Mike Singletary | 77 / 81 | 73 / **99** |
+| Howie Long | 77 / 81 | 71 / **95** |
+| Anthony Munoz | 81 / 99 | 81 / 99 (unchanged) |
+
+**The scouting signal is now monotone in career value**, which is the user-visible
+outcome — headroom by `wAV` band: 7 (0-24), 10 (25-49), 14 (50-74), 20 (75-99),
+22 (100+).
+
+**The low end reads as limited, not merely unrated.** Every first-round pick in all
+four classes played, so the real busts are men who played badly, and they carry a
+modest ceiling: Gabe Rivera (`wAV` 1) 74/78, Rich Campbell (2) 78/82, Art Schlichter
+(4) 80/85 — a gap of 4 or 5 against Elway's 14 and Singletary's 26. Across the whole
+pool, men who never played sit at rating median 57 against 65 and cap at a p90 gap
+of 8 against 14.
+
+**`wip/draft_1982_1983_ambiguous.csv` is resolved**: Gerald Riggs is the 1982 ninth
+pick, Mike Pitts the 1983 sixteenth. 79 of the 174 appear in a real class; the rest
+were never drafted in those years, which is the answer the ambiguity was asking for.
+
+**One thing the listings cannot say.** PFR labels **every** linebacker of the era
+`LB` — all 193 across the four classes — so mapping it straight to OLB left the draft
+pool with **zero** middle linebackers and failed the gate. The 2K5 archive labels
+them, and of the 121 it holds, 60 read OLB and 52 ILB. Inside becomes MLB, outside
+OLB, and a man the archive does not hold takes OLB, the more common label, stated
+rather than silent.

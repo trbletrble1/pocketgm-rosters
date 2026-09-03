@@ -1,230 +1,336 @@
 year,name,pos,age,rating,potential,draft_pick,round,college,career_av,pro_bowls,ever_played,source,ordering,raise_basis
-1983,Dokie Williams,WR,21,85,90,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Eric Dickerson,RB,22,81,86,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Lionel Washington,CB,22,79,83,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Bill Bates,S,23,78,82,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Vernon Maxwell,OLB,22,78,82,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Bill Pickel,DE,23,77,81,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Bubba Paris,OT,22,77,81,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Dan Manning,TE,21,76,80,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Bruce Matthews,OG,23,76,80,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Bob Hamm,DT,22,76,80,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Dan Marino,QB,23,75,79,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1983,Jim Eliopulos,MLB,22,75,79,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Victor Oatis,WR,24,75,79,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Michael Haddix,RB,22,74,78,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Darrell Green,CB,22,74,78,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Steve Mott,C,23,74,78,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1983,Terry Kinard,S,22,74,78,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Bucky Scribner,P,23,74,78,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1983,Billy Ray Smith,OLB,22,74,78,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Mark Duda,DE,21,74,78,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Willie Gault,WR,23,74,78,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,John Tice,TE,22,73,77,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Bill Contz,OT,23,73,77,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Michael Williams,RB,22,73,77,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Mike Richardson,CB,24,73,77,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Chris Hinton,OG,22,73,77,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Charles Mann,DT,22,73,77,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Ken Coffey,S,23,72,76,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Dennis McKinnon,WR,22,72,76,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Larry Moriarty,RB,23,72,76,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Tim Lewis,CB,22,72,76,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Sam Merriman,OLB,21,72,76,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Brian Sochia,DE,22,72,76,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,John Elway,QB,22,71,75,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1983,Kelly Thomas,OT,23,71,75,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Pat Dunsmore,TE,22,71,75,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Bob Harris,MLB,23,71,75,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Raul Allegre,K,22,71,75,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.65),NONE — no career outcome on disk; PFR fetch pending
-1983,Eugene Goodlow,WR,21,71,75,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Mark Bortz,OG,23,70,74,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Earnest Jackson,RB,22,70,74,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Dave Duerson,S,23,70,74,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Richard Dent,DT,22,70,74,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Steve Brown,CB,24,70,74,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Carlos Scott,C,22,70,74,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1983,Jeff Chadwick,WR,22,70,74,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Jim Eliopulos,OLB,23,70,74,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Gabe Rivera,DE,22,70,74,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Roger Craig,RB,23,70,74,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Jimbo Covert,OT,22,69,73,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Malcolm Scott,TE,21,69,73,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Albert Lewis,CB,23,69,73,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Keith Bostic,S,22,69,73,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Jim Fritzsche,OG,23,69,73,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Tyrone Young,WR,22,69,73,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Mike Black,P,24,69,73,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1983,Leonard Marshall,DT,22,69,73,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,David Overstreet,RB,22,68,72,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Todd Blackledge,QB,23,68,72,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1983,Harvey Clayton,CB,22,68,72,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Chris Martin,OLB,23,68,72,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Byron Darby,DE,22,68,72,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Greg Best,S,21,68,72,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Tim Joiner,MLB,22,68,72,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Byron Williams,WR,22,67,71,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Chris Dressel,TE,23,67,71,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Harvey Salem,OT,22,67,71,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Anthony Hutchison,RB,23,67,71,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Cedric Mack,CB,22,67,71,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Roy Foster,OG,21,67,71,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Randy Grimes,C,23,66,70,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1983,Mike Jones,WR,22,66,70,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Charles Benson,DT,23,66,70,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Mike Walter,OLB,22,66,70,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Dave Puzzuoli,DE,24,66,70,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Al Gross,S,22,66,70,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Boyce Green,RB,22,66,70,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Jeremiah Castille,CB,23,66,70,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Zeke Mowatt,TE,22,66,70,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Matt Hernandez,OT,23,66,70,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Oliver Luck,QB,22,65,69,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1983,Stephone Paige,WR,21,65,69,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Carl Monroe,RB,23,65,69,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Mark Kirchner,OG,22,65,69,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,James Griffin,S,23,65,69,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Bobby Johnson,CB,22,65,69,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Karl Mecklenburg,OLB,24,65,69,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Mike Charles,DE,22,65,69,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Mike Green,MLB,22,65,69,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Paul Skansi,WR,23,64,68,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Jimmy Payne,DT,22,64,68,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Stanley Wilson,RB,23,64,68,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,James McDonald,TE,22,64,68,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Shawn Hollingsworth,OT,21,64,68,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Jim Arnold,P,22,64,68,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1983,Kendal Williams,CB,22,64,68,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,George Schmitt,S,23,64,68,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Zach Thomas,WR,22,63,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Kevin Belcher,OG,23,63,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Joe Shearin,C,22,63,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1983,Tim Krumrie,DE,21,63,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Dale Carver,OLB,23,63,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Henry Odom,RB,22,63,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Jimmy Turner,CB,23,63,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Jeff Simmons,WR,22,63,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Tyrone Keys,DT,24,63,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Tony Hunter,TE,22,62,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Paul Farren,OT,22,62,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Ray Horton,S,23,62,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Larry Kinnebrew,RB,22,62,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Robert Sowell,CB,23,62,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Gregg Garrity,WR,22,62,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,August Curly,MLB,21,61,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Dennis Fowlkes,OLB,23,61,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Dave Drechsler,OG,22,61,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Earnest Barnes,DE,23,61,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Chuck Nelson,K,22,61,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.65),NONE — no career outcome on disk; PFR fetch pending
-1983,Ken Thomas,RB,24,61,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Joey Browner,S,22,61,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Mike Mularkey,TE,22,61,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Jim Mills,OT,23,61,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Keith Gary,DT,22,61,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Otis Grant,WR,23,61,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Danny Verser,CB,22,60,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Bob Holly,QB,21,60,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1983,Gary Kubiak,QB,22,60,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1983,Alvin Moore,RB,22,60,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Rich Kraynak,OLB,23,60,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Charles Cook,DE,22,60,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Grant Feasel,C,23,60,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1983,Ellis Gardner,OG,22,60,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Mike Harmon,WR,21,60,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Carl Lee,S,23,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Van Jakes,CB,22,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Reggie Roby,P,23,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1983,Harry Holt,TE,22,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Reggie McElroy,OT,25,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Tim Harris,RB,22,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Jim Jeffcoat,DT,22,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Jerome Boyd,MLB,23,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Glen Young,WR,22,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Jacob Turner,OLB,23,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Jimmy Walker,DE,22,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Greg Hill,CB,21,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Myron Dupree,S,23,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Gary Kowalski,OG,22,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Ken Jenkins,RB,23,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Herkie Walls,WR,22,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Bruce Mathison,QB,24,59,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1983,Andy Gibler,TE,22,58,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Sid Abramowitz,OT,22,58,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,James Caver,CB,23,58,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,John Tuggle,RB,22,58,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Davlin Mullen,S,23,58,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Darryl Talley,OLB,22,58,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Hasson Arbubakkr,DE,21,58,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Jerome Foster,DT,22,58,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Sam Hall,WR,22,58,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Mark Cooper,C,23,58,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1983,Darryl Meadows,CB,22,58,66,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Darryl Caldwell,OG,23,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Jessie Clark,RB,22,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Tim Straka,TE,21,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,David Lutz,OT,23,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Mark Brown,MLB,22,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Wayne Capers,WR,23,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Paul Moyer,S,22,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Daryl Byrd,OLB,26,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Quinton Ballard,DE,22,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Elbert Foules,CB,22,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Walt Bowyer,DT,23,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Van Williams,RB,22,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Mark Reed,QB,23,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1983,Thomas Maxwell,P,22,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1983,Mike Miller,WR,21,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Steve Korte,OG,23,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Fred Bohannon,S,22,57,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Vince Newsome,CB,23,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Mike McCloskey,TE,22,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Don Mosebar,OT,24,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Johnny Hector,RB,22,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Guy Ruff,OLB,22,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Jerry Baker,DE,23,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Terry Sutorik,WR,22,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Adam Lingner,C,23,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1983,Vance Bedford,CB,22,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Tom Strauthers,DT,21,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Tom Holmoe,S,22,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Lawrence Ricks,RB,22,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Riki Ellison,MLB,23,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Rocky Belk,WR,22,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Ali Haji-Sheikh,K,23,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.65),NONE — no career outcome on disk; PFR fetch pending
-1983,Blake Wingle,OG,22,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Greg Knafelc,TE,21,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Tim Norman,OT,23,56,64,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Joe Dufek,QB,22,55,63,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1983,Larry Kubin,OLB,23,55,63,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Bill Elko,DE,22,55,63,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,George Peoples,RB,26,55,63,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Julius Dawkins,WR,22,55,63,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Wes Hopkins,S,22,55,63,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Scott Virkus,DT,23,55,63,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Wilbur Myers,CB,22,55,63,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Marco Tongue,CB,23,55,63,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Jesse Sapolu,OG,22,54,62,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Chuck McSwain,RB,21,54,62,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Cleo Simmons,OT,23,54,62,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Ron Wetzel,TE,22,54,62,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Phil Smith,WR,23,54,62,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Emmett Tilley,OLB,22,54,62,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Rich Stachowskid,DE,24,54,62,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Jim Ackerman,P,22,54,62,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.77),NONE — no career outcome on disk; PFR fetch pending
-1983,Mike Kennedy,S,22,54,62,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Gerry Feehery,C,23,54,62,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.64),NONE — no career outcome on disk; PFR fetch pending
-1983,Darrell Pattillo,CB,22,53,61,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Major Everett,RB,23,53,61,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Hosea Fortune,WR,22,53,61,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
-1983,Mark Hicks,MLB,21,53,61,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Jim Bob Taylor,QB,22,53,61,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,PassArmStrength alone — the model fails for rookie QBs,NONE — no career outcome on disk; PFR fetch pending
-1983,Michael Cofer,DT,22,52,60,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Ron Sams,OG,23,52,60,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Norris Brown,TE,22,52,60,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.59),NONE — no career outcome on disk; PFR fetch pending
-1983,Chris Schultz,OT,24,51,59,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Mark Jerue,OLB,22,51,59,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.46),NONE — no career outcome on disk; PFR fetch pending
-1983,Chris Lindstrom,DE,21,51,59,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.57),NONE — no career outcome on disk; PFR fetch pending
-1983,Dean Barnett,S,23,50,58,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.62),NONE — no career outcome on disk; PFR fetch pending
-1983,Gary Thompson,CB,22,49,67,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.58),NONE — no career outcome on disk; PFR fetch pending
-1983,Rick Bell,RB,23,47,65,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.42),NONE — no career outcome on disk; PFR fetch pending
-1983,Steve Bird,WR,22,40,58,,,,,,,2K5 1983-1984SAVEGAME.DAT years_pro==1,calibrated attributes (fit r 0.70),NONE — no career outcome on disk; PFR fetch pending
+1983,John Elway,QB,23,85,99,1,1,Stanford,140,9,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Eric Dickerson,RB,23,82,99,2,1,SMU,92,6,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Curt Warner,RB,22,81,96,3,1,Penn St.,60,3,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Chris Hinton,OT,22,80,99,4,1,Northwestern,79,7,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Billy Ray Smith,OLB,22,79,89,5,1,Arkansas,46,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jimbo Covert,OT,23,78,94,6,1,Pittsburgh,57,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Todd Blackledge,QB,22,78,83,7,1,Penn St.,12,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Michael Haddix,RB,21,77,84,8,1,Mississippi St.,19,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bruce Matthews,OG,22,77,99,9,1,USC,138,14,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Terry Kinard,S,23,77,89,10,1,Clemson,49,1,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tim Lewis,S,21,76,82,11,1,Pittsburgh,21,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tony Hunter,TE,23,76,82,12,1,Notre Dame,11,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,James Jones,RB,22,76,86,13,1,Florida,42,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jim Kelly,QB,23,76,99,14,1,Miami (FL),103,5,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tony Eason,QB,23,75,83,15,1,Illinois,36,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Pitts,DT,22,75,86,16,1,Alabama,53,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Leonard Smith,S,23,75,85,17,1,McNeese St.,42,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Willie Gault,WR,23,75,87,18,1,Tennessee,56,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Joey Browner,S,23,75,98,19,1,USC,74,6,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gary Anderson,RB,22,75,85,20,1,Arkansas,42,1,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gabe Rivera,DT,22,74,78,21,1,Texas Tech,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gill Byrd,S,22,74,88,22,1,San Jose St.,58,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jim Jeffcoat,DE,22,74,86,23,1,Arizona St.,57,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ken O'Brien,QB,22,74,88,24,1,UC Davis,73,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Dave Rimington,C,23,74,83,25,1,Nebraska,39,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Don Mosebar,C,21,74,89,26,1,USC,60,3,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Dan Marino,QB,21,74,99,27,1,Pittsburgh,145,9,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Darrell Green,S,23,74,98,28,1,Texas A&M-Kingsville,103,7,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Vernon Maxwell,OLB,21,74,81,29,2,Arizona St.,26,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Harvey Salem,OT,22,74,84,30,2,California,40,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Cooper,OG,23,74,79,31,2,Miami (FL),10,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Henry Ellard,WR,22,73,95,32,2,Fresno St.,97,3,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Richardson,S,22,73,82,33,2,Arizona St.,39,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Dave Lutz,OT,23,73,86,34,2,Georgia Tech,66,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Wes Hopkins,S,21,73,87,35,2,SMU,55,1,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Wilcher,OLB,23,73,83,36,2,North Carolina,42,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Leonard Marshall,DE,21,73,88,37,2,LSU,70,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Steve Korte,C,23,73,81,38,2,Arkansas,28,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Darryl Talley,OLB,23,73,89,39,2,West Virginia,73,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Rich Strenger,OT,23,73,79,40,2,Michigan,17,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ron Brown,WR,22,72,81,41,2,Arizona St.,20,1,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Keith Bostic,S,22,72,82,42,2,Michigan,34,1,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,James Britt,S,22,72,78,43,2,LSU,13,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Cedric Mack,S,22,72,81,44,2,Baylor,33,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Randy Grimes,C,23,72,82,45,2,Baylor,38,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jody Schulz,MLB,23,72,77,46,2,East Carolina,6,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Darryal Wilson,WR,22,72,76,47,2,Tennessee,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Dave Drechsler,OG,23,72,77,48,2,North Carolina,10,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Roger Craig,RB,23,71,91,49,2,Nebraska,95,4,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Walter,MLB,22,71,81,50,2,Oregon,46,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Johnny Hector,RB,22,71,79,51,2,Texas A&M,39,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Wayne Capers,WR,22,71,76,52,2,Kansas,8,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ray Horton,S,23,71,80,53,2,Washington,38,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bill Pickel,DT,23,71,82,54,2,Rutgers,49,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Charles,DT,20,71,78,55,2,Syracuse,27,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Richard Williams,RB,23,71,75,56,2,Memphis,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,George Achica,DT,22,71,75,57,3,USC,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tim Joiner,MLB,22,70,74,58,3,LSU,3,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Blanchard Montgomery,MLB,22,70,74,59,3,UCLA,3,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Clint Sampson,WR,22,70,75,60,3,San Diego St.,10,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Albert Lewis,S,22,70,92,61,3,Grambling St.,82,4,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Glen Young,WR,22,70,74,62,3,Mississippi St.,2,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jamie Williams,TE,23,70,77,63,3,Nebraska,16,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Dave Duerson,S,22,70,84,64,3,Notre Dame,58,4,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,John Tice,TE,23,70,76,65,3,Maryland,12,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Cliff Austin,RB,23,70,74,66,3,Clemson,5,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Cofer,OLB,23,70,81,67,3,Tennessee,47,1,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Reggie Camp,DE,22,70,78,68,3,California,30,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Chris Dressel,TE,22,70,75,69,3,Stanford,8,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Karl Nelson,OT,23,70,77,70,3,Iowa St.,25,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ramsey Dardar,DT,23,70,74,71,3,LSU,3,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jeremiah Castille,S,22,70,77,72,3,Alabama,23,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Walker Lee Ashley,MLB,23,69,74,73,3,Penn St.,13,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Stephen Starring,WR,22,69,75,74,3,McNeese St.,16,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Andrew Provence,DT,22,69,74,75,3,South Carolina,9,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Charles Benson,DE,22,69,73,76,3,Baylor,4,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bryan Caldwell,DE,23,69,73,77,3,Arizona St.,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jo-Jo Townsell,WR,22,69,74,78,3,UCLA,10,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Todd Seabaugh,OLB,22,69,73,79,3,San Diego St.,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Steve Moore,OT,22,69,75,80,3,Tennessee St.,14,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jimmy Turner,S,24,69,74,81,3,UCLA,6,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tony Caldwell,OLB,22,69,73,82,3,Washington,3,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Steve Brown,S,23,69,78,83,3,Oregon,30,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Charles Mann,DE,22,69,87,84,3,Nevada,79,4,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Phil Smith,WR,23,68,72,85,4,San Diego St.,3,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Greg Hill,S,22,68,73,86,4,Oklahoma St.,8,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Chuck Nelson,K,23,68,73,87,4,Washington,7,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike McCloskey,TE,22,68,72,88,4,Penn St.,2,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Michael Williams,RB,22,68,73,89,4,Mississippi Col.,5,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tom Holmoe,S,23,68,73,90,4,BYU,11,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tom Thayer,OG,22,68,79,91,4,Notre Dame,48,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ron Wetzel,TE,22,68,72,92,4,Arizona St.,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Trey Junkin,TE,22,68,72,93,4,Louisiana Tech,2,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,August Curley,MLB,23,67,72,94,4,USC,7,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Danny Walters,S,22,67,73,95,4,Arkansas,17,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Duda,DT,22,67,73,96,4,Maryland,15,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Vince Newsome,S,22,67,76,97,4,Washington,38,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gary Lewis,DT,22,67,71,98,4,Oklahoma St.,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Kelly Thomas,OT,22,67,72,99,4,USC,8,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Rush,RB,22,67,71,100,4,Miami (FL),,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Johnny Rembert,MLB,22,67,78,101,4,Clemson,43,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,John Harper,MLB,23,67,71,102,4,Southern Illinois,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Lionel Washington,S,22,66,78,103,4,Tulane,53,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Miller,WR,23,66,70,104,4,Tennessee,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Wes Howell,TE,22,66,70,105,4,California,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bo Metcalf,S,22,66,70,106,4,Baylor,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Pat Dunsmore,TE,23,66,70,107,4,Drake,2,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Chris Faulkner,TE,23,66,70,108,4,Florida,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Steve Maidlow,OLB,23,66,70,109,4,Michigan St.,5,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Greg Townsend,DE,21,66,80,110,4,TCU,63,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Doug Reed,DE,23,66,75,111,4,San Diego St.,34,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jimmy Payne,DE,22,66,70,112,4,Georgia,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Sid Abramowitz,OT,23,66,70,113,5,Tulsa,2,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Larry Moriarty,RB,25,66,72,114,5,Notre Dame,14,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Demetrious Johnson,S,22,66,72,115,5,Missouri,20,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,George Harris,OLB,22,66,70,116,5,Houston,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Riki Ellison,MLB,23,65,76,117,5,USC,49,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Smiley Creswell,DE,23,65,69,118,5,Michigan St.,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jim Arnold,P,22,65,74,119,5,Vanderbilt,22,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Byron Darby,DE,23,65,70,120,5,USC,12,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Steve Mott,C,22,65,73,121,5,Alabama,30,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bill Contz,OT,22,65,71,122,5,Penn St.,13,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Chris Castor,WR,23,65,69,123,5,Duke,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Malcolm Scott,TE,22,65,69,124,5,LSU,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bruce Baldwin,S,22,65,69,125,5,Harding,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Matt Vanden Boom,S,22,65,69,126,5,Wisconsin,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Stewart,MLB,23,65,69,127,5,Washington,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Darryl Lewis,TE,22,65,69,128,5,Texas-Arlington,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Brett Miller,OT,24,65,73,129,5,Iowa,28,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Steve Bird,WR,22,65,69,130,5,Eastern Kentucky,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tony Chickillo,DT,23,64,68,131,5,Miami (FL),1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bryan Thomas,RB,22,64,68,132,5,Pittsburgh,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Paul Skansi,WR,22,64,70,133,5,Washington,17,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Otis Grant,WR,22,64,68,134,5,Michigan St.,5,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Chuck McSwain,RB,22,64,68,135,5,Clemson,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,John Walker,DT,21,64,68,136,5,Nebraska-Omaha,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jeff Christensen,QB,23,64,68,137,5,Eastern Illinois,2,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Dokie Williams,WR,23,64,71,138,5,UCLA,23,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jerome Foster,DE,23,64,68,139,5,Ohio St.,3,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gregg Garrity,WR,22,64,69,140,5,Penn St.,12,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Trumaine Johnson,WR,22,64,69,141,6,Grambling St.,11,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Steve Haworth,S,21,64,68,142,6,Oklahoma,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Victor Heflin,S,23,63,67,143,6,Delaware St.,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gary Kowalski,OT,23,63,69,144,6,Boston Col.,14,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tim Stracka,TE,23,63,67,145,6,Wisconsin,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ellis Gardner,OT,21,63,67,146,6,Georgia Tech,2,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Victor Oatis,WR,24,63,67,147,6,Northwestern St. (LA),1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gene Branton,WR,22,63,67,148,6,Texas Southern,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Dave Puzzuoli,DT,22,63,68,149,6,Pittsburgh,7,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Reginald Gipson,RB,22,63,67,150,6,Alabama A&M,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Darrell Patterson,OLB,22,63,67,151,6,TCU,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Kiki DeAyala,OLB,21,63,67,152,6,Texas,3,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Kevin Belcher,C,22,63,68,153,6,Texas-El Paso,8,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Todd Brown,WR,22,63,67,154,6,Nebraska,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Bass,K,22,63,67,155,6,Illinois,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Anthony Allen,WR,24,62,67,156,6,Washington,7,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,George Schmitt,S,22,62,66,157,6,Delaware,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ken Kaplan,OT,23,62,67,158,6,New Hampshire,6,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Jones,WR,23,62,69,159,6,Tennessee St.,22,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ron Sams,C,22,62,67,160,6,Pittsburgh,4,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Grant Feasel,C,23,62,69,161,6,Abilene Christian,24,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Reggie Collier,QB,22,62,66,162,6,Southern Miss,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Vincent White,RB,22,62,66,163,6,Stanford,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Eric Williams,S,23,62,69,164,6,North Carolina St.,21,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Larry Kinnebrew,RB,24,61,68,165,6,Tennessee St.,24,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bob Winckler,OT,22,61,65,166,6,Wisconsin,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Reggie Roby,P,22,61,73,167,6,Iowa,28,3,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Babe Laufenberg,QB,23,61,65,168,6,Indiana,4,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Alvin Moore,RB,24,61,66,169,7,Arizona St.,6,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Herkie Walls,WR,22,61,66,170,7,Texas,5,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jeff Simmons,WR,23,61,65,171,7,USC,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Myron Dupree,S,21,61,65,172,7,North Carolina Central,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ken Thomas,RB,23,61,65,173,7,San Jose St.,2,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Anthony Edgar,RB,22,61,65,174,7,Hawaii,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gary Moten,OLB,22,61,65,175,7,SMU,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Rocky Belk,WR,23,61,65,176,7,Miami (FL),1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Sam Merriman,OLB,22,61,66,177,7,Idaho,6,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Perry Williams,S,22,61,71,178,7,North Carolina St.,46,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Daryl Posey,RB,22,61,65,179,7,Mississippi Col.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gurnest Brown,DT,22,61,65,180,7,Maryland,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Black,P,22,60,65,181,7,Arizona St.,7,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jon Schultheis,OG,22,60,64,182,7,Princeton,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jeff Turk,S,22,60,64,183,7,Boise St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Carlos Scott,C,23,60,64,184,7,Texas-El Paso,4,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Weldon Ledbetter,RB,22,60,64,185,7,Oklahoma,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Carl Lee,S,22,60,78,186,7,Marshall,69,3,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Craig James,RB,22,60,68,187,7,SMU,22,1,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jessie Clark,RB,23,60,67,188,7,Louisiana Tech,18,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Chris Schultz,OT,23,60,64,189,7,Arizona,4,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Darrin Newbold,OLB,22,60,64,190,7,Missouri State,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Kirchner,OG,23,60,64,191,7,Baylor,5,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bill Elko,DT,23,60,65,192,7,LSU,7,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,James Griffin,S,21,60,66,193,7,Middle Tenn. St.,19,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jeff McCall,RB,22,59,67,194,7,Clemson,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Keith Woetzel,OLB,22,59,67,195,7,Rutgers,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Kelvin Bryant,RB,22,59,69,196,7,North Carolina,23,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gary Kubiak,QB,22,59,68,197,8,Texas A&M,7,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Robert Thompson,OLB,23,59,67,198,8,Michigan,4,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Henry Odom,RB,24,59,67,199,8,South Carolina St.,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Troy West,S,22,59,67,200,8,USC,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Rich Kraynak,OLB,22,59,68,201,8,Pittsburgh,6,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Earnest Jackson,RB,23,59,73,202,8,Texas A&M,35,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Richard Dent,DE,22,59,84,203,8,Tennessee St.,98,4,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Irv Eatman,OT,22,59,73,204,8,UCLA,45,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Andy Headen,OLB,23,59,68,205,8,Clemson,13,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,David Greenwood,S,23,59,68,206,8,Wisconsin,5,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,James Durham,S,22,59,67,207,8,Houston,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bill Stapleton,S,22,59,67,208,8,Washington,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike McClearn,OG,22,59,67,209,8,Temple,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Matt Hernandez,OT,21,59,67,210,8,Purdue,2,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bob Harris,MLB,22,59,68,211,8,Auburn,8,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,John Samuelson,OLB,22,59,67,212,8,Azusa Pacific,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Norris Brown,TE,22,59,67,213,8,Georgia,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ronnie Lippett,S,22,59,73,214,8,Miami (FL),44,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,John Rade,OLB,23,59,73,215,8,Boise St.,40,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Carlton Briscoe,S,22,59,67,216,8,McNeese St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Davlin Mullen,S,23,59,68,217,8,Western Kentucky,5,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Craig Dunaway,TE,22,59,67,218,8,Michigan,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Bortz,OG,22,58,77,219,8,Iowa,62,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Lawrence Ricks,RB,22,58,66,220,8,Michigan,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Martin,WR,22,58,67,221,8,Illinois,8,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Dotterer,RB,22,58,66,222,8,Stanford,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Clayton,WR,22,58,81,223,8,Louisville,78,5,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Todd Hallstrom,OT,22,58,66,224,8,Minnesota,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jim Mills,OT,21,58,67,225,9,Hawaii,7,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Kevin Potter,S,23,58,66,226,9,Missouri,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jack Belcher,C,22,58,66,227,9,Boston Col.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Brian Hawkins,S,22,58,66,228,9,San Jose St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Mularkey,TE,21,58,68,229,9,Florida,11,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Rob Fada,OG,22,58,66,230,9,Pittsburgh,3,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Adam Lingner,C,22,58,67,231,9,Illinois,10,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Rich Pelzer,OT,22,58,66,232,9,Rhode Island,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ricky Williams,RB,23,58,66,233,9,Langston,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,George Parker,RB,22,57,65,234,9,Norfolk St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Zavagnin,OLB,22,57,65,235,9,Notre Dame,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bob Clasby,DT,22,57,68,236,9,Notre Dame,18,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ali Haji-Sheikh,K,22,57,68,237,9,Michigan,7,1,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Hasson Arbubakrr,DE,22,57,65,238,9,Texas Tech,2,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Rod Achter,WR,22,57,65,239,9,Toledo,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Keel,TE,21,57,65,240,9,Arizona,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Chris Rose,OT,22,57,65,241,9,Stanford,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Otis Brown,RB,22,57,65,242,9,Jackson St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Robin Ham,C,22,57,65,243,9,West Texas A&M,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Blake Wingle,OG,23,57,66,244,9,UCLA,7,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Green,MLB,22,57,67,245,9,Oklahoma St.,16,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Al Gross,S,22,57,67,246,9,Arizona,21,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bobby Humphery,S,22,57,68,247,9,New Mexico St.,24,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Stanley Wilson,RB,22,57,66,248,9,Oklahoma,11,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Kent Jordan,TE,22,57,65,249,9,St. Mary's (CA),,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Brown,OLB,22,57,69,250,9,Purdue,28,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Marcus Gilbert,RB,22,57,65,251,9,TCU,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ronald Hopkins,S,22,57,65,252,10,Murray St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Byron Williams,WR,22,57,66,253,10,Texas-Arlington,8,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Walt Bowyer,DE,22,57,66,254,10,Arizona St.,13,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Melvin Brown,S,22,57,65,255,10,Mississippi,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Anthony Hutchison,RB,22,57,65,256,10,Texas Tech,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Shumate,DT,23,57,65,257,10,Wisconsin,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Thomas Strauthers,DE,22,57,66,258,10,Jackson St.,10,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jeff Merrell,DT,22,57,65,259,10,Nebraska,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Richard Tharpe,DE,22,56,64,260,10,Louisville,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Dave Laube,OG,22,56,64,261,10,Penn St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Thomas Hopkins,OT,23,56,64,262,10,Alabama A&M,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Pete Speros,OG,22,56,64,263,10,Penn St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,James Williams,TE,22,56,64,264,10,Wyoming,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Toby Williams,DT,23,56,68,265,10,Nebraska,26,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Walter Tate,C,22,56,64,266,10,Tennessee St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tom Ramsey,QB,22,56,64,267,10,UCLA,5,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ralph Giacomarro,P,22,56,65,268,10,Penn St.,6,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tim Lucas,OLB,22,56,65,269,10,California,10,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Darius Durham,WR,22,56,64,270,10,San Diego St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jimmy Thomas,S,22,56,64,271,10,Indiana,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bruce Mathison,QB,24,56,65,272,10,Nebraska,6,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Eric Moran,OT,23,56,65,273,10,Washington,6,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Dan Fike,OG,22,56,70,274,10,Florida,48,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Roosevelt Straughter,S,22,56,64,275,10,La-Monroe,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tim Krumrie,DT,23,56,76,276,10,Wisconsin,63,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mervyn Fernandez,WR,23,56,68,277,10,San Jose St.,35,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Anthony Reed,RB,22,56,64,278,10,South Carolina St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Geff Gandy,OLB,22,56,64,279,10,Baylor,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jim Bob Taylor,QB,23,56,64,280,11,Georgia Tech,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Lee Jenkins,S,22,56,64,281,11,Tennessee,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Danny Triplett,OLB,22,56,64,282,11,Clemson,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Don Bailey,C,22,56,64,283,11,Miami (FL),2,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,DeWayne Jackson,DE,22,56,64,284,11,South Carolina St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Steve Sebahar,C,22,56,64,285,11,Washington St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gary Worthy,RB,22,55,63,286,11,Wilmington,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ben Tate,RB,22,55,63,287,11,North Carolina Central,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Boyce Green,RB,23,55,65,288,11,Carson-Newman,14,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jesse Sapolu,C,22,55,75,289,11,Hawaii,79,2,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bob Mayberry,OG,22,55,63,290,11,Clemson,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Clenzie Pierson,DT,22,55,63,291,11,Rice,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Steve Parker,WR,22,55,63,292,11,Abilene Christian,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Larry White,DE,22,55,63,293,11,Jackson St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Calvin Eason,S,22,55,63,294,11,Houston,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,John Salley,S,22,55,63,295,11,Wyoming,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Aaron Williams,WR,22,55,63,296,11,Washington,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Witte,TE,23,55,63,297,11,North Texas,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Brian Butcher,OG,22,55,63,298,11,Clemson,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Bucky Scribner,P,23,54,63,299,11,Kansas,9,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Dan Taylor,OT,22,54,62,300,11,Idaho St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mike Harmon,WR,22,54,62,301,11,Mississippi,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Mark Raugh,TE,22,54,62,302,11,West Virginia,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tim Kearse,WR,23,54,62,303,11,San Jose St.,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Gary Williams,WR,24,54,62,304,11,Ohio St.,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Howard McAdoo,OLB,22,54,62,305,11,Michigan St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Joe Lukens,OG,22,54,62,306,11,Ohio St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Tim Spencer,RB,22,54,64,307,11,Ohio St.,14,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Carl Williams,WR,22,54,62,308,12,Texas Southern,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Robbie Jones,MLB,23,54,62,309,12,Alabama,4,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Karl Mecklenburg,MLB,23,54,84,310,12,Minnesota,93,6,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Clete Casper,QB,22,54,62,311,12,Washington St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,David Mangrum,QB,22,54,62,312,12,Baylor,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Oliver Williams,WR,22,54,62,313,12,Illinois,4,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Billy Blaylock,S,22,53,61,314,12,Tennessee Tech,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Ken Jones,OT,22,53,61,315,12,Tennessee,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Paul Farren,OT,22,53,67,316,12,Boston Univ.,42,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Don Dow,OT,22,53,61,317,12,Washington,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Frank Magwood,WR,22,53,61,318,12,Clemson,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Waddell Kelly,RB,22,53,61,319,12,Arkansas St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Julius Dawkins,WR,22,53,61,320,12,Pittsburgh,3,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Jim Lane,C,22,52,60,321,12,Idaho St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Allama Matthews,TE,22,52,60,322,12,Vanderbilt,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,James Lane,OLB,22,52,60,323,12,Alabama St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,John Higgenbotham,DT,22,52,60,324,12,NE State (OK),,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Maurice Turner,RB,22,51,59,325,12,Utah St.,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Andy Ekern,TE,22,51,59,326,12,Missouri,0,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,John Harvey,DT,22,51,59,327,12,USC,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Stu Crum,K,22,51,59,328,12,Tulsa,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Chuck Ehin,DT,22,51,62,329,12,BYU,18,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Roger Wiley,RB,22,50,58,330,12,Sam Houston St.,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Lorenzo Bouier,RB,22,50,58,331,12,Maine,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Andre Young,OLB,22,49,67,332,12,Bowling Green,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Scott Lindquist,QB,22,48,66,333,12,Northern Arizona,,0,no,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,Anthony Carter,WR,22,46,75,334,12,Michigan,61,3,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"
+1983,John Tuggle,RB,22,40,58,335,12,California,1,0,yes,PFR 1983 draft listing,draft pick,"career AV, Pro Bowls, All-Pros, seasons started"

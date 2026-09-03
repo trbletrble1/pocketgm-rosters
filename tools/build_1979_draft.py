@@ -60,7 +60,7 @@ the top of all three classes was a punter or a kicker — Stachowicz, Karlis,
 Scribner — because the K/P models emit on their own scale. Same rule as
 everywhere else in this build: level from the pool, per position.
 """
-import csv, sys, os, re, unicodedata, collections, statistics as st, importlib.util
+import os, csv, sys, re, unicodedata, collections, statistics as st, importlib.util
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pgm3_paths import repo
 
@@ -102,8 +102,53 @@ def potential(rating, row):
     # RAISE and not the result: Anthony Munoz came out at 102.
     return min(99, int(round(rating + min(GAP_CAP, band + raise_for(row)))))
 
+_LB_CACHE = {}
+
+def lb_side(name):
+    """PFR calls EVERY linebacker of this era 'LB' — all 193 across the four
+    listings — so mapping it straight to OLB left the draft pool with zero middle
+    linebackers and failed the gate. The 2K5 archive labels them: of the 121 it
+    holds, 60 read OLB and 52 ILB, a near-even split.
+
+    Inside -> MLB, outside -> OLB, and a man the archive does not hold takes OLB,
+    which is the more common label and is stated rather than silent."""
+    global _LB_CACHE
+    if not _LB_CACHE:
+        import nfl2k5
+        from pgm3_paths import sources as _src
+        d = os.path.join(_src(), 'NFL2k25 Year Saves')
+        seen = collections.defaultdict(list)
+        for f in sorted(os.listdir(d)):
+            if not f.endswith('.DAT'):
+                continue
+            try:
+                pls = nfl2k5.Save(os.path.join(d, f)).players
+            except Exception:
+                continue
+            for q in pls:
+                seen[norm(q['fname'] + ' ' + q['lname'])].append(q['position'])
+        _LB_CACHE = seen
+    v = [p for p in _LB_CACHE.get(norm(name), []) if p in ('ILB', 'MLB', 'OLB')]
+    if not v:
+        return 'OLB'
+    return 'MLB' if collections.Counter(v).most_common(1)[0][0] in ('ILB', 'MLB') else 'OLB'
+
 def class_1980(band):
-    rows = list(csv.DictReader(open(repo('wip', 'draft_1980_pfr.csv'))))
+    return class_pfr(1980, band)
+
+def class_pfr(year, band):
+    """A class from its real PFR draft listing. THE SAME METHOD for all four —
+    1981-83 previously came from the 2K5 archive saves, which carry membership and
+    ordering but nothing about what a man became, so every one of them took the
+    band baseline and the whole cohort sat at a flat gap of 4-5. John Elway topped
+    out at 75 and Dan Marino at 79, while Anthony Munoz — the only class with real
+    wAV behind it — reached 99.
+
+    All four listings now carry the SAME COLUMNS. The original 1980 CSV lacked
+    all_pro and seasons_started, so raise_for() scored those two as zero for that
+    class alone; re-extracting it with the same tool fixes a difference in basis
+    that would otherwise have been mistaken for a difference in the classes."""
+    rows = list(csv.DictReader(open(repo('wip', f'draft_{year}_pfr.csv'))))
     # a man on a 1979 roster with the SAME college is the same man and cannot
     # be a 1980 draftee: Mike Davis, S, Colorado, played 1979 for Oakland. The
     # spine's claim is the stronger one; the listing's entry is dropped and named.
@@ -131,11 +176,13 @@ def class_1980(band):
     for rank, r in enumerate(rows):
         rating = at(band[::-1], rank, n)               # pick 1 gets the band's top
         age = int(r['age']) if r['age'].isdigit() else 22
-        out.append(dict(year=1980, name=r['name'], pos=POSMAP.get(r['pos'], r['pos']), age=age,
+        pos = lb_side(r['name']) if r['pos'] == 'LB' else POSMAP.get(r['pos'], r['pos'])
+        out.append(dict(year=year, name=r['name'], pos=pos, age=age,
                         rating=rating, potential=potential(rating, r), draft_pick=int(r['pick']),
                         round=r['round'], college=r['college'], career_av=r['career_av'],
                         pro_bowls=r['pro_bowls'], ever_played='yes' if r['last_season'] else 'no',
-                        source='PFR 1980 draft listing', ordering='draft pick', raise_basis='career AV, Pro Bowls'))
+                        source=f'PFR {year} draft listing', ordering='draft pick',
+                        raise_basis='career AV, Pro Bowls, All-Pros, seasons started'))
     return out
 
 FILLER = re.compile(r'\b(nobody|player|rookie|unknown|placeholder|dummy|noname|blank)\b', re.I)
@@ -283,14 +330,14 @@ def main():
     print(f"published prospect band: p5 {band[len(band)//20]}  median {st.median(band):.0f}  p95 {band[len(band)*19//20]}\n")
     print(f"{'class':<6}{'n':>5}{'rating med':>11}{'pot med':>9}{'headroom':>9}{'raised':>8}{'age med':>8}   top five by potential")
     for year in (1980, 1981, 1982, 1983):
-        c = class_1980(band) if year == 1980 else class_archive(year, band, models, ages)
+        c = class_pfr(year, band)          # all four from their real listings
         fh = open(repo('wip', f'draft_class_{year}.csv'), 'w', newline='')
         w = csv.DictWriter(fh, fieldnames=keys); w.writeheader(); w.writerows(c); fh.close()
         hd = [x['potential'] - x['rating'] for x in c]
         raised = sum(1 for x in c if x['potential'] - x['rating'] > GAP_BY_BAND.get(min(9, max(4, x['rating'] // 10)), 4))
         top = ', '.join(f"{x['name'].split()[-1]} {x['potential']}" for x in sorted(c, key=lambda x: -x['potential'])[:5])
         print(f"{year:<6}{len(c):>5}{st.median(x['rating'] for x in c):>11.0f}{st.median(x['potential'] for x in c):>9.0f}{st.median(hd):>9.0f}{raised:>8}{st.median(x['age'] for x in c):>8.0f}   {top}")
-    print("\n  published prospects: headroom median 7, p90 13. 1980 is raised by real careers; 1981-83 carry the band baseline only.")
+    print("\n  published prospects: headroom median 7, p90 13. All four classes are now raised by real careers.")
 
 if __name__ == '__main__':
     if '--selftest' in sys.argv:
