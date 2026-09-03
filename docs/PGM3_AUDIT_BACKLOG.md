@@ -2597,3 +2597,39 @@ transform, why a second floor pass was needed, and why p10 lands at $0.65M on
 the three deepest files against the game's $0.70M (item 37). It is also why
 top-53 is the project's payroll basis and full-roster totals run higher. One
 characteristic, several symptoms; do not investigate them separately.
+
+---
+
+### 48. The 84-coach hold rested on a principle the project does not have — REVERSED
+
+**2026-09-03.** The 1979 head-coach pool was held twice — first at 87 of 91,
+then at 84 after the era COCH tables reached three more — on the stated ground
+that assigning skin to a real man is invention, and "a smaller real pool beats a
+full invented one." **That principle does not exist in this project.** The rule
+is **no invented humans** — no fabricated people on rosters — and the record
+already states its one standing exception (generated scouts and physios). It was
+never "no assigned appearance for a real person," and it could not be: the face
+registry votes across community sources and assigns where coverage is thin,
+`build_1979_faces` sends every unsourced player to the league prior
+(`ABSTAIN_BAND`), and `build_2000` abstains to the same prior. Appearance has
+been assigned to real people since the first build.
+
+What got conflated was **"never invent data when real data exists"** — a rule
+about outcomes, ratings and contracts, which is why the 2026 prospect hold (no
+outcome can exist for a future class) is sound and this one was not.
+
+**Accepted twice at this end before Ryan caught it.** Both earlier reports state
+the hold as following from project principle; it did not, and the two rulings
+that accepted it were made on that misstatement.
+
+**Reversed and shipped**: all 91 real head coaches in the pool — four with faces
+from 1986, three from era COCH skin, **84 assigned from the league prior** by the
+same machinery every other coach and player gets, hair by the game's
+age-then-family rule, and listed in `wip/staff_pool_1979_faces_unsourced.csv` for
+later sourcing. The 423 existing records are byte-identical; nothing sitting
+moved. **Faces-staff gate unchanged at 21 / 38 / 40** — none of the 84 sits in
+any later file, so they add no multi-season pairs. Staff gate ALL CLEAR.
+
+**Swept for the same misreading elsewhere: none found.** Every other "invented"
+in the record refers to franchises, contracts, names for roles with no public
+source, or outcomes — the data rule, correctly applied.

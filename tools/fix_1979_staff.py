@@ -85,7 +85,7 @@ def main():
         head = subprocess.run(['git', 'show', f'HEAD:PGMStaff_{y}.json'], capture_output=True, text=True, cwd=repo('')).stdout
         files[y] = (json.load(open(repo(f'PGMStaff_{y}.json'))), serialiser(head))
     s79 = files['1979'][0]
-    assert not any(x['teamID'] == 'Free Agent' for x in s79), '1979 already has a pool'
+    s79[:] = [x for x in s79 if x['teamID'] != 'Free Agent']   # rebuild the pool from the sitting 288; the generated men are seeded and come back identical
 
     # 1. hair
     before = collections.Counter(); after = collections.Counter()
@@ -136,6 +136,7 @@ def main():
     # dark band, 1 -> bimodal, abstain. Wally Lemm is CSKI 1 and so is NOT sourced.
     COCH_SKIN = {'chuck fairbanks': '0', 'tom bettis': '0', 'bob hollway': '0'}
     LIGHT_BAND = [('1', 0.540), ('2', 0.246), ('3', 0.214)]; DARK_BAND = [('4', 0.378), ('5', 0.622)]
+    ABSTAIN_BAND = [('1', 0.20), ('2', 0.09), ('3', 0.02), ('4', 0.16), ('5', 0.53)]   # build_1979_faces' league prior
     def skin_fam(rng, k):
         band = LIGHT_BAND if k == '0' else DARK_BAND; r = rng.random(); acc = 0
         for f, w in band:
@@ -165,16 +166,28 @@ def main():
             a[5] = rng.choice([t for t in vocab['5'] if t.startswith('Nose' + f)] or vocab['5']); a[6] = rng.choice([t for t in vocab['6'] if t.startswith('Mouth' + f)] or vocab['6'])
             x['appearance'] = a; src = 'COCH skin'
         else:
-            # NO SOURCED SKIN. Ruled 2026-09-03: a smaller real pool beats a full
-            # invented one. The man is left out and listed, not drawn.
-            unsourced.append((r['name'], age, rating, '')); continue
+            # NO SOURCED SKIN -> ASSIGNED, the same machinery every other coach and
+            # player gets. The hold on these men (twice) rested on a principle the
+            # project does not have: the rule is NO INVENTED HUMANS, never "no
+            # assigned appearance for a real person" — the registry votes across
+            # sources and assigns where coverage is thin, which is most of every
+            # historical file. Reversed 2026-09-03. Head family from the league
+            # prior the player builder uses when no source speaks (ABSTAIN_BAND),
+            # hair by the game's age-then-family rule; listed for later sourcing.
+            rng = random.Random(f'{nk}|1979|face'); r_ = rng.random(); acc = 0; f = '5'
+            for fam_, w_ in ABSTAIN_BAND:
+                acc += w_
+                if r_ <= acc: f = fam_; break
+            a = list(x['appearance']); a[0] = rng.choice([t for t in vocab['0'] if t.startswith('Head' + f)])
+            a[5] = rng.choice([t for t in vocab['5'] if t.startswith('Nose' + f)] or vocab['5']); a[6] = rng.choice([t for t in vocab['6'] if t.startswith('Mouth' + f)] or vocab['6'])
+            x['appearance'] = a; src = 'ASSIGNED (league prior)'; unsourced.append((r['name'], age, rating, f))
         if src not in ('later file', 'registry'): redraw_hair(x, f"{x['iden']}|1979|hair")   # a sourced face is canonical, hair included
         h = min(random.Random(f"{x['iden']}|1979|staffpot").choice(vhd), 114 - rating)
         x['potential'] = rating + h; x['growthType'] = build_growth(x['potential'], rating, random.Random(f"{x['iden']}|1979|gt"))
         new.append(x)
     hr = sorted(x['rating'] for x in new)
-    print(f"2. head-coach pool: {len(new)} real men with SOURCED faces (later file {sum(1 for x in new if norm(x['forename']+' '+x['surname']) in later)}, era COCH skin {sum(1 for x in new if norm(x['forename']+' '+x['surname']) in COCH_SKIN)}), ratings {hr[0]}-{st.median(hr):.0f}-{hr[-1]}; LEFT OUT for want of skin: {len(unsourced)} (wip/staff_pool_1979_faces_unsourced.csv)")
-    csv.writer(open(repo('wip', 'staff_pool_1979_faces_unsourced.csv'), 'w', newline='')).writerows([['name', 'age', 'rating', 'left_out']] + [list(u[:3]) + ['no sourced skin: not in registry, no later file, no era COCH skin'] for u in unsourced])
+    print(f"2. head-coach pool: {len(new)} real men — faces from a later file {sum(1 for x in new if norm(x['forename']+' '+x['surname']) in later)}, era COCH skin {sum(1 for x in new if norm(x['forename']+' '+x['surname']) in COCH_SKIN)}, ASSIGNED from the league prior {len(unsourced)} (listed in wip/staff_pool_1979_faces_unsourced.csv for later sourcing); ratings {hr[0]}-{st.median(hr):.0f}-{hr[-1]}")
+    csv.writer(open(repo('wip', 'staff_pool_1979_faces_unsourced.csv'), 'w', newline='')).writerows([['name', 'age', 'rating', 'left_out']] + [list(u[:3]) + [f'assigned from the league prior (Head{u[3]}); not in registry, no later file, no era COCH skin'] for u in unsourced])
 
     # 3. eight generated roles
     names = json.load(open(repo('wip', 'staff_name_pool.json'))); real = {norm(n) for n in names['real_coach_names']} | sitting | {norm(x['forename'] + ' ' + x['surname']) for x in new} | set(canon)   # canon: every staff name in every later file — a generated man must not collide with one (Rakim Barrett did, with a 2000 physio)
