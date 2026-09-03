@@ -40,11 +40,21 @@ def decompress(path):
         raise SystemExit(f'{path}: not an FBCHUNKS container')
     return zlib.decompressobj().decompress(raw[82:]), raw
 
-# Records excluded at SOURCE, not in each consumer. A retired player carried in
-# the asset database with an untouched placeholder head has now tried to enter
-# two different files: `donaldAaron_10852` reads gen_2_H_B_005 (skin 2,
-# ethnicity H) for Aaron Donald, who retired in 2024. It would have shipped him
-# light in 2026 and again in 2021. One fix here beats remembering every time.
+# Records excluded in cmd_dump — the registry EXPORT — which is the single door
+# every consumer comes through. NOT in records(), which is the raw generator and
+# still yields the placeholder; anyone calling that layer directly gets it.
+# (An earlier version of this comment claimed the exclusion was at source. It is
+# one layer up from source, and the distinction matters: a guard whose documented
+# location is wrong will be walked around by the next person who reads it.)
+#
+# A retired player carried in the asset database with an untouched placeholder
+# head has now tried to enter three files: `donaldAaron_10852` reads gen_2_H_B_005
+# (skin 2, ethnicity H) for Aaron Donald, who retired in 2024. It would have
+# shipped him light in 2026 and again in 2021. Donald was ADDED to the 2026 roster
+# on 2026-09-03 after coming out of retirement, which retires the old reasoning
+# that he 'can never reach a build because lookups fire on 2026 rosters' — he is
+# on one now. The exclusion is what keeps him out, not his absence from the file.
+# His appearance comes from the registry's verified `aaron donald|DE` instead.
 EXCLUDE_IDS = {'10852'}          # Aaron Donald — retired, placeholder head
 
 def band(skin):

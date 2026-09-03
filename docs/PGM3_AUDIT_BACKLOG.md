@@ -1627,3 +1627,35 @@ check compares file to file, so a build that took the block for either man
 failed against 1986 — which is how this was found. The 1979 build takes the
 file. Which of the two is right for each man is unmeasured; the registry's
 own change log may say. Low stakes, two men, logged.
+
+### 31. 2026 carries six players at 99 or above; every other published file maxes at 98
+
+| player | pos | team | before today | after |
+|---|---|---|---|---|
+| Nick Folk | **K** | ATL | 99 | **100** |
+| Lane Johnson | OT | PHI | 99 | **100** |
+| Myles Garrett | DE | LAR | 99 | **100** |
+| Vita Vea | DT | TB | 98 | 99 |
+| Will Anderson Jr. | DE | HOU | 99 | 99 |
+| Micah Parsons | OLB | GB | 99 | 99 |
+
+2013, 2017 and 2021 all max at **98**, with nobody at 99.
+
+**Two causes, and they are not the same.** The 99s **predate today** — the
+published file already carried **eleven** men at 99 before this session's writes,
+which is the out-of-band condition. Today's writes then pushed three of those to
+**100** and lifted Vita Vea from 98 (while the count at 99-plus fell from 11 to 6).
+
+**The mechanism for the 100s is that rating has no ceiling.** In
+`fix_2026_spread_potential.py` the attributes are clamped — `max(1, min(99, ...))`
+at both the attribute map and the rookie refit — but every `x['rating'] = ...`
+is a bare `int(round(overall(...)))`. A man whose attributes all sit near 99
+computes an overall above 99 and nothing stops him. None of the three is a
+quarterback, so stage 8 is not involved: it is the attribute map feeding the
+rating recompute.
+
+**A kicker at 100 is the tell.** Fixing it means deciding whether the ceiling is
+98 (what the published files do) or 99 (what potential is clamped to in the 1979
+build), and whether the eleven inherited 99s come down with it. **Not folded into
+the Donald write — different cause, and mixing them makes both harder to reason
+about.**
