@@ -4718,3 +4718,20 @@ alignment, the rating invariant, the outcome ceilings — and they will go on
 doing so. **What they cannot do is land a specific number.** Any work that
 targets a particular rating for a particular man is verified in game, not
 against the weights, before it is called done.
+
+---
+
+## A value correct in the source population is not a value — the third instance
+
+**2026-09-03.** The game's free-agent staff all ask a flat $0.20M. That is also
+the game's going rate for a 57–69 rated coach, and its pool contains nothing
+else — so in vanilla the flat value and the going rate are the same number and
+the file cannot tell you which one the engine means. Our 1979 pool holds Paul
+Brown at 88. Copying $0.20M would have priced him as a 60.
+
+The position band (measured from eight files that shared an ancestor) and the
+payroll constant ($197.4M, one donor wearing ten coats) were the first two. **The
+rule: before copying a value from a reference, ask what population it was
+measured on, and whether ours is the same population.** If the reference cannot
+distinguish two explanations for the value, take the one that survives a
+population ours has and theirs lacks.

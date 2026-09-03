@@ -2633,3 +2633,47 @@ any later file, so they add no multi-season pairs. Staff gate ALL CLEAR.
 **Swept for the same misreading elsewhere: none found.** Every other "invented"
 in the record refers to franchises, contracts, names for roles with no public
 source, or outcomes — the data rule, correctly applied.
+
+---
+
+### 49. Empty-where-the-game-populates: the general form, swept, and four instances closed
+
+**2026-09-03.** Three fields had been found empty one at a time — free-agent
+player extension terms, free-agent staff asking prices (Paul Brown and Blanton
+Collier hireable for nothing, spotted in play), `car_av` in the 2000 draft file.
+A field present in the schema and empty in the data does not error and does not
+gate. `tools/coverage_sweep.py` is the general form: every field, both files,
+five cohorts, our zero/empty share against vanilla's, flagged at 15 points. Its
+first run found the fourth instance. **Every player cohort came back clean**,
+which bounds the class to staff and to `guarantee` — as useful as the hits.
+
+| cohort | field | vanilla empty | ours before | after |
+|---|---|---|---|---|
+| staff, free agents | `eSalary`, `eLength` | 0% | 1979 100% | 0% |
+| staff, employed | `eGuarantee` | 50% | 85–100% in nine files | 27–56% |
+| staff, employed | `guarantee` | 50% | 1979 100%, 2010 89% | 38%, **0%** |
+| roster, rostered | `guarantee` | 40% | 2017 72% | **21%** |
+
+`tools/fix_staff_money.py`, one pass. **The 1979 asking price is the going rate
+by (role, rating band) from vanilla's employed salaries, NOT vanilla's flat
+$0.20M**: in the game's own file the flat ask and the going rate are the same
+number, because its pool is 57–69 rated men and $0.20M is that band's rate.
+Copying the literal value into a pool holding Paul Brown at 88 would import a
+number never meant to price him — **the same trap as the position band and the
+payroll constant, the third instance: correct in the source population, wrong in
+ours.** Brown and Collier now ask $6.05M on a year; a 34-rated man asks $0.45M.
+The guarantees are **splits with the total held** — salary+guarantee and
+eSalary+eGuarantee asserted unchanged on every record against HEAD — so payroll,
+ordering and every guard are untouched by construction, and nobody who had a
+guarantee lost or changed it.
+
+**Two overshoots, mild, logged:** vanilla gives every multi-year man a
+guarantee, and 2010's employed staff and 2017's rostered players skew longer
+than vanilla's, so presence lands at 100% and 79% against the game's 50% and
+60%. Presence, not money; total compensation did not move.
+
+**Two divergences, mild, not acted on:** six files carry `eLength` 1/2/3 on
+free-agent staff where vanilla is 1 throughout; five carry `eGuarantee` on
+free-agent staff where vanilla has none on 140 of 144.
+
+**The sweep runs whenever a file is built.**
