@@ -1,0 +1,48 @@
+name,pos,age,franchise,group,rating,basis,archive_file,fit_r,fit_mean_abs_error
+Billy Kilmer,QB,39,Indianapolis Racers,old,85,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.78,3.1
+Ron McDole,DE,39,Indianapolis Racers,old,85,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.58,4.1
+Fran Tarkenton,QB,38,Memphis Southmen,old,76,calibrated from the 2K5 archive,GOATSSAVEGAME.DAT,0.78,3.1
+Jackie Smith,TE,38,Indianapolis Racers,old,84,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.59,4.4
+Mick Tingelhoff,C,38,Indianapolis Racers,old,82,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.63,5.0
+Willie Brown,DB,37,Indianapolis Racers,old,77,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.62,4.1
+Jim Bakken,K,37,Indianapolis Racers,old,90,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.63,5.0
+Chris Hanburger,LB,37,Indianapolis Racers,old,75,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.46,4.7
+Jon Morris,C,36,Indianapolis Racers,old,68,calibrated from the 2K5 archive,GOATSSAVEGAME.DAT,0.63,5.0
+MacArthur Lane,RB,36,Indianapolis Racers,old,78,hand: eleven seasons 1968-78; at 36 the oldest back to rush for 100 yards in a game,,,
+Norm Evans,OT,36,Indianapolis Racers,old,72,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.57,4.7
+Fred Biletnikoff,WR,35,Charlotte Hornets,old,79,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.74,3.3
+Elbert Drungo,OT,35,Charlotte Hornets,old,69,calibrated from the 2K5 archive,GOATSSAVEGAME.DAT,0.57,4.7
+Bobby Maples,C,35,Charlotte Hornets,old,80,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.63,5.0
+Emmitt Thomas,DB,35,Charlotte Hornets,old,76,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.62,4.1
+Mike Curtis,LB,35,Charlotte Hornets,old,76,calibrated from the 2K5 archive,GOATSSAVEGAME.DAT,0.46,4.7
+Jethro Pugh,DT,34,Charlotte Hornets,old,83,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.62,4.5
+Pete Banaszak,RB,34,Charlotte Hornets,old,75,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.44,4.9
+Paul Naumoff,LB,33,Charlotte Hornets,old,76,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.46,4.7
+Pat Curran,TE,33,Charlotte Hornets,old,72,"hand: ten seasons at tight end, Rams and Chargers 1969-78, a starter",,,
+Jake Scott,DB,33,Charlotte Hornets,old,81,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.62,4.1
+Vince Papale,WR,32,Charlotte Hornets,old,55,"hand: three NFL seasons, Eagles 1976-78, primarily special teams",,,
+Hubert Ginn,RB,31,Charlotte Hornets,old,71,calibrated from the 2K5 archive,1958-1980SAVEGAME.DAT,0.44,4.9
+Jim Mandich,TE,30,Charlotte Hornets,old,80,calibrated from the 2K5 archive,1979-1980SAVEGAME.DAT,0.59,4.4
+Mike Patrick,P,26,Memphis Southmen,young,51,"prospect band, ordered by age (the only signal they carry)",,,
+Mel Mitchell,OG,25,Memphis Southmen,young,54,"prospect band, ordered by age (the only signal they carry)",1979-1980SAVEGAME.DAT,,
+Teddy Farmer,RB,25,Memphis Southmen,young,54,"prospect band, ordered by age (the only signal they carry)",,,
+Ken Moore,TE,24,Memphis Southmen,young,58,"prospect band, ordered by age (the only signal they carry)",,,
+Marvin Switzer,DB,24,Memphis Southmen,young,59,"prospect band, ordered by age (the only signal they carry)",,,
+Robert Turner,RB,24,Memphis Southmen,young,59,"prospect band, ordered by age (the only signal they carry)",,,
+Al Darby,TE,24,Memphis Southmen,young,56,"prospect band, ordered by age (the only signal they carry)",,,
+Dave Farmer,RB,24,Memphis Southmen,young,56,"prospect band, ordered by age (the only signal they carry)",,,
+Karl Farmer,WR,24,Memphis Southmen,young,57,"prospect band, ordered by age (the only signal they carry)",,,
+Earl Inmon,LB,24,Memphis Southmen,young,57,"prospect band, ordered by age (the only signal they carry)",,,
+Leo Biedermann,OT,23,Jacksonville Sharks,young,66,"prospect band, ordered by age (the only signal they carry)",,,
+Frank Chesley,LB,23,Jacksonville Sharks,young,63,"prospect band, ordered by age (the only signal they carry)",,,
+Danny Johnson,LB,23,Jacksonville Sharks,young,61,"prospect band, ordered by age (the only signal they carry)",,,
+James Van Wagner,RB,23,Jacksonville Sharks,young,64,"prospect band, ordered by age (the only signal they carry)",,,
+Warren Anderson,WR,23,Jacksonville Sharks,young,67,"prospect band, ordered by age (the only signal they carry)",,,
+Larry Franklin,WR,23,Jacksonville Sharks,young,65,"prospect band, ordered by age (the only signal they carry)",,,
+Brett Moritz,OG,23,Jacksonville Sharks,young,60,"prospect band, ordered by age (the only signal they carry)",,,
+Willie Taylor,WR,22,Jacksonville Sharks,young,77,"prospect band, ordered by age (the only signal they carry)",,,
+Tom Jurich,K,22,Jacksonville Sharks,young,74,"prospect band, ordered by age (the only signal they carry)",,,
+Rusty Rebowe,LB,22,Jacksonville Sharks,young,73,"prospect band, ordered by age (the only signal they carry)",,,
+Randy Gill,LB,22,Jacksonville Sharks,young,71,"prospect band, ordered by age (the only signal they carry)",,,
+Mark Manges,QB,22,Jacksonville Sharks,young,70,"prospect band, ordered by age (the only signal they carry)",,,
+David Posey,K,22,Indianapolis Racers,young,69,"prospect band, ordered by age (the only signal they carry)",1958-1980SAVEGAME.DAT,,

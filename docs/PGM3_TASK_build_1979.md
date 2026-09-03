@@ -1029,6 +1029,55 @@ Waters at 73 with an 87 ceiling is unusual but not malformed.
 file covers them. Split between men aged 22 to 25 with no NFL career yet and men
 aged 33 to 39 who retired before the source's coverage.
 
+## Step 7b — the 47 with no Madden record, RATED 2026-09-02. `wip/unrated_1979.csv`.
+
+**Ryan's instinct to check the archive first paid.** 21 of the 24 old men are in
+it — the 1958-1980 save holds 17, the GOATs save 13, overlapping on 9, and the two
+are independent rather than copies. Only **Vince Papale, Pat Curran and MacArthur
+Lane** needed hand ratings, their careers fetched rather than remembered.
+
+**The archive gives eleven attributes and no overall**, so the overall is
+calibrated: a per-position least-squares fit from those eleven onto Madden's
+`POVR`, trained on the 1,133 men who carry both. The fit is reported beside every
+rating because it varies a lot — **QB 0.78 and P 0.77 at the top, RB 0.44 and OLB
+0.46 at the bottom**, mean absolute error 3 to 5 points.
+
+**Three defects, each caught by reading the result rather than the code.**
+
+1. **Applied raw, the model gave Billy Kilmer a 96 at 39, out of football**, and
+   Jim Mandich — a backup tight end — a 90. The archive rates men at *career*
+   level; the model was trained on men playing in 1979. **The fit supplies the
+   ordering and the pool supplies the level**, which is the same rule the rest of
+   this build uses. The right population is the pool's own rated men aged 30-39,
+   39 of them, median 77 and p90 85.
+   The league's own age curve runs the *other* way — median `POVR` rises from 74 at
+   22 to 87 at 33 — but that is **survivorship**, and these men are the opposite
+   selection. Conditioning on the league would have been the wrong population.
+2. **The two archives are different scales** — GOATs reads 90 against 67 on
+   stamina and 95 against 79 on durability — so a man read from one was not
+   comparable to a man read from the other. It showed: Kilmer, from the era file,
+   outranked Tarkenton, from GOATs. Both are now quantile-aligned per attribute
+   onto the **1979-1980 season file**, which is both the right season and the
+   scale the model was trained on. It holds only 1 of the 24, which is why the
+   historical archives are needed at all. Kilmer fell from 94 to 85.
+3. **The plotting-position defect again.** 23 young men stretched across the
+   published prospect distribution handed **David Posey, a 22-year-old kicker, a
+   93** — the band's ceiling — because he sorted first among six men who are all
+   22. `(i+0.5)/n` instead of `rank/(n-1)`, exactly as in the rating map.
+
+**The young 23 go through the prospect band**, measured over 3,353 published
+prospects: rating p5 53, median 61, p95 75. The archive holds exactly one of them,
+which is the confirmation rather than a gap — they have no career to have been
+recorded. Ordered by **age**, oldest worst, because age is the only signal they
+carry.
+
+**Result:** old 24 at 55 to 90, median 76. Young 23 at 51 to 77, median 61.
+
+**Papale is rated as what he was**, not as the story: three NFL seasons, primarily
+special teams, and a **55** — the lowest of the 24. He is on Charlotte because its
+doctrine picked him, and if he sits there as a reclamation that mostly does not
+work, that is honest.
+
 ### Still to build
 
 Draft classes 1980-1983, then the face registry, then all gates.
