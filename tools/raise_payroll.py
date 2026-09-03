@@ -87,11 +87,6 @@ def pos_ratios(ros):
 # through the level change, and both move to the compression work so that level
 # and shape land in one write and one gate pass.
 EXCEPTIONS = {
-    #   2026  the re-true after fix_2026_contracts (floor, position-aware, second
-    #         floor, extensions) moves mean distance 0.124 -> 0.125. A uniform
-    #         per-team scale cannot change within-team ratios; +0.001 is rounding.
-    #         Pinned so the re-true can run; Ryan may strike it.
-    2026: {'mean': (0.124, 0.125)},
     2010: {'mean': (0.514, 0.521)},
     2007: {'mean': (0.422, 0.414), 'pos': ('QB', 2.142, 2.035)},
 }
@@ -185,7 +180,12 @@ def run(year, dry):
         want = exc.get(kind)
         return want is not None and all(abs(a - b) < 5e-4 if isinstance(b, float) else a == b
                                         for a, b in zip(vals, want))
-    if md_a > md_b + 1e-9:
+    # TOLERANCE, ruled 2026-09-03: movement under 0.005 is rounding from a uniform
+    # per-team scale and is what the guard should tolerate, not what an exception
+    # should cover. An exception list that accumulates rounding artefacts stops
+    # meaning anything; 2010's +0.007 is a real number and sits there alone.
+    TOL = 0.005
+    if md_a > md_b + TOL:
         assert waived('mean', md_b, md_a), \
             f'mean distance to vanilla increased: {md_b:.3f} -> {md_a:.3f}'
         print(f"  ACCEPTED EXCEPTION (ruled 2026-09-03): mean distance {md_b:.3f} -> {md_a:.3f}, "

@@ -4676,3 +4676,19 @@ equal**, and that arithmetic was the whole of the detection.
 **Rule: diff the write by field and count, not just by line.** A gate tests the
 properties someone thought to encode. The diff shows everything that moved,
 including the field nobody knew was load-bearing.
+
+---
+
+## A count supplied with a task is what the supplier could see, not the population
+
+**2026-09-03, three times in two passes.** "96 under $500K" — the floor lifted 282,
+because the floor sits at $0.60M–$1.09M by position and band and the sub-$500K
+men were the visible end of it. "12 back under $500K after the transform" — the
+second pass lifted 369, same reason. "51 stars under $2M" — the real signature
+was 26+ and under $2M or anything under $500K, and vanilla itself carries 31
+stars under $2M on rookie deals.
+
+Each time the supplied number was true, and each time it was a symptom of a
+larger defect it could not see. **Measure the population before scoping the fix,
+and report the population beside the supplied count** — "282, of which your 96"
+— so the gap is visible and nobody plans against the smaller number.
