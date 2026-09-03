@@ -2719,3 +2719,60 @@ $0.2–0.4M, matching the export. **The game scales the stored value on display*
 the export stores a flat $0.2M for all 144 and the screen shows $0.4M, $0.3M and
 $0.2M. Our going-rate numbers will be scaled the same way, so the displayed figure
 will not equal the stored one. Does not change the fix.
+
+---
+
+### 51. Generated staff names resembled real people — 1,955 renamed on a rarity rule; provenance sidecar written
+
+**Ryan's ruling, 2026-09-03.** The generator drew invented forenames onto real
+football surnames — Rich Dungy, Garo Whitehurst, Elvin Thurman — which reads as
+a real person misremembered, worse than an obviously fake name.
+
+**Measured first.** Under the literal rule (no surname anywhere in the archive)
+**1,979 of 2,888 generated staff collide, 69%**, and the generator's own surname
+list is 69% football. But that rule catches Dennis Wilson and cannot tell him
+from Rich Dungy. What makes a name read as a specific person is
+**distinctiveness, not presence**, and it has a forename half the surname rule
+misses entirely — Jadeveon Jackson is the Garo case. Against 23,056 distinct
+football people held, the pool split: 161 surnames with 1–14 bearers (the Dungy
+class), 77 with 15+ (53 of them Census top-100), 143 not football (which skew
+Cadwallader–Belvoir, the acceptable failure); 62 distinctive forenames. And junk:
+`Assistant` was a forename, `No` and `Oh` were surnames.
+
+**The rule, ruled:** drop 1–14 bearers on both fields, keep 15+, keep the
+non-football surnames, hard-block a notable list (Hall of Fame coaches and
+players, a short celebrity list), strip the junk. Pool 320/445 → 183/193.
+
+**The scope, because an inference flags George Allen and Hal Hunter as generated
+(George, Allen, Hal and Hunter are all in the invented lists) and would rename
+real men:** 1979 from the exact provenance CSV; the other nine rename scouts and
+physios (always invented) and coordinators failing every real source AND carrying
+a distinctive-class name; common-named coordinators stay. **1,955 renamed, every
+one provenance-invented, none in any real source**; Allen, Hunter, Glanville and
+Baughan untouched. New names deterministic by iden, unique across all ten files
+and every real name — the first run seeded uniqueness with sources and players
+only, and 25 new names matched kept staff elsewhere, which the name-keyed faces
+gate read as 25 new multi-season people; reseeded with every staff name in every
+file. **Faces-staff gate unchanged at 21 / 38 / 40, multi-season people 352 → 342**
+(ten generated names that repeated across files are now distinct men). Staff
+gate ALL CLEAR on nine.
+
+**The sidecar.** There is no provenance field: the staff schema is 72 keys,
+vanilla's exactly, and a 73rd is an engine risk for a bookkeeping gain.
+`reference/PGM3_STAFF_PROVENANCE.csv` — one row per staff record per file (file,
+iden, role, team, name before and after, provenance, how) — **exact for 1979**
+(70 sourced, 4 named by Ryan, 342 invented; the pool's 91 sourced from PFR) and
+**inferred elsewhere and marked as such** (1,320 real, 162 unknown). Glanville vs
+Dungy is now recoverable from the data.
+
+### 52. 1979 defensive fronts mixed — DELIBERATE VARIANCE, NOT SOURCED
+
+**Ryan's ruling, 2026-09-03.** Every 1979 team ran a 4-3 because no source names
+each team's front and a uniform wrong answer beat a heuristic one. **This
+reverses that** — on the grounds that the game plays better with variety, which
+is a different criterion, not new evidence. Eight of 32 teams (a quarter,
+era-plausible: New England and the Jets ran a 3-4 in 1979 and it spread through
+the early eighties) switch to 3-4, chosen by a hash of the head coach's iden so it
+reproduces: **CAR, DEN, DET, GB, LAC, LAR, MIA, PHI**. The Man/Zone suffix is
+kept and every sitting man on the team moves together. **Not a claim about any
+team.** `tools/mix_fronts_1979.py`.
