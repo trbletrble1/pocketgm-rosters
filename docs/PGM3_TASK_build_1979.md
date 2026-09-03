@@ -924,6 +924,52 @@ not rating and not service, and it cannot be reproduced without inventing it.
 divergence.** The service curve was left out on the era argument as well: 1979 had
 no free agency, so the modern veteran premium had no mechanism to work through.
 
+## Step 6 — staff BUILT 2026-09-02. `wip/staff_1979.csv`, 252 records, `tools/build_1979_staff.py`.
+
+**`NFL79.ros` carries a coach table nobody had opened.** 218 records, 68 fields:
+names, ages, salaries, and per-unit coaching ratings (`CDEF`, `COFF`, `CMOT`,
+`CKNW`, `CRQB`, `CRRB`, `CRDB`, `CRDL`, `CROL`, `CRWR`).
+
+**It is contaminated, and the age field is what separates it.** The assistants
+are a stock Madden pool from about 2007 — Bruce Arians reads 54 against a 1952
+birth, Marty Mornhinweg 45 against 1962 (he was **seventeen** in 1979), Dick
+LeBeau 70. **None of the fifteen tested fits 1979 or 2004.** The real head
+coaches fit 1979 exactly: ten of ten on the first pass, then **27 of 28** across
+the league, with Ray Perkins closed by the table's own `CAGE` of 38 against a
+December 1941 birth.
+
+**The `CHTY` head-coach flag is NOT the discriminator.** It marks 19 records,
+includes **Dom Capers** and **Art Shell** — a Raiders *player* in 1979 — and
+**misses Bill Walsh**, who is in the table at a correct age of 48. Age is the
+discriminator. Taking the flag would have shipped two modern coaches and lost
+the best coach in the file.
+
+**Head coach ratings are the modder's own view**, quantile-mapped onto the
+published Head Coach distribution: Shula 95, Landry 90, Noll 87, Grant 85, Miller
+83. Median 69.5 against the published 70, range 32–95 against 32–95. The mod's
+ratings correlate **+0.45** with 1979 win percentage, which is right — they
+track reputation, not one season. A win-percentage rating would have made **Bill
+Walsh the worst coach in the league** on a 2–14 first year.
+
+**Coordinators are thin by era, not by failure.** 1979 teams mostly had no titled
+coordinator; the head coach called the plays. Sourced: **3 offensive, 13
+defensive, 15 special teams, 11 personnel** — Glanville, Schottenheimer, Collier,
+Carson, Marion Campbell, Studley, Baughan, Wiggin, Hanner, Biles, Hawkins, Walton,
+Lionel Taylor, Ed Hughes, Brinker, Urich.
+
+**Scouts and physios are invented**, following the 1986 and 2000 builds, which do
+the same. No 1979 source names a trainer. 70 of 252 records are sourced; every
+row carries a `provenance` column saying which it is.
+
+**The defensive front is NOT derived, and two routes were tried.** Roster
+composition (linebackers minus linemen) made Atlanta, Green Bay and Cleveland
+into 3–4 teams and left out New England and the Jets, who actually ran it — the
+roster reflects who was signed, and the mod's `PPOS` assigns LOLB/MLB/ROLB
+regardless of scheme. The season pages name no front at all: zero hits across 28
+for "3-4 defense", "3-4 scheme", "3-4 front" and the 4-3 equivalents. **Every
+team gets a 4-3**, the era's predominant front, and a wrong 3-4 is worse than a
+uniform one.
+
 ### Still to build
 
-Staff, the four invented franchises, draft classes, faces.
+The four invented franchises, draft classes, faces.

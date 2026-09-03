@@ -464,3 +464,18 @@ footballdb gives only `DB`. **Not** a rating signal — nothing marks starters.
 **Lineage caveat:** the Cincinnati, Washington and Pittsburgh pages cite PFR's
 1979 roster page as their source; Denver does not. Treat as PFR-derived unless
 checked. It is independent of NFL79.ros and of the 2K5 save.
+
+
+## `NFL79.ros` COCH — a real 1979 head-coach source inside a 2007 stock pool
+
+218 records, 68 fields. **All 28 of 1979's head coaches are in it with ages that
+verify against their birth years**, carrying the modder's per-unit ratings. The
+assistants are stock, from roughly a 2007 Madden: their ages fit neither 1979 nor
+2004, and they include men who were children in 1979.
+
+**Use `CAGE` against a fetched birth year as the gate. Do not use `CHTY`.** The
+head-coach flag marks 19 records, includes Dom Capers and Art Shell, and misses
+Bill Walsh.
+
+The same test should be run before trusting the 1983, 1986 or 1990 mods' coach
+tables — see backlog item 20.
