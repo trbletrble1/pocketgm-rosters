@@ -2677,3 +2677,35 @@ free-agent staff where vanilla is 1 throughout; five carry `eGuarantee` on
 free-agent staff where vanilla has none on 140 of 144.
 
 **The sweep runs whenever a file is built.**
+
+---
+
+### 50. Sitting staff earned nothing in 1979, and contract length ran to 19 years in 1979 and 18 in 2000
+
+**Ryan saw both in play, 2026-09-03.** Chuck Noll coached Pittsburgh for $0.0M
+with every other sitting man in the file, and the free-agent screen showed Shula
+at 19 years and Madden at 17 — the sitting record's `length`, not a free-agent
+contract. **Checked on all ten before writing**: the salary defect is 1979's
+alone (its staff was built this week by a tool that got the free-agent structure
+right and the sitting one wrong; the other nine sit at $0.34–0.56M medians
+against the game's $0.20M); **the length defect is 1979's and 2000's** — 79 and
+68 men over the game's maximum of 5.
+
+**`length` is not tenure.** In 1979 it correlates with nothing — r −0.01 against
+2026 − startSeason, +0.02 against age; Shula 19 at 49, Madden 17 at 43 — and the
+game keeps tenure in `startSeason` (2026 − startSeason runs to 38 in vanilla), so
+nothing was lost by overwriting it. Only the men over 5 were redrawn, from
+vanilla's employed length distribution for their band (60s all one-year; 70s
+1–2; 80+ 1–5); both files now read 1–1–5 like the game.
+
+**Salary, 1979**: 288 sitting men rank-mapped within (role, rating band) onto
+vanilla's employed salary distribution for the cell — median $0.20M against
+$0.20M, 80+ head coaches $6.05M against $6.05M; guarantee split by vanilla's rule
+(58% present against 50%). The extension ask, which had been a ratio of a zero
+salary and so was ~zero too, is re-derived from the new salary through the joint
+table: eSalary/salary median 0.92 against 1.00, eGuarantee present 45% against
+50%. Shula earns $7.10M on two years and asks $4.13M on three; Madden $7.32M/3
+asking $5.49M/3. No free-agent record touched. Staff gate ALL CLEAR on 1979;
+2000 its pre-existing item 44. Sweep clean.
+
+`tools/fix_staff_sitting.py`.
