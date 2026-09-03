@@ -1084,12 +1084,16 @@ his career, sourced at 61 — a 6-point gap, inside the calibration's own 3-to-5
 point error. Two methods, roughly one answer. He is still the lowest of the 24 and
 still on Charlotte because the doctrine picked him.
 
-**Lane is the opposite, and it is the number to look at.** Hand-rated 78, sourced
-**94** — a 16-point correction at running back, the position where the fit was
-weakest at 0.44. He is now the best player on Indianapolis, above Charlie Waters's
-healthy 87. That follows from a real 1976 rating (he led the NFL in receptions
-that year) and it is an upper bound, because the age curve is measured on men who
-were still playing in 1979 and Lane was not.
+**Lane is the opposite, and his first number was wrong.** Sourced at 96 for 1976,
+he came out at **94** under an age band of 30-33 — and that band was too coarse.
+Men aged 30, 31 and 32 in 1976 barely move (median −1), while men aged exactly 33
+fall by **7** and 33-plus pooled by **8**. Lane was 33. The break is at 33, so the
+band now is, and he lands at **88**.
+
+That still makes him the best outfield player on Indianapolis, a point above
+Charlie Waters's healthy 87, and it is still an **upper bound** — the curve is
+measured on men who were playing in 1979 and Lane was not. Deliberate rather than
+default: the coarse bucket would have shipped 94 silently.
 
 ### Still to build
 

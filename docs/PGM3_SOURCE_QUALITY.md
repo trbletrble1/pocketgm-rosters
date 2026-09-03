@@ -297,3 +297,36 @@ parser bug and will be re-investigated as one otherwise.
 **Coach skin has no middle value.** `CSKI` 0 is light and anything above it is
 dark, unlike player `PSKI` where 1 means unknown and must abstain. Counting
 coach dark as `>= 2` undercounts — it read ROJO at 17% against a true 20%.
+
+
+## The `PSKI` middle-value screen measures collapse, not accuracy — anchor-test as well
+
+Ryan flagged that a user of the site praised these classic rosters for "skin tone,
+approximate hairstyle" and named the 1976 file specifically, against a screen that
+read it as collapsed at 29.2%. Both were tested against the same ground truth: the
+**8,226 men the 2K5 archive labels unanimously across three or more saves**.
+
+| file | matched | agrees with the archive | `PSKI` middle value |
+|---|---|---|---|
+| **1983** | 989 | **90%** | 24% |
+| `NFL79.ros` | 709 | 74% | 43% |
+| 1990 | 1,689 | 69% | 31% |
+| 1986 | 1,064 | 67% | 63% |
+| **1976 raidermike** | 439 | **57%** | 29% |
+
+A coin flip is 50%.
+
+**The 1976 file is the worst of the five and barely above chance**, so the screen's
+verdict stands and the praise does not extend to its skin data. It cannot
+cross-check 1979's faces.
+
+**But the screen itself does not predict accuracy.** At a 28% threshold it rejects
+`NFL79.ros` (43% middle, 74% accurate), 1986 (63%, 67%) and 1990 (31%, 69%) while
+passing 1983 (24%, 90%) — and 1976 fails on accuracy at a middle share *below*
+three of the files it rejects. **Middle-value share and anchor agreement are
+close to unrelated across these five.** Treat the screen as a cheap first pass,
+never as the usability gate: run the anchor before discarding a file for faces.
+
+**1979's appearances therefore still rest on the 2K5 archive alone**, with no
+independent confirmation. `NFL79.ros` at 74% is the nearest thing to a second
+opinion and it is not independent enough to be one.

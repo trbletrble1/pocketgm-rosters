@@ -53,9 +53,14 @@ GOATS = 'GOATSSAVEGAME.DAT'             # fallback: runs ~5 hot on speed
 # both, POVR agrees on 11% and the attributes on 30-51%. (Height agrees on 97%,
 # which is not lineage — height does not change.)
 #
-# AGE FORWARD, measured on those 964 rather than assumed:
-#     ages 22-25 in 1976   +2.0     ages 30-33   -1.5
-#     ages 26-29            0.0     ages 34-40   -8.0  (n=7, thin)
+# AGE FORWARD, measured on those 964 rather than assumed. The first bands tried
+# were 30-33 and 34-40, which was TOO COARSE and cost the number that mattered:
+# the 30-33 bucket reads -1.5 because the 30-, 31- and 32-year-olds barely move,
+# while men aged exactly 33 fall by 7 (n=8) and 33-plus pooled by 8 (n=15).
+# MacArthur Lane was 33, and the coarse bucket handed him 94 instead of 88.
+# The break is at 33, so that is where the band is:
+#     22-25  +2      30-32  -1
+#     26-29   0      33+    -8
 #
 # CAVEAT, stated because no statistic shows it: those 964 are men who were still
 # playing in 1979. Our three were NOT — they are the men who did not survive, the
@@ -72,7 +77,7 @@ SOURCE_1976 = {
     'Pat Curran':     (78, 30, 'tight end, Chargers'),
     'MacArthur Lane': (96, 33, 'led the NFL in receptions in 1976, his best season'),
 }
-AGE_FORWARD = {(22, 25): +2, (26, 29): 0, (30, 33): -2, (34, 40): -8}
+AGE_FORWARD = {(22, 25): +2, (26, 29): 0, (30, 32): -1, (33, 45): -8}
 VETERAN_MAX = 94        # the observed top of the pool's own 30+ men
 
 def age_forward(povr, age76):
