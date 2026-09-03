@@ -822,6 +822,39 @@ weighted attributes, the 2026 stage-8 pattern: median k **-0.9**, p5-p95 -4.9 to
 target| **0.50**, above 1 on **34**, worst -9.5 where an attribute clamps at 1
 or 99.
 
+## Step 4 — potential BUILT 2026-09-02. `wip/potential_1979.csv`.
+
+**`draftSeason` is on the 2026 game clock in every published file, not on the
+file's own season.** The 2004 file's rostered players carry draftSeason 2007-2026.
+Reading years pro as *(file year − draftSeason)* makes 2004's entire roster
+negative and silently drops it, which is what a first pass here did — it produced
+a curve built on 243 players instead of 1,990. With *2026 − draftSeason* the
+2017 column reproduces the 6/4/2/0/0/0/0/0/0 the 2026 build used, exactly.
+
+**The pooled curve, taken:** median headroom by years pro across the published
+six is **4, 4, 3, 2, 1, 1, 0, 0, 0**. 2017 alone is steeper. 1979 takes the pool,
+consistent with every other level decision in this build. The interaction with
+rating is flat — at year 0 headroom is 4 to 6 across every rating decile, at year
+4 and beyond it is 0 to 1 across every decile — so **years pro alone is
+adequate** and no second term is warranted.
+
+**`PYRP` is exact where it matters, and one too high where it does not.** Four
+men from each draft class: 1976-1979 read exactly right (Montana, Winslow,
+Anderson, Hampton 0; Campbell, Lofton, Newsome 1; Dorsett, Morgan, Walker 2;
+Haynes, Largent, Muncie 3), and every class from 1975 back reads one too high
+(Payton 5 for four seasons, Guy and Hannah 7 for six, Harris 8 for seven). A
+clean break between the 1976 and 1975 classes. Corrected rather than carried,
+though headroom is 1 or 0 by then so it costs at most a point.
+
+The 2K5 save disagrees in the opposite direction — it has **no zeros at all**,
+reading every 1979 rookie as 1 — so NFL79.ros is the source and 2K5 the check.
+
+**Result:** potential median 73, max 99, headroom 0 on 317 and 4 on 480.
+`rating == potential` on **23%**, inside the published 10% (2021) to 53% (2017).
+The 99 ceiling binds on exactly one man, Mike Haynes at 98 with two years of
+headroom. That is the field's observed range in all six files, not a guard of the
+kind removed from the 2026 build.
+
 ### Still to build
 
-Potential, contracts, staff, the four invented franchises, draft classes, faces.
+Contracts, staff, the four invented franchises, draft classes, faces.

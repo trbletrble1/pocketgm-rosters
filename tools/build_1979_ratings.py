@@ -324,6 +324,27 @@ def load_2k5(rows, ppos):
             got[(r['team'], r['name'])] = dict(pick)
     return got
 
+# The pooled headroom curve, median potential-minus-rating by years pro across
+# the published six. Computed with yrs = 2026 - draftSeason, because EVERY
+# published file carries draftSeason on the 2026 game clock, not on its own
+# season — reading it as (file year - draftSeason) makes 2004's whole roster
+# negative and silently drops it.
+# 2017 alone reads 6/4/2/0/0/0/0/0/0, which is what the 2026 build used. The
+# pooled column is gentler. 1979 takes the pool, consistent with every other
+# level decision in this build.
+HEADROOM = [4, 4, 3, 2, 1, 1, 0, 0, 0]
+
+def years_pro(p):
+    """NFL79.ros PYRP, corrected. Anchored on four men from each draft class:
+    the 1976-1979 classes read EXACTLY right (Montana/Winslow/Anderson/Hampton 0,
+    Campbell/Lofton/Newsome 1, Dorsett/Morgan/Walker 2, Haynes/Largent/Muncie 3)
+    and every class from 1975 back reads one too high (Payton 5 for four seasons,
+    Guy and Hannah 7 for six, Harris 8 for seven). The break is clean between the
+    1976 and 1975 classes. It costs at most one point of potential either way,
+    since headroom is 1 or 0 by then, but it is corrected rather than carried."""
+    v = int(p['PYRP'])
+    return v if v <= 3 else v - 1
+
 def pool_attrs(attrs):
     """Per (position, attribute) values across the published six, rostered only."""
     import json
@@ -413,8 +434,31 @@ if __name__ == '__main__':
           f'residual mean|.| {st.mean([abs(x) for x in res]):.2f}, |res|>1 on {sum(1 for x in res if abs(x) > 1)}')
     out2 = repo('wip', 'attributes_1979.csv')
     w2 = csv.writer(open(out2, 'w', newline=''))
-    w2.writerow(['team', 'name', 'pgm3_pos', 'rating'] + LIVE + ['k5_source'])
+    # PROVENANCE, per player. The 275 with no 2K5 record carry the pool median on
+    # manCover, zoneCover and routeRun — the one place a man has no individual
+    # signal at all. Flagged the way single-source ratings are flagged, so it is
+    # visible in the file rather than discovered later.
+    w2.writerow(['team', 'name', 'pgm3_pos', 'rating'] + LIVE + ['k5_source', 'imputed_fields'])
     for r, pg, tg, d, K in built:
-        w2.writerow([r['team'], r['name'], pg, tg] + [d[a] for a in LIVE] + ['yes' if K else 'no'])
+        imp = '' if K else 'manCover zoneCover routeRun (pool median, no 2K5 record)'
+        w2.writerow([r['team'], r['name'], pg, tg] + [d[a] for a in LIVE] +
+                    ['yes' if K else 'no', imp])
+    # potential, written alongside the rating it derives from
+    import csv as _csv
+    pot = repo('wip', 'potential_1979.csv')
+    w3 = _csv.writer(open(pot, 'w', newline=''))
+    w3.writerow(['team', 'name', 'pgm3_pos', 'years_pro', 'rating', 'potential', 'headroom'])
+    hs = []
+    for (r, p, _), (r2, pg, tg, d, K) in zip(rows, built):
+        y = years_pro(p)
+        # 99 is the ceiling in all six published files (max potential 99, every
+        # one). Not a guard of the kind removed from the 2026 build — it is the
+        # field's observed range. It binds on exactly one man.
+        po = min(99, tg + HEADROOM[min(y, 8)])
+        h = po - tg
+        hs.append(h)
+        w3.writerow([r['team'], r['name'], pg, y, tg, po, h])
+    print(f'wrote {pot}: headroom 0 on {hs.count(0)}, 1 on {hs.count(1)}, 2 on {hs.count(2)}, '
+          f'3 on {hs.count(3)}, 4 on {hs.count(4)}')
     print(f'wrote {out2}: {len(built)} players x {len(LIVE)} attributes, '
           f'{sum(1 for b in built if b[4] is None)} without a 2K5 record')
