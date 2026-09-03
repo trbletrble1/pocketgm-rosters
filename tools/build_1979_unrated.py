@@ -245,7 +245,7 @@ def main():
     done, raw, pending, youngsters = collections.Counter(), [], [], []
     prat, phd = prospect_band()
     for x in sorted(rows, key=lambda z: (int(z['age']) < 30, -int(z['age']))):
-        nm, pos = x['name'], POSMAP.get(x['pos'], x['pos'])
+        nm, pos = x['name'], x['pgm3_pos']
         young = int(x['age']) < 30
         rec, src = None, ''
         for f in (SEASON_FILE, ERA_FILE, GOATS):       # right season, then right era

@@ -1141,7 +1141,102 @@ veteran-fitted speed and durability terms drown the one QB attribute the archive
 has. **Quarterbacks order on `PassArmStrength` alone**: Marino 92 and Elway 90
 lead 1983, Lomax 93 leads 1981. A per-position exception, stated and self-tested.
 
-### Still to build
+## Step 10 — ASSEMBLED 2026-09-02. `PGMRoster_1979.json` (2,782 records), `PGMStaff_1979.json` (288). `tools/build_1979_roster_file.py`.
 
-The face registry, then all gates. The 1981–83 classes are upgraded when the PFR
-pages arrive.
+**Gates on the written files:** `pgm3_validate staff` ALL CLEAR. `faces` all checks
+passed. The mandatory conditional — skin family split by the archive band — separates
+by **+100 points** on 1,057 archive-sourced men. `roster` fails **one group**: *team
+empty at a position every reference fills — ARI has no K; DAL has no P.* **That is the
+era, and it is left as it was.** St. Louis's Steve Little kicked *and* punted in 1979;
+Dallas punted with Danny White, its backup quarterback. Every reference file, 1986 to
+2021, carries a separate kicker and punter, so the check is a later-era convention
+applied to an earlier season — the third form of that precedent in this build. Adding
+a man to a real roster to satisfy it would disturb a real roster. **Ryan rules.**
+
+### What assembly found, in the order it found it
+
+**1. The Step 4 join bound namesakes to one record, and coverage measured the join.**
+An assembler uniqueness assert fired on five name+position pairs inside the spine.
+They were two men each — Buffalo's Ken Johnson is a defensive end and the Giants'
+a running back — carrying the same position and the same rating, because tier 2
+(unique name anywhere in the mod) never checked position or whether the record was
+already claimed. Under the old join **18 spine men shared 9 mod records** and a
+defensive end shipped with a running back's attributes. Fixed structurally: team+name
+binds first and *consumes* its record, tier 2 requires position compatibility, and
+**`assert_one_to_one`** now guards the join — the invariant Step 4 lacked. Coverage
+is still 1,408 of 1,408, with 1,353 on team+name, 40 on team+surname+position, 11 on
+name only, 4 duplicate-in-mod; the no-source path exists and is empty. Sixteen men
+remain bound to a record whose position disagrees with footballdb's — Calvin Hill as
+back or tight end, Guido Merkens as quarterback or receiver — which is two sources
+disagreeing about one man, settled in the mod's favour at Step 4, not a join error.
+**"100% coverage" at Step 4 was true of the join and not of the truth.**
+
+**2. The archive draft classes carried veterans as rookies.** 65 men were on a 1979
+roster *and* in a 1981–83 class — Jack Lambert as a 1983 prospect, Larry Cole and Tom
+Banks in 1981 — because `years_pro` reads stock junk for a minority and that minority
+runs both ways. Presence in an earlier save is now a sound exclusion (17/29/18 men per
+class), thirteen "Joe Nobody" filler rows are stripped, a doubled Mike Reilly is
+deduplicated, and Mike Davis of Colorado leaves the 1980 class because the spine's
+claim that he played 1979 for Oakland is the stronger one. The 1980 listing's
+**supplemental draft** is a second table whose picks restart at 1; its two rows are
+numbered after the last regular pick and marked round S, and Matthew Teague — drafted
+by Dallas in round ten, unsigned, redrafted by Atlanta in the supplemental — is one
+man, kept once. Potential is capped at 99, the field's ceiling; Munoz had come out at
+102. Classes: **333 / 286 / 218 / 229.**
+
+**3. Conventions the references hold that no document recorded.** A position's unused
+attributes are **zero** in every published file — 202 (position, attribute) pairs at
+100%, none weighted bar one 0.033 OLB entry — and the map had filled all thirty for
+everyone. Applied from the measured table, and those attributes are excluded from the
+closing shift. And the validator's face rule, read from its code: head, nose and mouth
+match on **family digit** with the age variant free; eyes, hair, beard, eyebrows,
+glasses and clothes are compared **whole**. "Family digit only" is three slots, not
+nine; 248 registry men had failed on hair. Registry men now take the shipped **1986
+file's** appearance where it holds them — the validator compares file to file, and the
+block disagrees with the file for two men (backlog 32) — and the block otherwise.
+
+**4. Contracts, re-solved over 32 teams.** Length by bucket median put 49% of the file
+on one-year deals against a published 25–45%, because the median collapses a bucket
+that is half 1 and half 2–4. Length is now the published **distribution** within each
+years-pro bucket, placed by rating rank — and that direction is real, not invented:
+r(rating, length) = **0.22–0.39** in every bucket, terciles rising. That fix exposed the
+five-year guarantee ratio as a **spike**: 1.25 between 0.21 and 0.44, mean 2.28, on 297
+men, and with the best-paid men now on five-year deals it put **38%** of the league's
+guarantee on 49 men (published 4–16%) and drove the compression ratio to 3.87x.
+Smoothed to the monotone interpolation; five-year men hold **21%**. Final: **TOP_RATIO 5.44x**,
+median top-53 $197.4M, max team $275.0M, 0 over the cap. The total guarantee load, ~0.10,
+sits **below** the published 0.17–0.48 — an era claim (no free agency, little guaranteed
+money), stated.
+
+**5. Pool men's positions are decided once.** The pool CSV says DB and LB; the mod says
+CB/S and MLB/OLB, taken as the spine does. A first version relabelled inside the
+assembler while the face file was built elsewhere from the coarse label, and the two
+could not agree by construction. `build_1979_franchises` now writes `pgm3_pos` and every
+downstream tool reads it. With linebackers and backs split, no franchise held a corner
+and Indianapolis no middle linebacker, then Jacksonville no tackle: **MLB, CB and DT
+joined the reservation.** The four shapes after:
+
+```
+                         n  best  med  age  South  from the 40
+Memphis Southmen        46    90   76   24     14           12
+Charlotte Hornets       46    87   78   28     18           15
+Jacksonville Sharks     46    82   69   24     18            5
+Indianapolis Racers     46    94   76   26     13           10
+```
+
+**6. The four franchises carry generated staff**, nine each, flagged. Inventing a real
+coach's employment is a different act from rostering real men who were out of football.
+Ryan may name them.
+
+**Process note, recorded because it happened twice — then a third time in the commit
+gate.** A validator run after a crashed build step reports on the *previous* file; and a
+gate that greps for "FAIL" counts the summary line "1 CHECK GROUP(S) FAILED" too. Read
+the check lines, inside the chain that wrote the file.
+
+### For Ryan — the fetch list
+
+- **1981–83 PFR draft listings**: membership, pick order, age and career raise for
+  three classes in one pass; `wip/draft_1982_1983_ambiguous.csv` (174 men, including
+  first-rounders Gerald Riggs and Mike Pitts) resolves by name.
+- **A 1958–1979 draft-pick source**: every rostered man carries `draftNum` 224.
+- **The two era teams**: leave St. Louis and Dallas as they were, or rule otherwise.

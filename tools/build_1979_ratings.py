@@ -109,21 +109,43 @@ def join(play, spine, tm, ppos_name=None, report=None):
         nm = norm(p['PFNA'] + ' ' + p['PLNA'])
         idx[ALIAS.get(nm, nm)].append(p)
     out, miss = [], []
+    # PASS 1 — team+name binds first and CONSUMES its record. Only then do the
+    # lower tiers run, over what is left. Without this, the Giants' Gene
+    # Washington and Kansas City's Larry Brown — real namesakes the mod does not
+    # hold — took the records their Lions and Steelers namesakes had already
+    # claimed, because tier 2 checked uniqueness and position but not whether
+    # the record was spoken for. One-to-one is now structural, and asserted too.
+    consumed = set(); pass1 = {}
     for r in spine:
         nm = ALIAS.get(norm(r['name']), norm(r['name']))
-        cands = idx.get(nm, [])
-        hit = None
-        same = [p for p in cands if tm.get(p['TGID']) == r['team']]
-        if len(same) == 1:
-            hit, how = same[0], 'team+name'
-        elif len(cands) == 1:
-            hit, how = cands[0], 'name only (moved or FA in the mod)'
+        same = [p for p in idx.get(nm, []) if tm.get(p['TGID']) == r['team']]
+        if len(same) == 1 and id(same[0]) not in consumed:
+            pass1[id(r)] = (same[0], 'team+name'); consumed.add(id(same[0]))
         elif len(same) > 1:
-            hit, how = max(same, key=lambda p: int(p['POVR'])), 'team+name, duplicate in mod'
+            best = max(same, key=lambda p: int(p['POVR']))
+            if id(best) not in consumed:
+                pass1[id(r)] = (best, 'team+name, duplicate in mod'); consumed.add(id(best))
+    for r in spine:
+        if id(r) in pass1:
+            out.append((r,) + pass1[id(r)]); continue
+        nm = ALIAS.get(norm(r['name']), norm(r['name']))
+        cands = [p for p in idx.get(nm, []) if id(p) not in consumed]
+        hit = None
+        same = []
+        if len(cands) == 1 and (ppos_name is None or posok(ppos_name(cands[0]), r['pos'])):
+            # TIER 2 NOW REQUIRES POSITION COMPATIBILITY. Without it, a unique
+            # name anywhere in the mod bound to BOTH footballdb namesakes:
+            # Buffalo's Ken Johnson (DE) and the Giants' Ken Johnson (RB) both
+            # took the one 'Ken Johnson' record, and a defensive end shipped with
+            # a running back's attributes. Cleveland's John Smith (WR) became a
+            # kicker; Tampa's Steve Wilson (C) a safety. The 100% coverage that
+            # tier produced measured the join, not the truth. Found at assembly
+            # by a uniqueness assert, not at Step 4 — see assert_one_to_one.
+            hit, how = cands[0], 'name only (moved or FA in the mod)'
         if hit is None:                          # tier 3
             sur = nm.split()[-1] if nm else ''
             cand = [p for p in play
-                    if norm(p['PLNA']) == sur and tm.get(p['TGID']) == r['team']
+                    if id(p) not in consumed and norm(p['PLNA']) == sur and tm.get(p['TGID']) == r['team']
                     and posok(ppos_name(p) if ppos_name else '', r['pos'])]
             if len(cand) == 1:
                 hit, how = cand[0], 'team+surname+position'
@@ -133,8 +155,16 @@ def join(play, spine, tm, ppos_name=None, report=None):
         if hit is None:
             miss.append(r)
         else:
-            out.append((r, hit, how))
+            consumed.add(id(hit)); out.append((r, hit, how))
     return out, miss
+
+def assert_one_to_one(rows):
+    """No mod record may be bound to two spine men. This is the invariant the
+    Step 4 join lacked; the defect it would have caught was found at assembly,
+    five steps later, by an unrelated uniqueness check."""
+    used = collections.Counter(id(p) for _, p, _ in rows)
+    dup = [(r['name'], r['team'], p['PFNA'] + ' ' + p['PLNA']) for r, p, _ in rows if used[id(p)] > 1]
+    assert not dup, f'{len(dup)} spine men share a mod record: {dup[:6]}'
 
 def selftest():
     """Negative tests must actually fail. Both of these are real failures."""
@@ -279,6 +309,8 @@ def src_value(p, attr, k5, pos=None):
     press put Spearman against the POVR target at 0.52 for K and 0.62 for P,
     against 0.85-0.99 everywhere else. With PKPR it is the source's own
     ordering — Ray Guy 99, Steve Little 97, Moseley 97."""
+    if p.get('_nosrc'):
+        return None                              # no source: the pool median, by design
     if attr == 'power' and pos in ('K', 'P'):
         return int(p['PKPR'])
     if attr == 'injuryProne':                 # PINJ is DURABILITY: r=+0.55 with
@@ -369,6 +401,7 @@ if __name__ == '__main__':
     ppos = load_ppos(play)
     tier3 = []
     rows, miss = join(play, spine, tm, ppos_name=ppos, report=tier3)
+    assert_one_to_one(rows)
     print(f'joined {len(rows)}/1408 = {len(rows)/14.08:.1f}%   unmatched {len(miss)}')
     how = collections.Counter(h for _, _, h in rows)
     for k, v in how.most_common():
@@ -380,7 +413,16 @@ if __name__ == '__main__':
     print(f'\nthe unmatched, all of them:')
     for r in miss:
         print(f"   {r['name']:<22}{r['team']:<22}{r['pos']:<4}{r['games']:>3}g")
-    assert not miss, f'{len(miss)} spine players did not join — do not rate a partial file'
+    # THE NO-DATA COHORT IS NOT EMPTY. Step 4 said the 17 named men all had a
+    # record, which was true; it then said coverage was 100%, which was the join
+    # binding namesakes to one record. After one-to-one it is a few men — the
+    # Giants' Gene Washington, Kansas City's Larry Brown, the 49ers' Charles
+    # Johnson — and they take the same path the unrated pool men took: a rating
+    # from the band for their age, ordered by games played, and attributes from
+    # the position median shifted to it. Written with provenance, never imputed
+    # silently. Coverage is stated as what it is.
+    assert len(miss) <= 12, f'{len(miss)} unjoined — more than a namesake residue; look before rating'
+    print(f'\nNO-SOURCE cohort: {len(miss)} — ' + ', '.join(f"{r['name']} ({r['team']}, {r['pos']}, {r['games']}g)" for r in miss))
 
     ratings = rate(rows, ppos)
     out = repo('wip', 'ratings_1979.csv')
@@ -395,6 +437,16 @@ if __name__ == '__main__':
         if ov:
             pg, note = ov
         w.writerow([r['team'], r['name'], r['pos'], mp, pg, p['POVR'], rt, how, note])
+    # the no-source men: a placeholder mod record carrying only what the band gives
+    FDB2PGM = {'DB': 'S', 'LB': 'OLB', 'OT': 'OT', 'OG': 'OG', 'C': 'C', 'DE': 'DE', 'DT': 'DT', 'RB': 'RB', 'WR': 'WR', 'TE': 'TE', 'QB': 'QB', 'K': 'K', 'P': 'P'}
+    pool_r = pool_ratings()
+    for r in sorted(miss, key=lambda r: int(r['games'])):
+        pg = FDB2PGM.get(r['pos'], r['pos']); band = pool_r[pg]
+        q = 0.15 + 0.35 * min(1.0, int(r['games']) / 16.0)      # a low-games man sits low in his position's band
+        rt = band[int(q * (len(band) - 1))]
+        w.writerow([r['team'], r['name'], r['pos'], '', pg, '', rt, 'NO SOURCE — band by games played', 'no mod record after one-to-one'])
+        rows.append((r, {'PYRP': str(max(0, int(r['age']) - 22)), 'PINJ': '80', 'PTHA': '0', 'PTHP': '0', 'PSTR': '50', 'PTAK': '50', 'POVR': str(rt), '_nosrc': True}, 'NO SOURCE'))
+        ratings.append(rt)
     print(f'\nwrote {out}: {len(rows)} rated, {len(POS_OVERRIDE)} position overrides applied')
 
     # ---- attributes ----
@@ -405,7 +457,7 @@ if __name__ == '__main__':
     pool = pool_attrs(LIVE)
     pos_of, smed = [], collections.defaultdict(list)
     for (r, p, _) in rows:
-        pg = POS_OVERRIDE.get((r['team'], r['name']), (PGM3POS[ppos(p)],))[0]
+        pg = POS_OVERRIDE.get((r['team'], r['name']), (PGM3POS[ppos(p)] if not p.get('_nosrc') else {'DB': 'S', 'LB': 'OLB'}.get(r['pos'], r['pos']),))[0]
         pos_of.append(pg)
         for a in LIVE:
             v = src_value(p, a, k5.get((r['team'], r['name'])), pg)

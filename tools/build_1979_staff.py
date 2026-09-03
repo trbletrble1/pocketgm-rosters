@@ -34,13 +34,13 @@ from pgm3_paths import repo
 
 ROLES = ['Head Coach', 'Off Co-ord', 'Def Co-ord', 'Special Teams', 'Head Scout',
          'Off Scout', 'Def Scout', 'Head Physio', 'Assistant Physio']
-TEAMID = {'ATL': 'ATL', 'BAL': 'BAL', 'BUF': 'BUF', 'CHI': 'CHI', 'CIN': 'CIN',
+TEAMID = {'TEN': 'TEN', 'CAR': 'CAR', 'JAX': 'JAX', 'IND': 'IND', 'ATL': 'ATL', 'BAL': 'BAL', 'BUF': 'BUF', 'CHI': 'CHI', 'CIN': 'CIN',
           'CLE': 'CLE', 'DAL': 'DAL', 'DEN': 'DEN', 'DET': 'DET', 'GB': 'GB',
           'HOU': 'HOU', 'KC': 'KC', 'LA': 'LAR', 'MIA': 'MIA', 'MIN': 'MIN',
           'NE': 'NE', 'NO': 'NO', 'NYG': 'NYG', 'NYJ': 'NYJ', 'OAK': 'LV',
           'PHI': 'PHI', 'PIT': 'PIT', 'SD': 'LAC', 'SEA': 'SEA', 'SF': 'SF',
           'STL': 'ARI', 'TB': 'TB', 'WAS': 'WAS'}
-SLUG = {'ATL': 'atlanta-falcons', 'BAL': 'baltimore-colts', 'BUF': 'buffalo-bills',
+SLUG = {'TEN': 'Memphis Southmen', 'CAR': 'Charlotte Hornets', 'JAX': 'Jacksonville Sharks', 'IND': 'Indianapolis Racers', 'ATL': 'atlanta-falcons', 'BAL': 'baltimore-colts', 'BUF': 'buffalo-bills',
         'CHI': 'chicago-bears', 'CIN': 'cincinnati-bengals', 'CLE': 'cleveland-browns',
         'DAL': 'dallas-cowboys', 'DEN': 'denver-broncos', 'DET': 'detroit-lions',
         'GB': 'green-bay-packers', 'HOU': 'houston-oilers', 'KC': 'kansas-city-chiefs',
@@ -85,7 +85,14 @@ def scheme_from_roster():
 
 def main():
     src = list(csv.DictReader(open(repo('wip', 'staff_1979_sources.csv'))))
-    assert len(src) == 28, f'expected 28 teams, got {len(src)}'
+    assert len(src) == 28, f'expected 28 real teams, got {len(src)}'
+    # THE FOUR INVENTED FRANCHISES need nine staff each and have no source of any
+    # kind — they did not exist. Every one of their 36 is generated and flagged,
+    # exactly as the scouts and physios of the real teams are. Rostering real
+    # players who were out of football is one thing; putting a real coach into a
+    # job he never held is another, and it is not done here. Ryan may name them.
+    for code, nm in (('TEN', 'Memphis Southmen'), ('CAR', 'Charlotte Hornets'), ('JAX', 'Jacksonville Sharks'), ('IND', 'Indianapolis Racers')):
+        src.append(dict(team=code, head_coach='', born='', w1979='', l1979='', t1979='', wiki_off_coord='', wiki_def_coord='', wiki_special_teams='', wiki_personnel='', _invented=nm))
     coch = {x['CLNA']: x for x in csv.DictReader(open('/tmp/n79/coch.csv'))}
     players = list(csv.DictReader(open(repo('wip', 'ratings_1979.csv'))))
     fores = sorted({p['name'].split()[0] for p in players})
@@ -98,24 +105,33 @@ def main():
     hc_pool = published('rating', 'Head Coach')
     hcv = []
     for x in src:
+        if x.get('_invented'):
+            hcv.append(None); continue
         k = x['head_coach'].split()[0][0] + '.' + x['head_coach'].split()[-1]
         m = coch.get(k)
         hcv.append((int(m['CDEF']) + int(m['COFF'])) / 2 if m else None)
-    assert all(v is not None for v in hcv), 'every 1979 head coach must resolve in COCH'
-    order = sorted(range(28), key=lambda i: hcv[i])
-    mapped = spread(28, hc_pool)
-    hc_rating = [0] * 28
+    assert all(v is not None for v, x in zip(hcv, src) if not x.get('_invented')), 'every REAL 1979 head coach must resolve in COCH'
+    real = [i for i, x in enumerate(src) if not x.get('_invented')]
+    order = sorted(real, key=lambda i: hcv[i])
+    mapped = spread(len(real), hc_pool)
+    hc_rating = [0] * len(src)
+    for i, x in enumerate(src):
+        if x.get('_invented'):                         # an expansion head coach: the band's lower third
+            hc_rating[i] = hc_pool[len(hc_pool) // 3]
     for rank, i in enumerate(order):
         hc_rating[i] = mapped[rank]
 
     rows = []
     for role in ROLES:
         pool = published('rating', role)
-        vals = spread(28, pool)
+        vals = spread(len(src), pool)
         for i, x in enumerate(src):
             t = x['team']
-            if role == 'Head Coach':
+            if role == 'Head Coach' and not x.get('_invented'):
                 name, rating, age, real = x['head_coach'], hc_rating[i], 1979 - int(x['born']), 'sourced'
+            elif role == 'Head Coach':
+                h = int(hashlib.md5(f'{t}HC'.encode()).hexdigest(), 16)
+                name, rating, age, real = f'{fores[h % len(fores)]} {surs[(h // 7) % len(surs)]}', hc_rating[i], 38 + h % 20, 'invented (expansion franchise)'
             else:
                 w = {'Off Co-ord': 'wiki_off_coord', 'Def Co-ord': 'wiki_def_coord',
                      'Special Teams': 'wiki_special_teams', 'Head Scout': 'wiki_personnel'}.get(role, '')
@@ -130,7 +146,7 @@ def main():
             rows.append({'team': t, 'teamID': TEAMID[t], 'role': role,
                          'forename': name.split()[0], 'surname': ' '.join(name.split()[1:]) or name,
                          'rating': rating, 'age': age, 'provenance': real,
-                         'front': front[SLUG[t]], 'w1979': x['w1979'], 'l1979': x['l1979']})
+                         'front': front.get(SLUG[t], '4-3'), 'w1979': x['w1979'], 'l1979': x['l1979']})
     w = csv.writer(open(repo('wip', 'staff_1979.csv'), 'w', newline=''))
     w.writerow(['team', 'teamID', 'role', 'forename', 'surname', 'rating', 'age',
                 'provenance', 'defensive_front', 'w1979', 'l1979'])
@@ -138,7 +154,7 @@ def main():
         w.writerow([r['team'], r['teamID'], r['role'], r['forename'], r['surname'],
                     r['rating'], r['age'], r['provenance'], r['front'], r['w1979'], r['l1979']])
     p = collections.Counter(r['provenance'] for r in rows)
-    print(f'wrote wip/staff_1979.csv: {len(rows)} staff, {p["sourced"]} sourced, {p["invented"]} invented')
+    print(f'wrote wip/staff_1979.csv: {len(rows)} staff, {p["sourced"]} sourced, {p["invented"] + p["invented (expansion franchise)"]} invented ({p["invented (expansion franchise)"]} on the four franchises)')
     print(f'  head coach ratings: median {st.median(hc_rating)}, range {min(hc_rating)}-{max(hc_rating)}')
     top = sorted(zip([x["head_coach"] for x in src], hc_rating), key=lambda z: -z[1])[:5]
     print('  best rated: ' + ', '.join(f'{n} {v}' for n, v in top))

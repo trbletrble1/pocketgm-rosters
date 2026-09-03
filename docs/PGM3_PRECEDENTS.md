@@ -4458,3 +4458,28 @@ step further: **a published range is a range over the eras that were published.
 Before applying it to a season outside them, measure the era's own source and
 gate on that** — and print the published range beside it, so the divergence is
 seen rather than smoothed.
+
+
+---
+
+## A validator run after a crashed build step reports on the previous file
+
+Twice in the 1979 assembly the build chain died before its write, the validators
+ran anyway on the files from the run before, and the failures they printed were
+read as evidence about the patches just made. They were not. Then a commit gate
+that counted every line containing "FAIL" counted the summary line "1 CHECK
+GROUP(S) FAILED" and refused a clean build. Put the validators *inside* the chain
+that writes the file, gate on the check lines and the exit codes, and print the
+build's own "wrote" line beside them. A result is about the file that exists, not
+the one you meant to make.
+
+---
+
+## "Coverage 100%" is a claim about the join
+
+Step 4 of 1979 reported every spine man joined to a mod record. It was true, and
+18 of them shared 9 records: tier 2 took a unique name anywhere in the mod without
+checking position or whether the record was already claimed, and a defensive end
+shipped with a running back's attributes. Found five steps later by a uniqueness
+assert in assembly. **Bind the strongest tier first and consume; assert one-to-one
+on the source side; and read a coverage number as what it measures.**

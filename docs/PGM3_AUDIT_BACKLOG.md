@@ -1617,3 +1617,13 @@ archive is not the thing that is off. Found while re-basing the 1979 face gate
 of the modern files' shape than anyone realised. **Log, do not fix** — it is
 published and it is the file we understand least. (2021 shows the same gap the
 other way: 72.9% against its save's 65.6%.)
+
+### 32. Two registry entries disagree with the shipped 1986 file
+
+`faces_1986` and `PGMRoster_1986.json` were compared on family for the 530 men
+in both. Two differ: **Mickey Shuler TE NYJ** (block family 1, file family 3)
+and **Gary Anderson K PIT** (block 4, file 1). The validator's cross-season
+check compares file to file, so a build that took the block for either man
+failed against 1986 — which is how this was found. The 1979 build takes the
+file. Which of the two is right for each man is unmeasured; the registry's
+own change log may say. Low stakes, two men, logged.

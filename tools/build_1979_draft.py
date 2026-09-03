@@ -98,10 +98,34 @@ def raise_for(row):
 
 def potential(rating, row):
     band = GAP_BY_BAND.get(min(9, max(4, rating // 10)), 4)
-    return int(round(rating + min(GAP_CAP, band + raise_for(row))))
+    # 99 is the ceiling in every published file. The gap cap of 40 bounded the
+    # RAISE and not the result: Anthony Munoz came out at 102.
+    return min(99, int(round(rating + min(GAP_CAP, band + raise_for(row)))))
 
 def class_1980(band):
     rows = list(csv.DictReader(open(repo('wip', 'draft_1980_pfr.csv'))))
+    # a man on a 1979 roster with the SAME college is the same man and cannot
+    # be a 1980 draftee: Mike Davis, S, Colorado, played 1979 for Oakland. The
+    # spine's claim is the stronger one; the listing's entry is dropped and named.
+    spine = {(norm(x['name']), norm(x['college'])) for x in csv.DictReader(open(repo('wip', 'roster_1979_dedup.csv')))}
+    rows = [r for r in rows if (norm(r['name']), norm(r['college'])) not in spine]
+    # THE SUPPLEMENTAL DRAFT is a second table in the listing whose picks restart
+    # at 1 — the last two rows, Matthew Teague (ATL) and Billy Mullins (SDG). Taken
+    # as regular picks they collided with Billy Sims and Lam Jones at 1 and 2.
+    # They are numbered after the last regular pick and marked round S.
+    picks = [int(r['pick']) for r in rows]
+    restart = next((i for i in range(1, len(picks)) if picks[i] < picks[i - 1]), len(rows))
+    top = max(picks[:restart])
+    for r in rows[restart:]:
+        r['pick'] = str(top + int(r['pick'])); r['round'] = 'S'
+    # THE SAME MAN DRAFTED TWICE: Teague was a Dallas tenth-round pick who did not
+    # sign and was redrafted by Atlanta in the supplemental. One person, one
+    # record — the row that played (last_season set) is kept.
+    best = {}
+    for r in rows:
+        k = (norm(r['name']), norm(r['college']))
+        if k not in best or (r['last_season'] and not best[k]['last_season']): best[k] = r
+    rows = list(best.values())
     rows.sort(key=lambda r: int(r['pick']))
     n = len(rows); out = []
     for rank, r in enumerate(rows):
@@ -114,8 +138,37 @@ def class_1980(band):
                         source='PFR 1980 draft listing', ordering='draft pick', raise_basis='career AV, Pro Bowls'))
     return out
 
+FILLER = re.compile(r'\b(nobody|player|rookie|unknown|placeholder|dummy|noname|blank)\b', re.I)
+
+def earlier_saves(year):
+    """Names present in any save BEFORE the class's rookie-season save. A 1981
+    rookie cannot be in 1979-80; a 1982 or 1983 rookie cannot be in 1979-80 or
+    1981-82. Presence in an earlier save is a SOUND exclusion even though
+    absence was never a sound inclusion — the years_pro field reads stock junk
+    for a minority, and that minority runs both ways: it hid Kenneth Sims and
+    Curt Warner, and it put Jack Lambert, Bob Kuechenberg and Tom Banks into
+    draft classes as rookies. Measured: 17 of 316 in 1981, 29 of 249 in 1982,
+    18 of 247 in 1983 were in an earlier save."""
+    import nfl2k5
+    from pgm3_paths import sources
+    files = {1981: ['1979-1980SAVEGAME.DAT'], 1982: ['1979-1980SAVEGAME.DAT', '1981-1982SAVEGAME.DAT'],
+             1983: ['1979-1980SAVEGAME.DAT', '1981-1982SAVEGAME.DAT']}[year]
+    out = set()
+    for f in files:
+        out |= {norm(q['fname'] + ' ' + q['lname']) for q in nfl2k5.Save(sources('NFL2k25 Year Saves', f)).players}
+    return out
+
 def class_archive(year, band, models, age_prior):
     rows = list(csv.DictReader(open(repo('wip', f'draft_{year}_archive.csv'))))
+    before = len(rows)
+    rows = [r for r in rows if not FILLER.search(r['name'])]           # 13 'Joe Nobody' in 1981-82
+    earlier = earlier_saves(year)
+    rows = [r for r in rows if norm(r['name']) not in earlier]
+    seen = set(); dd = []
+    for r in sorted(rows, key=lambda r: -sum(int(r[f]) for f in F)):  # dedupe on name+pos, keep the stronger record
+        k = (norm(r['name']), POSMAP.get(r['pos'], r['pos']))
+        if k not in seen: seen.add(k); dd.append(r)
+    rows = dd
     scored = []
     for r in rows:
         pos = POSMAP.get(r['pos'], r['pos'])
@@ -203,6 +256,22 @@ def selftest():
         ok += 1; print('  ok: Elway and Marino lead the 1983 quarterbacks, Lomax the 1981 — arm strength orders rookie QBs')
     except AssertionError as e:
         print(f'  FAIL: {e}')
+    try:
+        spine = {(norm(x['name']), x['pgm3_pos']) for x in csv.DictReader(open(repo('wip', 'ratings_1979.csv')))}
+        for year in (1981, 1982, 1983):
+            c = class_archive(year, band, models, ages); e = earlier_saves(year)
+            assert not [x for x in c if norm(x['name']) in e], f'{year} still holds a man from an earlier save'
+            assert not [x for x in c if FILLER.search(x['name'])], f'{year} still holds filler'
+            ks = [(norm(x['name']), x['pos']) for x in c]; assert len(ks) == len(set(ks)), f'{year} has a duplicate name+position'
+            lam = [x for x in c if norm(x['name']) in ('jack lambert', 'bob kuechenberg', 'tom banks')]; assert not lam, lam
+        c80 = class_1980(band); assert not [x for x in c80 if x['name'] == 'Mike Davis' and x['pos'] == 'S'], 'Mike Davis S still in 1980'
+        pk = [x['draft_pick'] for x in c80]; assert len(pk) == len(set(pk)), 'duplicate pick in 1980'
+        nm = [(norm(x['name']), norm(x['college'])) for x in c80]; assert len(nm) == len(set(nm)), 'a man twice in 1980'
+        assert sum(1 for x in c80 if x['round'] == 'S') == 2, 'the two supplemental picks are not marked S'
+        assert max(x['potential'] for x in c80) <= 99, 'a potential above the 99 ceiling'
+        ok += 1; print('  ok: no class holds a man from an earlier save, a filler name, a duplicate, or a 1979 roster man')
+    except AssertionError as e:
+        print(f'  FAIL exclusion: {e}')
     return ok
 
 def main():
@@ -225,5 +294,5 @@ def main():
 
 if __name__ == '__main__':
     if '--selftest' in sys.argv:
-        print('self-test:'); sys.exit(0 if selftest() == 5 else 1)
+        print('self-test:'); sys.exit(0 if selftest() == 6 else 1)
     main()

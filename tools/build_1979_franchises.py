@@ -48,7 +48,10 @@ NAME = {'MEM': 'Memphis Southmen', 'CAR': 'Charlotte Hornets',
         'JAX': 'Jacksonville Sharks', 'IND': 'Indianapolis Racers'}
 ROSTER = 46
 INJURY_DISCOUNT = 14
-SCARCE = [('QB', 2), ('C', 2), ('K', 1), ('P', 1), ('OG', 3), ('DE', 3), ('TE', 2)]
+# MLB and CB added after the pool took the mod's position labels: with every
+# linebacker coarse-labelled OLB and every back S, neither could be scarce; once
+# split, Indianapolis held no middle linebacker and no franchise held a corner.
+SCARCE = [('QB', 2), ('C', 2), ('K', 1), ('P', 1), ('MLB', 1), ('CB', 2), ('DT', 2), ('OG', 3), ('DE', 3), ('TE', 2)]   # DT: Jacksonville had none once DE alone was reserved
 STARS = ['Too Tall Jones', 'Fran Tarkenton', 'Otis Sistrunk', 'Jim Otis']
 # the nine the pool could not resolve, whom no doctrine claims. Placed on fit and
 # labelled as such, rather than left to fall wherever the fill order put them.
@@ -101,8 +104,10 @@ def allocate(top, pool):
             return False
         taken[x['name']] = (t, why); R[t].append((x, why)); return True
 
+    for x in pool:
+        if '_pg' not in x: x['_pg'] = pgm3_position(x)
     for pos, each in SCARCE:                       # step 0, before any doctrine
-        cands = sorted([x for x in pool if x['pos'] == pos], key=rated_key)
+        cands = sorted([x for x in pool if x['_pg'] == pos], key=rated_key)
         i = 0
         for _ in range(each):
             for t in TEAMS:
@@ -174,11 +179,11 @@ def selftest():
     top, pool = load_pool()
     try:
         R, _ = allocate(top, pool)
-        need = {'QB': 2, 'C': 1, 'K': 1, 'P': 1}
+        need = {'QB': 2, 'C': 1, 'K': 1, 'P': 1, 'MLB': 1, 'CB': 1, 'DT': 1}
         bad = [(t, p) for t in TEAMS for p, k in need.items()
-               if sum(1 for x, _ in R[t] if x['pos'] == p) < k]
+               if sum(1 for x, _ in R[t] if x.get('_pg', pgm3_position(x)) == p) < k]
         assert not bad, f'a franchise is missing a position it cannot play without: {bad}'
-        ok += 1; print('  ok: every franchise has a quarterback, a centre, a kicker and a punter')
+        ok += 1; print('  ok: every franchise has a quarterback, a centre, a kicker, a punter, a middle linebacker and a corner')
     except AssertionError as e:
         print(f'  FAIL: {e}')
     try:
@@ -207,19 +212,42 @@ def selftest():
         print(f'  FAIL: {e}')
     return ok
 
+def pgm3_position(x):
+    """THE ONE PLACE a pool man's PGM3 position is decided. The pool CSV says DB
+    and LB; NFL79.ros says CB/FS/SS and LOLB/MLB/ROLB, and its DB labels were
+    right 24:2 against Wikipedia — so the mod's label is taken where a record
+    exists and is position-compatible, exactly as the spine does. Every
+    downstream tool (faces, calibration, assembly) READS this column. A first
+    version let the assembler relabel on its own and the face file, built by
+    another tool from the coarse label, could not agree with it by construction:
+    KeyError on Willie Hall, LB in one file and MLB in the other."""
+    import importlib.util, unicodedata, re as _re
+    spec = importlib.util.spec_from_file_location('r', repo('tools', 'build_1979_ratings.py'))
+    Rm = importlib.util.module_from_spec(spec); spec.loader.exec_module(Rm)
+    if not hasattr(pgm3_position, '_n79'):
+        pgm3_position._n79 = {Rm.norm(r['PFNA'] + ' ' + r['PLNA']): r for r in csv.DictReader(open('/tmp/n79/play.csv'))}
+        pgm3_position._R = Rm
+    Rm = pgm3_position._R; n = Rm.norm(x['name'])
+    coarse = {'DB': 'S', 'LB': 'OLB', 'FB': 'RB', 'HB': 'RB', 'T': 'OT', 'G': 'OG', 'ILB': 'MLB', 'NT': 'DT'}.get(x['pos'], x['pos'])
+    rec = pgm3_position._n79.get(n)
+    if rec and rec['PPOS'].isdigit():
+        mp = Rm.PPOS_CODES[int(rec['PPOS'])]
+        if Rm.posok(mp, x['pos']): return Rm.PGM3POS.get(mp, coarse)
+    return coarse
+
 def main():
     top, pool = load_pool()
     R, spare = allocate(top, pool)
     w = csv.writer(open(repo('wip', 'franchises_1979.csv'), 'w', newline=''))
-    w.writerow(['franchise', 'teamID', 'name', 'pos', 'age', 'povr', 'rating_note',
+    w.writerow(['franchise', 'teamID', 'name', 'pos', 'pgm3_pos', 'age', 'povr', 'rating_note',
                 'college', 'team78', 'reason', 'why_here'])
     for t in TEAMS:
         for x, why in sorted(R[t], key=lambda z: -povr(z[0])):
             note = f'injury: rating {INJURY_DISCOUNT} below potential' if x.get('reason') == 'INJURY' else ''
-            w.writerow([NAME[t], TEAMID[t], x['name'], x['pos'], x['age'], x['povr'],
+            w.writerow([NAME[t], TEAMID[t], x['name'], x['pos'], pgm3_position(x), x['age'], x['povr'],
                         note, x['college'], x.get('team78', ''), x.get('reason', ''), why])
     for x in spare:
-        w.writerow(['(free agent pool)', 'Free Agent', x['name'], x['pos'], x['age'],
+        w.writerow(['(free agent pool)', 'Free Agent', x['name'], x['pos'], pgm3_position(x), x['age'],
                     x['povr'], '', x['college'], x.get('team78', ''), x.get('reason', ''), ''])
     print(f'wrote wip/franchises_1979.csv: {sum(len(R[t]) for t in TEAMS)} on four rosters, '
           f'{len(spare)} to the free agent pool\n')

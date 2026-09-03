@@ -128,6 +128,20 @@ def load_ros(path):
 def load_registry():
     reg = json.load(open(repo('reference', 'PGM3_FACE_REGISTRY.json')))
     p86 = {(norm(k.split('|')[0]), k.split('|')[1]): v for k, v in reg['faces_1986'].items() if k.count('|') >= 1}
+    # FILE FIRST. The validator compares file to file, and the shipped 1986 file
+    # disagrees with the registry block for two men — Mickey Shuler (block family
+    # 1, file family 3) and Gary Anderson (block 4, file 1) — out of 530 checked.
+    # What shipped is the authority and the registry is its index, so a man in
+    # the 1986 file takes the file's appearance; the block covers the 137 the
+    # file does not hold. The two disagreements are registry drift: backlog 32.
+    f86 = repo('PGMRoster_1986.json')
+    if os.path.exists(f86):
+        seen = {}
+        for x in json.load(open(f86)):
+            if x['teamID'] not in ('Rookie', 'Free Agent'):
+                seen.setdefault((norm(x['forename'] + ' ' + x['surname']), x['position']), x['appearance'])
+        for k, v in seen.items():
+            if k in p86: p86[k] = v
     s86 = {norm(k.split('|')[0]): v for k, v in reg['staff_faces_1986'].items()}
     sm = {norm(k.split('|')[0]): v for k, v in reg['staff_faces'].items()}
     later = set()
@@ -168,7 +182,7 @@ def cohorts():
         out.append(dict(cohort='spine', name=x['name'], pos=x['pgm3_pos'], team=x['team'], age=None))
     for x in csv.DictReader(open(repo('wip', 'franchises_1979.csv'))):
         out.append(dict(cohort='franchise' if x['franchise'] != '(free agent pool)' else 'fa_pool',
-                        name=x['name'], pos=POSMAP.get(x['pos'], x['pos']), team=x['franchise'], age=int(x['age']) if x['age'].isdigit() else None))
+                        name=x['name'], pos=x['pgm3_pos'], team=x['franchise'], age=int(x['age']) if x['age'].isdigit() else None))
     for y in (1980, 1981, 1982, 1983):
         for x in csv.DictReader(open(repo('wip', f'draft_class_{y}.csv'))):
             out.append(dict(cohort=f'draft_{y}', name=x['name'], pos=x['pos'], team='Rookie', age=int(x['age'])))
@@ -177,13 +191,21 @@ def cohorts():
     return out
 
 def player_face(p, ctx, disable_source=False):
-    n = norm(p['name']); key = f"{n}|{p['pos']}"
+    n = norm(p['name']); key = f"{n}|{p['pos']}|{p['team']}"
     era, season, alltime = ctx['archive']; n79 = ctx['n79']; n76 = ctx['n76']; p86 = ctx['p86']
     fr = seeded(key, 'face'); hr = seeded(key, 'hair')
     # --- skin band and family
     skin_src, agree, fam = '', 0.0, None
+    reg_arr = None
     if (n, p['pos']) in p86:
-        fam, skin_src, agree = p86[(n, p['pos'])][0].replace('Head', '')[0], 'registry-1986 family', 1.0
+        # THE VALIDATOR'S RULE, read from its code: head/nose/mouth match on
+        # FAMILY DIGIT (the age variant is free — players age) and eyes, hair,
+        # beard, eyebrows, glasses, clothes are compared WHOLE. 'Family digit
+        # only' in apply_registry_all means slots 0/5/6, not all nine. A first
+        # version took only the digit and regenerated the rest, and 248 registry
+        # men failed 'hair style constant across seasons'.
+        reg_arr = p86[(n, p['pos'])]
+        fam, skin_src, agree = reg_arr[0].replace('Head', '')[0], 'registry-1986 family', 1.0
     else:
         b, m, tag = archive_band(n, era, season, alltime) if not disable_source else (None, 0, '')
         if b:
@@ -211,6 +233,11 @@ def player_face(p, ctx, disable_source=False):
     app = [head, hr.choice(V['eyes']['1']), hr.choice(V['hair'][hair]), hr.choice(V['beard'][hair]),
            hr.choice(V['eyebrows'][hair]), hr.choice(V['nose'][fam]), hr.choice(V['mouth'][fam]),
            'Glasses1e', hr.choice(sorted(ctx['vocab'][8]))]
+    if reg_arr is not None:
+        for i in (1, 2, 3, 4, 7, 8): app[i] = reg_arr[i]                       # whole
+        app[5] = f"Nose{fam}{reg_arr[5].replace('Nose', '')[1:]}"            # family from registry, variant theirs too
+        app[6] = f"Mouth{fam}{reg_arr[6].replace('Mouth', '')[1:]}"
+        hair_src = 'registry-1986 (whole)'
     band = 'light' if fam in '123' else 'dark'
     return app, skin_src, agree, hair_src, band
 
@@ -344,6 +371,8 @@ def main():
     c, t, dark, fam_rng, dark_rng, bad, (n_era, era), implied = check_family_gate(rows)
     assert not bad, 'family gate failed: ' + '; '.join(bad)      # BEFORE the write, not after
     fh = open(repo('wip', 'faces_1979.csv'), 'w', newline='')
+    # keyed on TEAM as well as cohort/name/position: Detroit's and New York's Gene
+    # Washington are two receivers, and a key without team gave them one row.
     w = csv.writer(fh); w.writerow(['cohort', 'name', 'pos', 'team', 'appearance', 'skin_source', 'skin_agreement', 'hair_source', 'band'])
     for r in rows: w.writerow([r['cohort'], r['name'], r['pos'], r['team'], ' '.join(r['appearance']), r['skin_source'], f"{r['skin_agreement']:.2f}", r['hair_source'], r['band']])
     fh.close()

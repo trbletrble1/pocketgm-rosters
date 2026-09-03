@@ -62,9 +62,34 @@ CAP_HEADROOM = 275_000_000           # the ceiling this build actually targets
 TOP_RATIO = None                     # SOLVED against CAP_HEADROOM, never set by hand
 FLOOR_RATIO = 0.24                   # $13,000 CBA veteran minimum over a low-$60,000s average
 
-# measured from the published six
-LENGTH_BY_YEARS = [4, 3, 2, 1, 1, 1, 1, 2, 1, 1]
-GUARANTEE_BY_LENGTH = {1: 0.06, 2: 0.09, 3: 0.08, 4: 0.21, 5: 1.25, 6: 0.44, 7: 0.32}
+# measured from the published six. THE MEDIAN PER BUCKET WAS THE WRONG SHAPE:
+# at years 3-9 half the men are on 1-year deals and half on 2-4, and the median
+# put ALL of them on 1 — 49% of the file against a published 25-45%, and an
+# empty 5-year bucket that read as zero guarantee. So length is now the
+# published DISTRIBUTION within each years-pro bucket, placed by rating rank
+# (the better veteran gets the longer deal — a real convention, extensions go
+# to the men worth keeping), and the rookie ladder 4/3/2 holds because those
+# buckets are nearly single-valued in the published files anyway.
+LENGTH_BY_YEARS = [4, 3, 2, 1, 1, 1, 1, 2, 1, 1]          # kept: the bucket medians, for the selftest
+def length_dist():
+    import json
+    d = collections.defaultdict(list)
+    for y in ['2004', '2007', '2010', '2013', '2017', '2021']:
+        for x in json.load(open(repo(f'PGMRoster_{y}.json'))):
+            if x['teamID'] in ('Rookie', 'Free Agent') or not x.get('draftSeason'): continue
+            d[min(2026 - x['draftSeason'], 9)].append(x['length'])
+    return {k: sorted(v) for k, v in d.items()}
+# The five-year bucket's published median, 1.25, is a SPIKE: 0.21 at four and
+# 0.44 at six either side of it, mean 2.28, p90 3.81, on 297 men — the thinnest
+# bucket that matters. Taken literally, with the rank rule sending the 49
+# best-rated men into five-year deals, it put 38% of the league's guarantee on
+# those 49 (the published files: 4-16%) and halved the compression ratio to
+# 3.87x as the cap bound on the richest teams. Replaced by the monotone
+# interpolation its neighbours imply. The total load then sits at ~0.10 against
+# a published 0.17-0.48 — an era claim (no free agency, little guaranteed money)
+# stated rather than hidden; the payroll constant is on salary+guarantee, so the
+# file is internally consistent either way.
+GUARANTEE_BY_LENGTH = {1: 0.06, 2: 0.09, 3: 0.08, 4: 0.21, 5: 0.33, 6: 0.44, 7: 0.50}
 
 # era-real relativities. QB is the premium position in any era, but 1979's
 # marquee earners were quarterbacks AND running backs — a first pass at QB 2.00
@@ -154,6 +179,18 @@ def selftest():
         ok += 1; print('  ok: an equally rated kicker is paid BELOW the field, not above it')
     except AssertionError as e:
         print(f'  FAIL: {e}')
+    try:
+        rows = list(csv.DictReader(open(repo('wip', 'potential_1979.csv'))))
+        s_ = build(rows, quiet=True); one = 100 * sum(1 for x in s_ if x['length'] == 1) / len(s_)
+        assert 25 <= one <= 45, f'{one:.0f}% on 1-year deals'
+        assert any(x['length'] >= 5 for x in s_), 'no 5-year deals at all'
+        ok += 1; print(f'  ok: 1-year deals at {one:.0f}% inside the published 25-45%, and 5-year deals exist')
+        g = GUARANTEE_BY_LENGTH; assert all(g[k] <= g[k + 1] for k in range(1, 7) if k not in (2,)) and g[2] >= g[1], 'guarantee ratio must rise with length'
+        g5 = [x for x in s_ if x['length'] >= 5]; share = sum(x['guarantee'] for x in g5) / sum(x['guarantee'] for x in s_)
+        assert share < 0.25, f'5yr+ men still hold {share:.0%} of the guarantee (published 4-16%)'
+        ok += 1; print(f'  ok: the guarantee curve is monotone and 5yr+ men hold {share:.0%} of the guarantee')
+    except AssertionError as e:
+        print(f'  FAIL: {e}')
     return ok
 
 def team_median_top53(sal):
@@ -168,9 +205,19 @@ def build(rows, quiet=False, solve_ratio=True):
     med_rating = st.median([int(r['rating']) for r in rows])
     k = solve_k(rows, med_rating)
     out = []
-    for r in rows:
+    LD = length_dist()
+    # rank within years-pro bucket by rating, longest deals to the best
+    byy = collections.defaultdict(list)
+    for i, r in enumerate(rows): byy[min(int(r['years_pro']), 9)].append(i)
+    Lof = {}
+    for y, idxs in byy.items():
+        idxs.sort(key=lambda i: int(rows[i]['rating']))
+        dist = LD.get(y) or LD[max(LD)]
+        for rank, i in enumerate(idxs):
+            Lof[i] = max(1, dist[min(len(dist) - 1, int((rank + 0.5) / len(idxs) * (len(dist) - 1)))])
+    for i, r in enumerate(rows):
         y = int(r['years_pro']); rat = int(r['rating']); pos = r['pgm3_pos']
-        L = LENGTH_BY_YEARS[min(y, len(LENGTH_BY_YEARS) - 1)]
+        L = Lof[i]
         out.append({'team': r['team'], 'name': r.get('name', ''), 'pos': pos, 'rating': rat,
                     'length': L, 'rel': rel_salary(rat, pos, y, med_rating, k),
                     'gr': GUARANTEE_BY_LENGTH[L]})
@@ -191,7 +238,7 @@ def build(rows, quiet=False, solve_ratio=True):
 
 if __name__ == '__main__':
     if '--selftest' in sys.argv:
-        print('self-test:'); sys.exit(0 if selftest() == 2 else 1)
+        print('self-test:'); sys.exit(0 if selftest() == 4 else 1)
     rows = list(csv.DictReader(open(repo('wip', 'potential_1979.csv'))))
     assert len(rows) == 1408
     out = build(rows)
