@@ -544,3 +544,38 @@ The listing carries `Rnd, Pick, Tm, Player, Pos, Age, To, AP1, PB, St, wAV, DrAV
 College`. **The hindsight signal is `wAV` and `DrAV` directly**, no derivation, and
 a man who never played reads blank — which is itself the signal. In the 1980 class
 `wAV` is present on 208 of 349 rows.
+
+## The Mike `.ros` family — ten files, one source (added 2026-09-03)
+
+`$PGM3_SOURCES/mike/`: 1966Roster, 1976Roster, 1978Roster, 1996Roster,
+Mike-NFL1941-1969, Mike-NFL1970-1974, Mike-NFL1975-1979, Mike-NFL1980-1989,
+Mike-USFL_WFL, MuscleMike-LM67. 112 PLAY fields, an eight-value `PSKI`.
+
+**Lineage: not ten voters.** Every file carries the same 2,032-record block —
+identical on name, skin, age, overall, height, weight, college — a **2003-season
+base** (Van Pelt 33, Wuerffel 29, Mirer 33) covering 54–63% of our 2000 and 2004
+files. Each file is that base plus a period layer; pairwise identical period
+records run 54–67% between the single-year files and everything, 42–50% between
+the era files. Weighted in the registry as ONE source: one vote on the base,
+separate votes on the layers (files listed per man in `mike_skin`).
+
+**PSKI (eight values), from the pooled crosstab against 1,396 anchors:** 0, 1, 2
+→ light (99 / 96 / 92% pure); 3, 4, 5, 6 → dark (100%); **7 abstains** (58%,
+bimodal). Note Mike's 1 is light, unlike the three-value sources where 1 abstains.
+
+**Accuracy.** On the shared base all ten read 98.1–98.6% on the same ~560
+anchors — that is the base measured ten times, and it is what the earlier 97.7%
+was. On the period layers: LM67 96.2% (208 anchors), 1996Roster 98.3% (118),
+USFL/WFL 96.1% (76), 1980-89 93.3% (30), 1970-74 90.9% (44), 1975-79 90.6% (32),
+1978 90.5% (21), 1976 89.5% (19), 1966 88.0% (25). **NFL1941-1969: 13 anchors,
+no evidence either way.** Against hand-verified truth (archive consensus
+computed without 1986): archive 95/95, Mike 79/81.
+
+**Coverage of our rostered men (union):** 1979 89%, 1986 70%, 2000 86%, 2004
+69%, 2007 40%, then falling.
+
+**LM67 is the file to build on, and it is narrower than the forum thread
+implies:** 159 year-labelled teams across 44 seasons, 1957–2002 (`'82 Packers'`,
+`'99TEN'`), 7,678 players, one to seven teams a year — Raiders 15 seasons,
+Cowboys 14, 49ers 10. **A notable-teams database, not a league-year database.**
+Plus 32 unlabelled current teams (3,560 men) and 5,501 records unique to it.

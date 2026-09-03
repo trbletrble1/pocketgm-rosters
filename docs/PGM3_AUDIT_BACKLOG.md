@@ -2776,3 +2776,48 @@ the early eighties) switch to 3-4, chosen by a hash of the head coach's iden so 
 reproduces: **CAR, DEN, DET, GB, LAC, LAR, MIA, PHI**. The Man/Zone suffix is
 kept and every sitting man on the team moves together. **Not a claim about any
 team.** `tools/mix_fronts_1979.py`.
+
+---
+
+### 53. The Mike family — measured, merged as one source with a tiebreak role, not authority
+
+**Ryan's question, 2026-09-03:** whether the Mike `.ros` family becomes the
+archive's definitive skin source, on the strength of 97.7% against the archive's
+93.4%. **The premise was the shared base measured through one file** (see the
+source notes): our anchors are mostly 2000s men and all ten files score the same
+~560 records at 98%. The period layers run 89–96%. **Ten files agreeing at 98%
+looked like ten confirmations and was one block measured ten times** — the
+payroll-constant shape, this time in a source rather than our own files.
+
+**The design question, settled by hand-verified truth:** archive consensus 95 of
+95, Mike 79 of 81. Authority would trade a perfect record for 97.5% to gain
+nothing where they overlap. On the archive's own splits Mike sides with the
+majority 29–3. **Ruled: strong voter with a tiebreak role, weighted as one
+source, PSKI 7 abstaining.** `tools/merge_mike_registry.py` writes the
+`mike_skin` block (9,659 names, 9,548 with a class) and `_mike` note.
+
+**A correction to the report that preceded the ruling.** The "59 one-to-one ties
+broken correctly in every case" were name-only; **57 of them are the same name at
+two positions — different men.** Keyed as the registry keys (name|position) the
+archive has **four** ties, and Mike resolves all four: Dennis Johnson RB (2013 →
+dark), D.D. Lewis OLB (2007 → light), Charlie Jones WR (2026 → dark) applied
+directly to the losing file; Mark Brown (1986 vs 2004, and 1986 keys its own
+block by team) left open. Faces gate head-family 20 → 18 differ, hair 20 → 18.
+The coverage gain stands: **3,114 rostered men with no canonical face now carry
+a Mike skin class** for builders to consume. No published face was invented.
+
+**A near miss, caught on the diff.** `apply_registry_all.py` was run to push the
+four families and pushed **110**, reverting Elijah Molden Head4 → Head2 and
+Anthony Firkser Head1 → Head4 — the wrong direction. Reverted before commit.
+That is item 54.
+
+### 54. The face registry has drifted behind the files — 91 men, 77 in 2021
+
+Canonical head family in `reference/PGM3_FACE_REGISTRY.json` disagrees on
+light/dark with the live file for **91 registered players**: 2021 77, 2017 10,
+1986 2, and Morgan Cox in 2010, 2013 and 2017. Where a face can be checked
+(Molden, Epenesa, Firkser) **the file is right and the registry is stale** — the
+registry was last written on 2026-09-03 for the quarterback faces and before that
+on 2026-09-01; 2021's faces moved after. **`apply_registry_all.py` is unsafe
+until this is reconciled** — it will revert those 91 — and the direction of the
+reconciliation is file → registry, checked per man, not the reverse. Not acted on.
