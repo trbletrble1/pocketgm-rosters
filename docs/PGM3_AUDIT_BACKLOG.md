@@ -1949,6 +1949,28 @@ ratios. **The flatter a file's team spread, the wider the factor range needed, t
 more the ratios move.** 2000 is the extreme — 1.13x mapped onto 1.78x demands
 factors from 0.82 to 1.33, some teams cut a fifth and others raised a third.
 
+#### 1979 and 2000 DONE, 2026-09-03 — `tools/contracts_to_vanilla.py`; 2010 SKIPPED
+
+Level and shape in one write, the game as the reference, position-aware: each
+position rank-mapped onto vanilla's distribution for that position, then each
+team scaled uniformly onto the rank-mapped vanilla total.
+
+| | mean position distance | p10 / p25 | team median | within-team pairs reordered |
+|---|---|---|---|---|
+| 1979 | 0.325 → **0.133** | $0.76M / $1.08M | **$242.9M** | 16.8% (same-position 21 of 2,390) |
+| 2000 | 0.351 → **0.142** | $0.64M / $0.94M | **$242.9M** | 12.9% (same-position 23 of 2,705) |
+| vanilla | — | $0.70M / $1.03M | $242.9M | — |
+
+The reordering is our `POS_MULT` hierarchy being replaced by the game's, ruled
+ours and not the engine's. **The data was sound** — item 45 measured zero
+placeholders in either file. Extension terms scale with the man. Roster gate
+ALL CLEAR on both with `--payroll=vanilla`.
+
+**2010 is the one file the payroll rollout did not reach, by ruling.** Raising it
+moves centre 1.06 → 1.16 against vanilla's 0.55 while the mean distance worsens
+0.514 → 0.521 — the guard doing its job, and not the 2007 trade. It stays at
+$197.4M; `--payroll=vanilla` is not the flag for it.
+
 #### RULED: all ten get tuned, as its own piece of work, after two checks
 
 1. ~~Confirm $242.9M from more than one vanilla export.~~ **CLOSED 2026-09-03.**
@@ -2403,7 +2425,14 @@ because age was the only signal they carried. It is not: all 22 join a 1976-79
 draft listing and carry wAV, and it is 0–4 for every one of them. Jurich (wAV −1,
 the worst) was ruled down to the band's low end at 51. **Willie Taylor, wAV 0,
 still reads 77 and is Jacksonville's best player** on the same age-only ranking.
-Same signature, 21 men, not ruled. Measure and log.
+Same signature, 21 men.
+
+**FIXED 2026-09-03, `tools/fix_1979_young.py`.** The 22 ranked by outcome (wAV,
+seasons started, age last) onto the same prospect band with the same plotting
+position; attributes scaled so each man keeps his shape and lands on the band;
+headroom kept. Jurich stays 51. **Willie Taylor 77 → 65**; Rusty Rebowe 73 → 66;
+Leo Biedermann (wAV 4, the best of a bad lot) 66 → 77 and is now Jacksonville's
+best player, which is what ranking by outcome means when nobody had one.
 
 ### BATCH 4 (1979), 2026-09-03 — what landed and what is held
 
@@ -2425,5 +2454,16 @@ plus 16 generated men in each of the eight other roles — but **87 of the 91 ha
 no sourced skin**: the registry knows none, and only Bill Johnson, Modzelewski,
 Ringo and Sandusky carry a face in a later file. The tool draws head families for
 the rest and writes them to `wip/staff_pool_1979_faces_unsourced.csv`. Invented
-skin on real men is the thing this project does not do without saying so; ruling
-needed. 1979 still has no free-agent staff.
+skin on real men is the thing this project does not do without saying so.
+
+**RULED AND SHIPPED, 2026-09-03.** Two routes were measured before conceding: the
+face registry (0 of 87) and the six era `.ros` COCH tables, dumped for the first
+time. The mods renamed only their head coaches and a few coordinators over stock
+Madden 08, so COCH reached **4 of 87** — Fairbanks and Lemm (1979-SB-XIV), Bettis
+and Hollway (1983-SB-XVIII) — and Lemm's CSKI is 1, the bimodal value the player
+builder abstains on. **The pool ships with 7 real head coaches carrying sourced
+faces** (Bill Johnson, Modzelewski, Ringo, Sandusky from 1986; Fairbanks, Bettis,
+Hollway from COCH skin) plus 16 generated men in each of the eight other roles.
+**84 real coaches are left out for want of skin**, listed in
+`wip/staff_pool_1979_faces_unsourced.csv`. A smaller real pool beats a full
+invented one. Faces-staff gate unchanged at 21 / 38 / 40.

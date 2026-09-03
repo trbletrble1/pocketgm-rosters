@@ -1,88 +1,85 @@
-name,age,rating,head_family_drawn
-Paul Brown,71,88,4
-Hank Stram,56,83,2
-Chuck Fairbanks,46,80,3
-John Ralston,52,76,2
-Mike Holovak,60,75,1
-Lou Saban,58,74,1
-Charley Winner,55,74,4
-Tommy Hudspeth,48,73,2
-Rick Forzano,51,73,4
-Tommy Prothro,59,69,1
-John North,36,66,1
-Pete McCulley,31,50,1
-Fred O'Connor,40,50,4
-Ken Meyer,54,50,2
-Tom Bettis,46,50,3
-Pat Peppler,57,50,5
-Lou Holtz,42,50,2
-Ernie Hefferle,64,50,2
-Ken Shipp,50,50,1
-Blanton Collier,73,90,4
-Hamp Pool,64,89,5
-Luke Johnsos,74,87,1
-Jim Lee Howell,65,86,1
-Lou Rymkus,60,85,4
-John Rauch,52,84,2
-Buddy Parker,66,84,2
-Al Davis,50,83,2
-Sid Gillman,68,79,2
-Frankie Albert,59,78,1
-Joe Schmidt,47,77,1
-Allie Sherman,56,77,4
-Weeb Ewbank,72,76,3
-Red Hickey,62,76,2
-Wally Lemm,60,75,2
-Charlie Waller,58,75,3
-Nick Skorich,58,73,1
-Dan Devine,55,72,2
-Phil Bengtson,66,72,2
-Sammy Baugh,65,71,2
-Alex Webster,48,70,3
-Pop Ivy,63,70,5
-John Michelosen,63,70,4
-Joe Kuharich,62,69,2
-Otto Graham,58,69,5
-Jack Christiansen,51,68,2
-Buster Ramsey,59,68,3
-Norm Van Brocklin,53,67,2
-Harry Gilmer,53,67,2
-Jim Dooley,49,66,5
-Milan Creighton,71,66,1
-Ed Khayat,44,65,3
-Bill Austin,43,64,1
-Bill McPeak,53,63,4
-John Mazur,49,62,3
-Bob Hollway,53,61,1
-Hugh Devore,69,61,1
-Jack Faulkner,53,60,1
-Harland Svare,49,59,3
-Tom Fears,57,58,1
-Bob Waterfield,59,58,3
-Abe Gibron,54,55,3
-Frank Filchock,63,54,5
-Joe Thomas,35,50,1
-Ron Waller,46,50,3
-Jerry Smith,49,50,5
-Clive Rush,48,50,1
-Hugh Taylor,56,50,2
-Bulldog Turner,60,50,5
-Red Conkright,65,50,1
-Dick Todd,65,50,5
-Cecil Isbell,64,50,1
-Bob Snyder,66,50,5
-Aldo Donelli,72,50,4
-Bill Edwards,74,50,4
-Damon Wetzel,69,50,1
-Forrest Douds,74,50,3
-Benny Friedman,74,50,1
-Howard Schnellenberger,45,49,1
-Mac Speedie,59,47,1
-Jerry Williams,56,45,5
-Herman Ball,69,42,5
-J. D. Roberts,47,41,2
-Mike Nixon,68,39,1
-Norb Hecker,52,36,1
-Marty Feldman,57,35,5
-Harvey Johnson,41,34,2
-Bill Peterson,59,32,3
+name,age,rating,left_out
+Paul Brown,71,88,"no sourced skin: not in registry, no later file, no era COCH skin"
+Hank Stram,56,83,"no sourced skin: not in registry, no later file, no era COCH skin"
+John Ralston,52,76,"no sourced skin: not in registry, no later file, no era COCH skin"
+Mike Holovak,60,75,"no sourced skin: not in registry, no later file, no era COCH skin"
+Lou Saban,58,74,"no sourced skin: not in registry, no later file, no era COCH skin"
+Charley Winner,55,74,"no sourced skin: not in registry, no later file, no era COCH skin"
+Tommy Hudspeth,48,73,"no sourced skin: not in registry, no later file, no era COCH skin"
+Rick Forzano,51,73,"no sourced skin: not in registry, no later file, no era COCH skin"
+Tommy Prothro,59,69,"no sourced skin: not in registry, no later file, no era COCH skin"
+John North,36,66,"no sourced skin: not in registry, no later file, no era COCH skin"
+Pete McCulley,31,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Fred O'Connor,40,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Ken Meyer,54,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Pat Peppler,57,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Lou Holtz,42,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Ernie Hefferle,64,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Ken Shipp,50,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Blanton Collier,73,90,"no sourced skin: not in registry, no later file, no era COCH skin"
+Hamp Pool,64,89,"no sourced skin: not in registry, no later file, no era COCH skin"
+Luke Johnsos,74,87,"no sourced skin: not in registry, no later file, no era COCH skin"
+Jim Lee Howell,65,86,"no sourced skin: not in registry, no later file, no era COCH skin"
+Lou Rymkus,60,85,"no sourced skin: not in registry, no later file, no era COCH skin"
+John Rauch,52,84,"no sourced skin: not in registry, no later file, no era COCH skin"
+Buddy Parker,66,84,"no sourced skin: not in registry, no later file, no era COCH skin"
+Al Davis,50,83,"no sourced skin: not in registry, no later file, no era COCH skin"
+Sid Gillman,68,79,"no sourced skin: not in registry, no later file, no era COCH skin"
+Frankie Albert,59,78,"no sourced skin: not in registry, no later file, no era COCH skin"
+Joe Schmidt,47,77,"no sourced skin: not in registry, no later file, no era COCH skin"
+Allie Sherman,56,77,"no sourced skin: not in registry, no later file, no era COCH skin"
+Weeb Ewbank,72,76,"no sourced skin: not in registry, no later file, no era COCH skin"
+Red Hickey,62,76,"no sourced skin: not in registry, no later file, no era COCH skin"
+Wally Lemm,60,75,"no sourced skin: not in registry, no later file, no era COCH skin"
+Charlie Waller,58,75,"no sourced skin: not in registry, no later file, no era COCH skin"
+Nick Skorich,58,73,"no sourced skin: not in registry, no later file, no era COCH skin"
+Dan Devine,55,72,"no sourced skin: not in registry, no later file, no era COCH skin"
+Phil Bengtson,66,72,"no sourced skin: not in registry, no later file, no era COCH skin"
+Sammy Baugh,65,71,"no sourced skin: not in registry, no later file, no era COCH skin"
+Alex Webster,48,70,"no sourced skin: not in registry, no later file, no era COCH skin"
+Pop Ivy,63,70,"no sourced skin: not in registry, no later file, no era COCH skin"
+John Michelosen,63,70,"no sourced skin: not in registry, no later file, no era COCH skin"
+Joe Kuharich,62,69,"no sourced skin: not in registry, no later file, no era COCH skin"
+Otto Graham,58,69,"no sourced skin: not in registry, no later file, no era COCH skin"
+Jack Christiansen,51,68,"no sourced skin: not in registry, no later file, no era COCH skin"
+Buster Ramsey,59,68,"no sourced skin: not in registry, no later file, no era COCH skin"
+Norm Van Brocklin,53,67,"no sourced skin: not in registry, no later file, no era COCH skin"
+Harry Gilmer,53,67,"no sourced skin: not in registry, no later file, no era COCH skin"
+Jim Dooley,49,66,"no sourced skin: not in registry, no later file, no era COCH skin"
+Milan Creighton,71,66,"no sourced skin: not in registry, no later file, no era COCH skin"
+Ed Khayat,44,65,"no sourced skin: not in registry, no later file, no era COCH skin"
+Bill Austin,43,64,"no sourced skin: not in registry, no later file, no era COCH skin"
+Bill McPeak,53,63,"no sourced skin: not in registry, no later file, no era COCH skin"
+John Mazur,49,62,"no sourced skin: not in registry, no later file, no era COCH skin"
+Hugh Devore,69,61,"no sourced skin: not in registry, no later file, no era COCH skin"
+Jack Faulkner,53,60,"no sourced skin: not in registry, no later file, no era COCH skin"
+Harland Svare,49,59,"no sourced skin: not in registry, no later file, no era COCH skin"
+Tom Fears,57,58,"no sourced skin: not in registry, no later file, no era COCH skin"
+Bob Waterfield,59,58,"no sourced skin: not in registry, no later file, no era COCH skin"
+Abe Gibron,54,55,"no sourced skin: not in registry, no later file, no era COCH skin"
+Frank Filchock,63,54,"no sourced skin: not in registry, no later file, no era COCH skin"
+Joe Thomas,35,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Ron Waller,46,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Jerry Smith,49,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Clive Rush,48,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Hugh Taylor,56,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Bulldog Turner,60,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Red Conkright,65,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Dick Todd,65,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Cecil Isbell,64,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Bob Snyder,66,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Aldo Donelli,72,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Bill Edwards,74,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Damon Wetzel,69,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Forrest Douds,74,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Benny Friedman,74,50,"no sourced skin: not in registry, no later file, no era COCH skin"
+Howard Schnellenberger,45,49,"no sourced skin: not in registry, no later file, no era COCH skin"
+Mac Speedie,59,47,"no sourced skin: not in registry, no later file, no era COCH skin"
+Jerry Williams,56,45,"no sourced skin: not in registry, no later file, no era COCH skin"
+Herman Ball,69,42,"no sourced skin: not in registry, no later file, no era COCH skin"
+J. D. Roberts,47,41,"no sourced skin: not in registry, no later file, no era COCH skin"
+Mike Nixon,68,39,"no sourced skin: not in registry, no later file, no era COCH skin"
+Norb Hecker,52,36,"no sourced skin: not in registry, no later file, no era COCH skin"
+Marty Feldman,57,35,"no sourced skin: not in registry, no later file, no era COCH skin"
+Harvey Johnson,41,34,"no sourced skin: not in registry, no later file, no era COCH skin"
+Bill Peterson,59,32,"no sourced skin: not in registry, no later file, no era COCH skin"

@@ -128,6 +128,20 @@ def main():
     regf = {}
     for k in ('staff_faces', 'staff_faces_1986'):
         for nk, v in (reg.get(k) or {}).items(): regf.setdefault(norm(nk.split('|')[0]), v.get('appearance', v) if isinstance(v, dict) else v)
+    # ERA COCH TABLES reach four of the 87 (Fairbanks and Lemm in 1979-SB-XIV, Bettis
+    # and Hollway in 1983-SB-XVIII); the mods renamed only head coaches and a few
+    # coordinators over stock Madden 08, so the rest of the pool is unreachable.
+    # CSKI is the same 0-4 skin scale the player builder reads from PSKI.
+    # CSKI reads as the player builder reads PSKI: 0 -> the light band, 2/3 -> the
+    # dark band, 1 -> bimodal, abstain. Wally Lemm is CSKI 1 and so is NOT sourced.
+    COCH_SKIN = {'chuck fairbanks': '0', 'tom bettis': '0', 'bob hollway': '0'}
+    LIGHT_BAND = [('1', 0.540), ('2', 0.246), ('3', 0.214)]; DARK_BAND = [('4', 0.378), ('5', 0.622)]
+    def skin_fam(rng, k):
+        band = LIGHT_BAND if k == '0' else DARK_BAND; r = rng.random(); acc = 0
+        for f, w in band:
+            acc += w
+            if r <= acc: return f
+        return band[-1][0]
     hc_templates = sorted([x for x in s79 if x['role'] == 'Head Coach'], key=lambda x: x['rating'])
     def clone(role, rating):
         ts = sorted([x for x in s79 if x['role'] == role], key=lambda x: abs(x['rating'] - rating))
@@ -145,21 +159,25 @@ def main():
         nk = norm(r['name'])
         if nk in regf and isinstance(regf[nk], list): x['appearance'] = list(regf[nk]); src = 'registry'
         elif nk in later: x['appearance'] = list(later[nk]); src = 'later file'
-        else:
-            rng = random.Random(f'{nk}|1979|face'); f = rng.choice(vfam)
+        elif nk in COCH_SKIN:
+            rng = random.Random(f'{nk}|1979|face'); f = skin_fam(rng, COCH_SKIN[nk])
             a = list(x['appearance']); a[0] = rng.choice([t for t in vocab['0'] if t.startswith('Head' + f)])
             a[5] = rng.choice([t for t in vocab['5'] if t.startswith('Nose' + f)] or vocab['5']); a[6] = rng.choice([t for t in vocab['6'] if t.startswith('Mouth' + f)] or vocab['6'])
-            x['appearance'] = a; src = 'DRAWN'; unsourced.append((r['name'], age, rating, f))
-        redraw_hair(x, f"{x['iden']}|1979|hair")
+            x['appearance'] = a; src = 'COCH skin'
+        else:
+            # NO SOURCED SKIN. Ruled 2026-09-03: a smaller real pool beats a full
+            # invented one. The man is left out and listed, not drawn.
+            unsourced.append((r['name'], age, rating, '')); continue
+        if src not in ('later file', 'registry'): redraw_hair(x, f"{x['iden']}|1979|hair")   # a sourced face is canonical, hair included
         h = min(random.Random(f"{x['iden']}|1979|staffpot").choice(vhd), 114 - rating)
         x['potential'] = rating + h; x['growthType'] = build_growth(x['potential'], rating, random.Random(f"{x['iden']}|1979|gt"))
         new.append(x)
     hr = sorted(x['rating'] for x in new)
-    print(f"2. head-coach pool: {len(new)} real men, ratings {hr[0]}-{st.median(hr):.0f}-{hr[-1]}, faces from a later file {sum(1 for x in new if norm(x['forename']+' '+x['surname']) in later)}, DRAWN (unsourced skin) {len(unsourced)}, ages estimated {aged}")
-    csv.writer(open(repo('wip', 'staff_pool_1979_faces_unsourced.csv'), 'w', newline='')).writerows([['name', 'age', 'rating', 'head_family_drawn']] + unsourced)
+    print(f"2. head-coach pool: {len(new)} real men with SOURCED faces (later file {sum(1 for x in new if norm(x['forename']+' '+x['surname']) in later)}, era COCH skin {sum(1 for x in new if norm(x['forename']+' '+x['surname']) in COCH_SKIN)}), ratings {hr[0]}-{st.median(hr):.0f}-{hr[-1]}; LEFT OUT for want of skin: {len(unsourced)} (wip/staff_pool_1979_faces_unsourced.csv)")
+    csv.writer(open(repo('wip', 'staff_pool_1979_faces_unsourced.csv'), 'w', newline='')).writerows([['name', 'age', 'rating', 'left_out']] + [list(u[:3]) + ['no sourced skin: not in registry, no later file, no era COCH skin'] for u in unsourced])
 
     # 3. eight generated roles
-    names = json.load(open(repo('wip', 'staff_name_pool.json'))); real = {norm(n) for n in names['real_coach_names']} | sitting | {norm(x['forename'] + ' ' + x['surname']) for x in new}
+    names = json.load(open(repo('wip', 'staff_name_pool.json'))); real = {norm(n) for n in names['real_coach_names']} | sitting | {norm(x['forename'] + ' ' + x['surname']) for x in new} | set(canon)   # canon: every staff name in every later file — a generated man must not collide with one (Rakim Barrett did, with a 2000 physio)
     vpool = collections.defaultdict(list)
     for x in van:
         if x['teamID'] == 'Free Agent': vpool[x['role']].append((x['rating'], x['age'], x['startSeason']))
@@ -182,7 +200,7 @@ def main():
             redraw_hair(x, f"{x['iden']}|1979|hair")
             h = min(rng.choice(vhd), 114 - rating); x['potential'] = rating + h; x['growthType'] = build_growth(x['potential'], rating, random.Random(f"{x['iden']}|1979|gt"))
             new.append(x)
-    print(f"3. generated pool: {len(new) - len(pool_rows)} men across eight roles, on the game's per-role pool profile")
+    print(f"3. generated pool: {len(new) - sum(1 for x in new if x['role'] == 'Head Coach')} men across eight roles, on the game's per-role pool profile")
     s79.extend(new)
     for x in s79:
         assert x['rating'] == x[PRIM[x['role']]] and len(x['growthType']) == 51 and sum(v for v in x['growthType'] if v > 0) == (x['potential'] - x['rating']) * 50, x['surname']

@@ -142,3 +142,19 @@ in the report could have told him, because the report said "committed" and meant
 The fix is a reporting rule, not a git rule: **a report that says a thing is on
 `main` names the SHA that `git ls-remote` returns for `main`**, not the local HEAD.
 The REST API and `raw.githubusercontent.com` both cache; `ls-remote` does not.
+
+---
+
+## A patch removed a hold and shipped the held thing for one run
+
+**2026-09-03.** The 1979 staff pool was held — 87 of 91 real coaches had no
+sourced skin — behind a `--no-pool` early return in the tool. A later patch to the
+same tool replaced a block of code by its start and end markers, and the hold sat
+between them. The next run wrote the pool. Caught on the post-write diff (507
+records where 288 were expected), reverted, the hold restored.
+
+A hold is a line of code like any other, and a patch that replaces a region
+replaces whatever is in it. **Two rules:** a hold goes at the top of the function,
+above anything a later patch is likely to touch; and the post-write field-and-count
+diff runs before anything is reported, every time — it caught this, and it is the
+fourth catch this session that no gate made.
