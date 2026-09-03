@@ -37,7 +37,10 @@ STAT = {'round': 'draft_round', 'pick': 'draft_pick', 'team': 'team', 'name': 'p
         'career_av': 'career_av', 'draft_av': 'draft_av', 'college': 'college_id'}
 
 def find(year):
-    pats = [f'*{year}*Draft*.html', f'*{year}*draft*.html', f'*{year}*Draft*.htm']
+    # 'Draft Listing' first: a saved TEAM page ('... Team Draftees ...') also
+    # matches '*{year}*Draft*' and parses to zero picks, which is how 1979 failed.
+    pats = [f'*{year} NFL Draft Listing*.htm*', f'*{year}*Draft Listing*.htm*',
+            f'*{year}*Draft*.html', f'*{year}*draft*.html', f'*{year}*Draft*.htm']
     for p in pats:
         hits = glob.glob(os.path.join(sources('1979PFR'), p))
         if hits:

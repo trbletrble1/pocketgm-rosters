@@ -2339,3 +2339,91 @@ the engine's. Measure and log; the fix is the head-coach fix applied per role.
 
 `FAIL duplicate names [2]` on the staff gate, identical at HEAD before batch 3.
 Not investigated.
+
+---
+
+### 45. Near-zero contracts on rated men — three sources, and filling them does not change the compression picture
+
+**Ryan found it in play, 2026-09-03**: Aidan Hutchinson 96 at $0.08M on 7 years,
+Josh Allen 96 at $0.12M on 6, Trey Smith 89 at $0.01M. Measured on every file,
+rostered men only. Vanilla itself carries 31 stars under $2M — rookie deals, 6 of
+them aged 26+ — and a floor of $600K; the signature is therefore **26+ and under
+$2M, or anything under $500K**.
+
+| | 85+ & 26+ & <$2M | under $500K | under $100K | min |
+|---|---|---|---|---|
+| vanilla | 6 | 0 | 0 | $600K |
+| 1979, 2000, 2007, 2010 | 0 / 0 / 4 / 16 | **0** | 0 | $631K–$942K |
+| 1986 | 13 | 31 | 4 | $67K |
+| 2013 | 20 | 20 | 0 | $120K |
+| 2021 | 12 | 69 | 0 | $150K |
+| **2017** | 15 | **195** | **40** | **$17K** |
+| **2026** | 21 | **115** | **53** | **$2K** |
+
+**Three sources, found in 2026's builder (`build_2026.py`):**
+
+1. **A singleton cell maps to the pool's minimum.** `assign_money` ranks each man
+   inside his (position, length) cell and maps rank to a quantile with
+   `q = i / max(1, n-1)`; with n = 1 that is q = 0. Josh Allen is the only 6-year
+   quarterback and Hutchinson the only 7-year end, and each took the bottom dollar
+   of the pool. 6 of the 42 stars under $2M and 10 of the 115 under $500K are
+   singleton cells. **The Madden source had the money** — Allen's `PTSA` is 37,107
+   (≈ $37.1M), Hutchinson's 16,628 — and the build discarded the level on purpose,
+   keeping only the order.
+2. **The pool's floor is the archive's placeholders.** The reference pool is the
+   eight published files, whose bottom holds 2017's 263 sub-$500K men, 2010's
+   136, 2013's 96. Anyone mapped low lands on $17K–$100K instead of a real
+   minimum. The 89 of 115 who join Madden have a median `PTSA` of 110 — Madden's
+   own near-minimum men — and the pool turned a $110K placeholder into a $17K one.
+3. **The top is compressed everywhere**, and it is not the placeholders. 85+
+   median salary is $6.6M–$11.6M in our files against **$14.35M** in vanilla, and
+   filling every placeholder moves it by $0.1M–$2.2M.
+
+**The fill simulation** (placeholders → vanilla's (position, rating-band) median):
+p10 moves $0.01M–$0.39M, p90:p10 barely moves except 2017 (17.0x → 10.2x, 208
+filled). **1979 and 2000 have zero placeholders**, so their compression — 4.2x and
+7.9x against vanilla's 15.7x on salary+guarantee — is formula-built, not missing
+money. **Filling does not change what the contract transform is fitting to.**
+
+**Madden's real dollars are not the fix for 2026 either.** Scaled to the game's
+economy they give p90:p10 of 54x, p10 $0.21M, and 39 stars still under $2M —
+Madden had Zack Baun at $2.4M when he had signed for $17M a year. It is a proxy,
+and a stale one.
+
+**Not fixed.** Contracts are held pending the transform ruling; this item says what
+the placeholders are so the transform is not blamed for them.
+
+---
+
+### 46. 21 of 1979's 22 young unrated men are ranked by age alone
+
+Found while re-estimating Tom Jurich (batch 4). The 22 young men with no NFL
+career were mapped onto the prospect band **ordered by age — 22 ahead of 25** —
+because age was the only signal they carried. It is not: all 22 join a 1976-79
+draft listing and carry wAV, and it is 0–4 for every one of them. Jurich (wAV −1,
+the worst) was ruled down to the band's low end at 51. **Willie Taylor, wAV 0,
+still reads 77 and is Jacksonville's best player** on the same age-only ranking.
+Same signature, 21 men, not ruled. Measure and log.
+
+### BATCH 4 (1979), 2026-09-03 — what landed and what is held
+
+Landed in `tools/fix_1979_roster.py` and `tools/fix_1979_staff.py --no-pool`:
+Willie Brown S → CB; Donnie Green and Rocky Freitas (OT) to JAX and TEN, Mike
+Sensibaugh (S) to JAX, Don Rives (MLB) to IND, from the pool; Bakken 90 → 82
+(age-forward), Jurich 74 → 51; draft numbers on 1,323 rostered men from the
+1960-79 listings (242 above 224, **unverified against the engine**; 255 undrafted
+and 19 unresolved stay 224); extension terms on 1,597 from vanilla's joint
+(length, rating band) table, clamped to vanilla's maxima on 40 men — median 1.00,
+29% want a raise, 26% want less, against vanilla's 1.00 / 27% / 22%; staff hair
+from vanilla's age-then-family table, with the 37 multi-season men taking the
+later file's hair (the registry makes it canonical — pushing 1979's outward made
+the faces gate worse, 38 → 42, and was reversed). `gate_players`/`gate_staff` now
+collect every failure before raising.
+
+**HELD: the staff pool.** 91 real head coaches are ready (all of them, by rule)
+plus 16 generated men in each of the eight other roles — but **87 of the 91 have
+no sourced skin**: the registry knows none, and only Bill Johnson, Modzelewski,
+Ringo and Sandusky carry a face in a later file. The tool draws head families for
+the rest and writes them to `wip/staff_pool_1979_faces_unsourced.csv`. Invented
+skin on real men is the thing this project does not do without saying so; ruling
+needed. 1979 still has no free-agent staff.

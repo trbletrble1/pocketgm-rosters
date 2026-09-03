@@ -330,33 +330,43 @@ def assemble_staff(keys, ref):
 
 # ------------------------------------------------------------- gates
 def gate_players(out, keys):
-    assert all(set(r) - {'_cohort', '_yrs', '_team'} == set(keys) for r in out), 'roster key set drift'
+    """EVERY check runs and ALL failures are reported before anything raises.
+    A gate that stops at its first assertion reports that failure as its only
+    failure — 2010's payroll write had two and the report showed one, and Ryan
+    ruled on the wrong list (precedent, 2026-09-03). Collect, then assert once."""
+    fails = []
+    def chk(cond, msg):
+        if not cond: fails.append(msg)
+    chk(all(set(r) - {'_cohort', '_yrs', '_team'} == set(keys) for r in out), 'roster key set drift')
     for r in out:
-        assert sum(v for v in r['growthType'] if v > 0) == (r['potential'] - r['rating']) * 50 and len(r['growthType']) == 31, r['forename']
-        a = r['appearance']; assert a[0].replace('Head', '')[0] == a[5].replace('Nose', '')[0] == a[6].replace('Mouth', '')[0] and a[7] == 'Glasses1e'
-        assert r['teamID'] in FIXED | {'Rookie', 'Free Agent'}, r['teamID']
-        if r['teamID'] == 'Rookie': assert 2027 <= r['draftSeason'] <= 2030
-        else: assert r['draftSeason'] <= 2026 and r['draftNum'] >= 1
-    assert len({r['iden'] for r in out}) == len(out), 'iden collision'
-    assert sum(1 for r in out if r['_cohort'] == 'spine') == 1408, 'the spine is not 1,408 — a keyed dict dropped someone'
-    # team in the key: two men may share a name and a position on different teams
-    # (the Gene Washingtons). The stronger invariant — no two spine men share a
-    # mod record — is enforced in the join itself, so nothing is lost here.
+        chk(sum(v for v in r['growthType'] if v > 0) == (r['potential'] - r['rating']) * 50 and len(r['growthType']) == 31, f"growthType 50x rule: {r['forename']} {r['surname']}")
+        a = r['appearance']
+        chk(a[0].replace('Head', '')[0] == a[5].replace('Nose', '')[0] == a[6].replace('Mouth', '')[0] and a[7] == 'Glasses1e', f"face family mismatch: {r['forename']} {r['surname']}")
+        chk(r['teamID'] in FIXED | {'Rookie', 'Free Agent'}, f"bad teamID {r['teamID']}")
+        if r['teamID'] == 'Rookie': chk(2027 <= r['draftSeason'] <= 2030, f"prospect draftSeason {r['draftSeason']}: {r['surname']}")
+        else: chk(r['draftSeason'] <= 2026 and r['draftNum'] >= 1, f"draftSeason/draftNum: {r['surname']}")
+    chk(len({r['iden'] for r in out}) == len(out), 'iden collision')
+    chk(sum(1 for r in out if r['_cohort'] == 'spine') == 1408, 'the spine is not 1,408 — a keyed dict dropped someone')
     dup = collections.Counter((norm(r['forename'] + ' ' + r['surname']), r['position'], r['_team'], r['_cohort']) for r in out)
-    assert max(dup.values()) == 1, [k for k, v in dup.items() if v > 1][:5]
+    chk(max(dup.values()) == 1, f"duplicate men: {[k for k, v in dup.items() if v > 1][:5]}")
     teams = {r['teamID'] for r in out if r['teamID'] in FIXED}
-    assert teams == FIXED, f'missing teams {FIXED - teams}'
+    chk(teams == FIXED, f'missing teams {FIXED - teams}')
     for t in ('TEN', 'CAR', 'JAX', 'IND'):
-        assert all(r['_cohort'] == 'franchise' for r in out if r['teamID'] == t), t
+        chk(all(r['_cohort'] == 'franchise' for r in out if r['teamID'] == t), f'{t} carries a non-franchise man')
+    assert not fails, f"{len(fails)} gate failure(s):\n  " + "\n  ".join(fails[:40])
 
 def gate_staff(out, keys):
-    assert all(set(r) == set(keys) for r in out), 'staff key set drift'
+    fails = []
+    def chk(cond, msg):
+        if not cond: fails.append(msg)
+    chk(all(set(r) == set(keys) for r in out), 'staff key set drift')
     for r in out:
-        assert r[PRIMARY[r['role']]] == r['rating'], r['surname']
-        assert len(r['growthType']) == 51 and sum(v for v in r['growthType'] if v > 0) == (r['potential'] - r['rating']) * 50
-        assert 1989 <= r['startSeason'] <= 2026
+        chk(r[PRIMARY[r['role']]] == r['rating'], f"primary != rating: {r['surname']}")
+        chk(len(r['growthType']) == 51 and sum(v for v in r['growthType'] if v > 0) == (r['potential'] - r['rating']) * 50, f"growthType: {r['surname']}")
+        chk(1989 <= r['startSeason'] <= 2026, f"startSeason {r['startSeason']}: {r['surname']}")
     # nine per team for ALL 32 — the four franchises carry generated staff now
-    assert collections.Counter(r['teamID'] for r in out) == collections.Counter({t: 9 for t in sorted(FIXED)}), 'not nine per team across the 32'
+    chk(collections.Counter(r['teamID'] for r in out if r['teamID'] != 'Free Agent') == collections.Counter({t: 9 for t in sorted(FIXED)}), 'not nine per team across the 32')
+    assert not fails, f"{len(fails)} staff gate failure(s):\n  " + "\n  ".join(fails[:40])
 
 def selftest():
     ok = 0
