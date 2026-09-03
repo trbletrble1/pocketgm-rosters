@@ -201,11 +201,28 @@ def assemble_players(keys, per_team_constant):
     by_pos_povr = collections.defaultdict(list)
     for x in fr:
         if x['povr'].isdigit(): by_pos_povr[x['_fpos']].append(int(x['povr']))
-    # quantile-map the pool's POVR onto the published band per position, plotting position, as the spine was
-    povr_to_rating = {}
-    for pos, vals in by_pos_povr.items():
-        mapped = R.quantile_map(vals, rat_pool[pos])
-        for v, m in zip(vals, mapped): povr_to_rating[(pos, v)] = m
+    # THE POOL TAKES THE SPINE'S OWN POVR->RATING CURVE, not a fresh quantile map.
+    # Quantile-mapping the pool alone stretched a small, low, narrow cohort across
+    # the whole published band: its 12 quarterbacks span POVR 63-75 and the top one
+    # came out at 95 where the spine's curve gives 72; three kickers spanning 63-77
+    # produced a 90. Charlotte's best became Larry Walton at 94 from a POVR of 82,
+    # and all four franchises landed inside the real teams' 85-98 range — erasing
+    # the finding that expansion teams sit below it, and with it the shapes that
+    # were the evidence the doctrines worked.
+    #
+    # A quantile map needs a source that spans its target. The spine's does (n=74-178
+    # per position, POVR 52-99); the pool's does not. So the pool reads the spine's
+    # curve instead — the same map, applied to the same POVR scale, which is what
+    # 'mapped as the spine was' was always supposed to mean.
+    spine_curve = collections.defaultdict(list)
+    for x in csv.DictReader(open(repo('wip', 'ratings_1979.csv'))):
+        if x['povr'].isdigit(): spine_curve[x['pgm3_pos']].append((int(x['povr']), int(x['rating'])))
+    for k in spine_curve: spine_curve[k].sort()
+    def from_spine(pos, v):
+        pairs = spine_curve.get(pos) or [q for vs in spine_curve.values() for q in vs]
+        near = [r for p_, r in pairs if abs(p_ - v) <= 2] or [r for p_, r in sorted(pairs, key=lambda z: abs(z[0] - v))[:9]]
+        return int(round(st.median(near)))
+    povr_to_rating = {(pos, v): from_spine(pos, v) for pos, vals in by_pos_povr.items() for v in vals}
     for x in fr:
         name = x['name']; pos = x['_fpos']; n = norm(name)      # the pool CSV says DB/LB; the mod says CB/S, MLB/OLB — taken, as the spine does
         is_fa = x['franchise'] == '(free agent pool)'
@@ -357,6 +374,13 @@ def selftest():
     except AssertionError as e: print(f'  FAIL staff: {e}')
     try:
         assert stats['injury mechanic'] == 6 and stats['attrs from NFL79'] >= 250, dict(stats)
+        # the pool must not outshine the league it joins
+        byt = collections.defaultdict(list)
+        for r in out:
+            if r['teamID'] in FIXED: byt[r['teamID']].append(r['rating'])
+        four = [max(byt[t]) for t in ('TEN', 'CAR', 'JAX', 'IND')]
+        real = sorted(max(v) for t, v in byt.items() if t not in ('TEN', 'CAR', 'JAX', 'IND'))
+        assert max(four) < real[len(real) // 2], f'an expansion team\'s best {max(four)} beats the median real team\'s {real[len(real)//2]}'
         ok += 1; print(f"  ok: six injured men took the mechanic; {stats['attrs from NFL79']} pool men took NFL79 attributes, {stats['attrs from 1976']} took 1976, {stats['attrs pool median']} the median")
     except AssertionError as e: print(f'  FAIL provenance: {e}')
     return ok

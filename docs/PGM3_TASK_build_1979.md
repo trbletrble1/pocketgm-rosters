@@ -1143,15 +1143,25 @@ lead 1983, Lomax 93 leads 1981. A per-position exception, stated and self-tested
 
 ## Step 10 — ASSEMBLED 2026-09-02. `PGMRoster_1979.json` (2,782 records), `PGMStaff_1979.json` (288). `tools/build_1979_roster_file.py`.
 
-**Gates on the written files:** `pgm3_validate staff` ALL CLEAR. `faces` all checks
-passed. The mandatory conditional — skin family split by the archive band — separates
-by **+100 points** on 1,057 archive-sourced men. `roster` fails **one group**: *team
-empty at a position every reference fills — ARI has no K; DAL has no P.* **That is the
-era, and it is left as it was.** St. Louis's Steve Little kicked *and* punted in 1979;
-Dallas punted with Danny White, its backup quarterback. Every reference file, 1986 to
-2021, carries a separate kicker and punter, so the check is a later-era convention
-applied to an earlier season — the third form of that precedent in this build. Adding
-a man to a real roster to satisfy it would disturb a real roster. **Ryan rules.**
+**Gates on the written files: all three ALL CLEAR.**
+
+    python3 tools/pgm3_validate.py roster PGMRoster_1979.json <refs> --era=1979
+    python3 tools/pgm3_validate.py staff  PGMStaff_1979.json  <refs>
+    python3 tools/pgm3_validate.py faces  PGMRoster_1979.json PGMRoster_1986.json
+
+The mandatory conditional separates by **+100 points** on 1,057 archive-sourced men.
+
+**`--era` exists because of one check and one ruling.** *Team empty at a position
+every reference fills* flagged ARI with no kicker and DAL with no punter. Both are
+correct: St. Louis's Steve Little kicked **and** punted in 1979, and Dallas punted
+with Danny White, its backup quarterback. The dedicated specialist is a later-era
+convention and every reference the check is built from postdates it — the earliest
+is 1986. **Ryan's ruling: leave them, and make the gate era-aware rather than
+suppressing it.** `--era=1979` exempts **K and P only, before 1980**, and says so in
+the check's own output. Verified three ways: the file passes with the flag and fails
+without it; a modern file passes either way; and stripping Pittsburgh's cornerbacks
+still fails **under** the flag. **There is nobody to add to those two rosters. Do not
+"fix" this.**
 
 ### What assembly found, in the order it found it
 
@@ -1262,6 +1272,31 @@ field split by its source value:
 **Every gate the standing rules name has now run on the written files.** What is
 left is Ryan's: import it and play it.
 
+**The pool's ratings were inflated, and the doctrines were the evidence.** Ryan asked
+whether the franchise shapes survived to the shipped file. They had not: Charlotte's
+best was Larry Walton at **94** against the 87 reported at Step 7, and all four
+franchises had climbed inside the real teams' 85–98 range, erasing the finding that
+expansion teams sit below it. The cause was one line — the pool got a **fresh quantile
+map over its own cohort** instead of the spine's curve. A quantile map needs a source
+that spans its target: the spine's does (74–178 men per position, `POVR` 52–99), the
+pool's does not (three kickers spanning 63–77, twelve quarterbacks spanning 63–75), so
+it stretched a small, low, narrow cohort across the whole published band — a `POVR`-75
+quarterback became **95** where the spine's curve gives 72. The pool now reads the
+spine's own curve, which is what "mapped as the spine was" always meant, and a
+**shape assert** now fails the build if an expansion team's best man beats the median
+real team's. Restored:
+
+| | n | best | median | age | Southern | top five |
+|---|---|---|---|---|---|---|
+| Memphis Southmen | 46 | 84 | 65 | 24 | 14 | Otis 84, Hall 84, Too Tall Jones 79, Sistrunk 79, Wilson 78 |
+| Charlotte Hornets | 46 | 83 | 72 | 28 | 18 | Pugh 83, Scott 81, Biletnikoff 80, Mandich 80, Maples 79 |
+| Jacksonville Sharks | 46 | 77 | 61 | 24 | 18 | Taylor 77, McLinton 74, Jurich 74, Woodcock 73, Payne 73 |
+| Indianapolis Racers | 46 | 90 | 68 | 26 | 13 | Bakken 90, Lane 88, Simpson 86, Kilmer 85, McDole 85 |
+
+Memphis youngest and top-heavy, Charlotte oldest and deepest by median, Jacksonville
+weakest with nobody expensive, Indianapolis with the highest ceiling. Waters 73 against
+a potential of 87, Cappelletti 72/86, Harper 72/86 — the injury mechanic, in the file.
+
 **Two more, from reading shipped records end to end.** Vince Papale shipped at
 **zero years pro** — his only record is the 1976 mod, whose `PYRP` is as of 1976, his
 rookie year, and his rating had been aged forward three years while that field had not.
@@ -1276,4 +1311,5 @@ and the final build was run **with the dumps deleted first** to prove it.
   three classes in one pass; `wip/draft_1982_1983_ambiguous.csv` (174 men, including
   first-rounders Gerald Riggs and Mike Pitts) resolves by name.
 - **A 1958–1979 draft-pick source**: every rostered man carries `draftNum` 224.
-- **The two era teams**: leave St. Louis and Dallas as they were, or rule otherwise.
+- **The four franchise head coaches** are generated and flagged; Ryan may name them.
+- ~~The two era teams~~ — ruled: left as they were, `--era` added.

@@ -19,6 +19,11 @@ Contract ceilings and the team cap are parameters, not laws — see LIMITS.
 Override per build:
 
     python3 pgm3_validate.py roster NEW.json REF1.json --team_cap=301.2M
+    python3 pgm3_validate.py roster NEW.json REF1.json --era=1979
+
+`--era=YEAR` states which season the file models. Its only effect today is to
+exempt K/P from the empty-position check before 1980, where a team really could
+have neither — see that check for the reasoning.
     python3 pgm3_validate.py roster NEW.json REF1.json --salary=60M
 
 REF files are known-good published files. Ranges and zero-patterns are
@@ -273,9 +278,31 @@ def check_roster(new, refs):
         for q in on: bt[q['teamID']][q['position']] += 1
         gaps = [f'{t} has no {p}' for t in sorted(bt) for p in sorted(ref_never_empty)
                 if bt[t][p] == 0]
-        out.append((f'team empty at a position every reference fills '
-                    f'({len(ref_never_empty)} positions checked)'
-                    + (': ' + '; '.join(gaps[:5]) if gaps else ''), len(gaps)))
+        # ERA EXEMPTION, ruled 2026-09-02 by Ryan, for K and P only, before 1980.
+        # The dedicated specialist is a later-era convention, and this check is
+        # built from references that all postdate it — the earliest is 1986. In
+        # 1979 St. Louis's Steve Little kicked AND punted, and Dallas punted with
+        # Danny White, its backup quarterback. Both are historically correct, and
+        # the only way to satisfy the check would be to add a man to a real
+        # roster, which is worse than failing it.
+        #
+        # SCOPE, deliberately narrow: K and P alone, and only with --era before
+        # 1980. Every other position and every later file is unchanged — a team
+        # with no cornerback is still a failure in any era. Pass --era=1979.
+        #
+        # DO NOT "FIX" THE 1979 FILE TO CLEAR THIS. There is nobody to add.
+        era = LIMITS.get('era')
+        exempt = []
+        if era and era < 1980:
+            keep = [g for g in gaps if not g.endswith(' K') and not g.endswith(' P')]
+            exempt = [g for g in gaps if g not in keep]
+            gaps = keep
+        label = (f'team empty at a position every reference fills '
+                 f'({len(ref_never_empty)} positions checked)'
+                 + (': ' + '; '.join(gaps[:5]) if gaps else ''))
+        if exempt:
+            label += f'   [era {era}: {len(exempt)} K/P gap(s) exempt — {"; ".join(exempt[:4])}]'
+        out.append((label, len(gaps)))
         # Per-team position RATE, on a TOP-53 slice, against the range every
         # reference spans. Two calibration points, both learned the hard way:
         #
@@ -805,6 +832,9 @@ def main():
     # Accepts plain numbers or shorthand: --team_cap=301.2M
     argv = []
     for a in sys.argv:
+        me = re.match(r'--era=(\d{4})$', a)
+        if me:
+            LIMITS['era'] = int(me.group(1)); continue
         m = re.match(r'--(salary|eSalary|eGuarantee|team_cap)=([\d._]+)([MmKk]?)$', a)
         if m:
             n = float(m.group(2).replace('_',''))
