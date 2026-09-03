@@ -4624,3 +4624,55 @@ convention we invented and then mistook for a constraint.
    confidence from two leagues with zero shared identifiers. The coach finding rests
    on three exports of ONE league sharing all 432 identifiers, so it is n = 1 and
    is labelled as such until a second lands.
+
+---
+
+## A gate that short-circuits reports its first failure as its only failure
+
+**2026-09-03.** `raise_payroll` asserted the mean position distance before the
+per-position guard. 2010 failed the mean by +0.007, the assertion raised, and the
+per-position check never ran. **The batch-1 report told Ryan that 2010 had one
+failure. It had two** — centre also moves 1.06 → 1.16 against vanilla's 0.55.
+
+Ryan then ruled on the +0.007 as noise, which it is. Had the second failure been
+visible the ruling would have been different, and it was: 2010 is now held.
+**A ruling made on a partial failure list is a ruling made on the wrong facts,
+and the tool chose which facts by the order its assertions happened to sit in.**
+
+It was found only by re-running every guard with the short-circuit removed. Nothing
+about the original output suggested anything was missing — a single clean
+`AssertionError` looks exactly like a complete answer.
+
+**Rules:**
+1. **A terminal gate evaluates every check and reports all failures.** Assert at the
+   end, on the collected list. `pgm3_validate.py` already works this way, which is
+   why its output can be trusted to be complete; the payroll guard did not.
+2. **Never rule on a failure list from a gate that stops at the first failure**
+   without re-running it to exhaustion first.
+
+**Where the structure still exists.** `pgm3_validate.py` collects and is safe.
+`build_1979_roster_file.py:gate_players` (11 independent checks) and `gate_staff`
+(5) are terminal gates that short-circuit. Nothing is masked today — 1979 passes
+all of them — but the next failure there will report as a singleton. Fix when 1979
+is next opened, which is batch 4.
+
+---
+
+## The post-write diff caught what the gates did not — the third time
+
+**2026-09-03.** `eSalary`/`eGuarantee` are extension terms — what a player wants to
+re-sign for, paired with `eLength`. Vanilla's Derrick Tunsil earns $3.1M on a
+one-year deal and wants **$7.7M over four**. `raise_payroll` assigned them *from*
+salary and guarantee, so every asking price became the current salary: **every
+extension free, nobody ever asking for a raise.** A gameplay defect, and it shipped
+in a6fb417 and sat live in 2026 through a play test.
+
+**No gate caught it.** Payroll totals were right, ordering was right, position
+ratios were right, and the roster gate returned ALL CLEAR. It was caught by
+counting which fields the diff changed: `guarantee` moved on 1,048 records and
+`eGuarantee` on 1,456. **Those two counts cannot differ if the fields started
+equal**, and that arithmetic was the whole of the detection.
+
+**Rule: diff the write by field and count, not just by line.** A gate tests the
+properties someone thought to encode. The diff shows everything that moved,
+including the field nobody knew was load-bearing.

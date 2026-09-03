@@ -1902,6 +1902,53 @@ wrong, the second is a ten-file decision in a two-file disguise.
 `sources/vanilla/` — the first this project has held — and both the payroll constant
 and the position band have turned out to be ours rather than the engine's.
 
+#### Two different flatnesses, and only one of them is this item
+
+**2026-09-03.** 1979 has been called "flat" throughout, without distinguishing
+which distribution. They point opposite ways.
+
+| | team-payroll spread (max:min) | player-salary spread (p90:p10) |
+|---|---|---|
+| vanilla | 1.78x | **10.7x** |
+| **1979** | **2.45x — the WIDEST of any file** | **4.6x — the narrowest** |
+| 2000 | **1.13x — the narrowest** | 7.4x |
+
+**1979's teams are spread wider than the game's; its players are squashed into a
+third of the game's range.** Only the player one is this item. 2000 is the reverse
+case and its teams are nearly identical to one another — a $24M gap across all 32.
+
+Conflating them sends you looking for the compression in the wrong distribution.
+
+#### The level change amplifies the compression without causing it
+
+A uniform per-team scale leaves the ratio invariant by construction, so raising
+1979 to $242.9M moves it 4.6x -> 4.5x. **What moves is the floor.** 1979's
+tenth-percentile player goes from **$1.40M to $1.64M** against vanilla's $0.70M —
+the cheap depth a capped user needs to cut gets more expensive, not less.
+
+That is the argument for doing level and shape in one write rather than leaving
+1979 raised and uncompressed.
+
+#### BATCH 1 DONE, 2026-09-03 — seven files raised, three held
+
+Six raised to $242.9M (1986, 2004, 2013, 2017, 2021, 2007) plus 2026's extension
+repair, in f5cc178. Median top-53 $197.4M -> $242.9M, min/p25/max matching vanilla
+exactly, ordering exact inside every team.
+
+**Held, and why:**
+
+| | fails | disposition |
+|---|---|---|
+| **1979** | mean 0.323 -> 0.328 | compression showing through the level. **Batch 4**, one write. |
+| **2000** | mean 0.351 -> **0.379**, the largest move of any file | same defect. **Batch 4.** |
+| **2010** | mean 0.514 -> 0.521 (ruled noise) AND centre 1.06 -> 1.16 against vanilla 0.55 | the second failure was masked by a short-circuiting assertion. **Unruled.** |
+
+The mechanism behind all of them: rank-mapping team totals onto vanilla's spread
+needs a different factor per team, and those factors jostle cross-team position
+ratios. **The flatter a file's team spread, the wider the factor range needed, the
+more the ratios move.** 2000 is the extreme — 1.13x mapped onto 1.78x demands
+factors from 0.82 to 1.33, some teams cut a fifth and others raised a third.
+
 #### RULED: all ten get tuned, as its own piece of work, after two checks
 
 1. ~~Confirm $242.9M from more than one vanilla export.~~ **CLOSED 2026-09-03.**
@@ -2102,3 +2149,69 @@ other nine still fail if raised by accident. Verified both ways.
 $242.9M. Whether the engine *expects* it is not something any file can answer —
 those are indistinguishable from outside. **Ryan imports and plays this before the
 other nine follow.**
+
+---
+
+### 41. Extension terms are one-sided in every file, and 1979 has none at all
+
+**Found 2026-09-03**, while repairing the damage `raise_payroll` did to
+`eSalary`/`eGuarantee`. Repairing the fields meant learning what they are, and
+that exposed a defect the flattening had been hiding.
+
+**What the fields are.** `eSalary`/`eGuarantee`/`eLength` are the terms the player
+wants to **re-sign** for, against `salary`/`guarantee`/`length` on his current
+deal. Vanilla's Derrick Tunsil earns $3.1M on a one-year contract and wants $7.7M
+over four; Reginald Emanuel earns $9.5M over four and would take $9.4M over three.
+
+**The game's asking prices go both ways. Ours go one way.**
+
+| file | median eSalary/salary | want a raise (>5%) | want less (<5%) | median length → eLength |
+|---|---|---|---|---|
+| **vanilla** | **1.000** | **27%** | **22%** | 1 → 2 |
+| 1979 | 1.000 | **0%** | **0%** | 2 → 2 |
+| 2000 | **0.293** | 0% | **100%** | 2 → 1 |
+| 2004 | 0.524 | 7% | 91% | 2 → 3 |
+| 2007 | 0.851 | 28% | 60% | 2 → 3 |
+| 1986 | 1.056 | 50% | 42% | 2 → 3 |
+| 2010 | 1.097 | 56% | 24% | 2 → 3 |
+| 2013 | 1.231 | 66% | 21% | 2 → 3 |
+| 2021 | 1.310 | 81% | 11% | 2 → 3 |
+| **2026** | 1.200 | **100%** | **0%** | 2 → 1 |
+| 2017 | 1.508 | 89% | 3% | 2 → 3 |
+
+**Vanilla sits at 1.000 with a real spread on both sides** — roughly a quarter of
+the league wants more, roughly a quarter would settle for less, and the median man
+asks for what he already earns. That two-sidedness is the negotiation. A GM finds
+bargains and overpays, and both exist.
+
+**Three distinct failures here:**
+
+1. **1979 has no extension terms at all.** `eSalary == salary` and
+   `eLength == length` for every one of its 1,593 rostered men — 0% differ against
+   vanilla's 72%. Built that way by `build_1979_contracts.py`, not damaged later.
+   **Every extension in 1979 is free**, which is the same gameplay defect the
+   `raise_payroll` flattening caused, native to the file. **Batch 4.**
+2. **2026 and 2000 are degenerate in opposite directions.** 2026: every single
+   player wants a raise, nobody would take less. 2000: every single player would
+   take less, nobody wants a raise, and the median asks for **29%** of his current
+   salary. Both also set `eLength` below `length` where the game sets it above.
+3. **The other seven are one-sided by degree**, running from 2004 at 7%/91% to
+   2017 at 89%/3%. None resembles vanilla's balance.
+
+**Measure and log, do not act.** This is a ten-file shape question of exactly the
+same kind as item 37, and it should be ruled on with the same care rather than
+folded into a payroll pass. It is also unmeasured in one important respect: **we do
+not know whether the engine reads `eSalary` directly or treats it as a starting
+point for negotiation**, and the difference matters for how far off these numbers
+actually put us.
+
+**1979's half is not optional in the same way.** 0% is not a bad distribution, it
+is an absent one, and it is already scheduled — batch 4 opens that file anyway.
+
+---
+
+### 42. 2021's free-agent `injuryProne` misses the cross-year median
+
+`[FA] injuryProne: new 34 vs ref 51` — the only remaining roster-gate failure on
+2021 after the payroll write, and it predates that write. Unrelated to money.
+Free-agent cohort only; the rostered men pass. Not investigated.
