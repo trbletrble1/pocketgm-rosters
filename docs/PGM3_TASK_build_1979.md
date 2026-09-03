@@ -970,6 +970,65 @@ for "3-4 defense", "3-4 scheme", "3-4 front" and the 4-3 equivalents. **Every
 team gets a 4-3**, the era's predominant front, and a wrong 3-4 is worse than a
 uniform one.
 
+## Step 7 — the four invented franchises BUILT 2026-09-02. `wip/franchises_1979.csv`.
+
+184 men on four 46-man rosters, 124 to the free agent pool, from the 308 who were
+genuinely out of football in 1979. **No real roster is disturbed, and it is
+asserted rather than assumed**: the loader fails if any of the 308 appears in the
+1,408-man spine. The pool's "real 1979 team" flag on Waters, Kunz and Pinney means
+they were under contract, not that they played.
+
+| | n | best | median | age | Southern | from the 40 |
+|---|---|---|---|---|---|---|
+| Memphis Southmen | 46 | 90 | 77 | 24 | 17 | 12 |
+| Charlotte Hornets | 46 | 87 | 79 | 30 | 16 | 18 |
+| Jacksonville Sharks | 46 | 82 | 68 | 24 | 19 | 3 |
+| Indianapolis Racers | 46 | 94 | 76 | 26 | 11 | 9 |
+
+The pool's own Southern baseline is 25%, so Jacksonville's 41% is a lean and not a
+rule, as briefed.
+
+**Ryan's ceiling ruling:** 1986's four invented franchises came out at 75, 79, 82
+and 84 — Carolina's best player is a 75, the floor across all nine published
+files. These four sit inside that, so a block of weak expansion teams is
+precedented in the file that did exactly this.
+
+**THREE DEFECTS, all caught by measuring the result rather than the intent.**
+
+1. **Doctrine-first left Charlotte with no quarterback and Indianapolis with no
+   centre.** The pool is whoever fell out of football, and that population is 47
+   running backs and 46 linebackers against 14 quarterbacks, 10 centres and 6
+   kickers. Scarce positions are now reserved round-robin **before** any doctrine
+   runs. A weak team is a shape; a team with no quarterback is broken.
+2. **"Cheapest first" silently meant "unrated first."** 47 of the 308 have no
+   Madden record, and `povr` read them as zero. Jacksonville took **30 of 46**
+   that way, including **Jackie Smith, Mick Tingelhoff, Emmitt Thomas, Chris
+   Hanburger, Willie Brown and Jake Scott**. The cheap team got the Hall of Fame.
+   Every ordering now goes through `rated_key()`, which holds the unrated out of
+   the comparison instead of ranking them at the bottom.
+3. **The fix over-corrected twice.** Splitting the unrated by doctrine — old to
+   Charlotte, young to Jacksonville — left those two rosters *half* unsourced, 23
+   and 21 of 46. Capping each at 12 fixed that but sent the overflow of old men to
+   Memphis, pushing its median age from 24 to 27 and costing it the one thing its
+   doctrine asks for. Memphis now takes old men **last**. Four self-tests hold the
+   result: every team has a quarterback, centre, kicker and punter; every injured
+   man is Indianapolis and only Indianapolis; no roster is more than a quarter
+   unsourced; and Jacksonville's Southern share must exceed the pool baseline by
+   30%.
+
+**Biletnikoff is a Charlotte Hornet because the doctrine claims him** — released
+by Oakland after 1978 is exactly Charlotte's profile — not because he reads
+better there.
+
+**The injury mechanic**, confirmed before use: potential holds the man's healthy
+1978 level and the 1979 rating sits 14 below it. **69 veterans across four of the
+six published files carry 10 or more points of headroom, up to 46**, so Charlie
+Waters at 73 with an 87 ceiling is unusual but not malformed.
+
+**47 men still need hand ratings** — 11 to 13 per franchise — because no Madden
+file covers them. Split between men aged 22 to 25 with no NFL career yet and men
+aged 33 to 39 who retired before the source's coverage.
+
 ### Still to build
 
-The four invented franchises, draft classes, faces.
+Draft classes 1980-1983, then the face registry, then all gates.

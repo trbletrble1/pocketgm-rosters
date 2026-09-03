@@ -64,8 +64,21 @@ SOUTH = {'Alabama', 'Auburn', 'Tennessee', 'Georgia', 'Florida', 'Florida State'
          'South Carolina', 'Vanderbilt', 'Alcorn State', 'Miami (FL)'}
 
 def povr(x):
+    """0 means NO MADDEN RECORD, not a rating of zero. 47 of the 308 have none —
+    22 men aged 22-25 with no NFL career yet, and 21 aged 33-39 who retired before
+    the source's coverage. Sorting 'cheapest first' on this swept ALL of them to
+    Jacksonville: 30 of its 46, including Jackie Smith, Mick Tingelhoff, Emmitt
+    Thomas, Chris Hanburger, Willie Brown and Jake Scott. The cheap team got the
+    Hall of Fame. Use rated_key() for any ordering, never povr() directly."""
     v = x.get('povr', '')
     return int(v) if str(v).isdigit() else 0
+
+def unrated(x):
+    return not str(x.get('povr', '')).isdigit()
+
+def rated_key(x, cheap=False):
+    """Order on rating, with the unrated held out of the comparison entirely."""
+    return (1 if unrated(x) else 0, povr(x) if cheap else -povr(x))
 
 def age(x):
     return int(x['age']) if str(x.get('age', '')).isdigit() else 99
@@ -89,7 +102,7 @@ def allocate(top, pool):
         taken[x['name']] = (t, why); R[t].append((x, why)); return True
 
     for pos, each in SCARCE:                       # step 0, before any doctrine
-        cands = sorted([x for x in pool if x['pos'] == pos], key=lambda z: -povr(z))
+        cands = sorted([x for x in pool if x['pos'] == pos], key=rated_key)
         i = 0
         for _ in range(each):
             for t in TEAMS:
@@ -113,6 +126,30 @@ def allocate(top, pool):
     for x in top:
         if x['name'] in UNCLAIMED:
             take(x, UNCLAIMED[x['name']], 'no doctrine claims him; placed on fit')
+    # the 47 with no Madden record, split by the doctrines rather than by an
+    # artefact of sorting. The old ones were let go or retired — Charlotte's
+    # profile. The young ones have no career yet — cheap and unproven, which is
+    # Jacksonville's. Tarkenton is already a Memphis purchase.
+    # Doctrine first, then a cap. Old and unrated is Charlotte's profile and young
+    # and unrated is Jacksonville's, but taking all of each left those two rosters
+    # HALF unsourced — 23 and 21 of 46, every one needing a hand rating. So each
+    # team takes at most 12, and the overflow goes to the franchise whose doctrine
+    # fits second: recognisable finished names to Memphis, young men to
+    # Indianapolis, who can wait for them.
+    UNRATED_CAP = 12
+    # Overflow order matters. Sending old men to Memphis second pushed its median
+    # age from 24 to 27 and cost it the one thing its doctrine asks for — young and
+    # cheap, because the expensive slots are spent. Memphis takes old men LAST.
+    order = {'old': ['CAR', 'IND', 'JAX', 'MEM'], 'young': ['JAX', 'MEM', 'IND', 'CAR']}
+    held = collections.Counter()
+    for x in sorted([z for z in pool if unrated(z) and z['name'] not in taken],
+                    key=lambda z: (age(z) < 30, age(z))):
+        band = 'old' if age(x) >= 30 else 'young'
+        for t in order[band]:
+            if held[t] < UNRATED_CAP:
+                why = ('no Madden record; a name that had finished'
+                       if band == 'old' else 'no Madden record; young and unproven, which is cheap')
+                take(x, t, why); held[t] += 1; break
 
     left = lambda: [z for z in pool if z['name'] not in taken]
     def fill(t, key, why, cap=ROSTER):
@@ -120,13 +157,16 @@ def allocate(top, pool):
             if len(R[t]) >= cap:
                 break
             take(x, t, why)
-    fill('JAX', lambda z: (z['college'] not in SOUTH, povr(z)), 'cheap, and Southern', cap=30)
-    fill('MEM', lambda z: (age(z) > 24, -povr(z)), 'young and cheap; the slots are spent')
-    fill('IND', lambda z: (age(z) > 26, -povr(z)), 'young, and they can wait')
-    fill('JAX', lambda z: (povr(z),), 'cheap, wherever from')
-    fill('CAR', lambda z: (-povr(z),), 'worth another look')
+    # Southern-first up to 40, not 30. At 30 the unrated allocation had already
+    # filled a dozen of Jacksonville's slots and the lean collapsed to 22%, BELOW
+    # the pool's own 27% baseline — the doctrine inverted itself.
+    fill('JAX', lambda z: (z['college'] not in SOUTH,) + rated_key(z, cheap=True), 'cheap, and Southern', cap=40)
+    fill('MEM', lambda z: (age(z) > 24,) + rated_key(z), 'young and cheap; the slots are spent')
+    fill('IND', lambda z: (age(z) > 26,) + rated_key(z), 'young, and they can wait')
+    fill('JAX', lambda z: rated_key(z, cheap=True), 'cheap, wherever from')
+    fill('CAR', lambda z: rated_key(z), 'worth another look')
     for t in TEAMS:
-        fill(t, lambda z: -povr(z), 'roster filler')
+        fill(t, lambda z: rated_key(z), 'roster filler')
     return R, left()
 
 def selftest():
@@ -148,6 +188,21 @@ def selftest():
         elsewhere = [x['name'] for t in ('MEM', 'CAR', 'JAX') for x, _ in R[t] if x.get('reason') == 'INJURY']
         assert not elsewhere, f'an injured man went somewhere other than Indianapolis: {elsewhere}'
         ok += 1; print('  ok: every injured man is Indianapolis and only Indianapolis')
+    except AssertionError as e:
+        print(f'  FAIL: {e}')
+    try:
+        R, _ = allocate(top, pool)
+        n = {t: sum(1 for x, _ in R[t] if unrated(x)) for t in TEAMS}
+        assert max(n.values()) <= 13, f'a roster is more than a quarter unsourced: {n}'
+        old = {t: [age(x) for x, _ in R[t] if unrated(x)] for t in TEAMS}
+        assert st.median(old['CAR']) > st.median(old['JAX']), 'the age split by doctrine did not hold'
+        jx = [x for x, _ in R['JAX']]
+        share = sum(1 for x in jx if x['college'] in SOUTH) / len(jx)
+        base = sum(1 for x in pool if x['college'] in SOUTH) / len(pool)
+        assert share > base * 1.3, f'Jacksonville does not lean Southern: {share:.0%} against a {base:.0%} pool'
+        ages = {t: st.median([age(x) for x, _ in R[t] if age(x) < 99]) for t in TEAMS}
+        assert ages['MEM'] <= min(ages['CAR'], ages['IND']), f'Memphis is meant to be young: {ages}'
+        ok += 1; print(f'  ok: the 47 unrated are spread by doctrine, none over a quarter of a roster ({n})')
     except AssertionError as e:
         print(f'  FAIL: {e}')
     return ok
@@ -182,5 +237,5 @@ def main():
 
 if __name__ == '__main__':
     if '--selftest' in sys.argv:
-        print('self-test:'); sys.exit(0 if selftest() == 2 else 1)
+        print('self-test:'); sys.exit(0 if selftest() == 3 else 1)
     main()
