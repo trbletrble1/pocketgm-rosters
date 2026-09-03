@@ -1693,3 +1693,48 @@ from the 2026 player build. It is kept here because it reproduces a published
 convention that is itself apparently random: there is no signal to fit, so a draw
 matching the marginal distribution is the honest choice. Written down as a decision
 so it is not discovered later and mistaken for an oversight.
+
+### 33. Prospect ceilings: 2017 is capped at 96, 2000 puts 99 on men who are already 93
+
+Measured 2026-09-03 across every file we hold. Prospects only (`teamID == Rookie`).
+
+| file | at potential 95+ | their median rating | their median gap | max potential |
+|---|---|---|---|---|
+| 2004 | 5 | 73 | **26** | 99 |
+| 2013 | 5 | 76 | **21** | 99 |
+| 2010 | 8 | 75 | 22 | 99 |
+| 1986 | 19 | 83 | 16 | 99 |
+| **2000** | **41** | **88** | **9** | 99 |
+| **2017** | **1** | 82 | 14 | **96** |
+| 1979 (after the PFR fix) | 27 | 77 | 20 | 99 |
+
+**They fail in opposite directions, and neither is about the per-round gradient** —
+every file gives round one about 9 or 10 and later rounds 4 to 8, 2017 included. The
+difference is entirely in the tail.
+
+**2017's ceiling is too low.** Maximum prospect potential in the whole file is **96**,
+with **zero at 99** and one man at 95 or above. No prospect in that class can become a
+franchise player, so Lamar Jackson at 76/84 is not an outlier — it is the ceiling
+doing that to everyone.
+
+**2000 is inflated at both ends**: 41 at 95+, 86 at 90+, and **19 rated 90 or higher
+before playing a down**, against 0 or 1 in every other file. Tomlinson, Reed and
+Peppers reach 99 on a gap of 6 because they start at 92 or 93. **Putting a 99 ceiling
+on a man rated 93 is not a scouting reward.**
+
+**What the good files do:** they put the high ceiling on a LOW-rated man. Rodgers is
+63/99, Donald 76/99, Aikman 83/99. That gap *is* the reward — the user finds someone
+the ratings undersell.
+
+**RULED 2026-09-03.**
+- **2000 and 1986 are ours and will be fixed** on the 1979 pattern — move the ceiling
+  onto low-rated prospects rather than raising men already elite. 1986 is the milder
+  instance of the same defect.
+- **2017 is left alone and documented here instead.** It is a published original and
+  its 96 ceiling came with the file; changing it would overwrite a shipped design
+  rather than repair our own work. **A user should know that scouting in 2017 is
+  flatter than in every other season and that no prospect there can exceed 96.**
+
+**Correction to a premise:** Tom Brady is NOT missing from 2000. He is on New England
+at **73/78, draftNum 199** — rostered rather than a prospect, which is correct: he was
+drafted in 2000, so he belongs on a roster while the pool holds the upcoming classes.
