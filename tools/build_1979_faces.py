@@ -50,6 +50,9 @@ import csv, sys, os, re, json, glob, random, unicodedata, collections, statistic
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import nfl2k5
 from pgm3_paths import sources, repo
+import importlib.util as _ilu
+_rs=_ilu.spec_from_file_location('_r', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'build_1979_ratings.py')); _R=_ilu.module_from_spec(_rs); _rs.loader.exec_module(_R)
+
 
 HAIR_FAM = {0: '1', 1: '5', 2: '3', 3: '4', 4: '2'}
 # EVERY generated token is drawn from the on-disk PLAYER vocabulary, per slot and
@@ -404,7 +407,7 @@ def load_ctx():
     for k, fams in (('hair', '12345'), ('beard', '12345'), ('eyebrows', '12345'), ('head', '12345'), ('nose', '12345'), ('mouth', '12345')):
         missing = [f for f in fams if not pv[k].get(f)]
         assert not missing, f'player vocabulary has no {k} tokens for family {missing}'
-    return dict(archive=load_archive(), n79=load_ros('/tmp/n79/play.csv'), n76=load_ros('/tmp/n76/play.csv'),
+    return dict(archive=load_archive(), n79=load_ros(_R.dump_path('n79')), n76=load_ros(_R.dump_path('n76')),
                 p86=p86, s86=s86, sm=sm, later=later, vocab=voc, pv=pv, staff_vocab=staff_vocab())
 
 if __name__ == '__main__':

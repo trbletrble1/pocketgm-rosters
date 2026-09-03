@@ -31,6 +31,9 @@ Raiders player in 1979), and misses Bill Walsh. **Age is the discriminator.**
 import csv, sys, os, json, collections, statistics as st, hashlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from pgm3_paths import repo
+import importlib.util as _ilu
+_rs=_ilu.spec_from_file_location('_r', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'build_1979_ratings.py')); _R=_ilu.module_from_spec(_rs); _rs.loader.exec_module(_R)
+
 
 ROLES = ['Head Coach', 'Off Co-ord', 'Def Co-ord', 'Special Teams', 'Head Scout',
          'Off Scout', 'Def Scout', 'Head Physio', 'Assistant Physio']
@@ -93,7 +96,7 @@ def main():
     # job he never held is another, and it is not done here. Ryan may name them.
     for code, nm in (('TEN', 'Memphis Southmen'), ('CAR', 'Charlotte Hornets'), ('JAX', 'Jacksonville Sharks'), ('IND', 'Indianapolis Racers')):
         src.append(dict(team=code, head_coach='', born='', w1979='', l1979='', t1979='', wiki_off_coord='', wiki_def_coord='', wiki_special_teams='', wiki_personnel='', _invented=nm))
-    coch = {x['CLNA']: x for x in csv.DictReader(open('/tmp/n79/coch.csv'))}
+    coch = {x['CLNA']: x for x in csv.DictReader(open(_R.dump_path('n79', 'COCH')))}
     players = list(csv.DictReader(open(repo('wip', 'ratings_1979.csv'))))
     fores = sorted({p['name'].split()[0] for p in players})
     surs = sorted({p['name'].split()[-1] for p in players})
@@ -170,7 +173,7 @@ def selftest():
     except (AssertionError, FileNotFoundError) as e:
         print(f'  FAIL: {e}')
     try:
-        coch = {x['CLNA']: x for x in csv.DictReader(open('/tmp/n79/coch.csv'))}
+        coch = {x['CLNA']: x for x in csv.DictReader(open(_R.dump_path('n79', 'COCH')))}
         bad = [n for n in ('B.Arians', 'M.Mornhinweg') if n in coch and abs(int(coch[n]['CAGE']) - (1979 - 1952)) <= 2]
         assert not bad, f'a stock modern coach passed the 1979 age gate: {bad}'
         ok += 1; print('  ok: the stock-coach age gate rejects the 2007 pool')

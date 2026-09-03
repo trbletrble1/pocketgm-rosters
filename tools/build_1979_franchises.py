@@ -225,7 +225,7 @@ def pgm3_position(x):
     spec = importlib.util.spec_from_file_location('r', repo('tools', 'build_1979_ratings.py'))
     Rm = importlib.util.module_from_spec(spec); spec.loader.exec_module(Rm)
     if not hasattr(pgm3_position, '_n79'):
-        pgm3_position._n79 = {Rm.norm(r['PFNA'] + ' ' + r['PLNA']): r for r in csv.DictReader(open('/tmp/n79/play.csv'))}
+        pgm3_position._n79 = {Rm.norm(r['PFNA'] + ' ' + r['PLNA']): r for r in csv.DictReader(open(Rm.dump_path('n79')))}
         pgm3_position._R = Rm
     Rm = pgm3_position._R; n = Rm.norm(x['name'])
     coarse = {'DB': 'S', 'LB': 'OLB', 'FB': 'RB', 'HB': 'RB', 'T': 'OT', 'G': 'OG', 'ILB': 'MLB', 'NT': 'DT'}.get(x['pos'], x['pos'])

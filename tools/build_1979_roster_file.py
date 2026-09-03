@@ -131,8 +131,8 @@ def assemble_players(keys, per_team_constant):
     R = load('build_1979_ratings'); W = json.load(open(repo('wip', 'PGM3_2026_build_data.json')))['weights']
     LIVE = sorted(set().union(*[set(W[p][0]) for p in W]))
     pool = R.pool_attrs(LIVE); rat_pool = R.pool_ratings()
-    n79 = {norm(x['PFNA'] + ' ' + x['PLNA']): x for x in csv.DictReader(open('/tmp/n79/play.csv'))}
-    n76 = {norm(x['PFNA'] + ' ' + x['PLNA']): x for x in csv.DictReader(open('/tmp/n76/play.csv'))}
+    n79 = {norm(x['PFNA'] + ' ' + x['PLNA']): x for x in csv.DictReader(open(R.dump_path('n79')))}
+    n76 = {norm(x['PFNA'] + ' ' + x['PLNA']): x for x in csv.DictReader(open(R.dump_path('n76')))}
     faces = {(r['cohort'], norm(r['name']), r['pos'], r['team']): r['appearance'].split() for r in csv.DictReader(open(repo('wip', 'faces_1979.csv')))}
     # keyed on POSITION as well: Cleveland rostered two Robert Jacksons in 1979,
     # a guard and a linebacker, and a (team, name) key silently kept one of them.
@@ -213,8 +213,17 @@ def assemble_players(keys, per_team_constant):
             rating = povr_to_rating[(pos, int(x['povr']))]; src = n79.get(n) or n76.get(n); rsrc = 'POVR mapped'
         else:
             rating = int(unrated[name]['rating']); src = n76.get(n); rsrc = unrated[name]['basis'][:30]
-        yrs = int(src['PYRP']) if src and src.get('PYRP', '').isdigit() else max(0, int(x['age']) - 22)
-        yrs = R.years_pro({'PYRP': str(yrs)})
+        # years pro: the 1979 mod's PYRP, corrected as the spine's is. A man whose
+        # ONLY record is the 1976 mod carries PYRP as of 1976 and must be aged
+        # forward three years, exactly as his rating was: Vince Papale shipped at
+        # zero years pro — 1976 was his rookie year — with a 2026 draftSeason and a
+        # rookie's contract ladder. Twenty-three men take the 1976 record.
+        if src and n in n79 and src.get('PYRP', '').isdigit():
+            yrs = R.years_pro({'PYRP': src['PYRP']})
+        elif src and src.get('PYRP', '').isdigit():
+            yrs = R.years_pro({'PYRP': src['PYRP']}) + 3
+        else:
+            yrs = max(0, int(x['age']) - 22)
         if x['reason'] == 'INJURY':
             healthy = rating; rating = max(40, healthy - INJURY_DISCOUNT); pot = healthy; stats['injury mechanic'] += 1
         elif not x['povr'].isdigit() and int(x['age']) < 30:

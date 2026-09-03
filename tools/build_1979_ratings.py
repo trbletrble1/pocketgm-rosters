@@ -32,15 +32,23 @@ ALIAS = {
     'roland woolsey': 'rolly woolsey', 'john mckay': 'jk mckay',
 }
 
+DUMPS = {'n79': ('1979madden', 'NFL79.ros'), 'n76': ('1976madden', '1976_raidermike.ros')}
+
+def dump_path(which, table='PLAY'):
+    """Path to a rosdump CSV of a source mod, regenerated if absent. Every 1979
+    tool reads the mods through this so a clean clone rebuilds: a first version
+    had four tools opening /tmp/n79/play.csv directly, which only existed because
+    the ratings tool had happened to run first on this machine."""
+    cache = f'/tmp/{which}/{table.lower()}.csv'
+    if not os.path.exists(cache):
+        os.makedirs(f'/tmp/{which}', exist_ok=True)
+        subprocess.run([sys.executable, repo('tools', 'rosdump.py'), 'dump',
+                        require(*DUMPS[which]), table, '-o', cache], check=True, capture_output=True)
+    return cache
+
 def load_play(path=None):
     """NFL79.ros PLAY table as a list of dicts. Dumped via rosdump."""
-    cache = '/tmp/n79/play.csv'
-    if not os.path.exists(cache):
-        os.makedirs('/tmp/n79', exist_ok=True)
-        subprocess.run([sys.executable, repo('tools', 'rosdump.py'), 'dump',
-                        path or require('1979madden', 'NFL79.ros'), 'PLAY',
-                        '-o', cache], check=True, capture_output=True)
-    return list(csv.DictReader(open(cache)))
+    return list(csv.DictReader(open(dump_path('n79'))))
 
 # PPOS is the standard 21-slot Madden layout. NOT assumed — derived by joining
 # every code to the footballdb position of the men in it (code 0 has the top

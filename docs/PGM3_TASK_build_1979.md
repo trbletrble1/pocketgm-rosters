@@ -1262,6 +1262,14 @@ field split by its source value:
 **Every gate the standing rules name has now run on the written files.** What is
 left is Ryan's: import it and play it.
 
+**Two more, from reading shipped records end to end.** Vince Papale shipped at
+**zero years pro** — his only record is the 1976 mod, whose `PYRP` is as of 1976, his
+rookie year, and his rating had been aged forward three years while that field had not.
+Twenty-three men take the 1976 record; all now carry `PYRP + 3`. And four tools read
+the mod dumps straight from `/tmp`, which existed only because the ratings tool had
+run first on this machine; every read now goes through one regenerating accessor,
+and the final build was run **with the dumps deleted first** to prove it.
+
 ### For Ryan — the fetch list
 
 - **1981–83 PFR draft listings**: membership, pick order, age and career raise for
