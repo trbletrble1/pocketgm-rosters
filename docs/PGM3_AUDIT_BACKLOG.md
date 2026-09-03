@@ -2574,11 +2574,15 @@ one that mattered: the shave took speed 97 → 87 on a pass rusher and overshot
 anyway — he read 97 in game against the 98 aimed at.
 
 **The gate keeps a ceiling at 99**: reached in game, legitimate. 100 is seen
-nowhere and is caught. **Open**: after the revert Folk, Lane Johnson and Garrett
-carry a STORED rating and potential of 100, which the 99 gate fails. Ruling
-needed — a stored-only clamp to 99 with no attribute moved would clear it (the
-game computes from attributes and displays 99 regardless), but that touches
-values just ruled restored.
+nowhere and is caught. **Resolved by ruling**: Folk, Lane Johnson and Garrett had a STORED rating and
+potential of 100 after the revert, which the 99 gate fails. Stored values
+clamped to 99, **no attribute touched** — the game computes what it shows from
+attributes, so a stored 100 never reached the player; it was a build artefact,
+and the clamp changes nothing in play. Gate ALL CLEAR.
+
+**Carried forward** (precedent): `weights.json` is a fit, not the formula — the
+shave aimed at 98 and Parsons read 97. Fine for ordering and distribution; any
+work that targets a specific rating is verified in game.
 
 ### DOCUMENTED CHARACTERISTIC — 59-man rosters, by ruling
 

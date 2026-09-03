@@ -4705,3 +4705,16 @@ fact about when the snapshot was taken.** Reverted the same day. The rule from
 the earlier precedent stands and gets a corollary: **a game-generated file
 supports a claim about what the engine PRODUCES at that moment, not about what
 it permits.** Play, or a simmed-forward export, is the evidence for a ceiling.
+
+---
+
+## `weights.json` is a fit, not the formula — fine for ordering, not for hitting a number
+
+**2026-09-03, from the same failed pass as the snapshot precedent.** The 98 cap
+shaved Micah Parsons' attributes until the weighted sum read 98.4; the game
+displayed **97**. The weights came from a regression on the build data. They have
+carried everything that needed ordering or a distribution — the quarterback
+alignment, the rating invariant, the outcome ceilings — and they will go on
+doing so. **What they cannot do is land a specific number.** Any work that
+targets a particular rating for a particular man is verified in game, not
+against the weights, before it is called done.
