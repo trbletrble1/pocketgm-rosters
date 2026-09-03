@@ -1,0 +1,257 @@
+round,pick,team,name,pos,age,last_season,all_pro,pro_bowls,seasons_started,career_av,draft_av,college
+1,1,HOU,Mario Williams,DE,21,2016,1,4,9,79,36,North Carolina St.
+1,2,NOR,Reggie Bush,RB,21,2016,0,0,8,61,34,USC
+1,3,TEN,Vince Young,QB,23,2011,0,2,4,33,31,Texas
+1,4,NYJ,D'Brickashaw Ferguson,T,22,2015,0,3,10,58,58,Virginia
+1,5,GNB,A.J. Hawk,LB,22,2016,0,1,10,55,52,Ohio St.
+1,6,SFO,Vernon Davis,TE,22,2019,0,2,11,51,42,Maryland
+1,7,OAK,Michael Huff,DB,23,2013,0,0,6,33,33,Texas
+1,8,BUF,Donte Whitner,DB,21,2016,0,2,10,47,19,Ohio St.
+1,9,DET,Ernie Sims,LB,21,2013,0,0,4,29,18,Florida St.
+1,10,ARI,Matt Leinart,QB,23,2012,0,0,1,12,12,USC
+1,11,DEN,Jay Cutler,QB,23,2017,0,1,10,86,28,Vanderbilt
+1,12,BAL,Haloti Ngata,DT,22,2018,2,5,12,100,92,Oregon
+1,13,CLE,Kamerion Wimbley,DE,22,2014,0,0,8,44,24,Florida St.
+1,14,PHI,Brodrick Bunkley,DT,22,2014,0,0,7,40,25,Florida St.
+1,15,STL,Tye Hill,DB,24,2010,0,0,0,9,7,Clemson
+1,16,MIA,Jason Allen,DB,23,2012,0,0,1,13,9,Tennessee
+1,17,MIN,Chad Greenway,LB,23,2016,0,2,10,66,66,Iowa
+1,18,DAL,Bobby Carpenter,LB,23,2012,0,0,0,11,5,Ohio St.
+1,19,SDG,Antonio Cromartie,DB,22,2016,1,4,8,66,26,Florida St.
+1,20,KAN,Tamba Hali,DE,22,2017,0,5,10,75,75,Penn St.
+1,21,NWE,Laurence Maroney,RB,21,2010,0,0,0,26,25,Minnesota
+1,22,SFO,Manny Lawson,DE,22,2015,0,0,7,47,23,North Carolina St.
+1,23,TAM,Davin Joseph,G,22,2014,0,2,8,42,38,Oklahoma
+1,24,CIN,Johnathan Joseph,DB,22,2020,0,2,15,67,19,South Carolina
+1,25,PIT,Santonio Holmes,WR,22,2014,0,0,6,47,35,Ohio St.
+1,26,BUF,John McCargo,DT,23,2011,0,0,0,4,4,North Carolina St.
+1,27,CAR,DeAngelo Williams,RB,23,2016,0,1,6,61,51,Memphis
+1,28,JAX,Marcedes Lewis,TE,22,2025,0,1,15,35,33,UCLA
+1,29,NYJ,Nick Mangold,C,22,2016,2,7,11,73,73,Ohio St.
+1,30,IND,Joseph Addai,RB,23,2011,0,1,4,50,50,LSU
+1,31,SEA,Kelly Jennings,DB,23,2011,0,0,2,18,17,Miami (FL)
+1,32,NYG,Mathias Kiwanuka,DE,23,2014,0,0,5,37,37,Boston Col.
+2,33,HOU,DeMeco Ryans,LB,22,2015,0,2,8,58,39,Alabama
+2,34,CLE,D'Qwell Jackson,LB,22,2016,0,1,9,61,40,Maryland
+2,35,WAS,Rocky McIntosh,LB,23,2013,0,0,5,38,33,Miami (FL)
+2,36,NWE,Chad Jackson,WR,21,2008,0,0,0,2,2,Florida
+2,37,ATL,Jimmy Williams,DB,22,2007,0,0,0,5,5,Virginia Tech
+2,38,OAK,Thomas Howard,LB,23,2013,0,0,5,33,25,Texas-El Paso
+2,39,PHI,Winston Justice,T,21,2013,0,0,3,21,16,USC
+2,40,DET,Daniel Bullocks,DB,23,2008,0,0,1,7,7,Nebraska
+2,41,ARI,Deuce Lutui,G,23,2012,0,0,5,34,32,USC
+2,42,CHI,Danieal Manning,DB,24,2014,0,0,6,35,21,Abilene Christian
+2,43,NOR,Roman Harper,DB,23,2016,0,2,8,49,40,Alabama
+2,44,NYG,Sinorice Moss,WR,22,2009,0,0,0,4,4,Miami (FL)
+2,45,TEN,LenDale White,RB,21,2009,0,0,1,14,14,USC
+2,46,STL,Joe Klopfenstein,TE,22,2009,0,0,3,3,3,Colorado
+2,47,GNB,Daryn Colledge,T,24,2014,0,0,9,57,38,Boise St.
+2,48,MIN,Cedric Griffin,DB,23,2012,0,0,4,23,23,Texas
+2,49,NYJ,Kellen Clemens,QB,23,2017,0,0,2,10,3,Oregon
+2,50,SDG,Marcus McNeill,T,22,2011,0,2,6,48,48,Auburn
+2,51,MIN,Ryan Cook,C,23,2012,0,0,3,23,17,New Mexico
+2,52,GNB,Greg Jennings,WR,22,2015,0,2,8,66,55,Western Michigan
+2,53,DAL,Anthony Fasano,TE,22,2017,0,0,8,22,2,Notre Dame
+2,54,KAN,Bernard Pollard,DB,21,2014,0,1,7,34,11,Purdue
+2,55,CIN,Andrew Whitworth,T,24,2021,2,4,16,100,66,LSU
+2,56,BAL,Chris Chester,G,23,2016,0,0,9,59,18,Oklahoma
+2,57,CHI,Devin Hester,DB,23,2016,3,4,3,47,43,Miami (FL)
+2,58,CAR,Richard Marshall,DB,21,2014,0,0,3,31,23,Fresno St.
+2,59,TAM,Jeremy Trueblood,T,23,2013,0,0,6,35,31,Boston Col.
+2,60,JAX,Maurice Jones-Drew,RB,21,2014,1,3,4,74,73,UCLA
+2,61,DEN,Tony Scheffler,TE,23,2013,0,0,2,24,16,Western Michigan
+2,62,IND,Tim Jennings,DB,22,2015,0,2,6,43,9,Georgia
+2,63,SEA,Darryl Tapp,DE,21,2017,0,0,2,30,21,Virginia Tech
+2,64,MIN,Tarvaris Jackson,QB,23,2015,0,0,2,22,13,Alabama St.
+3,65,HOU,Charles Spencer,G,24,2006,0,0,0,1,1,Pittsburgh
+3,66,HOU,Eric Winston,T,22,2017,0,0,7,53,41,Miami (FL)
+3,67,GNB,Abdul Hodge,LB,23,2010,0,0,0,2,1,Iowa
+3,68,STL,Claude Wroten,DT,22,2007,0,0,0,2,2,LSU
+3,69,OAK,Paul McQuistan,T,23,2014,0,0,2,24,4,Weber St.
+3,70,BUF,Ashton Youboty,DB,22,2011,0,0,0,8,5,Ohio St.
+3,71,PHI,Chris Gocong,DE,22,2011,0,0,5,29,15,Cal Poly-San Luis Obispo
+3,72,ARI,Leonard Pope,TE,22,2012,0,0,4,6,4,Georgia
+3,73,CHI,Dusty Dvoracek,DT,25,2008,0,0,1,6,6,Oklahoma
+3,74,DET,Brian Calhoun,RB,22,2007,0,0,0,1,1,Wisconsin
+3,75,GNB,Jason Spitz,G,23,2011,0,0,3,24,24,Louisville
+3,76,NYJ,Anthony Schlegel,LB,25,2007,0,0,0,2,0,Ohio St.
+3,77,STL,Jon Alston,LB,23,2009,0,0,0,5,0,Stanford
+3,78,CLE,Travis Wilson,WR,22,2006,0,0,0,0,0,Oklahoma
+3,79,ATL,Jerious Norwood,RB,23,2011,0,0,0,20,20,Mississippi St.
+3,80,JAX,Clint Ingram,LB,23,2009,0,0,3,21,21,Oklahoma
+3,81,SDG,Charlie Whitehurst,QB,24,2016,0,0,0,7,0,Clemson
+3,82,MIA,Derek Hagan,WR,21,2014,0,0,0,12,5,Arizona St.
+3,83,PIT,Anthony Smith,DB,22,2011,0,0,1,12,9,Syracuse
+3,84,SFO,Brandon Williams,WR,22,2007,0,0,0,0,0,Wisconsin
+3,85,KAN,Brodie Croyle,QB,23,2010,0,0,0,2,2,Alabama
+3,86,NWE,David Thomas,TE,23,2012,0,0,3,9,3,Texas
+3,87,BAL,David Pittman,DB,22,2007,0,0,0,1,1,Northwestern St. (LA)
+3,88,CAR,James Anderson,LB,22,2015,0,0,4,31,25,Virginia Tech
+3,89,CAR,Rashad Butler,T,23,2013,0,0,0,7,,Miami (FL)
+3,90,TAM,Maurice Stovall,WR,21,2012,0,0,0,5,5,Notre Dame
+3,91,CIN,Frostee Rucker,DE,22,2018,0,0,5,39,10,USC
+3,92,DAL,Jason Hatcher,DE,24,2015,0,1,5,34,23,Grambling St.
+3,93,STL,Dominique Byrd,TE,22,2011,0,0,0,0,0,USC
+3,94,IND,Freddy Keiaho,LB,23,2009,0,0,2,15,15,San Diego St.
+3,95,PIT,Willie Reid,WR,23,2007,0,0,0,1,1,Florida St.
+3,96,NYG,Gerris Wilkinson,LB,23,2010,0,0,0,6,6,Georgia Tech
+3,97,NYJ,Eric Smith,DB,23,2012,0,0,1,18,18,Michigan St.
+4,98,HOU,Owen Daniels,TE,23,2015,0,2,9,41,35,Wisconsin
+4,99,PHI,Max Jean-Gilles,G,22,2010,0,0,2,14,14,Georgia
+4,100,SFO,Michael Robinson,WR,23,2013,0,1,1,7,4,Penn St.
+4,101,OAK,Darnell Bing,DB,21,2009,0,0,0,1,,USC
+4,102,TEN,Calvin Lowry,DB,23,2008,0,0,0,7,6,Penn St.
+4,103,NYJ,Brad Smith,QB,22,2014,0,0,1,17,12,Missouri
+4,104,GNB,Cory Rodgers,WR,,,0,0,0,,,TCU
+4,105,BUF,Ko Simpson,DB,22,2009,0,0,2,12,10,South Carolina
+4,106,NWE,Garrett Mills,FB,22,2010,0,0,0,1,,Tulsa
+4,107,ARI,Gabe Watson,DT,22,2010,0,0,1,11,11,Michigan
+4,108,NOR,Jahri Evans,T,23,2017,4,6,12,114,110,Bloomsburg
+4,109,PHI,Jason Avant,WR,23,2015,0,0,3,29,25,Michigan
+4,110,CLE,Leon Williams,LB,23,2012,0,0,0,9,8,Miami (FL)
+4,111,BAL,Demetrius Williams,WR,23,2010,0,0,0,9,9,Oregon
+4,112,CLE,Isaac Sowells,T,24,2008,0,0,0,1,1,Indiana
+4,113,STL,Victor Adeyanju,DE,23,2009,0,0,2,13,13,Indiana
+4,114,MIA,Joe Toledo,T,,,0,0,0,,,Washington
+4,115,GNB,Will Blackmon,DB,21,2016,0,0,2,16,6,Boston Col.
+4,116,TEN,Stephen Tulloch,LB,21,2016,0,0,7,49,20,North Carolina St.
+4,117,NYJ,Leon Washington,RB,24,2014,1,2,1,30,23,Florida St.
+4,118,NWE,Stephen Gostkowski,K,22,2020,2,4,0,37,36,Memphis
+4,119,DEN,Brandon Marshall,WR,22,2018,1,6,10,83,27,Central Florida
+4,120,CHI,Jamar Williams,LB,22,2010,0,0,0,5,5,Arizona St.
+4,121,CAR,Nate Salley,DB,22,2008,0,0,0,1,1,Ohio St.
+4,122,TAM,Alan Zemaitis,DB,,,0,0,0,,,Penn St.
+4,123,CIN,Domata Peko,DT,21,2020,0,0,12,68,60,Michigan St.
+4,124,NYG,Barry Cofield,DT,22,2015,0,0,8,46,30,Northwestern
+4,125,DAL,Skyler Green,WR,21,2008,0,0,0,0,0,LSU
+4,126,DEN,Elvis Dumervil,DE,22,2017,2,5,6,63,41,Louisville
+4,127,MIN,Ray Edwards,DE,21,2012,0,0,5,37,28,Purdue
+4,128,SEA,Rob Sims,G,22,2014,0,0,7,46,13,Ohio St.
+4,129,NYG,Guy Whimper,DE,23,2013,0,0,1,13,2,East Carolina
+4,130,DEN,Domenik Hixon,WR,21,2013,0,0,0,17,0,Akron
+4,131,PIT,Willie Colon,G,23,2015,0,0,6,40,28,Hofstra
+4,132,BAL,P.J. Daniels,RB,23,,0,0,0,,,Georgia Tech
+4,133,PIT,Orien Harris,DT,23,2009,0,0,0,1,,Miami (FL)
+5,134,BUF,Kyle Williams,DT,23,2018,0,6,11,79,79,LSU
+5,135,NOR,Rob Ninkovich,DE,22,2016,0,0,7,51,0,Purdue
+5,136,NWE,Ryan O'Callaghan,T,23,2010,0,0,1,11,6,California
+5,137,TEN,Terna Nande,LB,23,2006,0,0,0,0,0,Miami (OH)
+5,138,DAL,Pat Watkins,DB,23,2010,0,0,1,6,6,Florida St.
+5,139,ATL,Quinn Ojinnaka,G,22,2012,0,0,2,11,8,Syracuse
+5,140,SFO,Parys Haralson,DE,22,2014,0,0,7,38,31,Tennessee
+5,141,DET,Jonathan Scott,T,23,2014,0,0,1,17,4,Texas
+5,142,ARI,Brandon Johnson,LB,23,2012,0,0,1,13,0,Louisville
+5,143,BUF,Brad Butler,T,22,2009,0,0,2,13,13,Virginia
+5,144,STL,Marques Hagans,WR,23,2008,0,0,0,1,1,Virginia
+5,145,CLE,Jerome Harrison,RB,23,2011,0,0,0,12,10,Washington St.
+5,146,BAL,Dawan Landry,DB,23,2014,0,0,8,43,22,Georgia Tech
+5,147,PHI,Jeremy Bloom,DB,,,0,0,0,,,Colorado
+5,148,GNB,Ingle Martin,QB,24,2006,0,0,0,0,0,Furman
+5,149,MIN,Greg Blue,DB,24,2007,0,0,0,2,2,Georgia
+5,150,NYJ,Jason Pociask,TE,23,2007,0,0,0,0,0,Wisconsin
+5,151,SDG,Tim Dobbins,LB,23,2013,0,0,1,19,9,Iowa St.
+5,152,CLE,DeMario Minter,DB,,,0,0,0,,,Georgia
+5,153,WAS,Anthony Montgomery,NT,22,2009,0,0,1,14,14,Minnesota
+5,154,KAN,Marcus Maxey,DB,23,2006,0,0,0,0,0,Miami (FL)
+5,155,CAR,Jeff King,TE,23,2012,0,0,6,10,8,Virginia Tech
+5,156,TAM,Julian Jenkins,DE,22,2006,0,0,0,1,1,Stanford
+5,157,CIN,A.J. Nicholson,LB,23,2006,0,0,0,0,0,Florida St.
+5,158,NYG,Charlie Peprah,DB,23,2012,0,0,2,12,,Alabama
+5,159,CHI,Mark Anderson,DE,23,2012,0,0,1,21,15,Alabama
+5,160,JAX,Brent Hawkins,DE,23,2007,0,0,0,3,3,Illinois St.
+5,161,DEN,Chris Kuper,G,23,2013,0,0,5,35,35,North Dakota
+5,162,IND,Michael Toudouze,G,23,2011,0,0,0,1,1,TCU
+5,163,SEA,David Kirtman,RB,23,2008,0,0,0,0,0,USC
+5,164,PIT,Omar Jacobs,QB,,,0,0,0,,,Bowling Green
+5,165,GNB,Tony Moll,T,23,2011,0,0,0,13,10,Nevada
+5,166,BAL,Quinn Sypniewski,TE,24,2007,0,0,1,2,2,Colorado
+5,167,PIT,Charles Davis,TE,,,0,0,0,,,Purdue
+5,168,PHI,Omar Gaither,LB,22,2013,0,0,2,25,22,Tennessee
+5,169,TEN,Jesse Mahelona,DT,23,2007,0,0,0,1,1,Tennessee
+6,170,HOU,Wali Lundy,RB,22,2006,0,0,1,5,5,Virginia
+6,171,NOR,Mike Hass,WR,23,2009,0,0,0,0,,Oregon St.
+6,172,TEN,Jonathan Orr,WR,,,0,0,0,,,Wisconsin
+6,173,WAS,Reed Doughty,DB,23,2013,0,0,3,20,20,Northern Colorado
+6,174,NOR,Josh Lay,DB,,,0,0,0,,,Pittsburgh
+6,175,SFO,Delanie Walker,WR,22,2019,0,3,7,39,8,Central Missouri St.
+6,176,OAK,Kevin Boothe,T,23,2014,0,0,4,27,3,Cornell
+6,177,ARI,Jonathan Lewis,DT,22,2006,0,0,0,0,0,Virginia Tech
+6,178,BUF,Keith Ellison,LB,22,2010,0,0,3,19,19,Oregon St.
+6,179,DET,Dee McCann,DB,,,0,0,0,,,West Virginia
+6,180,CLE,Lawrence Vickers,FB,23,2012,0,0,3,3,2,Colorado
+6,181,CLE,Babatunde Oshinowo,DT,23,2007,0,0,0,0,0,Stanford
+6,182,DAL,Montavious Stanley,DT,24,2009,0,0,0,5,,Louisville
+6,183,GNB,Johnny Jolly,DT,23,2013,0,0,3,21,21,Texas A&M
+6,184,ATL,Adam Jennings,WR,23,2009,0,0,0,0,0,Fresno St.
+6,185,GNB,Tyrone Culver,DB,23,2012,0,0,0,7,1,Fresno St.
+6,186,KAN,Tre Stallings,G,23,2007,0,0,0,0,0,Mississippi St.
+6,187,SDG,Jeromey Clary,T,22,2013,0,0,6,47,47,Kansas St.
+6,188,SDG,Kurt Smith,K,,,0,0,0,,,Virginia
+6,189,NYJ,Drew Coleman,DB,23,2011,0,0,0,11,8,TCU
+6,190,KAN,Jeff Webb,WR,24,2008,0,0,0,2,2,San Diego St.
+6,191,NWE,Jeremy Mincey,DE,22,2015,0,0,4,29,,Florida
+6,192,SFO,Marcus Hudson,DB,23,2010,0,0,0,5,4,North Carolina St.
+6,193,CIN,Reggie McNeal,QB,22,2006,0,0,0,0,0,Texas A&M
+6,194,TAM,Bruce Gradkowski,QB,23,2014,0,0,1,8,3,Toledo
+6,195,CHI,J.D. Runnels,RB,22,2006,0,0,0,0,0,Oklahoma
+6,196,WAS,Kedric Golston,DT,23,2016,0,0,4,27,27,Georgia
+6,197,SFO,Melvin Oliver,DE,23,2006,0,0,1,5,5,LSU
+6,198,DEN,Greg Eslinger,C,,,0,0,0,,,Minnesota
+6,199,IND,Charlie Johnson,T,22,2014,0,0,7,52,30,Oklahoma St.
+6,200,CHI,Tyler Reed,G,,,0,0,0,,,Penn St.
+6,201,PIT,Marvin Philip,C,,,0,0,0,,,California
+6,202,TAM,T.J. Williams,TE,,,0,0,0,,,North Carolina St.
+6,203,BAL,Sam Koch,P,24,2021,0,1,0,25,25,Nebraska
+6,204,PHI,LaJuan Ramsey,DT,22,2009,0,0,0,4,2,USC
+6,205,NWE,Dan Stevenson,G,,,0,0,0,,,Notre Dame
+6,206,NWE,Le Kevin Smith,DT,24,2010,0,0,0,5,3,Nebraska
+6,207,IND,Antoine Bethea,DB,22,2019,0,3,12,63,40,Howard
+6,208,BAL,Derrick Martin,DB,21,2013,0,0,0,5,2,Wyoming
+7,209,CIN,Ethan Kilmer,WR,23,2006,0,0,0,0,0,Penn St.
+7,210,NOR,Zach Strief,G,22,2017,0,0,6,50,50,Northwestern
+7,211,DAL,Pat McQuistan,T,23,2012,0,0,0,8,3,Weber St.
+7,212,MIA,Fred Evans,DT,22,2013,0,0,0,9,0,Texas St.
+7,213,JAX,James Wyche,DE,24,2009,0,0,0,0,0,Syracuse
+7,214,OAK,Chris Morris,C,23,2010,0,0,1,5,5,Michigan St.
+7,215,TEN,Cortland Finnegan,DB,22,2015,1,1,7,53,43,Samford
+7,216,BUF,Terrance Pennington,T,22,2007,0,0,1,4,4,New Mexico
+7,217,DET,Fred Matua,G,,,0,0,0,,,USC
+7,218,ARI,Todd Watkins,WR,23,2009,0,0,0,1,,BYU
+7,219,BAL,Ryan LaCasse,LB,23,2006,0,0,0,1,,Syracuse
+7,220,NYJ,Titus Adams,DT,23,2009,0,0,0,0,,Nebraska
+7,221,STL,Tim McGarigle,LB,22,2007,0,0,0,1,1,Northwestern
+7,222,CLE,Justin Hamilton,DB,23,2008,0,0,0,1,1,Virginia Tech
+7,223,ATL,D.J. Shockley,QB,,,0,0,0,,,Georgia
+7,224,DAL,E.J. Whitley,C,,,0,0,0,,,Texas Tech
+7,225,SDG,Chase Page,DT,23,2007,0,0,0,0,,North Carolina
+7,226,MIA,Rodrique Wright,DT,22,2008,0,0,0,4,4,Texas
+7,227,SDG,Jimmy Martin,C,,,0,0,0,,,Virginia Tech
+7,228,KAN,Jarrad Page,DB,21,2011,0,0,2,18,16,UCLA
+7,229,NWE,Willie Andrews,DB,22,2007,0,0,0,3,3,Baylor
+7,230,WAS,Kili Lefotu,G,,,0,0,0,,,Arizona
+7,231,CIN,Bennie Brazell,WR,,,0,0,0,,,LSU
+7,232,NYG,Gerrick McPhearson,DB,,,0,0,0,,,Maryland
+7,233,MIA,Devin Aromashodu,WR,22,2012,0,0,0,10,,Auburn
+7,234,CAR,Will Montgomery,G,23,2015,0,0,4,34,2,Virginia Tech
+7,235,TAM,Justin Phinisee,DB,,,0,0,0,,,Oregon
+7,236,JAX,Dee Webb,DB,21,2006,0,0,0,1,1,Florida
+7,237,CAR,Stanley McClover,DE,21,2008,0,0,0,1,1,Auburn
+7,238,IND,T.J. Rushing,DB,23,2009,0,0,0,3,3,Stanford
+7,239,SEA,Ryan Plackemeier,P,22,2008,0,0,0,5,4,Wake Forest
+7,240,PIT,Cedric Humes,RB,,,0,0,0,,,Virginia Tech
+7,241,TAM,Charles Bennett,LB,23,2006,0,0,0,0,0,Clemson
+7,242,STL,Mark Setterstrom,G,22,2009,0,0,0,5,5,Minnesota
+7,243,STL,Tony Palmer,G,23,2007,0,0,0,0,,Missouri
+7,244,TAM,Tim Massaquoi,TE,24,2007,0,0,0,0,,Michigan
+7,245,TEN,Spencer Toone,LB,26,2006,0,0,0,0,0,Utah
+7,246,TEN,Quinton Ganther,RB,22,2010,0,0,0,3,1,Utah
+7,247,DET,Anthony Cannon,LB,21,2008,0,0,0,3,3,Tulane
+7,248,BUF,Aaron Merz,G,23,2006,0,0,0,1,1,California
+7,249,SEA,Ben Obomanu,WR,22,2013,0,0,0,10,10,Auburn
+7,250,WAS,Kevin Simon,LB,,,0,0,0,,,Tennessee
+7,251,HOU,David Anderson,WR,23,2011,0,0,0,7,7,Colorado St.
+7,252,NOR,Marques Colston,WR,23,2015,0,0,7,72,72,Hofstra
+7,253,GNB,Dave Tollefson,DE,24,2012,0,0,0,6,,NW Missouri St.
+7,254,SFO,Vickiel Vaughn,DB,,,0,0,0,,,Arkansas
+7,255,OAK,Kevin McMahan,WR,,,0,0,0,,,Maine
+3,1,CIN,Ahmad Brooks,LB,22,2017,0,1,6,54,3,Virginia

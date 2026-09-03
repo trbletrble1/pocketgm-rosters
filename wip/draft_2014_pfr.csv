@@ -1,0 +1,257 @@
+round,pick,team,name,pos,age,last_season,all_pro,pro_bowls,seasons_started,career_av,draft_av,college
+1,1,HOU,Jadeveon Clowney,DE,21,2025,0,3,10,63,38,South Carolina
+1,2,STL,Greg Robinson,T,21,2019,0,0,5,24,13,Auburn
+1,3,JAX,Blake Bortles,QB,22,2019,0,0,5,44,44,Central Florida
+1,4,BUF,Sammy Watkins,WR,21,2022,0,0,6,43,20,Clemson
+1,5,OAK,Khalil Mack,LB,23,2025,3,9,11,105,41,Buffalo
+1,6,ATL,Jake Matthews,T,22,2025,0,1,12,75,75,Texas A&M
+1,7,TAM,Mike Evans,WR,21,2025,0,6,11,80,80,Texas A&M
+1,8,CLE,Justin Gilbert,DB,22,2016,0,0,0,4,3,Oklahoma St.
+1,9,MIN,Anthony Barr,LB,22,2023,0,4,7,56,52,UCLA
+1,10,DET,Eric Ebron,TE,21,2021,0,1,4,29,15,North Carolina
+1,11,TEN,Taylor Lewan,T,23,2022,0,3,7,48,48,Michigan
+1,12,NYG,Odell Beckham Jr.,WR,21,2024,0,3,6,59,41,LSU
+1,13,STL,Aaron Donald,DT,23,2023,8,10,10,123,123,Pittsburgh
+1,14,CHI,Kyle Fuller,DB,22,2022,1,2,5,48,45,Virginia Tech
+1,15,PIT,Ryan Shazier,LB,22,2017,0,2,3,27,27,Ohio St.
+1,16,DAL,Zack Martin,G,23,2024,7,9,11,103,103,Notre Dame
+1,17,BAL,C.J. Mosley,LB,22,2024,0,5,8,81,59,Alabama
+1,18,NYJ,Calvin Pryor,DB,22,2017,0,0,3,13,13,Louisville
+1,19,MIA,Ja'Wuan James,T,22,2022,0,0,4,27,26,Tennessee
+1,20,NOR,Brandin Cooks,WR,20,2025,0,0,10,73,21,Oregon St.
+1,21,GNB,Ha Ha Clinton-Dix,DB,21,2021,0,1,6,34,24,Alabama
+1,22,CLE,Johnny Manziel,QB,21,2015,0,0,0,4,4,Texas A&M
+1,23,KAN,Dee Ford,LB,23,2021,0,1,2,23,21,Auburn
+1,24,CIN,Darqueze Dennard,DB,22,2021,0,0,0,13,12,Michigan St.
+1,25,SDG,Jason Verrett,DB,23,2023,0,1,2,17,13,TCU
+1,26,PHI,Marcus Smith,LB,22,2018,0,0,0,4,3,Louisville
+1,27,ARI,Deone Bucannon,DB,22,2020,0,0,4,32,29,Washington St.
+1,28,CAR,Kelvin Benjamin,WR,23,2018,0,0,4,22,18,Florida St.
+1,29,NWE,Dominique Easley,DT,22,2018,0,0,0,7,4,Florida
+1,30,SFO,Jimmie Ward,DB,23,2024,0,0,6,31,25,Northern Illinois
+1,31,DEN,Bradley Roby,DB,22,2023,0,0,4,26,14,Ohio St.
+1,32,MIN,Teddy Bridgewater,QB,21,2025,0,1,4,49,22,Louisville
+2,33,HOU,Xavier Su'a-Filo,G,23,2021,0,0,3,24,17,UCLA
+2,34,DAL,DeMarcus Lawrence,DE,22,2025,0,5,8,78,65,Boise St.
+2,35,CLE,Joel Bitonio,G,22,2025,2,7,11,75,75,Nevada
+2,36,OAK,Derek Carr,QB,23,2024,0,4,11,93,80,Fresno St.
+2,37,ATL,Ra'Shede Hageman,DT,24,2016,0,0,1,8,8,Minnesota
+2,38,TAM,Austin Seferian-Jenkins,TE,21,2018,0,0,2,9,5,Washington
+2,39,JAX,Marqise Lee,WR,22,2019,0,0,2,17,17,USC
+2,40,DET,Kyle Van Noy,LB,23,2025,0,1,8,62,4,BYU
+2,41,STL,Lamarcus Joyner,DB,23,2022,0,0,4,26,15,Florida St.
+2,42,PHI,Jordan Matthews,WR,22,2024,0,0,3,23,21,Vanderbilt
+2,43,NYG,Weston Richburg,OL,23,2019,0,0,5,33,21,Colorado St.
+2,44,BUF,Cyrus Kouandjio,T,21,2018,0,0,0,6,5,Alabama
+2,45,SEA,Paul Richardson,WR,22,2019,0,0,3,14,11,Colorado
+2,46,PIT,Stephon Tuitt,DE,21,2020,0,0,6,38,38,Notre Dame
+2,47,WAS,Trent Murphy,LB,23,2020,0,0,4,33,11,Stanford
+2,48,BAL,Timmy Jernigan,DT,21,2020,0,0,4,25,14,Florida St.
+2,49,NYJ,Jace Amaro,TE,22,2016,0,0,0,4,3,Texas Tech
+2,50,SDG,Jeremiah Attaochu,LB,21,2022,0,0,1,15,8,Georgia Tech
+2,51,CHI,Ego Ferguson,DT,22,2015,0,0,0,2,2,LSU
+2,52,ARI,Troy Niklas,TE,21,2017,0,0,1,1,1,Notre Dame
+2,53,GNB,Davante Adams,WR,21,2025,3,6,11,92,59,Fresno St.
+2,54,TEN,Bishop Sankey,RB,21,2015,0,0,1,6,6,Washington
+2,55,CIN,Jeremy Hill,RB,21,2018,0,0,3,21,21,LSU
+2,56,DEN,Cody Latimer,WR,21,2019,0,0,1,6,3,Indiana
+2,57,SFO,Carlos Hyde,RB,23,2021,0,0,4,32,18,Ohio St.
+2,58,NOR,Stanley Jean-Baptiste,DB,24,2017,0,0,0,0,0,Nebraska
+2,59,IND,Jack Mewhort,T,23,2017,0,0,4,22,22,Ohio St.
+2,60,CAR,Kony Ealy,DE,22,2018,0,0,0,12,10,Missouri
+2,61,JAX,Allen Robinson,WR,21,2024,0,1,8,48,18,Penn St.
+2,62,NWE,Jimmy Garoppolo,QB,22,2025,0,0,3,47,2,Eastern Illinois
+2,63,MIA,Jarvis Landry,WR,21,2022,0,5,8,56,28,LSU
+2,64,SEA,Justin Britt,T,23,2022,0,0,7,41,39,Missouri
+3,65,HOU,C.J. Fiedorowicz,TE,22,2017,0,0,2,6,6,Iowa
+3,66,WAS,Morgan Moses,OL,23,2025,0,0,11,65,36,Virginia
+3,67,MIA,Billy Turner,T,22,2023,0,0,5,35,5,North Dakota St.
+3,68,ATL,Dezmen Southward,DB,23,2017,0,0,0,1,1,Wisconsin
+3,69,TAM,Charles Sims,RB,23,2017,0,0,0,13,13,West Virginia
+3,70,SFO,Marcus Martin,C,20,2020,0,0,2,11,11,USC
+3,71,CLE,Christian Kirksey,LB,22,2022,0,0,5,40,22,Iowa
+3,72,MIN,Scott Crichton,DE,22,2015,0,0,0,2,2,Oregon St.
+3,73,BUF,Preston Brown,LB,21,2019,0,0,6,34,28,Louisville
+3,74,NYG,Jay Bromley,DT,22,2018,0,0,0,5,5,Syracuse
+3,75,STL,Tre Mason,RB,21,2015,0,0,1,8,8,Auburn
+3,76,DET,Travis Swanson,C,23,2018,0,0,4,23,20,Arkansas
+3,77,SFO,Chris Borland,LB,23,2014,0,0,1,6,6,Wisconsin
+3,78,WAS,Spencer Long,G,23,2019,0,0,3,22,16,Nebraska
+3,79,BAL,Terrence Brooks,DB,22,2021,0,0,0,8,2,Florida St.
+3,80,NYJ,Dexter McDougle,DB,23,2018,0,0,0,2,1,Maryland
+3,81,OAK,Gabe Jackson,G,23,2023,0,0,9,47,36,Mississippi St.
+3,82,CHI,Will Sutton,DT,22,2016,0,0,2,8,8,Arizona St.
+3,83,HOU,Louis Nix,DT,23,2015,0,0,0,0,,Notre Dame
+3,84,ARI,Kareem Martin,DE,22,2020,0,0,2,12,9,North Carolina
+3,85,GNB,Khyri Thornton,DT,24,2017,0,0,0,3,,Southern Miss
+3,86,PHI,Josh Huff,WR,22,2016,0,0,0,6,6,Oregon
+3,87,KAN,Phillip Gaines,DB,23,2020,0,0,1,10,6,Rice
+3,88,CIN,Will Clarke,DE,23,2018,0,0,0,6,4,West Virginia
+3,89,SDG,Chris Watt,G,24,2015,0,0,0,5,5,Notre Dame
+3,90,IND,Donte Moncrief,WR,21,2020,0,0,3,18,15,Mississippi
+3,91,ARI,John Brown,WR,24,2022,0,0,5,36,19,Pittsburg St.
+3,92,CAR,Trai Turner,OL,21,2022,0,5,9,51,41,LSU
+3,93,JAX,Brandon Linder,OL,22,2021,0,0,6,31,31,Miami (FL)
+3,94,CLE,Terrance West,RB,23,2017,0,0,2,11,3,Towson
+3,95,DEN,Michael Schofield,OL,23,2023,0,0,5,38,10,Michigan
+3,96,MIN,Jerick McKinnon,RB,22,2023,0,0,1,32,20,Georgia Southern
+3,97,PIT,Dri Archer,WR,23,2015,0,0,0,0,0,Kent St.
+3,98,GNB,Richard Rodgers,TE,22,2022,0,0,2,14,11,California
+3,99,BAL,Crockett Gillmore,TE,22,2016,0,0,1,4,4,Colorado St.
+3,100,SFO,Brandon Thomas,OL,23,,0,0,0,,,Clemson
+4,101,PHI,Jaylen Watkins,DB,22,2020,0,0,0,5,3,Florida
+4,102,WAS,Bashaud Breeland,DB,22,2021,0,0,7,34,20,Clemson
+4,103,ATL,Devonta Freeman,RB,22,2021,0,2,4,49,45,Florida St.
+4,104,NYJ,Jalen Saunders,WR,21,2014,0,0,0,0,0,Oklahoma
+4,105,NWE,Bryan Stork,C,23,2015,0,0,1,11,11,Florida St.
+4,106,SFO,Bruce Ellington,WR,23,2018,0,0,0,7,2,South Carolina
+4,107,OAK,Justin Ellis,DT,23,2022,0,0,3,25,19,Louisiana Tech
+4,108,SEA,Cassius Marsh,DE,22,2021,0,0,0,13,5,UCLA
+4,109,BUF,Ross Cockrell,DB,23,2021,0,0,3,20,0,Duke
+4,110,STL,Maurice Alexander,DB,23,2019,0,0,1,11,10,Utah St.
+4,111,CIN,Russell Bodine,C,22,2018,0,0,5,30,28,North Carolina
+4,112,TEN,DaQuan Jones,DT,22,2025,0,0,10,60,34,Penn St.
+4,113,NYG,Andre Williams,RB,22,2017,0,0,0,7,6,Boston Col.
+4,114,JAX,Aaron Colvin,DB,22,2019,0,0,1,16,13,Oklahoma
+4,115,NYJ,Shaquelle Evans,WR,23,,0,0,0,,,UCLA
+4,116,OAK,Keith McGill,DB,25,2017,0,0,0,4,4,Utah
+4,117,CHI,Ka'Deem Carey,RB,21,2016,0,0,0,3,3,Arizona
+4,118,PIT,Martavis Bryant,WR,22,2018,0,0,1,19,17,Clemson
+4,119,DAL,Anthony Hitchens,LB,22,2021,0,0,7,41,21,Iowa
+4,120,ARI,Logan Thomas,QB,23,2023,0,0,3,15,0,Virginia Tech
+4,121,GNB,Carl Bradford,LB,22,2016,0,0,0,0,0,Arizona St.
+4,122,TEN,Marqueston Huff,DB,22,2016,0,0,0,4,3,Wyoming
+4,123,SEA,Kevin Norwood,WR,24,2015,0,0,0,1,1,Alabama
+4,124,KAN,De'Anthony Thomas,RB,21,2019,0,0,0,7,7,Oregon
+4,125,MIA,Walt Aikens,DB,23,2019,0,0,0,6,6,Liberty
+4,126,NOR,Khairi Fortt,LB,22,2014,0,0,0,0,,California
+4,127,CLE,Pierre Desir,DB,23,2021,0,0,3,18,2,Lindenwood
+4,128,CAR,Tre Boston,DB,22,2020,0,0,4,28,17,North Carolina
+4,129,SFO,Dontae Johnson,DB,22,2022,0,0,1,15,15,North Carolina St.
+4,130,NWE,James White,RB,22,2021,0,0,0,37,37,Wisconsin
+4,131,CHI,Brock Vereen,DB,22,2015,0,0,0,2,2,Minnesota
+4,132,SEA,Kevin Pierre-Louis,LB,22,2022,0,0,1,15,3,Boston Col.
+4,133,DET,Nevin Lawson,DB,23,2021,0,0,5,22,17,Utah St.
+4,134,BAL,Brent Urban,DT,23,2025,0,0,2,24,18,Virginia
+4,135,HOU,Tom Savage,QB,24,2017,0,0,1,3,3,Pittsburgh
+4,136,DET,Larry Webster,DE,24,2016,0,0,0,0,,Bloomsburg
+4,137,NYJ,Dakota Dozier,OL,23,2021,0,0,1,13,3,Furman
+4,138,BAL,Lorenzo Taliaferro,RB,22,2016,0,0,0,3,3,Coastal Carolina
+4,139,ATL,Prince Shembo,LB,22,2014,0,0,0,2,2,Notre Dame
+4,140,NWE,Cameron Fleming,T,22,2024,0,0,2,30,13,Stanford
+5,141,PHI,Taylor Hart,DE,23,2016,0,0,0,1,1,Oregon
+5,142,WAS,Ryan Grant,WR,23,2019,0,0,1,10,7,Tulane
+5,143,TAM,Kadeem Edwards,OL,23,,0,0,0,,,Tennessee St.
+5,144,JAX,Telvin Smith,LB,23,2018,0,1,5,42,42,Florida St.
+5,145,MIN,David Yankey,OL,22,2016,0,0,0,0,,Stanford
+5,146,DAL,Devin Street,WR,23,2016,0,0,0,1,1,Pittsburgh
+5,147,ATL,Ricardo Allen,DB,22,2021,0,0,5,25,24,Purdue
+5,148,CAR,Bene Benwikere,DB,23,2018,0,0,1,10,6,San Jose St.
+5,149,TAM,Kevin Pamphile,T,23,2018,0,0,2,16,15,Purdue
+5,150,SFO,Aaron Lynch,DE,21,2020,0,0,1,14,10,South Florida
+5,151,TEN,Avery Williamson,LB,22,2021,0,0,5,38,25,Kentucky
+5,152,NYG,Nat Berhe,DB,23,2018,0,0,0,3,3,San Diego St.
+5,153,BUF,Cyril Richardson,G,23,2014,0,0,0,2,2,Baylor
+5,154,NYJ,Jeremiah George,LB,22,2017,0,0,0,3,,Iowa St.
+5,155,MIA,Arthur Lynch,TE,24,,0,0,0,,,Georgia
+5,156,DEN,Lamin Barrow,LB,23,2015,0,0,0,2,1,LSU
+5,157,PIT,Shaquille Richardson,DB,22,,0,0,0,,,Arizona
+5,158,DET,Caraun Reid,DT,22,2021,0,0,1,9,6,Princeton
+5,159,JAX,Chris Smith,DE,22,2021,0,0,0,8,3,Arkansas
+5,160,ARI,Ed Stinson,DE,24,2017,0,0,0,5,5,Alabama
+5,161,GNB,Corey Linsley,C,23,2023,1,1,9,64,47,Ohio St.
+5,162,PHI,Ed Reynolds,DB,22,2016,0,0,1,4,1,Stanford
+5,163,KAN,Aaron Murray,QB,23,,0,0,0,,,Georgia
+5,164,CIN,A.J. McCarron,QB,23,2023,0,0,0,4,3,Alabama
+5,165,SDG,Ryan Carrethers,DT,23,2016,0,0,0,3,3,Arkansas St.
+5,166,IND,Jonathan Newsome,LB,23,2015,0,0,0,4,4,Ball St.
+5,167,NOR,Vinnie Sunseri,DB,22,2016,0,0,0,0,0,Alabama
+5,168,ATL,Marquis Spruill,LB,23,,0,0,0,,,Syracuse
+5,169,NOR,Ronald Powell,LB,23,2014,0,0,0,1,1,Florida
+5,170,SFO,Keith Reaser,DB,23,2017,0,0,0,2,2,Florida Atlantic
+5,171,MIA,Jordan Tripp,LB,23,2017,0,0,0,3,1,Montana
+5,172,SEA,Jimmy Staten,DT,23,,0,0,0,,,Middle Tenn. St.
+5,173,PIT,Wesley Johnson,OL,23,2018,0,0,1,11,,Vanderbilt
+5,174,NYG,Devon Kennard,DE,23,2022,0,0,5,33,13,USC
+5,175,BAL,John Urschel,G,23,2016,0,0,0,7,7,Penn St.
+5,176,GNB,Jared Abbrederis,WR,23,2017,0,0,0,1,1,Wisconsin
+6,177,HOU,Jeoffrey Pagan,DE,21,2015,0,0,0,1,1,Alabama
+6,178,TEN,Zach Mettenberger,QB,23,2015,0,0,1,1,1,LSU
+6,179,NWE,Jon Halapio,OL,23,2019,0,0,2,10,,Florida
+6,180,SFO,Kenneth Acker,DB,22,2017,0,0,1,8,5,SMU
+6,181,HOU,Alfred Blue,RB,23,2018,0,0,1,18,18,LSU
+6,182,MIN,Antone Exum,DB,23,2019,0,0,0,6,3,Virginia Tech
+6,183,CHI,David Fales,QB,23,2019,0,0,0,1,0,San Jose St.
+6,184,MIN,Kendall James,DB,23,,0,0,0,,,Maine
+6,185,TAM,Robert Herron,WR,22,2014,0,0,0,0,0,Wyoming
+6,186,WAS,Lache Seastrunk,RB,23,,0,0,0,,,Baylor
+6,187,NYG,Bennett Jackson,DB,22,2020,0,0,0,0,,Notre Dame
+6,188,STL,E.J. Gaines,DB,22,2018,0,0,3,13,9,Missouri
+6,189,DET,T.J. Jones,WR,22,2019,0,0,0,7,7,Notre Dame
+6,190,MIA,Matt Hazel,WR,22,2017,0,0,0,0,0,Coastal Carolina
+6,191,CHI,Pat O'Donnell,P,23,2025,0,0,1,18,17,Miami (FL)
+6,192,PIT,Jordan Zumwalt,LB,22,,0,0,0,,,UCLA
+6,193,KAN,Zach Fulton,G,22,2020,0,0,6,39,21,Tennessee
+6,194,BAL,Keith Wenning,QB,23,,0,0,0,,,Ball St.
+6,195,NYJ,Brandon Dixon,DB,24,2017,0,0,0,3,,NW Missouri St.
+6,196,ARI,Walt Powell,WR,22,2016,0,0,0,1,,Murray St.
+6,197,GNB,Demetri Goodson,DB,25,2016,0,0,0,2,2,Baylor
+6,198,NWE,Zach Moore,DE,24,2018,0,0,0,3,1,Concordia-St.Paul (MN)
+6,199,SEA,Garrett Scott,OL,22,,0,0,0,,,Marshall
+6,200,KAN,Laurent Duvernay-Tardif,OL,23,2022,0,0,4,29,27,McGill
+6,201,SDG,Marion Grice,RB,23,2014,0,0,0,0,,Arizona St.
+6,202,NOR,Tavon Rooks,OL,24,,0,0,0,,,Kansas St.
+6,203,IND,Andrew Jackson,LB,22,2014,0,0,0,1,1,Western Kentucky
+6,204,CAR,Tyler Gaffney,RB,23,,0,0,0,,,Stanford
+6,205,JAX,Luke Bowanko,C,23,2018,0,0,1,9,5,Virginia
+6,206,NWE,Jemea Thomas,DB,24,2014,0,0,0,0,,Georgia Tech
+6,207,DEN,Matt Paradis,OL,24,2021,0,0,6,34,21,Boise St.
+6,208,SEA,Eric Pinkins,DB,23,2016,0,0,0,2,1,San Diego St.
+6,209,NYJ,Quincy Enunwa,WR,22,2019,0,0,2,13,13,Nebraska
+6,210,NYJ,IK Enemkpali,DT,23,2015,0,0,0,1,0,Louisiana Tech
+6,211,HOU,Jay Prosch,FB,22,2017,0,0,2,0,0,Auburn
+6,212,CIN,Marquis Flowers,LB,22,2018,0,0,0,7,4,Arizona
+6,213,NYJ,Tajh Boyd,QB,23,,0,0,0,,,Clemson
+6,214,STL,Garrett Gilbert,QB,23,2021,0,0,0,2,,SMU
+6,215,PIT,Daniel McCullers,DT,22,2020,0,0,0,6,6,Tennessee
+7,216,HOU,Andre Hal,DB,22,2018,0,0,3,17,17,Vanderbilt
+7,217,WAS,Ted Bolser,TE,23,,0,0,0,,,Indiana
+7,218,BAL,Michael Campanaro,WR,23,2017,0,0,0,4,4,Wake Forest
+7,219,OAK,T.J. Carrie,DB,24,2022,0,0,3,22,13,Ohio
+7,220,MIN,Shamar Stephen,DT,23,2021,0,0,4,32,25,Connecticut
+7,221,BUF,Randell Johnson,LB,23,2016,0,0,0,2,2,Florida Atlantic
+7,222,JAX,Storm Johnson,RB,22,2014,0,0,0,0,0,Central Florida
+7,223,MIN,Brandon Watts,LB,23,2015,0,0,0,1,1,Georgia Tech
+7,224,PHI,Beau Allen,DT,22,2019,0,0,1,13,8,Wisconsin
+7,225,MIN,Jabari Price,DB,21,2014,0,0,0,1,1,North Carolina
+7,226,STL,Mitchell Van Dyk,OL,23,,0,0,0,,,Portland St.
+7,227,SEA,Kiero Small,RB,25,2014,0,0,0,0,,Arkansas
+7,228,WAS,Zach Hocker,K,23,2015,0,0,0,0,,Arkansas
+7,229,DET,Nate Freese,K,24,2014,0,0,0,-1,-1,Boston Col.
+7,230,PIT,Rob Blanchflower,TE,24,,0,0,0,,,Massachusetts
+7,231,DAL,Ben Gardner,DE,24,,0,0,0,,,Stanford
+7,232,IND,Ulrick John,OL,22,2017,0,0,0,2,,Georgia St.
+7,233,NYJ,Trevor Reilly,LB,26,2017,0,0,0,4,3,Utah
+7,234,MIA,Terrence Fede,DE,22,2017,0,0,0,5,5,Marist
+7,235,OAK,Shelby Harris,DE,23,2025,0,0,5,41,1,Illinois St.
+7,236,GNB,Jeff Janis,WR,23,2017,0,0,0,2,2,Saginaw Valley St.
+7,237,BUF,Seantrel Henderson,OL,22,2019,0,0,2,14,13,Miami (FL)
+7,238,DAL,Will Smith,LB,22,,0,0,0,,,Texas Tech
+7,239,CIN,James Wright,WR,22,2016,0,0,0,2,2,LSU
+7,240,SDG,Tevin Reese,WR,23,,0,0,0,,,Baylor
+7,241,STL,C.B. Bryant,DB,22,2016,0,0,0,1,1,Ohio St.
+7,242,DEN,Corey Nelson,LB,22,2019,0,0,0,8,8,Oklahoma
+7,243,SFO,Kaleb Ramsey,DE,25,,0,0,0,,,Boston Col.
+7,244,NWE,Jeremy Gallon,WR,24,,0,0,0,,,Michigan
+7,245,SFO,Trey Millard,FB,23,,0,0,0,,,Oklahoma
+7,246,CHI,Charles Leno Jr.,T,22,2023,0,1,9,53,37,Boise St.
+7,247,OAK,Jonathan Dowling,DB,22,2014,0,0,0,0,0,Western Kentucky
+7,248,DAL,Ahmad Dixon,DB,23,2014,0,0,0,0,,Baylor
+7,249,STL,Michael Sam,DE,24,,0,0,0,,,Missouri
+7,250,STL,Demetrius Rhaney,OL,22,2017,0,0,0,2,2,Tennessee St.
+7,251,DAL,Ken Bishop,DT,23,2015,0,0,0,0,0,Northern Illinois
+7,252,CIN,Lavelle Westbrooks,DB,22,,0,0,0,,,Georgia Southern
+7,253,ATL,Yawin Smallwood,LB,22,,0,0,0,,,Connecticut
+7,254,DAL,Terrance Mitchell,DB,22,2022,0,0,3,20,0,Oregon
+7,255,ATL,Tyler Starr,LB,23,2015,0,0,0,0,0,South Dakota
+7,256,HOU,Lonnie Ballentine,DB,21,2016,0,0,0,0,0,Memphis

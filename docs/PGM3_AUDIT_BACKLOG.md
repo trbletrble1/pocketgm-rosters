@@ -1961,11 +1961,16 @@ Ours carry **21 to 33** men rated down to **32**. The 1979 pool built at `b69ed9
 holds 99 men across two tiers on the same assumption. **Worth settling before that
 pool is used as a template for anything.**
 
-**CAVEAT ON THE SAMPLE: the three staff exports share all 432 identifiers.** They
-are one league exported three times, so this is **n = 1** for staff, against n = 2
-for rosters. The direction is unambiguous — median 7 against 2 is not sampling
-noise — but a second independent staff league should be exported before anything is
-rebuilt on it.
+**THE CAVEAT IS RESOLVED, and the reason is structural: THE GAME SHIPS A FIXED
+STAFF POPULATION AND GENERATES PLAYERS.** The three exports share all 432
+identifiers because those 432 *are* the engine's coaches, not because one file was
+copied. Between two exports, **290 of the 432 records differ** — 284 change
+`teamID`, the rest change contract terms — while ratings, potentials and attributes
+are identical. The rosters, by contrast, share **zero** identifiers between leagues.
+
+So the shared identity is the population, not a repeated sample, and **item 39 is
+CONFIRMED rather than provisional.** It also means our staff builders invent names
+for a cast the game keeps fixed, which is worth knowing before rebuilding the pool.
 
 ### 38. The position-multiplier "band" is our convention, not the game's
 
@@ -1995,3 +2000,38 @@ normal is the divergence.
 would enforce our own convention. The gate should be rebuilt against vanilla, or
 restricted to the one property it was written to catch — a transform making a ratio
 *worse* — without claiming the band describes anything.
+
+### 40. Prospect potential is computed relative to draft-time rating, so career outcome cannot fully determine the ceiling
+
+**Supersedes the deferred halves of items 34 and 35's follow-ups. One defect, two
+symptoms.**
+
+`draft_potential` computes `rating + baseline + raise`, where `baseline` comes from
+`GAP_BY_BAND[rating // 10]` and `raise` from career outcomes. **Both terms are
+anchored on where a man started**, so where he started bounds where he can finish.
+
+**Symptom one — the ceiling is bounded by the floor.** In 2004, Jahri Evans
+(rating 73, career value 114) reaches **99** while Aaron Rodgers (rating 63, career
+value **169**) stops at **95**. Evans was a very good guard; Rodgers was a four-time
+MVP. Rodgers has the largest raise in the class at +32 and still cannot reach the
+top, because 63 + 40 is where the cap bites and 63 + 32 is where he lands.
+
+**Symptom two — the never-played band sits too high.** `GAP_BY_BAND` gives 18
+points of baseline to a man rated in the 40s and 1 to a man in the 90s, so men who
+never played take a median headroom of 7 against 6 for men with a career value of
+1-24. Every fixed file shows it: 1979, 2000 and now 2004.
+
+**1986 escapes both** only because its prospect ratings cluster tightly — 1% in the
+40s, 38% in the 50s — so the baseline barely varies and the raise does the work.
+That is why it reads +0.70 while the others plateau around +0.40.
+
+**NOT FIXED. It reaches every file with a calibrated class** — 1979, 2000, 2004 and
+the three to follow — and wants measuring across the whole set rather than bolting
+on mid-pass. A fix would likely make potential a function of outcome with rating as
+a floor, rather than of rating with outcome as a bonus.
+
+**Two reasoning errors recorded alongside**, both Ryan's and both the same shape:
+Rodgers and Peterson were cited as evidence 2004's mechanism worked, and with a
+real signal applied Peterson rises to 99 while Rodgers falls to 95 — they were the
+flat baseline landing well twice, not a mechanism. **Individual names are not
+evidence about a distribution.**
