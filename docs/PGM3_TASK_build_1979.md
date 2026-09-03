@@ -690,3 +690,86 @@ Thompson DB→**SS**, Deac Sanders DB→**FS**, Don Schwartz DB→**SS**, Sidney
 Justin DB→**CB**, McCartney/Seabron/Kurnick LB→**OLB**, Stokes OT→**T**, and
 Phil Tabor DE→**DT** (his draft entry says DE — a conflict, low stakes).
 Written to `wip/no_data_17_1979.csv` as `jersey` and `season_page_pos`.
+
+
+## Step 4 — ratings BUILT 2026-09-02. Two things in the approved proposal were wrong.
+
+`tools/build_1979_ratings.py`, output `wip/ratings_1979.csv`, 1,408 rated.
+
+### The 17 with no data of any kind do not exist. The join was.
+
+**Coverage is 100%, not 97%.** All 1,408 spine players carry a `POVR`. The 17
+were an artefact of joining on the exact name string: the mod writes **Bill
+Thompson, Tim Stokes, Don Westbrook, Joe Shipp, Phil Tabor, Sid Justin, Walter
+Landers, Arthur Whittington, Ron McCartney, Howard Kurnick, Tom Seabron, Phil
+Wise, Rich Szaro, Don Schwartz, John McDaniel**. The last one is the interesting
+one: footballdb's **Deac Sanders** is the mod's **John Sanders**, and Wikipedia
+confirms *John Maurice "Deac" Sanders*. Also recovered: Cleveland's **two Robert
+Jacksons**, an offensive guard and a linebacker, which the mod disambiguates as
+Robert E. and Robert L.
+
+The join now runs three tiers, each reported: team+name (1,353), unique name
+anywhere (21), and **team + surname + compatible position** (30). The third tier
+is gated on position precisely because of the Robert Jacksons.
+
+**No hand-rating is needed.** The approved instruction to hand-rate the 17 is
+moot — there is real source data for every one of them.
+
+### `PPOS` decoded, and it is why the source can answer the CB/S question
+
+Not assumed — derived, by joining every code to the footballdb position of the
+men inside it, and anchored on an assert that the code holding the top throwing
+arms is the one the table calls QB. It is the standard 21-slot Madden layout,
+`QB HB FB WR TE LT LG C RG RT LE RE DT LOLB MLB ROLB CB FS SS K P`. **Codes 16,
+17 and 18 come apart as CB, FS and SS** — that is the whole basis for treating
+NFL79.ros as a DB-label source.
+
+### The out-of-band CB/S ratio was measured on the wrong population
+
+|                                              | CB  | S   | ratio |
+|----------------------------------------------|-----|-----|-------|
+| every record in NFL79.ros (2,128)            | 181 | 154 | 1.18  |
+| the mod's own 28 rosters (1,452) — *escalated* | 120 | 118 | **1.02** |
+| **the 1,408 footballdb spine — what we build**  | 121 | 106 | **1.14** |
+| the spine, after the two label corrections   | 122 | 104 | **1.17** |
+
+The 1.02 reproduces exactly, so the escalation was not a mistake — but its cause
+is **population, not labelling**. The mod carries **44 men on those 28 teams who
+were not on a 1979 roster**, and 13 of them are safeties against 3 corners. The
+spine filter removes them and the ratio lands mid-band. The label arbitration was
+still worth running: it found two real errors. But the gate that triggered it was
+never a labelling defect.
+
+### The scale map
+
+Per-position quantile of `POVR` onto the published six (2004, 2007, 2010, 2013,
+2017, 2021, rostered only), fullbacks capped at the measured ceiling of 86. Median
+shifts run **−3 (QB, K) to −13 (C)**, matching the proposal.
+
+**Plotting position, not rank/(n−1).** The naive map sends each position group's
+top man to the pool *maximum*, which manufactures exactly one 98 per group — 21 of
+them, against the 8 to 19 a published file holds. `(i+0.5)/n` puts the best of 29
+punters at the 98.3rd percentile instead. Same family as the 2026 stretch defect:
+**an order statistic read off the end of a small sample.**
+
+Top-end density, against the published band scaled to 1,408:
+
+| threshold | 1979 | published band | |
+|-----|-----|-----|-----|
+| ≥90 | 65 | 49–91 | in band |
+| ≥95 | 24 | 12–36 | in band |
+| ≥98 | 6 | 6–12 | in band |
+
+Median 71 against the published 69–72. The six 98s are Stallworth, Lambert,
+Payton, Haynes, Staubach and Bradshaw.
+
+**The traps land near the proposal's figures but not on them**, because the
+proposal's numbers were taken with the naive map: Riggins 86 and Harris 86 exactly
+as stated, Campbell 90 against ~88, Moseley 95 against ~93, Ray Guy 94 against
+~92, Payton 98 against ~95. Stated rather than smoothed. The aggregate band test
+is the stronger check and it passes on all three thresholds.
+
+### Still to build
+
+Attributes — width from the source, level from the pool — then potential,
+contracts, staff, the four invented franchises, draft classes, faces.

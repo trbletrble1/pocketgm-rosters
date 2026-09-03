@@ -4334,3 +4334,37 @@ Sibling of the in-band-aggregate precedent: there the number hid the wrong
 records, here the question hid the right answer. **And a ruling made to avoid an
 expensive check is worth re-testing when the check turns out to be cheap** — the
 ruling's stated basis was cost, not evidence.
+
+
+---
+
+## A join on the exact name string measures the name format, not the coverage
+
+1979's brief named **17 players with no rating data of any kind** and had them
+down for hand-rating, approved. All 17 were in the source. The mod writes Bill
+for Billy, Tim for Timothy, Don for Donald, Arthur for Art, and disambiguates
+namesakes with a middle initial. One was a nickname a diminutive rule would
+never reach: footballdb's *Deac Sanders* is the mod's *John Sanders*, and the
+article confirms **John Maurice "Deac" Sanders**.
+
+Coverage went 97% to 100% by adding one tier — team + surname + compatible
+position — and the position gate earns its keep immediately, because Cleveland
+rostered **two Robert Jacksons** in 1979, a guard and a linebacker.
+
+**A coverage number is a claim about the join, not about the source.** Before
+reporting a cohort as unreachable, join it a second way.
+
+---
+
+## An out-of-band aggregate can be the wrong population rather than the wrong data
+
+The 1979 CB/S ratio escalated at 1.02 against a published band of 1.06-1.30, and
+three separate arbitration passes were run against the labels. The number
+reproduces — but it was taken over **the mod's own 28 rosters**, not the 1,408
+footballdb spine the file is built from. The mod carries 44 men who were not on a
+1979 roster, 13 safeties against 3 corners. On the population actually being
+built, the ratio is **1.14**, mid-band.
+
+The label work was not wasted; it found two real errors. But **check that a
+failing aggregate was computed over the population you are shipping** before
+concluding the data is wrong. Sibling of "read the names inside the number."
