@@ -769,7 +769,59 @@ as stated, Campbell 90 against ~88, Moseley 95 against ~93, Ray Guy 94 against
 ~92, Payton 98 against ~95. Stated rather than smoothed. The aggregate band test
 is the stronger check and it passes on all three thresholds.
 
+## Step 4 — attributes BUILT 2026-09-02. `wip/attributes_1979.csv`, 1,408 x 30.
+
+**All 30 PGM3 live attributes are covered, and none is drawn from the player's
+own rating.** That constraint is not stylistic: PGM3 recomputes rating from
+attributes, so a rating-percentile fill would make a defensive lineman's rating
+39% a function of itself — `blockShedding` alone carries **+0.52** at DE and DT.
+
+**Every source field anchored before use.** Hannah, Upshaw and Shell top run
+block; Largent, Swann and Stallworth top catching; Lambert and Ham top tackle;
+Payton and Campbell top break-tackle; Klecko strongest; Ray Guy the biggest leg;
+Moseley the most accurate; Fouts the best arm; Wright and Hayes top coverage;
+Carmichael and Largent top routes.
+
+**`PINJ` is durability, not proneness** — r = **+0.55** against games played in
+1979. PGM3's `injuryProne` is the opposite pole, so it inverts. Measured, not
+assumed from the field name.
+
+**A 2003-era Madden export has no block-shedding, elusiveness or route field.**
+Checked rather than assumed: every unidentified field with spread was correlated
+against `POVR` among the 200 defensive linemen. `PIMP` reaches r = +0.91 and is
+an importance value computed *from* the overall — circular, rejected. `PJEN`,
+`PDPI`, `PDRO`, `PCON` and `PFMK` are near-constant; their "top five" is
+alphabetical. The 2K5 save supplies `Coverage` and `RunRoute` for **1,133 of
+1,408 (80.5%)**; the other 275 take the pool median for those three fields.
+
+Where no field exists the attribute is built from anchored fields, never from
+rating — `blockShedding` = mean(strength, tackle), `ballStrip` = tackle,
+`releaseLine` = acceleration, `elusiveness` and `skillMove` = agility,
+`discipline` = awareness. **The cost, stated: agility then drives three PGM3
+attributes and awareness four**, so those source fields carry more weight in the
+computed rating than they do in a published file.
+
+**`power` is position-conditional.** For K and P the weight vector gives it
++0.59 against `kickAccuracy` +1.04, and there it means *leg*. Feeding a kicker
+his bench press put Spearman against the rating target at **0.52 for K and 0.62
+for P**; with `PKPR` they are **0.97 and 0.95**. Found by measuring, not by
+reading the field name.
+
+**Spearman of computed rating against the POVR target, by position:** 0.85 (RB,
+where the fullback ceiling compresses the target) through 0.99 (C). Every other
+position is 0.91 or better.
+
+**Level and width behave as designed.** Medians land on the pool within a point;
+p5-p95 stays narrower than the pool where the source is narrower — speed 59-94
+against the pool's 53-99, intelligence 57-92 against 52-98. Width from the
+source, level from the pool.
+
+**Closing to the target.** A per-player uniform shift across that position's
+weighted attributes, the 2026 stage-8 pattern: median k **-0.9**, p5-p95 -4.9 to
++3.8, |k|>10 on **2 of 1,408**. Residual after the shift: mean |computed -
+target| **0.50**, above 1 on **34**, worst -9.5 where an attribute clamps at 1
+or 99.
+
 ### Still to build
 
-Attributes — width from the source, level from the pool — then potential,
-contracts, staff, the four invented franchises, draft classes, faces.
+Potential, contracts, staff, the four invented franchises, draft classes, faces.
