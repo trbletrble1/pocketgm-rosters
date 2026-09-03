@@ -2016,6 +2016,18 @@ value **169**) stops at **95**. Evans was a very good guard; Rodgers was a four-
 MVP. Rodgers has the largest raise in the class at +32 and still cannot reach the
 top, because 63 + 40 is where the cap bites and 63 + 32 is where he lands.
 
+**The clearest instance is Dak Prescott, 2013 file: rating 58, career value 104 —
+more than Myles Garrett — and he tops out at 79.** Wider gap than Rodgers between
+what a man became and where he can finish, and a more recognisable name. Jalen
+Hurts, 62/77 on 79 career value, is the same shape in 2017.
+
+**What is NOT this defect, for contrast.** In 2017, Justin Herbert falls 82 → 79 and
+Kyler Murray 90 → 84. Those are the flat baseline being *corrected* — their prior
+ceilings were generous and unmeasured, and their career values (74, 71) genuinely
+sit below Josh Allen's 111 and Lamar Jackson's 110. A man losing an unearned ceiling
+is the fix working. Rodgers is the defect because he fell *despite* the largest
+raise in his class.
+
 **Symptom two — the never-played band sits too high.** `GAP_BY_BAND` gives 18
 points of baseline to a man rated in the 40s and 1 to a man in the 90s, so men who
 never played take a median headroom of 7 against 6 for men with a career value of
@@ -2029,6 +2041,13 @@ That is why it reads +0.70 while the others plateau around +0.40.
 the three to follow — and wants measuring across the whole set rather than bolting
 on mid-pass. A fix would likely make potential a function of outcome with rating as
 a floor, rather than of rating with outcome as a bonus.
+
+**2017's weaker gradient is class composition, not a defect.** It reads +0.33
+against +0.40 to +0.44 for the other three, with identical bands. Its classes are
+2018-2021 and **recent men have truncated careers**: `wAV` p90 falls from 49 in
+2017 to 43, 35 and 30 across 2019-2021, and the file's career-value standard
+deviation is **16.8 against 21.5-23.6** for the other three. A compressed outcome
+range flattens a correlation without changing the shape. Nothing to chase.
 
 **Two reasoning errors recorded alongside**, both Ryan's and both the same shape:
 Rodgers and Peterson were cited as evidence 2004's mechanism worked, and with a
