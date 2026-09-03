@@ -2102,6 +2102,60 @@ real signal applied Peterson rises to 99 while Rodgers falls to 95 — they were
 flat baseline landing well twice, not a mechanism. **Individual names are not
 evidence about a distribution.**
 
+#### FIXED on six files, 2026-09-03 — `tools/outcome_ceilings.py`
+
+**The mechanism.** Within each draft class, rank men by outcome and map that rank
+onto the class's EXISTING potential distribution. The marginal is preserved by
+construction, so the numbers that matter — star supply at 1.8-4.5% against
+vanilla's 2.0-3.1%, and the count at 99 — do not move. **What moves is which men
+hold the ceilings.** Rating is a floor: a man whose mapped potential would sit at
+or below his rating gets rating + 3, vanilla's median headroom among its unlocked
+prospects.
+
+**Why +3 and not a bare floor.** A bare rating floor was measured first and locked
+**13-15% of every class** — men locked for being rated above their outcome rank.
+That is not vanilla's locked share, which is random, and it is not a bust. Ryan's
+"leave the locked share alone" ruling was about not manufacturing busts, and this
+does not. The old ~1% locked was the previous formula's noise clipping at zero;
+it goes to 0% and nothing real is lost.
+
+**Per class, not per file**, because 2017's 2021-class men have truncated careers
+and a whole-file rank would push them down for playing fewer seasons, not worse
+ones.
+
+| file | r(outcome, potential) | 90+ | at 99 | headroom p90 | source |
+|---|---|---|---|---|---|
+| 1979 | +0.69 → **+0.87** | 3.7% → 3.7% | 17 → 17 | 12 → 17 | PFR wAV |
+| 2000 | +0.72 → **+0.95** | 3.3% → 3.3% | 9 → 9 | 14 → 17 | **car_av filled from nflverse span — the +0.76 substitute** |
+| 2004 | +0.69 → **+0.94** | 4.5% → 4.6% | 8 → 8 | 15 → 18 | PFR wAV |
+| 2010 | +0.68 → **+0.94** | 3.9% → 4.1% | 18 → 18 | 15 → 20 | PFR wAV |
+| 2013 | +0.64 → **+0.92** | 2.8% → 2.8% | 7 → 7 | 14 → 18 | PFR wAV |
+| 2017 | +0.65 → **+0.93** | 2.2% → 2.3% | 8 → 8 | 14 → 18 | PFR wAV |
+
+**The named cases:** Rodgers 95 → **99**. Prescott 79 → **90**. Hurts 77 → 88.
+Brees 89 → 97. Russell Wilson 87 → 99. Herbert 79 → 87 and Murray 84 → 86, which
+is where their outcomes put them against Allen (95) and Jackson (99). Garrett,
+Evans, Peterson, Munoz, Lott, Singletary, Marino, Elway, Tomlinson, Watt: 99,
+unchanged.
+
+**ACCEPTED DIVERGENCE, ruled.** Headroom p90 widens from 14-15 to 17-20 against
+vanilla's unlocked 10-11. Prescott at 33 points of headroom IS the fix working;
+star supply, the measure that matters, does not move.
+
+**HELD, and why — this is six files, not ten:**
+
+| file | classes | reason |
+|---|---|---|
+| **2007** | 2008-11 | 2008 and 2011 join 100%; **2009 and 2010 have no listing**. Two of four is too thin. Ryan is saving the two pages. |
+| **1986** | 1987-90 | No listing. nflverse span exists, but 1986 is the archive's best file at +0.70 and is not touched on a weaker signal than the others got. Ryan is saving four pages. |
+| **2021** | 2022-25 | No listing, and the 2025 class has at most one season. Four pages. |
+| **2026** | 2027-28 | **The game's future. No outcome can exist and none is invented.** Its ceilings are consensus scouting, which is the honest thing for a future class. **Not touched, by ruling.** |
+
+This also resolves the contradiction between this item's "+0.70 for 1986" and the
+Section 3 line calling 1986's prospect cohort unsourced: the +0.70 is measured
+against nflverse **career span**, which is a source, just the weaker one. Both
+statements were true; neither said which.
+
 #### 2026 raised to the game's level, 2026-09-03 — the play test decides the rest
 
 **Second prerequisite closed by Ryan's measurement, not mine.** He exported a
