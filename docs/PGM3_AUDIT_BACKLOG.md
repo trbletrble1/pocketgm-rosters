@@ -2821,3 +2821,42 @@ registry was last written on 2026-09-03 for the quarterback faces and before tha
 on 2026-09-01; 2021's faces moved after. **`apply_registry_all.py` is unsafe
 until this is reconciled** — it will revert those 91 — and the direction of the
 reconciliation is file → registry, checked per man, not the reverse. Not acted on.
+
+---
+
+### 55. Can historical seasons ship with real faces? — the verification set, out for photograph review
+
+**Ryan reframed the Mike question, 2026-09-03**: the gain is not better faces on
+1979, it is **whether every historical season from 1957 can ship with real
+appearance data at all**, or whether historical builds generate faces forever.
+
+**And item 53's period-layer accuracies cannot answer it.** They rest on 13–44
+anchors per file, because the archive's verification set is overwhelmingly
+modern. 90.5% on 21 men and 96% on 21 men are the same measurement.
+
+**`wip/mike_disagreements_for_ryan.csv`** — 100 men where Mike's PERIOD LAYERS
+(not the shared 2003 base) disagree with the archive, careers in the 1960s–80s,
+for verdict by photograph. Four verdicts, not two: `light` `dark` `middle`
+`skip`. **`middle` is a verdict** — a source calling that man either way is not
+wrong the way a clear miss is — and **`skip` is absence of evidence and drops out
+of the accuracy calculation.** A high `middle` count is itself a finding about
+the light/dark binary the whole archive rests on.
+
+**Selection.** 3,355 archive men appear in our 1979 or 1986 files; 508 of them
+disagree with a Mike period-layer class. **53 were dropped because the archive's
+own label is `generated` or `no source -> league prior`** — 750 of 1979's faces
+are the league prior, and a disagreement with a guess is not evidence. Of the 455
+that remain, the 100 shipped are ranked by archive vote count, then the strength
+of the archive's source (registry-1986 > NFL79 PSKI > archive majority), then
+Mike's PSKI purity, then how many period files agree. **355 left out**, all
+weaker on those axes.
+
+**What shipped:** 92 registry-1986 labels, 6 NFL79 PSKI, 2 the 1986 export; 79 of
+the 100 carry two archive votes; 82 are 1979 men and 18 are 1986. Direction is
+lopsided — **69 archive-dark/Mike-light against 31 the other way** — which is
+itself worth watching in the verdicts. The first rows are the kind of case the
+ranking was meant to surface: Mosi Tatupu (Samoan, plausibly `middle`), Tony
+Galbreath, Marvin Powell, Reggie Roby, Kent Hill.
+
+**Then:** re-test Mike's period-layer accuracy against the returned verdicts —
+a set that can carry one — and report `middle`/`skip` counts.
