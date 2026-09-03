@@ -1856,8 +1856,59 @@ files agreeing to the dollar turned out to be the donor file's highest-paid play
 rather than an engine limit. **$197.4M appears never to have been checked against a
 game-generated file** — it could not have been, because none existed until today.
 
+**Stated plainly: the constant was never measured against a game-generated file,
+because none existed. One now does.** Every prior validation compared our files to
+each other, which is why they agree to the dollar — the same shape as the K/P
+contract ceiling, where five files agreeing exactly turned out to be one donor
+record wearing five coats. Ten files at $197.4M is one ancestor wearing ten.
+
 **Measure and log, do not act.** Every file is internally consistent at $197.4M and
-nothing is broken; moving it is a ten-file decision with playtesting behind it.
+nothing is broken. A $45M shift across ten published files is Ryan's call and a
+large one, with playtesting behind it.
+
+---
+
+#### The contract-compression defect belongs here, because it is the same question
+
+**The defect is real and unfixed.** A reader reported the files "destroy cap".
+Totals are correct everywhere — $197.4M median top-53, nobody over the $280M
+ceiling — but **1979's cheapest quarter costs $2.14M against vanilla's $1.03M**, so
+a user against the cap has no cheap depth to cut. It does not break, it seizes.
+2000 is the milder version at $1.29M. Seven of the ten files are fine.
+
+| | p25 | median | top 20% |
+|---|---|---|---|
+| vanilla (full export) | 1.03M | 1.27M | 58% |
+| conforming eight | 0.73–1.02M | 0.93–1.74M | 54–65% |
+| **1979** | **2.14M** | **3.30M** | **38%** |
+| **2000** | **1.29M** | **2.39M** | **50%** |
+| 2007 | 1.02M | 1.22M | 56% — inside, leave alone |
+
+**A working transform exists** (`tools/compress_contracts.py`) and was measured:
+rank-preserving within team, team totals exact to the dollar, and it moves 1979 to
+1.16M / 1.80M / 63%. **Zero strictly-ordered pairs invert** — the per-team Spearman
+of 0.9997 is entirely tied pairs becoming distinguished.
+
+**It is not applied, and the reason is this item.** Compressing toward the eight
+conforming files propagates a position hierarchy the game does not share: at a 50%
+blend, six of 1979's positions move closer to vanilla and six move further, mean
+distance rising 0.32 → 0.42, with quarterback going from 0.41 away to **1.59**.
+Compressing toward *vanilla* instead is the right reference and redefines
+"conforming" for the whole archive. **Payroll level and payroll shape are one
+decision**, and neither half fits inside a two-file fix: the first is knowingly
+wrong, the second is a ten-file decision in a two-file disguise.
+
+**What makes the larger ruling possible now:** a full game-generated league is in
+`sources/vanilla/` — the first this project has held — and both the payroll constant
+and the position band have turned out to be ours rather than the engine's.
+
+#### RULED: all ten get tuned, as its own piece of work, after two checks
+
+1. **Confirm $242.9M from more than one vanilla export.** One file is one sample,
+   and this constant has already fooled us by agreeing with itself ten times.
+2. **Check whether the game raises the cap across seasons.** If vanilla's payroll
+   rises year on year, $242.9M is a starting point rather than a constant, and
+   matching it needs to know which.
 
 ### 38. The position-multiplier "band" is our convention, not the game's
 

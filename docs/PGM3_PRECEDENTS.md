@@ -4554,3 +4554,35 @@ file, field or convention came from somewhere, point at the thing that says so. 
 when a project word carries a specific local meaning — *published*, *donor*,
 *vanilla*, *archive* — check which sense the record is using rather than the sense
 it has elsewhere.
+
+
+---
+
+## A band computed from our own files describes our convention, not the engine
+
+**2026-09-03.** To gate a contract-compression transform I built a position-
+multiplier band from the eight files whose salary distribution already looked
+right, and used it to assert that no position could drift outside normal. It
+caught a real defect immediately — a transform sending quarterbacks to 5.9x the
+file median — so the gate worked.
+
+Then Ryan exported a **full vanilla league**, the first complete game-generated
+reference the project has ever held. **Seven of the ten positions in that file sit
+outside the band.** Kickers read **0.59** against our 1.00-1.92; corners 2.18
+against 0.83-1.01; tackles 0.86 against 1.06-1.26.
+
+That is not seven anomalies in the game. It is one systematic difference between
+what the engine does and what our files do, and the band was measuring the wrong
+side of it.
+
+**The sharpest instance: we paid 1979's kickers 0.77 as a DELIBERATE ERA DEPARTURE
+from a modern norm of 1.00-1.92 — and the game pays 0.59.** 1979 was closer to the
+engine than the eight files we called conforming. The "departure" was a partial
+correction toward the truth and the premium is ours.
+
+**Rule: before asserting that a value is normal, ask what population the norm was
+computed over.** Agreement among our own files is evidence of a shared ancestor,
+not of correctness — the same shape as ten files reporting a $197.4M payroll
+constant to the dollar against the game's $242.9M, and as five files reporting a
+contract ceiling that turned out to be one donor record. When the check is a
+guard against a specific failure, assert the failure and not the norm.
