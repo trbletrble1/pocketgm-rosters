@@ -4948,3 +4948,33 @@ touch — not the plan, and not the reasoning that produced the plan.
 **Print what you are about to overwrite, keyed by what makes it valuable.** A
 count of records to be changed would not have caught this; a count of records to
 be changed BROKEN DOWN BY THEIR CURRENT PROVENANCE did, immediately.
+
+## A value set once and reused across records that do not share it — third instance
+
+2026-09-04. `move_1979_coordinators.py` held `SLOT = 'Off Co-ord'` as a module
+constant and looped three men through it. Ken Meyer and Jim Ringo were offensive
+coordinators; **Tom Bettis coached the Cardinals' defence**, and the pass put him
+on the wrong side of the ball. The pull file said `Def Co-ord` on his row the
+whole time; nothing read it.
+
+**Third instance of the same shape in this project:**
+
+1. the `ro` variable scoped across eight stages of a build when each stage had
+   its own roster,
+2. the per-file `iden` seeding that made one man diverge between files because
+   the seed belonged to the file rather than to him,
+3. this — one slot constant for three men who held two different jobs.
+
+**The tell is always the same: a value that describes ONE record living at a
+scope that spans MANY.** A module constant, a loop variable hoisted out, a seed
+taken from the container instead of the contents. It reads as tidy — three men,
+one job, why repeat yourself — and it is only correct while the records happen
+to agree.
+
+**The rule: if a value could differ per record, it is read per record, even when
+today's records all match.** The cost of `('Ken Meyer', 'CHI', 'Off Co-ord')`
+over `SLOT = 'Off Co-ord'` is nine characters a line. The cost of the constant
+was a Hall-of-Fame linebacker coaching the wrong side of the ball in a published
+file — and it survived a dry run, an assertion on record counts, an
+employed-staff count, a one-man-one-record check and all four gates, because
+every one of those was true of the wrong answer.
