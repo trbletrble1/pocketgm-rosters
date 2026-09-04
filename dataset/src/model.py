@@ -1,0 +1,211 @@
+"""Core primitives: persons, sources, claims, denotations, resolution.
+
+Design invariants enforced here rather than remembered:
+  - a person has NO attributes. Names are claims.
+  - a claim cannot exist without a source_record.
+  - a source_record reaches a person only through a denotation.
+  - `relayed` acquisition may never enter the store.
+  - resolution is a pure function of (claims, policy).
+"""
+import json, hashlib, os
+from collections import defaultdict
+
+KINDS = {"observed", "source_derived", "derived", "absent"}
+FORBIDDEN_KINDS = {"invented"}
+ACQ_ALLOWED = {"fetched", "held", "transcribed"}
+ACQ_FORBIDDEN = {"relayed"}
+
+
+class StoreError(Exception):
+    pass
+
+
+class Store:
+    def __init__(self):
+        self.sources = {}          # source_id -> declaration dict
+        self.source_records = {}   # sr_id -> {source_id, locator}
+        self.persons = set()       # opaque ids only. NO attributes.
+        self.claims = []           # list of dicts
+        self.denotations = []
+        self._by_subject = defaultdict(list)
+        self._seq = 0
+
+    # ---- ids -------------------------------------------------------------
+    def _mint(self, prefix):
+        self._seq += 1
+        return f"{prefix}_{self._seq:06d}"
+
+    def mint_person(self):
+        pid = self._mint("p")
+        self.persons.add(pid)
+        return pid
+
+    # ---- sources ---------------------------------------------------------
+    def add_source(self, decl):
+        acq = decl.get("acquisition")
+        if acq in ACQ_FORBIDDEN:
+            raise StoreError(
+                f"source {decl['source_id']}: acquisition '{acq}' may never enter "
+                f"the store. It is a lead, not a source (design 3.7).")
+        if acq not in ACQ_ALLOWED:
+            raise StoreError(f"source {decl['source_id']}: unknown acquisition '{acq}'")
+        self.sources[decl["source_id"]] = decl
+        return decl["source_id"]
+
+    def add_source_record(self, source_id, locator):
+        if source_id not in self.sources:
+            raise StoreError(f"no such source: {source_id}")
+        sr = f"{source_id}#{locator}"
+        self.source_records[sr] = {"source_id": source_id, "locator": locator}
+        return sr
+
+    # ---- claims ----------------------------------------------------------
+    def add_claim(self, source_record, subject, predicate, value, observed_at,
+                  kind="observed", stated_by=None, attribution=None, note=None):
+        if kind in FORBIDDEN_KINDS:
+            raise StoreError(f"kind '{kind}' has no field to occupy. It belongs in a build.")
+        if kind not in KINDS:
+            raise StoreError(f"unknown kind '{kind}'")
+        if source_record not in self.source_records:
+            raise StoreError(f"claim without a resolvable source_record: {source_record}")
+        src = self.sources[self.source_records[source_record]["source_id"]]
+        c = {
+            "id": self._mint("c"),
+            "source_record": source_record,
+            "source_id": src["source_id"],
+            "subject": subject,
+            "predicate": predicate,
+            "value": value,
+            "observed_at": observed_at,
+            "kind": kind,
+            "stated_by": stated_by if stated_by is not None else src.get("stated_by"),
+            "attribution": list(attribution if attribution is not None
+                                else src.get("attribution", [])),
+            "note": note,
+        }
+        self.claims.append(c)
+        self._by_subject[(subject, predicate)].append(c)
+        return c["id"]
+
+    def add_absence(self, source_record, subject, predicate, observed_at, note=None):
+        """The source has the column / would have carried it, and does not."""
+        return self.add_claim(source_record, subject, predicate, None, observed_at,
+                              kind="absent", note=note)
+
+    # ---- denotations -----------------------------------------------------
+    def add_denotation(self, source_record, person, discriminator, method,
+                       matched_against=None, status="asserted", note=None):
+        if status == "asserted" and person not in self.persons:
+            raise StoreError(f"denotation to unknown person {person}")
+        if status == "asserted" and not discriminator:
+            raise StoreError("a denotation must record what separated it")
+        d = {
+            "id": self._mint("d"),
+            "source_record": source_record,
+            "person": person,
+            "discriminator": list(discriminator),
+            "method": method,
+            # WHICH source's value the match was made against. A contested
+            # discriminator is inherited by the denotation resting on it.
+            "matched_against": matched_against,
+            "status": status,
+            "note": note,
+        }
+        self.denotations.append(d)
+        return d["id"]
+
+    # ---- resolution ------------------------------------------------------
+    def resolve(self, subject, predicate, policy):
+        """Pure. Returns basis + value + the claims that produced it, winners and losers."""
+        cs = self._by_subject.get((subject, predicate), [])
+        if not cs:
+            return {"subject": subject, "predicate": predicate, "value": None,
+                    "basis": "unknown", "rule": "no claims",
+                    "winning": [], "losing": [], "policy": policy["version"]}
+
+        eligible = [c for c in cs if self._eligible(c, predicate, policy)]
+        positive = [c for c in eligible if c["kind"] != "absent"]
+        absences = [c for c in eligible if c["kind"] == "absent"]
+
+        if not positive:
+            return {"subject": subject, "predicate": predicate, "value": None,
+                    "basis": "absent" if absences else "unknown",
+                    "rule": "only absence claims" if absences else "no eligible claims",
+                    "winning": [c["id"] for c in absences], "losing": [],
+                    "policy": policy["version"]}
+
+        # group by value; a claim with a non-empty attribution votes only in
+        # stated_by's group, never the attributed party's.
+        groups = defaultdict(list)
+        for c in positive:
+            groups[json.dumps(c["value"], sort_keys=True)].append(c)
+
+        if len(groups) == 1:
+            win = positive
+            return {"subject": subject, "predicate": predicate,
+                    "value": win[0]["value"], "basis": "observed",
+                    "rule": "uncontested", "winning": [c["id"] for c in win],
+                    "losing": [], "policy": policy["version"]}
+
+        ranked = sorted(groups.items(),
+                        key=lambda kv: self._rank(kv[1], policy), reverse=True)
+        top, second = ranked[0], ranked[1]
+        if self._rank(top[1], policy) > self._rank(second[1], policy):
+            losers = [c["id"] for k, g in ranked[1:] for c in g]
+            return {"subject": subject, "predicate": predicate,
+                    "value": top[1][0]["value"], "basis": "observed",
+                    "rule": self._rule_name(top[1], policy),
+                    "winning": [c["id"] for c in top[1]], "losing": losers,
+                    "policy": policy["version"]}
+
+        return {"subject": subject, "predicate": predicate, "value": None,
+                "basis": "contested", "rule": "no eligible rule separates the claims",
+                "winning": [], "losing": [c["id"] for g in groups.values() for c in g],
+                "candidates": [{"value": g[0]["value"],
+                                "stated_by": g[0]["stated_by"],
+                                "attribution": g[0]["attribution"]} for g in groups.values()],
+                "policy": policy["version"]}
+
+    # ---- policy helpers --------------------------------------------------
+    def _eligible(self, c, predicate, policy):
+        key = f"{c['source_id']}|{predicate}"
+        ex = policy.get("excluded", [])
+        return key not in ex and c["source_id"] not in ex
+
+    def _lineage_group(self, c):
+        """Independence key. Attribution collapses a claim into stated_by's group."""
+        src = self.sources.get(c["source_id"], {})
+        root = src.get("derived_from") or c["source_id"]
+        return (root, c["stated_by"])
+
+    def _rank(self, group, policy):
+        tiers = policy["tiers"]
+        best = 0
+        for c in group:
+            if c["kind"] == "derived":
+                t = tiers.get("derived", 2)
+            elif c["stated_by"] in policy.get("human_verdict_by", []):
+                t = tiers["human"]
+            elif c["kind"] == "source_derived":
+                t = tiers.get("source_derived", 2)
+            else:
+                t = tiers.get("observed", 3)
+            best = max(best, t)
+        # independent lineage groups add weight WITHIN a tier, never across one
+        n_ind = len({self._lineage_group(c) for c in group})
+        return best * 1000 + min(n_ind, 999)
+
+    def _rule_name(self, group, policy):
+        if any(c["stated_by"] in policy.get("human_verdict_by", []) for c in group):
+            return "human verdict terminates resolution"
+        n = len({self._lineage_group(c) for c in group})
+        return f"{n} independent lineage group(s)" if n > 1 else "single source"
+
+    # ---- persistence -----------------------------------------------------
+    def save(self, path):
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        json.dump({"persons": sorted(self.persons),
+                   "source_records": self.source_records,
+                   "claims": self.claims,
+                   "denotations": self.denotations},
+                  open(path, "w"), indent=1, sort_keys=True)

@@ -1,0 +1,28 @@
+{
+  "version": "policy@v1",
+  "note": "Resolution ranking. Data, not code. Changing this is an edit and a re-run; the claims never move.",
+
+  "tiers": {
+    "human": 4,
+    "observed": 3,
+    "derived": 2,
+    "source_derived": 2
+  },
+  "_tiers_note": "A human verdict TERMINATES resolution. It is not a weight - no quantity of agreeing sources can reach it, because sources can be wrong together and a number eventually gets tuned. Design 9.7, ruled 2026-09-04.",
+
+  "human_verdict_by": ["ryan"],
+  "_human_note": "Transcription is NOT adjudication. A person operating a lossy instrument does not enter here; only a person adjudicating evidence does. Design 3.7.",
+
+  "lineage_note": "Independence is counted in lineage GROUPS, not sources. A claim with a non-empty attribution votes only in stated_by's group - the League cannot be outvoted by its opponent quoting it, nor corroborated by it. Design 3.6, 4.3.",
+
+  "excluded": [],
+  "_excluded_note": "(source, predicate) pairs barred from voting. A pair with no source_score row is excluded at ranks 2 and 3.",
+
+  "rules": [
+    {"name": "contemporaneous-over-aggregator",
+     "predicate": "role_title",
+     "prefer": "observed_at within the season",
+     "over": "observed_at later",
+     "evidence": "Coaching Tree: 3 role errors in 5 teams, 1979 - a modern aggregator projects modern title structures onto teams that did not use them"}
+  ]
+}

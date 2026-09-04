@@ -1,0 +1,75 @@
+{
+  "source_id": "media-guides",
+  "name": "Team media guides (archive.org nfl-media-guides collection)",
+  "acquisition": "held",
+  "stated_by": "the club publishing the guide",
+  "attribution": [],
+  "derived_from": null,
+  "note": "A club's own contemporaneous publication. observed_at is the guide's own year, which is why it outranks a modern aggregator on role titles (policy@v4, contemporaneous-over-aggregator).",
+
+  "local": {
+    "root": "$PGM3_SOURCES/nfl-books",
+    "index": "index.csv",
+    "text": "text/{team}-{year}.txt",
+    "cached": {"guides_indexed": 2105, "texts_extracted": 28, "year_of_texts": 1979}
+  },
+  "retrieval": {
+    "pattern": "https://archive.org/stream/{identifier}/{filename}_djvu.txt",
+    "trap": "MUST follow redirects. A 302 without -L writes a zero-byte file that reads exactly like a book with no text."
+  },
+
+  "coverage": {
+    "team_guides": "1934-2026, 2065 items; all 28 teams for 1979; 32 of 32 for 2010, 2013, 2017, 2021",
+    "league_books": "1981-2026, 40 items",
+    "confirmed_absent": "salary and contract data - two occurrences of 'salary' in 9.4M characters, both prose"
+  },
+
+  "fields": {
+    "stint_scope": ["role_title", "club", "season"],
+    "person_scope": ["biography_prose", "career_history_prose", "birth_date"],
+    "club_season_scope": ["staff_roster", "front_office", "medical_staff", "all_time_roster", "draft_history"]
+  },
+
+  "field_availability": {
+    "role_title": {
+      "kind": "constant",
+      "verdict": "the guide's strength - exact contemporaneous titles, e.g. 'WOODY WIDENHOFER / Defensive Coordinator'",
+      "outranks": "modern aggregators (Coaching Tree measured at 3 role errors in 5 teams, 1979)"
+    },
+    "birth_date": {
+      "kind": "measured_absent",
+      "_comment": "MEASURED 2026-09-04 across the 28 cached 1979 guide texts, matching 638 coach-title occurrences and reading 1200 chars after each.",
+      "measured": {"explicit_Born_date": 17, "age_in_prose_only": 37, "neither": 584, "total": 638},
+      "guides_with_any_coach_birth_date": 7,
+      "guides_with_none": 21,
+      "verdict": "NOT usable as a discriminator. 2.7% is a LOWER BOUND (the denominator includes contents-page mentions) but no correction rescues a field missing from three quarters of the files."
+    },
+    "career_history_prose": {
+      "kind": "constant",
+      "verdict": "rich - 'in his 15th year of coaching', 'came to the Steelers in 1973'. This is what carries identity for assistants."
+    }
+  },
+
+  "discriminators": [
+    {"scope": "default", "order": ["stint_continuity", "club_season", "role_title"],
+     "note": "stint_continuity = the chain of club-seasons and titles a man's bios describe. Same mechanism as a player who changes position (design shape 11), reached from the opposite direction."},
+    {"scope": "coach_assistants", "order": ["stint_continuity"],
+     "excluded": ["birth_date"],
+     "reason": "measured absent - 584 of 638 coach-title bios carry neither a birth date nor an age",
+     "residual": "two same-named assistants with OVERLAPPING career chains have NO discriminator. Gansz Sr and Jr separate only because their chains sit decades apart. REFUSE these; do not resolve by inference."}
+  ],
+
+  "absence_semantics": {
+    "staff_section_lists_roles_and_omits_one": "absence claim about the club-season, e.g. Pittsburgh 1979 lists the defensive staff and no defensive coordinator",
+    "guide_not_held": "silence, NOT absence - do not confuse 'we have not read the 1962 guide' with 'the 1962 guide has no strength coach'"
+  },
+
+  "scores": [
+    {"predicate": "role_title", "method": "cross-check against a modern aggregator", "population": "5 teams, 1979", "n": 5,
+     "result": "Coaching Tree wrong on 3 of 5; the guides are the reference", "date": "2026-08-31"},
+    {"predicate": "coach_birth_date", "method": "fill rate over coach-title bios", "population": "28 cached 1979 guide texts", "n": 638,
+     "result": "2.7% explicit date, 5.8% age in prose, 91.5% neither; 21 of 28 guides have none", "date": "2026-09-04"},
+    {"predicate": "salary", "method": "full-text search", "population": "9.4M characters", "n": 9400000,
+     "result": "2 occurrences, both prose - recorded as ABSENCE, not as a gap", "date": "2026-08-31"}
+  ]
+}

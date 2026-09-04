@@ -1,0 +1,119 @@
+{
+  "source_id": "statscrew",
+  "name": "StatsCrew.com",
+  "acquisition": "fetched",
+  "stated_by": "StatsCrew",
+  "attribution": [],
+  "derived_from": null,
+  "note": "Backbone source. Every professional league in American history, one URL pattern, no bot detection. Measured 2026-09-04; see docs/reports/2026-09-04-06-birth-date-coverage-by-league-year.md",
+
+  "url_patterns": {
+    "league_year": "https://www.statscrew.com/football/l-{league}/y-{year}",
+    "team_roster": "https://www.statscrew.com/football/roster/t-{team}/y-{year}",
+    "person":      "https://www.statscrew.com/football/stats/{slug}"
+  },
+
+  "person_id_scheme": {
+    "pattern": "{prefix}-{surname[:5]}{forename[:3]}{NNN}",
+    "namespaces": { "p-": "player", "c-": "coach" },
+    "counter_scope": "within_namespace",
+    "counters_align_across_namespaces": false,
+    "cross_namespace_evidence": "explicit bidirectional link on the page; 35/35 in the cached sample, identical slug body, birth dates agreeing",
+    "cross_namespace_string_match_is_evidence": false,
+    "existence_test": "a name AND a full birth date must be present; HTTP 200 is NOT existence",
+    "counter_is_dense": false,
+    "traps": [
+      "p-allengeo002 (player) and c-allengeo001 (coach) are DIFFERENT men - counters do not align",
+      "p-allengeo001 returns HTTP 200, is empty, and renders another man's Coach of the Year awards",
+      "the slug body is a truncation, so p-brownlar004 is Laron Brown - it groups near-names",
+      "the c- namespace holds HEAD COACHES ONLY; assistants are absent entirely"
+    ]
+  },
+
+  "coverage": {
+    "players": "all leagues, 1920-present",
+    "head_coaches": "c- namespace, head-coaching years only (Noll reads 1969-1991, omitting 1960-68 as an assistant)",
+    "assistant_coaches": "NONE - Frank Gansz Jr has no record at all"
+  },
+
+  "fields": {
+    "always": ["name", "position", "college", "height", "weight", "games_played"],
+    "person_scope": ["birth_date", "birthplace", "death_date", "college", "high_school", "full_legal_name"],
+    "stint_scope": ["jersey", "position", "games_played", "games_started"]
+  },
+
+  "field_availability": {
+    "_comment": "Measured, 4 teams per league-year, ~4613 rows. A field below its threshold is not usable as a discriminator for that scope.",
+    "birth_date": {
+      "kind": "per_era",
+      "measured": {"APFA-1920": 92.2, "NFL-1925": 98.9, "NFL-1930": 96.8, "NFL-1935": 100.0,
+                   "NFL-1940": 100.0, "NFL-1945": 100.0, "AAFC-1946": 100.0, "AAFC-1949": 100.0,
+                   "NFL-1950": 100.0, "NFL-1955": 100.0, "AFL-1960": 99.5, "AFL-1965": 100.0,
+                   "AFL-1969": 100.0, "NFL-1960": 100.0, "NFL-1965": 100.0, "NFL-1970": 100.0,
+                   "NFL-1980": 100.0, "NFL-1990": 100.0, "NFL-2000": 100.0, "NFL-2010": 100.0,
+                   "NFL-2020": 100.0, "WFL-1974": 100.0, "USFL-1984": 99.3, "XFL-2020": 96.2,
+                   "CFL-1979": 100.0},
+      "verdict": "usable as primary discriminator in every league-year sampled, 1920 to 2020"
+    },
+    "jersey": {
+      "kind": "per_era",
+      "_comment": "THE era-dependent field. Not a single per-source verdict.",
+      "measured": {"APFA-1920": 60.4, "NFL-1925": 77.3, "NFL-1930": 87.2, "NFL-1935": 97.3,
+                   "NFL-1940": 97.9, "NFL-1945": 93.5, "AAFC-1946": 100.0, "NFL-1950": 100.0,
+                   "AFL-1960": 100.0, "NFL-1970": 100.0, "NFL-2020": 100.0,
+                   "WFL-1974": 95.3, "USFL-1984": 89.2, "CFL-1979": 90.9},
+      "column_absent_entirely": ["APFA-1920"],
+      "usable_from": 1935,
+      "verdict": "NOT usable as a discriminator before ~1935; the 1920 roster page has no jersey column at all"
+    },
+    "games_played": {
+      "kind": "per_league",
+      "_comment": "THE per-league field. Scoping a completeness gate per ERA reads the WFL as catastrophically broken.",
+      "measured": {"NFL": 100.0, "APFA": 100.0, "AAFC": 100.0, "AFL": 100.0,
+                   "CFL": 100.0, "XFL": 84.7, "USFL": 76.9, "WFL": 14.9},
+      "verdict": "blank cells are the NORMAL condition in WFL/USFL/XFL - they are absence claims, not defects"
+    },
+    "games_started": {
+      "kind": "per_league",
+      "measured": {"NFL": 100.0, "APFA": 100.0, "AAFC": 100.0, "AFL": 100.0,
+                   "XFL": 84.7, "USFL": 65.7, "CFL": 4.7, "WFL": 4.7},
+      "verdict": "CFL and WFL record almost no starts despite CFL recording every game played - per-league, and per-FIELD within a league"
+    },
+    "hometown": {
+      "kind": "per_league",
+      "measured": {"CFL-1979": 74.3, "XFL-2020": 76.6, "WFL-1974": 90.2, "NFL-1935": 100.0},
+      "verdict": "weakest field overall, and worst in the MODERN minor leagues rather than the 1920s - not a reliable fallback discriminator"
+    },
+    "college": {
+      "kind": "constant",
+      "measured": {"all_25_samples": 100.0},
+      "verdict": "100% in every league-year sampled; supports its use as the 1979 same-season discriminator"
+    }
+  },
+
+  "discriminators": [
+    {"scope": "default", "order": ["source_native_id", "birth_date", "college", "position"],
+     "note": "source_native_id means the slug, resolved through the cross-reference link and never through a matching string"},
+    {"scope": "era:pre-1935", "order": ["source_native_id", "birth_date", "college"],
+     "excluded": ["jersey"], "reason": "jersey below 90% and absent entirely in 1920"},
+    {"scope": "same_season_same_position", "order": ["college", "birth_date"],
+     "reason": "1979 Larry Brown and Gene Washington: position and era both fail inside one season"}
+  ],
+
+  "absence_semantics": {
+    "blank_cell_in_present_column": "absence claim - the source declines",
+    "column_absent_from_page": "not applicable for this era/league - belongs on this declaration, NOT as one absence claim per player",
+    "_worked": "Akron 1920 has no jersey column (9 headers vs 1950's 10). That is one declaration fact, not 23 identical claims. Matt Brown on the same page has a blank Birth Date in a column that exists - that IS an absence claim."
+  },
+
+  "scores": [
+    {"predicate": "birth_date", "method": "fill-rate at scale", "population": "25 league-years, 4 teams each, ~4613 rows", "n": 4613, "result": ">=96% every league-year, 100% in 19 of 25", "date": "2026-09-04"},
+    {"predicate": "identity", "method": "namesake separation against recorded collisions", "population": "6 documented collisions + George Allen + Chuck Noll", "n": 33, "result": "separates every collision tested including 3-generation Clay Matthews", "date": "2026-09-04"}
+  ],
+
+  "known_conflicts": [
+    {"predicate": "birth_date", "subject": "George Allen (coach)", "statscrew": "1922-04-29",
+     "other_source": "coachingtree", "other_value": "1918-04-29",
+     "status": "contested", "note": "same day and month, four years apart. Presence is not agreement - a denotation must record WHICH source's birth date it matched against."}
+  ]
+}
