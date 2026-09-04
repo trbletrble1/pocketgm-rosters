@@ -1121,6 +1121,40 @@ The same page carries the per-club version of the same disagreement — **$4.3M
 against $5.2M** — and each side's own adjusted figure, "still under $75,000" and
 "still stays over $85,000".
 
+**REVISED AGAIN 2026-09-04, and this is the more important correction: the contest
+is at least partly DEFINITIONAL, and both documents say so.**
+
+Newman's 1987 law review article (§9b) reprints the same 1970–1985 series and
+carries a provenance note the other two sources do not:
+
+> *…the NFLPA and the Management Council employ different methods to measure
+> average salary (**the Management Council pro-rates signing bonuses by the number
+> of years a player is under contract; the NFLPA defers money to the year it is
+> received**)… all this data should be treated as best estimates.*
+
+And the 1982 hearing states its own definitions on the page: the NFLPA's $68,900
+is *"salary + deferred compensation earned + all bonuses except performance
+bonuses"*; the League's $93,333 is *"salaries + bonuses + deferred compensation +
+medical + workmen's compensation + payroll taxes + retirement + insurance + pre-
+and post-season pay"* divided by a headcount.
+
+**Those are not two answers to one question. They are answers to two questions.**
+One measures money a player receives in a year; the other measures what a club
+spends per player including benefits and taxes, with bonuses spread across a
+contract.
+
+**Consequence for the model, and it generalises: a contest can be the symptom of
+an under-specified predicate.** `average_salary` was doing two jobs. Split into
+`average_salary_money_received` and `average_player_cost_prorated`, most of this
+contest dissolves — not by choosing a winner, which would have been wrong, but by
+recognising the claims were never about the same thing.
+
+**What does NOT dissolve** is which figure a consumer should scale to, and whether
+Newman's note is right that 1977–1981 was *"compiled by the NFL Management
+Council"* — because the hearing attributes the same 1979 figure to *the NFLPA's own
+review of 1,500 contracts*. **Two documents disagree about the provenance of one
+number.** That is a genuine contest and it stays.
+
 **CORRECTED 2026-09-04: this is not two parties.** `c_102` is the League's figure
 **as quoted by the NFLPA**, in NFLPA testimony. There is no League-original
 document in hand, and the 2002 primer is the same organisation twenty years later

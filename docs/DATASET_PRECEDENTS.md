@@ -386,3 +386,45 @@ modern football, produced automatically by pointing a modern instrument at it.
 **A gate that fails for a structural reason is a measurement, provided you do the
 work to separate it from a gate that fails because the file is wrong.** Reporting
 "4 failures" without that separation would have been worthless in both directions.
+
+---
+
+## A contest can be the symptom of an under-specified predicate
+
+2026-09-04. §8.4 held a contest the design called unresolvable in principle: the
+NFLPA's **$68,900** against the League's **$93,333** for the same 1979 season, two
+interested parties, no external arbiter. The right handling looked like
+`contested` forever.
+
+A third document — Newman's 1987 law review article — carries the note that
+explains it:
+
+> *the Management Council pro-rates signing bonuses by the number of years a player
+> is under contract; the NFLPA defers money to the year it is received*
+
+And the hearing itself, on the same page as both figures, gives each side's
+definition: the NFLPA counts salary plus deferred pay plus non-performance
+bonuses; the League divides a total that **also includes medical, workmen's
+compensation, payroll taxes, retirement, insurance and pre/post-season pay**.
+
+**They were never answering the same question.** One is money a player receives in
+a year; the other is what a club spends per player, benefits included, bonuses
+spread.
+
+**The rule: before recording a contest, check that both claims share a predicate.**
+Two numbers under one label may be two measurements of two different quantities,
+and `contested` then hides a modelling error rather than an evidential one — it
+looks like honesty about the world while actually being vagueness in the schema.
+
+**The tell is a disagreement that is large, stable, and signed** — the same two
+parties differing by the same rough factor across years, rather than scattering.
+Genuine evidential contests scatter; definitional ones hold their shape.
+
+**And splitting is not resolving.** `average_salary_money_received` and
+`average_player_cost_prorated` are now two predicates, and each has a single
+uncontested value. What remains contested is a *different* question the split
+exposed: Newman says the 1977–1981 figures were compiled by the Management
+Council, and the hearing says the 1979 figure came from the NFLPA's own review of
+1,500 contracts. **Two documents disagreeing about the provenance of one number
+is a real contest**, and it survived precisely because the definitional layer was
+peeled off first.
