@@ -33,7 +33,29 @@
  "coverage": {
   "players": "all leagues, 1920-present",
   "head_coaches": "c- namespace, head-coaching years only (Noll reads 1969-1991, omitting 1960-68 as an assistant)",
-  "assistant_coaches": "NONE - Frank Gansz Jr has no record at all"
+  "assistant_coaches": "NONE - Frank Gansz Jr has no record at all",
+  "leagues_swept": {
+   "with_rosters": [
+    "NFL 1922-2024",
+    "APFA 1920-21",
+    "AAFC 1946-49",
+    "AFL 1960-69",
+    "WFL 1974-75",
+    "USFL 1983-85",
+    "USFL2 2022-23",
+    "XFL 2001/2020/2023",
+    "WLAF 1991-92",
+    "UFL 2009-12",
+    "UFL2 2024",
+    "AAF 2019"
+   ],
+   "league_page_exists_but_NO_rosters": [
+    "AFL2 1936 (the second AFL)",
+    "NFLE 1997 (NFL Europe)"
+   ],
+   "code_collision": "AFL3 resolves to the ARENA Football League, not the 1940 AFL. Do not use it for the third AFL.",
+   "team_codes_globally_unique": "VERIFIED across 12 year-sharing league pairs - no team code is reused between leagues in the same year, so a {TEAM}_{YEAR} cache key is safe."
+  }
  },
  "fields": {
   "always": [
@@ -90,7 +112,12 @@
     "XFL-2020": 96.2,
     "CFL-1979": 100.0
    },
-   "verdict": "usable as primary discriminator in every league-year sampled, 1920 to 2020"
+   "verdict": "usable as primary discriminator in every league-year sampled, 1920 to 2020",
+   "_census_all_leagues_2026_09_04": {
+    "worst": "APFA-1920 at 88.8%",
+    "every_other_league_season": ">= 93.8%",
+    "verdict": "\u00a79.2 confirmed across every league StatsCrew carries, not just the NFL"
+   }
   },
   "jersey": {
    "kind": "per_era_AND_per_page",
@@ -159,7 +186,7 @@
    }
   },
   "games_played": {
-   "kind": "per_league",
+   "kind": "per_league_season",
    "_comment": "THE per-league field. Scoping a completeness gate per ERA reads the WFL as catastrophically broken.",
    "measured": {
     "NFL": 100.0,
@@ -171,10 +198,47 @@
     "USFL": 76.9,
     "WFL": 14.9
    },
-   "verdict": "blank cells are the NORMAL condition in WFL/USFL/XFL - they are absence claims, not defects"
+   "verdict": "blank cells are the NORMAL condition in WFL/USFL/XFL - they are absence claims, not defects",
+   "_kind_correction_2026_09_04": "Declared per_league from report 06's 4-team sample. The full sweep of 34 non-NFL league-seasons shows it swings by season WITHIN a league: WLAF 1991 96.3% -> 1992 16.1%, an 80-point collapse in consecutive seasons of the same league. USFL 1983 86.7% -> 1985 42.0%. UFL games_started 2009 90.2% -> 2012 4.9%. per_league is one level too coarse.",
+   "census_by_league_season": {
+    "AAF-2019": 96.3,
+    "AAFC-1946": 100.0,
+    "AAFC-1947": 100.0,
+    "AAFC-1948": 100.0,
+    "AAFC-1949": 100.0,
+    "AFL-1960": 100.0,
+    "AFL-1961": 100.0,
+    "AFL-1962": 100.0,
+    "AFL-1963": 100.0,
+    "AFL-1964": 100.0,
+    "AFL-1965": 100.0,
+    "AFL-1966": 100.0,
+    "AFL-1967": 100.0,
+    "AFL-1968": 100.0,
+    "AFL-1969": 100.0,
+    "APFA-1920": 100.0,
+    "APFA-1921": 100.0,
+    "UFL-2009": 90.2,
+    "UFL-2010": 89.3,
+    "UFL-2011": 81.1,
+    "UFL-2012": 64.9,
+    "UFL2-2024": 92.0,
+    "USFL-1983": 86.7,
+    "USFL-1984": 79.2,
+    "USFL-1985": 42.0,
+    "USFL2-2022": 91.5,
+    "USFL2-2023": 83.5,
+    "WFL-1974": 21.6,
+    "WFL-1975": 45.8,
+    "WLAF-1991": 96.3,
+    "WLAF-1992": 16.1,
+    "XFL-2001": 92.1,
+    "XFL-2020": 83.9,
+    "XFL-2023": 87.5
+   }
   },
   "games_started": {
-   "kind": "per_league",
+   "kind": "per_league_season",
    "measured": {
     "NFL": 100.0,
     "APFA": 100.0,
@@ -190,6 +254,43 @@
     "NFL-2013": 89.8,
     "NFL-2014": 89.2,
     "note": "declared 100.0 for the NFL from an 8-season sample that skipped both years. Two consecutive seasons ~10 points low."
+   },
+   "_kind_correction_2026_09_04": "Declared per_league from report 06's 4-team sample. The full sweep of 34 non-NFL league-seasons shows it swings by season WITHIN a league: WLAF 1991 96.3% -> 1992 16.1%, an 80-point collapse in consecutive seasons of the same league. USFL 1983 86.7% -> 1985 42.0%. UFL games_started 2009 90.2% -> 2012 4.9%. per_league is one level too coarse.",
+   "census_by_league_season": {
+    "AAF-2019": 96.3,
+    "AAFC-1946": 100.0,
+    "AAFC-1947": 100.0,
+    "AAFC-1948": 100.0,
+    "AAFC-1949": 100.0,
+    "AFL-1960": 100.0,
+    "AFL-1961": 100.0,
+    "AFL-1962": 100.0,
+    "AFL-1963": 100.0,
+    "AFL-1964": 100.0,
+    "AFL-1965": 100.0,
+    "AFL-1966": 100.0,
+    "AFL-1967": 100.0,
+    "AFL-1968": 100.0,
+    "AFL-1969": 100.0,
+    "APFA-1920": 100.0,
+    "APFA-1921": 100.0,
+    "UFL-2009": 90.2,
+    "UFL-2010": 89.0,
+    "UFL-2011": 62.5,
+    "UFL-2012": 4.9,
+    "UFL2-2024": 92.0,
+    "USFL-1983": 77.9,
+    "USFL-1984": 63.1,
+    "USFL-1985": 19.7,
+    "USFL2-2022": 47.7,
+    "USFL2-2023": 83.5,
+    "WFL-1974": 7.8,
+    "WFL-1975": 25.2,
+    "WLAF-1991": 96.3,
+    "WLAF-1992": 15.1,
+    "XFL-2001": 92.1,
+    "XFL-2020": 83.9,
+    "XFL-2023": 87.1
    }
   },
   "hometown": {

@@ -1,0 +1,75 @@
+{
+ "summary": [
+  {
+   "league": "AAFC",
+   "year": 1946,
+   "teams": 8,
+   "rows": 303,
+   "denotations": 303,
+   "persons": 289,
+   "absences": 7,
+   "deviations": 1
+  },
+  {
+   "league": "AAFC",
+   "year": 1947,
+   "teams": 8,
+   "rows": 314,
+   "denotations": 314,
+   "persons": 303,
+   "absences": 7,
+   "deviations": 1
+  },
+  {
+   "league": "AAFC",
+   "year": 1948,
+   "teams": 8,
+   "rows": 328,
+   "denotations": 328,
+   "persons": 307,
+   "absences": 11,
+   "deviations": 1
+  },
+  {
+   "league": "AAFC",
+   "year": 1949,
+   "teams": 7,
+   "rows": 246,
+   "denotations": 246,
+   "persons": 242,
+   "absences": 3,
+   "deviations": 1
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "AAFC-1946",
+   "field": "hometown",
+   "declared": null,
+   "actual": 99.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AAFC-1947",
+   "field": "hometown",
+   "declared": null,
+   "actual": 98.7,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AAFC-1948",
+   "field": "hometown",
+   "declared": null,
+   "actual": 99.4,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AAFC-1949",
+   "field": "hometown",
+   "declared": null,
+   "actual": 99.2,
+   "why": "declaration makes NO prediction for this league"
+  }
+ ],
+ "failures": []
+}

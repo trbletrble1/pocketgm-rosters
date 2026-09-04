@@ -1,0 +1,52 @@
+{
+ "summary": [
+  {
+   "league": "AAF",
+   "year": 2019,
+   "teams": 8,
+   "rows": 485,
+   "denotations": 485,
+   "persons": 483,
+   "absences": 178,
+   "deviations": 5
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "AAF-2019",
+   "field": "jersey",
+   "declared": null,
+   "actual": 99.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AAF-2019",
+   "field": "games_played",
+   "declared": null,
+   "actual": 96.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AAF-2019",
+   "field": "games_started",
+   "declared": null,
+   "actual": 96.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AAF-2019",
+   "field": "birth_date",
+   "declared": null,
+   "actual": 95.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AAF-2019",
+   "field": "hometown",
+   "declared": null,
+   "actual": 75.9,
+   "why": "declaration makes NO prediction for this league"
+  }
+ ],
+ "failures": []
+}

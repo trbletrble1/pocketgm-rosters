@@ -1,0 +1,72 @@
+{
+ "summary": [
+  {
+   "league": "XFL",
+   "year": 2001,
+   "teams": 8,
+   "rows": 491,
+   "denotations": 491,
+   "persons": 478,
+   "absences": 185,
+   "deviations": 2
+  },
+  {
+   "league": "XFL",
+   "year": 2020,
+   "teams": 8,
+   "rows": 523,
+   "denotations": 523,
+   "persons": 517,
+   "absences": 310,
+   "deviations": 1
+  },
+  {
+   "league": "XFL",
+   "year": 2023,
+   "teams": 8,
+   "rows": 568,
+   "denotations": 568,
+   "persons": 549,
+   "absences": 204,
+   "deviations": 2
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "XFL-2001",
+   "field": "jersey",
+   "declared": null,
+   "actual": 85.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "XFL-2001",
+   "field": "hometown",
+   "declared": 76.6,
+   "actual": 93.5,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "XFL-2020",
+   "field": "jersey",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "XFL-2023",
+   "field": "jersey",
+   "declared": null,
+   "actual": 99.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "XFL-2023",
+   "field": "hometown",
+   "declared": 76.6,
+   "actual": 95.8,
+   "why": "deviation > 10 points"
+  }
+ ],
+ "failures": []
+}

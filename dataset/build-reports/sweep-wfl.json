@@ -1,0 +1,41 @@
+{
+ "summary": [
+  {
+   "league": "WFL",
+   "year": 1974,
+   "teams": 14,
+   "rows": 901,
+   "denotations": 901,
+   "persons": 832,
+   "absences": 1622,
+   "deviations": 0
+  },
+  {
+   "league": "WFL",
+   "year": 1975,
+   "teams": 11,
+   "rows": 629,
+   "denotations": 629,
+   "persons": 596,
+   "absences": 691,
+   "deviations": 2
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "WFL-1975",
+   "field": "games_played",
+   "declared": 14.9,
+   "actual": 45.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "WFL-1975",
+   "field": "games_started",
+   "declared": 4.7,
+   "actual": 25.2,
+   "why": "deviation > 10 points"
+  }
+ ],
+ "failures": []
+}

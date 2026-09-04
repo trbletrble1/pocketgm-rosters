@@ -1,0 +1,48 @@
+{
+ "summary": [
+  {
+   "league": "APFA",
+   "year": 1920,
+   "teams": 14,
+   "rows": 367,
+   "denotations": 367,
+   "persons": 348,
+   "absences": 178,
+   "deviations": 1
+  },
+  {
+   "league": "APFA",
+   "year": 1921,
+   "teams": 21,
+   "rows": 466,
+   "denotations": 466,
+   "persons": 427,
+   "absences": 103,
+   "deviations": 2
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "APFA-1920",
+   "field": "hometown",
+   "declared": null,
+   "actual": 85.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "APFA-1921",
+   "field": "jersey",
+   "declared": 60.4,
+   "actual": 82.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "APFA-1921",
+   "field": "hometown",
+   "declared": null,
+   "actual": 94.0,
+   "why": "declaration makes NO prediction for this league"
+  }
+ ],
+ "failures": []
+}

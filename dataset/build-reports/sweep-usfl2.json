@@ -1,0 +1,97 @@
+{
+ "summary": [
+  {
+   "league": "USFL2",
+   "year": 2022,
+   "teams": 8,
+   "rows": 449,
+   "denotations": 449,
+   "persons": 441,
+   "absences": 370,
+   "deviations": 5
+  },
+  {
+   "league": "USFL2",
+   "year": 2023,
+   "teams": 8,
+   "rows": 558,
+   "denotations": 558,
+   "persons": 552,
+   "absences": 252,
+   "deviations": 5
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "USFL2-2022",
+   "field": "jersey",
+   "declared": null,
+   "actual": 99.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "USFL2-2022",
+   "field": "games_played",
+   "declared": null,
+   "actual": 91.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "USFL2-2022",
+   "field": "games_started",
+   "declared": null,
+   "actual": 47.7,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "USFL2-2022",
+   "field": "birth_date",
+   "declared": null,
+   "actual": 99.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "USFL2-2022",
+   "field": "hometown",
+   "declared": null,
+   "actual": 80.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "USFL2-2023",
+   "field": "jersey",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "USFL2-2023",
+   "field": "games_played",
+   "declared": null,
+   "actual": 83.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "USFL2-2023",
+   "field": "games_started",
+   "declared": null,
+   "actual": 83.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "USFL2-2023",
+   "field": "birth_date",
+   "declared": null,
+   "actual": 96.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "USFL2-2023",
+   "field": "hometown",
+   "declared": null,
+   "actual": 91.0,
+   "why": "declaration makes NO prediction for this league"
+  }
+ ],
+ "failures": []
+}

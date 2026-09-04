@@ -1,0 +1,52 @@
+{
+ "summary": [
+  {
+   "league": "UFL2",
+   "year": 2024,
+   "teams": 8,
+   "rows": 503,
+   "denotations": 503,
+   "persons": 500,
+   "absences": 113,
+   "deviations": 5
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "UFL2-2024",
+   "field": "jersey",
+   "declared": null,
+   "actual": 99.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL2-2024",
+   "field": "games_played",
+   "declared": null,
+   "actual": 92.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL2-2024",
+   "field": "games_started",
+   "declared": null,
+   "actual": 92.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL2-2024",
+   "field": "birth_date",
+   "declared": null,
+   "actual": 99.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL2-2024",
+   "field": "hometown",
+   "declared": null,
+   "actual": 93.8,
+   "why": "declaration makes NO prediction for this league"
+  }
+ ],
+ "failures": []
+}

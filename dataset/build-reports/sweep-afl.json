@@ -1,0 +1,177 @@
+{
+ "summary": [
+  {
+   "league": "AFL",
+   "year": 1960,
+   "teams": 8,
+   "rows": 374,
+   "denotations": 374,
+   "persons": 362,
+   "absences": 17,
+   "deviations": 1
+  },
+  {
+   "league": "AFL",
+   "year": 1961,
+   "teams": 8,
+   "rows": 343,
+   "denotations": 343,
+   "persons": 330,
+   "absences": 10,
+   "deviations": 1
+  },
+  {
+   "league": "AFL",
+   "year": 1962,
+   "teams": 8,
+   "rows": 333,
+   "denotations": 333,
+   "persons": 325,
+   "absences": 5,
+   "deviations": 1
+  },
+  {
+   "league": "AFL",
+   "year": 1963,
+   "teams": 8,
+   "rows": 325,
+   "denotations": 325,
+   "persons": 319,
+   "absences": 7,
+   "deviations": 1
+  },
+  {
+   "league": "AFL",
+   "year": 1964,
+   "teams": 8,
+   "rows": 339,
+   "denotations": 339,
+   "persons": 331,
+   "absences": 5,
+   "deviations": 1
+  },
+  {
+   "league": "AFL",
+   "year": 1965,
+   "teams": 8,
+   "rows": 356,
+   "denotations": 356,
+   "persons": 352,
+   "absences": 4,
+   "deviations": 1
+  },
+  {
+   "league": "AFL",
+   "year": 1966,
+   "teams": 9,
+   "rows": 428,
+   "denotations": 428,
+   "persons": 424,
+   "absences": 2,
+   "deviations": 1
+  },
+  {
+   "league": "AFL",
+   "year": 1967,
+   "teams": 9,
+   "rows": 441,
+   "denotations": 441,
+   "persons": 426,
+   "absences": 2,
+   "deviations": 1
+  },
+  {
+   "league": "AFL",
+   "year": 1968,
+   "teams": 10,
+   "rows": 503,
+   "denotations": 503,
+   "persons": 494,
+   "absences": 4,
+   "deviations": 1
+  },
+  {
+   "league": "AFL",
+   "year": 1969,
+   "teams": 10,
+   "rows": 473,
+   "denotations": 473,
+   "persons": 471,
+   "absences": 1,
+   "deviations": 1
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "AFL-1960",
+   "field": "hometown",
+   "declared": null,
+   "actual": 96.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AFL-1961",
+   "field": "hometown",
+   "declared": null,
+   "actual": 98.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AFL-1962",
+   "field": "hometown",
+   "declared": null,
+   "actual": 98.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AFL-1963",
+   "field": "hometown",
+   "declared": null,
+   "actual": 98.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AFL-1964",
+   "field": "hometown",
+   "declared": null,
+   "actual": 98.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AFL-1965",
+   "field": "hometown",
+   "declared": null,
+   "actual": 98.9,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AFL-1966",
+   "field": "hometown",
+   "declared": null,
+   "actual": 99.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AFL-1967",
+   "field": "hometown",
+   "declared": null,
+   "actual": 99.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AFL-1968",
+   "field": "hometown",
+   "declared": null,
+   "actual": 99.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "AFL-1969",
+   "field": "hometown",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  }
+ ],
+ "failures": []
+}

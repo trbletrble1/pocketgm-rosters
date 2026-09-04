@@ -1,0 +1,526 @@
+{
+ "AAF-2019": {
+  "absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 95.1,
+   "College": 100.0,
+   "GP": 96.3,
+   "GS": 96.3,
+   "Height": 100.0,
+   "Hometown": 75.9,
+   "Weight": 100.0
+  },
+  "players": 485,
+  "teams": 8
+ },
+ "AAFC-1946": {
+  "absent": [],
+  "fill": {
+   "#": 99.0,
+   "Birth Date": 99.7,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.0,
+   "Weight": 100.0
+  },
+  "players": 303,
+  "teams": 8
+ },
+ "AAFC-1947": {
+  "absent": [],
+  "fill": {
+   "#": 99.7,
+   "Birth Date": 99.4,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.7,
+   "Weight": 100.0
+  },
+  "players": 314,
+  "teams": 8
+ },
+ "AAFC-1948": {
+  "absent": [],
+  "fill": {
+   "#": 97.6,
+   "Birth Date": 99.7,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.4,
+   "Weight": 100.0
+  },
+  "players": 328,
+  "teams": 8
+ },
+ "AAFC-1949": {
+  "absent": [],
+  "fill": {
+   "#": 99.6,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.2,
+   "Weight": 100.0
+  },
+  "players": 246,
+  "teams": 7
+ },
+ "AFL-1960": {
+  "absent": [],
+  "fill": {
+   "#": 99.7,
+   "Birth Date": 99.2,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 96.5,
+   "Weight": 100.0
+  },
+  "players": 374,
+  "teams": 8
+ },
+ "AFL-1961": {
+  "absent": [],
+  "fill": {
+   "#": 99.7,
+   "Birth Date": 99.4,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.0,
+   "Weight": 100.0
+  },
+  "players": 343,
+  "teams": 8
+ },
+ "AFL-1962": {
+  "absent": [],
+  "fill": {
+   "#": 99.7,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.8,
+   "Weight": 100.0
+  },
+  "players": 333,
+  "teams": 8
+ },
+ "AFL-1963": {
+  "absent": [],
+  "fill": {
+   "#": 99.7,
+   "Birth Date": 99.7,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.5,
+   "Weight": 100.0
+  },
+  "players": 325,
+  "teams": 8
+ },
+ "AFL-1964": {
+  "absent": [],
+  "fill": {
+   "#": 99.7,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.8,
+   "Weight": 100.0
+  },
+  "players": 339,
+  "teams": 8
+ },
+ "AFL-1965": {
+  "absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.9,
+   "Weight": 100.0
+  },
+  "players": 356,
+  "teams": 8
+ },
+ "AFL-1966": {
+  "absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.5,
+   "Weight": 100.0
+  },
+  "players": 428,
+  "teams": 9
+ },
+ "AFL-1967": {
+  "absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.5,
+   "Weight": 100.0
+  },
+  "players": 441,
+  "teams": 9
+ },
+ "AFL-1968": {
+  "absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.2,
+   "Weight": 100.0
+  },
+  "players": 503,
+  "teams": 10
+ },
+ "AFL-1969": {
+  "absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 473,
+  "teams": 10
+ },
+ "APFA-1920": {
+  "absent": [
+   "#"
+  ],
+  "fill": {
+   "#": 60.3,
+   "Birth Date": 88.8,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 85.3,
+   "Hometown": 85.3,
+   "Weight": 92.6
+  },
+  "players": 367,
+  "teams": 14
+ },
+ "APFA-1921": {
+  "absent": [
+   "#"
+  ],
+  "fill": {
+   "#": 82.8,
+   "Birth Date": 95.1,
+   "College": 99.8,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 86.5,
+   "Hometown": 94.0,
+   "Weight": 92.3
+  },
+  "players": 466,
+  "teams": 21
+ },
+ "UFL-2009": {
+  "absent": [],
+  "fill": {
+   "#": 90.2,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 90.2,
+   "GS": 90.2,
+   "Height": 100.0,
+   "Hometown": 88.3,
+   "Weight": 100.0
+  },
+  "players": 256,
+  "teams": 4
+ },
+ "UFL-2010": {
+  "absent": [],
+  "fill": {
+   "#": 89.3,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 89.3,
+   "GS": 89.0,
+   "Height": 100.0,
+   "Hometown": 90.4,
+   "Weight": 100.0
+  },
+  "players": 355,
+  "teams": 5
+ },
+ "UFL-2011": {
+  "absent": [],
+  "fill": {
+   "#": 81.1,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 81.1,
+   "GS": 62.5,
+   "Height": 100.0,
+   "Hometown": 92.0,
+   "Weight": 100.0
+  },
+  "players": 275,
+  "teams": 4
+ },
+ "UFL-2012": {
+  "absent": [
+   "GS"
+  ],
+  "fill": {
+   "#": 88.3,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 64.9,
+   "GS": 4.9,
+   "Height": 100.0,
+   "Hometown": 90.4,
+   "Weight": 100.0
+  },
+  "players": 239,
+  "teams": 4
+ },
+ "UFL2-2024": {
+  "absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 99.8,
+   "College": 100.0,
+   "GP": 92.0,
+   "GS": 92.0,
+   "Height": 100.0,
+   "Hometown": 93.8,
+   "Weight": 100.0
+  },
+  "players": 503,
+  "teams": 8
+ },
+ "USFL-1983": {
+  "absent": [],
+  "fill": {
+   "#": 86.5,
+   "Birth Date": 99.3,
+   "College": 100.0,
+   "GP": 86.7,
+   "GS": 77.9,
+   "Height": 99.9,
+   "Hometown": 93.5,
+   "Weight": 99.9
+  },
+  "players": 840,
+  "teams": 12
+ },
+ "USFL-1984": {
+  "absent": [],
+  "fill": {
+   "#": 88.9,
+   "Birth Date": 99.1,
+   "College": 100.0,
+   "GP": 79.2,
+   "GS": 63.1,
+   "Height": 99.9,
+   "Hometown": 94.0,
+   "Weight": 99.9
+  },
+  "players": 1229,
+  "teams": 18
+ },
+ "USFL-1985": {
+  "absent": [
+   "GS"
+  ],
+  "fill": {
+   "#": 92.3,
+   "Birth Date": 99.0,
+   "College": 100.0,
+   "GP": 42.0,
+   "GS": 19.7,
+   "Height": 99.8,
+   "Hometown": 96.4,
+   "Weight": 99.7
+  },
+  "players": 882,
+  "teams": 14
+ },
+ "USFL2-2022": {
+  "absent": [],
+  "fill": {
+   "#": 99.1,
+   "Birth Date": 99.1,
+   "College": 100.0,
+   "GP": 91.5,
+   "GS": 47.7,
+   "Height": 100.0,
+   "Hometown": 80.2,
+   "Weight": 100.0
+  },
+  "players": 449,
+  "teams": 8
+ },
+ "USFL2-2023": {
+  "absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 96.8,
+   "College": 100.0,
+   "GP": 83.5,
+   "GS": 83.5,
+   "Height": 100.0,
+   "Hometown": 91.0,
+   "Weight": 100.0
+  },
+  "players": 558,
+  "teams": 8
+ },
+ "WFL-1974": {
+  "absent": [
+   "GS"
+  ],
+  "fill": {
+   "#": 89.8,
+   "Birth Date": 99.3,
+   "College": 100.0,
+   "GP": 21.6,
+   "GS": 7.8,
+   "Height": 100.0,
+   "Hometown": 93.1,
+   "Weight": 100.0
+  },
+  "players": 901,
+  "teams": 14
+ },
+ "WFL-1975": {
+  "absent": [
+   "GS"
+  ],
+  "fill": {
+   "#": 91.7,
+   "Birth Date": 99.0,
+   "College": 99.8,
+   "GP": 45.8,
+   "GS": 25.2,
+   "Height": 100.0,
+   "Hometown": 93.8,
+   "Weight": 100.0
+  },
+  "players": 629,
+  "teams": 11
+ },
+ "WLAF-1991": {
+  "absent": [],
+  "fill": {
+   "#": 97.1,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 96.3,
+   "GS": 96.3,
+   "Height": 98.6,
+   "Hometown": 93.0,
+   "Weight": 98.6
+  },
+  "players": 487,
+  "teams": 10
+ },
+ "WLAF-1992": {
+  "absent": [
+   "GS"
+  ],
+  "fill": {
+   "#": 84.2,
+   "Birth Date": 99.8,
+   "College": 100.0,
+   "GP": 16.1,
+   "GS": 15.1,
+   "Height": 99.6,
+   "Hometown": 90.6,
+   "Weight": 99.6
+  },
+  "players": 467,
+  "teams": 10
+ },
+ "XFL-2001": {
+  "absent": [],
+  "fill": {
+   "#": 85.1,
+   "Birth Date": 99.6,
+   "College": 100.0,
+   "GP": 92.1,
+   "GS": 92.1,
+   "Height": 100.0,
+   "Hometown": 93.5,
+   "Weight": 100.0
+  },
+  "players": 491,
+  "teams": 8
+ },
+ "XFL-2020": {
+  "absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 97.1,
+   "College": 100.0,
+   "GP": 83.9,
+   "GS": 83.9,
+   "Height": 100.0,
+   "Hometown": 75.7,
+   "Weight": 100.0
+  },
+  "players": 523,
+  "teams": 8
+ },
+ "XFL-2023": {
+  "absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 93.8,
+   "College": 100.0,
+   "GP": 87.5,
+   "GS": 87.1,
+   "Height": 100.0,
+   "Hometown": 95.8,
+   "Weight": 100.0
+  },
+  "players": 568,
+  "teams": 8
+ }
+}

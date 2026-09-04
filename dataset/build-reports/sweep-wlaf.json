@@ -1,0 +1,97 @@
+{
+ "summary": [
+  {
+   "league": "WLAF",
+   "year": 1991,
+   "teams": 10,
+   "rows": 487,
+   "denotations": 487,
+   "persons": 472,
+   "absences": 84,
+   "deviations": 5
+  },
+  {
+   "league": "WLAF",
+   "year": 1992,
+   "teams": 10,
+   "rows": 467,
+   "denotations": 467,
+   "persons": 452,
+   "absences": 826,
+   "deviations": 5
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "WLAF-1991",
+   "field": "jersey",
+   "declared": null,
+   "actual": 97.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "WLAF-1991",
+   "field": "games_played",
+   "declared": null,
+   "actual": 96.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "WLAF-1991",
+   "field": "games_started",
+   "declared": null,
+   "actual": 96.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "WLAF-1991",
+   "field": "birth_date",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "WLAF-1991",
+   "field": "hometown",
+   "declared": null,
+   "actual": 93.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "WLAF-1992",
+   "field": "jersey",
+   "declared": null,
+   "actual": 84.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "WLAF-1992",
+   "field": "games_played",
+   "declared": null,
+   "actual": 16.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "WLAF-1992",
+   "field": "games_started",
+   "declared": null,
+   "actual": 15.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "WLAF-1992",
+   "field": "birth_date",
+   "declared": null,
+   "actual": 99.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "WLAF-1992",
+   "field": "hometown",
+   "declared": null,
+   "actual": 90.6,
+   "why": "declaration makes NO prediction for this league"
+  }
+ ],
+ "failures": []
+}

@@ -1,0 +1,187 @@
+{
+ "summary": [
+  {
+   "league": "UFL",
+   "year": 2009,
+   "teams": 4,
+   "rows": 256,
+   "denotations": 256,
+   "persons": 253,
+   "absences": 105,
+   "deviations": 5
+  },
+  {
+   "league": "UFL",
+   "year": 2010,
+   "teams": 5,
+   "rows": 355,
+   "denotations": 355,
+   "persons": 340,
+   "absences": 149,
+   "deviations": 5
+  },
+  {
+   "league": "UFL",
+   "year": 2011,
+   "teams": 4,
+   "rows": 275,
+   "denotations": 275,
+   "persons": 274,
+   "absences": 229,
+   "deviations": 5
+  },
+  {
+   "league": "UFL",
+   "year": 2012,
+   "teams": 4,
+   "rows": 239,
+   "denotations": 239,
+   "persons": 239,
+   "absences": 252,
+   "deviations": 5
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "UFL-2009",
+   "field": "jersey",
+   "declared": null,
+   "actual": 90.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2009",
+   "field": "games_played",
+   "declared": null,
+   "actual": 90.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2009",
+   "field": "games_started",
+   "declared": null,
+   "actual": 90.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2009",
+   "field": "birth_date",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2009",
+   "field": "hometown",
+   "declared": null,
+   "actual": 88.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2010",
+   "field": "jersey",
+   "declared": null,
+   "actual": 89.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2010",
+   "field": "games_played",
+   "declared": null,
+   "actual": 89.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2010",
+   "field": "games_started",
+   "declared": null,
+   "actual": 89.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2010",
+   "field": "birth_date",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2010",
+   "field": "hometown",
+   "declared": null,
+   "actual": 90.4,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2011",
+   "field": "jersey",
+   "declared": null,
+   "actual": 81.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2011",
+   "field": "games_played",
+   "declared": null,
+   "actual": 81.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2011",
+   "field": "games_started",
+   "declared": null,
+   "actual": 62.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2011",
+   "field": "birth_date",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2011",
+   "field": "hometown",
+   "declared": null,
+   "actual": 92.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2012",
+   "field": "jersey",
+   "declared": null,
+   "actual": 88.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2012",
+   "field": "games_played",
+   "declared": null,
+   "actual": 64.9,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2012",
+   "field": "games_started",
+   "declared": null,
+   "actual": 4.9,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2012",
+   "field": "birth_date",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "UFL-2012",
+   "field": "hometown",
+   "declared": null,
+   "actual": 90.4,
+   "why": "declaration makes NO prediction for this league"
+  }
+ ],
+ "failures": []
+}

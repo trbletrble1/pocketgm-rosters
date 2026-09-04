@@ -1,0 +1,79 @@
+{
+ "summary": [
+  {
+   "league": "USFL",
+   "year": 1983,
+   "teams": 12,
+   "rows": 840,
+   "denotations": 840,
+   "persons": 778,
+   "absences": 472,
+   "deviations": 2
+  },
+  {
+   "league": "USFL",
+   "year": 1984,
+   "teams": 18,
+   "rows": 1229,
+   "denotations": 1229,
+   "persons": 1121,
+   "absences": 931,
+   "deviations": 1
+  },
+  {
+   "league": "USFL",
+   "year": 1985,
+   "teams": 14,
+   "rows": 882,
+   "denotations": 882,
+   "persons": 821,
+   "absences": 1226,
+   "deviations": 3
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "USFL-1983",
+   "field": "games_started",
+   "declared": 65.7,
+   "actual": 77.9,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "USFL-1983",
+   "field": "hometown",
+   "declared": null,
+   "actual": 93.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "USFL-1984",
+   "field": "hometown",
+   "declared": null,
+   "actual": 94.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "USFL-1985",
+   "field": "games_played",
+   "declared": 76.9,
+   "actual": 42.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "USFL-1985",
+   "field": "games_started",
+   "declared": 65.7,
+   "actual": 19.7,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "USFL-1985",
+   "field": "hometown",
+   "declared": null,
+   "actual": 96.4,
+   "why": "declaration makes NO prediction for this league"
+  }
+ ],
+ "failures": []
+}
