@@ -4876,3 +4876,34 @@ not care which commit broke it or whether anyone remembered the floor existed.
 **Corollary for anything that re-splits, rescales or redistributes a value:**
 the invariant the transform preserves is not the invariant that matters. Ask
 what property of the OUTPUT held before it ran, and check that.
+
+## The reference for what a cohort should look like is the archive, never the file under question
+
+2026-09-03. 2021's free agents carried the wrong draw of `injuryProne` and I
+cleared it, twice, before it was caught.
+
+The first clearance: I compared 2021's free agents against **2021's own
+rookies**, found them differently shaped, and concluded there was no cohort
+crossing. **2021's rookies are themselves anomalous** — they run p10 19 to p90
+41 where the archive's rookie draw runs 6 to 83. So the comparison put one
+defect beside another and passed both. **I tested one defect against another and
+passed both.**
+
+Against the right reference the answer was immediate and not close: 2021's free
+agents match the other nine files' rookies at KS 0.067 and their free agents at
+KS 0.263. A hundred and three men matching a pool of nine thousand that closely
+are the same draw.
+
+**The rule.** When you ask "does this cohort look right", the comparison set is
+every other file, never the file you are questioning and never a neighbouring
+cohort inside it. A file under suspicion has forfeited its right to be its own
+control. This is the same error as testing a file against the registry it was
+written from, and the same error as a source scoring 98% because the anchor set
+lived inside it — **a test whose reference is contaminated by the thing being
+tested returns a clean result and means nothing.**
+
+**And medians are not enough to find it.** The cohort read 34 against an archive
+49, which says something is wrong but not what; 34 also happens to be the
+archive's rookie median, which is suggestive and no more. The distribution
+identified the source. Compare shapes, not centres, when the question is "where
+did this come from".

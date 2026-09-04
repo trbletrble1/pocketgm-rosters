@@ -966,7 +966,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2000,BB1D9681-F9F4-3091-BD7F-EA2D6C603EE2,Head Coach,CHI,Dick Jauron,Dick Jauron,real (name in a real source),inferred
 2000,18CD7939-4BCA-1BC8-9FEA-328D477A6A2B,Off Co-ord,CHI,Gary Crowton,Gary Crowton,real (name in a real source),inferred
 2000,D50A84C9-8B83-8F0C-7CA6-7C23B5443F8A,Special Teams,CHI,Keith Armstrong,Keith Armstrong,real (name in a real source),inferred
-2000,07B34FA6-ADF3-3C5E-225E-068B42DBB72E,Def Co-ord,CIN,Dick LeBeau,Dick LeBeau,real (name in a real source),inferred
+2000,07B34FA6-ADF3-3C5E-225E-068B42DBB72E,Def Co-ord,CIN,Dick LeBeau,Mark Duffner,real (name in a real source),"Cincinnati's 2000 linebackers coach and the senior defensive assistant; the real team had no separate defensive coordinator after LeBeau's promotion, so he is mapped to the Def Co-ord slot"
 2000,E9219C6D-862B-277A-6F1C-47BA17BB27B4,Head Coach,CIN,Dick LeBeau,Dick LeBeau,real (name in a real source),inferred
 2000,54B40209-2734-0FF5-05DA-98512A9E331A,Off Co-ord,CIN,Ken Anderson,Ken Anderson,real (name in a real source),inferred
 2000,FCDEF207-CDBE-3FDF-5854-616083823E41,Special Teams,CIN,Al Roberts,Al Roberts,real (name in a real source),inferred

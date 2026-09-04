@@ -3469,3 +3469,66 @@ somebody else: Cincinnati's actual 2000 defensive assistant, or a generated
 coach with that stated in the provenance sidecar. If it does tolerate it, the
 duplicate-names check needs a same-man exemption distinct from the namesake one.
 **Not written either way.**
+
+### 68. Staff ages: 59 men whose ages cannot describe one career — surfaced by the namesake test, logged as its own audit
+
+The namesake work needed a cross-file age test and could not have one for staff.
+Run at tolerance 12 it returns **59 men, and the top of the list is not
+namesakes at all** — it is the age field failing:
+
+| man | reads | the man |
+|---|---|---|
+| Frank Gansz | 61 in 1979, 40 in 2007 | one man, off by 49 |
+| Jerry Mitchell | 64 in 1979, 40 in 2004 | off by 49 |
+| George Allen | 61 in 1979, 44 in 2004 | off by 42 |
+| Bill Belichick | 49 in 1979, 34 in 1986 | born 1952, so 1986 is right |
+| Adam Gase | 35 in 2013, 52 in 2017 | born 1978, so 2013 is right |
+
+**Median miss 19 years across the 59.** Pete Carmichael reads 59, 69, 42, 76, 80
+and 85 across six files — a man who ages 17 years in one four-year gap and loses
+27 in the next.
+
+**Why this is logged rather than fixed.** It is a different job from anything
+today: it needs a birth year per man from a real source, and there are 343 staff
+who appear in more than one file. `wip/staff_age_errors.csv` carries all 59 with
+every file, age and role, ranked by how badly the ages miss — **that list is the
+starting point for a proper staff age audit**, not the whole of it, because a
+man appearing in ONE file can be just as wrong with nothing to contradict him.
+
+**The reason it matters beyond tidiness:** age drives the appearance aging
+variant and the staff contract and potential curves, so a coach 20 years out is
+wrong in the interface in several places at once. And it is why the cross-file
+namesake test is refused for staff — on this cohort it measures the age field
+rather than identity, and **would have written 57 false namesakes into the
+registry to hide one real problem. A namesake registry is exactly the kind of
+artefact nobody re-examines once it exists.**
+
+#### 67 CLOSED 2026-09-03 — LeBeau keeps the head-coach slot; Mark Duffner takes the coordinator record
+
+Ruled by Ryan on asymmetric risk rather than certainty: vanilla carries zero
+duplicate names in 1,296 records, so one-record-per-person is the engine's
+convention, and a doubled man breaking a depth chart is a failure a user meets
+blind, while splitting him costs trivia the interface never showed.
+
+**The real man, researched.** The 2000 Bengals defensive staff was Tim Krumrie
+(line), **Mark Duffner (linebackers)**, Ray Horton (defensive backs) and Louie
+Cioffi (defensive staff assistant). **No separate coordinator is named after
+LeBeau's promotion, because there was not one** — he kept calling the defence
+himself. Duffner is the senior defensive assistant of the four, a former head
+coach at Maryland, so he takes the file's `Def Co-ord` slot and the mapping is
+stated in the sidecar rather than implied. No man was generated.
+
+**He was already in the archive** as a 2010 Jacksonville scout with a registry
+face, so the pass took that face: he looks the same in both files and the
+one-person-one-face gate stays green.
+
+**Changed: name, age (47, born 1953), startSeason (1997, when he joined
+Cincinnati), appearance. NOT changed: rating 66, potential 80, the growth curve
+and every attribute.** This changes who occupies the slot, not how good
+Cincinnati's defence is, and the archive's staff ratings are assigned by
+convention rather than sourced per man — inventing a rating for Duffner would be
+a claim nothing supports.
+
+**No same-man exemption was added to the duplicate check**, per the ruling: a
+check with two kinds of exemption is one nobody trusts. The sidecar row was
+rewritten in place, CRLF preserved.
