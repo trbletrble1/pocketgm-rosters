@@ -1,0 +1,102 @@
+year,team,slot,source_title,name,fill
+1979,ARI,Def Co-ord,Defensive Coordinator,Tom Bettis,titled
+1979,ARI,Off Co-ord,,,fallback
+1979,ARI,Special Teams,Special Teams Assistant,Jerry Thompson,inferred
+1979,ATL,Off Co-ord,,,fallback
+1979,ATL,Special Teams,,,fallback
+1979,BUF,Def Co-ord,Defensive Coordinator,Tom Catlin,titled
+1979,BUF,Off Co-ord,Offensive Coordinator,Ray Prochaska,titled
+1979,BUF,Special Teams,Special Teams Assistant,Elijah Pitts,inferred
+1979,CHI,Def Co-ord,Defensive Coordinator,Buddy Ryan,titled
+1979,CHI,Off Co-ord,Offensive Coordinator,Ken Meyer,titled
+1979,CHI,Special Teams,Special Teams Assistant,Hank Kuhlmann,inferred
+1979,CIN,Off Co-ord,,,fallback
+1979,CLE,Off Co-ord,,,fallback
+1979,DAL,Def Co-ord,Defensive Coordinator,Ernie Stautner,titled
+1979,DAL,Off Co-ord,Offensive Coordinator,Dan Reeves,titled
+1979,DAL,Special Teams,Special Teams Assistant,Mike Ditka,inferred
+1979,DEN,Off Co-ord,,,fallback
+1979,DET,Def Co-ord,,,fallback
+1979,DET,Off Co-ord,,,fallback
+1979,DET,Special Teams,Special Teams Assistant,Larry Pasquale,inferred
+1979,GB,Off Co-ord,,,fallback
+1979,IND,Def Co-ord,Defensive Coordinator,Maxie Baughan,titled
+1979,IND,Off Co-ord,,,fallback
+1979,IND,Special Teams,Special Teams Assistant,George Boutselis,inferred
+1979,KC,Def Co-ord,Defensive Coordinator,Rod Rust,titled
+1979,KC,Off Co-ord,,,fallback
+1979,KC,Special Teams,Special Teams Assistant,Bobby Ross,inferred
+1979,LAC,Def Co-ord,Defensive Coordinator,Jacki Simpson,titled
+1979,LAC,Off Co-ord,Offensive Coordinator,Joe Gibbs,titled
+1979,LAC,Special Teams,Special Teams Assistant,Wayne Sevier,inferred
+1979,LV,Def Co-ord,,,fallback
+1979,LV,Off Co-ord,,,fallback
+1979,MIA,Def Co-ord,,,fallback
+1979,MIA,Off Co-ord,,,fallback
+1979,MIN,Def Co-ord,,,fallback
+1979,MIN,Off Co-ord,Offensive Coordinator,Jerry Burns,titled
+1979,MIN,Special Teams,,,fallback
+1979,NE,Def Co-ord,Defensive Coordinator,Hank Bullough,titled
+1979,NE,Off Co-ord,Offensive Coordinator,Jim Ringo,titled
+1979,NE,Special Teams,Special Teams Assistant,Gino Cappelletti,inferred
+1979,NYG,Off Co-ord,,,fallback
+1979,NYJ,Def Co-ord,Defensive Coordinator,Johnny Mazur,titled
+1979,NYJ,Off Co-ord,Offensive Coordinator,John Idzik,titled
+1979,NYJ,Special Teams,Special Teams Assistant,Joe Haering,inferred
+1979,PHI,Off Co-ord,,,fallback
+1979,PIT,Def Co-ord,Defensive Coordinator,George Perles,titled
+1979,PIT,Off Co-ord,,,fallback
+1979,PIT,Special Teams,,,fallback
+1979,SEA,Def Co-ord,,,fallback
+1979,SEA,Off Co-ord,,,fallback
+1979,SF,Off Co-ord,,,fallback
+1979,TB,Def Co-ord,Defensive Coordinator,Tom Bass,titled
+1979,TB,Off Co-ord,,,fallback
+1979,TB,Special Teams,Special Teams Assistant,Phil Krueger,inferred
+1979,TEN,Def Co-ord,Defensive Coordinator,Ed Biles,titled
+1979,TEN,Off Co-ord,,,fallback
+1979,TEN,Special Teams,Special Teams Assistant,John Paul Young,inferred
+1979,BAL,Off Co-ord,,,no franchise
+1979,CAR,Def Co-ord,,,no franchise
+1979,CAR,Off Co-ord,,,no franchise
+1979,CAR,Special Teams,,,no franchise
+1979,HOU,Off Co-ord,,,no franchise
+1979,JAX,Def Co-ord,,,no franchise
+1979,JAX,Off Co-ord,,,no franchise
+1979,JAX,Special Teams,,,no franchise
+2010,ATL,Def Co-ord,Defensive Coordinator,Brian VanGorder,titled
+2010,ATL,Special Teams,Special Teams Coordinator,Keith Armstrong,titled
+2010,BAL,Def Co-ord,Defensive Coordinator,Greg Mattison,titled
+2010,BAL,Special Teams,Special Teams Coordinator,Jerry Rosburg,titled
+2010,BUF,Special Teams,Special Teams Coordinator,Bruce DeHaven,titled
+2010,CAR,Def Co-ord,Defensive Coordinator,Ron Meeks,titled
+2010,CAR,Special Teams,Special Teams Assistant,Jeff Rodgers,inferred
+2010,CHI,Special Teams,Special Teams Coordinator,Dave Toub,titled
+2010,CIN,Special Teams,Special Teams Assistant,Darrin Simmons,inferred
+2010,CLE,Special Teams,Special Teams Coordinator,Brad Seely,titled
+2010,DAL,Def Co-ord,,,fallback
+2010,DAL,Special Teams,Special Teams Coordinator,Joe DeCamillis,titled
+2010,DEN,Def Co-ord,Defensive Coordinator,Don Martindale,titled
+2010,DEN,Special Teams,Special Teams Coordinator,Mike Priefer,titled
+2010,DET,Special Teams,Special Teams Assistant,Danny Crossman,inferred
+2010,GB,Special Teams,Special Teams Coordinator,Shawn Slocum,titled
+2010,HOU,Special Teams,,,not in source
+2010,IND,Def Co-ord,Defensive Coordinator,Larry Coyer,titled
+2010,IND,Special Teams,Special Teams Assistant,Ray Rychleski,inferred
+2010,JAX,Special Teams,Special Teams Coordinator,Russ Purnell,titled
+2010,KC,Special Teams,Special Teams Assistant,Steve Hoffman,inferred
+2010,LAC,Off Co-ord,Offensive Coordinator,Clarence Shelmon,titled
+2010,LAR,Def Co-ord,Defensive Coordinator,Ken Flajole,titled
+2010,LAR,Special Teams,Special Teams Coordinator,Tom McMahon,titled
+2010,MIA,Special Teams,Special Teams Coordinator,John Bonamego,titled
+2010,MIN,Special Teams,Special Teams Coordinator,Brian Murphy,titled
+2010,NE,Def Co-ord,,,fallback
+2010,NO,Special Teams,Special Teams Coordinator,Greg McMahon,titled
+2010,NYG,Special Teams,Special Teams Coordinator,Tom Quinn,titled
+2010,NYJ,Special Teams,Special Teams Coordinator,Mike Westhoff,titled
+2010,PHI,Special Teams,Special Teams Coordinator,Bobby April Jr.,titled
+2010,PIT,Special Teams,Special Teams Assistant,Al Everest,inferred
+2010,SF,Special Teams,Special Teams Coordinator,Kurt Schottenheimer,titled
+2010,TB,Special Teams,Special Teams Coordinator,Rich Bisaccia,titled
+2010,TEN,Special Teams,Special Teams Assistant,Alan Lowry,inferred
+2010,WAS,Special Teams,Special Teams Assistant,Danny Smith,inferred
