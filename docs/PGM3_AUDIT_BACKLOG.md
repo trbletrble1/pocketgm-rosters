@@ -2975,3 +2975,56 @@ Faces moved: 1979 151, 1986 247, 2000 89. Faces gate back to **18 / 18**
 (from 19 / 19); verified faces intact, 329 checked. Same-man 1979/1986 family
 agreement across rostered and prospects **645 of 649**; the four are named in
 the commit. Roster gates ALL CLEAR on 1979, 1986, 2000. Only `appearance` moved.
+
+---
+
+### 58. Mike's appearance fields decoded — no facial-hair field exists; hair colour decodes but the mapping is unproven
+
+**2026-09-03, measurement before any merge.** Our vocabulary first: the colour
+digit is shared across hair, beard and eyebrows on **32,034 of 32,034** records
+(Ryan's in-game reading confirmed). Beard: 8 style letters × 5 colours, `g` clean
+shaven. **1979's beards are a flat uniform draw** (194–249 per letter); every
+other file has a realistic shape with `g` dominant. Hair colour is sourced only
+in 1979 — 1,339 men from NFL79's `PHCL` via `HAIR_FAM`, 755 from the 1986
+registry, 1,178 generated. **The only real hair and beard data in the project is
+the original 142 hand-verified faces; the 99 skin verdicts carry none and were
+excluded from every test here.**
+
+**`PFMK` is not facial hair.** 14 values (0–13) — Madden 08's face-mask list.
+Against the 78 verified beards its best possible binary accuracy (clean vs any
+hair) is **63% against a 41% base rate**, and its per-value crosstab is noise;
+against NFL79's `PFMK` it agrees 90% on the diagonal, so both mods carry the
+same field and it is not the one we want. `PHED` (16 values) is the head/face
+preset and tracks skin, not beards (70% binary, almost all from the skin
+correlation: value 4 is dark-skinned men with hair style `p`, value 7 light-
+skinned men). `PEYE` is two values (eye black or visor). `PFEx` is unique per
+man — a face-texture index, not a category. **Madden bakes facial hair into the
+head model; there is no field to merge. Facial hair is photographs or nothing.**
+
+**`PHCL` decodes and its encoding matches NFL79's** — Mike 0/1/2/4 land on
+NFL79 0/1/2/4 at 93 / 74 / 77 / 63% over 1,630 shared men. Six values against
+our five: 3 and 5 total 72 records and are noise. **But what the values MEAN is
+unproven.** Against the 77 verified men Mike covers, the documented mapping
+(0 black, 1 blond, 2 brown, 3 red, 4 light brown — `HAIR_FAM`, taken from
+NFL79) scores **43/77 = 56%**; the best fit from the photographs (0 black,
+**1 red, 2 light brown, 4 brown**) scores **60/77 = 78%**. And that rests on
+almost nothing: 38 of the 77 are dark-skinned men whose hair is black whatever
+the field says, so **the light-colour mapping is decided by 39 men — 67% on the
+best fit — with red on four and blond on none.**
+
+**What that means for the archive's own data:** 1979's 1,339 NFL79-sourced hair
+colours carry `HAIR_FAM`, the mapping the photographs score at 56%. If the
+best-fit reading is right, values 2 and 4 are swapped for every one of them.
+Measured on light-skinned rostered men, Mike (best fit) and the archive disagree
+on **594 of 712 in 1979 and 414 of 515 in 1986** — 80%+ — and the split is
+dominated by one pair, **archive brown / Mike light brown (372 and 213)**, which
+is exactly the 2↔4 question. **Not a data disagreement; a mapping question with
+two candidate answers and 39 men to choose between them.**
+
+**Verdict on Ryan's bar (95%+ merges, ambiguous gets a photo pass):** `PFMK`
+does not exist as facial hair — no pass can help. `PHCL` is ambiguous on the
+mapping, not the data: a second photo pass on light-skinned men would settle
+which of two mappings is right, and it needs far fewer than a hundred — the
+question is one bit (is value 2 brown or light brown, is 1 blond or red), and
+thirty light-skinned men with clear photographs would carry it. Hair style has
+no Mike field at all. **Nothing merged. Proposal in the report.**
