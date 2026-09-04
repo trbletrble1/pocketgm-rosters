@@ -1000,3 +1000,52 @@ also era-local — 1950's Baltimore is `BA1`.
 
 **Not yet examined**: player IDs, the All-Pro and Coach-of-the-Year tables on the
 season index, and the `stats/` and `results/` paths.
+
+## archive.org `nfl-media-guides` — the index, before anything is fetched
+
+Queried 2026-09-04. **2,105 items, none restricted** — `access-restricted-item`
+is empty on every one, so this whole collection is a different class from the
+borrow-only Record & Fact Book library scans Ryan warned about. Index cached at
+`pgm3-sources/nfl-books/index.csv` and copied to `wip/`.
+
+**It is far larger than the league books.** Two families, and the second is the
+one that matters:
+
+**League-wide books: 40 items, 39 distinct years, 1981–2026.** The two title
+families behave exactly as described — `nfl-media-information-book-198{1,2,3}`
+then `nfl-…-record-fact-book-…` from 1984. **Gaps: 1987, 1992, 1994, 1996, 1997,
+1998 and 2024.** Nothing before 1981 in this collection, so the league book does
+not reach 1979 directly, though a 1981 or 1984 edition reaches backwards through
+each coach's career history.
+
+**Team media guides: 2,065 items, 1934–2026** — the find. Per decade: 8 in the
+1930s, 62 in the 1940s, 115 in the 1950s, 220 in the 1960s, 263 in the 1970s,
+279, 288, 306, 315, and 209 so far in the 2020s.
+
+**Coverage of the archive's own ten seasons is near-complete:**
+
+| season | team guides held |
+|---|---|
+| 1979 | **28 of 28** |
+| 1986 | 29 |
+| 2000 | 30 of 31 |
+| 2004 | 30 of 32 |
+| 2007 | 30 of 32 |
+| 2010 | **32 of 32** |
+| 2013 | **32 of 32** |
+| 2017 | **32 of 32** |
+| 2021 | **32 of 32** |
+| 2026 | 16 so far |
+
+**1979 is complete — every one of the 28 teams.** That is the season with the
+coordinator gap this session has been closing a slot at a time, and a team's own
+media guide names its entire staff with roles, which no other source in the
+project does. It is also the direct answer to what item 71 recorded as
+unrepresentable: the position coaches PGM3 has no slot for are all in these
+books, whether or not the file can hold them.
+
+**Nothing fetched yet.** Next step, on a ruling: pull `_djvu.txt` for a single
+1979 guide, confirm the text carries the staff section with roles and birth
+dates, and only then decide what a sweep looks like — 28 books for 1979 alone,
+and the caution stands that a `_djvu.txt` must be confirmed to exist per item
+rather than assumed from the collection.
