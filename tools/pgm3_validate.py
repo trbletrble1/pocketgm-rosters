@@ -271,6 +271,17 @@ def check_roster(new, refs):
         out.append(('draft pool has no safeties', 1 if rc['S'] == 0 else 0))
         out.append(('draft pool missing a LB type',
                     1 if (rc['MLB'] == 0 or rc['OLB'] == 0) else 0))
+        # A PROSPECT'S CEILING IS AT LEAST HIS RATING PLUS THREE. Ruled
+        # archive-wide by Ryan 2026-09-03, which is what makes it checkable:
+        # outcome_ceilings applied the floor inside each class it processed, so
+        # it was a property of a transform and not of the archive, and seven
+        # files kept 68-133 prospects under it while 2007 kept 496. A prospect
+        # whose ceiling is his current rating is not a prospect. Applied to all
+        # ten by tools/fix_prospect_floor.py, 1,271 men, growth curves rebuilt.
+        # The 99 ceiling wins where the two meet; no prospect in the archive is
+        # rated above 86, so today it binds on nobody.
+        out.append((f'prospect potential below rating + 3',
+                    sum(1 for p in rk if p['potential'] < min(p['rating'] + 3, 99))))
 
     # ---- ROSTER COMPOSITION: no team empty at a position the references
     # always fill. `zero_pattern` is about attribute VALUES, not roster

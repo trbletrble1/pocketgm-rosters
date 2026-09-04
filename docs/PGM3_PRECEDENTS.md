@@ -4845,3 +4845,34 @@ on. Two forms that do work:
   A floor at 15 catches the flat draw and cannot fire on a real file.
 
 Where the band is genuinely the only reference, it stays a WARN and says so.
+
+## A later fix can undo an earlier one through a field neither of them names
+
+Ryan's words for what the retrofitted gates caught on their first run, 2026-09-03.
+
+At `a95c793` the contract work put a floor on salary and 2017 came out with
+nobody under $500K. At `7b40c9a`, four commits later, the guarantee split moved
+money out of salary into guarantee for 1,016 of 2017's players. **Total
+compensation was preserved on every one of them and asserted to be. The cap
+arithmetic runs on salary plus guarantee, so it did not move either. And the
+salary floor was silently undone underneath it** — Elijah Wilkinson ended on
+$101,178 of salary against $494,049 of guarantee, and 185 men sat under $500K
+in a file where every other one holds nobody below $566K.
+
+**Nothing in the split's code mentioned the floor, and nothing in the floor's
+code mentioned the split.** Neither was wrong about what it named. The defect
+lives in the field they share and neither one owns, and no review of either
+commit on its own would find it: the split's own assertion — total pay
+unchanged — passes.
+
+The file was green under every check that existed the day before, and red on the
+first run of a check written the day after. **This is the case that makes the
+standing rule pay for itself, and it is the argument for the property form of a
+check over the instance form.** A check on "salary plus guarantee is unchanged"
+is a check on what the author was thinking about. A check on "the bottom of the
+salary distribution is a wall, not a tail" is a check on the file, and it does
+not care which commit broke it or whether anyone remembered the floor existed.
+
+**Corollary for anything that re-splits, rescales or redistributes a value:**
+the invariant the transform preserves is not the invariant that matters. Ask
+what property of the OUTPUT held before it ran, and check that.

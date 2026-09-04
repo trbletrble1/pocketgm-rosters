@@ -3182,3 +3182,56 @@ the correct state: the gate is telling the truth about the file.
 **The general lesson, and the reason the check earns its place:** a later fix
 can undo an earlier one through a field neither of them names. Nothing in the
 guarantee split mentioned the floor. Only a check on the property caught it.
+
+#### CLOSED 2026-09-03 — the same money, re-split, with the floor binding on salary
+
+Ruled by Ryan the hour it was reported: apply the floor to salary alone, as
+ruled for Christen Miller. `tools/fix_2017_salary_split.py`.
+
+**655 men sat below vanilla's floor on salary — not the 185 the $500K reading
+showed, because the floor is $600,000 by position and band.** For each of them
+salary was raised to the floor out of his own guarantee, and where his whole pay
+was under the floor he took all of it as salary:
+
+- **375** reach the floor from their own guarantee
+- **280** take their entire pay as salary, guarantee to zero
+- **$99.88M moved from guarantee into salary. Total compensation unchanged on
+  every one of the 1,994 rostered men, asserted per record; team payroll
+  identical to the dollar**, so the median stays at $242.9M with no re-true.
+
+**Salary minimum $101,178 → $583,062; the wall reads 0.50 → 0.98; men under
+$500K, 185 → 0.** Post-write diff against HEAD: salary and guarantee on 583
+records, nothing else, no record added or removed. The roster gate on 2017 was
+red on one check and is now ALL CLEAR.
+
+The 280 whose whole pay is under the floor were like that before the guarantee
+split too — the per-team rescale leaves 2017's cheapest men at $583,062 against
+a $600,000 floor. That is the second-floor-pass drift, a different defect, and
+this pass did not invent money to cover it. Guarantee coverage falls from 78.5%
+to 68.1% against vanilla's 60%, so nothing regresses on the coverage sweep.
+
+### 63. The prospect +3 floor, ruled archive-wide — which is what made it checkable
+
+The retrofit reported this as one of three things it could not write a check
+for: `outcome_ceilings` applied a rating+3 floor to potential inside each draft
+class it processed, so the floor was a property of a transform and not of the
+archive. Seven files kept 68-133 prospects under it, **2007 kept 496 and 2026
+kept 75**, and a gate written against it would have failed the archive.
+
+**Ryan ruled it archive-wide.** `tools/fix_prospect_floor.py`, all ten files:
+
+**1,271 prospects raised to rating + 3. Minimum gap is now 3 in every file.**
+Growth curves rebuilt for all 1,271 — the 50x rule applies in every cohort, so
+raising potential without rebuilding the curve fails the gate at once — seeded
+per man on `iden`, so a re-run is byte-identical. Post-write diff: `potential`
+and `growthType` only, no non-prospect record touched in any file, maximum
+potential still 99.
+
+The 99 ceiling is respected and **binds on nobody**: no prospect in the archive
+is rated above 86. The check exempts exactly the men it would cap, so a future
+file carrying a 97-rated prospect will not fail for a reason it cannot fix.
+
+**The general point is the one worth keeping.** The floor was already the right
+answer; it was unenforceable because it lived in a transform rather than in the
+archive. Ruling it a property is what turned it into a gate — and the gate fires
+on all three pre-write files (2007 at 496, 1979 at 108, 2026 at 75).

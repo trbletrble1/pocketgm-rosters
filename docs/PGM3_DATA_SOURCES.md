@@ -805,3 +805,31 @@ in 1940–1943 and holds 19 seasons 2K5 does not (1942, 1945, 1947–49, 1951,
 1957–59, 1967, 1975, 1996, 1999–2000, 2005, 2014, 2023–25). PSF's filler is
 tagged by slot and photo; 2K5's is not. Neither carries a face model.
 `wip/psf_season_inventory.csv`, one row per file.
+
+## The PSF photograph library on disk — 26,145 headshots, and a measurement pass
+
+`pgm3-sources/photos/PSFplayers/` holds **26,145 photographs**, the set the PSF
+mod's records reference by filename (`Terry_Bradshaw.jpg`), extracted from the
+`psf2026 - USFL.zip` archive. Filenames are `first_last.jpg` with inconsistent
+case, keyed on name alone — no position, so a namesake check is required before
+anything is applied by name, as always.
+
+Beside it, `pgm3-sources/photos/measured.csv` carries **9,472 rows of
+per-photograph measurement** made on 2026-08-31: `skin_frac`, cheek RGB and
+luminance, crown RGB and luminance, `mous_delta`, `chin_delta`, `jaw_delta`,
+`hair_above`, and a `status` column that marks the photographs where no face was
+found. Roughly a third of the library, measured.
+
+**Why this matters and what it is not.** The retrofit of 2026-09-03 recorded
+"whether a face matches the man" as one of the things no check can test, because
+it needs a person and a photograph. **This is the photograph.** Cheek luminance
+bears on skin family, crown luminance on hair colour, the moustache and chin
+deltas on facial hair, `hair_above` on the balding axis that item 60 measured
+and left. It is plausible that the appearance fields become checkable against a
+source rather than only against each other.
+
+**Not acted on, and deliberately.** Every one of those mappings is a hypothesis
+until it is scored against Ryan's verdicts the way `PHCL` was — and `PHCL`
+scored 86% against a 91% base rate and was refuted. The measurement being on
+disk is not the same as the mapping being established. Recorded here so the next
+pass starts from what exists rather than re-measuring it.
