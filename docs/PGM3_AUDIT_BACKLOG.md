@@ -2951,15 +2951,22 @@ needs a word: follow Mike into 2000 for boundary men where the base is silent.
    Mike keep the archive label.
 2. **The 1990 boundary.** Where Mike's period layer speaks, its base is silent
    and 2000 disagrees, 2000 follows Mike — **85 men** (21 dark→light, 64
-   light→dark); the four named earlier were only those also in 1986. The 12 men
+   light→dark). **The measurement said 89; the write says 85, and the two are
+   not a discrepancy**: four of the 89 were verdict men, handled first as Ryan's
+   truth and counted once there. The four named when item 57 was opened were
+   only those also present in 1986. The 12 men
    where period and base disagree with each other stay with the 2000s voting.
 3. **Ryan's 100 verdicts are truth everywhere.** Reconciled against the sheet
    exactly: **Mike right 95, archive right 4, middle 1** — the "five" was a
    miscount. The four Mike got wrong — Gary Danielson QB, Bob Jury CB, Steve
-   Moore OT, Herb Lusk RB, all verified light — are corrected. Verdicts keyed on
-   the sheet's **name|position**, because a namesake check found six names whose
-   verdict would otherwise have reached a different man (Bob Nelson MLB vs a DT
-   and a DE; Mike Bell DE vs a running back of 2007). **99 keys added to
+   Moore OT, Herb Lusk RB, all verified light — are corrected. (Lusk is flagged
+   without argument: the other verdict was expected; the list is authoritative;
+   this line is the record if it ever comes back.) Verdicts keyed on the sheet's
+   **name|position**, because a namesake check run BEFORE applying found six
+   names whose verdict would otherwise have reached a different man in files
+   Ryan never looked at (Bob Nelson MLB vs a DT and a DE; Mike Bell DE vs a
+   running back of 2007). **The seventh namesake collision this project has hit,
+   and the first caught before it did damage.** **99 keys added to
    `_verified_keys` (142 → 241)**; the original 142 touched 0, asserted.
    **Mosi Tatupu is `_verified_middle`**: Ryan's answer recorded, no family
    forced, his face untouched.

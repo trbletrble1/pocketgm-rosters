@@ -4776,3 +4776,21 @@ The `iden` is a property of the record. The man is the thing that has to agree
 with himself across seasons. **Seed on the man — normalised name plus position —
 for anything a reader could compare across files: names, face families, hair,
 anything drawn.** Seed on `iden` only for what is legitimately per-record.
+
+---
+
+## Check for namesakes BEFORE applying anything by name — the seventh collision, the first caught in time
+
+**2026-09-03.** Ryan verified 100 men by photograph, each at a position, team
+and season. Applied by name across ten files, six of the verdicts would have
+landed on a different man: Bob Nelson MLB onto a DT and a DE, Mike Bell DE onto
+a 2007 running back, David Carter C onto three DTs. A namesake check run before
+the write — every record the name would reach, at what position, in what year —
+found all six; keying on name|position kept each verdict on its man.
+
+Six earlier collisions in this project were found after the fact (Gene
+Washington, the Clay Matthews and Kellen Winslow fathers and sons, the two
+James Joneses of 1986, Mark Brown, and the rename's cross-file repeats). **A
+name is a lookup key only inside one file and one season. Across files it is a
+hypothesis, and the check is cheap: list what the name reaches before you write
+to it.**
