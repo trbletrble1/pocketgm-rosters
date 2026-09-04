@@ -6,9 +6,11 @@ they actually held. Ruled by Ryan 2026-09-04.
     python3 tools/move_1979_coordinators.py --dry-run
     python3 tools/move_1979_coordinators.py
 
-Ken Meyer, Jim Ringo and Tom Bettis were 1979 offensive coordinators — Chicago,
-New England and the Cardinals — and the 1979 build put all three in the
-free-agent head-coach pool while inventing men for the slots they held. The fill
+Ken Meyer and Jim Ringo were 1979 offensive coordinators, at Chicago and New
+England; Tom Bettis was the Cardinals' DEFENSIVE coordinator. The 1979 build put
+all three in the free-agent head-coach pool while inventing men for the slots
+they held. The first run of this tool took the slot from a constant and so put
+Bettis on the wrong side of the ball — corrected, and the slot is now per man. The fill
 pass could not touch them: writing the name into the slot while the man sat in
 the pool would have put one man in two places, which is the LeBeau defect.
 
@@ -33,9 +35,14 @@ from pgm3_paths import repo
 
 Y = 1979
 SIDECAR = 'reference/PGM3_STAFF_PROVENANCE.csv'
-MOVES = [('Ken Meyer', 'CHI'), ('Jim Ringo', 'NE'), ('Tom Bettis', 'ARI')]
-SLOT = 'Off Co-ord'
-HOW = ('Coaching Tree: titled Offensive Coordinator, 1979 {team}. Moved out of the '
+# THE SLOT IS PER MAN, and getting it from a constant was a bug: Tom Bettis was
+# the Cardinals' DEFENSIVE coordinator, not their offensive one, and the first
+# run put him on the wrong side of the ball. The pull file says which slot each
+# man held; read it from there rather than assuming three men share one.
+MOVES = [('Ken Meyer', 'CHI', 'Off Co-ord'),
+         ('Jim Ringo', 'NE', 'Off Co-ord'),
+         ('Tom Bettis', 'ARI', 'Def Co-ord')]
+HOW = ('Coaching Tree: titled {title}, 1979 {team}. Moved out of the '
        'free-agent head-coach pool, where the 1979 build had parked him while an '
        'invented man held the job he actually had; his free-agent record is gone')
 
@@ -58,7 +65,7 @@ def main():
     before_employed = sum(1 for p in d if p['teamID'] != 'Free Agent')
 
     drop = set(); edits = {}
-    for full, team in MOVES:
+    for full, team, SLOT in MOVES:
         fn, ln = full.split(' ', 1)
         pool = [p for p in d if p['teamID'] == 'Free Agent' and p['forename'] == fn and p['surname'] == ln]
         slot = [p for p in d if p['teamID'] == team and p['role'] == SLOT]
@@ -69,7 +76,8 @@ def main():
         dst['age'] = src['age']
         dst['appearance'] = list(src['appearance'])
         drop.add(src['iden'])
-        edits[(str(Y), dst['iden'])] = (full, 'real (name in a real source)', HOW.format(team=team))
+        edits[(str(Y), dst['iden'])] = (full, 'real (name in a real source)',
+                                       HOW.format(team=team, title='Defensive Coordinator' if SLOT == 'Def Co-ord' else 'Offensive Coordinator'))
         print(f'  {team} {SLOT}: {was} -> {full} (age {src["age"]}); '
               f'rating {dst["rating"]} and potential {dst["potential"]} unchanged; free-agent record deleted')
 
@@ -77,7 +85,7 @@ def main():
     after_employed = sum(1 for p in d if p['teamID'] != 'Free Agent')
     assert before_employed == after_employed == 288, 'employed staff must stay at 288'
     names = [(p['forename'], p['surname']) for p in d]
-    for full, _ in MOVES:
+    for full, _, _ in MOVES:
         fn, ln = full.split(' ', 1)
         assert names.count((fn, ln)) == 1, f'{full} appears {names.count((fn, ln))} times — one man, one record'
     print(f'  free agents {len([p for p in json.load(open(repo(path))) if p["teamID"] == "Free Agent"])} -> '

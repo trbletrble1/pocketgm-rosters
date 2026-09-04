@@ -56,7 +56,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,2155C740-EC55-012F-E9C0-CF0D1D2AA27A,Off Co-ord,LAC,Walt Csonka,Joe Gibbs,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 LAC; age not sourced, slot age retained"
 1979,5C1ABC29-8A52-1C9B-0826-0A5AFB75B603,Off Co-ord,SEA,Louis Manucci,Zigmund Fairholm,invented,exact (wip/staff_1979.csv)
 1979,27C2DE33-3C6A-2ED5-6BBC-47B7476E0AD8,Off Co-ord,SF,Lem Kuykendall,Wes Quillen,invented,exact (wip/staff_1979.csv)
-1979,0C28EC97-1B2A-D5FE-FFD6-6EC22086A78E,Off Co-ord,ARI,Elvis Fugett,Tom Bettis,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 ARI. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
+1979,0C28EC97-1B2A-D5FE-FFD6-6EC22086A78E,Off Co-ord,ARI,Elvis Fugett,Adrian Brooks,invented,displaced from the defensive coordinator slot when Tom Bettis was placed in the job he actually held; this slot returns to the fallback list
 1979,82239F00-9BB5-1085-C4FF-F4E03AAC5E1E,Off Co-ord,TB,William Johnson,Bob Adams,invented,exact (wip/staff_1979.csv)
 1979,6BA98DA5-D54B-787A-D791-7D1EB6BD7342,Off Co-ord,WAS,Joe Walton,Joe Walton,sourced,exact (wip/staff_1979.csv)
 1979,2FE0603D-FAA8-1D95-958F-FF1DDBB6C6FB,Off Co-ord,TEN,Ray Rozier,Gary Duffner,generated (franchise did not exist that season),"TEN did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
@@ -88,7 +88,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,69C090CD-4761-BDD3-1C18-E78121B080C1,Def Co-ord,LAC,Craig Krauss,Jacki Simpson,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 LAC; age not sourced, slot age retained"
 1979,CCE7849B-1F28-1254-BB36-364D53065B5B,Def Co-ord,SEA,Neil Wright,Sean Trumbull,invented,exact (wip/staff_1979.csv)
 1979,7B16DC7A-2BCF-8D22-5E67-5798EBE41CB0,Def Co-ord,SF,Chuck Studley,Chuck Studley,sourced,exact (wip/staff_1979.csv)
-1979,80EBBEF0-3B30-288C-E90A-B1BDBE70724A,Def Co-ord,ARI,Garo Allerman,Adrian Brooks,invented,exact (wip/staff_1979.csv)
+1979,80EBBEF0-3B30-288C-E90A-B1BDBE70724A,Def Co-ord,ARI,Garo Allerman,Tom Bettis,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 ARI. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
 1979,8753897F-DC3C-D7F8-239A-43406EC5C040,Def Co-ord,TB,Whitney Falcon,Tom Bass,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 TB; age not sourced, slot age retained"
 1979,C172D8AE-78D2-93C2-15AB-B53F55BD8351,Def Co-ord,WAS,Doc Urich,Doc Urich,sourced,exact (wip/staff_1979.csv)
 1979,63F3F124-E4B9-33A5-0A3F-53BB9469499E,Def Co-ord,TEN,Sylvester Blackwood,Marvin Alexander,generated (franchise did not exist that season),"TEN did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
