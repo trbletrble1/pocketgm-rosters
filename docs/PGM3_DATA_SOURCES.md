@@ -1093,3 +1093,82 @@ rest on the weaker source.**
 **Pittsburgh also had no special-teams coach and no offensive coordinator**,
 which both sources agree on and which our file still shows as generated and as
 Dotsch by inference respectively.
+
+### What is actually in a 1979 media guide — a survey of all 28, extracting nothing
+
+Twenty-eight books, 9.4 million characters, median 337,000 each. Characterised
+rather than mined, because four passes over these had each found something
+unplanned and that is the wrong order to work in.
+
+**OCR IS CLEAN ACROSS ALL 28 and that is the first result.** Common-word rate 13
+to 22 per cent, and **garbled tokens under 0.2 per cent in every book.** These
+are not damaged scans. So where a section reads as absent below, it is absent or
+named differently — it is not lost to the scanner.
+
+| section | books | what it holds |
+|---|---|---|
+| front office directory | 27/28 | names and titles, president down |
+| medical / training | 27/28 | physicians, dentist, trainers, equipment manager |
+| coaching staff list | 25/28 | name and exact role |
+| hometown / birthplace | 25/28 | town, state, country |
+| attendance | 25/28 | per-game and season figures |
+| team records | 20/28 | club and individual, all-time |
+| player biographies | 20/28 | birth date, birthplace, college, career prose |
+| college field | 19/28 | |
+| standings | 19/28 | |
+| pronunciation guide | 19/28 | **how to say the man's name** |
+| draft history | 18/28 | year, round, player |
+| stadium / facility | 18/28 | capacity, surface, dimensions |
+| schedule | 17/28 | |
+| transactions | 16/28 | trades and waivers |
+| season results | 14/28 | game by game |
+| radio / TV network | 14/28 | station lists |
+| all-time roster | 13/28 | name, position, college, years — back to 1933 |
+| height / weight fields | 11/28 | |
+| depth chart | 6/28 | |
+| coach biographies | 3/28 by pattern | **undercounted — see below** |
+
+**THE COUNTS ARE A FLOOR, NOT A CENSUS**, and the coach-biography row shows why:
+the Steelers, Dolphins and Rams books all carry full coach biographies with birth
+dates and career histories, and a pattern looking for "Born" near "Coordinator"
+finds three because the other books phrase it differently. **Atlanta reads absent
+from nine sections and its OCR is clean** — it simply never writes the words
+`ATTENDANCE`, `DRAFT` or `RESULTS`, though it says "draft choice" eight times.
+**Each book is edited by its own club, so the vocabulary differs even where the
+content does not.** Section presence needs per-book reading, exactly as the staff
+blocks did.
+
+**Q1 — SALARY AND CONTRACT: nothing usable, and this is now measured rather than
+assumed.** "Salary" appears **twice in 9.4 million characters**, "holdout" once.
+"Contract" appears 108 times across 23 books and every instance read was prose —
+front-office duties, a trade anecdote, a WFL signing, Murchison joking about a
+ten-year deal. **No contract length, no dollar figure, no term attached to any
+player.** The `$` and "multi-year" counts are ticket prices and career narrative.
+Our files will keep inventing contract terms.
+
+**Q2 — PER-PLAYER STATISTICS: yes, and structured.** **1,578 table-like rows**
+across the 28 — a name or label followed by three or more numeric columns —
+present in every book. The blocks are properly formed and headed:
+
+> `RUSHING No. Yds. Avg. LG TD  1976 Pittsburgh AFC 1 5 5.0 5 0` … `PUNT RETURNS
+> No. FC Yds. Avg. LG TD` … `KICKOFF RETURNS No. Yds. Avg. LG TD`
+
+with season rows and career totals, by category, per man. **That is a rating
+basis for 1979 that nothing else in the project reaches** — and it is
+year-by-year, so a 1979 book carries a man's whole career to date.
+
+**Structural consistency, which matters as much as presence.** Three tiers:
+
+1. **Consistently structured**: the statistics blocks (headed, columnar, the same
+   category vocabulary across books) and the front-office and medical
+   directories.
+2. **Present but per-club in format**: coaching staff lists, player biographies,
+   draft history. Legible to a reader, unreliable to a matcher — Cleveland never
+   writes "coordinator", Kansas City compounds two jobs into one title.
+3. **Unpredictable**: everything the index calls a section. Page-number tables of
+   contents pollute keyword searches, and half the "year-by-year" hits are index
+   entries rather than data.
+
+**Nothing extracted.** The survey's purpose was to decide what a dataset should
+hold, and the two findings that change that decision are the absence of contract
+data and the presence of complete year-by-year statistics.
