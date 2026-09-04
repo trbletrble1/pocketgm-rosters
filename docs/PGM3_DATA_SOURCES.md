@@ -699,3 +699,72 @@ the key. Caught because Julius Peppers appeared in a 1984 roster.
 for every season before 1957.** Its 76.9% anchor reading is **13 men** against an
 archive that barely reaches the era — no evidence either way, not a quality
 verdict, and it should not be read as one.
+
+## The PS2 2K5 "every season 1940–2022" mod — five archives, decoded (2026-09-03)
+
+**Container.** 121 `.max` files, 253–306 KB each: `Ps2PowerSave` (Action Replay
+MAX) wrapping an ESPN NFL 2K5 PS2 save, game code `BASLUS-20919`. The header
+parses exactly (compressed length, five inner files, decompressed length); the
+payload is **LZARI** — LZSS with arithmetic coding, which is why it reads as
+8.00 bits/byte and byte-wise LZSS fails. `mymcplus` decodes it. Inside:
+`icon.sys`, `VIEW.ICO`, `TYPE`, the save data, `EXTRA`. Ten files carry a 20-byte
+`EXTRA` instead of 4 and decode by reading to end-of-file. **All 121 decode.**
+
+**What the archives hold.** 70 roster saves (`Ros*`, 593,984 bytes, tag `ROST`)
+and 51 franchise saves (`Fra*`, 720,044 bytes, tag `04 00 00 00`), 70 distinct
+seasons 1940–2022: 50 with both, 18 roster-only, 2 franchise-only (1942, 1951).
+**Gaps: 1945, 1947–49, 1957–59, 1975, 1996, 1999–2000, 2005, 2014.** Three labels
+lie: `Ros43.max` holds `Ros1941` inside (content is 1943 — Luckman, Baugh, Hutson,
+no Van Buren), `ros1989.max` holds a slot named `2K7` (content is 1989), and
+`Ros1967.max` holds a **franchise** blob, so 1967 has no roster. `Ros1978` and
+`Ros1979` share an inner name; content separates them (1979 has Simms, Winslow,
+Montana; 1978 does not).
+
+**The roster save is readable end to end** by the project's existing 2K5 backend
+(`rosdump` → `nfl2k5.py`): 1,944 player slots, names, position, skin, face,
+jersey, weight, height, years pro, and eleven ratings. Layout is the 2K5 shape
+exactly — **32 blocks of 53 in fixed team order, then 248 free agents.** No
+draft table: the roster carries 0 rookies in 1979 and 190 in 2022 as ordinary
+records; **the draft classes the modder describes live in the franchise save,
+which our decoder does not read.** The franchise files are league state.
+
+**The claim of full leagues from 1940 does not survive the content.** Every
+season fills all 32 blocks and every slot differs between files — the modder
+touched everything — but what he filled the early blocks with is **generated
+men with anachronistic names**: Jaxton Russo, Zayden James, Kyrie Small, Huxley
+Barker on a 1943 roster, 135–242 modern given names per pre-1960 file. Real men
+are sprinkled in (Luckman, Isbell, Cherundolo in 1943; Lujack, Layne, Tittle,
+Graham, Baugh in 1950 — on modern team slots). Joined to the 26,067 real
+football names the project holds:
+
+| era | real-name share | note |
+|---|---|---|
+| 1940–1946 | **2–9%** | filler with modern names |
+| 1950–1956 | 13–22% | the pool is thin here, so a floor |
+| 1960–1965 | 36–59% | |
+| 1966–1998 | 62–85% | |
+| 2001–2022 | 84–96% | |
+
+**Same-year cross-check** against our PFR-sourced files, where the pool is
+strong: **PS2 1979 rostered 1,696 → 70% in our 1979 file; our 1,586 rostered →
+76% in PS2. 1986: 68% and 64%.** So a 1979 PS2 roster is roughly 500 men we do
+not hold and roughly 400 of ours it does not — the same men in the middle and
+generated men at the edges, consistent with a real 1979 core of ~1,200 and
+filler to 1,696. This is the same shape as our 1979 build's 59-man rosters and
+the four invented franchises, done by a different hand.
+
+**Skin, against our truth** (the 241 verified faces plus Ryan's verdicts, 202
+anchors on 1979 and 1986): raw values **1 and 2 are light (140 of 150), 3–6 and
+above are dark (46 of 49)** — **94% with that mapping.** The decoder's "mixed"
+band mixes raw 2 (light) with raw 3 (dark) and should not be used. The 1943
+roster reading 42% dark is the filler's random skin, not the 1943 NFL.
+
+**Ratings are the modder's design, as Ryan said**: 1979 speed median 63 against
+our 82, tackle median 31 against a distribution that starts at 0 for non-
+tacklers — different scale and different zero convention. Not importable
+directly; rescale to the archive's shape if used at all.
+
+**What it is, plainly:** for 1966–2022 a real core of 60–95% of each roster with
+verified 2K5-format skin at 94%, sitting inside generated filler; for 1940–1965
+mostly filler around a few dozen to a few hundred real men. Readable throughout.
+`wip/ps2_2k5_season_inventory.csv`.
