@@ -160,149 +160,16 @@
  ],
  "system_rules": {
   "_note": "Claims about how the SYSTEM worked, not about what a person was paid. They take a league-season or league-era subject and can never take a person. Enforced at ingest, so averaging them with player money is not expressible - the same move as the salary conventions themselves.",
-  "predicates": {
-   "option_year_rate": {
-    "definition": "the fraction of the prior year's salary payable in an option year",
-    "unit": "fraction",
-    "known": [
-     {
-      "value": 0.9,
-      "era": "1968",
-      "source": "Smith v. Pro-Football, footnote 8",
-      "source_words": "the standard option-year pay of 90% of the prior year's salary",
-      "self_check": "$19,800 is exactly 90% of Smith's $22,000"
-     }
-    ]
-   },
-   "developmental_squad_weekly_wage": {
-    "definition": "a league-wide fixed weekly wage set by the Management Council",
-    "unit": "USD/week",
-    "known": [
-     {
-      "value": 1000,
-      "effective": "1989-05-17",
-      "source": "Brown v. Pro Football, 782 F. Supp. 125",
-      "source_words": "the Executive Committee of the NFL Management Council agreed to pay developmental squad players a fixed salary of $1,000 per week"
-     }
-    ]
-   },
-   "roster_bonus_is_conditional": {
-    "definition": "whether a bonus is payable only on making the active roster",
-    "unit": "boolean",
-    "known": [
-     {
-      "value": true,
-      "era": "1968",
-      "source": "Smith v. Pro-Football",
-      "source_words": "an additional $5,000 if he made the team"
-     },
-     {
-      "value": true,
-      "era": "1980",
-      "source": "Rudolph v. Miami Dolphins",
-      "source_words": "agreed to pay him $27,000 per year ... if he made the team roster",
-      "note": "the same clause structure twelve years apart - a structural fact about how contracts were WRITTEN, not a figure"
-     }
-    ]
-   },
-   "league_entry_fee": {
-    "definition": "fee for a franchise to join a league",
-    "unit": "USD",
-    "known": [
-     {
-      "value": 500000,
-      "league": "WFL",
-      "era": "1974",
-      "source": "Alabama Football v. Greenwood"
-     }
-    ]
-   },
-   "club_workers_comp_self_insured_ceiling": {
-    "definition": "the amount a club self-insured before excess cover",
-    "unit": "USD",
-    "known": [
-     {
-      "value": 100000,
-      "club": "Miami Dolphins",
-      "era": "c.1977-1980",
-      "source": "Rudolph v. Miami Dolphins"
-     }
-    ]
-   },
-   "qualifying_offer_floor": {
-    "definition": "minimum qualifying offer by years of credited service, Article XV",
-    "unit": "USD",
-    "known": [
-     {
-      "service": "<4th year completed",
-      "value": 30000
-     },
-     {
-      "service": "<5th year completed",
-      "value": 40000
-     },
-     {
-      "service": "each subsequent year",
-      "value": "+5000"
-     }
-    ],
-    "source": "Reynolds v. NFL, 584 F.2d 280 (8th Cir. 1978)"
-   },
-   "draft_compensation_ladder": {
-    "definition": "draft picks owed to the old club, keyed on the size of the qualifying offer",
-    "unit": "USD -> picks",
-    "known": [
-     {
-      "offer_from": 50000,
-      "offer_to": 65000,
-      "compensation": "one third-round choice"
-     },
-     {
-      "offer_from": 200000,
-      "compensation": "first-round choices in the two NEXT college drafts"
-     },
-     {
-      "note": "a $50,000 offer is also the THRESHOLD for any compensation, for a player who has not completed his seventh season; the threshold rises with service"
-     }
-    ],
-    "source": "Reynolds v. NFL, 584 F.2d 280 (8th Cir. 1978)"
-   },
-   "player_movement_regime": {
-    "definition": "which restraint governed player movement - contracts must be read against the regime operating in their season",
-    "unit": "named regime",
-    "known": [
-     {
-      "regime": "Rozelle Rule",
-      "ended": "1976-77",
-      "source": "Mackey v. NFL (8th Cir. 1976); Reynolds",
-      "note": "signing club compensates the old club; the Commissioner may award compensation if they cannot agree"
-     },
-     {
-      "regime": "Article XV, First Refusal/Compensation",
-      "began": "1977",
-      "source": "Reynolds",
-      "note": "replaced the discarded Rozelle Rule; all contracts expire 1 February; right of first refusal on a written qualifying offer"
-     }
-    ],
-    "measured_effect": "Reynolds records 176 players played out their options in ELEVEN YEARS under the Rozelle Rule, against a far smaller number under Article XV - the court's own comparison"
-   },
-   "inter_club_transfer_fee": {
-    "definition": "a payment from one CLUB to another for a player's release. A transfer price, not compensation to the player.",
-    "unit": "USD",
-    "subject_scope": "club-to-club, never person",
-    "known": [
-     {
-      "value": 50000,
-      "year": 1967,
-      "from": "Minnesota Vikings",
-      "to": "Kapp's Canadian club",
-      "source": "Kapp v. NFL, 390 F. Supp. 73 (N.D. Cal. 1974)",
-      "source_words": "he eventually obtained clearance to play for the Minnesota Vikings when the latter paid Kapp's Canadian team $50,000 for his release"
-     }
-    ],
-    "warning": "Kapp received NONE of this. Filed as a salary it would inflate his 1967 pay by more than his Vikings deal was worth per year."
-   }
-  },
+  "predicates": [
+   "option_year_rate",
+   "developmental_squad_weekly_wage",
+   "roster_bonus_is_conditional",
+   "league_entry_fee",
+   "club_workers_comp_self_insured_ceiling",
+   "qualifying_offer_floor",
+   "draft_compensation_ladder",
+   "player_movement_regime"
+  ],
   "hard_rules": [
    "A system_rule predicate REQUIRES a league-scoped subject and REFUSES a person.",
    "A money predicate about a person REFUSES a league-scoped subject.",
@@ -354,5 +221,25 @@
   "sources_searched_and_empty": "a negative result - what was searched and held nothing",
   "owed_league_original": "a record of a document not obtained, and the decision about it",
   "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ - see src/gate_declarations_are_read.py. This list living in the declaration rather than in the gate means widening it shows up in a diff."
+ },
+ "transfer_payments": {
+  "_note": "A payment from one CLUB to another for a player's release or rights. It is not a salary - the player is not the payee - and it is not a system rule, because it is one transaction on one date rather than a statement of how the regime worked.",
+  "_ruling": "2026-09-04, Ryan. inter_club_transfer_fee was declared under system_rules.predicates, which requires a league-scoped subject. Filing this figure on the league would state a RULE where there is an INSTANCE - the same error as pooling conventions, one level up.",
+  "subject_shape": [
+   "transfer",
+   "person",
+   "from_club",
+   "to_club",
+   "year"
+  ],
+  "why_this_shape": "it preserves everything the source states: which man, which two clubs, which date. A league subject loses all three. It extends the ('contract', person, club) shape that resolved the two-Kapp-contracts false contest, rather than inventing a new idea.",
+  "predicates": [
+   "inter_club_transfer_fee"
+  ],
+  "hard_rules": [
+   "A transfer predicate REQUIRES a transfer-scoped subject and REFUSES a league, person or cohort subject.",
+   "A person-scoped money predicate REFUSES a transfer subject: the payee is a club, not the player.",
+   "A transfer subject names BOTH clubs. A fee with one club is not a transfer; it is an unresolved claim."
+  ]
  }
 }

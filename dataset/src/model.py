@@ -33,6 +33,15 @@ LEAGUE_SCOPES = {"league_season", "league_era", "league"}
 COHORT_SCOPES = {"cohort"}
 COHORT_PREDICATES = set(_SAL["cohort_aggregates"]["predicates"])
 
+# A payment from one CLUB to another for a player's release. The payee is not the
+# player, so it is not a salary; it is one transaction on one date, so it is not a
+# system rule. Filing it on the league would state a RULE where there is an
+# INSTANCE - the same error as pooling conventions, one level up.
+# Ruled 2026-09-04. Subject: ("transfer", person, from_club, to_club, year).
+TRANSFER_SCOPES = {"transfer"}
+TRANSFER_PREDICATES = set(_SAL["transfer_payments"]["predicates"])
+TRANSFER_SUBJECT_ARITY = len(_SAL["transfer_payments"]["subject_shape"])
+
 # The five named conventions, plus the itemised components nested under
 # `compensation_component.predicates`. Both come from the declaration.
 SALARY_CONVENTIONS = {c for c in _SAL["conventions"] if c != "compensation_component"}
@@ -105,6 +114,22 @@ class Store:
                 f"'{predicate}' is a SYSTEM rule and requires a league-scoped subject "
                 f"({sorted(LEAGUE_SCOPES)}), not '{scope}'. It describes how the system "
                 f"worked, not what a person was paid.")
+        if predicate in TRANSFER_PREDICATES and scope not in TRANSFER_SCOPES:
+            raise StoreError(
+                f"'{predicate}' is a payment between CLUBS and requires a "
+                f"transfer-scoped subject, not '{scope}'. On a league subject it "
+                f"would state a rule where there is one transaction; on a person "
+                f"it would say the player received money he did not receive.")
+        if scope in TRANSFER_SCOPES and len(subject) != TRANSFER_SUBJECT_ARITY:
+            raise StoreError(
+                f"a transfer subject names BOTH clubs: "
+                f"{tuple(_SAL['transfer_payments']['subject_shape'])}. Got "
+                f"{len(subject)} parts. A fee with one club is not a transfer, "
+                f"it is an unresolved claim.")
+        if predicate in SALARY_CONVENTIONS and scope in TRANSFER_SCOPES:
+            raise StoreError(
+                f"'{predicate}' is a person-scoped money predicate and cannot take "
+                f"a transfer subject. The payee of a transfer fee is a club.")
         if predicate in COHORT_PREDICATES and scope not in COHORT_SCOPES:
             raise StoreError(
                 f"'{predicate}' describes a COHORT and requires a cohort-scoped "
@@ -120,6 +145,7 @@ class Store:
         if (MONEY_SHAPED.search(predicate) and predicate not in SALARY_CONVENTIONS
                 and predicate not in SYSTEM_PREDICATES
                 and predicate not in COHORT_PREDICATES
+                and predicate not in TRANSFER_PREDICATES
                 and predicate not in BARE_MONEY_PREDICATES):
             raise StoreError(
                 f"'{predicate}' looks like money but is not a declared convention. "

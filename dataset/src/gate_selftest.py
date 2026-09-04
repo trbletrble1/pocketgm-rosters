@@ -132,6 +132,23 @@ def main():
         print(f"           gate said: {detail}")
         if not fired:
             bad.append(name)
+    # Gate 12: the break must hit the SCOPE rule specifically. Widening the
+    # allowed scopes leaves the ARITY rule still refusing the league subject, so
+    # a gate that only caught StoreError read that as correct. It now asserts
+    # which rule refused.
+    saved_scopes = set(model.TRANSFER_SCOPES)
+    try:
+        model.TRANSFER_SCOPES.add("league_season")
+        ok, detail = gates.gate_transfer_is_not_a_rule_or_a_salary(Store)
+    finally:
+        model.TRANSFER_SCOPES.clear(); model.TRANSFER_SCOPES.update(saved_scopes)
+    fired = not ok
+    print(f"  [{'FIRED' if fired else 'SILENT'}] transfer fee is neither a rule nor a salary")
+    print(f"           break: transfer scope widened to accept a league subject")
+    print(f"           gate said: {detail}")
+    if not fired:
+        bad.append("transfer fee is neither a rule nor a salary")
+
     # Gate 11 breaks a DECLARATION, not a store, so it does not take a store
     # factory. Its failure is constructed the same way: declare a rule that
     # nothing enforces, and watch it refuse.
@@ -148,7 +165,7 @@ def main():
     print(f"           gate said: {detail}")
     if not fired:
         bad.append("every declared hard rule names an enforcing gate")
-    n_cases = len(CASES) + 1
+    n_cases = len(CASES) + 2
 
     print()
     if bad:

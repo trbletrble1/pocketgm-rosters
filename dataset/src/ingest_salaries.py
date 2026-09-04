@@ -96,7 +96,25 @@ def main():
             # Filing two of a player's contracts on ("person", p) collapses them
             # into a false contest - Kapp's $300,000 Minnesota deal against his
             # $600,000 New England deal are two instruments, not a disagreement.
-            if season:
+            # A club-to-club release fee is neither a stint nor a contract: the
+            # payee is the other CLUB. Ruled 2026-09-04 - it takes its own
+            # subject naming both clubs, or it states a rule where there is an
+            # instance. The store refuses every other shape.
+            if f.get("subject_scope") == "transfer":
+                subj = ("transfer", p, f["from_club"], f["to_club"], f["season"])
+                # The FEE is observed. A club in the subject may not be. Kapp's
+                # opinion says "Kapp's Canadian team" and never names it, so
+                # CFLBC is source_derived - and a reader seeing it in the subject
+                # would otherwise assume the court said it. Provenance records
+                # ORIGIN, not last hop.
+                _d = f.get("from_club_is_DERIVED")
+                if _d:
+                    store.declare_subject(subj)
+                    store.add_claim(sr, subj, "from_club_identification",
+                                    f["from_club"], f["season"], kind=_d["kind"],
+                                    stated_by=None, attribution=[],
+                                    note=_d["basis"][:200])
+            elif season:
                 subj = ("stint", p, club or "?", f"y{season}")
             elif club:
                 subj = ("contract", p, club)

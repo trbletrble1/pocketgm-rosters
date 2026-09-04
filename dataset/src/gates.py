@@ -26,6 +26,11 @@ SYSTEM_RULE_ENFORCED_BY = {
     1: "gate_system_rules_cannot_be_averaged",
     2: "gate_system_rules_cannot_be_averaged",
 }
+TRANSFER_RULE_ENFORCED_BY = {
+    0: "gate_transfer_is_not_a_rule_or_a_salary",
+    1: "gate_transfer_is_not_a_rule_or_a_salary",
+    2: "gate_transfer_is_not_a_rule_or_a_salary",
+}
 
 
 def gate_every_hard_rule_has_a_gate():
@@ -33,10 +38,14 @@ def gate_every_hard_rule_has_a_gate():
     missing = [i for i in range(len(_SAL["hard_rules"])) if i not in RULE_ENFORCED_BY]
     missing += [f"system:{i}" for i in range(len(_SAL["system_rules"]["hard_rules"]))
                 if i not in SYSTEM_RULE_ENFORCED_BY]
+    missing += [f"transfer:{i}"
+                for i in range(len(_SAL["transfer_payments"]["hard_rules"]))
+                if i not in TRANSFER_RULE_ENFORCED_BY]
     if missing:
         return False, f"declared hard rules with NO enforcing gate: {missing}"
     return True, (f"{len(RULE_ENFORCED_BY)} salary + {len(SYSTEM_RULE_ENFORCED_BY)} "
-                  f"system hard rules each name a gate")
+                  f"system + {len(TRANSFER_RULE_ENFORCED_BY)} transfer hard rules "
+                  f"each name a gate")
 
 def check(name, ok, detail=""):
     FAILURES.append((name, ok, detail))
@@ -217,6 +226,48 @@ def gate_system_rules_cannot_be_averaged(store_factory, policy):
     return True, "0.90 lives on the league, $22,000 on the man; the scopes never meet"
 
 
+# ---------------------------------------------------------------- gate 12
+def gate_transfer_is_not_a_rule_or_a_salary(store_factory):
+    """A club-to-club release fee has its own subject and refuses every other.
+
+    Ruled 2026-09-04: on a league subject it states a RULE where there is an
+    INSTANCE; on a person it says the player received money he did not receive.
+    """
+    s = store_factory()
+    s.add_source({"source_id": "ct", "acquisition": "held", "stated_by": "ct"})
+    sr = s.add_source_record("ct", "kapp")
+    p = "p_kapp"
+    # Each case names the marker of the rule that MUST do the refusing. Catching
+    # a bare StoreError is not enough: widening the scope rule still left the
+    # arity rule refusing the league subject, and the gate read that as correct.
+    # A gate that fires must fire for its STATED reason.
+    cases = [
+        (("league_season", "NFL", "1967"), "inter_club_transfer_fee",
+         "requires a transfer-scoped subject", "a league subject"),
+        (("person", p), "inter_club_transfer_fee",
+         "requires a transfer-scoped subject", "a person subject"),
+        (("cohort", "QB", "1967"), "inter_club_transfer_fee",
+         "requires a transfer-scoped subject", "a cohort subject"),
+        (("transfer", p, "BC"), "inter_club_transfer_fee",
+         "names BOTH clubs", "a transfer subject naming ONE club"),
+        (("transfer", p, "BC", "MIN", 1967), "salary_base",
+         "payee of a transfer fee is a club", "a person salary on a transfer subject"),
+    ]
+    for subj, pred, marker, why in cases:
+        try:
+            s.add_claim(sr, subj, pred, 50000, 1967)
+            return False, f"{pred} was ACCEPTED on {why}"
+        except StoreError as e:
+            if marker not in str(e):
+                return False, (f"{why} was refused, but by the WRONG rule - "
+                               f"expected {marker!r}, got: {str(e)[:110]}")
+    # the real shape is accepted
+    s.add_claim(sr, ("transfer", p, "BC", "MIN", 1967),
+                "inter_club_transfer_fee", 50000, 1967)
+    return True, ("refused on league, person, cohort and a one-club transfer; "
+                  "accepted only as (transfer, person, from_club, to_club, year)")
+
+
 def main():
     policy = json.load(open(__file__.rsplit('/',2)[0] + "/policy/resolution.json"))
     sf = Store
@@ -233,6 +284,8 @@ def main():
     ok, d = gate_conventions_do_not_pool(sf, policy);        check("salary conventions do not pool", ok, d)
     ok, d = gate_system_rules_cannot_be_averaged(sf, policy)
     check("system rules cannot be averaged with player money", ok, d)
+    ok, d = gate_transfer_is_not_a_rule_or_a_salary(sf)
+    check("transfer fee is neither a rule nor a salary", ok, d)
     ok, d = gate_every_hard_rule_has_a_gate()
     check("every declared hard rule names an enforcing gate", ok, d)
     bad = [n for n,o,_ in FAILURES if not o]
