@@ -1,0 +1,2507 @@
+{
+ "summary": [
+  {
+   "league": "CFL",
+   "year": 1945,
+   "teams": 8,
+   "rows": 210,
+   "denotations": 210,
+   "persons": 210,
+   "absences": 373,
+   "deviations": 5
+  },
+  {
+   "league": "CFL",
+   "year": 1946,
+   "teams": 8,
+   "rows": 278,
+   "denotations": 278,
+   "persons": 278,
+   "absences": 433,
+   "deviations": 5
+  },
+  {
+   "league": "CFL",
+   "year": 1947,
+   "teams": 8,
+   "rows": 252,
+   "denotations": 252,
+   "persons": 252,
+   "absences": 402,
+   "deviations": 5
+  },
+  {
+   "league": "CFL",
+   "year": 1948,
+   "teams": 8,
+   "rows": 253,
+   "denotations": 253,
+   "persons": 253,
+   "absences": 327,
+   "deviations": 5
+  },
+  {
+   "league": "CFL",
+   "year": 1949,
+   "teams": 9,
+   "rows": 297,
+   "denotations": 297,
+   "persons": 297,
+   "absences": 313,
+   "deviations": 5
+  },
+  {
+   "league": "CFL",
+   "year": 1950,
+   "teams": 9,
+   "rows": 280,
+   "denotations": 280,
+   "persons": 280,
+   "absences": 291,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1951,
+   "teams": 9,
+   "rows": 307,
+   "denotations": 307,
+   "persons": 306,
+   "absences": 327,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1952,
+   "teams": 9,
+   "rows": 333,
+   "denotations": 333,
+   "persons": 330,
+   "absences": 365,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1953,
+   "teams": 9,
+   "rows": 347,
+   "denotations": 347,
+   "persons": 342,
+   "absences": 392,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1954,
+   "teams": 10,
+   "rows": 377,
+   "denotations": 377,
+   "persons": 368,
+   "absences": 409,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1955,
+   "teams": 9,
+   "rows": 374,
+   "denotations": 374,
+   "persons": 364,
+   "absences": 372,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1956,
+   "teams": 9,
+   "rows": 379,
+   "denotations": 379,
+   "persons": 368,
+   "absences": 378,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1957,
+   "teams": 9,
+   "rows": 390,
+   "denotations": 390,
+   "persons": 381,
+   "absences": 396,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1958,
+   "teams": 9,
+   "rows": 363,
+   "denotations": 363,
+   "persons": 358,
+   "absences": 304,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1959,
+   "teams": 9,
+   "rows": 384,
+   "denotations": 384,
+   "persons": 377,
+   "absences": 398,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1960,
+   "teams": 9,
+   "rows": 393,
+   "denotations": 393,
+   "persons": 377,
+   "absences": 459,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1961,
+   "teams": 9,
+   "rows": 370,
+   "denotations": 370,
+   "persons": 357,
+   "absences": 345,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1962,
+   "teams": 9,
+   "rows": 362,
+   "denotations": 362,
+   "persons": 346,
+   "absences": 336,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1963,
+   "teams": 9,
+   "rows": 376,
+   "denotations": 376,
+   "persons": 359,
+   "absences": 325,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1964,
+   "teams": 9,
+   "rows": 379,
+   "denotations": 379,
+   "persons": 360,
+   "absences": 373,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1965,
+   "teams": 9,
+   "rows": 378,
+   "denotations": 378,
+   "persons": 360,
+   "absences": 416,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1966,
+   "teams": 9,
+   "rows": 350,
+   "denotations": 350,
+   "persons": 338,
+   "absences": 314,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1967,
+   "teams": 9,
+   "rows": 360,
+   "denotations": 360,
+   "persons": 351,
+   "absences": 433,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1968,
+   "teams": 9,
+   "rows": 354,
+   "denotations": 354,
+   "persons": 347,
+   "absences": 382,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1969,
+   "teams": 9,
+   "rows": 371,
+   "denotations": 371,
+   "persons": 363,
+   "absences": 375,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1970,
+   "teams": 9,
+   "rows": 376,
+   "denotations": 376,
+   "persons": 363,
+   "absences": 334,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1971,
+   "teams": 9,
+   "rows": 386,
+   "denotations": 386,
+   "persons": 369,
+   "absences": 283,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1972,
+   "teams": 9,
+   "rows": 385,
+   "denotations": 385,
+   "persons": 369,
+   "absences": 324,
+   "deviations": 2
+  },
+  {
+   "league": "CFL",
+   "year": 1973,
+   "teams": 9,
+   "rows": 397,
+   "denotations": 397,
+   "persons": 380,
+   "absences": 284,
+   "deviations": 2
+  },
+  {
+   "league": "CFL",
+   "year": 1974,
+   "teams": 9,
+   "rows": 409,
+   "denotations": 409,
+   "persons": 384,
+   "absences": 359,
+   "deviations": 2
+  },
+  {
+   "league": "CFL",
+   "year": 1975,
+   "teams": 9,
+   "rows": 430,
+   "denotations": 430,
+   "persons": 410,
+   "absences": 357,
+   "deviations": 2
+  },
+  {
+   "league": "CFL",
+   "year": 1976,
+   "teams": 9,
+   "rows": 436,
+   "denotations": 436,
+   "persons": 400,
+   "absences": 325,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1977,
+   "teams": 9,
+   "rows": 454,
+   "denotations": 454,
+   "persons": 416,
+   "absences": 371,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1978,
+   "teams": 9,
+   "rows": 463,
+   "denotations": 463,
+   "persons": 428,
+   "absences": 358,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1979,
+   "teams": 9,
+   "rows": 469,
+   "denotations": 469,
+   "persons": 430,
+   "absences": 463,
+   "deviations": 2
+  },
+  {
+   "league": "CFL",
+   "year": 1980,
+   "teams": 9,
+   "rows": 460,
+   "denotations": 460,
+   "persons": 432,
+   "absences": 400,
+   "deviations": 2
+  },
+  {
+   "league": "CFL",
+   "year": 1981,
+   "teams": 9,
+   "rows": 453,
+   "denotations": 453,
+   "persons": 430,
+   "absences": 431,
+   "deviations": 2
+  },
+  {
+   "league": "CFL",
+   "year": 1982,
+   "teams": 9,
+   "rows": 456,
+   "denotations": 456,
+   "persons": 436,
+   "absences": 405,
+   "deviations": 2
+  },
+  {
+   "league": "CFL",
+   "year": 1983,
+   "teams": 9,
+   "rows": 475,
+   "denotations": 475,
+   "persons": 433,
+   "absences": 303,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1984,
+   "teams": 9,
+   "rows": 459,
+   "denotations": 459,
+   "persons": 435,
+   "absences": 293,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1985,
+   "teams": 9,
+   "rows": 485,
+   "denotations": 485,
+   "persons": 452,
+   "absences": 266,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1986,
+   "teams": 9,
+   "rows": 504,
+   "denotations": 504,
+   "persons": 477,
+   "absences": 463,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1987,
+   "teams": 8,
+   "rows": 440,
+   "denotations": 440,
+   "persons": 425,
+   "absences": 455,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1988,
+   "teams": 8,
+   "rows": 448,
+   "denotations": 448,
+   "persons": 423,
+   "absences": 449,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1989,
+   "teams": 8,
+   "rows": 456,
+   "denotations": 456,
+   "persons": 432,
+   "absences": 438,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1990,
+   "teams": 8,
+   "rows": 449,
+   "denotations": 449,
+   "persons": 430,
+   "absences": 443,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1991,
+   "teams": 8,
+   "rows": 454,
+   "denotations": 454,
+   "persons": 441,
+   "absences": 446,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1992,
+   "teams": 8,
+   "rows": 433,
+   "denotations": 433,
+   "persons": 423,
+   "absences": 434,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1993,
+   "teams": 9,
+   "rows": 529,
+   "denotations": 529,
+   "persons": 503,
+   "absences": 499,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1994,
+   "teams": 12,
+   "rows": 727,
+   "denotations": 727,
+   "persons": 694,
+   "absences": 662,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1995,
+   "teams": 13,
+   "rows": 795,
+   "denotations": 795,
+   "persons": 745,
+   "absences": 755,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1996,
+   "teams": 9,
+   "rows": 536,
+   "denotations": 536,
+   "persons": 497,
+   "absences": 446,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1997,
+   "teams": 8,
+   "rows": 426,
+   "denotations": 426,
+   "persons": 404,
+   "absences": 333,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1998,
+   "teams": 8,
+   "rows": 444,
+   "denotations": 444,
+   "persons": 422,
+   "absences": 268,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 1999,
+   "teams": 8,
+   "rows": 459,
+   "denotations": 459,
+   "persons": 440,
+   "absences": 315,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2000,
+   "teams": 8,
+   "rows": 462,
+   "denotations": 462,
+   "persons": 441,
+   "absences": 234,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2001,
+   "teams": 8,
+   "rows": 479,
+   "denotations": 479,
+   "persons": 459,
+   "absences": 194,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2002,
+   "teams": 9,
+   "rows": 542,
+   "denotations": 542,
+   "persons": 525,
+   "absences": 371,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2003,
+   "teams": 9,
+   "rows": 531,
+   "denotations": 531,
+   "persons": 512,
+   "absences": 409,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2004,
+   "teams": 9,
+   "rows": 547,
+   "denotations": 547,
+   "persons": 535,
+   "absences": 445,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2005,
+   "teams": 9,
+   "rows": 556,
+   "denotations": 556,
+   "persons": 535,
+   "absences": 324,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2006,
+   "teams": 8,
+   "rows": 520,
+   "denotations": 520,
+   "persons": 502,
+   "absences": 251,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2007,
+   "teams": 8,
+   "rows": 571,
+   "denotations": 571,
+   "persons": 545,
+   "absences": 236,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2008,
+   "teams": 8,
+   "rows": 549,
+   "denotations": 549,
+   "persons": 529,
+   "absences": 104,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2009,
+   "teams": 8,
+   "rows": 554,
+   "denotations": 554,
+   "persons": 536,
+   "absences": 81,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2010,
+   "teams": 8,
+   "rows": 537,
+   "denotations": 537,
+   "persons": 523,
+   "absences": 21,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2011,
+   "teams": 8,
+   "rows": 542,
+   "denotations": 542,
+   "persons": 520,
+   "absences": 30,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2012,
+   "teams": 8,
+   "rows": 550,
+   "denotations": 550,
+   "persons": 539,
+   "absences": 56,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2013,
+   "teams": 8,
+   "rows": 603,
+   "denotations": 603,
+   "persons": 579,
+   "absences": 34,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2014,
+   "teams": 9,
+   "rows": 664,
+   "denotations": 664,
+   "persons": 642,
+   "absences": 37,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2015,
+   "teams": 9,
+   "rows": 667,
+   "denotations": 667,
+   "persons": 648,
+   "absences": 24,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2016,
+   "teams": 9,
+   "rows": 677,
+   "denotations": 677,
+   "persons": 644,
+   "absences": 31,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2017,
+   "teams": 9,
+   "rows": 675,
+   "denotations": 675,
+   "persons": 657,
+   "absences": 9,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2018,
+   "teams": 9,
+   "rows": 645,
+   "denotations": 645,
+   "persons": 617,
+   "absences": 7,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2019,
+   "teams": 9,
+   "rows": 660,
+   "denotations": 660,
+   "persons": 643,
+   "absences": 8,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2021,
+   "teams": 9,
+   "rows": 685,
+   "denotations": 685,
+   "persons": 671,
+   "absences": 69,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2022,
+   "teams": 9,
+   "rows": 658,
+   "denotations": 658,
+   "persons": 652,
+   "absences": 19,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2023,
+   "teams": 9,
+   "rows": 706,
+   "denotations": 706,
+   "persons": 690,
+   "absences": 150,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2024,
+   "teams": 9,
+   "rows": 740,
+   "denotations": 740,
+   "persons": 724,
+   "absences": 244,
+   "deviations": 3
+  },
+  {
+   "league": "CFL",
+   "year": 2025,
+   "teams": 9,
+   "rows": 741,
+   "denotations": 741,
+   "persons": 722,
+   "absences": 710,
+   "deviations": 3
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "CFL-1945",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1945",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 32.9,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1945",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 32.9,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1945",
+   "field": "college",
+   "declared": 100.0,
+   "actual": 56.7,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1945",
+   "field": "jersey",
+   "declared": 1935,
+   "actual": 0.0,
+   "why": "jersey column ABSENT at or above usable_from"
+  },
+  {
+   "league_year": "CFL-1946",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1946",
+   "field": "games_started",
+   "declared": null,
+   "actual": 86.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1946",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 46.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1946",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 44.6,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1946",
+   "field": "college",
+   "declared": 100.0,
+   "actual": 75.5,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1947",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1947",
+   "field": "games_started",
+   "declared": null,
+   "actual": 63.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1947",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 50.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1947",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 47.2,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1947",
+   "field": "college",
+   "declared": 100.0,
+   "actual": 74.2,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1948",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1948",
+   "field": "games_started",
+   "declared": null,
+   "actual": 88.7,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1948",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 54.9,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1948",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 51.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1948",
+   "field": "college",
+   "declared": 100.0,
+   "actual": 79.4,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1949",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1949",
+   "field": "games_started",
+   "declared": null,
+   "actual": 91.7,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1949",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 64.6,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1949",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 63.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1949",
+   "field": "college",
+   "declared": 100.0,
+   "actual": 87.2,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1950",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1950",
+   "field": "games_started",
+   "declared": null,
+   "actual": 63.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1950",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 75.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1951",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1951",
+   "field": "games_started",
+   "declared": null,
+   "actual": 50.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1951",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 75.6,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1952",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1952",
+   "field": "games_started",
+   "declared": null,
+   "actual": 49.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1952",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 75.1,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1953",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1953",
+   "field": "games_started",
+   "declared": null,
+   "actual": 4.9,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1953",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 74.6,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1954",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1954",
+   "field": "games_started",
+   "declared": null,
+   "actual": 4.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1954",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 74.5,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1955",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1955",
+   "field": "games_started",
+   "declared": null,
+   "actual": 3.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1955",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 76.5,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1956",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1956",
+   "field": "games_started",
+   "declared": null,
+   "actual": 3.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1956",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 77.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1957",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1957",
+   "field": "games_started",
+   "declared": null,
+   "actual": 2.7,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1957",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 80.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1958",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1958",
+   "field": "games_started",
+   "declared": null,
+   "actual": 3.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1958",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 84.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1959",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1959",
+   "field": "games_started",
+   "declared": null,
+   "actual": 3.6,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1959",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 84.1,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1960",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1960",
+   "field": "games_started",
+   "declared": null,
+   "actual": 4.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1960",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 80.7,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1961",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1961",
+   "field": "games_started",
+   "declared": null,
+   "actual": 5.7,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1961",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 81.4,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1962",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1962",
+   "field": "games_started",
+   "declared": null,
+   "actual": 3.6,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1962",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 83.1,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1963",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1963",
+   "field": "games_started",
+   "declared": null,
+   "actual": 3.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1963",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 84.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1964",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1964",
+   "field": "games_started",
+   "declared": null,
+   "actual": 3.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1964",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 85.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1965",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1965",
+   "field": "games_started",
+   "declared": null,
+   "actual": 4.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1965",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 85.7,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1966",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1966",
+   "field": "games_started",
+   "declared": null,
+   "actual": 3.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1966",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 83.4,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1967",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1967",
+   "field": "games_started",
+   "declared": null,
+   "actual": 3.6,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1967",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 85.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1968",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1968",
+   "field": "games_started",
+   "declared": null,
+   "actual": 5.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1968",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 84.7,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1969",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1969",
+   "field": "games_started",
+   "declared": null,
+   "actual": 4.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1969",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 81.9,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1970",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1970",
+   "field": "games_started",
+   "declared": null,
+   "actual": 4.6,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1970",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 84.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1971",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1971",
+   "field": "games_started",
+   "declared": null,
+   "actual": 4.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1971",
+   "field": "birth_date",
+   "declared": 100.0,
+   "actual": 87.3,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1972",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1972",
+   "field": "games_started",
+   "declared": null,
+   "actual": 5.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1973",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1973",
+   "field": "games_started",
+   "declared": null,
+   "actual": 5.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1974",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1974",
+   "field": "games_started",
+   "declared": null,
+   "actual": 6.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1975",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1975",
+   "field": "games_started",
+   "declared": null,
+   "actual": 8.4,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1976",
+   "field": "jersey",
+   "declared": 90.9,
+   "actual": 80.5,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1976",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1976",
+   "field": "games_started",
+   "declared": null,
+   "actual": 7.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1977",
+   "field": "jersey",
+   "declared": 90.9,
+   "actual": 73.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1977",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1977",
+   "field": "games_started",
+   "declared": null,
+   "actual": 6.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1978",
+   "field": "jersey",
+   "declared": 90.9,
+   "actual": 79.7,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1978",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1978",
+   "field": "games_started",
+   "declared": null,
+   "actual": 5.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1979",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1979",
+   "field": "games_started",
+   "declared": null,
+   "actual": 4.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1980",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1980",
+   "field": "games_started",
+   "declared": null,
+   "actual": 6.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1981",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1981",
+   "field": "games_started",
+   "declared": null,
+   "actual": 5.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1982",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1982",
+   "field": "games_started",
+   "declared": null,
+   "actual": 6.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1983",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1983",
+   "field": "games_started",
+   "declared": null,
+   "actual": 7.6,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1983",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 89.1,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1984",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1984",
+   "field": "games_started",
+   "declared": null,
+   "actual": 5.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1984",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 91.3,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1985",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1985",
+   "field": "games_started",
+   "declared": null,
+   "actual": 6.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1985",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.4,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1986",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1986",
+   "field": "games_started",
+   "declared": null,
+   "actual": 7.4,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1986",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.2,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1987",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1987",
+   "field": "games_started",
+   "declared": null,
+   "actual": 8.4,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1987",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 97.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1988",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1988",
+   "field": "games_started",
+   "declared": null,
+   "actual": 8.9,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1988",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 97.5,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1989",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1989",
+   "field": "games_started",
+   "declared": null,
+   "actual": 10.7,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1989",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.5,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1990",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1990",
+   "field": "games_started",
+   "declared": null,
+   "actual": 7.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1990",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 97.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1991",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1991",
+   "field": "games_started",
+   "declared": null,
+   "actual": 7.9,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1991",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1992",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1992",
+   "field": "games_started",
+   "declared": null,
+   "actual": 8.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1992",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1993",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1993",
+   "field": "games_started",
+   "declared": null,
+   "actual": 11.9,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1993",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.1,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1994",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1994",
+   "field": "games_started",
+   "declared": null,
+   "actual": 13.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1994",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 96.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1995",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1995",
+   "field": "games_started",
+   "declared": null,
+   "actual": 9.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1995",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 96.4,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1996",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1996",
+   "field": "games_started",
+   "declared": null,
+   "actual": 20.7,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1996",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 97.2,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1997",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1997",
+   "field": "games_started",
+   "declared": null,
+   "actual": 23.7,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1997",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.4,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1998",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1998",
+   "field": "games_started",
+   "declared": null,
+   "actual": 41.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1998",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.9,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-1999",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1999",
+   "field": "games_started",
+   "declared": null,
+   "actual": 33.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-1999",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.9,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2000",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2000",
+   "field": "games_started",
+   "declared": null,
+   "actual": 50.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2000",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2001",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2001",
+   "field": "games_started",
+   "declared": null,
+   "actual": 59.9,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2001",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2002",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2002",
+   "field": "games_started",
+   "declared": null,
+   "actual": 33.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2002",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.7,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2003",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2003",
+   "field": "games_started",
+   "declared": null,
+   "actual": 25.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2003",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.3,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2004",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2004",
+   "field": "games_started",
+   "declared": null,
+   "actual": 28.5,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2004",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 93.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2005",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2005",
+   "field": "games_started",
+   "declared": null,
+   "actual": 45.3,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2005",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.5,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2006",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2006",
+   "field": "games_started",
+   "declared": null,
+   "actual": 54.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2006",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2007",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2007",
+   "field": "games_started",
+   "declared": null,
+   "actual": 62.9,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2007",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2008",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2008",
+   "field": "games_started",
+   "declared": null,
+   "actual": 87.4,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2008",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2009",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2009",
+   "field": "games_started",
+   "declared": null,
+   "actual": 92.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2009",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2010",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2010",
+   "field": "games_started",
+   "declared": null,
+   "actual": 98.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2010",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2011",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2011",
+   "field": "games_started",
+   "declared": null,
+   "actual": 97.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2011",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.9,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2012",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2012",
+   "field": "games_started",
+   "declared": null,
+   "actual": 96.7,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2012",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 97.3,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2013",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2013",
+   "field": "games_started",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2013",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 98.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2014",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2014",
+   "field": "games_started",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2014",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 96.5,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2015",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2015",
+   "field": "games_started",
+   "declared": null,
+   "actual": 99.6,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2015",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 97.5,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2016",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2016",
+   "field": "games_started",
+   "declared": null,
+   "actual": 99.9,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2016",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 96.2,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2017",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2017",
+   "field": "games_started",
+   "declared": null,
+   "actual": 99.9,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2017",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.0,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2018",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2018",
+   "field": "games_started",
+   "declared": null,
+   "actual": 99.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2018",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.4,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2019",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2019",
+   "field": "games_started",
+   "declared": null,
+   "actual": 99.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2019",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.2,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2021",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2021",
+   "field": "games_started",
+   "declared": null,
+   "actual": 95.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2021",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.7,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2022",
+   "field": "games_played",
+   "declared": null,
+   "actual": 100.0,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2022",
+   "field": "games_started",
+   "declared": null,
+   "actual": 98.8,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2022",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.7,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2023",
+   "field": "games_played",
+   "declared": null,
+   "actual": 90.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2023",
+   "field": "games_started",
+   "declared": null,
+   "actual": 90.1,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2023",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.9,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2024",
+   "field": "games_played",
+   "declared": null,
+   "actual": 84.6,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2024",
+   "field": "games_started",
+   "declared": null,
+   "actual": 84.6,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2024",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.6,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "CFL-2025",
+   "field": "games_played",
+   "declared": null,
+   "actual": 60.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2025",
+   "field": "games_started",
+   "declared": null,
+   "actual": 59.2,
+   "why": "declaration makes NO prediction for this league"
+  },
+  {
+   "league_year": "CFL-2025",
+   "field": "hometown",
+   "declared": 74.3,
+   "actual": 99.6,
+   "why": "deviation > 10 points"
+  }
+ ],
+ "failures": [
+  [
+   "CFL",
+   2020,
+   "AssertionError: match rate 0.000 below floor 0.95"
+  ]
+ ]
+}

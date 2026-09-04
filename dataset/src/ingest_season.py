@@ -48,7 +48,11 @@ def run(store, log):
     teams = F.teams_in(LEAGUE, YEAR)
     log(f"teams: {len(teams)}  {teams}")
 
-    fill_seen = collections.defaultdict(lambda: [0, 0])
+    # [filled, rows_on_pages_WITH_the_column, rows_total, pages_without]
+    # Two denominators, because they answer different questions and a single
+    # scalar cannot say which it used. See src/gate_census_denominator.py.
+    fill_seen = collections.defaultdict(lambda: [0, 0, 0, 0])
+    empty_pages = []
     by_slug = {}          # slug -> person id
     rows_seen = denot = absences = 0
     stints = []
@@ -63,8 +67,16 @@ def run(store, log):
         if missing_cols:
             log(f"  {team}: columns absent for this era/league: {missing_cols}")
         names = {}
+        if not rows:
+            # A team the league page LINKS whose roster page parses to nothing.
+            # Before this was recorded it contributed nothing, silently.
+            empty_pages.append(team)
+            log(f"  {team}: roster page parses to ZERO rows")
+        for c in ("#", "GP", "GS", "Birth Date", "Hometown", "College"):
+            if c not in cols_present: fill_seen[c][3] += 1
         for r in rows:
             for c in ("#", "GP", "GS", "Birth Date", "Hometown", "College"):
+                fill_seen[c][2] += 1              # every row, column or not
                 if c in cols_present:
                     fill_seen[c][1] += 1
                     if r.get(c, "") != "": fill_seen[c][0] += 1
@@ -137,7 +149,13 @@ def run(store, log):
         seen = fill_seen.get(col)
         if not seen or not seen[1]:
             continue
-        actual = 100.0 * seen[0] / seen[1]
+        actual = 100.0 * seen[0] / seen[1]          # fill WHERE THE COLUMN EXISTS
+        absolute = 100.0 * seen[0] / seen[2] if seen[2] else 0.0
+        if abs(actual - absolute) > 0.1:
+            DEVIATIONS.append((f"{LEAGUE}-{YEAR}", field, round(actual, 1),
+                               round(absolute, 1),
+                               f"column absent from {seen[3]} page(s): fill where "
+                               f"present {actual:.1f}% but {absolute:.1f}% of all rows"))
         exp = expected_fill(field)
         if exp is None:
             DEVIATIONS.append((f"{LEAGUE}-{YEAR}", field, None, round(actual, 1),
@@ -150,7 +168,12 @@ def run(store, log):
     # the column is present but too sparse. The first sweep raised this on every
     # season 1922-1934, which was the check being noisy rather than a finding.
     # What IS a deviation is the column being ABSENT above the threshold.
-    if JERSEY_USABLE and not fill_seen.get("#", (0, 0))[1]:
+    if empty_pages:
+        DEVIATIONS.append((f"{LEAGUE}-{YEAR}", "roster_page", len(teams),
+                           len(empty_pages),
+                           f"teams linked by the league page with ZERO roster rows: "
+                           f"{empty_pages}"))
+    if JERSEY_USABLE and not fill_seen.get("#", (0, 0, 0, 0))[1]:
         DEVIATIONS.append((f"{LEAGUE}-{YEAR}", "jersey", FA["jersey"]["usable_from"], 0.0,
                            "jersey column ABSENT at or above usable_from"))
     return by_slug, stints, rows_seen, denot
