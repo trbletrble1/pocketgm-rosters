@@ -1,57 +1,125 @@
-season,league,teams,players,files,already_published,identifying_names,franchises
-1941,NFL,2,102,1,,"Bulldog Turner, Danny Fortmann, Joe Stydahar.",Chicago Bears; Chicago Bears-
-1945,NFL,1,50,1,,"Bob Waterfield, Jim Benton, Milan Lazetich.",Cleveland Rams
-1948,NFL,1,49,1,,"Steve Van Buren, Bucko Kilroy., Al Wistert",Philadelphia Eagles
-1949,NFL,1,52,1,,"Steve Van Buren, Bucko Kilroy., Al Wistert",Philadelphia Eagles
-1950,NFL,2,88,1,,"Marion Motley, Otto Graham, Lou Groza",Cleveland Browns; Cleveland Browns-
-1951,NFL,2,90,2,,"Dan Towler, Bob Waterfield, Tank Younger",Los Angeles Rams
-1952,NFL,1,46,1,,"Art Donovan, Gino Marchetti, Dick Hoerner",Dallas Texans
-1955,NFL,2,90,1,,"Tank Younger, Norm Van Brocklin, Andy Robustelli",Cleveland Browns; Los Angeles Rams
-1956,NFL,1,46,1,,"Pat Summerall, Jack Simmons, Ollie Matson",Chicago Cardinals
-1957,NFL,4,182,2,,"John Henry Johnson, Joe Schmidt, Jack Christiansen",Detroit Lions; San Francisco 49ers
-1958,NFL,4,184,2,,"Alan Ameche, Gino Marchetti, Jim Parker",Baltimore Colts; New York Giants
-1960,NFL,6,283,2,,"Walt Cudzik, Gino Cappelletti., Bob Dee",Boston Patriots; Dallas Cowboys; Green Bay Packers; Los Angeles Chargers; Philadelphia Eagles
-1961,NFL,2,90,1,,"Rip Hawkins, Fran Tarkenton, Jim Prestel",Chicago Bears; Minnesota Vikings
-1962,NFL,11,496,2,,"Jim Tyrer, Curtis McClinton, Johnny Robinson",Dallas Texans; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Oakland Raiders; Pittsburgh Steelers; San Francisco 49ers
-1963,NFL,8,361,2,,"Curley Johnson., Bill Baird, Mark Smolinski",Chicago Bears; Los Angeles Rams; New York Giants; New York Jets; Oakland Raiders; San Diego Chargers
-1964,NFL,8,382,3,,"Jim Bakken, Larry Wilson, Jackie Smith",Baltimore Colts; Buffalo Bills; Cleveland Browns; Minnesota Vikings; St. Louis Cardinals; Washington Redskins
-1965,NFL,3,140,2,,"Jim Brown, Lou Groza, John Morrow",Chicago Bears; Cleveland Browns
-1966,NFL,30,1367,3,,"Ray Mansfield, Frank Lambert, Charley Bradshaw",Atlanta Falcons; Baltimore Colts; Boston Patriots; Buffalo Bills; Chicago Bears; Cleveland Browns; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Kansas City Chiefs; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; St. Louis Cardinals; Washington Redskins
-1967,NFL,14,663,4,,"Jim Taylor, Doug Atkins, Dan Abramowicz",Dallas Cowboys; Detroit Lions; Green Bay Packers; Houston Oilers; Los Angeles Rams; New Orleans Saints; Oakland Raiders
-1968,NFL,8,380,3,,"Gene Upshaw, Jim Otto, Hewritt Dixon",Baltimore Colts; Minnesota Vikings; New York Jets; Oakland Raiders
-1969,NFL,11,515,4,,"Mike Bragg, Sam Huff, Charley Taylor",Buffalo Bills; Kansas City Chiefs; Los Angeles Rams; Minnesota Vikings; Oakland Raiders; Washington Redskins
-1970,NFL,16,755,2,,"Tom Dempsey, Julian Fagan, Danny  Abramowicz",Baltimore Colts; Cleveland Browns; Dallas Cowboys; Detroit Lions; Minnesota Vikings; New Orleans Saints; New York Giants; Oakland Raiders; San Francisco 49ers
-1971,NFL,12,579,3,,"Jim Turner, Rich Jackson, Floyd Little",Dallas Cowboys; Denver Broncos; Kansas City Chiefs; Miami Dolphins; Oakland Raiders; San Francisco 49ers; Washington Redskins
-1972,NFL,14,682,2,,"Harold Jackson, Bill Bradley, Tom Dempsey",Chicago Bears; Green Bay Packers; Los Angeles Rams; Miami Dolphins; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Francisco 49ers; Washington Redskins
-1973,NFL,14,679,3,,"Tom McNeill, Harold Carmichael, Bill Bradley",Atlanta Falcons; Buffalo Bills; Cincinnati Bengals; Dallas Cowboys; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; Philadelphia Eagles; San Diego Chargers
-1974,NFL,15,744,3,,"Elvin Bethea, Curly Culp, Fred Willis",Buffalo Bills; Houston Oilers; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New England Patriots; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; Washington Redskins
-1975,NFL,17,809,5,,"Don Cockroft, Jerry Sherk, Reggie Rucker",Cleveland Browns; Dallas Cowboys; Los Angeles Rams; Minnesota Vikings; New York Giants; Oakland Raiders; Pittsburgh Steelers; St. Louis Cardinals
-1975,WFL,6,302,2,,"Ken Bowman, John Wilbur, Karl  Lorch",Birmingham Vulcans; Honolulu Hawaiians; Memphis Southmen; So California Sun
-1976,NFL,43,2049,4,,"Lee Roy Selmon, Mark Cotney, Mike Washington",Atlanta Falcons; Baltimore Colts; Buffalo Bills; Chicago Bears; Cincinnati Bengals; Cleveland Browns; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Kansas City Chiefs; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New England Patriots; New Orleans Saints; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; Seattle Seahawks; St. Louis Cardinals; Tampa Bay Bucs; Washington Redskins
-1977,NFL,14,671,3,,"Greg Coleman, Don Cockroft, Mike Pruitt",Baltimore Colts; Chicago Bears; Cleveland Browns; Dallas Cowboys; Denver Broncos; Los Angeles Rams; Minnesota Vikings; Oakland Raiders
-1978,NFL,43,2092,5,,"Jim Bakken, Jim Otis, Tom Banks",Atlanta Falcons; Baltimore Colts; Buffalo Bills; Chicago Bears; Cincinnati Bengals; Cleveland Browns; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Kansas City Chiefs; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New England Patriots; New Orleans Saints; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; Seattle Seahawks; St. Louis Cardinals; Tampa Bay Bucs; Washington Redskins
-1979,NFL,13,637,3,yes,"Jack Youngblood, Frank Corral, Doug France",Dallas Cowboys; Los Angeles Rams; New Orleans Saints; Pittsburgh Steelers; Tampa Bay Bucs; Washington Redskins
-1980,NFL,14,682,2,,"Jack Youngblood, Frank Corral, Cullen Bryant",Atlanta Falcons; Cleveland Browns; Dallas Cowboys; Detroit Lions; Houston Oilers; Los Angeles Rams; Oakland Raiders; Philadelphia Eagles
-1981,NFL,14,682,2,,"Lawrence Taylor, Dave Jennings, Harry Carson",Buffalo Bills; Cincinnati Bengals; Dallas Cowboys; Miami Dolphins; New York Giants; San Diego Chargers; San Francisco 49ers
-1982,NFL,11,540,3,,"Jan Stenerud, Ray Stachowicz, James Lofton",Cincinnati Bengals; Green Bay Packers; Miami Dolphins; New York Jets; St. Louis Cardinals; Washington Redskins
-1983,NFL,8,399,2,,"Jack Youngblood, Kent Hill, Jackie Slater",Los Angeles Raiders; Los Angeles Rams; New Orleans Saints; Philadelphia Eagles; Seattle Seahawks; Washington Redskins
-1984,NFL,9,445,3,,"Kenny Easley, Jeff West, Steve Largent",Los Angeles Rams; Miami Dolphins; Pittsburgh Steelers; San Francisco 49ers; Seattle Seahawks
-1984,USFL,18,926,1,,"John Corker, Anthony Carter, Ray Bentley",Arizona Wranglers; Birmingham Stallions; Chicago Blitz; Denver Gold; Houston Gamblers; Jacksonville Bulls; Los Angeles Express; Memphis Showboats; Michigan Panthers; New Jersey Generals; New Orleans Breakers; Oakland Invaders; Oklahoma Outlaws; Philadelphia Stars; Pittsburgh Maulers; San Antonio Gunslingers; Tampa Bay Bandits; Washington Federals
-1985,NFL,13,629,2,,"Mike Lansford, Kent Hill, Jackie Slater",Chicago Bears; Dallas Cowboys; Los Angeles Raiders; Los Angeles Rams; Miami Dolphins; New England Patriots; New York Jets
-1986,NFL,6,288,2,yes,"Kevin Mack, Jeff Gossett, Ozzie Newsome",Cleveland Browns; Denver Broncos; New York Giants
-1987,NFL,13,644,4,,"Norm Johnson, John L. Williams, Steve Largent",Cleveland Browns; Denver Broncos; Indianapolis Colts; Minnesota Vikings; New Orleans Saints; Seattle Seahawks; Washington Redskins
-1988,NFL,8,383,2,,"Steve McMichael, Richard Dent, Mike Singletary",Chicago Bears; Cincinnati Bengals; Houston Oilers; San Francisco 49ers
-1989,NFL,6,294,2,,"Randall McDaniel, Rich Karlis, Kirk Lowdermilk",Denver Broncos; Los Angeles Rams; Minnesota Vikings; San Francisco 49ers
-1990,NFL,6,287,1,,"Ronnie Lott, Tom Rathman, Jerry Rice",Buffalo Bills; Kansas City Chiefs; Los Angeles Raiders; New York Giants; Philadelphia Eagles; San Francisco 49ers
-1991,NFL,8,383,4,,"John Elway, Greg Kragen, David Treadwell",Atlanta Falcons; Buffalo Bills; Denver Broncos; Detroit Lions; Washington Redskins
-1992,NFL,7,339,2,,"Darryl Johnston, Charles Haley, Nate Newton",Buffalo Bills; Dallas Cowboys; Green Bay Packers; Houston Oilers; New Orleans Saints; San Francisco 49ers
-1993,NFL,2,98,1,,"Darryl Johnston, Charles Haley, Nate Newton",Buffalo Bills; Dallas Cowboys
-1994,NFL,3,148,1,,"Steve Young, Rickey Jackson, Jerry Rice",Dallas Cowboys; San Diego Chargers; San Francisco 49ers
-1995,NFL,5,250,2,,"Chris Gardocki, Marshall Faulk, Cary Blanchard",Dallas Cowboys; Detroit Lions; Indianapolis Colts; Kansas City Chiefs; Pittsburgh Steelers
-1996,NFL,40,2000,4,,"Michael Strahan, Brad Daluiso, Mike Horan",Arizona Cardinals; Atlanta Falcons; Baltimore Ravens; Buffalo Bills; Carolina Panthers; Chicago Bears; Cincinnati Bengals; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Indianapolis Colts; Jacksonville Jaguars; Kansas City Chiefs; Miami Dolphins; Minnesota Vikings; New England Patriots; New Orleans Saints; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; Seattle Seahawks; St. Louis Rams; Tampa Bay Bucs; Washington Redskins
-1997,NFL,4,194,3,,"Craig Hentrich, Reggie White, Brett Favre",Denver Broncos; Green Bay Packers
-1998,NFL,6,298,2,,"Mitch Berger, Randall McDaniel, John Randle",Atlanta Falcons; Denver Broncos; Green Bay Packers; Minnesota Vikings; San Francisco 49ers
-1999,NFL,2,100,1,,"Jevon Kearse, Al Del Greco, Craig Hentrich",St. Louis Rams; Tennessee Titans
-2000,NFL,1,53,1,yes,"Ray Lewis, Jonathan Ogden, Matt Stover",Baltimore Ravens
-2001,NFL,2,100,1,,"Orlando Pace, Marshall Faulk, Jeff Wilkins",New England Patriots; St. Louis Rams
-2002,NFL,2,99,1,,"Rich Gannon, Rod Woodson, Lincoln Kennedy",Oakland Raiders; Tampa Bay Bucs
+season,league,source_file,teams,players,league_size,share,block_is,already_published,identifying_names,franchises
+1941,NFL,Mike-NFL1941-1969,2,102,10,20%,notable teams,,"Bulldog Turner, Danny Fortmann, Joe Stydahar.",Chicago Bears; Chicago Bears-
+1945,NFL,Mike-NFL1941-1969,1,50,10,10%,notable teams,,"Bob Waterfield, Jim Benton, Milan Lazetich.",Cleveland Rams
+1948,NFL,Mike-NFL1941-1969,1,49,10,10%,notable teams,,"Steve Van Buren, Bucko Kilroy., Al Wistert",Philadelphia Eagles
+1949,NFL,Mike-NFL1941-1969,1,52,10,10%,notable teams,,"Steve Van Buren, Bucko Kilroy., Al Wistert",Philadelphia Eagles
+1950,NFL,Mike-NFL1941-1969,2,88,13,15%,notable teams,,"Marion Motley, Otto Graham, Lou Groza",Cleveland Browns; Cleveland Browns-
+1951,NFL,Mike-NFL1941-1969,1,45,12,8%,notable teams,,"Dan Towler, Bob Waterfield, Tank Younger",Los Angeles Rams
+1951,NFL,Mike-NFL1975-1979,1,45,12,8%,notable teams,,"Dan Towler, Bob Waterfield, Tank Younger",Los Angeles Rams
+1952,NFL,Mike-NFL1941-1969,1,46,12,8%,notable teams,,"Art Donovan, Gino Marchetti, Dick Hoerner",Dallas Texans
+1955,NFL,Mike-NFL1941-1969,2,90,12,17%,notable teams,,"Tank Younger, Norm Van Brocklin, Andy Robustelli",Cleveland Browns; Los Angeles Rams
+1956,NFL,Mike-NFL1941-1969,1,46,12,8%,notable teams,,"Pat Summerall, Jack Simmons, Ollie Matson",Chicago Cardinals
+1957,NFL,Mike-NFL1941-1969,2,91,12,17%,notable teams,,"John Henry Johnson, Joe Schmidt, Jack Christiansen",Detroit Lions; San Francisco 49ers
+1957,NFL,MuscleMike-LM67,2,91,12,17%,notable teams,,"Joe Schmidt, Jack Christiansen, Frank Gatski",Detroit Lions; San Francisco 49ers
+1958,NFL,Mike-NFL1941-1969,2,92,12,17%,notable teams,,"Alan Ameche, Gino Marchetti, Jim Parker",Baltimore Colts; New York Giants
+1958,NFL,MuscleMike-LM67,2,92,12,17%,notable teams,,"Gino Marchetti, Jim Parker, Raymond Berry",Baltimore Colts; New York Giants
+1960,NFL,Mike-NFL1941-1969,5,236,21,24%,notable teams,,"Walt Cudzik, Gino Cappelletti., Bob Dee",Boston Patriots; Dallas Cowboys; Green Bay Packers; Los Angeles Chargers; Philadelphia Eagles
+1960,NFL,MuscleMike-LM67,1,47,21,5%,notable teams,,"Chuck Bednarik, Pete Retzlaff, Clarence Peaks",Philadelphia Eagles
+1961,NFL,Mike-NFL1941-1969,2,90,22,9%,notable teams,,"Rip Hawkins, Fran Tarkenton, Jim Prestel",Chicago Bears; Minnesota Vikings
+1962,NFL,Mike-NFL1941-1969,8,361,22,36%,notable teams,,"Jim Tyrer, Curtis McClinton, Johnny Robinson",Dallas Texans; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Oakland Raiders; Pittsburgh Steelers; San Francisco 49ers
+1962,NFL,MuscleMike-LM67,3,135,22,14%,notable teams,,"Jim Tyrer, Fred Arbanas, Curtis McClinton",Dallas Texans; Green Bay Packers; Houston Oilers
+1963,NFL,Mike-NFL1941-1969,6,270,22,27%,notable teams,,"Curley Johnson., Bill Baird, Mark Smolinski",Chicago Bears; Los Angeles Rams; New York Giants; New York Jets; Oakland Raiders; San Diego Chargers
+1963,NFL,MuscleMike-LM67,2,91,22,9%,notable teams,,"Mike Ditka, Joe Marconi, Bobby Joe Green",Chicago Bears; San Diego Chargers
+1964,NFL,Mike-NFL1941-1969,6,284,22,27%,notable teams,,"Jim Bakken, Larry Wilson, Jackie Smith",Baltimore Colts; Buffalo Bills; Cleveland Browns; Minnesota Vikings; St. Louis Cardinals; Washington Redskins
+1964,NFL,1996Roster,1,51,22,5%,notable teams,,"Jim Bakken, Larry Wilson, Jackie Smith",St. Louis Cardinals
+1964,NFL,MuscleMike-LM67,1,47,22,5%,notable teams,,"Billy Shaw, Jack Kemp, Pete Gogolak",Buffalo Bills
+1965,NFL,Mike-NFL1941-1969,2,93,22,9%,notable teams,,"Jim Brown, Lou Groza, John Morrow",Chicago Bears; Cleveland Browns
+1965,NFL,MuscleMike-LM67,1,47,22,5%,notable teams,,"Jim Brown, Lou Groza, Paul Wiggin",Cleveland Browns
+1966,NFL,1966Roster,24,1087,24,100%,full league,,"Ray Mansfield, Frank Lambert, Charley Bradshaw",Atlanta Falcons; Baltimore Colts; Boston Patriots; Buffalo Bills; Chicago Bears; Cleveland Browns; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Kansas City Chiefs; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; St. Louis Cardinals; Washington Redskins
+1966,NFL,Mike-NFL1941-1969,3,138,24,12%,notable teams,,"Jerry Kramer, Forrest Gregg, Willie Davis",Dallas Cowboys; Green Bay Packers; Kansas City Chiefs
+1966,NFL,MuscleMike-LM67,3,142,24,12%,notable teams,,"Bob Lilly, Mel Renfro, Dave Manders",Dallas Cowboys; Green Bay Packers; Kansas City Chiefs
+1967,NFL,Mike-NFL1941-1969,7,336,25,28%,notable teams,,"Jim Taylor, Doug Atkins, Dan Abramowicz",Dallas Cowboys; Detroit Lions; Green Bay Packers; Houston Oilers; Los Angeles Rams; New Orleans Saints; Oakland Raiders
+1967,NFL,MuscleMike-LM67,4,187,25,16%,notable teams,,"Deacon Jones, Merlin Olsen, Les Josephson",Dallas Cowboys; Green Bay Packers; Los Angeles Rams; Oakland Raiders
+1967,NFL,Mike-NFL1975-1979,2,92,25,8%,notable teams,,"Jim Otto, Ben Davidson, Dan Birdwell",Green Bay Packers; Oakland Raiders
+1967,NFL,Mike-NFL1970-1974,1,48,25,4%,notable teams,,"Deacon Jones, Merlin Olsen, Tom Mack",Los Angeles Rams
+1968,NFL,Mike-NFL1941-1969,4,190,26,15%,notable teams,,"Gene Upshaw, Jim Otto, Hewritt Dixon",Baltimore Colts; Minnesota Vikings; New York Jets; Oakland Raiders
+1968,NFL,MuscleMike-LM67,3,143,26,12%,notable teams,,"John Mackey, Bob Vogel, Bubba Smith",Baltimore Colts; New York Jets; Oakland Raiders
+1968,NFL,Mike-NFL1970-1974,1,47,26,4%,notable teams,,"Joe Namath, Matt Snell, Winston Hill",New York Jets
+1969,NFL,Mike-NFL1941-1969,6,286,26,23%,notable teams,,"Mike Bragg, Sam Huff, Charley Taylor",Buffalo Bills; Kansas City Chiefs; Los Angeles Rams; Minnesota Vikings; Oakland Raiders; Washington Redskins
+1969,NFL,MuscleMike-LM67,3,137,26,12%,notable teams,,"Buck Buchanan, Jerry Mays, Ed Budde",Kansas City Chiefs; Minnesota Vikings; Oakland Raiders
+1969,NFL,1996Roster,1,46,26,4%,notable teams,,"Carl Eller, Jim Marshall, Alan Page",Minnesota Vikings
+1969,NFL,Mike-NFL1975-1979,1,46,26,4%,notable teams,,"Carl Eller, Jim Marshall, Alan Page",Minnesota Vikings
+1970,NFL,Mike-NFL1970-1974,9,425,26,35%,notable teams,,"Tom Dempsey, Julian Fagan, Danny  Abramowicz",Baltimore Colts; Cleveland Browns; Dallas Cowboys; Detroit Lions; Minnesota Vikings; New Orleans Saints; New York Giants; Oakland Raiders; San Francisco 49ers
+1970,NFL,MuscleMike-LM67,7,330,26,27%,notable teams,,"Larry Hand, Charlie Sanders, Ed Flanagan",Baltimore Colts; Cleveland Browns; Dallas Cowboys; Detroit Lions; Minnesota Vikings; Oakland Raiders; San Francisco 49ers
+1971,NFL,Mike-NFL1970-1974,7,336,26,27%,notable teams,,"Jim Turner, Rich Jackson, Floyd Little",Dallas Cowboys; Denver Broncos; Kansas City Chiefs; Miami Dolphins; Oakland Raiders; San Francisco 49ers; Washington Redskins
+1971,NFL,MuscleMike-LM67,4,194,26,15%,notable teams,,"Garo Yepremian, Larry Little, Manny Fernandez",Dallas Cowboys; Kansas City Chiefs; Miami Dolphins; Oakland Raiders
+1971,NFL,1996Roster,1,49,26,4%,notable teams,,"Cornell Green, Bob Lilly, Mike Ditka",Dallas Cowboys
+1972,NFL,Mike-NFL1970-1974,10,486,26,38%,notable teams,,"Harold Jackson, Bill Bradley, Tom Dempsey",Chicago Bears; Green Bay Packers; Los Angeles Rams; Miami Dolphins; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Francisco 49ers; Washington Redskins
+1972,NFL,MuscleMike-LM67,4,196,26,15%,notable teams,,"Joe Greene, Bobby Walden, Ray Mansfield",Miami Dolphins; Oakland Raiders; Pittsburgh Steelers; Washington Redskins
+1973,NFL,Mike-NFL1970-1974,9,439,26,35%,notable teams,,"Tom McNeill, Harold Carmichael, Bill Bradley",Atlanta Falcons; Buffalo Bills; Cincinnati Bengals; Dallas Cowboys; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; Philadelphia Eagles; San Diego Chargers
+1973,NFL,MuscleMike-LM67,4,196,26,15%,notable teams,,"Jim Braxton, Joe DeLamielleure, Spike Jones",Buffalo Bills; Cincinnati Bengals; Miami Dolphins; Minnesota Vikings
+1973,NFL,1966Roster,1,44,26,4%,notable teams,,"Billy Shaw, Stew Barber, Ron McDole",Buffalo Bills
+1974,NFL,Mike-NFL1970-1974,10,494,26,38%,notable teams,,"Elvin Bethea, Curly Culp, Fred Willis",Buffalo Bills; Houston Oilers; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New England Patriots; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; Washington Redskins
+1974,NFL,MuscleMike-LM67,4,200,26,15%,notable teams,,"Garo Yepremian, Larry Little, Jake Scott",Miami Dolphins; Minnesota Vikings; Oakland Raiders; Pittsburgh Steelers
+1974,NFL,Mike-NFL1975-1979,1,50,26,4%,notable teams,,"O.J. Simpson, Jim Braxton, Joe DeLamielleure",Buffalo Bills
+1975,NFL,Mike-NFL1975-1979,8,376,26,31%,notable teams,,"Don Cockroft, Jerry Sherk, Reggie Rucker",Cleveland Browns; Dallas Cowboys; Los Angeles Rams; Minnesota Vikings; New York Giants; Oakland Raiders; Pittsburgh Steelers; St. Louis Cardinals
+1975,NFL,MuscleMike-LM67,6,289,26,23%,notable teams,,"Fran Tarkenton, Fred Cox, Alan Page",Dallas Cowboys; Los Angeles Rams; Minnesota Vikings; Oakland Raiders; Pittsburgh Steelers; St. Louis Cardinals
+1975,NFL,1966Roster,1,50,26,4%,notable teams,,"Don Cockroft, Jerry Sherk, Reggie Rucker",Cleveland Browns
+1975,NFL,Mike-NFL1970-1974,1,47,26,4%,notable teams,,"Harvey Martin, Ralph Neely, Rayfield Wright",Dallas Cowboys
+1975,NFL,Mike-NFL1980-1989,1,47,26,4%,notable teams,,"L.C. Greenwood, Dwight White, Joe Greene",Pittsburgh Steelers
+1975,WFL,Mike-USFL_WFL,4,201,11,36%,notable teams,,"Ken Bowman, John Wilbur, Karl  Lorch",Birmingham Vulcans; Honolulu Hawaiians; Memphis Southmen; So California Sun
+1975,WFL,1976Roster,2,101,11,18%,notable teams,,"Ken Bowman, John Wilbur, Karl  Lorch",Birmingham Vulcans; Honolulu Hawaiians
+1976,NFL,1976Roster,28,1334,28,100%,full league,,"Lee Roy Selmon, Ed Williams, Mark Cotney",Atlanta Falcons; Baltimore Colts; Buffalo Bills; Chicago Bears; Cincinnati Bengals; Cleveland Browns; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Kansas City Chiefs; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New England Patriots; New Orleans Saints; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; Seattle Seahawks; St. Louis Cardinals; Tampa Bay Bucs; Washington Redskins
+1976,NFL,Mike-NFL1975-1979,11,517,28,39%,notable teams,,"Lee Roy Selmon, Mark Cotney, Mike Washington",Dallas Cowboys; Los Angeles Rams; Minnesota Vikings; New England Patriots; New York Giants; Oakland Raiders; Oakland Raiders; San Francisco 49ers; Seattle Seahawks; Tampa Bay Bucs; Washington Redskins
+1976,NFL,MuscleMike-LM67,3,147,28,11%,notable teams,,"Dave Casper, Gene Upshaw, Ray Guy",Minnesota Vikings; New England Patriots; Oakland Raiders
+1976,NFL,Mike-NFL1970-1974,1,51,28,4%,notable teams,,"John James, Tommy Nobis, Jeff Van Note",Atlanta Falcons
+1977,NFL,Mike-NFL1975-1979,8,384,28,29%,notable teams,,"Greg Coleman, Don Cockroft, Mike Pruitt",Baltimore Colts; Chicago Bears; Cleveland Browns; Dallas Cowboys; Denver Broncos; Los Angeles Rams; Minnesota Vikings; Oakland Raiders
+1977,NFL,MuscleMike-LM67,5,239,28,18%,notable teams,,"Dave Casper, Ray Guy, Gene Upshaw",Baltimore Colts; Chicago Bears; Dallas Cowboys; Denver Broncos; Oakland Raiders
+1977,NFL,1966Roster,1,48,28,4%,notable teams,,"Mark van Eeghen, Ray Guy, Fred Biletnikoff",Oakland Raiders
+1978,NFL,1978Roster,28,1370,28,100%,full league,,"Jim Bakken, Jim Otis, Tom Banks",Atlanta Falcons; Baltimore Colts; Buffalo Bills; Chicago Bears; Cincinnati Bengals; Cleveland Browns; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Kansas City Chiefs; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New England Patriots; New Orleans Saints; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; Seattle Seahawks; St. Louis Cardinals; Tampa Bay Bucs; Washington Redskins
+1978,NFL,Mike-NFL1975-1979,9,434,28,32%,notable teams,,"Jack Youngblood, Frank Corral, Doug France",Dallas Cowboys; Houston Oilers; Los Angeles Rams; Miami Dolphins; New England Patriots; Oakland Raiders; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers
+1978,NFL,MuscleMike-LM67,4,194,28,14%,notable teams,,"Bob Baumhower, George Roberts, Larry Little",Dallas Cowboys; Houston Oilers; Miami Dolphins; Pittsburgh Steelers
+1978,NFL,1966Roster,1,49,28,4%,notable teams,,"Reggie McKenzie, Frank Lewis, Joe DeLamielleure",Buffalo Bills
+1978,NFL,Mike-NFL1970-1974,1,45,28,4%,notable teams,,"Randy Cross, Ray Wersching, Cedrick Hardman",San Francisco 49ers
+1979,NFL,Mike-NFL1975-1979,6,292,28,21%,notable teams,yes,"Jack Youngblood, Frank Corral, Doug France",Dallas Cowboys; Los Angeles Rams; New Orleans Saints; Pittsburgh Steelers; Tampa Bay Bucs; Washington Redskins
+1979,NFL,MuscleMike-LM67,6,294,28,21%,notable teams,yes,"Randy White, Cliff Harris, Roger Staubach",Dallas Cowboys; Los Angeles Rams; New Orleans Saints; Pittsburgh Steelers; Tampa Bay Bucs; Washington Redskins
+1979,NFL,Mike-NFL1970-1974,1,51,28,4%,notable teams,yes,"Jack Youngblood, Frank Corral, Doug France",Los Angeles Rams
+1980,NFL,Mike-NFL1980-1989,8,393,28,29%,notable teams,,"Jack Youngblood, Frank Corral, Cullen Bryant",Atlanta Falcons; Cleveland Browns; Dallas Cowboys; Detroit Lions; Houston Oilers; Los Angeles Rams; Oakland Raiders; Philadelphia Eagles
+1980,NFL,MuscleMike-LM67,6,289,28,21%,notable teams,,"Don Cockroft, Ozzie Newsome, Joe DeLamielleure",Atlanta Falcons; Cleveland Browns; Detroit Lions; Houston Oilers; Oakland Raiders; Philadelphia Eagles
+1981,NFL,Mike-NFL1980-1989,7,339,28,25%,notable teams,,"Lawrence Taylor, Dave Jennings, Harry Carson",Buffalo Bills; Cincinnati Bengals; Dallas Cowboys; Miami Dolphins; New York Giants; San Diego Chargers; San Francisco 49ers
+1981,NFL,MuscleMike-LM67,7,343,28,25%,notable teams,,"Lawrence Taylor, Dave Jennings, Harry Carson",Buffalo Bills; Cincinnati Bengals; Dallas Cowboys; Miami Dolphins; New York Giants; San Diego Chargers; San Francisco 49ers
+1982,NFL,Mike-NFL1980-1989,6,296,28,21%,notable teams,,"Jan Stenerud, Ray Stachowicz, James Lofton",Cincinnati Bengals; Green Bay Packers; Miami Dolphins; New York Jets; St. Louis Cardinals; Washington Redskins
+1982,NFL,MuscleMike-LM67,4,196,28,14%,notable teams,,"Jan Stenerud, Ray Stachowicz, James Lofton",Green Bay Packers; Miami Dolphins; New York Jets; Washington Redskins
+1982,NFL,Mike-NFL1970-1974,1,48,28,4%,notable teams,,"Dave Butz, Mark Moseley, Jeff Hayes",Washington Redskins
+1983,NFL,Mike-NFL1980-1989,6,301,28,21%,notable teams,,"Jack Youngblood, Kent Hill, Jackie Slater",Los Angeles Raiders; Los Angeles Rams; New Orleans Saints; Philadelphia Eagles; Seattle Seahawks; Washington Redskins
+1983,NFL,MuscleMike-LM67,2,98,28,7%,notable teams,,"Howie Long, Chris Bahr, Ray Guy",Los Angeles Raiders; Washington Redskins
+1984,NFL,Mike-NFL1980-1989,4,198,28,14%,notable teams,,"Kenny Easley, Jeff West, Steve Largent",Los Angeles Rams; Miami Dolphins; Pittsburgh Steelers; Seattle Seahawks
+1984,NFL,MuscleMike-LM67,4,198,28,14%,notable teams,,"Randy Cross, Joe Montana, Carlton Williamson",Los Angeles Rams; Miami Dolphins; San Francisco 49ers; Seattle Seahawks
+1984,NFL,1976Roster,1,49,28,4%,notable teams,,"Uwe von Schamann, Dwight Stephenson, Reggie Roby",Miami Dolphins
+1984,USFL,Mike-USFL_WFL,18,926,18,100%,full league,,"John Corker, Anthony Carter, Ray Bentley",Arizona Wranglers; Birmingham Stallions; Chicago Blitz; Denver Gold; Houston Gamblers; Jacksonville Bulls; Los Angeles Express; Memphis Showboats; Michigan Panthers; New Jersey Generals; New Orleans Breakers; Oakland Invaders; Oklahoma Outlaws; Philadelphia Stars; Pittsburgh Maulers; San Antonio Gunslingers; Tampa Bay Bandits; Washington Federals
+1985,NFL,Mike-NFL1980-1989,7,339,28,25%,notable teams,,"Mike Lansford, Kent Hill, Jackie Slater",Chicago Bears; Dallas Cowboys; Los Angeles Raiders; Los Angeles Rams; Miami Dolphins; New England Patriots; New York Jets
+1985,NFL,MuscleMike-LM67,6,290,28,21%,notable teams,,"Richard Dent, Mike Singletary, Jim Covert",Chicago Bears; Dallas Cowboys; Los Angeles Raiders; Miami Dolphins; New England Patriots; New York Jets
+1986,NFL,Mike-NFL1980-1989,3,144,28,11%,notable teams,yes,"Kevin Mack, Jeff Gossett, Ozzie Newsome",Cleveland Browns; Denver Broncos; New York Giants
+1986,NFL,MuscleMike-LM67,3,144,28,11%,notable teams,yes,"Mark Moseley, Kevin Mack, Jeff Gossett",Cleveland Browns; Denver Broncos; New York Giants
+1987,NFL,Mike-NFL1980-1989,7,349,28,25%,notable teams,,"Norm Johnson, John L. Williams, Steve Largent",Cleveland Browns; Denver Broncos; Indianapolis Colts; Minnesota Vikings; New Orleans Saints; Seattle Seahawks; Washington Redskins
+1987,NFL,MuscleMike-LM67,4,194,28,14%,notable teams,,"Kevin Mack, Jeff Gossett, Ozzie Newsome",Cleveland Browns; Denver Broncos; New Orleans Saints; Washington Redskins
+1987,NFL,Mike-NFL1970-1974,1,51,28,4%,notable teams,,"Rohn Stark, Dean Biasucci, Chris Hinton",Indianapolis Colts
+1987,NFL,Mike-NFL1975-1979,1,50,28,4%,notable teams,,"Charles Mann, Dave Butz, Steve Cox",Washington Redskins
+1988,NFL,Mike-NFL1980-1989,4,191,28,14%,notable teams,,"Steve McMichael, Richard Dent, Mike Singletary",Chicago Bears; Cincinnati Bengals; Houston Oilers; San Francisco 49ers
+1988,NFL,MuscleMike-LM67,4,192,28,14%,notable teams,,"Mike Singletary, Steve McMichael, Richard Dent",Chicago Bears; Cincinnati Bengals; Houston Oilers; San Francisco 49ers
+1989,NFL,Mike-NFL1980-1989,4,198,28,14%,notable teams,,"Randall McDaniel, Rich Karlis, Kirk Lowdermilk",Denver Broncos; Los Angeles Rams; Minnesota Vikings; San Francisco 49ers
+1989,NFL,MuscleMike-LM67,2,96,28,7%,notable teams,,"Greg Kragen, David Treadwell, Mike Horan",Denver Broncos; San Francisco 49ers
+1990,NFL,MuscleMike-LM67,6,287,28,21%,notable teams,,"Ronnie Lott, Tom Rathman, Jerry Rice",Buffalo Bills; Kansas City Chiefs; Los Angeles Raiders; New York Giants; Philadelphia Eagles; San Francisco 49ers
+1991,NFL,MuscleMike-LM67,5,238,28,18%,notable teams,,"Greg Kragen, David Treadwell, John Elway",Atlanta Falcons; Buffalo Bills; Denver Broncos; Detroit Lions; Washington Redskins
+1991,NFL,Mike-NFL1970-1974,1,49,28,4%,notable teams,,"John Elway, Greg Kragen, David Treadwell",Denver Broncos
+1991,NFL,Mike-NFL1975-1979,1,48,28,4%,notable teams,,"Chip Lohmiller, Charles Mann, Mark Schlereth",Washington Redskins
+1991,NFL,Mike-NFL1980-1989,1,48,28,4%,notable teams,,"Bruce Smith, Will Wolford, Jim Ritcher",Buffalo Bills
+1992,NFL,MuscleMike-LM67,6,292,28,21%,notable teams,,"Darryl Johnston, Charles Haley, Nate Newton",Buffalo Bills; Dallas Cowboys; Green Bay Packers; Houston Oilers; New Orleans Saints; San Francisco 49ers
+1992,NFL,1976Roster,1,47,28,4%,notable teams,,"Bruce Smith, Jim Kelly, Steve Christie",Buffalo Bills
+1993,NFL,MuscleMike-LM67,2,98,28,7%,notable teams,,"Darryl Johnston, Charles Haley, Nate Newton",Buffalo Bills; Dallas Cowboys
+1994,NFL,MuscleMike-LM67,3,148,28,11%,notable teams,,"Steve Young, Rickey Jackson, Jerry Rice",Dallas Cowboys; San Diego Chargers; San Francisco 49ers
+1995,NFL,MuscleMike-LM67,4,199,30,13%,notable teams,,"Chris Gardocki, Marshall Faulk, Cary Blanchard",Dallas Cowboys; Indianapolis Colts; Kansas City Chiefs; Pittsburgh Steelers
+1995,NFL,Mike-NFL1941-1969,1,51,30,3%,notable teams,,"Barry Sanders, Kevin Glover, Mark Royals",Detroit Lions
+1996,NFL,1996Roster,30,1508,30,100%,full league,,"Michael Strahan, Brad Daluiso, Mike Horan",Arizona Cardinals; Atlanta Falcons; Baltimore Ravens; Buffalo Bills; Carolina Panthers; Chicago Bears; Cincinnati Bengals; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Indianapolis Colts; Jacksonville Jaguars; Kansas City Chiefs; Miami Dolphins; Minnesota Vikings; New England Patriots; New Orleans Saints; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; Seattle Seahawks; St. Louis Rams; Tampa Bay Bucs; Washington Redskins
+1996,NFL,MuscleMike-LM67,5,243,30,17%,notable teams,,"Howard Griffith, Matt Elliott, Greg Skrepenak",Carolina Panthers; Denver Broncos; Green Bay Packers; Jacksonville Jaguars; New England Patriots
+1996,NFL,Mike-NFL1970-1974,4,197,30,13%,notable teams,,"Dan Stryzinski, Morten Andersen, Bob Whitfield",Atlanta Falcons; Carolina Panthers; Green Bay Packers; New England Patriots
+1996,NFL,Mike-NFL1975-1979,1,52,30,3%,notable teams,,"Barry Sanders, Kevin Glover, Mark Royals",Detroit Lions
+1997,NFL,MuscleMike-LM67,2,97,30,7%,notable teams,,"Craig Hentrich, Reggie White, Brett Favre",Denver Broncos; Green Bay Packers
+1997,NFL,Mike-NFL1970-1974,1,48,30,3%,notable teams,,"Jason Elam, Tom Rouen, John Elway",Denver Broncos
+1997,NFL,Mike-NFL1975-1979,1,49,30,3%,notable teams,,"Craig Hentrich, Reggie White, Brett Favre",Green Bay Packers
+1998,NFL,MuscleMike-LM67,5,246,30,17%,notable teams,,"Dan Stryzinski, Morten Andersen, Bob Whitfield",Atlanta Falcons; Denver Broncos; Green Bay Packers; Minnesota Vikings; San Francisco 49ers
+1998,NFL,1966Roster,1,52,30,3%,notable teams,,"Mitch Berger, Randall McDaniel, John Randle",Minnesota Vikings
+1999,NFL,MuscleMike-LM67,2,100,31,6%,notable teams,,"Jevon Kearse, Al Del Greco, Craig Hentrich",St. Louis Rams; Tennessee Titans
+2000,NFL,MuscleMike-LM67,1,53,31,3%,notable teams,yes,"Ray Lewis, Jonathan Ogden, Matt Stover",Baltimore Ravens
+2001,NFL,MuscleMike-LM67,2,100,31,6%,notable teams,,"Orlando Pace, Marshall Faulk, Jeff Wilkins",New England Patriots; St. Louis Rams
+2002,NFL,MuscleMike-LM67,2,99,32,6%,notable teams,,"Rich Gannon, Rod Woodson, Lincoln Kennedy",Oakland Raiders; Tampa Bay Bucs

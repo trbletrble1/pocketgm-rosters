@@ -639,30 +639,56 @@ in the film and Hawaii teams. **621 of the 926 USFL men appear nowhere in our
 1979, 1986 or 2000 files** — median `POVR` 74, p90 83 — which is the pool a
 build would draw on.
 
-## The Mike family — full season inventory (2026-09-03)
+## The Mike family — full season inventory (2026-09-03, restated)
 
 **Nine of the ten files carry year-labelled teams** (`'66 Vikings`, `66MIN`), so
-this is a decode. Only `Mike-USFL_WFL` is unlabelled and it was decoded
-separately. `wip/mike_season_inventory.csv` carries the table; the summary:
+this is a decode. `wip/mike_season_inventory.csv` carries the table: **one row
+per season PER SOURCE FILE**, never aggregated across files, with team count,
+player count, the real league size that year, and what the block is.
 
-**537 season blocks, 25,916 men, 54 distinct seasons from 1941 to 2002.** Every
-year from 1960 to 2002 is present except 1959; before that the file holds 1941,
-1945, 1948–52, 1955–58. **39 of the 56 season-league combinations appear in more
-than one file** — cross-checks, not duplicates.
+**537 season blocks, 25,916 men, 54 distinct seasons 1941-2002 — and that
+sentence answers the wrong question.** A block labelled `'58 Colts` makes 1958
+"a season present in the family"; it is two teams. **Aggregating across files
+hides where the teams come from**: 1966 reads as 30 teams only if the
+standalone `1966Roster.ros` (24 teams, a complete league) is pooled with three
+notable teams from each of two compilations. Those are different objects and
+the table now keeps them apart.
 
-The largest are 1976 (43 teams, 2,049 men), 1978 (43, 2,092), 1996 (40, 2,000)
-and 1966 (30, 1,367); the thinnest are single teams. **The 1984 USFL is complete
-at 18 teams and 926 men** and the 1975 WFL partial at 6 blocks across two files.
-**Only three of the ten seasons the project has published are represented** —
-1979 (13 teams), 1986 (6) and 2000 (1) — so the file family is almost entirely
-seasons the archive does not hold.
+### What is actually buildable
+
+**Five season-league combinations are a complete league, and each comes from one
+file** — no pooling, no invented teams:
+
+| season | league | teams | men | source |
+|---|---|---|---|---|
+| **1966** | NFL+AFL | **24 of 24** | 1,087 | `1966Roster.ros` |
+| **1976** | NFL | **28 of 28** | 1,334 | `1976Roster.ros` |
+| **1978** | NFL | **28 of 28** | 1,370 | `1978Roster.ros` |
+| **1984** | USFL | **18 of 18** | 926 | `Mike-USFL_WFL.ros` |
+| **1996** | NFL | **30 of 30** | 1,508 | `1996Roster.ros` |
+
+**Nothing sits between.** There is no partial league at 40-89% anywhere in the
+family: the other **51 of 56 season-league combinations are notable teams only**,
+3-39% of their league, typically four to ten famous sides. The 1975 WFL is 4 of
+11 (36%) and belongs in that group.
+
+**Pooling files does not help.** Across all 56 combinations, only two seasons
+gain a single franchise from the union of files (1984 NFL and 1995, 4 → 5); every
+other season repeats the same famous teams in every file that carries it. The
+39 multi-file seasons are **cross-checks on the same teams**, which is useful for
+verification and useless for coverage.
+
+**So the era claim, corrected: the forties and fifties are not available.** 1941
+is two teams, 1945 through 1958 is one or two teams a year, 1960 is five, and the
+first buildable season is 1966. Of our ten published seasons, 1979 (6 teams, 21%),
+1986 (3, 11%) and 2000 (1, 3%) appear, all as notable teams.
 
 **Excluded from the season list, being real data but not seasons:** 320 modern
 NFL blocks (the shared 2003 base), 62 all-time franchise teams (`All Bills`,
-median `POVR` 93 — this is where the career-peak 99s live), 67 stadium and
-uniform test teams with placeholder names (`LA Coliseum`, `QB 32W`), 10
-free-agent pools, 4 Pro Bowl squads, the 2 fiction teams from *The Longest Yard*
-and the 3 Hawaii service teams.
+median `POVR` 93 — where the career-peak 99s live), 67 stadium and uniform test
+teams with placeholder names (`LA Coliseum`, `QB 32W`), 10 free-agent pools, 4
+Pro Bowl squads, the 2 fiction teams from *The Longest Yard*, the 3 Hawaii
+service teams.
 
 **A classifier trap worth recording:** matching a team by nickname alone put the
 modern **Carolina Panthers** into the 1984 USFL in all ten files, because the
