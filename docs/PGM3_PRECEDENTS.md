@@ -5049,3 +5049,45 @@ minutes. What it buys: the difference between a check and a decoration.**
 
 This is the companion to *every fix ships with a gate*. A gate that has never
 failed is not yet a gate.
+
+## When a source returns less than expected, test the query before concluding about the source
+
+2026-09-04. StatsCrew's search scored **5 of 29** on a set of NFL coaches. As a
+number that reads like a fact about the source: thin coverage, an incomplete
+database. It was a fact about the query — filling the `searchnamefirst` field
+returns nothing at all, and last-name-only returns the full candidate list. The
+same set then scored **20 of 29**.
+
+**What caught it was not the number. It was two specific empties: Jim Ringo and
+Jack Christiansen.** Both are in the Hall of Fame. A football database missing
+two Hall of Famers is implausible in a way that "17% coverage" simply is not —
+low coverage has a hundred innocent explanations, a missing Jim Ringo has none.
+
+**The general form.** A disappointing result from a source is a hypothesis about
+the source AND a hypothesis about the request, and the second is cheaper to test.
+Before recording "this source only covers X%", ask it for something it certainly
+has. If that comes back empty, the query is wrong.
+
+**Same shape as the anchor tests that kept coming back thin** because our own
+verification set was thin, not the source's coverage — and as the file tested
+against the registry it was written from. **A measurement of a source is only as
+good as the question put to it.**
+
+## A name is not an identity, and a bigger sample is what proves it
+
+Same pass, and the correction cost two rounds.
+
+At n=29 the two age sources agreed **20 of 20, to the day**, and that read like
+verification. **At n=55 they disagreed four times, and every disagreement was
+StatsCrew matching a different man**: George Allen 1944 against 1918; John McKay
+1953 against 1923, which is the head coach's son, a receiver; **Bill Walsh 1927
+against 1931, which is Atlanta's offensive line coach against San Francisco's
+head coach.** The clean small sample was luck.
+
+**The fix was not a better matcher, it was the right database.** StatsCrew holds
+every professional footballer since 1920 and answers a name with whoever played
+under it; the Coaching Tree is a database OF COACHES and answers with the coach.
+For a coaching question the coaching source is primary, and the other fills gaps.
+Before that switch this pass produced **Joe Gibbs born 1988 and a head coach aged
+-16** — caught by a plausibility guard, which stays in place, because no age
+should reach a published file without being possible.
