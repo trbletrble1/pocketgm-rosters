@@ -34,7 +34,8 @@ COHORT_PREDICATES = {
 }
 
 SALARY_CONVENTIONS = {
-    "salary_base", "salary_base_plus_prorated_bonus", "club_cost_per_player",
+    "salary_base", "salary_base_plus_prorated_bonus",
+    "salary_base_plus_bonuses_nflpa", "club_cost_per_player",
     "qualifying_offer",
     "signing_bonus", "roster_bonus", "reporting_bonus", "base_salary_year",
     "option_year_pay", "performance_incentive", "additional_compensation",

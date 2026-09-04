@@ -84,6 +84,20 @@
    "source": "Reynolds v. NFL, 584 F.2d 280 (8th Cir. 1978), quoting the CBA's Article XV",
    "source_words": "The qualifying offer essentially refers only to monetary salary payments to be made for the player's services or as a bonus for reporting; it does not include non-cash compensation or outside income possibilities.",
    "warning": "A qualifying offer is a FLOOR a club had to clear, never evidence of what a player was paid. Filing it beside real salaries would read as 16 players earning exactly $30,000."
+  },
+  "salary_base_plus_bonuses_nflpa": {
+   "definition": "base salary WITH signing, reporting and roster bonuses included on the NFLPA's method - money attributed to the year it is RECEIVED, not pro-rated across the contract",
+   "distinct_from": "salary_base_plus_prorated_bonus - the Management Council / Dallas Morning News method, which spreads a signing bonus over the contract length",
+   "source": "NFLPA survey as published by The Buffalo News, carried in The Register, 9 February 1987",
+   "source_words": "If signing, reporting and roster bonuses are included as well as base salary...",
+   "evidence_it_is_NOT_prorated": {
+    "argument": "Two of 28 team averages are INVERTED - the 'total' is LOWER than the base. Cleveland -$2,404 and Denver -$51,233. Addition cannot produce an inversion, so the two columns are not (base) and (base + bonus) computed over the same money.",
+    "the_source_explains_it": "the discrepancy is attributable to bonus payments that have long deferments",
+    "corroborated_by": "Newman 1987 Appendix C: 'the Management Council pro-rates signing bonuses by the number of years a player is under contract; the NFLPA defers money to the year it is received'"
+   },
+   "population": "all of a team's players, INCLUDING those who spent the year on injured reserve and did not play",
+   "population_words": "The figures represent the average pay for all of a team's players, even if the player spent the year on injured reserve and didn't play.",
+   "warning": "The exact mechanism producing an inversion is NOT determinable from the page. Recorded as the source states it; do not reconstruct the arithmetic."
   }
  },
  "hard_rules": [

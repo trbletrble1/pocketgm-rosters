@@ -1,32 +1,28 @@
 {
+ "bonus_treatments": 3,
  "by_predicate": {
   "additional_compensation": 1,
   "amount_actually_paid": 1,
   "base_salary_year": 21,
-  "cohort_salary_average": 3,
+  "cohort_salary_average": 59,
   "cohort_salary_high": 1,
   "cohort_salary_low": 1,
   "contract_total_stated": 5,
   "option_year_pay": 1,
   "reporting_bonus": 2,
   "roster_bonus": 1,
-  "salary_base": 2,
+  "salary_base": 3,
   "salary_base_plus_prorated_bonus": 73,
   "signing_bonus": 10,
   "total_earnings_year": 1
  },
  "by_source_class": {
   "court": 43,
-  "news": 80
+  "news": 137
  },
- "cases_ingested": 12,
- "cases_refused": 3,
- "claims": 148,
- "persons": 91,
- "regime_claims": {
-  "article-xv": 5,
-  "rozelle": 20
- },
+ "claims": 205,
+ "conventions_held": 5,
+ "persons": 92,
  "season_span": [
   1965,
   1986
@@ -46,18 +42,6 @@
   "1980": 2,
   "1983": 1,
   "1984": 55,
-  "1986": 1
- },
- "ud_positions": [
-  "DEFENSIVE BACKS",
-  "DEFENSIVE LINE",
-  "LINEBACKERS",
-  "OFFENSIVE LINE",
-  "PLACE KICKERS",
-  "PUNTERS",
-  "QUARTERBACKS",
-  "RUNNING BACKS",
-  "TIGHT ENDS",
-  "WIDE RECEIVERS"
- ]
+  "1986": 58
+ }
 }

@@ -587,5 +587,213 @@
    }
   ],
   "_contradiction": "Dean says he was 'the lowest paid sixth-year defensive lineman in the NFL'; the schedule puts that floor at $62,000; published reports put him at $65,000. All three cannot hold. Retained as a contest, not resolved."
+ },
+ "register-1987-02-09-buffalo-survey": {
+  "citation": "The Register (NJ), 9 February 1987, p.17 \u2014 'Jets top NFL salary list; Giants No. 11', dateline BUFFALO, N.Y.",
+  "file": "1987-02-09.pdf",
+  "stated_by": "The Register",
+  "attribution": [
+   "The Buffalo News",
+   "NFL Players Association survey"
+  ],
+  "_attribution_note": "The relay described this as 'the Buffalo News survey'. The document held is THE REGISTER carrying it, dateline Buffalo - so one remove further than described. Same NFLPA lineage as the 2002 primer, the 1982 hearing and the 1988 LA Times piece: NOT an independent witness to any of them.",
+  "season": 1986,
+  "league": "NFL",
+  "regime": "article-xv",
+  "conventions": {
+   "base": "salary_base",
+   "total": "salary_base_plus_bonuses_nflpa"
+  },
+  "population": "all of a team's players, including those who spent the year on injured reserve and did not play",
+  "teams": [
+   {
+    "club": "Atlanta Falcons",
+    "base": 160297,
+    "nflpa_total": 198380
+   },
+   {
+    "club": "Buffalo Bills",
+    "base": 165731,
+    "nflpa_total": 176110
+   },
+   {
+    "club": "Chicago Bears",
+    "base": 199722,
+    "nflpa_total": 200956
+   },
+   {
+    "club": "Cincinnati Bengals",
+    "base": 165985,
+    "nflpa_total": 209286
+   },
+   {
+    "club": "Cleveland Browns",
+    "base": 197465,
+    "nflpa_total": 195061
+   },
+   {
+    "club": "Dallas Cowboys",
+    "base": 180026,
+    "nflpa_total": 231052
+   },
+   {
+    "club": "Denver Broncos",
+    "base": 196330,
+    "nflpa_total": 145097
+   },
+   {
+    "club": "Detroit Lions",
+    "base": 160645,
+    "nflpa_total": 184215
+   },
+   {
+    "club": "Green Bay Packers",
+    "base": 157455,
+    "nflpa_total": 186846
+   },
+   {
+    "club": "Houston Oilers",
+    "base": 151627,
+    "nflpa_total": 159812
+   },
+   {
+    "club": "Indianapolis Colts",
+    "base": 153730,
+    "nflpa_total": 186942
+   },
+   {
+    "club": "Kansas City Chiefs",
+    "base": 175182,
+    "nflpa_total": 228664
+   },
+   {
+    "club": "Los Angeles Raiders",
+    "base": 228223,
+    "nflpa_total": 239169
+   },
+   {
+    "club": "Los Angeles Rams",
+    "base": 176594,
+    "nflpa_total": 203839
+   },
+   {
+    "club": "Miami Dolphins",
+    "base": 195972,
+    "nflpa_total": 213277
+   },
+   {
+    "club": "Minnesota Vikings",
+    "base": 154096,
+    "nflpa_total": 175326
+   },
+   {
+    "club": "New England Patriots",
+    "base": 205855,
+    "nflpa_total": 214899
+   },
+   {
+    "club": "New Orleans Saints",
+    "base": 161798,
+    "nflpa_total": 185387
+   },
+   {
+    "club": "New York Giants",
+    "base": 186274,
+    "nflpa_total": 225856
+   },
+   {
+    "club": "New York Jets",
+    "base": 233700,
+    "nflpa_total": 255100
+   },
+   {
+    "club": "Philadelphia Eagles",
+    "base": 162867,
+    "nflpa_total": 169242
+   },
+   {
+    "club": "Pittsburgh Steelers",
+    "base": 146331,
+    "nflpa_total": 165409
+   },
+   {
+    "club": "San Diego Chargers",
+    "base": 198670,
+    "nflpa_total": 243465
+   },
+   {
+    "club": "San Francisco 49ers",
+    "base": 229196,
+    "nflpa_total": 259709
+   },
+   {
+    "club": "Seattle Seahawks",
+    "base": 193617,
+    "nflpa_total": 226006
+   },
+   {
+    "club": "St. Louis Cardinals",
+    "base": 175181,
+    "nflpa_total": 200996
+   },
+   {
+    "club": "Tampa Bay Buccaneers",
+    "base": 169549,
+    "nflpa_total": 195588
+   },
+   {
+    "club": "Washington Redskins",
+    "base": 178194,
+    "nflpa_total": 214974
+   }
+  ],
+  "inversions": [
+   {
+    "club": "Cleveland Browns",
+    "diff": -2404
+   },
+   {
+    "club": "Denver Broncos",
+    "diff": -51233
+   }
+  ],
+  "inversion_note": "the discrepancy is attributable to bonus payments that have long deferments",
+  "figures": [
+   {
+    "player": "Jim Kelly",
+    "club": "Buffalo Bills",
+    "value": 1000000,
+    "season": 1986,
+    "convention": "salary_base",
+    "quote": "Kelly was the higest-paid Bill last season, earning $1 million in base salary and $2 million in bonuses"
+   }
+  ],
+  "capture_note": "28 of 28 clubs. Matched on each club's distinctive last word then the following (base, total) pair, after a looser regex truncated four names at line-wraps ('geles Rams', 'tsburgh Steelers')."
+ },
+ "_RELAYED_NOT_INGESTED": {
+  "_rule": "design \u00a73.7 - `relayed` is a lead, not a source. These reached the session as conversation text with no document behind them and MAY NOT become claims. Listed so the leads are not lost.",
+  "elway-williams-1988": {
+   "described_as": "AP via Dallas Morning News, January 1988, from the NFLPA's 1987 list",
+   "stated_convention": "base salary plus reporting and roster bonuses",
+   "why_it_matters": "would carry the 1987 strike deduction - 25% of base over 24 days for players who did not cross, Elway losing $250,000. EVERY 1987 figure anywhere needs flagging as pre-deduction.",
+   "lineage_warning": "NFLPA 1987 list - same party as the Buffalo survey, the primer and the hearing",
+   "note": "Steve Watson's $700,000 was described as DERIVED from '$300,000 more than' Elway's $1 million. Arithmetic on a relayed figure, two steps from a document. Would be source_derived at best.",
+   "needed": "the document"
+  },
+  "staudohar-playing-for-dollars": {
+   "described_as": "Staudohar, Playing for Dollars: Labor Relations and the Sports Business",
+   "status": "upload failed - came through as an error page",
+   "note": "a SECONDARY source: it would cite figures rather than originate them, so its value is CBA structure, not salaries.",
+   "needed": "the file"
+  }
+ },
+ "_lineage_ruling": {
+  "finding": "The Buffalo survey, the 1988 LA Times piece, the 1986 Cayman Compass piece, the 2002 primer and the NFLPA half of the 1982 hearing are ALL the NFLPA's own salary survey.",
+  "consequence": "They are ONE lineage group. Agreement between any two of them is not corroboration - \u00a74.3 counts lineage groups, not sources, and a claim with a non-empty attribution votes only in stated_by's group.",
+  "already_proven": "the 1987 primer/Newman series matched identically for 1971-1980, ten years running",
+  "the_only_non_NFLPA_salary_sources_held": [
+   "the fourteen court opinions (findings of fact)",
+   "the Dallas Morning News tables (origin unnamed, but a different compilation)"
+  ]
  }
 }

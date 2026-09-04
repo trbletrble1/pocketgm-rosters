@@ -128,7 +128,7 @@ def main():
     # ---------------- newspapers ----------------------------------------
     news = json.load(open(os.path.join(BASE, "extract", "newspapers.json")))
     for sid, src in sorted(news.items()):
-        if sid.startswith("_"): continue
+        if sid.startswith("_"): continue          # _RELAYED_NOT_INGESTED etc.
         acq = src.get("acquisition", "held")
         f_ = src.get("file")
         path = os.path.join(SRC, "DocDump", f_) if f_ else None
@@ -180,6 +180,23 @@ def main():
             by_regime[src.get("regime", "unresolved")] += 1
             by_league[src.get("league", "?")] += 1
             by_decade[f"{(f['season']//10)*10}s"] += 1
+        for i, tm in enumerate(src.get("teams", [])):
+            for col, pred in (("base", src.get("conventions", {}).get("base")),
+                              ("nflpa_total", src.get("conventions", {}).get("total"))):
+                if not pred: continue
+                counts["figures seen"] += 1
+                subj = ("cohort", src.get("league", "NFL"), src["season"], tm["club"])
+                store.declare_subject(subj)
+                sr = store.add_source_record(f"news/{sid}", f"team{i+1}-{col}")
+                store.add_claim(sr, subj, "cohort_salary_average", tm[col], src["season"],
+                                kind="observed", stated_by=src["stated_by"],
+                                attribution=src.get("attribution", []),
+                                note=f"convention={pred}; population={src.get('population','')}"[:200])
+                counts["claims written"] += 1; counts["cohort aggregates"] += 1
+                by_conv[f"cohort/{pred}"] += 1
+                by_regime[src.get("regime", "unresolved")] += 1
+                by_league[src.get("league", "?")] += 1
+                by_decade[f"{(src['season']//10)*10}s"] += 1
         for i, f in enumerate(src.get("cohort_figures", [])):
             counts["figures seen"] += 1
             subj = tuple("?" if x is None else x for x in f["scope"])
