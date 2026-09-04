@@ -113,6 +113,13 @@
    "source": "Kapp v. NFL",
    "what": "contracted total, of which only $154,000 was paid",
    "not": "money received"
+  },
+  {
+   "value": 50000,
+   "source": "Kapp v. NFL",
+   "what": "an inter-CLUB release fee paid by Minnesota to Kapp's Canadian club",
+   "not": "anything paid to the player",
+   "note": "a transfer price - the sixth decoy, and the only one that is a real payment to a real party"
   }
  ],
  "system_rules": {
@@ -242,6 +249,22 @@
      }
     ],
     "measured_effect": "Reynolds records 176 players played out their options in ELEVEN YEARS under the Rozelle Rule, against a far smaller number under Article XV - the court's own comparison"
+   },
+   "inter_club_transfer_fee": {
+    "definition": "a payment from one CLUB to another for a player's release. A transfer price, not compensation to the player.",
+    "unit": "USD",
+    "subject_scope": "club-to-club, never person",
+    "known": [
+     {
+      "value": 50000,
+      "year": 1967,
+      "from": "Minnesota Vikings",
+      "to": "Kapp's Canadian club",
+      "source": "Kapp v. NFL, 390 F. Supp. 73 (N.D. Cal. 1974)",
+      "source_words": "he eventually obtained clearance to play for the Minnesota Vikings when the latter paid Kapp's Canadian team $50,000 for his release"
+     }
+    ],
+    "warning": "Kapp received NONE of this. Filed as a salary it would inflate his 1967 pay by more than his Vikings deal was worth per year."
    }
   },
   "hard_rules": [
@@ -249,5 +272,15 @@
    "A money predicate about a person REFUSES a league-scoped subject.",
    "So a system rule can never enter a player-salary average: the subject types do not meet."
   ]
- }
+ },
+ "sources_searched_and_empty": [
+  {
+   "source": "Robertson v. NBA (cited in the Reynolds and Newman lines)",
+   "searched_for": "player contract or salary figures",
+   "result": "one dollar figure, a statutory penalty",
+   "date": "2026-09-04",
+   "by": "Ryan",
+   "note": "recorded as an ABSENCE so the next session does not repeat the search - design 3.4"
+  }
+ ]
 }
