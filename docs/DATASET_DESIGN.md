@@ -352,6 +352,8 @@ claim
   recorded_at     2026-09-04T14:02Z       # when we ingested it
   kind            observed
   source_conf     null                    # the source's own, if it has one
+  stated_by       "StatsCrew"             # whose voice, inside the document
+  attribution     []                      # empty = first-hand. See §3.6
 ```
 
 ### 3.2 What a claim can attach to
@@ -452,6 +454,73 @@ not `era_certain`. `denotation_method`, not `identity_verified`.
 
 ---
 
+### 3.6 Attributed claims — a claim about a claim
+
+**Added 2026-09-04 on Ryan's ruling**, after the 1979 salary contest turned out
+not to be what §8.4 first said it was.
+
+A document often does not assert a fact — it asserts that **someone else**
+asserted it. The 1982 hearing does not give the League's average salary; it gives
+*the NFLPA reporting* the League's figure. Modelled flat, that becomes a League
+claim, and the League gets a vote it never cast.
+
+**Two fields, and the second is a chain, not a scalar:**
+
+```
+stated_by     whose voice this is, inside the document we hold
+attribution   [ordered, from that voice outward toward the origin]
+```
+
+`attribution: []` is first-hand. Its length is the number of **removes**.
+
+**Worked, on the two cases in hand:**
+
+```
+# NFL average salary, 1979 — the League's figure
+source_record  hearing-XQ8o#p61
+stated_by      "NFLPA"
+attribution    ["NFL Management Council"]              # 1 remove
+
+# defensive-line salary schedule — UPI, 30 Sep 1981
+source_record  upi-1981-09-30-dean#perrine-quote
+stated_by      "Dave Perrine (agent, Fred Dean)"
+attribution    ["NFL salary schedule"]                 # via an interested party
+                                                       # reported by a wire service
+                                                       # = 2 removes from origin
+
+# Fred Dean's own 1980 salary
+source_record  upi-1981-09-30-dean#published-reports
+stated_by      "UPI"
+attribution    ["published reports"]                   # 1 remove, origin UNNAMED
+```
+
+**The rule, and it is the point of the whole mechanism:**
+
+> **An attributed claim never counts as an independent source for the party at the
+> end of its chain.** The NFLPA's report of the League's figure is evidence about
+> what the NFLPA says the League said. It is not evidence from the League.
+
+So a claim with a non-empty `attribution` votes only in `stated_by`'s lineage
+group (§4.3), never in the attributed party's. The League cannot be outvoted by
+its opponent quoting it, and it cannot be corroborated by its opponent quoting it
+either.
+
+**Attribution and lineage are different axes and both cap independence.** Lineage
+is *documents descending from documents* — four JINX files agreeing is one vote.
+Attribution is *a document reporting another party*. A source can be
+lineage-independent and still be hearsay, which is exactly the primer's position
+relative to the hearing on the League's number.
+
+**An unnamed origin is weaker than a named one.** `["published reports"]` cannot
+be chased, corroborated, or dated. It is recorded verbatim rather than cleaned up,
+because "published reports" is the actual state of the evidence and paraphrasing
+it as a source would overstate it.
+
+**This does not make attributed claims useless.** The Dean cell below is two
+removes and is the only per-position salary structure this project has ever held.
+It is held, used, and correctly labelled — which is the difference between a
+dataset that knows what it has and one that does not.
+
 ## 4. Resolution
 
 ### 4.1 The shape
@@ -500,6 +569,11 @@ players, and the best threshold moved. *Anchors skew toward the well-known, and
 the well-known are the players every source gets right.* So `source_score` rows
 carry predicate, method, threshold, **population and n**, result and date — and an
 unscored `(source, predicate)` pair cannot vote at rank 2 or 3.
+
+**An attributed claim cannot vote as the party it attributes (§3.6).** A claim
+whose `attribution` is non-empty joins `stated_by`'s lineage group and no other.
+This is separate from lineage and stacks with it: a document can be
+lineage-independent of everything we hold and still be hearsay.
 
 **Guards read provenance.** Any floor, ceiling, clamp or default checks the
 resolved value's `basis` before it fires and refuses on `observed`. This is the
@@ -997,7 +1071,21 @@ c_102  source_record  hearing-XQ8o#p61          # the League's figure, quoted
 
 The same page carries the per-club version of the same disagreement — **$4.3M
 against $5.2M** — and each side's own adjusted figure, "still under $75,000" and
-"still stays over $85,000". Four numbers, two parties, one season.
+"still stays over $85,000".
+
+**CORRECTED 2026-09-04: this is not two parties.** `c_102` is the League's figure
+**as quoted by the NFLPA**, in NFLPA testimony. There is no League-original
+document in hand, and the 2002 primer is the same organisation twenty years later
+(§9b), so it does not supply one. Per §3.6 the claim carries
+`stated_by: NFLPA`, `attribution: ["NFL Management Council"]`, and has **no
+independent standing**.
+
+**So the contest is one party and one hearsay.** That is a weaker and more honest
+thing than the symmetric dispute this section first described, and the design
+should say so rather than flatter the evidence. It does not change the resolution
+— `contested` either way — but it changes what a reader should conclude from it,
+and it makes a League-original source an explicit debt (§9b) rather than a
+nicety.
 
 **What resolution does.** Nothing clever. The policy has no rule that separates
 them, because there is no honest one: both are `source_derived`, both are dated
@@ -1440,6 +1528,93 @@ season 1980–2002 — valuable as **stint** data, worthless as compensation.
 Searched all 164 pages: **no coach compensation anywhere.** The NFLPA's 1980
 estimate in the hearing above remains the only coach salary figure this project
 has for any era.
+
+### UPI, 30 September 1981 — the first per-position cell, at two removes
+
+`upi.com/Archives/1981/09/30/Chargers-six-year-defensive-end-Fred-Dean-complaining-his-salary/8038370670400/`
+**Fetched and read 2026-09-04**, not taken on relay. Plain `curl` with a browser
+user-agent, HTTP 200. UPI's archive is free and fetchable.
+
+Fred Dean, Chargers defensive end, holding out. His agent Dave Perrine reads from
+the league salary schedule at a press conference:
+
+> *Perrine … said that the recent NFL salary schedule showed that top defensive
+> linemen with six years experience earned $185,000 a year, with the lowest paid
+> receiving $62,000. He said the average of all defensive linemen was $70,000…*
+
+**This is the CBA table the 1981–82 hearing described** — highest, lowest and
+average, by position and years of service — being read aloud. The document reached
+**agents**, not only the union office, which widens where a copy might survive:
+agent papers, arbitration filings, contract-dispute litigation.
+
+**The cell, with the corrections the article forces:**
+
+| figure | value | cohort | dated? |
+|---|---|---|---|
+| highest | $185,000 | defensive linemen, **six years** experience | **no** — "the recent … schedule" |
+| lowest | $62,000 | defensive linemen, **six years** experience | **no** |
+| average | $70,000 | **all** defensive linemen, not the six-year cohort | **no** |
+| Fred Dean | $65,000 | himself | **1980** — "last year" |
+
+**Only Dean's own figure is dated.** The relay that reached this session assigned
+the whole block to 1980; the article dates only Dean's. Perrine says "recent",
+which spans 1980 and 1981 and cannot be narrowed from the text. Recorded as
+`observed_at: 1981-09-30`, season **unresolved** — because that is what the source
+supports.
+
+**And the article contradicts itself, which is kept rather than tidied.** Dean
+says *"Last year I was the lowest paid sixth-year defensive lineman in the NFL"*,
+the schedule puts the six-year floor at **$62,000**, and published reports put
+Dean at **$65,000**. All three cannot hold. Three claims, one contradiction, no
+forced resolution — a `contested` set, and the disagreement is itself evidence
+about how loosely a figure quoted in a dispute should be read.
+
+**Attribution — three different chains in one short article** (§3.6):
+
+    cohort figures   UPI -> Perrine (agent, interested party) -> NFL salary schedule
+                     2 removes
+    Dean's $65,000   UPI -> "published reports"
+                     1 remove, origin UNNAMED and unchaseable
+    "lowest paid"    UPI -> Dean, about himself
+                     1 remove, and it is an assertion in a negotiation
+
+Same shape as the League figures in the hearing and the primer, and it reinforces
+the ruling: **a claim about a claim has no independent standing.** Held, used,
+correctly labelled.
+
+### The method this opens — reconstruct the table one dispute at a time
+
+Every holdout of 1980–83 had an agent quoting the same survey. UPI's archive is
+free and fetchable, and each story yields another cell.
+
+**Not the document — a reconstruction of it.** Search UPI 1980–83 for `NFL
+salary`, `salary schedule`, `holdout`, plus position words. Ryan is running that
+search; cells get logged here as they arrive, each with its own attribution chain
+and its own dating problem, because "the recent schedule" will recur.
+
+**Two cautions for whoever assembles it.** Cells gathered this way are quoted by
+*agents in active disputes* — a population selected for grievance, so the figures
+an agent chooses to read aloud are the ones that support a holdout. And a cell's
+cohort definition must be read exactly: this article gives a **six-year** high and
+low against an **all-players** average, and conflating them would put Dean's
+$65,000 against the wrong benchmark.
+
+### OWED: a League-original source
+
+**Recorded as a debt, per Ryan's ruling 2026-09-04.** Every League figure this
+project holds arrives quoted by the NFLPA or by an agent. No document in which the
+**NFL states its own number** is in hand.
+
+What would satisfy it:
+
+- NFL Management Council material — the salary schedule itself, or any circular
+  reproducing it
+- League financial disclosure, in any proceeding
+- **A court filing in which the League states its own figure** — *Mackey*, the
+  1982 antitrust litigation, or any contract-dispute arbitration
+
+Until one exists, §8.4's contest is **one party and one hearsay**, and the
+dataset should say so.
 
 ### THE HIGHEST-VALUE OUTSTANDING SALARY LEAD
 
