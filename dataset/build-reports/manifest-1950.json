@@ -1,0 +1,249 @@
+{
+ "built": "2026-09-04T12:00:48",
+ "choices_made_by_this_export": [
+  {
+   "chose": "IND",
+   "kind": "franchise",
+   "over": "unresolved",
+   "subject": "NYY",
+   "why": "CONTESTED. The 1950 New York Yanks are commonly traced Yanks -> Dallas Texans (1952) -> Baltimore Colts (1953) -> Indianapolis, but the NFL's own position on wh"
+  },
+  {
+   "chose": "CHI",
+   "kind": "mover_club",
+   "over": "BA1",
+   "subject": "p_000010",
+   "why": "most games played (11 vs 1)"
+  },
+  {
+   "chose": "QB",
+   "kind": "contested_position",
+   "over": "QB-K",
+   "subject": "p_000010",
+   "why": "export must emit one position; first candidate taken, dataset retains the contest"
+  },
+  {
+   "chose": "WAS",
+   "kind": "mover_club",
+   "over": "BA1",
+   "subject": "p_000028",
+   "why": "most games played (8 vs 4)"
+  },
+  {
+   "chose": "MLB",
+   "kind": "contested_position",
+   "over": "LB",
+   "subject": "p_000028",
+   "why": "export must emit one position; first candidate taken, dataset retains the contest"
+  },
+  {
+   "chose": "BA1",
+   "kind": "mover_club",
+   "over": "DET",
+   "subject": "p_000136",
+   "why": "most games played (8 vs 4)"
+  },
+  {
+   "chose": "K",
+   "kind": "contested_position",
+   "over": "FB",
+   "subject": "p_000136",
+   "why": "export must emit one position; first candidate taken, dataset retains the contest"
+  },
+  {
+   "chose": "BA1",
+   "kind": "mover_club",
+   "over": "NYY",
+   "subject": "p_000145",
+   "why": "most games played (3 vs 1)"
+  },
+  {
+   "chose": "BA1",
+   "kind": "mover_club",
+   "over": "SF",
+   "subject": "p_000289",
+   "why": "most games played (7 vs 4)"
+  },
+  {
+   "chose": "LE",
+   "kind": "contested_position",
+   "over": "LOE",
+   "subject": "p_000289",
+   "why": "export must emit one position; first candidate taken, dataset retains the contest"
+  },
+  {
+   "chose": "BA1",
+   "kind": "mover_club",
+   "over": "WAS",
+   "subject": "p_000307",
+   "why": "most games played (6 vs 6)"
+  },
+  {
+   "chose": "HB",
+   "kind": "contested_position",
+   "over": "LOH",
+   "subject": "p_000307",
+   "why": "export must emit one position; first candidate taken, dataset retains the contest"
+  },
+  {
+   "chose": "CHC",
+   "kind": "mover_club",
+   "over": "SF",
+   "subject": "p_000469",
+   "why": "most games played (7 vs 4)"
+  },
+  {
+   "chose": "HB",
+   "kind": "contested_position",
+   "over": "LOH",
+   "subject": "p_000469",
+   "why": "export must emit one position; first candidate taken, dataset retains the contest"
+  },
+  {
+   "chose": "CHC",
+   "kind": "mover_club",
+   "over": "DET",
+   "subject": "p_000550",
+   "why": "most games played (11 vs 1)"
+  },
+  {
+   "chose": "LDT",
+   "kind": "contested_position",
+   "over": "ROG",
+   "subject": "p_000550",
+   "why": "export must emit one position; first candidate taken, dataset retains the contest"
+  },
+  {
+   "chose": "CHC",
+   "kind": "mover_club",
+   "over": "NYY",
+   "subject": "p_000649",
+   "why": "most games played (8 vs 1)"
+  },
+  {
+   "chose": "RDH",
+   "kind": "contested_position",
+   "over": "ROH",
+   "subject": "p_000649",
+   "why": "export must emit one position; first candidate taken, dataset retains the contest"
+  },
+  {
+   "chose": "DET",
+   "kind": "mover_club",
+   "over": "CHI",
+   "subject": "p_000810",
+   "why": "most games played (7 vs 1)"
+  },
+  {
+   "chose": "LOG",
+   "kind": "contested_position",
+   "over": "LOG-C",
+   "subject": "p_000810",
+   "why": "export must emit one position; first candidate taken, dataset retains the contest"
+  },
+  {
+   "chose": "DET",
+   "kind": "mover_club",
+   "over": "PHI/SF",
+   "subject": "p_001563",
+   "why": "most games played (5 vs 5,2)"
+  },
+  {
+   "chose": "RDH-LDH-RO",
+   "kind": "contested_position",
+   "over": "DB",
+   "subject": "p_001563",
+   "why": "export must emit one position; first candidate taken, dataset retains the contest"
+  },
+  {
+   "chose": "GB",
+   "kind": "mover_club",
+   "over": "PHI",
+   "subject": "p_001653",
+   "why": "most games played (9 vs 1)"
+  },
+  {
+   "chose": "SF",
+   "kind": "mover_club",
+   "over": "WAS",
+   "subject": "p_003655",
+   "why": "most games played (7 vs 4)"
+  },
+  {
+   "chose": "LDH",
+   "kind": "contested_position",
+   "over": "RS-LOH",
+   "subject": "p_003655",
+   "why": "export must emit one position; first candidate taken, dataset retains the contest"
+  },
+  {
+   "chose": "x2.2930",
+   "kind": "payroll_scale",
+   "over": "era-accurate dollars",
+   "subject": "all clubs",
+   "why": "PGM3's cap is a fixed engine constant with no cap field in the schema; era-accurate 1950 dollars leave every club ~100% of the cap unused and the financial layer inert. One uniform factor preserves every ratio."
+  }
+ ],
+ "fields_INVENTED_by_this_export": {
+  "appearance": 446,
+  "attributes": 6660,
+  "draftNum": 446,
+  "draftSeason": 446,
+  "growthType": 446,
+  "guarantee": 446,
+  "injuryProne": 446,
+  "length": 446,
+  "personality": 1784,
+  "potential": 446,
+  "rating": 446,
+  "salary": 446,
+  "teamNum_dedup": 6
+ },
+ "fields_from_the_dataset": [
+  "forename",
+  "surname",
+  "position",
+  "teamID",
+  "teamNum",
+  "age"
+ ],
+ "information_lost_in_translation": {
+  "original jersey (collided within club)": 6,
+  "secondary position tokens (C kept)": 3,
+  "secondary position tokens (FB kept)": 2,
+  "secondary position tokens (K kept)": 1,
+  "secondary position tokens (LDE kept)": 4,
+  "secondary position tokens (LDG kept)": 1,
+  "secondary position tokens (LDH kept)": 4,
+  "secondary position tokens (LDT kept)": 3,
+  "secondary position tokens (LLB kept)": 1,
+  "secondary position tokens (LOG kept)": 6,
+  "secondary position tokens (LOH kept)": 5,
+  "secondary position tokens (LOT kept)": 1,
+  "secondary position tokens (LS kept)": 2,
+  "secondary position tokens (MG kept)": 2,
+  "secondary position tokens (MLB kept)": 1,
+  "secondary position tokens (OG kept)": 1,
+  "secondary position tokens (OHB kept)": 1,
+  "secondary position tokens (QB kept)": 1,
+  "secondary position tokens (RDE kept)": 6,
+  "secondary position tokens (RDH kept)": 3,
+  "secondary position tokens (RDT kept)": 4,
+  "secondary position tokens (RLB kept)": 3,
+  "secondary position tokens (ROE kept)": 4,
+  "secondary position tokens (ROG kept)": 1,
+  "secondary position tokens (ROH kept)": 4,
+  "secondary position tokens (ROT kept)": 2,
+  "secondary position tokens (S kept)": 3,
+  "secondary position tokens (T kept)": 1
+ },
+ "note": "Invented values exist ONLY here. They are not claims and are never written back to the store.",
+ "policy": "policy@v1",
+ "position_map": "statscrew-1950 -> pgm3-15@v1",
+ "records": 446,
+ "refusals": [],
+ "schema_keys": 52,
+ "season": "NFL-1950",
+ "seed": 20260904,
+ "store": "nfl-1950.json"
+}

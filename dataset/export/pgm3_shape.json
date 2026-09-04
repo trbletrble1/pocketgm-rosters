@@ -1,0 +1,1724 @@
+{
+ "_levels_note": "median and sd per (position, attribute) taken from the reference. The export supplies ORDER (from the invented rating); the reference supplies LEVEL. Roster-project precedent: a published reference is an output, not a specification - so it is used for the level only, never as a term added on top.",
+ "appearance_slot_vocab": {
+  "0": [
+   "Head1a",
+   "Head1b",
+   "Head1c",
+   "Head1d",
+   "Head2a",
+   "Head2b",
+   "Head2c",
+   "Head2d",
+   "Head3a",
+   "Head3b",
+   "Head3c",
+   "Head3d",
+   "Head4a",
+   "Head4b",
+   "Head4c",
+   "Head4d",
+   "Head5a",
+   "Head5b",
+   "Head5c",
+   "Head5d"
+  ],
+  "1": [
+   "Eyes1a",
+   "Eyes1b",
+   "Eyes1c",
+   "Eyes1d",
+   "Eyes1e"
+  ],
+  "2": [
+   "Hair1a",
+   "Hair1b",
+   "Hair1c",
+   "Hair1d",
+   "Hair1e",
+   "Hair1f",
+   "Hair1g",
+   "Hair1h",
+   "Hair1i",
+   "Hair1j",
+   "Hair1k",
+   "Hair1l",
+   "Hair1m",
+   "Hair1n",
+   "Hair1o",
+   "Hair1p",
+   "Hair1q",
+   "Hair1r1",
+   "Hair1r2",
+   "Hair1s",
+   "Hair2a",
+   "Hair2b",
+   "Hair2c",
+   "Hair2d",
+   "Hair2e",
+   "Hair2f",
+   "Hair2g",
+   "Hair2h",
+   "Hair2i",
+   "Hair2j",
+   "Hair2k",
+   "Hair2l",
+   "Hair3a",
+   "Hair3b",
+   "Hair3c",
+   "Hair3d",
+   "Hair3e",
+   "Hair3f",
+   "Hair3g",
+   "Hair3h",
+   "Hair3i",
+   "Hair3j",
+   "Hair3k",
+   "Hair3l",
+   "Hair4a",
+   "Hair4c",
+   "Hair4d",
+   "Hair4e",
+   "Hair4f",
+   "Hair4g",
+   "Hair4l",
+   "Hair5a",
+   "Hair5b",
+   "Hair5c",
+   "Hair5d",
+   "Hair5e",
+   "Hair5f",
+   "Hair5g",
+   "Hair5h",
+   "Hair5i",
+   "Hair5j",
+   "Hair5k",
+   "Hair5l"
+  ],
+  "3": [
+   "Beard1a",
+   "Beard1b",
+   "Beard1c",
+   "Beard1d",
+   "Beard1e",
+   "Beard1f1",
+   "Beard1f2",
+   "Beard1g",
+   "Beard2a",
+   "Beard2b",
+   "Beard2c",
+   "Beard2d",
+   "Beard2e",
+   "Beard2f1",
+   "Beard2f2",
+   "Beard2g",
+   "Beard3a",
+   "Beard3b",
+   "Beard3c",
+   "Beard3d",
+   "Beard3e",
+   "Beard3f1",
+   "Beard3f2",
+   "Beard3g",
+   "Beard4a",
+   "Beard4b",
+   "Beard4c",
+   "Beard4d",
+   "Beard4f1",
+   "Beard4f2",
+   "Beard4g",
+   "Beard5a",
+   "Beard5b",
+   "Beard5c",
+   "Beard5d",
+   "Beard5e",
+   "Beard5f1",
+   "Beard5f2",
+   "Beard5g"
+  ],
+  "4": [
+   "Eyebrows1a",
+   "Eyebrows1b",
+   "Eyebrows2a",
+   "Eyebrows2b",
+   "Eyebrows3a",
+   "Eyebrows3b",
+   "Eyebrows4a",
+   "Eyebrows4b",
+   "Eyebrows5a",
+   "Eyebrows5b"
+  ],
+  "5": [
+   "Nose1a",
+   "Nose1b",
+   "Nose1c",
+   "Nose1d",
+   "Nose2a",
+   "Nose2b",
+   "Nose2c",
+   "Nose2d",
+   "Nose3a",
+   "Nose3b",
+   "Nose3c",
+   "Nose3d",
+   "Nose4a",
+   "Nose4b",
+   "Nose4c",
+   "Nose4d",
+   "Nose5a",
+   "Nose5b",
+   "Nose5c",
+   "Nose5d"
+  ],
+  "6": [
+   "Mouth1a",
+   "Mouth1b",
+   "Mouth2a",
+   "Mouth2b",
+   "Mouth3a",
+   "Mouth3b",
+   "Mouth4a",
+   "Mouth4b",
+   "Mouth5a",
+   "Mouth5b"
+  ],
+  "7": [
+   "Glasses1e"
+  ],
+  "8": [
+   "Clothes1",
+   "Clothes2"
+  ]
+ },
+ "attribute_levels": {
+  "C": {
+   "agility": [
+    66.0,
+    10
+   ],
+   "ambition": [
+    79.0,
+    24
+   ],
+   "burst": [
+    72.0,
+    12
+   ],
+   "decisions": [
+    76.5,
+    12
+   ],
+   "discipline": [
+    72.5,
+    19
+   ],
+   "greed": [
+    75.0,
+    22
+   ],
+   "injuryProne": [
+    43.0,
+    31
+   ],
+   "intelligence": [
+    80.5,
+    13
+   ],
+   "jumping": [
+    63.0,
+    13
+   ],
+   "loyalty": [
+    54.5,
+    28
+   ],
+   "passBlock": [
+    83.0,
+    11
+   ],
+   "power": [
+    87.0,
+    9
+   ],
+   "releaseLine": [
+    75.0,
+    27
+   ],
+   "rushBlock": [
+    83.5,
+    11
+   ],
+   "speed": [
+    61.5,
+    8
+   ],
+   "stamina": [
+    82.0,
+    13
+   ],
+   "vision": [
+    74.0,
+    16
+   ]
+  },
+  "CB": {
+   "agility": [
+    90,
+    9
+   ],
+   "ambition": [
+    79,
+    25
+   ],
+   "ballStrip": [
+    72,
+    10
+   ],
+   "blockShedding": [
+    72,
+    16
+   ],
+   "burst": [
+    93,
+    6
+   ],
+   "decisions": [
+    75,
+    10
+   ],
+   "discipline": [
+    70,
+    17
+   ],
+   "greed": [
+    70,
+    27
+   ],
+   "injuryProne": [
+    52,
+    25
+   ],
+   "intelligence": [
+    74,
+    12
+   ],
+   "jumping": [
+    91,
+    10
+   ],
+   "loyalty": [
+    53,
+    28
+   ],
+   "manCover": [
+    84,
+    8
+   ],
+   "power": [
+    68,
+    12
+   ],
+   "releaseLine": [
+    77,
+    24
+   ],
+   "skillMove": [
+    75,
+    14
+   ],
+   "speed": [
+    92,
+    6
+   ],
+   "stamina": [
+    89,
+    15
+   ],
+   "tackle": [
+    72,
+    9
+   ],
+   "vision": [
+    76,
+    11
+   ],
+   "zoneCover": [
+    83,
+    8
+   ]
+  },
+  "DE": {
+   "agility": [
+    79.0,
+    11
+   ],
+   "ambition": [
+    80.0,
+    26
+   ],
+   "ballStrip": [
+    79.0,
+    9
+   ],
+   "blockShedding": [
+    84.0,
+    6
+   ],
+   "burst": [
+    85.0,
+    10
+   ],
+   "decisions": [
+    77.0,
+    11
+   ],
+   "discipline": [
+    71.0,
+    15
+   ],
+   "greed": [
+    73.0,
+    25
+   ],
+   "injuryProne": [
+    51.5,
+    26
+   ],
+   "intelligence": [
+    75.0,
+    13
+   ],
+   "jumping": [
+    78.0,
+    9
+   ],
+   "loyalty": [
+    48.5,
+    29
+   ],
+   "power": [
+    86.0,
+    7
+   ],
+   "releaseLine": [
+    78.0,
+    25
+   ],
+   "skillMove": [
+    74.0,
+    19
+   ],
+   "speed": [
+    80.0,
+    10
+   ],
+   "stamina": [
+    82.0,
+    18
+   ],
+   "tackle": [
+    81.0,
+    9
+   ],
+   "vision": [
+    74.0,
+    14
+   ]
+  },
+  "DT": {
+   "agility": [
+    70,
+    10
+   ],
+   "ambition": [
+    75,
+    26
+   ],
+   "ballStrip": [
+    76,
+    9
+   ],
+   "blockShedding": [
+    85,
+    7
+   ],
+   "burst": [
+    76,
+    12
+   ],
+   "decisions": [
+    78,
+    10
+   ],
+   "discipline": [
+    71,
+    16
+   ],
+   "greed": [
+    67,
+    26
+   ],
+   "injuryProne": [
+    53,
+    27
+   ],
+   "intelligence": [
+    76,
+    12
+   ],
+   "jumping": [
+    69,
+    11
+   ],
+   "loyalty": [
+    48,
+    29
+   ],
+   "power": [
+    92,
+    5
+   ],
+   "releaseLine": [
+    74,
+    26
+   ],
+   "skillMove": [
+    71,
+    23
+   ],
+   "speed": [
+    69,
+    10
+   ],
+   "stamina": [
+    74,
+    15
+   ],
+   "tackle": [
+    85,
+    11
+   ],
+   "vision": [
+    74,
+    16
+   ]
+  },
+  "K": {
+   "agility": [
+    54.5,
+    12
+   ],
+   "ambition": [
+    74.5,
+    24
+   ],
+   "burst": [
+    62.5,
+    12
+   ],
+   "decisions": [
+    77.5,
+    13
+   ],
+   "discipline": [
+    72.0,
+    18
+   ],
+   "greed": [
+    75.0,
+    24
+   ],
+   "injuryProne": [
+    44.5,
+    23
+   ],
+   "intelligence": [
+    80.5,
+    14
+   ],
+   "jumping": [
+    63.0,
+    13
+   ],
+   "kickAccuracy": [
+    89.0,
+    8
+   ],
+   "loyalty": [
+    43.5,
+    24
+   ],
+   "power": [
+    74.5,
+    13
+   ],
+   "speed": [
+    72.5,
+    15
+   ],
+   "stamina": [
+    82.5,
+    13
+   ],
+   "vision": [
+    65.0,
+    11
+   ]
+  },
+  "MLB": {
+   "agility": [
+    82,
+    8
+   ],
+   "ambition": [
+    81,
+    19
+   ],
+   "ballStrip": [
+    80,
+    10
+   ],
+   "blockShedding": [
+    81,
+    9
+   ],
+   "burst": [
+    86,
+    8
+   ],
+   "decisions": [
+    79,
+    10
+   ],
+   "discipline": [
+    75,
+    18
+   ],
+   "greed": [
+    72,
+    23
+   ],
+   "injuryProne": [
+    52,
+    27
+   ],
+   "intelligence": [
+    78,
+    12
+   ],
+   "jumping": [
+    79,
+    7
+   ],
+   "loyalty": [
+    50,
+    29
+   ],
+   "manCover": [
+    74,
+    12
+   ],
+   "power": [
+    80,
+    8
+   ],
+   "releaseLine": [
+    77,
+    24
+   ],
+   "skillMove": [
+    70,
+    16
+   ],
+   "speed": [
+    83,
+    6
+   ],
+   "stamina": [
+    84,
+    13
+   ],
+   "tackle": [
+    88,
+    8
+   ],
+   "vision": [
+    72,
+    15
+   ],
+   "zoneCover": [
+    77,
+    9
+   ]
+  },
+  "OG": {
+   "agility": [
+    65,
+    11
+   ],
+   "ambition": [
+    78,
+    24
+   ],
+   "burst": [
+    71,
+    11
+   ],
+   "decisions": [
+    73,
+    13
+   ],
+   "discipline": [
+    72,
+    16
+   ],
+   "greed": [
+    71,
+    29
+   ],
+   "injuryProne": [
+    54,
+    26
+   ],
+   "intelligence": [
+    78,
+    12
+   ],
+   "jumping": [
+    60,
+    12
+   ],
+   "loyalty": [
+    45,
+    27
+   ],
+   "passBlock": [
+    84,
+    7
+   ],
+   "power": [
+    93,
+    4
+   ],
+   "releaseLine": [
+    77,
+    27
+   ],
+   "rushBlock": [
+    88,
+    7
+   ],
+   "speed": [
+    64,
+    10
+   ],
+   "stamina": [
+    83,
+    15
+   ],
+   "vision": [
+    69,
+    17
+   ]
+  },
+  "OLB": {
+   "agility": [
+    84,
+    9
+   ],
+   "ambition": [
+    80,
+    22
+   ],
+   "ballStrip": [
+    80,
+    10
+   ],
+   "blockShedding": [
+    86,
+    7
+   ],
+   "burst": [
+    88,
+    8
+   ],
+   "decisions": [
+    81,
+    11
+   ],
+   "discipline": [
+    71,
+    17
+   ],
+   "greed": [
+    73,
+    26
+   ],
+   "injuryProne": [
+    45,
+    25
+   ],
+   "intelligence": [
+    79,
+    12
+   ],
+   "jumping": [
+    83,
+    9
+   ],
+   "loyalty": [
+    43,
+    26
+   ],
+   "power": [
+    83,
+    8
+   ],
+   "releaseLine": [
+    78,
+    25
+   ],
+   "skillMove": [
+    71,
+    18
+   ],
+   "speed": [
+    84,
+    8
+   ],
+   "stamina": [
+    80,
+    15
+   ],
+   "tackle": [
+    85,
+    9
+   ],
+   "vision": [
+    73,
+    16
+   ]
+  },
+  "OT": {
+   "agility": [
+    67.0,
+    11
+   ],
+   "ambition": [
+    74.0,
+    24
+   ],
+   "burst": [
+    71.0,
+    11
+   ],
+   "decisions": [
+    75.0,
+    13
+   ],
+   "discipline": [
+    70.0,
+    16
+   ],
+   "greed": [
+    63.5,
+    27
+   ],
+   "injuryProne": [
+    49.5,
+    29
+   ],
+   "intelligence": [
+    79.0,
+    12
+   ],
+   "jumping": [
+    66.0,
+    12
+   ],
+   "loyalty": [
+    50.5,
+    28
+   ],
+   "passBlock": [
+    85.0,
+    7
+   ],
+   "power": [
+    92.0,
+    5
+   ],
+   "releaseLine": [
+    77.0,
+    26
+   ],
+   "rushBlock": [
+    86.0,
+    7
+   ],
+   "speed": [
+    66.5,
+    10
+   ],
+   "stamina": [
+    80.0,
+    15
+   ],
+   "vision": [
+    75.5,
+    17
+   ]
+  },
+  "P": {
+   "agility": [
+    66.5,
+    14
+   ],
+   "ambition": [
+    81.5,
+    19
+   ],
+   "burst": [
+    75.0,
+    13
+   ],
+   "decisions": [
+    77.5,
+    13
+   ],
+   "discipline": [
+    72.0,
+    19
+   ],
+   "greed": [
+    66.5,
+    24
+   ],
+   "injuryProne": [
+    58.5,
+    17
+   ],
+   "intelligence": [
+    78.5,
+    13
+   ],
+   "jumping": [
+    55.0,
+    14
+   ],
+   "kickAccuracy": [
+    90.5,
+    7
+   ],
+   "loyalty": [
+    46.0,
+    27
+   ],
+   "power": [
+    77.0,
+    13
+   ],
+   "speed": [
+    73.5,
+    13
+   ],
+   "stamina": [
+    85.0,
+    17
+   ],
+   "vision": [
+    64.5,
+    10
+   ]
+  },
+  "QB": {
+   "agility": [
+    78,
+    11
+   ],
+   "ambition": [
+    79,
+    21
+   ],
+   "ballSecurity": [
+    72,
+    15
+   ],
+   "burst": [
+    79,
+    11
+   ],
+   "dPassAcc": [
+    84,
+    7
+   ],
+   "decisions": [
+    75,
+    13
+   ],
+   "discipline": [
+    72,
+    16
+   ],
+   "elusiveness": [
+    78,
+    16
+   ],
+   "greed": [
+    73,
+    26
+   ],
+   "injuryProne": [
+    43,
+    29
+   ],
+   "intelligence": [
+    81,
+    12
+   ],
+   "jumping": [
+    70,
+    12
+   ],
+   "loyalty": [
+    59,
+    28
+   ],
+   "mPassAcc": [
+    86,
+    5
+   ],
+   "power": [
+    74,
+    12
+   ],
+   "rushBlock": [
+    28,
+    16
+   ],
+   "sPassAcc": [
+    89,
+    6
+   ],
+   "skillMove": [
+    72,
+    12
+   ],
+   "speed": [
+    78,
+    11
+   ],
+   "stamina": [
+    90,
+    14
+   ],
+   "throwOnRun": [
+    82,
+    9
+   ],
+   "trucking": [
+    62,
+    13
+   ],
+   "vision": [
+    79,
+    10
+   ]
+  },
+  "RB": {
+   "agility": [
+    84,
+    10
+   ],
+   "ambition": [
+    78,
+    23
+   ],
+   "ballSecurity": [
+    80,
+    10
+   ],
+   "burst": [
+    92,
+    8
+   ],
+   "catching": [
+    75,
+    10
+   ],
+   "decisions": [
+    70,
+    15
+   ],
+   "discipline": [
+    72,
+    17
+   ],
+   "elusiveness": [
+    83,
+    15
+   ],
+   "greed": [
+    67,
+    27
+   ],
+   "injuryProne": [
+    51,
+    24
+   ],
+   "intelligence": [
+    73,
+    14
+   ],
+   "jumping": [
+    82,
+    9
+   ],
+   "loyalty": [
+    49,
+    27
+   ],
+   "passBlock": [
+    61,
+    13
+   ],
+   "power": [
+    80,
+    9
+   ],
+   "releaseLine": [
+    79,
+    16
+   ],
+   "routeRun": [
+    75,
+    14
+   ],
+   "rushBlock": [
+    53,
+    19
+   ],
+   "skillMove": [
+    79,
+    13
+   ],
+   "speed": [
+    88,
+    8
+   ],
+   "stamina": [
+    85,
+    17
+   ],
+   "trucking": [
+    78,
+    11
+   ],
+   "vision": [
+    78,
+    12
+   ]
+  },
+  "S": {
+   "agility": [
+    88.0,
+    7
+   ],
+   "ambition": [
+    78.0,
+    25
+   ],
+   "ballStrip": [
+    76.0,
+    10
+   ],
+   "blockShedding": [
+    74.0,
+    12
+   ],
+   "burst": [
+    91.0,
+    5
+   ],
+   "decisions": [
+    77.0,
+    10
+   ],
+   "discipline": [
+    74.0,
+    17
+   ],
+   "greed": [
+    75.0,
+    28
+   ],
+   "injuryProne": [
+    52.0,
+    25
+   ],
+   "intelligence": [
+    74.5,
+    12
+   ],
+   "jumping": [
+    90.0,
+    7
+   ],
+   "loyalty": [
+    60.5,
+    27
+   ],
+   "manCover": [
+    78.0,
+    9
+   ],
+   "power": [
+    72.0,
+    9
+   ],
+   "releaseLine": [
+    76.5,
+    25
+   ],
+   "skillMove": [
+    69.5,
+    14
+   ],
+   "speed": [
+    90.0,
+    5
+   ],
+   "stamina": [
+    91.0,
+    20
+   ],
+   "tackle": [
+    79.0,
+    8
+   ],
+   "vision": [
+    74.0,
+    13
+   ],
+   "zoneCover": [
+    83.0,
+    7
+   ]
+  },
+  "TE": {
+   "agility": [
+    80.0,
+    10
+   ],
+   "ambition": [
+    79.5,
+    25
+   ],
+   "ballSecurity": [
+    75.0,
+    9
+   ],
+   "burst": [
+    84.0,
+    9
+   ],
+   "catching": [
+    83.0,
+    10
+   ],
+   "decisions": [
+    73.0,
+    13
+   ],
+   "discipline": [
+    65.5,
+    18
+   ],
+   "elusiveness": [
+    75.0,
+    15
+   ],
+   "greed": [
+    75.0,
+    27
+   ],
+   "injuryProne": [
+    55.0,
+    26
+   ],
+   "intelligence": [
+    76.5,
+    13
+   ],
+   "jumping": [
+    84.0,
+    10
+   ],
+   "loyalty": [
+    54.0,
+    26
+   ],
+   "passBlock": [
+    72.0,
+    10
+   ],
+   "power": [
+    85.0,
+    8
+   ],
+   "releaseLine": [
+    81.0,
+    10
+   ],
+   "routeRun": [
+    79.5,
+    11
+   ],
+   "rushBlock": [
+    75.0,
+    9
+   ],
+   "skillMove": [
+    70.0,
+    12
+   ],
+   "speed": [
+    81.0,
+    9
+   ],
+   "stamina": [
+    83.5,
+    15
+   ],
+   "trucking": [
+    75.0,
+    11
+   ],
+   "vision": [
+    78.5,
+    11
+   ]
+  },
+  "WR": {
+   "agility": [
+    86,
+    7
+   ],
+   "ambition": [
+    78,
+    27
+   ],
+   "ballSecurity": [
+    71,
+    11
+   ],
+   "burst": [
+    90,
+    5
+   ],
+   "catching": [
+    82,
+    8
+   ],
+   "decisions": [
+    66,
+    13
+   ],
+   "discipline": [
+    72,
+    17
+   ],
+   "elusiveness": [
+    83,
+    12
+   ],
+   "greed": [
+    65,
+    27
+   ],
+   "injuryProne": [
+    52,
+    27
+   ],
+   "intelligence": [
+    70,
+    13
+   ],
+   "jumping": [
+    86,
+    9
+   ],
+   "loyalty": [
+    46,
+    28
+   ],
+   "passBlock": [
+    37,
+    23
+   ],
+   "power": [
+    64,
+    14
+   ],
+   "releaseLine": [
+    79,
+    12
+   ],
+   "routeRun": [
+    78,
+    10
+   ],
+   "rushBlock": [
+    49,
+    20
+   ],
+   "skillMove": [
+    75,
+    11
+   ],
+   "speed": [
+    89,
+    5
+   ],
+   "stamina": [
+    84,
+    19
+   ],
+   "trucking": [
+    72,
+    14
+   ],
+   "vision": [
+    75,
+    10
+   ]
+  }
+ },
+ "live_attributes": {
+  "C": [
+   "agility",
+   "ambition",
+   "burst",
+   "decisions",
+   "discipline",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "passBlock",
+   "power",
+   "releaseLine",
+   "rushBlock",
+   "speed",
+   "stamina",
+   "vision"
+  ],
+  "CB": [
+   "agility",
+   "ambition",
+   "ballStrip",
+   "blockShedding",
+   "burst",
+   "decisions",
+   "discipline",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "manCover",
+   "power",
+   "releaseLine",
+   "skillMove",
+   "speed",
+   "stamina",
+   "tackle",
+   "vision",
+   "zoneCover"
+  ],
+  "DE": [
+   "agility",
+   "ambition",
+   "ballStrip",
+   "blockShedding",
+   "burst",
+   "decisions",
+   "discipline",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "power",
+   "releaseLine",
+   "skillMove",
+   "speed",
+   "stamina",
+   "tackle",
+   "vision"
+  ],
+  "DT": [
+   "agility",
+   "ambition",
+   "ballStrip",
+   "blockShedding",
+   "burst",
+   "decisions",
+   "discipline",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "power",
+   "releaseLine",
+   "skillMove",
+   "speed",
+   "stamina",
+   "tackle",
+   "vision"
+  ],
+  "K": [
+   "agility",
+   "ambition",
+   "burst",
+   "decisions",
+   "discipline",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "kickAccuracy",
+   "loyalty",
+   "power",
+   "speed",
+   "stamina",
+   "vision"
+  ],
+  "MLB": [
+   "agility",
+   "ambition",
+   "ballStrip",
+   "blockShedding",
+   "burst",
+   "decisions",
+   "discipline",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "manCover",
+   "power",
+   "releaseLine",
+   "skillMove",
+   "speed",
+   "stamina",
+   "tackle",
+   "vision",
+   "zoneCover"
+  ],
+  "OG": [
+   "agility",
+   "ambition",
+   "burst",
+   "decisions",
+   "discipline",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "passBlock",
+   "power",
+   "releaseLine",
+   "rushBlock",
+   "speed",
+   "stamina",
+   "vision"
+  ],
+  "OLB": [
+   "agility",
+   "ambition",
+   "ballStrip",
+   "blockShedding",
+   "burst",
+   "decisions",
+   "discipline",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "power",
+   "releaseLine",
+   "skillMove",
+   "speed",
+   "stamina",
+   "tackle",
+   "vision"
+  ],
+  "OT": [
+   "agility",
+   "ambition",
+   "burst",
+   "decisions",
+   "discipline",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "passBlock",
+   "power",
+   "releaseLine",
+   "rushBlock",
+   "speed",
+   "stamina",
+   "vision"
+  ],
+  "P": [
+   "agility",
+   "ambition",
+   "burst",
+   "decisions",
+   "discipline",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "kickAccuracy",
+   "loyalty",
+   "power",
+   "speed",
+   "stamina",
+   "vision"
+  ],
+  "QB": [
+   "agility",
+   "ambition",
+   "ballSecurity",
+   "burst",
+   "dPassAcc",
+   "decisions",
+   "discipline",
+   "elusiveness",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "mPassAcc",
+   "power",
+   "rushBlock",
+   "sPassAcc",
+   "skillMove",
+   "speed",
+   "stamina",
+   "throwOnRun",
+   "trucking",
+   "vision"
+  ],
+  "RB": [
+   "agility",
+   "ambition",
+   "ballSecurity",
+   "burst",
+   "catching",
+   "decisions",
+   "discipline",
+   "elusiveness",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "passBlock",
+   "power",
+   "releaseLine",
+   "routeRun",
+   "rushBlock",
+   "skillMove",
+   "speed",
+   "stamina",
+   "trucking",
+   "vision"
+  ],
+  "S": [
+   "agility",
+   "ambition",
+   "ballStrip",
+   "blockShedding",
+   "burst",
+   "decisions",
+   "discipline",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "manCover",
+   "power",
+   "releaseLine",
+   "skillMove",
+   "speed",
+   "stamina",
+   "tackle",
+   "vision",
+   "zoneCover"
+  ],
+  "TE": [
+   "agility",
+   "ambition",
+   "ballSecurity",
+   "burst",
+   "catching",
+   "decisions",
+   "discipline",
+   "elusiveness",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "passBlock",
+   "power",
+   "releaseLine",
+   "routeRun",
+   "rushBlock",
+   "skillMove",
+   "speed",
+   "stamina",
+   "trucking",
+   "vision"
+  ],
+  "WR": [
+   "agility",
+   "ambition",
+   "ballSecurity",
+   "burst",
+   "catching",
+   "decisions",
+   "discipline",
+   "elusiveness",
+   "greed",
+   "injuryProne",
+   "intelligence",
+   "jumping",
+   "loyalty",
+   "passBlock",
+   "power",
+   "releaseLine",
+   "routeRun",
+   "rushBlock",
+   "skillMove",
+   "speed",
+   "stamina",
+   "trucking",
+   "vision"
+  ]
+ },
+ "note": "Consumer shape, derived from PGMRoster_1986.json. Belongs to the EXPORT, never to the dataset.",
+ "payroll_target_median_top53": 197400000
+}

@@ -1,0 +1,47 @@
+{
+  "map_id": "statscrew-1950 -> pgm3-15",
+  "from_vocab": "statscrew",
+  "to_vocab": "pgm3-15",
+  "era": "1946-1959",
+  "version": "v1",
+  "note": "Era-native to consumer. Data, not code. Changing an entry is an edit and a re-export; the dataset does not move.",
+
+  "composite_rule": {
+    "separator": "-",
+    "policy": "map the FIRST token; record the dropped tokens in the manifest",
+    "why": "PGM3 has one position field and 1950 has two-way players. The choice is the EXPORT's and must be visible.",
+    "source_artifact": "StatsCrew truncates the position string at 10 characters, so codes like 'LDH-ROH-LO' and 'LDG-RDG-RO' end mid-token. A truncated trailing token is dropped by the same rule."
+  },
+
+  "tokens": {
+    "QB": "QB",
+
+    "FB": "RB", "HB": "RB", "LH": "RB", "RH": "RB", "LOH": "RB", "ROH": "RB",
+    "OHB": "RB", "TB": "RB", "WB": "RB", "BB": "RB",
+    "_backs_note": "1950 single-wing and T-formation backs all collapse to RB. FB keeps the handoff's warning: rate against the real FB cohort, never as an ordinary RB.",
+
+    "E": "TE", "LE": "TE", "RE": "TE", "LOE": "TE", "ROE": "TE",
+    "_ends_note": "A 1950 offensive end blocked and caught. TE is the closer of PGM3's two; WR would import a modern split-end role that did not exist. The receiving half is lost and that loss is recorded.",
+
+    "C": "C", "LS": "C",
+    "G": "OG", "LG": "OG", "RG": "OG", "LOG": "OG", "ROG": "OG",
+    "T": "OT", "LT": "OT", "RT": "OT", "LOT": "OT", "ROT": "OT", "OT": "OT", "OG": "OG",
+
+    "MG": "DT",
+    "_mg_note": "Middle guard, the nose of a five-man front. A nose tackle by alignment, an inside linebacker by responsibility, and neither. DT chosen because PGM3 rates DT on the traits a middle guard was selected for. The linebacker half is lost.",
+
+    "DT": "DT", "LDT": "DT", "RDT": "DT",
+    "DE": "DE", "LDE": "DE", "RDE": "DE",
+    "LB": "OLB", "LLB": "OLB", "RLB": "OLB", "MLB": "MLB",
+    "DB": "CB", "LDH": "CB", "RDH": "CB", "LDG": "DT", "RDG": "DT",
+    "S": "S", "RS": "S",
+    "K": "K", "P": "P",
+    "KR": "WR", "PR": "WR",
+    "_returner_note": "Follows the roster project's rule: PR/KR map to WR."
+  },
+
+  "refuse": {
+    "policy": "a token with no entry above RAISES. It does not fall through to a default.",
+    "why": "Four boundary-translation bugs in the prior project all silently reduced a cohort rather than raising, because a label that does not match simply finds nothing."
+  }
+}

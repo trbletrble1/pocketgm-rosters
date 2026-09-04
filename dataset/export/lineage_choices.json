@@ -1,0 +1,25 @@
+{
+  "note": "Per design 9.5: the dataset abstains on contested franchise continuity; the EXPORT must choose. A table of named cases with written reasons, not an algorithm. The export FAILS if a contested franchise has no entry here.",
+  "era": "NFL-1950",
+  "rule": "CITY where a PGM3 slot exists, LINEAGE where it does not (roster project handoff, verified across 1979/1986/2000/2004).",
+
+  "choices": {
+    "BA1": {"slot": "BAL", "basis": "city", "reason": "1950 Baltimore Colts played in Baltimore and a BAL slot exists. NOTE: this club folded after 1950 and is NOT the franchise that later moved to Indianapolis - a separate franchise entity in the dataset.", "contested": false},
+    "CHC": {"slot": "ARI", "basis": "lineage", "reason": "Chicago Cardinals -> St Louis -> Phoenix -> Arizona. City Chicago's slot is held by the Bears, so lineage.", "contested": false},
+    "CHI": {"slot": "CHI", "basis": "city", "reason": "Chicago Bears, unbroken.", "contested": false},
+    "CLE": {"slot": "CLE", "basis": "city", "reason": "Cleveland Browns. The 1996-98 suspension is later than this season and does not bear on it.", "contested": false},
+    "DET": {"slot": "DET", "basis": "city", "reason": "unbroken", "contested": false},
+    "GB":  {"slot": "GB",  "basis": "city", "reason": "unbroken", "contested": false},
+    "LAN": {"slot": "LAR", "basis": "city", "reason": "Los Angeles Rams, and an LAR slot exists.", "contested": false},
+    "NYG": {"slot": "NYG", "basis": "city", "reason": "unbroken", "contested": false},
+    "PHI": {"slot": "PHI", "basis": "city", "reason": "unbroken", "contested": false},
+    "PIT": {"slot": "PIT", "basis": "city", "reason": "unbroken", "contested": false},
+    "SF":  {"slot": "SF",  "basis": "city", "reason": "San Francisco 49ers, entered from the AAFC in 1950.", "contested": false},
+    "WAS": {"slot": "WAS", "basis": "city", "reason": "unbroken", "contested": false},
+
+    "NYY": {"slot": "IND", "basis": "lineage", "contested": true,
+            "reason": "CONTESTED. The 1950 New York Yanks are commonly traced Yanks -> Dallas Texans (1952) -> Baltimore Colts (1953) -> Indianapolis, but the NFL's own position on whether the 1953 Colts continued the Texans franchise or were an expansion club is not settled in any source held here. City New York's slots are taken by NYG and NYJ, so city is unavailable and lineage must be used - which is exactly where the contest lives.",
+            "dissent": "If the 1953 Colts were a new franchise, the Yanks lineage terminates in 1952 and this club has no modern slot at all.",
+            "review": "REQUIRES A RULING. Exported to IND under protest; the dataset holds the contest unresolved."}
+  }
+}

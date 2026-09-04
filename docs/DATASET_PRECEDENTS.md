@@ -275,3 +275,114 @@ source; ignoring it throws away the only cheap check available on a lossy scan.
 **Generalises past newspapers.** Wire copy, syndicated columns, a table reprinted
 in two volumes of one hearing, a press release carried by several outlets — all
 the same shape. **One vote for what happened, N witnesses for what the page says.**
+
+---
+
+## A gate that fires must fire for its stated reason — the exit code does not tell you
+
+2026-09-04, building the first real-data gate.
+
+The gate asserts that all four resolution bases are reachable in the built corpus.
+To prove it could fail, it was run against NFL 1950 alone, where the distinction
+is known to be absent. **It exited 1.** That looked like the gate failing
+correctly, and it was one line from being written up as a verified selftest.
+
+It was a `ModuleNotFoundError`. The variant had been copied to `/tmp` and could no
+longer import `resolve_store`. **The gate never ran at all.**
+
+**This is the roster project's *"an anchor that FAILS for the wrong reason"*
+arriving in the gate layer, and it is worse there**, because a gate's whole
+contract is its exit code. Everywhere else a wrong-reason failure produces a
+confusing result someone investigates. Here it produces the *expected* result and
+closes the question.
+
+**The rule: a selftest must assert on the gate's stated failure, not on its exit
+status.** Read the message. The correct run prints:
+
+    FAIL: no single predicate shows BOTH unknown and absent.
+
+and that sentence — not the `1` — is the evidence the gate works.
+
+**Corollary, and it is the practical form:** run the broken variant **in the same
+environment as the real one**. Copying a check somewhere else to break it changes
+two things at once, and the exit code cannot distinguish them.
+
+**Both halves of the discipline are now needed.** `gate_selftest.py` proves a gate
+*can* fail; this precedent says the proof is only good if the failure is the one
+the gate was written to detect. A gate that cannot fail reports success; a gate
+that fails for the wrong reason reports a successful selftest.
+
+---
+
+## A distribution over subjects-that-have-claims can never report "unknown"
+
+2026-09-04, first resolution pass over the ingested 1950 and 1974 seasons.
+
+Every predicate reported **`unknown: 0`**. On WFL 1974 that is not credible —
+report 06 measured games-played fill at 14.9% for that league, so most players
+should have no games-started value at all.
+
+The data was fine. **The resolver built its subject list by iterating the claims**,
+so a subject with no claim for a predicate was never enumerated, and the one basis
+that means *"nothing was ever claimed here"* was unreachable by construction.
+
+**The fix is a subject universe: the store records what EXISTS, not only what is
+claimed.** `declare_subject()` is called for every person, person-season and stint
+the ingest sees, and resolution enumerates that universe rather than the claim
+index. With it, WFL games-started returns 64 observed, 756 absent and **81
+unknown** — the 81 being the two teams whose pages carry no `GS` column at all.
+
+**The general form: any measurement whose denominator is derived from its
+numerator's source cannot detect absence.** Same family as the inventory that
+found zero unreferenced entries because it named them in order to flag them, and
+as the count assertion that is dead wherever a fallback tops up the total. Three
+instances in one day, all the same shape — **the population must be established
+independently of the thing being measured.**
+
+**The tell was an implausible zero**, and it was treated as a question about the
+instrument rather than a fact about the data. That ordering is the only reason it
+was found.
+
+---
+
+## A consumer's gates encode its own era, and a historical build fails them for being historical
+
+2026-09-04, exporting NFL 1950 to PocketGM 3 and running the roster project's own
+validator against it.
+
+Fourteen check groups failed on the first run. After fixing every defect in the
+export's invented values — appearance tokens, jersey collisions, the contract
+ladder, guarantee tracking remaining length, payroll scaled to the engine constant,
+and attribute levels drawn from the reference — **four remained, and not one of
+them is a defect in the file:**
+
+| gate | reads | 1950 fact |
+|---|---|---|
+| `team count != 32` | 19 slots empty | the NFL had **13 clubs** |
+| `roster under 45` | 13 clubs short | the 1950 roster limit was **32**; median exported roster is 33 |
+| `CB/S ratio 2.92 outside 1.11-1.13` | far too many corners | the 1950 secondary is two **defensive halfbacks** and one safety |
+| `team empty at a position every reference fills` | no K, no P, no MLB | only **9 of 13** clubs listed a punter; the 5-2 front used a **middle guard**, not a middle linebacker |
+
+**Every one of those gates was fitted on files from 1986 to 2026.** They encode
+modern football's positional structure and roster size, and they are correct for
+the population they were built on. Pointed at 1950 they measure the era and report
+it as failure.
+
+**This is report 06's per-league finding arriving on a second axis.** There, a
+completeness gate scoped per era read the WFL as catastrophically broken because
+games-played fill is a property of the *league*. Here, positional gates scoped
+across all files read 1950 as broken because positional structure is a property of
+the *era*. **Same shape: a gate applied to a population it was not fitted on
+manufactures findings.**
+
+**The rule: a gate carries the population it was fitted on, and refuses — or
+widens its band — outside it.** Not "turn the check off for old files", which
+loses the check. The band for `CB/S` in a five-man-front era is a different band,
+and it has to be measured on that era rather than inherited.
+
+**And the split is the useful output.** Fourteen failures became four, and the four
+are *the interesting ones* — they are a list of the ways 1950 football differs from
+modern football, produced automatically by pointing a modern instrument at it.
+**A gate that fails for a structural reason is a measurement, provided you do the
+work to separate it from a gate that fails because the file is wrong.** Reporting
+"4 failures" without that separation would have been worthless in both directions.
