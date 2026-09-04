@@ -2860,3 +2860,50 @@ Galbreath, Marvin Powell, Reggie Roby, Kent Hill.
 
 **Then:** re-test Mike's period-layer accuracy against the returned verdicts —
 a set that can carry one — and report `middle`/`skip` counts.
+
+---
+
+### 56. Ryan's 99 verdicts: Mike 95, archive 4 — and the test that said otherwise was circular
+
+**2026-09-03.** Of the 100-man verification set (item 55): 99 decided, 1
+`middle` (Mosi Tatupu, as predicted), 0 `skip`. **Mike correct 95 of 99; the
+archive 4 of 99.** Not directional: archive-dark/Mike-light 69 of 69 for Mike,
+archive-light/Mike-dark 26 of 30.
+
+**Two corrections to what preceded the ruling in item 53.**
+
+1. **"Archive consensus 95 of 95 against hand-verified truth" was circular.**
+   The verified faces live in the registry and the files are written from the
+   registry; measured, the file label equals the verified entry on **249 of
+   249**. The archive was being compared with the source it was written from.
+   Mike's 79 of 81 on the same set was the only independent number in that
+   test. The design question in item 53 was settled on a comparison that could
+   not see the archive's error.
+2. **The 96/4 is selection-biased the other way** — it is measured on men chosen
+   because the two disagree. De-biased over the era population (Mike and the
+   archive agree on 80% of the 2,534 era men Mike covers): **Mike ≈ 95–98%,
+   archive ≈ 77–81%**. That is the honest pre-1990 comparison.
+
+**The era gradient, measured directly** — each archive file alone, agreement with
+Mike's period layers (accuracy ≈ agreement, since Mike is ~96% on every
+independent test): **1986 76.9% (n 1,199), 1979 84.6% (n 1,412)**; then 2000
+91.4%, 2004 95.8%, 2007 92.7%, 2010 91.5%; and against the 2003 base 2004–2010
+read 98–99%. **The archive is weak before 1990 and strong after.** A single
+global weight cannot express that.
+
+**Why the archive's pre-1990 labels fail — it is not "the archive is wrong."**
+The 100 tested were the archive's *sourced* labels (the 53 with a league-prior
+label were dropped before ranking; 25% of 1979's faces are the prior). 92 of the
+100 came through `registry-1986 family`, whose root is the decoded Xbox 360
+field (bit 1347). On the 69 men Ryan verified light, **that field said dark on 45
+and was absent on 23** — absent meaning the 1986 face was drawn from a
+distribution and then propagated to 1979 labelled as sourced. The 1986 Madden-08
+mod's own PSKI is the bimodal value on 63 of the 100. **So the pre-1990 archive
+rests on one weak field plus disguised draws**, and the 4% is that, not a good
+source failing.
+
+**What Mike-authoritative-pre-1990 with archive fallback would do:** 1979 — 1,516
+of 1,716 men covered, **252 labels change** (53 of them currently the prior), 200
+uncovered stay; 1986 — 1,317 of 1,947 covered, **332 change**, 630 uncovered stay.
+
+**Not acted on. Proposal in the report; ruling is Ryan's.**
