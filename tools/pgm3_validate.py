@@ -522,6 +522,28 @@ def check_staff(new, refs):
         out.append((f'namesakes exempted from duplicate names ({len(_exempt)} recorded)', 0))
     out.append(('duplicate names' + (': ' + ', '.join(f'{a} {b}' for a, b in sorted(_real)) if _real else ''),
                 len(_real)))
+
+    # ONE MAN, ONE AGE, IN ONE FILE. The age belongs to the PERSON, not to the
+    # slot he occupies -- and the archive proved the opposite convention was in
+    # force: Tom Bettis read 46 as Kansas City's head coach and 30 as the
+    # Cardinals' coordinator IN THE SAME FILE, sixteen years apart, because each
+    # record carried its slot's age rather than his. Ken Meyer was the same
+    # shape. Both were corrected by taking the man's own age when he moved, and
+    # this check exists so the next placement cannot re-create it: this session
+    # moved sixty-five coordinators, so it would have happened again within the
+    # week.
+    #
+    # Recorded namesakes are exempt for the same reason they are exempt from the
+    # duplicate-names check -- Jim Mora at 65 and his son at 39 in 2000 are two
+    # men and SHOULD differ.
+    _by_name = collections.defaultdict(list)
+    for p in new:
+        _by_name[_norm_name(p['forename'], p['surname'])].append(p)
+    _age_split = [k for k, v in _by_name.items()
+                  if len(v) > 1 and len({q.get('age') for q in v}) > 1
+                  and k.replace('|', ' ') not in _sns]
+    out.append(('one man, one age' + (': ' + ', '.join(sorted(_age_split)) if _age_split else ''),
+                len(_age_split)))
     oor = sum(1 for p in new for k in NUM if not LO[k] <= p[k] <= HI[k])
     if oor: print(f'  WARN  {oor} values outside the reference range '
                   f'(observed range != accepted range — check they are real, do not auto-clamp)')

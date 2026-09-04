@@ -4978,3 +4978,52 @@ was a Hall-of-Fame linebacker coaching the wrong side of the ball in a published
 file — and it survived a dry run, an assertion on record counts, an
 employed-staff count, a one-man-one-record check and all four gates, because
 every one of those was true of the wrong answer.
+
+## The attributes belong to the person, not to the slot
+
+2026-09-04, and the mechanism matters more than the count of records it damaged.
+
+**`startSeason` is not an independent fact that happens to correlate with age —
+it is computed from it.** Measured across the archive's employed staff:
+
+| file | r(age, startSeason) |
+|---|---|
+| 1979 | −0.942 |
+| 2000 | −0.928 |
+| 2004 | −0.967 |
+| 2013 | −0.988 |
+| 2026 | −0.961 |
+| **1986** | **−0.175** |
+
+Nine files run −0.93 to −0.99. **1986 is the exception at −0.175 and its
+startSeason is evidently NOT age-derived** — which is itself worth knowing before
+any correction pass assumes one convention across the archive.
+
+**The consequence for any age fix: correcting age and leaving startSeason
+produces a 63-year-old with a 27-year-old's experience — a worse artifact than
+the one being repaired.** Growth curves conditioned on age move for the same
+reason. `startSeason` is computed on the GAME clock, which runs 1989–2026 in
+every file including 1979, the same convention as `draftSeason`.
+
+**THE RULE. Any tool that places a person into a slot takes HIS attributes, not
+the slot's** — age, birth date, and everything derived from them travel with the
+man. A slot carries the job: rating, potential, the team's strength. It does not
+carry a birthday.
+
+**The proof the archive gave up**: one man appearing twice in a single file at
+two different ages, sixteen years apart, because each record wore its slot's age.
+Fixed in passing when those men were moved — the move tools took the man's own
+record — but fixing instances without fixing the mechanism means the next
+placement re-creates it, and **this session alone moved sixty-five coordinators.**
+
+**The gate: no two records of the same man in one file may differ in age.**
+Recorded namesakes are exempt, for the same reason they are exempt from the
+duplicate-names check: Jim Mora at 65 and his son at 39 in 2000 are two men and
+should differ.
+
+**It passes on all ten files today, so it was proved against the counterfactual
+it exists to prevent** — a fill writing a real man's name into a slot while his
+own record still stands elsewhere, which is exactly what the namesake guard
+refused three times this session. Injecting that case makes it fail: *one man,
+one age: paul|brown*. **A check that has only ever passed has not been tested;
+if the archive will not produce the failure, construct it.**
