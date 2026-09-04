@@ -1222,25 +1222,88 @@ is a third-party site's content.
    available check: where a second source (nflverse birth dates, a media guide)
    splits a man StatsCrew holds as one, that disagreement is a claim and surfaces
    as `contested` rather than being averaged away.
+
+   **A related and sharper problem now has a worked instance: the discriminator
+   itself can be contested.** Found 2026-09-04 in the `coachingtree` cache, on the
+   very person §2.4 uses as its example:
+
+   | | StatsCrew `c-allengeo001` | Coaching Tree cache |
+   |---|---|---|
+   | birth date | **April 29, 1922** | **1918-04-29** |
+   | college | Marquette | Alma |
+   | career span | 1966–1984 | 1957–1984 |
+
+   Same day and month, **four years apart on the year**. Two different colleges.
+   George Allen's birth year is genuinely disputed in the record, and he is
+   reported to have attended both colleges — so the "college disagreement" may be
+   two true facts and the birth-year disagreement a real one.
+
+   **The consequence for the model is the important part.** §2.4 leans on birth
+   date, and §9.2 has just established it is nearly always *present*. Presence is
+   not agreement. A `contested` birth date is a `contested` **discriminator**, and
+   a denotation resting on it inherits that. So a denotation records **which
+   source's birth date it matched against**, not merely that it matched one —
+   otherwise two denotations made against two disagreeing sources look identical
+   and the conflict is invisible.
+
+   The career-span row is incidental corroboration of an earlier finding: 1966–1984
+   against 1957–1984 is StatsCrew's `c-` namespace holding head-coaching years
+   only, confirmed from a second source.
 3. **Assistant coach coverage is absent, not thin.** Confirmed on Frank Gansz Jr.
    This is the finding that actually changes the plan — see §10.
 
-### 9.2 Birth-date coverage before about 1930
+### 9.2 ANSWERED 2026-09-04 — birth date holds all the way back
 
-The 1950 roster page carries a birth date per player. I have not checked 1920,
-1925, or the AAFC. Birth date is the discriminator §2.4 leans on hardest, and if
-it thins out in the earliest era then the earliest era needs a different declared
-discriminator — probably hometown plus college.
+**Measured across 25 league-years and ~4,613 players**, four teams sampled per
+league-year from StatsCrew roster pages. This was §10 step 2 and it is the
+measurement §2.4 leans on hardest.
 
-**PARTLY ANSWERED 2026-09-04, and the news is good.** Birth date is **91%**
-populated on the cached Akron 1920 roster page and **100%** on 1950, 1979, 2000
-and 2020 — see the table in §9.6. The earliest era is far better served than this
-section feared, so birth date likely remains the primary discriminator all the way
-back.
+| league-year | n | birth date | hometown | jersey `#` | GP | GS |
+|---|---|---|---|---|---|---|
+| APFA 1920 | 102 | **92.2%** | 89.2 | **60.4** | 100 | 100 |
+| NFL 1925 | 88 | 98.9 | 97.7 | **77.3** | 100 | 100 |
+| NFL 1930 | 125 | 96.8 | 98.4 | **87.2** | 100 | 100 |
+| NFL 1935 | 113 | **100** | 100 | 97.3 | 100 | 100 |
+| NFL 1940 / 1945 | 142 / 168 | 100 / 100 | 99.3 / 99.4 | 97.9 / 93.5 | 100 | 100 |
+| **AAFC 1946 / 1949** | 152 / 141 | **100 / 100** | 99.3 / 100 | 100 / 99.3 | 100 | 100 |
+| NFL 1950 / 1955 | 146 / 146 | 100 / 100 | 100 / 100 | 100 / 100 | 100 | 100 |
+| **AFL 1960 / 1965 / 1969** | 190 / 178 / 196 | **99.5 / 100 / 100** | 95.8 / 98.9 / 100 | 100 | 100 | 100 |
+| NFL 1960–2020 (7 samples) | 160–278 | **100** throughout | 98.2–100 | 100 | 100 | 100 |
+| WFL 1974 | 235 | 100 | 90.2 | 95.3 | **14.9** | **4.7** |
+| USFL 1984 | 268 | 99.3 | 94.0 | 89.2 | **76.9** | **65.7** |
+| XFL 2020 | 261 | **96.2** | **76.6** | 100 | 84.7 | 84.7 |
+| CFL 1979 | 187 | 100 | **74.3** | 90.9 | 100 | **4.7** |
 
-**Still owed:** one 1920 page at n=23 is indicative, not settled. Run the fill
-rate across a proper sample per decade, including the AAFC and both AFLs, before
-relying on it. Under an hour.
+**Birth date is ≥96% in every league-year sampled and 100% in 19 of 25.** The
+1920 Akron page that this section rested on (91%, n=23) was the worst case in the
+whole grid, and even it is usable. **The primary discriminator holds back to
+1920, and across the AAFC and both AFL samples**, which is where identity work
+was expected to be thinnest.
+
+**Three findings the measurement was not looking for:**
+
+1. **The era-dependent field is the jersey number, not birth date** — 60.4% in
+   1920, 77.3% in 1925, 87.2% in 1930, and only from 1935 does it reach 97%+.
+   That matches the 1920 Akron roster page having **no `#` column at all**. So
+   jersey is unusable as a discriminator before ~1935 and fine after, and the
+   source declaration should say so per era rather than per source.
+2. **Games played is a LEAGUE property, not an era property.** WFL 1974 records
+   GP for **14.9%** of players and GS for **4.7%**; CFL 1979 has GP at 100% and GS
+   at **4.7%**; USFL 1984 runs 76.9% / 65.7%. The NFL is 100% throughout. So
+   §9.6's **state 2** — a source with a GP column leaving the cell blank — is not
+   an edge case, it is the normal condition for the minor leagues, and any
+   roster-completeness check must be scoped per league or it will read the WFL as
+   catastrophically broken.
+3. **Hometown is the weakest field overall** — CFL 1979 at 74.3% and XFL 2020 at
+   76.6%, worse than anything in the 1920s. It is not a reliable fallback
+   discriminator despite being present on every page.
+
+**College is 100% in all 25 samples**, which supports its use as the 1979
+discriminator (§2.2 shape 1) and suggests it generalises.
+
+**Caveat: four teams per league-year is a sample, not a census.** It is enough to
+retire the concern this section was opened for, not enough to quote a fill rate
+for a whole league-year.
 
 ### 9.3 RULED — display name is era-scoped, with a defined fallback
 
@@ -1745,73 +1808,72 @@ no performance bonuses, no playoff shares.**
 **Manning at $600,000 still settles nothing** — a round number, an attractor, and
 uninformative in both directions whatever it matches.
 
-### Washington Post, Leonard Shapiro, on the 1978 season — RELAYED, not yet held
+### Washington Post, Leonard Shapiro, on the 1978 season — HELD AND VERIFIED
 
-**`acquisition: relayed`.** Ryan has a scan and will add it; until it is in
-`pgm3-sources/` **nothing here may become a claim.** Logged now because its
-*structural* content is evidence about the owed document and changes what would
-satisfy that debt.
+**Found 2026-09-04 inside a scan that arrived unlabelled.**
+`Midland_Reporter_Telegram_1979_02_10.pdf`, 24pp, 50,862,954 B, sha256
+`7e92474c6d78ff29ba0a87023abbbe8d065263524408de795542f13f8bfcca4f`. The story is
+on **PDF p.9**, bylined *"By LEONARD SHAPIRO / The Washington Post"*. It is the
+article report 05 logged as `relayed`, and it is now **`acquisition: held`**.
 
-**It describes the OWED table's full shape, from someone holding it:**
+    stated_by     Midland Reporter-Telegram
+    attribution   ["Washington Post (Shapiro)", "NFL Management Council survey"]
+
+**Two removes** — shorter than the Cowboys story's three, and the origin is
+**named**: the Management Council. That makes it the best-provenanced salary
+source this project holds.
+
+**Verified verbatim, and every relayed figure was correct.** League average rose
+**13.2%** from **$55,000** (1977) to **$62,585** (1978), *"computed by the NFL's
+Management Council"*. Exclusions confirmed: *"did not include performance
+(incentive) clauses or playoff money."*
+
+Positional average **increases** 1977→1978 — deltas, not levels — QB +$13,000,
+OL +$8,000, LB +$8,000, DL +$7,000, DB +$7,000, K +$7,000, WR +$6,000,
+RB +$2,000.
+
+Nineteen named players, covering the positions every other source misses:
+Simpson **$733,358**, Payton **$431,500**, Tarkenton **$360,000**, Pastorini
+**$358,333**, Stabler **$342,000**, Riggins **$300,000**, Jackson **$237,657**,
+Kilmer **$230,000**, Bergey **$213,333**, Campbell **$199,666**, Greene
+**$174,000**, Hannah **$173,966**, Blount **$141,870**, Hanburger **$125,000**,
+Curtis **$115,000**, Talbert **$105,000**, McDole **$100,000**, Houston
+**$96,000**, Yepremian **$90,000**.
+
+**The structural description, verbatim, and it is the most valuable sentence:**
 
 > *The Management Council also broke down salaries from first-year players to
 > 20-year players, by position, listing the highest salary paid, the lowest salary
 > paid, the average and the median salary.*
 
-**That is the table's dimensions, stated by a witness**: position × service year
-(1st through 20th), **four statistics per cell** — high, low, average, **median**.
-The hearing proved the document existed; Dean's agent read one cell aloud; this
-names the axes and the cell contents.
+**And the split between released and withheld, also verbatim:** the by-position
+average and median figures were *"made public recently"* — dating that release to
+early 1979 — while the service-year breakdown was *"not made public"*.
 
-**Three things it adds beyond the numbers:**
+**Three provenance tiers inside one article, all marked by the author** (§3.6):
 
-1. **It distinguishes released from withheld.** Averages and medians by position
-   were made public; **the service-year breakdown was not.** That narrows the
-   search: the public half may survive in contemporary reporting, the valuable
-   half only in Management Council, agent or litigation papers.
-2. **The author declares his own derivation** — *"Using those figures (which were
-   not made public), previously published salary estimates and interviews with
-   several highly placed NFL sources, it is possible to deduce…"* That is
-   **`source_derived` announced by the source**, which is better than the 2002
-   primer's silence and better than most of what this project holds.
-3. **Three provenance tiers inside one article, marked by the author** — stated as
-   fact for most figures, explicitly hedged for two (*"is believed to have
-   earned"*, Blount and Talbert), and the deduction method disclosed for the rest.
-   Per §3.6 each tier gets its own attribution, and the hedged pair must not be
-   flattened into the rest.
+1. **Stated as fact** — most figures.
+2. **Explicitly hedged** — Blount and Talbert both *"is believed to have earned"*.
+   These must not be flattened into tier 1.
+3. **Declared derivation** — *"Using those figures (which were not made public),
+   previously published salary estimates and interviews with several highly placed
+   NFL sources, it is possible to deduce…"* `source_derived`, **announced by the
+   source**, which is better than the 2002 primer's silence.
 
-**Relayed content, to be verified against the scan:** 1978 league average
-**$62,585**, up 13.2% from **$55,000** in 1977, same exclusions. Positional
-*increases* 1977→1978 — deltas, not levels — QB +$13,000, OL +$8,000, LB +$8,000,
-DL +$7,000, DB +$7,000, K +$7,000, WR +$6,000, RB +$2,000. Nineteen named players
-covering the positions the other articles miss: offensive line, linebacker,
-defensive back, kicker.
+**The deduction method is described concretely, and it tells us what the withheld
+table contains.** Shapiro identifies Simpson as one of *only three* 10-year veteran
+running backs active in 1978, and notes *"only two 14th-year linebackers in the
+NFL in 1978 and both were Redskins"* before naming Hanburger and Curtis. **At high
+service years the table's cells hold one, two or three men** — so the withheld
+half is not merely aggregate, it is close to individual for veterans. That raises
+its value and is a concrete argument for chasing it.
 
-**And the item that bears directly on §8.4:** Ed Garvey, NFLPA executive director,
-on the Management Council's figures — *"on the whole are accurate. I have no
-reason to doubt them."* **The opposing party declining to dispute them.**
-
-That is **not** a League-original source and does not discharge the debt. But it
-is the same two organisations, a year before the hearing, and it is the NFLPA
-conceding rather than contesting — which is evidence of a different and stronger
-kind than either party's own assertion. Weigh it when the scan lands.
-
-### The method this opens — reconstruct the table one dispute at a time
-
-Every holdout of 1980–83 had an agent quoting the same survey. UPI's archive is
-free and fetchable, and each story yields another cell.
-
-**Not the document — a reconstruction of it.** Search UPI 1980–83 for `NFL
-salary`, `salary schedule`, `holdout`, plus position words. Ryan is running that
-search; cells get logged here as they arrive, each with its own attribution chain
-and its own dating problem, because "the recent schedule" will recur.
-
-**Two cautions for whoever assembles it.** Cells gathered this way are quoted by
-*agents in active disputes* — a population selected for grievance, so the figures
-an agent chooses to read aloud are the ones that support a holdout. And a cell's
-cohort definition must be read exactly: this article gives a **six-year** high and
-low against an **all-players** average, and conflating them would put Dean's
-$65,000 against the wrong benchmark.
+**Garvey, verified verbatim:** *"the figures released by the Management Council
+'on the whole are accurate. I have no reason to doubt them.'"* The NFLPA's
+executive director declining to dispute the League's figures, a year before the
+hearing where the two organisations disagree. **Not a League-original source** —
+it does not discharge the debt — but a concession is evidence of a different kind
+from either party's own assertion, and it bears directly on §8.4.
 
 ### OWED: a League-original source
 
