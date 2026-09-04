@@ -1,0 +1,45 @@
+"For each man below: look at the photos, then write his hair colour in the verdict column."
+black   brown   light brown   blond   red   grey   bald   skip
+Use skip if the photos do not let you tell.
+
+name,position,team,season,verdict,photos
+Don Cockroft,K,Cleveland Browns,1979,,https://www.google.com/search?tbm=isch&q=Don%20Cockroft%20K%20Cleveland%20Browns%201979%20NFL
+Jack Lambert,MLB,Pittsburgh Steelers,1979,,https://www.google.com/search?tbm=isch&q=Jack%20Lambert%20MLB%20Pittsburgh%20Steelers%201979%20NFL
+Jon Kolb,OT,Pittsburgh Steelers,1979,,https://www.google.com/search?tbm=isch&q=Jon%20Kolb%20OT%20Pittsburgh%20Steelers%201979%20NFL
+Mike Webster,C,Pittsburgh Steelers,1979,,https://www.google.com/search?tbm=isch&q=Mike%20Webster%20C%20Pittsburgh%20Steelers%201979%20NFL
+Carl Mauck,C,Houston Oilers,1979,,https://www.google.com/search?tbm=isch&q=Carl%20Mauck%20C%20Houston%20Oilers%201979%20NFL
+Keith Fahnhorst,OT,San Francisco 49ers,1986,,https://www.google.com/search?tbm=isch&q=Keith%20Fahnhorst%20OT%20San%20Francisco%2049ers%201986%20NFL
+Larry Cole,DE,Dallas Cowboys,1979,,https://www.google.com/search?tbm=isch&q=Larry%20Cole%20DE%20Dallas%20Cowboys%201979%20NFL
+Pat Haden,QB,Los Angeles Rams,1979,,https://www.google.com/search?tbm=isch&q=Pat%20Haden%20QB%20Los%20Angeles%20Rams%201979%20NFL
+Jan Stenerud,K,Kansas City Chiefs,1979,,https://www.google.com/search?tbm=isch&q=Jan%20Stenerud%20K%20Kansas%20City%20Chiefs%201979%20NFL
+Dave Edwards,S,Pittsburgh Steelers,1986,,https://www.google.com/search?tbm=isch&q=Dave%20Edwards%20S%20Pittsburgh%20Steelers%201986%20NFL
+Louie Kelcher,DT,San Diego Chargers,1979,,https://www.google.com/search?tbm=isch&q=Louie%20Kelcher%20DT%20San%20Diego%20Chargers%201979%20NFL
+Dave Elmendorf,S,Los Angeles Rams,1979,,https://www.google.com/search?tbm=isch&q=Dave%20Elmendorf%20S%20Los%20Angeles%20Rams%201979%20NFL
+Mike McCoy,CB,Green Bay Packers,1979,,https://www.google.com/search?tbm=isch&q=Mike%20McCoy%20CB%20Green%20Bay%20Packers%201979%20NFL
+A.J. Duhe,DE,Miami Dolphins,1979,,https://www.google.com/search?tbm=isch&q=A.J.%20Duhe%20DE%20Miami%20Dolphins%201979%20NFL
+Bob Klein,TE,San Diego Chargers,1979,,https://www.google.com/search?tbm=isch&q=Bob%20Klein%20TE%20San%20Diego%20Chargers%201979%20NFL
+Mike McCoy,DT,New York Giants,1979,,https://www.google.com/search?tbm=isch&q=Mike%20McCoy%20DT%20New%20York%20Giants%201979%20NFL
+Ed White,OG,San Diego Chargers,1979,,https://www.google.com/search?tbm=isch&q=Ed%20White%20OG%20San%20Diego%20Chargers%201979%20NFL
+Craig Morton,QB,Denver Broncos,1979,,https://www.google.com/search?tbm=isch&q=Craig%20Morton%20QB%20Denver%20Broncos%201979%20NFL
+Paul Krause,S,Minnesota Vikings,1979,,https://www.google.com/search?tbm=isch&q=Paul%20Krause%20S%20Minnesota%20Vikings%201979%20NFL
+Wally Hilgenberg,OLB,Minnesota Vikings,1979,,https://www.google.com/search?tbm=isch&q=Wally%20Hilgenberg%20OLB%20Minnesota%20Vikings%201979%20NFL
+Joe Ferguson,QB,Buffalo Bills,1979,,https://www.google.com/search?tbm=isch&q=Joe%20Ferguson%20QB%20Buffalo%20Bills%201979%20NFL
+John Fitzgerald,C,Dallas Cowboys,1979,,https://www.google.com/search?tbm=isch&q=John%20Fitzgerald%20C%20Dallas%20Cowboys%201979%20NFL
+Ron Yary,OT,Minnesota Vikings,1979,,https://www.google.com/search?tbm=isch&q=Ron%20Yary%20OT%20Minnesota%20Vikings%201979%20NFL
+Jerry Sherk,DT,Cleveland Browns,1979,,https://www.google.com/search?tbm=isch&q=Jerry%20Sherk%20DT%20Cleveland%20Browns%201979%20NFL
+Eddie Brown,WR,Cincinnati Bengals,1986,,https://www.google.com/search?tbm=isch&q=Eddie%20Brown%20WR%20Cincinnati%20Bengals%201986%20NFL
+Tom DeLeone,C,Cleveland Browns,1979,,https://www.google.com/search?tbm=isch&q=Tom%20DeLeone%20C%20Cleveland%20Browns%201979%20NFL
+George Buehler,OG,Cleveland Browns,1979,,https://www.google.com/search?tbm=isch&q=George%20Buehler%20OG%20Cleveland%20Browns%201979%20NFL
+Bobby Bryant,CB,Minnesota Vikings,1979,,https://www.google.com/search?tbm=isch&q=Bobby%20Bryant%20CB%20Minnesota%20Vikings%201979%20NFL
+Ray Guy,P,Oakland Raiders,1979,,https://www.google.com/search?tbm=isch&q=Ray%20Guy%20P%20Oakland%20Raiders%201979%20NFL
+Dave Casper,TE,Oakland Raiders,1979,,https://www.google.com/search?tbm=isch&q=Dave%20Casper%20TE%20Oakland%20Raiders%201979%20NFL
+Joe DeLamielleure,OG,Buffalo Bills,1979,,https://www.google.com/search?tbm=isch&q=Joe%20DeLamielleure%20OG%20Buffalo%20Bills%201979%20NFL
+Ted Hendricks,OLB,Oakland Raiders,1979,,https://www.google.com/search?tbm=isch&q=Ted%20Hendricks%20OLB%20Oakland%20Raiders%201979%20NFL
+Ken Stabler,QB,Oakland Raiders,1979,,https://www.google.com/search?tbm=isch&q=Ken%20Stabler%20QB%20Oakland%20Raiders%201979%20NFL
+Bob Chandler,WR,Buffalo Bills,1979,,https://www.google.com/search?tbm=isch&q=Bob%20Chandler%20WR%20Buffalo%20Bills%201979%20NFL
+Jack Youngblood,DE,Los Angeles Rams,1979,,https://www.google.com/search?tbm=isch&q=Jack%20Youngblood%20DE%20Los%20Angeles%20Rams%201979%20NFL
+Bob Kuechenberg,OT,Miami Dolphins,1979,,https://www.google.com/search?tbm=isch&q=Bob%20Kuechenberg%20OT%20Miami%20Dolphins%201979%20NFL
+Vern Den Herder,DE,Miami Dolphins,1979,,https://www.google.com/search?tbm=isch&q=Vern%20Den%20Herder%20DE%20Miami%20Dolphins%201979%20NFL
+Fred Dryer,DE,Los Angeles Rams,1979,,https://www.google.com/search?tbm=isch&q=Fred%20Dryer%20DE%20Los%20Angeles%20Rams%201979%20NFL
+Bob Young,OG,St. Louis Cardinals,1979,,https://www.google.com/search?tbm=isch&q=Bob%20Young%20OG%20St.%20Louis%20Cardinals%201979%20NFL
+Dan Pastorini,QB,Houston Oilers,1979,,https://www.google.com/search?tbm=isch&q=Dan%20Pastorini%20QB%20Houston%20Oilers%201979%20NFL

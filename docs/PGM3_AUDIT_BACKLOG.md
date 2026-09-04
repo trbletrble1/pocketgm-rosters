@@ -3027,4 +3027,41 @@ mapping, not the data: a second photo pass on light-skinned men would settle
 which of two mappings is right, and it needs far fewer than a hundred — the
 question is one bit (is value 2 brown or light brown, is 1 blond or red), and
 thirty light-skinned men with clear photographs would carry it. Hair style has
-no Mike field at all. **Nothing merged. Proposal in the report.**
+no Mike field at all. **Nothing merged.**
+
+**RULED 2026-09-03: facial hair and hair style CLOSED** — no field on Mike's
+side for either, and no photo pass can create one. **Hair colour: a photo pass.**
+`wip/hair_colour_for_ryan.csv`, 40 light-skinned pre-1990 men where the two
+mappings give different answers — 16 on the blond-versus-red question (PHCL 1,
+decided so far on four men and none of them blond), 12 each on PHCL 2 and 4 —
+weighted toward men with more Mike files and higher ratings, since those have
+photographs. Options wider than the two bits need, by ruling: black, brown,
+light brown, blond, red, grey, bald, skip — a sheet offering only brown and
+light brown to a plainly blond man would be a defect of ours. The sheet carries
+no `PHCL` and no archive colour; the answer key is `wip/hair_colour_for_ryan.key.json`.
+
+**Stated precisely, as ruled:** if the best-fit reading holds, **1,339 men in
+1979 have brown and light brown transposed**, and the 594 and 414 disagreements
+are almost entirely that one pair. Not two sources disagreeing about players —
+one mapping question with a thousand records behind it.
+
+
+---
+
+### 59. 1979's beards were a flat uniform draw — redrawn from the archive's own shape
+
+**2026-09-03, found in item 58's decode, fixed separately by ruling.** 1979's
+beard style letters sat at 194–249 each on rostered men — a uniform draw across
+the eight tokens — where every other file has clean-shaven `g` dominant and a
+consistent shape. No beard source exists (Madden bakes facial hair into the head
+model), so the target is the archive's own shape: the pooled distribution of the
+nine other files' rostered men, **conditioned on skin class** — light-skinned
+men 33% clean-shaven, dark-skinned 26%, the fuller styles a little more common
+among the latter — drawn seeded on name|position. `tools/fix_1979_beards.py`.
+
+2,545 of 3,053 records moved, beard slot only; the colour digit (shared with
+hair and eyebrows) untouched; verified faces untouched. Rostered `g` 486 → 889.
+Faces gate unchanged (18 / 18), roster gate ALL CLEAR. **Beard is not gated
+across seasons**, so a 1979 man who also sits in 1986 may wear a different
+generated style there — the same class of thing as the hair-style randomness
+the handoff already records, and out of scope here.
