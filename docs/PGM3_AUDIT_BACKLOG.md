@@ -3532,3 +3532,48 @@ a claim nothing supports.
 **No same-man exemption was added to the duplicate check**, per the ruling: a
 check with two kinds of exemption is one nobody trusts. The sidecar row was
 rewritten in place, CRLF preserved.
+
+### 69. The coordinator gap, measured — and the benchmark for testing any coordinator source
+
+Head coaches are effectively solved: **319 of 320 employed head-coach records
+across the ten files are real, 99.7%.** Everything below that is where the
+archive stops.
+
+| role | real | invented | real |
+|---|---|---|---|
+| Head Coach | 319 | 1 | 99.7% |
+| Off Co-ord | 275 | 45 | 85.9% |
+| Def Co-ord | 271 | 49 | 84.7% |
+| Special Teams | 252 | 68 | 78.8% |
+| Head Scout | 35 | 285 | 10.9% |
+| Off / Def Scout | 27 | 613 | 4.2% |
+| Physios | 21 | 619 | 3.3% |
+
+**2,880 employed staff, 1,200 real (41.7%).** Scouts and physios are the
+standing generated exception and are not a sourcing problem. **The three
+coordinator roles are: 798 real against 162 invented**, and the invented ones
+are concentrated — **1979 carries 65 of its 96, 2010 carries 36**, while 2000
+and 2026 carry none at all.
+
+**THE BENCHMARK, for the three questions Ryan wants asked of any coordinator
+source: 1979 Pittsburgh.** Our file holds one sourced man and eight invented:
+
+| role | ours | provenance |
+|---|---|---|
+| Head Coach | Chuck Noll | sourced |
+| Off Co-ord | Jermaine Turner | invented |
+| Def Co-ord | Denholm Wojcik | invented |
+| Special Teams | Godric Dunmore | invented |
+| the five scout and physio slots | generated | the standing exception |
+
+A source that can name the 1979 Steelers' coordinators replaces three invented
+men on the most documented staff of the era. **If it cannot do 1979 Pittsburgh
+it cannot do 1979**, which is where two thirds of the remaining gap sits.
+
+**Score before applying, on the Wayne Fontes rule.** The PSF coach set reads
+Wayne Fontes as Detroit's 1986 head coach, a job he did not hold until 1988 —
+one checkable error found by looking at one row. Any coordinator source gets the
+same treatment: a sample scored against a real reference before a single record
+is written, because a source that is right about head coaches is not thereby
+right about coordinators, and a name that is right for a franchise is not
+thereby right for a year.
