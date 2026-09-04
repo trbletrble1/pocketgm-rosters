@@ -259,7 +259,20 @@ def main():
     # so no skin claim is in dispute -- it looks like the 1986 block was built
     # on a different family convention rather than a statement about any man.
     #
-    # --staff applies the reconciliation once that ruling exists.
+    # RULED 2026-09-03 and applied with --staff. Of the 40 disputed coaches
+    # exactly ONE is verified -- Jim Mora -- and all 18 verified staff faces are
+    # 1986 faces. So the ruling that loses no hand-set data is:
+    #
+    #   * a verified 1986 face wins and propagates FORWARD, which is precisely
+    #     what shipped for Flutie, Rice and Reggie White among the players;
+    #   * for the other 39, neither block is evidence about the man -- the 1986
+    #     values are family 2 where the modern are family 1, on the same side of
+    #     the light/dark line, which is a convention and not a claim -- so the
+    #     value carried by most of his files becomes canonical.
+    #
+    # That rewrites 47 pre-1990 records rather than 130 modern ones, overwrites
+    # no verified face, and keeps the gate at full strength: era-scoping stays
+    # legitimate for men who appear in ONE era, which is what the block is for.
     changed_s = collections.Counter()
     for k, v in (staff.items() if '--staff' in sys.argv else []):
         if len({y for y, _ in v}) < 2:
@@ -267,7 +280,16 @@ def main():
         arrays = {tuple(p['appearance']) for _, p in v}
         if len(arrays) < 2:
             continue
-        ver = reg.get('staff_faces', {}).get(k) if k in vstaff_names else None
+        # EVERY hand-set staff face in the project is a 1986 face -- all 18
+        # verified staff entries carry season 1986 -- so a verified coach is
+        # looked up in the ERA block first, exactly as the players are. Reading
+        # `staff_faces` first would make an unverified modern value canonical
+        # and then quietly overwrite the verified one.
+        ver = None
+        if k in vstaff_names:
+            ver = reg.get('staff_faces_1986', {}).get(k)
+            if not isinstance(ver, list):
+                ver = reg.get('staff_faces', {}).get(k)
         if ver:
             want = list(ver)
         else:

@@ -3358,3 +3358,37 @@ colour, facial hair and the balding axis together. **What a working pass needs:
 face detection placing the sample region rather than whatever placed it here, a
 key of name plus position, and the same scoring against the same 61 before
 anything is applied to a file.**
+
+#### 54 CLOSED 2026-09-03 — the staff half ruled: verified wins and propagates, otherwise the majority of a man's files
+
+The escalation was answered by a measurement rather than a preference, and the
+measurement is decisive: **all 18 hand-set staff faces in the project are 1986
+faces, and exactly ONE of the 40 disputed coaches is among them — Jim Mora.**
+
+That kills the simple reading of "one canonical face per coach, modern block
+wins": it would overwrite Ryan's hand-set Mora. And it makes the third option
+the obvious one, because it is not a new principle — **it is precisely the rule
+that shipped for the players an hour earlier**, when Flutie's, Rice's and Reggie
+White's verified 1986 faces propagated forward onto their 2000 and 2004 records.
+
+**The ruling.** A verified face wins and propagates forward. For a coach with no
+verified face neither block is evidence about the man — the 1986 values are
+family 2 where the modern ones are family 1, on the same side of the light/dark
+line, which is a convention in the block and not a claim about anyone — so the
+value carried by most of his files becomes canonical.
+
+**51 records rewritten: 46 pre-1990 (1979 seven, 1986 thirty-nine) and five
+modern.** The five modern are Jim Mora's four, carrying his verified 1986 face
+into 2000, 2004, 2007 and 2010, and one Frank Gansz record where two of his
+three files agree against 2000. **All 18 verified faces intact, asserted after
+the write.** It rewrites 47 records rather than the 130 the other direction
+would have cost.
+
+**Era-scoping survives where it belongs.** The 1986 blocks still govern every
+man who appears in ONE era, which is what they were built for. The contradiction
+was only ever about men who appear in both, and there the canonical rule wins.
+
+**All four gates now pass on all twenty files** except two failures that predate
+this work and are unrelated to faces: 2021's free-agent injuryProne median and
+2000's two duplicate staff names (Dick LeBeau and Jim Mora, both real men
+appearing twice).
