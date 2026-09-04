@@ -34,7 +34,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,265755B1-9A6D-D6C8-50C0-A5422EAA0737,Off Co-ord,ATL,Kevin Thornton,Kevin Thornton,invented,exact (wip/staff_1979.csv)
 1979,4BAC2783-9BE1-9D82-F6D5-F94666F7A043,Off Co-ord,BAL,Elvin Thurman,Caspian Brooks,invented,exact (wip/staff_1979.csv)
 1979,BA47085C-DCDA-AB2F-96DB-2B9B586BC2F6,Off Co-ord,BUF,Garo Whitehurst,Ray Prochaska,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 BUF; age not sourced, slot age retained"
-1979,C77E06F2-53EE-26E9-1964-462CE5138907,Off Co-ord,CHI,Aaron Parsons,Quill Yardley,invented,exact (wip/staff_1979.csv)
+1979,C77E06F2-53EE-26E9-1964-462CE5138907,Off Co-ord,CHI,Aaron Parsons,Ken Meyer,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 CHI. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
 1979,FD08C74D-B971-4DFC-EBE2-45B92B4AD68A,Off Co-ord,CIN,Wilbur Browning,Kirk Marchbanks,invented,exact (wip/staff_1979.csv)
 1979,030FE3FA-90A5-42A5-F58A-87F411CF1251,Off Co-ord,CLE,Craig Payton,Dan Petrosian,invented,exact (wip/staff_1979.csv)
 1979,E30A2CC0-DD36-E2DE-298D-3251E24DEF8D,Off Co-ord,DAL,Dwight Tyler,Dan Reeves,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 DAL; age not sourced, slot age retained"
@@ -46,7 +46,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,072905F0-26B4-E557-AE3D-01A8CE4C477A,Off Co-ord,LAR,Lionel Taylor,Lionel Taylor,sourced,exact (wip/staff_1979.csv)
 1979,7D5EF07C-EADF-68AA-F6C9-7CCE101C8C27,Off Co-ord,MIA,Russ Shirk,Quill Eastleigh,invented,exact (wip/staff_1979.csv)
 1979,11CE0BCB-BE2C-AF91-FD8C-3A28F9B6911D,Off Co-ord,MIN,Virgil Theismann,Jerry Burns,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 MIN; age not sourced, slot age retained"
-1979,814F0554-069D-D30A-E319-66F32122A622,Off Co-ord,NE,Jessie Feacher,Isaiah Roberts,invented,exact (wip/staff_1979.csv)
+1979,814F0554-069D-D30A-E319-66F32122A622,Off Co-ord,NE,Jessie Feacher,Jim Ringo,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 NE. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
 1979,3B0365F6-B959-2DF5-9583-4B915A0F037F,Off Co-ord,NO,Ed Hughes,Ed Hughes,sourced,exact (wip/staff_1979.csv)
 1979,52F2170D-ABD8-0537-6DDF-8FBCF3BD108D,Off Co-ord,NYG,Craig Harrison,Craig Harrison,invented,exact (wip/staff_1979.csv)
 1979,675F0E1D-9A41-0C95-2ECA-A0F74CAA69E8,Off Co-ord,NYJ,Amos Elias,John Idzik,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 NYJ; age not sourced, slot age retained"
@@ -56,7 +56,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,2155C740-EC55-012F-E9C0-CF0D1D2AA27A,Off Co-ord,LAC,Walt Csonka,Joe Gibbs,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 LAC; age not sourced, slot age retained"
 1979,5C1ABC29-8A52-1C9B-0826-0A5AFB75B603,Off Co-ord,SEA,Louis Manucci,Zigmund Fairholm,invented,exact (wip/staff_1979.csv)
 1979,27C2DE33-3C6A-2ED5-6BBC-47B7476E0AD8,Off Co-ord,SF,Lem Kuykendall,Wes Quillen,invented,exact (wip/staff_1979.csv)
-1979,0C28EC97-1B2A-D5FE-FFD6-6EC22086A78E,Off Co-ord,ARI,Elvis Fugett,Tony Thornton,invented,exact (wip/staff_1979.csv)
+1979,0C28EC97-1B2A-D5FE-FFD6-6EC22086A78E,Off Co-ord,ARI,Elvis Fugett,Tom Bettis,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 ARI. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
 1979,82239F00-9BB5-1085-C4FF-F4E03AAC5E1E,Off Co-ord,TB,William Johnson,Bob Adams,invented,exact (wip/staff_1979.csv)
 1979,6BA98DA5-D54B-787A-D791-7D1EB6BD7342,Off Co-ord,WAS,Joe Walton,Joe Walton,sourced,exact (wip/staff_1979.csv)
 1979,2FE0603D-FAA8-1D95-958F-FF1DDBB6C6FB,Off Co-ord,TEN,Ray Rozier,Gary Duffner,generated (franchise did not exist that season),"TEN did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
@@ -301,14 +301,11 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,5CA8A5ED-B425-510D-B5A5-C234F07CFCFA,Head Coach,Free Agent,John North,John North,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,6FEF0398-2B42-5F68-A244-96F2D873909A,Head Coach,Free Agent,Pete McCulley,Pete McCulley,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,8C04958E-4E0A-5ADA-A1C2-A8D364E78A24,Head Coach,Free Agent,Fred O'Connor,Fred O'Connor,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,7C7FEA59-3486-55AA-9E88-1986DA968ABA,Head Coach,Free Agent,Ken Meyer,Ken Meyer,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,216B2587-C78B-58C7-867C-0576D275D886,Head Coach,Free Agent,Tom Bettis,Tom Bettis,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,DE7F4F49-5098-55B1-9643-C68EE58DBA03,Head Coach,Free Agent,Dick Modzelewski,Dick Modzelewski,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,728E017C-C531-5AA0-9F95-DCF985E1B035,Head Coach,Free Agent,Pat Peppler,Pat Peppler,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,9C29DCD3-E40D-5E80-B9CC-9421DDAC8F7A,Head Coach,Free Agent,Lou Holtz,Lou Holtz,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,E7BD7274-D99C-5AEA-9EC8-2067CEE63C0B,Head Coach,Free Agent,Ernie Hefferle,Ernie Hefferle,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,01492D1D-1F01-58E0-99B0-F9107B775F67,Head Coach,Free Agent,Ken Shipp,Ken Shipp,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,90A44F58-EE6E-5B05-9FD6-FE2E0C2993D0,Head Coach,Free Agent,Jim Ringo,Jim Ringo,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,C0CBCCA2-909F-5821-A7C6-819304D13C81,Head Coach,Free Agent,Blanton Collier,Blanton Collier,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,CD898402-21F6-58ED-85A4-DAC9DC59102A,Head Coach,Free Agent,Hamp Pool,Hamp Pool,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,276F6FF4-7AB2-525C-93AC-D82E5F8049D1,Head Coach,Free Agent,Luke Johnsos,Luke Johnsos,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)

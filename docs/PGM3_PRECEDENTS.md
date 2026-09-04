@@ -4907,3 +4907,44 @@ tested returns a clean result and means nothing.**
 archive's rookie median, which is suggestive and no more. The distribution
 identified the source. Compare shapes, not centres, when the question is "where
 did this come from".
+
+## The absence of a positive marker is not a negative one
+
+2026-09-04. I reported that 2010 carried "36 invented coordinator records" and
+Ryan ruled on that number. It was wrong. My classifier read the provenance
+sidecar and called a record invented whenever its value did not begin `real`,
+`sourced` or `named`. All 36 of 2010's actually read **`unknown (no real source,
+not from the invented lists)`** — which says the opposite of invented: it says
+nobody has checked. Against the Coaching Tree, **29 of the 36 were already the
+right man**, 22 of them stored with an initial (`D. Toub` for Dave Toub).
+
+**A test built as "not positively marked, therefore bad" manufactures defects.**
+It reported a hole where there was a column of unverified abbreviations, and it
+would have had a tool rewrite 29 correct records to "fix" them.
+
+The vocabulary a project actually uses is data, not decoration. This sidecar
+carries eight distinct provenance values and three of them are shades of "we do
+not know", which is a different state from "we made it up" and a different state
+again from "we checked". **Enumerate the values before writing a predicate over
+them** — one `Counter` over the column would have caught this before the report,
+let alone the ruling.
+
+## Check the file, not the framing — including your own
+
+Same pass, and the more dangerous of the two. I described 1979's four
+non-existent franchises as Carolina, Jacksonville, the Ravens and the Texans,
+and wrote that into a tool. **The 1979 file uses HISTORICAL team ids**: its
+Baltimore Colts sit at `BAL` and its Houston Oilers at `HOU`, both already
+carrying the real Maxie Baughan, George Boutselis, Ed Biles and John Paul Young,
+marked `sourced`. The ids with no 1979 team behind them are **IND and TEN** —
+the modern ids of those same two franchises.
+
+Had the pass trusted the framing it would have relabelled four real sourced
+coordinators as "this franchise did not exist", **which is the exact opposite of
+the truth, on the records most worth protecting.** What caught it was a
+diagnostic printing the current provenance of every record the tool was about to
+touch — not the plan, and not the reasoning that produced the plan.
+
+**Print what you are about to overwrite, keyed by what makes it valuable.** A
+count of records to be changed would not have caught this; a count of records to
+be changed BROKEN DOWN BY THEIR CURRENT PROVENANCE did, immediately.
