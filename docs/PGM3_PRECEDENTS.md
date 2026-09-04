@@ -4794,3 +4794,22 @@ James Joneses of 1986, Mark Brown, and the rename's cross-file repeats). **A
 name is a lookup key only inside one file and one season. Across files it is a
 hypothesis, and the check is cheap: list what the name reaches before you write
 to it.**
+
+---
+
+## A field that agrees with something you already know is not evidence about the thing you don't
+
+**2026-09-03.** Mike's `PHCL`, collapsed to black versus not-black, scored **90%**
+over the men with photographic truth. It was refused, because dark-skinned men
+sit at `PHCL 0` **99%** of the time and light-skinned men **11%** — the field was
+largely restating skin, which the project already holds from a source that beat
+the archive 95 to 4. **Restricted to light-skinned men, where the open question
+actually lives, it scored 86% against a 91% base rate for the constant answer
+"not black" — worse than guessing**, and it was right about one of the six such
+men it called black.
+
+Same family as the Mike files' shared 2003 base reading 98% because the anchor
+set lived inside it: **a headline accuracy is only evidence to the extent the
+test population contains the disagreement.** Before accepting a source on a
+score, condition on what is already known and re-score on the remainder. If the
+number collapses, the source was agreeing with the old evidence, not adding new.

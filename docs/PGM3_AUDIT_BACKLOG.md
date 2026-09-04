@@ -3076,6 +3076,13 @@ splits 7 to 4. **Black versus not-black is solid and we already have it from
 skin; everything above it is noise in the source and in the evidence.** The
 five-way colour distinction is a two-way one wearing five labels.
 
+**The limit of the evidence, stated plainly.** The sheet deliberately excluded
+`PHCL 0` — correct for choosing between the two candidate mappings, since 0 is
+black under both and there was no question to ask — which left the coarse test
+resting on the older verified set, and its deciding half on **79 light-skinned
+men**. **Enough to refuse a merge, not enough to accept one.** If hair colour is
+ever reopened, the pass that reopens it must include `PHCL 0` men.
+
 Verdicts kept in `wip/hair_colour_verdicts_ryan.csv`.
 
 
@@ -3129,3 +3136,8 @@ rather than merely arbitrary, and separates the two axes so a fix can treat
 them differently. **Measured and logged, not fixed** — the fix is a distribution
 question (what share of 25-year-old professional athletes visibly recede) and it
 belongs with the hair-style work, not with hair colour, which is now closed.
+There is no source on the other side: Mike carries no hair-style field either.
+
+**If hair style ever gets a pass, 1979's 452 balding men at a median age of 25
+is the number to fix first.** It is the visible instance — a quarter of a
+1970s roster receding or shaved at 25 — and the one a reader meets.
