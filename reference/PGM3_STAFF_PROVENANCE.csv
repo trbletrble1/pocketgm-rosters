@@ -33,11 +33,11 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,55F79DC1-C914-742F-8A0C-DD36C2A7AD3A,Head Coach,IND,John Madden,John Madden,named by Ryan,exact (wip/staff_1979.csv)
 1979,265755B1-9A6D-D6C8-50C0-A5422EAA0737,Off Co-ord,ATL,Kevin Thornton,Kevin Thornton,invented,exact (wip/staff_1979.csv)
 1979,4BAC2783-9BE1-9D82-F6D5-F94666F7A043,Off Co-ord,BAL,Elvin Thurman,Caspian Brooks,invented,exact (wip/staff_1979.csv)
-1979,BA47085C-DCDA-AB2F-96DB-2B9B586BC2F6,Off Co-ord,BUF,Garo Whitehurst,Thomas Walton,invented,exact (wip/staff_1979.csv)
+1979,BA47085C-DCDA-AB2F-96DB-2B9B586BC2F6,Off Co-ord,BUF,Garo Whitehurst,Ray Prochaska,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 BUF; age not sourced, slot age retained"
 1979,C77E06F2-53EE-26E9-1964-462CE5138907,Off Co-ord,CHI,Aaron Parsons,Quill Yardley,invented,exact (wip/staff_1979.csv)
 1979,FD08C74D-B971-4DFC-EBE2-45B92B4AD68A,Off Co-ord,CIN,Wilbur Browning,Kirk Marchbanks,invented,exact (wip/staff_1979.csv)
 1979,030FE3FA-90A5-42A5-F58A-87F411CF1251,Off Co-ord,CLE,Craig Payton,Dan Petrosian,invented,exact (wip/staff_1979.csv)
-1979,E30A2CC0-DD36-E2DE-298D-3251E24DEF8D,Off Co-ord,DAL,Dwight Tyler,Jedd Russell,invented,exact (wip/staff_1979.csv)
+1979,E30A2CC0-DD36-E2DE-298D-3251E24DEF8D,Off Co-ord,DAL,Dwight Tyler,Dan Reeves,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 DAL; age not sourced, slot age retained"
 1979,02F51705-513F-8D4C-8ED5-A7CF793A9DAB,Off Co-ord,DEN,Duriel Schamann,Perrin Fairweather,invented,exact (wip/staff_1979.csv)
 1979,DE50DC60-565A-DF7E-CE1D-1AFAA8E23BE4,Off Co-ord,DET,Duke Bell,Pat Kromer,invented,exact (wip/staff_1979.csv)
 1979,314051B6-2F11-A8A7-5F6D-640D54B46DED,Off Co-ord,GB,Gus Kramer,Caspian Trowbridge,invented,exact (wip/staff_1979.csv)
@@ -45,88 +45,88 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,3AF2235D-2499-4628-7F27-11DC8D2741E6,Off Co-ord,KC,Dan Hardison,Jamie Oakhurst,invented,exact (wip/staff_1979.csv)
 1979,072905F0-26B4-E557-AE3D-01A8CE4C477A,Off Co-ord,LAR,Lionel Taylor,Lionel Taylor,sourced,exact (wip/staff_1979.csv)
 1979,7D5EF07C-EADF-68AA-F6C9-7CCE101C8C27,Off Co-ord,MIA,Russ Shirk,Quill Eastleigh,invented,exact (wip/staff_1979.csv)
-1979,11CE0BCB-BE2C-AF91-FD8C-3A28F9B6911D,Off Co-ord,MIN,Virgil Theismann,Raymond Mowbray,invented,exact (wip/staff_1979.csv)
+1979,11CE0BCB-BE2C-AF91-FD8C-3A28F9B6911D,Off Co-ord,MIN,Virgil Theismann,Jerry Burns,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 MIN; age not sourced, slot age retained"
 1979,814F0554-069D-D30A-E319-66F32122A622,Off Co-ord,NE,Jessie Feacher,Isaiah Roberts,invented,exact (wip/staff_1979.csv)
 1979,3B0365F6-B959-2DF5-9583-4B915A0F037F,Off Co-ord,NO,Ed Hughes,Ed Hughes,sourced,exact (wip/staff_1979.csv)
 1979,52F2170D-ABD8-0537-6DDF-8FBCF3BD108D,Off Co-ord,NYG,Craig Harrison,Craig Harrison,invented,exact (wip/staff_1979.csv)
-1979,675F0E1D-9A41-0C95-2ECA-A0F74CAA69E8,Off Co-ord,NYJ,Amos Elias,Greg Fairbanks,invented,exact (wip/staff_1979.csv)
+1979,675F0E1D-9A41-0C95-2ECA-A0F74CAA69E8,Off Co-ord,NYJ,Amos Elias,John Idzik,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 NYJ; age not sourced, slot age retained"
 1979,0315685A-0AA7-4AFB-14BE-113A7DB10E41,Off Co-ord,LV,Phillip Buchanon,Brian Oakleigh,invented,exact (wip/staff_1979.csv)
 1979,6EBE799C-768E-743D-579A-72003326B733,Off Co-ord,PHI,Dick Grogan,Cliff Evans,invented,exact (wip/staff_1979.csv)
 1979,4312F07C-3C1B-C162-DFE5-F7FD9E30BDB3,Off Co-ord,PIT,Dewey Allerman,Jermaine Turner,invented,exact (wip/staff_1979.csv)
-1979,2155C740-EC55-012F-E9C0-CF0D1D2AA27A,Off Co-ord,LAC,Walt Csonka,Ray Thompson,invented,exact (wip/staff_1979.csv)
+1979,2155C740-EC55-012F-E9C0-CF0D1D2AA27A,Off Co-ord,LAC,Walt Csonka,Joe Gibbs,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 LAC; age not sourced, slot age retained"
 1979,5C1ABC29-8A52-1C9B-0826-0A5AFB75B603,Off Co-ord,SEA,Louis Manucci,Zigmund Fairholm,invented,exact (wip/staff_1979.csv)
 1979,27C2DE33-3C6A-2ED5-6BBC-47B7476E0AD8,Off Co-ord,SF,Lem Kuykendall,Wes Quillen,invented,exact (wip/staff_1979.csv)
 1979,0C28EC97-1B2A-D5FE-FFD6-6EC22086A78E,Off Co-ord,ARI,Elvis Fugett,Tony Thornton,invented,exact (wip/staff_1979.csv)
 1979,82239F00-9BB5-1085-C4FF-F4E03AAC5E1E,Off Co-ord,TB,William Johnson,Bob Adams,invented,exact (wip/staff_1979.csv)
 1979,6BA98DA5-D54B-787A-D791-7D1EB6BD7342,Off Co-ord,WAS,Joe Walton,Joe Walton,sourced,exact (wip/staff_1979.csv)
-1979,2FE0603D-FAA8-1D95-958F-FF1DDBB6C6FB,Off Co-ord,TEN,Ray Rozier,Gary Duffner,invented,exact (wip/staff_1979.csv)
-1979,5BCFE3F2-BDB4-68F3-3CBB-DA89A284DE57,Off Co-ord,CAR,Glenn McShane,Gary Mack,invented,exact (wip/staff_1979.csv)
-1979,62F9DAAD-E692-723E-5414-A78C750BB92B,Off Co-ord,JAX,Reggie Bordelon,Casey Thornbury,invented,exact (wip/staff_1979.csv)
-1979,7E0F6919-FE0F-5C19-B177-37D5EE8B794D,Off Co-ord,IND,Phillip Fowler,Rodney Ingleby,invented,exact (wip/staff_1979.csv)
+1979,2FE0603D-FAA8-1D95-958F-FF1DDBB6C6FB,Off Co-ord,TEN,Ray Rozier,Gary Duffner,generated (franchise did not exist that season),"TEN did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
+1979,5BCFE3F2-BDB4-68F3-3CBB-DA89A284DE57,Off Co-ord,CAR,Glenn McShane,Gary Mack,generated (franchise did not exist that season),"CAR did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
+1979,62F9DAAD-E692-723E-5414-A78C750BB92B,Off Co-ord,JAX,Reggie Bordelon,Casey Thornbury,generated (franchise did not exist that season),"JAX did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
+1979,7E0F6919-FE0F-5C19-B177-37D5EE8B794D,Off Co-ord,IND,Phillip Fowler,Rodney Ingleby,generated (franchise did not exist that season),"IND did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
 1979,1F6B9A44-9EE2-550C-E1B8-3D6DE0A3C63F,Def Co-ord,ATL,Jerry Glanville,Jerry Glanville,sourced,exact (wip/staff_1979.csv)
 1979,34087D1D-1155-D525-3C10-1525EFB4C8E4,Def Co-ord,BAL,Maxie Baughan,Maxie Baughan,sourced,exact (wip/staff_1979.csv)
-1979,4A9BF983-C841-F609-37FB-2091F4BB2B96,Def Co-ord,BUF,Brooks Felton,Ken Chavez,invented,exact (wip/staff_1979.csv)
-1979,6A0C0AB6-02B1-54EB-C774-9479C4DF5725,Def Co-ord,CHI,Alfred Nielsen,Jeff Parker,invented,exact (wip/staff_1979.csv)
+1979,4A9BF983-C841-F609-37FB-2091F4BB2B96,Def Co-ord,BUF,Brooks Felton,Tom Catlin,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 BUF; age not sourced, slot age retained"
+1979,6A0C0AB6-02B1-54EB-C774-9479C4DF5725,Def Co-ord,CHI,Alfred Nielsen,Buddy Ryan,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 CHI; age not sourced, slot age retained"
 1979,AB695240-2B16-D5BB-4883-D3DC96D3E780,Def Co-ord,CIN,Howard Brinker,Howard Brinker,sourced,exact (wip/staff_1979.csv)
 1979,C1AEAA21-511B-4119-037A-43C65B2A92E1,Def Co-ord,CLE,Marty Schottenheimer,Marty Schottenheimer,sourced,exact (wip/staff_1979.csv)
-1979,8D01A5C5-5A42-1D3A-A017-ADF660444802,Def Co-ord,DAL,Wentford Beamon,Jalen Mack,invented,exact (wip/staff_1979.csv)
+1979,8D01A5C5-5A42-1D3A-A017-ADF660444802,Def Co-ord,DAL,Wentford Beamon,Ernie Stautner,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 DAL; age not sourced, slot age retained"
 1979,66FF8A60-DC43-C653-5129-B61D4E530531,Def Co-ord,DEN,Joe Collier,Joe Collier,sourced,exact (wip/staff_1979.csv)
 1979,DA20F2C9-05B2-7027-5B0B-ECC870594AF0,Def Co-ord,DET,James Fowler,Adrian Davis,invented,exact (wip/staff_1979.csv)
 1979,630E0007-6579-4B95-CC89-A0E04778F7C2,Def Co-ord,GB,Dave Hanner,Dave Hanner,sourced,exact (wip/staff_1979.csv)
 1979,0DF8DC91-16AA-DE8A-D37B-CE30D3CE5703,Def Co-ord,HOU,Ed Biles,Ed Biles,sourced,exact (wip/staff_1979.csv)
-1979,08D2F2F9-5220-A5BB-CE7F-2836D803977C,Def Co-ord,KC,Aaron Clack,George Falkner,invented,exact (wip/staff_1979.csv)
+1979,08D2F2F9-5220-A5BB-CE7F-2836D803977C,Def Co-ord,KC,Aaron Clack,Rod Rust,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 KC; age not sourced, slot age retained"
 1979,BCA63C0D-159E-E789-FD61-61BBCF206566,Def Co-ord,LAR,Bud Carson,Bud Carson,sourced,exact (wip/staff_1979.csv)
 1979,9D52305C-094E-4CB8-6F8C-7B59CD43D264,Def Co-ord,MIA,Cleveland Pietrzak,Michael Danvers,invented,exact (wip/staff_1979.csv)
 1979,AE874521-2CBA-23DD-794F-A79A1DE0C171,Def Co-ord,MIN,Lemar Moseley,Lorne Ferrante,invented,exact (wip/staff_1979.csv)
-1979,5E6AE06A-EA7F-5384-6916-D5B9795767E7,Def Co-ord,NE,Allan Baker,Jamie Wojcik,invented,exact (wip/staff_1979.csv)
+1979,5E6AE06A-EA7F-5384-6916-D5B9795767E7,Def Co-ord,NE,Allan Baker,Hank Bullough,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 NE; age not sourced, slot age retained"
 1979,83EDA827-0FD0-902D-629A-A7137E8FECBB,Def Co-ord,NO,Paul Wiggin,Paul Wiggin,sourced,exact (wip/staff_1979.csv)
 1979,9EAF198A-7B88-7731-B1EB-BB42149DCAE0,Def Co-ord,NYG,Ralph Hawkins,Ralph Hawkins,sourced,exact (wip/staff_1979.csv)
-1979,05652B58-8AED-ADA8-FC20-D1AC1268AF87,Def Co-ord,NYJ,Allan Carter,Godric Bennett,invented,exact (wip/staff_1979.csv)
+1979,05652B58-8AED-ADA8-FC20-D1AC1268AF87,Def Co-ord,NYJ,Allan Carter,Johnny Mazur,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 NYJ; age not sourced, slot age retained"
 1979,3D346F66-F9DC-548E-1F40-6CDFC27D8F07,Def Co-ord,LV,Rob Hunt,Garrick Bracewell,invented,exact (wip/staff_1979.csv)
 1979,C0FCD4DE-C955-9CC3-07AD-BC9FAC2CD836,Def Co-ord,PHI,Marion Campbell,Marion Campbell,sourced,exact (wip/staff_1979.csv)
-1979,832ABA87-E74E-B816-E2AF-82A733201ADF,Def Co-ord,PIT,Darrell Robiskie,Denholm Wojcik,invented,exact (wip/staff_1979.csv)
-1979,69C090CD-4761-BDD3-1C18-E78121B080C1,Def Co-ord,LAC,Craig Krauss,Otis Harrison,invented,exact (wip/staff_1979.csv)
+1979,832ABA87-E74E-B816-E2AF-82A733201ADF,Def Co-ord,PIT,Darrell Robiskie,George Perles,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 PIT; age not sourced, slot age retained"
+1979,69C090CD-4761-BDD3-1C18-E78121B080C1,Def Co-ord,LAC,Craig Krauss,Jacki Simpson,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 LAC; age not sourced, slot age retained"
 1979,CCE7849B-1F28-1254-BB36-364D53065B5B,Def Co-ord,SEA,Neil Wright,Sean Trumbull,invented,exact (wip/staff_1979.csv)
 1979,7B16DC7A-2BCF-8D22-5E67-5798EBE41CB0,Def Co-ord,SF,Chuck Studley,Chuck Studley,sourced,exact (wip/staff_1979.csv)
 1979,80EBBEF0-3B30-288C-E90A-B1BDBE70724A,Def Co-ord,ARI,Garo Allerman,Adrian Brooks,invented,exact (wip/staff_1979.csv)
-1979,8753897F-DC3C-D7F8-239A-43406EC5C040,Def Co-ord,TB,Whitney Falcon,Craig Barnes,invented,exact (wip/staff_1979.csv)
+1979,8753897F-DC3C-D7F8-239A-43406EC5C040,Def Co-ord,TB,Whitney Falcon,Tom Bass,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 TB; age not sourced, slot age retained"
 1979,C172D8AE-78D2-93C2-15AB-B53F55BD8351,Def Co-ord,WAS,Doc Urich,Doc Urich,sourced,exact (wip/staff_1979.csv)
-1979,63F3F124-E4B9-33A5-0A3F-53BB9469499E,Def Co-ord,TEN,Sylvester Blackwood,Marvin Alexander,invented,exact (wip/staff_1979.csv)
-1979,767EC4D0-08E1-3419-A200-5EDDFBE59660,Def Co-ord,CAR,Daryl Burns,Colin Marchbanks,invented,exact (wip/staff_1979.csv)
-1979,B665B4C9-B4B5-D6FB-880D-BE6649B81BB3,Def Co-ord,JAX,John McClanahan,Michael Stanfield,invented,exact (wip/staff_1979.csv)
-1979,6AB16F56-57DF-780E-3712-F803B82AAB6A,Def Co-ord,IND,Gifford Deloplaine,Ron Reed,invented,exact (wip/staff_1979.csv)
+1979,63F3F124-E4B9-33A5-0A3F-53BB9469499E,Def Co-ord,TEN,Sylvester Blackwood,Marvin Alexander,generated (franchise did not exist that season),"TEN did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
+1979,767EC4D0-08E1-3419-A200-5EDDFBE59660,Def Co-ord,CAR,Daryl Burns,Colin Marchbanks,generated (franchise did not exist that season),"CAR did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
+1979,B665B4C9-B4B5-D6FB-880D-BE6649B81BB3,Def Co-ord,JAX,John McClanahan,Michael Stanfield,generated (franchise did not exist that season),"JAX did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
+1979,6AB16F56-57DF-780E-3712-F803B82AAB6A,Def Co-ord,IND,Gifford Deloplaine,Ron Reed,generated (franchise did not exist that season),"IND did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
 1979,0735AF30-489B-17C7-655A-D68402B2870D,Special Teams,ATL,Rich Dungy,Matthew Trombley,invented,exact (wip/staff_1979.csv)
 1979,869C2BB4-2F7F-FDFF-7EFB-B252EF503E8D,Special Teams,BAL,George Boutselis,George Boutselis,sourced,exact (wip/staff_1979.csv)
-1979,F3BE38E6-ADB7-B024-6D1E-D518A7EEC358,Special Teams,BUF,Bob Downing,Sean Ashford,invented,exact (wip/staff_1979.csv)
-1979,B1FEE364-0EA5-3573-178C-176FBC95DB50,Special Teams,CHI,Billy Sisemore,Matt Vandergriff,invented,exact (wip/staff_1979.csv)
+1979,F3BE38E6-ADB7-B024-6D1E-D518A7EEC358,Special Teams,BUF,Bob Downing,Elijah Pitts,real (name in a real source),"Coaching Tree: NO titled special teams coach on the 1979 BUF staff; Elijah Pitts carried ""Special Teams Assistant"" as a second role — INFERRED, not a titled coordinator; age not sourced, slot age retained"
+1979,B1FEE364-0EA5-3573-178C-176FBC95DB50,Special Teams,CHI,Billy Sisemore,Hank Kuhlmann,real (name in a real source),"Coaching Tree: NO titled special teams coach on the 1979 CHI staff; Hank Kuhlmann carried ""Special Teams Assistant"" as a second role — INFERRED, not a titled coordinator; age not sourced, slot age retained"
 1979,4AD68577-15C3-9BCD-5651-699E4BDE739F,Special Teams,CIN,Frank Gansz,Frank Gansz,sourced,exact (wip/staff_1979.csv)
 1979,A7D881D2-E7C9-C394-868A-48937B456C61,Special Teams,CLE,Al Tabor,Al Tabor,sourced,exact (wip/staff_1979.csv)
-1979,C6EABACE-E265-1EE2-9817-41486B21571B,Special Teams,DAL,Walter Dickey,Rakim Shurmur,invented,exact (wip/staff_1979.csv)
+1979,C6EABACE-E265-1EE2-9817-41486B21571B,Special Teams,DAL,Walter Dickey,Mike Ditka,real (name in a real source),"Coaching Tree: NO titled special teams coach on the 1979 DAL staff; Mike Ditka carried ""Special Teams Assistant"" as a second role — INFERRED, not a titled coordinator; age not sourced, slot age retained"
 1979,2782BFD9-4F79-8641-027E-ECB7023D7426,Special Teams,DEN,Marv Braden,Marv Braden,sourced,exact (wip/staff_1979.csv)
-1979,CD47D343-CBA4-3A3C-160C-3954F38E9C52,Special Teams,DET,Vaughn Pureifory,Ray Wojcik,invented,exact (wip/staff_1979.csv)
+1979,CD47D343-CBA4-3A3C-160C-3954F38E9C52,Special Teams,DET,Vaughn Pureifory,Larry Pasquale,real (name in a real source),"Coaching Tree: NO titled special teams coach on the 1979 DET staff; Larry Pasquale carried ""Special Teams Assistant"" as a second role — INFERRED, not a titled coordinator; age not sourced, slot age retained"
 1979,3B9B456A-2697-645B-1ECF-4124FF8B6757,Special Teams,GB,Dick Rehbein,Dick Rehbein,sourced,exact (wip/staff_1979.csv)
 1979,E3C28D68-7F16-22B0-D2EC-6238F1B32864,Special Teams,HOU,John Paul Young,John Paul Young,sourced,exact (wip/staff_1979.csv)
-1979,6714B3D7-C833-1A0D-3701-A2199E6AB905,Special Teams,KC,Norm Brudzinski,Godric Deveraux,invented,exact (wip/staff_1979.csv)
+1979,6714B3D7-C833-1A0D-3701-A2199E6AB905,Special Teams,KC,Norm Brudzinski,Bobby Ross,real (name in a real source),"Coaching Tree: NO titled special teams coach on the 1979 KC staff; Bobby Ross carried ""Special Teams Assistant"" as a second role — INFERRED, not a titled coordinator; age not sourced, slot age retained"
 1979,9910B2D1-D6A7-C27D-BDBB-257996BB745A,Special Teams,LAR,Paul Lanham,Paul Lanham,sourced,exact (wip/staff_1979.csv)
 1979,A7682C14-C910-AF7F-540F-910586915004,Special Teams,MIA,Steve Crosby,Steve Crosby,sourced,exact (wip/staff_1979.csv)
 1979,F57F110A-93E6-D95D-5A88-050489037FEB,Special Teams,MIN,Jeff Erxleben,Jared Gilbert,invented,exact (wip/staff_1979.csv)
-1979,C1594E05-29FE-797E-2090-369B9773FEDC,Special Teams,NE,Edgar Downing,Gene Cooper,invented,exact (wip/staff_1979.csv)
+1979,C1594E05-29FE-797E-2090-369B9773FEDC,Special Teams,NE,Edgar Downing,Gino Cappelletti,real (name in a real source),"Coaching Tree: NO titled special teams coach on the 1979 NE staff; Gino Cappelletti carried ""Special Teams Assistant"" as a second role — INFERRED, not a titled coordinator; age not sourced, slot age retained"
 1979,2EEF53EA-6248-7C67-45D3-AB216D620BA4,Special Teams,NO,Whitey Campbell,Whitey Campbell,sourced,exact (wip/staff_1979.csv)
 1979,11AF7D57-6DB0-EEA1-EDCE-2526B3E7AA4A,Special Teams,NYG,Bill Belichick,Bill Belichick,sourced,exact (wip/staff_1979.csv)
-1979,5C675665-A64E-8041-BE51-FE83B0459FE1,Special Teams,NYJ,Dave Benirschke,Warren Little,invented,exact (wip/staff_1979.csv)
+1979,5C675665-A64E-8041-BE51-FE83B0459FE1,Special Teams,NYJ,Dave Benirschke,Joe Haering,real (name in a real source),"Coaching Tree: NO titled special teams coach on the 1979 NYJ staff; Joe Haering carried ""Special Teams Assistant"" as a second role — INFERRED, not a titled coordinator; age not sourced, slot age retained"
 1979,8DEDC750-EDF6-6389-F066-47DDAF869468,Special Teams,LV,Myrel Moore,Myrel Moore,sourced,exact (wip/staff_1979.csv)
 1979,4BC7AE77-4DF6-3A08-0250-FBC89D546DF5,Special Teams,PHI,Lynn Stiles,Lynn Stiles,sourced,exact (wip/staff_1979.csv)
 1979,3F344A71-A55B-2D22-41FC-45F3435E9610,Special Teams,PIT,Kurt Mendenhall,Godric Dunmore,invented,exact (wip/staff_1979.csv)
-1979,9DCCA262-BB05-9A46-F123-5F12810048F9,Special Teams,LAC,J.C. McKinnely,Denholm Garsdale,invented,exact (wip/staff_1979.csv)
+1979,9DCCA262-BB05-9A46-F123-5F12810048F9,Special Teams,LAC,J.C. McKinnely,Wayne Sevier,real (name in a real source),"Coaching Tree: NO titled special teams coach on the 1979 LAC staff; Wayne Sevier carried ""Special Teams Assistant"" as a second role — INFERRED, not a titled coordinator; age not sourced, slot age retained"
 1979,071EC6EC-7632-442A-1634-E9E03974A113,Special Teams,SEA,Rusty Tillman,Rusty Tillman,sourced,exact (wip/staff_1979.csv)
 1979,2FB731AE-A241-65A7-A65C-B450C684C592,Special Teams,SF,Dennis Green,Dennis Green,sourced,exact (wip/staff_1979.csv)
-1979,05E133BB-BB86-ABF0-F439-DBD46935BA37,Special Teams,ARI,Ricky Zook,Jason Martin,invented,exact (wip/staff_1979.csv)
-1979,CA2F385E-1CC0-E785-A117-9BC04EFA8DA0,Special Teams,TB,Ken Waldemore,Dave King,invented,exact (wip/staff_1979.csv)
+1979,05E133BB-BB86-ABF0-F439-DBD46935BA37,Special Teams,ARI,Ricky Zook,Jerry Thompson,real (name in a real source),"Coaching Tree: NO titled special teams coach on the 1979 ARI staff; Jerry Thompson carried ""Special Teams Assistant"" as a second role — INFERRED, not a titled coordinator; age not sourced, slot age retained"
+1979,CA2F385E-1CC0-E785-A117-9BC04EFA8DA0,Special Teams,TB,Ken Waldemore,Phil Krueger,real (name in a real source),"Coaching Tree: NO titled special teams coach on the 1979 TB staff; Phil Krueger carried ""Special Teams Assistant"" as a second role — INFERRED, not a titled coordinator; age not sourced, slot age retained"
 1979,B519653A-E9D8-90CD-3794-D4FEB6077939,Special Teams,WAS,John Hilton,John Hilton,sourced,exact (wip/staff_1979.csv)
-1979,EB755B7A-C540-B705-0574-73509C5BD0E9,Special Teams,TEN,Gregg Krahl,Dennis Mason,invented,exact (wip/staff_1979.csv)
-1979,EE1F09D4-5E3B-3D73-C9C2-93B505182715,Special Teams,CAR,Jeris Manumaleuga,Steve Fairbanks,invented,exact (wip/staff_1979.csv)
-1979,68DB86F1-7F18-FC8A-F8A0-1E5806EAD7F9,Special Teams,JAX,Guy Lyons,Clarence Stockwell,invented,exact (wip/staff_1979.csv)
-1979,3D2CD1EB-4BF8-BEE3-B907-8F989318B539,Special Teams,IND,Golden Collins,Terry Kestrel,invented,exact (wip/staff_1979.csv)
+1979,EB755B7A-C540-B705-0574-73509C5BD0E9,Special Teams,TEN,Gregg Krahl,Dennis Mason,generated (franchise did not exist that season),"TEN did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
+1979,EE1F09D4-5E3B-3D73-C9C2-93B505182715,Special Teams,CAR,Jeris Manumaleuga,Steve Fairbanks,generated (franchise did not exist that season),"CAR did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
+1979,68DB86F1-7F18-FC8A-F8A0-1E5806EAD7F9,Special Teams,JAX,Guy Lyons,Clarence Stockwell,generated (franchise did not exist that season),"JAX did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
+1979,3D2CD1EB-4BF8-BEE3-B907-8F989318B539,Special Teams,IND,Golden Collins,Terry Kestrel,generated (franchise did not exist that season),"IND did not field a team in 1979; the slot is a generated man on a franchise the season never had, not a coordinator we failed to find"
 1979,A4E42F4A-BC94-55C4-600E-34345E367E4F,Head Scout,ATL,Tom Braatz,Tom Braatz,sourced,exact (wip/staff_1979.csv)
 1979,92E35A28-0323-6FFD-6535-6B35B9F6978B,Head Scout,BAL,Dwaine Cosbie,Rashad Ludlow,invented,exact (wip/staff_1979.csv)
 1979,6E957FE2-B941-C645-DB1F-FBB4C3CAD2A8,Head Scout,BUF,Vern Barbaro,Barry Rademacher,invented,exact (wip/staff_1979.csv)
@@ -2249,8 +2249,8 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,8B399237-FB46-4555-B3B0-121370D3EB87,Assistant Physio,ARI,Marist Huff,Jamie Cardoso,"invented (scout/physio, the standing exception)",inferred
 2010,96C1A5B3-18D3-45E3-8454-EE88208F9FE9,Head Coach,ATL,Mike Smith,Mike Smith,real (name in a real source),inferred
 2010,214405C9-F66B-477F-BE59-A56728D472D6,Off Co-ord,ATL,Mike Mularkey,Mike Mularkey,real (name in a real source),inferred
-2010,91CA6FF1-BF8F-4E8E-AAB7-1F72616F85F7,Def Co-ord,ATL,Brian VanGorder,Brian VanGorder,"unknown (no real source, not from the invented lists)",inferred
-2010,C94FF6F3-32C8-489C-B2EE-35AD667039E6,Special Teams,ATL,K. Armstrong,K. Armstrong,"unknown (no real source, not from the invented lists)",inferred
+2010,91CA6FF1-BF8F-4E8E-AAB7-1F72616F85F7,Def Co-ord,ATL,Brian VanGorder,Brian VanGorder,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 2010 ATL; confirmed unchanged"
+2010,C94FF6F3-32C8-489C-B2EE-35AD667039E6,Special Teams,ATL,K. Armstrong,Keith Armstrong,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 ATL; first name expanded from an initial"
 2010,2B801414-9F89-40DF-92D4-AC8680749A41,Head Scout,ATL,Bobby Cooper,Bobby Cooper,"invented (scout/physio, the standing exception)",inferred
 2010,95FE93C4-FDEE-4776-811B-BF56F50F2B39,Off Scout,ATL,George Cook,George Cook,"invented (scout/physio, the standing exception)",inferred
 2010,F3702DD5-B7D8-49DB-8BF5-C7D9E4531CC0,Def Scout,ATL,Tavares Senat,Pat Gravesend,"invented (scout/physio, the standing exception)",inferred
@@ -2258,8 +2258,8 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,D22813D6-2926-4686-AD47-2FAF31480D53,Assistant Physio,ATL,Malcolm Kindley,Darius Masseur,"invented (scout/physio, the standing exception)",inferred
 2010,5BD30B58-F1C4-45EE-90C5-9240EEE2CA9D,Head Coach,BAL,John Harbaugh,John Harbaugh,real (name in a real source),inferred
 2010,63B490DE-E6A6-4909-9640-0BB6BA85A4D2,Off Co-ord,BAL,Cam Cameron,Cam Cameron,real (name in a real source),inferred
-2010,9D7D7FB1-A430-4675-907A-71EC94B12FEB,Def Co-ord,BAL,Greg Mattison,Greg Mattison,"unknown (no real source, not from the invented lists)",inferred
-2010,5222B17C-1B28-407B-9BD4-DD1B500FEF29,Special Teams,BAL,J. Rosburg,J. Rosburg,"unknown (no real source, not from the invented lists)",inferred
+2010,9D7D7FB1-A430-4675-907A-71EC94B12FEB,Def Co-ord,BAL,Greg Mattison,Greg Mattison,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 2010 BAL; confirmed unchanged"
+2010,5222B17C-1B28-407B-9BD4-DD1B500FEF29,Special Teams,BAL,J. Rosburg,Jerry Rosburg,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 BAL; first name expanded from an initial"
 2010,7A834D63-90DC-464C-89EE-4B3C4FB8FC36,Head Scout,BAL,David Evans,David Evans,real (name in a real source),inferred
 2010,80C5A604-2120-45CC-B8AF-EC2DBCE655BD,Off Scout,BAL,Gregory Evans,Doug Marchetti,"invented (scout/physio, the standing exception)",inferred
 2010,0BAB6206-3299-4436-96C3-EA04524E1A3D,Def Scout,BAL,Joshua Harlow,Fred Alexander,"invented (scout/physio, the standing exception)",inferred
@@ -2268,7 +2268,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,7AC7783B-C151-4D7B-90AD-E3D4F5F47A80,Head Coach,BUF,Chan Gailey,Chan Gailey,real (name in a real source),inferred
 2010,EFE625AF-1E61-4F7A-A022-DCBF7D2EB9D7,Off Co-ord,BUF,Curtis Modkins,Curtis Modkins,real (name in a real source),inferred
 2010,C58EB534-724B-44A8-B0E9-980A366AEE49,Def Co-ord,BUF,George Edwards,George Edwards,real (name in a real source),inferred
-2010,D6424E46-751F-41F1-9848-87A04FE8F637,Special Teams,BUF,B. DeHaven,B. DeHaven,"unknown (no real source, not from the invented lists)",inferred
+2010,D6424E46-751F-41F1-9848-87A04FE8F637,Special Teams,BUF,B. DeHaven,Bruce DeHaven,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 BUF; first name expanded from an initial"
 2010,099FE7F6-E5F4-4D88-B4D7-DBB65600A67C,Head Scout,BUF,Bob Sanders,Bob Sanders,real (name in a real source),inferred
 2010,21B398DB-A389-41DF-9E4C-866DA8964DCC,Off Scout,BUF,Giff Smith,Giff Smith,real (name in a real source),inferred
 2010,44806EC8-48D6-4C53-998E-468AF29D4CC8,Def Scout,BUF,Ikem Winston Jr.,Otis Gearhart,"invented (scout/physio, the standing exception)",inferred
@@ -2276,8 +2276,8 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,F68E7ACD-6200-4FF2-B35D-567952F11D2E,Assistant Physio,BUF,Curt Trice,Jacob Ludlow,"invented (scout/physio, the standing exception)",inferred
 2010,6FF23BC8-ED2E-4258-BDCC-A25133F10BB0,Head Coach,CAR,John Fox,John Fox,real (name in a real source),inferred
 2010,99166FAC-8374-4CBF-AF42-D57253693241,Off Co-ord,CAR,Jeff Davidson,Jeff Davidson,real (name in a real source),inferred
-2010,F6BD0664-9BD8-4854-94A1-221591F2D5B4,Def Co-ord,CAR,Ron Meeks,Ron Meeks,"unknown (no real source, not from the invented lists)",inferred
-2010,BF0352A0-C34F-4DAF-84C8-EC0E154ED443,Special Teams,CAR,J. Rodgers,J. Rodgers,"unknown (no real source, not from the invented lists)",inferred
+2010,F6BD0664-9BD8-4854-94A1-221591F2D5B4,Def Co-ord,CAR,Ron Meeks,Ron Meeks,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 2010 CAR; confirmed unchanged"
+2010,BF0352A0-C34F-4DAF-84C8-EC0E154ED443,Special Teams,CAR,J. Rodgers,Jeff Rodgers,real (name in a real source),"Coaching Tree: Special Teams Assistant (INFERRED, no titled special teams coach), 2010 CAR; first name expanded from an initial"
 2010,7146DB50-2A89-49D6-9436-53D83CBB431A,Head Scout,CAR,Jim Skipper,Ethan Moore,"invented (scout/physio, the standing exception)",inferred
 2010,8B03F691-22F9-4146-820E-F9AB588207A2,Off Scout,CAR,Richard Smith,Richard Smith,real (name in a real source),inferred
 2010,39FD87EA-211D-47C3-9F95-F51874081355,Def Scout,CAR,Isaiahh Jewell,Derrick Canales,"invented (scout/physio, the standing exception)",inferred
@@ -2286,7 +2286,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,61C873EF-4C39-4890-8DCB-AD42280FC3E2,Head Coach,CHI,Lovie Smith,Lovie Smith,real (name in a real source),inferred
 2010,DCD9EFC0-087C-43FE-A230-6BA9241A7923,Off Co-ord,CHI,Mike Martz,Mike Martz,real (name in a real source),inferred
 2010,F54435D9-8C18-4A94-8C1E-F442242351DB,Def Co-ord,CHI,Rod Marinelli,Rod Marinelli,real (name in a real source),inferred
-2010,EE6D177F-2601-4F01-BE5C-E992DFFF826E,Special Teams,CHI,D. Toub,D. Toub,"unknown (no real source, not from the invented lists)",inferred
+2010,EE6D177F-2601-4F01-BE5C-E992DFFF826E,Special Teams,CHI,D. Toub,Dave Toub,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 CHI; first name expanded from an initial"
 2010,0B25203C-9CE3-4B59-AA40-3AF98DF6211E,Head Scout,CHI,Gregory Patterson,Sean Draycott,"invented (scout/physio, the standing exception)",inferred
 2010,1B98A8A1-356B-4542-B93A-112FA40055B5,Off Scout,CHI,Willie Hughes,Willie Hughes,"invented (scout/physio, the standing exception)",inferred
 2010,8CB6E5B4-0378-4236-AC50-96F9FEFEDCAE,Def Scout,CHI,Jamie Reed,Jamie Reed,"invented (scout/physio, the standing exception)",inferred
@@ -2295,7 +2295,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,4C40E32C-B262-4F41-9D0B-35031C349527,Head Coach,CIN,Marvin Lewis,Marvin Lewis,real (name in a real source),inferred
 2010,88400E9E-EE66-4E3F-B9A0-FE8299567F72,Off Co-ord,CIN,Bob Bratkowski,Bob Bratkowski,real (name in a real source),inferred
 2010,3BCABE4C-830B-4243-AC82-481305C7C709,Def Co-ord,CIN,Mike Zimmer,Mike Zimmer,real (name in a real source),inferred
-2010,014358C3-6329-41B1-8583-AB8C92EEC7DA,Special Teams,CIN,D. Simmons,D. Simmons,"unknown (no real source, not from the invented lists)",inferred
+2010,014358C3-6329-41B1-8583-AB8C92EEC7DA,Special Teams,CIN,D. Simmons,Darrin Simmons,real (name in a real source),"Coaching Tree: Special Teams Assistant (INFERRED, no titled special teams coach), 2010 CIN; first name expanded from an initial"
 2010,BD5539D3-4C19-4EBD-88ED-B10952ADDCF2,Head Scout,CIN,Kevin Clark,Kevin Clark,"invented (scout/physio, the standing exception)",inferred
 2010,6CFFAE45-F8AA-4CD6-BC0C-65337EC7A7D1,Off Scout,CIN,Mike Sheppard,Kirk Quintero,"invented (scout/physio, the standing exception)",inferred
 2010,2D9E9D9D-DF73-4EA2-A510-DC819774DECF,Def Scout,CIN,Dominic Woodson,Bryce Idzik,"invented (scout/physio, the standing exception)",inferred
@@ -2304,7 +2304,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,ADCF1F4A-BD79-4223-AD20-B9B4D1CECA7E,Head Coach,CLE,Eric Mangini,Eric Mangini,real (name in a real source),inferred
 2010,D2FF6599-8109-4FAC-8F8E-8F762EBE46EE,Off Co-ord,CLE,Brian Daboll,Brian Daboll,real (name in a real source),inferred
 2010,62093447-D861-4B23-85AA-E1EE3DDB1671,Def Co-ord,CLE,Rob Ryan,Rob Ryan,real (name in a real source),inferred
-2010,F0529177-1834-455F-AC2D-7A06D5DE6821,Special Teams,CLE,B. Seely,B. Seely,"unknown (no real source, not from the invented lists)",inferred
+2010,F0529177-1834-455F-AC2D-7A06D5DE6821,Special Teams,CLE,B. Seely,Brad Seely,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 CLE; first name expanded from an initial"
 2010,79B33C80-CBD5-4045-B4D2-EB16B9D90F70,Head Scout,CLE,Willie Rogers,Willie Rogers,"invented (scout/physio, the standing exception)",inferred
 2010,331E07B7-1201-42DB-B4D6-DC98D3FF15D9,Off Scout,CLE,Carl Smith,Carl Smith,real (name in a real source),inferred
 2010,B10703B6-4E21-4D2A-8D0B-6554EC7736B9,Def Scout,CLE,Darius Rumph,Jeremy Richardson,"invented (scout/physio, the standing exception)",inferred
@@ -2312,8 +2312,8 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,C2BB2612-7E4F-4776-ACE4-3AD3FD70E9FD,Assistant Physio,CLE,Jackson Alexander,Craig Dunmore,"invented (scout/physio, the standing exception)",inferred
 2010,57A49BCD-3775-4398-AB1C-C1D6A4E3EBFA,Head Coach,DAL,Wade Phillips,Wade Phillips,real (name in a real source),inferred
 2010,880363F9-3EFE-46FD-B49C-CFA349CD6B7D,Off Co-ord,DAL,Jason Garrett,Jason Garrett,real (name in a real source),inferred
-2010,930AEAB4-9525-49D1-A892-9E7F9A968585,Def Co-ord,DAL,Paul Pasqualoni,Paul Pasqualoni,"unknown (no real source, not from the invented lists)",inferred
-2010,4A9506CE-696A-432F-89AC-57B632704051,Special Teams,DAL,J. DeCamillis,J. DeCamillis,"unknown (no real source, not from the invented lists)",inferred
+2010,930AEAB4-9525-49D1-A892-9E7F9A968585,Def Co-ord,DAL,Paul Pasqualoni,Paul Pasqualoni,"unknown (no real source, not from the invented lists)","Coaching Tree: Wade Phillips called the defence himself; our record already holds Paul Pasqualoni, his defensive line coach and senior defensive assistant"
+2010,4A9506CE-696A-432F-89AC-57B632704051,Special Teams,DAL,J. DeCamillis,Joe DeCamillis,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 DAL; first name expanded from an initial"
 2010,100E6862-E61C-4B06-A57E-EF41FEE3054C,Head Scout,DAL,Wes Phillips,Wes Phillips,real (name in a real source),inferred
 2010,CC4C79B4-D0E8-4F27-8379-C126448A2802,Off Scout,DAL,Ray Sherman,Ethan Thompson,"invented (scout/physio, the standing exception)",inferred
 2010,2A67EF61-5CDF-430E-A1F1-843FC1793625,Def Scout,DAL,Kelee Loudermilk,Colin Mockler,"invented (scout/physio, the standing exception)",inferred
@@ -2321,8 +2321,8 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,1671025F-DA78-4082-8B17-F8723C812859,Assistant Physio,DAL,Byron Engstrand,Byron Engstrand,"invented (scout/physio, the standing exception)",inferred
 2010,DFA4AB82-C73C-4BDE-9D8B-008F99F21E20,Head Coach,DEN,Eric Studesville,Eric Studesville,real (name in a real source),inferred
 2010,43509B7F-86C9-4C6A-8363-E397C1432CBD,Off Co-ord,DEN,Mike McCoy,Mike McCoy,real (name in a real source),inferred
-2010,D07CE441-C32A-4A94-99B1-BE1448791EFD,Def Co-ord,DEN,Don Martindale,Don Martindale,"unknown (no real source, not from the invented lists)",inferred
-2010,B48C8393-CF38-44C4-9A9C-7DFBD43E36A6,Special Teams,DEN,M. Priefer,M. Priefer,"unknown (no real source, not from the invented lists)",inferred
+2010,D07CE441-C32A-4A94-99B1-BE1448791EFD,Def Co-ord,DEN,Don Martindale,Don Martindale,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 2010 DEN; confirmed unchanged"
+2010,B48C8393-CF38-44C4-9A9C-7DFBD43E36A6,Special Teams,DEN,M. Priefer,Mike Priefer,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 DEN; first name expanded from an initial"
 2010,CDA8B917-4AF3-4E2A-928D-F651F4EA4517,Head Scout,DEN,Russell Rogers,Russell Rogers,"invented (scout/physio, the standing exception)",inferred
 2010,D77579FF-4CDD-4FE6-9566-4C776BA9E546,Off Scout,DEN,Gary Adams,Gary Adams,real (name in a real source),inferred
 2010,068E18A9-D948-4231-B031-FF51DACADAF0,Def Scout,DEN,Chauncey Danna,Tim Gilbert,"invented (scout/physio, the standing exception)",inferred
@@ -2331,7 +2331,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,3B3B76BE-6318-43EC-9C5B-5BDC232068A3,Head Coach,DET,Jim Schwartz,Jim Schwartz,real (name in a real source),inferred
 2010,4A36C2AD-5613-417E-B7D5-934A0876883C,Off Co-ord,DET,Scott Linehan,Scott Linehan,real (name in a real source),inferred
 2010,0DAD386B-8AAB-4C06-A46F-907CC1865C4C,Def Co-ord,DET,Gunther Cunningham,Gunther Cunningham,real (name in a real source),inferred
-2010,E51486CF-981A-4D73-B972-822576A98C05,Special Teams,DET,D. Crossman,D. Crossman,"unknown (no real source, not from the invented lists)",inferred
+2010,E51486CF-981A-4D73-B972-822576A98C05,Special Teams,DET,D. Crossman,Danny Crossman,real (name in a real source),"Coaching Tree: Special Teams Assistant (INFERRED, no titled special teams coach), 2010 DET; first name expanded from an initial"
 2010,61E36FD1-7F6B-4ACC-B299-F902A1755354,Head Scout,DET,Carl Price,Carl Price,"invented (scout/physio, the standing exception)",inferred
 2010,75DD2FFE-5FB8-4D0D-B55B-0DA4EC6E93CC,Off Scout,DET,Tim Walton,Tim Walton,real (name in a real source),inferred
 2010,98BDA5E7-BEA4-48F4-A3F6-858B64DB00A8,Def Scout,DET,Rashid Robinson,Keith Mockler,"invented (scout/physio, the standing exception)",inferred
@@ -2340,7 +2340,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,2682FDCE-997A-439F-9CB1-F45D388FC56F,Head Coach,GB,Mike McCarthy,Mike McCarthy,real (name in a real source),inferred
 2010,F351E54D-5673-4FFC-9F7A-E79125231E59,Off Co-ord,GB,Joe Philbin,Joe Philbin,real (name in a real source),inferred
 2010,BB3E0AB4-9500-44DE-9DF7-F41D8C893CEF,Def Co-ord,GB,Dom Capers,Dom Capers,real (name in a real source),inferred
-2010,F05143D5-01D8-4305-8516-8D53F6C7CD20,Special Teams,GB,S. Slocum,S. Slocum,"unknown (no real source, not from the invented lists)",inferred
+2010,F05143D5-01D8-4305-8516-8D53F6C7CD20,Special Teams,GB,S. Slocum,Shawn Slocum,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 GB; first name expanded from an initial"
 2010,EBB71916-BA1D-4F23-8E97-651AED2519BF,Head Scout,GB,Charles Parker,Charles Parker,"invented (scout/physio, the standing exception)",inferred
 2010,E9789256-4108-4F01-9FB9-1E80DB134E96,Off Scout,GB,Dennis Cooper,Dennis Cooper,"invented (scout/physio, the standing exception)",inferred
 2010,69A5D526-76A0-46CE-BEF2-52EE547CBFD0,Def Scout,GB,D'onta McKee,Warren Ravenel,"invented (scout/physio, the standing exception)",inferred
@@ -2349,7 +2349,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,3FB5EF11-C23D-4970-A8D6-ECFEDA2B8329,Head Coach,HOU,Gary Kubiak,Gary Kubiak,real (name in a real source),inferred
 2010,29AC6865-71DE-4FC1-9871-9C6AEDF2EA9E,Off Co-ord,HOU,Rick Dennison,Rick Dennison,real (name in a real source),inferred
 2010,2C81260B-401E-4169-B4C2-B48CD1433ACF,Def Co-ord,HOU,Frank Bush,Frank Bush,real (name in a real source),inferred
-2010,80DD6D47-53AE-4864-8964-C723FE48539C,Special Teams,HOU,J. Marciano,J. Marciano,"unknown (no real source, not from the invented lists)",inferred
+2010,80DD6D47-53AE-4864-8964-C723FE48539C,Special Teams,HOU,J. Marciano,J. Marciano,"unknown (no real source, not from the invented lists)",Houston is absent from the Coaching Tree at every year tried
 2010,E8D5DCDF-E15F-443B-B862-2B9B5389A5DF,Head Scout,HOU,Curtis Wood,Jeremy Murphy,"invented (scout/physio, the standing exception)",inferred
 2010,98D8EA0B-B12E-4048-B366-39B4177EF364,Off Scout,HOU,Larry Reed,Larry Reed,"invented (scout/physio, the standing exception)",inferred
 2010,CCF0D503-D26D-401E-AEB8-C23A8667B94A,Def Scout,HOU,Starling Ulofoshio,Ronald Ashdown,"invented (scout/physio, the standing exception)",inferred
@@ -2357,8 +2357,8 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,AD946416-E1C1-4DCD-9AC1-CFEE48A6C259,Assistant Physio,HOU,Quinyon Bateman,Zedekiah Larkspur,"invented (scout/physio, the standing exception)",inferred
 2010,2815BC8C-5DED-4F61-9716-9B05209AAB73,Head Coach,IND,Jim Caldwell,Jim Caldwell,real (name in a real source),inferred
 2010,F4654041-4CD4-4DC2-9519-94EF236CBBF0,Off Co-ord,IND,Clyde Christensen,Clyde Christensen,real (name in a real source),inferred
-2010,BB79F46A-9432-4D49-892C-215667BFAB79,Def Co-ord,IND,Larry Coyer,Larry Coyer,"unknown (no real source, not from the invented lists)",inferred
-2010,56D1179A-513B-4BCF-A34B-DC0D321A05BF,Special Teams,IND,R. Rychleski,R. Rychleski,"unknown (no real source, not from the invented lists)",inferred
+2010,BB79F46A-9432-4D49-892C-215667BFAB79,Def Co-ord,IND,Larry Coyer,Larry Coyer,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 2010 IND; confirmed unchanged"
+2010,56D1179A-513B-4BCF-A34B-DC0D321A05BF,Special Teams,IND,R. Rychleski,Ray Rychleski,real (name in a real source),"Coaching Tree: Special Teams Assistant (INFERRED, no titled special teams coach), 2010 IND; first name expanded from an initial"
 2010,8786F53C-DF36-4173-83EE-878281707A7F,Head Scout,IND,Peter Reed,Bruce Jerrold,"invented (scout/physio, the standing exception)",inferred
 2010,990BE3D1-D663-4BB5-8E2C-72DD016BEB27,Off Scout,IND,Harold Barnes,Harold Barnes,"invented (scout/physio, the standing exception)",inferred
 2010,D086E8C1-AE6D-4261-8727-4BB3D7581320,Def Scout,IND,Carlton Coburn,Dwight Ontiveros,"invented (scout/physio, the standing exception)",inferred
@@ -2367,16 +2367,16 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,C77A882A-E910-4603-A67C-A956C8298EF2,Head Coach,JAX,Jack Del Rio,Jack Del Rio,real (name in a real source),inferred
 2010,834BD28C-3C95-49DA-AEB0-AE135C7CFA83,Off Co-ord,JAX,Dirk Koetter,Dirk Koetter,real (name in a real source),inferred
 2010,6BA976C5-6011-4B32-83F4-FB8741D70DD8,Def Co-ord,JAX,Mel Tucker,Mel Tucker,real (name in a real source),inferred
-2010,E19A7D28-4B7C-484B-868B-B609E83064FF,Special Teams,JAX,R. Purnell,R. Purnell,"unknown (no real source, not from the invented lists)",inferred
+2010,E19A7D28-4B7C-484B-868B-B609E83064FF,Special Teams,JAX,R. Purnell,Russ Purnell,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 JAX; first name expanded from an initial"
 2010,478ED9F2-EF0C-48CC-916A-79AFF5C88AA7,Head Scout,JAX,Joe Cullen,Joe Cullen,"invented (scout/physio, the standing exception)",inferred
-2010,DD6F1671-E289-42B5-B3E4-D557E553EF4B,Off Scout,JAX,Mark Duffner,Mark Duffner,"invented (scout/physio, the standing exception)",inferred
-2010,55BA7B02-8CCD-4C48-8A12-CB2C5D043B9D,Def Scout,JAX,Jeremy Haley,Jalen Wexler,"invented (scout/physio, the standing exception)",inferred
+2010,DD6F1671-E289-42B5-B3E4-D557E553EF4B,Off Scout,JAX,Mark Duffner,Jalen Wexler,"invented (scout/physio, the standing exception)",displaced to the offensive scout slot when Duffner moved to the defensive side
+2010,55BA7B02-8CCD-4C48-8A12-CB2C5D043B9D,Def Scout,JAX,Jeremy Haley,Mark Duffner,real (name in a real source),"Coaching Tree: Duffner coached Jacksonville's LINEBACKERS in 2010, a defensive job; our file had him as an offensive scout. The two scout records swap so both stay filled"
 2010,223F1BFA-5DBC-425C-BEBA-5DB0FF92AD9B,Head Physio,JAX,Jaire Ragland,Vernon Wexler,"invented (scout/physio, the standing exception)",inferred
 2010,33ED687F-FEFC-4F96-87FA-0F83749911FC,Assistant Physio,JAX,D'Andre Scott,Adrian Garsdale,"invented (scout/physio, the standing exception)",inferred
 2010,3B817720-3A6F-42C8-808D-DD7F77074647,Head Coach,KC,Todd Haley,Todd Haley,real (name in a real source),inferred
 2010,50F1A982-6F32-4041-BB5F-15878505CAE5,Off Co-ord,KC,Charlie Weis,Charlie Weis,real (name in a real source),inferred
 2010,78D0ABD2-72E5-4DE2-A831-24396E48490E,Def Co-ord,KC,Romeo Crennel,Romeo Crennel,real (name in a real source),inferred
-2010,C3465384-AFE2-45D0-A6B2-3ECDB35E9463,Special Teams,KC,S. Hoffman,S. Hoffman,"unknown (no real source, not from the invented lists)",inferred
+2010,C3465384-AFE2-45D0-A6B2-3ECDB35E9463,Special Teams,KC,S. Hoffman,Steve Hoffman,real (name in a real source),"Coaching Tree: Special Teams Assistant (INFERRED, no titled special teams coach), 2010 KC; first name expanded from an initial"
 2010,F9E173F0-F1D2-48E3-9FE4-4CFC62BD26C4,Head Scout,KC,Gary Gibbs,Freddie Mack,"invented (scout/physio, the standing exception)",inferred
 2010,E49D514A-4F3C-4D60-A701-76235D7305FD,Off Scout,KC,Timothy Barnes,Leroy Trumbull,"invented (scout/physio, the standing exception)",inferred
 2010,6A0F3CDA-938C-4AB6-813E-EFAF871AADCA,Def Scout,KC,Leroy Tartt,Randy Kowalczyk,"invented (scout/physio, the standing exception)",inferred
@@ -2385,7 +2385,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,7D568D57-EB9E-429D-9CAD-6AACF8494D9A,Head Coach,MIA,Tony Sparano,Tony Sparano,real (name in a real source),inferred
 2010,A0B37D68-34B2-4A56-B286-B3D13A6BF484,Off Co-ord,MIA,Dan Henning,Dan Henning,real (name in a real source),inferred
 2010,5CEC2D1B-FE85-4031-A66A-43DA37AB7457,Def Co-ord,MIA,Mike Nolan,Mike Nolan,real (name in a real source),inferred
-2010,C0611E5A-D6FE-481C-88AD-8337D6760A7A,Special Teams,MIA,J. Bonamego,J. Bonamego,"unknown (no real source, not from the invented lists)",inferred
+2010,C0611E5A-D6FE-481C-88AD-8337D6760A7A,Special Teams,MIA,J. Bonamego,John Bonamego,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 MIA; first name expanded from an initial"
 2010,53AC470F-547F-409D-A8F0-F9C582A2026B,Head Scout,MIA,Dan Campbell,Dan Campbell,real (name in a real source),inferred
 2010,63AB5338-5169-4865-BB0E-7A1C9273D157,Off Scout,MIA,Bruce Hall,Bruce Hall,"invented (scout/physio, the standing exception)",inferred
 2010,021E4CB2-0319-4778-A321-33D9919C1D26,Def Scout,MIA,James Verrett,Keith Ashdown,"invented (scout/physio, the standing exception)",inferred
@@ -2394,7 +2394,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,F922FA12-2F36-48DA-85C6-4FE1D21A73D0,Head Coach,MIN,Brad Childress,Brad Childress,real (name in a real source),inferred
 2010,E22204BF-7ED1-4BC1-A1B7-C611090AF300,Off Co-ord,MIN,Darrell Bevell,Darrell Bevell,real (name in a real source),inferred
 2010,DC11EBAD-1890-4176-8419-A1FCF3C4CFB7,Def Co-ord,MIN,Leslie Frazier,Leslie Frazier,real (name in a real source),inferred
-2010,92B40D91-4AD0-4C04-893E-289E3B6A8544,Special Teams,MIN,B. Murphy,B. Murphy,"unknown (no real source, not from the invented lists)",inferred
+2010,92B40D91-4AD0-4C04-893E-289E3B6A8544,Special Teams,MIN,B. Murphy,Brian Murphy,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 MIN; first name expanded from an initial"
 2010,8538432B-6D58-4E13-AA32-07B73F5F409D,Head Scout,MIN,Kevin Stefanski,Kevin Stefanski,real (name in a real source),inferred
 2010,6DA9C45F-26D6-41A1-84E2-0FC31D7A6AC3,Off Scout,MIN,Paul Coleman,Paul Coleman,"invented (scout/physio, the standing exception)",inferred
 2010,1A57FA7D-3E5D-418F-BF60-E04B80B339D6,Def Scout,MIN,Ryan Helm,Melvin Fairbanks,"invented (scout/physio, the standing exception)",inferred
@@ -2402,7 +2402,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,3A4BD3D2-BFC6-4F72-800A-82FEBBE262CF,Assistant Physio,MIN,Conrad Nix III,Johnny Fisch,"invented (scout/physio, the standing exception)",inferred
 2010,0BC41753-A030-4AD1-AA1D-DF97A2A42327,Head Coach,NE,Bill Belichick,Bill Belichick,real (name in a real source),inferred
 2010,B9AF0673-E9C5-4BA8-906D-9BFC51393B69,Off Co-ord,NE,Bill O'Brien,Bill O'Brien,real (name in a real source),inferred
-2010,A5029933-F728-4C7D-8996-C384EB54E69C,Def Co-ord,NE,Chad O'Shea,Chad O'Shea,"unknown (no real source, not from the invented lists)",inferred
+2010,A5029933-F728-4C7D-8996-C384EB54E69C,Def Co-ord,NE,Chad O'Shea,Chad O'Shea,"unknown (no real source, not from the invented lists)","Coaching Tree: Belichick ran 2010 without a titled defensive coordinator; our record holds Chad O'Shea, who coached the WIDE RECEIVERS -- the wrong side of the ball, left for the fallback pass"
 2010,B594E3A3-17B7-4ABA-B844-D3E08CF2093B,Special Teams,NE,Josh Boyer,Josh Boyer,real (name in a real source),inferred
 2010,611C83B7-E2EC-4C59-9B2C-A6E468F9C2EA,Head Scout,NE,Brian Flores,Brian Flores,real (name in a real source),inferred
 2010,143F1108-29A8-41FF-A6F5-B630F9DF168E,Off Scout,NE,Patrick Graham,Patrick Graham,real (name in a real source),inferred
@@ -2412,7 +2412,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,F8B6AD54-4EED-4D55-B33F-058C1ECCF8EA,Head Coach,NO,Sean Payton,Sean Payton,real (name in a real source),inferred
 2010,9B672FA1-4905-4E25-A856-AC9EC99C5E36,Off Co-ord,NO,Pete Carmichael,Pete Carmichael,real (name in a real source),inferred
 2010,0191884E-2A9C-4B4D-82E4-6A41F3DF84E2,Def Co-ord,NO,Gregg Williams,Gregg Williams,real (name in a real source),inferred
-2010,CAD49781-E812-4FAC-918F-CADEDA438039,Special Teams,NO,G. McMahon,G. McMahon,"unknown (no real source, not from the invented lists)",inferred
+2010,CAD49781-E812-4FAC-918F-CADEDA438039,Special Teams,NO,G. McMahon,Greg McMahon,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 NO; first name expanded from an initial"
 2010,2416F75E-6AE8-4DA9-BFD4-F6D22A17148B,Head Scout,NO,Aaron Kromer,Aaron Kromer,real (name in a real source),inferred
 2010,BFAE5595-7CD9-41BD-B728-F42F9577E38A,Off Scout,NO,Joe Lombardi,Joe Lombardi,real (name in a real source),inferred
 2010,EA285BCB-F023-435E-BF90-79A6223ACD25,Def Scout,NO,Donovan Morgan,Alan Jerrold,"invented (scout/physio, the standing exception)",inferred
@@ -2421,7 +2421,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,D2A90B65-7DC1-456A-A436-CBF4C1B1FD12,Head Coach,NYG,Tom Coughlin,Tom Coughlin,real (name in a real source),inferred
 2010,84AA060F-C727-4E26-BF75-C4F748866D78,Off Co-ord,NYG,Kevin Gilbride,Kevin Gilbride,real (name in a real source),inferred
 2010,73E57D58-EFB2-43C5-8F69-E58B33A11070,Def Co-ord,NYG,Perry Fewell,Perry Fewell,real (name in a real source),inferred
-2010,D2902416-8D57-4E5D-A515-3540BE40A89A,Special Teams,NYG,T. Quinn,T. Quinn,"unknown (no real source, not from the invented lists)",inferred
+2010,D2902416-8D57-4E5D-A515-3540BE40A89A,Special Teams,NYG,T. Quinn,Tom Quinn,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 NYG; first name expanded from an initial"
 2010,E72C0D94-2FF8-4B61-BEB1-109DCAE8C259,Head Scout,NYG,Al Holcomb,Lonnie Masseur,"invented (scout/physio, the standing exception)",inferred
 2010,0F801321-1656-491C-9937-80D2E2B059FE,Off Scout,NYG,Mike Pope,Colin Wojcik,"invented (scout/physio, the standing exception)",inferred
 2010,E2EC91A6-1102-4B0E-917F-B0513BF12918,Def Scout,NYG,Jojo Garvin,Bryce Quimby,"invented (scout/physio, the standing exception)",inferred
@@ -2430,7 +2430,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,18E99744-18B7-4BD9-A289-131B41FD1B9C,Head Coach,NYJ,Rex Ryan,Rex Ryan,real (name in a real source),inferred
 2010,8C54D339-07E6-48BE-AE25-B8CC5601FED2,Off Co-ord,NYJ,Brian Schottenheimer,Brian Schottenheimer,real (name in a real source),inferred
 2010,B1569FCD-0FBE-495A-9268-B7A7112C0D8D,Def Co-ord,NYJ,Mike Pettine,Mike Pettine,real (name in a real source),inferred
-2010,AE58832D-1C3B-49D6-BDA7-473FD73ED7DC,Special Teams,NYJ,M. Westhoff,M. Westhoff,"unknown (no real source, not from the invented lists)",inferred
+2010,AE58832D-1C3B-49D6-BDA7-473FD73ED7DC,Special Teams,NYJ,M. Westhoff,Mike Westhoff,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 NYJ; first name expanded from an initial"
 2010,7775EC22-37BA-4951-A4F5-CEC901C7D659,Head Scout,NYJ,Willie Thompson,Willie Thompson,"invented (scout/physio, the standing exception)",inferred
 2010,22DFB30E-477B-42ED-BA44-CCD2A935B9E9,Off Scout,NYJ,Richard Price,Richard Price,"invented (scout/physio, the standing exception)",inferred
 2010,77B1A518-8D56-4F42-81B9-EDA485ACC281,Def Scout,NYJ,Brad Hayball,Brad Hayball,"invented (scout/physio, the standing exception)",inferred
@@ -2448,7 +2448,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,ACCD4C2A-2C95-434E-B4B0-6FC0546C9403,Head Coach,PHI,Andy Reid,Andy Reid,real (name in a real source),inferred
 2010,2B60F2F5-FE7B-475E-BF7F-96E2746935FA,Off Co-ord,PHI,Marty Mornhinweg,Marty Mornhinweg,real (name in a real source),inferred
 2010,D3C1C9DF-D386-40E0-820B-16BD63FEF26D,Def Co-ord,PHI,Sean McDermott,Sean McDermott,real (name in a real source),inferred
-2010,73F5284C-CC93-4541-A197-A073D381B68D,Special Teams,PHI,B. April,B. April,"unknown (no real source, not from the invented lists)",inferred
+2010,73F5284C-CC93-4541-A197-A073D381B68D,Special Teams,PHI,B. April,Bobby April Jr.,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 PHI; first name expanded from an initial"
 2010,8E1D372F-4007-4CDB-94B0-6392631F632A,Head Scout,PHI,Juan Castillo,Brad Rogers,"invented (scout/physio, the standing exception)",inferred
 2010,88C9B4E6-C97F-4E38-BE78-FFA51A905CA5,Off Scout,PHI,David Culley,David Culley,"invented (scout/physio, the standing exception)",inferred
 2010,592C0C95-3ADD-4F25-825E-66DA46368330,Def Scout,PHI,Jamaal McKinney,Willie Price,"invented (scout/physio, the standing exception)",inferred
@@ -2457,14 +2457,14 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,D35027C2-2501-41ED-B35B-7F2496DB2CB0,Head Coach,PIT,Mike Tomlin,Mike Tomlin,real (name in a real source),inferred
 2010,176D0BB1-6FA1-4418-BF67-A73734029E1B,Off Co-ord,PIT,Bruce Arians,Bruce Arians,real (name in a real source),inferred
 2010,B6D51064-A100-423F-9042-A86039443A73,Def Co-ord,PIT,Dick LeBeau,Dick LeBeau,real (name in a real source),inferred
-2010,9CE157D7-7436-4A09-8B5D-A09819BEDAA9,Special Teams,PIT,B. Ligashesky,B. Ligashesky,"unknown (no real source, not from the invented lists)",inferred
+2010,9CE157D7-7436-4A09-8B5D-A09819BEDAA9,Special Teams,PIT,B. Ligashesky,Al Everest,real (name in a real source),"Coaching Tree: 2010 PIT Special Teams Assistant was Al Everest; our record held B. Ligashesky, who held that job in an earlier season"
 2010,E5D8A266-92C9-458E-B63A-280C4F4CFFC0,Head Scout,PIT,Randy Fichtner,Darnell Fairweather,"invented (scout/physio, the standing exception)",inferred
 2010,DB4F7E5E-A6CF-4382-858E-75240BA46AC9,Off Scout,PIT,Johnny Thompson,Johnny Thompson,"invented (scout/physio, the standing exception)",inferred
 2010,F9C71462-3E01-43B2-8A15-C14AFAECF28B,Def Scout,PIT,Jason Parker,Jason Parker,"invented (scout/physio, the standing exception)",inferred
 2010,C1CB2D1E-2449-4339-A764-6129202BD3DF,Head Physio,PIT,Ethan Amos,Leonard Mangurian,"invented (scout/physio, the standing exception)",inferred
 2010,803186EA-9B5A-4AE1-933E-66E073C40932,Assistant Physio,PIT,Tory Davidson,Tyler Fairbanks,"invented (scout/physio, the standing exception)",inferred
 2010,3371880C-8837-4836-BCEA-0C57E11D672B,Head Coach,LAC,Norv Turner,Norv Turner,real (name in a real source),inferred
-2010,BD1E3C38-350E-44F5-9263-4762C435F338,Off Co-ord,LAC,Clarence Shelmon,Clarence Shelmon,"unknown (no real source, not from the invented lists)",inferred
+2010,BD1E3C38-350E-44F5-9263-4762C435F338,Off Co-ord,LAC,Clarence Shelmon,Clarence Shelmon,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 2010 LAC; confirmed unchanged"
 2010,82BF25AE-D18E-47D2-91CF-B2D0DAB94C07,Def Co-ord,LAC,Ron Rivera,Ron Rivera,real (name in a real source),inferred
 2010,D3180370-1A97-490B-9DCA-97E6440AA9C2,Special Teams,LAC,Rob Chudzinski,Rob Chudzinski,real (name in a real source),inferred
 2010,15560EFD-518E-45A3-9EC8-186C64DDB9B0,Head Scout,LAC,Michael Cooper,Michael Cooper,"invented (scout/physio, the standing exception)",inferred
@@ -2475,7 +2475,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,0057C417-ACEB-44C9-A7B0-C046489EF896,Head Coach,SF,Jim Tomsula,Jim Tomsula,real (name in a real source),inferred
 2010,612A4227-D8EE-4032-8F50-9935516C1B9B,Off Co-ord,SF,Jimmy Raye,Jimmy Raye,real (name in a real source),inferred
 2010,F90E96B3-31EC-4AA1-B3B4-2392B981E45B,Def Co-ord,SF,Greg Manusky,Greg Manusky,real (name in a real source),inferred
-2010,7532325B-3332-4537-8A9E-257669BDA973,Special Teams,SF,A. Everest,A. Everest,"unknown (no real source, not from the invented lists)",inferred
+2010,7532325B-3332-4537-8A9E-257669BDA973,Special Teams,SF,A. Everest,Kurt Schottenheimer,real (name in a real source),"Coaching Tree: 2010 SF Special Teams Coordinator was Kurt Schottenheimer; our record held A. Everest, who held that job in an earlier season"
 2010,3DF86EBE-179E-46F5-8704-24F11CE87A92,Head Scout,SF,Johnny Lynn,Johnny Lynn,real (name in a real source),inferred
 2010,97AD53CF-71D3-4D76-A137-EEC6C1F3836F,Off Scout,SF,Jason Michael,Charles Murray,"invented (scout/physio, the standing exception)",inferred
 2010,416E21EB-B7B6-4E56-B4E8-334FF451F424,Def Scout,SF,Jadeveon Jackson,Eugene Sandoval,"invented (scout/physio, the standing exception)",inferred
@@ -2492,8 +2492,8 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,4E571C70-DCC3-45C3-80F2-6A51B44159EC,Assistant Physio,SEA,D'Ernest Chaisson,Willie Fenimore,"invented (scout/physio, the standing exception)",inferred
 2010,7422A228-0656-472F-894B-BE17C9DF39E2,Head Coach,LAR,Steve Spagnuolo,Steve Spagnuolo,real (name in a real source),inferred
 2010,61400D57-6F45-4321-B5AB-3E26896B5D9D,Off Co-ord,LAR,Pat Shurmur,Pat Shurmur,real (name in a real source),inferred
-2010,4C62CA04-1BCB-4780-94FF-FBD6652DDF2B,Def Co-ord,LAR,Ken Flajole,Ken Flajole,"unknown (no real source, not from the invented lists)",inferred
-2010,7DBC4D0A-122D-498A-9316-9A740CFFB51D,Special Teams,LAR,T. McMahon,T. McMahon,"unknown (no real source, not from the invented lists)",inferred
+2010,4C62CA04-1BCB-4780-94FF-FBD6652DDF2B,Def Co-ord,LAR,Ken Flajole,Ken Flajole,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 2010 LAR; confirmed unchanged"
+2010,7DBC4D0A-122D-498A-9316-9A740CFFB51D,Special Teams,LAR,T. McMahon,Tom McMahon,real (name in a real source),"Coaching Tree: titled Special Teams Coordinator, 2010 LAR; first name expanded from an initial"
 2010,E61EA4DD-7CE2-490C-85E7-D681CC5AB26B,Head Scout,LAR,Jonathan Gannon,Jonathan Gannon,real (name in a real source),inferred
 2010,991FABC3-5515-44AA-9D76-7F7EE22A4F07,Off Scout,LAR,Steve Loney,Steve Loney,"invented (scout/physio, the standing exception)",inferred
 2010,4BFAFA32-6D2B-4530-BA8D-363BCD1A0EE9,Def Scout,LAR,Raheem Goff,Isaiah Bracewell,"invented (scout/physio, the standing exception)",inferred
@@ -2502,7 +2502,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,AE1AFBB7-32C6-42FC-98EB-3C95773D4A6C,Head Coach,TB,Raheem Morris,Raheem Morris,real (name in a real source),inferred
 2010,6F15412D-1475-4866-A740-72C1F0AA3EC6,Off Co-ord,TB,Greg Olson,Greg Olson,real (name in a real source),inferred
 2010,8E0EA26B-D72B-4966-9D92-E6277727E14A,Def Co-ord,TB,Alex Van Pelt,Alex Van Pelt,real (name in a real source),inferred
-2010,82F0942E-CB93-4A61-B7A7-F27E6903F539,Special Teams,TB,J. Bates,J. Bates,"unknown (no real source, not from the invented lists)",inferred
+2010,82F0942E-CB93-4A61-B7A7-F27E6903F539,Special Teams,TB,J. Bates,Rich Bisaccia,real (name in a real source),"Coaching Tree: 2010 TB Special Teams Coordinator was Rich Bisaccia; our record held J. Bates, who held that job in an earlier season"
 2010,2F0C90D3-B8ED-4F4C-804A-CC4FA8563D76,Head Scout,TB,Jimmy Lake,Al Yeager,"invented (scout/physio, the standing exception)",inferred
 2010,D161EF17-6806-4FBB-806A-B90571ACD79B,Off Scout,TB,Pete Mangurian,Pete Mangurian,"invented (scout/physio, the standing exception)",inferred
 2010,8E34F337-9A20-41AD-AB79-AD72970764D0,Def Scout,TB,Walter Thomson,Walter Thomson,"invented (scout/physio, the standing exception)",inferred
@@ -2511,7 +2511,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,76C4BCBE-CE28-4F8B-A635-70A665DA76D1,Head Coach,TEN,Jeff Fisher,Jeff Fisher,real (name in a real source),inferred
 2010,20044774-0B68-499C-8F44-3A376734DB88,Off Co-ord,TEN,Mike Heimerdinger,Mike Heimerdinger,real (name in a real source),inferred
 2010,D25AE1E8-8399-4F80-9755-218ED99D4491,Def Co-ord,TEN,Chuck Cecil,Chuck Cecil,real (name in a real source),inferred
-2010,B9B2C19B-CDC0-4B6F-AD50-2E77783BEAFB,Special Teams,TEN,A. Lowry,A. Lowry,"unknown (no real source, not from the invented lists)",inferred
+2010,B9B2C19B-CDC0-4B6F-AD50-2E77783BEAFB,Special Teams,TEN,A. Lowry,Alan Lowry,real (name in a real source),"Coaching Tree: Special Teams Assistant (INFERRED, no titled special teams coach), 2010 TEN; first name expanded from an initial"
 2010,13B728FE-7D15-45EF-A145-DE0C7EE8A35B,Head Scout,TEN,Dave McGinnis,Dave McGinnis,real (name in a real source),inferred
 2010,627C177E-A208-48F3-9D86-5BD037E65272,Off Scout,TEN,Mike Munchak,Mike Munchak,real (name in a real source),inferred
 2010,0B098D6A-074F-4C8B-AAF8-7EB7A9DEC10A,Def Scout,TEN,Britain Wagner,Jared Jenkins,"invented (scout/physio, the standing exception)",inferred
@@ -2520,7 +2520,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 2010,6459EFA7-113F-45C9-8B71-6C020DB66038,Head Coach,WAS,Mike Shanahan,Mike Shanahan,real (name in a real source),inferred
 2010,F5623B79-43C8-48CC-A71A-7AEBE6EBB39A,Off Co-ord,WAS,Kyle Shanahan,Kyle Shanahan,real (name in a real source),inferred
 2010,64F1915F-0DA6-4C89-A450-CF0260AD02FF,Def Co-ord,WAS,Jim Haslett,Jim Haslett,real (name in a real source),inferred
-2010,AA3699F9-7D31-4F40-936E-B30BA2232705,Special Teams,WAS,D. Smith,D. Smith,"unknown (no real source, not from the invented lists)",inferred
+2010,AA3699F9-7D31-4F40-936E-B30BA2232705,Special Teams,WAS,D. Smith,Danny Smith,real (name in a real source),"Coaching Tree: Special Teams Assistant (INFERRED, no titled special teams coach), 2010 WAS; first name expanded from an initial"
 2010,EF44183B-F3AB-49ED-B84B-5E219F1F171A,Head Scout,WAS,Billy Murphy,Billy Murphy,"invented (scout/physio, the standing exception)",inferred
 2010,5D15559F-5E68-4503-8A86-9DAE737CBCB7,Off Scout,WAS,Arthur Moore,Arthur Moore,real (name in a real source),inferred
 2010,3B79B665-ADCC-4BEE-8580-F45A227F1A57,Def Scout,WAS,Justin Barkley,Isaiah Harris,"invented (scout/physio, the standing exception)",inferred

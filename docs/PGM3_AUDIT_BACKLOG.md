@@ -3577,3 +3577,76 @@ same treatment: a sample scored against a real reference before a single record
 is written, because a source that is right about head coaches is not thereby
 right about coordinators, and a name that is right for a franchise is not
 thereby right for a year.
+
+### 70. Coordinators filled from the Coaching Tree — 1979 and 2010 — and a correction to my own count
+
+**FIRST, THE CORRECTION, because Ryan ruled on a number I got wrong.** I reported
+"2010 carries 36 invented coordinator records". It does not. My classifier
+treated every provenance value not beginning real/sourced/named as invented, and
+2010's 36 all read `unknown (no real source, not from the invented lists)` —
+a different thing entirely. Against the source, **29 of the 36 were already the
+right man**, 22 of them stored with an initial (`D. Toub` for Dave Toub).
+**2010 was never a hole; it was a set of unverified abbreviations.** 1979's 65
+are genuinely `invented` and that half of the report stood.
+
+**A second thing I had backwards: the 1979 file uses HISTORICAL team ids.** Its
+Baltimore Colts sit at `BAL` and its Houston Oilers at `HOU`, both already
+carrying the real Maxie Baughan, George Boutselis, Ed Biles and John Paul Young
+marked `sourced`. So the ids with no 1979 team behind them are **IND and TEN**,
+the modern ids of those same two franchises, plus Carolina and Jacksonville —
+twelve records, not eight. Had I not checked, the pass would have relabelled
+four real sourced coordinators as "this franchise did not exist", which is the
+exact opposite of the truth.
+
+**WHAT WAS WRITTEN.**
+
+| | |
+|---|---|
+| 1979 titled coordinator | 14 |
+| 1979 inferred from a Special Teams Assistant | 10 |
+| 1979 franchise did not exist — own provenance value | 12 |
+| 2010 confirmed already correct | 7 |
+| 2010 first name expanded from an initial | 23 |
+| 2010 corrected to a different man | 3 |
+| 2010 seniority fallback, marked | 2 |
+| 2010 absent from the source (Houston) | 1 |
+
+**The three 2010 corrections are a coherent defect, not noise.** Our file had Bob
+Ligashesky on Pittsburgh's special teams and Al Everest on San Francisco's; the
+source has Everest at Pittsburgh and Kurt Schottenheimer at San Francisco.
+Ligashesky and Everest each held those jobs in an EARLIER season. Tampa Bay was
+the same shape. The 2010 file's special-teams column was one coaching cycle
+stale.
+
+**THREE SLOTS WERE NOT FILLED, and the reason is the LeBeau defect.** Chicago's,
+New England's and the Cardinals' 1979 offensive coordinators are Ken Meyer, Jim
+Ringo and Tom Bettis — **all three already sit in the 1979 file as free-agent
+head coaches.** Filling would put one man in two places. Left alone and reported:
+the fix is to move each man from the free-agent pool into his real job, which is
+a placement question, not a fill.
+
+**Mark Duffner moved from Jacksonville's offensive scout slot to its defensive
+one**, the two scout records swapping so both stay filled and nobody is invented.
+The source has him coaching their linebackers in 2010. This is the independent
+check on yesterday's LeBeau decision: right man, right team, wrong side of the
+ball in our file.
+
+**Faces followed.** Fourteen of the new men already existed elsewhere in the
+archive, so `reconcile_faces.py --staff` ran after the fill and rewrote 32
+records under the ruled rule. All four gates pass on all twenty files.
+
+**Ages were not touched**, as ruled. A real man sits on his slot's existing age
+and the sidecar says the age is not sourced.
+
+#### STILL OPEN — the 23 fallbacks, and why they are not written
+
+1979's remaining fallbacks need the senior assistant on that side of the ball,
+and **the rule as approved misfires on at least one team.** Applied mechanically
+it makes Ken Iman Philadelphia's offensive coordinator while **Sid Gillman is
+sitting on the same staff**, listed under "Quality Control" — a title that reads
+junior today and did not in 1979. Rather than hand-pick around the rule for one
+team and apply it blind everywhere else, the picks go to Ryan as a list.
+
+**Three of those have no candidate at all**: Atlanta, Minnesota and Pittsburgh
+carried nobody in any special teams role in 1979. There is nothing to infer and
+they stay generated.
