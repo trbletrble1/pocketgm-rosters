@@ -3744,3 +3744,48 @@ wanted to fill, assistant head coach and defensive architect at Miami. **The
 question is whether a placement Ryan named on a phantom franchise outranks the
 man's real job**, and that is his to answer, not a tool's. Miami's defensive
 coordinator slot stays generated meanwhile.
+
+### 71. The 1979 free-agent coach pool was built from head-coaching records, so it collected men who had jobs
+
+Ryan's read, confirmed by measurement. Nine men have already come out of the
+pool this session — Meyer, Ringo, Bettis, North, Gillman, Christiansen, Gilmer,
+Sandusky, Hollway — and **every one was a former head coach actually employed as
+a coordinator in 1979.** That is not nine coincidences: **the pool was built from
+men with head-coaching records, and a man with a head-coaching record who was
+working as an assistant looked available.** The build had no way to see he had a
+job.
+
+**Joining the remaining 82 against the Coaching Tree's 1979 staffs finds eight
+more** — one query, no new source needed:
+
+| in the pool | actually in 1979 |
+|---|---|
+| Abe Gibron | Tampa Bay, assistant head coach |
+| Bill Johnson | Tampa Bay, defensive line |
+| Charley Winner | Cincinnati, defensive backs |
+| Dick Modzelewski | Cincinnati, defensive line |
+| Fred O'Connor | Washington, running backs |
+| Jack Faulkner | the Rams, offensive assistant |
+| Norb Hecker | San Francisco, defensive backs |
+| Pete McCulley | the Jets, wide receivers |
+
+**All eight are former NFL head coaches** — Gibron at Chicago, Winner at the
+Cardinals and Jets, Faulkner at Denver, Hecker at Atlanta, McCulley and O'Connor
+both at San Francisco in 1978, Johnson at Cincinnati, Modzelewski interim at
+Cleveland. The pool caught the record and missed the job, exactly as with the
+nine.
+
+**SEVENTEEN OF THE ORIGINAL 91 WERE EMPLOYED THAT SEASON — one in five.**
+
+**Why these eight are NOT being moved, unlike the nine.** Every one of the nine
+held a coordinator's job, which PGM3 has a slot for. **These eight were position
+coaches — defensive backs, defensive line, running backs, wide receivers — and
+the file has no slot for a position coach.** There is nowhere to move them to.
+
+**The ruling needed.** Either they stay in the pool, misrepresented as available
+when they were working, with the sidecar saying so per record; or they come out
+of the pool entirely, which makes the hiring market eight men smaller but true.
+**Measured and reported, not acted on** — eight deletions from a published file
+is Ryan's call, and the recorded staffs are in
+`wip/coaching_tree_1979_staffs.csv` (245 men, 28 teams) so the join can be redone
+against any future ruling.

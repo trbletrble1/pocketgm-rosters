@@ -1,0 +1,247 @@
+team,name,roles
+PIT,Chuck Noll,Head Coach
+PIT,Rollie Dotsch,Offensive Line
+PIT,Dick Hoak,Running Backs
+PIT,Tom Moore,Wide Receivers
+PIT,George Perles,Defensive Coordinator
+PIT,Paul Uram,Administrative Assistant
+PIT,Dick Walker,Defensive Assistant
+PIT,Woody Widenhofer,Linebackers
+DAL,Tom Landry,Head Coach
+DAL,Dan Reeves,Offensive Coordinator
+DAL,Gene Stallings,Defensive Backs
+DAL,Ermal Allen,Research and Development
+DAL,Jim Myers,Assistant Head Coach
+DAL,Ernie Stautner,Defensive Coordinator
+DAL,Jerry Tubbs,Linebackers
+DAL,Mike Ditka,Wide Receivers
+DAL,Bob Ward,Strength and Conditioning
+MIA,Don Shula,Head Coach
+MIA,Dan Henning,Wide Receivers
+MIA,John Sandusky,Offensive Line
+MIA,Steve Crosby,Special Teams Assistant
+MIA,Tom Keane,Defensive Backs
+MIA,Mike Scarry,Defensive Line
+MIA,Bill Arnsparger,Assistant Head Coach
+MIA,Carl Taseff,Running Backs
+LV,Tom Flores,Head Coach
+LV,Ray Willsey,Running Backs
+LV,Sam Boghosian,Offensive Line
+LV,Lew Erber,Wide Receivers
+LV,Myrel Moore,Linebackers
+LV,Ollie Spencer,Offensive Line
+LV,Charlie Sumner,Defensive Backs
+WAS,Jack Pardee,Head Coach
+WAS,Richie Petitbon,Defensive Backs
+WAS,Joe Walton,Offensive Coordinator
+WAS,Bob Bowser,Special Assistant
+WAS,Ray Callahan,Offensive Line
+WAS,George Dickson,Linebackers
+WAS,John Hilton,Tight Ends
+WAS,Fred O'Connor,Running Backs
+WAS,Richard Urich,Defensive Coordinator
+ATL,Leeman Bennett,Head Coach
+ATL,Jerry Glanville,Defensive Backs
+ATL,John North,Running Backs
+ATL,Jim Champion,Defensive Line
+ATL,Ted Plumb,Quarterbacks
+ATL,Doug Shively,Linebackers
+ATL,Bill Walsh,Offensive Line
+ATL,Dick Wood,Quarterbacks
+SF,Bill Walsh,Head Coach
+SF,Norb Hecker,Defensive Backs
+SF,Chuck Studley,Defensive Coordinator
+SF,Mike White,Assistant Offensive Line
+SF,Sam Wyche,Quarterbacks
+SF,Billie Matthews,Running Backs
+SF,Bobb McKittrick,Offensive Line
+SF,Bill McPherson,Linebackers
+SF,Dennis Green,Wide Receivers
+SF,Al Vermeil,Strength and Conditioning
+NYG,Ray Perkins,Head Coach
+NYG,Ernie Adams,Offensive Assistant
+NYG,Ralph Hawkins,Defensive Coordinator
+NYG,Pat Hodgson,Wide Receivers
+NYG,Bob Lord,Running Backs
+NYG,Don Pollard,Defensive Backs
+NYG,Dick Scesniak,Offensive Line
+NYG,Bill Belichick,Special Teams Assistant
+NYG,Jim Stanley,Defensive Line
+CHI,Neill Armstrong,Head Coach
+CHI,Hank Kuhlmann,Running Backs
+CHI,Ken Meyer,Offensive Coordinator
+CHI,Buddy Ryan,Defensive Coordinator
+CHI,Jerry Frei,Offensive Line
+CHI,Doug Gerhart,Wide Receivers
+CHI,Dale Haupt,Defensive Line
+CHI,Jim LaRue,Defensive Backs
+MIN,Bud Grant,Head Coach
+MIN,Bob Hollway,Defensive Assistant
+MIN,Les Steckel,Wide Receivers
+MIN,Bus Mertes,Running Backs
+MIN,John Michels,Offensive Line
+MIN,Floyd Reese,Linebackers
+MIN,Jerry Burns,Offensive Coordinator
+MIN,Murray Warmath,Defensive Line
+DEN,Red Miller,Head Coach
+DEN,Marv Braden,Special Teams Assistant
+DEN,Whitey Dovell,Offensive Line
+DEN,Stan Jones,Defensive Line
+DEN,Richie McCabe,Linebackers
+DEN,Babe Parilli,Quarterbacks
+DEN,Fran Polsfoot,Wide Receivers
+DEN,Paul Roach,Running Backs
+DEN,Joe Collier,Defensive Coordinator
+DEN,Bob Zeman,Defensive Backs
+CLE,Sam Rutigliano,Head Coach
+CLE,Dick MacPherson,Linebackers
+CLE,Jim Shofner,Quarterbacks
+CLE,Jim Garrett,Running Backs
+CLE,Rod Humenuik,Offensive Line
+CLE,John Petercuskie,Special Teams Assistant
+CLE,Rich Kotite,Wide Receivers
+CLE,Chuck Weber,Defensive Backs
+NE,Ron Erhardt,Head Coach
+NE,Hank Bullough,Defensive Coordinator
+NE,Jim Ringo,Offensive Coordinator
+NE,Rick Buffington,Administrative Assistant
+NE,Gino Cappelletti,Special Teams Assistant
+NE,Billy Kinard,Defensive Backs
+NE,John Polonchek,Quarterbacks
+NE,Fritz Shurmur,Defensive Line
+NE,Raymond Berry,Wide Receivers
+NE,Tom Yewcic,Running Backs
+CIN,Homer Rice,Head Coach
+CIN,Mike McCormack,Offensive Line
+CIN,Dick Modzelewski,Defensive Line
+CIN,Charley Winner,Defensive Backs
+CIN,Howard Brinker,Linebackers
+CIN,Boyd Dowler,Wide Receivers
+CIN,George Sefcik,Running Backs
+CIN,Frank Gansz,Special Teams Assistant
+CIN,Kim Wood,Strength and Conditioning
+DET,Monte Clark,Head Coach
+DET,Marty Schottenheimer,Linebackers
+DET,Billy Atkins,Defensive Backs
+DET,Don Doll,Special Assistant
+DET,Fred Hoaglin,Offensive Line
+DET,Larry Pasquale,Special Teams Assistant
+DET,Floyd Peters,Defensive Line
+DET,Jimmy Raye,Running Backs
+DET,Bob Schnelker,Quarterbacks
+GB,Bart Starr,Head Coach
+GB,Zeke Bratkowski,Quarterbacks
+GB,Lew Carpenter,Wide Receivers
+GB,Bill Curry,Offensive Line
+GB,Dave Hanner,Assistant Head Coach
+GB,Ernie McMillan,Offensive Line
+GB,John Meyer,Linebackers
+GB,Dick Rehbein,Special Assistant
+GB,Dick LeBeau,Defensive Backs
+GB,Fred Von Appen,Special Teams Assistant
+BAL,Ted Marchibroda,Head Coach
+BAL,Maxie Baughan,Defensive Coordinator
+BAL,Eddie Khayat,Defensive Line
+BAL,George Boutselis,Special Teams Assistant
+BAL,John Symank,Defensive Backs
+BAL,Ernie Zwahlen,Offensive Line
+BAL,Dick Bielski,Wide Receivers
+KC,Marv Levy,Head Coach
+KC,Bobby Ross,Special Teams Assistant
+KC,Rod Rust,Defensive Coordinator
+KC,Rick Abernathy,Strength and Conditioning
+KC,Walt Corey,Defensive Line
+KC,Kay Dalton,Wide Receivers
+KC,Tom Pagna,Running Backs
+KC,Dick Roach,Defensive Backs
+KC,Joe Spencer,Offensive Line
+LAC,Don Coryell,Head Coach
+LAC,Joe Gibbs,Offensive Coordinator
+LAC,Jim Hanifan,Assistant Head Coach
+LAC,Earnel Durden,Running Backs
+LAC,Wayne Sevier,Special Teams Assistant
+LAC,Jacki Simpson,Defensive Coordinator
+LAC,Larrye Weaver,Defensive Backs
+LAC,Ernie Zampese,Wide Receivers
+LAR,Ray Malavasi,Head Coach
+LAR,Jack Faulkner,Offensive Assistant
+LAR,Clyde Evans,Strength and Conditioning
+LAR,Bill Hickman,Administrative Assistant
+LAR,Paul Lanham,Special Teams Assistant
+LAR,Frank Lauterbur,Linebackers
+LAR,Dan Radakovich,Defensive Coordinator
+LAR,Lionel Taylor,Wide Receivers
+LAR,Bud Carson,Defensive Backs
+LAR,LaVern Torgeson,Defensive Line
+NO,Dick Nolan,Head Coach
+NO,Dick Stanfel,Offensive Line
+NO,Paul Wiggin,Defensive Coordinator
+NO,Ed Beard,Linebackers
+NO,Whitey Campbell,Special Teams Assistant
+NO,Chet Franklin,Defensive Backs
+NO,Lamar McHan,Quarterbacks
+NO,Ed Hughes,Offensive Coordinator
+NO,Tom Pratt,Defensive Line
+NYJ,Walt Michaels,Head Coach
+NYJ,Pete McCulley,Wide Receivers
+NYJ,Bob Fry,Offensive Line
+NYJ,Joe Gardi,Linebackers
+NYJ,Joe Haering,Special Teams Assistant
+NYJ,John Idzik,Offensive Coordinator
+NYJ,Bob Ledbetter,Running Backs
+NYJ,Johnny Mazur,Defensive Coordinator
+NYJ,Dan Sekanovich,Defensive Line
+PHI,Dick Vermeil,Head Coach
+PHI,Marion Campbell,Defensive Coordinator
+PHI,Sid Gillman,Quality Control
+PHI,Chuck Bednarik,Linebackers
+PHI,Chuck Clausen,Defensive Line
+PHI,Dick Coury,Wide Receivers
+PHI,Ken Iman,Offensive Line
+PHI,Billy Joe,Running Backs
+PHI,Lynn Stiles,Tight Ends
+PHI,Fred Bruney,Defensive Backs
+PHI,Jerry Wampfler,Offensive Line
+SEA,Jack Patera,Head Coach
+SEA,Jim Mora,Defensive Line
+SEA,Andy MacDonald,Running Backs
+SEA,Howard Mudd,Offensive Line
+SEA,Larry Peccatiello,Linebackers
+SEA,Jerry Rhome,Quarterbacks
+SEA,Jack Christiansen,Defensive Backs
+SEA,Rusty Tillman,Special Teams Assistant
+TB,John McKay,Head Coach
+TB,Abe Gibron,Assistant Head Coach
+TB,Bill Johnson,Defensive Line
+TB,Tom Bass,Defensive Coordinator
+TB,George Chaump,Running Backs
+TB,Phil Krueger,Special Teams Assistant
+TB,Wayne Fontes,Defensive Backs
+TB,Bill Nelsen,Quarterbacks
+HOU,Bum Phillips,Head Coach
+HOU,Joe Bugel,Offensive Line
+HOU,Wade Phillips,Defensive Line
+HOU,Andy Bourgeois,Running Backs
+HOU,Bob Gambold,Defensive Backs
+HOU,King Hill,Wide Receivers
+HOU,Ed Biles,Defensive Coordinator
+HOU,John Paul Young,Linebackers
+ARI,Bud Wilkinson,Head Coach
+ARI,Larry Wilson,Head Coach
+ARI,Rudy Feldman,Defensive Line
+ARI,Freddy Glick,Defensive Backs
+ARI,Leon McLaughlin,Special Assistant
+ARI,Duane Putnam,Offensive Line
+ARI,Jim Sweeney,Running Backs
+ARI,Tom Bettis,Defensive Coordinator
+ARI,Jerry Thompson,Special Teams Assistant
+ARI,Harry Gilmer,Quarterbacks
+BUF,Chuck Knox,Head Coach
+BUF,Ray Prochaska,Offensive Coordinator
+BUF,Kay Stephenson,Quarterbacks
+BUF,Tom Catlin,Defensive Coordinator
+BUF,Jack Donaldson,Wide Receivers
+BUF,Steve Moore,Special Assistant
+BUF,Elijah Pitts,Running Backs
+BUF,Jim Wagstaff,Defensive Backs
+BUF,Willie Zapalac,Defensive Line
