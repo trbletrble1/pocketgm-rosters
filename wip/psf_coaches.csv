@@ -1,0 +1,1946 @@
+file,city,nick,abbr,coach,photo
+1940_NFL,Brooklyn,Dodgers,BKN,Jock Sutherland,jock_sutherland.jpg
+1940_NFL,New York,Giants,NY,Steve Owen,steve_owen.jpg
+1940_NFL,Philadelphia,Eagles,PHI,Bert Bell,bert_bell.jpg
+1940_NFL,Pittsburgh,Steelers,PIT,Walt Kiesling,walt_kiesling.jpg
+1940_NFL,Washington,Redskins,WAS,Ray Flaherty,ray_flaherty.jpg
+1940_NFL,Cleveland,Rams,CLE,Dutch Clark,dutch_clark.jpg
+1940_NFL,Detroit,Lions,DET,Potsy Clark,potsy_clark.jpg
+1940_NFL,Green Bay,Packers,GB,Curly Lambeau,curly_lambeau.jpg
+1941_NFL,Brooklyn,Dodgers,BKN,Jock Sutherland,jock_sutherland.jpg
+1941_NFL,New York,Giants,NY,Steve Owen,steve_owen.jpg
+1941_NFL,Philadelphia,Eagles,PHI,Greasy Neale,greasy_neale.jpg
+1941_NFL,Pittsburgh,Steelers,PIT,Walt Kiesling,walt_kiesling.jpg
+1941_NFL,Washington,Redskins,WAS,Ray Flaherty,ray_flaherty.jpg
+1941_NFL,Cleveland,Rams,CLE,Dutch Clark,dutch_clark.jpg
+1941_NFL,Detroit,Lions,DET,Bill Edwards,bill_edwards.jpg
+1941_NFL,Green Bay,Packers,GB,Curly Lambeau,curly_lambeau.jpg
+1942_NFL,Brooklyn,Dodgers,BKN,Mike Getto,mike_getto.jpg
+1942_NFL,New York,Giants,NY,Steve Owen,steve_owen.jpg
+1942_NFL,Philadelphia,Eagles,PHI,Greasy Neale,greasy_neale.jpg
+1942_NFL,Pittsburgh,Steelers,PIT,Walt Kiesling,walt_kiesling.jpg
+1942_NFL,Washington,Redskins,WAS,Ray Flaherty,ray_flaherty.jpg
+1942_NFL,Cleveland,Rams,CLE,Dutch Clark,dutch_clark.jpg
+1942_NFL,Detroit,Lions,DET,Bull Karcis,bull_karcis.jpg
+1942_NFL,Green Bay,Packers,GB,Curly Lambeau,curly_lambeau.jpg
+1943_NFL,Brooklyn,Dodgers,BKN,Pete Cawthon,pete_cawthon.jpg
+1943_NFL,New York,Giants,NY,Steve Owen,steve_owen.jpg
+1943_NFL,Washington,Redskins,WAS,Dutch Bergman,dutch_bergman.jpg
+1943_NFL,Detroit,Lions,DET,Gus Dorais,gus_dorias.jpg
+1943_NFL,Green Bay,Packers,GB,Curly Lambeau,curly_lambeau.jpg
+1944_NFL,Boston,Yanks,BOS,Herb Kopf,herb_kopf.jpg
+1944_NFL,Brooklyn,Tigers,BKN,Frank Bridges,frank_bridges.jpg
+1944_NFL,New York,Giants,NY,Steve Owen,steve_owen.jpg
+1944_NFL,Philadelphia,Eagles,PHI,Greasy Neale,greasy_neale.jpg
+1944_NFL,Washington,Redskins,WAS,Dudley DeGroot,dudley_degroot.jpg
+1944_NFL,Cleveland,Rams,CLE,Aldo Donelli,aldo_donelli.jpg
+1944_NFL,Detroit,Lions,DET,Gus Dorais,gus_dorais.jpg
+1944_NFL,Green Bay,Packers,GB,Curly Lambeau,curly_lambeau.jpg
+1945_NFL,New York,Giants,NY,Steve Owen,steve_owen.jpg
+1945_NFL,Philadelphia,Eagles,PHI,Greasy Neale,greasy_neale.jpg
+1945_NFL,Pittsburgh,Steelers,PIT,Jim Leonard,jim_leonard.jpg
+1945_NFL,Washington,Redskins,WAS,Dudley DeGroot,dudley_degroot.jpg
+1945_NFL,Cleveland,Rams,CLE,Adam Walsh,adam_walsh.jpg
+1945_NFL,Detroit,Lions,DET,Gus Dorais,gus_dorais.jpg
+1945_NFL,Green Bay,Packers,GB,Curly Lambeau,curly_lambeau.jpg
+1946_AAFC,Brooklyn,Dodgers,BKN,Cliff Battles,cliff_battles.jpg
+1946_AAFC,Buffalo,Bisons,BUF,Red Dawson,red_dawson.jpg
+1946_AAFC,Miami,Seahawks,MIA,Hampton Pool,hampton_pool.jpg
+1946_AAFC,New York,Yankees,NY,Ray Flaherty,ray_flaherty.jpg
+1946_AAFC,Chicago,Rockets,CHI,Bob Dove,bob_dove.jpg
+1946_AAFC,Cleveland,Browns,CLE,Paul Brown,paul_brown.jpg
+1946_AAFC,Los Angeles,Dons,LA,Dudley DeGroot,dudley_degroot.jpg
+1946_AAFC,San Francisco,49ers,SF,Buck Shaw,buck_shaw.jpg
+1946_NFL,Boston,Yanks,BOS,Herb Kopf,herb_kopf.jpg
+1946_NFL,New York,Giants,NY,Steve Owen,steve_owen.jpg
+1946_NFL,Philadelphia,Eagles,PHI,Greasy Neale,greasy_neale.jpg
+1946_NFL,Pittsburgh,Steelers,PIT,Jock Sutherland,jock_sutherland.jpg
+1946_NFL,Washington,Redskins,WAS,Turk Edwards,turk_edwards.jpg
+1946_NFL,Detroit,Lions,DET,Gus Dorais,gus_dorais.jpg
+1946_NFL,Green Bay,Packers,GB,Curly Lambeau,curly_lambeau.jpg
+1946_NFL,Los Angeles,Rams,LA,Adam Walsh,adam_walsh.jpg
+1947_AAFC,Baltimore,Colts,BAL,Cecil Isbell,cecil_isbell.jpg
+1947_AAFC,Brooklyn,Dodgers,BKN,Cliff Battles,cliff_battles.jpg
+1947_AAFC,Buffalo,Bills,BUF,Red Dawson,red_dawson.jpg
+1947_AAFC,New York,Yankees,NY,Ray Flaherty,ray_flaherty.jpg
+1947_AAFC,Chicago,Rockets,CHI,Jim Crowley,jim_crowley.jpg
+1947_AAFC,Cleveland,Browns,CLE,Paul Brown,paul_brown.jpg
+1947_AAFC,Los Angeles,Dons,LA,Dudley DeGroot,dudley_degroot.jpg
+1947_AAFC,San Francisco,49ers,SF,Buck Shaw,buck_shaw.jpg
+1947_NFL,Boston,Yanks,BOS,Clipper Smith,clipper_smith.jpg
+1947_NFL,New York,Giants,NY,Steve Owen,steve_owen.jpg
+1947_NFL,Philadelphia,Eagles,PHI,Greasy Neale,greasy_neale.jpg
+1947_NFL,Pittsburgh,Steelers,PIT,Jock Sutherland,jock_sutherland.jpg
+1947_NFL,Washington,Redskins,WAS,Turk Edwards,turk_edwards.jpg
+1947_NFL,Detroit,Lions,DET,Gus Dorais,gus_dorais.jpg
+1947_NFL,Green Bay,Packers,GB,Curly Lambeau,curly_lambeau.jpg
+1947_NFL,Los Angeles,Rams,LA,Bob Snyder,bob_snyder.jpg
+1948_AAFC,Baltimore,Colts,BAL,Cecil Isbell,Cecil_Isbell.jpg
+1948_AAFC,Brooklyn,Dodgers,BKN,Carl Voyles,Carl_Voyles.jpg
+1948_AAFC,Buffalo,Bills,BUF,Red Dawson,Red_Dawson.jpg
+1948_AAFC,New York,Yankees,NY,Red Strader,Red_Strader.jpg
+1948_AAFC,Chicago,Rockets,CHI,Ed McKeever,Ed_McKeever.jpg
+1948_AAFC,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1948_AAFC,Los Angeles,Dons,LA,Jimmy Phelan,Jimmy_Phelan.jpg
+1948_AAFC,San Francisco,49ers,SF,Buck Shaw,Buck_Shaw.jpg
+1948_NFL,Boston,Yanks,BOS,Clipper Smith,Clipper_Smith.jpg
+1948_NFL,New York,Giants,NY,Steve Owen,Steve_Owen.jpg
+1948_NFL,Philadelphia,Eagles,PHI,Greasy Neale,Greasy_Neale.jpg
+1948_NFL,Pittsburgh,Steelers,PIT,John Michelosen,John_Michelosen.jpg
+1948_NFL,Washington,Redskins,WAS,Turk Edwards,Turk_Edwards.jpg
+1948_NFL,Detroit,Lions,DET,Bo McMillin,Bo_McMillin.jpg
+1948_NFL,Green Bay,Packers,GB,Curly Lambeau,Curly_Lambeau.jpg
+1948_NFL,Los Angeles,Rams,LA,Clark Shaughnessy,Clark_Shaughnessy.jpg
+1949_AAFC,Baltimore,Colts,BAL,Walt Driskill,walt_driskill.jpg
+1949_AAFC,Buffalo,Bills,BUF,Red Dawson,red_dawson.jpg
+1949_AAFC,Chicago,Hornets,CHI,Ray Flaherty,ray_flaherty.jpg
+1949_AAFC,Cleveland,Browns,CLE,Paul Brown,paul_brown.jpg
+1949_AAFC,Los Angeles,Dons,LA,Jimmy Phelan,jimmy_phelan.jpg
+1949_AAFC,New York,Yankees,NY,Red Strader,red_strader.jpg
+1949_AAFC,San Francisco,49ers,SF,Buck Shaw,buck_shaw.jpg
+1949_NFL,Philadelphia,Eagles,PHI,Greasy Neale,greasy_neale.jpg
+1949_NFL,Pittsburgh,Steelers,PIT,John Michelosen,john_michelosen.jpg
+1949_NFL,Washington,Redskins,WAS,John Whelchel,john_whelchel.jpg
+1949_NFL,Detroit,Lions,DET,Bo McMillin,bo_mcmillin.jpg
+1949_NFL,Green Bay,Packers,GB,Curly Lambeau,curly_lambeau.jpg
+1949_NFL,Los Angeles,Rams,LA,Clark Shaughnessy,clark_shaughnessy.jpg
+1950_NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1950_NFL,Philadelphia,Eagles,PHI,Greasy Neale,Greasy_Neale.jpg
+1950_NFL,Pittsburgh,Steelers,PIT,John Michelosen,John_Michelosen.jpg
+1950_NFL,Washington,Redskins,WAS,Herman Ball,Herman_Ball.jpg
+1950_NFL,Baltimore,Colts,BAL,Clem Crowe,Clem_Crowe.jpg
+1950_NFL,Detroit,Lions,DET,Bo McMillin,Bo_McMillin.jpg
+1950_NFL,Green Bay,Packers,GB,Gene Ronzani,Gene_Ronzani.jpg
+1950_NFL,Los Angeles,Rams,LA,Joe Stydahar,Joe_Stydahar.jpg
+1950_NFL,San Francisco,49ers,SF,Buck Shaw,Buck_Shaw.jpg
+1951_NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1951_NFL,Philadelphia,Eagles,PHI,Bo McMillin,Bo_McMillin.jpg
+1951_NFL,Pittsburgh,Steelers,PIT,John Michelosen,John_Michelosen.jpg
+1951_NFL,Washington,Redskins,WAS,Herman Ball,Herman_Ball.jpg
+1951_NFL,Detroit,Lions,DET,Buddy Parker,Buddy_Parker.jpg
+1951_NFL,Green Bay,Packers,GB,Gene Ronzani,Gene_Ronzani.jpg
+1951_NFL,Los Angeles,Rams,LA,John Stydahar,John_Stydahar.jpg
+1951_NFL,San Francisco,49ers,SF,Buck Shaw,Buck_Shaw.jpg
+1952_NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1952_NFL,New York,Giants,NYG,Steve Owen,Steve_Owen.jpg
+1952_NFL,Philadelphia,Eagles,PHI,Jim Trimble,Jim_Trimble.jpg
+1952_NFL,Pittsburgh,Steelers,PIT,Joe Bach,Joe_Bach.jpg
+1952_NFL,Washington,Redskins,WAS,Curly Lambeau,Curly_Lambeau.jpg
+1952_NFL,Dallas,Texans,DAL,Jimmy Phelan,Jimmy_Phelan.jpg
+1952_NFL,Detroit,Lions,DET,Buddy Parker,Buddy_Parker.jpg
+1952_NFL,Green Bay,Packers,GB,Gene Ronzani,Gene_Ronzani.jpg
+1952_NFL,Los Angeles,Rams,LA,Joe Stydahar,Joe_Stydahar.jpg
+1952_NFL,San Francisco,49ers,SF,Buck Shaw,Buck_Shaw.jpg
+1953_NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1953_NFL,New York,Giants,NYG,Steve Owen,Steve_Owen.jpg
+1953_NFL,Philadelphia,Eagles,PHI,Jim Trimble,Jim_Trimble.jpg
+1953_NFL,Pittsburgh,Steelers,PIT,Joe Bach,Joe_Bach.jpg
+1953_NFL,Washington,Redskins,WAS,Curly Lambeau,Curly_Lambeau.jpg
+1953_NFL,Baltimore,Colts,BAL,Keith Molesworth,Keith_Molesworth.jpg
+1953_NFL,Detroit,Lions,DET,Buddy Parker,Buddy_Parker.jpg
+1953_NFL,Green Bay,Packers,GB,Gene Ronzani,Gene_Ronzani.jpg
+1953_NFL,Los Angeles,Rams,LA,Hampton Pool,Hampton_Pool.jpg
+1953_NFL,San Francisco,49ers,SF,Buck Shaw,Buck_Shaw.jpg
+1954_NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1954_NFL,New York,Giants,NYG,Jim Lee Howell,Jim_Lee_Howell.jpg
+1954_NFL,Philadelphia,Eagles,PHI,Jim Trimble,Jim_Trimble.jpg
+1954_NFL,Pittsburgh,Steelers,PIT,Walt Kiesling,Walt_Kiesling.jpg
+1954_NFL,Washington,Redskins,WAS,Joe Kuharich,Joe_Kuharich.jpg
+1954_NFL,Baltimore,Colts,BAL,Weeb Ewbank,Weeb_Ewbank.jpg
+1954_NFL,Detroit,Lions,DET,Buddy Parker,Buddy_Parker.jpg
+1954_NFL,Green Bay,Packers,GB,Lisle Blackbourn,Lisle_Blackbourn.jpg
+1954_NFL,Los Angeles,Rams,LA,Hampton Pool,Hampton_Pool.jpg
+1954_NFL,San Francisco,49ers,SF,Buck Shaw,Buck_Shaw.jpg
+1955_NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1955_NFL,New York,Giants,NYG,Jim Lee Howell,Jim_Lee_Howell.jpg
+1955_NFL,Philadelphia,Eagles,PHI,Jim Trimble,Jim_Trimble.jpg
+1955_NFL,Pittsburgh,Steelers,PIT,Walt Kiesling,Walt_Kiesling.jpg
+1955_NFL,Washington,Redskins,WAS,Joe Kuharich,Joe_Kuharich.jpg
+1955_NFL,Baltimore,Colts,BAL,Weeb Ewbank,Weeb_Ewbank.jpg
+1955_NFL,Detroit,Lions,DET,Buddy Parker,Buddy_Parker.jpg
+1955_NFL,Green Bay,Packers,GB,Lisle Blackbourn,Lisle_Blackbourn.jpg
+1955_NFL,Los Angeles,Rams,LA,Sid Gillman,Sid_Gillman.jpg
+1955_NFL,San Francisco,49ers,SF,Red Strader,Red_Strader.jpg
+1956_NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1956_NFL,New York,Giants,NYG,Jim Lee Howell,Jim_Lee_Howell.jpg
+1956_NFL,Philadelphia,Eagles,PHI,Hugh Devore,Hugh_Devore.jpg
+1956_NFL,Pittsburgh,Steelers,PIT,Walt Kiesling,Walt_Kiesling.jpg
+1956_NFL,Washington,Redskins,WAS,Joe Kuharich,Joe_Kuharich.jpg
+1956_NFL,Baltimore,Colts,BAL,Weeb Ewbank,Weeb_Ewbank.jpg
+1956_NFL,Detroit,Lions,DET,Buddy Parker,Buddy_Parker.jpg
+1956_NFL,Green Bay,Packers,GB,Lisle Blackbourn,Lisle_Blackbourn.jpg
+1956_NFL,Los Angeles,Rams,LA,Sid Gilman,Sid_Gilman.jpg
+1956_NFL,San Francisco,49ers,SF,Frankie Albert,Frankie_Albert.jpg
+1957_NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1957_NFL,New York,Giants,NYG,Jim Lee Howell,Jim_Lee_Howell.jpg
+1957_NFL,Philadelphia,Eagles,PHI,Hugh Devore,Hugh_Devore.jpg
+1957_NFL,Pittsburgh,Steelers,PIT,Buddy Parker,Buddy_Parker.jpg
+1957_NFL,Washington,Redskins,WAS,Joe Kuharich,Joe_Kuharich.jpg
+1957_NFL,Baltimore,Colts,BAL,Weeb Ewbank,Weeb_Ewbank.jpg
+1957_NFL,Detroit,Lions,DET,George Wilson,George_Wilson.jpg
+1957_NFL,Green Bay,Packers,GB,Lisle Blackbourn,Lisle_Blackbourn.jpg
+1957_NFL,Los Angeles,Rams,LA,Sid Gillman,Sid_Gillman.jpg
+1957_NFL,San Francisco,49ers,SF,Frankie Albert,Frankie_Albert.jpg
+1958_NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1958_NFL,New York,Giants,NYG,Jim Lee Howell,Jim_Lee_Howell.jpg
+1958_NFL,Philadelphia,Eagles,PHI,Buck Shaw,Buck_Shaw.jpg
+1958_NFL,Pittsburgh,Steelers,PIT,Buddy Parker,Buddy_Parker.jpg
+1958_NFL,Washington,Redskins,WAS,Joe Kuharich,Joe_Kuharich.jpg
+1958_NFL,Baltimore,Colts,BAL,Weeb Ewbank,Weeb_Ewbank.jpg
+1958_NFL,Detroit,Lions,DET,George Wilson,George_Wilson.jpg
+1958_NFL,Green Bay,Packers,GB,Ray McLean,Ray_McLean.jpg
+1958_NFL,Los Angeles,Rams,LA,Sid Gillman,Sid_Gillman.jpg
+1958_NFL,San Francisco,49ers,SF,Frankie Albert,Frankie_Albert.jpg
+1959_NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1959_NFL,New York,Giants,NYG,Jim Lee Howell,Jim_Lee_Howell.jpg
+1959_NFL,Philadelphia,Eagles,PHI,Buck Shaw,Buck_Shaw.jpg
+1959_NFL,Pittsburgh,Steelers,PIT,Billy Parker,Billy_Parker.jpg
+1959_NFL,Washington,Redskins,WAS,Mike Nixon,Mike_Nixon.jpg
+1959_NFL,Baltimore,Colts,BAL,Weeb Ewbank,Weeb_Ewbank.jpg
+1959_NFL,Detroit,Lions,DET,George Wilson,George_Wilson.jpg
+1959_NFL,Green Bay,Packers,GB,Vince Lombardi,Vince_Lombardi.jpg
+1959_NFL,Los Angeles,Rams,LA,Sid Gillman,Sid_Gillman.jpg
+1959_NFL,San Francisco,49ers,SF,Red Hickey,Red_Hickey.jpg
+1960_AFL-NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1960_AFL-NFL,Philadelphia,Eagles,PHI,Buck Shaw,Buck_Shaw.jpg
+1960_AFL-NFL,Pittsburgh,Steelers,PIT,Buddy Parker,Buddy_Parker.jpg
+1960_AFL-NFL,St. Louis,Cardinals,STL,Pop Ivy,Pop_Ivy.jpg
+1960_AFL-NFL,Washington,Redskins,WAS,Mike Nixon,Mike_Nixon.jpg
+1960_AFL-NFL,Baltimore,Colts,BAL,Weeb Ewbank,Weeb_Ewbank.jpg
+1960_AFL-NFL,Chicago,Bears,CHI,George Halas,George_Halas.jpg
+1960_AFL-NFL,Detroit,Lions,DET,George Wilson,George_Wilson.jpg
+1960_AFL-NFL,Green Bay,Packers,GB,Vince Lombardi,Vince_Lombardi.jpg
+1960_AFL-NFL,San Francisco,49ers,SF,Red Hickey,Red_Hickey.jpg
+1960_AFL-NFL,Boston,Patriots,BOS,Lou Saban,Lou_Saban.jpg
+1960_AFL-NFL,Buffalo,Bills,BUF,Buster Ramsey,Buster_Ramsey.jpg
+1960_AFL-NFL,Houston,Oilers,HOU,Lou Rymkus,Lou_Rymkus.jpg
+1960_AFL-NFL,Denver,Broncos,DEN,Frank Filchock,Frank_Filchock.jpg
+1960_AFL-NFL,Oakland,Raiders,OAK,Eddie Erdelatz,Eddie_Erdelatz.jpg
+1961_AFL-NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1961_AFL-NFL,Philadelphia,Eagles,PHI,Nick Skorich,Nick_Skorich.jpg
+1961_AFL-NFL,Pittsburgh,Steelers,PIT,Buddy Parker,Buddy_Parker.jpg
+1961_AFL-NFL,St. Louis,Cardinals,STL,Pop Ivy,Pop_Ivy.jpg
+1961_AFL-NFL,Washington,Redskins,WAS,Bill McPeak,Bill_McPeak.jpg
+1961_AFL-NFL,Baltimore,Colts,BAL,Weeb Ewbank,Weeb_Ewbank.jpg
+1961_AFL-NFL,Chicago,Bears,CHI,George Halas,George_Halas.jpg
+1961_AFL-NFL,Detroit,Lions,DET,George Wilson,George_Wilson.jpg
+1961_AFL-NFL,Green Bay,Packers,GB,Vince Lombardi,Vince_Lombardi.jpg
+1961_AFL-NFL,Los Angeles,Rams,LA,Bob Waterfield,Bob_Waterfield.jpg
+1961_AFL-NFL,Minnesota,Vikings,MIN,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1961_AFL-NFL,San Francisco,49ers,SF,Red Hickey,Red_Hickey.jpg
+1961_AFL-NFL,Boston,Patriots,BOS,Lou Saban,Lou_Saban.jpg
+1961_AFL-NFL,Buffalo,Bills,BUF,Buster Ramsey,Buster_Ramsey.jpg
+1961_AFL-NFL,Houston,Oilers,HOU,Lou Rymkus,Lou_Rymkus.jpg
+1961_AFL-NFL,Denver,Broncos,DEN,Frank Filchock,Frank_Filchock.jpg
+1961_AFL-NFL,Oakland,Raiders,OAK,Eddie Erdelatz,Eddie_Erdelatz.jpg
+1961_AFL-NFL,San Diego,Chargers,SD,Sid Gilman,Sid_Gilman.jpg
+1962_AFL-NFL,Cleveland,Browns,CLE,Paul Brown,Paul_Brown.jpg
+1962_AFL-NFL,Philadelphia,Eagles,PHI,Nick Skorich,Nick_Skorich.jpg
+1962_AFL-NFL,Pittsburgh,Steelers,PIT,Buddy Parker,Buddy_Parker.jpg
+1962_AFL-NFL,St. Louis,Cardinals,STL,Wally Lemm,Wally_Lemm.jpg
+1962_AFL-NFL,Washington,Redskins,WAS,Bill McPeak,Bill_McPeak.jpg
+1962_AFL-NFL,Baltimore,Colts,BAL,Weeb Ewbank,Weeb_Ewbank.jpg
+1962_AFL-NFL,Chicago,Bears,CHI,George Halas,George_Halas.jpg
+1962_AFL-NFL,Detroit,Lions,DET,George Wilson,George_Wilson.jpg
+1962_AFL-NFL,Green Bay,Packers,GB,Vince Lombardi,Vince_Lombardi.jpg
+1962_AFL-NFL,Los Angeles,Rams,LA,Harland Svare,Harland_Svare.jpg
+1962_AFL-NFL,Minnesota,Vikings,MIN,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1962_AFL-NFL,San Francisco,49ers,SF,Red Hickey,Red_Hickey.jpg
+1962_AFL-NFL,Boston,Patriots,BOS,Mike Holovak,Mike_Holovak.jpg
+1962_AFL-NFL,Buffalo,Bills,BUF,Lou Saban,Lou_Saban.jpg
+1962_AFL-NFL,Houston,Oilers,HOU,Pop Ivy,Pop_Ivy.jpg
+1962_AFL-NFL,Denver,Broncos,DEN,John Faulkner,John_Faulkner.jpg
+1962_AFL-NFL,Oakland,Raiders,OAK,Marty Feldman,Marty_Feldman.jpg
+1962_AFL-NFL,San Diego,Chargers,SD,Sid Gillman,Sid_Gillman.jpg
+1963_AFL-NFL,Cleveland,Browns,CLE,Blanton Collier,Blanton_Collier.jpg
+1963_AFL-NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1963_AFL-NFL,Philadelphia,Eagles,PHI,Nick Skorich,Nick_Skorich.jpg
+1963_AFL-NFL,Pittsburgh,Steelers,PIT,Buddy Parker,Buddy_Parker.jpg
+1963_AFL-NFL,St. Louis,Cardinals,STL,Wally Lemm,Wally_Lemm.jpg
+1963_AFL-NFL,Washington,Redskins,WAS,Bill McPeak,Bill_McPeak.jpg
+1963_AFL-NFL,Baltimore,Colts,BAL,Don Shula,Don_Shula.jpg
+1963_AFL-NFL,Chicago,Bears,CHI,George Halas,George_Halas.jpg
+1963_AFL-NFL,Detroit,Lions,DET,George Wilson,George_Wilson.jpg
+1963_AFL-NFL,Green Bay,Packers,GB,Vince Lombardi,Vince_Lombardi.jpg
+1963_AFL-NFL,Los Angeles,Rams,LA,Harland Svare,Harland_Svare.jpg
+1963_AFL-NFL,Minnesota,Vikings,MIN,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1963_AFL-NFL,San Francisco,49ers,SF,Jack Christiansen,Jack_Christiansen.jpg
+1963_AFL-NFL,Boston,Patriots,BOS,Mike Holovak,Mike_Holovak.jpg
+1963_AFL-NFL,Buffalo,Bills,BUF,Lou Saban,Lou_Saban.jpg
+1963_AFL-NFL,Houston,Oilers,HOU,Pop Ivy,Pop_Ivy.jpg
+1963_AFL-NFL,Denver,Broncos,DEN,Jack Faulkner,Jack_Faulkner.jpg
+1963_AFL-NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1963_AFL-NFL,Oakland,Raiders,OAK,Al Davis,Al_Davis.jpg
+1963_AFL-NFL,San Diego,Chargers,SD,Sid Gillman,Sid_Gillman.jpg
+1964_AFL-NFL,Cleveland,Browns,CLE,Blanton Collier,Blanton_Collier.jpg
+1964_AFL-NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1964_AFL-NFL,Philadelphia,Eagles,PHI,Joe Kuharich,Joe_Kuharich.jpg
+1964_AFL-NFL,Pittsburgh,Steelers,PIT,Buddy Parker,Buddy_Parker.jpg
+1964_AFL-NFL,St. Louis,Cardinals,STL,Wally Lemm,Wally_Lemm.jpg
+1964_AFL-NFL,Washington,Redskins,WAS,Bill McPeak,Bill_McPeak.jpg
+1964_AFL-NFL,Baltimore,Colts,BAL,Don Shula,Don_Shula.jpg
+1964_AFL-NFL,Chicago,Bears,CHI,George Halas,George_Halas.jpg
+1964_AFL-NFL,Detroit,Lions,DET,George Wilson,George_Wilson.jpg
+1964_AFL-NFL,Green Bay,Packers,GB,Vince Lombardi,Vince_Lombardi.jpg
+1964_AFL-NFL,Los Angeles,Rams,LA,Harland Svare,Harland_Svare.jpg
+1964_AFL-NFL,Minnesota,Vikings,MIN,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1964_AFL-NFL,San Francisco,49ers,SF,Jack Christiansen,Jack_Christiansen.jpg
+1964_AFL-NFL,Boston,Patriots,BOS,Mike Holovak,Mike_Holovak.jpg
+1964_AFL-NFL,Buffalo,Bills,BUF,Lou Saban,Lou_Saban.jpg
+1964_AFL-NFL,Houston,Oilers,HOU,Sammy Baugh,Sammy_Baugh.jpg
+1964_AFL-NFL,Denver,Broncos,DEN,Jack Faulkner,Jack_Faulkner.jpg
+1964_AFL-NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1964_AFL-NFL,Oakland,Raiders,OAK,Al Davis,Al_Davis.jpg
+1964_AFL-NFL,San Diego,Chargers,SD,Sid Gillman,Sid_Gillman.jpg
+1965_AFL-NFL,Cleveland,Browns,CLE,Blanton Collier,Blanton_Collier.jpg
+1965_AFL-NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1965_AFL-NFL,Philadelphia,Eagles,PHI,Joe Kuharich,Joe_Kuharich.jpg
+1965_AFL-NFL,Pittsburgh,Steelers,PIT,MIke Nixon,MIke_Nixon.jpg
+1965_AFL-NFL,St. Louis,Cardinals,STL,Wally Lemm,Wally_Lemm.jpg
+1965_AFL-NFL,Washington,Redskins,WAS,Bill McPeak,Bill_McPeak.jpg
+1965_AFL-NFL,Baltimore,Colts,BAL,Don Shula,Don_Shula.jpg
+1965_AFL-NFL,Chicago,Bears,CHI,George Halas,George_Halas.jpg
+1965_AFL-NFL,Detroit,Lions,DET,Harry Gilmer,Harry_Gilmer.jpg
+1965_AFL-NFL,Green Bay,Packers,GB,Vince Lombardi,Vince_Lombardi.jpg
+1965_AFL-NFL,Los Angeles,Rams,LA,Harland Svare,Harland_Svare.jpg
+1965_AFL-NFL,Minnesota,Vikings,MIN,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1965_AFL-NFL,San Francisco,49ers,SF,Jack Christiansen,Jack_Christiansen.jpg
+1965_AFL-NFL,Boston,Patriots,BOS,Mike Holovak,Mike_Holovak.jpg
+1965_AFL-NFL,Buffalo,Bills,BUF,Lou Saban,Lou_Saban.jpg
+1965_AFL-NFL,Houston,Oilers,HOU,Hugh Taylor,Hugh_Taylor.jpg
+1965_AFL-NFL,Denver,Broncos,DEN,Mac Speedie,Mac_Speedie.jpg
+1965_AFL-NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1965_AFL-NFL,Oakland,Raiders,OAK,Al Davis,Al_Davis.jpg
+1965_AFL-NFL,San Diego,Chargers,SD,Sid Gillman,Sid_Gillman.jpg
+1966_AFL-NFL,Atlanta,Falcons,ATL,Norb Hecker,Norb_Hecker.jpg
+1966_AFL-NFL,Cleveland,Browns,CLE,Blanton Collier,Blanton_Collier.jpg
+1966_AFL-NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1966_AFL-NFL,Philadelphia,Eagles,PHI,Joe Kuharich,Joe_Kuharich.jpg
+1966_AFL-NFL,Pittsburgh,Steelers,PIT,Bill Austin,Bill_Austin.jpg
+1966_AFL-NFL,St. Louis,Cardinals,STL,Charley Winner,Charley_Winner.jpg
+1966_AFL-NFL,Washington,Redskins,WAS,Otto Graham,Otto_Graham.jpg
+1966_AFL-NFL,Baltimore,Colts,BAL,Don Shula,Don_Shula.jpg
+1966_AFL-NFL,Chicago,Bears,CHI,George Halas,George_Halas.jpg
+1966_AFL-NFL,Detroit,Lions,DET,Harry Gilmer,Harry_Gilmer.jpg
+1966_AFL-NFL,Green Bay,Packers,GB,Vince Lombardi,Vince_Lombardi.jpg
+1966_AFL-NFL,Los Angeles,Rams,LA,George Allen,George_Allen.jpg
+1966_AFL-NFL,Minnesota,Vikings,MIN,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1966_AFL-NFL,San Francisco,49ers,SF,Jack Christiansen,Jack_Christiansen.jpg
+1966_AFL-NFL,Boston,Patriots,BOS,Mike Holovak,Mike_Holovak.jpg
+1966_AFL-NFL,Buffalo,Bills,BUF,Joe Collier,Joe_Collier.jpg
+1966_AFL-NFL,Houston,Oilers,HOU,Wally Lemm,Wally_Lemm.jpg
+1966_AFL-NFL,Miami,Dolphins,MIA,George Wilson,George_Wilson.jpg
+1966_AFL-NFL,Denver,Broncos,DEN,Ray Malavasi,Ray_Malavasi.jpg
+1966_AFL-NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1966_AFL-NFL,Oakland,Raiders,OAK,John Rauch,John_Rauch.jpg
+1966_AFL-NFL,San Diego,Chargers,SD,Sid Gillman,Sid_Gillman.jpg
+1967_AFL-NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1967_AFL-NFL,New Orleans,Saints,NO,Tom Fears,Tom_Fears.jpg
+1967_AFL-NFL,Philadelphia,Eagles,PHI,Joe Kuharich,Joe_Kuharich.jpg
+1967_AFL-NFL,Washington,Redskins,WAS,Otto Graham,Otto_Graham.jpg
+1967_AFL-NFL,Cleveland,Browns,CLE,Blanton Collier,Blanton_Collier.jpg
+1967_AFL-NFL,Pittsburgh,Steelers,PIT,Bill Austin,Bill_Austin.jpg
+1967_AFL-NFL,St. Louis,Cardinals,STL,Charley Winner,Charley_Winner.jpg
+1967_AFL-NFL,Chicago,Bears,CHI,George Halas,George_Halas.jpg
+1967_AFL-NFL,Detroit,Lions,DET,Joe Schmidt,Joe_Schmidt.jpg
+1967_AFL-NFL,Green Bay,Packers,GB,Vince Lombardi,Vince_Lombardi.jpg
+1967_AFL-NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1967_AFL-NFL,Atlanta,Falcons,ATL,Norb Hecker,Norb_Hecker.jpg
+1967_AFL-NFL,Baltimore,Colts,BAL,Don Shula,Don_Shula.jpg
+1967_AFL-NFL,Los Angeles,Rams,LA,George Allen,George_Allen.jpg
+1967_AFL-NFL,San Francisco,49ers,SF,Jack Christiansen,Jack_Christiansen.jpg
+1967_AFL-NFL,Boston,Patriots,BOS,Mike Holovak,Mike_Holovak.jpg
+1967_AFL-NFL,Buffalo,Bills,BUF,Joe Collier,Joe_Collier.jpg
+1967_AFL-NFL,Houston,Oilers,HOU,Wally Lemm,Wally_Lemm.jpg
+1967_AFL-NFL,Miami,Dolphins,MIA,George Wilson,George_Wilson.jpg
+1967_AFL-NFL,Denver,Broncos,DEN,Lou Saban,Lou_Saban.jpg
+1967_AFL-NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1967_AFL-NFL,Oakland,Raiders,OAK,John Rauch,John_Rauch.jpg
+1967_AFL-NFL,San Diego,Chargers,SD,Sid Gillman,Sid_Gillman.jpg
+1967_AFL-NFL,Indianapolis,Mustangs,IND,Lonny Sandhu,Lonny Sandhu.jpg
+1967_AFL-NFL,Jacksonville,Cheetahs,JAX,Mario Friesen,Mario Friesen.jpg
+1967_AFL-NFL,Tennessee,Mammoths,TEN,Ethan Slaughter,Ethan Slaughter.jpg
+1967_AFL-NFL,Denver,Stallions,DEN,Stephen Aguero,Stephen Aguero.jpg
+1967_AFL-NFL,Kansas City,Red Team,KC,Reinaldo Sturdivant,Reinaldo Sturdivant.jpg
+1967_AFL-NFL,Las Vegas,Pillagers,LV,Lanny Ruiz,Lanny Ruiz.jpg
+1968_AFL-NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1968_AFL-NFL,Philadelphia,Eagles,PHI,Joe Kuharich,Joe_Kuharich.jpg
+1968_AFL-NFL,Washington,Redskins,WAS,Otto Graham,Otto_Graham.jpg
+1968_AFL-NFL,Cleveland,Browns,CLE,Blanton Collier,Blanton_Collier.jpg
+1968_AFL-NFL,New Orleans,Saints,NO,Tom Fears,Tom_Fears.jpg
+1968_AFL-NFL,Pittsburgh,Steelers,PIT,Bill Austin,Bill_Austin.jpg
+1968_AFL-NFL,St. Louis,Cardinals,STL,Charley Winner,Charley_Winner.jpg
+1968_AFL-NFL,Chicago,Bears,CHI,Jim Dooley,Jim_Dooley.jpg
+1968_AFL-NFL,Detroit,Lions,DET,Joe Schmidt,Joe_Schmidt.jpg
+1968_AFL-NFL,Green Bay,Packers,GB,Phil Bengtson,Phil_Bengtson.jpg
+1968_AFL-NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1968_AFL-NFL,Atlanta,Falcons,ATL,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1968_AFL-NFL,Baltimore,Colts,BAL,Don Shula,Don_Shula.jpg
+1968_AFL-NFL,Los Angeles,Rams,LA,George Allen,George_Allen.jpg
+1968_AFL-NFL,San Francisco,49ers,SF,Dick Nolan,Dick_Nolan.jpg
+1968_AFL-NFL,Boston,Patriots,BOS,Mike Holovak,Mike_Holovak.jpg
+1968_AFL-NFL,Buffalo,Bills,BUF,Harvey Johnson,Harvey_Johnson.jpg
+1968_AFL-NFL,Houston,Oilers,HOU,Wally Lemm,Wally_Lemm.jpg
+1968_AFL-NFL,Miami,Dolphins,MIA,George Wilson,George_Wilson.jpg
+1968_AFL-NFL,Cincinnati,Bengals,CIN,Paul Brown,Paul_Brown.jpg
+1968_AFL-NFL,Denver,Broncos,DEN,Lou Saban,Lou_Saban.jpg
+1968_AFL-NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1968_AFL-NFL,Oakland,Raiders,OAK,John Rauch,John_Rauch.jpg
+1968_AFL-NFL,San Diego,Chargers,SD,Sid Gillman,Sid_Gillman.jpg
+1968_AFL-NFL,Jacksonville,Cheetahs,JAX,Fred Vernon,Fred Vernon.jpg
+1968_AFL-NFL,Tennessee,Mammoths,TEN,Rodolfo Jenks,Rodolfo Jenks.jpg
+1968_AFL-NFL,Denver,Stallions,DEN,Roger Sutherland,Roger Sutherland.jpg
+1968_AFL-NFL,Kansas City,Red Team,KC,Donovan Cheatham,Donovan Cheatham.jpg
+1968_AFL-NFL,Las Vegas,Pillagers,LV,Clark Williamson,Clark Williamson.jpg
+1969_AFL-NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1969_AFL-NFL,New Orleans,Saints,NO,Tom Fears,Tom_Fears.jpg
+1969_AFL-NFL,Philadelphia,Eagles,PHI,Jerry Williams,Jerry_Williams.jpg
+1969_AFL-NFL,Washington,Redskins,WAS,Vince Lombardi,Vince_Lombardi.jpg
+1969_AFL-NFL,Cleveland,Browns,CLE,Blanton Collier,Blanton_Collier.jpg
+1969_AFL-NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1969_AFL-NFL,St. Louis,Cardinals,STL,Charley Winner,Charley_Winner.jpg
+1969_AFL-NFL,Chicago,Bears,CHI,Jim Dooley,Jim_Dooley.jpg
+1969_AFL-NFL,Detroit,Lions,DET,Joe Schmidt,Joe_Schmidt.jpg
+1969_AFL-NFL,Green Bay,Packers,GB,Phil Bengtson,Phil_Bengtson.jpg
+1969_AFL-NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1969_AFL-NFL,Atlanta,Falcons,ATL,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1969_AFL-NFL,Baltimore,Colts,BAL,Don Shula,Don_Shula.jpg
+1969_AFL-NFL,Los Angeles,Rams,LA,George Allen,George_Allen.jpg
+1969_AFL-NFL,San Francisco,49ers,SF,Dick Nolan,Dick_Nolan.jpg
+1969_AFL-NFL,Boston,Patriots,BOS,Clive Rush,Clive_Rush.jpg
+1969_AFL-NFL,Buffalo,Bills,BUF,John Rauch,John_Rauch.jpg
+1969_AFL-NFL,Houston,Oilers,HOU,Wally Lemm,Wally_Lemm.jpg
+1969_AFL-NFL,Miami,Dolphins,MIA,George Wilson,George_Wilson.jpg
+1969_AFL-NFL,Cincinnati,Bengals,CIN,Paul Brown,Paul_Brown.jpg
+1969_AFL-NFL,Denver,Broncos,DEN,Lou Saban,Lou_Saban.jpg
+1969_AFL-NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1969_AFL-NFL,Oakland,Raiders,OAK,John Madden,John_Madden.jpg
+1969_AFL-NFL,San Diego,Chargers,SD,Sid Gillman,Sid_Gillman.jpg
+1970_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1970_NFL,Philadelphia,Eagles,PHI,Jerry Williams,Jerry_Williams.jpg
+1970_NFL,St. Louis,Cardinals,STL,Charley Winner,Charley_Winner.jpg
+1970_NFL,Washington,Redskins,WAS,Bill Austin,Bill_Austin.jpg
+1970_NFL,Chicago,Bears,CHI,Jim Dooley,Jim_Dooley.jpg
+1970_NFL,Detroit,Lions,DET,Joe Schmidt,Joe_Schmidt.jpg
+1970_NFL,Green Bay,Packers,GB,Phil Bengston,Phil_Bengtson.jpg
+1970_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1970_NFL,Atlanta,Falcons,ATL,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1970_NFL,Los Angeles,Rams,LA,George Allen,George_Allen.jpg
+1970_NFL,New Orleans,Saints,NO,J.D. Roberts,J.D._Roberts.jpg
+1970_NFL,San Francisco,49ers,SF,Dick Nolan,Dick_Nolan.jpg
+1970_NFL,Baltimore,Colts,BAL,Don McCafferty,Don_McCafferty.jpg
+1970_NFL,Boston,Patriots,BOS,John Mazur,John_Mazur.jpg
+1970_NFL,Buffalo,Bills,BUF,John Rauch,John_Rauch.jpg
+1970_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1970_NFL,Cincinnati,Bengals,CIN,Paul Brown,Paul_Brown.jpg
+1970_NFL,Cleveland,Browns,CLE,Blanton Collier,Blanton_Collier.jpg
+1970_NFL,Houston,Oilers,HOU,Wally Lemm,Wally_Lemm.jpg
+1970_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1970_NFL,Denver,Broncos,DEN,Lou Saban,Lou_Saban.jpg
+1970_NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1970_NFL,Oakland,Raiders,OAK,John Madden,John_Madden.jpg
+1970_NFL,San Diego,Chargers,SD,Charlie Waller,Charlie_Waller.jpg
+1971_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1971_NFL,Philadelphia,Eagles,PHI,Ed Khayat,Ed_Khayat.jpg
+1971_NFL,St. Louis,Cardinals,STL,Bob Hollway,Bob_Hollway.jpg
+1971_NFL,Washington,Redskins,WAS,George Allen,George_Allen.jpg
+1971_NFL,Chicago,Bears,CHI,Jim Dooley,Jim_Dooley.jpg
+1971_NFL,Detroit,Lions,DET,Joe Schmidt,Joe_Schmidt.jpg
+1971_NFL,Green Bay,Packers,GB,Dan Devine,Dan_Devine.jpg
+1971_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1971_NFL,Atlanta,Falcons,ATL,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1971_NFL,Los Angeles,Rams,LA,Tommy Prothro,Tommy_Prothro.jpg
+1971_NFL,New Orleans,Saints,NO,J.D. Roberts,J.D._Roberts.jpg
+1971_NFL,San Francisco,49ers,SF,Dick Nolan,Dick_Nolan.jpg
+1971_NFL,Baltimore,Colts,BAL,Don McCafferty,Don_McCafferty.jpg
+1971_NFL,Buffalo,Bills,BUF,Harvey Johnson,Harvey_Johnson.jpg
+1971_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1971_NFL,New England,Patriots,NE,John Mazur,John_Mazur.jpg
+1971_NFL,Cincinnati,Bengals,CIN,Paul Brown,Paul_Brown.jpg
+1971_NFL,Cleveland,Browns,CLE,Nick Skorich,Nick_Skorich.jpg
+1971_NFL,Houston,Oilers,HOU,Ed Hughes,Ed_Hughes.jpg
+1971_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1971_NFL,Denver,Broncos,DEN,Lou Saban,Lou_Saban.jpg
+1971_NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1971_NFL,Oakland,Raiders,OAK,John Madden,John_Madden.jpg
+1971_NFL,San Diego,Chargers,SD,Sid Gillman,Sid_Gillman.jpg
+1972_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1972_NFL,Philadelphia,Eagles,PHI,Ed Khayat,Ed_Khayat.jpg
+1972_NFL,St. Louis,Cardinals,STL,Bob Hollway,Bob_Hollway.jpg
+1972_NFL,Washington,Redskins,WAS,George Allen,George_Allen.jpg
+1972_NFL,Chicago,Bears,CHI,Abe Gibron,Abe_Gibron.jpg
+1972_NFL,Detroit,Lions,DET,Joe Schmidt,Joe_Schmidt.jpg
+1972_NFL,Green Bay,Packers,GB,Dan Devine,Dan_Devine.jpg
+1972_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1972_NFL,Atlanta,Falcons,ATL,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1972_NFL,Los Angeles,Rams,LA,Tommy Prothro,Tommy_Prothro.jpg
+1972_NFL,New Orleans,Saints,NO,J.D. Roberts,J.D._Roberts.jpg
+1972_NFL,San Francisco,49ers,SF,Dick Nolan,Dick_Nolan.jpg
+1972_NFL,Baltimore,Colts,BAL,Don McCafferty,Don_McCafferty.jpg
+1972_NFL,Buffalo,Bills,BUF,Lou Saban,Lou_Saban.jpg
+1972_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1972_NFL,New England,Patriots,NE,Phil Bengtson,Phil_Bengtson.jpg
+1972_NFL,Cincinnati,Bengals,CIN,Paul Brown,Paul_Brown.jpg
+1972_NFL,Cleveland,Browns,CLE,Nick Skorich,Nick_Skorich.jpg
+1972_NFL,Houston,Oilers,HOU,Bill Peterson,Bill_Peterson.jpg
+1972_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1972_NFL,Denver,Broncos,DEN,John Ralston,John_Ralston.jpg
+1972_NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1972_NFL,Oakland,Raiders,OAK,John Madden,John_Madden.jpg
+1972_NFL,San Diego,Chargers,SD,Harland Svare,Harland_Svare.jpg
+1972_NFL,Jacksonville,Cheetahs,JAX,Jimmie Alba,Jimmie Alba.jpg
+1972_NFL,Tennessee,Mammoths,TEN,Jacoby Hartman,Jacoby Hartman.jpg
+1972_NFL,Denver,Stallions,DEN,Rick Rutherford,Rick Rutherford.jpg
+1972_NFL,Kansas City,Red Team,KC,Erwin Mcclain,Erwin Mcclain.jpg
+1972_NFL,Las Vegas,Pillagers,LV,Elroy Paradis,Elroy Paradis.jpg
+1973_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1973_NFL,Philadelphia,Eagles,PHI,Mike McCormack,Mike_McCormack.jpg
+1973_NFL,St. Louis,Cardinals,STL,Don Coryell,Don_Coryell.jpg
+1973_NFL,Washington,Redskins,WAS,George Allen,George_Allen.jpg
+1973_NFL,Chicago,Bears,CHI,Abe Gibron,Abe_Gibron.jpg
+1973_NFL,Detroit,Lions,DET,Don McCafferty,Don_McCafferty.jpg
+1973_NFL,Green Bay,Packers,GB,Dan Devine,Dan_Devine.jpg
+1973_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1973_NFL,Atlanta,Falcons,ATL,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1973_NFL,Los Angeles,Rams,LA,Chuck Knox,Chuck_Knox.jpg
+1973_NFL,New Orleans,Saints,NO,John North,John_North.jpg
+1973_NFL,San Francisco,49ers,SF,Dick Nolan,Dick_Nolan.jpg
+1973_NFL,Baltimore,Colts,BAL,Howard Schnellenberger,Howard_Schnellenberger.jpg
+1973_NFL,Buffalo,Bills,BUF,Lou Saban,Lou_Saban.jpg
+1973_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1973_NFL,New England,Patriots,NE,Chuck Fairbanks,Chuck_Fairbanks.jpg
+1973_NFL,Cincinnati,Bengals,CIN,Paul Brown,Paul_Brown.jpg
+1973_NFL,Cleveland,Browns,CLE,Nick Skorich,Nick_Skorich.jpg
+1973_NFL,Houston,Oilers,HOU,Sid Gillman,Sid_Gillman.jpg
+1973_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1973_NFL,Denver,Broncos,DEN,John Ralston,John_Ralston.jpg
+1973_NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1973_NFL,Oakland,Raiders,OAK,John Madden,John_Madden.jpg
+1973_NFL,San Diego,Chargers,SD,Harland Svare,Harland_Svare.jpg
+1973_NFL,Jacksonville,Cheetahs,JAX,Bobby Jackson,Bobby Jackson.jpg
+1973_NFL,Tennessee,Mammoths,TEN,Josh Darden,Josh Darden.jpg
+1973_NFL,Denver,Stallions,DEN,Jonathon Peter,Jonathon Peter.jpg
+1973_NFL,Kansas City,Red Team,KC,Melvin Durand,Melvin Durand.jpg
+1973_NFL,Las Vegas,Pillagers,LV,Joshua Boston,Joshua Boston.jpg
+1974_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1974_NFL,Philadelphia,Eagles,PHI,Mike McCormack,Mike_McCormack.jpg
+1974_NFL,St. Louis,Cardinals,STL,Don Coryell,Don_Coryell.jpg
+1974_NFL,Washington,Redskins,WAS,George Allen,George_Allen.jpg
+1974_NFL,Chicago,Bears,CHI,Abe Gibron,Abe_Gibron.jpg
+1974_NFL,Detroit,Lions,DET,Rick Forzano,Rick_Forzano.jpg
+1974_NFL,Green Bay,Packers,GB,Dan Devine,Dan_Devine.jpg
+1974_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1974_NFL,Atlanta,Falcons,ATL,Norm Van Brocklin,Norm_Van_Brocklin.jpg
+1974_NFL,Los Angeles,Rams,LA,Chuck Knox,Chuck_Knox.jpg
+1974_NFL,New Orleans,Saints,NO,John North,John_North.jpg
+1974_NFL,San Francisco,49ers,SF,Dick Nolan,Dick_Nolan.jpg
+1974_NFL,Baltimore,Colts,BAL,Joe Thomas,Joe_Thomas.jpg
+1974_NFL,Buffalo,Bills,BUF,Lou Saban,Lou_Saban.jpg
+1974_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1974_NFL,New England,Patriots,NE,Chuck Fairbanks,Chuck_Fairbanks.jpg
+1974_NFL,Cincinnati,Bengals,CIN,Paul Brown,Paul_Brown.jpg
+1974_NFL,Cleveland,Browns,CLE,Nick Skorich,Nick_Skorich.jpg
+1974_NFL,Houston,Oilers,HOU,Sid Gillman,Sid_Gillman.jpg
+1974_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1974_NFL,Denver,Broncos,DEN,John Ralston,John_Ralston.jpg
+1974_NFL,Kansas City,Chiefs,KC,Hank Stram,Hank_Stram.jpg
+1974_NFL,Oakland,Raiders,OAK,John Madden,John_Madden.jpg
+1974_NFL,San Diego,Chargers,SD,Tommy Prothro,Tommy_Prothro.jpg
+1974_NFL,Jacksonville,Cheetahs,JAX,Tony Schilling,Tony Schilling.jpg
+1974_NFL,Tennessee,Mammoths,TEN,Josh Black,Josh Black.jpg
+1974_NFL,Denver,Stallions,DEN,Bradley Olivares,Bradley Olivares.jpg
+1974_NFL,Kansas City,Red Team,KC,Keith Fletcher,Keith Fletcher.jpg
+1974_NFL,Las Vegas,Pillagers,LV,Eugene Case,Eugene Case.jpg
+1975_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1975_NFL,Philadelphia,Eagles,PHI,Mike McCormack,Mike_McCormack.jpg
+1975_NFL,St. Louis,Cardinals,STL,Don Coryell,Don_Coryell.jpg
+1975_NFL,Washington,Redskins,WAS,George Allen,George_Allen.jpg
+1975_NFL,Chicago,Bears,CHI,Jack Pardee,Jack_Pardee.jpg
+1975_NFL,Detroit,Lions,DET,Rick Forzano,Rick_Forzano.jpg
+1975_NFL,Green Bay,Packers,GB,Bart Starr,Bart_Starr.jpg
+1975_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1975_NFL,Atlanta,Falcons,ATL,Marion Campbell,Marion_Campbell.jpg
+1975_NFL,Los Angeles,Rams,LA,Chuck Knox,Chuck_Knox.jpg
+1975_NFL,New Orleans,Saints,NO,Ernie Hefferle,Ernie_Hefferle.jpg
+1975_NFL,San Francisco,49ers,SF,Dick Nolan,Dick_Nolan.jpg
+1975_NFL,Baltimore,Colts,BAL,Ted Marchibroda,Ted_Marchibroda.jpg
+1975_NFL,Buffalo,Bills,BUF,Lou Saban,Lou_Saban.jpg
+1975_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1975_NFL,New England,Patriots,NE,Chuck Fairbanks,Chuck_Fairbanks.jpg
+1975_NFL,Cincinnati,Bengals,CIN,Paul Brown,Paul_Brown.jpg
+1975_NFL,Cleveland,Browns,CLE,Forrest Gregg,Forrest_Gregg.jpg
+1975_NFL,Houston,Oilers,HOU,Bum Phillips,Bum_Phillips.jpg
+1975_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1975_NFL,Denver,Broncos,DEN,John Ralston,John_Ralston.jpg
+1975_NFL,Kansas City,Chiefs,KC,Paul Wiggin,Paul_Wiggin.jpg
+1975_NFL,Oakland,Raiders,OAK,John Madden,John_Madden.jpg
+1975_NFL,San Diego,Chargers,SD,Tommy Prothro,Tommy_Prothro.jpg
+1976_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1976_NFL,Philadelphia,Eagles,PHI,Dick Vermeil,Dick_Vermeil.jpg
+1976_NFL,St. Louis,Cardinals,STL,Don Coryell,Don_Coryell.jpg
+1976_NFL,Washington,Redskins,WAS,George Allen,George_Allen.jpg
+1976_NFL,Chicago,Bears,CHI,Jack Pardee,Jack_Pardee.jpg
+1976_NFL,Detroit,Lions,DET,Tommy Hudspeth,Tommy_Hudspeth.jpg
+1976_NFL,Green Bay,Packers,GB,Bart Starr,Bart_Starr.jpg
+1976_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1976_NFL,Atlanta,Falcons,ATL,Pat Peppler,Pat_Peppler.jpg
+1976_NFL,Los Angeles,Rams,LA,Chuck Knox,Chuck_Knox.jpg
+1976_NFL,New Orleans,Saints,NO,Hank Stram,Hank_Stram.jpg
+1976_NFL,San Francisco,49ers,SF,Monte Clark,Monte_Clark.jpg
+1976_NFL,Seattle,Seahawks,SEA,Jack Patera,Jack_Patera.jpg
+1976_NFL,Baltimore,Colts,BAL,Ted Marchibroda,Ted_Marchibroda.jpg
+1976_NFL,Buffalo,Bills,BUF,Jim Ringo,Jim_Ringo.jpg
+1976_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1976_NFL,New England,Patriots,NE,Chuck Fairbanks,Chuck_Fairbanks.jpg
+1976_NFL,Cincinnati,Bengals,CIN,Bill Johnson,Bill_Johnson.jpg
+1976_NFL,Cleveland,Browns,CLE,Forrest Gregg,Forrest_Gregg.jpg
+1976_NFL,Houston,Oilers,HOU,Bum Phillips,Bum_Phillips.jpg
+1976_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1976_NFL,Denver,Broncos,DEN,John Ralston,John_Ralston.jpg
+1976_NFL,Kansas City,Chiefs,KC,Paul Wiggin,Paul_Wiggin.jpg
+1976_NFL,Oakland,Raiders,OAK,John Madden,John_Madden.jpg
+1976_NFL,San Diego,Chargers,SD,Tommy Prothro,Tommy_Prothro.jpg
+1976_NFL,Tampa Bay,Buccaneers,TB,John McKay,John_McKay.jpg
+1977_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1977_NFL,Philadelphia,Eagles,PHI,Dick Vermeil,Dick_Vermeil.jpg
+1977_NFL,St. Louis,Cardinals,STL,Don Coryell,Don_Coryell.jpg
+1977_NFL,Washington,Redskins,WAS,George Allen,George_Allen.jpg
+1977_NFL,Chicago,Bears,CHI,Jack Pardee,Jack_Pardee.jpg
+1977_NFL,Detroit,Lions,DET,Tommy Hudspeth,Tommy_Hudspeth.jpg
+1977_NFL,Green Bay,Packers,GB,Bart Starr,Bart_Starr.jpg
+1977_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1977_NFL,Tampa Bay,Buccaneers,TB,John McKay,John_McKay.jpg
+1977_NFL,Atlanta,Falcons,ATL,Leeman Bennett,Leeman_Bennett.jpg
+1977_NFL,Los Angeles,Rams,LA,Chuck Knox,Chuck_Knox.jpg
+1977_NFL,New Orleans,Saints,NO,Hank Stram,Hank_Stram.jpg
+1977_NFL,San Francisco,49ers,SF,Ken Meyer,Ken_Meyer.jpg
+1977_NFL,Baltimore,Colts,BAL,Ted Marchibroda,Ted_Marchibroda.jpg
+1977_NFL,Buffalo,Bills,BUF,Jim Ringo,Jim_Ringo.jpg
+1977_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1977_NFL,New England,Patriots,NE,Chuck Fairbanks,Chuck_Fairbanks.jpg
+1977_NFL,Cincinnati,Bengals,CIN,Bill Johnson,Bill_Johnson.jpg
+1977_NFL,Cleveland,Browns,CLE,Forrest Gregg,Forrest_Gregg.jpg
+1977_NFL,Houston,Oilers,HOU,Bum Phillips,Bum_Phillips.jpg
+1977_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1977_NFL,Denver,Broncos,DEN,Red Miller,Red_Miller.jpg
+1977_NFL,Kansas City,Chiefs,KC,Paul Wiggin,Paul_Wiggin.jpg
+1977_NFL,Oakland,Raiders,OAK,John Madden,John_Madden.jpg
+1977_NFL,San Diego,Chargers,SD,Tommy Prothro,Tommy_Prothro.jpg
+1977_NFL,Seattle,Seahawks,SEA,Jack Patera,Jack_Patera.jpg
+1978_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1978_NFL,Philadelphia,Eagles,PHI,Dick Vermeil,Dick_Vermeil.jpg
+1978_NFL,St. Louis,Cardinals,STL,Bud Wilkinson,Bud_Wilkinson.jpg
+1978_NFL,Washington,Redskins,WAS,Jack Pardee,Jack_Pardee.jpg
+1978_NFL,Chicago,Bears,CHI,Neill Armstrong,Neill_Armstrong.jpg
+1978_NFL,Detroit,Lions,DET,Monte Clark,Monte_Clark.jpg
+1978_NFL,Green Bay,Packers,GB,Bart Starr,Bart_Starr.jpg
+1978_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1978_NFL,Tampa Bay,Buccaneers,TB,John McKay,John_McKay.jpg
+1978_NFL,Atlanta,Falcons,ATL,Leeman Bennett,Leeman_Bennett.jpg
+1978_NFL,Los Angeles,Rams,LA,Ray Malavasi,Ray_Malavasi.jpg
+1978_NFL,New Orleans,Saints,NO,Hank Stram,Hank_Stram.jpg
+1978_NFL,San Francisco,49ers,SF,Pete McCulley,Pete_McCulley.jpg
+1978_NFL,Baltimore,Colts,BAL,Ted Marchibroda,Ted_Marchibroda.jpg
+1978_NFL,Buffalo,Bills,BUF,Chuck Knox,Chuck_Knox.jpg
+1978_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1978_NFL,New England,Patriots,NE,Chuck Fairbanks,Chuck_Fairbanks.jpg
+1978_NFL,Cincinnati,Bengals,CIN,Homer Rice,Homer_Rice.jpg
+1978_NFL,Cleveland,Browns,CLE,Sam Rutigliano,Sam_Rutigliano.jpg
+1978_NFL,Houston,Oilers,HOU,Bum Phillips,Bum_Phillips.jpg
+1978_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1978_NFL,Denver,Broncos,DEN,Red Miller,Red_Miller.jpg
+1978_NFL,Kansas City,Chiefs,KC,Marv Levy,Marv_Levy.jpg
+1978_NFL,Oakland,Raiders,OAK,John Madden,John_Madden.jpg
+1978_NFL,San Diego,Chargers,SD,Don Coryell,Don_Coryell.jpg
+1978_NFL,Seattle,Seahawks,SEA,Jack Patera,Jack_Patera.jpg
+1979_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1979_NFL,Philadelphia,Eagles,PHI,Dick Vermeil,Dick_Vermeil.jpg
+1979_NFL,St. Louis,Cardinals,STL,Bud Wilkinson,Bud_Wilkinson.jpg
+1979_NFL,Washington,Redskins,WAS,Jack Pardee,Jack_Pardee.jpg
+1979_NFL,Chicago,Bears,CHI,Neill Armstrong,Neill_Armstrong.jpg
+1979_NFL,Detroit,Lions,DET,Monte Clark,Monte_Clark.jpg
+1979_NFL,Green Bay,Packers,GB,Bart Starr,Bart_Starr.jpg
+1979_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1979_NFL,Tampa Bay,Buccaneers,TB,John McKay,John_McKay.jpg
+1979_NFL,Atlanta,Falcons,ATL,Leeman Bennett,Leeman_Bennett.jpg
+1979_NFL,Los Angeles,Rams,LA,Ray Malavasi,Ray_Malavasi.jpg
+1979_NFL,New Orleans,Saints,NO,Dick Nolan,Dick_Nolan.jpg
+1979_NFL,San Francisco,49ers,SF,Bill Walsh,Bill_Walsh.jpg
+1979_NFL,Baltimore,Colts,BAL,Ted Marchibroda,Ted_Marchibroda.jpg
+1979_NFL,Buffalo,Bills,BUF,Chuck Knox,Chuck_Knox.jpg
+1979_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1979_NFL,New England,Patriots,NE,Ron Erhardt,Ron_Erhardt.jpg
+1979_NFL,Cincinnati,Bengals,CIN,Homer Rice,Homer_Rice.jpg
+1979_NFL,Cleveland,Browns,CLE,Sam Rutigliano,Sam_Rutigliano.jpg
+1979_NFL,Houston,Oilers,HOU,Bum Phillips,Bum_Phillips.jpg
+1979_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1979_NFL,Denver,Broncos,DEN,Red Miller,Red_Miller.jpg
+1979_NFL,Kansas City,Chiefs,KC,Marv Levy,Marv_Levy.jpg
+1979_NFL,Oakland,Raiders,OAK,Tom Flores,Tom_Flores.jpg
+1979_NFL,San Diego,Chargers,SD,Don Coryell,Don_Coryell.jpg
+1979_NFL,Seattle,Seahawks,SEA,Jack Patera,Jack_Patera.jpg
+1980_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1980_NFL,Philadelphia,Eagles,PHI,Dick Vermeil,Dick_Vermeil.jpg
+1980_NFL,St. Louis,Cardinals,STL,Jim Hanifan,Jim_Hanifan.jpg
+1980_NFL,Washington,Redskins,WAS,Jack Pardee,Jack_Pardee.jpg
+1980_NFL,Chicago,Bears,CHI,Neill Armstrong,Neill_Armstrong.jpg
+1980_NFL,Detroit,Lions,DET,Monte Clark,Monte_Clark.jpg
+1980_NFL,Green Bay,Packers,GB,Bart Starr,Bart_Starr.jpg
+1980_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1980_NFL,Tampa Bay,Buccaneers,TB,John McKay,John_McKay.jpg
+1980_NFL,Atlanta,Falcons,ATL,Leeman Bennett,Leeman_Bennett.jpg
+1980_NFL,Los Angeles,Rams,LA,Ray Malavasi,Ray_Malavasi.jpg
+1980_NFL,New Orleans,Saints,NO,Dick Nolan,Dick_Nolan.jpg
+1980_NFL,San Francisco,49ers,SF,Bill Walsh,Bill_Walsh.jpg
+1980_NFL,Baltimore,Colts,BAL,Mike McCormack,Mike_McCormack.jpg
+1980_NFL,Buffalo,Bills,BUF,Chuck Knox,Chuck_Knox.jpg
+1980_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1980_NFL,New England,Patriots,NE,Ron Erhardt,Ron_Erhardt.jpg
+1980_NFL,Cincinnati,Bengals,CIN,Forrest Gregg,Forrest_Gregg.jpg
+1980_NFL,Cleveland,Browns,CLE,Sam Rutigliano,Sam_Rutigliano.jpg
+1980_NFL,Houston,Oilers,HOU,Bum Phillips,Bum_Phillips.jpg
+1980_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1980_NFL,Denver,Broncos,DEN,Red Miller,Red_Miller.jpg
+1980_NFL,Kansas City,Chiefs,KC,Marv Levy,Marv_Levy.jpg
+1980_NFL,Oakland,Raiders,OAK,Tom Flores,Tom_Flores.jpg
+1980_NFL,San Diego,Chargers,SD,Don Coryell,Don_Coryell.jpg
+1980_NFL,Seattle,Seahawks,SEA,Jack Patera,Jack_Patera.jpg
+1981_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1981_NFL,Philadelphia,Eagles,PHI,Dick Vermeil,Dick_Vermeil.jpg
+1981_NFL,St. Louis,Cardinals,STL,Jim Hanifan,Jim_Hanifan.jpg
+1981_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1981_NFL,Chicago,Bears,CHI,Neill Armstrong,Neill_Armstrong.jpg
+1981_NFL,Detroit,Lions,DET,Monte Clark,Monte_Clark.jpg
+1981_NFL,Green Bay,Packers,GB,Bart Starr,Bart_Starr.jpg
+1981_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1981_NFL,Tampa Bay,Buccaneers,TB,John McKay,John_McKay.jpg
+1981_NFL,Atlanta,Falcons,ATL,Leeman Bennett,Leeman_Bennett.jpg
+1981_NFL,Los Angeles,Rams,LA,Ray Malavasi,Ray_Malavasi.jpg
+1981_NFL,New Orleans,Saints,NO,Bum Phillips,Bum_Phillips.jpg
+1981_NFL,San Francisco,49ers,SF,Bill Walsh,Bill_Walsh.jpg
+1981_NFL,Baltimore,Colts,BAL,Mike McCormack,Mike_McCormack.jpg
+1981_NFL,Buffalo,Bills,BUF,Chuck Knox,Chuck_Knox.jpg
+1981_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1981_NFL,New England,Patriots,NE,Ron Erhardt,Ron_Erhardt.jpg
+1981_NFL,Cincinnati,Bengals,CIN,Forrest Gregg,Forrest_Gregg.jpg
+1981_NFL,Cleveland,Browns,CLE,Sam Rutigliano,Sam_Rutigliano.jpg
+1981_NFL,Houston,Oilers,HOU,Ed Biles,Ed_Biles.jpg
+1981_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1981_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1981_NFL,Kansas City,Chiefs,KC,Marv Levy,Marv_Levy.jpg
+1981_NFL,Oakland,Raiders,OAK,Tom Flores,Tom_Flores.jpg
+1981_NFL,San Diego,Chargers,SD,Don Coryell,Don_Coryell.jpg
+1981_NFL,Seattle,Seahawks,SEA,Jack Patera,Jack_Patera.jpg
+1982_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1982_NFL,Philadelphia,Eagles,PHI,Dick Vermeil,Dick_Vermeil.jpg
+1982_NFL,St. Louis,Cardinals,STL,Jim Hanifan,Jim_Hanifan.jpg
+1982_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1982_NFL,Chicago,Bears,CHI,Mike Ditka,Mike_Ditka.jpg
+1982_NFL,Detroit,Lions,DET,Monte Clark,Monte_Clark.jpg
+1982_NFL,Green Bay,Packers,GB,Bart Starr,Bart_Starr.jpg
+1982_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1982_NFL,Tampa Bay,Buccaneers,TB,John McKay,John_McKay.jpg
+1982_NFL,Atlanta,Falcons,ATL,Leeman Bennett,Leeman_Bennett.jpg
+1982_NFL,New Orleans,Saints,NO,Bum Philips,Bum_Philips.jpg
+1982_NFL,San Francisco,49ers,SF,Bill Walsh,Bill_Walsh.jpg
+1982_NFL,Baltimore,Colts,BAL,Frank Kush,Frank_Kush.jpg
+1982_NFL,Buffalo,Bills,BUF,Chuck Knox,Chuck_Knox.jpg
+1982_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1982_NFL,New England,Patriots,NE,Ron Meyer,Ron_Meyer.jpg
+1982_NFL,Cincinnati,Bengals,CIN,Forrest Gregg,Forrest_Gregg.jpg
+1982_NFL,Cleveland,Browns,CLE,Sam Rutigliano,Sam_Rutigliano.jpg
+1982_NFL,Houston,Oilers,HOU,Ed Biles,Ed_Biles.jpg
+1982_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1982_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1982_NFL,Kansas City,Chiefs,KC,Marv Levy,Marv_Levy.jpg
+1982_NFL,San Diego,Chargers,SD,Don Coryell,Don_Coryell.jpg
+1982_NFL,Seattle,Seahawks,SEA,Jack Patera,Jack_Patera.jpg
+1983_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1983_NFL,Philadelphia,Eagles,PHI,Dick Vermeil,Dick_Vermeil.jpg
+1983_NFL,St. Louis,Cardinals,STL,Jim Hanifan,Jim_Hanifan.jpg
+1983_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1983_NFL,Chicago,Bears,CHI,Mike Ditka,Mike_Ditka.jpg
+1983_NFL,Detroit,Lions,DET,Monte Clark,Monte_Clark.jpg
+1983_NFL,Green Bay,Packers,GB,Bart Starr,Bart_Starr.jpg
+1983_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1983_NFL,Tampa Bay,Buccaneers,TB,John McKay,John_McKay.jpg
+1983_NFL,Atlanta,Falcons,ATL,Dan Henning,Dan_Henning.jpg
+1983_NFL,New Orleans,Saints,NO,Bum Phillips,Bum_Phillips.jpg
+1983_NFL,San Francisco,49ers,SF,Bill Walsh,Bill_Walsh.jpg
+1983_NFL,Baltimore,Colts,BAL,Mike McCormack,Mike_McCormack.jpg
+1983_NFL,Buffalo,Bills,BUF,Kay Stephenson,Kay_Stephenson.jpg
+1983_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1983_NFL,New England,Patriots,NE,Ron Meyer,Ron_Meyer.jpg
+1983_NFL,Cincinnati,Bengals,CIN,Forrest Gregg,Forrest_Gregg.jpg
+1983_NFL,Cleveland,Browns,CLE,Sam Rutigliano,Sam_Rutigliano.jpg
+1983_NFL,Houston,Oilers,HOU,Chuck Studley,Chuck_Studley.jpg
+1983_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1983_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1983_NFL,Kansas City,Chiefs,KC,Jack Mackovic,Jack_Mackovic.jpg
+1983_NFL,San Diego,Chargers,SD,Don Coryell,Don_Coryell.jpg
+1983_NFL,Seattle,Seahawks,SEA,Chuck Knox,Chuck_Knox.jpg
+1984_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1984_NFL,Philadelphia,Eagles,PHI,Marion Campbell,Marion_Campbell.jpg
+1984_NFL,St. Louis,Cardinals,STL,Jim Hanifan,Jim_Hanifan.jpg
+1984_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1984_NFL,Chicago,Bears,CHI,Mike Ditka,Mike_Ditka.jpg
+1984_NFL,Detroit,Lions,DET,Monte Clark,Monte_Clark.jpg
+1984_NFL,Green Bay,Packers,GB,Forrest Gregg,Forrest_Gregg.jpg
+1984_NFL,Minnesota,Vikings,MIN,Les Steckel,Les_Steckel.jpg
+1984_NFL,Tampa Bay,Buccaneers,TB,John McKay,John_McKay.jpg
+1984_NFL,Atlanta,Falcons,ATL,Dan Henning,Dan_Henning.jpg
+1984_NFL,New Orleans,Saints,NO,Bum Phillips,Bum_Phillips.jpg
+1984_NFL,San Francisco,49ers,SF,Bill Walsh,Bill_Walsh.jpg
+1984_NFL,Buffalo,Bills,BUF,Kay Stephenson,Kay_Stephenson.jpg
+1984_NFL,Indianapolis,Colts,IND,Hal Hunter,Hal_Hunter.jpg
+1984_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1984_NFL,New England,Patriots,NE,Raymond Berry,Raymond_Berry.jpg
+1984_NFL,Cincinnati,Bengals,CIN,Sam Wyche,Sam_Wyche.jpg
+1984_NFL,Cleveland,Browns,CLE,Sam Rutigliano,Sam_Rutigliano.jpg
+1984_NFL,Houston,Oilers,HOU,Hugh Campbell,Hugh_Campbell.jpg
+1984_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1984_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1984_NFL,Kansas City,Chiefs,KC,John Mackovic,John_Mackovic.jpg
+1984_NFL,San Diego,Chargers,SD,Don Coryell,Don_Coryell.jpg
+1984_NFL,Seattle,Seahawks,SEA,Chuck Knox,Chuck_Knox.jpg
+1985_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1985_NFL,Philadelphia,Eagles,PHI,Marion Campbell,Marion_Campbell.jpg
+1985_NFL,St. Louis,Cardinals,STL,Jim Hanifan,Jim_Hanifan.jpg
+1985_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1985_NFL,Chicago,Bears,CHI,Mike Ditka,Mike_Ditka.jpg
+1985_NFL,Detroit,Lions,DET,Darryl Rogers,Darryl_Rogers.jpg
+1985_NFL,Green Bay,Packers,GB,Forrest Gregg,Forrest_Gregg.jpg
+1985_NFL,Minnesota,Vikings,MIN,Bud Grant,Bud_Grant.jpg
+1985_NFL,Tampa Bay,Buccaneers,TB,Leeman Bennett,Leeman_Bennett.jpg
+1985_NFL,Atlanta,Falcons,ATL,Dan Henning,Dan_Henning.jpg
+1985_NFL,New Orleans,Saints,NO,Bum Phillips,Bum_Phillips.jpg
+1985_NFL,San Francisco,49ers,SF,Bill Walsh,Bill_Walsh.jpg
+1985_NFL,Buffalo,Bills,BUF,Hank Bullough,Hank_Bullough.jpg
+1985_NFL,Indianapolis,Colts,IND,Rod Dowhower,Rod_Dowhower.jpg
+1985_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1985_NFL,New England,Patriots,NE,Raymond Berry,Raymond_Berry.jpg
+1985_NFL,Cincinnati,Bengals,CIN,Sam Wyche,Sam_Wyche.jpg
+1985_NFL,Cleveland,Browns,CLE,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1985_NFL,Houston,Oilers,HOU,Hugh Campbell,Hugh_Campbell.jpg
+1985_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1985_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1985_NFL,Kansas City,Chiefs,KC,Jack Mackovic,Jack_Mackovic.jpg
+1985_NFL,San Diego,Chargers,SD,Don Coryell,Don_Coryell.jpg
+1985_NFL,Seattle,Seahawks,SEA,Chuck Knox,Chuck_Knox.jpg
+1986_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1986_NFL,Philadelphia,Eagles,PHI,Buddy Ryan,Buddy_Ryan.jpg
+1986_NFL,St. Louis,Cardinals,STL,Gene Stallings,Gene_Stallings.jpg
+1986_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1986_NFL,Chicago,Bears,CHI,Mike Ditka,Mike_Ditka.jpg
+1986_NFL,Detroit,Lions,DET,Wayne Fontes,Wayne_Fontes.jpg
+1986_NFL,Green Bay,Packers,GB,Forrest Gregg,Forrest_Gregg.jpg
+1986_NFL,Minnesota,Vikings,MIN,Jerry Burns,Jerry_Burns.jpg
+1986_NFL,Tampa Bay,Buccaneers,TB,Leeman Bennett,Leeman_Bennett.jpg
+1986_NFL,Atlanta,Falcons,ATL,Dan Henning,Dan_Henning.jpg
+1986_NFL,New Orleans,Saints,NO,Jim Mora,Jim_Mora.jpg
+1986_NFL,San Francisco,49ers,SF,Bill Walsh,Bill_Walsh.jpg
+1986_NFL,Buffalo,Bills,BUF,Hank Bullough,Hank_Bullough.jpg
+1986_NFL,Indianapolis,Colts,IND,Rod Dowhower,Rod_Dowhower.jpg
+1986_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1986_NFL,New England,Patriots,NE,Raymond Berry,Raymond_Berry.jpg
+1986_NFL,Cincinnati,Bengals,CIN,Sam Wyche,Sam_Wyche.jpg
+1986_NFL,Cleveland,Browns,CLE,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1986_NFL,Houston,Oilers,HOU,Jerry Glanville,Jerry_Glanville.jpg
+1986_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1986_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1986_NFL,Kansas City,Chiefs,KC,John Mackovic,John_Mackovic.jpg
+1986_NFL,San Diego,Chargers,SD,Don Coryell,Don_Coryell.jpg
+1986_NFL,Seattle,Seahawks,SEA,Chuck Knox,Chuck_Knox.jpg
+1987_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1987_NFL,Philadelphia,Eagles,PHI,Buddy Ryan,Buddy_Ryan.jpg
+1987_NFL,St. Louis,Cardinals,STL,Gene Stallings,Gene_Stallings.jpg
+1987_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1987_NFL,Chicago,Bears,CHI,Mike Ditka,Mike_Ditka.jpg
+1987_NFL,Detroit,Lions,DET,Darryl Rogers,Darryl_Rogers.jpg
+1987_NFL,Green Bay,Packers,GB,Forrest Gregg,Forrest_Gregg.jpg
+1987_NFL,Minnesota,Vikings,MIN,Jerry Burns,Jerry_Burns.jpg
+1987_NFL,Tampa Bay,Buccaneers,TB,Ray Perkins,Ray_Perkins.jpg
+1987_NFL,Atlanta,Falcons,ATL,Marion Campbell,Marion_Campbell.jpg
+1987_NFL,New Orleans,Saints,NO,Jim Mora,Jim_Mora.jpg
+1987_NFL,San Francisco,49ers,SF,Bill Walsh,Bill_Walsh.jpg
+1987_NFL,Buffalo,Bills,BUF,Marv Levy,Marv_Levy.jpg
+1987_NFL,Indianapolis,Colts,IND,Ron Meyer,Ron_Meyer.jpg
+1987_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1987_NFL,New England,Patriots,NE,Raymond Berry,Raymond_Berry.jpg
+1987_NFL,Cincinnati,Bengals,CIN,Sam Wyche,Sam_Wyche.jpg
+1987_NFL,Cleveland,Browns,CLE,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1987_NFL,Houston,Oilers,HOU,Jerry Glanville,Jerry_Glanville.jpg
+1987_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1987_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1987_NFL,Kansas City,Chiefs,KC,Frank Gansz,Frank_Gansz.jpg
+1987_NFL,San Diego,Chargers,SD,Al Saunders,Al_Saunders.jpg
+1987_NFL,Seattle,Seahawks,SEA,Chuck Knox,Chuck_Knox.jpg
+1988_NFL,Dallas,Cowboys,DAL,Tom Landry,Tom_Landry.jpg
+1988_NFL,Philadelphia,Eagles,PHI,Buddy Ryan,Buddy_Ryan.jpg
+1988_NFL,Phoenix,Cardinals,PHX,Gene Stallings,Gene_Stallings.jpg
+1988_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1988_NFL,Chicago,Bears,CHI,Mike Ditka,Mike_Ditka.jpg
+1988_NFL,Detroit,Lions,DET,Darryl Rogers,Darryl_Rogers.jpg
+1988_NFL,Green Bay,Packers,GB,Lindy Infante,Lindy_Infante.jpg
+1988_NFL,Minnesota,Vikings,MIN,Jerry Burns,Jerry_Burns.jpg
+1988_NFL,Tampa Bay,Buccaneers,TB,Ray Perkins,Ray_Perkins.jpg
+1988_NFL,Atlanta,Falcons,ATL,Marion Campbell,Marion_Campbell.jpg
+1988_NFL,New Orleans,Saints,NO,Jim Mora,Jim_Mora.jpg
+1988_NFL,San Francisco,49ers,SF,Bill Walsh,Bill_Walsh.jpg
+1988_NFL,Buffalo,Bills,BUF,Marv Levy,Marv_Levy.jpg
+1988_NFL,Indianapolis,Colts,IND,Ron Meyer,Ron_Meyer.jpg
+1988_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1988_NFL,New England,Patriots,NE,Raymond Berry,Raymond_Berry.jpg
+1988_NFL,Cincinnati,Bengals,CIN,Sam Wyche,Sam_Wyche.jpg
+1988_NFL,Cleveland,Browns,CLE,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1988_NFL,Houston,Oilers,HOU,Jerry Glanville,Jerry_Glanville.jpg
+1988_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1988_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1988_NFL,Kansas City,Chiefs,KC,Frank Gansz,Frank_Gansz.jpg
+1988_NFL,San Diego,Chargers,SD,Al Saunders,Al_Saunders.jpg
+1988_NFL,Seattle,Seahawks,SEA,Chuck Knox,Chuck_Knox.jpg
+1989_NFL,Dallas,Cowboys,DAL,Jimmy Johnson,Jimmy_Johnson.jpg
+1989_NFL,Philadelphia,Eagles,PHI,Buddy Ryan,Buddy_Ryan.jpg
+1989_NFL,Phoenix,Cardinals,PHX,Gene Stallings,Gene_Stallings.jpg
+1989_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1989_NFL,Chicago,Bears,CHI,Mike Ditka,Mike_Ditka.jpg
+1989_NFL,Detroit,Lions,DET,Wayne Fontes,Wayne_Fontes.jpg
+1989_NFL,Green Bay,Packers,GB,Lindy Infante,Lindy_Infante.jpg
+1989_NFL,Minnesota,Vikings,MIN,Jerry Burns,Jerry_Burns.jpg
+1989_NFL,Tampa Bay,Buccaneers,TB,Ray Perkins,Ray_Perkins.jpg
+1989_NFL,Atlanta,Falcons,ATL,Marion Campbell,Marion_Campbell.jpg
+1989_NFL,New Orleans,Saints,NO,Jim Mora,Jim_Mora.jpg
+1989_NFL,San Francisco,49ers,SF,George Seifert,George_Seifert.jpg
+1989_NFL,Buffalo,Bills,BUF,Marv Levy,Marv_Levy.jpg
+1989_NFL,Indianapolis,Colts,IND,Ron Meyer,Ron_Meyer.jpg
+1989_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1989_NFL,New England,Patriots,NE,Raymond Berry,Raymond_Berry.jpg
+1989_NFL,Cincinnati,Bengals,CIN,Sam Wyche,Sam_Wyche.jpg
+1989_NFL,Cleveland,Browns,CLE,Bud Carson,Bud_Carson.jpg
+1989_NFL,Houston,Oilers,HOU,Jerry Glanville,Jerry_Glanville.jpg
+1989_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1989_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1989_NFL,Kansas City,Chiefs,KC,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1989_NFL,San Diego,Chargers,SD,Dan Henning,Dan_Henning.jpg
+1989_NFL,Seattle,Seahawks,SEA,Chuck Knox,Chuck_Knox.jpg
+1990_NFL,Dallas,Cowboys,DAL,Jimmy Johnson,Jimmy_Johnson.jpg
+1990_NFL,Philadelphia,Eagles,PHI,Buddy Ryan,Buddy_Ryan.jpg
+1990_NFL,Phoenix,Cardinals,PHX,Joe Bugel,Joe_Bugel.jpg
+1990_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1990_NFL,Chicago,Bears,CHI,Mike Ditka,Mike_Ditka.jpg
+1990_NFL,Detroit,Lions,DET,Wayne Fontes,Wayne_Fontes.jpg
+1990_NFL,Green Bay,Packers,GB,Lindy Infante,Lindy_Infante.jpg
+1990_NFL,Minnesota,Vikings,MIN,Jerry Burns,Jerry_Burns.jpg
+1990_NFL,Tampa Bay,Buccaneers,TB,Ray Perkins,Ray_Perkins.jpg
+1990_NFL,Atlanta,Falcons,ATL,Jerry Glanville,Jerry_Glanville.jpg
+1990_NFL,New Orleans,Saints,NO,Jim Mora,Jim_Mora.jpg
+1990_NFL,San Francisco,49ers,SF,George Seifert,George_Seifert.jpg
+1990_NFL,Buffalo,Bills,BUF,Marv Levy,Marv_Levy.jpg
+1990_NFL,Indianapolis,Colts,IND,Ron Meyer,Ron_Meyer.jpg
+1990_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1990_NFL,New England,Patriots,NE,Rod Rust,Rod_Rust.jpg
+1990_NFL,Cincinnati,Bengals,CIN,Sam Wyche,Sam_Wyche.jpg
+1990_NFL,Cleveland,Browns,CLE,Bud Carson,Bud_Carson.jpg
+1990_NFL,Houston,Oilers,HOU,Jack Pardee,Jack_Pardee.jpg
+1990_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1990_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1990_NFL,Kansas City,Chiefs,KC,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1990_NFL,San Diego,Chargers,SD,Dan Henning,Dan_Henning.jpg
+1990_NFL,Seattle,Seahawks,SEA,Chuck Knox,Chuck_Knox.jpg
+1991_NFL,Dallas,Cowboys,DAL,Jimmy Johnson,Jimmy_Johnson.jpg
+1991_NFL,Philadelphia,Eagles,PHI,Rich Kotite,Rich_Kotite.jpg
+1991_NFL,Phoenix,Cardinals,PHX,Joe Bugel,Joe_Bugel.jpg
+1991_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1991_NFL,Chicago,Bears,CHI,Mike Ditka,Mike_Ditka.jpg
+1991_NFL,Detroit,Lions,DET,Wayne Fontes,Wayne_Fontes.jpg
+1991_NFL,Green Bay,Packers,GB,Lindy Infante,Lindy_Infante.jpg
+1991_NFL,Minnesota,Vikings,MIN,Jerry Burns,Jerry_Burns.jpg
+1991_NFL,Tampa Bay,Buccaneers,TB,Richard Williamson,Richard_Williamson.jpg
+1991_NFL,Atlanta,Falcons,ATL,Jerry Glanville,Jerry_Glanville.jpg
+1991_NFL,New Orleans,Saints,NO,Jim Mora,Jim_Mora.jpg
+1991_NFL,San Francisco,49ers,SF,George Seifert,George_Seifert.jpg
+1991_NFL,Buffalo,Bills,BUF,Marv Levy,Marv_Levy.jpg
+1991_NFL,Indianapolis,Colts,IND,Rick Venturi,Rick_Venturi.jpg
+1991_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1991_NFL,New England,Patriots,NE,Dick MacPherson,Dick_MacPherson.jpg
+1991_NFL,Cincinnati,Bengals,CIN,Sam Wyche,Sam_Wyche.jpg
+1991_NFL,Cleveland,Browns,CLE,Bill Belichick,Bill_Belichick.jpg
+1991_NFL,Houston,Oilers,HOU,Jack Pardee,Jack_Pardee.jpg
+1991_NFL,Pittsburgh,Steelers,PIT,Chuck Noll,Chuck_Noll.jpg
+1991_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1991_NFL,Kansas City,Chiefs,KC,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1991_NFL,San Diego,Chargers,SD,Dan Henning,Dan_Henning.jpg
+1991_NFL,Seattle,Seahawks,SEA,Chuck Knox,Chuck_Knox.jpg
+1992_NFL,Dallas,Cowboys,DAL,Jimmy Johnson,Jimmy_Johnson.jpg
+1992_NFL,Philadelphia,Eagles,PHI,Rich Kotite,Rich_Kotite.jpg
+1992_NFL,Phoenix,Cardinals,PHX,Joe Bugel,Joe_Bugel.jpg
+1992_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+1992_NFL,Chicago,Bears,CHI,Mike Ditka,Mike_Ditka.jpg
+1992_NFL,Detroit,Lions,DET,Wayne Fontes,Wayne_Fontes.jpg
+1992_NFL,Green Bay,Packers,GB,Mike Holmgren,Mike_Holmgren.jpg
+1992_NFL,Minnesota,Vikings,MIN,Dennis Green,Dennis_Green.jpg
+1992_NFL,Tampa Bay,Buccaneers,TB,Sam Wyche,Sam_Wyche.jpg
+1992_NFL,Atlanta,Falcons,ATL,Jerry Glanville,Jerry_Glanville.jpg
+1992_NFL,New Orleans,Saints,NO,Jim Mora,Jim_Mora.jpg
+1992_NFL,San Francisco,49ers,SF,George Seifert,George_Seifert.jpg
+1992_NFL,Buffalo,Bills,BUF,Marv Levy,Marv_Levy.jpg
+1992_NFL,Indianapolis,Colts,IND,Ted Marchibroda,Ted_Marchibroda.jpg
+1992_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1992_NFL,New England,Patriots,NE,Dick MacPherson,Dick_MacPherson.jpg
+1992_NFL,Cincinnati,Bengals,CIN,David Shula,David_Shula.jpg
+1992_NFL,Cleveland,Browns,CLE,Bill Belichick,Bill_Belichick.jpg
+1992_NFL,Houston,Oilers,HOU,Jack Pardee,Jack_Pardee.jpg
+1992_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+1992_NFL,Denver,Broncos,DEN,Dan Reeves,Dan_Reeves.jpg
+1992_NFL,Kansas City,Chiefs,KC,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1992_NFL,San Diego,Chargers,SD,Bobby Ross,Bobby_Ross.jpg
+1992_NFL,Seattle,Seahawks,SEA,Tom Flores,Tom_Flores.jpg
+1993_NFL,Dallas,Cowboys,DAL,Jimmy Johnson,Jimmy_Johnson.jpg
+1993_NFL,Philadelphia,Eagles,PHI,Rich Kotite,Rich_Kotite.jpg
+1993_NFL,Phoenix,Cardinals,PHX,Joe Bugel,Joe_Bugel.jpg
+1993_NFL,Washington,Redskins,WAS,Richie Petitbon,Richie_Petitbon.jpg
+1993_NFL,Chicago,Bears,CHI,Dave Wannstedt,Dave_Wannstedt.jpg
+1993_NFL,Detroit,Lions,DET,Wayne Fontes,Wayne_Fontes.jpg
+1993_NFL,Green Bay,Packers,GB,Mike Holmgren,Mike_Holmgren.jpg
+1993_NFL,Minnesota,Vikings,MIN,Dennis Green,Dennis_Green.jpg
+1993_NFL,Tampa Bay,Buccaneers,TB,Sam Wyche,Sam_Wyche.jpg
+1993_NFL,Atlanta,Falcons,ATL,Jerry Glanville,Jerry_Glanville.jpg
+1993_NFL,New Orleans,Saints,NO,Jim Mora,Jim_Mora.jpg
+1993_NFL,San Francisco,49ers,SF,George Seifert,George_Seifert.jpg
+1993_NFL,Buffalo,Bills,BUF,Marv Levy,Marv_Levy.jpg
+1993_NFL,Indianapolis,Colts,IND,Ted Marchibroda,Ted_Marchibroda.jpg
+1993_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1993_NFL,New England,Patriots,NE,Bill Parcells,Bill_Parcells.jpg
+1993_NFL,Cincinnati,Bengals,CIN,David Shula,David_Shula.jpg
+1993_NFL,Cleveland,Browns,CLE,Bill Belichick,Bill_Belichick.jpg
+1993_NFL,Houston,Oilers,HOU,Jack Pardee,Jack_Pardee.jpg
+1993_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+1993_NFL,Denver,Broncos,DEN,Wade Phillips,Wade_Phillips.jpg
+1993_NFL,Kansas City,Chiefs,KC,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1993_NFL,San Diego,Chargers,SD,Bobby Ross,Bobby_Ross.jpg
+1993_NFL,Seattle,Seahawks,SEA,Tom Flores,Tom_Flores.jpg
+1994_NFL,Arizona,Cardinals,ARI,Buddy Ryan,Buddy_Ryan.jpg
+1994_NFL,Dallas,Cowboys,DAL,Barry Switzer,Barry_Switzer.jpg
+1994_NFL,Philadelphia,Eagles,PHI,Rich Kotite,Rich_Kotite.jpg
+1994_NFL,Washington,Redskins,WAS,Norv Turner,Norv_Turner.jpg
+1994_NFL,Chicago,Bears,CHI,Dave Wannstedt,Dave_Wannstedt.jpg
+1994_NFL,Detroit,Lions,DET,Wayne Fontes,Wayne_Fontes.jpg
+1994_NFL,Green Bay,Packers,GB,Mike Holmgren,Mike_Holmgren.jpg
+1994_NFL,Minnesota,Vikings,MIN,Dennis Green,Dennis_Green.jpg
+1994_NFL,Tampa Bay,Buccaneers,TB,Sam Wyche,Sam_Wyche.jpg
+1994_NFL,Atlanta,Falcons,ATL,June Jones,June_Jones.jpg
+1994_NFL,New Orleans,Saints,NO,Jim Mora,Jim_Mora.jpg
+1994_NFL,San Francisco,49ers,SF,George Seifert,George_Seifert.jpg
+1994_NFL,Buffalo,Bills,BUF,Marv Levy,Marv_Levy.jpg
+1994_NFL,Indianapolis,Colts,IND,Ted Marchibroda,Ted_Marchibroda.jpg
+1994_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1994_NFL,New England,Patriots,NE,Bill Parcells,Bill_Parcells.jpg
+1994_NFL,Cincinnati,Bengals,CIN,David Shula,David_Shula.jpg
+1994_NFL,Cleveland,Browns,CLE,Bill Belichick,Bill_Belichick.jpg
+1994_NFL,Houston,Oilers,HOU,Jack Pardee,Jack_Pardee.jpg
+1994_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+1994_NFL,Denver,Broncos,DEN,Wade Phillips,Wade_Phillips.jpg
+1994_NFL,Kansas City,Chiefs,KC,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1994_NFL,San Diego,Chargers,SD,Bobby Ross,Bobby_Ross.jpg
+1994_NFL,Seattle,Seahawks,SEA,Tom Flores,Tom_Flores.jpg
+1995_NFL,Arizona,Cardinals,ARI,Buddy Ryan,Buddy_Ryan.jpg
+1995_NFL,Dallas,Cowboys,DAL,Barry Switzer,Barry_Switzer.jpg
+1995_NFL,Philadelphia,Eagles,PHI,Ray Rhodes,Ray_Rhodes.jpg
+1995_NFL,Washington,Redskins,WAS,Norv Turner,Norv_Turner.jpg
+1995_NFL,Chicago,Bears,CHI,Dave Wannstedt,Dave_Wannstedt.jpg
+1995_NFL,Detroit,Lions,DET,Wayne Fontes,Wayne_Fontes.jpg
+1995_NFL,Green Bay,Packers,GB,Mike Holmgren,Mike_Holmgren.jpg
+1995_NFL,Minnesota,Vikings,MIN,Dennis Green,Dennis_Green.jpg
+1995_NFL,Tampa Bay,Buccaneers,TB,Sam Wyche,Sam_Wyche.jpg
+1995_NFL,Atlanta,Falcons,ATL,June Jones,June_Jones.jpg
+1995_NFL,Carolina,Panthers,CAR,Dom Capers,Dom_Capers.jpg
+1995_NFL,New Orleans,Saints,NO,Jim Mora,Jim_Mora.jpg
+1995_NFL,St. Louis,Rams,STL,Rich Brooks,Rich_Brooks.jpg
+1995_NFL,San Francisco,49ers,SF,George Seifert,George_Seifert.jpg
+1995_NFL,Buffalo,Bills,BUF,Marv Levy,Marv_Levy.jpg
+1995_NFL,Indianapolis,Colts,IND,Ted Marchibroda,Ted_Marchibroda.jpg
+1995_NFL,Miami,Dolphins,MIA,Don Shula,Don_Shula.jpg
+1995_NFL,New England,Patriots,NE,Bill Parcells,Bill_Parcells.jpg
+1995_NFL,Cincinnati,Bengals,CIN,David Shula,David_Shula.jpg
+1995_NFL,Cleveland,Browns,CLE,Bill Belichick,Bill_Belichick.jpg
+1995_NFL,Houston,Oilers,HOU,Jeff Fisher,Jeff_Fisher.jpg
+1995_NFL,Jacksonville,Jaguars,JAX,Tom Coughlin,Tom_Coughlin.jpg
+1995_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+1995_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+1995_NFL,Kansas City,Chiefs,KC,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1995_NFL,Oakland,Raiders,OAK,Mike White,Mike_White.jpg
+1995_NFL,San Diego,Chargers,SD,Bobby Ross,Bobby_Ross.jpg
+1995_NFL,Seattle,Seahawks,SEA,Dennis Erickson,Dennis_Erickson.jpg
+1996_NFL,Arizona,Cardinals,ARI,Vince Tobin,Vince_Tobin.jpg
+1996_NFL,Dallas,Cowboys,DAL,Barry Switzer,Barry_Switzer.jpg
+1996_NFL,Philadelphia,Eagles,PHI,Ray Rhodes,Ray_Rhodes.jpg
+1996_NFL,Washington,Redskins,WAS,Norv Turner,Norv_Turner.jpg
+1996_NFL,Chicago,Bears,CHI,Dave Wannstedt,Dave_Wannstedt.jpg
+1996_NFL,Detroit,Lions,DET,Wayne Fontes,Wayne_Fontes.jpg
+1996_NFL,Green Bay,Packers,GB,Mike Holmgren,Mike_Holmgren.jpg
+1996_NFL,Minnesota,Vikings,MIN,Dennis Green,Dennis_Green.jpg
+1996_NFL,Tampa Bay,Buccaneers,TB,Tony Dungy,Tony_Dungy.jpg
+1996_NFL,Atlanta,Falcons,ATL,June Jones,June_Jones.jpg
+1996_NFL,Carolina,Panthers,CAR,Dom Capers,Dom_Capers.jpg
+1996_NFL,New Orleans,Saints,NO,Jim Mora,Jim_Mora.jpg
+1996_NFL,St. Louis,Rams,STL,Rich Brooks,Rich_Brooks.jpg
+1996_NFL,San Francisco,49ers,SF,George Seifert,George_Seifert.jpg
+1996_NFL,Buffalo,Bills,BUF,Marv Levy,Marv_Levy.jpg
+1996_NFL,Indianapolis,Colts,IND,Lindy Infante,Lindy_Infante.jpg
+1996_NFL,Miami,Dolphins,MIA,Jimmy Johnson,Jimmy_Johnson.jpg
+1996_NFL,New England,Patriots,NE,Bill Parcells,Bill_Parcells.jpg
+1996_NFL,Baltimore,Ravens,BAL,Ted Marchibroda,Ted_Marchibroda.jpg
+1996_NFL,Cincinnati,Bengals,CIN,Bruce Coslet,Bruce_Coslet.jpg
+1996_NFL,Houston,Oilers,HOU,Jeff Fisher,Jeff_Fisher.jpg
+1996_NFL,Jacksonville,Jaguars,JAX,Tom Coughlin,Tom_Coughlin.jpg
+1996_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+1996_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+1996_NFL,Kansas City,Chiefs,KC,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1996_NFL,Oakland,Raiders,OAK,Mike White,Mike_White.jpg
+1996_NFL,San Diego,Chargers,SD,Bobby Ross,Bobby_Ross.jpg
+1996_NFL,Seattle,Seahawks,SEA,Dennis Erickson,Dennis_Erickson.jpg
+1997_NFL,Arizona,Cardinals,ARI,Vince Tobin,Vince_Tobin.jpg
+1997_NFL,Dallas,Cowboys,DAL,Barry Switzer,Barry_Switzer.jpg
+1997_NFL,Philadelphia,Eagles,PHI,Ray Rhodes,Ray_Rhodes.jpg
+1997_NFL,Washington,Redskins,WAS,Norv Turner,Norv_Turner.jpg
+1997_NFL,Chicago,Bears,CHI,Dave Wannstedt,Dave_Wannstedt.jpg
+1997_NFL,Detroit,Lions,DET,Bobby Ross,Bobby_Ross.jpg
+1997_NFL,Green Bay,Packers,GB,Mike Holmgren,Mike_Holmgren.jpg
+1997_NFL,Minnesota,Vikings,MIN,Dennis Green,Dennis_Green.jpg
+1997_NFL,Tampa Bay,Buccaneers,TB,Tony Dungy,Tony_Dungy.jpg
+1997_NFL,Atlanta,Falcons,ATL,Dan Reeves,Dan_Reeves.jpg
+1997_NFL,Carolina,Panthers,CAR,Dom Capers,Dom_Capers.jpg
+1997_NFL,New Orleans,Saints,NO,Mike Ditka,Mike_Ditka.jpg
+1997_NFL,St. Louis,Rams,STL,Dick Vermeil,Dick_Vermeil.jpg
+1997_NFL,San Francisco,49ers,SF,Steve Mariucci,Steve_Mariucci.jpg
+1997_NFL,Buffalo,Bills,BUF,Marv Levy,Marv_Levy.jpg
+1997_NFL,Indianapolis,Colts,IND,Lindy Infante,Lindy_Infante.jpg
+1997_NFL,Miami,Dolphins,MIA,Jimmy Johnson,Jimmy_Johnson.jpg
+1997_NFL,New England,Patriots,NE,Pete Carroll,Pete_Carroll.jpg
+1997_NFL,Baltimore,Ravens,BAL,Ted Marchibroda,Ted_Marchibroda.jpg
+1997_NFL,Cincinnati,Bengals,CIN,Bruce Coslet,Bruce_Coslet.jpg
+1997_NFL,Jacksonville,Jaguars,JAX,Tom Coughlin,Tom_Coughlin.jpg
+1997_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+1997_NFL,Tennessee,Oilers,TEN,Jeff Fisher,Jeff_Fisher.jpg
+1997_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+1997_NFL,Kansas City,Chiefs,KC,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1997_NFL,Oakland,Raiders,OAK,Joe Bugel,Joe_Bugel.jpg
+1997_NFL,San Diego,Chargers,SD,Kevin Gilbride,Kevin_Gilbride.jpg
+1997_NFL,Seattle,Seahawks,SEA,Dennis Erickson,Dennis_Erickson.jpg
+1998_NFL,Arizona,Cardinals,ARI,Vince Tobin,Vince_Tobin.jpg
+1998_NFL,Dallas,Cowboys,DAL,Chan Gailey,Chan_Gailey.jpg
+1998_NFL,Philadelphia,Eagles,PHI,Ray Rhodes,Ray_Rhodes.jpg
+1998_NFL,Washington,Redskins,WAS,Norv Turner,Norv_Turner.jpg
+1998_NFL,Chicago,Bears,CHI,Dave Wannstedt,Dave_Wannstedt.jpg
+1998_NFL,Detroit,Lions,DET,Bobby Ross,Bobby_Ross.jpg
+1998_NFL,Green Bay,Packers,GB,Mike Holmgren,Mike_Holmgren.jpg
+1998_NFL,Minnesota,Vikings,MIN,Dennis Green,Dennis_Green.jpg
+1998_NFL,Tampa Bay,Buccaneers,TB,Tony Dungy,Tony_Dungy.jpg
+1998_NFL,Atlanta,Falcons,ATL,Dan Reeves,Dan_Reeves.jpg
+1998_NFL,Carolina,Panthers,CAR,Dom Capers,Dom_Capers.jpg
+1998_NFL,New Orleans,Saints,NO,Mike Ditka,Mike_Ditka.jpg
+1998_NFL,St. Louis,Rams,STL,Dick Vermeil,Dick_Vermeil.jpg
+1998_NFL,San Francisco,49ers,SF,Steve Mariucci,Steve_Mariucci.jpg
+1998_NFL,Buffalo,Bills,BUF,Wade Phillips,Wade_Phillips.jpg
+1998_NFL,Indianapolis,Colts,IND,Jim Mora,Jim_Mora.jpg
+1998_NFL,Miami,Dolphins,MIA,Jimmy Johnson,Jimmy_Johnson.jpg
+1998_NFL,New England,Patriots,NE,Pete Carroll,Pete_Carroll.jpg
+1998_NFL,Baltimore,Ravens,BAL,Ted Marchibroda,Ted_Marchibroda.jpg
+1998_NFL,Cincinnati,Bengals,CIN,Bruce Coslet,Bruce_Coslet.jpg
+1998_NFL,Jacksonville,Jaguars,JAX,Tom Coughlin,Tom_Coughlin.jpg
+1998_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+1998_NFL,Tennessee,Oilers,TEN,Jeff Fisher,Jeff_Fisher.jpg
+1998_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+1998_NFL,Kansas City,Chiefs,KC,Marty Schottenheimer,Marty_Schottenheimer.jpg
+1998_NFL,Oakland,Raiders,OAK,Jon Gruden,Jon_Gruden.jpg
+1998_NFL,San Diego,Chargers,SD,June Jones,June_Jones.jpg
+1998_NFL,Seattle,Seahawks,SEA,Dennis Erickson,Dennis_Erickson.jpg
+1999_NFL,Arizona,Cardinals,ARI,Vince Tobin,Vince_Tobin.jpg
+1999_NFL,Dallas,Cowboys,DAL,Chan Gailey,Chan_Gailey.jpg
+1999_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+1999_NFL,Washington,Redskins,WAS,Norv Turner,Norv_Turner.jpg
+1999_NFL,Chicago,Bears,CHI,Dick Jauron,Dick_Jauron.jpg
+1999_NFL,Detroit,Lions,DET,Bobby Ross,Bobby_Ross.jpg
+1999_NFL,Green Bay,Packers,GB,Ray Rhodes,Ray_Rhodes.jpg
+1999_NFL,Minnesota,Vikings,MIN,Dennis Green,Dennis_Green.jpg
+1999_NFL,Tampa Bay,Buccaneers,TB,Tony Dungy,Tony_Dungy.jpg
+1999_NFL,Atlanta,Falcons,ATL,Dan Reeves,Dan_Reeves.jpg
+1999_NFL,Carolina,Panthers,CAR,George Seifert,George_Seifert.jpg
+1999_NFL,New Orleans,Saints,NO,Mike Ditka,Mike_Ditka.jpg
+1999_NFL,St. Louis,Rams,STL,Dick Vermeil,Dick_Vermeil.jpg
+1999_NFL,San Francisco,49ers,SF,Steve Mariucci,Steve_Mariucci.jpg
+1999_NFL,Buffalo,Bills,BUF,Wade Phillips,Wade_Phillips.jpg
+1999_NFL,Indianapolis,Colts,IND,Jim Mora,Jim_Mora.jpg
+1999_NFL,Miami,Dolphins,MIA,Jimmy Johnson,Jimmy_Johnson.jpg
+1999_NFL,New England,Patriots,NE,Pete Carroll,Pete_Carroll.jpg
+1999_NFL,Baltimore,Ravens,BAL,Brian Billick,Brian_Billick.jpg
+1999_NFL,Cincinnati,Bengals,CIN,Bruce Coslet,Bruce_Coslet.jpg
+1999_NFL,Cleveland,Browns,CLE,Chris Palmer,Chris_Palmer.jpg
+1999_NFL,Jacksonville,Jaguars,JAX,Tom Coughlin,Tom_Coughlin.jpg
+1999_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+1999_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+1999_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+1999_NFL,Kansas City,Chiefs,KC,Gunther Cunningham,Gunther_Cunningham.jpg
+1999_NFL,Oakland,Raiders,OAK,Jon Gruden,Jon_Gruden.jpg
+1999_NFL,San Diego,Chargers,SD,Mike Riley,Mike_Riley.jpg
+1999_NFL,Seattle,Seahawks,SEA,Mike Holmgren,Mike_Holmgren.jpg
+2000_NFL,Arizona,Cardinals,ARI,Dave McGinnis,Dave_McGinnis.jpg
+2000_NFL,Dallas,Cowboys,DAL,Dave Campo,Dave_Campo.jpg
+2000_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2000_NFL,Washington,Redskins,WAS,Terry Robiskie,Terry_Robiskie.jpg
+2000_NFL,Chicago,Bears,CHI,Dick Jauron,Dick_Jauron.jpg
+2000_NFL,Detroit,Lions,DET,Gary Moeller,Gary_Moeller.jpg
+2000_NFL,Green Bay,Packers,GB,Mike Sherman,Mike_Sherman.jpg
+2000_NFL,Minnesota,Vikings,MIN,Dennis Green,Dennis_Green.jpg
+2000_NFL,Tampa Bay,Buccaneers,TB,Tony Dungy,Tony_Dungy.jpg
+2000_NFL,Atlanta,Falcons,ATL,Dan Reeves,Dan_Reeves.jpg
+2000_NFL,Carolina,Panthers,CAR,George Seifert,George_Seifert.jpg
+2000_NFL,New Orleans,Saints,NO,Jim Haslett,Jim_Haslett.jpg
+2000_NFL,San Francisco,49ers,SF,Steve Mariucci,Steve_Mariucci.jpg
+2000_NFL,St. Louis,Rams,STL,Mike Martz,Mike_Martz.jpg
+2000_NFL,Buffalo,Bills,BUF,Wade Phillips,Wade_Phillips.jpg
+2000_NFL,Indianapolis,Colts,IND,Jim Mora,Jim_Mora.jpg
+2000_NFL,Miami,Dolphins,MIA,Dave Wannstedt,Dave_Wannstedt.jpg
+2000_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2000_NFL,Baltimore,Ravens,BAL,Brian Billick,Brian_Billick.jpg
+2000_NFL,Cincinnati,Bengals,CIN,Bruce Coslet,Bruce_Coslet.jpg
+2000_NFL,Cleveland,Browns,CLE,Chris Palmer,Chris_Palmer.jpg
+2000_NFL,Jacksonville,Jaguars,JAX,Tom Coughlin,Tom_Coughlin.jpg
+2000_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+2000_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+2000_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+2000_NFL,Kansas City,Chiefs,KC,Gunther Cunningham,Gunther_Cunningham.jpg
+2000_NFL,Oakland,Raiders,OAK,Jon Gruden,Jon_Gruden.jpg
+2000_NFL,San Diego,Chargers,SD,Mike Riley,Mike_Riley.jpg
+2000_NFL,Seattle,Seahawks,SEA,Mike Holmgren,Mike_Holmgren.jpg
+2001_NFL,Arizona,Cardinals,ARI,Dave McGinnis,Dave_McGinnis.jpg
+2001_NFL,Dallas,Cowboys,DAL,Dave Campo,Dave_Campo.jpg
+2001_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2001_NFL,Washington,Redskins,WAS,Marty Schottenheimer,Marty_Schottenheimer.jpg
+2001_NFL,Chicago,Bears,CHI,Dick Jauron,Dick_Jauron.jpg
+2001_NFL,Detroit,Lions,DET,Marty Mornhinweg,Marty_Mornhinweg.jpg
+2001_NFL,Green Bay,Packers,GB,Mike Sherman,Mike_Sherman.jpg
+2001_NFL,Minnesota,Vikings,MIN,Dennis Green,Dennis_Green.jpg
+2001_NFL,Tampa Bay,Buccaneers,TB,Tony Dungy,Tony_Dungy.jpg
+2001_NFL,Atlanta,Falcons,ATL,Dan Reeves,Dan_Reeves.jpg
+2001_NFL,Carolina,Panthers,CAR,George Seifert,George_Seifert.jpg
+2001_NFL,New Orleans,Saints,NO,Jim Haslett,Jim_Haslett.jpg
+2001_NFL,San Francisco,49ers,SF,Steve Mariucci,Steve_Mariucci.jpg
+2001_NFL,St. Louis,Rams,STL,Mike Martz,Mike_Martz.jpg
+2001_NFL,Buffalo,Bills,BUF,Gregg Williams,Gregg_Williams.jpg
+2001_NFL,Indianapolis,Colts,IND,Jim Mora,Jim_Mora.jpg
+2001_NFL,Miami,Dolphins,MIA,Dave Wannstedt,Dave_Wannstedt.jpg
+2001_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2001_NFL,Baltimore,Ravens,BAL,Brian Billick,Brian_Billick.jpg
+2001_NFL,Cincinnati,Bengals,CIN,Dick LeBeau,Dick_LeBeau.jpg
+2001_NFL,Cleveland,Browns,CLE,Butch Davis,Butch_Davis.jpg
+2001_NFL,Jacksonville,Jaguars,JAX,Tom Coughlin,Tom_Coughlin.jpg
+2001_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+2001_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+2001_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+2001_NFL,Kansas City,Chiefs,KC,Dick Vermeil,Dick_Vermeil.jpg
+2001_NFL,Oakland,Raiders,OAK,Jon Gruden,Jon_Gruden.jpg
+2001_NFL,San Diego,Chargers,SD,Mike Riley,Mike_Riley.jpg
+2001_NFL,Seattle,Seahawks,SEA,Mike Holmgren,Mike_Holmgren.jpg
+2002_NFL,Dallas,Cowboys,DAL,Dave Campo,Dave_Campo.jpg
+2002_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2002_NFL,Washington,Redskins,WAS,Steve Spurrier,Steve_Spurrier.jpg
+2002_NFL,Chicago,Bears,CHI,Dick Jauron,Dick_Jauron.jpg
+2002_NFL,Detroit,Lions,DET,Marty Mornhinweg,Marty_Mornhinweg.jpg
+2002_NFL,Green Bay,Packers,GB,Mike Sherman,Mike_Sherman.jpg
+2002_NFL,Minnesota,Vikings,MIN,Mike Tice,Mike_Tice.jpg
+2002_NFL,Atlanta,Falcons,ATL,Dan Reeves,Dan_Reeves.jpg
+2002_NFL,Carolina,Panthers,CAR,John Fox,John_Fox.jpg
+2002_NFL,New Orleans,Saints,NO,Jim Haslett,Jim_Haslett.jpg
+2002_NFL,Tampa Bay,Buccaneers,TB,Jon Gruden,Jon_Gruden.jpg
+2002_NFL,Arizona,Cardinals,ARI,Dave McGinnis,Dave_McGinnis.jpg
+2002_NFL,St. Louis,Rams,STL,Mike Martz,Mike_Martz.jpg
+2002_NFL,San Francisco,49ers,SF,Steve Mariucci,Steve_Mariucci.jpg
+2002_NFL,Seattle,Seahawks,SEA,Mike Holmgren,Mike_Holmgren.jpg
+2002_NFL,Buffalo,Bills,BUF,Gregg Williams,Gregg_Williams.jpg
+2002_NFL,Miami,Dolphins,MIA,Dave Wannstedt,Dave_Wannstedt.jpg
+2002_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2002_NFL,Baltimore,Ravens,BAL,Brian Billick,Brian_Billick.jpg
+2002_NFL,Cincinnati,Bengals,CIN,Dick LeBeau,Dick_LeBeau.jpg
+2002_NFL,Cleveland,Browns,CLE,Butch Davis,Butch_Davis.jpg
+2002_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+2002_NFL,Houston,Texans,HOU,Dom Capers,Dom_Capers.jpg
+2002_NFL,Indianapolis,Colts,IND,Tony Dungy,Tony_Dungy.jpg
+2002_NFL,Jacksonville,Jaguars,JAX,Tom Coughlin,Tom_Coughlin.jpg
+2002_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+2002_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+2002_NFL,Kansas City,Chiefs,KC,Dick Vermeil,Dick_Vermeil.jpg
+2002_NFL,Oakland,Raiders,OAK,Bill Callahan,Bill_Callahan.jpg
+2002_NFL,San Diego,Chargers,SD,Marty Schottenheimer,Marty_Schottenheimer.jpg
+2003_NFL,Dallas,Cowboys,DAL,Bill Parcells,Bill_Parcells.jpg
+2003_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2003_NFL,Washington,Redskins,WAS,Steve Spurrier,Steve_Spurrier.jpg
+2003_NFL,Chicago,Bears,CHI,Dick Jauron,Dick_Jauron.jpg
+2003_NFL,Detroit,Lions,DET,Steve Mariucci,Steve_Mariucci.jpg
+2003_NFL,Green Bay,Packers,GB,Mike Sherman,Mike_Sherman.jpg
+2003_NFL,Minnesota,Vikings,MIN,Mike Tice,Mike_Tice.jpg
+2003_NFL,Atlanta,Falcons,ATL,Wade Phillips,Wade_Phillips.jpg
+2003_NFL,Carolina,Panthers,CAR,John Fox,John_Fox.jpg
+2003_NFL,New Orleans,Saints,NO,Jim Haslett,Jim_Haslett.jpg
+2003_NFL,Tampa Bay,Buccaneers,TB,Jon Gruden,Jon_Gruden.jpg
+2003_NFL,Arizona,Cardinals,ARI,Dave McGinnis,Dave_McGinnis.jpg
+2003_NFL,San Francisco,49ers,SF,Dennis Erickson,Dennis_Erickson.jpg
+2003_NFL,Seattle,Seahawks,SEA,Mike Holmgren,Mike_Holmgren.jpg
+2003_NFL,St. Louis,Rams,STL,Mike Martz,Mike_Martz.jpg
+2003_NFL,Buffalo,Bills,BUF,Gregg Williams,Gregg_Williams.jpg
+2003_NFL,Miami,Dolphins,MIA,Dave Wannstedt,Dave_Wannstedt.jpg
+2003_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2003_NFL,Baltimore,Ravens,BAL,Brian Billick,Brian_Billick.jpg
+2003_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2003_NFL,Cleveland,Browns,CLE,Butch Davis,Butch_Davis.jpg
+2003_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+2003_NFL,Houston,Texans,HOU,Dom Capers,Dom_Capers.jpg
+2003_NFL,Indianapolis,Colts,IND,Tony Dungy,Tony_Dungy.jpg
+2003_NFL,Jacksonville,Jaguars,JAX,Jack Del Rio,Jack_Del_Rio.jpg
+2003_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+2003_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+2003_NFL,Kansas City,Chiefs,KC,Dick Vermeil,Dick_Vermeil.jpg
+2003_NFL,Oakland,Raiders,OAK,Bill Callahan,Bill_Callahan.jpg
+2003_NFL,San Diego,Chargers,SD,Marty Schottenheimer,Marty_Schottenheimer.jpg
+2004_NFL,Dallas,Cowboys,DAL,Bill Parcells,Bill_Parcells.jpg
+2004_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2004_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+2004_NFL,Chicago,Bears,CHI,Lovie Smith,Lovie_Smith.jpg
+2004_NFL,Detroit,Lions,DET,Steve Mariucci,Steve_Mariucci.jpg
+2004_NFL,Green Bay,Packers,GB,Mike Sherman,Mike_Sherman.jpg
+2004_NFL,Minnesota,Vikings,MIN,Mike Tice,Mike_Tice.jpg
+2004_NFL,Atlanta,Falcons,ATL,Jim Mora,Jim_Mora.jpg
+2004_NFL,Carolina,Panthers,CAR,John Fox,John_Fox.jpg
+2004_NFL,New Orleans,Saints,NO,Jim Haslett,Jim_Haslett.jpg
+2004_NFL,Tampa Bay,Buccaneers,TB,Jon Gruden,Jon_Gruden.jpg
+2004_NFL,Arizona,Cardinals,ARI,Dennis Green,Dennis_Green.jpg
+2004_NFL,St. Louis,Rams,STL,Mike Martz,Mike_Martz.jpg
+2004_NFL,San Francisco,49ers,SF,Dennis Erickson,Dennis_Erickson.jpg
+2004_NFL,Seattle,Seahawks,SEA,Mike Holmgren,Mike_Holmgren.jpg
+2004_NFL,Buffalo,Bills,BUF,Mike Mularkey,Mike_Mularkey.jpg
+2004_NFL,Miami,Dolphins,MIA,Dave Wannstedt,Dave_Wannstedt.jpg
+2004_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2004_NFL,Baltimore,Ravens,BAL,Brian Billick,Brian_Billick.jpg
+2004_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2004_NFL,Cleveland,Browns,CLE,Butch Davis,Butch_Davis.jpg
+2004_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+2004_NFL,Houston,Texans,HOU,Dom Capers,Dom_Capers.jpg
+2004_NFL,Indianapolis,Colts,IND,Tony Dungy,Tony_Dungy.jpg
+2004_NFL,Jacksonville,Jaguars,JAX,Jack Del Rio,Jack_Del_Rio.jpg
+2004_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+2004_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+2004_NFL,Kansas City,Chiefs,KC,Dick Vermeil,Dick_Vermeil.jpg
+2004_NFL,Oakland,Raiders,OAK,Norv Turner,Norv_Turner.jpg
+2004_NFL,San Diego,Chargers,SD,Marty Schottenheimer,Marty_Schottenheimer.jpg
+2005_NFL,Dallas,Cowboys,DAL,Bill Parcells,Bill_Parcells.jpg
+2005_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2005_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+2005_NFL,Chicago,Bears,CHI,Lovie Smith,Lovie_Smith.jpg
+2005_NFL,Detroit,Lions,DET,Steve Mariucci,Steve_Mariucci.jpg
+2005_NFL,Green Bay,Packers,GB,Mike Sherman,Mike_Sherman.jpg
+2005_NFL,Minnesota,Vikings,MIN,Mike Tice,Mike_Tice.jpg
+2005_NFL,Atlanta,Falcons,ATL,Jim Mora,Jim_Mora.jpg
+2005_NFL,Carolina,Panthers,CAR,John Fox,John_Fox.jpg
+2005_NFL,New Orleans,Saints,NO,Jim Haslett,Jim_Haslett.jpg
+2005_NFL,Tampa Bay,Buccaneers,TB,Jon Gruden,Jon_Gruden.jpg
+2005_NFL,Arizona,Cardinals,ARI,Dennis Green,Dennis_Green.jpg
+2005_NFL,San Francisco,49ers,SF,Mike Nolan,Mike_Nolan.jpg
+2005_NFL,Seattle,Seahawks,SEA,Mike Holmgren,Mike_Holmgren.jpg
+2005_NFL,St. Louis,Rams,STL,Mike Martz,Mike_Martz.jpg
+2005_NFL,Buffalo,Bills,BUF,Mike Mularkey,Mike_Mularkey.jpg
+2005_NFL,Miami,Dolphins,MIA,Nick Saban,Nick_Saban.jpg
+2005_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2005_NFL,Baltimore,Ravens,BAL,Brian Billick,Brian_Billick.jpg
+2005_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2005_NFL,Cleveland,Browns,CLE,Romeo Crennel,Romeo_Crennel.jpg
+2005_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+2005_NFL,Houston,Texans,HOU,Dom Capers,Dom_Capers.jpg
+2005_NFL,Indianapolis,Colts,IND,Tony Dungy,Tony_Dungy.jpg
+2005_NFL,Jacksonville,Jaguars,JAX,Jack Del Rio,Jack_Del_Rio.jpg
+2005_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+2005_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+2005_NFL,Kansas City,Chiefs,KC,Dick Vermeil,Dick_Vermeil.jpg
+2005_NFL,Oakland,Raiders,OAK,Norv Turner,Norv_Turner.jpg
+2005_NFL,San Diego,Chargers,SD,Marty Schottenheimer,Marty_Schottenheimer.jpg
+2006_NFL,Dallas,Cowboys,DAL,Bill Parcells,Bill_Parcells.jpg
+2006_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2006_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+2006_NFL,Chicago,Bears,CHI,Lovie Smith,Lovie_Smith.jpg
+2006_NFL,Detroit,Lions,DET,Rod Marinelli,Rod_Marinelli.jpg
+2006_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2006_NFL,Minnesota,Vikings,MIN,Brad Childress,Brad_Childress.jpg
+2006_NFL,Atlanta,Falcons,ATL,Jim Mora,Jim_Mora.jpg
+2006_NFL,Carolina,Panthers,CAR,John Fox,John_Fox.jpg
+2006_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2006_NFL,Tampa Bay,Buccaneers,TB,Jon Gruden,Jon_Gruden.jpg
+2006_NFL,Arizona,Cardinals,ARI,Dennis Green,Dennis_Green.jpg
+2006_NFL,St. Louis,Rams,STL,Scott Linehan,Scott_Linehan.jpg
+2006_NFL,San Francisco,49ers,SF,Mike Nolan,Mike_Nolan.jpg
+2006_NFL,Seattle,Seahawks,SEA,Mike Holmgren,Mike_Holmgren.jpg
+2006_NFL,Buffalo,Bills,BUF,Dick Jauron,Dick_Jauron.jpg
+2006_NFL,Miami,Dolphins,MIA,Nick Saban,Nick_Saban.jpg
+2006_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2006_NFL,Baltimore,Ravens,BAL,Brian Billick,Brian_Billick.jpg
+2006_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2006_NFL,Cleveland,Browns,CLE,Romeo Crennel,Romeo_Crennel.jpg
+2006_NFL,Pittsburgh,Steelers,PIT,Bill Cowher,Bill_Cowher.jpg
+2006_NFL,Houston,Texans,HOU,Gary Kubiak,Gary_Kubiak.jpg
+2006_NFL,Indianapolis,Colts,IND,Tony Dungy,Tony_Dungy.jpg
+2006_NFL,Jacksonville,Jaguars,JAX,Jack Del Rio,Jack_Del_Rio.jpg
+2006_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+2006_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+2006_NFL,Kansas City,Chiefs,KC,Herm Edwards,Herm_Edwards.jpg
+2006_NFL,Oakland,Raiders,OAK,Art Shell,Art_Shell.jpg
+2006_NFL,San Diego,Chargers,SD,Marty Schottenheimer,Marty_Schottenheimer.jpg
+2007_NFL,Dallas,Cowboys,DAL,Wade Phillips,Wade_Phillips.jpg
+2007_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2007_NFL,Washington,Redskins,WAS,Joe Gibbs,Joe_Gibbs.jpg
+2007_NFL,Chicago,Bears,CHI,Lovie Smith,Lovie_Smith.jpg
+2007_NFL,Detroit,Lions,DET,Rod Marinelli,Rod_Marinelli.jpg
+2007_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2007_NFL,Minnesota,Vikings,MIN,Brad Childress,Brad_Childress.jpg
+2007_NFL,Atlanta,Falcons,ATL,Bobby Petrino,Bobby_Petrino.jpg
+2007_NFL,Carolina,Panthers,CAR,John Fox,John_Fox.jpg
+2007_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2007_NFL,Tampa Bay,Buccaneers,TB,Jon Gruden,Jon_Gruden.jpg
+2007_NFL,Arizona,Cardinals,ARI,Ken Whisenhunt,Ken_Whisenhunt.jpg
+2007_NFL,San Francisco,49ers,SF,Mike Nolan,Mike_Nolan.jpg
+2007_NFL,Seattle,Seahawks,SEA,Mike Holmgren,Mike_Holmgren.jpg
+2007_NFL,St. Louis,Rams,STL,Scott Linehan,Scott_Linehan.jpg
+2007_NFL,Buffalo,Bills,BUF,Dick Jauron,Dick_Jauron.jpg
+2007_NFL,Miami,Dolphins,MIA,Cam Cameron,Cam_Cameron.jpg
+2007_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2007_NFL,Baltimore,Ravens,BAL,Brian Billick,Brian_Billick.jpg
+2007_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2007_NFL,Cleveland,Browns,CLE,Romeo Crennel,Romeo_Crennel.jpg
+2007_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2007_NFL,Houston,Texans,HOU,Gary Kubiak,Gary_Kubiak.jpg
+2007_NFL,Indianapolis,Colts,IND,Tony Dungy,Tony_Dungy.jpg
+2007_NFL,Jacksonville,Jaguars,JAX,Jack Del Rio,Jack_Del_Rio.jpg
+2007_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+2007_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+2007_NFL,Kansas City,Chiefs,KC,Herm Edwards,Herm_Edwards.jpg
+2007_NFL,Oakland,Raiders,OAK,Lane Kiffin,Lane_Kiffin.jpg
+2007_NFL,San Diego,Chargers,SD,Norv Turner,Norv_Turner.jpg
+2008_NFL,Dallas,Cowboys,DAL,Wade Phillips,Wade_Phillips.jpg
+2008_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2008_NFL,Washington,Redskins,WAS,Jim Zorn,Jim_Zorn.jpg
+2008_NFL,Chicago,Bears,CHI,Lovie Smith,Lovie_Smith.jpg
+2008_NFL,Detroit,Lions,DET,Rod Marinelli,Rod_Marinelli.jpg
+2008_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2008_NFL,Minnesota,Vikings,MIN,Brad Childress,Brad_Childress.jpg
+2008_NFL,Atlanta,Falcons,ATL,Mike Smith,Mike_Smith.jpg
+2008_NFL,Carolina,Panthers,CAR,John Fox,John_Fox.jpg
+2008_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2008_NFL,Tampa Bay,Buccaneers,TB,Jon Gruden,Jon_Gruden.jpg
+2008_NFL,Arizona,Cardinals,ARI,Ken Whisenhunt,Ken_Whisenhunt.jpg
+2008_NFL,St. Louis,Rams,STL,Jim Haslett,Jim_Haslett.jpg
+2008_NFL,San Francisco,49ers,SF,Mike Singletary,Mike_Singletary.jpg
+2008_NFL,Seattle,Seahawks,SEA,Mike Holmgren,Mike_Holmgren.jpg
+2008_NFL,Buffalo,Bills,BUF,Dick Jauron,Dick_Jauron.jpg
+2008_NFL,Miami,Dolphins,MIA,Tony Sparano,Tony_Sparano.jpg
+2008_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2008_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2008_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2008_NFL,Cleveland,Browns,CLE,Romeo Crennel,Romeo_Crennel.jpg
+2008_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2008_NFL,Houston,Texans,HOU,Gary Kubiak,Gary_Kubiak.jpg
+2008_NFL,Indianapolis,Colts,IND,Tony Dungy,Tony_Dungy.jpg
+2008_NFL,Jacksonville,Jaguars,JAX,Jack Del Rio,Jack_Del_Rio.jpg
+2008_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+2008_NFL,Denver,Broncos,DEN,Mike Shanahan,Mike_Shanahan.jpg
+2008_NFL,Kansas City,Chiefs,KC,Herm Edwards,Herm_Edwards.jpg
+2008_NFL,Oakland,Raiders,OAK,Tom Cable,Tom_Cable.jpg
+2008_NFL,San Diego,Chargers,SD,Norv Turner,Norv_Turner.jpg
+2009_NFL,Dallas,Cowboys,DAL,Wade Phillips,Wade_Phillips.jpg
+2009_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2009_NFL,Washington,Redskins,WAS,Jim Zorn,Jim_Zorn.jpg
+2009_NFL,Chicago,Bears,CHI,Lovie Smith,Lovie_Smith.jpg
+2009_NFL,Detroit,Lions,DET,Jim Schwartz,Jim_Schwartz.jpg
+2009_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2009_NFL,Minnesota,Vikings,MIN,Brad Childress,Brad_Childress.jpg
+2009_NFL,Atlanta,Falcons,ATL,Mike Smith,Mike_Smith.jpg
+2009_NFL,Carolina,Panthers,CAR,John Fox,John_Fox.jpg
+2009_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2009_NFL,Tampa Bay,Buccaneers,TB,Raheem Morris,Raheem_Morris.jpg
+2009_NFL,Arizona,Cardinals,ARI,Ken Whisenhunt,Ken_Whisenhunt.jpg
+2009_NFL,San Francisco,49ers,SF,Mike Singletary,Mike_Singletary.jpg
+2009_NFL,Seattle,Seahawks,SEA,Jim Mora,Jim_Mora.jpg
+2009_NFL,St. Louis,Rams,STL,Steve Spagnuolo,Steve_Spagnuolo.jpg
+2009_NFL,Buffalo,Bills,BUF,Dick Jauron,Dick_Jauron.jpg
+2009_NFL,Miami,Dolphins,MIA,Tony Sparano,Tony_Sparano.jpg
+2009_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2009_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2009_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2009_NFL,Cleveland,Browns,CLE,Eric Mangini,Eric_Mangini.jpg
+2009_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2009_NFL,Houston,Texans,HOU,Gary Kubiak,Gary_Kubiak.jpg
+2009_NFL,Indianapolis,Colts,IND,Jim Caldwell,Jim_Caldwell.jpg
+2009_NFL,Jacksonville,Jaguars,JAX,Jack Del Rio,Jack_Del_Rio.jpg
+2009_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+2009_NFL,Denver,Broncos,DEN,Josh McDaniels,Josh_McDaniels.jpg
+2009_NFL,Kansas City,Chiefs,KC,Todd Haley,Todd_Haley.jpg
+2009_NFL,Oakland,Raiders,OAK,Tom Cable,Tom_Cable.jpg
+2009_NFL,San Diego,Chargers,SD,Norv Turner,Norv_Turner.jpg
+2010_NFL,Dallas,Cowboys,DAL,Jason Garrett,Jason_Garrett.jpg
+2010_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2010_NFL,Washington,Redskins,WAS,Mike Shanahan,Mike_Shanahan.jpg
+2010_NFL,Chicago,Bears,CHI,Lovie Smith,Lovie_Smith.jpg
+2010_NFL,Detroit,Lions,DET,Jim Schwartz,Jim_Schwartz.jpg
+2010_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2010_NFL,Minnesota,Vikings,MIN,Brad Childress,Brad_Childress.jpg
+2010_NFL,Atlanta,Falcons,ATL,Mike Smith,Mike_Smith.jpg
+2010_NFL,Carolina,Panthers,CAR,John Fox,John_Fox.jpg
+2010_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2010_NFL,Tampa Bay,Buccaneers,TB,Raheem Morris,Raheem_Morris.jpg
+2010_NFL,Arizona,Cardinals,ARI,Ken Whisenhunt,Ken_Whisenhunt.jpg
+2010_NFL,St. Louis,Rams,STL,Steve Spagnuola,Steve_Spagnuola.jpg
+2010_NFL,San Francisco,49ers,SF,Mike Singletary,Mike_Singletary.jpg
+2010_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2010_NFL,Buffalo,Bills,BUF,Chan Gailey,Chan_Gailey.jpg
+2010_NFL,Miami,Dolphins,MIA,Tony Sparano,Tony_Sparano.jpg
+2010_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2010_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2010_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2010_NFL,Cleveland,Browns,CLE,Eric Mangini,Eric_Mangini.jpg
+2010_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2010_NFL,Houston,Texans,HOU,Gary Kubiak,Gary_Kubiak.jpg
+2010_NFL,Indianapolis,Colts,IND,Jim Caldwell,Jim_Caldwell.jpg
+2010_NFL,Jacksonville,Jaguars,JAX,Jack Del Rio,Jack_Del_Rio.jpg
+2010_NFL,Tennessee,Titans,TEN,Jeff Fisher,Jeff_Fisher.jpg
+2010_NFL,Denver,Broncos,DEN,Josh McDaniels,Josh_McDaniels.jpg
+2010_NFL,Kansas City,Chiefs,KC,Todd Haley,Todd_Haley.jpg
+2010_NFL,Oakland,Raiders,OAK,Tom Cable,Tom_Cable.jpg
+2010_NFL,San Diego,Chargers,SD,Norv Turner,Norv_Turner.jpg
+2011_NFL,Dallas,Cowboys,DAL,Jason Garrett,Jason_Garrett.jpg
+2011_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2011_NFL,Washington,Redskins,WAS,Mike Shanahan,Mike_Shanahan.jpg
+2011_NFL,Chicago,Bears,CHI,Lovie Smith,Lovie_Smith.jpg
+2011_NFL,Detroit,Lions,DET,Jim Schwartz,Jim_Schwartz.jpg
+2011_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2011_NFL,Minnesota,Vikings,MIN,Leslie Frazier,Leslie_Frazier.jpg
+2011_NFL,Atlanta,Falcons,ATL,Mike Smith,Mike_Smith.jpg
+2011_NFL,Carolina,Panthers,CAR,Ron Rivera,Ron_Rivera.jpg
+2011_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2011_NFL,Tampa Bay,Buccaneers,TB,Raheem Morris,Raheem_Morris.jpg
+2011_NFL,Arizona,Cardinals,ARI,Ken Whisenhunt,Ken_Whisenhunt.jpg
+2011_NFL,San Francisco,49ers,SF,Jm Harbaugh,Jm_Harbaugh.jpg
+2011_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2011_NFL,St. Louis,Rams,STL,Steve Spagnuolo,Steve_Spagnuolo.jpg
+2011_NFL,Buffalo,Bills,BUF,Chan Gailey,Chan_Gailey.jpg
+2011_NFL,Miami,Dolphins,MIA,Tony Sparano,Tony_Sparano.jpg
+2011_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2011_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2011_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2011_NFL,Cleveland,Browns,CLE,Pat Shurmur,Pat_Shurmur.jpg
+2011_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2011_NFL,Houston,Texans,HOU,Gary Kubiak,Gary_Kubiak.jpg
+2011_NFL,Indianapolis,Colts,IND,Jim Caldwell,Jim_Caldwell.jpg
+2011_NFL,Jacksonville,Jaguars,JAX,Jack Del Rio,Jack_Del_Rio.jpg
+2011_NFL,Tennessee,Titans,TEN,Mike Munchak,Mike_Munchak.jpg
+2011_NFL,Denver,Broncos,DEN,John Fox,John_Fox.jpg
+2011_NFL,Kansas City,Chiefs,KC,Todd Haley,Todd_Haley.jpg
+2011_NFL,Oakland,Raiders,OAK,Hue Jackson,Hue_Jackson.jpg
+2011_NFL,San Diego,Chargers,SD,Norv Turner,Norv_Turner.jpg
+2012_NFL,Dallas,Cowboys,DAL,Jason Garrett,Jason_Garrett.jpg
+2012_NFL,Philadelphia,Eagles,PHI,Andy Reid,Andy_Reid.jpg
+2012_NFL,Washington,Redskins,WAS,Mike Shanahan,Mike_Shanahan.jpg
+2012_NFL,Chicago,Bears,CHI,Lovie Smith,Lovie_Smith.jpg
+2012_NFL,Detroit,Lions,DET,Jim Schwartz,Jim_Schwartz.jpg
+2012_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2012_NFL,Minnesota,Vikings,MIN,Leslie Frazier,Leslie_Frazier.jpg
+2012_NFL,Atlanta,Falcons,ATL,Mike Smith,Mike_Smith.jpg
+2012_NFL,Carolina,Panthers,CAR,Ron Rivera,Ron_Rivera.jpg
+2012_NFL,New Orleans,Saints,NO,Joe Vitt,Joe_Vitt.jpg
+2012_NFL,Tampa Bay,Buccaneers,TB,Greg Schiano,Greg_Schiano.jpg
+2012_NFL,Arizona,Cardinals,ARI,Ken Whisenhunt,Ken_Whisenhunt.jpg
+2012_NFL,St. Louis,Rams,STL,Jeff Fisher,Jeff_Fisher.jpg
+2012_NFL,San Francisco,49ers,SF,Jim Harbaugh,Jim_Harbaugh.jpg
+2012_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2012_NFL,Buffalo,Bills,BUF,Chan Gailey,Chan_Gailey.jpg
+2012_NFL,Miami,Dolphins,MIA,Joe Philbin,Joe_Philbin.jpg
+2012_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2012_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2012_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2012_NFL,Cleveland,Browns,CLE,Pat Shurmur,Pat_Shurmur.jpg
+2012_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2012_NFL,Houston,Texans,HOU,Gary Kubiak,Gary_Kubiak.jpg
+2012_NFL,Indianapolis,Colts,IND,Chuck Pagano,Chuck_Pagano.jpg
+2012_NFL,Jacksonville,Jaguars,JAX,Mike Mularkey,Mike_Mularkey.jpg
+2012_NFL,Tennessee,Titans,TEN,Mike Munchak,Mike_Munchak.jpg
+2012_NFL,Denver,Broncos,DEN,John Fox,John_Fox.jpg
+2012_NFL,Kansas City,Chiefs,KC,Romeo Crennel,Romeo_Crennel.jpg
+2012_NFL,Oakland,Raiders,OAK,Dennis Allen,Dennis_Allen.jpg
+2012_NFL,San Diego,Chargers,SD,Norv Turner,Norv_Turner.jpg
+2013_NFL,Dallas,Cowboys,DAL,Jason Garrett,Jason_Garrett.jpg
+2013_NFL,Philadelphia,Eagles,PHI,Chip Kelly,Chip_Kelly.jpg
+2013_NFL,Washington,Redskins,WAS,Mike Shanahan,Mike_Shanahan.jpg
+2013_NFL,Chicago,Bears,CHI,Marc Trestman,Marc_Trestman.jpg
+2013_NFL,Detroit,Lions,DET,Jim Schwartz,Jim_Schwartz.jpg
+2013_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2013_NFL,Minnesota,Vikings,MIN,Leslie Frazier,Leslie_Frazier.jpg
+2013_NFL,Atlanta,Falcons,ATL,Mike Smith,Mike_Smith.jpg
+2013_NFL,Carolina,Panthers,CAR,Ron Rivera,Ron_Rivera.jpg
+2013_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2013_NFL,Tampa Bay,Buccaneers,TB,Greg Schiano,Greg_Schiano.jpg
+2013_NFL,Arizona,Cardinals,ARI,Bruce Arians,Bruce_Arians.jpg
+2013_NFL,San Francisco,49ers,SF,Jim Harbaugh,Jim_Harbaugh.jpg
+2013_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2013_NFL,St. Louis,Rams,STL,Jeff Fisher,Jeff_Fisher.jpg
+2013_NFL,Buffalo,Bills,BUF,Doug Marrone,Doug_Marrone.jpg
+2013_NFL,Miami,Dolphins,MIA,Joe Philbin,Joe_Philbin.jpg
+2013_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2013_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2013_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2013_NFL,Cleveland,Browns,CLE,Rob Chudzinski,Rob_Chudzinski.jpg
+2013_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2013_NFL,Houston,Texans,HOU,Gary Kubiak,Gary_Kubiak.jpg
+2013_NFL,Indianapolis,Colts,IND,Chuck Pagano,Chuck_Pagano.jpg
+2013_NFL,Jacksonville,Jaguars,JAX,Gus Bradley,Gus_Bradley.jpg
+2013_NFL,Tennessee,Titans,TEN,Mike Munchak,Mike_Munchak.jpg
+2013_NFL,Denver,Broncos,DEN,John Fox,John_Fox.jpg
+2013_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2013_NFL,Oakland,Raiders,OAK,Dennis Allen,Dennis_Allen.jpg
+2013_NFL,San Diego,Chargers,SD,Mike McCoy,Mike_McCoy.jpg
+2014_NFL,Dallas,Cowboys,DAL,Jason Garrett,Jason_Garrett.jpg
+2014_NFL,Philadelphia,Eagles,PHI,Chip Kelly,Chip_Kelly.jpg
+2014_NFL,Washington,Redskins,WAS,Jay Gruden,Jay_Gruden.jpg
+2014_NFL,Chicago,Bears,CHI,Marc Trestman,Marc_Trestman.jpg
+2014_NFL,Detroit,Lions,DET,Jim Caldwell,Jim_Caldwell.jpg
+2014_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2014_NFL,Minnesota,Vikings,MIN,Mike Zimmer,Mike_Zimmer.jpg
+2014_NFL,Atlanta,Falcons,ATL,Mike Smith,Mike_Smith.jpg
+2014_NFL,Carolina,Panthers,CAR,Ron Rivera,Ron_Rivera.jpg
+2014_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2014_NFL,Tampa Bay,Buccaneers,TB,Lovie Smith,Lovie_Smith.jpg
+2014_NFL,Arizona,Cardinals,ARI,Bruce Arians,Bruce_Arians.jpg
+2014_NFL,St. Louis,Rams,STL,Jeff Fisher,Jeff_Fisher.jpg
+2014_NFL,San Francisco,49ers,SF,Jim Harbaugh,Jim_Harbaugh.jpg
+2014_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2014_NFL,Buffalo,Bills,BUF,Doug Marrone,Doug_Marrone.jpg
+2014_NFL,Miami,Dolphins,MIA,Joe Philbin,Joe_Philbin.jpg
+2014_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2014_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2014_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2014_NFL,Cleveland,Browns,CLE,Mike Pettine,Mike_Pettine.jpg
+2014_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2014_NFL,Houston,Texans,HOU,Bill O'Brien,Bill_O'Brien.jpg
+2014_NFL,Indianapolis,Colts,IND,Chuck Pagano,Chuck_Pagano.jpg
+2014_NFL,Jacksonville,Jaguars,JAX,Gus Bradley,Gus_Bradley.jpg
+2014_NFL,Tennessee,Titans,TEN,Ken Whisenhunt,Ken_Whisenhunt.jpg
+2014_NFL,Denver,Broncos,DEN,John Fox,John_Fox.jpg
+2014_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2014_NFL,Oakland,Raiders,OAK,Tony Sparano,Tony_Sparano.jpg
+2014_NFL,San Diego,Chargers,SD,Mike McCoy,Mike_McCoy.jpg
+2015_NFL,Dallas,Cowboys,DAL,Jason Garrett,Jason_Garrett.jpg
+2015_NFL,Philadelphia,Eagles,PHI,Chip Kelly,Chip_Kelly.jpg
+2015_NFL,Washington,Redskins,WAS,Jay Gruden,Jay_Gruden.jpg
+2015_NFL,Chicago,Bears,CHI,John Fox,John_Fox.jpg
+2015_NFL,Detroit,Lions,DET,Jim Caldwell,Jim_Caldwell.jpg
+2015_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2015_NFL,Minnesota,Vikings,MIN,Mike Zimmer,Mike_Zimmer.jpg
+2015_NFL,Atlanta,Falcons,ATL,Dan Quinn,Dan_Quinn.jpg
+2015_NFL,Carolina,Panthers,CAR,Ron Rivera,Ron_Rivera.jpg
+2015_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2015_NFL,Tampa Bay,Buccaneers,TB,Lovie Smith,Lovie_Smith.jpg
+2015_NFL,Arizona,Cardinals,ARI,Bruce Arians,Bruce_Arians.jpg
+2015_NFL,San Francisco,49ers,SF,Jim Tomsula,Jim_Tomsula.jpg
+2015_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2015_NFL,St. Louis,Rams,STL,Jeff Fisher,Jeff_Fisher.jpg
+2015_NFL,Buffalo,Bills,BUF,Rex Ryan,Rex_Ryan.jpg
+2015_NFL,Miami,Dolphins,MIA,Dan Campbell,Dan_Campbell.jpg
+2015_NFL,New England,Patriots,NE,Bill Belichik,Bill_Belichik.jpg
+2015_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2015_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2015_NFL,Cleveland,Browns,CLE,Mike Pettine,Mike_Pettine.jpg
+2015_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2015_NFL,Houston,Texans,HOU,Bill O'Brien,Bill_O'Brien.jpg
+2015_NFL,Indianapolis,Colts,IND,Chuck Pagano,Chuck_Pagano.jpg
+2015_NFL,Jacksonville,Jaguars,JAX,Gus Bradley,Gus_Bradley.jpg
+2015_NFL,Tennessee,Titans,TEN,Ken Whisenhunt,Ken_Whisenhunt.jpg
+2015_NFL,Denver,Broncos,DEN,Gary Kubiak,Gary_Kubiak.jpg
+2015_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2015_NFL,Oakland,Raiders,OAK,Jack Del Rio,Jack_Del_Rio.jpg
+2015_NFL,San Diego,Chargers,SD,Mike McCoy,Mike_McCoy.jpg
+2016_NFL,Dallas,Cowboys,DAL,Jason Garrett,Jason_Garrett.jpg
+2016_NFL,Philadelphia,Eagles,PHI,Doug Pederson,Doug_Pederson.jpg
+2016_NFL,Washington,Redskins,WAS,Jay Gruden,Jay_Gruden.jpg
+2016_NFL,Chicago,Bears,CHI,John Fox,John_Fox.jpg
+2016_NFL,Detroit,Lions,DET,Jim Caldwell,Jim_Caldwell.jpg
+2016_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2016_NFL,Minnesota,Vikings,MIN,Mike Zimmer,Mike_Zimmer.jpg
+2016_NFL,Atlanta,Falcons,ATL,Dan Quinn,Dan_Quinn.jpg
+2016_NFL,Carolina,Panthers,CAR,Ron Rivera,Ron_Rivera.jpg
+2016_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2016_NFL,Tampa Bay,Buccaneers,TB,Dick Koetter,Dick_Koetter.jpg
+2016_NFL,Arizona,Cardinals,ARI,Bruce Arians,Bruce_Arians.jpg
+2016_NFL,Los Angeles,Rams,LAR,Jeff Fisher,Jeff_Fisher.jpg
+2016_NFL,San Francisco,49ers,SF,Chip Kelly,Chip_Kelly.jpg
+2016_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2016_NFL,Buffalo,Bills,BUF,Rex Ryan,Rex_Ryan.jpg
+2016_NFL,Miami,Dolphins,MIA,Adam Gase,Adam_Gase.jpg
+2016_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2016_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2016_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2016_NFL,Cleveland,Browns,CLE,Hue Jackson,Hue_Jackson.jpg
+2016_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2016_NFL,Houston,Texans,HOU,Bill O'Brien,Bill_O'Brien.jpg
+2016_NFL,Indianapolis,Colts,IND,Chuck Pagano,Chuck_Pagano.jpg
+2016_NFL,Jacksonville,Jaguars,JAX,Gus Bradley,Gus_Bradley.jpg
+2016_NFL,Tennessee,Titans,TEN,Mike Mularkey,Mike_Mularkey.jpg
+2016_NFL,Denver,Broncos,DEN,Gary Kubiak,Gary_Kubiak.jpg
+2016_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2016_NFL,Oakland,Raiders,OAK,Jack Del Rio,Jack_Del_Rio.jpg
+2016_NFL,San Diego,Chargers,SD,Mike McCoy,Mike_McCoy.jpg
+2017_NFL,Dallas,Cowboys,DAL,Jason Garrett,Jason_Garrett.jpg
+2017_NFL,Philadelphia,Eagles,PHI,Doug Pederson,Doug_Pederson.jpg
+2017_NFL,Washington,Redskins,WAS,Jay Gruden,Jay_Gruden.jpg
+2017_NFL,Chicago,Bears,CHI,John Fox,John_Fox.jpg
+2017_NFL,Detroit,Lions,DET,Jim Caldwell,Jim_Caldwell.jpg
+2017_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2017_NFL,Minnesota,Vikings,MIN,Mike Zimmer,Mike_Zimmer.jpg
+2017_NFL,Atlanta,Falcons,ATL,Dan Quinn,Dan_Quinn.jpg
+2017_NFL,Carolina,Panthers,CAR,Ron Rivera,Ron_Rivera.jpg
+2017_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2017_NFL,Tampa Bay,Buccaneers,TB,Dirk Koetter,Dirk_Koetter.jpg
+2017_NFL,Arizona,Cardinals,ARI,Bruce Arians,Bruce_Arians.jpg
+2017_NFL,San Francisco,49ers,SF,Kyle Shanahan,Kyle_Shanahan.jpg
+2017_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2017_NFL,Buffalo,Bills,BUF,Sean McDermott,Sean_McDermott.jpg
+2017_NFL,Miami,Dolphins,MIA,Adam Gase,Adam_Gase.jpg
+2017_NFL,New England,Patriots,NE,Bill Belichik,Bill_Belichik.jpg
+2017_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2017_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2017_NFL,Cleveland,Browns,CLE,Hue Jackson,Hue_Jackson.jpg
+2017_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2017_NFL,Houston,Texans,HOU,Bill O'Brien,Bill_O'Brien.jpg
+2017_NFL,Indianapolis,Colts,IND,Chuck Pagano,Chuck_Pagano.jpg
+2017_NFL,Jacksonville,Jaguars,JAC,Doug Marrone,Doug_Marrone.jpg
+2017_NFL,Tennessee,Titans,TEN,Mike Mularkey,Mike_Mularkey.jpg
+2017_NFL,Denver,Broncos,DEN,Vance Joseph,Vance_Joseph.jpg
+2017_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2017_NFL,Oakland,Raiders,OAK,Jack Del Rio,Jack_Del_Rio.jpg
+2018_NFL,Dallas,Cowboys,DAL,Jason Garrett,Jason_Garrett.jpg
+2018_NFL,Philadelphia,Eagles,PHI,Doug Pederson,Doug_Pederson.jpg
+2018_NFL,Washington,Redskins,WAS,Jay Gruden,Jay_Gruden.jpg
+2018_NFL,Chicago,Bears,CHI,Matt Nagy,Matt_Nagy.jpg
+2018_NFL,Detroit,Lions,DET,Matt Patricia,Matt_Patricia.jpg
+2018_NFL,Green Bay,Packers,GB,Mike McCarthy,Mike_McCarthy.jpg
+2018_NFL,Minnesota,Vikings,MIN,Mike Zimmer,Mike_Zimmer.jpg
+2018_NFL,Atlanta,Falcons,ATL,Dan Quinn,Dan_Quinn.jpg
+2018_NFL,Carolina,Panthers,CAR,Ron Rivera,Ron_Rivera.jpg
+2018_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2018_NFL,Tampa Bay,Buccaneers,TB,Dirk Koetter,Dirk_Koetter.jpg
+2018_NFL,Arizona,Cardinals,ARI,Steve Wilks,Steve_Wilks.jpg
+2018_NFL,San Francisco,49ers,SF,Kyle Shanahan,Kyle_Shanahan.jpg
+2018_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2018_NFL,Buffalo,Bills,BUF,Sean McDermott,Sean_McDermott.jpg
+2018_NFL,Miami,Dolphins,MIA,Adam Gase,Adam_Gase.jpg
+2018_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2018_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2018_NFL,Cincinnati,Bengals,CIN,Marvin Lewis,Marvin_Lewis.jpg
+2018_NFL,Cleveland,Browns,CLE,Hue Jackson,Hue_Jackson.jpg
+2018_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2018_NFL,Houston,Texans,HOU,Bill O'Brien,Bill_O'Brien.jpg
+2018_NFL,Indianapolis,Colts,IND,Frank Reich,Frank_Reich.jpg
+2018_NFL,Jacksonville,Jaguars,JAX,Doug Marrone,Doug_Marrone.jpg
+2018_NFL,Tennessee,Titans,TEN,Mike Vrabel,Mike_Vrabel.jpg
+2018_NFL,Denver,Broncos,DEN,Vance Joseph,Vance_Joseph.jpg
+2018_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2018_NFL,Oakland,Raiders,OAK,Jon Gruden,Jon_Gruden.jpg
+2019_NFL,Dallas,Cowboys,DAL,Jason Garrett,Jason_Garrett.jpg
+2019_NFL,Philadelphia,Eagles,PHI,Doug Pederson,Doug_Pederson.jpg
+2019_NFL,Washington,Redskins,WAS,Bill Callahan,Bill_Callahan.jpg
+2019_NFL,Chicago,Bears,CHI,Matt Nagy,Matt_Nagy.jpg
+2019_NFL,Detroit,Lions,DET,Matt Patricia,Matt_Patricia.jpg
+2019_NFL,Green Bay,Packers,GB,Matt LaFleur,Matt_LaFleur.jpg
+2019_NFL,Minnesota,Vikings,MIN,Mike Zimmer,Mike_Zimmer.jpg
+2019_NFL,Atlanta,Falcons,ATL,Dan Quinn,Dan_Quinn.jpg
+2019_NFL,Carolina,Panthers,CAR,Ron Rivera,Ron_Rivera.jpg
+2019_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2019_NFL,Tampa Bay,Buccaneers,TB,Bruce Arians,Bruce_Arians.jpg
+2019_NFL,Arizona,Cardinals,ARI,Kliff Kingsbury,Kliff_Kingsbury.jpg
+2019_NFL,San Francisco,49ers,SF,Kyle Shanahan,Kyle_Shanahan.jpg
+2019_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2019_NFL,Buffalo,Bills,BUF,Sean McDermott,Sean_McDermott.jpg
+2019_NFL,Miami,Dolphins,MIA,Brian Flores,Brian_Flores.jpg
+2019_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2019_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2019_NFL,Cincinnati,Bengals,CIN,Zac Taylor,Zac_Taylor.jpg
+2019_NFL,Cleveland,Browns,CLE,Freddie Kitchens,Freddie_Kitchens.jpg
+2019_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2019_NFL,Houston,Texans,HOU,Bill O'Brien,Bill_O'Brien.jpg
+2019_NFL,Indianapolis,Colts,IND,Frank Reich,Frank_Reich.jpg
+2019_NFL,Jacksonville,Jaguars,JAX,Doug Marrone,Doug_Marrone.jpg
+2019_NFL,Tennessee,Titans,TEN,Mike Vrabel,Mike_Vrabel.jpg
+2019_NFL,Denver,Broncos,DEN,Vic Fangio,Vic_Fangio.jpg
+2019_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2019_NFL,Oakland,Raiders,OAK,Jon Gruden,Jon_Gruden.jpg
+2020_NFL,Dallas,Cowboys,DAL,Mike McCarthy,Mike_McCarthy.jpg
+2020_NFL,Philadelphia,Eagles,PHI,Doug Pederson,Doug_Pederson.jpg
+2020_NFL,Washington,Football Team,WAS,Ron Rivera,Ron_Rivera.jpg
+2020_NFL,Chicago,Bears,CHI,Matt Nagy,Matt_Nagy.jpg
+2020_NFL,Detroit,Lions,DET,Matt Patricia,Matt_Patricia.jpg
+2020_NFL,Green Bay,Packers,GB,Mat LaFleur,Mat_LaFleur.jpg
+2020_NFL,Minnesota,Vikings,MIN,Mike Zimmer,Mike_Zimmer.jpg
+2020_NFL,Atlanta,Falcons,ATL,Dan Quinn,Dan_Quinn.jpg
+2020_NFL,Carolina,Panthers,CAR,Matt Rhule,Matt_Rhule.jpg
+2020_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2020_NFL,Tampa Bay,Buccaneers,TB,Bruce Arians,Bruce_Arians.jpg
+2020_NFL,Arizona,Cardinals,ARI,Kliff Kingsbury,Kliff_Kingsbury.jpg
+2020_NFL,San Francisco,49ers,SF,Kyle Shanahan,Kyle_Shanahan.jpg
+2020_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2020_NFL,Buffalo,Bills,BUF,Sean McDermott,Sean_McDermott.jpg
+2020_NFL,Miami,Dolphins,MIA,Brian Flores,Brian_Flores.jpg
+2020_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2020_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2020_NFL,Cincinnati,Bengals,CIN,Zac Taylor,Zac_Taylor.jpg
+2020_NFL,Cleveland,Browns,CLE,Kevin Stefanski,Kevin_Stefanski.jpg
+2020_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2020_NFL,Houston,Texans,HOU,Bill O'Brien,Bill_O'Brien.jpg
+2020_NFL,Indianapolis,Colts,IND,Frank Reich,Frank_Reich.jpg
+2020_NFL,Jacksonville,Jaguars,JAX,Doug Marrone,Doug_Marrone.jpg
+2020_NFL,Tennessee,Titans,TEN,Mike Vrabel,Mike_Vrabel.jpg
+2020_NFL,Denver,Broncos,DEN,Vic Fangio,Vic_Fangio.jpg
+2020_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2020_NFL,Las Vegas,Raiders,LV,Jon Gruden,Jon_Gruden.jpg
+2021_NFL,Dallas,Cowboys,DAL,Mike McCarthy,Mike_McCarthy.jpg
+2021_NFL,Philadelphia,Eagles,PHI,Nick Sirianni,Nick_Sirianni.jpg
+2021_NFL,Washington,Football Team,WAS,Ron Rivera,Ron_Rivera.jpg
+2021_NFL,Chicago,Bears,CHI,Matt Nagy,Matt_Nagy.jpg
+2021_NFL,Detroit,Lions,DET,Dan Campbell,Dan_Campbell.jpg
+2021_NFL,Green Bay,Packers,GB,Mat LaFleur,Mat_LaFleur.jpg
+2021_NFL,Minnesota,Vikings,MIN,Mike Zimmer,Mike_Zimmer.jpg
+2021_NFL,Atlanta,Falcons,ATL,Arthur Smith,Arthur_Smith.jpg
+2021_NFL,Carolina,Panthers,CAR,Matt Rhule,Matt_Rhule.jpg
+2021_NFL,New Orleans,Saints,NO,Sean Payton,Sean_Payton.jpg
+2021_NFL,Tampa Bay,Buccaneers,TB,Bruce Arians,Bruce_Arians.jpg
+2021_NFL,Arizona,Cardinals,ARI,Kliff Kingsbury,Kliff_Kingsbury.jpg
+2021_NFL,San Francisco,49ers,SF,Kyle Shanahan,Kyle_Shanahan.jpg
+2021_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2021_NFL,Buffalo,Bills,BUF,Sean McDermott,Sean_McDermott.jpg
+2021_NFL,Miami,Dolphins,MIA,Brian Flores,Brian_Flores.jpg
+2021_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2021_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2021_NFL,Cincinnati,Bengals,CIN,Zac Taylor,Zac_Taylor.jpg
+2021_NFL,Cleveland,Browns,CLE,Kevin Stefanski,Kevin_Stefanski.jpg
+2021_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2021_NFL,Houston,Texans,HOU,David Culley,David_Culley.jpg
+2021_NFL,Indianapolis,Colts,IND,Frank Reich,Frank_Reich.jpg
+2021_NFL,Jacksonville,Jaguars,JAX,Urban Meyer,Urban_Meyer.jpg
+2021_NFL,Tennessee,Titans,TEN,Mike Vrabel,Mike_Vrabel.jpg
+2021_NFL,Denver,Broncos,DEN,Vic Fangio,Vic_Fangio.jpg
+2021_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2021_NFL,Las Vegas,Raiders,LV,Rich Bisaccia,Rich_Bisaccia.jpg
+2022_NFL,Dallas,Cowboys,DAL,Mike McCarthy,Mike_McCarthy.jpg
+2022_NFL,Philadelphia,Eagles,PHI,Nick Sirianni,Nick_Sirianni.jpg
+2022_NFL,Washington,Commanders,WAS,Ron Rivera,Ron_Rivera.jpg
+2022_NFL,Chicago,Bears,CHI,Matt Eberflus,Matt_Eberflus.jpg
+2022_NFL,Detroit,Lions,DET,Dan Campbell,Dan_Campbell.jpg
+2022_NFL,Green Bay,Packers,GB,Mat LaFleur,Mat_LaFleur.jpg
+2022_NFL,Minnesota,Vikings,MIN,Kevin O'Connell,kevin_oconnell.jpg
+2022_NFL,Atlanta,Falcons,ATL,Arthur Smith,Arthur_Smith.jpg
+2022_NFL,Carolina,Panthers,CAR,Matt Rhule,Matt_Rhule.jpg
+2022_NFL,New Orleans,Saints,NO,Dennis Allen,dennis_allen.jpg
+2022_NFL,Tampa Bay,Buccaneers,TB,Todd Bowles,Todd_Bowles.jpg
+2022_NFL,Arizona,Cardinals,ARI,Kliff Kingsbury,Kliff_Kingsbury.jpg
+2022_NFL,San Francisco,49ers,SF,Kyle Shanahan,Kyle_Shanahan.jpg
+2022_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2022_NFL,Buffalo,Bills,BUF,Sean McDermott,Sean_McDermott.jpg
+2022_NFL,Miami,Dolphins,MIA,Mike McDaniel,mike_mcdaniel.jpg
+2022_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2022_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2022_NFL,Cincinnati,Bengals,CIN,Zac Taylor,Zac_Taylor.jpg
+2022_NFL,Cleveland,Browns,CLE,Kevin Stefanski,Kevin_Stefanski.jpg
+2022_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2022_NFL,Houston,Texans,HOU,Lovie Smith,lovie_smith.jpg
+2022_NFL,Indianapolis,Colts,IND,Jeff Saturday,Jeff_Saturday.jpg
+2022_NFL,Jacksonville,Jaguars,JAX,Doug Pederson,doug_pederson.jpg
+2022_NFL,Tennessee,Titans,TEN,Mike Vrabel,Mike_Vrabel.jpg
+2022_NFL,Denver,Broncos,DEN,Nathaniel Hackett,nathaniel_hackett.jpg
+2022_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2022_NFL,Las Vegas,Raiders,LV,Josh McDaniels,josh_mcdaniels.jpg
+2023_NFL,Dallas,Cowboys,DAL,Mike McCarthy,Mike_McCarthy.jpg
+2023_NFL,Philadelphia,Eagles,PHI,Nick Sirianni,Nick_Sirianni.jpg
+2023_NFL,Washington,Commanders,WAS,Ron Rivera,Ron_Rivera.jpg
+2023_NFL,Chicago,Bears,CHI,Matt Eberflus,Matt_Eberflus.jpg
+2023_NFL,Detroit,Lions,DET,Dan Campbell,Dan_Campbell.jpg
+2023_NFL,Green Bay,Packers,GB,Mat LaFleur,Mat_LaFleur.jpg
+2023_NFL,Minnesota,Vikings,MIN,Kevin O'Connell,kevin_oconnell.jpg
+2023_NFL,Atlanta,Falcons,ATL,Arthur Smith,Arthur_Smith.jpg
+2023_NFL,Carolina,Panthers,CAR,Frank Reich,Frank_Reich.jpg
+2023_NFL,New Orleans,Saints,NO,Dennis Allen,dennis_allen.jpg
+2023_NFL,Tampa Bay,Buccaneers,TB,Todd Bowles,Todd_Bowles.jpg
+2023_NFL,Arizona,Cardinals,ARI,Jonathan Gannon,Jonathan_Gannon.jpg
+2023_NFL,San Francisco,49ers,SF,Kyle Shanahan,Kyle_Shanahan.jpg
+2023_NFL,Seattle,Seahawks,SEA,Pete Carroll,Pete_Carroll.jpg
+2023_NFL,Buffalo,Bills,BUF,Sean McDermott,Sean_McDermott.jpg
+2023_NFL,Miami,Dolphins,MIA,Mike McDaniel,mike_mcdaniel.jpg
+2023_NFL,New England,Patriots,NE,Bill Belichick,Bill_Belichick.jpg
+2023_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2023_NFL,Cincinnati,Bengals,CIN,Zac Taylor,Zac_Taylor.jpg
+2023_NFL,Cleveland,Browns,CLE,Kevin Stefanski,Kevin_Stefanski.jpg
+2023_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2023_NFL,Houston,Texans,HOU,Lovie Smith,lovie_smith.jpg
+2023_NFL,Indianapolis,Colts,IND,Shane Steichen,Shane_Steichen.jpg
+2023_NFL,Jacksonville,Jaguars,JAX,Doug Pederson,doug_pederson.jpg
+2023_NFL,Tennessee,Titans,TEN,Mike Vrabel,Mike_Vrabel.jpg
+2023_NFL,Denver,Broncos,DEN,Sean Payton,Sean_Payton.jpg
+2023_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2023_NFL,Las Vegas,Raiders,LV,Josh McDaniels,josh_mcdaniels.jpg
+2024_NFL,Dallas,Cowboys,DAL,Mike McCarthy,Mike_McCarthy.jpg
+2024_NFL,Philadelphia,Eagles,PHI,Nick Sirianni,Nick_Sirianni.jpg
+2024_NFL,Washington,Commanders,WAS,Dan Quinn,Dan_Quinn.jpg
+2024_NFL,Chicago,Bears,CHI,Matt Eberflus,Matt_Eberflus.jpg
+2024_NFL,Detroit,Lions,DET,Dan Campbell,Dan_Campbell.jpg
+2024_NFL,Green Bay,Packers,GB,Matt LaFleur,Matt_LaFleur.jpg
+2024_NFL,Minnesota,Vikings,MIN,Kevin O'Connell,kevin_o'connell.jpg
+2024_NFL,Atlanta,Falcons,ATL,Raheem Morris,raheem_morris.jpg
+2024_NFL,Carolina,Panthers,CAR,Dave Canales,dave_canales.jpg
+2024_NFL,New Orleans,Saints,NO,Dennis Allen,dennis_allen.jpg
+2024_NFL,Tampa Bay,Buccaneers,TB,Todd Bowles,Todd_Bowles.jpg
+2024_NFL,Arizona,Cardinals,ARI,Jonathan Gannon,Jonathan_Gannon.jpg
+2024_NFL,San Francisco,49ers,SF,Kyle Shanahan,Kyle_Shanahan.jpg
+2024_NFL,Seattle,Seahawks,SEA,Mike MacDonald,Mike_MacDonald.jpg
+2024_NFL,Buffalo,Bills,BUF,Sean McDermott,Sean_McDermott.jpg
+2024_NFL,Miami,Dolphins,MIA,Mike McDaniel,mike_mcdaniel.jpg
+2024_NFL,New England,Patriots,NE,Jerod Mayo,Jerod_Mayo.jpg
+2024_NFL,Baltimore,Ravens,BAL,John Harbaugh,John_Harbaugh.jpg
+2024_NFL,Cincinnati,Bengals,CIN,Zac Taylor,Zac_Taylor.jpg
+2024_NFL,Cleveland,Browns,CLE,Kevin Stefanski,Kevin_Stefanski.jpg
+2024_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,Mike_Tomlin.jpg
+2024_NFL,Houston,Texans,HOU,DeMeco Ryans,demeco_ryans.jpg
+2024_NFL,Indianapolis,Colts,IND,Shane Steichen,Shane_Steichen.jpg
+2024_NFL,Jacksonville,Jaguars,JAX,Doug Pederson,doug_pederson.jpg
+2024_NFL,Tennessee,Titans,TEN,Brian Callahan,Brian_Callahan.jpg
+2024_NFL,Denver,Broncos,DEN,Sean Payton,Sean_Payton.jpg
+2024_NFL,Kansas City,Chiefs,KC,Andy Reid,Andy_Reid.jpg
+2024_NFL,Las Vegas,Raiders,LV,Antonio Pierce,Antonio_Pierce.jpg
+2025_NFL,Dallas,Cowboys,DAL,Brian Schottenheimer,brian_schottenheimer.jpg
+2025_NFL,Philadelphia,Eagles,PHI,Nick Sirianni,nick_sirianni.jpg
+2025_NFL,Washington,Commanders,WAS,Dan Quinn,dan_quinn.jpg
+2025_NFL,Chicago,Bears,CHI,Ben Johnson,ben_johnson.jpg
+2025_NFL,Detroit,Lions,DET,Dan Campbell,dan_campbell.jpg
+2025_NFL,Green Bay,Packers,GB,Matt LaFleur,matt_lafleur.jpg
+2025_NFL,Minnesota,Vikings,MIN,Kevin O'Connell,kevin_o'connell.jpg
+2025_NFL,Atlanta,Falcons,ATL,Raheem Morris,raheem_morris.jpg
+2025_NFL,Carolina,Panthers,CAR,Dave Canales,dave_canales.jpg
+2025_NFL,New Orleans,Saints,NO,Kellen Moore,kellen_moore.jpg
+2025_NFL,Tampa Bay,Buccaneers,TB,Todd Bowles,todd_bowles.jpg
+2025_NFL,Arizona,Cardinals,ARI,Jonathan Gannon,jonathan_gannon.jpg
+2025_NFL,San Francisco,49ers,SF,Kyle Shanahan,kyle_shanahan.jpg
+2025_NFL,Seattle,Seahawks,SEA,Mike MacDonald,mike_macdonald.jpg
+2025_NFL,Buffalo,Bills,BUF,Sean McDermott,sean_mcdermott.jpg
+2025_NFL,Miami,Dolphins,MIA,Mike McDaniel,mike_mcdaniel.jpg
+2025_NFL,New England,Patriots,NE,Mike Vrabel,mike_vrabel.jpg
+2025_NFL,Baltimore,Ravens,BAL,John Harbaugh,john_harbaugh.jpg
+2025_NFL,Cincinnati,Bengals,CIN,Zac Taylor,zac_taylor.jpg
+2025_NFL,Cleveland,Browns,CLE,Kevin Stefanski,kevin_stefanski.jpg
+2025_NFL,Pittsburgh,Steelers,PIT,Mike Tomlin,mike_tomlin.jpg
+2025_NFL,Houston,Texans,HOU,DeMeco Ryans,demeco_ryans.jpg
+2025_NFL,Indianapolis,Colts,IND,Shane Steichen,shane_steichen.jpg
+2025_NFL,Jacksonville,Jaguars,JAX,Liam Coen,liam_coen.jpg
+2025_NFL,Tennessee,Titans,TEN,Brian Callahan,brian_callahan.jpg
+2025_NFL,Denver,Broncos,DEN,Sean Payton,sean_payton.jpg
+2025_NFL,Kansas City,Chiefs,KC,Andy Reid,andy_reid.jpg
+2025_NFL,Las Vegas,Raiders,LV,Pete Carroll,pete_carroll.jpg

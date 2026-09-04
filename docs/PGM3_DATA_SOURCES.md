@@ -833,3 +833,65 @@ until it is scored against Ryan's verdicts the way `PHCL` was — and `PHCL`
 scored 86% against a 91% base rate and was refuted. The measurement being on
 disk is not the same as the mapping being established. Recorded here so the next
 pass starts from what exists rather than re-measuring it.
+
+## The coach-source question: PSF carries head coaches, 2K5 does not
+
+Every source examined so far has been players only. Asked and answered
+2026-09-03.
+
+### PSF: yes — 1,945 head coaches across 90 seasons, each with a photograph
+
+**They live in the team record, not a staff table.** Each 6,604-byte team record
+carries city, nickname and abbreviation at +0/+32/+64, the stadium at +72, and
+then **the head coach's name at +1172 and his photo filename at +1212** —
+`Tom Landry` and `Tom_Landry.jpg` in Dallas 1979. One coach per team; no
+coordinator, scout or physio anywhere in the format. The file header names a
+`coaches` asset path beside `players`, `default_player_names.txt` and
+`default_colleges_list.txt`.
+
+| | |
+|---|---|
+| coaches found | 1,945 across 90 files |
+| carrying a photo filename | 1,945, all of them |
+| photo resolving in the 26,145-image library | 1,201 |
+| already present in our own staff files | 1,724 |
+
+**Coverage by era follows the team detection**: 8 of 27 teams in 1940, 8 of 10
+in each AAFC file, then essentially complete from 1960 — 15 of 15, 24 of 24, 26
+of 26 in 1979, 29 of 29 in 2000, 30 of 30 in 2010. The team walk finds 26 of
+1979's 28 teams, so a couple per file are missed by the anchor rule rather than
+absent.
+
+**Cross-check against our own head coaches: 1979 is 26 of 26**, every PSF coach
+already in our file. 1986 is 22 of 24, 2000 is 26 of 29, 2010 is 26 of 30 — and
+**the men PSF names that we do not are the mid-season changes**: Bruce Coslet at
+Cincinnati in 2000 (who started the year LeBeau finished), Gary Moeller and
+Terry Robiskie, Jason Garrett and Josh McDaniels in 2010. So PSF and the archive
+sometimes pick different ends of the same season, which is a reconciliation
+question rather than a disagreement about who existed. `wip/psf_coaches.csv`.
+
+**One caution, unresolved:** 1986 Detroit reads Wayne Fontes, who was Detroit's
+coordinator in 1986 and did not become head coach until 1988. Whether that is a
+mod error or a mislabelled file is not established, so the set should be scored
+against a real source before any of it is applied.
+
+### 2K5: no — the franchise saves carry the game's own 2004 coaches
+
+The franchise saves DO hold a coach table, with a biography line each. It is the
+stock NFL 2K5 table: **Belichick, Reid, Dungy, Schottenheimer, Vermeil,
+Wannstedt, Coughlin, Del Rio, Mariucci, Martz, Fox, Turner, Sherman, Edwards** —
+all fourteen surnames present, plus "Dallas Coach" where Parcells' name was
+withheld for licensing.
+
+**It is identical across seasons.** Eleven of the 29 franchise saves share one
+byte-identical coach block, six carry none at all, and the files labelled 1940,
+1941, 1942, 1961 and 1987 all carry the 2004 coaches. **The modder changed
+players and left the coaching staff untouched**, so there is no historical staff
+data in the 2K5 archive at any date.
+
+### What this means for the archive
+
+PSF is the first staff source found in any of them, and it is head coaches only.
+Coordinators, scouts and physios still have no source anywhere — which is why
+the generated-staff exception exists and why 1979's coordinator terms had to be
+built rather than sourced.
