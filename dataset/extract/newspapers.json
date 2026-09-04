@@ -1,0 +1,591 @@
+{
+ "_note": "Hand-transcribed after an automated coordinate parse was attempted and ABANDONED: it reconstructed 4 of 52 rows and misassigned 2 of those (Eric Dickerson to LINEBACKERS, Uwe von Schamann to DEFENSIVE BACKS). A silently wrong position is exactly the failure this project keeps catching, so the table was read instead.",
+ "_acquisition": "held",
+ "_transcriber": "build session, 2026-09-04",
+ "ud-1985-01-14": {
+  "citation": "University Daily, 14 January 1985, p.10, reprinting a Dallas Morning News listing",
+  "file": "UD_1985_01_14.pdf",
+  "headline": "NFL players enjoyed 25 percent salary raise in 1984",
+  "byline": "By The Associated Press",
+  "stated_by": "University Daily",
+  "attribution": [
+   "Associated Press",
+   "Dallas Morning News",
+   "<unnamed origin>"
+  ],
+  "_attribution_correction": "Report 14 gave this as 2 removes (UD <- DMN). The page byline reads 'By The Associated Press', so it is THREE removes, the same chain as the Pampa News story. Corrected here.",
+  "convention": "salary_base_plus_prorated_bonus",
+  "convention_quote": "Figures reflect 1984 base salary, reporting and roster bonuses and signing bonus pro-rated over the length of the contract. For example: Detroit's Billy Sims signed a 5-year contract with a $1 million bonus. His 1984 salary was $600,000; his pro-rated signing bonus is $200,000 a year. In the listing, his salary is listed at $800,000. Many of the contracts contain large sums of deferred money, which reduces the present value.",
+  "season": 1984,
+  "league": "NFL",
+  "regime": "article-xv",
+  "figures": [
+   {
+    "pos": "QUARTERBACKS",
+    "player": "Warren Moon",
+    "club": "Houston",
+    "value": 1100000,
+    "as_printed": "$1.1 million"
+   },
+   {
+    "pos": "QUARTERBACKS",
+    "player": "John Elway",
+    "club": "Denver",
+    "value": 900000
+   },
+   {
+    "pos": "QUARTERBACKS",
+    "player": "Joe Montana",
+    "club": "San Francisco",
+    "value": 858333
+   },
+   {
+    "pos": "QUARTERBACKS",
+    "player": "Lynn Dickey",
+    "club": "Green Bay",
+    "value": 850000
+   },
+   {
+    "pos": "QUARTERBACKS",
+    "player": "Dan Fouts",
+    "club": "San Diego",
+    "value": 750000
+   },
+   {
+    "pos": "QUARTERBACKS",
+    "player": "Marc Wilson",
+    "club": "LA Raiders",
+    "value": 700000
+   },
+   {
+    "pos": "RUNNING BACKS",
+    "player": "Billy Sims",
+    "club": "Detroit",
+    "value": 800000
+   },
+   {
+    "pos": "RUNNING BACKS",
+    "player": "Walter Payton",
+    "club": "Chicago",
+    "value": 785000
+   },
+   {
+    "pos": "RUNNING BACKS",
+    "player": "John Riggins",
+    "club": "Washington",
+    "value": 695000
+   },
+   {
+    "pos": "RUNNING BACKS",
+    "player": "William Andrews",
+    "club": "Atlanta",
+    "value": 580000
+   },
+   {
+    "pos": "RUNNING BACKS",
+    "player": "Eric Dickerson",
+    "club": "LA Rams",
+    "value": 550000,
+    "block_assignment": "INFERRED",
+    "block_reason": "The layout places this row adjacent to the LINEBACKERS heading in a neighbouring column. Assigned to RUNNING BACKS on three grounds: it continues the block's descending sequence exactly (580,000 -> 550,000 -> 500,000); Dickerson was a running back; and RUNNING BACKS is otherwise 4 entries where every other block has 5 or 6."
+   },
+   {
+    "pos": "RUNNING BACKS",
+    "player": "James Wilder",
+    "club": "Tampa Bay",
+    "value": 500000,
+    "block_assignment": "INFERRED",
+    "block_reason": "same as Dickerson - continues the descending sequence and Wilder was a running back"
+   },
+   {
+    "pos": "WIDE RECEIVERS",
+    "player": "James Lofton",
+    "club": "Green Bay",
+    "value": 853000
+   },
+   {
+    "pos": "WIDE RECEIVERS",
+    "player": "Irving Fryar",
+    "club": "New England",
+    "value": 575000
+   },
+   {
+    "pos": "WIDE RECEIVERS",
+    "player": "Kenny Jackson",
+    "club": "Philadelphia",
+    "value": 556250
+   },
+   {
+    "pos": "WIDE RECEIVERS",
+    "player": "Dwight Clark",
+    "club": "San Francisco",
+    "value": 530000
+   },
+   {
+    "pos": "WIDE RECEIVERS",
+    "player": "Wesley Walker",
+    "club": "NY Jets",
+    "value": 480000
+   },
+   {
+    "pos": "TIGHT ENDS",
+    "player": "Kellen Winslow",
+    "club": "San Diego",
+    "value": 480000
+   },
+   {
+    "pos": "TIGHT ENDS",
+    "player": "Tony Hunter",
+    "club": "Buffalo",
+    "value": 437500
+   },
+   {
+    "pos": "TIGHT ENDS",
+    "player": "Jimmie Giles",
+    "club": "Tampa Bay",
+    "value": 430000
+   },
+   {
+    "pos": "TIGHT ENDS",
+    "player": "Ozzie Newsome",
+    "club": "Cleveland",
+    "value": 420000
+   },
+   {
+    "pos": "TIGHT ENDS",
+    "player": "David Lewis",
+    "club": "Detroit",
+    "value": 417500
+   },
+   {
+    "pos": "OFFENSIVE LINE",
+    "player": "Dean Steinkuhler",
+    "club": "Houston",
+    "value": 649250
+   },
+   {
+    "pos": "OFFENSIVE LINE",
+    "player": "Bruce Matthews",
+    "club": "Houston",
+    "value": 460000
+   },
+   {
+    "pos": "OFFENSIVE LINE",
+    "player": "John Alt",
+    "club": "Kansas City",
+    "value": 410500
+   },
+   {
+    "pos": "OFFENSIVE LINE",
+    "player": "Ron Solt",
+    "club": "Indianapolis",
+    "value": 393750
+   },
+   {
+    "pos": "OFFENSIVE LINE",
+    "player": "William Roberts",
+    "club": "NY Giants",
+    "value": 362500
+   },
+   {
+    "pos": "DEFENSIVE LINE",
+    "player": "Randy White",
+    "club": "Dallas",
+    "value": 570000
+   },
+   {
+    "pos": "DEFENSIVE LINE",
+    "player": "Rick Bryan",
+    "club": "Atlanta",
+    "value": 557000
+   },
+   {
+    "pos": "DEFENSIVE LINE",
+    "player": "Joe Klecko",
+    "club": "NY Jets",
+    "value": 555000
+   },
+   {
+    "pos": "DEFENSIVE LINE",
+    "player": "Bill Maas",
+    "club": "Kansas City",
+    "value": 518750
+   },
+   {
+    "pos": "DEFENSIVE LINE",
+    "player": "Lee Roy Selmon",
+    "club": "Tampa Bay",
+    "value": 500000
+   },
+   {
+    "pos": "LINEBACKERS",
+    "player": "Lawrence Taylor",
+    "club": "NY Giants",
+    "value": 650000
+   },
+   {
+    "pos": "LINEBACKERS",
+    "player": "Wilber Marshall",
+    "club": "Chicago",
+    "value": 617000
+   },
+   {
+    "pos": "LINEBACKERS",
+    "player": "Ricky Hunley",
+    "club": "Denver",
+    "value": 601250
+   },
+   {
+    "pos": "LINEBACKERS",
+    "player": "Tom Cousineau",
+    "club": "Cleveland",
+    "value": 600000
+   },
+   {
+    "pos": "LINEBACKERS",
+    "player": "Carl Banks",
+    "club": "NY Giants",
+    "value": 575000
+   },
+   {
+    "pos": "DEFENSIVE BACKS",
+    "player": "Ronnie Lott",
+    "club": "San Francisco",
+    "value": 522500
+   },
+   {
+    "pos": "DEFENSIVE BACKS",
+    "player": "Louis Wright",
+    "club": "Denver",
+    "value": 458333
+   },
+   {
+    "pos": "DEFENSIVE BACKS",
+    "player": "Terry Taylor",
+    "club": "Seattle",
+    "value": 387500
+   },
+   {
+    "pos": "DEFENSIVE BACKS",
+    "player": "Lester Hayes",
+    "club": "LA Raiders",
+    "value": 365000
+   },
+   {
+    "pos": "DEFENSIVE BACKS",
+    "player": "Russell Carter",
+    "club": "NY Jets",
+    "value": 362500
+   },
+   {
+    "pos": "PLACE KICKERS",
+    "player": "Ray Wersching",
+    "club": "San Francisco",
+    "value": 221000
+   },
+   {
+    "pos": "PLACE KICKERS",
+    "player": "Jan Stenerud",
+    "club": "Minnesota",
+    "value": 210000
+   },
+   {
+    "pos": "PLACE KICKERS",
+    "player": "Rolf Benirschke",
+    "club": "San Diego",
+    "value": 190000
+   },
+   {
+    "pos": "PLACE KICKERS",
+    "player": "Mark Moseley",
+    "club": "Washington",
+    "value": 185000
+   },
+   {
+    "pos": "PLACE KICKERS",
+    "player": "Uwe von Schamann",
+    "club": "Miami",
+    "value": 180000
+   },
+   {
+    "pos": "PUNTERS",
+    "player": "John James",
+    "club": "Houston",
+    "value": 160000
+   },
+   {
+    "pos": "PUNTERS",
+    "player": "Dave Jennings",
+    "club": "NY Giants",
+    "value": 152000
+   },
+   {
+    "pos": "PUNTERS",
+    "player": "Ray Guy",
+    "club": "LA Raiders",
+    "value": 150000
+   },
+   {
+    "pos": "PUNTERS",
+    "player": "Pat McInally",
+    "club": "Cincinnati",
+    "value": 145000
+   },
+   {
+    "pos": "PUNTERS",
+    "player": "Chuck Ramsey",
+    "club": "NY Jets",
+    "value": 145000
+   }
+  ]
+ },
+ "pampa-1984-10-18": {
+  "citation": "Pampa News, 18 October 1984, p.15 (AP, quoting the Dallas Morning News)",
+  "file": "Pampa_News_1984_10_18.pdf",
+  "stated_by": "Pampa News",
+  "attribution": [
+   "Associated Press",
+   "Dallas Morning News",
+   "the clubs, via the NFL Players Association"
+  ],
+  "attribution_quote": "quoting figures supplied by the teams to the NFL Players Association",
+  "convention": "salary_base_plus_prorated_bonus",
+  "season": 1984,
+  "league": "NFL",
+  "regime": "article-xv",
+  "figures": [
+   {
+    "player": "Danny White",
+    "club": "Dallas",
+    "value": 550000,
+    "pos": "QUARTERBACK",
+    "quote": "quarterback Danny White remains the highest-paid member of the Dallas Cowboys with an annual salary of $550,000"
+   },
+   {
+    "player": "Randy White",
+    "club": "Dallas",
+    "value": 570000,
+    "pos": "DEFENSIVE LINE",
+    "quote": "$450,000 annual base salary ... also received a $600,000 signing bonus which, if prorated over the length of his contract, would add [$120,000] a year to his base salary, putting him at $570,000 a year",
+    "cross_check": "matches the UD table exactly - the two papers are ONE lineage, not two witnesses"
+   }
+  ],
+  "figures_on_a_different_convention": [
+   {
+    "player": "Randy White",
+    "club": "Dallas",
+    "value": 450000,
+    "predicate": "salary_base",
+    "season": 1984,
+    "quote": "the $450,000 annual base salary recently negotiated for defensive tackle Randy White",
+    "note": "the SAME man in the SAME season on TWO conventions - base 450,000 and base+prorated 570,000. The clearest possible demonstration of why they are different predicates."
+   }
+  ]
+ },
+ "shapiro-1979-02-10": {
+  "citation": "Leonard Shapiro, The Washington Post, syndicated in the Midland Reporter-Telegram, 10 February 1979, p.9",
+  "file": "Midland_Reporter_Telegram_1979_02_10.pdf",
+  "stated_by": "Midland Reporter-Telegram",
+  "attribution": [
+   "Washington Post (Leonard Shapiro)",
+   "NFL Management Council survey"
+  ],
+  "convention": "salary_base_plus_prorated_bonus",
+  "convention_quote": "The Management Council's dollar figures ... did not include performance (incentive) clauses or playoff money.",
+  "convention_note": "INFERRED that signing bonuses are pro-rated: Shapiro does not say so, but Newman 1987 Appendix C states the Management Council pro-rates them, and these figures are Management Council-computed. Flagged rather than assumed.",
+  "season": 1978,
+  "league": "NFL",
+  "regime": "article-xv",
+  "figures": [
+   {
+    "player": "O.J. Simpson",
+    "club": "San Francisco",
+    "value": 733358
+   },
+   {
+    "player": "Walter Payton",
+    "club": "Chicago",
+    "value": 431500
+   },
+   {
+    "player": "Fran Tarkenton",
+    "club": "Minnesota",
+    "value": 360000
+   },
+   {
+    "player": "Dan Pastorini",
+    "club": "Houston",
+    "value": 358333
+   },
+   {
+    "player": "Ken Stabler",
+    "club": "Oakland",
+    "value": 342000
+   },
+   {
+    "player": "John Riggins",
+    "club": "Washington",
+    "value": 300000
+   },
+   {
+    "player": "Harold Jackson",
+    "club": "New England",
+    "value": 237657
+   },
+   {
+    "player": "Billy Kilmer",
+    "club": "Washington",
+    "value": 230000
+   },
+   {
+    "player": "Bill Bergey",
+    "club": "Philadelphia",
+    "value": 213333
+   },
+   {
+    "player": "Earl Campbell",
+    "club": "Houston",
+    "value": 199666
+   },
+   {
+    "player": "Joe Greene",
+    "club": "Pittsburgh",
+    "value": 174000
+   },
+   {
+    "player": "John Hannah",
+    "club": "New England",
+    "value": 173966
+   },
+   {
+    "player": "Mel Blount",
+    "club": "Pittsburgh",
+    "value": 141870,
+    "tier": "HEDGED",
+    "quote": "is believed to have earned $141,870 in 1978 to lead defensive backs"
+   },
+   {
+    "player": "Chris Hanburger",
+    "club": "Washington",
+    "value": 125000
+   },
+   {
+    "player": "Mike Curtis",
+    "club": "Washington",
+    "value": 115000
+   },
+   {
+    "player": "Diron Talbert",
+    "club": "Washington",
+    "value": 105000,
+    "tier": "HEDGED",
+    "quote": "is believed to have earned $105,000 in 1978 according to NFL sources"
+   },
+   {
+    "player": "Ron McDole",
+    "club": "Washington",
+    "value": 100000
+   },
+   {
+    "player": "Ken Houston",
+    "club": "Washington",
+    "value": 96000
+   },
+   {
+    "player": "Garo Yepremian",
+    "club": "Miami",
+    "value": 90000
+   }
+  ],
+  "cohort_figures": [
+   {
+    "scope": [
+     "cohort",
+     "NFL",
+     1978,
+     "all"
+    ],
+    "predicate": "cohort_salary_average",
+    "value": 62585,
+    "quote": "the average NFL salary rose 13.2 perent - from $55,000 in 1977 to $62,585 in 1978"
+   },
+   {
+    "scope": [
+     "cohort",
+     "NFL",
+     1977,
+     "all"
+    ],
+    "predicate": "cohort_salary_average",
+    "value": 55000,
+    "quote": "from $55,000 in 1977"
+   }
+  ],
+  "_deltas_not_ingested": "The positional increases (QB +$13,000, OL +$8,000, LB +$8,000, DL +$7,000, DB +$7,000, K +$7,000, WR +$6,000, RB +$2,000) are DELTAS, not levels. There is no predicate for a year-on-year change and inventing one to hold them would invite them being read as salaries. Left out deliberately and recorded here."
+ },
+ "upi-1981-09-30-dean": {
+  "citation": "UPI, 30 September 1981",
+  "url": "upi.com/Archives/1981/09/30/Chargers-six-year-defensive-end-Fred-Dean-complaining-his-salary/8038370670400/",
+  "acquisition": "fetched",
+  "stated_by": "UPI",
+  "attribution": [
+   "Dave Perrine (agent, an interested party in an active dispute)",
+   "NFL salary schedule"
+  ],
+  "league": "NFL",
+  "regime": "article-xv",
+  "cohort_figures": [
+   {
+    "scope": [
+     "cohort",
+     "NFL",
+     null,
+     "DL/6yr"
+    ],
+    "predicate": "cohort_salary_high",
+    "value": 185000,
+    "quote": "top defensive linemen with six years experience earned $185,000 a year",
+    "season_note": "UNRESOLVED - Perrine says 'the recent NFL salary schedule', which spans 1980 and 1981"
+   },
+   {
+    "scope": [
+     "cohort",
+     "NFL",
+     null,
+     "DL/6yr"
+    ],
+    "predicate": "cohort_salary_low",
+    "value": 62000,
+    "quote": "with the lowest paid receiving $62,000",
+    "season_note": "UNRESOLVED"
+   },
+   {
+    "scope": [
+     "cohort",
+     "NFL",
+     null,
+     "DL/all"
+    ],
+    "predicate": "cohort_salary_average",
+    "value": 70000,
+    "quote": "He said the average of all defensive linemen was $70,000",
+    "season_note": "UNRESOLVED. NOTE the cohort differs from the two above - ALL defensive linemen, not the six-year cohort."
+   }
+  ],
+  "figures": [
+   {
+    "player": "Fred Dean",
+    "club": "San Diego Chargers",
+    "value": 65000,
+    "season": 1980,
+    "convention": "salary_base",
+    "attribution_override": [
+     "published reports"
+    ],
+    "quote": "According to published reports, Dean received $65,000 last year",
+    "note": "UNNAMED origin - 'published reports' cannot be chased or dated. Recorded verbatim."
+   }
+  ],
+  "_contradiction": "Dean says he was 'the lowest paid sixth-year defensive lineman in the NFL'; the schedule puts that floor at $62,000; published reports put him at $65,000. All three cannot hold. Retained as a contest, not resolved."
+ }
+}

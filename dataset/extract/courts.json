@@ -1,0 +1,227 @@
+{
+  "_note": "Hand-transcribed from the opinion text of each case, after the boundary detector (src/opinion_boundary.py). NOT regex-scraped: scraping money out of a legal opinion is how a decoy gets in. Every row carries the source's own words.",
+  "_acquisition": "held",
+  "_transcriber": "build session, 2026-09-04, reading the cached documents in pgm3-sources/DocDump",
+  "_regime_rule": "Rozelle Rule through 1976 (struck in Mackey, 8th Cir. 1976, cert. dismissed 1977); Article XV First Refusal/Compensation from 1977. Rival-league contracts are marked n/a - the NFL regime did not govern them.",
+
+  "cases": {
+    "smith-v-pro-football": {
+      "citation": "Smith v. Pro-Football, 420 F. Supp. 738 (D.D.C. 1976)",
+      "file": "Smith v. Pro-Football, 420 F. Supp. 738 (D.D.C. 1976) __ Justia.html",
+      "figures": [
+        {"person": "James Smith", "club": "Washington", "season": 1968, "league": "NFL", "regime": "rozelle",
+         "predicate": "signing_bonus", "value": 23000,
+         "quote": "a contract calling for the payment of a $23,000 \"bonus\" for signing"},
+        {"person": "James Smith", "club": "Washington", "season": 1968, "league": "NFL", "regime": "rozelle",
+         "predicate": "roster_bonus", "value": 5000,
+         "quote": "an additional $5,000 if he made the team"},
+        {"person": "James Smith", "club": "Washington", "season": 1968, "league": "NFL", "regime": "rozelle",
+         "predicate": "base_salary_year", "value": 22000, "quote": "and a salary of $22,000"},
+        {"person": "James Smith", "club": "Washington", "season": 1969, "league": "NFL", "regime": "rozelle",
+         "predicate": "option_year_pay", "value": 19800,
+         "quote": "the Redskins paid plaintiff $19,800 in the season following his injury (the standard option-year pay of 90% of the prior year's salary)"},
+        {"person": "James Smith", "club": "Washington", "season": null, "league": "NFL", "regime": "rozelle",
+         "predicate": "contract_total_stated", "value": 69800,
+         "quote": "This sum of $69,800 is the total compensation paid to plaintiff by the team"},
+        {"person": "Pat Fischer", "club": "Washington", "season": 1968, "league": "NFL", "regime": "rozelle",
+         "predicate": "base_salary_year", "value": 30000,
+         "quote": "compensated under that contract in the amounts of $30,000 salary for each year"},
+        {"person": "Pat Fischer", "club": "Washington", "season": 1969, "league": "NFL", "regime": "rozelle",
+         "predicate": "base_salary_year", "value": 30000, "quote": "$30,000 salary for each year"},
+        {"person": "Pat Fischer", "club": "Washington", "season": null, "league": "NFL", "regime": "rozelle",
+         "predicate": "signing_bonus", "value": 48000,
+         "quote": "a $48,000 additional sum, denominated as a \"bonus\", for the two year period"}
+      ]
+    },
+
+    "bengals-v-bergey": {
+      "citation": "Cincinnati Bengals, Inc. v. Bergey, 453 F. Supp. 129 (S.D. Ohio 1974)",
+      "file": "CINCINNATI BENGALS, INC. v. BERGEY, (S.D.Ohio 1974) _ Civ. A. No. C-1-74-142. _ S.D. Ohio _ Judgment _ Law _ CaseMine.html",
+      "figures": [
+        {"person": "Bill Bergey", "club": "Cincinnati Bengals", "season": 1974, "league": "NFL", "regime": "rozelle",
+         "predicate": "base_salary_year", "value": 38750,
+         "quote": "Bergey's compensation under his contract with the Bengals is $38,750"},
+        {"person": "Bill Bergey", "club": "Virginia Ambassadors", "season": 1976, "league": "WFL", "regime": "n/a",
+         "predicate": "base_salary_year", "value": 125000,
+         "quote": "Bergey's compensation during the term of his contract with the Ambassadors is $125,000 per year"},
+        {"person": "Bill Bergey", "club": "Virginia Ambassadors", "season": null, "league": "WFL", "regime": "n/a",
+         "predicate": "signing_bonus", "value": 150000,
+         "quote": "In consideration of signing the contract, Bergey received a bonus of $150,000, $40,000 of which was payable upon the signing of the contract"}
+      ]
+    },
+
+    "alabama-football-v-greenwood": {
+      "citation": "Alabama Football, Inc. v. Greenwood, 452 F. Supp. 1191 (W.D. Pa. 1978)",
+      "file": "Alabama Football, Inc. v. Greenwood, 452 F. Supp. 1191 (W.D. Pa. 1978) __ Justia.html",
+      "figures": [
+        {"person": "L.C. Greenwood", "club": "Birmingham Americans", "season": 1975, "league": "WFL", "regime": "n/a",
+         "predicate": "base_salary_year", "value": 90000, "quote": "1975 $90,000.00"},
+        {"person": "L.C. Greenwood", "club": "Birmingham Americans", "season": 1976, "league": "WFL", "regime": "n/a",
+         "predicate": "base_salary_year", "value": 100000, "quote": "1976 $100,000.00"},
+        {"person": "L.C. Greenwood", "club": "Birmingham Americans", "season": 1977, "league": "WFL", "regime": "n/a",
+         "predicate": "base_salary_year", "value": 110000, "quote": "1977 $110,000.00"},
+        {"person": "L.C. Greenwood", "club": "Birmingham Americans", "season": null, "league": "WFL", "regime": "n/a",
+         "predicate": "signing_bonus", "value": 75000,
+         "quote": "$25,000.00 Bonus due upon signing $25,000.00 due Sept. 1, 1974 April 1, 1975 $25,000.00 Bal due on Bonus"},
+        {"person": "L.C. Greenwood", "club": "Birmingham Americans", "season": null, "league": "WFL", "regime": "n/a",
+         "predicate": "contract_total_stated", "value": 375000,
+         "quote": "one entire contract calling for a total compensation of $375,000 in exchange for three years of service"},
+        {"person": "Ken Stabler", "club": "Birmingham Americans", "season": 1974, "league": "WFL", "regime": "n/a",
+         "predicate": "contract_total_stated", "value": 70000,
+         "quote": "the balancing of the equities would not require Stabler to return the [$70,000] received during the year 1974"}
+      ]
+    },
+
+    "beathard-v-chicago": {
+      "citation": "Beathard v. Chicago Football Club, Inc., 419 F. Supp. 1133 (N.D. Ill. 1976)",
+      "file": "Beathard v. Chicago Football Club, Inc., 419 F. Supp. 1133 (N.D. Ill. 1976) __ Justia.html",
+      "figures": [
+        {"person": "Pete Beathard", "club": "Chicago Winds", "season": 1975, "league": "WFL", "regime": "n/a",
+         "predicate": "signing_bonus", "value": 12000,
+         "quote": "Beathard was to receive a $12,000 bonus for signing and $70,000 for the 1975 season"},
+        {"person": "Pete Beathard", "club": "Chicago Winds", "season": 1975, "league": "WFL", "regime": "n/a",
+         "predicate": "base_salary_year", "value": 70000, "quote": "and $70,000 for the 1975 season"},
+        {"person": "Lawrence Jameson", "club": "Chicago Winds", "season": 1975, "league": "WFL", "regime": "n/a",
+         "predicate": "signing_bonus", "value": 10500,
+         "quote": "Jameson was to receive a bonus of $10,500 and $25,000 for the 1975 season"},
+        {"person": "Lawrence Jameson", "club": "Chicago Winds", "season": 1975, "league": "WFL", "regime": "n/a",
+         "predicate": "base_salary_year", "value": 25000, "quote": "and $25,000 for the 1975 season"}
+      ]
+    },
+
+    "kapp-v-nfl": {
+      "citation": "Kapp v. NFL, 390 F. Supp. 73 (N.D. Cal. 1974)",
+      "file": "Kapp v. NFL, 390 F. Supp. 73 (N.D. Cal. 1974) __ Justia.html",
+      "figures": [
+        {"person": "Joe Kapp", "club": "Houston Oilers", "season": 1967, "league": "AFL", "regime": "rozelle",
+         "predicate": "reporting_bonus", "value": 10000,
+         "quote": "Kapp was to be paid a $10,000 bonus to report to Houston in 1967",
+         "note": "this contract was declared INVALID by Commissioner Rozelle and the AFL president; the figure is what the instrument said"},
+        {"person": "Joe Kapp", "club": "Houston Oilers", "season": 1968, "league": "AFL", "regime": "rozelle",
+         "predicate": "base_salary_year", "value": 100000,
+         "quote": "he was to report to Houston in 1968 and play for two years at a salary of $100,000 a year",
+         "note": "voided contract, as above"},
+        {"person": "Joe Kapp", "club": "Minnesota Vikings", "season": null, "league": "NFL", "regime": "rozelle",
+         "predicate": "contract_total_stated", "value": 300000,
+         "quote": "was for the 1967-1968 seasons with an option to have him also in 1969 for a total compensation of $300,000"},
+        {"person": "Joe Kapp", "club": "New England Patriots", "season": null, "league": "NFL", "regime": "rozelle",
+         "predicate": "contract_total_stated", "value": 600000,
+         "quote": "for the remainder of the 1970 season and for 1971 and 1972 at a total compensation of $600,000",
+         "note": "CONTRACTED, not received. See amount_paid below - the pair is the decoy the master session flagged."},
+        {"person": "Joe Kapp", "club": "New England Patriots", "season": 1970, "league": "NFL", "regime": "rozelle",
+         "predicate": "amount_actually_paid", "value": 154000,
+         "quote": "Kapp played for the Patriots under that agreement for the remaining eleven games of the 1970 season and was paid $154,000 of the contracted amount"}
+      ]
+    },
+
+    "hayes-v-nfl": {
+      "citation": "Hayes v. National Football League, 469 F. Supp. 247 (C.D. Cal. 1979)",
+      "file": "Hayes v. National Football League, 469 F. Supp. 247 (C.D. Cal. 1979) __ Justia.html",
+      "figures": [
+        {"person": "Hayes", "club": "Los Angeles Rams", "season": 1974, "league": "NFL", "regime": "rozelle",
+         "predicate": "signing_bonus", "value": 8000,
+         "quote": "The first of these gave plaintiff an $8,000 \"signing\" bonus, annual compensation (subject to the terms of the contract) of $22,000",
+         "note": "ALTERNATIVE contract A of two signed the same day"},
+        {"person": "Hayes", "club": "Los Angeles Rams", "season": 1974, "league": "NFL", "regime": "rozelle",
+         "predicate": "base_salary_year", "value": 22000, "quote": "annual compensation ... of $22,000",
+         "note": "alternative contract A"},
+        {"person": "Hayes", "club": "Los Angeles Rams", "season": 1974, "league": "NFL", "regime": "rozelle",
+         "predicate": "base_salary_year", "value": 26000,
+         "quote": "The second provided for annual compensation (subject to the terms of the contract) of $26,000 and contained different bonus provisions",
+         "note": "ALTERNATIVE contract B - the SAME man and season under a different instrument. Two values, one subject: a genuine contested pair that must NOT be averaged."}
+      ]
+    },
+
+    "partee-v-chargers": {
+      "citation": "Partee v. San Diego Chargers Football Co., 34 Cal. 3d 378 (1983)",
+      "file": "Partee v. San Diego Chargers Football Co. (1983) __ __ Supreme Court of California Decisions __ California Case Law __ California Law __ U.S. Law __ Justia.html",
+      "figures": [
+        {"person": "Dennis Partee", "club": "San Diego Chargers", "season": 1974, "league": "NFL", "regime": "rozelle",
+         "predicate": "base_salary_year", "value": 38500,
+         "quote": "a contract with the Chargers for three years with a salary of $38,500 in 1974, $44,000 in 1975, and $49,500 in 1976"},
+        {"person": "Dennis Partee", "club": "San Diego Chargers", "season": 1975, "league": "NFL", "regime": "rozelle",
+         "predicate": "base_salary_year", "value": 44000, "quote": "$44,000 in 1975"},
+        {"person": "Dennis Partee", "club": "San Diego Chargers", "season": 1976, "league": "NFL", "regime": "rozelle",
+         "predicate": "base_salary_year", "value": 49500, "quote": "$49,500 in 1976"}
+      ]
+    },
+
+    "rivers-v-jets": {
+      "citation": "Rivers v. New York Jets, 460 F. Supp. 1233 (E.D. Mo. 1978)",
+      "file": "Rivers v. New York Jets, 460 F. Supp. 1233 (E.D. Mo. 1978) __ Justia.html",
+      "figures": [
+        {"person": "Rivers", "club": "New York Jets", "season": null, "league": "NFL", "regime": "unresolved",
+         "predicate": "base_salary_year", "value": 65000,
+         "quote": "after each football season during the term of this contract, unless compensation is changed under Paragraph 10 hereof, the amount of $65,000.00",
+         "note": "SEASON UNRESOLVED. The opinion quotes the clause without dating the contract term; the dispute concerns the 1977 option. Regime therefore unresolved - it straddles the 1977 boundary."}
+      ]
+    },
+
+    "rudolph-v-dolphins": {
+      "citation": "Rudolph v. Miami Dolphins, Ltd., 447 So. 2d 284 (Fla. Dist. Ct. App.)",
+      "file": "RUDOLPH v. MIAMI DOLPHINS, LTD _ Nos. AM-381, AN-79 and AN-77. _ Fla. Dist. Ct. App. _ Judgment _ Law _ CaseMine.html",
+      "figures": [
+        {"person": "Council Rudolph", "club": "Tampa Bay Buccaneers", "season": null, "league": "NFL", "regime": "article-xv",
+         "predicate": "base_salary_year", "value": 65000,
+         "quote": "under contract with the Buccaneers to play professional football for $65,000 per season"},
+        {"person": "Floyd Wells", "club": "Miami Dolphins", "season": 1980, "league": "NFL", "regime": "article-xv",
+         "predicate": "base_salary_year", "value": 27000,
+         "quote": "the Dolphins agreed to pay him $27,000 per year for playing as a wide receiver if he made the team roster",
+         "note": "conditional on making the roster - the same clause structure as Smith 1968"},
+        {"person": "Bill Windauer", "club": "Miami Dolphins", "season": 1977, "league": "NFL", "regime": "article-xv",
+         "predicate": "base_salary_year", "value": 35000,
+         "quote": "his base salary was $35,000 for services during the 1977 season and $39,000 during the 1978 season"},
+        {"person": "Bill Windauer", "club": "Miami Dolphins", "season": 1978, "league": "NFL", "regime": "article-xv",
+         "predicate": "base_salary_year", "value": 39000, "quote": "$39,000 during the 1978 season"}
+      ]
+    },
+
+    "heidel-v-commissioner": {
+      "citation": "Heidel v. Commissioner, 56 T.C. 95 (T.C.)",
+      "file": "HEIDEL v. COMMISSIONER OF INTERNAL REVENUE _ Docket No. 5405-68. _ T.C. _ Judgment _ Law _ CaseMine.html",
+      "figures": [
+        {"person": "James B. Heidel", "club": "Chicago Cardinals Football Club", "season": 1965, "league": "NFL", "regime": "rozelle",
+         "predicate": "signing_bonus", "value": 50000,
+         "quote": "the club agrees to pay the player the sum of $50,000.00. By the execution hereof, the player acknowledges receipt of said sum"},
+        {"person": "James B. Heidel", "club": "Chicago Cardinals Football Club", "season": 1965, "league": "NFL", "regime": "rozelle",
+         "predicate": "additional_compensation", "value": 5000,
+         "quote": "$50,000 as a bonus, $5,000 as additional compensation, and $1,000 as travel funds",
+         "note": "the source's own words - neither salary nor a named bonus"},
+        {"person": "James B. Heidel", "club": "Chicago Cardinals Football Club", "season": 1965, "league": "NFL", "regime": "rozelle",
+         "predicate": "reporting_bonus", "value": 1000, "quote": "and $1,000 as travel funds"}
+      ]
+    },
+
+    "gardin-v-commissioner": {
+      "citation": "Gardin v. Commissioner, 64 T.C. 1079 (T.C. 1975)",
+      "file": "Gardin v. Comm'r of Internal Revenue , Docket No. 1903-74. (Gardin v. Comm'r of Internal Revenue , 64 T.C. 1079 (T.C. 1975)) - vLex United States.html",
+      "figures": [
+        {"person": "Ronald L. Gardin", "club": null, "season": 1971, "league": "NFL", "regime": "rozelle",
+         "predicate": "total_earnings_year", "value": 43326,
+         "quote": "Petitioner earned $43,326 as a professional football player during 1971",
+         "note": "TOTAL EARNINGS for the year as stipulated for tax purposes, not a contract line. Club unnamed in the extracted text."}
+      ]
+    },
+
+    "dolphins-v-cowan": {
+      "citation": "Miami Dolphins, Ltd. v. Cowan, 601 So. 2d 301 (Fla. Dist. Ct. App. 1992)",
+      "file": "30484e16-8631-44cd-a908-294a4900ca7b.pdf",
+      "boundary_note": "opinion body only, pages 4-5; pages 1-3 are a machine-generated summary and were NOT read for figures",
+      "figures": [
+        {"person": "David Overstreet", "club": "Miami Dolphins", "season": 1983, "league": "NFL", "regime": "article-xv",
+         "predicate": "signing_bonus", "value": 150000,
+         "quote": "a \"Signing Bonus Rider,\" which provided for payment of $150,000 upon execution, and $100,000 on May 1, 1986"},
+        {"person": "David Overstreet", "club": "Miami Dolphins", "season": 1986, "league": "NFL", "regime": "article-xv",
+         "predicate": "signing_bonus", "value": 100000,
+         "quote": "and $100,000 on May 1, 1986",
+         "note": "the deferred instalment. NEVER PAID - the Dolphins refused after Overstreet's death and the case went to arbitration without deciding the merits."}
+      ]
+    }
+  },
+
+  "refused": [
+    {"case": "usfl-players-assn-v-usfl", "reason": "no dollar figures in the opinion"},
+    {"case": "brown-v-pro-football", "reason": "one figure and it is a SYSTEM rule (developmental squad $1,000/week), already held as developmental_squad_weekly_wage"},
+    {"case": "reynolds-v-nfl", "reason": "no contracts; the CBA ladders are already held as system predicates"}
+  ]
+}

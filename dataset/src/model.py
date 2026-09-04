@@ -7,7 +7,7 @@ Design invariants enforced here rather than remembered:
   - `relayed` acquisition may never enter the store.
   - resolution is a pure function of (claims, policy).
 """
-import json, hashlib, os
+import json, hashlib, os, re
 from collections import defaultdict
 
 KINDS = {"observed", "source_derived", "derived", "absent"}
@@ -24,11 +24,30 @@ SYSTEM_PREDICATES = {
 }
 LEAGUE_SCOPES = {"league_season", "league_era", "league"}
 
+# A positional or service-year AVERAGE is neither a person's pay nor a league
+# rule. It describes a COHORT, and it needs its own scope or it has nowhere to
+# live: person-money predicates refuse a league subject, and rightly.
+COHORT_SCOPES = {"cohort"}
+COHORT_PREDICATES = {
+    "cohort_salary_average", "cohort_salary_median",
+    "cohort_salary_high", "cohort_salary_low", "cohort_size",
+}
+
 SALARY_CONVENTIONS = {
     "salary_base", "salary_base_plus_prorated_bonus", "club_cost_per_player",
+    "qualifying_offer",
     "signing_bonus", "roster_bonus", "reporting_bonus", "base_salary_year",
-    "option_year_pay", "performance_incentive", "contract_total_stated",
+    "option_year_pay", "performance_incentive", "additional_compensation",
+    "amount_actually_paid", "total_earnings_year", "contract_total_stated",
 }
+
+# Anything that LOOKS like money must be one of the declared conventions. Without
+# this an undeclared name (e.g. `amount_actually_paid` before it was declared)
+# sails past the bare-name check and lands in the store unclassified.
+_ALL_MONEY = None
+MONEY_SHAPED = re.compile(
+    r"(salary|bonus|pay|wage|compensation|earnings|cost|fee|money|contract_total)",
+    re.I)
 FORBIDDEN_KINDS = {"invented"}
 ACQ_ALLOWED = {"fetched", "held", "transcribed"}
 ACQ_FORBIDDEN = {"relayed"}
@@ -89,10 +108,26 @@ class Store:
                 f"'{predicate}' is a SYSTEM rule and requires a league-scoped subject "
                 f"({sorted(LEAGUE_SCOPES)}), not '{scope}'. It describes how the system "
                 f"worked, not what a person was paid.")
+        if predicate in COHORT_PREDICATES and scope not in COHORT_SCOPES:
+            raise StoreError(
+                f"'{predicate}' describes a COHORT and requires a cohort-scoped "
+                f"subject, not '{scope}'. A positional average is not a person's pay.")
+        if predicate in SALARY_CONVENTIONS and scope in COHORT_SCOPES:
+            raise StoreError(
+                f"'{predicate}' is a person-scoped money predicate and cannot take a "
+                f"cohort subject. Use a cohort_* predicate for an aggregate.")
         if predicate in SALARY_CONVENTIONS and scope in LEAGUE_SCOPES:
             raise StoreError(
                 f"'{predicate}' is a person-scoped money predicate and cannot take a "
                 f"league-scoped subject. A league aggregate is its own predicate.")
+        if (MONEY_SHAPED.search(predicate) and predicate not in SALARY_CONVENTIONS
+                and predicate not in SYSTEM_PREDICATES
+                and predicate not in COHORT_PREDICATES
+                and predicate not in BARE_MONEY_PREDICATES):
+            raise StoreError(
+                f"'{predicate}' looks like money but is not a declared convention. "
+                f"Add it to declarations/salary_conventions.json with its definition, "
+                f"or use one of {sorted(SALARY_CONVENTIONS)}.")
         if predicate in BARE_MONEY_PREDICATES:
             raise StoreError(
                 f"predicate '{predicate}' is REFUSED: a money figure must name its "
@@ -270,7 +305,7 @@ class Store:
     def save(self, path):
         os.makedirs(os.path.dirname(path), exist_ok=True)
         json.dump({"persons": sorted(self.persons),
-                   "universe": sorted(list(x) for x in self.universe),
+                   "universe": sorted((list(x) for x in self.universe), key=lambda v: [str(i) for i in v]),
                    "source_records": self.source_records,
                    "claims": self.claims,
                    "denotations": self.denotations},

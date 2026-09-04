@@ -56,10 +56,19 @@ def broken_store_factory(**breaks):
     if breaks.get("count_sources_not_lineage"):
         Broken._lineage_group = lambda self, c: (c["source_id"], c["stated_by"])
     if breaks.get("allow_bare_salary"):
+        # TWO independent guards refuse a bare `salary`: the bare-name list and
+        # the undeclared-money check. Both must be disabled to prove the gate can
+        # fail - disabling one leaves the other holding, which is the redundancy
+        # doing its job rather than a broken selftest.
         model.BARE_MONEY_PREDICATES.clear()
+        model.SALARY_CONVENTIONS.add("salary")
     if breaks.get("ignore_scope"):
         model.SYSTEM_PREDICATES.clear()
     if breaks.get("pool_conventions"):
+        # the break must reach the RESOLVER, so `money` is temporarily declared -
+        # otherwise the undeclared-money guard refuses it first and the selftest
+        # would pass for the wrong reason.
+        model.SALARY_CONVENTIONS.add("money")
         # an ingest that strips the convention off the predicate name - which is
         # exactly how the §8.4 error happens in the wild
         orig = Store.add_claim
@@ -107,6 +116,7 @@ def main():
         saved_forbidden = set(model.FORBIDDEN_KINDS); saved_kinds = set(model.KINDS)
         saved_bare = set(model.BARE_MONEY_PREDICATES)
         saved_sys = set(model.SYSTEM_PREDICATES)
+        saved_conv = set(model.SALARY_CONVENTIONS)
         sf = broken_store_factory(**{brk: True})
         try:
             ok, detail = run(sf, POLICY)
@@ -115,6 +125,7 @@ def main():
             model.KINDS.clear(); model.KINDS.update(saved_kinds)
             model.BARE_MONEY_PREDICATES.clear(); model.BARE_MONEY_PREDICATES.update(saved_bare)
             model.SYSTEM_PREDICATES.clear(); model.SYSTEM_PREDICATES.update(saved_sys)
+            model.SALARY_CONVENTIONS.clear(); model.SALARY_CONVENTIONS.update(saved_conv)
         fired = not ok
         print(f"  [{'FIRED' if fired else 'SILENT'}] {name}")
         print(f"           break: {brk}")

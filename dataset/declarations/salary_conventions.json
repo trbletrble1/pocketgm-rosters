@@ -48,12 +48,21 @@
     "reporting_bonus",
     "base_salary_year",
     "option_year_pay",
-    "performance_incentive"
+    "performance_incentive",
+    "additional_compensation",
+    "amount_actually_paid",
+    "total_earnings_year",
+    "contract_total_stated"
    ],
    "sources": [
     "federal court opinions - findings of fact, zero removes"
    ],
-   "note": "This is the only convention that permits reconstructing any of the others. It is also the only one with no attribution chain."
+   "note": "This is the only convention that permits reconstructing any of the others. It is also the only one with no attribution chain.",
+   "added_2026_09_04": {
+    "additional_compensation": "the source's own words for a component that is neither salary nor a named bonus (Heidel: '$5,000 as additional compensation')",
+    "amount_actually_paid": "money RECEIVED, as distinct from money contracted. Kapp: $600,000 contracted, $154,000 paid. Filing either as the other is the fifth decoy.",
+    "total_earnings_year": "a whole year's football income as stipulated for tax purposes - not a contract line (Gardin: $43,326 for 1971)"
+   }
   },
   "club_cost_per_player": {
    "definition": "total club expenditure divided by headcount - INCLUDES benefits, medical, workmen's compensation, payroll taxes, retirement, insurance and pre/post-season pay",
@@ -88,38 +97,51 @@
    "value": 162000,
    "source": "Smith v. Pro-Football",
    "what": "the COURT's estimate of free-market value over three years",
-   "not": "anything the player was paid"
+   "not": "anything the player was paid",
+   "decoy_kind": "not_compensation",
+   "scoped_to_source_key": "smith"
   },
   {
    "value": 150000,
    "source": "Smith v. Pro-Football",
    "what": "the AGENT's deposition estimate",
-   "not": "a contract"
+   "not": "a contract",
+   "decoy_kind": "not_compensation",
+   "scoped_to_source_key": "smith"
   },
   {
    "value": 276600,
    "source": "Smith v. Pro-Football",
    "what": "treble damages awarded",
-   "not": "compensation"
+   "not": "compensation",
+   "decoy_kind": "not_compensation",
+   "scoped_to_source_key": "smith"
   },
   {
    "value": 400000,
    "source": "Bengals v. Bergey",
    "what": "a counter-offer that was REFUSED",
-   "not": "a contract"
+   "not": "a contract",
+   "decoy_kind": "not_compensation",
+   "scoped_to_source_key": "bergey"
   },
   {
    "value": 600000,
    "source": "Kapp v. NFL",
    "what": "contracted total, of which only $154,000 was paid",
-   "not": "money received"
+   "not": "money received",
+   "decoy_kind": "requires_pairing",
+   "must_be_paired_with": "amount_actually_paid",
+   "scoped_to_source_key": "kapp"
   },
   {
    "value": 50000,
    "source": "Kapp v. NFL",
    "what": "an inter-CLUB release fee paid by Minnesota to Kapp's Canadian club",
    "not": "anything paid to the player",
-   "note": "a transfer price - the sixth decoy, and the only one that is a real payment to a real party"
+   "note": "a transfer price - the sixth decoy, and the only one that is a real payment to a real party",
+   "decoy_kind": "not_compensation",
+   "scoped_to_source_key": "kapp"
   }
  ],
  "system_rules": {
@@ -293,5 +315,23 @@
   "decision": "Ryan's",
   "if_never_obtained": "a legitimate resting state - \u00a78.4 stays at one party and one hearsay, which the design already records",
   "date": "2026-09-04"
- }
+ },
+ "_decoy_kinds": {
+  "not_compensation": "never money paid to a player for playing. BLOCK on the write - these must not reach a money predicate at all.",
+  "requires_pairing": "real compensation data that is easily misread as something else. ADMIT under its own predicate, but REQUIRE the companion figure in the same case so the pair travels together.",
+  "_why": "The first list conflated 'false' with 'easily misread'. Kapp's $600,000 is a genuine contracted total and blocking it discards a real figure; the danger is reading it as money received, which is prevented by admitting $154,000 alongside it under amount_actually_paid."
+ },
+ "cohort_aggregates": {
+  "_note": "A positional or service-year average describes a COHORT, not a person and not a league rule. Person-money predicates refuse a cohort subject and vice versa, so an aggregate can never be averaged with individual pay.",
+  "subject_shape": "(cohort, league, season, position | service_years)",
+  "predicates": {
+   "cohort_salary_average": "mean pay across the cohort, on a STATED convention",
+   "cohort_salary_median": "median pay across the cohort",
+   "cohort_salary_high": "the highest in the cohort",
+   "cohort_salary_low": "the lowest in the cohort",
+   "cohort_size": "n - how many players the aggregate is over"
+  },
+  "why_it_matters": "This is the SHAPE of the owed Management Council table (position x service year, high/low/average/median per cell). Building the scope now means that document drops straight in if it is ever obtained."
+ },
+ "_decoy_scoping": "A decoy is a figure IN A DOCUMENT, never a number in the abstract. Keyed on value alone the list blocked Ray Guy's genuine $150,000 punter salary in the 1984 UD table, because a 1968 agent's deposition estimate in Smith happened to be the same round number. Round numbers are attractors - the same precedent that rejected Manning's $600,000 as corroboration. Each decoy now carries the source it belongs to and fires only there."
 }
