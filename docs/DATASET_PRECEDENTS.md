@@ -232,3 +232,46 @@ shared ancestry — it is uninformative in both directions**, and should be reco
 as such rather than counted either way. The honest reading of Manning at $600,000
 in two papers is that it settles nothing about their independence.
 
+
+---
+
+## A syndicated story in two papers is one vote and two witnesses
+
+2026-09-04. Two scans arrived of the same day's news: the *Midland
+Reporter-Telegram* and the *Big Spring Herald*, both 24 February 1982, both
+carrying the same AP wire story about Dallas Cowboys salaries.
+
+**The instinct is to treat the second as corroboration. It is not** — for content.
+Both are the same wire, so for **attribution** and **lineage** they are a single
+source, and their agreement says nothing about whether the Morning News was right.
+
+**But for acquisition (§3.7) they are two independent witnesses** — two physical
+papers, two scans, two OCR passes over the same words. That is a free
+transcription check, and it fired immediately:
+
+| figure | Midland | Big Spring |
+|---|---|---|
+| Dallas average | **$89,170** | `$80,170` |
+| Washington | **$89,162** | `180,162` |
+| Newhouse | **$145,000** | `$146,000` |
+| Ron Springs | **$65,000** | `$66,000` |
+
+**The rule: the axes are independent, so ask which one a second copy helps with.**
+A second printing of a syndicated story adds nothing to the evidence and a great
+deal to the transcription. Counting it as corroboration inflates a single
+source; ignoring it throws away the only cheap check available on a lossy scan.
+
+**Two things settled the disputed cells, and neither was preferring a scan:**
+
+1. **The article's own internal logic.** It says Dallas *"was higher than any NFC
+   East team"* and names Washington at $89,162 in the same paragraph. $80,170
+   would contradict that sentence; $89,170 satisfies it. Same instrument as the
+   percentage column that arbitrated the 1982 hearing's twice-printed table.
+2. **The error pattern is systematic, not random** — 5→6 on two figures, 89→80/180
+   on two more. A character-confusion class identifies the faulty instrument, where
+   scattered disagreement would not. **Averaging two transcriptions would have been
+   wrong**; identifying the worse one was right.
+
+**Generalises past newspapers.** Wire copy, syndicated columns, a table reprinted
+in two volumes of one hearing, a press release carried by several outlets — all
+the same shape. **One vote for what happened, N witnesses for what the page says.**

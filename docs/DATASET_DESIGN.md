@@ -1630,74 +1630,171 @@ Same shape as the League figures in the hearing and the primer, and it reinforce
 the ruling: **a claim about a claim has no independent standing.** Held, used,
 correctly labelled.
 
-### Dallas Morning News via AP, 1982 — PENDING, the scan is not yet on disk
+### The Cowboys salary story, 1982 — READ FROM THE FILES 2026-09-04
 
-Reported 1981 salaries, published 1982, with a **stated margin of error under
-$4,000**. Ryan holds it as a scanned newspaper PDF with text copied out in
-Acrobat. **`acquisition: transcribed`** per §3.7 — not fetchable, not a relay.
+**Two scans landed, not one**, and the second turns out to matter more than the
+first.
 
-**BLOCKED, and this is the ask:** the scan is not in `pgm3-sources/`. Until it is,
-the figures below reached this session as conversational text and are therefore
-`relayed` — **a lead, not a source, and nothing here may become a claim.** Put the
-PDF in `pgm3-sources/` so it can be hash-pinned and a claim can cite a file rather
-than a paste.
+    Midland_Reporter_Telegram_1982_02_24.pdf   50pp  64,974,642 B
+      sha256 69c5ae755eb2d9555aa517cd15fb46631706cda2ec7b243a26f7efcaa08ec9e7
+      story on PDF p.29
+    Big_Spring_Herald_1982_02_24.pdf           30pp  48,956,755 B
+      sha256 8c745bc8541ac2b56c3899117b3d8c3a7bfb8887fe8b3e2c6b90cda731a27637
+      story on PDF p.15
 
-**OCR damage is already visible** in the transcribed text — `mewspaper`,
-`alltime`, `$94948` with the comma lost, `hase salary`. Per §3.7 every numeric
-gets a plausibility pass before any figure is called a source disagreement, which
-is report 01's lesson: *a failing check may be your reading of the source rather
-than the source.*
+Both carry an OCR text layer; `pypdf` reads them directly. `acquisition: held`.
 
-**Plausibility pass run on the relayed figures, to be re-run against the scan.**
-Benchmark is the primer's 1981 league average of **$82,400**.
+**The chain, read off the page and it is three removes as Ryan said.** The byline
+is **`DALLAS (AP)`**, and the body says *"according to the Dallas Morning News. In
+a story published Tuesday…"*:
 
-| figure | value | vs league | reading |
+    the paper we hold  <-  AP wire  <-  Dallas Morning News  <-  UNNAMED
+
+    stated_by     Midland Reporter-Telegram (or Big Spring Herald)
+    attribution   ["AP", "Dallas Morning News", <unnamed origin>]
+
+The Morning News still does not say where its figures came from, so the chain
+terminates in an unnamed origin at the fourth position. Report 04 described two
+removes; the page supports three.
+
+**Dating.** Both papers are dated Wednesday 24 February 1982 (the Herald's own
+masthead reads `WEDNESDAY, FEB. 24, 1982`). MRT says the Morning News story was
+**"published Tuesday"** — 23 February. The Herald says **"published today"**.
+The two printings disagree; MRT's is the specific claim and the Herald's reads
+like an editorial substitution. Logged `contested`, leaning 23 Feb 1982.
+
+#### Two printings of one wire story = one vote, two witnesses
+
+**This is the interaction between §3.6/§4.3 and §3.7, and it cuts both ways.**
+
+- For **attribution and lineage**, the two papers are **one source**. They are the
+  same AP wire. Agreement between them is not corroboration of the Morning News.
+- For **acquisition**, they are **two independent scans and two independent OCR
+  passes of the same words** — which is a free transcription check, the same
+  instrument the hearing's twice-printed Attachment B provided.
+
+**The check fires immediately, and MRT wins every disputed cell:**
+
+| figure | MRT | Big Spring Herald | resolution |
 |---|---|---|---|
-| QB average | $160,037 | 1.94× | plausible |
-| RB average | $94,948 | 1.15× | plausible |
-| WR average | $85,873 | 1.04× | plausible |
-| Denver (high) | $106,000 | 1.29× | plausible |
-| Kansas City (low) | $64,000 | 0.78× | spread 1.66×, plausible |
-| Payton | $800,000 | 9.7× | high, but he was at the top of the market |
+| Dallas average | **$89,170** | `$80,170` | **MRT** — see below |
+| Washington | **$89,162** | `180,162` | MRT; Herald garbled |
+| Newhouse | **$145,000** | `$146,000` | MRT |
+| Ron Springs | **$65,000** | `$66,000` | MRT |
+| RB league average | **$94,948** | `$M,M8` | MRT |
+| NY Giants | **$75,000** | `$^,000` | MRT |
+| 1981 | 1981 | `IM l`, `1081`, `IWI` | MRT |
 
-**Three things flagged for the re-read:**
+**The Dallas figure is settled by the article's own logic, not by preferring a
+scan.** The sentence says Dallas *"was higher than any NFC East team"* and names
+Washington at $89,162 in the next breath. $80,170 would put Dallas **below**
+Washington and contradict the same paragraph; $89,170 satisfies it. **Internal
+consistency arbitrates the transcription**, exactly as the percentage column
+arbitrated Attachment B.
 
-1. **Dallas $89,170 and Washington $89,162 differ by $8.** Possible — but adjacent
-   numbers in a column are exactly where a transcription slips. Re-read both.
-2. **The 35.5% may not be on the same basis as the averages.** 35.5% of $15.42M is
-   $5.474M; the team average × 53 is $4.726M, a gap of $748k. Not necessarily a
-   defect — the article's salaries **exclude performance bonuses and playoff
-   shares** and "spent on players" probably does not. But the basis must be read
-   off the page, not assumed.
-3. **Howard Richards is quoted on a different basis from everyone else.** $165,000
-   *of which $105,000 was a signing bonus* implies a $60,000 base — 0.73× league
-   on base, 2.00× on total. If the other named players are base-only, he is not
-   comparable to them. **He is also the only component breakdown in any 1981
-   source this project holds**, which makes getting his basis right worth more
-   than the figure itself.
+**And the Herald's errors are a character-confusion class, not noise** — 5→6 on
+both Newhouse and Springs, 89→80/180 on both team averages. A systematic
+instrument fault, which is further reason to prefer MRT rather than average them.
 
-**Manning at $600,000 matches the January UPI story exactly — and that settles
-nothing.** The precedent about exact matches across a gap requires the figure to
-be *improbable under independent generation*. $68,900 is; **$600,000 is a round
-number and an attractor**, reached independently by negotiation and by rounding.
-Recorded as uninformative in both directions rather than as corroboration.
-Sharpened in `DATASET_PRECEDENTS.md`.
+#### Report 04's three flags, resolved against the page
 
-**Provenance:** `stated_by: Dallas Morning News`, **attribution chain unknown** —
-the paper does not say where the figures came from, and the club spokesman Greg
-Aiello says *"I don't even know if it's accurate."* Better than Dean's two removes
-— a paper's own reporting with a stated error bound, which implies a survey it or
-AP conducted — but the origin is unnamed, so it cannot be tested for lineage
-against the Management Council survey.
+**1. The $8 gap is REAL, not a transcription slip.** MRT prints *"The average
+Cowboy salary of $89,170 … The Redskins, for example, paid players an average
+$89,162"* — both figures in one paragraph, in the source. Two team averages $8
+apart is a genuine coincidence in the underlying data.
 
-**The non-denial is weak evidence, not none.** A club spokesman declining to
-contest specific figures about his own club is worth recording, and worth almost
-nothing on its own.
+**2. The 35.5% basis is still not readable from the wire story.** It says the
+franchise *"spent 35.5 percent of its $15.42 million gross revenue in 1981 on
+player salaries"* and, separately, that the reported figures *"did not include
+performance bonuses or the players' shares of playoff money."* Whether the 35.5%
+is on the same basis is **not stated**. The arithmetic gap stands
+(35.5% = $5.474M against $4.726M for 53 × $89,170) and is about the right size for
+the excluded items. **Unresolved, and only the original Morning News piece can
+settle it.**
 
-**Definitional note that must travel with every figure:** these exclude
-**performance bonuses and playoff shares**. The primer and the hearing do not use
-that basis. Any comparison across the three needs it stated, or it manufactures a
-disagreement out of a definition.
+**3. Richards's basis mismatch is REAL and the source discloses it.** The article
+is explicit that it reports **base pay** — Danny White *"made $235,000 base salary"*
+and Pearson *"got less in base pay"*. Richards is then flagged as the exception:
+*"made $165,000 … but $105,000 of it was a signing bonus"*, implying a $60,000
+base. So the inconsistency is the source's own, and **stated**, which is the good
+case. Richards remains the only component breakdown in any 1981 source held.
+
+**4. NEW — the article benchmarks against a league average it never states.**
+*"31 of its 53 players less than the National Football League average"* and
+*"four times the league average"* both rest on a figure absent from the wire
+story. Taking White's $375,000 literally as 4× implies ~$93,750, against the
+primer's 1981 figure of $82,400 — a 14% gap, though "four times" is plainly loose.
+**The Morning News's own league average is not in this story**, which limits what
+can be done with the "31 of 53" claim.
+
+#### Confirmed figures, from MRT
+
+Positional averages QB **$160,037**, RB **$94,948**, WR **$85,873**. Team averages
+Denver **$106,000** (highest), Dallas **$89,170**, Washington **$89,162**,
+Philadelphia **$83,000**, NY Giants **$75,000**, Kansas City **$64,000** (lowest).
+Named: Manning **$600,000** (league-leading QB), Payton **$800,000** (highest-paid
+RB), Randy White **$375,000** (highest-paid DL), Dorsett **$325,000**, Danny White
+**$235,000** base, Richards **$165,000** incl. $105,000 bonus, Newhouse
+**$145,000**, Hill and Johnson **$135,000** each, Pearson **$125,000**, Springs
+**$65,000**. Team finance: 35.5% of $15.42M gross, 31 of 53 below league average,
+margin of error under $4,000.
+
+**Definitional exclusion, confirmed on the page and travelling with every figure:
+no performance bonuses, no playoff shares.**
+
+**Manning at $600,000 still settles nothing** — a round number, an attractor, and
+uninformative in both directions whatever it matches.
+
+### Washington Post, Leonard Shapiro, on the 1978 season — RELAYED, not yet held
+
+**`acquisition: relayed`.** Ryan has a scan and will add it; until it is in
+`pgm3-sources/` **nothing here may become a claim.** Logged now because its
+*structural* content is evidence about the owed document and changes what would
+satisfy that debt.
+
+**It describes the OWED table's full shape, from someone holding it:**
+
+> *The Management Council also broke down salaries from first-year players to
+> 20-year players, by position, listing the highest salary paid, the lowest salary
+> paid, the average and the median salary.*
+
+**That is the table's dimensions, stated by a witness**: position × service year
+(1st through 20th), **four statistics per cell** — high, low, average, **median**.
+The hearing proved the document existed; Dean's agent read one cell aloud; this
+names the axes and the cell contents.
+
+**Three things it adds beyond the numbers:**
+
+1. **It distinguishes released from withheld.** Averages and medians by position
+   were made public; **the service-year breakdown was not.** That narrows the
+   search: the public half may survive in contemporary reporting, the valuable
+   half only in Management Council, agent or litigation papers.
+2. **The author declares his own derivation** — *"Using those figures (which were
+   not made public), previously published salary estimates and interviews with
+   several highly placed NFL sources, it is possible to deduce…"* That is
+   **`source_derived` announced by the source**, which is better than the 2002
+   primer's silence and better than most of what this project holds.
+3. **Three provenance tiers inside one article, marked by the author** — stated as
+   fact for most figures, explicitly hedged for two (*"is believed to have
+   earned"*, Blount and Talbert), and the deduction method disclosed for the rest.
+   Per §3.6 each tier gets its own attribution, and the hedged pair must not be
+   flattened into the rest.
+
+**Relayed content, to be verified against the scan:** 1978 league average
+**$62,585**, up 13.2% from **$55,000** in 1977, same exclusions. Positional
+*increases* 1977→1978 — deltas, not levels — QB +$13,000, OL +$8,000, LB +$8,000,
+DL +$7,000, DB +$7,000, K +$7,000, WR +$6,000, RB +$2,000. Nineteen named players
+covering the positions the other articles miss: offensive line, linebacker,
+defensive back, kicker.
+
+**And the item that bears directly on §8.4:** Ed Garvey, NFLPA executive director,
+on the Management Council's figures — *"on the whole are accurate. I have no
+reason to doubt them."* **The opposing party declining to dispute them.**
+
+That is **not** a League-original source and does not discharge the debt. But it
+is the same two organisations, a year before the hearing, and it is the NFLPA
+conceding rather than contesting — which is evidence of a different and stronger
+kind than either party's own assertion. Weigh it when the scan lands.
 
 ### The method this opens — reconstruct the table one dispute at a time
 
@@ -1729,6 +1826,21 @@ What would satisfy it:
 - League financial disclosure, in any proceeding
 - **A court filing in which the League states its own figure** — *Mackey*, the
   1982 antitrust litigation, or any contract-dispute arbitration
+
+**SHARPENED 2026-09-04 by the Shapiro article's structural description.** The owed
+document now has known dimensions: **position × service year, 1st through 20th,
+four statistics per cell — highest, lowest, average, median.** And it splits into
+two halves with different survival odds:
+
+| half | released? | where to look |
+|---|---|---|
+| averages and medians **by position** | **made public** | contemporary press, 1978–82 |
+| the **service-year** breakdown | **withheld** | Management Council papers, agent files, arbitration and litigation discovery |
+
+**The public half is reconstructible from newspapers** — that is what the UPI
+method below is doing. **The withheld half is the actual debt**, and Dean's agent
+quoting six-year figures at a press conference proves copies reached agents, so
+agent papers and contract-dispute discovery are the live routes.
 
 Until one exists, §8.4's contest is **one party and one hearsay**, and the
 dataset should say so.
