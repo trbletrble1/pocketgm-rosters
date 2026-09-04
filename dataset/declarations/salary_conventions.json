@@ -61,6 +61,20 @@
     "the League's figure as quoted by the NFLPA in the 1982 hearing"
    ],
    "note": "This is what made the \u00a78.4 contest look factual when it was definitional. It is not a salary at all."
+  },
+  "qualifying_offer": {
+   "definition": "a CONTRACTUAL THRESHOLD, not a measurement of pay - the minimum a club must offer to retain first-refusal or compensation rights",
+   "includes": [
+    "monetary salary payments for the player's services",
+    "a bonus for reporting"
+   ],
+   "excludes": [
+    "non-cash compensation",
+    "outside income possibilities"
+   ],
+   "source": "Reynolds v. NFL, 584 F.2d 280 (8th Cir. 1978), quoting the CBA's Article XV",
+   "source_words": "The qualifying offer essentially refers only to monetary salary payments to be made for the player's services or as a bonus for reporting; it does not include non-cash compensation or outside income possibilities.",
+   "warning": "A qualifying offer is a FLOOR a club had to clear, never evidence of what a player was paid. Filing it beside real salaries would read as 16 players earning exactly $30,000."
   }
  },
  "hard_rules": [
@@ -171,6 +185,63 @@
       "source": "Rudolph v. Miami Dolphins"
      }
     ]
+   },
+   "qualifying_offer_floor": {
+    "definition": "minimum qualifying offer by years of credited service, Article XV",
+    "unit": "USD",
+    "known": [
+     {
+      "service": "<4th year completed",
+      "value": 30000
+     },
+     {
+      "service": "<5th year completed",
+      "value": 40000
+     },
+     {
+      "service": "each subsequent year",
+      "value": "+5000"
+     }
+    ],
+    "source": "Reynolds v. NFL, 584 F.2d 280 (8th Cir. 1978)"
+   },
+   "draft_compensation_ladder": {
+    "definition": "draft picks owed to the old club, keyed on the size of the qualifying offer",
+    "unit": "USD -> picks",
+    "known": [
+     {
+      "offer_from": 50000,
+      "offer_to": 65000,
+      "compensation": "one third-round choice"
+     },
+     {
+      "offer_from": 200000,
+      "compensation": "first-round choices in the two NEXT college drafts"
+     },
+     {
+      "note": "a $50,000 offer is also the THRESHOLD for any compensation, for a player who has not completed his seventh season; the threshold rises with service"
+     }
+    ],
+    "source": "Reynolds v. NFL, 584 F.2d 280 (8th Cir. 1978)"
+   },
+   "player_movement_regime": {
+    "definition": "which restraint governed player movement - contracts must be read against the regime operating in their season",
+    "unit": "named regime",
+    "known": [
+     {
+      "regime": "Rozelle Rule",
+      "ended": "1976-77",
+      "source": "Mackey v. NFL (8th Cir. 1976); Reynolds",
+      "note": "signing club compensates the old club; the Commissioner may award compensation if they cannot agree"
+     },
+     {
+      "regime": "Article XV, First Refusal/Compensation",
+      "began": "1977",
+      "source": "Reynolds",
+      "note": "replaced the discarded Rozelle Rule; all contracts expire 1 February; right of first refusal on a written qualifying offer"
+     }
+    ],
+    "measured_effect": "Reynolds records 176 players played out their options in ELEVEN YEARS under the Rozelle Rule, against a far smaller number under Article XV - the court's own comparison"
    }
   },
   "hard_rules": [
