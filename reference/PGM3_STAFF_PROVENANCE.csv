@@ -28,7 +28,7 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,35CDCFA6-68CC-E0F7-B96E-A25FB35B58C3,Head Coach,TB,John McKay,John McKay,sourced,exact (wip/staff_1979.csv)
 1979,4BE247A4-5EFF-C2B0-7504-B1D7BE631246,Head Coach,WAS,Jack Pardee,Jack Pardee,sourced,exact (wip/staff_1979.csv)
 1979,B7FF51C6-6E78-835F-9F29-3BB202512D39,Head Coach,TEN,George Allen,George Allen,named by Ryan,exact (wip/staff_1979.csv)
-1979,554C11ED-0C53-913D-7366-4C6C07C436D2,Head Coach,CAR,Bill Arnsparger,Bill Arnsparger,named by Ryan,exact (wip/staff_1979.csv)
+1979,554C11ED-0C53-913D-7366-4C6C07C436D2,Head Coach,CAR,Bill Arnsparger,Bill Arnsparger,named by Ryan,"Placed at Carolina BY RYAN'S RULING on a franchise that did not exist in 1979: Charlotte's doctrine needed a man whose record was worse than he was, and that story is why the franchise reads as it does. His real 1979 job was assistant head coach and defensive architect at MIAMI, whose coordinator slot went to Tom Keane. The trade is deliberate, not an error"
 1979,70D5CDCA-2528-73B1-31DD-4765EA2365A9,Head Coach,JAX,Pat Dye,Pat Dye,named by Ryan,exact (wip/staff_1979.csv)
 1979,55F79DC1-C914-742F-8A0C-DD36C2A7AD3A,Head Coach,IND,John Madden,John Madden,named by Ryan,exact (wip/staff_1979.csv)
 1979,265755B1-9A6D-D6C8-50C0-A5422EAA0737,Off Co-ord,ATL,Kevin Thornton,John North,real (name in a real source),"Coaching Tree: the 1979 ATL staff had no titled offensive coordinator, so the slot takes the senior assistant on that side by CAREER STANDING — John North had 14 years by 1979 against Ted Plumb's 5, whom title order would have chosen. INFERRED, not a titled coordinator; age not sourced. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
@@ -68,15 +68,15 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,4A9BF983-C841-F609-37FB-2091F4BB2B96,Def Co-ord,BUF,Brooks Felton,Tom Catlin,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 BUF; age not sourced, slot age retained"
 1979,6A0C0AB6-02B1-54EB-C774-9479C4DF5725,Def Co-ord,CHI,Alfred Nielsen,Buddy Ryan,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 CHI; age not sourced, slot age retained"
 1979,AB695240-2B16-D5BB-4883-D3DC96D3E780,Def Co-ord,CIN,Howard Brinker,Howard Brinker,sourced,exact (wip/staff_1979.csv)
-1979,C1AEAA21-511B-4119-037A-43C65B2A92E1,Def Co-ord,CLE,Marty Schottenheimer,Marty Schottenheimer,sourced,exact (wip/staff_1979.csv)
+1979,C1AEAA21-511B-4119-037A-43C65B2A92E1,Def Co-ord,CLE,Marty Schottenheimer,Chuck Weber,real (name in a real source),"Coaching Tree: the 1979 Cleveland staff carried NO titled defensive coordinator — the man this file had in the slot, Marty Schottenheimer, did not arrive until 1980 — so it takes the senior assistant on that side by career standing: Weber had 15 years by 1979 and had already been Cincinnati's coordinator in 1973-75, against Dick MacPherson's 12. INFERRED; age not sourced"
 1979,8D01A5C5-5A42-1D3A-A017-ADF660444802,Def Co-ord,DAL,Wentford Beamon,Ernie Stautner,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 DAL; age not sourced, slot age retained"
 1979,66FF8A60-DC43-C653-5129-B61D4E530531,Def Co-ord,DEN,Joe Collier,Joe Collier,sourced,exact (wip/staff_1979.csv)
-1979,DA20F2C9-05B2-7027-5B0B-ECC870594AF0,Def Co-ord,DET,James Fowler,Adrian Davis,invented,exact (wip/staff_1979.csv)
+1979,DA20F2C9-05B2-7027-5B0B-ECC870594AF0,Def Co-ord,DET,James Fowler,Marty Schottenheimer,real (name in a real source),"Coaching Tree, confirmed independently: Schottenheimer coached Detroit's linebackers in 1978 and 1979 and did not reach Cleveland until 1980. Our file had him as Cleveland's coordinator a year early. The 1979 Detroit staff carried no titled defensive coordinator, so the slot takes the senior assistant on that side by career standing. INFERRED; age not sourced"
 1979,630E0007-6579-4B95-CC89-A0E04778F7C2,Def Co-ord,GB,Dave Hanner,Dave Hanner,sourced,exact (wip/staff_1979.csv)
 1979,0DF8DC91-16AA-DE8A-D37B-CE30D3CE5703,Def Co-ord,HOU,Ed Biles,Ed Biles,sourced,exact (wip/staff_1979.csv)
 1979,08D2F2F9-5220-A5BB-CE7F-2836D803977C,Def Co-ord,KC,Aaron Clack,Rod Rust,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 KC; age not sourced, slot age retained"
 1979,BCA63C0D-159E-E789-FD61-61BBCF206566,Def Co-ord,LAR,Bud Carson,Bud Carson,sourced,exact (wip/staff_1979.csv)
-1979,9D52305C-094E-4CB8-6F8C-7B59CD43D264,Def Co-ord,MIA,Cleveland Pietrzak,Michael Danvers,invented,exact (wip/staff_1979.csv)
+1979,9D52305C-094E-4CB8-6F8C-7B59CD43D264,Def Co-ord,MIA,Cleveland Pietrzak,Tom Keane,real (name in a real source),"Coaching Tree: the 1979 Miami staff carried no titled defensive coordinator, and Bill Arnsparger — who held the job in substance — is placed at Carolina by Ryan's ruling. The slot takes the next man by career standing: Keane had 22 years by 1979 against Mike Scarry's 13, though Scarry carried the more senior-sounding Defensive Run Game Coordinator title. INFERRED; age not sourced"
 1979,AE874521-2CBA-23DD-794F-A79A1DE0C171,Def Co-ord,MIN,Lemar Moseley,Bob Hollway,real (name in a real source),"Coaching Tree: the 1979 MIN staff had no titled defensive coordinator, so the slot takes the senior assistant on that side by CAREER STANDING — Bob Hollway had 12 years by 1979, and title order reaches the same man. INFERRED, not a titled coordinator; age not sourced. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
 1979,5E6AE06A-EA7F-5384-6916-D5B9795767E7,Def Co-ord,NE,Allan Baker,Hank Bullough,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 NE; age not sourced, slot age retained"
 1979,83EDA827-0FD0-902D-629A-A7137E8FECBB,Def Co-ord,NO,Paul Wiggin,Paul Wiggin,sourced,exact (wip/staff_1979.csv)
@@ -289,18 +289,13 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,080D4DDC-FFA1-3714-1B2B-FF08F2490E51,Assistant Physio,IND,Joseph Pennywell,Malcolm Woodbury,invented,exact (wip/staff_1979.csv)
 1979,73502237-2E20-58C1-95B2-AED67E3FAD6F,Head Coach,Free Agent,Paul Brown,Paul Brown,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,4D54A7D4-F715-5249-9446-F04A835DF175,Head Coach,Free Agent,Hank Stram,Hank Stram,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,DC5433B0-59A0-5387-BF5C-02529EFE4303,Head Coach,Free Agent,Bill Johnson,Bill Johnson,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,369A0414-F808-5DC8-B201-2AC267186976,Head Coach,Free Agent,Chuck Fairbanks,Chuck Fairbanks,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,34492487-4A0C-5C1D-9F3C-C86E3206433F,Head Coach,Free Agent,John Ralston,John Ralston,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,40A3F97A-AAA4-57ED-BE6C-32E39B7C2EA9,Head Coach,Free Agent,Mike Holovak,Mike Holovak,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,E08CFE6F-3EAE-589B-91BE-6BFB751B5A8D,Head Coach,Free Agent,Lou Saban,Lou Saban,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,934CD034-4B9A-59CF-A3FB-F0C2927708C5,Head Coach,Free Agent,Charley Winner,Charley Winner,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,74DFF401-E63A-512C-B4D8-7ECCCBA4DB5A,Head Coach,Free Agent,Tommy Hudspeth,Tommy Hudspeth,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,AFA24C09-76FA-5B64-B269-1452BBEDCA68,Head Coach,Free Agent,Rick Forzano,Rick Forzano,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,E990E59E-43BA-588E-AEB2-B8172E42BC8F,Head Coach,Free Agent,Tommy Prothro,Tommy Prothro,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,6FEF0398-2B42-5F68-A244-96F2D873909A,Head Coach,Free Agent,Pete McCulley,Pete McCulley,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,8C04958E-4E0A-5ADA-A1C2-A8D364E78A24,Head Coach,Free Agent,Fred O'Connor,Fred O'Connor,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,DE7F4F49-5098-55B1-9643-C68EE58DBA03,Head Coach,Free Agent,Dick Modzelewski,Dick Modzelewski,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,728E017C-C531-5AA0-9F95-DCF985E1B035,Head Coach,Free Agent,Pat Peppler,Pat Peppler,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,9C29DCD3-E40D-5E80-B9CC-9421DDAC8F7A,Head Coach,Free Agent,Lou Holtz,Lou Holtz,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,E7BD7274-D99C-5AEA-9EC8-2067CEE63C0B,Head Coach,Free Agent,Ernie Hefferle,Ernie Hefferle,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
@@ -338,11 +333,9 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,7C98A797-C238-53E0-BCDD-EDF413956561,Head Coach,Free Agent,Bill McPeak,Bill McPeak,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,BF644D16-382A-55D4-8D6D-3E1C1715C89C,Head Coach,Free Agent,John Mazur,John Mazur,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,8A2CA612-7A5D-578F-AF83-36B3DD15FB0F,Head Coach,Free Agent,Hugh Devore,Hugh Devore,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,385CAD91-CD2A-54FE-81E9-29DAADF1D0CE,Head Coach,Free Agent,Jack Faulkner,Jack Faulkner,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,1746F4C1-F79F-5464-A640-8FB6EF226FBE,Head Coach,Free Agent,Harland Svare,Harland Svare,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,2B447605-00CA-516A-B865-76EC6A1B4FD7,Head Coach,Free Agent,Tom Fears,Tom Fears,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,CC706D90-E374-574E-8C3E-61E279F42346,Head Coach,Free Agent,Bob Waterfield,Bob Waterfield,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,692A78C0-9840-58C7-A685-459F3A586599,Head Coach,Free Agent,Abe Gibron,Abe Gibron,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,E7F78DAB-9A6B-5E39-BAE9-048B56A482F3,Head Coach,Free Agent,Frank Filchock,Frank Filchock,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,FCE93FDE-8FBC-58BB-9100-14CAE2D7F0A5,Head Coach,Free Agent,Joe Thomas,Joe Thomas,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,A4D66F55-A131-590D-BC38-D51D218155AA,Head Coach,Free Agent,Ron Waller,Ron Waller,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
@@ -365,7 +358,6 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,151A4B8C-E04A-5550-8171-EA57399F6283,Head Coach,Free Agent,Herman Ball,Herman Ball,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,0B3A7409-8715-5BEC-A421-A588E74EA0E8,Head Coach,Free Agent,J. D. Roberts,J. D. Roberts,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,C49503A0-106B-5C2A-B816-34B4FC04AE80,Head Coach,Free Agent,Mike Nixon,Mike Nixon,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,02CDEDD6-0169-556D-9103-67AB3173A1CD,Head Coach,Free Agent,Norb Hecker,Norb Hecker,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,3C69B20A-087B-5B67-A5E4-D4C4469BE98B,Head Coach,Free Agent,Marty Feldman,Marty Feldman,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,05F90765-8C26-5655-A862-26372F236EB1,Head Coach,Free Agent,Harvey Johnson,Harvey Johnson,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,C1218A2C-FAC2-54E6-895C-F95DE76CC5AE,Head Coach,Free Agent,Bill Peterson,Bill Peterson,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)

@@ -3789,3 +3789,47 @@ of the pool entirely, which makes the hiring market eight men smaller but true.
 is Ryan's call, and the recorded staffs are in
 `wip/coaching_tree_1979_staffs.csv` (245 men, 28 teams) so the join can be redone
 against any future ruling.
+
+#### 71 CLOSED — the eight removed, and what the format cannot hold
+
+Ruled: **a pool that misrepresents eight of eighty-five men as available is worse
+than a pool of seventy-seven that is true.** The point of the free-agent pool is
+that the user can hire from it, and a man who was coaching Tampa Bay's defensive
+backs that season is not available. A sidecar note does not reach the user.
+
+**Seventeen of the original 91 were employed in 1979 — one in five.** Nine held
+coordinator jobs and moved into them. **These eight held position-coach jobs, and
+PGM3 models nine staff roles, none of which is a position coach.** So they leave
+the file entirely: Abe Gibron, Bill Johnson, Charley Winner, Dick Modzelewski,
+Fred O'Connor, Jack Faulkner, Norb Hecker, Pete McCulley.
+
+**WHAT IS LOST, recorded as a limitation rather than a defect.** Eight real men
+who genuinely coached in the NFL in 1979 now appear nowhere in the archive, not
+because we could not find them but because **the format has no shape for what
+they did.** A nine-role staff model holds a head coach, two coordinators, a
+special-teams man, three scouts and two physios; it cannot hold a defensive backs
+coach. Every historical season will lose men the same way, and the number is not
+small: the 28 staffs of 1979 carry 245 men against 288 slots, but only about half
+of those 245 map to a role the file has.
+
+#### 70 CLOSED — the last two holds settled
+
+**The Schottenheimer year, checked away from the Coaching Tree**: he coached
+Detroit's linebackers in 1978 and 1979 and became Cleveland's defensive
+coordinator in 1980. **Our file was a year early, on a record marked `sourced`.**
+So Detroit takes him — and **Cleveland's slot, which we had wrong, becomes a
+fallback and goes to Chuck Weber**, 15 years by 1979 and already Cincinnati's
+coordinator in 1973-75, over Dick MacPherson's 12. One check turned a hold into
+two corrections.
+
+**Arnsparger stays at Carolina by ruling**, and the sidecar now says why: he is
+on a franchise that did not exist in 1979 because Charlotte's doctrine needed a
+man whose record was worse than he was, and that story is why the franchise reads
+as it does. **His real 1979 job was Miami**, whose slot takes Tom Keane — 22 years
+against Mike Scarry's 13, though Scarry held the more senior-sounding Defensive
+Run Game Coordinator title. The Gillman shape again.
+
+**1979's coordinator column is now 81 real of 96**: twelve franchises that did
+not exist, and three special-teams slots whose staffs carried nobody in the role.
+**Nothing else in that column is generated.** All four gates pass on all twenty
+files.
