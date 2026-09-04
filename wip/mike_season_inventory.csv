@@ -1,0 +1,57 @@
+season,league,teams,players,files,already_published,identifying_names,franchises
+1941,NFL,2,102,1,,"Bulldog Turner, Danny Fortmann, Joe Stydahar.",Chicago Bears; Chicago Bears-
+1945,NFL,1,50,1,,"Bob Waterfield, Jim Benton, Milan Lazetich.",Cleveland Rams
+1948,NFL,1,49,1,,"Steve Van Buren, Bucko Kilroy., Al Wistert",Philadelphia Eagles
+1949,NFL,1,52,1,,"Steve Van Buren, Bucko Kilroy., Al Wistert",Philadelphia Eagles
+1950,NFL,2,88,1,,"Marion Motley, Otto Graham, Lou Groza",Cleveland Browns; Cleveland Browns-
+1951,NFL,2,90,2,,"Dan Towler, Bob Waterfield, Tank Younger",Los Angeles Rams
+1952,NFL,1,46,1,,"Art Donovan, Gino Marchetti, Dick Hoerner",Dallas Texans
+1955,NFL,2,90,1,,"Tank Younger, Norm Van Brocklin, Andy Robustelli",Cleveland Browns; Los Angeles Rams
+1956,NFL,1,46,1,,"Pat Summerall, Jack Simmons, Ollie Matson",Chicago Cardinals
+1957,NFL,4,182,2,,"John Henry Johnson, Joe Schmidt, Jack Christiansen",Detroit Lions; San Francisco 49ers
+1958,NFL,4,184,2,,"Alan Ameche, Gino Marchetti, Jim Parker",Baltimore Colts; New York Giants
+1960,NFL,6,283,2,,"Walt Cudzik, Gino Cappelletti., Bob Dee",Boston Patriots; Dallas Cowboys; Green Bay Packers; Los Angeles Chargers; Philadelphia Eagles
+1961,NFL,2,90,1,,"Rip Hawkins, Fran Tarkenton, Jim Prestel",Chicago Bears; Minnesota Vikings
+1962,NFL,11,496,2,,"Jim Tyrer, Curtis McClinton, Johnny Robinson",Dallas Texans; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Oakland Raiders; Pittsburgh Steelers; San Francisco 49ers
+1963,NFL,8,361,2,,"Curley Johnson., Bill Baird, Mark Smolinski",Chicago Bears; Los Angeles Rams; New York Giants; New York Jets; Oakland Raiders; San Diego Chargers
+1964,NFL,8,382,3,,"Jim Bakken, Larry Wilson, Jackie Smith",Baltimore Colts; Buffalo Bills; Cleveland Browns; Minnesota Vikings; St. Louis Cardinals; Washington Redskins
+1965,NFL,3,140,2,,"Jim Brown, Lou Groza, John Morrow",Chicago Bears; Cleveland Browns
+1966,NFL,30,1367,3,,"Ray Mansfield, Frank Lambert, Charley Bradshaw",Atlanta Falcons; Baltimore Colts; Boston Patriots; Buffalo Bills; Chicago Bears; Cleveland Browns; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Kansas City Chiefs; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; St. Louis Cardinals; Washington Redskins
+1967,NFL,14,663,4,,"Jim Taylor, Doug Atkins, Dan Abramowicz",Dallas Cowboys; Detroit Lions; Green Bay Packers; Houston Oilers; Los Angeles Rams; New Orleans Saints; Oakland Raiders
+1968,NFL,8,380,3,,"Gene Upshaw, Jim Otto, Hewritt Dixon",Baltimore Colts; Minnesota Vikings; New York Jets; Oakland Raiders
+1969,NFL,11,515,4,,"Mike Bragg, Sam Huff, Charley Taylor",Buffalo Bills; Kansas City Chiefs; Los Angeles Rams; Minnesota Vikings; Oakland Raiders; Washington Redskins
+1970,NFL,16,755,2,,"Tom Dempsey, Julian Fagan, Danny  Abramowicz",Baltimore Colts; Cleveland Browns; Dallas Cowboys; Detroit Lions; Minnesota Vikings; New Orleans Saints; New York Giants; Oakland Raiders; San Francisco 49ers
+1971,NFL,12,579,3,,"Jim Turner, Rich Jackson, Floyd Little",Dallas Cowboys; Denver Broncos; Kansas City Chiefs; Miami Dolphins; Oakland Raiders; San Francisco 49ers; Washington Redskins
+1972,NFL,14,682,2,,"Harold Jackson, Bill Bradley, Tom Dempsey",Chicago Bears; Green Bay Packers; Los Angeles Rams; Miami Dolphins; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Francisco 49ers; Washington Redskins
+1973,NFL,14,679,3,,"Tom McNeill, Harold Carmichael, Bill Bradley",Atlanta Falcons; Buffalo Bills; Cincinnati Bengals; Dallas Cowboys; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; Philadelphia Eagles; San Diego Chargers
+1974,NFL,15,744,3,,"Elvin Bethea, Curly Culp, Fred Willis",Buffalo Bills; Houston Oilers; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New England Patriots; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; Washington Redskins
+1975,NFL,17,809,5,,"Don Cockroft, Jerry Sherk, Reggie Rucker",Cleveland Browns; Dallas Cowboys; Los Angeles Rams; Minnesota Vikings; New York Giants; Oakland Raiders; Pittsburgh Steelers; St. Louis Cardinals
+1975,WFL,6,302,2,,"Ken Bowman, John Wilbur, Karl  Lorch",Birmingham Vulcans; Honolulu Hawaiians; Memphis Southmen; So California Sun
+1976,NFL,43,2049,4,,"Lee Roy Selmon, Mark Cotney, Mike Washington",Atlanta Falcons; Baltimore Colts; Buffalo Bills; Chicago Bears; Cincinnati Bengals; Cleveland Browns; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Kansas City Chiefs; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New England Patriots; New Orleans Saints; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; Seattle Seahawks; St. Louis Cardinals; Tampa Bay Bucs; Washington Redskins
+1977,NFL,14,671,3,,"Greg Coleman, Don Cockroft, Mike Pruitt",Baltimore Colts; Chicago Bears; Cleveland Browns; Dallas Cowboys; Denver Broncos; Los Angeles Rams; Minnesota Vikings; Oakland Raiders
+1978,NFL,43,2092,5,,"Jim Bakken, Jim Otis, Tom Banks",Atlanta Falcons; Baltimore Colts; Buffalo Bills; Chicago Bears; Cincinnati Bengals; Cleveland Browns; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Kansas City Chiefs; Los Angeles Rams; Miami Dolphins; Minnesota Vikings; New England Patriots; New Orleans Saints; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; Seattle Seahawks; St. Louis Cardinals; Tampa Bay Bucs; Washington Redskins
+1979,NFL,13,637,3,yes,"Jack Youngblood, Frank Corral, Doug France",Dallas Cowboys; Los Angeles Rams; New Orleans Saints; Pittsburgh Steelers; Tampa Bay Bucs; Washington Redskins
+1980,NFL,14,682,2,,"Jack Youngblood, Frank Corral, Cullen Bryant",Atlanta Falcons; Cleveland Browns; Dallas Cowboys; Detroit Lions; Houston Oilers; Los Angeles Rams; Oakland Raiders; Philadelphia Eagles
+1981,NFL,14,682,2,,"Lawrence Taylor, Dave Jennings, Harry Carson",Buffalo Bills; Cincinnati Bengals; Dallas Cowboys; Miami Dolphins; New York Giants; San Diego Chargers; San Francisco 49ers
+1982,NFL,11,540,3,,"Jan Stenerud, Ray Stachowicz, James Lofton",Cincinnati Bengals; Green Bay Packers; Miami Dolphins; New York Jets; St. Louis Cardinals; Washington Redskins
+1983,NFL,8,399,2,,"Jack Youngblood, Kent Hill, Jackie Slater",Los Angeles Raiders; Los Angeles Rams; New Orleans Saints; Philadelphia Eagles; Seattle Seahawks; Washington Redskins
+1984,NFL,9,445,3,,"Kenny Easley, Jeff West, Steve Largent",Los Angeles Rams; Miami Dolphins; Pittsburgh Steelers; San Francisco 49ers; Seattle Seahawks
+1984,USFL,18,926,1,,"John Corker, Anthony Carter, Ray Bentley",Arizona Wranglers; Birmingham Stallions; Chicago Blitz; Denver Gold; Houston Gamblers; Jacksonville Bulls; Los Angeles Express; Memphis Showboats; Michigan Panthers; New Jersey Generals; New Orleans Breakers; Oakland Invaders; Oklahoma Outlaws; Philadelphia Stars; Pittsburgh Maulers; San Antonio Gunslingers; Tampa Bay Bandits; Washington Federals
+1985,NFL,13,629,2,,"Mike Lansford, Kent Hill, Jackie Slater",Chicago Bears; Dallas Cowboys; Los Angeles Raiders; Los Angeles Rams; Miami Dolphins; New England Patriots; New York Jets
+1986,NFL,6,288,2,yes,"Kevin Mack, Jeff Gossett, Ozzie Newsome",Cleveland Browns; Denver Broncos; New York Giants
+1987,NFL,13,644,4,,"Norm Johnson, John L. Williams, Steve Largent",Cleveland Browns; Denver Broncos; Indianapolis Colts; Minnesota Vikings; New Orleans Saints; Seattle Seahawks; Washington Redskins
+1988,NFL,8,383,2,,"Steve McMichael, Richard Dent, Mike Singletary",Chicago Bears; Cincinnati Bengals; Houston Oilers; San Francisco 49ers
+1989,NFL,6,294,2,,"Randall McDaniel, Rich Karlis, Kirk Lowdermilk",Denver Broncos; Los Angeles Rams; Minnesota Vikings; San Francisco 49ers
+1990,NFL,6,287,1,,"Ronnie Lott, Tom Rathman, Jerry Rice",Buffalo Bills; Kansas City Chiefs; Los Angeles Raiders; New York Giants; Philadelphia Eagles; San Francisco 49ers
+1991,NFL,8,383,4,,"John Elway, Greg Kragen, David Treadwell",Atlanta Falcons; Buffalo Bills; Denver Broncos; Detroit Lions; Washington Redskins
+1992,NFL,7,339,2,,"Darryl Johnston, Charles Haley, Nate Newton",Buffalo Bills; Dallas Cowboys; Green Bay Packers; Houston Oilers; New Orleans Saints; San Francisco 49ers
+1993,NFL,2,98,1,,"Darryl Johnston, Charles Haley, Nate Newton",Buffalo Bills; Dallas Cowboys
+1994,NFL,3,148,1,,"Steve Young, Rickey Jackson, Jerry Rice",Dallas Cowboys; San Diego Chargers; San Francisco 49ers
+1995,NFL,5,250,2,,"Chris Gardocki, Marshall Faulk, Cary Blanchard",Dallas Cowboys; Detroit Lions; Indianapolis Colts; Kansas City Chiefs; Pittsburgh Steelers
+1996,NFL,40,2000,4,,"Michael Strahan, Brad Daluiso, Mike Horan",Arizona Cardinals; Atlanta Falcons; Baltimore Ravens; Buffalo Bills; Carolina Panthers; Chicago Bears; Cincinnati Bengals; Dallas Cowboys; Denver Broncos; Detroit Lions; Green Bay Packers; Houston Oilers; Indianapolis Colts; Jacksonville Jaguars; Kansas City Chiefs; Miami Dolphins; Minnesota Vikings; New England Patriots; New Orleans Saints; New York Giants; New York Jets; Oakland Raiders; Philadelphia Eagles; Pittsburgh Steelers; San Diego Chargers; San Francisco 49ers; Seattle Seahawks; St. Louis Rams; Tampa Bay Bucs; Washington Redskins
+1997,NFL,4,194,3,,"Craig Hentrich, Reggie White, Brett Favre",Denver Broncos; Green Bay Packers
+1998,NFL,6,298,2,,"Mitch Berger, Randall McDaniel, John Randle",Atlanta Falcons; Denver Broncos; Green Bay Packers; Minnesota Vikings; San Francisco 49ers
+1999,NFL,2,100,1,,"Jevon Kearse, Al Del Greco, Craig Hentrich",St. Louis Rams; Tennessee Titans
+2000,NFL,1,53,1,yes,"Ray Lewis, Jonathan Ogden, Matt Stover",Baltimore Ravens
+2001,NFL,2,100,1,,"Orlando Pace, Marshall Faulk, Jeff Wilkins",New England Patriots; St. Louis Rams
+2002,NFL,2,99,1,,"Rich Gannon, Rod Woodson, Lincoln Kennedy",Oakland Raiders; Tampa Bay Bucs

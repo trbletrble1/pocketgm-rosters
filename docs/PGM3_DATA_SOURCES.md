@@ -638,3 +638,38 @@ a full positional spread. **39 names appear twice or more inside the block and
 in the film and Hawaii teams. **621 of the 926 USFL men appear nowhere in our
 1979, 1986 or 2000 files** — median `POVR` 74, p90 83 — which is the pool a
 build would draw on.
+
+## The Mike family — full season inventory (2026-09-03)
+
+**Nine of the ten files carry year-labelled teams** (`'66 Vikings`, `66MIN`), so
+this is a decode. Only `Mike-USFL_WFL` is unlabelled and it was decoded
+separately. `wip/mike_season_inventory.csv` carries the table; the summary:
+
+**537 season blocks, 25,916 men, 54 distinct seasons from 1941 to 2002.** Every
+year from 1960 to 2002 is present except 1959; before that the file holds 1941,
+1945, 1948–52, 1955–58. **39 of the 56 season-league combinations appear in more
+than one file** — cross-checks, not duplicates.
+
+The largest are 1976 (43 teams, 2,049 men), 1978 (43, 2,092), 1996 (40, 2,000)
+and 1966 (30, 1,367); the thinnest are single teams. **The 1984 USFL is complete
+at 18 teams and 926 men** and the 1975 WFL partial at 6 blocks across two files.
+**Only three of the ten seasons the project has published are represented** —
+1979 (13 teams), 1986 (6) and 2000 (1) — so the file family is almost entirely
+seasons the archive does not hold.
+
+**Excluded from the season list, being real data but not seasons:** 320 modern
+NFL blocks (the shared 2003 base), 62 all-time franchise teams (`All Bills`,
+median `POVR` 93 — this is where the career-peak 99s live), 67 stadium and
+uniform test teams with placeholder names (`LA Coliseum`, `QB 32W`), 10
+free-agent pools, 4 Pro Bowl squads, the 2 fiction teams from *The Longest Yard*
+and the 3 Hawaii service teams.
+
+**A classifier trap worth recording:** matching a team by nickname alone put the
+modern **Carolina Panthers** into the 1984 USFL in all ten files, because the
+USFL's Michigan **Panthers** share the nickname. City and nickname together are
+the key. Caught because Julius Peppers appeared in a 1984 roster.
+
+**`Mike-NFL1941-1969` is 5,322 players across 104 blocks and is the only source
+for every season before 1957.** Its 76.9% anchor reading is **13 men** against an
+archive that barely reaches the era — no evidence either way, not a quality
+verdict, and it should not be read as one.
