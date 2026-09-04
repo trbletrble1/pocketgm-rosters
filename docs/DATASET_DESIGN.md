@@ -521,6 +521,54 @@ removes and is the only per-position salary structure this project has ever held
 It is held, used, and correctly labelled — which is the difference between a
 dataset that knows what it has and one that does not.
 
+### 3.7 Acquisition — how the bytes reached us, as a third axis
+
+**Added 2026-09-04.** The Dallas Morning News piece is a document Ryan holds as a
+scanned PDF with text copied out in Acrobat. There is no URL, so "fetch it rather
+than log the relay" cannot apply — and it is plainly not a relay either. It is a
+third thing, and the model had no name for it.
+
+Three orthogonal axes now, and a source can be weak on any one of them
+independently:
+
+| axis | question | §  |
+|---|---|---|
+| **attribution** | who *asserted* it | 3.6 |
+| **lineage** | which documents descend from which | 4.3 |
+| **acquisition** | how faithfully the text reached *us* | here |
+
+**Four acquisition classes:**
+
+| class | means | may enter the store? |
+|---|---|---|
+| `fetched` | retrieved from a URL, hash-pinned, reproducible | yes |
+| `held` | a file in the source tree, hash-pinned | yes |
+| `transcribed` | a reading of a held document — OCR, or a person typing | yes, **naming the transcriber and the tool** |
+| `relayed` | text in a conversation with no document behind it | **no — it is a lead, not a source** |
+
+**`relayed` is the one that earns its place.** Four times today a figure or a repo
+fact arrived as conversational memory and was treated as established; each time it
+was wrong or incomplete. Giving the state a name and a rule — *a lead, never a
+claim* — turns a recurring discipline failure into something the model refuses
+structurally.
+
+**`transcribed` carries two obligations:**
+
+1. **Name the transcriber and the instrument.** "Ryan, Acrobat text copy, from
+   `<file>`" is provenance about the *reading*, distinct from provenance about the
+   assertion.
+2. **Numerics get a plausibility pass before they are called a disagreement.**
+   This is report 01's lesson exactly: a failing check may be your reading of the
+   source rather than the source. OCR damage is visible in the DMN text already —
+   `mewspaper`, `alltime`, `$94948` with the comma lost, `hase salary`.
+
+**And the guard that matters most:** Ryan transcribing a document is **not** a
+human verdict under §4.2. A verdict is a person adjudicating evidence; a
+transcription is a person operating a lossy instrument. Conflating them would let
+an OCR slip inherit rank 1 and outrank every source in the dataset.
+
+> **Transcription is an acquisition channel, never an adjudication.**
+
 ## 4. Resolution
 
 ### 4.1 The shape
@@ -1581,6 +1629,75 @@ about how loosely a figure quoted in a dispute should be read.
 Same shape as the League figures in the hearing and the primer, and it reinforces
 the ruling: **a claim about a claim has no independent standing.** Held, used,
 correctly labelled.
+
+### Dallas Morning News via AP, 1982 — PENDING, the scan is not yet on disk
+
+Reported 1981 salaries, published 1982, with a **stated margin of error under
+$4,000**. Ryan holds it as a scanned newspaper PDF with text copied out in
+Acrobat. **`acquisition: transcribed`** per §3.7 — not fetchable, not a relay.
+
+**BLOCKED, and this is the ask:** the scan is not in `pgm3-sources/`. Until it is,
+the figures below reached this session as conversational text and are therefore
+`relayed` — **a lead, not a source, and nothing here may become a claim.** Put the
+PDF in `pgm3-sources/` so it can be hash-pinned and a claim can cite a file rather
+than a paste.
+
+**OCR damage is already visible** in the transcribed text — `mewspaper`,
+`alltime`, `$94948` with the comma lost, `hase salary`. Per §3.7 every numeric
+gets a plausibility pass before any figure is called a source disagreement, which
+is report 01's lesson: *a failing check may be your reading of the source rather
+than the source.*
+
+**Plausibility pass run on the relayed figures, to be re-run against the scan.**
+Benchmark is the primer's 1981 league average of **$82,400**.
+
+| figure | value | vs league | reading |
+|---|---|---|---|
+| QB average | $160,037 | 1.94× | plausible |
+| RB average | $94,948 | 1.15× | plausible |
+| WR average | $85,873 | 1.04× | plausible |
+| Denver (high) | $106,000 | 1.29× | plausible |
+| Kansas City (low) | $64,000 | 0.78× | spread 1.66×, plausible |
+| Payton | $800,000 | 9.7× | high, but he was at the top of the market |
+
+**Three things flagged for the re-read:**
+
+1. **Dallas $89,170 and Washington $89,162 differ by $8.** Possible — but adjacent
+   numbers in a column are exactly where a transcription slips. Re-read both.
+2. **The 35.5% may not be on the same basis as the averages.** 35.5% of $15.42M is
+   $5.474M; the team average × 53 is $4.726M, a gap of $748k. Not necessarily a
+   defect — the article's salaries **exclude performance bonuses and playoff
+   shares** and "spent on players" probably does not. But the basis must be read
+   off the page, not assumed.
+3. **Howard Richards is quoted on a different basis from everyone else.** $165,000
+   *of which $105,000 was a signing bonus* implies a $60,000 base — 0.73× league
+   on base, 2.00× on total. If the other named players are base-only, he is not
+   comparable to them. **He is also the only component breakdown in any 1981
+   source this project holds**, which makes getting his basis right worth more
+   than the figure itself.
+
+**Manning at $600,000 matches the January UPI story exactly — and that settles
+nothing.** The precedent about exact matches across a gap requires the figure to
+be *improbable under independent generation*. $68,900 is; **$600,000 is a round
+number and an attractor**, reached independently by negotiation and by rounding.
+Recorded as uninformative in both directions rather than as corroboration.
+Sharpened in `DATASET_PRECEDENTS.md`.
+
+**Provenance:** `stated_by: Dallas Morning News`, **attribution chain unknown** —
+the paper does not say where the figures came from, and the club spokesman Greg
+Aiello says *"I don't even know if it's accurate."* Better than Dean's two removes
+— a paper's own reporting with a stated error bound, which implies a survey it or
+AP conducted — but the origin is unnamed, so it cannot be tested for lineage
+against the Management Council survey.
+
+**The non-denial is weak evidence, not none.** A club spokesman declining to
+contest specific figures about his own club is worth recording, and worth almost
+nothing on its own.
+
+**Definitional note that must travel with every figure:** these exclude
+**performance bonuses and playoff shares**. The primer and the hearing do not use
+that basis. Any comparison across the three needs it stated, or it manufactures a
+disagreement out of a definition.
 
 ### The method this opens — reconstruct the table one dispute at a time
 

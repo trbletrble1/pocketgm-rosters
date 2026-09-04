@@ -209,3 +209,26 @@ is harder to see, because the documents genuinely are different documents.
 Two independent surveys of 1,500 contracts would not both land on $68,900.
 **Suspicious agreement is evidence of shared ancestry**, and the check is to look
 for the office rather than the file.
+
+**SHARPENED 2026-09-04, and the sharpening matters.** The tell requires the figure
+to be **improbable under independent generation**. $68,900 is: no two surveys land
+there by chance. **A round number is not.**
+
+The Dallas Morning News piece reports Archie Manning at **$600,000**, matching a
+January UPI story exactly — which looks like the same tell and is not nearly as
+strong. Round numbers are **attractors**: contracts are negotiated to them,
+reporters round to them, and two independent sources can arrive at $600,000
+without any shared ancestry at all.
+
+So the check has two parts, and the first was implicit:
+
+1. **Is the figure improbable on its own?** Count the significant digits and ask
+   whether the value is a natural resting place. $68,900 and $94,948 are not.
+   $600,000, $135,000 and $65,000 are.
+2. Only then does an exact match across a gap indicate shared ancestry.
+
+**Consequence: a round-number agreement is not corroboration and not evidence of
+shared ancestry — it is uninformative in both directions**, and should be recorded
+as such rather than counted either way. The honest reading of Manning at $600,000
+in two papers is that it settles nothing about their independence.
+
