@@ -5091,3 +5091,34 @@ For a coaching question the coaching source is primary, and the other fills gaps
 Before that switch this pass produced **Joe Gibbs born 1988 and a head coach aged
 -16** — caught by a plausibility guard, which stays in place, because no age
 should reach a published file without being possible.
+
+## A disappointing diff is a hypothesis about the matcher too — third instance
+
+2026-09-04, and it is the same shape as the query lesson one layer up.
+
+Twenty-eight team media guides were diffed against 1979's 84 coordinator slots.
+The matcher returned **36 agree, 14 differ, 34 silent**. Reading the fourteen,
+**twelve dissolved**: Kansas City's book says `Defensive Coordinator/Linebacker
+Coach ... Rod Rust` and we have Rod Rust; New England's compound
+`Ass't Head Coach, Def. Coordinator/Linebackers: Hank Bullough` is ours; the
+Jets' `Defensive Coordinator, Secondary ... John Mazur` is our Johnny Mazur. A
+compound title, a dotted leader line or an OCR'd surname was enough to make a
+correct record look wrong. **Two real errors survived.**
+
+The "silent" third was the same illusion in the other direction: Cleveland's
+guide never uses the word coordinator, it says `Coach, Defensive Backs: CHUCK
+WEBER` and `Coach, Quarterbacks: JIM SHOFNER` — **the two men the career-standing
+rule had picked for those slots by arithmetic alone, confirmed by the team's own
+book.**
+
+**Three instances in one session, one shape:**
+
+1. a source scoring 5 of 29, which was a filled search field;
+2. thirty-six flat appearance slots, which were a leave-one-out artifact;
+3. fourteen file errors, which were twelve matcher artifacts.
+
+**The rule: before reporting that something is wrong with the data, spend the
+cheaper test on the instrument.** Read a handful of the failures in full. If they
+dissolve, the number was measuring your own query, your own fit, or your own
+regex — and a number that measures the instrument reads exactly like a number
+that measures the world.

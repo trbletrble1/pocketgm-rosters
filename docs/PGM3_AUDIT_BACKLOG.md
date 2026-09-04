@@ -3926,3 +3926,36 @@ document, but a full season-wide verdict needs the remaining slots adjudicated b
 reading rather than by matcher, and that is a per-team job of a different size
 from this pass. The two are named here so the correction is one command when
 ruled.
+
+#### 72 CLOSED — Pittsburgh takes Widenhofer, Miami takes Taseff
+
+`tools/fix_1979_guide_corrections.py`. Two records, on primary documents:
+
+- **Pittsburgh**: George Perles (45) → **Woody Widenhofer (36)**, from the
+  Steelers' own `ROBERT (WOODY) WIDENHOFER Defensive Coordinator`. Perles was
+  Assistant Head Coach, a role PGM3 does not model.
+- **Miami**: Steve Crosby (29) → **Carl Taseff (51)**, from the Dolphins'
+  `Offensive Backs, Special Teams: Carl Taseff`, born Sept. 28 1928. The same
+  book lists Crosby as **Assistant Director of Player Personnel** — front office,
+  not coaching.
+
+Age and startSeason moved together on the file's own slope, ratings and growth
+curves untouched, employed staff 288, all four gates green.
+
+**The count is TWO, not fourteen**, and the difference is the matcher: twelve of
+its disagreements dissolved on reading. Recorded as a precedent in its own right.
+
+**The disposition of the two coaching sources, settled by 28 primary documents.**
+The Coaching Tree is reliable where a team used modern coordinator titles and
+unreliable where it did not — Pittsburgh's assistant head coach, Miami's
+"Asst. Head Coach, Defense", the Rams splitting duties. **The career-standing
+fallback rule handles exactly that population, and where the books speak they
+confirm it** (Cleveland's Weber and Shofner, chosen by arithmetic). **Both
+surviving errors were in the TITLED fills** — the inverse of where the scrutiny
+had been.
+
+**Left undone, deliberately.** Steve Crosby was a real Miami personnel man and
+PGM3 *does* model scouts; Miami's three scout slots hold generated men. A later
+pass could put him in one. Reading the remaining 28 books slot by slot is a
+bigger job than the residual uncertainty warrants — the sample says the file is
+sound.
