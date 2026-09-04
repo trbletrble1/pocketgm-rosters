@@ -368,11 +368,12 @@ that coin flip does not exist at the dataset level.** Both stints are facts. Onl
 the export has to pick one, and the export records why in the build's own
 provenance, where a coin flip belongs.
 
-### 3.3 Four kinds, and the line between them
+### 3.3 Five kinds, and the line between them
 
 | kind | test | lives in the dataset? |
 |---|---|---|
-| `observed` | a source says it | yes |
+| `observed` | a source states it as a fact it witnessed or recorded | yes |
+| `source_derived` | a source states it, but the *source* computed or estimated it | yes — **marked**, see below |
 | `derived` | computed from claims by a named, versioned recipe; anyone with the same claims reproduces it | yes, marked, with recipe id and input claim ids |
 | `absent` | a source that *would* have carried it does not | **yes** — see §3.4 |
 | `invented` | drawn, seeded, or chosen to satisfy a consumer | **no. There is no field it can be written into.** |
@@ -380,6 +381,31 @@ provenance, where a coin flip belongs.
 The brief's test — *could someone else with the same sources reproduce it?* — is
 exactly the observed/derived line against the invented line, and it is checkable
 rather than a matter of judgement.
+
+**`source_derived` was added 2026-09-04, and it closes a real hole.** The first
+draft had four kinds and quietly assumed that if a document says a number, the
+document *observed* it. Two cases from the same afternoon show that is false, and
+that the difference matters:
+
+- The 1966–1980 NFL financial table's **1980 column is an estimate**, said so in
+  its own footnote ("based on results of large majority of clubs and
+  projections"), and is internally inconsistent *because* of that — three cells
+  fail a percentage check that all six real columns pass.
+- The NFLPA's average-coaching-salary figure is built from an assumption of
+  **nine assistants at a flat $45,000 each**. The staff *count* is plausibly an
+  observation of 1980 practice. The **flat rate is the NFLPA's own fill**, and
+  taking it as structure would import an interested party's estimating
+  convention as though it were measured — which is this project's
+  "a safe default is still a claim" precedent arriving from outside the project
+  rather than inside it.
+
+Without the distinction, both enter as `observed` and their method becomes our
+data. It is also the general form of the `era_certain` failure: a value that
+*looks* like a fact because a credible document states it, when the document
+computed it. **The rule: a claim is `observed` only where the source is
+reporting, not reckoning. If the source shows its arithmetic, or footnotes an
+estimate, or the figure is an average the source itself computed, it is
+`source_derived`** — usable, quotable, and never mistaken for a measurement.
 
 ### 3.4 Absence is a claim, and this is a bigger deal than it sounds
 
@@ -931,6 +957,86 @@ the man held two titles — his verdict enters as a claim at rank 1 and wins, wi
 person looking at the evidence outranks any source, however well it scores*, and
 provenance follows who decided, not what surfaced it.
 
+### 8.4 A contest with no arbiter — two 1979 salary averages, both true to their source
+
+Added 2026-09-04 at Ryan's direction, and it is the strongest of the four because
+it is real, it came from a source pulled the same day, and **the disagreement is
+unresolvable in principle rather than pending more work.** Examples 8.1–8.3 all
+end in an answer. This one does not, and the design has to be honest about that.
+
+**The source.** *Antitrust Policy and Professional Sports*, House Judiciary
+oversight hearings 1981–82 (Google Books `XQ8oAAAAMAAJ`, sha256 `8ed1a97c…`, 685
+pages, cached). Printed pp. 59–61 carry the NFLPA's analysis with the League's
+figures set against it.
+
+**Two claims about one value:**
+
+```
+c_101  source_record  hearing-XQ8o#p60          # NFLPA, 1981 salary survey
+       subject        (league NFL, season NFL-1979)
+       predicate      average_player_salary
+       value          68900 USD
+       observed_at    1981
+       kind           source_derived            # a survey average, not a return
+       stated_by      NFLPA                     # a party to the dispute
+
+c_102  source_record  hearing-XQ8o#p61          # the League's figure, quoted
+       subject        (league NFL, season NFL-1979)
+       predicate      average_player_salary
+       value          93333 USD
+       observed_at    1981
+       kind           source_derived            # ~$140M / 1,500 players
+       stated_by      NFL Management Council
+```
+
+The same page carries the per-club version of the same disagreement — **$4.3M
+against $5.2M** — and each side's own adjusted figure, "still under $75,000" and
+"still stays over $85,000". Four numbers, two parties, one season.
+
+**What resolution does.** Nothing clever. The policy has no rule that separates
+them, because there is no honest one: both are `source_derived`, both are dated
+1981, both are lineage-independent, and **both parties have a stake in the number
+being what they say it is**. So:
+
+```
+value           —
+basis           contested
+rule_fired      "no eligible rule separates the claims"
+candidates      [c_101 (68900, NFLPA), c_102 (93333, NFLMC)]
+```
+
+**Four things this example makes concrete that the other three do not:**
+
+1. **`contested` is a terminal state, not a queue.** 8.3's contest resolved once a
+   better-placed source arrived. This one will not resolve if we read every
+   remaining volume, because the disagreement *is* the historical record. A model
+   that must produce one number per field cannot represent 1979 honestly.
+2. **`stated_by` earns its place.** It is not decoration — it is the field that
+   makes "both sources have a stake" expressible, and it is the direct descendant
+   of the precedent *when a source has a stake in its own entry, check that entry
+   first, and say so before you look.*
+3. **The export must choose, and the choice is the export's.** A PocketGM 1979
+   build needs a scale factor and cannot take "contested" for an answer. So the
+   build picks one, and its manifest records which and why:
+   ```
+   build/pgm3-1979/manifest
+     rule     "salary scale anchored on the NFLPA 1979 survey average
+               ($68,900), not the League's $93,333"
+     reason   "the survey counts players; the League figure divides a total
+               expenditure that includes benefits and deferred pay by a
+               headcount. The former is closer to what PGM3's `salary`
+               field means."
+     contested_source  hearing-XQ8o, both claims retained
+   ```
+   That is the whole layering argument in one block: **the dataset holds the
+   disagreement, the consumer holds the decision, and each records its own.**
+4. **It closes the project's oldest gap without pretending to more than it does.**
+   Pre-1990 salary was recorded as "nothing found" across the entire prior
+   project. There is now a measured league-level series for 1966, 1970, 1975,
+   1977, 1979 and 1980. It sets the **level**. It says nothing about any
+   individual, so per-player salary remains absent — and §3.4 means the dataset
+   can now say *that* precisely, rather than by silence.
+
 ---
 
 ## 9. Where this design is uncertain
@@ -1111,6 +1217,63 @@ is load-bearing for identity, and where an external identifier exists it stores
 the pointer, not the biography. The observation that settled it: birthplace, high
 school and date of death are already in the store from StatsCrew, so the question
 was never *whether* non-football facts enter — only where the line sits.
+
+---
+
+## 9b. Sources found, and the leads they open
+
+### The pre-1990 salary gap — closed at league level, 2026-09-04
+
+*Antitrust Policy and Professional Sports*, House Judiciary oversight hearings
+1981–82. Google Books `XQ8oAAAAMAAJ`, sha256
+`8ed1a97cc9a6b965a61ab5197b2fa1ad7439fb1bf959e1149f8d141678738551`, 18,570,665
+bytes, 685 pages. Cached at `pgm3-sources/hearings/`, **not committed** — same
+ruling as `sources/`. Full report in `HEARING_XQ8o_FINDINGS.md`.
+
+**Attachment B, "NFL Financial Summary 1966–1980"**, printed twice (printed pp.
+233 and 239), per average club, in thousands, with a percentage-of-revenue column
+beside every figure:
+
+| | 1966 AFL | 1966 NFL | 1970 | 1975 | 1977 | 1979 | 1980 est |
+|---|---|---|---|---|---|---|---|
+| Total income | 2,164 | 3,741 | 4,825 | 7,399 | 7,909 | 12,090 | 13,300 |
+| Salaries, incl. pre/post-season | 1,193 | 1,321 | 1,661 | 2,887 | 3,435 | 4,524 | 5,065 |
+| Total player cost | 1,262 | 1,471 | 1,863 | 3,137 | 3,981 | 5,190 | 5,810 |
+
+*Transport note for whoever fetches it again:* the PDF needs `curl -L`; without
+it the 302 yields 562 bytes of HTML that reads exactly like a book with no text.
+The EPUB is captcha-gated; the PDF is not. Text extracts with `pypdf`.
+
+**Coach salaries — the first ever sourced for this project, any era.** NFLPA
+estimate for an average club, 1980 (printed p.60): head coach **~$100,000**, nine
+assistants at **~$45,000 each**, other coaching costs **~$195,000**.
+
+**Read the shape carefully.** The *count* — nine assistants — is plausibly an
+observation of 1980 practice and is useful as such. The **flat $45,000 is the
+NFLPA's own estimating assumption**, not a measured distribution, and enters as
+`source_derived` per §3.3. Treating it as observed structure would import an
+interested party's fill as data. It is a level, not a spread.
+
+### THE HIGHEST-VALUE OUTSTANDING SALARY LEAD
+
+The hearing reproduces CBA language describing a document it does not contain:
+
+> …a compilation of salary information which shall set forth the average salary
+> for all players then under contract to the Member Clubs, including current and
+> deferred compensation and any signing or reporting bonus, **compiled by team
+> positions and years of service** of the players. This information shall also
+> include **the highest and lowest salary for each team position**…
+
+**An annual NFLMC→NFLPA return, per position, per service year, with highs and
+lows, existed contractually in this era.** That is precisely the granularity an
+export needs and the hearing proves it existed without printing it. Candidate
+holders: NFLPA publications, *Mackey v. NFL* and later antitrust filings,
+subsequent oversight hearings. **Log it as the top salary lead.**
+
+*Garvey's prepared statement is not in this volume — printed p.597 here is
+testimony attacking Rozelle, and Garvey appears around 593–594. Google collapses
+the other editions into this same record, so a separate volume needs finding
+rather than following a link. Not a priority; the table is the prize.*
 
 ---
 
