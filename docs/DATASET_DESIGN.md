@@ -10,6 +10,12 @@ The project has no name yet; this file calls the thing "the dataset".
 > the new dataset, parked in this repo only so it can be read. It moves to the
 > new repo once Ryan points a session at it, and nothing here should be treated
 > as guidance for a PGM3 build.
+>
+> **Companion file: `DATASET_PRECEDENTS.md`** — method rulings and documented
+> failures for this project. Kept separate from `PGM3_PRECEDENTS.md` by Ryan's
+> ruling (2026-09-04): different project, different lifecycle, and the roster
+> project's precedents are about *building files* where these are about
+> *representing knowledge*. **Cross-reference, do not merge.**
 
 ---
 
@@ -1090,17 +1096,52 @@ The 1950 roster page carries a birth date per player. I have not checked 1920,
 it thins out in the earliest era then the earliest era needs a different declared
 discriminator — probably hometown plus college.
 
-**Measurement:** parse birth-date fill rate per decade across the cached
-league-year and roster pages. Under an hour.
+**PARTLY ANSWERED 2026-09-04, and the news is good.** Birth date is **91%**
+populated on the cached Akron 1920 roster page and **100%** on 1950, 1979, 2000
+and 2020 — see the table in §9.6. The earliest era is far better served than this
+section feared, so birth date likely remains the primary discriminator all the way
+back.
 
-### 9.3 Which name is the display name — needs a ruling
+**Still owed:** one 1920 page at n=23 is indicative, not settled. Run the fill
+rate across a proper sample per decade, including the AAFC and both AFLs, before
+relying on it. Under an hour.
 
-Names are era-scoped claims (§2.5), which handles the data. What it does not settle
-is what a query for "the person's name" returns with no era given. I propose
-**era-scoped: a 1979 export gets the 1979 spelling**, which is the era-native
-principle applied to names. But it means the same man reads differently in two
-files, and the prior project treated that as a defect in other fields. **This is a
-ruling, not a design decision, and it is yours.**
+### 9.3 RULED — display name is era-scoped, with a defined fallback
+
+**Ruling (2026-09-04): era-scoped. A 1979 export gets the 1979 spelling.**
+
+The prior project treated cross-file inconsistency as a defect and was right to —
+but that was a defect in **appearance**, and a man's face does not change between
+1986 and 2004. **His name does.** Nickell Robey genuinely was Robey in 2013 and
+Robey-Coleman in 2017, and a dataset that renders him one way in both is asserting
+something false about one of them.
+
+**Required with it: a query with no era must still be answerable.** "Undefined"
+would be the actual defect. The fallback is:
+
+> **The name-claim covering the largest span of the person's own attested career,
+> tie-broken by the earliest.**
+
+Chosen over "most recent" deliberately. Most-recent favours whichever source was
+observed latest, which for the historical population means a modern reference work
+using a modernised spelling — the same shape as the 2004-observed hair colour
+applied to a 1986 coach. Career-span is era-neutral: it returns the name the man
+was known by for most of the time this dataset is about. Ties break earliest,
+which is deterministic and matches the era-native instinct.
+
+It is a **`derived` value with a named recipe** (§3.3), not a stored attribute,
+and it is total — a person with no name claims at all resolves to
+`basis: unknown` rather than to nothing.
+
+**The hazard this creates, named so it is not discovered later.** A "primary name"
+is exactly the field §2.3 removed, and reintroducing it as a convenience
+reintroduces the temptation to join on it. Three guards:
+
+1. It is computed, never stored on the person.
+2. It is marked `derived`, so anything consuming it can see what it is.
+3. **Gate: no denotation may cite the display name as a discriminator.** A
+   denotation whose `discriminator` list contains it fails the build. That is the
+   check that keeps this from quietly becoming a key.
 
 ### 9.4 How much resolution to materialise
 
@@ -1115,24 +1156,100 @@ invisible — the same move as marking derived claims stale rather than
 recomputing them. **Unmeasured:** whether on-read resolution is actually too slow.
 Worth a spike once volumes are known rather than deciding now.
 
-### 9.5 Whether some franchise continuities should ever resolve
+### 9.5 RULED — permanently contested is acceptable; the export must still render
 
-Browns/Ravens has a league ruling. The 1920s lineages do not, and several are
-genuinely disputed among historians. I think `contested` is a legitimate permanent
-state for those, but it means a consumer asking "which franchise is this" gets no
-answer for a handful of clubs. **Ruling needed:** is a permanently-contested
-franchise acceptable, or does the dataset pick one and record the dissent?
+**Ruling (2026-09-04): a permanently-contested franchise continuity is a
+legitimate resting state.** Where historians genuinely disagree and no league
+ruling exists, the dataset saying so is more accurate than picking one and
+presenting it as settled.
 
-### 9.6 Rostered but not played
+**Required with it: a rendering rule at the boundary**, so a consumer is not
+handed nothing. Same shape as §8.4 — the dataset declines, the build chooses, and
+the build records why.
 
-"Hold what the sources hold" means representing the difference between *this man
-was on the roster and no source counted his games* and *this man played zero
-games*. Those are different claims and the model can carry both. What is unsettled
-is whether roster **presence** is its own predicate (`on_roster: true` with a date)
-or is implied by the existence of a stint. I lean towards explicit, because a media
-guide's all-time roster list is exactly a presence claim with nothing else attached
-— but it adds a predicate that will be queried constantly and I would rather you
-chose.
+Mechanically this is the position map (§5.4) again, and deliberately so:
+
+```
+export config: lineage_choices
+  <contested franchise>  ->  chosen lineage
+                             reason   (written, not computed)
+                             source   (the ruling or argument relied on)
+```
+
+**A table of named cases, not an algorithm.** There are only a handful, and a rule
+that resolves them automatically would be a rule nobody ever checks — where a
+written entry per case forces the choice to be stated. The reason field is prose
+because the reasons are not commensurable: the NFL's own ruling settles
+Browns/Ravens, and nothing comparable exists for the 1920s Chicago and Cleveland
+lineages.
+
+**Gate, and it is the load-bearing part: the export fails if a contested franchise
+appears in the data with no `lineage_choices` entry.** It does not fall back, pick
+the first, or emit null. That is the same refusal §5.4 requires of an unmapped
+position code, and for the same reason — the four boundary-translation bugs in the
+prior project all "silently reduced a cohort rather than raising an error, because
+a label that does not match simply finds nothing."
+
+**The dataset abstains; the export must not; neither may do the other's job.**
+
+### 9.6 RULED — roster presence is its own predicate, and it needs a four-state check
+
+**Ruling (2026-09-04): explicit predicate.** A media guide's all-time roster list
+is a presence claim with nothing else attached, and a model that can only express
+presence through a stint would have to **invent** a stint to hold it — inventing
+structure to record a fact is exactly what §3.3 forbids. The query-frequency cost
+is real and is the right trade: a predicate queried constantly earns its place.
+
+**The check Ryan asked for: does "did not play" stay distinguishable from "no
+source counted his games" once presence is separate?**
+
+**Yes — but only if blank-cell semantics are ingested, and there are four states,
+not two.** Working it through:
+
+| state | what happened | how it is stored | resolves to |
+|---|---|---|---|
+| 1 | no source that counts games has seen him | `on_roster: true`, no games claim | `basis: unknown` |
+| 2 | a source **with a GP column** lists him, cell **blank** | `on_roster: true` + **absence claim** on games (§3.4) | `basis: absent` |
+| 3 | a source states zero | `games_played: 0`, `kind: observed` | `basis: observed`, 0 |
+| 4 | a source states a number | `games_played: n` | `basis: observed`, n |
+
+**State 2 is the one that would be lost**, and it is not hypothetical. Measured on
+the cached StatsCrew roster pages this session:
+
+| page | n | birth date | hometown | college | GP |
+|---|---|---|---|---|---|
+| Akron 1920 | 23 | **91%** | **83%** | 100% | 100% |
+| Baltimore 1950 | 41 | 100% | 100% | 100% | 100% |
+| Atlanta 1979 | 50 | 100% | 100% | 100% | 100% |
+| Arizona 2000 | 58 | 100% | 100% | 100% | 100% |
+| Arizona 2020 | 69 | 100% | 99% | 100% | 100% |
+
+Matt Brown, halfback, Akron 1920: blank birth date, blank hometown, GP 1. **The
+column exists and the cell is empty** — the source declining, not the source
+silent. Skipping blanks at ingest would collapse state 2 into state 1 and lose the
+fact that a source which knew the rest of his details did not know when he was
+born.
+
+**The 1920 page also has no jersey column at all** — nine headers against 1950's
+ten. That is a different absence again: *the era did not have the field*, which is
+a property of the source and of 1920 football, and belongs on the **source
+declaration** rather than as 23 identical absence claims.
+
+**Gate: a games query must be able to return all four bases, and the gate asserts
+each is reachable.** A refusal or absence counter that can only ever read zero is
+the vacuous-pass failure the prior project calls its dominant one — so the check
+is not "do these states exist in the output" but "construct one of each and watch
+them come back distinct."
+
+**And the export is where they collapse, legitimately.** PocketGM needs a number,
+so states 1 and 2 become 0 on the way out — recorded in the build manifest as a
+default, never written back. That is the same layering as §8.4: the collapse is the
+consumer's, and it does not propagate into the store because an export is not a
+claim.
+
+*Incidental result: this partly answers §9.2. Birth date is 91% populated on a 1920
+roster page and 100% from 1950 on, so the earliest era is far better served than
+feared. One page, n=23 — indicative, not settled.*
 
 ### 9.7 RULED — sources vote; a human decides
 

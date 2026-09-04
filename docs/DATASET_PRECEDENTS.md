@@ -4,11 +4,14 @@ Companion to `DATASET_DESIGN.md`. **Neither file belongs to the PGM3 roster
 project**; both are parked here to be read and move to the new repo when it
 exists.
 
-Started 2026-09-04. Ryan's instruction was that the 1980-column finding "belongs
-in precedents as written" — recorded here rather than in
-`docs/PGM3_PRECEDENTS.md`, because that file is the roster project's and this is
-not a roster finding. **Say if it should go there instead**; the argument for
-moving it is that method precedents have always lived in one place.
+Started 2026-09-04. **Ruled the same day: these stay here.** The argument for
+keeping all method precedents in one place is real and was outweighed — this is a
+different project with a different lifecycle, and `PGM3_PRECEDENTS.md` is about
+*building files* where this is about *representing knowledge*. **Cross-reference,
+do not merge.**
+
+Where an entry here extends or generalises a roster-project precedent, it names it
+inline rather than restating it.
 
 ---
 
