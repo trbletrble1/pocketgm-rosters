@@ -2907,3 +2907,37 @@ of 1,716 men covered, **252 labels change** (53 of them currently the prior), 20
 uncovered stay; 1986 — 1,317 of 1,947 covered, **332 change**, 630 uncovered stay.
 
 **Not acted on. Proposal in the report; ruling is Ryan's.**
+
+**RULED AND APPLIED, 2026-09-03 — `tools/apply_mike_pre1990.py`.** Mike
+authoritative on the period layers pre-1990 (1979, 1986), archive the fallback
+where Mike is silent, voting unchanged from 2000 on. Three sub-rulings held: the
+142 verified faces protected (asserted, 0 touched); PSKI 7 and split votes
+abstain to the archive (15 men in 1979, 19 in 1986); the uncovered men — 200 in
+1979, **630 in 1986** — keep an archive label that runs ~77% pre-1990, stated per
+man in `reference/PGM3_SKIN_PROVENANCE_PRE1990.csv` and in the registry's
+`_mike` note, since the roster JSON has no field to carry it.
+
+| | 1979 | 1986 |
+|---|---|---|
+| men (rostered + free agents) | 1,716 | 1,947 |
+| Mike agrees, unchanged | 1,252 | 913 |
+| **changed dark → light** | **183** | **253** |
+| **changed light → dark** | **69** | **79** |
+| abstain (PSKI 7 / split) | 15 | 19 |
+| not in Mike, archive kept | 185 | 607 |
+| verified, protected | 12 | 76 |
+
+Only `appearance` moved. Hair colour followed skin by the player builder's rule.
+Family digit drawn from the band **seeded on the man, not the file** — a per-file
+seed let one man draw Head1 in 1979 and Head2 in 1986 (same class) and the faces
+gate reported 35 false cross-season disagreements; reseeded, same-man 1979/1986
+family-digit agreement is **254 of 254**. Faces gate head-family 18 → 19 differ,
+hair 18 → 19. Roster gate ALL CLEAR on both. Registry canonical entries updated
+for the moved men; `wip/faces_1979.csv` provenance rewritten to the origin.
+
+**Item 57, open — men who span the 1990 boundary.** Four men now disagree with
+their own 2000 record: Reggie Roby, Seth Joyner, Steve Wallace (1986 dark, 2000
+light) and Trey Junkin (1986 light, 2000 dark). Mike's period layer speaks and
+its base does not; Roby was on Ryan's list and verified dark, so the 2000 label
+is the wrong one. The ruling changed one side of these men only. Small, and
+needs a word: follow Mike into 2000 for boundary men where the base is silent.

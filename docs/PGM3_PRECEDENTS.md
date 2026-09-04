@@ -4735,3 +4735,29 @@ rule: before copying a value from a reference, ask what population it was
 measured on, and whether ours is the same population.** If the reference cannot
 distinguish two explanations for the value, take the one that survives a
 population ours has and theirs lacks.
+
+---
+
+## A label that says "sourced" and was drawn is worse than a missing label
+
+**2026-09-03.** 92 of the 100 pre-1990 faces Ryan verified by photograph carried
+the provenance `registry-1986 family` — a sourced label. Traced to the root, 23 of
+the 69 he found wrong were never in the 1986 decode at all: the 1986 face was
+drawn from a position distribution, the registry stored the draw as canonical,
+and 1979 inherited it as "registry-1986 family". Another 45 rested on a decoded
+field that was simply wrong. **The label defeated every check the project has**
+— the coverage sweep, the provenance ranking, the disagreement list — because
+each of them trusted "sourced" to mean sourced.
+
+**A missing label is honest: builders fall to the prior and say so. A draw
+recorded as a source is a guess that has stopped being visible.** Rules:
+
+1. **Provenance records the ORIGIN, not the last hop.** "registry-1986" is a hop.
+   "Xbox bit 1347 = 1" or "drawn, league prior, 1986 build" is an origin.
+2. **When a registry entry is created from a draw, it carries `drawn` in its
+   provenance forever**, and every file that inherits it inherits the word.
+3. **Never test a file against the registry it was written from.** The archive
+   read 95 of 95 against hand-verified truth because the files ARE the registry
+   for those men (249 of 249 identical). That test settled a design ruling and
+   could not see the error. Independence is a property of the comparison, not
+   of the truth set.
