@@ -553,6 +553,34 @@ not** — a court's free-market estimate, an agent's deposition estimate, a treb
 damages award, a refused counter-offer, and a contracted total of which a fraction
 was paid. They are data, not a caution to remember.
 
+### 3.6c System rules are a separate predicate family, on a league subject
+
+**Added 2026-09-04** from the court cases (reports 14–15). Some findings are about
+**how the system worked**, not about what a person was paid:
+
+| predicate | value held | source |
+|---|---|---|
+| `option_year_rate` | **0.90** — 90% of the prior year's salary | *Smith v. Pro-Football*, fn 8, 1968 |
+| `developmental_squad_weekly_wage` | **$1,000/week**, effective 17 May 1989 | *Brown v. Pro Football* |
+| `roster_bonus_is_conditional` | **true**, 1968 and again 1980 | *Smith*; *Rudolph v. Miami Dolphins* |
+| `league_entry_fee` | **$500,000**, WFL 1974 | *Alabama Football v. Greenwood* |
+| `club_workers_comp_self_insured_ceiling` | **$100,000**, Dolphins | *Rudolph* |
+
+**These take a league-scoped subject — `league`, `league_season` or `league_era` —
+and the store REFUSES them on a person.** Symmetrically, a person-scoped money
+predicate refuses a league subject.
+
+**So a system rule can never enter a player-salary average: the subject types do
+not meet.** Same discipline as §3.6b — the failure is removed from the type system
+rather than added to the documentation. Gate 10 enforces it and fails when broken.
+
+**Why it matters:** `0.90`, `$1,000` and `$500,000` are not commensurable with each
+other or with a salary. Pooled into a money field they would look like three cheap
+contracts. `roster_bonus_is_conditional` is the sharpest case — it is a **fact
+about how contracts were written**, attested identically in 1968 (*"an additional
+$5,000 if he made the team"*) and 1980 (*"$27,000 per year … if he made the team
+roster"*), and it carries no amount at all.
+
 ### 3.7 Acquisition — how the bytes reached us, as a third axis
 
 **Added 2026-09-04.** The Dallas Morning News piece is a document Ryan holds as a

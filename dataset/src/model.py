@@ -16,6 +16,14 @@ KINDS = {"observed", "source_derived", "derived", "absent"}
 # the sources and pooling them manufactures disagreements out of definitions, so
 # the convention is part of the predicate NAME - pooling is not expressible.
 BARE_MONEY_PREDICATES = {"salary", "pay", "compensation", "wage", "average_salary"}
+# Claims about the SYSTEM, not about a person. Distinct subject scope so they can
+# never be averaged with player money - the subject types simply do not meet.
+SYSTEM_PREDICATES = {
+    "option_year_rate", "developmental_squad_weekly_wage", "roster_bonus_is_conditional",
+    "league_entry_fee", "club_workers_comp_self_insured_ceiling",
+}
+LEAGUE_SCOPES = {"league_season", "league_era", "league"}
+
 SALARY_CONVENTIONS = {
     "salary_base", "salary_base_plus_prorated_bonus", "club_cost_per_player",
     "signing_bonus", "roster_bonus", "reporting_bonus", "base_salary_year",
@@ -75,6 +83,16 @@ class Store:
                   kind="observed", stated_by=None, attribution=None, note=None):
         if kind in FORBIDDEN_KINDS:
             raise StoreError(f"kind '{kind}' has no field to occupy. It belongs in a build.")
+        scope = subject[0] if isinstance(subject, (tuple, list)) and subject else None
+        if predicate in SYSTEM_PREDICATES and scope not in LEAGUE_SCOPES:
+            raise StoreError(
+                f"'{predicate}' is a SYSTEM rule and requires a league-scoped subject "
+                f"({sorted(LEAGUE_SCOPES)}), not '{scope}'. It describes how the system "
+                f"worked, not what a person was paid.")
+        if predicate in SALARY_CONVENTIONS and scope in LEAGUE_SCOPES:
+            raise StoreError(
+                f"'{predicate}' is a person-scoped money predicate and cannot take a "
+                f"league-scoped subject. A league aggregate is its own predicate.")
         if predicate in BARE_MONEY_PREDICATES:
             raise StoreError(
                 f"predicate '{predicate}' is REFUSED: a money figure must name its "

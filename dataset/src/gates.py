@@ -161,6 +161,32 @@ def gate_conventions_do_not_pool(store_factory, policy):
     return True, "Randy White 1984: base 450,000 and base+prorated 570,000 both stand, no contest"
 
 
+# ---------------------------------------------------------------- gate 10
+def gate_system_rules_cannot_be_averaged(store_factory, policy):
+    """A system rule and a player's salary must not share a subject scope.
+    If they cannot meet, no average can pool them."""
+    s = store_factory()
+    s.add_source({"source_id": "ct", "acquisition": "held", "stated_by": "court"})
+    sr = s.add_source_record("ct", "1")
+    p = s.mint_person()
+    # a system rule on a person must be refused
+    try:
+        s.add_claim(sr, ("person", p), "option_year_rate", 0.90, 1968)
+        return False, "a system rule was accepted on a PERSON subject"
+    except StoreError:
+        pass
+    # player money on a league must be refused
+    try:
+        s.add_claim(sr, ("league_season", "NFL", "1968"), "salary_base", 50000, 1968)
+        return False, "player money was accepted on a LEAGUE subject"
+    except StoreError:
+        pass
+    # and each is accepted in its own scope
+    s.add_claim(sr, ("league_era", "NFL", "1968"), "option_year_rate", 0.90, 1968)
+    s.add_claim(sr, ("person", p), "salary_base", 22000, 1968)
+    return True, "0.90 lives on the league, $22,000 on the man; the scopes never meet"
+
+
 def main():
     policy = json.load(open(__file__.rsplit('/',2)[0] + "/policy/resolution.json"))
     sf = Store
@@ -175,6 +201,8 @@ def main():
     check("attributed claim cannot vote as the attributed party", ok, d)
     ok, d = gate_bare_salary_refused(sf);                   check("bare `salary` predicate refused", ok, d)
     ok, d = gate_conventions_do_not_pool(sf, policy);        check("salary conventions do not pool", ok, d)
+    ok, d = gate_system_rules_cannot_be_averaged(sf, policy)
+    check("system rules cannot be averaged with player money", ok, d)
     bad = [n for n,o,_ in FAILURES if not o]
     print(f"\n{len(FAILURES)-len(bad)}/{len(FAILURES)} gates pass")
     return 1 if bad else 0

@@ -57,6 +57,8 @@ def broken_store_factory(**breaks):
         Broken._lineage_group = lambda self, c: (c["source_id"], c["stated_by"])
     if breaks.get("allow_bare_salary"):
         model.BARE_MONEY_PREDICATES.clear()
+    if breaks.get("ignore_scope"):
+        model.SYSTEM_PREDICATES.clear()
     if breaks.get("pool_conventions"):
         # an ingest that strips the convention off the predicate name - which is
         # exactly how the §8.4 error happens in the wild
@@ -94,6 +96,8 @@ CASES = [
      lambda sf, pol: gates.gate_bare_salary_refused(sf)),
     ("salary conventions do not pool", "pool_conventions",
      lambda sf, pol: gates.gate_conventions_do_not_pool(sf, pol)),
+    ("system rules cannot be averaged with player money", "ignore_scope",
+     lambda sf, pol: gates.gate_system_rules_cannot_be_averaged(sf, pol)),
 ]
 
 def main():
@@ -102,6 +106,7 @@ def main():
     for name, brk, run in CASES:
         saved_forbidden = set(model.FORBIDDEN_KINDS); saved_kinds = set(model.KINDS)
         saved_bare = set(model.BARE_MONEY_PREDICATES)
+        saved_sys = set(model.SYSTEM_PREDICATES)
         sf = broken_store_factory(**{brk: True})
         try:
             ok, detail = run(sf, POLICY)
@@ -109,6 +114,7 @@ def main():
             model.FORBIDDEN_KINDS.clear(); model.FORBIDDEN_KINDS.update(saved_forbidden)
             model.KINDS.clear(); model.KINDS.update(saved_kinds)
             model.BARE_MONEY_PREDICATES.clear(); model.BARE_MONEY_PREDICATES.update(saved_bare)
+            model.SYSTEM_PREDICATES.clear(); model.SYSTEM_PREDICATES.update(saved_sys)
         fired = not ok
         print(f"  [{'FIRED' if fired else 'SILENT'}] {name}")
         print(f"           break: {brk}")
