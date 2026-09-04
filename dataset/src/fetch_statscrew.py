@@ -1,7 +1,36 @@
 """Fetch and cache StatsCrew pages. Cache is a source tree, not a claim store."""
-import os, re, time, urllib.request, html
+import os, re, time, json, urllib.request, html
 UA = "Mozilla/5.0 (research; contact ryannecci@gmail.com)"
 CACHE = os.environ.get("SC_CACHE", os.path.expanduser("~/Documents/pgm3-sources/statscrew/build1950"))
+
+_DECL = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                    "..", "declarations", "statscrew.json")))
+_CODES = _DECL["league_codes"]
+URL = _DECL["url_patterns"]
+
+
+class UndeclaredLeague(Exception):
+    """A league code the declaration does not verify."""
+
+
+def check_league(code):
+    """A wrong league code loads the WRONG SPORT silently - AFL3 renders as the
+    Arena Football League, its teams parse, its rows ingest, and nothing objects.
+    Documenting that in a note did not prevent it; refusing it does.
+
+    Make the wrong thing inexpressible, not forbidden.
+    """
+    if code in _CODES["VERIFIED_with_rosters"]:
+        return code
+    trap = _CODES["TRAPS"].get(code)
+    if trap:
+        raise UndeclaredLeague(
+            f"league code {code!r} is a DECLARED TRAP: {trap['resolves_to']}. "
+            f"{trap.get('rule', '')}")
+    raise UndeclaredLeague(
+        f"league code {code!r} is not in league_codes.VERIFIED_with_rosters. "
+        f"Verify what it actually resolves to and declare it before ingesting it - "
+        f"a page that renders is not a page of the league you asked for.")
 
 def _get(url, key):
     os.makedirs(CACHE, exist_ok=True)
@@ -26,13 +55,14 @@ def _get(url, key):
     return open(p, encoding="utf-8", errors="replace").read()
 
 def league_year(league, year):
-    return _get(f"https://www.statscrew.com/football/l-{league}/y-{year}", f"L_{league}_{year}")
+    check_league(league)
+    return _get(URL["league_year"].format(league=league, year=year), f"L_{league}_{year}")
 
 def team_roster(team, year):
-    return _get(f"https://www.statscrew.com/football/roster/t-{team}/y-{year}", f"R_{team}_{year}")
+    return _get(URL["team_roster"].format(team=team, year=year), f"R_{team}_{year}")
 
 def person(slug):
-    return _get(f"https://www.statscrew.com/football/stats/{slug}", f"P_{slug}")
+    return _get(URL["person"].format(slug=slug), f"P_{slug}")
 
 def teams_in(league, year):
     t = league_year(league, year)

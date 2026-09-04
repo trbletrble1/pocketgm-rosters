@@ -1,35 +1,86 @@
 {
-  "source_id": "pre1936-assistants",
-  "name": "pre1936_nfl_assistant_coaches.csv",
-  "acquisition": "held",
-  "stated_by": null,
-  "_stated_by_note": "THE COMPILER IS UNNAMED. The CSV has no header identifying who assembled it or when. A compilation is itself a claim, so this is an open provenance question - ask Ryan.",
-  "attribution": ["profootballarchives.com | pro-football-history.com (PER ROW)"],
-  "derived_from": null,
-  "local": {"root": "$PGM3_SOURCES/DocDump", "file": "pre1936_nfl_assistant_coaches.csv",
-            "sha256": "794e009b791a849cb20d6e5e55f42f5fad97502ad0b47eefb8c5a208ca3faeac"},
-  "note": "First material of any kind for the recorded gap 'coaching staffs before 1934'. 21 rows over 9 scattered years is not a staff list, and must not be presented as one.",
-
-  "coverage": {"rows": 21, "years": [1921,1923,1924,1925,1926,1931,1933,1934,1935], "clubs": 11},
-
-  "field_availability": {
-    "primary_source": {"kind": "constant", "measured": {"fill": 100.0},
-                       "verdict": "PER-ROW attribution - unique in this project. Every other source attributes per document."},
-    "birth_date": {"kind": "constant", "measured": {"fill": 80.0, "n": 21},
-                   "verdict": "usable; the 4 rows without it fall to stint_continuity via known_coaching_lineage"},
-    "title": {"kind": "constant",
-              "DEFECT": "two rows read 'Assistant Coach / later Head Coach' (Nevers 1931, Palm 1933), conflating a STINT fact with a CAREER fact. Must split into two seasons' claims or a 1931 export lists Nevers as a head coach."}
+ "source_id": "pre1936-assistants",
+ "name": "pre1936_nfl_assistant_coaches.csv",
+ "acquisition": "held",
+ "stated_by": null,
+ "_stated_by_note": "THE COMPILER IS UNNAMED. The CSV has no header identifying who assembled it or when. A compilation is itself a claim, so this is an open provenance question - ask Ryan.",
+ "attribution": [
+  "profootballarchives.com | pro-football-history.com (PER ROW)"
+ ],
+ "derived_from": null,
+ "local": {
+  "root": "$PGM3_SOURCES/DocDump",
+  "file": "pre1936_nfl_assistant_coaches.csv",
+  "sha256": "794e009b791a849cb20d6e5e55f42f5fad97502ad0b47eefb8c5a208ca3faeac"
+ },
+ "note": "First material of any kind for the recorded gap 'coaching staffs before 1934'. 21 rows over 9 scattered years is not a staff list, and must not be presented as one.",
+ "coverage": {
+  "rows": 21,
+  "years": [
+   1921,
+   1923,
+   1924,
+   1925,
+   1926,
+   1931,
+   1933,
+   1934,
+   1935
+  ],
+  "clubs": 11
+ },
+ "field_availability": {
+  "primary_source": {
+   "kind": "constant",
+   "measured": {
+    "fill": 100.0
+   },
+   "verdict": "PER-ROW attribution - unique in this project. Every other source attributes per document."
   },
-
-  "external_id_scheme": {
-    "host": "profootballarchives.com",
-    "pattern": "/coaches/{surname4}{5 digits}.html, e.g. higg00400, ster00400",
-    "observed": ["berr01600","chri00600","flah01000","higg00400","pott00200","ster00400","walq00200","wilh00400"],
-    "status": "UNTESTED for namesake behaviour. Not to be trusted as an identifier until it is tested the way StatsCrew's was."
+  "birth_date": {
+   "kind": "constant",
+   "measured": {
+    "fill": 80.0,
+    "n": 21
+   },
+   "verdict": "usable; the 4 rows without it fall to stint_continuity via known_coaching_lineage"
   },
-
-  "discriminators": [
-    {"scope": "default", "order": ["birth_date", "stint_continuity"],
-     "note": "known_coaching_lineage supplies the continuity chain for the 4 rows with no birth date"}
-  ]
+  "title": {
+   "kind": "constant",
+   "DEFECT": "two rows read 'Assistant Coach / later Head Coach' (Nevers 1931, Palm 1933), conflating a STINT fact with a CAREER fact. Must split into two seasons' claims or a 1931 export lists Nevers as a head coach."
+  }
+ },
+ "external_id_scheme": {
+  "host": "profootballarchives.com",
+  "pattern": "/coaches/{surname4}{5 digits}.html, e.g. higg00400, ster00400",
+  "observed": [
+   "berr01600",
+   "chri00600",
+   "flah01000",
+   "higg00400",
+   "pott00200",
+   "ster00400",
+   "walq00200",
+   "wilh00400"
+  ],
+  "status": "UNTESTED for namesake behaviour. Not to be trusted as an identifier until it is tested the way StatsCrew's was."
+ },
+ "discriminators": [
+  {
+   "scope": "default",
+   "order": [
+    "birth_date",
+    "stint_continuity"
+   ],
+   "note": "known_coaching_lineage supplies the continuity chain for the 4 rows with no birth date"
+  }
+ ],
+ "_documentation_only": {
+  "name": "the source's human name; code keys on source_id",
+  "note": "free prose",
+  "local": "where the files sit on this machine; the scripts take paths as arguments",
+  "coverage": "a record of what was measured to exist, addressed to a reader",
+  "external_id_scheme": "as person_id_scheme",
+  "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ - see src/gate_declarations_are_read.py. This list living in the declaration rather than in the gate means widening it shows up in a diff."
+ }
 }

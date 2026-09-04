@@ -132,12 +132,30 @@ def main():
         print(f"           gate said: {detail}")
         if not fired:
             bad.append(name)
+    # Gate 11 breaks a DECLARATION, not a store, so it does not take a store
+    # factory. Its failure is constructed the same way: declare a rule that
+    # nothing enforces, and watch it refuse.
+    import json as _json, copy as _copy
+    saved_rules = _copy.deepcopy(gates._SAL["hard_rules"])
+    try:
+        gates._SAL["hard_rules"].append("A rule declared with no enforcing gate.")
+        ok, detail = gates.gate_every_hard_rule_has_a_gate()
+    finally:
+        gates._SAL["hard_rules"][:] = saved_rules
+    fired = not ok
+    print(f"  [{'FIRED' if fired else 'SILENT'}] every declared hard rule names an enforcing gate")
+    print(f"           break: a hard rule added to the declaration with no gate")
+    print(f"           gate said: {detail}")
+    if not fired:
+        bad.append("every declared hard rule names an enforcing gate")
+    n_cases = len(CASES) + 1
+
     print()
     if bad:
         print(f"{len(bad)} gate(s) did NOT fire when broken — they cannot fail and report success:")
         for n in bad: print("   ", n)
         return 1
-    print(f"all {len(CASES)} gates fired when their invariant was broken")
+    print(f"all {n_cases} gates fired when their invariant was broken")
     return 0
 
 if __name__ == "__main__":

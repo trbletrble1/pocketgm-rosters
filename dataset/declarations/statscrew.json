@@ -1347,14 +1347,6 @@
     "note": "IN-PROGRESS SEASON as of 2026-09-04. Excluded from the sweep: its GP values are a mid-season snapshot that would file indistinguishably from a final total, and the cache rule forbids re-fetching to correct them later."
    }
   },
-  "season_not_played": {
-   "CFL-2020": {
-    "finding": "the league-year page renders but lists ZERO teams",
-    "why": "the CFL cancelled its 2020 season entirely (COVID-19). No games were played.",
-    "how_it_surfaced": "the ingest refused it - match rate 0.000 below the 0.95 floor - rather than recording an empty season as a successful one",
-    "rule": "a league-season with no teams is an ABSENCE to declare, not a sweep failure to retry. Retrying it would fetch the same empty page forever."
-   }
-  },
   "sweep_result": {
    "_measured": "2026-09-04",
    "seasons_ok": 80,
@@ -1405,5 +1397,27 @@
     "WFLSHR"
    ]
   }
+ },
+ "season_not_played": {
+  "CFL-2020": {
+   "finding": "the league-year page renders but lists ZERO teams",
+   "why": "the CFL cancelled its 2020 season entirely (COVID-19). No games were played.",
+   "how_it_surfaced": "the ingest refused it - match rate 0.000 below the 0.95 floor - rather than recording an empty season as a successful one",
+   "rule": "a league-season with no teams is an ABSENCE to declare, not a sweep failure to retry. Retrying it would fetch the same empty page forever."
+  },
+  "_scope": "any league. Keyed LEAGUE-YEAR. The ingest exits before fetching."
+ },
+ "_documentation_only": {
+  "name": "the source's human name; code keys on source_id",
+  "note": "free prose",
+  "coverage": "a record of what was measured to exist, addressed to a reader",
+  "fields": "a human inventory; field_availability is the enforced one",
+  "scores": "provenance scoring notes, not yet an implemented policy",
+  "known_conflicts": "worked examples of conflicts already seen",
+  "person_id_scheme": "how the source builds its ids, with the traps; the ingest follows cross-reference links rather than parsing ids",
+  "cfl": "narrative of the CFL sweep; its enforceable parts moved to league_codes and season_not_played",
+  "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ - see src/gate_declarations_are_read.py. This list living in the declaration rather than in the gate means widening it shows up in a diff.",
+  "league_codes.team_codes_are_globally_unique": "the measurement that makes R_{TEAM}_{YEAR} cache keys safe; the safety is in the key format, not a lookup",
+  "league_codes.leagues_the_brief_named_that_this_source_CANNOT_supply": "a negative result - leagues to seek elsewhere"
  }
 }

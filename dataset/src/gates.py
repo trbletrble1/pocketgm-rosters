@@ -8,6 +8,36 @@ from model import Store, StoreError
 
 FAILURES = []
 
+# Each declared hard rule must name the gate that enforces it. A rule with no
+# gate is prose; a gate with no rule is undocumented behaviour. Keeping the
+# mapping here means adding a rule to the declaration without enforcing it
+# FAILS, rather than sitting there reading like policy.
+import os as _os
+_SAL = json.load(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)),
+                                    "..", "declarations", "salary_conventions.json")))
+RULE_ENFORCED_BY = {
+    0: "gate_bare_salary_refused",
+    1: "gate_conventions_do_not_pool",
+    2: "gate_bare_salary_refused",        # an undeclared money name is refused
+    3: "export manifest - src/export_pgm3.py states the convention",
+}
+SYSTEM_RULE_ENFORCED_BY = {
+    0: "gate_system_rules_cannot_be_averaged",
+    1: "gate_system_rules_cannot_be_averaged",
+    2: "gate_system_rules_cannot_be_averaged",
+}
+
+
+def gate_every_hard_rule_has_a_gate():
+    """The declaration's hard_rules must each name an enforcer."""
+    missing = [i for i in range(len(_SAL["hard_rules"])) if i not in RULE_ENFORCED_BY]
+    missing += [f"system:{i}" for i in range(len(_SAL["system_rules"]["hard_rules"]))
+                if i not in SYSTEM_RULE_ENFORCED_BY]
+    if missing:
+        return False, f"declared hard rules with NO enforcing gate: {missing}"
+    return True, (f"{len(RULE_ENFORCED_BY)} salary + {len(SYSTEM_RULE_ENFORCED_BY)} "
+                  f"system hard rules each name a gate")
+
 def check(name, ok, detail=""):
     FAILURES.append((name, ok, detail))
     print(f"  [{'PASS' if ok else 'FAIL'}] {name}" + (f"  {detail}" if detail else ""))
@@ -203,6 +233,8 @@ def main():
     ok, d = gate_conventions_do_not_pool(sf, policy);        check("salary conventions do not pool", ok, d)
     ok, d = gate_system_rules_cannot_be_averaged(sf, policy)
     check("system rules cannot be averaged with player money", ok, d)
+    ok, d = gate_every_hard_rule_has_a_gate()
+    check("every declared hard rule names an enforcing gate", ok, d)
     bad = [n for n,o,_ in FAILURES if not o]
     print(f"\n{len(FAILURES)-len(bad)}/{len(FAILURES)} gates pass")
     return 1 if bad else 0

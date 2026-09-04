@@ -18,6 +18,39 @@ DECL = json.load(open(os.path.join(HERE, "..", "declarations", "statscrew.json")
 
 # per-era / per-league availability, read from the declaration rather than assumed
 FA = DECL["field_availability"]
+
+# --- THE DECLARATION REFUSES, IT DOES NOT MERELY DESCRIBE ---------------------
+# The design says "the ingest refuses to run without a discriminator". It said so
+# for a while before it was true. These are the refusals that make it true.
+
+_NOT_PLAYED = DECL.get("season_not_played", {})
+if SEASON in _NOT_PLAYED:
+    _r = _NOT_PLAYED[SEASON]
+    sys.exit(f"REFUSED {SEASON}: {_r['why']}\n  {_r['rule']}")
+
+DISCRIMINATORS = DECL["discriminators"]
+def discriminator_order(year):
+    """The declared order for this era. A source with no discriminator cannot
+    resolve identity, so the ingest must not start."""
+    for d in DISCRIMINATORS:
+        sc = d["scope"]
+        if sc.startswith("era:pre-") and year < int(sc.split("-")[-1]):
+            return d["order"]
+    for d in DISCRIMINATORS:
+        if d["scope"] == "default":
+            return d["order"]
+    return None
+
+DISC_ORDER = discriminator_order(YEAR)
+if not DISC_ORDER:
+    sys.exit(f"REFUSED {SEASON}: declarations/statscrew.json declares no "
+             f"discriminator for this era. Identity cannot be resolved without one.")
+
+# absence_semantics is what separates one declaration fact from N identical claims
+ABSENCE = DECL["absence_semantics"]
+assert "blank_cell_in_present_column" in ABSENCE and "column_absent_from_page" in ABSENCE, \
+    "absence_semantics must state both cases: a blank cell is an absence CLAIM, " \
+    "an absent column is a DECLARATION fact"
 JERSEY_USABLE = YEAR >= FA["jersey"]["usable_from"]
 
 def expected_fill(field):

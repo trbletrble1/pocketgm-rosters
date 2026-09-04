@@ -347,5 +347,12 @@
   },
   "why_it_matters": "This is the SHAPE of the owed Management Council table (position x service year, high/low/average/median per cell). Building the scope now means that document drops straight in if it is ever obtained."
  },
- "_decoy_scoping": "A decoy is a figure IN A DOCUMENT, never a number in the abstract. Keyed on value alone the list blocked Ray Guy's genuine $150,000 punter salary in the 1984 UD table, because a 1968 agent's deposition estimate in Smith happened to be the same round number. Round numbers are attractors - the same precedent that rejected Manning's $600,000 as corroboration. Each decoy now carries the source it belongs to and fires only there."
+ "_decoy_scoping": "A decoy is a figure IN A DOCUMENT, never a number in the abstract. Keyed on value alone the list blocked Ray Guy's genuine $150,000 punter salary in the 1984 UD table, because a 1968 agent's deposition estimate in Smith happened to be the same round number. Round numbers are attractors - the same precedent that rejected Manning's $600,000 as corroboration. Each decoy now carries the source it belongs to and fires only there.",
+ "_documentation_only": {
+  "note": "free prose",
+  "established": "the date a ruling was made",
+  "sources_searched_and_empty": "a negative result - what was searched and held nothing",
+  "owed_league_original": "a record of a document not obtained, and the decision about it",
+  "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ - see src/gate_declarations_are_read.py. This list living in the declaration rather than in the gate means widening it shows up in a diff."
+ }
 }

@@ -18,29 +18,25 @@ KINDS = {"observed", "source_derived", "derived", "absent"}
 BARE_MONEY_PREDICATES = {"salary", "pay", "compensation", "wage", "average_salary"}
 # Claims about the SYSTEM, not about a person. Distinct subject scope so they can
 # never be averaged with player money - the subject types simply do not meet.
-SYSTEM_PREDICATES = {
-    "option_year_rate", "developmental_squad_weekly_wage", "roster_bonus_is_conditional",
-    "league_entry_fee", "club_workers_comp_self_insured_ceiling",
-}
+_DECL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                          "..", "declarations", "salary_conventions.json")
+_SAL = json.load(open(_DECL_PATH))
+# These lists were duplicated here as literals. A convention added to the
+# declaration was still REFUSED by the code, and the refusal message told you to
+# add it to the declaration - the fix it named had no effect. Read, do not mirror.
+SYSTEM_PREDICATES = set(_SAL["system_rules"]["predicates"])
 LEAGUE_SCOPES = {"league_season", "league_era", "league"}
 
 # A positional or service-year AVERAGE is neither a person's pay nor a league
 # rule. It describes a COHORT, and it needs its own scope or it has nowhere to
 # live: person-money predicates refuse a league subject, and rightly.
 COHORT_SCOPES = {"cohort"}
-COHORT_PREDICATES = {
-    "cohort_salary_average", "cohort_salary_median",
-    "cohort_salary_high", "cohort_salary_low", "cohort_size",
-}
+COHORT_PREDICATES = set(_SAL["cohort_aggregates"]["predicates"])
 
-SALARY_CONVENTIONS = {
-    "salary_base", "salary_base_plus_prorated_bonus",
-    "salary_base_plus_bonuses_nflpa", "club_cost_per_player",
-    "qualifying_offer",
-    "signing_bonus", "roster_bonus", "reporting_bonus", "base_salary_year",
-    "option_year_pay", "performance_incentive", "additional_compensation",
-    "amount_actually_paid", "total_earnings_year", "contract_total_stated",
-}
+# The five named conventions, plus the itemised components nested under
+# `compensation_component.predicates`. Both come from the declaration.
+SALARY_CONVENTIONS = {c for c in _SAL["conventions"] if c != "compensation_component"}
+SALARY_CONVENTIONS |= set(_SAL["conventions"]["compensation_component"]["predicates"])
 
 # Anything that LOOKS like money must be one of the declared conventions. Without
 # this an undeclared name (e.g. `amount_actually_paid` before it was declared)

@@ -528,3 +528,87 @@ are not — a court's free-market estimate, an agent's deposition estimate, a tr
 damages award, a refused counter-offer, and a contracted total of which a fraction
 was paid. They are listed in `declarations/salary_conventions.json` so the next
 session meets them as data rather than rediscovering them.*
+
+---
+
+## An empty result and a failed one are the same bytes
+
+**Fourth instance, 2026-09-04.** Four times now, in four different mechanisms, an
+absence has been indistinguishable from a breakage:
+
+1. **archive.org 302** — a redirect to a login page, saved as a document. Recorded
+   in the original handoff.
+2. **The zero-byte cache** — `open(path,"wb")` ran before `urlopen()`, so a DNS
+   outage created ~700 empty files that the cache then served forever as valid.
+   28 NFL seasons read as "0 teams" and nothing objected.
+3. **`<tbody><td>` with no `<tr>`** — a regex that dropped every per-year row.
+   The conclusion nearly drawn was "1950 has no statistics."
+4. **13 team pages that parse to zero rows** while a league page links them —
+   CFL 1945–54 and the two WFL-1974 mid-season relocations. They contributed
+   nothing, and contributed it silently.
+
+Adjacent, same family: `AFL2 1936` and `NFLE 1997` render a league page and list
+no rosters; `CFL 2020` renders and lists no teams, because the season was
+cancelled. Both look exactly like a fetch that went wrong.
+
+**The rule: nothing may report an absence it did not expect.** An empty result is
+only information when something declared what a full one looks like. Concretely,
+three obligations:
+
+- **A fetch layer must never be able to cache a failure.** Fetch first, refuse
+  empty, write atomically. The cache is the thing that turns a transient failure
+  into a permanent fact.
+- **A parse that returns nothing must say so, loudly, against a declared
+  expectation.** Zero rows from a page a league links is a *deviation*, not a
+  nullity. It is now recorded per league-season in
+  `statscrew.json.empty_roster_pages`.
+- **A real absence must be declared before it is met, or refused when it is.**
+  `CFL-2020` is declared as a season not played; the ingest exits with that
+  reason rather than reporting a match-rate failure that invites a retry. A
+  retry would fetch the same empty page forever.
+
+**The tell to watch for is a suspiciously round success**: 100% fill, 0 errors,
+0 rows. Three of the four above announced themselves as clean results. The
+denominator defect found the same day is the same shape once more — `100%` was
+true, and it was computed over nothing.
+
+---
+
+## A declaration in the wrong place is not a declaration
+
+**Third instance, 2026-09-04, each in a new shape.**
+
+1. A declared value **computed and never referenced** (`JERSEY_USABLE`,
+   `GP_LEAGUE_RATE`).
+2. A declared value written to the right file, **the wrong block** — CFL
+   predictions under a new top-level `cfl` key while the ingest reads
+   `field_availability`. All 80 seasons reported *"declaration makes NO
+   prediction"*.
+3. A fact recorded as **prose that nothing enforces** — `league_codes` documented
+   that `AFL3` is the Arena Football League, a different sport that parses
+   without complaint. Documenting it did not prevent it.
+
+Each was found by reading the code. None would have been found by a check,
+because there was no check. There is now: `src/gate_declarations_are_read.py`
+asserts that every declaration key is read by something in `src/`.
+
+**Run against the existing declarations it failed on 107 of 176 keys** — the
+majority of what was written as declaration was note. Wiring the enforceable
+ones brought it to zero, and the exemptions live **in each declaration** under
+`_documentation_only`, not in the checker, so widening one shows up in a diff.
+
+**The worst case it exposed:** `model.py` duplicated the salary conventions as
+Python literals instead of reading `salary_conventions.json`. A convention added
+to the declaration was still refused — and the refusal message read *"Add it to
+declarations/salary_conventions.json"*, naming a fix that had no effect. The
+hardcoded system-predicate list had drifted to five entries against the
+declaration's nine.
+
+**The general form: a declaration is defined by being read, not by being
+written.** A file that describes policy nothing consults is documentation with a
+misleading filename, and it is more dangerous than no file, because the next
+person assumes the ingest honours it.
+
+*Corollary: the read-check is a string-literal grep, which is a proxy. It cannot
+see a key that is read and then ignored — only one that nothing so much as names.
+That is the failure it exists to catch, and the limit is stated in the gate.*

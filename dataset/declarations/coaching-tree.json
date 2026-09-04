@@ -1,63 +1,132 @@
 {
-  "source_id": "coaching-tree",
-  "name": "Coaching Tree (coaching-tree.app) — cached MCP responses",
-  "acquisition": "held",
-  "stated_by": "Coaching Tree",
-  "attribution": [],
-  "derived_from": null,
-  "local": {"root": "$PGM3_SOURCES/coachingtree", "files": 136,
-            "coach_records": 116, "error_responses": 10, "search_results": 10},
-  "note": "A MODERN AGGREGATOR. observed_at is the fetch date, not the season, which is why it LOSES to a club's own contemporaneous publication on role titles (policy@v4).",
-
-  "coverage": {
-    "stints": 2399, "span": "1951-2023",
-    "by_decade": {"1950": 45, "1960": 373, "1970": 846, "1980": 703,
-                  "1990": 326, "2000": 82, "2010": 18, "2020": 6},
-    "densest": "1970s",
-    "confirmed_absent": "nothing before 1951 in this cache - the pre-1936 CSV is the only material for that era"
+ "source_id": "coaching-tree",
+ "name": "Coaching Tree (coaching-tree.app) \u2014 cached MCP responses",
+ "acquisition": "held",
+ "stated_by": "Coaching Tree",
+ "attribution": [],
+ "derived_from": null,
+ "local": {
+  "root": "$PGM3_SOURCES/coachingtree",
+  "files": 136,
+  "coach_records": 116,
+  "error_responses": 10,
+  "search_results": 10
+ },
+ "note": "A MODERN AGGREGATOR. observed_at is the fetch date, not the season, which is why it LOSES to a club's own contemporaneous publication on role titles (policy@v4).",
+ "coverage": {
+  "stints": 2399,
+  "span": "1951-2023",
+  "by_decade": {
+   "1950": 45,
+   "1960": 373,
+   "1970": 846,
+   "1980": 703,
+   "1990": 326,
+   "2000": 82,
+   "2010": 18,
+   "2020": 6
   },
-
-  "person_id_scheme": {
-    "field": "slug",
-    "pattern": "name-derived, e.g. george-allen",
-    "collision_counter": false,
-    "warning": "A NAME-DERIVED slug has the namesake problem built in. Unlike StatsCrew's counter it carries no disambiguator, so it is usable as a WITHIN-SOURCE key and NOT as evidence of identity across sources."
-  },
-
-  "fields": {
-    "person_scope": ["birth_date", "birthplace", "college", "career_span"],
-    "stint_scope": ["year", "team", "roles", "is_head_coach"],
-    "graph": ["proteges", "mentors"]
-  },
-
-  "field_availability": {
-    "birth_date": {"kind": "constant", "measured": {"fill": 100.0, "n": 116},
-                   "verdict": "100% populated - but see known_conflicts; presence is not agreement"},
-    "roles": {"kind": "constant",
-              "measured_top": {"Head Coach": 646, "Defensive Coordinator": 235, "Offensive Line": 234,
-                               "Special Teams Assistant": 217, "Defensive Backs": 207},
-              "verdict": "MODERN title structure. Measured wrong on 3 of 5 teams checked against the clubs' own 1979 guides - it projects modern coordinator titles onto teams that did not use them."}
-  },
-
-  "discriminators": [
-    {"scope": "default", "order": ["birth_date", "stint_continuity"],
-     "excluded": ["slug"],
-     "reason": "the slug is name-derived and carries no collision counter"}
+  "densest": "1970s",
+  "confirmed_absent": "nothing before 1951 in this cache - the pre-1936 CSV is the only material for that era"
+ },
+ "person_id_scheme": {
+  "field": "slug",
+  "pattern": "name-derived, e.g. george-allen",
+  "collision_counter": false,
+  "warning": "A NAME-DERIVED slug has the namesake problem built in. Unlike StatsCrew's counter it carries no disambiguator, so it is usable as a WITHIN-SOURCE key and NOT as evidence of identity across sources."
+ },
+ "fields": {
+  "person_scope": [
+   "birth_date",
+   "birthplace",
+   "college",
+   "career_span"
   ],
-
-  "scores": [
-    {"predicate": "role_title", "method": "cross-check against clubs' own media guides",
-     "population": "5 teams, 1979", "n": 5, "result": "3 of 5 wrong", "date": "2026-08-31",
-     "consequence": "LOSES to media-guides on role_title under policy@v4"},
-    {"predicate": "birth_date", "method": "fill rate", "population": "cached coach records",
-     "n": 116, "result": "100% populated", "date": "2026-09-04"}
+  "stint_scope": [
+   "year",
+   "team",
+   "roles",
+   "is_head_coach"
   ],
-
-  "known_conflicts": [
-    {"predicate": "birth_date", "subject": "George Allen (coach)",
-     "this_source": "1918-04-29", "other_source": "statscrew c-allengeo001", "other_value": "1922-04-29",
-     "also": "college Alma here vs Marquette there; career_span 1957-1984 here vs 1966-1984 there",
-     "status": "contested",
-     "note": "The career-span difference is NOT a conflict - StatsCrew's c- namespace holds head-coaching years only, confirmed independently. The birth year IS."}
+  "graph": [
+   "proteges",
+   "mentors"
   ]
+ },
+ "field_availability": {
+  "birth_date": {
+   "kind": "constant",
+   "measured": {
+    "fill": 100.0,
+    "n": 116
+   },
+   "verdict": "100% populated - but see known_conflicts; presence is not agreement"
+  },
+  "roles": {
+   "kind": "constant",
+   "measured_top": {
+    "Head Coach": 646,
+    "Defensive Coordinator": 235,
+    "Offensive Line": 234,
+    "Special Teams Assistant": 217,
+    "Defensive Backs": 207
+   },
+   "verdict": "MODERN title structure. Measured wrong on 3 of 5 teams checked against the clubs' own 1979 guides - it projects modern coordinator titles onto teams that did not use them."
+  }
+ },
+ "discriminators": [
+  {
+   "scope": "default",
+   "order": [
+    "birth_date",
+    "stint_continuity"
+   ],
+   "excluded": [
+    "slug"
+   ],
+   "reason": "the slug is name-derived and carries no collision counter"
+  }
+ ],
+ "scores": [
+  {
+   "predicate": "role_title",
+   "method": "cross-check against clubs' own media guides",
+   "population": "5 teams, 1979",
+   "n": 5,
+   "result": "3 of 5 wrong",
+   "date": "2026-08-31",
+   "consequence": "LOSES to media-guides on role_title under policy@v4"
+  },
+  {
+   "predicate": "birth_date",
+   "method": "fill rate",
+   "population": "cached coach records",
+   "n": 116,
+   "result": "100% populated",
+   "date": "2026-09-04"
+  }
+ ],
+ "known_conflicts": [
+  {
+   "predicate": "birth_date",
+   "subject": "George Allen (coach)",
+   "this_source": "1918-04-29",
+   "other_source": "statscrew c-allengeo001",
+   "other_value": "1922-04-29",
+   "also": "college Alma here vs Marquette there; career_span 1957-1984 here vs 1966-1984 there",
+   "status": "contested",
+   "note": "The career-span difference is NOT a conflict - StatsCrew's c- namespace holds head-coaching years only, confirmed independently. The birth year IS."
+  }
+ ],
+ "_documentation_only": {
+  "name": "the source's human name; code keys on source_id",
+  "note": "free prose",
+  "local": "where the files sit on this machine; the scripts take paths as arguments",
+  "coverage": "a record of what was measured to exist, addressed to a reader",
+  "fields": "a human inventory; field_availability is the enforced one",
+  "scores": "provenance scoring notes, not yet an implemented policy",
+  "known_conflicts": "worked examples of conflicts already seen",
+  "person_id_scheme": "how the source builds its ids, with the traps; the ingest follows cross-reference links rather than parsing ids",
+  "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ - see src/gate_declarations_are_read.py. This list living in the declaration rather than in the gate means widening it shows up in a diff."
+ }
 }

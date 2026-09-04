@@ -1408,6 +1408,35 @@ whole grid, and even it is usable. **The primary discriminator holds back to
 1920, and across the AAFC and both AFL samples**, which is where identity work
 was expected to be thinnest.
 
+> ### Known limit: the discriminator fails entirely before 1950 in the CFL
+>
+> **Superseded in part, 2026-09-04, by a census.** The sentence above rests on a
+> 25-sample grid. The full sweep measured **CFL 1945 at 32.9% birth date** — not
+> 96%, not the 88.8% that report 06 later set as the floor across all
+> league-seasons. **Two thirds of those rosters carry no birth date at all.**
+>
+> The grid was not wrong; it was a sample, and it did not reach 1945 because the
+> CFL was assumed to start in 1958. This is the same lesson as the granularity
+> corrections in §7: *a sample tells you a field's typical value; only a census
+> tells you its range.*
+>
+> The consequence is structural, not cosmetic. §2.4 orders the discriminators
+> `source_native_id`, then `birth_date`, then `college`, then `position`. For
+> CFL 1945–1949 the first is present (the slug) but the second is absent for two
+> thirds of players, and `college` is only 56.7%. **For those seasons the design
+> has no discriminator beyond the source's own id.** That is enough to keep one
+> source's rows apart from each other; it is *not* enough to merge a person
+> across sources, and it is not enough to separate two men with the same name on
+> the same roster.
+>
+> **The rule for those seasons: same-name pairs are REFUSED, not resolved.**
+> This is shape 12 of §2.2 reached from the worst direction — no discriminator
+> at all rather than a weak one — and refusing is the only honest answer.
+> Anything else invents a distinction the sources do not support.
+>
+> The affected span is CFL 1945–1949 and, to a lesser degree, 1950–1957
+> (75–84%). It is declared in `statscrew.json` under `cfl.structural_boundaries`.
+
 **Three findings the measurement was not looking for:**
 
 1. **The era-dependent field is the jersey number, not birth date** — 60.4% in
