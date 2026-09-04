@@ -3833,3 +3833,49 @@ Run Game Coordinator title. The Gillman shape again.
 not exist, and three special-teams slots whose staffs carried nobody in the role.
 **Nothing else in that column is generated.** All four gates pass on all twenty
 files.
+
+### 72. The team media guides against the Coaching Tree, five 1979 teams — three role errors, two of them in our file
+
+Pittsburgh was the worst possible team to find the first contradiction on, so
+four more were pulled: Dallas, Miami, San Diego and the Rams, across both
+conferences. Every `_djvu.txt` confirmed on its own item first; all five cached
+at `pgm3-sources/nfl-books/text/`.
+
+| team | what our file holds | what the team's own 1979 guide says |
+|---|---|---|
+| **PIT** | Def Co-ord **George Perles** | **Woody Widenhofer**, Defensive Coordinator; Perles was Assistant Head Coach |
+| DAL | Reeves / Stautner / Ditka | **all three exactly** |
+| **MIA** | Special Teams **Steve Crosby** | **Carl Taseff** (Offensive Backs, Special Teams); Crosby was *Assistant Director of Player Personnel* |
+| LAC | Gibbs / Simpson / Sevier | **all three** |
+| LAR | Def Co-ord **Bud Carson** | **Bud Carson** — and the Coaching Tree had said Dan Radakovich, whom the guide lists as Offensive Line |
+
+**Three Coaching Tree role errors in five teams. Two reached the file.**
+
+- **Pittsburgh**: Perles written into the coordinator slot; the guide gives the
+  job to Widenhofer.
+- **Miami**: Steve Crosby written into special teams on the strength of a
+  "Special Teams Assistant" label. **He was a front-office scout that year.**
+- **The Rams**: the Coaching Tree gives Radakovich as defensive coordinator; the
+  guide has him coaching the offensive line and **Bud Carson** running the
+  defence. This one never reached the file — the slot was already `sourced` from
+  the original 1979 build, so the fill skipped it. **The original build agreed
+  with the team's own book and the newer source would have overwritten it.**
+
+**So the guides are the better authority and the sample says so, but they do not
+overturn everything.** Dallas and San Diego match on all six slots, and where the
+Coaching Tree gives a plain titled coordinator on a team that had one, it has
+been right. **It fails on teams whose staff did not use the modern title
+structure** — Pittsburgh's assistant head coach, Miami's "Asst. Head Coach,
+Defense", the Rams splitting coordinator duties — which is precisely the
+population the fallback rule was invented for.
+
+**What this implies for the 24 titled fills**, not yet acted on: they are not
+uniformly wrong, but they cannot be assumed right either, and the guides can
+settle every one of them — **1979 is complete at 28 of 28 teams.** The honest
+next step is to pull the remaining 23 and diff the whole season's staff against
+the file in one pass, rather than correcting Pittsburgh and Miami piecemeal.
+
+**Two confirmations worth keeping.** Both sources and the book agree Pittsburgh
+had no offensive coordinator and no special-teams coach in 1979, and Miami had no
+titled coordinator on either side — so the file's generated men in those slots
+are honest, not gaps.
