@@ -3879,3 +3879,50 @@ the file in one pass, rather than correcting Pittsburgh and Miami piecemeal.
 had no offensive coordinator and no special-teams coach in 1979, and Miami had no
 titled coordinator on either side — so the file's generated men in those slots
 are honest, not gaps.
+
+### 72 CONTINUED — all 28 guides pulled; the season diffed; two errors confirmed, no correction written
+
+All 28 of 1979's team guides are cached at `pgm3-sources/nfl-books/text/`, every
+`_djvu.txt` confirmed on its own item first, none restricted. The 84 coordinator
+slots were diffed against them. `wip/guide_diff_1979.csv`.
+
+**THE AUTOMATED DIFF IS NOT THE ANSWER, and saying so is the point.** A
+keyword-and-nearest-name matcher over 28 differently formatted OCR'd books
+returned 36 agree, 14 differ, 34 silent. **Reading the fourteen, most were the
+matcher's fault, not the file's:**
+
+- Kansas City: `Defensive Coordinator/Linebacker Coach ... Rod Rust` — we have Rod Rust. **Agrees.**
+- New England: `Ass't Head Coach, Def. Coordinator/Linebackers: Hank Bullough`, `Offensive Coordinator/Offensive Line: Jim Ringo` — both ours. **Agrees.**
+- The Jets: `Defensive Coordinator, Secondary ... John Mazur` — ours is Johnny Mazur. **Agrees.**
+- New Orleans: `ED HUGHES — Offensive Coordinator, Backfield` — ours. **Agrees.**
+- Washington: `COACHING STAFF OFFENSE—COORDINATOR ... Joe Walton` — ours. **Agrees.**
+
+**This is the same lesson as the search field, one layer up: a disappointing diff
+is a hypothesis about the file AND about the matcher, and the matcher is cheaper
+to test.** A compound title (`Def. Coordinator/Linebackers`), a dotted leader
+line, or an OCR'd surname is enough to make a correct record look wrong. The
+"34 silent" are mostly the same thing — books that name the job without ever
+using the phrase, like Cleveland's `Coach, Defensive Backs`.
+
+**CONFIRMED BY READING, not by matcher, and still only two:**
+
+- **Pittsburgh** — the guide gives the defensive coordinator to **Woody
+  Widenhofer**; we have George Perles, whom it lists as Assistant Head Coach.
+- **Miami** — the guide's staff list is `Asst. Head Coach, Defense: Bill
+  Arnsparger / Receivers: Dan Henning / Defensive Backs: Tom Keane / Offensive
+  Line: John Sandusky / Defensive Line: Mike Scarry / **Offensive Backs, Special
+  Teams: Carl Taseff**`. We have Steve Crosby on special teams, and the same book
+  lists him as **Assistant Director of Player Personnel**.
+
+**Several teams the diff called silent are in fact confirmations.** Cleveland's
+own block reads `Coach, Defensive Backs: CHUCK WEBER` and `Coach, Quarterbacks:
+JIM SHOFNER` — the two men the career-standing rule chose for that team's
+coordinator slots, arrived at independently. Cincinnati's book names **Howard
+Brinker Defensive Coordinator**, which is exactly what the file already held from
+the original build.
+
+**Nothing corrected.** Two records are wrong and the evidence is a primary
+document, but a full season-wide verdict needs the remaining slots adjudicated by
+reading rather than by matcher, and that is a per-team job of a different size
+from this pass. The two are named here so the correction is one command when
+ruled.
