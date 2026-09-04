@@ -27,6 +27,7 @@ class Store:
         self.persons = set()       # opaque ids only. NO attributes.
         self.claims = []           # list of dicts
         self.denotations = []
+        self.universe = set()   # subjects that EXIST, claimed or not
         self._by_subject = defaultdict(list)
         self._seq = 0
 
@@ -202,9 +203,15 @@ class Store:
         return f"{n} independent lineage group(s)" if n > 1 else "single source"
 
     # ---- persistence -----------------------------------------------------
+    def declare_subject(self, subject):
+        """A subject EXISTS. Without this, `unknown` is unreachable by construction:
+        a distribution computed over subjects-that-have-claims can never report it."""
+        self.universe.add(tuple(subject))
+
     def save(self, path):
         os.makedirs(os.path.dirname(path), exist_ok=True)
         json.dump({"persons": sorted(self.persons),
+                   "universe": sorted(list(x) for x in self.universe),
                    "source_records": self.source_records,
                    "claims": self.claims,
                    "denotations": self.denotations},

@@ -1,0 +1,288 @@
+[
+ {
+  "predicate": "position",
+  "subject": [
+   "person_season",
+   "p_000550",
+   "NFL-1950"
+  ],
+  "candidates": [
+   {
+    "value": {
+     "code": "LDT",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   },
+   {
+    "value": {
+     "code": "ROG",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   }
+  ]
+ },
+ {
+  "predicate": "position",
+  "subject": [
+   "person_season",
+   "p_000028",
+   "NFL-1950"
+  ],
+  "candidates": [
+   {
+    "value": {
+     "code": "MLB",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   },
+   {
+    "value": {
+     "code": "LB",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   }
+  ]
+ },
+ {
+  "predicate": "position",
+  "subject": [
+   "person_season",
+   "p_001563",
+   "NFL-1950"
+  ],
+  "candidates": [
+   {
+    "value": {
+     "code": "RDH-LDH-RO",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   },
+   {
+    "value": {
+     "code": "DB",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   }
+  ]
+ },
+ {
+  "predicate": "position",
+  "subject": [
+   "person_season",
+   "p_000649",
+   "NFL-1950"
+  ],
+  "candidates": [
+   {
+    "value": {
+     "code": "RDH",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   },
+   {
+    "value": {
+     "code": "ROH",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   }
+  ]
+ },
+ {
+  "predicate": "position",
+  "subject": [
+   "person_season",
+   "p_000136",
+   "NFL-1950"
+  ],
+  "candidates": [
+   {
+    "value": {
+     "code": "K",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   },
+   {
+    "value": {
+     "code": "FB",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   }
+  ]
+ },
+ {
+  "predicate": "position",
+  "subject": [
+   "person_season",
+   "p_000810",
+   "NFL-1950"
+  ],
+  "candidates": [
+   {
+    "value": {
+     "code": "LOG",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   },
+   {
+    "value": {
+     "code": "LOG-C",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   }
+  ]
+ },
+ {
+  "predicate": "position",
+  "subject": [
+   "person_season",
+   "p_000469",
+   "NFL-1950"
+  ],
+  "candidates": [
+   {
+    "value": {
+     "code": "HB",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   },
+   {
+    "value": {
+     "code": "LOH",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   }
+  ]
+ },
+ {
+  "predicate": "position",
+  "subject": [
+   "person_season",
+   "p_000307",
+   "NFL-1950"
+  ],
+  "candidates": [
+   {
+    "value": {
+     "code": "HB",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   },
+   {
+    "value": {
+     "code": "LOH",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   }
+  ]
+ },
+ {
+  "predicate": "position",
+  "subject": [
+   "person_season",
+   "p_000289",
+   "NFL-1950"
+  ],
+  "candidates": [
+   {
+    "value": {
+     "code": "LE",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   },
+   {
+    "value": {
+     "code": "LOE",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   }
+  ]
+ },
+ {
+  "predicate": "position",
+  "subject": [
+   "person_season",
+   "p_000010",
+   "NFL-1950"
+  ],
+  "candidates": [
+   {
+    "value": {
+     "code": "QB",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   },
+   {
+    "value": {
+     "code": "QB-K",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   }
+  ]
+ },
+ {
+  "predicate": "position",
+  "subject": [
+   "person_season",
+   "p_003655",
+   "NFL-1950"
+  ],
+  "candidates": [
+   {
+    "value": {
+     "code": "LDH",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   },
+   {
+    "value": {
+     "code": "RS-LOH",
+     "vocab": "statscrew"
+    },
+    "stated_by": "StatsCrew",
+    "attribution": []
+   }
+  ]
+ }
+]

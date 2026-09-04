@@ -1,0 +1,72 @@
+{
+ "nfl-1950.json": {
+  "bases_by_predicate": {
+   "also_coached": {
+    "observed": 32,
+    "unknown": 414
+   },
+   "birth_date": {
+    "observed": 446
+   },
+   "college": {
+    "observed": 446
+   },
+   "games_played": {
+    "observed": 460
+   },
+   "games_started": {
+    "observed": 460
+   },
+   "hometown": {
+    "absent": 1,
+    "observed": 445
+   },
+   "jersey": {
+    "observed": 460
+   },
+   "position": {
+    "contested": 11,
+    "observed": 435
+   }
+  },
+  "claims": 3252,
+  "denotations": 492,
+  "persons": 446,
+  "universe": 1352
+ },
+ "wfl-1974.json": {
+  "bases_by_predicate": {
+   "birth_date": {
+    "absent": 5,
+    "observed": 827
+   },
+   "college": {
+    "observed": 832
+   },
+   "games_played": {
+    "absent": 706,
+    "observed": 195
+   },
+   "games_started": {
+    "absent": 756,
+    "observed": 64,
+    "unknown": 81
+   },
+   "hometown": {
+    "absent": 57,
+    "observed": 775
+   },
+   "jersey": {
+    "absent": 92,
+    "observed": 809
+   },
+   "position": {
+    "observed": 832
+   }
+  },
+  "claims": 6226,
+  "denotations": 901,
+  "persons": 832,
+  "universe": 2565
+ }
+}
