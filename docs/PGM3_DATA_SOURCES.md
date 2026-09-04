@@ -1049,3 +1049,47 @@ books, whether or not the file can hold them.
 dates, and only then decide what a sweep looks like — 28 books for 1979 alone,
 and the caution stands that a `_djvu.txt` must be confirmed to exist per item
 rather than assumed from the collection.
+
+### The 1979 Steelers guide, pulled and read — the text is usable, and it corrects us
+
+`steelers-1979-media-guide-pittsburgh-c`, confirmed per item before fetching:
+`access-restricted-item` absent, and the file list carries a **`_djvu.txt` of
+411,807 bytes** beside the PDF, XML and hOCR. Cached at
+`pgm3-sources/nfl-books/text/`. Note the download needs `-L`: the first URL
+answers 302 and a fetch without redirect-following silently writes a zero-byte
+file, which is the failure mode that looks like an empty book.
+
+**What it contains.**
+
+A single **`COACHING STAFF` block naming every man with his exact role** — the
+thing no database in this project has:
+
+> CHUCK NOLL Head Coach · GEORGE PERLES Assistant Head Coach · ROLLIE DOTSCH
+> Offensive Line · DICK HOAK Offensive Backfield · TOM MOORE Receiver · LOUIS
+> RIECKE Strength · PAUL URAM Administrative Assistant · DICK WALKER Defensive
+> Backfield · **ROBERT (WOODY) WIDENHOFER Defensive Coordinator**
+
+Then a full biography per coach with career history, and medical and training
+staff by name — physicians, dentist, ophthalmologist, trainer, equipment and
+field managers, film director, photographer. **Birth dates are present** in the
+player bios (`Born: 11-1-56, Springhill, Louisiana`), 38 of them, plus an
+all-time roster back to 1933 with position and college.
+
+**AND IT CONTRADICTS THE SOURCE WE FILLED FROM.** The Coaching Tree gives
+Pittsburgh's 1979 defensive coordinator as **George Perles**, with Widenhofer on
+linebackers and defensive backs, and this session wrote Perles into that slot.
+**The Steelers' own book of that season says Widenhofer was the defensive
+coordinator and Perles was assistant head coach.**
+
+A team's own media guide is the better authority on its own staff than a
+third-party coaching database — it is the primary document — but this is one
+book against one database on one team, and the archive's rule is that a
+contradiction between documents is an escalation, not a tie for a tool to break.
+**Not corrected.** It needs a ruling, and it needs the same comparison run on
+more than one team before the general question is settled: **if the guides
+disagree with the Coaching Tree often, then the 24 titled fills of this session
+rest on the weaker source.**
+
+**Pittsburgh also had no special-teams coach and no offensive coordinator**,
+which both sources agree on and which our file still shows as generated and as
+Dotsch by inference respectively.
