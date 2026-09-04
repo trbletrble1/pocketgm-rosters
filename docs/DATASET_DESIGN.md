@@ -1052,17 +1052,19 @@ adjudicated a contest directly, the human's side held — RFM correct on 5 of 5
 decided contested cases against the archive.
 
 *(A "the archive was 4% right across a hundred photographs" figure was cited when
-this was ruled. I could not locate it in the repo — the photo-check samples I
-found are 5-of-5, 19-of-19 and 14-of-14, all small and all deliberately drawn
-from disagreements. The ruling does not depend on it and I have not used it. Worth
-knowing if the number is ever quoted as evidence for something else.)*
+this was ruled, and then corrected by the master session the same day: it is real
+but unwritten — Ryan judged 100 **disagreement** cases, the Mike period layers
+right on 95 of 99 decided and our archive on 4. Because the sample is drawn
+entirely from conflicts, it measures **where two sources disagree**, not the
+archive's accuracy. **Do not use it as evidence for anything.** The ruling does
+not rest on it.)*
 
 **Still a tuning question, and genuinely open:** can *five independent lineage
 groups* agreeing outrank a *single* source at the same rank? I think yes, by
 weight, within rank 2 — but that is a knob, not a principle, and it should be
 fitted rather than guessed.
 
-### 9.8 The boundary: a person whose football record is part of a larger record
+### 9.8 RULED — the boundary: a person whose football record is part of a larger record
 
 The two cases the brief named by hand — *two Bill Walshes on 1979 staffs* and *a
 coach and his senator son* — came from build-session reports and were never
@@ -1104,8 +1106,11 @@ senator case says the same thing from outside — a person is not exhausted by t
 football record either, and the model should be able to say so without trying to
 hold the rest.
 
-**Ruling wanted:** is "load-bearing for identity, plus an external pointer" the
-right line?
+**RULED (2026-09-04): yes.** The dataset holds a non-football fact only where it
+is load-bearing for identity, and where an external identifier exists it stores
+the pointer, not the biography. The observation that settled it: birthplace, high
+school and date of death are already in the store from StatsCrew, so the question
+was never *whether* non-football facts enter — only where the line sits.
 
 ---
 
