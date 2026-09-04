@@ -3691,6 +3691,16 @@ the men's, and the age pass will correct them against birth dates the source
 already carries. Listed in `wip/staff_age_gaps_1979_coordinators.csv` so that
 pass starts with them.
 
-**1979's coordinator column is now 84 real of 96**, the remaining twelve being
-the four franchises that did not exist and the three special-teams slots whose
-staffs carried nobody in the role. All four gates pass on all twenty files.
+**1979's coordinator column is now 67 real of 96** — measured, not estimated; I
+first wrote 84 here from memory and the count says 67. Twelve are the franchises
+that did not exist. **The other seventeen are still generated, and twelve of
+those are the fallback slots where career standing and title order AGREE** —
+Gilmer, McCormack, Shofner, Schnelker, Joe Spencer, Sandusky, Hollway, Dotsch,
+Nelsen, Arnsparger, Schottenheimer and Adams. They were held with the rest of the
+fallbacks while the rule was in question and were never written, because "write
+the nine" was the nine that CHANGED. The remaining five are the three special
+teams slots with no candidate on the staff at all (Atlanta, Minnesota,
+Pittsburgh) plus Arizona's offence and Cincinnati's, whose men the rule reaches
+but which sit behind the same hold.
+
+All four gates pass on all twenty files.
