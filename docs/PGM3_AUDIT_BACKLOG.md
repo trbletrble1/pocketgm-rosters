@@ -3045,6 +3045,39 @@ no `PHCL` and no archive colour; the answer key is `wip/hair_colour_for_ryan.key
 are almost entirely that one pair. Not two sources disagreeing about players —
 one mapping question with a thousand records behind it.
 
+#### CLOSED 2026-09-03 — `PHCL` is not merged, and the proposed swap was wrong
+
+Ryan photographed the 40. **The best fit is refuted and `HAIR_FAM` stands:**
+
+| mapping | scores |
+|---|---|
+| `HAIR_FAM` (0 black, 1 blond, 2 brown, 4 light brown) | **20/40 = 50%** |
+| best fit (0 black, 1 red, 2 light brown, 4 brown) | **7/40 = 18%** |
+| the archive's current label | 18/39 = 46% |
+
+**Value 2 is brown, 11 of 12** — the swap would have moved 1,339 records the
+wrong way on the strength of 39 men, and the photo pass is what stopped it.
+Value 1 is the light end but not red: blond and light brown together are 12 of
+16, **zero reds**. Value 4 does not separate at all — brown 7, light brown 4.
+
+**And the coarse fallback fails too, for a reason worth keeping.** `PHCL 0` →
+black, everything else → not-black reads 90% over the 117 men with truth — but
+**that is the skin correlation, not information**: dark-skinned men are 99% at
+`PHCL 0` and light-skinned men 11%, so the field is largely restating skin,
+which we already hold from a better source. **Restricted to light-skinned men,
+where the question actually lives, the coarse rule scores 86% against a 91%
+base rate for simply saying "not black" — worse than the constant guess**, and
+it is right on 1 of the 6 light-skinned men it calls black.
+
+**So hair colour is closed with `PHCL` unmerged.** Ryan's own reading is the
+finding: the light-brown and blond calls could go either way on many of the men,
+and the numbers agree — value 1 splits 7 to 5 between exactly those two, value 4
+splits 7 to 4. **Black versus not-black is solid and we already have it from
+skin; everything above it is noise in the source and in the evidence.** The
+five-way colour distinction is a two-way one wearing five labels.
+
+Verdicts kept in `wip/hair_colour_verdicts_ryan.csv`.
+
 
 ---
 
@@ -3065,3 +3098,34 @@ Faces gate unchanged (18 / 18), roster gate ALL CLEAR. **Beard is not gated
 across seasons**, so a 1979 man who also sits in 1986 may wear a different
 generated style there — the same class of thing as the hair-style randomness
 the handoff already records, and out of scope here.
+
+
+---
+
+### 60. The balding axis is assigned at random, archive-wide — Ryan's observation, measured
+
+**2026-09-03.** Ryan pointed out, while photographing the 40, that the sheet
+offered `bald` as a colour and that plenty of 1970s men were visibly balding
+while still having hair — balding is a separate axis from colour. It is, our
+vocabulary carries it, and **nothing sets it.**
+
+The screenshot-verified vocabulary has four relevant tokens: `i` receding at the
+temples, `k` horseshoe, `j` fully bald, `l` shaved with stubble. Measured over
+**21,935 rostered records across ten files**: `r(age, wears a balding style) =
++0.014`. Share balding by age band: 20s **20%**, 25s 20%, 30s 21%, 35s **23%**.
+Per file the balding-ish share runs 18–26% with the median age of the balding
+men equal to the median age of everyone else — 25 against 25 in 1979.
+
+**Both sub-axes are the same uniform draw.** Shaved (`j`+`l`) runs 11–13% of
+every file with the same dark-skin share as the file itself; male-pattern
+(`i`+`k`) runs 8–11% at the same median age as the rest. Neither is set from
+anything, and they are different things: **male-pattern balding is age-linked,
+shaving is a choice** that is era- and skin-linked.
+
+**Roughly 4,500 men across the archive wear a balding style unconnected to their
+age**, and in 1979 that is 452 men at a median age of 25. The handoff already
+recorded hair style as random; this names the part of it that is visibly wrong
+rather than merely arbitrary, and separates the two axes so a fix can treat
+them differently. **Measured and logged, not fixed** — the fix is a distribution
+question (what share of 25-year-old professional athletes visibly recede) and it
+belongs with the hair-style work, not with hair colour, which is now closed.
