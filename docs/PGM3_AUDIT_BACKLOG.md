@@ -3650,3 +3650,47 @@ team and apply it blind everywhere else, the picks go to Ryan as a list.
 **Three of those have no candidate at all**: Atlanta, Minnesota and Pittsburgh
 carried nobody in any special teams role in 1979. There is nothing to infer and
 they stay generated.
+
+#### 70 CONTINUED — the nine fallbacks written on career standing
+
+Ruled 2026-09-04 after the full twenty-one-slot comparison. `tools/fill_fallback_coordinators.py`.
+
+**Nine of twenty-one change when seniority means career standing rather than
+title rank**, and the causes split three ways — which is a better argument for
+the amendment than any single case:
+
+- **five had just arrived**: the title pick had five years or fewer, Sam Wyche
+  none at all, his entire career beginning on that 1979 San Francisco staff;
+- **five were former head coaches or coordinators working under a position
+  title**: North, Carpenter, Sumner, Gillman, Christiansen — moved or demoted
+  rather than new;
+- **one is neither**: Ollie Spencer, seventeen unbroken years on the Raiders'
+  offensive line, passed over because a five-year man shared his title.
+
+**No minimum margin, ruled explicitly.** Seattle's offence is the narrowest —
+Howard Mudd's five years against Jerry Rhome's three — and **the sidecar marks
+that record as the closest call in the table** so a reviewer knows where the rule
+is weakest. A threshold would be a second arbitrary rule protecting the first.
+
+**Twelve stand**, including Bill Arnsparger at Miami, the case Ryan named as the
+test: the rule reaches the same man under both readings. Detroit's defence ties
+on years and the tiebreak lands on Marty Schottenheimer, who had already been the
+Giants' coordinator in 1977 — the tiebreak and the seniority agreeing by
+accident. New York is the ruled case where every candidate began in 1979.
+
+**THREE OF THE NINE WERE ALREADY IN THE FILE, in the free-agent head-coach
+pool** — John North, Sid Gillman and Jack Christiansen, all former head coaches,
+which is why the 1979 build's coach pool caught them. Same defect as Ken Meyer,
+Jim Ringo and Tom Bettis, same ruling: they moved and their pool records were
+deleted. **The pool has now given up six men it should never have held**, 91 to
+85, while employed staff stays at exactly 288.
+
+**Seven of the nine sit on a visibly wrong age** — John North reads 36 and was
+58; Charlie Sumner reads 31 and was 49. Those are the slot's invented ages, not
+the men's, and the age pass will correct them against birth dates the source
+already carries. Listed in `wip/staff_age_gaps_1979_coordinators.csv` so that
+pass starts with them.
+
+**1979's coordinator column is now 84 real of 96**, the remaining twelve being
+the four franchises that did not exist and the three special-teams slots whose
+staffs carried nobody in the role. All four gates pass on all twenty files.

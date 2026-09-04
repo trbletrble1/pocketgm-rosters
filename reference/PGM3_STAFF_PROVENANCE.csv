@@ -31,16 +31,16 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,554C11ED-0C53-913D-7366-4C6C07C436D2,Head Coach,CAR,Bill Arnsparger,Bill Arnsparger,named by Ryan,exact (wip/staff_1979.csv)
 1979,70D5CDCA-2528-73B1-31DD-4765EA2365A9,Head Coach,JAX,Pat Dye,Pat Dye,named by Ryan,exact (wip/staff_1979.csv)
 1979,55F79DC1-C914-742F-8A0C-DD36C2A7AD3A,Head Coach,IND,John Madden,John Madden,named by Ryan,exact (wip/staff_1979.csv)
-1979,265755B1-9A6D-D6C8-50C0-A5422EAA0737,Off Co-ord,ATL,Kevin Thornton,Kevin Thornton,invented,exact (wip/staff_1979.csv)
+1979,265755B1-9A6D-D6C8-50C0-A5422EAA0737,Off Co-ord,ATL,Kevin Thornton,John North,real (name in a real source),"Coaching Tree: the 1979 ATL staff had no titled offensive coordinator, so the slot takes the senior assistant on that side by CAREER STANDING — John North had 14 years by 1979 against Ted Plumb's 5, whom title order would have chosen. INFERRED, not a titled coordinator; age not sourced. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
 1979,4BAC2783-9BE1-9D82-F6D5-F94666F7A043,Off Co-ord,BAL,Elvin Thurman,Caspian Brooks,invented,exact (wip/staff_1979.csv)
 1979,BA47085C-DCDA-AB2F-96DB-2B9B586BC2F6,Off Co-ord,BUF,Garo Whitehurst,Ray Prochaska,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 BUF; age not sourced, slot age retained"
 1979,C77E06F2-53EE-26E9-1964-462CE5138907,Off Co-ord,CHI,Aaron Parsons,Ken Meyer,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 CHI. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
 1979,FD08C74D-B971-4DFC-EBE2-45B92B4AD68A,Off Co-ord,CIN,Wilbur Browning,Kirk Marchbanks,invented,exact (wip/staff_1979.csv)
 1979,030FE3FA-90A5-42A5-F58A-87F411CF1251,Off Co-ord,CLE,Craig Payton,Dan Petrosian,invented,exact (wip/staff_1979.csv)
 1979,E30A2CC0-DD36-E2DE-298D-3251E24DEF8D,Off Co-ord,DAL,Dwight Tyler,Dan Reeves,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 DAL; age not sourced, slot age retained"
-1979,02F51705-513F-8D4C-8ED5-A7CF793A9DAB,Off Co-ord,DEN,Duriel Schamann,Perrin Fairweather,invented,exact (wip/staff_1979.csv)
+1979,02F51705-513F-8D4C-8ED5-A7CF793A9DAB,Off Co-ord,DEN,Duriel Schamann,Whitey Dovell,real (name in a real source),"Coaching Tree: the 1979 DEN staff had no titled offensive coordinator, so the slot takes the senior assistant on that side by CAREER STANDING — Whitey Dovell had 12 years by 1979 against Babe Parilli's 8, whom title order would have chosen. INFERRED, not a titled coordinator; age not sourced"
 1979,DE50DC60-565A-DF7E-CE1D-1AFAA8E23BE4,Off Co-ord,DET,Duke Bell,Pat Kromer,invented,exact (wip/staff_1979.csv)
-1979,314051B6-2F11-A8A7-5F6D-640D54B46DED,Off Co-ord,GB,Gus Kramer,Caspian Trowbridge,invented,exact (wip/staff_1979.csv)
+1979,314051B6-2F11-A8A7-5F6D-640D54B46DED,Off Co-ord,GB,Gus Kramer,Lew Carpenter,real (name in a real source),"Coaching Tree: the 1979 GB staff had no titled offensive coordinator, so the slot takes the senior assistant on that side by CAREER STANDING — Lew Carpenter had 15 years by 1979 against Zeke Bratkowski's 10, whom title order would have chosen. INFERRED, not a titled coordinator; age not sourced"
 1979,8925AE30-0223-D425-92DF-EFE4FAE05F13,Off Co-ord,HOU,Reggie Moore,Reggie Moore,invented,exact (wip/staff_1979.csv)
 1979,3AF2235D-2499-4628-7F27-11DC8D2741E6,Off Co-ord,KC,Dan Hardison,Jamie Oakhurst,invented,exact (wip/staff_1979.csv)
 1979,072905F0-26B4-E557-AE3D-01A8CE4C477A,Off Co-ord,LAR,Lionel Taylor,Lionel Taylor,sourced,exact (wip/staff_1979.csv)
@@ -50,12 +50,12 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,3B0365F6-B959-2DF5-9583-4B915A0F037F,Off Co-ord,NO,Ed Hughes,Ed Hughes,sourced,exact (wip/staff_1979.csv)
 1979,52F2170D-ABD8-0537-6DDF-8FBCF3BD108D,Off Co-ord,NYG,Craig Harrison,Craig Harrison,invented,exact (wip/staff_1979.csv)
 1979,675F0E1D-9A41-0C95-2ECA-A0F74CAA69E8,Off Co-ord,NYJ,Amos Elias,John Idzik,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 NYJ; age not sourced, slot age retained"
-1979,0315685A-0AA7-4AFB-14BE-113A7DB10E41,Off Co-ord,LV,Phillip Buchanon,Brian Oakleigh,invented,exact (wip/staff_1979.csv)
-1979,6EBE799C-768E-743D-579A-72003326B733,Off Co-ord,PHI,Dick Grogan,Cliff Evans,invented,exact (wip/staff_1979.csv)
+1979,0315685A-0AA7-4AFB-14BE-113A7DB10E41,Off Co-ord,LV,Phillip Buchanon,Ollie Spencer,real (name in a real source),"Coaching Tree: the 1979 LV staff had no titled offensive coordinator, so the slot takes the senior assistant on that side by CAREER STANDING — Ollie Spencer had 17 years by 1979 against Sam Boghosian's 5, whom title order would have chosen. INFERRED, not a titled coordinator; age not sourced"
+1979,6EBE799C-768E-743D-579A-72003326B733,Off Co-ord,PHI,Dick Grogan,Sid Gillman,real (name in a real source),"Coaching Tree: the 1979 PHI staff had no titled offensive coordinator, so the slot takes the senior assistant on that side by CAREER STANDING — Sid Gillman had 24 years by 1979 against Ken Iman's 3, whom title order would have chosen. INFERRED, not a titled coordinator; age not sourced. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
 1979,4312F07C-3C1B-C162-DFE5-F7FD9E30BDB3,Off Co-ord,PIT,Dewey Allerman,Jermaine Turner,invented,exact (wip/staff_1979.csv)
 1979,2155C740-EC55-012F-E9C0-CF0D1D2AA27A,Off Co-ord,LAC,Walt Csonka,Joe Gibbs,real (name in a real source),"Coaching Tree: titled Offensive Coordinator, 1979 LAC; age not sourced, slot age retained"
-1979,5C1ABC29-8A52-1C9B-0826-0A5AFB75B603,Off Co-ord,SEA,Louis Manucci,Zigmund Fairholm,invented,exact (wip/staff_1979.csv)
-1979,27C2DE33-3C6A-2ED5-6BBC-47B7476E0AD8,Off Co-ord,SF,Lem Kuykendall,Wes Quillen,invented,exact (wip/staff_1979.csv)
+1979,5C1ABC29-8A52-1C9B-0826-0A5AFB75B603,Off Co-ord,SEA,Louis Manucci,Howard Mudd,real (name in a real source),"Coaching Tree: the 1979 SEA staff had no titled offensive coordinator, so the slot takes the senior assistant on that side by CAREER STANDING — Howard Mudd had 5 years by 1979 against Jerry Rhome's 3, whom title order would have chosen. INFERRED, not a titled coordinator; age not sourced. THE CLOSEST CALL IN THE TABLE: five years against three, the narrowest margin on which this rule overturns title order anywhere in 1979"
+1979,27C2DE33-3C6A-2ED5-6BBC-47B7476E0AD8,Off Co-ord,SF,Lem Kuykendall,Bobb McKittrick,real (name in a real source),"Coaching Tree: the 1979 SF staff had no titled offensive coordinator, so the slot takes the senior assistant on that side by CAREER STANDING — Bobb McKittrick had 8 years by 1979 against Sam Wyche's 0, whom title order would have chosen. INFERRED, not a titled coordinator; age not sourced"
 1979,0C28EC97-1B2A-D5FE-FFD6-6EC22086A78E,Off Co-ord,ARI,Elvis Fugett,Adrian Brooks,invented,displaced from the defensive coordinator slot when Tom Bettis was placed in the job he actually held; this slot returns to the fallback list
 1979,82239F00-9BB5-1085-C4FF-F4E03AAC5E1E,Off Co-ord,TB,William Johnson,Bob Adams,invented,exact (wip/staff_1979.csv)
 1979,6BA98DA5-D54B-787A-D791-7D1EB6BD7342,Off Co-ord,WAS,Joe Walton,Joe Walton,sourced,exact (wip/staff_1979.csv)
@@ -82,11 +82,11 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,83EDA827-0FD0-902D-629A-A7137E8FECBB,Def Co-ord,NO,Paul Wiggin,Paul Wiggin,sourced,exact (wip/staff_1979.csv)
 1979,9EAF198A-7B88-7731-B1EB-BB42149DCAE0,Def Co-ord,NYG,Ralph Hawkins,Ralph Hawkins,sourced,exact (wip/staff_1979.csv)
 1979,05652B58-8AED-ADA8-FC20-D1AC1268AF87,Def Co-ord,NYJ,Allan Carter,Johnny Mazur,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 NYJ; age not sourced, slot age retained"
-1979,3D346F66-F9DC-548E-1F40-6CDFC27D8F07,Def Co-ord,LV,Rob Hunt,Garrick Bracewell,invented,exact (wip/staff_1979.csv)
+1979,3D346F66-F9DC-548E-1F40-6CDFC27D8F07,Def Co-ord,LV,Rob Hunt,Charlie Sumner,real (name in a real source),"Coaching Tree: the 1979 LV staff had no titled defensive coordinator, so the slot takes the senior assistant on that side by CAREER STANDING — Charlie Sumner had 16 years by 1979 against Myrel Moore's 7, whom title order would have chosen. INFERRED, not a titled coordinator; age not sourced"
 1979,C0FCD4DE-C955-9CC3-07AD-BC9FAC2CD836,Def Co-ord,PHI,Marion Campbell,Marion Campbell,sourced,exact (wip/staff_1979.csv)
 1979,832ABA87-E74E-B816-E2AF-82A733201ADF,Def Co-ord,PIT,Darrell Robiskie,George Perles,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 PIT; age not sourced, slot age retained"
 1979,69C090CD-4761-BDD3-1C18-E78121B080C1,Def Co-ord,LAC,Craig Krauss,Jacki Simpson,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 LAC; age not sourced, slot age retained"
-1979,CCE7849B-1F28-1254-BB36-364D53065B5B,Def Co-ord,SEA,Neil Wright,Sean Trumbull,invented,exact (wip/staff_1979.csv)
+1979,CCE7849B-1F28-1254-BB36-364D53065B5B,Def Co-ord,SEA,Neil Wright,Jack Christiansen,real (name in a real source),"Coaching Tree: the 1979 SEA staff had no titled defensive coordinator, so the slot takes the senior assistant on that side by CAREER STANDING — Jack Christiansen had 20 years by 1979 against Larry Peccatiello's 7, whom title order would have chosen. INFERRED, not a titled coordinator; age not sourced. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
 1979,7B16DC7A-2BCF-8D22-5E67-5798EBE41CB0,Def Co-ord,SF,Chuck Studley,Chuck Studley,sourced,exact (wip/staff_1979.csv)
 1979,80EBBEF0-3B30-288C-E90A-B1BDBE70724A,Def Co-ord,ARI,Garo Allerman,Tom Bettis,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 ARI. Moved out of the free-agent head-coach pool, where the 1979 build had parked him while an invented man held the job he actually had; his free-agent record is gone"
 1979,8753897F-DC3C-D7F8-239A-43406EC5C040,Def Co-ord,TB,Whitney Falcon,Tom Bass,real (name in a real source),"Coaching Tree: titled Defensive Coordinator, 1979 TB; age not sourced, slot age retained"
@@ -298,7 +298,6 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,74DFF401-E63A-512C-B4D8-7ECCCBA4DB5A,Head Coach,Free Agent,Tommy Hudspeth,Tommy Hudspeth,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,AFA24C09-76FA-5B64-B269-1452BBEDCA68,Head Coach,Free Agent,Rick Forzano,Rick Forzano,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,E990E59E-43BA-588E-AEB2-B8172E42BC8F,Head Coach,Free Agent,Tommy Prothro,Tommy Prothro,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,5CA8A5ED-B425-510D-B5A5-C234F07CFCFA,Head Coach,Free Agent,John North,John North,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,6FEF0398-2B42-5F68-A244-96F2D873909A,Head Coach,Free Agent,Pete McCulley,Pete McCulley,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,8C04958E-4E0A-5ADA-A1C2-A8D364E78A24,Head Coach,Free Agent,Fred O'Connor,Fred O'Connor,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,DE7F4F49-5098-55B1-9643-C68EE58DBA03,Head Coach,Free Agent,Dick Modzelewski,Dick Modzelewski,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
@@ -314,7 +313,6 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,E0625E5D-1E6F-507B-8D4C-378F8779FAC5,Head Coach,Free Agent,John Rauch,John Rauch,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,DE6A64F6-F3CB-5EF5-A8EE-6354C0F2B0CE,Head Coach,Free Agent,Buddy Parker,Buddy Parker,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,4A87E31D-AD84-57B5-94BF-067267989B43,Head Coach,Free Agent,Al Davis,Al Davis,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,296FA006-1EF5-56D5-ADEE-91899D521D91,Head Coach,Free Agent,Sid Gillman,Sid Gillman,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,32FC0438-230D-5150-A7F4-3BEED88E3E06,Head Coach,Free Agent,Frankie Albert,Frankie Albert,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,DF9B6762-F51C-5410-99E2-595A36993ABD,Head Coach,Free Agent,Joe Schmidt,Joe Schmidt,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,F5343AF6-30D9-5899-9A8A-1CA0F6CC7921,Head Coach,Free Agent,Allie Sherman,Allie Sherman,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
@@ -331,7 +329,6 @@ file,iden,role,teamID,name_before,name_after,provenance,how
 1979,A11E0ECF-7A94-57ED-8220-7D8EDA86C3A5,Head Coach,Free Agent,John Michelosen,John Michelosen,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,E6053637-D5EE-5496-91B4-B7D3A6AF6492,Head Coach,Free Agent,Joe Kuharich,Joe Kuharich,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,7F9AB49C-5BD2-5CA9-8B11-AAE248AB8E01,Head Coach,Free Agent,Otto Graham,Otto Graham,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
-1979,4923D620-2FCE-5392-83BE-9EFCC6920B9B,Head Coach,Free Agent,Jack Christiansen,Jack Christiansen,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,EBB841F4-DC18-52BF-9431-82531A2CF260,Head Coach,Free Agent,Buster Ramsey,Buster Ramsey,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,0931B808-84DB-51E7-B2E2-DB4C101E2E61,Head Coach,Free Agent,Norm Van Brocklin,Norm Van Brocklin,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
 1979,16449ABB-42A6-5915-8670-013223DAF410,Head Coach,Free Agent,Harry Gilmer,Harry Gilmer,"sourced (coach pool, PFR)",exact (wip/coach_pool_1979.csv)
