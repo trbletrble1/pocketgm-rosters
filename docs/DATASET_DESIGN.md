@@ -259,7 +259,7 @@ source declares what it carries and what can separate:
 |---|---|---|---|
 | StatsCrew roster pages | jersey, position, **birth date**, height, weight, college, hometown, GP, GS | birth date | (unmeasured pre-1930 — §9.2) |
 | footballdb 1979 rosters | jersey, position, games, age, **college** | college | two men, same college, same position |
-| media guides | staff role, biography, birth date, career history | birth date + club-season | men absent from the guide |
+| media guides | staff **title**, club, season, career-history prose; birth date only rarely (measured, below) | **stint continuity** — club + season + title + prior-stint narrative | men absent from the guide |
 | nflverse `players.csv` | birth date (100%), college, position, `pfr_id` | birth date | pre-1974 rookies |
 | Coaching Tree MCP | staff, birth dates, per-year stints | birth date | (role labels unreliable — §8.3) |
 | 2K5 archive | skin band, era **votes** | presence of a season vote from that year's file | same-position cross-era namesakes |
@@ -267,6 +267,37 @@ source declares what it carries and what can separate:
 
 The declaration is data, not code. Adding a source means declaring its fields and
 its discriminator, and the ingest refuses to run without one.
+
+**Media guides do not carry coach birth dates — measured 2026-09-04, and it moves
+assistant-coach identity onto a different mechanism.** Across the 28 cached 1979
+guide texts, matching 638 coach-title occurrences and reading the 1,200 characters
+following each:
+
+| | n | share |
+|---|---|---|
+| explicit `Born:` date | 17 | 2.7% |
+| age in prose only ("at 36 is the youngest…") | 37 | 5.8% |
+| neither | 584 | 91.5% |
+
+**21 of the 28 guides carry no birth date anywhere near a coaching title.** That
+file-level count is the robust one: the 638 denominator includes contents-page and
+roster-listing mentions as well as real bios, so 2.7% is a **lower bound** on
+bio-level coverage — but no plausible correction rescues a discriminator present
+in a quarter of the files and absent from the rest.
+
+*What the guides do carry, richly:* the **exact title** — Pittsburgh's 1979 entry
+reads "WOODY WIDENHOFER / Defensive Coordinator" — the club, the season, and career
+history in prose ("in his 15th year of coaching", "came to the Steelers in 1973").
+
+**So the discriminator for assistant coaches is stint continuity, not birth date**
+— the same mechanism §2.2 shape 11 needs for a man who changes position, reached
+from the opposite direction. An assistant is identified by the chain of club-seasons
+and titles his bios describe, and two men of one name are separated where their
+chains do not join. Frank Gansz Sr and Jr are separable this way (KC 1981–82 and a
+head-coaching spell, against Raiders 1998–2000 / Chiefs 2001–05 / Ravens 2006–07)
+because the chains are decades apart. **Two assistants of one name with adjacent or
+overlapping chains would not be**, and that case should be expected rather than
+hoped against — it is §2.2 shape 7 with its discriminator removed.
 
 **Tier C — refusal.** When no available field separates, emit `ambiguous` with the
 candidate person ids and the reason. Do not guess, do not take a mode, do not use
@@ -1086,14 +1117,12 @@ In order:
    coaches, resting on a bidirectional cross-reference rather than a string.
 2. **Measure §9.2** — birth-date fill rate per decade. An hour, and it decides the
    earliest era's discriminator.
-3. **New, and promoted by §9.1's result: measure assistant-coach identity in the
-   media guides.** This is now the largest unknown in the identity layer, because
-   Tier A does not reach it and the staff data is a stated goal of the project.
-   The question: do the 1979 guides carry birth dates in coach biographies densely
-   enough to serve as the discriminator, or does the Frank Gansz Sr/Jr class of
-   collision have nothing to separate it? Measurable today against the 28 cached
-   1979 guide texts. **I would do this before §9.2** — same cost, larger
-   consequence.
+3. ~~Measure assistant-coach identity in the media guides.~~ **Done 2026-09-04,
+   same day, because §9.1 promoted it.** Result in §2.4: birth dates are absent
+   (2.7% of coach-title bios; 21 of 28 guides have none), so assistant identity
+   rests on **stint continuity** instead. The consequence to carry forward is that
+   two same-named assistants with overlapping career chains have no discriminator
+   at all, and the design should expect to refuse those rather than resolve them.
 4. **Get rulings on §9.3, §9.5, §9.6, and §9.8's boundary.** §9.7 is ruled.
 5. Write the source declarations for StatsCrew and the media guides — the two
    backbone sources — including their discriminators and their absence semantics.
