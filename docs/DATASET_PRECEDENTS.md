@@ -428,3 +428,44 @@ Council, and the hearing says the 1979 figure came from the NFLPA's own review o
 1,500 contracts. **Two documents disagreeing about the provenance of one number
 is a real contest**, and it survived precisely because the definitional layer was
 peeled off first.
+
+---
+
+## Some predicates are set-valued, and treating them as single-valued manufactures contests
+
+2026-09-04, first coaching ingest. Resolution reported **344 contested role
+titles** out of 2,433 stints — a 14% contest rate on the predicate the media-guide
+declaration calls that source's strength.
+
+**All 344 came from a single source**, and the samples explain themselves:
+
+    Buffalo 1990   ['Pass Game Coordinator', 'Quarterbacks']   sources=['coaching-tree']
+
+Coaching Tree returns `roles` as a **list**. A coach holding two jobs in one season
+is not two sources disagreeing; it is one source stating a set. The ingest emitted
+one claim per element and the resolver, which assumes a subject holds one value per
+predicate, read them as competing.
+
+**The rule: a predicate declares whether it is single- or set-valued, and
+set-valued predicates UNION within a lineage group.** They contest only when two
+independent groups assert *different sets*. With `role_title` declared set-valued,
+344 contests became **zero**, and the one contest that remained was real — a
+compiler stating Red Grange's coaching lineage two different ways on two rows.
+
+**Why this is the same family as the other instrumentation bugs found today**: a
+false contest is the mirror of a vacuous pass. A gate that cannot fail reports
+success; a resolver that cannot represent multiplicity reports disagreement. **Both
+are the model failing to express the world and blaming the data.**
+
+**And the tell was the rate.** Fourteen percent of a predicate contested, from one
+source, with no second source present, is not credible — a contest needs at least
+two voices and there was only one. **Check the source count before believing a
+contest**; a single-source contest is either a source disagreeing with itself,
+which is rare and interesting, or a modelling error, which is common and dull.
+
+*Open, and honestly the same shape: the 11 contested positions in NFL 1950 are
+mid-season movers listed differently by their two clubs, and they were written to
+`person_season` scope. On the **stint** they are two single values and no contest
+exists at all. Whether position belongs on the stint, the person-season, or both
+is a scope question that has not been ruled — and until it is, those 11 should be
+read as a scope artifact rather than as evidence of anything.*

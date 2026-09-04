@@ -1,0 +1,41 @@
+{
+ "claims": 5720,
+ "denotations": 150,
+ "distinct_role_titles": 35,
+ "persons": 144,
+ "sources": [
+  "coaching-tree",
+  "pre1936-assistants",
+  "statscrew"
+ ],
+ "span": [
+  1921,
+  2023
+ ],
+ "stints": 2433,
+ "stints_by_decade": {
+  "1920": 6,
+  "1930": 15,
+  "1940": 0,
+  "1950": 58,
+  "1960": 373,
+  "1970": 846,
+  "1980": 703,
+  "1990": 326,
+  "2000": 82,
+  "2010": 18,
+  "2020": 6
+ },
+ "top_roles": {
+  "Defensive Backs": 207,
+  "Defensive Coordinator": 235,
+  "Defensive Line": 136,
+  "Head Coach": 659,
+  "Linebackers": 169,
+  "Offensive Coordinator": 144,
+  "Offensive Line": 234,
+  "Running Backs": 159,
+  "Special Teams Assistant": 217,
+  "Wide Receivers": 183
+ }
+}

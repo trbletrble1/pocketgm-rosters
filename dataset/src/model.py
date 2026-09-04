@@ -135,6 +135,32 @@ class Store:
                     "winning": [c["id"] for c in absences], "losing": [],
                     "policy": policy["version"]}
 
+        # SET-VALUED predicates union within a lineage group rather than competing.
+        if predicate in policy.get("set_valued", []):
+            by_group = defaultdict(list)
+            for c in positive:
+                by_group[self._lineage_group(c)].append(c)
+            sets = {g: tuple(sorted({json.dumps(c["value"], sort_keys=True) for c in cs}))
+                    for g, cs in by_group.items()}
+            distinct = set(sets.values())
+            if len(distinct) == 1:
+                vals = [json.loads(v) for v in next(iter(distinct))]
+                return {"subject": subject, "predicate": predicate,
+                        "value": vals if len(vals) > 1 else vals[0],
+                        "basis": "observed",
+                        "rule": "set-valued, union within lineage group",
+                        "winning": [c["id"] for c in positive], "losing": [],
+                        "policy": policy["version"]}
+            return {"subject": subject, "predicate": predicate, "value": None,
+                    "basis": "contested",
+                    "rule": "set-valued, lineage groups hold different sets",
+                    "winning": [], "losing": [c["id"] for c in positive],
+                    "candidates": [{"value": [json.loads(v) for v in s],
+                                    "stated_by": by_group[g][0]["stated_by"],
+                                    "attribution": by_group[g][0]["attribution"]}
+                                   for g, s in sets.items()],
+                    "policy": policy["version"]}
+
         # group by value; a claim with a non-empty attribution votes only in
         # stated_by's group, never the attributed party's.
         groups = defaultdict(list)

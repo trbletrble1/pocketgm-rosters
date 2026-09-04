@@ -1283,6 +1283,40 @@ is a third-party site's content.
    The career-span row is incidental corroboration of an earlier finding: 1966–1984
    against 1957–1984 is StatsCrew's `c-` namespace holding head-coaching years
    only, confirmed from a second source.
+
+   **MEASURED AT SCALE 2026-09-04, and the shape of the disagreement matters more
+   than the rate.** Coaching Tree's 116 cached coaches were resolved against
+   StatsCrew's `c-` namespace by constructing the slug and confirming the name:
+
+       AGREE                    68
+       DISAGREE                  5      agreement 68/73 = 93.2%
+       not found on StatsCrew   43      (naive slug construction, not a source gap)
+
+   | coach | Coaching Tree | StatsCrew | differs on |
+   |---|---|---|---|
+   | Bobby Ross | 1936-12-23 | 1935-12-23 | year only |
+   | Bud Carson | 1930-04-28 | 1931-04-28 | year only |
+   | George Allen | 1918-04-29 | 1922-04-29 | year only |
+   | Ron Erhardt | 1931-02-27 | 1932-02-27 | year only |
+   | Buddy Ryan | 1934-02-17 | 1934-02-16 | day |
+
+   **Four of five preserve day and month exactly and differ only in the year** —
+   three of them by exactly one. That is a signature, not noise, and it is
+   consistent with age misreporting, which is well documented in football.
+
+   **The consequence is a refinement, not a retreat: a discriminator's reliability
+   depends on what it is being asked.**
+
+   | question | is a contested birth date usable? |
+   |---|---|
+   | *is this the same man?* | **yes, strongly** — two different men would differ on day and month too, and 4 of 5 conflicts agree there |
+   | *when was he born?* | **no** — record `contested` |
+
+   So a birth-date conflict degrades the **value** and barely touches the
+   **identity** use. §2.4's Tier B may keep leaning on birth date; §3's value
+   layer must carry the contest. A denotation therefore records the matched value,
+   and a match on day-and-month with a differing year is a **weaker but still
+   valid** identity match that should be labelled as such.
 3. **Assistant coach coverage is absent, not thin.** Confirmed on Frank Gansz Jr.
    This is the finding that actually changes the plan — see §10.
 
