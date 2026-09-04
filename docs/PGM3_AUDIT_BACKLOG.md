@@ -3235,3 +3235,77 @@ file carrying a 97-rated prospect will not fail for a reason it cannot fix.
 answer; it was unenforceable because it lived in a transform rather than in the
 archive. Ruling it a property is what turned it into a gate — and the gate fires
 on all three pre-write files (2007 at 496, 1979 at 108, 2026 at 75).
+
+#### 54 PART-CLOSED 2026-09-03 — players reconciled and the gate green; staff escalated
+
+`tools/reconcile_faces.py`. The gates reported 18 players and 40 staff whose
+faces move between seasons. Measured, it was three unrelated things.
+
+**Five of the eighteen were namesakes**, and 36 exist archive-wide. Two men
+sharing a name and a position key to one person in a gate that has nothing else
+to key on. **The test is arithmetic, not judgement: for one man the age gap
+between two files tracks the year gap.** The 36 miss it by 7 to 41 years —
+Stanley Morgan and his son, Clay Matthews in 1979 and 2010, Mark Clayton in 1986
+and 2007, Patrick Surtain in 2000 and 2021, Marvin Harrison in 2004 and 2026.
+Recorded in the registry's new `_namesakes` block with the miss that found each,
+and the faces gate now reads that block, so the exemption is a fact rather than
+a silent skip.
+
+**One genuine skin error in the whole archive.** Only two disagreements cross
+the light/dark line and one of them is a namesake. Martin Gramatica reads dark
+in 2000 and light in 2004 and 2007; the majority rule corrects 2000.
+
+**Everything else was shade inside one side** — 23 records rewritten, family
+digit or hair token only, letters preserved so the aging variant keeps varying
+(48%, unchanged). A guard refuses to flip a pre-1990 man across light/dark
+against Mike's class; it fired on nobody.
+
+**The pass overwrote two verified faces on its first run and the gate caught
+it.** Verified men come in two key forms — modern `name|POS` in `faces`, 1986
+`name|POS|TEAM` in `faces_1986` — and matching only the first left Doug Flutie
+and Jerry Rice unprotected. Corrected, and the correction turned out to be worth
+more than the bug: for Flutie, Rice and Reggie White **the verified face is the
+1986 one and the modern entry is unverified**, so the fix propagates Ryan's
+photograph-set skin and hair FORWARD onto their 2000 and 2004 records. That is
+real sourced appearance data reaching four records that had assigned values.
+
+**The registry was brought onto the files** on the 149 entries where its head
+family disagreed, the direction item 54 ruled, verified entries untouched.
+`apply_registry_all.py` is safe to run again.
+
+**All seven player face checks pass.**
+
+#### 54 STAFF HALF — ESCALATED, not written: the registry contradicts itself
+
+**Of the 46 coaches carried in both registry blocks, 40 have different faces in
+the two, and every drifted file agrees exactly with the block that governs it.**
+Bill Parcells is the registry's `Head2c` in 1986 and its `Head1d` in 2004, 2007
+and 2010. **The files are applying the registry correctly. The registry holds
+two faces for one man.**
+
+The contradiction is inside one document: `_README` says "canonical face per
+person, so anyone appearing in several seasons looks the same"; `_scope` says
+the 1986 blocks are era-scoped. For a man who coached in both eras they cannot
+both hold, and a contradiction between documents is an escalation rather than a
+tie for a tool to break.
+
+**The evidence for the ruling.** The 1986 values are family 2 where the modern
+ones are family 1, and family 4 where Dennis Green's modern ones are 5. **Every
+pair sits on the same side of the light/dark line**, so no skin claim is in
+dispute — it reads as a different family convention in the 1986 block rather
+than a statement about any man. Two ways to settle it: the era block governs a
+man in his era, and the identical-face check exempts cross-era staff; or the
+canonical block governs and 40 1986 records are rewritten. `--staff` applies the
+second the moment it is ruled.
+
+The three staff face checks stay red until then, and that is the correct state.
+
+### 64. `J.R.` normalises to nothing — twelve records whose forename vanishes from the key
+
+Surfaced by the namesake pass. The shared `_norm` strips `jr` as a suffix, so
+`J.R.` collapses to an empty forename and the key becomes ` reed|S`. **Twelve
+records across eight files**: J.R. Reed, J.R. Redmond, J.R. Sweezy, J.R. Tolver,
+J.R. Russell, J.R. Ambrose. They key correctly to each other by luck, but any
+other `X.Y. Surname` at the same position would merge into them. Measured, not
+fixed — the normaliser is shared by the registry, the gates and every join, so
+changing it moves keys everywhere and needs its own pass.

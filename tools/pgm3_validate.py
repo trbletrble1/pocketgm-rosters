@@ -902,6 +902,19 @@ def faces(paths, kind='roster'):
             per[k][p] = r['appearance']
     multi = {k: v for k, v in per.items() if len(v) > 1}
 
+    # NAMESAKES ARE NOT DRIFT. Two different men sharing a name and a position
+    # -- Clay Matthews in 1979 and 2010, Mark Clayton in 1986 and 2007, Stanley
+    # Morgan and his son -- key to the same person here, and one-face-per-person
+    # does not apply to them. The exemption is READ FROM the registry's
+    # `_namesakes` block rather than hard-coded, so it is a recorded fact with
+    # the arithmetic that found it (the age gap must track the year gap) and not
+    # a silent skip. 36 pairs, written by tools/reconcile_faces.py.
+    _reg_ns = (_find_registry() or {}).get('_namesakes', {}).get('players', {})
+    _ns = {k for k in _reg_ns if kind == 'roster'}
+    if _ns:
+        multi = {k: v for k, v in multi.items() if k not in _ns}
+        res.append((f'namesakes exempted from one-face-per-person ({len(_ns)} recorded)', ''))
+
     famv = [k for k, v in multi.items()
             if len({split_tok(a[0])[1] for a in v.values()}) > 1]
     hairv = [k for k, v in multi.items() if len({a[2] for a in v.values()}) > 1]

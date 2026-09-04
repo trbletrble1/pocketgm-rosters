@@ -410,13 +410,13 @@
    "Clothes1"
   ],
   "aj epenesa|DE": [
-   "Head2b",
+   "Head4b",
    "Eyes1d",
    "Hair1s",
    "Beard1d",
    "Eyebrows1a",
-   "Nose2a",
-   "Mouth2b",
+   "Nose4d",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -1070,13 +1070,13 @@
    "Clothes1"
   ],
   "jordan kunaszyk|OLB": [
-   "Head5a",
+   "Head1a",
    "Eyes1a",
    "Hair1a",
    "Beard1g",
    "Eyebrows1a",
-   "Nose5c",
-   "Mouth5a",
+   "Nose1c",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -1554,13 +1554,13 @@
    "Clothes1"
   ],
   "elijah molden|CB": [
-   "Head2a",
+   "Head4a",
    "Eyes1b",
    "Hair1f",
    "Beard1d",
    "Eyebrows1b",
-   "Nose2b",
-   "Mouth2b",
+   "Nose4b",
+   "Mouth4b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -1609,13 +1609,13 @@
    "Clothes2"
   ],
   "anthony firkser|RB": [
-   "Head4a",
+   "Head1a",
    "Eyes1d",
    "Hair1d",
    "Beard1g",
    "Eyebrows1b",
-   "Nose4d",
-   "Mouth4a",
+   "Nose1d",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -1741,13 +1741,13 @@
    "Clothes1"
   ],
   "aaron brewer|OG": [
-   "Head4a",
+   "Head2a",
    "Eyes1c",
    "Hair3i",
    "Beard3e",
    "Eyebrows3b",
-   "Nose4c",
-   "Mouth4a",
+   "Nose2c",
+   "Mouth2a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -1785,13 +1785,13 @@
    "Clothes2"
   ],
   "corey levin|OG": [
-   "Head4b",
+   "Head3b",
    "Eyes1e",
    "Hair1a",
    "Beard1b",
    "Eyebrows1a",
-   "Nose4d",
-   "Mouth4b",
+   "Nose3d",
+   "Mouth3b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -1961,13 +1961,13 @@
    "Clothes1"
   ],
   "kyle peko|DT": [
-   "Head2b",
+   "Head4b",
    "Eyes1e",
    "Hair1j",
    "Beard1g",
    "Eyebrows1b",
-   "Nose2d",
-   "Mouth2b",
+   "Nose4d",
+   "Mouth4b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -2368,13 +2368,13 @@
    "Clothes2"
   ],
   "kristian welch|MLB": [
-   "Head4a",
+   "Head1a",
    "Eyes1a",
    "Hair1b",
    "Beard1d",
    "Eyebrows1a",
-   "Nose4c",
-   "Mouth4a",
+   "Nose1c",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -2489,13 +2489,13 @@
    "Clothes1"
   ],
   "josh oliver|TE": [
-   "Head2a",
+   "Head4b",
    "Eyes1e",
    "Hair1f",
    "Beard1g",
    "Eyebrows1b",
-   "Nose2b",
-   "Mouth2b",
+   "Nose4a",
+   "Mouth4b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -2522,13 +2522,13 @@
    "Clothes1"
   ],
   "patrick mekari|OT": [
-   "Head5b",
+   "Head1b",
    "Eyes1c",
    "Hair1b",
    "Beard1g",
    "Eyebrows1b",
-   "Nose5a",
-   "Mouth5a",
+   "Nose1a",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -3831,13 +3831,13 @@
    "Clothes1"
   ],
   "quinnen williams|DT": [
-   "Head2b",
+   "Head5b",
    "Eyes1e",
    "Hair1f",
    "Beard1a",
    "Eyebrows1b",
-   "Nose2b",
-   "Mouth2a",
+   "Nose5c",
+   "Mouth5b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -3952,13 +3952,13 @@
    "Clothes1"
   ],
   "trevon wesco|TE": [
-   "Head2b",
+   "Head4b",
    "Eyes1b",
    "Hair1n",
    "Beard1c",
    "Eyebrows1b",
-   "Nose2c",
-   "Mouth2a",
+   "Nose4c",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -4348,13 +4348,13 @@
    "Clothes1"
   ],
   "isaiah williams|OT": [
-   "Head3a",
+   "Head5a",
    "Eyes1b",
    "Hair1l",
    "Beard1g",
    "Eyebrows1b",
-   "Nose3b",
-   "Mouth3b",
+   "Nose5b",
+   "Mouth5b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -4425,13 +4425,13 @@
    "Clothes1"
   ],
   "will harris|S": [
-   "Head2a",
+   "Head5a",
    "Eyes1a",
    "Hair1j",
    "Beard1b",
    "Eyebrows1a",
-   "Nose2c",
-   "Mouth2b",
+   "Nose5c",
+   "Mouth5b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -4535,13 +4535,13 @@
    "Clothes1"
   ],
   "jonah jackson|OG": [
-   "Head1b",
+   "Head4b",
    "Eyes1e",
    "Hair1b",
    "Beard1c",
    "Eyebrows1b",
-   "Nose1c",
-   "Mouth1b",
+   "Nose4a",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -4843,24 +4843,24 @@
    "Clothes1"
   ],
   "tom kennedy|WR": [
-   "Head4a",
+   "Head2a",
    "Eyes1a",
    "Hair1j",
    "Beard1d",
    "Eyebrows1b",
-   "Nose4b",
-   "Mouth4b",
+   "Nose2b",
+   "Mouth2b",
    "Glasses1e",
    "Clothes1"
   ],
   "brock wright|TE": [
-   "Head4a",
+   "Head1b",
    "Eyes1b",
    "Hair1q",
    "Beard1d",
    "Eyebrows1a",
-   "Nose4b",
-   "Mouth4a",
+   "Nose1c",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -5305,13 +5305,13 @@
    "Clothes2"
   ],
   "younghoe koo|K": [
-   "Head1a",
+   "Head4a",
    "Eyes1c",
    "Hair3e",
    "Beard3a",
    "Eyebrows3b",
-   "Nose1b",
-   "Mouth1a",
+   "Nose4b",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -5349,13 +5349,13 @@
    "Clothes1"
   ],
   "jalen mayfield|OG": [
-   "Head1b",
+   "Head4b",
    "Eyes1d",
    "Hair1c",
    "Beard1e",
    "Eyebrows1a",
-   "Nose1a",
-   "Mouth1b",
+   "Nose4a",
+   "Mouth4b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -5668,13 +5668,13 @@
    "Clothes2"
   ],
   "feleipe franks|QB": [
-   "Head1a",
+   "Head4a",
    "Eyes1d",
    "Hair1j",
    "Beard1a",
    "Eyebrows1a",
-   "Nose1d",
-   "Mouth1b",
+   "Nose4d",
+   "Mouth4b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -5910,13 +5910,13 @@
    "Clothes1"
   ],
   "austin trammell|WR": [
-   "Head4a",
+   "Head2a",
    "Eyes1b",
    "Hair5d",
    "Beard5g",
    "Eyebrows5a",
-   "Nose4a",
-   "Mouth4a",
+   "Nose2a",
+   "Mouth2a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -6020,13 +6020,13 @@
    "Clothes1"
   ],
   "morgan fox|DE": [
-   "Head4b",
+   "Head1b",
    "Eyes1e",
    "Hair1f",
    "Beard1e",
    "Eyebrows1b",
-   "Nose4d",
-   "Mouth4b",
+   "Nose1d",
+   "Mouth1b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -6812,13 +6812,13 @@
    "Clothes1"
   ],
   "ross matiscik|TE": [
-   "Head4a",
+   "Head1a",
    "Eyes1d",
    "Hair1l",
    "Beard1g",
    "Eyebrows1a",
-   "Nose4b",
-   "Mouth4a",
+   "Nose1b",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -7560,13 +7560,13 @@
    "Clothes1"
   ],
   "jonah williams|OT": [
-   "Head4b",
+   "Head3b",
    "Eyes1a",
    "Hair3j",
    "Beard3g",
    "Eyebrows3b",
-   "Nose4b",
-   "Mouth4a",
+   "Nose3b",
+   "Mouth3a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -7736,13 +7736,13 @@
    "Clothes2"
   ],
   "isaiah prince|OT": [
-   "Head2b",
+   "Head4b",
    "Eyes1c",
    "Hair1s",
    "Beard1b",
    "Eyebrows1b",
-   "Nose2c",
-   "Mouth2a",
+   "Nose4c",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -7978,13 +7978,13 @@
    "Clothes1"
   ],
   "trenton irwin|WR": [
-   "Head5a",
+   "Head1a",
    "Eyes1d",
    "Hair5l",
    "Beard5g",
    "Eyebrows5a",
-   "Nose5c",
-   "Mouth5b",
+   "Nose1c",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -8022,13 +8022,13 @@
    "Clothes1"
   ],
   "fred johnson|OG": [
-   "Head2b",
+   "Head5b",
    "Eyes1e",
    "Hair1r2",
    "Beard1f1",
    "Eyebrows1a",
-   "Nose2a",
-   "Mouth2a",
+   "Nose5a",
+   "Mouth5a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -8407,13 +8407,13 @@
    "Clothes1"
   ],
   "nick martin|C": [
-   "Head1b",
+   "Head5b",
    "Eyes1d",
    "Hair3a",
    "Beard3a",
    "Eyebrows3b",
-   "Nose1a",
-   "Mouth1b",
+   "Nose5a",
+   "Mouth5b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -8880,13 +8880,13 @@
    "Clothes1"
   ],
   "jackson barton|OT": [
-   "Head4b",
+   "Head1b",
    "Eyes1a",
    "Hair2j",
    "Beard2e",
    "Eyebrows2a",
-   "Nose4c",
-   "Mouth4a",
+   "Nose1c",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -9309,13 +9309,13 @@
    "Clothes1"
   ],
   "elijah wilkinson|OT": [
-   "Head1b",
+   "Head5d",
    "Eyes1a",
    "Hair5d",
    "Beard5b",
    "Eyebrows5a",
-   "Nose1b",
-   "Mouth1b",
+   "Nose5b",
+   "Mouth5a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -9529,13 +9529,13 @@
    "Clothes1"
   ],
   "teven jenkins|OT": [
-   "Head1b",
+   "Head4b",
    "Eyes1e",
    "Hair3h",
    "Beard3g",
    "Eyebrows3a",
-   "Nose1a",
-   "Mouth1a",
+   "Nose4a",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -9980,13 +9980,13 @@
    "Clothes1"
   ],
   "luke rhodes|TE": [
-   "Head5a",
+   "Head1a",
    "Eyes1d",
    "Hair1f",
    "Beard1g",
    "Eyebrows1a",
-   "Nose5d",
-   "Mouth5b",
+   "Nose1d",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -11355,13 +11355,13 @@
    "Clothes1"
   ],
   "byron murphy|CB": [
-   "Head2a",
+   "Head4a",
    "Eyes1e",
    "Hair1f",
    "Beard1f1",
    "Eyebrows1b",
-   "Nose2c",
-   "Mouth2b",
+   "Nose4d",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -12015,13 +12015,13 @@
    "Clothes1"
   ],
   "blake hance|OT": [
-   "Head4b",
+   "Head1b",
    "Eyes1b",
    "Hair1r2",
    "Beard1b",
    "Eyebrows1a",
-   "Nose4c",
-   "Mouth4a",
+   "Nose1c",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -12180,13 +12180,13 @@
    "Clothes1"
   ],
   "sione takitaki|OLB": [
-   "Head2a",
+   "Head4a",
    "Eyes1d",
    "Hair1p",
    "Beard1f2",
    "Eyebrows1b",
-   "Nose2a",
-   "Mouth2a",
+   "Nose4a",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -12312,13 +12312,13 @@
    "Clothes1"
   ],
   "jedrick wills|OT": [
-   "Head1b",
+   "Head4b",
    "Eyes1a",
    "Hair3k",
    "Beard3e",
    "Eyebrows3b",
-   "Nose1a",
-   "Mouth1b",
+   "Nose4a",
+   "Mouth4b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -12807,13 +12807,13 @@
    "Clothes1"
   ],
   "taylor rapp|S": [
-   "Head2a",
+   "Head4a",
    "Eyes1e",
    "Hair1q",
    "Beard1a",
    "Eyebrows1b",
-   "Nose2c",
-   "Mouth2b",
+   "Nose4c",
+   "Mouth4b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -12840,13 +12840,13 @@
    "Clothes1"
   ],
   "troy reeder|MLB": [
-   "Head5a",
+   "Head1a",
    "Eyes1d",
    "Hair1h",
    "Beard1g",
    "Eyebrows1b",
-   "Nose5c",
-   "Mouth5b",
+   "Nose1c",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -12862,13 +12862,13 @@
    "Clothes2"
   ],
   "michael hoecht|DE": [
-   "Head4b",
+   "Head1b",
    "Eyes1e",
    "Hair3h",
    "Beard3g",
    "Eyebrows3b",
-   "Nose4b",
-   "Mouth4a",
+   "Nose1d",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -13038,13 +13038,13 @@
    "Clothes1"
   ],
   "ben skowronek|WR": [
-   "Head4a",
+   "Head1a",
    "Eyes1b",
    "Hair5l",
    "Beard5c",
    "Eyebrows5b",
-   "Nose4a",
-   "Mouth4b",
+   "Nose1a",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -13808,13 +13808,13 @@
    "Clothes1"
   ],
   "kaden elliss|OLB": [
-   "Head2a",
+   "Head4a",
    "Eyes1a",
    "Hair1r1",
    "Beard1e",
    "Eyebrows1b",
-   "Nose2a",
-   "Mouth2a",
+   "Nose4a",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -13918,13 +13918,13 @@
    "Clothes2"
   ],
   "liljordan humphrey|WR": [
-   "Head2a",
+   "Head4a",
    "Eyes1d",
    "Hair3i",
    "Beard3f2",
    "Eyebrows3a",
-   "Nose2d",
-   "Mouth2a",
+   "Nose4c",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -14039,13 +14039,13 @@
    "Clothes2"
   ],
   "adam prentice|RB": [
-   "Head4a",
+   "Head3a",
    "Eyes1e",
    "Hair1h",
    "Beard1g",
    "Eyebrows1b",
-   "Nose4c",
-   "Mouth4b",
+   "Nose3c",
+   "Mouth3b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -14710,13 +14710,13 @@
    "Clothes2"
   ],
   "brett toth|OT": [
-   "Head4b",
+   "Head3b",
    "Eyes1d",
    "Hair3g",
    "Beard3g",
    "Eyebrows3a",
-   "Nose4a",
-   "Mouth4b",
+   "Nose3a",
+   "Mouth3b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -14831,13 +14831,13 @@
    "Clothes1"
   ],
   "isaac seumalo|OG": [
-   "Head2b",
+   "Head4d",
    "Eyes1a",
    "Hair1p",
    "Beard1e",
    "Eyebrows1a",
-   "Nose2b",
-   "Mouth2b",
+   "Nose4b",
+   "Mouth4b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -15084,13 +15084,13 @@
    "Clothes1"
   ],
   "armon watts|DT": [
-   "Head2b",
+   "Head5b",
    "Eyes1b",
    "Hair1h",
    "Beard1g",
    "Eyebrows1a",
-   "Nose2d",
-   "Mouth2a",
+   "Nose5d",
+   "Mouth5a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -15117,13 +15117,13 @@
    "Clothes1"
   ],
   "troy dye|MLB": [
-   "Head2a",
+   "Head4a",
    "Eyes1e",
    "Hair3b",
    "Beard3g",
    "Eyebrows3a",
-   "Nose2b",
-   "Mouth2a",
+   "Nose4b",
+   "Mouth4a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -15271,13 +15271,13 @@
    "Clothes1"
   ],
   "kris boyd|CB": [
-   "Head2a",
+   "Head5a",
    "Eyes1a",
    "Hair1l",
    "Beard1g",
    "Eyebrows1a",
-   "Nose2a",
-   "Mouth2a",
+   "Nose5a",
+   "Mouth5a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -15458,13 +15458,13 @@
    "Clothes1"
   ],
   "dan chisena|WR": [
-   "Head4a",
+   "Head3a",
    "Eyes1a",
    "Hair2a",
    "Beard2g",
    "Eyebrows2b",
-   "Nose4c",
-   "Mouth4b",
+   "Nose3c",
+   "Mouth3b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -16063,13 +16063,13 @@
    "Clothes1"
   ],
   "albert okwuegbunam|TE": [
-   "Head2a",
+   "Head4a",
    "Eyes1d",
    "Hair1b",
    "Beard1d",
    "Eyebrows1b",
-   "Nose2b",
-   "Mouth2a",
+   "Nose4b",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -16371,13 +16371,13 @@
    "Clothes1"
   ],
   "jonathan harris|DT": [
-   "Head1b",
+   "Head5b",
    "Eyes1a",
    "Hair1h",
    "Beard1d",
    "Eyebrows1a",
-   "Nose1b",
-   "Mouth1b",
+   "Nose5b",
+   "Mouth5b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -16987,13 +16987,13 @@
    "Clothes1"
   ],
   "elijah campbell|CB": [
-   "Head2a",
+   "Head4a",
    "Eyes1a",
    "Hair1s",
    "Beard1g",
    "Eyebrows1a",
-   "Nose2a",
-   "Mouth2a",
+   "Nose4a",
+   "Mouth4a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -17053,13 +17053,13 @@
    "Clothes1"
   ],
   "sheldrick redwine|S": [
-   "Head2a",
+   "Head4a",
    "Eyes1a",
    "Hair1b",
    "Beard1b",
    "Eyebrows1b",
-   "Nose2a",
-   "Mouth2b",
+   "Nose4a",
+   "Mouth4b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -17515,13 +17515,13 @@
    "Clothes1"
   ],
   "gunner olszewski|WR": [
-   "Head4a",
+   "Head1a",
    "Eyes1b",
    "Hair1h",
    "Beard1g",
    "Eyebrows1b",
-   "Nose4a",
-   "Mouth4b",
+   "Nose1d",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -17680,13 +17680,13 @@
    "Clothes1"
   ],
   "yodny cajuste|OT": [
-   "Head2b",
+   "Head5b",
    "Eyes1a",
    "Hair1h",
    "Beard1e",
    "Eyebrows1a",
-   "Nose2b",
-   "Mouth2b",
+   "Nose5b",
+   "Mouth5b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -18373,13 +18373,13 @@
    "Clothes1"
   ],
   "scotty miller|WR": [
-   "Head5a",
+   "Head1a",
    "Eyes1c",
    "Hair1b",
    "Beard1b",
    "Eyebrows1a",
-   "Nose5b",
-   "Mouth5b",
+   "Nose1b",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -18681,13 +18681,13 @@
    "Clothes1"
   ],
   "christian kuntz|MLB": [
-   "Head4a",
+   "Head1a",
    "Eyes1d",
    "Hair1i",
    "Beard1g",
    "Eyebrows1b",
-   "Nose4d",
-   "Mouth4a",
+   "Nose1d",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -18736,13 +18736,13 @@
    "Clothes1"
   ],
   "alex highsmith|OLB": [
-   "Head2a",
+   "Head4a",
    "Eyes1a",
    "Hair1e",
    "Beard1c",
    "Eyebrows1b",
-   "Nose2d",
-   "Mouth2a",
+   "Nose4b",
+   "Mouth4b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -19099,13 +19099,13 @@
    "Clothes2"
   ],
   "john leglue|OG": [
-   "Head5b",
+   "Head1b",
    "Eyes1d",
    "Hair4g",
    "Beard4g",
    "Eyebrows4b",
-   "Nose5d",
-   "Mouth5b",
+   "Nose1d",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -19330,13 +19330,13 @@
    "Clothes1"
   ],
   "will hernandez|OG": [
-   "Head2b",
+   "Head4b",
    "Eyes1a",
    "Hair1q",
    "Beard1e",
    "Eyebrows1b",
-   "Nose2c",
-   "Mouth2a",
+   "Nose4c",
+   "Mouth4a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -20012,24 +20012,24 @@
    "Clothes1"
   ],
   "dante pettis|WR": [
-   "Head2a",
+   "Head4a",
    "Eyes1d",
    "Hair2a",
    "Beard2b",
    "Eyebrows2b",
-   "Nose2b",
-   "Mouth2a",
+   "Nose4b",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
   "alex bachman|WR": [
-   "Head4a",
+   "Head3a",
    "Eyes1b",
    "Hair5h",
    "Beard5g",
    "Eyebrows5b",
-   "Nose4a",
-   "Mouth4a",
+   "Nose3a",
+   "Mouth3a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -20100,13 +20100,13 @@
    "Clothes1"
   ],
   "poona ford|DT": [
-   "Head1a",
+   "Head4d",
    "Eyes1a",
    "Hair1n",
    "Beard1g",
    "Eyebrows1a",
-   "Nose1c",
-   "Mouth1a",
+   "Nose4c",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -20353,13 +20353,13 @@
    "Clothes2"
   ],
   "jake curhan|OT": [
-   "Head5b",
+   "Head1b",
    "Eyes1e",
    "Hair1l",
    "Beard1f1",
    "Eyebrows1b",
-   "Nose5c",
-   "Mouth5b",
+   "Nose1c",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -20771,13 +20771,13 @@
    "Clothes1"
   ],
   "storm norton|OT": [
-   "Head5b",
+   "Head1d",
    "Eyes1c",
    "Hair1a",
    "Beard1f2",
    "Eyebrows1b",
-   "Nose5a",
-   "Mouth5b",
+   "Nose1b",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -20793,13 +20793,13 @@
    "Clothes1"
   ],
   "josh palmer|WR": [
-   "Head1a",
+   "Head4a",
    "Eyes1d",
    "Hair1b",
    "Beard1c",
    "Eyebrows1b",
-   "Nose1d",
-   "Mouth1b",
+   "Nose4c",
+   "Mouth4b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -21112,13 +21112,13 @@
    "Clothes1"
   ],
   "joe gaziano|DE": [
-   "Head5b",
+   "Head3b",
    "Eyes1a",
    "Hair1n",
    "Beard1g",
    "Eyebrows1a",
-   "Nose5a",
-   "Mouth5b",
+   "Nose3a",
+   "Mouth3b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -21398,13 +21398,13 @@
    "Clothes1"
   ],
   "cole christiansen|MLB": [
-   "Head4a",
+   "Head2a",
    "Eyes1b",
    "Hair1e",
    "Beard1e",
    "Eyebrows1a",
-   "Nose4c",
-   "Mouth4b",
+   "Nose2c",
+   "Mouth2b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -21486,13 +21486,13 @@
    "Clothes1"
   ],
   "michael bandy|WR": [
-   "Head4a",
+   "Head3a",
    "Eyes1d",
    "Hair1q",
    "Beard1a",
    "Eyebrows1a",
-   "Nose4a",
-   "Mouth4b",
+   "Nose3a",
+   "Mouth3b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -21816,13 +21816,13 @@
    "Clothes1"
   ],
   "michael burton|RB": [
-   "Head4a",
+   "Head3c",
    "Eyes1e",
    "Hair3e",
    "Beard3g",
    "Eyebrows3b",
-   "Nose4d",
-   "Mouth4b",
+   "Nose3b",
+   "Mouth3b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -22058,13 +22058,13 @@
    "Clothes1"
   ],
   "zayne anderson|S": [
-   "Head4a",
+   "Head3a",
    "Eyes1e",
    "Hair5g",
    "Beard5g",
    "Eyebrows5b",
-   "Nose4a",
-   "Mouth4a",
+   "Nose3a",
+   "Mouth3a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -23389,13 +23389,13 @@
    "Clothes1"
   ],
   "sean mckeon|TE": [
-   "Head4a",
+   "Head2a",
    "Eyes1b",
    "Hair1m",
    "Beard1g",
    "Eyebrows1a",
-   "Nose4c",
-   "Mouth4b",
+   "Nose2c",
+   "Mouth2b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -24247,13 +24247,13 @@
    "Clothes1"
   ],
   "austen pleasants|OT": [
-   "Head4b",
+   "Head3b",
    "Eyes1a",
    "Hair5h",
    "Beard5b",
    "Eyebrows5a",
-   "Nose4b",
-   "Mouth4a",
+   "Nose3b",
+   "Mouth3b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -24918,13 +24918,13 @@
    "Clothes1"
   ],
   "cameron thomas|DE": [
-   "Head4b",
+   "Head2b",
    "Eyes1e",
    "Hair2f",
    "Beard2c",
    "Eyebrows2b",
-   "Nose4b",
-   "Mouth4a",
+   "Nose2d",
+   "Mouth2b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -25039,13 +25039,13 @@
    "Clothes1"
   ],
   "matt henningsen|DE": [
-   "Head4b",
+   "Head2b",
    "Eyes1e",
    "Hair1i",
    "Beard1g",
    "Eyebrows1a",
-   "Nose4c",
-   "Mouth4a",
+   "Nose2d",
+   "Mouth2b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -25534,13 +25534,13 @@
    "Clothes1"
   ],
   "luke goedeke|OT": [
-   "Head4b",
+   "Head3b",
    "Eyes1d",
    "Hair3a",
    "Beard3d",
    "Eyebrows3b",
-   "Nose4b",
-   "Mouth4a",
+   "Nose3b",
+   "Mouth3a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -25578,13 +25578,13 @@
    "Clothes2"
   ],
   "bernhard raimann|OT": [
-   "Head4b",
+   "Head1b",
    "Eyes1e",
    "Hair5j",
    "Beard5g",
    "Eyebrows5a",
-   "Nose4d",
-   "Mouth4a",
+   "Nose1a",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -25611,13 +25611,13 @@
    "Clothes1"
   ],
   "max mitchell|OT": [
-   "Head4b",
+   "Head3b",
    "Eyes1d",
    "Hair1i",
    "Beard1g",
    "Eyebrows1a",
-   "Nose4a",
-   "Mouth4a",
+   "Nose3d",
+   "Mouth3b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -25688,24 +25688,24 @@
    "Clothes2"
   ],
   "austin deculus|OT": [
-   "Head4b",
+   "Head2b",
    "Eyes1e",
    "Hair2l",
    "Beard2a",
    "Eyebrows2a",
-   "Nose4b",
-   "Mouth4b",
+   "Nose2a",
+   "Mouth2b",
    "Glasses1e",
    "Clothes1"
   ],
   "luke tenuta|OT": [
-   "Head4b",
+   "Head1b",
    "Eyes1e",
    "Hair3b",
    "Beard3b",
    "Eyebrows3a",
-   "Nose4d",
-   "Mouth4b",
+   "Nose1d",
+   "Mouth1b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -26733,13 +26733,13 @@
    "Clothes1"
   ],
   "sam howell|QB": [
-   "Head4a",
+   "Head1a",
    "Eyes1e",
    "Hair1f",
    "Beard1e",
    "Eyebrows1b",
-   "Nose4c",
-   "Mouth4b",
+   "Nose1b",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -27294,13 +27294,13 @@
    "Clothes1"
   ],
   "micah mcfadden|MLB": [
-   "Head4a",
+   "Head3a",
    "Eyes1a",
    "Hair1o",
    "Beard1d",
    "Eyebrows1b",
-   "Nose4b",
-   "Mouth4b",
+   "Nose3c",
+   "Mouth3b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -27382,24 +27382,24 @@
    "Clothes1"
   ],
   "greg dulcich|TE": [
-   "Head4a",
+   "Head1a",
    "Eyes1e",
    "Hair1k",
    "Beard1a",
    "Eyebrows1b",
-   "Nose4b",
-   "Mouth4b",
+   "Nose1c",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
   "jeremy ruckert|TE": [
-   "Head4a",
+   "Head1a",
    "Eyes1b",
    "Hair1a",
    "Beard1g",
    "Eyebrows1b",
-   "Nose4a",
-   "Mouth4b",
+   "Nose1a",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -27426,13 +27426,13 @@
    "Clothes1"
   ],
   "charlie kolar|TE": [
-   "Head4a",
+   "Head2a",
    "Eyes1e",
    "Hair1i",
    "Beard1f1",
    "Eyebrows1b",
-   "Nose4b",
-   "Mouth4a",
+   "Nose2c",
+   "Mouth2b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -27514,13 +27514,13 @@
    "Clothes1"
   ],
   "grant calcaterra|TE": [
-   "Head4a",
+   "Head1a",
    "Eyes1d",
    "Hair3g",
    "Beard3g",
    "Eyebrows3a",
-   "Nose4d",
-   "Mouth4a",
+   "Nose1b",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -27547,13 +27547,13 @@
    "Clothes2"
   ],
   "ko kieft|TE": [
-   "Head5a",
+   "Head3b",
    "Eyes1e",
    "Hair4a",
    "Beard4e",
    "Eyebrows4a",
-   "Nose5a",
-   "Mouth5a",
+   "Nose3c",
+   "Mouth3a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -28042,13 +28042,13 @@
    "Clothes1"
   ],
   "riley moss|CB": [
-   "Head4a",
+   "Head1a",
    "Eyes1a",
    "Hair3h",
    "Beard3g",
    "Eyebrows3b",
-   "Nose4a",
-   "Mouth4a",
+   "Nose1c",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -28592,13 +28592,13 @@
    "Clothes2"
   ],
   "nick herbig|OLB": [
-   "Head4a",
+   "Head3a",
    "Eyes1c",
    "Hair3h",
    "Beard3b",
    "Eyebrows3b",
-   "Nose4b",
-   "Mouth4a",
+   "Nose3d",
+   "Mouth3b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -28889,13 +28889,13 @@
    "Clothes1"
   ],
   "bryan bresee|DT": [
-   "Head5a",
+   "Head1b",
    "Eyes1b",
    "Hair2b",
    "Beard2d",
    "Eyebrows2b",
-   "Nose5a",
-   "Mouth5b",
+   "Nose1a",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -29164,13 +29164,13 @@
    "Clothes1"
   ],
   "joe tippmann|OG": [
-   "Head5b",
+   "Head3b",
    "Eyes1d",
    "Hair1k",
    "Beard1g",
    "Eyebrows1b",
-   "Nose5a",
-   "Mouth5b",
+   "Nose3b",
+   "Mouth3a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -29406,35 +29406,35 @@
    "Clothes2"
   ],
   "luke wypler|C": [
-   "Head4b",
+   "Head2b",
    "Eyes1b",
    "Hair1d",
    "Beard1g",
    "Eyebrows1b",
-   "Nose4b",
-   "Mouth4b",
+   "Nose2a",
+   "Mouth2b",
    "Glasses1e",
    "Clothes1"
   ],
   "jarrett patterson|C": [
-   "Head4b",
+   "Head1b",
    "Eyes1a",
    "Hair1e",
    "Beard1f1",
    "Eyebrows1b",
-   "Nose4b",
-   "Mouth4b",
+   "Nose1c",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
   "lukas van ness|DE": [
-   "Head5a",
+   "Head1b",
    "Eyes1b",
    "Hair2h",
    "Beard2c",
    "Eyebrows2b",
-   "Nose5c",
-   "Mouth5a",
+   "Nose1a",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -30132,13 +30132,13 @@
    "Clothes1"
   ],
   "puka nacua|WR": [
-   "Head4a",
+   "Head1a",
    "Eyes1e",
    "Hair1s",
    "Beard1a",
    "Eyebrows1a",
-   "Nose4b",
-   "Mouth4a",
+   "Nose1b",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -30385,46 +30385,46 @@
    "Clothes2"
   ],
   "josh whyle|TE": [
-   "Head4a",
+   "Head1a",
    "Eyes1e",
    "Hair5g",
    "Beard5g",
    "Eyebrows5a",
-   "Nose4c",
-   "Mouth4b",
+   "Nose1a",
+   "Mouth1b",
    "Glasses1e",
    "Clothes2"
   ],
   "will mallory|TE": [
-   "Head4a",
+   "Head2a",
    "Eyes1d",
    "Hair1h",
    "Beard1g",
    "Eyebrows1a",
-   "Nose4c",
-   "Mouth4b",
+   "Nose2c",
+   "Mouth2a",
    "Glasses1e",
    "Clothes1"
   ],
   "payne durham|TE": [
-   "Head4a",
+   "Head1b",
    "Eyes1e",
    "Hair3a",
    "Beard3e",
    "Eyebrows3a",
-   "Nose4b",
-   "Mouth4a",
+   "Nose1b",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
   "davis allen|TE": [
-   "Head4a",
+   "Head3a",
    "Eyes1a",
    "Hair5f",
    "Beard5a",
    "Eyebrows5a",
-   "Nose4c",
-   "Mouth4b",
+   "Nose3a",
+   "Mouth3a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -31166,13 +31166,13 @@
    "Clothes1"
   ],
   "nick gargiulo|OG": [
-   "Head4b",
+   "Head2b",
    "Eyes1d",
    "Hair1s",
    "Beard1e",
    "Eyebrows1a",
-   "Nose4b",
-   "Mouth4b",
+   "Nose2c",
+   "Mouth2b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -31298,13 +31298,13 @@
    "Clothes1"
   ],
   "roger rosengarten|OT": [
-   "Head4b",
+   "Head1b",
    "Eyes1e",
    "Hair1i",
    "Beard1g",
    "Eyebrows1a",
-   "Nose4c",
-   "Mouth4a",
+   "Nose1b",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -31650,13 +31650,13 @@
    "Clothes1"
   ],
   "cade stover|TE": [
-   "Head4a",
+   "Head3a",
    "Eyes1a",
    "Hair3h",
    "Beard3e",
    "Eyebrows3b",
-   "Nose4a",
-   "Mouth4b",
+   "Nose3d",
+   "Mouth3b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -31804,13 +31804,13 @@
    "Clothes1"
   ],
   "logan lee|DT": [
-   "Head4b",
+   "Head3b",
    "Eyes1c",
    "Hair2b",
    "Beard2c",
    "Eyebrows2b",
-   "Nose4a",
-   "Mouth4a",
+   "Nose3c",
+   "Mouth3a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -32200,13 +32200,13 @@
    "Clothes1"
   ],
   "payton wilson|MLB": [
-   "Head5b",
+   "Head1a",
    "Eyes1c",
    "Hair2e",
    "Beard2e",
    "Eyebrows2a",
-   "Nose5c",
-   "Mouth5a",
+   "Nose1d",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -32233,13 +32233,13 @@
    "Clothes2"
   ],
   "tommy eichenberg|MLB": [
-   "Head4a",
+   "Head1a",
    "Eyes1e",
    "Hair4j",
    "Beard4e",
    "Eyebrows4a",
-   "Nose4d",
-   "Mouth4b",
+   "Nose1d",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -32640,13 +32640,13 @@
    "Clothes1"
   ],
   "cole bishop|S": [
-   "Head4a",
+   "Head3a",
    "Eyes1e",
    "Hair5h",
    "Beard5a",
    "Eyebrows5a",
-   "Nose4b",
-   "Mouth4a",
+   "Nose3a",
+   "Mouth3a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -33058,13 +33058,13 @@
    "Clothes1"
   ],
   "blake corum|RB": [
-   "Head1a",
+   "Head4a",
    "Eyes1d",
    "Hair1b",
    "Beard1d",
    "Eyebrows1a",
-   "Nose1a",
-   "Mouth1a",
+   "Nose4a",
+   "Mouth4b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -33410,35 +33410,35 @@
    "Clothes1"
   ],
   "kyle mccord|QB": [
-   "Head5a",
+   "Head1a",
    "Eyes1e",
    "Hair3c",
    "Beard3e",
    "Eyebrows3a",
-   "Nose5c",
-   "Mouth5b",
+   "Nose1c",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
   "will howard|QB": [
-   "Head4a",
+   "Head3a",
    "Eyes1d",
    "Hair3j",
    "Beard3b",
    "Eyebrows3a",
-   "Nose4a",
-   "Mouth4b",
+   "Nose3a",
+   "Mouth3a",
    "Glasses1e",
    "Clothes1"
   ],
   "riley leonard|QB": [
-   "Head4b",
+   "Head1a",
    "Eyes1e",
    "Hair3i",
    "Beard3g",
    "Eyebrows3a",
-   "Nose4d",
-   "Mouth4a",
+   "Nose1a",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -33476,24 +33476,24 @@
    "Clothes2"
   ],
   "kurtis rourke|QB": [
-   "Head5a",
+   "Head2a",
    "Eyes1a",
    "Hair3g",
    "Beard3e",
    "Eyebrows3b",
-   "Nose5a",
-   "Mouth5b",
+   "Nose2d",
+   "Mouth2b",
    "Glasses1e",
    "Clothes2"
   ],
   "quinn ewers|QB": [
-   "Head5c",
+   "Head1a",
    "Eyes1d",
    "Hair2b",
    "Beard2g",
    "Eyebrows2a",
-   "Nose5b",
-   "Mouth5b",
+   "Nose1d",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -33553,35 +33553,35 @@
    "Clothes1"
   ],
   "luther burden|WR": [
-   "Head3a",
+   "Head5a",
    "Eyes1a",
    "Hair1h",
    "Beard1f2",
    "Eyebrows1a",
-   "Nose3c",
-   "Mouth3a",
+   "Nose5a",
+   "Mouth5b",
    "Glasses1e",
    "Clothes1"
   ],
   "tre harris|WR": [
-   "Head1a",
+   "Head5a",
    "Eyes1d",
    "Hair1j",
    "Beard1b",
    "Eyebrows1b",
-   "Nose1a",
-   "Mouth1b",
+   "Nose5d",
+   "Mouth5a",
    "Glasses1e",
    "Clothes1"
   ],
   "jack bech|WR": [
-   "Head4a",
+   "Head1a",
    "Eyes1a",
    "Hair2l",
    "Beard2g",
    "Eyebrows2b",
-   "Nose4c",
-   "Mouth4a",
+   "Nose1c",
+   "Mouth1b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -33597,13 +33597,13 @@
    "Clothes2"
   ],
   "isaac teslaa|WR": [
-   "Head4a",
+   "Head3a",
    "Eyes1d",
    "Hair5d",
    "Beard5g",
    "Eyebrows5a",
-   "Nose4d",
-   "Mouth4a",
+   "Nose3a",
+   "Mouth3b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -33707,13 +33707,13 @@
    "Clothes1"
   ],
   "elic ayomanor|WR": [
-   "Head1a",
+   "Head4a",
    "Eyes1c",
    "Hair1k",
    "Beard1g",
    "Eyebrows1a",
-   "Nose1c",
-   "Mouth1a",
+   "Nose4b",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -33949,13 +33949,13 @@
    "Clothes1"
   ],
   "shemar turner|DE": [
-   "Head2b",
+   "Head5b",
    "Eyes1d",
    "Hair3d",
    "Beard3d",
    "Eyebrows3b",
-   "Nose2c",
-   "Mouth2b",
+   "Nose5d",
+   "Mouth5a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -34015,13 +34015,13 @@
    "Clothes1"
   ],
   "saivion jones|DE": [
-   "Head3b",
+   "Head5b",
    "Eyes1b",
    "Hair1h",
    "Beard1e",
    "Eyebrows1b",
-   "Nose3d",
-   "Mouth3a",
+   "Nose5b",
+   "Mouth5b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -34169,13 +34169,13 @@
    "Clothes1"
   ],
   "will campbell|OT": [
-   "Head5b",
+   "Head1b",
    "Eyes1d",
    "Hair3d",
    "Beard3g",
    "Eyebrows3a",
-   "Nose5c",
-   "Mouth5b",
+   "Nose1a",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -34444,13 +34444,13 @@
    "Clothes1"
   ],
   "mason graham|DT": [
-   "Head5b",
+   "Head1b",
    "Eyes1d",
    "Hair4f",
    "Beard4g",
    "Eyebrows4a",
-   "Nose5b",
-   "Mouth5a",
+   "Nose1c",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -34576,13 +34576,13 @@
    "Clothes1"
   ],
   "ty robinson|DT": [
-   "Head4b",
+   "Head2b",
    "Eyes1b",
    "Hair5f",
    "Beard5g",
    "Eyebrows5b",
-   "Nose4a",
-   "Mouth4a",
+   "Nose2c",
+   "Mouth2b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -34829,13 +34829,13 @@
    "Clothes1"
   ],
   "cam skattebo|RB": [
-   "Head4a",
+   "Head3a",
    "Eyes1c",
    "Hair3h",
    "Beard3e",
    "Eyebrows3b",
-   "Nose4d",
-   "Mouth4b",
+   "Nose3d",
+   "Mouth3b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -34884,13 +34884,13 @@
    "Clothes2"
   ],
   "jordan james|RB": [
-   "Head1a",
+   "Head4a",
    "Eyes1c",
    "Hair1q",
    "Beard1g",
    "Eyebrows1a",
-   "Nose1b",
-   "Mouth1b",
+   "Nose4b",
+   "Mouth4b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -35038,13 +35038,13 @@
    "Clothes1"
   ],
   "tyler warren|TE": [
-   "Head5a",
+   "Head1b",
    "Eyes1b",
    "Hair5a",
    "Beard5e",
    "Eyebrows5b",
-   "Nose5c",
-   "Mouth5b",
+   "Nose1d",
+   "Mouth1b",
    "Glasses1e",
    "Clothes2"
   ],
@@ -35060,24 +35060,24 @@
    "Clothes1"
   ],
   "terrance ferguson|TE": [
-   "Head5a",
+   "Head3a",
    "Eyes1c",
    "Hair4e",
    "Beard4g",
    "Eyebrows4b",
-   "Nose5d",
-   "Mouth5b",
+   "Nose3a",
+   "Mouth3a",
    "Glasses1e",
    "Clothes2"
   ],
   "elijah arroyo|TE": [
-   "Head1a",
+   "Head5b",
    "Eyes1c",
    "Hair1j",
    "Beard1g",
    "Eyebrows1a",
-   "Nose1a",
-   "Mouth1a",
+   "Nose5d",
+   "Mouth5a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -35093,24 +35093,24 @@
    "Clothes1"
   ],
   "gunnar helm|TE": [
-   "Head5a",
+   "Head2a",
    "Eyes1d",
    "Hair3j",
    "Beard3f2",
    "Eyebrows3a",
-   "Nose5b",
-   "Mouth5a",
+   "Nose2d",
+   "Mouth2a",
    "Glasses1e",
    "Clothes1"
   ],
   "mitchell evans|TE": [
-   "Head4a",
+   "Head1b",
    "Eyes1d",
    "Hair3h",
    "Beard3g",
    "Eyebrows3a",
-   "Nose4c",
-   "Mouth4b",
+   "Nose1b",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -35126,13 +35126,13 @@
    "Clothes1"
   ],
   "jackson hawes|TE": [
-   "Head4a",
+   "Head1b",
    "Eyes1a",
    "Hair5d",
    "Beard5g",
    "Eyebrows5b",
-   "Nose4c",
-   "Mouth4b",
+   "Nose1b",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -35159,24 +35159,24 @@
    "Clothes1"
   ],
   "thomas fidone|TE": [
-   "Head5a",
+   "Head1b",
    "Eyes1b",
    "Hair5g",
    "Beard5f1",
    "Eyebrows5a",
-   "Nose5d",
-   "Mouth5b",
+   "Nose1a",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
   "caleb lohner|TE": [
-   "Head4a",
+   "Head2a",
    "Eyes1b",
    "Hair5f",
    "Beard5f1",
    "Eyebrows5b",
-   "Nose4c",
-   "Mouth4b",
+   "Nose2b",
+   "Mouth2a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -35203,24 +35203,24 @@
    "Clothes1"
   ],
   "jahdae barron|CB": [
-   "Head2a",
+   "Head4a",
    "Eyes1d",
    "Hair2b",
    "Beard2d",
    "Eyebrows2a",
-   "Nose2d",
-   "Mouth2b",
+   "Nose4b",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
   "maxwell hairston|CB": [
-   "Head3a",
+   "Head4a",
    "Eyes1b",
    "Hair1f",
    "Beard1f1",
    "Eyebrows1b",
-   "Nose3d",
-   "Mouth3a",
+   "Nose4b",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -35280,13 +35280,13 @@
    "Clothes1"
   ],
   "shavon revel|CB": [
-   "Head2a",
+   "Head4a",
    "Eyes1a",
    "Hair3f",
    "Beard3e",
    "Eyebrows3a",
-   "Nose2a",
-   "Mouth2b",
+   "Nose4b",
+   "Mouth4a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -35302,13 +35302,13 @@
    "Clothes1"
   ],
   "jacob parrish|CB": [
-   "Head2a",
+   "Head5a",
    "Eyes1e",
    "Hair1h",
    "Beard1e",
    "Eyebrows1a",
-   "Nose2a",
-   "Mouth2b",
+   "Nose5a",
+   "Mouth5b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -35324,13 +35324,13 @@
    "Clothes2"
   ],
   "jaylin smith|CB": [
-   "Head2a",
+   "Head4a",
    "Eyes1b",
    "Hair3a",
    "Beard3g",
    "Eyebrows3a",
-   "Nose2a",
-   "Mouth2a",
+   "Nose4a",
+   "Mouth4a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -35533,13 +35533,13 @@
    "Clothes1"
   ],
   "luke newman|OG": [
-   "Head4b",
+   "Head2b",
    "Eyes1b",
    "Hair5e",
    "Beard5f1",
    "Eyebrows5a",
-   "Nose4a",
-   "Mouth4a",
+   "Nose2c",
+   "Mouth2b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -35555,13 +35555,13 @@
    "Clothes2"
   ],
   "garrett dellinger|OG": [
-   "Head4b",
+   "Head1b",
    "Eyes1b",
    "Hair5l",
    "Beard5g",
    "Eyebrows5a",
-   "Nose4b",
-   "Mouth4a",
+   "Nose1c",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -35797,13 +35797,13 @@
    "Clothes1"
   ],
   "hunter wohler|S": [
-   "Head5a",
+   "Head2a",
    "Eyes1c",
    "Hair3h",
    "Beard3g",
    "Eyebrows3a",
-   "Nose5c",
-   "Mouth5a",
+   "Nose2b",
+   "Mouth2a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -35885,13 +35885,13 @@
    "Clothes2"
   ],
   "cody lindenberg|MLB": [
-   "Head4a",
+   "Head1a",
    "Eyes1b",
    "Hair2j",
    "Beard2f1",
    "Eyebrows2a",
-   "Nose4c",
-   "Mouth4b",
+   "Nose1d",
+   "Mouth1a",
    "Glasses1e",
    "Clothes2"
   ],
@@ -36083,13 +36083,13 @@
    "Clothes1"
   ],
   "drew kendall|C": [
-   "Head4b",
+   "Head1b",
    "Eyes1b",
    "Hair3j",
    "Beard3f1",
    "Eyebrows3b",
-   "Nose4b",
-   "Mouth4a",
+   "Nose1d",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -36138,13 +36138,13 @@
    "Clothes2"
   ],
   "tyler loop|K": [
-   "Head5a",
+   "Head1a",
    "Eyes1b",
    "Hair5i",
    "Beard5g",
    "Eyebrows5b",
-   "Nose5c",
-   "Mouth5a",
+   "Nose1a",
+   "Mouth1a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -36886,13 +36886,13 @@
    "Clothes1"
   ],
   "morgan cox|C": [
-   "Head4c",
+   "Head2c",
    "Eyes1c",
    "Hair3c",
    "Beard3g",
    "Eyebrows3a",
-   "Nose4a",
-   "Mouth4b",
+   "Nose2a",
+   "Mouth2b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -38327,13 +38327,13 @@
    "Clothes2"
   ],
   "james winchester|C": [
-   "Head4a",
+   "Head1a",
    "Eyes1e",
    "Hair3l",
    "Beard3f2",
    "Eyebrows3a",
-   "Nose4b",
-   "Mouth4b",
+   "Nose1b",
+   "Mouth1b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -50988,13 +50988,13 @@
    "Clothes1"
   ],
   "elgton jenkins|C": [
-   "Head2b",
+   "Head4d",
    "Eyes1c",
    "Hair1h",
    "Beard1g",
    "Eyebrows1a",
-   "Nose2d",
-   "Mouth2b",
+   "Nose4c",
+   "Mouth4b",
    "Glasses1e",
    "Clothes1"
   ],
@@ -101577,13 +101577,13 @@
    "Clothes2"
   ],
   "martin gramatica|K": [
-   "Head5a",
+   "Head3c",
    "Eyes1d",
    "Hair1h",
    "Beard1b",
    "Eyebrows1a",
-   "Nose5c",
-   "Mouth5b",
+   "Nose3b",
+   "Mouth3a",
    "Glasses1e",
    "Clothes1"
   ],
@@ -119496,15 +119496,15 @@
    "Clothes1"
   ],
   "ron yary|OT": [
-   "Head1b",
-   "Eyes1a",
-   "Hair3j",
-   "Beard3g",
-   "Eyebrows3a",
-   "Nose1b",
-   "Mouth1b",
+   "Head2b",
+   "Eyes1d",
+   "Hair3g",
+   "Beard3e",
+   "Eyebrows3b",
+   "Nose2c",
+   "Mouth2b",
    "Glasses1e",
-   "Clothes1"
+   "Clothes2"
   ],
   "ron mix|OT": [
    "Head1b",
@@ -119551,15 +119551,15 @@
    "Clothes1"
   ],
   "john stallworth|WR": [
-   "Head5c",
-   "Eyes1e",
-   "Hair3h",
-   "Beard3g",
-   "Eyebrows3a",
-   "Nose5b",
-   "Mouth5b",
+   "Head4c",
+   "Eyes1d",
+   "Hair1s",
+   "Beard1d",
+   "Eyebrows1a",
+   "Nose4c",
+   "Mouth4a",
    "Glasses1e",
-   "Clothes1"
+   "Clothes2"
   ],
   "thurman thomas|RB": [
    "Head4a",
@@ -303668,5 +303668,46 @@
    "mosi tatupu|RB|1979",
    "mosi tatupu|RB|1986"
   ]
+ },
+ "_namesakes": {
+  "note": "Two different men sharing a name and a position. The faces gate keys a person on name|position and cannot separate them, so one-face-per-person does not apply. Found by the age-gap test: for one man the age gap between two files tracks the year gap; these miss by 21-37 years. Recorded so the exemption is a fact and not a silent skip.",
+  "players": {
+   " reed|S": "2004 aged 22 vs 2021 aged 25 \u2014 off by 14",
+   "aaron brewer|C": "2017 aged 27 vs 2026 aged 28 \u2014 off by 8",
+   "aaron wallace|OLB": "2000 aged 32 vs 2017 aged 24 \u2014 off by 25",
+   "anthony davis|OT": "2004 aged 24 vs 2010 aged 21 \u2014 off by 9",
+   "antonio brown|WR": "2004 aged 26 vs 2010 aged 22 \u2014 off by 10",
+   "asante samuel|CB": "2004 aged 23 vs 2026 aged 26 \u2014 off by 19",
+   "bryan thomas|DE": "2004 aged 25 vs 2026 aged 22 \u2014 off by 25",
+   "cedrick wilson|WR": "2004 aged 26 vs 2021 aged 26 \u2014 off by 17",
+   "chris brazzell|WR": "2000 aged 22 vs 2026 aged 22 \u2014 off by 26",
+   "chris johnson|CB": "2007 aged 28 vs 2026 aged 21 \u2014 off by 26",
+   "clay matthews|OLB": "1979 aged 23 vs 2010 aged 24 \u2014 off by 30",
+   "dd lewis|OLB": "1979 aged 34 vs 2007 aged 28 \u2014 off by 34",
+   "dennis johnson|RB": "1979 aged 23 vs 2013 aged 23 \u2014 off by 34",
+   "eric wilson|MLB": "1986 aged 23 vs 2026 aged 31 \u2014 off by 32",
+   "eric wright|CB": "1986 aged 27 vs 2007 aged 22 \u2014 off by 26",
+   "hardy nickerson|MLB": "2000 aged 33 vs 2017 aged 23 \u2014 off by 27",
+   "jeremiah trotter|MLB": "2000 aged 23 vs 2026 aged 23 \u2014 off by 26",
+   "jordan phillips|DT": "2017 aged 25 vs 2026 aged 22 \u2014 off by 12",
+   "kellen winslow|TE": "1979 aged 21 vs 2004 aged 21 \u2014 off by 25",
+   "kris jenkins|DT": "2004 aged 25 vs 2026 aged 24 \u2014 off by 23",
+   "kyle williams|WR": "2010 aged 22 vs 2026 aged 23 \u2014 off by 15",
+   "marion barber|RB": "1986 aged 26 vs 2007 aged 24 \u2014 off by 23",
+   "mark brown|MLB": "1986 aged 25 vs 2004 aged 24 \u2014 off by 19",
+   "mark clayton|WR": "1986 aged 25 vs 2007 aged 25 \u2014 off by 21",
+   "marvin harrison|WR": "2004 aged 32 vs 2026 aged 24 \u2014 off by 30",
+   "mickey shuler|TE": "1979 aged 23 vs 2010 aged 24 \u2014 off by 30",
+   "mike richardson|CB": "1986 aged 25 vs 2010 aged 26 \u2014 off by 23",
+   "mike thomas|WR": "2010 aged 23 vs 2017 aged 23 \u2014 off by 7",
+   "mike williams|WR": "2007 aged 23 vs 2017 aged 23 \u2014 off by 10",
+   "omar brown|S": "2000 aged 23 vs 2013 aged 25 \u2014 off by 11",
+   "orlando brown|OT": "2004 aged 34 vs 2021 aged 25 \u2014 off by 26",
+   "patrick surtain|CB": "2000 aged 25 vs 2021 aged 21 \u2014 off by 25",
+   "randy rasmussen|OG": "1979 aged 34 vs 1986 aged 26 \u2014 off by 15",
+   "robert hunt|OG": "2000 aged 22 vs 2021 aged 25 \u2014 off by 18",
+   "robert woods|WR": "1979 aged 24 vs 2013 aged 21 \u2014 off by 37",
+   "stanley morgan|WR": "1979 aged 24 vs 2021 aged 25 \u2014 off by 41"
+  }
  }
 }
