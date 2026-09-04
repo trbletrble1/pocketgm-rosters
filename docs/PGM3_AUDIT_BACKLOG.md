@@ -3141,3 +3141,16 @@ There is no source on the other side: Mike carries no hair-style field either.
 **If hair style ever gets a pass, 1979's 452 balding men at a median age of 25
 is the number to fix first.** It is the visible instance — a quarter of a
 1970s roster receding or shaved at 25 — and the one a reader meets.
+
+### 61. Compound forenames split into the surname in our own files
+
+Surfaced by the PSF cross-check: the men PSF names that our 1979 does not
+match exactly are Lee / Roy Selmon, Billy / Joe DuPree, Eddie / Lee Ivery,
+Johnny / Ray Smith, Billy / Ray Smith, Walker / Lee Ashley — the second given
+name stored as the first word of the surname. **1979 and 1986 carry nine each,
+2007, 2010 and 2013 two each (Johnnie Lee Higgins, Sammie Lee Hill); 2000,
+2004, 2017, 2021 and 2026 none** (Will Lee III, Pooh Paul Jr. and Brian De La
+Puente are correct and were false positives of the test). Measured, not
+fixed: it is a name-key defect, so it touches every join on name+position
+and the registry's verified keys for those men. Fix on a ruling, one file at
+a time, with the registry keys moved in the same commit.

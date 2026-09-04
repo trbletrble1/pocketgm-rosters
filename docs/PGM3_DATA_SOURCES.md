@@ -768,3 +768,40 @@ directly; rescale to the archive's shape if used at all.
 verified 2K5-format skin at 94%, sitting inside generated filler; for 1940–1965
 mostly filler around a few dozen to a few hundred real men. Readable throughout.
 `wip/ps2_2k5_season_inventory.csv`.
+
+## Pro Strategy Football 2026 mod (`psf2026`) — decoded 2026-09-03
+
+Ninety league files `YYYY_LEAGUE.lgs2026` (1940–2025 NFL, 1946–1949 AAFC,
+1960–1969 AFL-NFL), plaintext, no compression. **File size is base +
+teams × 48,792 for all 90**, and the AAFC files size to 8, 8, 8 and 7 teams —
+the real league. Team table of 6,604-byte records (city, nickname,
+abbreviation at +0/+32/+64); the AAFC tables name the real eight plus two NFL
+clubs with no roster behind them. Player records are 856 bytes, **57 per
+team**: forename +8, surname +40, jersey +72, college +109, photo filename
++142 (all NUL-terminated in fixed slots, with stale residue after the NUL that
+a regex parse misreads), age as u16 at +200 (exact for the eight men checked,
+Baugh 1943 to Manning 2010), then a numeric tail not decoded. No face model,
+no skin field: **appearance is a headshot reference**, `First_Last.jpg`,
+resolving against the 24,256 photographs in the separate `psf2026 - USFL.zip`
+(`player_photo_sets/players/`) for 89–96% of referenced names in every era
+before 2025; the 2025 file uses a `first_last_college` scheme this set lacks.
+
+**Fourteen fixed slots per team (2, 5, 11, 17, 24–26, 32–34, 40–41, 49–50) are
+generated men in every file before 2021** — no photo, a city where the college
+goes, 0.7–1.4% pool match (namesake noise). The other 43 are the roster. Against
+our 30,379-name pool the 43 are 97–99% real from 1970 on, 92% in the 1960s,
+59% in the 1950s and 24% in the 1940s — the last two are the pool's floor, not
+the file's: a headshot exists for ~90% of them in every era, and the 1940s
+names are the real men (Parker, Manders, Tittle, Dobbs, Sinkwich). From 2021
+all 57 slots are real (98% in our 2021). Cross-checks: **98% of PSF's 1979
+photo-men are in our 1979, 100% of 2010's**; the remainder are name-form
+differences (Herbert/Herb, and our own compound-forename splits, backlog 61).
+PSF holds 36–42% of each of our files' men — 43 per team against our ~94.
+
+Against 2K5 on the same pool, per season: **2K5 carries more real men from 1944
+on** (1979: 1,363 to 1,200; 1989: 1,661 to 1,169) inside far more filler
+(~600–1,900 generated men per file against PSF's 14 per team); PSF carries more
+in 1940–1943 and holds 19 seasons 2K5 does not (1942, 1945, 1947–49, 1951,
+1957–59, 1967, 1975, 1996, 1999–2000, 2005, 2014, 2023–25). PSF's filler is
+tagged by slot and photo; 2K5's is not. Neither carries a face model.
+`wip/psf_season_inventory.csv`, one row per file.
