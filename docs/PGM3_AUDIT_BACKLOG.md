@@ -3154,3 +3154,31 @@ Puente are correct and were false positives of the test). Measured, not
 fixed: it is a name-key defect, so it touches every join on name+position
 and the registry's verified keys for those men. Fix on a ruling, one file at
 a time, with the registry keys moved in the same commit.
+
+### 62. 2017's salary floor was undone by the guarantee split — found by the retrofitted gate, not fixed
+
+The first thing the new checks found, on their first run, in a file that was
+green under every check that existed the day before.
+
+**2017 carries 185 rostered men below $500,000 in salary, the lowest at
+$101,178, where the other nine files hold nobody under $566,000.** The
+distribution's bottom is a tail rather than a wall: minimum over 1st percentile
+reads **0.50 against 0.96-1.00 everywhere else.**
+
+**The cause is dated.** At `a95c793` the contract work put a floor on salary and
+2017 came out at a minimum of $583,062 with nobody under $500K. At `7b40c9a`,
+four commits later, the guarantee split moved money out of salary into
+guarantee for 2017's players — total compensation preserved, cap arithmetic
+unaffected, and the floor silently undone underneath it. Elijah Wilkinson
+carries $101,178 of salary against $494,049 of guarantee. Every man in the 185
+has a non-zero guarantee, so nothing was lost; it sits in the wrong field.
+
+**A fix is a re-run of the second floor pass over 2017, splitting total
+compensation so salary lands on the floor first and the remainder goes to
+guarantee.** Measured, reported, NOT applied — it writes to a published file
+and Ryan rules on those. Until then the roster gate ships red on 2017, which is
+the correct state: the gate is telling the truth about the file.
+
+**The general lesson, and the reason the check earns its place:** a later fix
+can undo an earlier one through a field neither of them names. Nothing in the
+guarantee split mentioned the floor. Only a check on the property caught it.

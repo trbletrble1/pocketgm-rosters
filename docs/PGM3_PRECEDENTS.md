@@ -4813,3 +4813,35 @@ set lived inside it: **a headline accuracy is only evidence to the extent the
 test population contains the disagreement.** Before accepting a source on a
 score, condition on what is already known and re-score on the remainder. If the
 number collapses, the source was agreeing with the old evidence, not adding new.
+
+## Every defect fixed ships a check that catches it — same commit, property not instance, every file
+
+Ryan's standing rule, 2026-09-03. **The check goes in the commit with the fix,
+not a follow-up. It tests the property, not the instance — "no cell of one maps
+to a quantile", never "Josh Allen earns more than $500K". It runs on every file,
+because the reason a day gets long is that a fix reaches one file and the defect
+lives in ten. Where a check genuinely cannot be written, say so and why.**
+
+The evidence for the rule is the day it was made on. Almost everything fixed —
+the 99-rating ceiling, the singleton salary cell, the per-file seed, the flat
+beard draw, the wiped extension terms, the unpaid staff — existed in more than
+one file and was found once, by Ryan opening a file or by an ad hoc measurement.
+The three fixes that had gates behind them — the payroll ratio guard, the tied-
+block ordering assertion, the coverage sweep — **all three fired on their first
+run and caught something real.**
+
+**Calibration, learned the same day.** A gate needs a threshold, and the obvious
+one — the band the published files span — does not work on this archive: leave
+one out and **16 of 80 appearance slot/file pairs fall outside the span of the
+other nine**, the same way every published file fails the position-rate span.
+A gate calibrated on a heterogeneous archive fails the files it is calibrated
+on. Two forms that do work:
+
+- **Scale-free ratios.** "The bottom of the salary distribution is a wall, not a
+  tail": minimum within 10% of the 1st percentile. Nine files read 0.96-1.00 in
+  four different eras' dollars, and it needs no dollar constant to catch $2,288.
+- **Floors far below the archive's own minimum.** A uniform draw has a
+  commonest/rarest token ratio near 1; the archive's thinnest real slot is 30.
+  A floor at 15 catches the flat draw and cannot fire on a real file.
+
+Where the band is genuinely the only reference, it stays a WARN and says so.

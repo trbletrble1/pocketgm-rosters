@@ -400,6 +400,74 @@ def check_roster(new, refs):
                     0 if lo <= m <= hi else 1))
         out.append(('teams over the ~$280M engine cap',
                     sum(1 for x in mine if x > 280_000_000)))
+
+    # ================= RETROFIT 2026-09-03, standing rule ==================
+    # Every defect fixed gets a check that catches it, testing the property and
+    # not the instance, running on every file. These four are the roster half.
+
+    # 1. EXTENSION TERMS HALF-WRITTEN. raise_payroll scaled salary and
+    # guarantee and left eSalary/eGuarantee behind, wiping the extension terms
+    # on 716 of 2026's 1,891 rostered men while every distribution check stayed
+    # green -- caught on a field-count diff, repaired from a6fb417^. The
+    # property is that the two halves of an extension agree: a man either has
+    # one or does not. All ten files are 100%/100% with 0 mismatches; the
+    # pre-fix file shows 716.
+    out.append(('extension half-written (eSalary>0 but eLength==0, or the reverse)',
+                sum(1 for p in on if (p['eSalary'] > 0) != (p['eLength'] > 0))))
+
+    # 2. THE SALARY FLOOR IS A WALL, NOT A TAIL. Three separate defects put men
+    # below the league minimum: a cell of one mapped to quantile 0 ($2,288 in
+    # 2026), an untransformed file ($36,000 in 2010), and a guarantee split that
+    # moved money out of salary AFTER the floor had been applied (2017, at
+    # 7b40c9a). Scale-free so it holds in any era's dollars: the bottom of a
+    # properly floored file is a wall, min sitting within 10% of the 1st
+    # percentile. Nine files read 0.96-1.00. The three pre-fix states read
+    # 0.08, 0.35 and 0.78.
+    _sal = sorted(p['salary'] for p in on)
+    if len(_sal) >= 100:
+        _p01 = _sal[len(_sal) // 100]
+        _r = _sal[0] / _p01 if _p01 else 0.0
+        out.append((f'salary floor collapsed: min ${_sal[0]:,} is {_r:.2f} of the '
+                    f'1st percentile ${_p01:,} (a floored file reads 0.96-1.00)',
+                    0 if _r >= 0.90 else 1))
+
+    # 3. FREE AGENTS MUST CARRY AN ASKING PRICE. A free agent with no eSalary
+    # cannot be signed -- the same defect the staff files had (219 of 1979's
+    # free agents), found by play test rather than by a check. All ten roster
+    # files are 100% eSalary>0 and eLength==1.
+    _fa = [p for p in new if cohort(p) == 'FA']
+    if _fa:
+        out.append(('free agent with no asking price (eSalary<=0)',
+                    sum(1 for p in _fa if p['eSalary'] <= 0)))
+        out.append(('free agent eLength != 1 (the archive is unanimous)',
+                    sum(1 for p in _fa if p['eLength'] != 1)))
+
+    # 4. NO GENERATED APPEARANCE FIELD IS FLATTER THAN A REAL ONE. 1979's beards
+    # were a flat uniform draw and 1979's hair fronts likewise -- both invisible
+    # to every check because a uniform draw has a perfectly legitimate
+    # vocabulary, a legitimate family digit and a legitimate length.
+    #
+    # WHY A COUNT RATIO AND NOT ENTROPY: entropy needs a band to compare
+    # against, and the archive does not span itself -- leave-one-out, 16 of 80
+    # slot/file pairs fall outside the span of the other nine, so a band gate
+    # would fail the files it is calibrated on (the same lesson as the position
+    # rates above). The max/min token-count ratio needs no band: a uniform draw
+    # sits near 1 whatever the era, and every published file sits far above it.
+    # Floors are set at roughly half the archive's own minimum.
+    #
+    # SLOTS 1, 7 and 8 ARE EXCLUDED and that is not an oversight: eyes read
+    # 1.2-1.5 and clothes 1.3-3.4 in every published file, so those really are
+    # near-uniform archive-wide, and glasses is constant by rule.
+    FLAT_FLOOR = {0: 20.0, 2: 20.0, 3: 15.0, 4: 4.0}   # head, hair, beard, eyebrows
+    SLOT_NAME = {0: 'head', 2: 'hair', 3: 'beard', 4: 'eyebrows'}
+    for _i, _floor in FLAT_FLOOR.items():
+        _c = collections.Counter(p['appearance'][_i] for p in new)
+        if len(_c) > 1:
+            _ratio = max(_c.values()) / min(_c.values())
+            out.append((f'{SLOT_NAME[_i]} drawn too flat: commonest/rarest token '
+                        f'{_ratio:.1f}, floor {_floor:.0f} (a uniform draw sits near 1; '
+                        f'the archive spans {_floor*2:.0f}-1154)',
+                        0 if _ratio >= _floor else 1))
     return out
 
 # ----------------------------------------------------------------- staff
@@ -500,6 +568,83 @@ def check_staff(new, refs):
     # a file with one distinct value has lost that.
     out.append(('startSeason flat (should spread with age)',
                 1 if len({p['startSeason'] for p in new}) < 5 else 0))
+
+    # ================= RETROFIT 2026-09-03, standing rule ==================
+
+    # 5. EMPLOYED CONTRACT LENGTH WITHIN THE GAME'S RANGE. 1979 shipped staff on
+    # contracts of up to 19 years and 2000 up to 18, inherited from a donor and
+    # never looked at; the game's own staff export runs 1-5 with 216 of 288 on
+    # a single year. Fixed at 2c12d53. The bound comes from vanilla, not from
+    # our files, so it is a fact about the engine rather than about us.
+    out.append(('employed staff contract outside the game\'s 1-5 years',
+                sum(1 for p in emp if not 1 <= p['length'] <= 5)))
+
+    # 6. FREE-AGENT STAFF MUST CARRY AN ASKING PRICE. 219 of 1979's free-agent
+    # staff had eSalary 0 and could not be hired. Found in play, fixed at
+    # 7b40c9a; all ten files now read 100%.
+    _fas = [p for p in new if p['teamID'] == 'Free Agent']
+    if _fas:
+        out.append(('free-agent staff with no asking price (eSalary<=0)',
+                    sum(1 for p in _fas if p['eSalary'] <= 0)))
+
+    # 7. AN INVENTED MAN MUST NOT CARRY A REAL PERSON'S NAME. The standing
+    # exception permits generated scouts and physios; it does not permit them to
+    # be named after real people. Before 04ce8c1 an invented 1979 staffer was
+    # called Phillip Buchanon, who is a real cornerback. The check reads the
+    # provenance sidecar -- which records the ORIGIN, so it survives a rename --
+    # and crosses every invented man against the real-name pool. Skipped, not
+    # passed, when the sidecar or the pool is unavailable.
+    _prov = _load_provenance()
+    if _prov is not None:
+        _pool_names = _real_name_pool()
+        _inv = [p for p in new
+                if _prov.get(p['iden'], '').startswith(('invented', 'unknown'))]
+        if _inv and _pool_names:
+            _hits = [f"{p['forename']} {p['surname']}" for p in _inv
+                     if _norm_name(p['forename'], p['surname']) in _pool_names]
+            out.append(('invented staff carrying a real person\'s name'
+                        + (': ' + ', '.join(_hits[:4]) if _hits else ''), len(_hits)))
+    return out
+
+
+# ---- helpers for the invented-name check ------------------------------------
+
+def _norm_name(f, l):
+    return re.sub(r'[^a-z]', '', str(f).lower()) + '|' + re.sub(r'[^a-z]', '', str(l).lower())
+
+
+def _load_provenance():
+    """iden -> provenance, from the staff sidecar. None when it is absent."""
+    import os, csv as _csv
+    for c in ('reference/PGM3_STAFF_PROVENANCE.csv', '../reference/PGM3_STAFF_PROVENANCE.csv',
+              'PGM3_STAFF_PROVENANCE.csv'):
+        if os.path.exists(c):
+            try:
+                return {r['iden']: r['provenance'] for r in _csv.DictReader(open(c))}
+            except Exception:
+                return None
+    return None
+
+
+def _real_name_pool():
+    """Every name known to belong to a real person: the ten roster files plus
+    the extracted draft listings. Empty set when none can be read."""
+    import os, glob as _glob, csv as _csv
+    out = set()
+    for fn in _glob.glob('PGMRoster_*.json') + _glob.glob('../PGMRoster_*.json'):
+        try:
+            for p in load(fn): out.add(_norm_name(p['forename'], p['surname']))
+        except Exception:
+            pass
+    for fn in _glob.glob('wip/draft_*.csv') + _glob.glob('../wip/draft_*.csv'):
+        try:
+            for r in _csv.DictReader(open(fn, encoding='utf-8', errors='replace')):
+                nm = (r.get('Player') or r.get('player') or '').replace('*', '').replace('+', '').strip()
+                if ' ' in nm:
+                    a, b = nm.split(' ', 1); out.add(_norm_name(a, b))
+        except Exception:
+            pass
+    out.discard('|')
     return out
 
 # ------------------------------------------------------------ zero pattern

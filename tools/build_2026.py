@@ -2245,12 +2245,20 @@ def assign_money(players, ref_sal, ref_gte, rng):
     cells = collections.defaultdict(list)
     for k, pos, ln, ov, prov in players: cells[(pos, ln)].append((k, ov, prov))
     salary, guarantee, prov_of = {}, {}, {}
+    # GUARD (2026-09-03): q = i / max(1, n - 1) sent a cell of one to q = 0 and
+    # the file's only LT on a 1-year deal earned $0.12M against a $37.1M Madden
+    # contract -- item 45, source 1. quantile_of_rank refuses a cell with no
+    # rank to preserve and uses the plotting position for the rest, so the
+    # defect cannot be rebuilt silently. A rebuild must now decide what small
+    # cells get: the ruled answer is the reference median for his position and
+    # band, which is what tools/fix_2026_small_cells.py applies.
+    from pgm3_guards import quantile_of_rank
     for (pos, ln), g in cells.items():
         ps = _pool(ref_sal, pos, ln); pg = _pool(ref_gte, pos, ln)
         g = sorted(g, key=lambda x: (x[1], rng.random()))
         n = len(g)
         for i, (k, ov, prov) in enumerate(g):
-            q = i / max(1, n - 1)
+            q = quantile_of_rank(i, n, label=f'assign_money {pos}/{ln}yr')
             salary[k]   = int(round(_target_at(ps, q)))
             guarantee[k] = int(round(_target_at(pg, q)))
             prov_of[k]  = prov
