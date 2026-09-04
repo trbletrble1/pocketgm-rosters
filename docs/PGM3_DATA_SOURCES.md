@@ -895,3 +895,59 @@ PSF is the first staff source found in any of them, and it is head coaches only.
 Coordinators, scouts and physios still have no source anywhere — which is why
 the generated-staff exception exists and why 1979's coordinator terms had to be
 built rather than sourced.
+
+## The Coaching Tree MCP — the coordinator source, and it carries birth dates
+
+Added by Ryan 2026-09-04 (`coaching-tree.app/mcp`). Five tools: `list_teams`,
+`get_team_staff`, `get_coach`, `search_coaches`, `get_coaching_tree`.
+
+**The three questions, answered.**
+
+**How far back.** To at least **1926** — Green Bay 1926 returns Curly Lambeau.
+1921 returns an empty staff. The early years are head coach only; assistants
+appear by 1933 (Halas plus two) and 1940 (Halas plus three, including Red
+Grange). Franchise identity is handled properly: `list_teams` gives every
+historical name with its year range, so Oakland 1979 is `LV`, the Houston Oilers
+are `TEN`, the St. Louis Cardinals are `ARI`.
+
+**Coordinators, or just head coaches.** **Coordinators, and the entire assistant
+staff with real titles** — offensive line, running backs, linebackers, defensive
+backs, strength and conditioning, administrative assistant, and second roles
+where a man held two.
+
+**1979 Pittsburgh.** Yes: Chuck Noll, **George Perles as defensive
+coordinator**, Woody Widenhofer, Dick Hoak, Tom Moore, Rollie Dotsch, Paul Uram,
+Dick Walker. Eight men where our file holds Noll and eight invented.
+
+**AND IT CARRIES BIRTH DATES.** `get_coach` returns `birth_date`, birthplace,
+college, career span, and a per-year stint list. Frank Gansz: born 1938-11-22,
+Cincinnati special teams in 1979. **Our 1979 file has him at 61; he was 40.**
+That is backlog 68's staff-age problem with a source attached — and the stint
+list also says which team a man was on in a given year, so a man can be placed
+as well as aged.
+
+**THE COMPLICATION, and it is the reason nothing has been written yet. 1979
+football did not use PGM3's vocabulary.** Of fourteen 1979 teams pulled:
+
+| PGM3 slot | teams with that exact title |
+|---|---|
+| Defensive coordinator | 8 of 14 |
+| Offensive coordinator | 5 of 14 |
+| Special teams | **0 of 14** — twelve carry a "Special Teams Assistant" as a *second* role |
+
+Pittsburgh has no offensive coordinator because Noll called the offence himself;
+San Francisco has none because Walsh did. Miami's defensive architect is Bill
+Arnsparger, titled **Assistant Head Coach / Defensive Assistant**, beside a
+"Defensive Run Game Coordinator". Atlanta has no titled coordinator at all.
+
+**So filling PGM3's three fixed slots needs a mapping rule and a seniority
+fallback, exactly the shape of the Duffner decision and about 160 times over.**
+The candidate rule: take the exact title where it exists; otherwise the senior
+assistant on that side of the ball; and state the mapping in the provenance
+sidecar every time, so a reader can tell a titled coordinator from an inferred
+one. **Not written — that is a ruling.**
+
+**A bonus the archive has needed for a long time: the source disambiguates
+namesakes itself.** Atlanta's 1979 offensive line coach is `bill-walsh-7506f6f4-…`
+while San Francisco's head coach is `bill-walsh`. Two men, two slugs, no
+arithmetic required.
