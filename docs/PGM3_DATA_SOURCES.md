@@ -951,3 +951,52 @@ one. **Not written — that is a ruling.**
 namesakes itself.** Atlanta's 1979 offensive line coach is `bill-walsh-7506f6f4-…`
 while San Francisco's head coach is `bill-walsh`. Two men, two slugs, no
 arithmetic required.
+
+## StatsCrew — reachable, and the schema does not drift across a century
+
+Allowlisted by Ryan 2026-09-04 and tested before anything was built on it.
+`tools/statscrew.py`.
+
+**REACHABILITY: yes, directly.** HTTP 200, raw HTML, no Cloudflare, no proxy
+problem — `curl` and `urllib` both work from the sandbox. That matters beyond
+access: **raw HTML means the pages can be cached**, which a fetch-and-summarise
+tool could not do.
+
+**The cache lives at `$PGM3_SOURCES/statscrew/raw/`, NOT in the scratchpad**,
+because /tmp was wiped mid-session earlier the same day and took every
+uncommitted dump with it. Every page is written on first fetch and never
+requested again; requests are spaced a second apart and carry a contact address.
+Seventeen pages, 960 KB, so far.
+
+**COLUMN DRIFT: none worth the name.** The same ten columns in 1950, 1979, 2000
+and 2020 — `# / Player / Pos. / Birth Date / Height / Weight / College /
+Hometown / GP / GS` — byte-identical headers across seventy years. **1920 has
+nine: there is no jersey-number column**, which is correct rather than missing,
+since numbers were not yet required. That is the only structural difference
+found across a century.
+
+**Two things that DO change and matter.**
+
+**The league code.** 1920 is not `l-NFL`; it is **`l-APFA`**, and `l-NFL/y-1920`
+returns a page with no team links rather than an error — a silent empty, which is
+the failure mode that quietly produces "no data for this season". Any sweep must
+assert that a season index yielded teams.
+
+**The position vocabulary is era-correct and therefore era-specific.** 1920 gives
+`LE RE LG RG BB WB LDH`; 1950 gives `LDH LDT LLB MG`; 2020 gives `CB FS ILB NT`.
+Compound values appear throughout (`FB-LDH-WB-`, `LDE-RDE-NT`, `DT,LDT`) and
+carry a trailing hyphen in at least one 1920 case. **Mapping this to PGM3's
+position set is a per-era translation table, not a lookup**, and it is the main
+work in using the source.
+
+**Birth dates: 100% on every roster from 1950 on, 91% in 1920** (21 of Akron's
+23). That is the age audit's reference, and it is independent of the Coaching
+Tree.
+
+**Every league Ryan listed resolves**, with codes that are not uniform: NFL and
+AAFC and AFL teams use bare codes (`CLE`, `BOS`, `BA1`), while the USFL, WFL, XFL
+and CFL prefix the league (`USFLBIR`, `WFLDET`, `XFLDAR`, `CFLBC`). Team codes are
+also era-local — 1950's Baltimore is `BA1`.
+
+**Not yet examined**: player IDs, the All-Pro and Coach-of-the-Year tables on the
+season index, and the `stats/` and `results/` paths.
