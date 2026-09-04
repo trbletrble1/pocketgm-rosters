@@ -505,9 +505,23 @@ def check_staff(new, refs):
     out.append(('schema keys', sum(1 for p in new if set(p.keys()) != keys)))
     out.append(('field types', sum(1 for p in new for k in keys if not isinstance(p[k], types[k]))))
     out.append(('duplicate iden', len(new) - len({p['iden'] for p in new})))
-    out.append(('duplicate names',
-                sum(1 for k, v in collections.Counter(
-                    (p['forename'], p['surname']) for p in new).items() if v > 1)))
+    # DUPLICATE NAMES, minus the recorded namesakes. Two men who share a name are
+    # not a duplicate record -- Jim Mora coached Indianapolis at 65 while his son
+    # ran San Francisco's defence at 39, both in 2000. The exemption is read from
+    # the registry's `_namesakes` block, which carries the arithmetic that found
+    # each one, so it is a recorded fact rather than a suppression. A man who
+    # appears twice at the SAME age is not in that block and still fails here:
+    # that is one man holding two jobs, which the game never generates (0 in
+    # 1,296 vanilla staff records) and which needs a ruling, not an exemption.
+    _sns = set((_find_registry() or {}).get('_namesakes', {}).get('staff', {}))
+    _dups = {k for k, v in collections.Counter(
+        (p['forename'], p['surname']) for p in new).items() if v > 1}
+    _exempt = {k for k in _dups if _norm_name(k[0], k[1]).replace('|', ' ') in _sns}
+    _real = _dups - _exempt
+    if _exempt:
+        out.append((f'namesakes exempted from duplicate names ({len(_exempt)} recorded)', 0))
+    out.append(('duplicate names' + (': ' + ', '.join(f'{a} {b}' for a, b in sorted(_real)) if _real else ''),
+                len(_real)))
     oor = sum(1 for p in new for k in NUM if not LO[k] <= p[k] <= HI[k])
     if oor: print(f'  WARN  {oor} values outside the reference range '
                   f'(observed range != accepted range — check they are real, do not auto-clamp)')

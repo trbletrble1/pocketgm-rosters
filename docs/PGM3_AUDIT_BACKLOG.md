@@ -3392,3 +3392,80 @@ was only ever about men who appear in both, and there the canonical rule wins.
 this work and are unrelated to faces: 2021's free-agent injuryProne median and
 2000's two duplicate staff names (Dick LeBeau and Jim Mora, both real men
 appearing twice).
+
+### 66. 2021's free agents carried the archive's ROOKIE draw of injuryProne — fixed
+
+Ryan read it off the medians: rostered 52 correct, free agents 34 where the
+archive reads 49, and 34 is the archive's rookie median. The medians are
+suggestive; the distributions settle it.
+
+**2021 free agents against the nine other files: KS 0.263 to their free agents,
+KS 0.067 to their rookies.** 103 men matching a pool of 9,000 rookies that
+closely are the same draw.
+
+**A first test of mine was wrong and the reason matters.** I compared 2021's
+free agents to 2021's OWN rookies, found them differently shaped (KS 0.306), and
+concluded there was no crossing. **2021's rookies are themselves anomalous** —
+p10 19 to p90 41 against an archive rookie spread of 6 to 83 — so the comparison
+tested one defect against another and cleared both. The reference for what a
+cohort's draw looks like is the archive, never the file under question.
+
+**Scope, measured.** No other field crossed: injuryProne separates the two pools
+by KS 0.196, while discipline, loyalty, ambition, greed and intelligence
+separate them by 0.005 to 0.052 and the same test on 2017 assigns them to a
+different pool each time — they cannot tell the pools apart. No other file
+crossed: eight files read "rostered matches the free-agent pool", which is an
+artifact of those two draws being indistinguishable archive-wide at KS 0.02-0.05
+in both directions.
+
+**There was no builder of ours to re-run.** 2021's injuryProne is byte-identical
+to the file's first commit, `77da945` "Add files via upload". The crossing came
+in with the donor and no tool in this repository ever assigned the field, so the
+correct assignment was made for the first time rather than repaired.
+
+**Fixed** by a rank-preserving remap of the 103 onto the nine-file free-agent
+distribution: 98 values changed, median 34 → 51, p90 77 → 88, the most fragile
+free agent still the most fragile. Diff against HEAD: `injuryProne` on 98
+records, all of them free agents, nothing else.
+
+**Left, deliberately:** 2021's rookies are narrower than any other file's rookie
+draw. Their median of 29 sits inside the archive's 28-44 so no gate fires, and
+widening a distribution is a different decision from moving one onto its own
+cohort's level.
+
+### 67. Jim Mora is two men; Dick LeBeau is one man in two jobs — one recorded, one for a ruling
+
+2000's two duplicate staff names are two unrelated things.
+
+**Jim Mora — recorded as a namesake.** Indianapolis head coach aged 65 and San
+Francisco defensive coordinator aged 39, in the same file. Father and son, both
+real, both correctly placed. **The staff test is a second piece of arithmetic,
+for the collision players do not have: two records of one name in ONE file, with
+different ages, are two men.** Written to the registry's `_namesakes` staff
+block; the staff gate reads it and exempts them.
+
+**The cross-file age-gap test is NOT used for staff, and that is a measurement.**
+Run at tolerance 12 it returns 58 men, headed by Bill Belichick "aged 49 in 1979
+and 34 in 1986" and Adam Gase "35 in 2013, 52 in 2017" — one man each, with a
+wrong age field. Staff ages carry far more noise than players' (Bruce Coslet is
+40 in both 1986 and 2000), so on this cohort the test measures the age field
+rather than identity, and would have written 57 false namesakes into the
+registry to hide one real problem. The same-file test has no such failure mode.
+
+**Dick LeBeau — NOT a namesake, and the gate still fails on him, correctly.**
+Cincinnati, age 63 on both records, defensive coordinator and head coach.
+Historically exact: he took over as head coach during the 2000 season and kept
+calling the defence. **But the file carries one man twice on one team.**
+
+**The number for the ruling: the game never does this.** Three independently
+generated vanilla staff exports, 1,296 records, carry **zero duplicate names and
+zero same-name-same-team pairs**. That is the engine's own convention, though it
+is evidence about what PGM3 generates rather than proof of what it accepts —
+only a play test can say whether a doubled man breaks a depth chart or a hire.
+
+**The question, for Ryan.** If PGM3 does not tolerate one man in two roles on
+one team, LeBeau holds the head-coach slot and the coordinator record needs
+somebody else: Cincinnati's actual 2000 defensive assistant, or a generated
+coach with that stated in the provenance sidecar. If it does tolerate it, the
+duplicate-names check needs a same-man exemption distinct from the namesake one.
+**Not written either way.**

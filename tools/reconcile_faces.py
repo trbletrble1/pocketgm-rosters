@@ -315,6 +315,33 @@ def main():
     for y, n in sorted(changed_s.items()): print(f'    {y}: {n}')
 
     # ---------------- registry <- files, and the namesake block ------------
+    # STAFF NAMESAKES, same idea and a second arithmetic test for the case the
+    # players do not have: two records of one name in ONE file. Same age is one
+    # man holding two jobs; different ages are two men. Jim Mora is Indianapolis
+    # head coach at 65 and San Francisco defensive coordinator at 39 in the same
+    # 2000 file -- father and son, both real, both correctly placed. Dick LeBeau
+    # is 63 on both of his, so he is one man and is NOT recorded here.
+    staff_ns = {}
+    for k, v in staff.items():
+        byfile = collections.defaultdict(list)
+        for y, p in v: byfile[y].append(p)
+        for y, ps in byfile.items():
+            if len(ps) > 1 and len({p.get('age') for p in ps}) > 1:
+                staff_ns[k] = (f'{y}: ' + ' vs '.join(
+                    f'{p["role"]} {p["teamID"]} aged {p.get("age")}' for p in ps)
+                    + ' — one file, one name, different ages, so two men')
+    # THE CROSS-FILE TEST IS NOT USED FOR STAFF, and this is a measurement not a
+    # caution. Run at tolerance 12 it returns 58 men, and the top of the list is
+    # Bill Belichick "aged 49 in 1979 and 34 in 1986" and Adam Gase "35 in 2013,
+    # 52 in 2017" -- one man each, with a wrong age field. Staff ages carry far
+    # more noise than players' (Bruce Coslet is 40 in both 1986 and 2000), so on
+    # this cohort the test measures the age field rather than identity and would
+    # write 57 false namesakes into the registry to hide one real problem.
+    # The SAME-FILE test above has no such failure mode: two records, one file,
+    # one name, two ages is two men whatever the ages are worth.
+    print(f'staff namesakes: {len(staff_ns)}')
+    for k, v_ in sorted(staff_ns.items()): print(f'    {k:<20} {v_}')
+
     reg.setdefault('_namesakes', {})
     reg['_namesakes'] = {
         'note': ('Two different men sharing a name and a position. The faces gate keys a '
@@ -323,6 +350,14 @@ def main():
                  'two files tracks the year gap; these miss by 21-37 years. Recorded so the '
                  'exemption is a fact and not a silent skip.'),
         'players': {k: d for k, d in sorted(nam.items())},
+        'staff': {k: d for k, d in sorted(staff_ns.items())},
+        'staff_note': ('Two tests, because staff collide two ways. In ONE file: same name, '
+                       'different ages means two men (Jim Mora, 65 at Indianapolis and 39 at '
+                       'San Francisco in 2000); same age means one man in two jobs, which is a '
+                       'data question and not a namesake (Dick LeBeau, 63 on both Cincinnati '
+                       'records) and is deliberately NOT recorded here. ACROSS files: the age '
+                       'gap must track the year gap, tolerance 12, wider than the players\' 6 '
+                       'because staff ages carry more noise.'),
     }
     # SCOPE OF THE REGISTRY UPDATE, deliberately narrow. Item 54 named the
     # entries where the registry's HEAD FAMILY disagrees with the live file --

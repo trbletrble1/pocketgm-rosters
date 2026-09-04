@@ -303708,6 +303708,10 @@
    "robert hunt|OG": "2000 aged 22 vs 2021 aged 25 \u2014 off by 18",
    "robert woods|WR": "1979 aged 24 vs 2013 aged 21 \u2014 off by 37",
    "stanley morgan|WR": "1979 aged 24 vs 2021 aged 25 \u2014 off by 41"
-  }
+  },
+  "staff": {
+   "jim mora": "2000: Head Coach IND aged 65 vs Def Co-ord SF aged 39 \u2014 one file, one name, different ages, so two men"
+  },
+  "staff_note": "Two tests, because staff collide two ways. In ONE file: same name, different ages means two men (Jim Mora, 65 at Indianapolis and 39 at San Francisco in 2000); same age means one man in two jobs, which is a data question and not a namesake (Dick LeBeau, 63 on both Cincinnati records) and is deliberately NOT recorded here. ACROSS files: the age gap must track the year gap, tolerance 12, wider than the players' 6 because staff ages carry more noise."
  }
 }
