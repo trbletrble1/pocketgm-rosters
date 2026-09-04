@@ -3309,3 +3309,52 @@ J.R. Russell, J.R. Ambrose. They key correctly to each other by luck, but any
 other `X.Y. Surname` at the same position would merge into them. Measured, not
 fixed — the normaliser is shared by the registry, the gates and every join, so
 changing it moves keys everywhere and needs its own pass.
+
+### 65. The photograph measurement scored against Ryan's verdicts — the measurement fails, the photographs do not
+
+Ruled next by Ryan 2026-09-03: score `pgm3-sources/photos/measured.csv` against
+the verdicts already held, since no new photograph pass is needed to do it.
+
+**It does not reproduce them.** 61 of the 241 verified men have a usable measured
+photograph. Leave-one-out, refitting the threshold without the man being
+predicted:
+
+| feature | leave-one-out | base rate |
+|---|---|---|
+| cheek luminance | 65.6% | 55.7% |
+| cheek red minus blue | 73.8% | 55.7% |
+| crown luminance | 70.5% | 55.7% |
+
+**The bar was 95%.** Mike scored 95 of 99 on the same kind of test.
+
+**The one column that looks good is a confound.** `skin_frac` scores 85.2%, and
+`skin_frac` is a skin-DETECTOR response: filter to `skin_frac >= 0.15` and the
+base rate itself becomes 86.2% light. It is measuring the detector's bias toward
+light skin rather than any man's skin. **Same family as `PHCL`, which scored 86%
+against a 91% base rate for the constant answer** — a number that collapses once
+you condition on what is already known.
+
+**The failures are not bad photographs, and this is the part that matters.**
+Aaron Donald reads cheek luminance 188, near-white, and is a dark-skinned man.
+Tony Gonzalez reads 29.3, near-black, and is light. **Both files were opened and
+looked at: correct man, clean headshot, plain background, no ambiguity.** Image
+size does not explain it either — the 70x90 and 240x360 crops carry the same
+median (139.0 and 135.8). The fault is in the measurement pass, not the library.
+
+**And the library is keyed by name alone, with namesakes in it.** There are two
+Josh Allens on disk — the Buffalo quarterback and the Jacksonville linebacker,
+both opened and confirmed — and `measured.csv` carries a single `josh allen`
+row, so which man it measured is arbitrary. The eighth namesake collision, in
+the source this time.
+
+**Coverage, for whoever picks this up:** measured.csv covers 9,472 of the 26,145
+photographs and **5,131 of those rows found no face at all**; 4,341 are usable,
+17% of the library.
+
+**NOT A REFUTATION OF THE PHOTOGRAPHS.** Four were opened and four were the
+right man, well cropped and well lit. They remain the largest untapped
+appearance source in the project and the only one that could answer skin, hair
+colour, facial hair and the balding axis together. **What a working pass needs:
+face detection placing the sample region rather than whatever placed it here, a
+key of name plus position, and the same scoring against the same 61 before
+anything is applied to a file.**
