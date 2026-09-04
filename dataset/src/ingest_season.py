@@ -4,7 +4,7 @@ Identity is resolved through StatsCrew slugs and the player/coach cross-referenc
 link. A matching slug BODY across the p-/c- namespaces is never treated as
 evidence (design 2.4, trap 1).
 """
-import os, sys, re, json
+import os, sys, re, json, collections
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from model import Store
@@ -13,11 +13,31 @@ import fetch_statscrew as F
 LEAGUE = os.environ.get("LEAGUE", "NFL")
 YEAR = int(os.environ.get("YEAR", "1950"))
 SEASON = f"{LEAGUE}-{YEAR}"
+DEVIATIONS = []
 DECL = json.load(open(os.path.join(HERE, "..", "declarations", "statscrew.json")))
 
 # per-era / per-league availability, read from the declaration rather than assumed
-JERSEY_USABLE = YEAR >= DECL["field_availability"]["jersey"]["usable_from"]
-GP_LEAGUE_RATE = DECL["field_availability"]["games_played"]["measured"].get(LEAGUE)
+FA = DECL["field_availability"]
+JERSEY_USABLE = YEAR >= FA["jersey"]["usable_from"]
+
+def expected_fill(field):
+    """What the DECLARATION predicts for this field, in this league-year.
+    per_era  -> keyed LEAGUE-YEAR, falling back to the nearest sampled year
+    per_league -> keyed LEAGUE
+    Returns None where the declaration makes no prediction."""
+    spec = FA.get(field)
+    if not spec: return None
+    m = spec.get("measured", {})
+    if spec["kind"] == "constant":
+        vals = [v for v in m.values() if isinstance(v, (int, float))]
+        return vals[0] if vals else None
+    if spec["kind"] == "per_league" and LEAGUE in m:
+        return m[LEAGUE]
+    key = f"{LEAGUE}-{YEAR}"
+    if key in m: return m[key]
+    same = [(abs(int(k.split("-")[1]) - YEAR), v) for k, v in m.items()
+            if k.startswith(LEAGUE + "-") and "-" in k]
+    return min(same)[1] if same else None
 
 PERSON_PREDS = {"Birth Date": "birth_date", "College": "college", "Hometown": "hometown"}
 STINT_PREDS  = {"#": "jersey", "GP": "games_played", "GS": "games_started"}
@@ -28,6 +48,7 @@ def run(store, log):
     teams = F.teams_in(LEAGUE, YEAR)
     log(f"teams: {len(teams)}  {teams}")
 
+    fill_seen = collections.defaultdict(lambda: [0, 0])
     by_slug = {}          # slug -> person id
     rows_seen = denot = absences = 0
     stints = []
@@ -43,6 +64,10 @@ def run(store, log):
             log(f"  {team}: columns absent for this era/league: {missing_cols}")
         names = {}
         for r in rows:
+            for c in ("#", "GP", "GS", "Birth Date", "Hometown", "College"):
+                if c in cols_present:
+                    fill_seen[c][1] += 1
+                    if r.get(c, "") != "": fill_seen[c][0] += 1
             rows_seen += 1
             nm = r.get("Player", "")
             names.setdefault(nm, 0); names[nm] += 1
@@ -100,6 +125,34 @@ def run(store, log):
             log(f"  {team}: repeated names on one roster: {dupes}")
 
     log(f"rows {rows_seen}  denotations {denot}  distinct persons {len(by_slug)}  absences {absences}")
+
+    # --- THE DECLARATION IS LOAD-BEARING ------------------------------------
+    # Measure what actually arrived and compare it to what the declaration
+    # predicts. A deviation is either a bad declaration or a season the source
+    # handles differently, and both are worth stopping for.
+    global DEVIATIONS
+    for field, col in (("jersey", "#"), ("games_played", "GP"),
+                       ("games_started", "GS"), ("birth_date", "Birth Date"),
+                       ("hometown", "Hometown"), ("college", "College")):
+        seen = fill_seen.get(col)
+        if not seen or not seen[1]:
+            continue
+        actual = 100.0 * seen[0] / seen[1]
+        exp = expected_fill(field)
+        if exp is None:
+            DEVIATIONS.append((f"{LEAGUE}-{YEAR}", field, None, round(actual, 1),
+                               "declaration makes NO prediction for this league"))
+        elif abs(actual - exp) > 10.0:
+            DEVIATIONS.append((f"{LEAGUE}-{YEAR}", field, exp, round(actual, 1),
+                               "deviation > 10 points"))
+    # NOT a deviation: a jersey column existing below usable_from is EXPECTED -
+    # usable_from means "usable as a discriminator", and the whole point is that
+    # the column is present but too sparse. The first sweep raised this on every
+    # season 1922-1934, which was the check being noisy rather than a finding.
+    # What IS a deviation is the column being ABSENT above the threshold.
+    if JERSEY_USABLE and not fill_seen.get("#", (0, 0))[1]:
+        DEVIATIONS.append((f"{LEAGUE}-{YEAR}", "jersey", FA["jersey"]["usable_from"], 0.0,
+                           "jersey column ABSENT at or above usable_from"))
     return by_slug, stints, rows_seen, denot
 
 
@@ -147,6 +200,13 @@ def main():
         both = resolve_coaches(store, by_slug, log)
     store.save(os.path.join(HERE, "..", "build", f"{LEAGUE.lower()}-{YEAR}.json"))
     log(f"claims {len(store.claims)}  denotations {len(store.denotations)}  persons {len(store.persons)}")
+    if DEVIATIONS:
+        log("DECLARATION DEVIATIONS:")
+        for lg, fld, exp, act, why in DEVIATIONS:
+            log(f"   {lg} {fld}: declared {exp}  actual {act}  -- {why}")
+    json.dump([{"league_year": a, "field": b, "declared": c, "actual": d, "why": e}
+               for a, b, c, d, e in DEVIATIONS],
+              open(os.path.join(HERE, "..", "build", f"dev-{LEAGUE.lower()}-{YEAR}.json"), "w"))
     open(os.path.join(HERE, "..", "build", f"ingest-{LEAGUE.lower()}-{YEAR}.log"), "w").write("\n".join(out))
 
 if __name__ == "__main__":

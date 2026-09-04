@@ -6,9 +6,22 @@ CACHE = os.environ.get("SC_CACHE", os.path.expanduser("~/Documents/pgm3-sources/
 def _get(url, key):
     os.makedirs(CACHE, exist_ok=True)
     p = os.path.join(CACHE, key + ".html")
+    # A CACHE MUST NOT BE ABLE TO STORE A FAILURE. The first version opened the
+    # file before fetching, so a DNS outage created ~700 zero-byte files that the
+    # cache then served forever as valid pages - 28 NFL seasons read as "0 teams".
+    # Same shape as the archive.org 302 trap the handoff records: a failed fetch
+    # that looks exactly like an empty document.
+    if os.path.exists(p) and os.path.getsize(p) == 0:
+        os.remove(p)
     if not os.path.exists(p):
         req = urllib.request.Request(url, headers={"User-Agent": UA})
-        open(p, "wb").write(urllib.request.urlopen(req, timeout=30).read())
+        data = urllib.request.urlopen(req, timeout=30).read()   # fetch FIRST
+        if not data:
+            raise IOError(f"empty response for {url} - not cached")
+        tmp = p + ".part"
+        with open(tmp, "wb") as fh:
+            fh.write(data)
+        os.replace(tmp, p)                                      # atomic
         time.sleep(0.7)
     return open(p, encoding="utf-8", errors="replace").read()
 

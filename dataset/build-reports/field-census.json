@@ -1,0 +1,1559 @@
+{
+ "1922": {
+  "columns_absent": [
+   "#"
+  ],
+  "fill": {
+   "#": 76.6,
+   "Birth Date": 96.1,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 90.0,
+   "Hometown": 95.9,
+   "Weight": 96.8
+  },
+  "players": 411,
+  "teams": 18
+ },
+ "1923": {
+  "columns_absent": [
+   "#"
+  ],
+  "fill": {
+   "#": 80.7,
+   "Birth Date": 97.3,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 93.2,
+   "Hometown": 96.4,
+   "Weight": 98.5
+  },
+  "players": 413,
+  "teams": 20
+ },
+ "1924": {
+  "columns_absent": [
+   "#"
+  ],
+  "fill": {
+   "#": 78.2,
+   "Birth Date": 96.4,
+   "College": 99.7,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 95.3,
+   "Hometown": 95.1,
+   "Weight": 97.4
+  },
+  "players": 386,
+  "teams": 18
+ },
+ "1925": {
+  "columns_absent": [
+   "#"
+  ],
+  "fill": {
+   "#": 81.0,
+   "Birth Date": 98.3,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 95.4,
+   "Hometown": 97.3,
+   "Weight": 98.5
+  },
+  "players": 476,
+  "teams": 20
+ },
+ "1926": {
+  "columns_absent": [],
+  "fill": {
+   "#": 82.6,
+   "Birth Date": 97.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 92.1,
+   "Hometown": 96.4,
+   "Weight": 97.8
+  },
+  "players": 535,
+  "teams": 22
+ },
+ "1927": {
+  "columns_absent": [],
+  "fill": {
+   "#": 86.0,
+   "Birth Date": 98.3,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 97.3,
+   "Hometown": 99.7,
+   "Weight": 100.0
+  },
+  "players": 300,
+  "teams": 12
+ },
+ "1928": {
+  "columns_absent": [],
+  "fill": {
+   "#": 89.7,
+   "Birth Date": 99.1,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 97.8,
+   "Hometown": 100.0,
+   "Weight": 98.7
+  },
+  "players": 223,
+  "teams": 10
+ },
+ "1929": {
+  "columns_absent": [
+   "#"
+  ],
+  "fill": {
+   "#": 90.3,
+   "Birth Date": 98.6,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 95.4,
+   "Hometown": 98.9,
+   "Weight": 98.6
+  },
+  "players": 284,
+  "teams": 12
+ },
+ "1930": {
+  "columns_absent": [],
+  "fill": {
+   "#": 81.4,
+   "Birth Date": 97.4,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 98.3,
+   "Hometown": 98.3,
+   "Weight": 99.4
+  },
+  "players": 345,
+  "teams": 11
+ },
+ "1931": {
+  "columns_absent": [
+   "#"
+  ],
+  "fill": {
+   "#": 86.9,
+   "Birth Date": 99.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 98.6,
+   "Hometown": 99.0,
+   "Weight": 99.7
+  },
+  "players": 290,
+  "teams": 10
+ },
+ "1932": {
+  "columns_absent": [],
+  "fill": {
+   "#": 86.6,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 99.6,
+   "Hometown": 98.7,
+   "Weight": 100.0
+  },
+  "players": 238,
+  "teams": 8
+ },
+ "1933": {
+  "columns_absent": [],
+  "fill": {
+   "#": 90.2,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 97.3,
+   "Weight": 100.0
+  },
+  "players": 295,
+  "teams": 10
+ },
+ "1934": {
+  "columns_absent": [],
+  "fill": {
+   "#": 94.8,
+   "Birth Date": 99.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 99.3,
+   "Hometown": 98.4,
+   "Weight": 100.0
+  },
+  "players": 307,
+  "teams": 10
+ },
+ "1935": {
+  "columns_absent": [],
+  "fill": {
+   "#": 95.7,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.9,
+   "Weight": 100.0
+  },
+  "players": 279,
+  "teams": 9
+ },
+ "1936": {
+  "columns_absent": [],
+  "fill": {
+   "#": 97.3,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.2,
+   "Weight": 100.0
+  },
+  "players": 260,
+  "teams": 9
+ },
+ "1937": {
+  "columns_absent": [],
+  "fill": {
+   "#": 97.7,
+   "Birth Date": 99.7,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.3,
+   "Weight": 100.0
+  },
+  "players": 305,
+  "teams": 10
+ },
+ "1938": {
+  "columns_absent": [],
+  "fill": {
+   "#": 98.2,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.8,
+   "Weight": 100.0
+  },
+  "players": 331,
+  "teams": 10
+ },
+ "1939": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.2,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.2,
+   "Weight": 100.0
+  },
+  "players": 354,
+  "teams": 10
+ },
+ "1940": {
+  "columns_absent": [],
+  "fill": {
+   "#": 98.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.9,
+   "Weight": 100.0
+  },
+  "players": 351,
+  "teams": 10
+ },
+ "1941": {
+  "columns_absent": [],
+  "fill": {
+   "#": 98.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.7,
+   "Weight": 100.0
+  },
+  "players": 357,
+  "teams": 10
+ },
+ "1942": {
+  "columns_absent": [],
+  "fill": {
+   "#": 97.1,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 349,
+  "teams": 10
+ },
+ "1943": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.2,
+   "Birth Date": 99.6,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.2,
+   "Weight": 100.0
+  },
+  "players": 246,
+  "teams": 8
+ },
+ "1944": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.7,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.7,
+   "Weight": 100.0
+  },
+  "players": 316,
+  "teams": 10
+ },
+ "1945": {
+  "columns_absent": [],
+  "fill": {
+   "#": 95.8,
+   "Birth Date": 99.8,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.5,
+   "Weight": 100.0
+  },
+  "players": 430,
+  "teams": 10
+ },
+ "1946": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.2,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.7,
+   "Weight": 100.0
+  },
+  "players": 353,
+  "teams": 10
+ },
+ "1947": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.9,
+   "Weight": 100.0
+  },
+  "players": 374,
+  "teams": 10
+ },
+ "1948": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.7,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.2,
+   "Weight": 100.0
+  },
+  "players": 379,
+  "teams": 10
+ },
+ "1949": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.1,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.4,
+   "Weight": 100.0
+  },
+  "players": 351,
+  "teams": 10
+ },
+ "1950": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.8,
+   "Weight": 100.0
+  },
+  "players": 460,
+  "teams": 13
+ },
+ "1951": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.8,
+   "Weight": 100.0
+  },
+  "players": 429,
+  "teams": 12
+ },
+ "1952": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.6,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 451,
+  "teams": 12
+ },
+ "1953": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 440,
+  "teams": 12
+ },
+ "1954": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.8,
+   "Weight": 100.0
+  },
+  "players": 444,
+  "teams": 12
+ },
+ "1955": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.9,
+   "Weight": 100.0
+  },
+  "players": 453,
+  "teams": 12
+ },
+ "1956": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.8,
+   "Weight": 100.0
+  },
+  "players": 467,
+  "teams": 12
+ },
+ "1957": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 446,
+  "teams": 12
+ },
+ "1958": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.8,
+   "Weight": 100.0
+  },
+  "players": 455,
+  "teams": 12
+ },
+ "1959": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 459,
+  "teams": 12
+ },
+ "1960": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.6,
+   "Weight": 100.0
+  },
+  "players": 515,
+  "teams": 13
+ },
+ "1961": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.8,
+   "Weight": 100.0
+  },
+  "players": 563,
+  "teams": 14
+ },
+ "1962": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.1,
+   "Weight": 100.0
+  },
+  "players": 553,
+  "teams": 14
+ },
+ "1963": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.5,
+   "Weight": 100.0
+  },
+  "players": 578,
+  "teams": 14
+ },
+ "1964": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 585,
+  "teams": 14
+ },
+ "1965": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 617,
+  "teams": 14
+ },
+ "1966": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 684,
+  "teams": 15
+ },
+ "1967": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 751,
+  "teams": 16
+ },
+ "1968": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 740,
+  "teams": 16
+ },
+ "1969": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 750,
+  "teams": 16
+ },
+ "1970": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1222,
+  "teams": 26
+ },
+ "1971": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1228,
+  "teams": 26
+ },
+ "1972": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1252,
+  "teams": 26
+ },
+ "1973": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1269,
+  "teams": 26
+ },
+ "1974": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.9,
+   "Weight": 100.0
+  },
+  "players": 1335,
+  "teams": 26
+ },
+ "1975": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1242,
+  "teams": 26
+ },
+ "1976": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.9,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1381,
+  "teams": 28
+ },
+ "1977": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1375,
+  "teams": 28
+ },
+ "1978": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1439,
+  "teams": 28
+ },
+ "1979": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.9,
+   "Weight": 100.0
+  },
+  "players": 1438,
+  "teams": 28
+ },
+ "1980": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1485,
+  "teams": 28
+ },
+ "1981": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1452,
+  "teams": 28
+ },
+ "1982": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1465,
+  "teams": 28
+ },
+ "1983": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1553,
+  "teams": 28
+ },
+ "1984": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1603,
+  "teams": 28
+ },
+ "1985": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1508,
+  "teams": 28
+ },
+ "1986": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1541,
+  "teams": 28
+ },
+ "1987": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 97.9,
+   "Weight": 100.0
+  },
+  "players": 2840,
+  "teams": 28
+ },
+ "1988": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.9,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1579,
+  "teams": 28
+ },
+ "1989": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.9,
+   "Weight": 100.0
+  },
+  "players": 1576,
+  "teams": 28
+ },
+ "1990": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.9,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1546,
+  "teams": 28
+ },
+ "1991": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.9,
+   "Weight": 100.0
+  },
+  "players": 1564,
+  "teams": 28
+ },
+ "1992": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1590,
+  "teams": 28
+ },
+ "1993": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1620,
+  "teams": 28
+ },
+ "1994": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1561,
+  "teams": 28
+ },
+ "1995": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1711,
+  "teams": 30
+ },
+ "1996": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1664,
+  "teams": 29
+ },
+ "1997": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1733,
+  "teams": 30
+ },
+ "1998": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1741,
+  "teams": 30
+ },
+ "1999": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1806,
+  "teams": 31
+ },
+ "2000": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1780,
+  "teams": 31
+ },
+ "2001": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.9,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1780,
+  "teams": 31
+ },
+ "2002": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.9,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1877,
+  "teams": 32
+ },
+ "2003": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1871,
+  "teams": 32
+ },
+ "2004": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1929,
+  "teams": 32
+ },
+ "2005": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1917,
+  "teams": 32
+ },
+ "2006": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.9,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1911,
+  "teams": 32
+ },
+ "2007": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 100.0,
+   "College": 99.9,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 99.9,
+   "Hometown": 99.9,
+   "Weight": 99.9
+  },
+  "players": 1946,
+  "teams": 32
+ },
+ "2008": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.5,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 1922,
+  "teams": 32
+ },
+ "2009": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.9,
+   "Weight": 100.0
+  },
+  "players": 1955,
+  "teams": 32
+ },
+ "2010": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.9,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 100.0,
+   "Weight": 100.0
+  },
+  "players": 2013,
+  "teams": 32
+ },
+ "2011": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 99.9,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 99.4,
+   "Weight": 100.0
+  },
+  "players": 1971,
+  "teams": 32
+ },
+ "2012": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.9,
+   "Birth Date": 100.0,
+   "College": 99.9,
+   "GP": 99.9,
+   "GS": 99.9,
+   "Height": 100.0,
+   "Hometown": 99.1,
+   "Weight": 100.0
+  },
+  "players": 1980,
+  "teams": 32
+ },
+ "2013": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.5,
+   "Birth Date": 100.0,
+   "College": 99.9,
+   "GP": 99.7,
+   "GS": 89.8,
+   "Height": 99.9,
+   "Hometown": 95.6,
+   "Weight": 99.9
+  },
+  "players": 2150,
+  "teams": 32
+ },
+ "2014": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.3,
+   "Birth Date": 99.9,
+   "College": 99.9,
+   "GP": 100.0,
+   "GS": 89.2,
+   "Height": 99.9,
+   "Hometown": 95.1,
+   "Weight": 99.9
+  },
+  "players": 2143,
+  "teams": 32
+ },
+ "2015": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.9,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 97.7,
+   "Weight": 100.0
+  },
+  "players": 1987,
+  "teams": 32
+ },
+ "2016": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.9,
+   "Birth Date": 100.0,
+   "College": 98.7,
+   "GP": 90.2,
+   "GS": 90.2,
+   "Height": 100.0,
+   "Hometown": 95.8,
+   "Weight": 100.0
+  },
+  "players": 2208,
+  "teams": 32
+ },
+ "2017": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 99.9,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.1,
+   "Weight": 100.0
+  },
+  "players": 2087,
+  "teams": 32
+ },
+ "2018": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 99.9,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.2,
+   "Weight": 100.0
+  },
+  "players": 2110,
+  "teams": 32
+ },
+ "2019": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 99.9,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.8,
+   "Weight": 100.0
+  },
+  "players": 2129,
+  "teams": 32
+ },
+ "2020": {
+  "columns_absent": [],
+  "fill": {
+   "#": 100.0,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 98.1,
+   "Weight": 100.0
+  },
+  "players": 2191,
+  "teams": 31
+ },
+ "2021": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 100.0,
+   "College": 99.9,
+   "GP": 100.0,
+   "GS": 100.0,
+   "Height": 100.0,
+   "Hometown": 97.7,
+   "Weight": 100.0
+  },
+  "players": 2346,
+  "teams": 32
+ },
+ "2022": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.5,
+   "Birth Date": 100.0,
+   "College": 99.9,
+   "GP": 97.8,
+   "GS": 97.7,
+   "Height": 100.0,
+   "Hometown": 98.2,
+   "Weight": 100.0
+  },
+  "players": 2149,
+  "teams": 32
+ },
+ "2023": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 98.0,
+   "GS": 98.0,
+   "Height": 100.0,
+   "Hometown": 98.5,
+   "Weight": 100.0
+  },
+  "players": 2092,
+  "teams": 32
+ },
+ "2024": {
+  "columns_absent": [],
+  "fill": {
+   "#": 99.8,
+   "Birth Date": 100.0,
+   "College": 100.0,
+   "GP": 98.3,
+   "GS": 98.3,
+   "Height": 100.0,
+   "Hometown": 99.0,
+   "Weight": 100.0
+  },
+  "players": 2159,
+  "teams": 32
+ }
+}

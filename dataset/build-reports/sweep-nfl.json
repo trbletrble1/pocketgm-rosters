@@ -1,0 +1,833 @@
+{
+ "league": "NFL",
+ "seasons": 102,
+ "span": [
+  1922,
+  2024
+ ],
+ "total_rows": 115190,
+ "total_persons_per_season": 112121,
+ "by_season": [
+  {
+   "year": 1922,
+   "teams": 18,
+   "rows": 411,
+   "persons": 382,
+   "deviations": 1
+  },
+  {
+   "year": 1923,
+   "teams": 20,
+   "rows": 413,
+   "persons": 389,
+   "deviations": 1
+  },
+  {
+   "year": 1924,
+   "teams": 18,
+   "rows": 386,
+   "persons": 367,
+   "deviations": 1
+  },
+  {
+   "year": 1925,
+   "teams": 20,
+   "rows": 476,
+   "persons": 433,
+   "deviations": 1
+  },
+  {
+   "year": 1926,
+   "teams": 22,
+   "rows": 535,
+   "persons": 501,
+   "deviations": 1
+  },
+  {
+   "year": 1927,
+   "teams": 12,
+   "rows": 300,
+   "persons": 282,
+   "deviations": 1
+  },
+  {
+   "year": 1928,
+   "teams": 10,
+   "rows": 223,
+   "persons": 214,
+   "deviations": 1
+  },
+  {
+   "year": 1929,
+   "teams": 12,
+   "rows": 284,
+   "persons": 278,
+   "deviations": 1
+  },
+  {
+   "year": 1930,
+   "teams": 11,
+   "rows": 345,
+   "persons": 302,
+   "deviations": 1
+  },
+  {
+   "year": 1931,
+   "teams": 10,
+   "rows": 290,
+   "persons": 265,
+   "deviations": 1
+  },
+  {
+   "year": 1932,
+   "teams": 8,
+   "rows": 238,
+   "persons": 219,
+   "deviations": 1
+  },
+  {
+   "year": 1933,
+   "teams": 10,
+   "rows": 295,
+   "persons": 278,
+   "deviations": 1
+  },
+  {
+   "year": 1934,
+   "teams": 10,
+   "rows": 307,
+   "persons": 289,
+   "deviations": 1
+  },
+  {
+   "year": 1935,
+   "teams": 9,
+   "rows": 279,
+   "persons": 263,
+   "deviations": 0
+  },
+  {
+   "year": 1936,
+   "teams": 9,
+   "rows": 260,
+   "persons": 253,
+   "deviations": 0
+  },
+  {
+   "year": 1937,
+   "teams": 10,
+   "rows": 305,
+   "persons": 292,
+   "deviations": 0
+  },
+  {
+   "year": 1938,
+   "teams": 10,
+   "rows": 331,
+   "persons": 318,
+   "deviations": 0
+  },
+  {
+   "year": 1939,
+   "teams": 10,
+   "rows": 354,
+   "persons": 338,
+   "deviations": 0
+  },
+  {
+   "year": 1940,
+   "teams": 10,
+   "rows": 351,
+   "persons": 343,
+   "deviations": 0
+  },
+  {
+   "year": 1941,
+   "teams": 10,
+   "rows": 357,
+   "persons": 345,
+   "deviations": 0
+  },
+  {
+   "year": 1942,
+   "teams": 10,
+   "rows": 349,
+   "persons": 342,
+   "deviations": 0
+  },
+  {
+   "year": 1943,
+   "teams": 9,
+   "rows": 246,
+   "persons": 242,
+   "deviations": 0
+  },
+  {
+   "year": 1944,
+   "teams": 10,
+   "rows": 316,
+   "persons": 308,
+   "deviations": 0
+  },
+  {
+   "year": 1945,
+   "teams": 10,
+   "rows": 430,
+   "persons": 417,
+   "deviations": 0
+  },
+  {
+   "year": 1946,
+   "teams": 10,
+   "rows": 353,
+   "persons": 351,
+   "deviations": 0
+  },
+  {
+   "year": 1947,
+   "teams": 10,
+   "rows": 374,
+   "persons": 366,
+   "deviations": 0
+  },
+  {
+   "year": 1948,
+   "teams": 10,
+   "rows": 379,
+   "persons": 367,
+   "deviations": 0
+  },
+  {
+   "year": 1949,
+   "teams": 10,
+   "rows": 351,
+   "persons": 337,
+   "deviations": 0
+  },
+  {
+   "year": 1950,
+   "teams": 13,
+   "rows": 460,
+   "persons": 446,
+   "deviations": 0
+  },
+  {
+   "year": 1951,
+   "teams": 12,
+   "rows": 429,
+   "persons": 421,
+   "deviations": 0
+  },
+  {
+   "year": 1952,
+   "teams": 12,
+   "rows": 451,
+   "persons": 437,
+   "deviations": 0
+  },
+  {
+   "year": 1953,
+   "teams": 12,
+   "rows": 440,
+   "persons": 429,
+   "deviations": 0
+  },
+  {
+   "year": 1954,
+   "teams": 12,
+   "rows": 444,
+   "persons": 437,
+   "deviations": 0
+  },
+  {
+   "year": 1955,
+   "teams": 12,
+   "rows": 453,
+   "persons": 441,
+   "deviations": 0
+  },
+  {
+   "year": 1956,
+   "teams": 12,
+   "rows": 467,
+   "persons": 450,
+   "deviations": 0
+  },
+  {
+   "year": 1957,
+   "teams": 12,
+   "rows": 446,
+   "persons": 441,
+   "deviations": 0
+  },
+  {
+   "year": 1958,
+   "teams": 12,
+   "rows": 455,
+   "persons": 445,
+   "deviations": 0
+  },
+  {
+   "year": 1959,
+   "teams": 12,
+   "rows": 459,
+   "persons": 452,
+   "deviations": 0
+  },
+  {
+   "year": 1960,
+   "teams": 13,
+   "rows": 515,
+   "persons": 511,
+   "deviations": 0
+  },
+  {
+   "year": 1961,
+   "teams": 14,
+   "rows": 563,
+   "persons": 550,
+   "deviations": 0
+  },
+  {
+   "year": 1962,
+   "teams": 14,
+   "rows": 553,
+   "persons": 545,
+   "deviations": 0
+  },
+  {
+   "year": 1963,
+   "teams": 14,
+   "rows": 578,
+   "persons": 567,
+   "deviations": 0
+  },
+  {
+   "year": 1964,
+   "teams": 14,
+   "rows": 585,
+   "persons": 582,
+   "deviations": 0
+  },
+  {
+   "year": 1965,
+   "teams": 14,
+   "rows": 617,
+   "persons": 611,
+   "deviations": 0
+  },
+  {
+   "year": 1966,
+   "teams": 15,
+   "rows": 684,
+   "persons": 674,
+   "deviations": 0
+  },
+  {
+   "year": 1967,
+   "teams": 16,
+   "rows": 751,
+   "persons": 739,
+   "deviations": 0
+  },
+  {
+   "year": 1968,
+   "teams": 16,
+   "rows": 740,
+   "persons": 733,
+   "deviations": 0
+  },
+  {
+   "year": 1969,
+   "teams": 16,
+   "rows": 750,
+   "persons": 735,
+   "deviations": 0
+  },
+  {
+   "year": 1970,
+   "teams": 26,
+   "rows": 1222,
+   "persons": 1210,
+   "deviations": 0
+  },
+  {
+   "year": 1971,
+   "teams": 26,
+   "rows": 1228,
+   "persons": 1211,
+   "deviations": 0
+  },
+  {
+   "year": 1972,
+   "teams": 26,
+   "rows": 1252,
+   "persons": 1226,
+   "deviations": 0
+  },
+  {
+   "year": 1973,
+   "teams": 26,
+   "rows": 1269,
+   "persons": 1240,
+   "deviations": 0
+  },
+  {
+   "year": 1974,
+   "teams": 26,
+   "rows": 1335,
+   "persons": 1303,
+   "deviations": 0
+  },
+  {
+   "year": 1975,
+   "teams": 26,
+   "rows": 1242,
+   "persons": 1212,
+   "deviations": 0
+  },
+  {
+   "year": 1976,
+   "teams": 28,
+   "rows": 1381,
+   "persons": 1335,
+   "deviations": 0
+  },
+  {
+   "year": 1977,
+   "teams": 28,
+   "rows": 1375,
+   "persons": 1346,
+   "deviations": 0
+  },
+  {
+   "year": 1978,
+   "teams": 28,
+   "rows": 1439,
+   "persons": 1386,
+   "deviations": 0
+  },
+  {
+   "year": 1979,
+   "teams": 28,
+   "rows": 1438,
+   "persons": 1406,
+   "deviations": 0
+  },
+  {
+   "year": 1980,
+   "teams": 28,
+   "rows": 1485,
+   "persons": 1438,
+   "deviations": 0
+  },
+  {
+   "year": 1981,
+   "teams": 28,
+   "rows": 1452,
+   "persons": 1416,
+   "deviations": 0
+  },
+  {
+   "year": 1982,
+   "teams": 28,
+   "rows": 1465,
+   "persons": 1452,
+   "deviations": 0
+  },
+  {
+   "year": 1983,
+   "teams": 28,
+   "rows": 1553,
+   "persons": 1518,
+   "deviations": 0
+  },
+  {
+   "year": 1984,
+   "teams": 28,
+   "rows": 1603,
+   "persons": 1559,
+   "deviations": 0
+  },
+  {
+   "year": 1985,
+   "teams": 28,
+   "rows": 1508,
+   "persons": 1468,
+   "deviations": 0
+  },
+  {
+   "year": 1986,
+   "teams": 28,
+   "rows": 1541,
+   "persons": 1487,
+   "deviations": 0
+  },
+  {
+   "year": 1987,
+   "teams": 28,
+   "rows": 2840,
+   "persons": 2788,
+   "deviations": 0
+  },
+  {
+   "year": 1988,
+   "teams": 28,
+   "rows": 1579,
+   "persons": 1533,
+   "deviations": 0
+  },
+  {
+   "year": 1989,
+   "teams": 28,
+   "rows": 1576,
+   "persons": 1533,
+   "deviations": 0
+  },
+  {
+   "year": 1990,
+   "teams": 28,
+   "rows": 1546,
+   "persons": 1512,
+   "deviations": 0
+  },
+  {
+   "year": 1991,
+   "teams": 28,
+   "rows": 1564,
+   "persons": 1529,
+   "deviations": 0
+  },
+  {
+   "year": 1992,
+   "teams": 28,
+   "rows": 1590,
+   "persons": 1540,
+   "deviations": 0
+  },
+  {
+   "year": 1993,
+   "teams": 28,
+   "rows": 1620,
+   "persons": 1572,
+   "deviations": 0
+  },
+  {
+   "year": 1994,
+   "teams": 28,
+   "rows": 1561,
+   "persons": 1537,
+   "deviations": 0
+  },
+  {
+   "year": 1995,
+   "teams": 30,
+   "rows": 1711,
+   "persons": 1683,
+   "deviations": 0
+  },
+  {
+   "year": 1996,
+   "teams": 30,
+   "rows": 1664,
+   "persons": 1635,
+   "deviations": 0
+  },
+  {
+   "year": 1997,
+   "teams": 30,
+   "rows": 1733,
+   "persons": 1696,
+   "deviations": 0
+  },
+  {
+   "year": 1998,
+   "teams": 30,
+   "rows": 1741,
+   "persons": 1705,
+   "deviations": 0
+  },
+  {
+   "year": 1999,
+   "teams": 31,
+   "rows": 1806,
+   "persons": 1771,
+   "deviations": 0
+  },
+  {
+   "year": 2000,
+   "teams": 31,
+   "rows": 1780,
+   "persons": 1745,
+   "deviations": 0
+  },
+  {
+   "year": 2001,
+   "teams": 31,
+   "rows": 1780,
+   "persons": 1746,
+   "deviations": 0
+  },
+  {
+   "year": 2002,
+   "teams": 32,
+   "rows": 1877,
+   "persons": 1840,
+   "deviations": 0
+  },
+  {
+   "year": 2003,
+   "teams": 32,
+   "rows": 1871,
+   "persons": 1838,
+   "deviations": 0
+  },
+  {
+   "year": 2004,
+   "teams": 32,
+   "rows": 1929,
+   "persons": 1887,
+   "deviations": 0
+  },
+  {
+   "year": 2005,
+   "teams": 32,
+   "rows": 1917,
+   "persons": 1886,
+   "deviations": 0
+  },
+  {
+   "year": 2006,
+   "teams": 32,
+   "rows": 1911,
+   "persons": 1873,
+   "deviations": 0
+  },
+  {
+   "year": 2007,
+   "teams": 32,
+   "rows": 1946,
+   "persons": 1900,
+   "deviations": 0
+  },
+  {
+   "year": 2008,
+   "teams": 32,
+   "rows": 1922,
+   "persons": 1874,
+   "deviations": 0
+  },
+  {
+   "year": 2009,
+   "teams": 32,
+   "rows": 1955,
+   "persons": 1899,
+   "deviations": 0
+  },
+  {
+   "year": 2010,
+   "teams": 32,
+   "rows": 2013,
+   "persons": 1937,
+   "deviations": 0
+  },
+  {
+   "year": 2011,
+   "teams": 32,
+   "rows": 1971,
+   "persons": 1915,
+   "deviations": 0
+  },
+  {
+   "year": 2012,
+   "teams": 32,
+   "rows": 1980,
+   "persons": 1946,
+   "deviations": 0
+  },
+  {
+   "year": 2013,
+   "teams": 32,
+   "rows": 2150,
+   "persons": 2093,
+   "deviations": 1
+  },
+  {
+   "year": 2014,
+   "teams": 32,
+   "rows": 2143,
+   "persons": 2088,
+   "deviations": 1
+  },
+  {
+   "year": 2015,
+   "teams": 32,
+   "rows": 1987,
+   "persons": 1932,
+   "deviations": 0
+  },
+  {
+   "year": 2016,
+   "teams": 32,
+   "rows": 2208,
+   "persons": 2159,
+   "deviations": 0
+  },
+  {
+   "year": 2017,
+   "teams": 32,
+   "rows": 2087,
+   "persons": 2013,
+   "deviations": 0
+  },
+  {
+   "year": 2019,
+   "teams": 32,
+   "rows": 2129,
+   "persons": 2025,
+   "deviations": 0
+  },
+  {
+   "year": 2020,
+   "teams": 32,
+   "rows": 2191,
+   "persons": 2128,
+   "deviations": 0
+  },
+  {
+   "year": 2021,
+   "teams": 32,
+   "rows": 2346,
+   "persons": 2252,
+   "deviations": 0
+  },
+  {
+   "year": 2022,
+   "teams": 32,
+   "rows": 2149,
+   "persons": 2074,
+   "deviations": 0
+  },
+  {
+   "year": 2023,
+   "teams": 32,
+   "rows": 2092,
+   "persons": 2027,
+   "deviations": 0
+  },
+  {
+   "year": 2024,
+   "teams": 32,
+   "rows": 2159,
+   "persons": 2070,
+   "deviations": 0
+  }
+ ],
+ "deviations": [
+  {
+   "league_year": "NFL-1922",
+   "field": "jersey",
+   "declared": null,
+   "actual": 76.6,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1923",
+   "field": "jersey",
+   "declared": null,
+   "actual": 80.7,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1924",
+   "field": "jersey",
+   "declared": null,
+   "actual": 78.2,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1925",
+   "field": "jersey",
+   "declared": null,
+   "actual": 81.0,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1926",
+   "field": "jersey",
+   "declared": null,
+   "actual": 82.6,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1927",
+   "field": "jersey",
+   "declared": null,
+   "actual": 86.0,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1928",
+   "field": "jersey",
+   "declared": null,
+   "actual": 89.7,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1929",
+   "field": "jersey",
+   "declared": null,
+   "actual": 90.3,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1930",
+   "field": "jersey",
+   "declared": null,
+   "actual": 81.4,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1931",
+   "field": "jersey",
+   "declared": null,
+   "actual": 86.9,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1932",
+   "field": "jersey",
+   "declared": null,
+   "actual": 86.6,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1933",
+   "field": "jersey",
+   "declared": null,
+   "actual": 90.2,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-1934",
+   "field": "jersey",
+   "declared": null,
+   "actual": 94.8,
+   "why": "a jersey column EXISTS below usable_from=1935"
+  },
+  {
+   "league_year": "NFL-2013",
+   "field": "games_started",
+   "declared": 100.0,
+   "actual": 89.8,
+   "why": "deviation > 10 points"
+  },
+  {
+   "league_year": "NFL-2014",
+   "field": "games_started",
+   "declared": 100.0,
+   "actual": 89.2,
+   "why": "deviation > 10 points"
+  }
+ ]
+}
