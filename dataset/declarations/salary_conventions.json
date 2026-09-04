@@ -282,5 +282,16 @@
    "by": "Ryan",
    "note": "recorded as an ABSENCE so the next session does not repeat the search - design 3.4"
   }
- ]
+ ],
+ "owed_league_original": {
+  "status": "NAMED, not obtained",
+  "what": "a document in which the NFL states its own numbers, first-hand",
+  "location": "National Archives, federal case file, Mackey v. NFL, docket 4-72-Civil 277",
+  "holds": "~400 trial exhibits including financial exhibits produced by the clubs",
+  "why_it_is_different": "League-original. Every source held reaches the League's figures through the NFLPA, a newspaper, an agent or a court's summary of them.",
+  "route": "records request, not a fetch",
+  "decision": "Ryan's",
+  "if_never_obtained": "a legitimate resting state - \u00a78.4 stays at one party and one hearsay, which the design already records",
+  "date": "2026-09-04"
+ }
 }

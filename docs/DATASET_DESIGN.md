@@ -2032,6 +2032,30 @@ method below is doing. **The withheld half is the actual debt**, and Dean's agen
 quoting six-year figures at a press conference proves copies reached agents, so
 agent papers and contract-dispute discovery are the live routes.
 
+#### NAMED 2026-09-04 — the one route left, and it is a records request
+
+Everything findable online has been found: **fourteen court cases, four
+newspapers, the 1982 hearing, the 2002 primer and the CBA terms** (reports 14–17).
+Every one of them reaches the League's numbers **through someone else**.
+
+The remaining route is not a search:
+
+    Mackey v. NFL
+    National Archives, federal case file, docket 4-72-Civil 277
+    ~400 trial exhibits, INCLUDING financial exhibits produced by the clubs
+
+**Those are League-original.** Not the NFLPA reporting the League, not a newspaper
+quoting a survey, not an agent reading a schedule aloud — documents the clubs
+produced themselves, under discovery, in a case they lost.
+
+**It is a records request, not a fetch**, and it is Ryan's call whether it is worth
+making. Recorded here so the debt has a location rather than a description, and so
+a later session does not re-derive the conclusion that no online route remains.
+
+**If it is never pursued, that is a legitimate resting state** — §8.4 stays at one
+party and one hearsay, and the design already says so. What changes is that the
+gap is now *addressed*: it has a docket number, not an open question.
+
 Until one exists, §8.4's contest is **one party and one hearsay**, and the
 dataset should say so.
 
