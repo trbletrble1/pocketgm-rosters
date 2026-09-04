@@ -1371,6 +1371,76 @@ NFLPA's own estimating assumption**, not a measured distribution, and enters as
 `source_derived` per §3.3. Treating it as observed structure would import an
 interested party's fill as data. It is a level, not a spread.
 
+### NFL Economics Primer 2002 — the per-experience axis, and one party's voice
+
+M. J. Duberstein, NFLPA Research Department, April 2002. 164 pages.
+`pgm3-sources/385388545-NFL-Economics-Primer-April-2002.pdf`, sha256
+`911489526cc300a1f512c79215efe763d3d1f0f5eae7c1da4cc56f5653a4ce81`. **Use the
+PDF with `extraction_mode="layout"`** — the flat text extraction loses the table
+geometry and the year-to-value association becomes guesswork. Printed page =
+PDF page − 1, confirmed on 162 pages.
+
+**Two questions were established before extracting anything. Both matter.**
+
+**1. The 1933–2001 series is SPOT YEARS before 1970 and annual after.** Printed
+p.20 carries the table: 1933, 1940, 1946, 1950, 1955, 1960, 1963 — seven points —
+then annual 1970 through 2001. **39 of 69 years present; 30 absent**, including
+every year of the 1940s except 1940 and 1946.
+
+**The chart on printed pp.18–19 plots all 69 years on its axis.** It is drawn
+over data that does not exist for 30 of them. Anyone reading the chart rather
+than the table would take an interpolation for an observation — so the chart is
+not a source, and the table is.
+
+**2. It cites no sources. Zero `Source:` lines in 164 pages.** There is exactly
+one provenance statement, on the cover:
+
+> *All salary data in this report comes from the NFLPA Salary Cap Information
+> System*
+
+**That cannot be true of the historical series.** The salary cap began in 1994;
+a cap information system cannot be the origin of a 1933 figure. And the document
+itself calls that figure an estimate — *"an estimated 1933 actual average NFL
+salary of $8,000"*.
+
+So, by the test Ryan set — *a 2002 primer citing sources is usable; one that
+doesn't is `source_derived`* — **the whole series is `source_derived`**, and the
+pre-1970 spot years are estimates by the document's own word.
+
+**Worth naming: that cover line is `registry-1986` in an external source.** A
+single provenance statement covering a whole document, naming *the system the
+author read from* rather than *where each value came from*. §4.5 exists to stop
+us doing it; this is what it looks like when a source does it to us, and it is why
+a source-level provenance claim cannot be inherited by the claims beneath it.
+
+**3. The primer and the 1981 hearing are ONE vote, not two.** The primer gives
+1979 as **$68,900**. The hearing gives $68,900 for 1979 — verified verbatim:
+*"According to our review of over 1,500 player contracts for the 1979 season,
+average salary … was $68,900."* Same figure, same organisation, 21 years apart,
+different authors.
+
+**This is §4.3's lineage rule with a real case attached.** Counting them as two
+agreeing sources would promote one party's standing position to multi-source
+consensus, in the exact dispute §8.4 declines to resolve. `derived_from` on the
+source declaration is what prevents it. It does, usefully, **confirm §8.4's season
+attribution** — the hearing's $68,900 is unambiguously the 1979 figure.
+
+**4. What is genuinely new: AVERAGE SALARY BY YEARS IN LEAGUE**, printed pp.70–79.
+Per season, per service year, with **headcount, share of league, and average in
+actual and 1997 dollars**. Current system 1993–2001; **old system 1983–1992**.
+
+That is **one axis of the table the hearing proved existed** — per-experience, not
+per-position, from 1983. It is the first per-cohort salary structure this project
+has ever had, and it is `source_derived` from one interested party, which is
+exactly how it should be stored and used.
+
+**5. Correction to the brief: printed p.11 is a coaching-CHANGES grid, not
+salaries.** It gives the head coach of record for every club at the end of every
+season 1980–2002 — valuable as **stint** data, worthless as compensation.
+Searched all 164 pages: **no coach compensation anywhere.** The NFLPA's 1980
+estimate in the hearing above remains the only coach salary figure this project
+has for any era.
+
 ### THE HIGHEST-VALUE OUTSTANDING SALARY LEAD
 
 The hearing reproduces CBA language describing a document it does not contain:

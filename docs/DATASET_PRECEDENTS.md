@@ -151,3 +151,61 @@ The roster project's canonical instance of the same shape is two mentions of
 "salary" in 9.4 million characters of media guide text, both prose — a
 measurement that lived in a document as a sentence. Here it lives in the store as
 claims.
+
+---
+
+## A document-level provenance statement does not cover the claims beneath it
+
+2026-09-04, found in the *NFL Economics Primer 2002* while establishing whether
+it was usable.
+
+Its cover carries one sentence of provenance for 164 pages: *"All salary data in
+this report comes from the NFLPA Salary Cap Information System."* That reads as a
+complete answer to "where did this come from", and it is why nobody would think
+to ask again.
+
+**It cannot be true of most of the document.** The salary cap began in 1994. A
+cap information system is not the origin of a 1933 average salary, and the primer
+elsewhere calls that figure *"an estimated 1933 actual average NFL salary of
+$8,000"*. The sentence describes **the system the author read from**, not where
+each value came from — which is the `registry-1986` failure exactly, arriving
+from outside the project instead of inside it.
+
+**The rule: provenance attaches to a claim, never to a document.** A source-level
+statement is a claim *about the source*, and it is inherited by nothing. Every
+value still needs its own origin, and where a source cannot supply one the value
+is `source_derived` — not `observed` on the strength of a cover line.
+
+**Practical form:** when a source states its provenance once, globally, test that
+statement against the oldest and least likely value in it. One check. Here it
+took a single question — *did the salary cap exist in 1933?* — to turn a document
+that appeared fully sourced into one that cites nothing.
+
+---
+
+## Two documents from one office are one vote
+
+2026-09-04. The 1981 congressional hearing gives an NFLPA average salary of
+**$68,900** for 1979. The *NFL Economics Primer 2002*, pulled from a different
+place on a different day, gives 1979 as **$68,900**.
+
+Twenty-one years apart, different authors, same figure — and it would be entirely
+natural to read the second as independent corroboration of the first, especially
+since it arrived separately and looked like a different kind of document.
+
+**It is the same organisation restating its own position.** NFLPA Research in
+2002, NFLPA Research under Garvey in 1981. In the dispute the hearing records —
+NFLPA $68,900 against the League's $93,333 — promoting this to two-against-one
+would let one party's standing position outvote the other by being written down
+twice.
+
+**The rule: `derived_from` is declared on the source, and consensus counts
+lineage groups.** This is the roster project's *"agreement across files is not
+independence — four JINX files agreeing is one vote"*, generalised from files
+that copy each other to **institutions that restate themselves**. The second form
+is harder to see, because the documents genuinely are different documents.
+
+**The tell that worked:** an exact match on an unusual figure across a long gap.
+Two independent surveys of 1,500 contracts would not both land on $68,900.
+**Suspicious agreement is evidence of shared ancestry**, and the check is to look
+for the office rather than the file.
