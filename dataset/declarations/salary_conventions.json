@@ -1,0 +1,49 @@
+{
+  "note": "THERE IS NO PREDICATE CALLED `salary`. Three incompatible conventions are in the sources and pooling them manufactures disagreements out of definitions. The convention is part of the PREDICATE NAME, so pooling is not expressible rather than merely forbidden - the same move as a person having no name.",
+  "established": "2026-09-04, from the DocDump scan (report 14) and the §8.4 revision (report 11)",
+
+  "conventions": {
+    "salary_base": {
+      "definition": "base salary only - contracts stripped of bonuses and incentives",
+      "includes": ["base salary"],
+      "excludes": ["signing bonus", "roster bonus", "reporting bonus", "performance incentives", "deferred money", "benefits"],
+      "sources": ["NFLPA salary surveys as reported by the Cayman Compass 1986 and the LA Times/AP 1988"],
+      "source_words": "\"Rankings were determined by players' base salaries, which are contracts stripped of bonuses or incentives.\""
+    },
+    "salary_base_plus_prorated_bonus": {
+      "definition": "base salary plus reporting and roster bonuses plus the signing bonus PRO-RATED over the contract length",
+      "includes": ["base salary", "reporting bonus", "roster bonus", "signing bonus / contract years"],
+      "excludes": ["performance incentives", "benefits", "payroll taxes"],
+      "sources": ["Dallas Morning News tables, as carried by UD 1985-01-14 and the Pampa News 1984-10-18"],
+      "source_words": "\"Figures reflect 1984 base salary, reporting and roster bonuses and signing bonus pro-rated over the length of the contract.\"",
+      "worked_example": "Billy Sims: 5-year deal, $1,000,000 bonus, 1984 salary $600,000, prorated bonus $200,000/yr, LISTED at $800,000",
+      "same_as": "the NFL Management Council method described in Newman 1987 Appendix C"
+    },
+    "compensation_component": {
+      "definition": "an itemised line of a real contract, each component its OWN predicate. Never summed by us.",
+      "predicates": ["signing_bonus", "roster_bonus", "reporting_bonus", "base_salary_year", "option_year_pay", "performance_incentive"],
+      "sources": ["federal court opinions - findings of fact, zero removes"],
+      "note": "This is the only convention that permits reconstructing any of the others. It is also the only one with no attribution chain."
+    },
+    "club_cost_per_player": {
+      "definition": "total club expenditure divided by headcount - INCLUDES benefits, medical, workmen's compensation, payroll taxes, retirement, insurance and pre/post-season pay",
+      "sources": ["the League's figure as quoted by the NFLPA in the 1982 hearing"],
+      "note": "This is what made the §8.4 contest look factual when it was definitional. It is not a salary at all."
+    }
+  },
+
+  "hard_rules": [
+    "A bare `salary` predicate is REFUSED at ingest. The convention is in the name.",
+    "Resolution never compares across conventions. Two figures under different conventions are not a contest; they are two measurements of two quantities.",
+    "A source declaration must name the convention it uses, per predicate, or its salary claims are ineligible.",
+    "An export that scales to a league average must state which convention that average was drawn on, in its manifest."
+  ],
+
+  "non_salary_figures_that_look_like_salaries": [
+    {"value": 162000, "source": "Smith v. Pro-Football", "what": "the COURT's estimate of free-market value over three years", "not": "anything the player was paid"},
+    {"value": 150000, "source": "Smith v. Pro-Football", "what": "the AGENT's deposition estimate", "not": "a contract"},
+    {"value": 276600, "source": "Smith v. Pro-Football", "what": "treble damages awarded", "not": "compensation"},
+    {"value": 400000, "source": "Bengals v. Bergey", "what": "a counter-offer that was REFUSED", "not": "a contract"},
+    {"value": 600000, "source": "Kapp v. NFL", "what": "contracted total, of which only $154,000 was paid", "not": "money received"}
+  ]
+}

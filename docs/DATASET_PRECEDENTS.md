@@ -469,3 +469,62 @@ mid-season movers listed differently by their two clubs, and they were written t
 exists at all. Whether position belongs on the stint, the person-season, or both
 is a scope question that has not been ruled — and until it is, those 11 should be
 read as a scope artifact rather than as evidence of anything.*
+
+---
+
+## Make the wrong thing inexpressible, not forbidden
+
+2026-09-04, recording the three salary conventions as a hard rule.
+
+The DocDump scan (report 14) found three incompatible conventions in the sources,
+and the §8.4 revision (report 11) had already shown that pooling two of them
+manufactured a contest that looked factual and was definitional:
+
+    salary_base                        base only - "contracts stripped of
+                                       bonuses or incentives"        (NFLPA survey)
+    salary_base_plus_prorated_bonus    base + reporting + roster + signing bonus
+                                       spread over the contract      (DMN / NFLMC)
+    club_cost_per_player               total club spend / headcount, INCLUDING
+                                       medical, taxes, retirement    (the League)
+    compensation_component             each itemised contract line as its own
+                                       predicate                     (the courts)
+
+**The obvious response is a rule: "never pool salary conventions."** That is a
+convention someone has to remember, and this project's own precedent says a
+convention that must be remembered is a defect waiting for the session that does
+not remember it.
+
+**What was done instead: there is no predicate called `salary`.** The convention is
+part of the predicate NAME, and the store *refuses* `salary`, `pay`,
+`compensation`, `wage` and `average_salary` at ingest with a message naming the
+alternatives. Two figures on different conventions cannot be compared because they
+are not the same predicate — pooling is not forbidden, it is **not expressible**.
+
+Same move as a person having no name (§2.3): the failure mode is removed from the
+type system rather than added to the documentation.
+
+**It found a live instance immediately, in my own test suite.** Gate 7 — the one
+proving an attributed claim cannot vote as the attributed party — used a bare
+`salary` predicate to compare the League's **$93,333** against the NFLPA's
+**$68,900**. Those are `club_cost_per_player` and `salary_base`: **the §8.4 error,
+embedded in a gate written to catch a different error.** The new rule refused it on
+the first run.
+
+**And the selftest reproduces the symptom exactly.** Breaking the rule — an ingest
+that strips the convention off the predicate name, which is how this happens in the
+wild — makes the gate report:
+
+    salary_base resolved contested/None
+
+**A false contest, which is what §8.4 looked like for a whole day.**
+
+**The general form: when two things must never be combined, prefer a design where
+combining them is a type error over a design where it is a policy violation.** The
+cost is a longer predicate vocabulary. The benefit is that the rule cannot decay,
+and it audits the existing corpus for free.
+
+*Corollary recorded with it: five figures in these sources look like salaries and
+are not — a court's free-market estimate, an agent's deposition estimate, a treble
+damages award, a refused counter-offer, and a contracted total of which a fraction
+was paid. They are listed in `declarations/salary_conventions.json` so the next
+session meets them as data rather than rediscovering them.*

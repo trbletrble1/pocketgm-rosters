@@ -109,18 +109,56 @@ def gate_attributed_cannot_vote_as_attributed_party(store_factory, policy):
     r1 = s.add_source_record("hearing","p61")
     r2 = s.add_source_record("primer","p20")
     r3 = s.add_source_record("league","x")
-    # NFLPA quoting the League, twice
-    s.add_claim(r1, ("person",p), "salary", 93333, 1981,
+    # NFLPA quoting the League, twice. NOTE the predicate names its convention -
+    # a bare `salary` here is what made the §8.4 error possible, and the store now
+    # refuses it. This fixture originally pooled 93,333 against 68,900 as one
+    # predicate, which is that error embedded in a test.
+    s.add_claim(r1, ("person",p), "club_cost_per_player", 93333, 1981,
                 stated_by="NFLPA", attribution=["NFL Management Council"])
-    s.add_claim(r2, ("person",p), "salary", 93333, 2002,
+    s.add_claim(r2, ("person",p), "club_cost_per_player", 93333, 2002,
                 stated_by="NFLPA", attribution=["NFL Management Council"])
-    # the League itself, first-hand, saying something else
-    s.add_claim(r3, ("person",p), "salary", 68900, 1981, stated_by="NFLMC", attribution=[])
-    r = s.resolve(("person",p), "salary", policy)
+    # the League itself, first-hand, saying something else ON THE SAME CONVENTION
+    s.add_claim(r3, ("person",p), "club_cost_per_player", 68900, 1981,
+                stated_by="NFLMC", attribution=[])
+    r = s.resolve(("person",p), "club_cost_per_player", policy)
     # two NFLPA-stated claims must NOT outweigh one first-hand claim by count
     if r["basis"] != "contested":
         return False, f"two hearsay claims beat one first-hand claim: {r['basis']} {r['value']}"
     return True, "hearsay pair did not outvote the first-hand claim"
+
+
+# ---------------------------------------------------------------- gate 8
+def gate_bare_salary_refused(store_factory):
+    """A money figure must name its convention. Pooling must be inexpressible."""
+    s = store_factory()
+    s.add_source({"source_id": "t", "acquisition": "held", "stated_by": "t"})
+    sr = s.add_source_record("t", "r1")
+    try:
+        s.add_claim(sr, ("person", "p_1"), "salary", 68900, 1979)
+        return False, "a bare `salary` claim was ACCEPTED"
+    except StoreError as e:
+        return ("convention" in str(e)), str(e)[:70]
+
+
+# ---------------------------------------------------------------- gate 9
+def gate_conventions_do_not_pool(store_factory, policy):
+    """Two figures under different conventions must NOT read as a contest."""
+    s = store_factory()
+    for sid in ("nflpa", "dmn"):
+        s.add_source({"source_id": sid, "acquisition": "held", "stated_by": sid})
+    p = s.mint_person()
+    s.declare_subject(("person", p))
+    a = s.add_source_record("nflpa", "1")
+    b = s.add_source_record("dmn", "1")
+    s.add_claim(a, ("person", p), "salary_base", 450000, 1984)
+    s.add_claim(b, ("person", p), "salary_base_plus_prorated_bonus", 570000, 1984)
+    r1 = s.resolve(("person", p), "salary_base", policy)
+    r2 = s.resolve(("person", p), "salary_base_plus_prorated_bonus", policy)
+    if r1["basis"] != "observed" or r1["value"] != 450000:
+        return False, f"salary_base resolved {r1['basis']}/{r1['value']}"
+    if r2["basis"] != "observed" or r2["value"] != 570000:
+        return False, f"prorated resolved {r2['basis']}/{r2['value']}"
+    return True, "Randy White 1984: base 450,000 and base+prorated 570,000 both stand, no contest"
 
 
 def main():
@@ -135,6 +173,8 @@ def main():
     ok, d = gate_contested_survives(sf, policy);            check("contested survives resolution", ok, d)
     ok, d = gate_attributed_cannot_vote_as_attributed_party(sf, policy)
     check("attributed claim cannot vote as the attributed party", ok, d)
+    ok, d = gate_bare_salary_refused(sf);                   check("bare `salary` predicate refused", ok, d)
+    ok, d = gate_conventions_do_not_pool(sf, policy);        check("salary conventions do not pool", ok, d)
     bad = [n for n,o,_ in FAILURES if not o]
     print(f"\n{len(FAILURES)-len(bad)}/{len(FAILURES)} gates pass")
     return 1 if bad else 0

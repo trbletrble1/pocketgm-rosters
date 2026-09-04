@@ -521,6 +521,38 @@ removes and is the only per-position salary structure this project has ever held
 It is held, used, and correctly labelled — which is the difference between a
 dataset that knows what it has and one that does not.
 
+### 3.6b Money predicates name their convention — there is no `salary`
+
+**Added 2026-09-04**, after the DocDump scan found three incompatible conventions
+in the sources and §8.4 showed that pooling two of them manufactured a contest
+that looked factual and was definitional.
+
+| predicate | means | source |
+|---|---|---|
+| `salary_base` | base only, *"contracts stripped of bonuses or incentives"* | NFLPA surveys |
+| `salary_base_plus_prorated_bonus` | base + reporting + roster + signing bonus spread over the contract | Dallas Morning News tables; the NFL Management Council method |
+| `club_cost_per_player` | total club spend ÷ headcount, **including** medical, payroll taxes, retirement, insurance | the League's figure, as quoted |
+| `signing_bonus`, `roster_bonus`, `option_year_pay`, `base_salary_year`, … | one itemised line of a real contract | federal court opinions |
+
+**`salary`, `pay`, `compensation`, `wage` and `average_salary` are REFUSED at
+ingest.** Two figures on different conventions cannot be compared because they are
+not the same predicate. **Pooling is not forbidden; it is not expressible** — the
+same move as a person having no name (§2.3), and for the same reason: a rule that
+must be remembered is a defect waiting for the session that forgets it.
+
+Full definitions, the sources' own wording, and the four hard rules are in
+`dataset/declarations/salary_conventions.json`. Gates 8 and 9 enforce it, and both
+were shown to fail when broken.
+
+**It caught a live instance on its first run** — gate 7's own fixture compared the
+League's $93,333 against the NFLPA's $68,900 under a bare `salary` predicate.
+That is the §8.4 error embedded in a gate written to catch a different error.
+
+**Also recorded there: five figures in these sources look like salaries and are
+not** — a court's free-market estimate, an agent's deposition estimate, a treble
+damages award, a refused counter-offer, and a contracted total of which a fraction
+was paid. They are data, not a caution to remember.
+
 ### 3.7 Acquisition — how the bytes reached us, as a third axis
 
 **Added 2026-09-04.** The Dallas Morning News piece is a document Ryan holds as a

@@ -11,6 +11,16 @@ import json, hashlib, os
 from collections import defaultdict
 
 KINDS = {"observed", "source_derived", "derived", "absent"}
+
+# There is no predicate called `salary`. Three incompatible conventions exist in
+# the sources and pooling them manufactures disagreements out of definitions, so
+# the convention is part of the predicate NAME - pooling is not expressible.
+BARE_MONEY_PREDICATES = {"salary", "pay", "compensation", "wage", "average_salary"}
+SALARY_CONVENTIONS = {
+    "salary_base", "salary_base_plus_prorated_bonus", "club_cost_per_player",
+    "signing_bonus", "roster_bonus", "reporting_bonus", "base_salary_year",
+    "option_year_pay", "performance_incentive", "contract_total_stated",
+}
 FORBIDDEN_KINDS = {"invented"}
 ACQ_ALLOWED = {"fetched", "held", "transcribed"}
 ACQ_FORBIDDEN = {"relayed"}
@@ -65,6 +75,11 @@ class Store:
                   kind="observed", stated_by=None, attribution=None, note=None):
         if kind in FORBIDDEN_KINDS:
             raise StoreError(f"kind '{kind}' has no field to occupy. It belongs in a build.")
+        if predicate in BARE_MONEY_PREDICATES:
+            raise StoreError(
+                f"predicate '{predicate}' is REFUSED: a money figure must name its "
+                f"convention. Use one of {sorted(SALARY_CONVENTIONS)} - see "
+                f"declarations/salary_conventions.json.")
         if kind not in KINDS:
             raise StoreError(f"unknown kind '{kind}'")
         if source_record not in self.source_records:

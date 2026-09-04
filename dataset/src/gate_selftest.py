@@ -55,6 +55,23 @@ def broken_store_factory(**breaks):
         Broken.resolve = resolve
     if breaks.get("count_sources_not_lineage"):
         Broken._lineage_group = lambda self, c: (c["source_id"], c["stated_by"])
+    if breaks.get("allow_bare_salary"):
+        model.BARE_MONEY_PREDICATES.clear()
+    if breaks.get("pool_conventions"):
+        # an ingest that strips the convention off the predicate name - which is
+        # exactly how the §8.4 error happens in the wild
+        orig = Store.add_claim
+        def add_claim(self, sr, subject, predicate, *a, **k):
+            if predicate.startswith(("salary_", "club_cost")):
+                predicate = "money"
+            return orig(self, sr, subject, predicate, *a, **k)
+        Broken.add_claim = add_claim
+        orig_r = Store.resolve
+        def resolve(self, subject, predicate, policy):
+            if predicate.startswith(("salary_", "club_cost")):
+                predicate = "money"
+            return orig_r(self, subject, predicate, policy)
+        Broken.resolve = resolve
     return Broken
 
 
@@ -73,6 +90,10 @@ CASES = [
      lambda sf, pol: gates.gate_contested_survives(sf, pol)),
     ("attributed claim cannot vote as the attributed party", "count_sources_not_lineage",
      lambda sf, pol: gates.gate_attributed_cannot_vote_as_attributed_party(sf, pol)),
+    ("bare `salary` predicate refused", "allow_bare_salary",
+     lambda sf, pol: gates.gate_bare_salary_refused(sf)),
+    ("salary conventions do not pool", "pool_conventions",
+     lambda sf, pol: gates.gate_conventions_do_not_pool(sf, pol)),
 ]
 
 def main():
@@ -80,12 +101,14 @@ def main():
     bad = []
     for name, brk, run in CASES:
         saved_forbidden = set(model.FORBIDDEN_KINDS); saved_kinds = set(model.KINDS)
+        saved_bare = set(model.BARE_MONEY_PREDICATES)
         sf = broken_store_factory(**{brk: True})
         try:
             ok, detail = run(sf, POLICY)
         finally:
             model.FORBIDDEN_KINDS.clear(); model.FORBIDDEN_KINDS.update(saved_forbidden)
             model.KINDS.clear(); model.KINDS.update(saved_kinds)
+            model.BARE_MONEY_PREDICATES.clear(); model.BARE_MONEY_PREDICATES.update(saved_bare)
         fired = not ok
         print(f"  [{'FIRED' if fired else 'SILENT'}] {name}")
         print(f"           break: {brk}")
