@@ -3704,3 +3704,43 @@ Pittsburgh) plus Arizona's offence and Cincinnati's, whose men the rule reaches
 but which sit behind the same hold.
 
 All four gates pass on all twenty files.
+
+#### 70 CONTINUED — the fourteen agreed slots; twelve written, two escalated
+
+**The framing failure worth naming.** "Write the nine" meant the nine that
+CHANGED under the amended rule. The fourteen where career standing and title
+order reach the SAME man were held with the rest of the fallbacks while the rule
+was in question, and then missed entirely — **Pittsburgh read an invented man
+while both rules said Rollie Dotsch.** The easy cases sat behind a ruling they
+did not need.
+
+**Twelve written**: Gilmer, Bielski, McCormack, Shofner, Schnelker, King Hill,
+Joe Spencer, Sandusky, Hollway, Adams, Dotsch, Nelsen. Baltimore and Houston
+needed a career lookup of their own — **Dick Bielski's 15 years over Ernie
+Zwahlen's 12, and King Hill's 7 over Joe Bugel's 4**, Hill having already been
+Houston's own coordinator in 1975-76.
+
+**1979's coordinator column is now 79 real of 96.** Twelve are franchises that
+did not exist; five remain generated — the three special-teams slots with no
+candidate on the staff at all, and the two escalated below.
+
+**THE POOL HAS NOW GIVEN UP NINE MEN**, 91 to 82: Meyer, Ringo, Bettis, North,
+Gillman, Christiansen, and now Gilmer, Sandusky and Hollway. **Every one a former
+head coach; every one actually employed as a coordinator in 1979.** That is not
+nine coincidences and it is not a coincidence at all — see item 71.
+
+#### TWO ESCALATED, both source contradictions rather than duplicates
+
+**Marty Schottenheimer.** Our file has him as CLEVELAND's defensive coordinator,
+marked `sourced`. The Coaching Tree puts him on **Detroit's linebackers in 1979**
+and has him reaching Cleveland in 1980, and Cleveland's 1979 staff carries no
+titled coordinator at all. So either our source is a year early or the Coaching
+Tree is a year late, and Detroit's defensive coordinator slot stays generated
+until that is settled. **Not moved.**
+
+**Bill Arnsparger.** Our file has him as CAROLINA's head coach, `named by Ryan` —
+on a franchise that did not exist in 1979. His real 1979 job is the one this pass
+wanted to fill, assistant head coach and defensive architect at Miami. **The
+question is whether a placement Ryan named on a phantom franchise outranks the
+man's real job**, and that is his to answer, not a tool's. Miami's defensive
+coordinator slot stays generated meanwhile.
