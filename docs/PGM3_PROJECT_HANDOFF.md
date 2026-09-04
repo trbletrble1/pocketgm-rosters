@@ -1573,3 +1573,16 @@ validate it against the verified 2000 coach data.
 cohort, 85% of the rostered cohort, **75% of the whole file**. It was 17% that
 morning.
 
+
+
+## Provenance lives in sidecars, not in the files — and there is no field to look for
+
+The roster and staff schemas are vanilla's exactly (52 and 72 keys). A provenance
+field cannot exist without adding a key the engine has never seen, which is an
+engine risk for a bookkeeping gain. So provenance is recorded beside the data:
+`reference/PGM3_STAFF_PROVENANCE.csv` (every staff record, real/invented, exact
+for 1979 and inferred elsewhere), `reference/PGM3_SKIN_PROVENANCE_PRE1990.csv`
+(every 1979 and 1986 face: origin, before, after), `wip/faces_1979.csv` (the 1979
+build's skin and hair origin per man). **The sidecar is the file's provenance.**
+Nobody should look for a field that cannot exist, and nobody should ship a file
+without its sidecar moving with it.

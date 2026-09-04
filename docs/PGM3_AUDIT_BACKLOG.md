@@ -2941,3 +2941,30 @@ light) and Trey Junkin (1986 light, 2000 dark). Mike's period layer speaks and
 its base does not; Roby was on Ryan's list and verified dark, so the 2000 label
 is the wrong one. The ruling changed one side of these men only. Small, and
 needs a word: follow Mike into 2000 for boundary men where the base is silent.
+
+**Item 57 CLOSED and the ruling EXTENDED, 2026-09-03 — `tools/apply_mike_extend.py`.**
+
+1. **Prospects.** The first apply excluded them and a prospect record is a real
+   man — Reggie Roby sat light on a 1979 prospect record (draftSeason 2030, age
+   22) after being verified dark. Extended: 1979 prospects 97 dark→light and 35
+   light→dark; 1986 68 and 177; 497 and 276 already agreed; 684 and 803 not in
+   Mike keep the archive label.
+2. **The 1990 boundary.** Where Mike's period layer speaks, its base is silent
+   and 2000 disagrees, 2000 follows Mike — **85 men** (21 dark→light, 64
+   light→dark); the four named earlier were only those also in 1986. The 12 men
+   where period and base disagree with each other stay with the 2000s voting.
+3. **Ryan's 100 verdicts are truth everywhere.** Reconciled against the sheet
+   exactly: **Mike right 95, archive right 4, middle 1** — the "five" was a
+   miscount. The four Mike got wrong — Gary Danielson QB, Bob Jury CB, Steve
+   Moore OT, Herb Lusk RB, all verified light — are corrected. Verdicts keyed on
+   the sheet's **name|position**, because a namesake check found six names whose
+   verdict would otherwise have reached a different man (Bob Nelson MLB vs a DT
+   and a DE; Mike Bell DE vs a running back of 2007). **99 keys added to
+   `_verified_keys` (142 → 241)**; the original 142 touched 0, asserted.
+   **Mosi Tatupu is `_verified_middle`**: Ryan's answer recorded, no family
+   forced, his face untouched.
+
+Faces moved: 1979 151, 1986 247, 2000 89. Faces gate back to **18 / 18**
+(from 19 / 19); verified faces intact, 329 checked. Same-man 1979/1986 family
+agreement across rostered and prospects **645 of 649**; the four are named in
+the commit. Roster gates ALL CLEAR on 1979, 1986, 2000. Only `appearance` moved.

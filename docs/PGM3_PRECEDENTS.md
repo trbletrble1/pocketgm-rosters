@@ -4761,3 +4761,18 @@ recorded as a source is a guess that has stopped being visible.** Rules:
    for those men (249 of 249 identical). That test settled a design ruling and
    could not see the error. Independence is a property of the comparison, not
    of the truth set.
+
+---
+
+## Anything seeded per file diverges for a man who appears in two files — name-plus-position is the seed
+
+**2026-09-03, twice in one session.** The staff rename seeded new names on the
+per-file `iden`, and a generated man present in two files became two men. The
+Mike skin apply seeded the family draw on `iden`, and one man moved into the
+light band drew Head1 in 1979 and Head2 in 1986 — same class, and the faces
+gate, which compares the digit, reported 35 disagreements that were not there.
+
+The `iden` is a property of the record. The man is the thing that has to agree
+with himself across seasons. **Seed on the man — normalised name plus position —
+for anything a reader could compare across files: names, face families, hair,
+anything drawn.** Seed on `iden` only for what is legitimately per-record.
