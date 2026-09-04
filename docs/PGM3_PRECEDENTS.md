@@ -5027,3 +5027,25 @@ own record still stands elsewhere, which is exactly what the namesake guard
 refused three times this session. Injecting that case makes it fail: *one man,
 one age: paul|brown*. **A check that has only ever passed has not been tested;
 if the archive will not produce the failure, construct it.**
+
+## If the archive will not produce the failure, construct it
+
+2026-09-04. The one-man-one-age gate passed on all ten files the moment it was
+written, because the instances it exists to catch had already been fixed in
+passing. **A check that has only ever passed has not been tested** — it may be
+catching nothing because nothing is wrong, or because it is looking at the wrong
+field, or because a typo made its condition unreachable, and a green tick cannot
+tell those apart.
+
+So the failure was built: a fill writing a real man's name into a slot while his
+own record still stands elsewhere — precisely what the namesake guard refused
+three times that session. Injected into a copy of the file, the gate failed as
+designed: *one man, one age: paul|brown*.
+
+**The general form.** When a new check comes up green on first run, the run has
+told you nothing yet. Either find the historical commit where it fails, or
+synthesise the defect in a scratch copy and watch it fail there. **Cost: two
+minutes. What it buys: the difference between a check and a decoration.**
+
+This is the companion to *every fix ships with a gate*. A gate that has never
+failed is not yet a gate.
