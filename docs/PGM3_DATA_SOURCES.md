@@ -579,3 +579,62 @@ implies:** 159 year-labelled teams across 44 seasons, 1957–2002 (`'82 Packers'
 `'99TEN'`), 7,678 players, one to seven teams a year — Raiders 15 seasons,
 Cowboys 14, 49ers 10. **A notable-teams database, not a league-year database.**
 Plus 32 unlabelled current teams (3,560 men) and 5,501 records unique to it.
+
+## `Mike-USFL_WFL.ros` — decoded, 2026-09-03
+
+**93 team rows, 91 with players, 4,904 men. Fully labelled in the TEAM table**, so
+this is a decode, not an inference. Four blocks by `TTYP`:
+
+| `TTYP` | what | teams | men | in the shared 2003 base |
+|---|---|---|---|---|
+| 0 | the modern NFL | 32 | 1,743 | **100%** |
+| 2 | all-time franchise teams (`ALLCHI`, `All Bills`…) | 31 | 1,567 | 3% |
+| **5** | **alternate leagues** | **27** | **1,347** | **0%** |
+| 1 | free agents | 1 | 247 | 100% |
+
+**The `POVR` 99s are in the all-time block, not the USFL one.** Jim Kelly is 99 on
+the *Buffalo All Bills* and **93** on the Houston Gamblers; Steve Young 99 on the
+*All 49ers* and 91 on Los Angeles; Herschel Walker 99 on the *All Vikings* and 90
+on New Jersey; Reggie White 99 on both the *All Eagles* and *All Packers* and 96
+at Memphis. The all-time block reads median 93 with 140 men at 99 — that is the
+career-peak block. **The alternate-league block reads median 76, p90 85, max 96,
+one man at 99** (Csonka), against our 1979 at median 70 / p90 85 / max 98 and
+1986 at 71 / 86 / 98. Era-shaped, a little compressed at the bottom.
+
+**The 27 alternate-league teams are four things:**
+
+- **The 1984 USFL, complete — all 18 teams, 926 men.** Not 1983 (12 teams) or
+  1985 (14): the eighteen are exactly the 1984 field. **Twelve named men checked
+  against their real 1984 club: 12 of 12 correct** — Kelly at Houston, Young at
+  Los Angeles, Walker at New Jersey, White at Memphis, Carter at Michigan,
+  Williams at Oklahoma, Cribbs at Birmingham, Landeta and Oates at Philadelphia,
+  Zimmerman at Los Angeles.
+- **The 1975 WFL, partial — 4 of 11 teams, 201 men**: Honolulu Hawaiians,
+  Memphis Southmen, Southern California Sun, Birmingham Vulcans. **1975, not
+  1974**: Birmingham were the Americans in 1974 and the Vulcans in 1975. Csonka
+  and Warfield are at Memphis, correctly.
+- **The Longest Yard (1974), 2 teams, 84 men** — The Mean Machine and the Citrus
+  State Guards. Paul Crewe, Captain Knauer, Granny Granville, Connie Shokner,
+  Charlie Blue Eyes, Bogdanski; Joe Kapp, who was in the film, plays for the
+  guards. Fiction, and flagged as such.
+- **Three Hawaii service teams, 136 men** — Schofield Knights, Barbers Point
+  Warriors, Black Rock Scorpions (Schofield Barracks and Barbers Point are Oahu
+  installations). Not identifiable as any league; ratings 69 median. Likely the
+  modder's own.
+
+**The alternate-league block is entirely original work**: 0 of 1,347 records
+match the shared 2003 base, and **0 match an all-time record even by name plus
+attributes** — 36 USFL men share a name with someone in the all-time block and
+not one shares a record. Csonka's 99 at Memphis is his own row, not a copy.
+
+**Anchor test, alternate-league rows only** (our verified faces plus Ryan's
+photograph verdicts as truth): **USFL 12 of 13 = 92.3%**, WFL 2 of 2, no
+abstentions. Thin — the archive barely reaches these men — but consistent with
+the family's 96% on period layers elsewhere.
+
+**Condition of the data.** 51 men per USFL team, age median 24 (range 19–38),
+a full positional spread. **39 names appear twice or more inside the block and
+68 records are padding-shaped** (`Tino Gomez.`, `Darren Anduha.`, `P #40`), all
+in the film and Hawaii teams. **621 of the 926 USFL men appear nowhere in our
+1979, 1986 or 2000 files** — median `POVR` 74, p90 83 — which is the pool a
+build would draw on.
