@@ -1,90 +1,5 @@
 {
  "stints": {
-  "ohio phone": [
-   [
-    "San Francisco 49ers",
-    "1961",
-    "Head Coach"
-   ]
-  ],
-  "texas phone": [
-   [
-    "San Francisco 49ers",
-    "1961",
-    "Head Coach"
-   ]
-  ],
-  "d.c. phone": [
-   [
-    "San Francisco 49ers",
-    "1961",
-    "Head Coach"
-   ]
-  ],
-  "ed beard": [
-   [
-    "San Francisco 49ers",
-    "1974",
-    "Linebackers"
-   ],
-   [
-    "San Francisco 49ers",
-    "1975",
-    "Linebackers"
-   ],
-   [
-    "San Francisco 49ers",
-    "1976",
-    "Linebackers"
-   ]
-  ],
-  "chet franklin": [
-   [
-    "Kansas City Chiefs",
-    "1977",
-    "Linebacker Coach"
-   ],
-   [
-    "San Francisco 49ers",
-    "1974",
-    "Secondary"
-   ]
-  ],
-  "billy atkins": [
-   [
-    "San Francisco 49ers",
-    "1976",
-    "Secondary"
-   ]
-  ],
-  "jim spavital": [
-   [
-    "San Francisco 49ers",
-    "1976",
-    "Running Backs"
-   ]
-  ],
-  "biographies monte clark": [
-   [
-    "San Francisco 49ers",
-    "1976",
-    "Head Coach"
-   ]
-  ],
-  "company. dick enright": [
-   [
-    "San Francisco 49ers",
-    "1976",
-    "Offensive Line"
-   ]
-  ],
-  "barbara. floyd peters": [
-   [
-    "San Francisco 49ers",
-    "1976",
-    "Defensive Line"
-   ]
-  ],
   "defense ed beard": [
    [
     "San Francisco 49ers",
@@ -97,105 +12,6 @@
     "San Francisco 49ers",
     "1977",
     "Head Coach"
-   ]
-  ],
-  "matthews norb hecker": [
-   [
-    "San Francisco 49ers",
-    "1979",
-    "Defensive Backs"
-   ]
-  ],
-  "calif. billie matthews": [
-   [
-    "San Francisco 49ers",
-    "1979",
-    "Running Backs"
-   ],
-   [
-    "San Francisco 49ers",
-    "1980",
-    "Running Backs"
-   ]
-  ],
-  "bobb mckittrick": [
-   [
-    "San Francisco 49ers",
-    "1979",
-    "Offensive Line"
-   ],
-   [
-    "San Francisco 49ers",
-    "1980",
-    "Offensive Line"
-   ]
-  ],
-  "calif. bill mcpherson": [
-   [
-    "San Francisco 49ers",
-    "1979",
-    "Linebackers"
-   ]
-  ],
-  "chuck studley": [
-   [
-    "San Francisco 49ers",
-    "1980",
-    "Defensive Coordinator"
-   ]
-  ],
-  "calif. norb hecker": [
-   [
-    "San Francisco 49ers",
-    "1980",
-    "Linebackers"
-   ]
-  ],
-  "matthews milt jackson": [
-   [
-    "San Francisco 49ers",
-    "1980",
-    "Special Teams"
-   ]
-  ],
-  "backs bobb mckittrick": [
-   [
-    "San Francisco 49ers",
-    "1981",
-    "Offensive Line"
-   ]
-  ],
-  "mare trestman": [
-   [
-    "Arizona Cardinals",
-    "1999",
-    "Offensive Coordinator"
-   ],
-   [
-    "San Francisco 49ers",
-    "1996",
-    "Defensive Coordinator"
-   ]
-  ],
-  "other stats": [
-   [
-    "San Francisco 49ers",
-    "1999",
-    "Special Teams"
-   ]
-  ],
-  "ben parks jr": [
-   [
-    "San Francisco 49ers",
-    "2000",
-    "Defensive Assistant"
-   ]
-  ],
-  "smith george stewart": [
-   [
-    "San Francisco 49ers",
-    "2002",
-    "Running Backs"
    ]
   ],
   "george s. halas": [
@@ -230,33 +46,6 @@
     "Head Coach"
    ]
   ],
-  "paddy driscoll": [
-   [
-    "Chicago Bears",
-    "1951",
-    "Backfield Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1952",
-    "Backfield Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1953",
-    "Backfield Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1954",
-    "Assistant Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1955",
-    "Assistant Coach"
-   ]
-  ],
   "luke johnsos": [
    [
     "Chicago Bears",
@@ -285,69 +74,20 @@
    ],
    [
     "Chicago Bears",
-    "1956",
-    "Assistant Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1957",
-    "Assistant Coach"
-   ],
-   [
-    "Chicago Bears",
     "1958",
     "Assistant Coach"
    ]
   ],
-  "jim benton": [
-   [
-    "Chicago Bears",
-    "1952",
-    "Head Coach"
-   ]
-  ],
-  "phil handler": [
+  "paddy driscoll": [
    [
     "Chicago Bears",
     "1953",
-    "Line Coach"
+    "Backfield Coach"
    ],
    [
     "Chicago Bears",
     "1954",
     "Assistant Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1955",
-    "Assistant Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1957",
-    "Assistant Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1958",
-    "Assistant Coach"
-   ]
-  ],
-  "sid luckman": [
-   [
-    "Chicago Bears",
-    "1954",
-    "Assistant Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1956",
-    "Quarterback Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1958",
-    "Quarterback Coach"
    ]
   ],
   "clark shaughnessy": [
@@ -362,397 +102,14 @@
     "Assistant Coach"
    ]
   ],
-  "clyde turner": [
-   [
-    "Chicago Bears",
-    "1954",
-    "Assistant Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1955",
-    "Assistant Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1956",
-    "Assistant Coach"
-   ]
-  ],
-  "john l. driscoll": [
-   [
-    "Chicago Bears",
-    "1956",
-    "Head Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1957",
-    "Head Coach"
-   ]
-  ],
-  "george connor": [
-   [
-    "Chicago Bears",
-    "1956",
-    "Assistant Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1957",
-    "Assistant Coach"
-   ]
-  ],
-  "advisor sid luckman": [
-   [
-    "Chicago Bears",
-    "1957",
-    "Quarterback Coach"
-   ]
-  ],
-  "pres. chuck mather": [
+  "chuck mather": [
    [
     "Chicago Bears",
     "1958",
     "Assistant Coach"
    ]
   ],
-  "handler phil handler": [
-   [
-    "Chicago Bears",
-    "1960",
-    "Line Coach"
-   ]
-  ],
-  "dir. stadium operations": [
-   [
-    "Chicago Bears",
-    "1975",
-    "Special Teams"
-   ]
-  ],
-  "haupt running backs": [
-   [
-    "Chicago Bears",
-    "1978",
-    "Special Teams"
-   ]
-  ],
-  "special teams": [
-   [
-    "Chicago Bears",
-    "1980",
-    "Running Backs"
-   ],
-   [
-    "Chicago Bears",
-    "1981",
-    "Running Backs"
-   ],
-   [
-    "Cincinnati Bengals",
-    "1983",
-    "Tight Ends"
-   ],
-   [
-    "Miami Dolphins",
-    "2000",
-    "Linebackers"
-   ],
-   [
-    "Miami Dolphins",
-    "2001",
-    "Linebackers"
-   ],
-   [
-    "Miami Dolphins",
-    "2002",
-    "Linebackers"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1987",
-    "Offensive Line"
-   ],
-   [
-    "Seattle Seahawks",
-    "1986",
-    "Tight Ends"
-   ]
-  ],
-  "chicago. dale haupt": [
-   [
-    "Chicago Bears",
-    "1984",
-    "Defensive Line"
-   ]
-  ],
-  "il. ed hughes": [
-   [
-    "Chicago Bears",
-    "1984",
-    "Offensive Coordinator"
-   ]
-  ],
-  "steve kazor": [
-   [
-    "Chicago Bears",
-    "1984",
-    "Special Teams"
-   ],
-   [
-    "Chicago Bears",
-    "1991",
-    "Special Teams"
-   ],
-   [
-    "Detroit Lions",
-    "1994",
-    "Special Teams"
-   ],
-   [
-    "Detroit Lions",
-    "1995",
-    "Tight Ends"
-   ],
-   [
-    "Detroit Lions",
-    "1996",
-    "Tight Ends"
-   ]
-  ],
-  "iqa steve kazor": [
-   [
-    "Chicago Bears",
-    "1990",
-    "Special Teams"
-   ]
-  ],
-  "hills. greg landry": [
-   [
-    "Chicago Bears",
-    "1990",
-    "Offensive Coordinator"
-   ]
-  ],
-  "john levra": [
-   [
-    "Buffalo Bills",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "Buffalo Bills",
-    "2000",
-    "Defensive Line"
-   ],
-   [
-    "Chicago Bears",
-    "1990",
-    "Defensive Line"
-   ]
-  ],
-  "il. david mcginnis": [
-   [
-    "Chicago Bears",
-    "1990",
-    "Linebackers"
-   ]
-  ],
-  "vic rapp": [
-   [
-    "Arizona Cardinals",
-    "1997",
-    "Wide Receivers"
-   ],
-   [
-    "Chicago Bears",
-    "1990",
-    "Wide Receivers"
-   ]
-  ],
-  "il. johnny roland": [
-   [
-    "Chicago Bears",
-    "1990",
-    "Running Backs"
-   ]
-  ],
-  "coaches dick stanfel": [
-   [
-    "Chicago Bears",
-    "1990",
-    "Offensive Line"
-   ]
-  ],
-  "vince tobin": [
-   [
-    "Arizona Cardinals",
-    "1999",
-    "Head Coach"
-   ],
-   [
-    "Arizona Cardinals",
-    "2000",
-    "Head Coach"
-   ],
-   [
-    "Chicago Bears",
-    "1990",
-    "Defensive Coordinator"
-   ]
-  ],
-  "dick stanfel": [
-   [
-    "Chicago Bears",
-    "1990",
-    "Offensive Line"
-   ]
-  ],
-  "greg landry": [
-   [
-    "Chicago Bears",
-    "1991",
-    "Offensive Coordinator"
-   ],
-   [
-    "Detroit Lions",
-    "1995",
-    "Quarterbacks"
-   ],
-   [
-    "Detroit Lions",
-    "1996",
-    "Quarterbacks"
-   ]
-  ],
-  "johnny roland": [
-   [
-    "Arizona Cardinals",
-    "1997",
-    "Running Backs"
-   ],
-   [
-    "Arizona Cardinals",
-    "1998",
-    "Running Backs"
-   ],
-   [
-    "Arizona Cardinals",
-    "2000",
-    "Running Backs"
-   ],
-   [
-    "Arizona Cardinals",
-    "2002",
-    "Running Backs"
-   ],
-   [
-    "Chicago Bears",
-    "1991",
-    "Running Backs"
-   ]
-  ],
-  "tim lefevour": [
-   [
-    "Chicago Bears",
-    "1996",
-    "Defensive Coordinator"
-   ]
-  ],
-  "lbs............ bob slowik": [
-   [
-    "Chicago Bears",
-    "1996",
-    "Defensive Line"
-   ]
-  ],
-  "clarence brooks marketing": [
-   [
-    "Chicago Bears",
-    "1996",
-    "Defensive Backs"
-   ]
-  ],
-  "broadcasting.........ken vakdiseri": [
-   [
-    "Chicago Bears",
-    "1996",
-    "Defensive Assistant"
-   ]
-  ],
-  "pat mccaskey": [
-   [
-    "Chicago Bears",
-    "1996",
-    "Running Backs"
-   ]
-  ],
-  "john bostrom": [
-   [
-    "Chicago Bears",
-    "1996",
-    "Wide Receivers"
-   ]
-  ],
-  "caroline guip": [
-   [
-    "Chicago Bears",
-    "1996",
-    "Special Teams"
-   ]
-  ],
-  "fs bill johnson": [
-   [
-    "Cincinnati Bengals",
-    "1971",
-    "Offensive Line"
-   ]
-  ],
-  "dick lebeau tight-ends": [
-   [
-    "Cincinnati Bengals",
-    "1980",
-    "Special Teams"
-   ]
-  ],
-  "coslet special teams": [
-   [
-    "Cincinnati Bengals",
-    "1981",
-    "Tight Ends"
-   ],
-   [
-    "Cincinnati Bengals",
-    "1982",
-    "Tight Ends"
-   ]
-  ],
-  "lindy infante receiver": [
-   [
-    "Cincinnati Bengals",
-    "1981",
-    "Quarterback Coach"
-   ]
-  ],
-  "lebeau tight ends": [
-   [
-    "Cincinnati Bengals",
-    "1981",
-    "Special Teams"
-   ],
-   [
-    "Cincinnati Bengals",
-    "1982",
-    "Special Teams"
-   ],
-   [
-    "Cincinnati Bengals",
-    "1983",
-    "Special Teams"
-   ]
-  ],
-  "right. sam wyche": [
+  "sam wyche": [
    [
     "Cincinnati Bengals",
     "1991",
@@ -764,469 +121,6 @@
     "Cincinnati Bengals",
     "1991",
     "Offensive Line"
-   ]
-  ],
-  "and jim anderson": [
-   [
-    "Cincinnati Bengals",
-    "1991",
-    "Running Backs Coach"
-   ]
-  ],
-  "bill walsh... rew": [
-   [
-    "Cincinnati Bengals",
-    "1993",
-    "Head Coach"
-   ]
-  ],
-  "marvin bass": [
-   [
-    "Buffalo Bills",
-    "1970",
-    "Offensive Line"
-   ]
-  ],
-  "bugsy engelberg": [
-   [
-    "Buffalo Bills",
-    "1970",
-    "Defensive Line"
-   ]
-  ],
-  "ray malavasi": [
-   [
-    "Buffalo Bills",
-    "1970",
-    "Linebacker Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1979",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1980",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1981",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1982",
-    "Head Coach"
-   ]
-  ],
-  "dan devine": [
-   [
-    "Buffalo Bills",
-    "1974",
-    "Head Coach"
-   ]
-  ],
-  "tom prothro": [
-   [
-    "Buffalo Bills",
-    "1976",
-    "Assistant Coach"
-   ]
-  ],
-  "pitts offensive backs": [
-   [
-    "Buffalo Bills",
-    "1979",
-    "Special Teams"
-   ]
-  ],
-  "san jose state": [
-   [
-    "Buffalo Bills",
-    "1982",
-    "Linebacker Coach"
-   ],
-   [
-    "Cleveland Browns",
-    "2001",
-    "Offensive Coordinator"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Defensive Backs"
-   ]
-  ],
-  "mccalmon special teams": [
-   [
-    "Buffalo Bills",
-    "1983",
-    "Defensive Assistant"
-   ]
-  ],
-  "bruce dehaven": [
-   [
-    "Buffalo Bills",
-    "1989",
-    "Special Teams"
-   ],
-   [
-    "Buffalo Bills",
-    "1995",
-    "Special Teams"
-   ],
-   [
-    "Buffalo Bills",
-    "1999",
-    "Special Teams"
-   ]
-  ],
-  "dick roach": [
-   [
-    "Buffalo Bills",
-    "1989",
-    "Defensive Backs"
-   ]
-  ],
-  "east aurora": [
-   [
-    "Buffalo Bills",
-    "1989",
-    "Assistant Coach"
-   ]
-  ],
-  "bruce del javen": [
-   [
-    "Buffalo Bills",
-    "1992",
-    "Special Teams"
-   ]
-  ],
-  "dan sekanovich": [
-   [
-    "Buffalo Bills",
-    "1992",
-    "Defensive Line"
-   ],
-   [
-    "Buffalo Bills",
-    "1995",
-    "Defensive Line"
-   ]
-  ],
-  "jim shofner": [
-   [
-    "Buffalo Bills",
-    "1992",
-    "Quarterbacks"
-   ],
-   [
-    "Phoenix Cardinals",
-    "1988",
-    "Offensive Coordinator"
-   ]
-  ],
-  "robert tisch": [
-   [
-    "Buffalo Bills",
-    "1993",
-    "Head Coach"
-   ]
-  ],
-  "line wade phillips": [
-   [
-    "Buffalo Bills",
-    "1995",
-    "Defensive Coordinator"
-   ]
-  ],
-  "ted cottrell": [
-   [
-    "Buffalo Bills",
-    "1995",
-    "Linebackers"
-   ],
-   [
-    "Buffalo Bills",
-    "1999",
-    "Defensive Coordinator"
-   ]
-  ],
-  "lbs dick roach": [
-   [
-    "Buffalo Bills",
-    "1995",
-    "Defensive Backs"
-   ]
-  ],
-  "joe pendry": [
-   [
-    "Buffalo Bills",
-    "1999",
-    "Offensive Coordinator"
-   ],
-   [
-    "Cleveland Browns",
-    "1985",
-    "Offensive Coordinator"
-   ],
-   [
-    "Cleveland Browns",
-    "1988",
-    "Running Backs"
-   ]
-  ],
-  "bill bradley": [
-   [
-    "Buffalo Bills",
-    "1999",
-    "Defensive Backs"
-   ]
-  ],
-  "bishop harris": [
-   [
-    "Buffalo Bills",
-    "1999",
-    "Running Backs"
-   ]
-  ],
-  "charle joiner": [
-   [
-    "Buffalo Bills",
-    "1999",
-    "Wide Receivers"
-   ]
-  ],
-  "rusty jones": [
-   [
-    "Buffalo Bills",
-    "1999",
-    "Strength & Conditioning"
-   ]
-  ],
-  "chuck lester": [
-   [
-    "Buffalo Bills",
-    "1999",
-    "Linebackers"
-   ]
-  ],
-  "carl mauck": [
-   [
-    "Arizona Cardinals",
-    "1996",
-    "Offensive Line"
-   ],
-   [
-    "Arizona Cardinals",
-    "1997",
-    "Offensive Line"
-   ],
-   [
-    "Buffalo Bills",
-    "1999",
-    "Offensive Line"
-   ],
-   [
-    "Buffalo Bills",
-    "2000",
-    "Offensive Line"
-   ],
-   [
-    "New Orleans Saints",
-    "1982",
-    "Offensive Line"
-   ],
-   [
-    "New Orleans Saints",
-    "1983",
-    "Offensive Line"
-   ]
-  ],
-  "turk schonert": [
-   [
-    "Buffalo Bills",
-    "1999",
-    "Quarterbacks"
-   ],
-   [
-    "Buffalo Bills",
-    "2000",
-    "Quarterbacks"
-   ]
-  ],
-  "ends bill bradley": [
-   [
-    "Buffalo Bills",
-    "2000",
-    "Defensive Backs"
-   ]
-  ],
-  "conditioning chuck lester": [
-   [
-    "Buffalo Bills",
-    "2000",
-    "Linebackers"
-   ]
-  ],
-  "james saxon": [
-   [
-    "Buffalo Bills",
-    "2000",
-    "Running Backs"
-   ]
-  ],
-  "faulkner gen. mgr.": [
-   [
-    "Denver Broncos",
-    "1962",
-    "Head Coach"
-   ]
-  ],
-  "jack faulkner": [
-   [
-    "Denver Broncos",
-    "1964",
-    "Head Coach"
-   ]
-  ],
-  "bronco gm": [
-   [
-    "Denver Broncos",
-    "1971",
-    "Head Coach"
-   ]
-  ],
-  "red miller": [
-   [
-    "Denver Broncos",
-    "1977",
-    "Defensive Coordinator"
-   ],
-   [
-    "Denver Broncos",
-    "1979",
-    "Defensive Coordinator"
-   ],
-   [
-    "Denver Broncos",
-    "1980",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Offensive Line"
-   ]
-  ],
-  "teams bobby tumer": [
-   [
-    "Denver Broncos",
-    "1995",
-    "Running Backs"
-   ]
-  ],
-  "frank bush": [
-   [
-    "Denver Broncos",
-    "1995",
-    "Linebackers"
-   ]
-  ],
-  "barney chavous": [
-   [
-    "Denver Broncos",
-    "1995",
-    "Offensive Line"
-   ]
-  ],
-  "continued richard smith": [
-   [
-    "Denver Broncos",
-    "1995",
-    "Special Teams"
-   ]
-  ],
-  "continued bosby turner": [
-   [
-    "Denver Broncos",
-    "1995",
-    "Running Backs"
-   ]
-  ],
-  "coaches rich tuten": [
-   [
-    "Denver Broncos",
-    "1995",
-    "Strength And Conditioning"
-   ]
-  ],
-  "rich tuten": [
-   [
-    "Denver Broncos",
-    "1995",
-    "Strength And Conditioning"
-   ]
-  ],
-  "ray crockett": [
-   [
-    "Denver Broncos",
-    "1995",
-    "Wide Receivers"
-   ]
-  ],
-  "ed mccaffrey": [
-   [
-    "Denver Broncos",
-    "1995",
-    "Running Backs"
-   ]
-  ],
-  "monique. rick dennison": [
-   [
-    "Denver Broncos",
-    "1997",
-    "Special Teams"
-   ]
-  ],
-  "mary. bossy turner": [
-   [
-    "Denver Broncos",
-    "1997",
-    "Running Backs"
-   ]
-  ],
-  "backs rich tuten": [
-   [
-    "Denver Broncos",
-    "2001",
-    "Strength And Conditioning"
-   ]
-  ],
-  "assistan zaven yaralian": [
-   [
-    "Denver Broncos",
-    "2001",
-    "Head Coach"
-   ]
-  ],
-  "backs rich tuten...": [
-   [
-    "Denver Broncos",
-    "2002",
-    "Strength And Conditioning"
    ]
   ],
   "blanton collier": [
@@ -1243,354 +137,43 @@
     "Head Coach"
    ]
   ],
-  "dave adolph": [
-   [
-    "Cleveland Browns",
-    "1982",
-    "Linebackers"
-   ],
-   [
-    "Cleveland Browns",
-    "1984",
-    "Linebackers"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1992",
-    "Defensive Coordinator"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1993",
-    "Defensive Coordinator"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1994",
-    "Defensive Coordinator"
-   ]
-  ],
-  "development paul hackett": [
-   [
-    "Cleveland Browns",
-    "1982",
-    "Quarterbacks"
-   ]
-  ],
-  "tom pratt": [
-   [
-    "Cleveland Browns",
-    "1982",
-    "Defensive Line"
-   ],
-   [
-    "Cleveland Browns",
-    "1984",
-    "Defensive Line"
-   ],
-   [
-    "Cleveland Browns",
-    "1985",
-    "Defensive Line"
-   ],
-   [
-    "Cleveland Browns",
-    "1988",
-    "Defensive Line"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1970",
-    "Defensive Line"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1971",
-    "Defensive Line"
-   ]
-  ],
-  "backs marty schottenheimer": [
-   [
-    "Cleveland Browns",
-    "1982",
-    "Defensive Coordinator"
-   ]
-  ],
-  "development howard mudd": [
-   [
-    "Cleveland Browns",
-    "1984",
-    "Offensive Line"
-   ]
-  ],
-  "john petercuskie": [
-   [
-    "Cleveland Browns",
-    "1984",
-    "Special Teams"
-   ]
-  ],
-  "strength keith rowen": [
-   [
-    "Cleveland Browns",
-    "1984",
-    "Running Backs"
-   ]
-  ],
-  "coaches marty schottenheimer": [
-   [
-    "Cleveland Browns",
-    "1985",
-    "Head Coach"
-   ]
-  ],
-  "tom bettis": [
-   [
-    "Cleveland Browns",
-    "1985",
-    "Defensive Coordinator"
-   ],
-   [
-    "Houston Oilers",
-    "1986",
-    "Quarterbacks"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1978",
-    "Defensive Coordinator"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1979",
-    "Defensive Coordinator"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1981",
-    "Defensive Coordinator"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1983",
-    "Defensive Coordinator"
-   ]
-  ],
-  "offense greg landry": [
-   [
-    "Cleveland Browns",
-    "1985",
-    "Quarterbacks"
-   ]
-  ],
-  "tom olivadotti": [
-   [
-    "Cleveland Browns",
-    "1985",
-    "Linebackers"
-   ]
-  ],
-  "offense bill cowher": [
-   [
-    "Cleveland Browns",
-    "1988",
-    "Secondary"
-   ]
-  ],
-  "teams marc trestman": [
-   [
-    "Cleveland Browns",
-    "1988",
-    "Quarterbacks"
-   ]
-  ],
-  "coaches bud carson": [
-   [
-    "Cleveland Browns",
-    "1989",
-    "Head Coach"
-   ]
-  ],
-  "jed hughes": [
-   [
-    "Cleveland Browns",
-    "1989",
-    "Secondary"
-   ],
-   [
-    "Minnesota Vikings",
-    "1982",
-    "Defensive Backs"
-   ]
-  ],
-  "hal hunter": [
-   [
-    "Cleveland Browns",
-    "1989",
-    "Offensive Line"
-   ],
-   [
-    "Cleveland Browns",
-    "1991",
-    "Offensive Line"
-   ]
-  ],
-  "conditioning paul lanham": [
-   [
-    "Cleveland Browns",
-    "1989",
-    "Special Teams"
-   ]
-  ],
-  "ends john teerlinck": [
-   [
-    "Cleveland Browns",
-    "1989",
-    "Defensive Line"
-   ]
-  ],
-  "conditioning dottie cooper": [
-   [
-    "Cleveland Browns",
-    "1989",
-    "Head Coach"
-   ]
-  ],
-  "scott o'brien": [
-   [
-    "Cleveland Browns",
-    "1991",
-    "Special Teams"
-   ],
-   [
-    "Cleveland Browns",
-    "1993",
-    "Special Teams"
-   ]
-  ],
-  "conditioning gary tranquill": [
-   [
-    "Cleveland Browns",
-    "1991",
-    "Quarterbacks"
-   ]
-  ],
-  "assignments jim bates": [
-   [
-    "Cleveland Browns",
-    "1993",
-    "Defensive Line"
-   ],
-   [
-    "Cleveland Browns",
-    "1995",
-    "Secondary"
-   ]
-  ],
-  "steve crosby": [
-   [
-    "Cleveland Browns",
-    "1993",
-    "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Special Teams"
-   ]
-  ],
-  "kirk ferentz": [
-   [
-    "Cleveland Browns",
-    "1993",
-    "Offensive Line"
-   ],
-   [
-    "Cleveland Browns",
-    "1995",
-    "Offensive Line"
-   ]
-  ],
-  "nick sabin": [
-   [
-    "Cleveland Browns",
-    "1993",
-    "Defensive Coordinator"
-   ]
-  ],
-  "phil savage": [
-   [
-    "Cleveland Browns",
-    "1993",
-    "Defensive Assistant"
-   ]
-  ],
-  "mike sheppard": [
-   [
-    "Cleveland Browns",
-    "1993",
-    "Offensive Assistant"
-   ]
-  ],
-  "conditioning kevin spencer": [
-   [
-    "Cleveland Browns",
-    "1993",
-    "Offensive Assistant"
-   ]
-  ],
-  "gary tranquill": [
-   [
-    "Cleveland Browns",
-    "1993",
-    "Quarterbacks"
-   ]
-  ],
-  "woody widenhofer": [
-   [
-    "Cleveland Browns",
-    "1993",
-    "Linebackers"
-   ]
-  ],
-  "hrowss bill belichick": [
-   [
-    "Cleveland Browns",
-    "1995",
-    "Head Coach"
-   ]
-  ],
-  "chuck bresnahan": [
-   [
-    "Cleveland Browns",
-    "1995",
-    "Linebackers"
-   ],
-   [
-    "Indianapolis Colts",
-    "1997",
-    "Linebackers"
-   ]
-  ],
-  "linc steve crosby": [
-   [
-    "Cleveland Browns",
-    "1995",
-    "Offensive Coordinator"
-   ]
-  ],
-  "pat hill": [
-   [
-    "Cleveland Browns",
-    "1995",
-    "Tight Ends"
-   ]
-  ],
-  "operations chris palmer": [
+  "chris palmer": [
    [
     "Cleveland Browns",
     "2000",
     "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2006",
+    "Quarterbacks"
+   ],
+   [
+    "New England Patriots",
+    "1994",
+    "Wide Receivers"
+   ],
+   [
+    "New England Patriots",
+    "1995",
+    "Wide Receivers"
+   ],
+   [
+    "New England Patriots",
+    "1996",
+    "Quarterbacks"
+   ],
+   [
+    "New England Patriots",
+    "1998",
+    "Wide Receivers"
+   ]
+  ],
+  "pete carmichael": [
+   [
+    "Cleveland Browns",
+    "2000",
+    "Offensive Coordinator"
    ]
   ],
   "romeo crennel": [
@@ -1613,28 +196,76 @@
     "New England Patriots",
     "1996",
     "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Line"
    ]
   ],
-  "line jerry butler": [
+  "jerry butler": [
    [
     "Cleveland Browns",
     "2000",
     "Wide Receivers"
+   ]
+  ],
+  "keith butler": [
+   [
+    "Cleveland Browns",
+    "2000",
+    "Linebackers Coach"
+   ],
+   [
+    "Cleveland Browns",
+    "2001",
+    "Linebackers Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Linebackers Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Linebackers Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Linebackers Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Linebackers Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Linebackers Coach"
+   ]
+  ],
+  "jerry holmes": [
+   [
+    "Cleveland Browns",
+    "2000",
+    "Defensive Backs"
+   ]
+  ],
+  "john hufnagel": [
+   [
+    "Cleveland Browns",
+    "2000",
+    "Quarterbacks Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2001",
+    "Quarterbacks"
+   ]
+  ],
+  "mark michaels": [
+   [
+    "Cleveland Browns",
+    "2000",
+    "Special Teams Coach"
    ]
   ],
   "ray perkins": [
@@ -1657,16 +288,6 @@
     "New England Patriots",
     "1996",
     "Offensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Offensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Offensive Coordinator"
    ]
   ],
   "mike pitts": [
@@ -1681,20 +302,70 @@
     "Cleveland Browns",
     "2000",
     "Offensive Line"
-   ]
-  ],
-  "kurman pete carmichael": [
+   ],
    [
-    "Cleveland Browns",
-    "2000",
-    "Offensive Coordinator"
+    "Dallas Cowboys",
+    "2003",
+    "Tight Ends"
    ]
   ],
-  "operations butch davis": [
+  "butch davis": [
    [
     "Cleveland Browns",
     "2001",
     "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "1991",
+    "Defensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "1992",
+    "Defensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "1993",
+    "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "1994",
+    "Defensive Coordinator"
+   ]
+  ],
+  "bruce arians": [
+   [
+    "Cleveland Browns",
+    "2001",
+    "Offensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "1999",
+    "Quarterbacks"
+   ],
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Offensive Coordinator"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Offensive Coordinator"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Offensive Coordinator"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Offensive Coordinator"
    ]
   ],
   "foge fazio": [
@@ -1711,11 +382,11 @@
     "Special Teams"
    ]
   ],
-  "package keith butler": [
+  "phillip banko": [
    [
     "Cleveland Browns",
     "2001",
-    "Linebackers Coach"
+    "Defensive Assistant"
    ]
   ],
   "pete garcia": [
@@ -1725,11 +396,35 @@
     "Assistant Coach"
    ]
   ],
-  "development steve hagen": [
+  "steve hagen": [
    [
     "Cleveland Browns",
     "2001",
     "Tight Ends"
+   ]
+  ],
+  "ray hamilton": [
+   [
+    "Cleveland Browns",
+    "2001",
+    "Defensive Line"
+   ],
+   [
+    "New England Patriots",
+    "1997",
+    "Defensive Line"
+   ],
+   [
+    "New England Patriots",
+    "1998",
+    "Defensive Line"
+   ]
+  ],
+  "todd mcnair": [
+   [
+    "Cleveland Browns",
+    "2001",
+    "Running Backs Coach"
    ]
   ],
   "chuck pagano": [
@@ -1737,6 +432,55 @@
     "Cleveland Browns",
     "2001",
     "Defensive Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Head Coach"
+   ]
+  ],
+  "terry robiskie": [
+   [
+    "Cleveland Browns",
+    "2001",
+    "Wide Receivers"
+   ]
+  ],
+  "carl smith": [
+   [
+    "Cleveland Browns",
+    "2001",
+    "Quarterbacks Coach"
+   ],
+   [
+    "New England Patriots",
+    "1998",
+    "Tight Ends"
    ]
   ],
   "larry zierlein": [
@@ -1744,95 +488,16 @@
     "Cleveland Browns",
     "2001",
     "Offensive Line"
-   ]
-  ],
-  "coordin bruce arians": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Offensive Coordinator"
-   ]
-  ],
-  "mississippi state": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Offensive Coordinator"
    ],
    [
-    "Cleveland Browns",
-    "2001",
-    "Running Backs"
-   ]
-  ],
-  "temple university": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Head Coach"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Head Coach"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Quarterbacks"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Tight Ends"
-   ]
-  ],
-  "boston university": [
-   [
-    "Cleveland Browns",
-    "2001",
+    "Pittsburgh Steelers",
+    "2007",
     "Offensive Line"
    ],
    [
-    "Cleveland Browns",
-    "2002",
+    "Pittsburgh Steelers",
+    "2009",
     "Offensive Line"
-   ]
-  ],
-  "harvard university": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Defensive Line"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Defensive Line"
-   ]
-  ],
-  "shanley high school": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Assistant Coach"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Assistant Coach"
-   ]
-  ],
-  "northern michigan": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Defensive Coordinator"
-   ],
-   [
-    "Cleveland Browns",
-    "2001",
-    "Linebackers"
    ]
   ],
   "western michigan": [
@@ -1840,639 +505,6 @@
     "Cleveland Browns",
     "2001",
     "Linebackers"
-   ]
-  ],
-  "boston college": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Secondary Coach"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Secondary Coach"
-   ]
-  ],
-  "morehouse college": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Defensive Coordinator"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Defensive Coordinator"
-   ]
-  ],
-  "grambling state university": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Defensive Coordinator"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Defensive Coordinator"
-   ]
-  ],
-  "arkansas state": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Defensive Coordinator"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Defensive Backs"
-   ]
-  ],
-  "kent state": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Quarterbacks Coach"
-   ]
-  ],
-  "east carolina university": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Defensive Backs"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Defensive Backs"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Offensive Coordinator"
-   ]
-  ],
-  "western carolina": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Strength And Conditioning"
-   ]
-  ],
-  "southwestern louisiana": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Defensive Backs"
-   ],
-   [
-    "Cleveland Browns",
-    "2001",
-    "Defensive Line"
-   ],
-   [
-    "Cleveland Browns",
-    "2001",
-    "Offensive Coordinator"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Defensive Backs"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Defensive Line"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Offensive Coordinator"
-   ]
-  ],
-  "north carolina state": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Offensive Coordinator"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Head Coach"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Head Coach"
-   ]
-  ],
-  "louisiana state": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Offensive Line"
-   ]
-  ],
-  "mississippi state university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Offensive Coordinator"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Running Backs"
-   ]
-  ],
-  "dwayne rudd": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Defensive Backs"
-   ]
-  ],
-  "northern michigan university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Defensive Coordinator"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Linebackers"
-   ]
-  ],
-  "western michigan university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Linebackers"
-   ]
-  ],
-  "arkansas state university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Defensive Coordinator"
-   ]
-  ],
-  "kent state university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Quarterbacks Coach"
-   ]
-  ],
-  "nevada-reno university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Offensive Coordinator"
-   ]
-  ],
-  "nevada-las vegas": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Defensive Backs"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Defensive Coordinator"
-   ],
-   [
-    "Cleveland Browns",
-    "2002",
-    "Offensive Coordinator"
-   ]
-  ],
-  "jose state university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Offensive Coordinator"
-   ]
-  ],
-  "western carolina university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Strength And Conditioning"
-   ]
-  ],
-  "lamar university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Offensive Coordinator"
-   ]
-  ],
-  "carolina state university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Offensive Coordinator"
-   ],
-   [
-    "Miami Dolphins",
-    "1996",
-    "Offensive Line"
-   ],
-   [
-    "Miami Dolphins",
-    "1997",
-    "Offensive Line"
-   ]
-  ],
-  "tulane university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Offensive Line"
-   ]
-  ],
-  "louisiana state university": [
-   [
-    "Cleveland Browns",
-    "2002",
-    "Offensive Line"
-   ]
-  ],
-  "congressional relati": [
-   [
-    "Tampa Bay Buccaneers",
-    "1981",
-    "Head Coach"
-   ]
-  ],
-  "montana state": [
-   [
-    "Tampa Bay Buccaneers",
-    "1988",
-    "Head Coach"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Tight Ends"
-   ]
-  ],
-  "ball state": [
-   [
-    "Tampa Bay Buccaneers",
-    "1988",
-    "Secondary Coach"
-   ]
-  ],
-  "eastern michigan": [
-   [
-    "Tampa Bay Buccaneers",
-    "1988",
-    "Defensive Coordinator"
-   ]
-  ],
-  "michigan tech": [
-   [
-    "Tampa Bay Buccaneers",
-    "1988",
-    "Defensive Coordinator"
-   ]
-  ],
-  "cabrini high school": [
-   [
-    "Tampa Bay Buccaneers",
-    "1988",
-    "Assistant Coach"
-   ]
-  ],
-  "bay buccaneers": [
-   [
-    "Tampa Bay Buccaneers",
-    "1988",
-    "Defensive Line"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "1990",
-    "Defensive Line"
-   ]
-  ],
-  "southern mississippi": [
-   [
-    "Tampa Bay Buccaneers",
-    "1988",
-    "Defensive Line"
-   ]
-  ],
-  "michigan state": [
-   [
-    "Tampa Bay Buccaneers",
-    "1988",
-    "Linebacker Coach"
-   ]
-  ],
-  "memphis state": [
-   [
-    "Tampa Bay Buccaneers",
-    "1990",
-    "Head Coach"
-   ]
-  ],
-  "ss eagles": [
-   [
-    "Tampa Bay Buccaneers",
-    "1990",
-    "Defensive Line"
-   ]
-  ],
-  "southern methodist": [
-   [
-    "Tampa Bay Buccaneers",
-    "1990",
-    "Defensive Line"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Offensive Line"
-   ]
-  ],
-  "northeast louisiana": [
-   [
-    "Tampa Bay Buccaneers",
-    "1990",
-    "Defensive Coordinator"
-   ]
-  ],
-  "east tennessee state": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Offensive Coordinator"
-   ]
-  ],
-  "holy cross": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Offensive Coordinator"
-   ]
-  ],
-  "south carolina": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Running Backs Coach"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Running Backs"
-   ]
-  ],
-  "colorado state": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Offensive Line"
-   ]
-  ],
-  "stanford university": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Offensive Line"
-   ]
-  ],
-  "east stroudsburg university": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Tight Ends"
-   ]
-  ],
-  "rhode island": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Tight Ends"
-   ]
-  ],
-  "villanova university": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Tight Ends"
-   ]
-  ],
-  "penn state": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Tight Ends"
-   ]
-  ],
-  "lock haven university": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Receivers Coach"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2001",
-    "Receivers Coach"
-   ]
-  ],
-  "cornell university": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Defensive Backs"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2001",
-    "Defensive Backs"
-   ]
-  ],
-  "institute junior college": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Defensive Backs"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2001",
-    "Defensive Backs"
-   ]
-  ],
-  "mccallie high school": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Assistant Coach"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2001",
-    "Assistant Coach"
-   ]
-  ],
-  "gardner webb university": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Defensive Backs"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2001",
-    "Defensive Backs"
-   ]
-  ],
-  "beach city college": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Assistant Coach"
-   ]
-  ],
-  "new mexico state": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Running Backs Coach"
-   ]
-  ],
-  "texas christian university": [
-   [
-    "Tampa Bay Buccaneers",
-    "1998",
-    "Wide Receivers"
-   ]
-  ],
-  "the citadel": [
-   [
-    "Tampa Bay Buccaneers",
-    "1999",
-    "Strength And Conditioning"
-   ]
-  ],
-  "wayne state": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Defensive Backs"
-   ]
-  ],
-  "recruiting mississippi": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Running Backs Coach"
-   ]
-  ],
-  "western oregon": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Offensive Line"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Tight Ends"
-   ]
-  ],
-  "portland state": [
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Head Coach"
-   ],
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Running Backs Coach"
-   ]
-  ],
-  "idaho state": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Defensive Coordinator"
-   ]
-  ],
-  "wabash college": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Head Coach"
-   ]
-  ],
-  "kansas state": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Head Coach"
-   ]
-  ],
-  "virginia military institute": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Wide Receivers"
-   ]
-  ],
-  "boise state": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Offensive Line"
-   ]
-  ],
-  "long beach state": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Offensive Line"
-   ]
-  ],
-  "city college": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Wide Receivers"
-   ]
-  ],
-  "southwest community college": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Quarterbacks"
-   ]
-  ],
-  "southern illinois": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Secondary Coach"
-   ]
-  ],
-  "southern california": [
-   [
-    "Tampa Bay Buccaneers",
-    "2002",
-    "Wide Receivers"
    ]
   ],
   "wally lemm": [
@@ -2484,17 +516,32 @@
   ],
   "chuck drulis": [
    [
+    "Green Bay Packers",
+    "1952",
+    "Assistant Coach"
+   ],
+   [
     "St. Louis Cardinals",
     "1962",
+    "Assistant Coach"
+   ],
+   [
+    "St. Louis Cardinals",
+    "1968",
+    "Assistant Coach"
+   ],
+   [
+    "St. Louis Cardinals",
+    "1970",
+    "Assistant Coach"
+   ],
+   [
+    "St. Louis Cardinals",
+    "1972",
     "Assistant Coach"
    ]
   ],
   "ray prochaska": [
-   [
-    "Seattle Seahawks",
-    "1984",
-    "Head Coach"
-   ],
    [
     "St. Louis Cardinals",
     "1962",
@@ -2509,6 +556,11 @@
    ]
   ],
   "harry gilmer": [
+   [
+    "Atlanta Falcons",
+    "1974",
+    "Receivers Coach"
+   ],
    [
     "St. Louis Cardinals",
     "1968",
@@ -2528,21 +580,6 @@
     "St. Louis Cardinals",
     "1976",
     "Quarterbacks"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1978",
-    "Quarterbacks"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1979",
-    "Quarterbacks"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1981",
-    "Quarterbacks"
    ]
   ],
   "don shroyer": [
@@ -2554,11 +591,6 @@
   ],
   "dick voris": [
    [
-    "New York Jets",
-    "1974",
-    "Defensive Coordinator"
-   ],
-   [
     "St. Louis Cardinals",
     "1968",
     "Defensive Line"
@@ -2569,52 +601,19 @@
     "Assistant Coach"
    ]
   ],
-  "gilmer chuck drulis": [
+  "charley winner": [
    [
     "St. Louis Cardinals",
     "1968",
-    "Assistant Coach"
-   ]
-  ],
-  "charley winner": [
-   [
-    "New York Jets",
-    "1973",
-    "Linebackers"
+    "Head Coach"
    ],
    [
     "St. Louis Cardinals",
-    "1968",
-    "Head Coach"
-   ]
-  ],
-  "voris chuck drulis": [
-   [
-    "St. Louis Cardinals",
-    "1970",
-    "Assistant Coach"
-   ]
-  ],
-  "illinoi charley winner": [
-   [
-    "St. Louis Cardinals",
     "1970",
     "Head Coach"
-   ]
-  ],
-  "carpenter chuck drulis": [
-   [
-    "St. Louis Cardinals",
-    "1972",
-    "Assistant Coach"
    ]
   ],
   "bob hollway": [
-   [
-    "Minnesota Vikings",
-    "1985",
-    "Defensive Coordinator"
-   ],
    [
     "St. Louis Cardinals",
     "1972",
@@ -2652,26 +651,6 @@
   ],
   "jim champion": [
    [
-    "Atlanta Falcons",
-    "1979",
-    "Defensive Line"
-   ],
-   [
-    "New Orleans Saints",
-    "1971",
-    "Defensive Coordinator"
-   ],
-   [
-    "New Orleans Saints",
-    "1972",
-    "Defensive Coordinator"
-   ],
-   [
-    "New Orleans Saints",
-    "1973",
-    "Defensive Coordinator"
-   ],
-   [
     "St. Louis Cardinals",
     "1974",
     "Defensive Line"
@@ -2694,10 +673,15 @@
     "Linebackers"
    ]
   ],
-  "coaches jim hanifan": [
+  "jim hanifan": [
    [
     "St. Louis Cardinals",
     "1974",
+    "Offensive Line"
+   ],
+   [
+    "St. Louis Cardinals",
+    "1975",
     "Offensive Line"
    ]
   ],
@@ -2720,18 +704,6 @@
     "Defensive Coordinator"
    ]
   ],
-  "jim hanifan": [
-   [
-    "St. Louis Cardinals",
-    "1975",
-    "Offensive Line"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1976",
-    "Offensive Line"
-   ]
-  ],
   "chuck weber": [
    [
     "New England Patriots",
@@ -2739,360 +711,9 @@
     "Defensive Line"
    ],
    [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Line"
-   ],
-   [
     "St. Louis Cardinals",
     "1976",
     "Defensive Backs"
-   ]
-  ],
-  "willie zapalac": [
-   [
-    "St. Louis Cardinals",
-    "1976",
-    "Defensive Line"
-   ]
-  ],
-  "coaches don coryell": [
-   [
-    "St. Louis Cardinals",
-    "1977",
-    "Head Coach"
-   ]
-  ],
-  "backfield rudy feldman": [
-   [
-    "St. Louis Cardinals",
-    "1978",
-    "Defensive Line"
-   ]
-  ],
-  "rudy feldman": [
-   [
-    "St. Louis Cardinals",
-    "1979",
-    "Defensive Line"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1981",
-    "Defensive Line"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1983",
-    "Linebackers"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1984",
-    "Linebackers"
-   ]
-  ],
-  "backfield jerry thompson": [
-   [
-    "St. Louis Cardinals",
-    "1979",
-    "Special Teams"
-   ]
-  ],
-  "strength rudy feldman": [
-   [
-    "St. Louis Cardinals",
-    "1981",
-    "Defensive Line"
-   ]
-  ],
-  "backfield tom lovat": [
-   [
-    "St. Louis Cardinals",
-    "1981",
-    "Offensive Line"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1983",
-    "Offensive Line"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1984",
-    "Offensive Line"
-   ]
-  ],
-  "chuck banker-": [
-   [
-    "St. Louis Cardinals",
-    "1981",
-    "Special Teams"
-   ]
-  ],
-  "tom lovat": [
-   [
-    "Green Bay Packers",
-    "1997",
-    "Offensive Line"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1981",
-    "Offensive Line"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1983",
-    "Offensive Line"
-   ]
-  ],
-  "floyd peters": [
-   [
-    "Minnesota Vikings",
-    "1986",
-    "Defensive Coordinator"
-   ],
-   [
-    "Minnesota Vikings",
-    "1987",
-    "Defensive Coordinator"
-   ],
-   [
-    "Minnesota Vikings",
-    "1989",
-    "Defensive Coordinator"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1983",
-    "Asst. Head Coach"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1984",
-    "Asst. Head Coach"
-   ]
-  ],
-  "defense rod dowhower": [
-   [
-    "St. Louis Cardinals",
-    "1983",
-    "Offensive Coordinator"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1984",
-    "Offensive Coordinator"
-   ]
-  ],
-  "chuck banker": [
-   [
-    "St. Louis Cardinals",
-    "1983",
-    "Special Teams"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1984",
-    "Special Teams"
-   ]
-  ],
-  "defensive tom bettis": [
-   [
-    "St. Louis Cardinals",
-    "1983",
-    "Defensive Coordinator"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1984",
-    "Defensive Coordinator"
-   ]
-  ],
-  "allen. rod dowhower": [
-   [
-    "St. Louis Cardinals",
-    "1983",
-    "Offensive Coordinator"
-   ]
-  ],
-  "deron. chuck banker": [
-   [
-    "St. Louis Cardinals",
-    "1983",
-    "Special Teams"
-   ]
-  ],
-  "coaches floyd peters": [
-   [
-    "Minnesota Vikings",
-    "1987",
-    "Defensive Coordinator"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1984",
-    "Asst. Head Coach"
-   ]
-  ],
-  "equipment marv braden": [
-   [
-    "Phoenix Cardinals",
-    "1988",
-    "Special Teams"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1987",
-    "Special Teams"
-   ]
-  ],
-  "tom bresnahan": [
-   [
-    "Phoenix Cardinals",
-    "1988",
-    "Offensive Line"
-   ],
-   [
-    "St. Louis Cardinals",
-    "1987",
-    "Offensive Line"
-   ]
-  ],
-  "department jim johnson": [
-   [
-    "St. Louis Cardinals",
-    "1987",
-    "Defensive Line"
-   ]
-  ],
-  "conditioning jim johnson": [
-   [
-    "Phoenix Cardinals",
-    "1988",
-    "Defensive Line"
-   ]
-  ],
-  "hank kuhlmann": [
-   [
-    "Arizona Cardinals",
-    "2000",
-    "Special Teams"
-   ],
-   [
-    "Arizona Cardinals",
-    "2001",
-    "Special Teams"
-   ],
-   [
-    "Arizona Cardinals",
-    "2002",
-    "Special Teams"
-   ],
-   [
-    "Phoenix Cardinals",
-    "1988",
-    "Running Backs"
-   ]
-  ],
-  "dennis thurman": [
-   [
-    "Phoenix Cardinals",
-    "1988",
-    "Defensive Backs"
-   ]
-  ],
-  "contre guy morriss": [
-   [
-    "Arizona Cardinals",
-    "1994",
-    "Offensive Line"
-   ]
-  ],
-  "dan neal": [
-   [
-    "Arizona Cardinals",
-    "1994",
-    "Offensive Line"
-   ]
-  ],
-  "ends al roberts": [
-   [
-    "Arizona Cardinals",
-    "1994",
-    "Special Teams"
-   ],
-   [
-    "Arizona Cardinals",
-    "1995",
-    "Special Teams"
-   ]
-  ],
-  "rex ryan": [
-   [
-    "Arizona Cardinals",
-    "1994",
-    "Defensive Line"
-   ],
-   [
-    "Arizona Cardinals",
-    "1995",
-    "Linebackers"
-   ],
-   [
-    "Baltimore Ravens",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "Baltimore Ravens",
-    "2000",
-    "Defensive Line"
-   ]
-  ],
-  "rob ryan": [
-   [
-    "Arizona Cardinals",
-    "1994",
-    "Defensive Backs"
-   ],
-   [
-    "Arizona Cardinals",
-    "1995",
-    "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Linebackers"
-   ]
-  ],
-  "bob rogucki": [
-   [
-    "Arizona Cardinals",
-    "1994",
-    "Strength And Conditioning"
-   ],
-   [
-    "Arizona Cardinals",
-    "1995",
-    "Strength And Conditioning"
-   ],
-   [
-    "Arizona Cardinals",
-    "1996",
-    "Strength And Conditioning"
-   ],
-   [
-    "Arizona Cardinals",
-    "1997",
-    "Strength And Conditioning"
    ]
   ],
   "dave atkins": [
@@ -3107,23 +728,39 @@
     "Arizona Cardinals",
     "1995",
     "Quarterbacks"
-   ],
-   [
-    "Baltimore Ravens",
-    "1999",
-    "Offensive Coordinator"
-   ],
-   [
-    "Baltimore Ravens",
-    "2000",
-    "Offensive Coordinator"
    ]
   ],
-  "back dan neal": [
+  "dan neal": [
    [
     "Arizona Cardinals",
     "1995",
     "Offensive Line"
+   ]
+  ],
+  "al roberts": [
+   [
+    "Arizona Cardinals",
+    "1995",
+    "Special Teams"
+   ]
+  ],
+  "rex ryan": [
+   [
+    "Arizona Cardinals",
+    "1995",
+    "Linebackers"
+   ]
+  ],
+  "rob ryan": [
+   [
+    "Arizona Cardinals",
+    "1995",
+    "Defensive Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2012",
+    "Defensive Coordinator"
    ]
   ],
   "jim stanley": [
@@ -3131,18 +768,13 @@
     "Arizona Cardinals",
     "1995",
     "Defensive Line"
-   ],
-   [
-    "Atlanta Falcons",
-    "1980",
-    "Defensive Line"
    ]
   ],
-  "backs dan neal": [
+  "bob rogucki": [
    [
     "Arizona Cardinals",
     "1995",
-    "Offensive Line"
+    "Strength And Conditioning"
    ]
   ],
   "buddy ryan": [
@@ -3150,146 +782,18 @@
     "Arizona Cardinals",
     "1995",
     "Head Coach"
-   ],
-   [
-    "New York Jets",
-    "1968",
-    "Defensive Line"
-   ],
-   [
-    "New York Jets",
-    "1969",
-    "Defensive Line"
-   ],
-   [
-    "New York Jets",
-    "1970",
-    "Defensive Line"
-   ],
-   [
-    "New York Jets",
-    "1973",
-    "Defensive Line"
-   ],
-   [
-    "New York Jets",
-    "1974",
-    "Linebackers"
-   ],
-   [
-    "New York Jets",
-    "1975",
-    "Linebackers"
    ]
   ],
-  "control... al everest": [
-   [
-    "Arizona Cardinals",
-    "1996",
-    "Special Teams"
-   ]
-  ],
-  "joe greene": [
-   [
-    "Arizona Cardinals",
-    "1996",
-    "Defensive Line"
-   ],
+  "vince tobin": [
    [
     "Arizona Cardinals",
     "1999",
-    "Defensive Line"
+    "Head Coach"
    ],
    [
     "Arizona Cardinals",
     "2000",
-    "Defensive Line"
-   ],
-   [
-    "Arizona Cardinals",
-    "2001",
-    "Defensive Line"
-   ],
-   [
-    "Arizona Cardinals",
-    "2002",
-    "Defensive Line"
-   ]
-  ],
-  "glenn pires": [
-   [
-    "Arizona Cardinals",
-    "1996",
-    "Linebackers"
-   ],
-   [
-    "Arizona Cardinals",
-    "1997",
-    "Linebackers"
-   ],
-   [
-    "Arizona Cardinals",
-    "2000",
-    "Linebackers"
-   ]
-  ],
-  "leaders... annual result": [
-   [
-    "Arizona Cardinals",
-    "1996",
-    "Assistant Coach"
-   ]
-  ],
-  "coord... geep chryst": [
-   [
-    "Arizona Cardinals",
-    "1997",
-    "Tight Ends"
-   ]
-  ],
-  "control al everest": [
-   [
-    "Arizona Cardinals",
-    "1997",
-    "Special Teams"
-   ]
-  ],
-  "lin larry marmie": [
-   [
-    "Arizona Cardinals",
-    "1997",
-    "Secondary"
-   ]
-  ],
-  "hank kuhimann": [
-   [
-    "Arizona Cardinals",
-    "1998",
-    "Tight Ends"
-   ],
-   [
-    "Arizona Cardinals",
-    "1999",
-    "Tight Ends"
-   ],
-   [
-    "Indianapolis Colts",
-    "1997",
-    "Special Teams"
-   ]
-  ],
-  "jerseys. larry marmie": [
-   [
-    "Arizona Cardinals",
-    "1998",
-    "Defensive Backs"
-   ]
-  ],
-  "backs george warhop": [
-   [
-    "Arizona Cardinals",
-    "1998",
-    "Offensive Line"
+    "Head Coach"
    ]
   ],
   "dave mcginnis": [
@@ -3304,18 +808,79 @@
     "Head Coach"
    ]
   ],
+  "mare trestman": [
+   [
+    "Arizona Cardinals",
+    "1999",
+    "Offensive Coordinator"
+   ]
+  ],
   "al everest": [
    [
     "Arizona Cardinals",
     "1999",
     "Special Teams"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Special Teams"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Special Teams"
    ]
   ],
-  "dd john garrett": [
+  "john garrett": [
    [
     "Arizona Cardinals",
     "1999",
     "Quarterbacks"
+   ],
+   [
+    "Arizona Cardinals",
+    "2000",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Tight Ends"
+   ],
+   [
+    "Dallas Cowboys",
+    "2009",
+    "Tight Ends"
+   ]
+  ],
+  "joe greene": [
+   [
+    "Arizona Cardinals",
+    "1999",
+    "Defensive Line"
+   ],
+   [
+    "Arizona Cardinals",
+    "2000",
+    "Defensive Line"
+   ],
+   [
+    "Arizona Cardinals",
+    "2002",
+    "Defensive Line"
+   ]
+  ],
+  "hank kuhimann": [
+   [
+    "Arizona Cardinals",
+    "1999",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "1997",
+    "Special Teams"
    ]
   ],
   "larry marmie": [
@@ -3325,17 +890,32 @@
     "Defensive Backs"
    ]
   ],
-  "sd glenn pires": [
+  "glenn pires": [
    [
     "Arizona Cardinals",
     "1999",
     "Linebackers"
+   ],
+   [
+    "Arizona Cardinals",
+    "2000",
+    "Linebackers"
    ]
   ],
-  "cond. johnny roland": [
+  "johnny roland": [
    [
     "Arizona Cardinals",
     "1999",
+    "Running Backs"
+   ],
+   [
+    "Arizona Cardinals",
+    "2000",
+    "Running Backs"
+   ],
+   [
+    "Arizona Cardinals",
+    "2002",
     "Running Backs"
    ]
   ],
@@ -3354,13 +934,23 @@
     "Arizona Cardinals",
     "2002",
     "Offensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2003",
+    "Offensive Line"
    ]
   ],
-  "john garrett": [
+  "hank kuhlmann": [
    [
     "Arizona Cardinals",
     "2000",
-    "Quarterbacks"
+    "Special Teams"
+   ],
+   [
+    "Arizona Cardinals",
+    "2002",
+    "Special Teams"
    ]
   ],
   "don lawrence": [
@@ -3368,56 +958,6 @@
     "Arizona Cardinals",
     "2000",
     "Tight Ends"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1982",
-    "Defensive Line"
-   ]
-  ],
-  "coaches dave mcginnis": [
-   [
-    "Arizona Cardinals",
-    "2001",
-    "Head Coach"
-   ]
-  ],
-  "control jeff fitzgerald": [
-   [
-    "Arizona Cardinals",
-    "2001",
-    "Linebackers"
-   ]
-  ],
-  "pete hoener": [
-   [
-    "Arizona Cardinals",
-    "2001",
-    "Tight Ends"
-   ],
-   [
-    "Arizona Cardinals",
-    "2002",
-    "Tight Ends"
-   ]
-  ],
-  "stan kwan": [
-   [
-    "Arizona Cardinals",
-    "2001",
-    "Special Teams"
-   ],
-   [
-    "Arizona Cardinals",
-    "2002",
-    "Special Teams"
-   ]
-  ],
-  "t-flon wolly": [
-   [
-    "Arizona Cardinals",
-    "2001",
-    "Special Teams"
    ]
   ],
   "geep chryst": [
@@ -3432,6 +972,40 @@
     "Arizona Cardinals",
     "2002",
     "Linebackers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Linebackers Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Linebackers Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Linebackers Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Linebackers Coach"
+   ]
+  ],
+  "pete hoener": [
+   [
+    "Arizona Cardinals",
+    "2002",
+    "Tight Ends"
+   ]
+  ],
+  "stan kwan": [
+   [
+    "Arizona Cardinals",
+    "2002",
+    "Special Teams"
    ]
   ],
   "kevin ramsey": [
@@ -3448,362 +1022,35 @@
     "Special Teams"
    ]
   ],
-  "kenny graham": [
+  "hank stram": [
    [
-    "San Diego Chargers",
-    "1966",
-    "Defensive Backs"
-   ]
-  ],
-  "sandie hughes": [
-   [
-    "San Diego Chargers",
-    "1991",
-    "Head Coach"
-   ]
-  ],
-  "tammy renich": [
-   [
-    "San Diego Chargers",
-    "1992",
+    "Kansas City Chiefs",
+    "1971",
     "Head Coach"
    ]
   ],
   "bill walsh": [
    [
-    "Atlanta Falcons",
-    "1979",
-    "Offensive Line"
-   ],
-   [
-    "Atlanta Falcons",
-    "1980",
-    "Offensive Line"
-   ],
-   [
-    "Atlanta Falcons",
-    "1981",
-    "Offensive Line"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1970",
-    "Offensive Line"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1974",
-    "Offensive Line"
-   ]
-  ],
-  "entertainment hank stram": [
-   [
-    "Kansas City Chiefs",
-    "1971",
-    "Head Coach"
-   ]
-  ],
-  "hu bill walsh": [
-   [
-    "Kansas City Chiefs",
-    "1971",
-    "Offensive Line"
-   ]
-  ],
-  "kansas. tom pratt": [
-   [
-    "Kansas City Chiefs",
-    "1974",
-    "Defensive Line"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1976",
-    "Defensive Line"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1977",
-    "Defensive Line"
-   ]
-  ],
-  "kansas. walt corey": [
-   [
-    "Kansas City Chiefs",
-    "1974",
-    "Linebacker Coach"
-   ]
-  ],
-  "bob schnelker offensive": [
-   [
-    "Kansas City Chiefs",
-    "1976",
-    "Line Coach"
-   ]
-  ],
-  "vince costello": [
-   [
-    "Kansas City Chiefs",
-    "1976",
-    "Defensive Coordinator"
-   ]
-  ],
-  "kansas. chet franklin": [
-   [
-    "Kansas City Chiefs",
-    "1976",
-    "Offensive Coordinator"
-   ]
-  ],
-  "kansas jack christiansen": [
-   [
-    "Kansas City Chiefs",
-    "1977",
-    "Offensive Assistant"
-   ]
-  ],
-  "bod rust": [
-   [
-    "Kansas City Chiefs",
-    "1978",
-    "Defensive Coordinator"
-   ]
-  ],
-  "independence. walt corey": [
-   [
-    "Kansas City Chiefs",
-    "1978",
-    "Defensive Line"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1979",
-    "Defensive Line"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1980",
-    "Defensive Line"
-   ]
-  ],
-  "rod rust": [
-   [
-    "Kansas City Chiefs",
-    "1979",
-    "Defensive Coordinator"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1981",
-    "Defensive Coordinator"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1982",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Coordinator"
-   ]
-  ],
-  "super rod rust": [
-   [
-    "Kansas City Chiefs",
-    "1980",
-    "Defensive Coordinator"
-   ]
-  ],
-  "raytown don lawrence": [
-   [
-    "Kansas City Chiefs",
-    "1981",
-    "Defensive Line"
-   ]
-  ],
-  "park ted cottrell": [
-   [
-    "Kansas City Chiefs",
-    "1982",
-    "Linebackers Coach"
-   ]
-  ],
-  "walt corey": [
-   [
-    "Kansas City Chiefs",
-    "1983",
-    "Defensive Line"
-   ],
-   [
-    "Kansas City Chiefs",
+    "Houston Oilers",
     "1984",
-    "Defensive Line"
+    "Offensive Line"
+   ],
+   [
+    "Houston Oilers",
+    "1985",
+    "Offensive Line"
    ],
    [
     "Kansas City Chiefs",
-    "1985",
-    "Defensive Line"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1986",
-    "Defensive Coordinator"
-   ]
-  ],
-  "nfl dave brazil": [
-   [
-    "Kansas City Chiefs",
-    "1985",
-    "Defensive Assistant"
-   ]
-  ],
-  "marty galbraith": [
-   [
-    "Kansas City Chiefs",
-    "1985",
+    "1971",
     "Offensive Line"
    ]
   ],
-  "dave brazil": [
+  "tom pratt": [
    [
     "Kansas City Chiefs",
-    "1986",
-    "Defensive Assistant"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1987",
-    "Defensive Backs"
-   ]
-  ],
-  "doug graber": [
-   [
-    "Kansas City Chiefs",
-    "1986",
-    "Defensive Backs"
-   ]
-  ],
-  "city ed beckman": [
-   [
-    "Kansas City Chiefs",
-    "1987",
-    "Special Teams"
-   ]
-  ],
-  "bruce arians": [
-   [
-    "Indianapolis Colts",
-    "1999",
-    "Quarterbacks"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1989",
-    "Running Backs"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1991",
-    "Running Backs"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1992",
-    "Running Backs"
-   ]
-  ],
-  "bill cowher": [
-   [
-    "Kansas City Chiefs",
-    "1989",
-    "Defensive Coordinator"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1991",
-    "Defensive Coordinator"
-   ]
-  ],
-  "tony dungy": [
-   [
-    "Kansas City Chiefs",
-    "1989",
-    "Defensive Backs"
-   ]
-  ],
-  "john bunting": [
-   [
-    "Kansas City Chiefs",
-    "1993",
-    "Defensive Assistant"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1994",
-    "Defensive Assistant"
-   ]
-  ],
-  "attendance information biographies": [
-   [
-    "Kansas City Chiefs",
-    "1995",
-    "Assistant Coach"
-   ]
-  ],
-  "marty schottenheimer asst": [
-   [
-    "Kansas City Chiefs",
-    "1995",
-    "Strength & Conditioning"
-   ]
-  ],
-  "single. john bunting": [
-   [
-    "Kansas City Chiefs",
-    "1995",
-    "Linebackers"
-   ]
-  ],
-  "gunther cunningham": [
-   [
-    "Kansas City Chiefs",
-    "1995",
-    "Defensive Coordinator"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1996",
-    "Defensive Coordinator"
-   ],
-   [
-    "Kansas City Chiefs",
-    "1997",
-    "Defensive Coordinator"
-   ]
-  ],
-  "blancarte. john bunting": [
-   [
-    "Kansas City Chiefs",
-    "1996",
-    "Linebackers"
-   ]
-  ],
-  "greg robinson": [
-   [
-    "Kansas City Chiefs",
-    "2002",
-    "Head Coach"
+    "1971",
+    "Defensive Line"
    ]
   ],
   "cecil isbell": [
@@ -3827,81 +1074,11 @@
     "Assistant Coach"
    ]
   ],
-  "high. andy hewlett": [
+  "andy hewlett": [
    [
     "Baltimore Colts",
     "1947",
     "Assistant Coach"
-   ]
-  ],
-  "eddie mcguire": [
-   [
-    "Baltimore Colts",
-    "1953",
-    "Assistant Coach"
-   ]
-  ],
-  "ohio state": [
-   [
-    "Baltimore Colts",
-    "1955",
-    "Assistant Coach"
-   ]
-  ],
-  "charles winner": [
-   [
-    "Baltimore Colts",
-    "1961",
-    "Backfield Coach"
-   ]
-  ],
-  "herman ball": [
-   [
-    "Baltimore Colts",
-    "1961",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1984",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1985",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1986",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1988",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1990",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1993",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1994",
-    "Offensive Line"
-   ]
-  ],
-  "maryland. john sandusky": [
-   [
-    "Baltimore Colts",
-    "1961",
-    "Defensive Line"
    ]
   ],
   "don shula": [
@@ -3916,7 +1093,7 @@
     "Head Coach"
    ]
   ],
-  "lisa. john sandusky": [
+  "john sandusky": [
    [
     "Baltimore Colts",
     "1969",
@@ -3926,9 +1103,19 @@
     "Baltimore Colts",
     "1970",
     "Defensive Line"
+   ],
+   [
+    "Baltimore Colts",
+    "1971",
+    "Defensive Line"
+   ],
+   [
+    "Baltimore Colts",
+    "1972",
+    "Defensive Line"
    ]
   ],
-  "ann. bill arnsparger": [
+  "bill arnsparger": [
    [
     "Baltimore Colts",
     "1969",
@@ -3943,189 +1130,25 @@
    ],
    [
     "Baltimore Colts",
-    "1972",
+    "1971",
     "Head Coach"
    ],
    [
     "Baltimore Colts",
-    "1983",
+    "1972",
     "Head Coach"
    ],
    [
     "Detroit Lions",
     "1973",
     "Head Coach"
-   ],
-   [
-    "Detroit Lions",
-    "1974",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1984",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1985",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1986",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1986",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1987",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1987",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1988",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1989",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1990",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1991",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1991",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1992",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1992",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1993",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1993",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1994",
-    "End Coach"
    ]
   ],
-  "dean. hank bullough": [
+  "hank bullough": [
    [
     "Baltimore Colts",
     "1970",
     "Linebacker Coach"
-   ]
-  ],
-  "gener- don mccafferty": [
-   [
-    "Baltimore Colts",
-    "1971",
-    "Head Coach"
-   ]
-  ],
-  "john sandusky": [
-   [
-    "Baltimore Colts",
-    "1971",
-    "Defensive Line"
-   ],
-   [
-    "Baltimore Colts",
-    "1972",
-    "Defensive Line"
-   ],
-   [
-    "Baltimore Colts",
-    "1983",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1984",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1985",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1986",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1987",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1988",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1989",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1990",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1991",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1992",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1993",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1994",
-    "Defensive Line"
    ]
   ],
   "howard schnellenberger": [
@@ -4156,536 +1179,23 @@
     "Defensive Line"
    ]
   ],
-  "state. ray callahan": [
-   [
-    "Baltimore Colts",
-    "1973",
-    "Linebackers Coach"
-   ]
-  ],
   "ray callahan": [
    [
     "Baltimore Colts",
     "1973",
     "Head Coach"
-   ]
-  ],
-  "don doll": [
-   [
-    "Baltimore Colts",
-    "1974",
-    "Defensive Coordinator"
-   ]
-  ],
-  "frank lauterbur": [
-   [
-    "Baltimore Colts",
-    "1974",
-    "Linebacker Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1978",
-    "Linebackers Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1979",
-    "Linebackers Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1980",
-    "Linebackers Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1981",
-    "Defensive Line"
-   ]
-  ],
-  "jerry smith": [
-   [
-    "Baltimore Colts",
-    "1974",
-    "Defensive Line"
    ],
    [
     "Baltimore Colts",
-    "1975",
-    "Defensive Line"
-   ],
-   [
-    "Baltimore Colts",
-    "1976",
-    "Defensive Line"
-   ],
-   [
-    "Boston Patriots",
-    "1960",
-    "Assistant Coach"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Line"
-   ],
-   [
-    "New Orleans Saints",
-    "1969",
-    "Linebacker Coach"
-   ],
-   [
-    "New Orleans Saints",
-    "1970",
-    "Defensive Coordinator"
-   ]
-  ],
-  "car maxie baughan": [
-   [
-    "Baltimore Colts",
-    "1975",
-    "Defensive Coordinator"
-   ]
-  ],
-  "george boutselis": [
-   [
-    "Baltimore Colts",
-    "1975",
-    "Special Teams Coach"
-   ],
-   [
-    "Baltimore Colts",
-    "1976",
-    "Special Teams"
-   ],
-   [
-    "Baltimore Colts",
-    "1977",
-    "Special Teams"
-   ]
-  ],
-  "whitey dovell": [
-   [
-    "Baltimore Colts",
-    "1975",
-    "Offensive Line"
-   ],
-   [
-    "Baltimore Colts",
-    "1976",
-    "Offensive Line"
-   ],
-   [
-    "Baltimore Colts",
-    "1977",
-    "Offensive Line"
-   ],
-   [
-    "Baltimore Colts",
-    "1978",
-    "Offensive Line"
-   ]
-  ],
-  "pete mcculley": [
-   [
-    "Baltimore Colts",
-    "1975",
-    "Receivers Coach"
-   ]
-  ],
-  "maureen kilcullen": [
-   [
-    "Baltimore Colts",
-    "1976",
-    "Head Coach"
-   ],
-   [
-    "Baltimore Colts",
-    "1977",
-    "Head Coach"
-   ],
-   [
-    "Baltimore Colts",
-    "1978",
-    "Head Coach"
-   ],
-   [
-    "Baltimore Colts",
-    "1979",
-    "Head Coach"
-   ]
-  ],
-  "min maxie baughan": [
-   [
-    "Baltimore Colts",
-    "1976",
-    "Defensive Coordinator"
-   ]
-  ],
-  "col maxie baughan": [
-   [
-    "Baltimore Colts",
-    "1977",
-    "Defensive Coordinator"
-   ]
-  ],
-  "ed khayat": [
-   [
-    "Baltimore Colts",
-    "1977",
-    "Defensive Line"
-   ],
-   [
-    "New Orleans Saints",
-    "1969",
-    "Defensive Line"
-   ],
-   [
-    "New Orleans Saints",
-    "1970",
-    "Defensive Line"
-   ],
-   [
-    "Philadelphia Eagles",
     "1973",
+    "Linebackers Coach"
+   ]
+  ],
+  "lindy infante": [
+   [
+    "Indianapolis Colts",
+    "1997",
     "Head Coach"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1974",
-    "Head Coach"
-   ]
-  ],
-  "maxie baughan": [
-   [
-    "Baltimore Colts",
-    "1978",
-    "Defensive Coordinator"
-   ]
-  ],
-  "maryland. george boutselis": [
-   [
-    "Baltimore Colts",
-    "1978",
-    "Special Teams"
-   ]
-  ],
-  "maryland. ed khayat": [
-   [
-    "Baltimore Colts",
-    "1978",
-    "Defensive Line"
-   ]
-  ],
-  "ronni swartz": [
-   [
-    "Baltimore Colts",
-    "1980",
-    "Head Coach"
-   ],
-   [
-    "Baltimore Colts",
-    "1981",
-    "Head Coach"
-   ],
-   [
-    "Baltimore Colts",
-    "1982",
-    "Head Coach"
-   ],
-   [
-    "Baltimore Colts",
-    "1983",
-    "Head Coach"
-   ]
-  ],
-  "hank bullough": [
-   [
-    "Baltimore Colts",
-    "1983",
-    "Linebacker Coach"
-   ],
-   [
-    "Detroit Lions",
-    "1993",
-    "Defensive Coordinator"
-   ],
-   [
-    "Indianapolis Colts",
-    "1984",
-    "Linebacker Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1985",
-    "Linebacker Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1986",
-    "Linebacker Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1987",
-    "Linebacker Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1988",
-    "Linebacker Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1989",
-    "Linebacker Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1990",
-    "Linebacker Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1991",
-    "Linebacker Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1992",
-    "Linebacker Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1993",
-    "Linebacker Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1994",
-    "Linebacker Coach"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Line"
-   ]
-  ],
-  "loy rymkus": [
-   [
-    "Baltimore Colts",
-    "1983",
-    "Offensive Line"
-   ]
-  ],
-  "john bridgers": [
-   [
-    "Indianapolis Colts",
-    "1984",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1985",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1986",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1987",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1989",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1990",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1993",
-    "Defensive Line"
-   ]
-  ],
-  "bob shaw": [
-   [
-    "Indianapolis Colts",
-    "1984",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1986",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1987",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1989",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1990",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1993",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1994",
-    "End Coach"
-   ]
-  ],
-  "lou rymkus": [
-   [
-    "Indianapolis Colts",
-    "1984",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1985",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1986",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1988",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1989",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1990",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1991",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1992",
-    "Offensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "1993",
-    "Offensive Line"
-   ]
-  ],
-  "john bob shaw": [
-   [
-    "Indianapolis Colts",
-    "1985",
-    "End Coach"
-   ]
-  ],
-  "ob don mccafferty": [
-   [
-    "Indianapolis Colts",
-    "1985",
-    "End Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "1988",
-    "End Coach"
-   ]
-  ],
-  "pea ball": [
-   [
-    "Indianapolis Colts",
-    "1987",
-    "Offensive Line"
-   ]
-  ],
-  "herman bali": [
-   [
-    "Indianapolis Colts",
-    "1987",
-    "Offensive Line"
-   ]
-  ],
-  "lou raymkus": [
-   [
-    "Indianapolis Colts",
-    "1987",
-    "Offensive Line"
-   ]
-  ],
-  "qb don mccafferty": [
-   [
-    "Indianapolis Colts",
-    "1990",
-    "End Coach"
-   ]
-  ],
-  "ends rick venturi...........": [
-   [
-    "Indianapolis Colts",
-    "1991",
-    "Defensive Coordinator"
-   ]
-  ],
-  "jonn bridgers": [
-   [
-    "Indianapolis Colts",
-    "1994",
-    "Defensive Line"
-   ]
-  ],
-  "lou aymkus": [
-   [
-    "Indianapolis Colts",
-    "1994",
-    "Offensive Line"
    ]
   ],
   "tom batta": [
@@ -4696,21 +1206,6 @@
    ],
    [
     "Minnesota Vikings",
-    "1985",
-    "Defensive Assistant"
-   ],
-   [
-    "Minnesota Vikings",
-    "1986",
-    "Tight Ends"
-   ],
-   [
-    "Minnesota Vikings",
-    "1987",
-    "Tight Ends"
-   ],
-   [
-    "Minnesota Vikings",
     "1989",
     "Tight Ends"
    ],
@@ -4720,11 +1215,26 @@
     "Tight Ends"
    ]
   ],
-  "control greg blache": [
+  "greg blache": [
    [
     "Indianapolis Colts",
     "1997",
     "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "1998",
+    "Defensive Line"
+   ],
+   [
+    "Washington Redskins",
+    "2005",
+    "Defensive Coordinator"
+   ],
+   [
+    "Washington Redskins",
+    "2007",
+    "Defensive Coordinator"
    ]
   ],
   "ron blackledge": [
@@ -4732,6 +1242,13 @@
     "Indianapolis Colts",
     "1997",
     "Offensive Line"
+   ]
+  ],
+  "chuck bresnahan": [
+   [
+    "Indianapolis Colts",
+    "1997",
+    "Linebackers"
    ]
   ],
   "jim johnson": [
@@ -4769,43 +1286,51 @@
     "Strength And Conditioning"
    ]
   ],
-  "lindy infante": [
-   [
-    "Indianapolis Colts",
-    "1997",
-    "Head Coach"
-   ]
-  ],
-  "quarterbocks greg blache": [
+  "jim mora": [
    [
     "Indianapolis Colts",
     "1998",
-    "Defensive Line"
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "1999",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2000",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2001",
+    "Head Coach"
    ]
   ],
-  "bocks tony marciano": [
+  "tony marciano": [
    [
     "Indianapolis Colts",
     "1998",
     "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "1999",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2000",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2001",
+    "Tight Ends"
    ]
   ],
   "tom moore": [
-   [
-    "Detroit Lions",
-    "1994",
-    "Quarterbacks"
-   ],
-   [
-    "Detroit Lions",
-    "1995",
-    "Offensive Coordinator"
-   ],
-   [
-    "Detroit Lions",
-    "1996",
-    "Offensive Coordinator"
-   ],
    [
     "Indianapolis Colts",
     "1998",
@@ -4829,6 +1354,16 @@
    [
     "Indianapolis Colts",
     "2002",
+    "Offensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2004",
+    "Offensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2005",
     "Offensive Coordinator"
    ]
   ],
@@ -4857,6 +1392,11 @@
     "Indianapolis Colts",
     "2002",
     "Offensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2004",
+    "Offensive Line"
    ]
   ],
   "mike murphy": [
@@ -4883,6 +1423,16 @@
    [
     "Indianapolis Colts",
     "2002",
+    "Linebackers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2004",
+    "Linebackers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2005",
     "Linebackers"
    ]
   ],
@@ -4930,7 +1480,7 @@
     "Defensive Assistant"
    ]
   ],
-  "teams rusty tillman": [
+  "rusty tillman": [
    [
     "Indianapolis Colts",
     "1998",
@@ -4944,36 +1494,19 @@
     "Head Coach"
    ]
   ],
-  "jim mora": [
-   [
-    "Indianapolis Colts",
-    "1999",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "2000",
-    "Head Coach"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Coordinator"
-   ]
-  ],
   "george catavolos": [
    [
     "Indianapolis Colts",
     "1999",
     "Asst. Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2000",
+    "Asst. Head Coach"
    ]
   ],
-  "backs vie fangio": [
+  "vie fangio": [
    [
     "Indianapolis Colts",
     "1999",
@@ -4986,6 +1519,11 @@
    ]
   ],
   "todd grantham": [
+   [
+    "Dallas Cowboys",
+    "2009",
+    "Defensive Line"
+   ],
    [
     "Indianapolis Colts",
     "1999",
@@ -5022,23 +1560,16 @@
     "Indianapolis Colts",
     "2002",
     "Running Backs"
-   ]
-  ],
-  "tony marciano": [
-   [
-    "Indianapolis Colts",
-    "1999",
-    "Tight Ends"
    ],
    [
     "Indianapolis Colts",
-    "2000",
-    "Tight Ends"
+    "2004",
+    "Running Backs"
    ],
    [
     "Indianapolis Colts",
-    "2001",
-    "Tight Ends"
+    "2005",
+    "Running Backs"
    ]
   ],
   "kevin spencer": [
@@ -5075,31 +1606,27 @@
     "Strength And Conditioning"
    ]
   ],
-  "quorterbacks george catavolos": [
-   [
-    "Indianapolis Colts",
-    "2000",
-    "Asst. Head Coach"
-   ]
-  ],
-  "backs vic fangio": [
+  "vic fangio": [
    [
     "Indianapolis Colts",
     "2001",
     "Defensive Coordinator"
    ]
   ],
-  "john hufnagel": [
+  "tony dungy": [
    [
     "Indianapolis Colts",
-    "2001",
-    "Quarterbacks"
-   ]
-  ],
-  "comm. jim mora": [
+    "2002",
+    "Head Coach"
+   ],
    [
     "Indianapolis Colts",
-    "2001",
+    "2004",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2005",
     "Head Coach"
    ]
   ],
@@ -5108,6 +1635,11 @@
     "Indianapolis Colts",
     "2002",
     "Quarterbacks"
+   ],
+   [
+    "Indianapolis Colts",
+    "2004",
+    "Quarterbacks"
    ]
   ],
   "clyde christensen": [
@@ -5115,6 +1647,36 @@
     "Indianapolis Colts",
     "2002",
     "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2004",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2005",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Quarterbacks Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Quarterbacks Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Quarterbacks Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Quarterbacks Coach"
    ]
   ],
   "chris foerster": [
@@ -5126,8 +1688,23 @@
   ],
   "ron meeks": [
    [
+    "Dallas Cowboys",
+    "1991",
+    "Defensive Assistant"
+   ],
+   [
     "Indianapolis Colts",
     "2002",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2004",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2005",
     "Defensive Coordinator"
    ]
   ],
@@ -5136,27 +1713,1034 @@
     "Indianapolis Colts",
     "2002",
     "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2004",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2005",
+    "Special Teams"
    ]
   ],
-  "control john teerlinck": [
+  "john teerlinck": [
    [
     "Indianapolis Colts",
     "2002",
     "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2004",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2005",
+    "Defensive Line"
    ]
   ],
-  "control alan williams": [
+  "alan williams": [
    [
     "Indianapolis Colts",
     "2002",
     "Defensive Backs"
-   ]
-  ],
-  "projec tony dungy": [
+   ],
    [
     "Indianapolis Colts",
-    "2002",
+    "2004",
+    "Defensive Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2018",
+    "Defensive Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Defensive Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Defensive Backs"
+   ]
+  ],
+  "ricky thomas": [
+   [
+    "Indianapolis Colts",
+    "2004",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2005",
+    "Tight Ends"
+   ]
+  ],
+  "leslie frazier": [
+   [
+    "Indianapolis Colts",
+    "2005",
+    "Defensive Assistant"
+   ]
+  ],
+  "howerd mudd": [
+   [
+    "Indianapolis Colts",
+    "2005",
+    "Offensive Line"
+   ]
+  ],
+  "greg manusky": [
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Defensive Coordinator"
+   ]
+  ],
+  "marwan maalouf": [
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Special Teams"
+   ]
+  ],
+  "gary emanuel": [
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Defensive Line"
+   ]
+  ],
+  "mike gillhamer": [
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Secondary Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Secondary Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Secondary Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Secondary Coach"
+   ]
+  ],
+  "harold goodwin": [
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Offensive Line"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Offensive Assistant"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Offensive Assistant"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Offensive Assistant"
+   ]
+  ],
+  "roger marandino": [
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Strength And Conditioning"
+   ],
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Strength And Conditioning"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Strength And Conditioning"
+   ]
+  ],
+  "alfredo roberts": [
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Tight Ends"
+   ]
+  ],
+  "david walker": [
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Running Backs Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Running Backs Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Running Backs Coach"
+   ]
+  ],
+  "charlie williams": [
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Running Backs Coach"
+   ]
+  ],
+  "pep hamilton": [
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Offensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Offensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Offensive Coordinator"
+   ]
+  ],
+  "tom mcmahon": [
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Special Teams"
+   ]
+  ],
+  "tim berbenich": [
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Offensive Assistant"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Offensive Assistant"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Defensive Assistant"
+   ],
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Offensive Assistant"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Offensive Assistant"
+   ]
+  ],
+  "joe gilbert": [
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Offensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Offensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Offensive Line"
+   ]
+  ],
+  "defensive line co": [
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Defensive Coordinator"
+   ]
+  ],
+  "jim hostler": [
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Tight Ends"
+   ]
+  ],
+  "hal hunter": [
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Offensive Line"
+   ]
+  ],
+  "rob chudzinski": [
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Offensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Offensive Coordinator"
+   ]
+  ],
+  "ted monachino": [
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Defensive Coordinator"
+   ]
+  ],
+  "jim herrmann": [
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Linebackers Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Linebackers Coach"
+   ]
+  ],
+  "lee hull": [
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Wide Receivers"
+   ]
+  ],
+  "brian schottenheimer": [
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Offensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Quarterbacks Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Quarterbacks Coach"
+   ]
+  ],
+  "jemal singleton": [
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Running Backs Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Running Backs Coach"
+   ]
+  ],
+  "greg williams": [
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Defensive Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Defensive Backs"
+   ]
+  ],
+  "sanjay lal": [
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Wide Receivers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Wide Receivers"
+   ]
+  ],
+  "shawn terlecky": [
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Defensive Assistant"
+   ]
+  ],
+  "frank reich": [
+   [
+    "Indianapolis Colts",
+    "2018",
     "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2021",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2022",
+    "Head Coach"
+   ]
+  ],
+  "matt eberflus": [
+   [
+    "Dallas Cowboys",
+    "2011",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2012",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Linebackers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2018",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2021",
+    "Defensive Coordinator"
+   ]
+  ],
+  "nick sirianni": [
+   [
+    "Indianapolis Colts",
+    "2018",
+    "Offensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Offensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Offensive Coordinator"
+   ]
+  ],
+  "bubba ventrone": [
+   [
+    "Indianapolis Colts",
+    "2018",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2021",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2022",
+    "Special Teams"
+   ]
+  ],
+  "dave borgonzi": [
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Offensive Assistant"
+   ],
+   [
+    "Indianapolis Colts",
+    "2018",
+    "Linebackers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Linebackers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Linebackers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2021",
+    "Linebackers"
+   ]
+  ],
+  "dave deguglielmo": [
+   [
+    "Indianapolis Colts",
+    "2018",
+    "Offensive Line"
+   ]
+  ],
+  "jonathan gannon": [
+   [
+    "Indianapolis Colts",
+    "2018",
+    "Defensive Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Defensive Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Defensive Backs"
+   ]
+  ],
+  "tom manning": [
+   [
+    "Indianapolis Colts",
+    "2018",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Tight Ends"
+   ]
+  ],
+  "kevin patullo": [
+   [
+    "Indianapolis Colts",
+    "2018",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Wide Receivers"
+   ]
+  ],
+  "mike phair": [
+   [
+    "Indianapolis Colts",
+    "2018",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Defensive Line"
+   ]
+  ],
+  "tom rathman": [
+   [
+    "Indianapolis Colts",
+    "2018",
+    "Running Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Running Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Running Backs"
+   ]
+  ],
+  "marcus brady": [
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Quarterbacks"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Quarterbacks"
+   ],
+   [
+    "Indianapolis Colts",
+    "2021",
+    "Offensive Coordinator"
+   ]
+  ],
+  "zane fakes": [
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Strength And Conditioning"
+   ],
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Strength And Conditioning"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Strength And Conditioning"
+   ]
+  ],
+  "jason michael": [
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Tight Ends"
+   ]
+  ],
+  "chris strausser": [
+   [
+    "Indianapolis Colts",
+    "2019",
+    "Offensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Offensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2021",
+    "Offensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2022",
+    "Offensive Line"
+   ]
+  ],
+  "brian baker": [
+   [
+    "Dallas Cowboys",
+    "2011",
+    "Defensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2012",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2021",
+    "Defensive Line"
+   ]
+  ],
+  "mike groh": [
+   [
+    "Indianapolis Colts",
+    "2020",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2021",
+    "Wide Receivers"
+   ]
+  ],
+  "klayton adams": [
+   [
+    "Indianapolis Colts",
+    "2021",
+    "Tight Ends"
+   ]
+  ],
+  "scott milanovich": [
+   [
+    "Indianapolis Colts",
+    "2021",
+    "Quarterbacks"
+   ],
+   [
+    "Indianapolis Colts",
+    "2022",
+    "Quarterbacks"
+   ]
+  ],
+  "scottie montgomery": [
+   [
+    "Indianapolis Colts",
+    "2021",
+    "Running Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2022",
+    "Running Backs"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Wide Receivers"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Wide Receivers"
+   ]
+  ],
+  "gus bradley": [
+   [
+    "Indianapolis Colts",
+    "2022",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Defensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Defensive Coordinator"
+   ]
+  ],
+  "ron milus": [
+   [
+    "Indianapolis Colts",
+    "2022",
+    "Defensive Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Defensive Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Defensive Backs"
+   ]
+  ],
+  "richard smith": [
+   [
+    "Indianapolis Colts",
+    "2022",
+    "Linebackers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Linebackers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Linebackers"
+   ]
+  ],
+  "reggie wayne": [
+   [
+    "Indianapolis Colts",
+    "2022",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Wide Receivers"
+   ]
+  ],
+  "shane steichen": [
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Head Coach"
+   ]
+  ],
+  "jim bob cooter": [
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Offensive Coordinator"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Offensive Coordinator"
+   ]
+  ],
+  "brian mason": [
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Special Teams"
+   ]
+  ],
+  "payton mccollum": [
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Defensive Assistant"
+   ]
+  ],
+  "deandre smith": [
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Running Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Running Backs"
+   ]
+  ],
+  "cam turner": [
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Quarterbacks"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Quarterbacks"
+   ]
+  ],
+  "mikey blazejowski": [
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Strength & Conditioning"
+   ]
+  ],
+  "sam khym": [
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Strength & Conditioning"
+   ]
+  ],
+  "charlie partridge": [
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Defensive Line"
+   ]
+  ],
+  "brent stockstill": [
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Defensive Assistant"
    ]
   ],
   "tom landry": [
@@ -5167,7 +2751,27 @@
    ],
    [
     "Dallas Cowboys",
+    "1961",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
     "1962",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "1963",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "1964",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "1965",
     "Head Coach"
    ],
    [
@@ -5201,13 +2805,6 @@
     "Head Coach"
    ]
   ],
-  "balas tom landry": [
-   [
-    "Dallas Cowboys",
-    "1961",
-    "Head Coach"
-   ]
-  ],
   "tom dahms": [
    [
     "Dallas Cowboys",
@@ -5217,34 +2814,14 @@
   ],
   "brad ecklund": [
    [
-    "Atlanta Falcons",
-    "1966",
-    "Offensive Line"
-   ],
-   [
     "Dallas Cowboys",
     "1961",
     "Offensive Line"
    ],
    [
     "Dallas Cowboys",
-    "1962",
-    "Defensive Line"
-   ],
-   [
-    "Dallas Cowboys",
     "1963",
     "Defensive Line"
-   ],
-   [
-    "New Orleans Saints",
-    "1969",
-    "Offensive Line"
-   ],
-   [
-    "New Orleans Saints",
-    "1970",
-    "Offensive Line"
    ]
   ],
   "jim myers": [
@@ -5275,25 +2852,23 @@
    ],
    [
     "Dallas Cowboys",
+    "1967",
+    "Offensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "1968",
+    "Offensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "1970",
+    "Offensive Line"
+   ],
+   [
+    "Dallas Cowboys",
     "1971",
     "Offensive Line"
-   ]
-  ],
-  "allen tom landry": [
-   [
-    "Dallas Cowboys",
-    "1963",
-    "Head Coach"
-   ],
-   [
-    "Dallas Cowboys",
-    "1964",
-    "Head Coach"
-   ],
-   [
-    "Dallas Cowboys",
-    "1965",
-    "Head Coach"
    ]
   ],
   "by tom landry": [
@@ -5301,23 +2876,6 @@
     "Dallas Cowboys",
     "1963",
     "Head Coach"
-   ]
-  ],
-  "ernie stautner": [
-   [
-    "Dallas Cowboys",
-    "1966",
-    "Defensive Line"
-   ],
-   [
-    "Dallas Cowboys",
-    "1967",
-    "Defensive Line"
-   ],
-   [
-    "Washington Redskins",
-    "1965",
-    "Assistant Coach"
    ]
   ],
   "jerry tubbs": [
@@ -5340,92 +2898,40 @@
     "Dallas Cowboys",
     "1971",
     "Linebackers"
-   ],
-   [
-    "Dallas Cowboys",
-    "1987",
-    "Linebackers"
-   ],
-   [
-    "Dallas Cowboys",
-    "1988",
-    "Linebackers"
    ]
   ],
-  "coaches tom landry": [
+  "ernie stautner": [
    [
     "Dallas Cowboys",
     "1966",
-    "Head Coach"
-   ]
-  ],
-  "backfield jim myers": [
-   [
-    "Dallas Cowboys",
-    "1968",
-    "Offensive Line"
+    "Defensive Line"
    ],
-   [
-    "Dallas Cowboys",
-    "1969",
-    "Offensive Line"
-   ]
-  ],
-  "offense ernie stautner": [
    [
     "Dallas Cowboys",
     "1968",
     "Defensive Line"
+   ],
+   [
+    "Washington Redskins",
+    "1965",
+    "Assistant Coach"
    ]
   ],
-  "backfield ernie stautner": [
+  "jimmy johnson": [
    [
     "Dallas Cowboys",
-    "1969",
-    "Defensive Line"
-   ]
-  ],
-  "offense jim myers": [
-   [
-    "Dallas Cowboys",
-    "1970",
-    "Offensive Line"
-   ]
-  ],
-  "texas e. schramm": [
-   [
-    "Dallas Cowboys",
-    "1975",
+    "1991",
     "Head Coach"
    ],
    [
-    "Seattle Seahawks",
-    "1980",
+    "Dallas Cowboys",
+    "1992",
     "Head Coach"
-   ]
-  ],
-  "al lavan": [
-   [
-    "Dallas Cowboys",
-    "1987",
-    "Running Backs"
    ],
    [
     "Dallas Cowboys",
-    "1988",
-    "Running Backs"
-   ]
-  ],
-  "mike solari": [
-   [
-    "Dallas Cowboys",
-    "1987",
-    "Special Teams"
-   ],
-   [
-    "Dallas Cowboys",
-    "1988",
-    "Special Teams"
+    "1993",
+    "Head Coach"
    ]
   ],
   "norv turner": [
@@ -5433,6 +2939,58 @@
     "Dallas Cowboys",
     "1991",
     "Offensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "1992",
+    "Offensive Coordinator"
+   ]
+  ],
+  "joe avezzano": [
+   [
+    "Dallas Cowboys",
+    "1991",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "1992",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "1993",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "1994",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "1996",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "1998",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "2000",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "2001",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "2002",
+    "Special Teams"
    ]
   ],
   "joe brodsky": [
@@ -5454,6 +3012,11 @@
    [
     "Dallas Cowboys",
     "1994",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "1996",
     "Running Backs"
    ]
   ],
@@ -5480,8 +3043,23 @@
    ],
    [
     "Dallas Cowboys",
+    "1996",
+    "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "1998",
+    "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
     "1999",
     "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2000",
+    "Head Coach"
    ],
    [
     "Dallas Cowboys",
@@ -5492,23 +3070,21 @@
     "Dallas Cowboys",
     "2002",
     "Head Coach"
-   ]
-  ],
-  "butch davis": [
-   [
-    "Dallas Cowboys",
-    "1991",
-    "Defensive Line"
    ],
    [
     "Dallas Cowboys",
-    "1992",
-    "Defensive Line"
+    "2009",
+    "Secondary"
    ],
    [
     "Dallas Cowboys",
-    "1994",
-    "Defensive Coordinator"
+    "2010",
+    "Secondary"
+   ],
+   [
+    "Dallas Cowboys",
+    "2011",
+    "Secondary"
    ]
   ],
   "robert ford": [
@@ -5538,13 +3114,6 @@
     "Tight Ends"
    ]
   ],
-  "control ron meeks": [
-   [
-    "Dallas Cowboys",
-    "1991",
-    "Defensive Assistant"
-   ]
-  ],
   "tony wise": [
    [
     "Dallas Cowboys",
@@ -5564,26 +3133,7 @@
     "Strength And Conditioning"
    ]
   ],
-  "operati jimmy johnson": [
-   [
-    "Dallas Cowboys",
-    "1991",
-    "Head Coach"
-   ]
-  ],
-  "jimmy johnson": [
-   [
-    "Dallas Cowboys",
-    "1992",
-    "Head Coach"
-   ],
-   [
-    "Dallas Cowboys",
-    "1993",
-    "Head Coach"
-   ]
-  ],
-  "control bob slowlk": [
+  "bob slowlk": [
    [
     "Dallas Cowboys",
     "1992",
@@ -5619,17 +3169,17 @@
     "Dallas Cowboys",
     "1994",
     "Linebackers"
-   ],
-   [
-    "Detroit Lions",
-    "1996",
-    "Defensive Coordinator"
    ]
   ],
-  "control hudson houck": [
+  "hudson houck": [
    [
     "Dallas Cowboys",
     "1993",
+    "Offensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "1994",
     "Offensive Line"
    ],
    [
@@ -5651,12 +3201,22 @@
     "Dallas Cowboys",
     "2001",
     "Offensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2010",
+    "Offensive Line"
    ]
   ],
-  "operations barry switzer": [
+  "barry switzer": [
    [
     "Dallas Cowboys",
     "1994",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "1996",
     "Head Coach"
    ]
   ],
@@ -5672,98 +3232,9 @@
     "Offensive Coordinator"
    ],
    [
-    "Los Angeles Rams",
-    "1987",
-    "Offensive Coordinator"
-   ],
-   [
-    "Los Angeles Rams",
-    "1990",
-    "Offensive Coordinator"
-   ],
-   [
-    "Los Angeles Rams",
-    "1991",
-    "Offensive Coordinator"
-   ],
-   [
     "New England Patriots",
     "1998",
     "Offensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Offensive Coordinator"
-   ]
-  ],
-  "joe avezzano": [
-   [
-    "Dallas Cowboys",
-    "1994",
-    "Special Teams"
-   ],
-   [
-    "Dallas Cowboys",
-    "1996",
-    "Special Teams"
-   ],
-   [
-    "Dallas Cowboys",
-    "1998",
-    "Special Teams"
-   ],
-   [
-    "Dallas Cowboys",
-    "2000",
-    "Special Teams"
-   ],
-   [
-    "Dallas Cowboys",
-    "2001",
-    "Special Teams"
-   ],
-   [
-    "Dallas Cowboys",
-    "2002",
-    "Special Teams"
-   ]
-  ],
-  "hudson houck": [
-   [
-    "Dallas Cowboys",
-    "1994",
-    "Offensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1983",
-    "Offensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1984",
-    "Offensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1985",
-    "Offensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1986",
-    "Offensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1990",
-    "Offensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1991",
-    "Offensive Line"
    ]
   ],
   "mike woicik": [
@@ -5775,6 +3246,41 @@
    [
     "Dallas Cowboys",
     "1996",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2011",
+    "Strength & Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2012",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
     "Strength And Conditioning"
    ]
   ],
@@ -5813,17 +3319,20 @@
     "Dallas Cowboys",
     "2002",
     "Defensive Coordinator"
-   ]
-  ],
-  "line dave campo": [
+   ],
    [
     "Dallas Cowboys",
-    "1996",
+    "2003",
     "Defensive Coordinator"
    ],
    [
     "Dallas Cowboys",
-    "1998",
+    "2006",
+    "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2024",
     "Defensive Coordinator"
    ]
   ],
@@ -5841,25 +3350,28 @@
     "Linebackers"
    ]
   ],
-  "tackles joe brodsky": [
-   [
-    "Dallas Cowboys",
-    "1996",
-    "Running Backs"
-   ]
-  ],
-  "barry switzer": [
-   [
-    "Dallas Cowboys",
-    "1996",
-    "Head Coach"
-   ]
-  ],
-  "marketing chan gailey": [
+  "chan gailey": [
    [
     "Dallas Cowboys",
     "1998",
     "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "1999",
+    "Head Coach"
+   ]
+  ],
+  "buddy geis": [
+   [
+    "Dallas Cowboys",
+    "1998",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "1999",
+    "Quarterbacks"
    ]
   ],
   "jim jeffcoat": [
@@ -5872,6 +3384,53 @@
     "Dallas Cowboys",
     "1999",
     "Defensive Line"
+   ]
+  ],
+  "joe juraszek": [
+   [
+    "Dallas Cowboys",
+    "1998",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "1999",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2000",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2001",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2002",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2003",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2009",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2010",
+    "Strength And Conditioning"
    ]
   ],
   "les miles": [
@@ -5913,9 +3472,19 @@
     "Dallas Cowboys",
     "1999",
     "Defensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2001",
+    "Secondary"
+   ],
+   [
+    "Dallas Cowboys",
+    "2002",
+    "Secondary"
    ]
   ],
-  "control tommie robinson": [
+  "tommie robinson": [
    [
     "Dallas Cowboys",
     "1998",
@@ -5925,6 +3494,11 @@
     "Dallas Cowboys",
     "1999",
     "Offensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2000",
+    "Special Teams"
    ]
   ],
   "clarence shelmon": [
@@ -5940,13 +3514,13 @@
    ],
    [
     "Dallas Cowboys",
-    "2001",
+    "2000",
     "Running Backs"
    ],
    [
-    "Los Angeles Rams",
-    "1991",
-    "Running Back Coach"
+    "Dallas Cowboys",
+    "2001",
+    "Running Backs"
    ]
   ],
   "bill bates": [
@@ -5961,25 +3535,21 @@
     "Defensive Backs"
    ]
   ],
-  "line george edwards": [
+  "george edwards": [
    [
     "Dallas Cowboys",
     "1999",
     "Linebackers"
-   ]
-  ],
-  "buddy geis": [
+   ],
    [
     "Dallas Cowboys",
-    "1999",
-    "Quarterbacks"
-   ]
-  ],
-  "chan gailey": [
+    "2000",
+    "Linebackers"
+   ],
    [
     "Dallas Cowboys",
-    "1999",
-    "Head Coach"
+    "2001",
+    "Linebackers"
    ]
   ],
   "wes chandler": [
@@ -5987,35 +3557,16 @@
     "Dallas Cowboys",
     "2000",
     "Wide Receivers"
-   ]
-  ],
-  "george edwards": [
-   [
-    "Dallas Cowboys",
-    "2000",
-    "Linebackers"
    ],
    [
     "Dallas Cowboys",
     "2001",
-    "Linebackers"
-   ]
-  ],
-  "ends joe juraszek": [
-   [
-    "Dallas Cowboys",
-    "2000",
-    "Strength And Conditioning"
-   ],
-   [
-    "Dallas Cowboys",
-    "2001",
-    "Strength And Conditioning"
+    "Wide Receivers"
    ],
    [
     "Dallas Cowboys",
     "2002",
-    "Strength And Conditioning"
+    "Wide Receivers"
    ]
   ],
   "package jack reilly": [
@@ -6023,13 +3574,6 @@
     "Dallas Cowboys",
     "2000",
     "Offensive Coordinator"
-   ]
-  ],
-  "tommie robinson": [
-   [
-    "Dallas Cowboys",
-    "2000",
-    "Special Teams"
    ]
   ],
   "glenn smith": [
@@ -6059,32 +3603,56 @@
     "Dallas Cowboys",
     "2002",
     "Quarterbacks"
-   ]
-  ],
-  "sa dave campo": [
-   [
-    "Dallas Cowboys",
-    "2000",
-    "Head Coach"
-   ]
-  ],
-  "teams wes chandler": [
-   [
-    "Dallas Cowboys",
-    "2001",
-    "Wide Receivers"
-   ]
-  ],
-  "tackles clancy pendergast": [
-   [
-    "Dallas Cowboys",
-    "2001",
-    "Secondary"
    ],
    [
     "Dallas Cowboys",
-    "2002",
-    "Secondary"
+    "2007",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2009",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2010",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2011",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2012",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Quarterbacks"
    ]
   ],
   "jack reilly": [
@@ -6097,18 +3665,6 @@
     "New England Patriots",
     "1998",
     "Quarterbacks"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Quarterbacks"
-   ]
-  ],
-  "tearns wes chandler": [
-   [
-    "Dallas Cowboys",
-    "2002",
-    "Wide Receivers"
    ]
   ],
   "bruce coslet": [
@@ -6122,6 +3678,11 @@
    [
     "Dallas Cowboys",
     "2002",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2003",
     "Linebackers"
    ]
   ],
@@ -6146,43 +3707,1218 @@
     "Offensive Line"
    ]
   ],
-  "officer tom luginbill": [
+  "bill parcells": [
    [
     "Dallas Cowboys",
-    "2002",
+    "2003",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2006",
+    "Head Coach"
+   ],
+   [
+    "New England Patriots",
+    "1994",
+    "Head Coach"
+   ],
+   [
+    "New England Patriots",
+    "1995",
+    "Head Coach"
+   ],
+   [
+    "New England Patriots",
+    "1996",
+    "Head Coach"
+   ]
+  ],
+  "david lee": [
+   [
+    "Dallas Cowboys",
+    "2003",
+    "Offensive Assistant"
+   ]
+  ],
+  "john mcnulty": [
+   [
+    "Dallas Cowboys",
+    "2003",
+    "Wide Receivers"
+   ]
+  ],
+  "ticke bill parcells": [
+   [
+    "Dallas Cowboys",
+    "2003",
+    "Head Coach"
+   ]
+  ],
+  "todd bowles": [
+   [
+    "Dallas Cowboys",
+    "2006",
+    "Secondary"
+   ],
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Secondary"
+   ]
+  ],
+  "bruce dehaven": [
+   [
+    "Dallas Cowboys",
+    "2006",
+    "Special Teams"
+   ]
+  ],
+  "todd haley": [
+   [
+    "Dallas Cowboys",
+    "2006",
+    "Wide Receivers"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Offensive Coordinator"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2013",
+    "Offensive Coordinator"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2014",
     "Offensive Coordinator"
    ]
   ],
-  "officer will mcclay": [
+  "freddie kitchens": [
    [
     "Dallas Cowboys",
-    "2002",
+    "2006",
+    "Tight Ends"
+   ]
+  ],
+  "anthony lynn": [
+   [
+    "Dallas Cowboys",
+    "2006",
+    "Running Backs"
+   ]
+  ],
+  "paul pasqualoni": [
+   [
+    "Dallas Cowboys",
+    "2006",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2010",
+    "Defensive Line"
+   ]
+  ],
+  "kacy rodgers": [
+   [
+    "Dallas Cowboys",
+    "2006",
+    "Defensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Defensive Line"
+   ]
+  ],
+  "will mcclay": [
+   [
+    "Dallas Cowboys",
+    "2006",
+    "Head Coach"
+   ]
+  ],
+  "mitch matuska": [
+   [
+    "Dallas Cowboys",
+    "2006",
+    "Special Teams"
+   ]
+  ],
+  "tony ollison": [
+   [
+    "Dallas Cowboys",
+    "2006",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Strength And Conditioning"
+   ]
+  ],
+  "wade phillips": [
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2009",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2010",
+    "Head Coach"
+   ]
+  ],
+  "jason garrett": [
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Offensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2011",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2012",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Head Coach"
+   ]
+  ],
+  "skip peete": [
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2009",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2010",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2011",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2012",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Running Backs"
+   ]
+  ],
+  "bruce read": [
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Special Teams"
+   ]
+  ],
+  "ray sherman": [
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Wide Receivers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2009",
+    "Wide Receivers"
+   ]
+  ],
+  "line brain stewart": [
+   [
+    "Dallas Cowboys",
+    "2007",
     "Defensive Coordinator"
    ]
   ],
-  "merchandise bennie wylie": [
+  "chris will mcclay": [
    [
     "Dallas Cowboys",
-    "2002",
-    "Strength & Conditioning"
+    "2007",
+    "Head Coach"
+   ]
+  ],
+  "steve criswell": [
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Offensive Assistant"
+   ]
+  ],
+  "adriel fenton": [
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Defensive Assistant"
+   ]
+  ],
+  "james fuller": [
+   [
+    "Dallas Cowboys",
+    "2007",
+    "Defensive Coordinator"
+   ]
+  ],
+  "joe decamillis": [
+   [
+    "Dallas Cowboys",
+    "2009",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "2010",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "2011",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "2012",
+    "Special Teams"
+   ]
+  ],
+  "records reggie herring": [
+   [
+    "Dallas Cowboys",
+    "2009",
+    "Linebackers"
+   ]
+  ],
+  "brett maxie": [
+   [
+    "Dallas Cowboys",
+    "2009",
+    "Secondary"
+   ]
+  ],
+  "reggie herring": [
+   [
+    "Dallas Cowboys",
+    "2010",
+    "Linebackers"
+   ]
+  ],
+  "line brett maxie": [
+   [
+    "Dallas Cowboys",
+    "2011",
+    "Secondary"
+   ]
+  ],
+  "bill callahan": [
+   [
+    "Dallas Cowboys",
+    "2012",
+    "Offensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Offensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Offensive Coordinator"
+   ]
+  ],
+  "jerome henderson": [
+   [
+    "Dallas Cowboys",
+    "2012",
+    "Secondary"
+   ],
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Secondary"
+   ],
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Secondary"
+   ],
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Secondary"
+   ]
+  ],
+  "leon lett": [
+   [
+    "Dallas Cowboys",
+    "2012",
+    "Defensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Defensive Assistant"
+   ]
+  ],
+  "rich bisaccia": [
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Special Teams"
+   ]
+  ],
+  "gary brown": [
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Running Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Running Backs"
+   ]
+  ],
+  "derek dooley": [
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Wide Receivers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Wide Receivers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Wide Receivers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Wide Receivers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Wide Receivers"
+   ]
+  ],
+  "monte kiffin": [
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Defensive Coordinator"
+   ],
+   [
+    "Minnesota Vikings",
+    "1991",
+    "Defensive Coordinator"
+   ]
+  ],
+  "rod marinelli": [
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Defensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Defensive Coordinator"
+   ]
+  ],
+  "wes phillips": [
+   [
+    "Dallas Cowboys",
+    "2013",
+    "Tight Ends"
+   ]
+  ],
+  "kevin carberry": [
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Offensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Offensive Assistant"
+   ]
+  ],
+  "michael pope": [
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Tight Ends"
+   ],
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Tight Ends"
+   ],
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Tight Ends"
+   ],
+   [
+    "New England Patriots",
+    "1994",
+    "Running Backs"
+   ],
+   [
+    "New England Patriots",
+    "1995",
+    "Tight Ends"
+   ],
+   [
+    "New England Patriots",
+    "1996",
+    "Tight Ends"
+   ]
+  ],
+  "turner west": [
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Defensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Defensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Defensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Defensive Assistant"
+   ]
+  ],
+  "defensive assistan": [
+   [
+    "Dallas Cowboys",
+    "2014",
+    "Defensive Backs"
+   ]
+  ],
+  "marc colombo": [
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Offensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Offensive Line"
+   ]
+  ],
+  "scott linehan": [
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Offensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Offensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Offensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Offensive Coordinator"
+   ]
+  ],
+  "frank pollack": [
+   [
+    "Dallas Cowboys",
+    "2015",
+    "Offensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Offensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Offensive Line"
+   ]
+  ],
+  "joe baker": [
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Secondary"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Secondary"
+   ]
+  ],
+  "ben bloom": [
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Assistant Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Assistant Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Linebackers"
+   ]
+  ],
+  "stephen brown": [
+   [
+    "Dallas Cowboys",
+    "2016",
+    "Offensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Offensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Offensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Offensive Assistant"
+   ]
+  ],
+  "steve loney": [
+   [
+    "Dallas Cowboys",
+    "2017",
+    "Tight Ends"
+   ]
+  ],
+  "paul alexander": [
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Offensive Line"
+   ]
+  ],
+  "ken amato": [
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Defensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Defensive Assistant"
+   ]
+  ],
+  "brett bech": [
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Strength And Conditioning"
+   ]
+  ],
+  "kellen moore": [
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Offensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Offensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Offensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Offensive Coordinator"
+   ]
+  ],
+  "doug nussmeier": [
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Tight Ends"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Tight Ends"
+   ],
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Quarterbacks"
+   ]
+  ],
+  "markus paul": [
+   [
+    "Dallas Cowboys",
+    "2018",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Strength And Conditioning"
+   ]
+  ],
+  "jon kitna": [
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Quarterbacks"
+   ]
+  ],
+  "kyle valero": [
+   [
+    "Dallas Cowboys",
+    "2019",
+    "Offensive Assistant"
+   ]
+  ],
+  "mike mccarthy": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Head Coach"
+   ]
+  ],
+  "john fassel": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Special Teams"
+   ],
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Special Teams"
+   ]
+  ],
+  "al harris": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Defensive Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Defensive Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Defensive Backs"
+   ],
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Defensive Backs"
+   ]
+  ],
+  "adam henry": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Wide Receivers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Wide Receivers"
+   ]
+  ],
+  "maurice linguist": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Defensive Backs"
+   ]
+  ],
+  "scott mccurley": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Linebackers"
+   ]
+  ],
+  "mike nolan": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Defensive Coordinator"
+   ]
+  ],
+  "joe philbin": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Offensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Offensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Offensive Line"
+   ]
+  ],
+  "scott tolzien": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Offensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Offensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Offensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Quarterbacks"
+   ]
+  ],
+  "jim tomsula": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Defensive Line"
+   ]
+  ],
+  "lunda wells": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Tight Ends"
+   ],
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Tight Ends"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Tight Ends"
+   ],
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Tight Ends"
+   ],
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Tight Ends"
+   ]
+  ],
+  "sam mike mccarthy": [
+   [
+    "Dallas Cowboys",
+    "2020",
+    "Head Coach"
+   ]
+  ],
+  "aden durde": [
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Defensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Defensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Defensive Line"
+   ]
+  ],
+  "harold nash": [
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Strength And Conditioning"
+   ]
+  ],
+  "dan quinn": [
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Defensive Coordinator"
+   ],
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Defensive Coordinator"
+   ]
+  ],
+  "robert prince": [
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Wide Receivers"
+   ],
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Wide Receivers"
+   ]
+  ],
+  "jeff blasko": [
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Running Backs"
+   ]
+  ],
+  "will harriger": [
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Offensive Assistant"
+   ]
+  ],
+  "evan harrington": [
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Offensive Assistant"
+   ],
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Offensive Assistant"
+   ]
+  ],
+  "analytics brian schottenheimer": [
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Offensive Coordinator"
+   ]
+  ],
+  "mike solari": [
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Offensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Offensive Line"
+   ]
+  ],
+  "braylon tatum": [
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Strength And Conditioning"
+   ]
+  ],
+  "dirty dozen": [
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Head Coach"
+   ],
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Head Coach"
+   ]
+  ],
+  "steve shimko": [
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Offensive Assistant"
+   ]
+  ],
+  "eric simonelli": [
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Head Coach"
+   ]
+  ],
+  "jeff zgonina": [
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Defensive Line"
    ]
   ],
   "george wilson": [
-   [
-    "Detroit Lions",
-    "1951",
-    "Assistant Coach"
-   ],
-   [
-    "Detroit Lions",
-    "1952",
-    "Assistant Coach"
-   ],
-   [
-    "Detroit Lions",
-    "1955",
-    "Assistant Coach"
-   ],
    [
     "Detroit Lions",
     "1957",
@@ -6221,88 +4957,31 @@
     "Offensive Line"
    ]
   ],
-  "line lester bingaman": [
+  "les bingaman": [
+   [
+    "Detroit Lions",
+    "1960",
+    "Defensive Line"
+   ],
+   [
+    "Detroit Lions",
+    "1964",
+    "Defensive Line"
+   ],
    [
     "Miami Dolphins",
     "1966",
     "Defensive Line"
    ]
   ],
-  "donald f. shula": [
+  "bob pellegrini": [
    [
     "Miami Dolphins",
-    "1972",
-    "Head Coach"
+    "1966",
+    "Linebacker Coach"
    ]
   ],
-  "sandusky offensive backs": [
-   [
-    "Miami Dolphins",
-    "1976",
-    "Special Teams"
-   ]
-  ],
-  "schneilenberger offensive backs": [
-   [
-    "Miami Dolphins",
-    "1977",
-    "Special Teams"
-   ]
-  ],
-  "scarry offensive backs": [
-   [
-    "Miami Dolphins",
-    "1979",
-    "Special Teams"
-   ],
-   [
-    "Miami Dolphins",
-    "1980",
-    "Special Teams"
-   ],
-   [
-    "Miami Dolphins",
-    "1981",
-    "Special Teams"
-   ],
-   [
-    "Miami Dolphins",
-    "1982",
-    "Special Teams"
-   ]
-  ],
-  "sandusky run defense": [
-   [
-    "Miami Dolphins",
-    "1982",
-    "Defensive Line"
-   ],
-   [
-    "Miami Dolphins",
-    "1983",
-    "Defensive Line"
-   ]
-  ],
-  "pro personnel": [
-   [
-    "Miami Dolphins",
-    "1982",
-    "Asst. Coach"
-   ]
-  ],
-  "keane special teams": [
-   [
-    "Miami Dolphins",
-    "1983",
-    "Linebackers"
-   ]
-  ],
-  "matheson special teams": [
-   [
-    "Miami Dolphins",
-    "1984",
-    "Linebackers"
-   ],
+  "special teams": [
    [
     "Miami Dolphins 1985 Super Bowl XIX Media Guide",
     "1985",
@@ -6311,430 +4990,8 @@
   ],
   "john sandusky offense": [
    [
-    "Miami Dolphins",
-    "1984",
-    "Offensive Line"
-   ],
-   [
     "Miami Dolphins 1985 Super Bowl XIX Media Guide",
     "1985",
-    "Offensive Line"
-   ]
-  ],
-  "mel phillips offense": [
-   [
-    "Miami Dolphins",
-    "1985",
-    "Offensive Line"
-   ],
-   [
-    "Miami Dolphins",
-    "1987",
-    "Offensive Line"
-   ],
-   [
-    "Miami Dolphins",
-    "1988",
-    "Offensive Line"
-   ]
-  ],
-  "tom keane": [
-   [
-    "Miami Dolphins",
-    "1985",
-    "Defensive Backs"
-   ]
-  ],
-  "wade special teams": [
-   [
-    "Miami Dolphins",
-    "1987",
-    "Tight Ends"
-   ],
-   [
-    "Miami Dolphins",
-    "1988",
-    "Tight Ends"
-   ]
-  ],
-  "larry seiple offense": [
-   [
-    "Miami Dolphins",
-    "1993",
-    "Quarterbacks"
-   ]
-  ],
-  "mary college": [
-   [
-    "Miami Dolphins",
-    "1996",
-    "Offensive Line"
-   ],
-   [
-    "Miami Dolphins",
-    "1997",
-    "Offensive Line"
-   ],
-   [
-    "Miami Dolphins",
-    "1998",
-    "Offensive Line"
-   ]
-  ],
-  "auburn university": [
-   [
-    "Miami Dolphins",
-    "1996",
-    "Offensive Coordinator"
-   ],
-   [
-    "Miami Dolphins",
-    "1997",
-    "Offensive Coordinator"
-   ]
-  ],
-  "louisiana tech university": [
-   [
-    "Miami Dolphins",
-    "1997",
-    "Head Coach"
-   ]
-  ],
-  "garolina state university": [
-   [
-    "Miami Dolphins",
-    "1998",
-    "Offensive Line"
-   ]
-  ],
-  "teams special teams": [
-   [
-    "Miami Dolphins",
-    "1998",
-    "Linebackers"
-   ],
-   [
-    "Miami Dolphins",
-    "1999",
-    "Linebackers"
-   ]
-  ],
-  "offensive line": [
-   [
-    "Miami Dolphins",
-    "1998",
-    "Tight Ends"
-   ],
-   [
-    "Miami Dolphins",
-    "1999",
-    "Tight Ends"
-   ]
-  ],
-  "pass offense offense": [
-   [
-    "Miami Dolphins",
-    "1998",
-    "Quarterbacks"
-   ],
-   [
-    "Miami Dolphins",
-    "1999",
-    "Quarterbacks"
-   ],
-   [
-    "Miami Dolphins",
-    "2002",
-    "Quarterbacks"
-   ]
-  ],
-  "kickers offensive backs": [
-   [
-    "Miami Dolphins",
-    "1998",
-    "Special Teams"
-   ],
-   [
-    "Miami Dolphins",
-    "2002",
-    "Special Teams"
-   ]
-  ],
-  "kicking special teams": [
-   [
-    "Miami Dolphins",
-    "1998",
-    "Tight Ends"
-   ]
-  ],
-  "kickers otiensive backs": [
-   [
-    "Miami Dolphins",
-    "1999",
-    "Special Teams"
-   ]
-  ],
-  "state special teams": [
-   [
-    "Miami Dolphins",
-    "1999",
-    "Tight Ends"
-   ],
-   [
-    "Miami Dolphins",
-    "2000",
-    "Tight Ends"
-   ],
-   [
-    "Miami Dolphins",
-    "2001",
-    "Tight Ends"
-   ]
-  ],
-  "ass't offensive line": [
-   [
-    "Miami Dolphins",
-    "2000",
-    "Tight Ends"
-   ],
-   [
-    "Miami Dolphins",
-    "2001",
-    "Tight Ends"
-   ],
-   [
-    "Miami Dolphins",
-    "2002",
-    "Tight Ends"
-   ]
-  ],
-  "offensive backs": [
-   [
-    "Miami Dolphins",
-    "2000",
-    "Special Teams"
-   ]
-  ],
-  "cleveland browns trimble": [
-   [
-    "Philadelphia Eagles 1954 Yearbook",
-    "1954",
-    "Head Coach"
-   ]
-  ],
-  "jim carr": [
-   [
-    "Minnesota Vikings",
-    "1981",
-    "Defensive Backs"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1971",
-    "Assistant Coach"
-   ]
-  ],
-  "secretary joe moss": [
-   [
-    "Philadelphia Eagles",
-    "1971",
-    "Assistant Coach"
-   ]
-  ],
-  "aide jack zilly": [
-   [
-    "Philadelphia Eagles",
-    "1971",
-    "Assistant Coach"
-   ]
-  ],
-  "victor e. schwenk": [
-   [
-    "Philadelphia Eagles",
-    "1971",
-    "Head Coach"
-   ]
-  ],
-  "jerry williams": [
-   [
-    "Philadelphia Eagles",
-    "1973",
-    "Head Coach"
-   ]
-  ],
-  "mike mccormack": [
-   [
-    "Philadelphia Eagles",
-    "1974",
-    "Head Coach"
-   ]
-  ],
-  "dick vermeil": [
-   [
-    "Philadelphia Eagles",
-    "1981",
-    "Head Coach"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1982",
-    "Head Coach"
-   ]
-  ],
-  "john becker": [
-   [
-    "Philadelphia Eagles",
-    "1981",
-    "Running Backs"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1982",
-    "Running Backs"
-   ]
-  ],
-  "marion campbell": [
-   [
-    "Boston Patriots",
-    "1963",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Line"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1981",
-    "Defensive Coordinator"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1982",
-    "Defensive Coordinator"
-   ]
-  ],
-  "chuck clausen": [
-   [
-    "Philadelphia Eagles",
-    "1981",
-    "Defensive Line"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1982",
-    "Defensive Line"
-   ]
-  ],
-  "dick coury": [
-   [
-    "Los Angeles Rams",
-    "1986",
-    "Quarterback Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1987",
-    "Quarterback Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1989",
-    "Quarterback Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1990",
-    "Quarterback Coach"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Offensive Coordinator"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1981",
-    "Wide Receivers"
-   ]
-  ],
-  "george hill": [
-   [
-    "Philadelphia Eagles",
-    "1981",
-    "Linebackers"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1982",
-    "Linebackers"
-   ]
-  ],
-  "ken iman": [
-   [
-    "Philadelphia Eagles",
-    "1981",
-    "Offensive Line"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1982",
-    "Offensive Line"
-   ]
-  ],
-  "jerry wampfler": [
-   [
-    "Detroit Lions",
-    "1993",
-    "Offensive Line"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1981",
-    "Offensive Line"
-   ],
-   [
-    "Philadelphia Eagles",
-    "1982",
-    "Offensive Line"
-   ]
-  ],
-  "sid gillman": [
-   [
-    "Philadelphia Eagles",
-    "1982",
-    "Quarterbacks"
-   ]
-  ],
-  "martin streight": [
-   [
-    "Philadelphia Eagles",
-    "1996",
-    "Strength And Conditioning"
-   ]
-  ],
-  "jordan. joe vitt": [
-   [
-    "Philadelphia Eagles",
-    "1996",
-    "Linebackers"
-   ]
-  ],
-  "bill callahan": [
-   [
-    "Philadelphia Eagles",
-    "1997",
     "Offensive Line"
    ]
   ],
@@ -6743,6 +5000,11 @@
     "Atlanta Falcons",
     "1968",
     "Head Coach"
+   ],
+   [
+    "Green Bay Packers",
+    "1963",
+    "Assistant Coach"
    ]
   ],
   "bob fry": [
@@ -6750,19 +5012,9 @@
     "Atlanta Falcons",
     "1968",
     "Offensive Line"
-   ],
-   [
-    "New York Jets",
-    "1974",
-    "Offensive Line"
-   ],
-   [
-    "New York Jets",
-    "1975",
-    "Offensive Line"
    ]
   ],
-  "te bill jobko": [
+  "bill jobko": [
    [
     "Atlanta Falcons",
     "1968",
@@ -6776,291 +5028,26 @@
     "Head Coach"
    ]
   ],
-  "ohio. harry gilmer": [
-   [
-    "Atlanta Falcons",
-    "1974",
-    "Receivers Coach"
-   ]
-  ],
-  "tex. marv matuszak": [
+  "marv matuszak": [
    [
     "Atlanta Falcons",
     "1974",
     "Linebackers Coach"
    ]
   ],
-  "fred bruney": [
-   [
-    "Atlanta Falcons",
-    "1976",
-    "Defensive Coordinator"
-   ]
-  ],
-  "fla. marv matuszak": [
-   [
-    "Atlanta Falcons",
-    "1976",
-    "Linebackers Coach"
-   ]
-  ],
-  "ind. bill nelsen": [
-   [
-    "Atlanta Falcons",
-    "1976",
-    "Offensive Coordinator"
-   ]
-  ],
-  "jerry glanville": [
-   [
-    "Atlanta Falcons",
-    "1979",
-    "Defensive Coordinator"
-   ],
-   [
-    "Atlanta Falcons",
-    "1981",
-    "Defensive Coordinator"
-   ],
-   [
-    "Atlanta Falcons",
-    "1982",
-    "Defensive Coordinator"
-   ]
-  ],
-  "doug shively": [
-   [
-    "Atlanta Falcons",
-    "1979",
-    "Linebacker Coach"
-   ],
-   [
-    "Atlanta Falcons",
-    "1979",
-    "Linebackers"
-   ],
-   [
-    "Atlanta Falcons",
-    "1980",
-    "Linebackers"
-   ],
-   [
-    "Atlanta Falcons",
-    "1981",
-    "Linebackers"
-   ],
-   [
-    "Atlanta Falcons",
-    "1982",
-    "Linebackers"
-   ],
-   [
-    "New Orleans Saints",
-    "1974",
-    "Linebacker Coach"
-   ]
-  ],
-  "dick wood": [
-   [
-    "Atlanta Falcons",
-    "1979",
-    "Quarterbacks"
-   ],
-   [
-    "Atlanta Falcons",
-    "1981",
-    "Quarterbacks"
-   ]
-  ],
-  "manage jerry glanville": [
-   [
-    "Atlanta Falcons",
-    "1980",
-    "Defensive Coordinator"
-   ]
-  ],
-  "brenda. wayne mcduffie": [
-   [
-    "Atlanta Falcons",
-    "1982",
-    "Special Teams"
-   ]
-  ],
-  "jimmy carr": [
-   [
-    "Atlanta Falcons",
-    "1993",
-    "Secondary"
-   ]
-  ],
-  "bishop egan high": [
-   [
-    "Atlanta Falcons",
-    "1994",
-    "Assistant Coach"
-   ]
-  ],
-  "experience atlanta falcons": [
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Head Coach"
-   ]
-  ],
-  "winnipeg blue bombers": [
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Asst. Coach"
-   ]
-  ],
-  "n.y. giants": [
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Defensive Coordinator"
-   ]
-  ],
-  "n.e. patriots": [
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Defensive Coordinator"
-   ],
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Head Coach"
-   ]
-  ],
-  "k.c. chiefs": [
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Defensive Coordinator"
-   ]
-  ],
-  "n.j. knights": [
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Head Coach"
-   ],
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Secondary"
-   ]
-  ],
-  "denver gold": [
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Head Coach"
-   ]
-  ],
-  "springfield college": [
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Wide Receivers"
-   ]
-  ],
-  "oklahoma state": [
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Secondary"
-   ]
-  ],
-  "west virginia university": [
-   [
-    "Atlanta Falcons",
-    "1996",
-    "Secondary"
-   ]
-  ],
-  "al miller asst": [
-   [
-    "Atlanta Falcons",
-    "1998",
-    "Strength & Conditioning"
-   ]
-  ],
-  "secretary allie sherman": [
+  "allie sherman": [
    [
     "New York Giants",
     "1966",
     "Head Coach"
-   ]
-  ],
-  "p.m allie sherman": [
+   ],
    [
     "New York Giants",
     "1967",
     "Head Coach"
    ]
   ],
-  "arnsparger bill arnsparger": [
-   [
-    "New York Giants",
-    "1975",
-    "Head Coach"
-   ],
-   [
-    "New York Giants",
-    "1976",
-    "Head Coach"
-   ]
-  ],
-  "plumb ray wietecha": [
-   [
-    "New York Giants",
-    "1975",
-    "Offensive Line"
-   ],
-   [
-    "New York Giants",
-    "1976",
-    "Offensive Line"
-   ]
-  ],
-  "all-time roster": [
-   [
-    "New York Giants",
-    "1987",
-    "Assistant Coach"
-   ]
-  ],
-  "chronology all-time roster": [
-   [
-    "New York Giants",
-    "1989",
-    "Assistant Coach"
-   ]
-  ],
-  "control james daniel...": [
-   [
-    "New York Giants",
-    "1993",
-    "Tight Ends"
-   ]
-  ],
-  "colman game ball": [
-   [
-    "New York Giants",
-    "1998",
-    "Offensive Line"
-   ]
-  ],
-  "way defensive mvp": [
-   [
-    "New York Giants",
-    "1998",
-    "Defensive Line"
-   ]
-  ],
-  "drulis gene ronzani": [
+  "gene ronzani": [
    [
     "Green Bay Packers",
     "1952",
@@ -7068,13 +5055,6 @@
    ]
   ],
   "richard plasman": [
-   [
-    "Green Bay Packers",
-    "1952",
-    "Assistant Coach"
-   ]
-  ],
-  "wis. chuck drulis": [
    [
     "Green Bay Packers",
     "1952",
@@ -7098,7 +5078,7 @@
     "Head Coach"
    ]
   ],
-  "ray mclean": [
+  "lou rymkus": [
    [
     "Green Bay Packers",
     "1955",
@@ -7107,18 +5087,11 @@
    [
     "Green Bay Packers",
     "1956",
-    "Assistant Coach"
+    "Asst. Coach"
    ],
    [
     "Green Bay Packers",
     "1957",
-    "Assistant Coach"
-   ]
-  ],
-  "earl klapstein": [
-   [
-    "Green Bay Packers",
-    "1956",
     "Asst. Coach"
    ]
   ],
@@ -7139,217 +5112,7 @@
     "Head Coach"
    ]
   ],
-  "chuck knox": [
-   [
-    "Los Angeles Rams",
-    "1975",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1976",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1977",
-    "Head Coach"
-   ],
-   [
-    "New York Jets",
-    "1966",
-    "Offensive Line"
-   ]
-  ],
-  "walt michaels": [
-   [
-    "New York Jets",
-    "1966",
-    "Defensive Line"
-   ],
-   [
-    "New York Jets",
-    "1968",
-    "Linebackers"
-   ],
-   [
-    "New York Jets",
-    "1969",
-    "Linebackers"
-   ],
-   [
-    "New York Jets",
-    "1970",
-    "Linebackers"
-   ]
-  ],
-  "jack donaldson": [
-   [
-    "New York Jets",
-    "1967",
-    "Defensive Line"
-   ]
-  ],
-  "ernie zwahlen": [
-   [
-    "New York Jets",
-    "1967",
-    "Offensive Line"
-   ]
-  ],
-  "joe spencer": [
-   [
-    "New York Jets",
-    "1968",
-    "Offensive Line"
-   ],
-   [
-    "New York Jets",
-    "1969",
-    "Offensive Line"
-   ],
-   [
-    "New York Jets",
-    "1970",
-    "Offensive Line"
-   ]
-  ],
-  "weeb ewhbank": [
-   [
-    "New York Jets",
-    "1969",
-    "Head Coach"
-   ]
-  ],
-  "jeff. buddy ryan": [
-   [
-    "New York Jets",
-    "1969",
-    "Defensive Line"
-   ],
-   [
-    "New York Jets",
-    "1970",
-    "Defensive Line"
-   ]
-  ],
-  "weeb ewbank": [
-   [
-    "New York Jets",
-    "1970",
-    "Head Coach"
-   ]
-  ],
-  "ed biles": [
-   [
-    "New Orleans Saints",
-    "1970",
-    "Defensive Backs"
-   ],
-   [
-    "New York Jets",
-    "1973",
-    "Defensive Backs"
-   ]
-  ],
-  "wimp hewgley": [
-   [
-    "New Orleans Saints",
-    "1974",
-    "Offensive Line"
-   ],
-   [
-    "New York Jets",
-    "1973",
-    "Offensive Line"
-   ]
-  ],
-  "sam rutigliano": [
-   [
-    "New York Jets",
-    "1974",
-    "Defensive Backs"
-   ],
-   [
-    "New York Jets",
-    "1975",
-    "Defensive Backs"
-   ]
-  ],
-  "ind ken shipp": [
-   [
-    "New York Jets",
-    "1974",
-    "Offensive Coordinator"
-   ]
-  ],
-  "michelle. bob fry": [
-   [
-    "New York Jets",
-    "1974",
-    "Offensive Line"
-   ]
-  ],
-  "ken shipp": [
-   [
-    "New Orleans Saints",
-    "1972",
-    "Offensive Coordinator"
-   ],
-   [
-    "New York Jets",
-    "1975",
-    "Offensive Coordinator"
-   ]
-  ],
-  "tenn. dick voris": [
-   [
-    "New York Jets",
-    "1975",
-    "Defensive Coordinator"
-   ]
-  ],
-  "joe gardi strength": [
-   [
-    "New York Jets",
-    "1979",
-    "Special Teams"
-   ]
-  ],
-  "earl m. brown": [
-   [
-    "Detroit Lions",
-    "1951",
-    "Assistant Coach"
-   ]
-  ],
-  "aldo j. forte": [
-   [
-    "Detroit Lions",
-    "1952",
-    "Assistant Coach"
-   ]
-  ],
-  "gregory. garrard ramsey": [
-   [
-    "Detroit Lions",
-    "1952",
-    "Assistant Coach"
-   ]
-  ],
-  "j. russell thomas": [
-   [
-    "Detroit Lions",
-    "1952",
-    "Assistant Coach"
-   ]
-  ],
   "aldo forte": [
-   [
-    "Detroit Lions",
-    "1955",
-    "Assistant Coach"
-   ],
    [
     "Detroit Lions",
     "1960",
@@ -7361,45 +5124,7 @@
     "Offensive Line"
    ]
   ],
-  "les bingaman": [
-   [
-    "Detroit Lions",
-    "1960",
-    "Defensive Line"
-   ],
-   [
-    "Detroit Lions",
-    "1964",
-    "Defensive Line"
-   ]
-  ],
-  "anne chuck knox": [
-   [
-    "Detroit Lions",
-    "1972",
-    "Offensive Line"
-   ]
-  ],
-  "john north": [
-   [
-    "Detroit Lions",
-    "1972",
-    "Receivers Coach"
-   ],
-   [
-    "New Orleans Saints",
-    "1973",
-    "Offensive Coordinator"
-   ]
-  ],
-  "martha dick voris": [
-   [
-    "Detroit Lions",
-    "1972",
-    "Defensive Line"
-   ]
-  ],
-  "bill raymond berry": [
+  "raymond berry": [
    [
     "Detroit Lions",
     "1973",
@@ -7411,52 +5136,12 @@
     "Detroit Lions",
     "1973",
     "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Line"
    ]
   ],
   "leon mclaughlin": [
    [
     "Detroit Lions",
     "1973",
-    "Offensive Line"
-   ],
-   [
-    "Detroit Lions",
-    "1974",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Offensive Line"
-   ],
-   [
-    "Pittsburgh Steelers",
-    "1966",
-    "Offensive Line"
-   ],
-   [
-    "Pittsburgh Steelers",
-    "1967",
     "Offensive Line"
    ]
   ],
@@ -7465,26 +5150,6 @@
     "Detroit Lions",
     "1973",
     "Linebacker Coach"
-   ],
-   [
-    "Detroit Lions",
-    "1974",
-    "Linebacker Coach"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Linebackers"
    ]
   ],
   "rick forzano": [
@@ -7499,7 +5164,7 @@
     "Head Coach"
    ]
   ],
-  "ricky bruce beatty": [
+  "bruce beatty": [
    [
     "Detroit Lions",
     "1975",
@@ -7511,56 +5176,53 @@
     "Offensive Line"
    ]
   ],
-  "gwendolyn rey dempsey": [
+  "rey dempsey": [
    [
     "Detroit Lions",
     "1975",
     "Special Teams Coach"
    ]
   ],
-  "tom jerry glanville": [
+  "jerry glanville": [
    [
     "Detroit Lions",
     "1975",
     "Linebacker Coach"
+   ],
+   [
+    "Detroit Lions",
+    "1976",
+    "Linebacker Coach"
+   ],
+   [
+    "Houston Oilers",
+    "1985",
+    "Defensive Coordinator"
    ]
   ],
-  "single floyd reese": [
+  "floyd reese": [
    [
     "Detroit Lions",
     "1975",
     "Strength And Conditioning"
+   ],
+   [
+    "Detroit Lions",
+    "1976",
+    "Strength And Conditioning"
+   ],
+   [
+    "Detroit Lions",
+    "1977",
+    "Strength And Conditioning"
    ]
   ],
-  "sally fritz shurmur": [
+  "fritz shurmur": [
    [
     "Detroit Lions",
     "1975",
     "Defensive Line"
-   ]
-  ],
-  "dave jerry glanville": [
-   [
-    "Detroit Lions",
-    "1976",
-    "Linebacker Coach"
-   ]
-  ],
-  "brenda floyd reese": [
-   [
-    "Detroit Lions",
-    "1976",
-    "Strength And Conditioning"
-   ]
-  ],
-  "sally ken shipp": [
-   [
-    "Detroit Lions",
-    "1976",
-    "Quarterbacks"
-   ]
-  ],
-  "fritz shurmur": [
+   ],
    [
     "Detroit Lions",
     "1976",
@@ -7572,57 +5234,19 @@
     "Defensive Coordinator"
    ],
    [
-    "Green Bay Packers",
-    "1997",
-    "Defensive Coordinator"
-   ],
-   [
-    "Los Angeles Rams",
-    "1986",
-    "Defensive Coordinator"
-   ],
-   [
-    "Los Angeles Rams",
-    "1987",
-    "Defensive Coordinator"
-   ],
-   [
-    "Los Angeles Rams",
-    "1990",
-    "Defensive Coordinator"
-   ],
-   [
     "New England Patriots",
     "1998",
     "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Line"
    ]
   ],
-  "dotsch tommy hudspeth": [
+  "ken shipp": [
+   [
+    "Detroit Lions",
+    "1976",
+    "Quarterbacks"
+   ]
+  ],
+  "tommy hudspeth": [
    [
     "Detroit Lions",
     "1977",
@@ -7636,455 +5260,11 @@
     "Linebacker Coach"
    ]
   ],
-  "shurmur john payne": [
+  "john payne": [
    [
     "Detroit Lions",
     "1977",
     "Offensive Line"
-   ]
-  ],
-  "young. floyd reese": [
-   [
-    "Detroit Lions",
-    "1977",
-    "Strength And Conditioning"
-   ]
-  ],
-  "lamar leachman inside": [
-   [
-    "Detroit Lions",
-    "1991",
-    "Linebackers"
-   ]
-  ],
-  "john fontes": [
-   [
-    "Detroit Lions",
-    "1993",
-    "Defensive Backs"
-   ],
-   [
-    "Detroit Lions",
-    "1994",
-    "Defensive Backs"
-   ],
-   [
-    "Detroit Lions",
-    "1995",
-    "Defensive Backs"
-   ],
-   [
-    "Detroit Lions",
-    "1996",
-    "Defensive Backs"
-   ]
-  ],
-  "frank gansz": [
-   [
-    "Detroit Lions",
-    "1993",
-    "Special Teams"
-   ]
-  ],
-  "dan henning": [
-   [
-    "Detroit Lions",
-    "1993",
-    "Offensive Coordinator"
-   ]
-  ],
-  "bert hill": [
-   [
-    "Detroit Lions",
-    "1993",
-    "Strength & Conditioning"
-   ],
-   [
-    "Detroit Lions",
-    "1994",
-    "Strength & Conditioning"
-   ],
-   [
-    "Detroit Lions",
-    "1995",
-    "Strength & Conditioning"
-   ],
-   [
-    "Detroit Lions",
-    "1996",
-    "Strength & Conditioning"
-   ],
-   [
-    "Detroit Lions",
-    "1997",
-    "Strength & Conditioning"
-   ],
-   [
-    "Detroit Lions",
-    "1998",
-    "Strength & Conditioning"
-   ],
-   [
-    "Detroit Lions",
-    "1999",
-    "Strength & Conditioning"
-   ]
-  ],
-  "lamar leachman": [
-   [
-    "Detroit Lions",
-    "1993",
-    "Defensive Line"
-   ],
-   [
-    "Detroit Lions",
-    "1994",
-    "Defensive Line"
-   ]
-  ],
-  "billie matthews": [
-   [
-    "Detroit Lions",
-    "1993",
-    "Running Backs"
-   ],
-   [
-    "Detroit Lions",
-    "1994",
-    "Running Backs"
-   ]
-  ],
-  "paul boudreau": [
-   [
-    "Detroit Lions",
-    "1994",
-    "Offensive Line"
-   ],
-   [
-    "Detroit Lions",
-    "1995",
-    "Offensive Line"
-   ],
-   [
-    "Detroit Lions",
-    "1996",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Offensive Line"
-   ],
-   [
-    "New Orleans Saints",
-    "1987",
-    "Offensive Line"
-   ]
-  ],
-  "dave jaumotte": [
-   [
-    "Detroit Lions",
-    "1994",
-    "Tight Ends"
-   ]
-  ],
-  "herb paterra": [
-   [
-    "Detroit Lions",
-    "1994",
-    "Defensive Coordinator"
-   ],
-   [
-    "Detroit Lions",
-    "1995",
-    "Defensive Coordinator"
-   ],
-   [
-    "Los Angeles Rams",
-    "1980",
-    "Special Teams Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1981",
-    "Linebackers Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1982",
-    "Linebackers Coach"
-   ]
-  ],
-  "howard tippett": [
-   [
-    "Detroit Lions",
-    "1994",
-    "Linebackers"
-   ],
-   [
-    "Detroit Lions",
-    "1996",
-    "Linebackers"
-   ]
-  ],
-  "don clemons": [
-   [
-    "Detroit Lions",
-    "1995",
-    "Linebackers"
-   ],
-   [
-    "Detroit Lions",
-    "1996",
-    "Defensive Assistant"
-   ],
-   [
-    "Detroit Lions",
-    "1997",
-    "Defensive Assistant"
-   ],
-   [
-    "Detroit Lions",
-    "1998",
-    "Defensive Assistant"
-   ],
-   [
-    "Detroit Lions",
-    "1999",
-    "Defensive Assistant"
-   ]
-  ],
-  "mo forte": [
-   [
-    "Detroit Lions",
-    "1995",
-    "Running Backs"
-   ],
-   [
-    "Detroit Lions",
-    "1996",
-    "Running Backs"
-   ]
-  ],
-  "frank novak": [
-   [
-    "Detroit Lions",
-    "1995",
-    "Special Teams"
-   ],
-   [
-    "Detroit Lions",
-    "1996",
-    "Special Teams"
-   ]
-  ],
-  "sylvester croom": [
-   [
-    "Detroit Lions",
-    "1997",
-    "Offensive Coordinator"
-   ],
-   [
-    "Detroit Lions",
-    "1998",
-    "Offensive Coordinator"
-   ],
-   [
-    "Detroit Lions",
-    "1999",
-    "Offensive Coordinator"
-   ]
-  ],
-  "larry peccatiello": [
-   [
-    "Detroit Lions",
-    "1997",
-    "Defensive Coordinator"
-   ],
-   [
-    "Detroit Lions",
-    "1998",
-    "Defensive Coordinator"
-   ],
-   [
-    "Washington Redskins",
-    "1981",
-    "Linebackers"
-   ],
-   [
-    "Washington Redskins",
-    "1982",
-    "Linebackers"
-   ],
-   [
-    "Washington Redskins",
-    "1983",
-    "Defensive Coordinator"
-   ]
-  ],
-  "brian baker": [
-   [
-    "Detroit Lions",
-    "1997",
-    "Defensive Line"
-   ],
-   [
-    "Detroit Lions",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "Detroit Lions",
-    "1999",
-    "Defensive Line"
-   ]
-  ],
-  "frank falks": [
-   [
-    "Detroit Lions",
-    "1997",
-    "Running Backs"
-   ],
-   [
-    "Detroit Lions",
-    "1998",
-    "Running Backs"
-   ],
-   [
-    "Detroit Lions",
-    "1999",
-    "Running Backs"
-   ]
-  ],
-  "jack henry": [
-   [
-    "Detroit Lions",
-    "1997",
-    "Offensive Line"
-   ],
-   [
-    "Detroit Lions",
-    "1998",
-    "Offensive Line"
-   ],
-   [
-    "Detroit Lions",
-    "1999",
-    "Offensive Line"
-   ]
-  ],
-  "gary moeller": [
-   [
-    "Detroit Lions",
-    "1997",
-    "Linebackers"
-   ],
-   [
-    "Detroit Lions",
-    "1998",
-    "Linebackers"
-   ],
-   [
-    "Detroit Lions",
-    "1999",
-    "Linebackers"
-   ]
-  ],
-  "bob palcic": [
-   [
-    "Detroit Lions",
-    "1997",
-    "Tight Ends"
-   ],
-   [
-    "Detroit Lions",
-    "1998",
-    "Tight Ends"
-   ]
-  ],
-  "chuck prieter": [
-   [
-    "Detroit Lions",
-    "1997",
-    "Special Teams"
-   ]
-  ],
-  "richard selcer": [
-   [
-    "Detroit Lions",
-    "1997",
-    "Secondary"
-   ],
-   [
-    "Detroit Lions",
-    "1998",
-    "Secondary"
-   ],
-   [
-    "Detroit Lions",
-    "1999",
-    "Secondary"
-   ]
-  ],
-  "marc trestman": [
-   [
-    "Detroit Lions",
-    "1997",
-    "Quarterbacks"
-   ]
-  ],
-  "chuck priefer": [
-   [
-    "Detroit Lions",
-    "1998",
-    "Special Teams"
-   ],
-   [
-    "Detroit Lions",
-    "1999",
-    "Special Teams"
-   ]
-  ],
-  "jim zorn": [
-   [
-    "Detroit Lions",
-    "1998",
-    "Quarterbacks"
-   ]
-  ],
-  "danny smith": [
-   [
-    "Detroit Lions",
-    "1999",
-    "Tight Ends"
-   ]
-  ],
-  "jim zom": [
-   [
-    "Detroit Lions",
-    "1999",
-    "Quarterbacks"
-   ]
-  ],
-  "jr. vice presidenit": [
-   [
-    "NFL Official Record Manual 1976",
-    "1976",
-    "Head Coach"
-   ]
-  ],
-  "boston massachu": [
-   [
-    "Houston Oilers",
-    "1961",
-    "Head Coach"
-   ]
-  ],
-  "new york city": [
-   [
-    "Houston Oilers",
-    "1961",
-    "Head Coach"
    ]
   ],
   "hugh campbell": [
@@ -8097,18 +5277,6 @@
     "Houston Oilers",
     "1985",
     "Head Coach"
-   ]
-  ],
-  "backs bill walsh": [
-   [
-    "Houston Oilers",
-    "1984",
-    "Offensive Line"
-   ],
-   [
-    "Houston Oilers",
-    "1985",
-    "Offensive Line"
    ]
   ],
   "gene gaines": [
@@ -8127,6 +5295,11 @@
    [
     "Houston Oilers",
     "1984",
+    "Defensive Backs"
+   ],
+   [
+    "Houston Oilers",
+    "1985",
     "Defensive Backs"
    ]
   ],
@@ -8149,72 +5322,17 @@
     "Linebackers"
    ]
   ],
-  "lb ken houston": [
+  "bill allerheiligen": [
    [
     "Houston Oilers",
     "1985",
-    "Defensive Backs"
+    "Strength And Conditioning"
    ]
   ],
-  "culver military acade": [
-   [
-    "Houston Oilers",
-    "1992",
-    "Linebackers"
-   ]
-  ],
-  "defensive coordinitto": [
-   [
-    "Houston Oilers",
-    "1996",
-    "Offensive Line"
-   ]
-  ],
-  "jack morton": [
+  "forrest gregg": [
    [
     "Green Bay Packers",
-    "1957",
-    "Asst. Coach"
-   ]
-  ],
-  "general vince lombardi": [
-   [
-    "Green Bay Packers",
-    "1963",
-    "Head Coach"
-   ]
-  ],
-  "vincent t. lombardi": [
-   [
-    "Green Bay Packers",
-    "1966",
-    "Assistant Coach"
-   ],
-   [
-    "Washington Redskins",
-    "1973",
-    "Head Coach"
-   ],
-   [
-    "Washington Redskins",
-    "1974",
-    "Head Coach"
-   ],
-   [
-    "Washington Redskins",
-    "1975",
-    "Head Coach"
-   ],
-   [
-    "Washington Redskins",
-    "1976",
-    "Head Coach"
-   ]
-  ],
-  "ziegler bart starr": [
-   [
-    "Green Bay Packers",
-    "1978",
+    "1987",
     "Head Coach"
    ]
   ],
@@ -8225,135 +5343,16 @@
     "Defensive Coordinator"
    ]
   ],
-  "wisconsin-eau claire": [
+  "dale lindsey": [
    [
     "Green Bay Packers",
-    "1992",
-    "Head Coach"
-   ],
-   [
-    "Green Bay Packers",
-    "1994",
-    "Head Coach"
-   ],
-   [
-    "Green Bay Packers",
-    "1996",
-    "Head Coach"
-   ],
-   [
-    "Green Bay Packers",
-    "1998",
-    "Head Coach"
-   ]
-  ],
-  "coaches mike holmgren": [
-   [
-    "Green Bay Packers",
-    "1997",
-    "Head Coach"
-   ]
-  ],
-  "sherman lewis": [
-   [
-    "Green Bay Packers",
-    "1997",
-    "Offensive Coordinator"
-   ]
-  ],
-  "larry brooks": [
-   [
-    "Green Bay Packers",
-    "1997",
-    "Defensive Line"
-   ]
-  ],
-  "nolan cromwell": [
-   [
-    "Green Bay Packers",
-    "1997",
-    "Special Teams"
-   ]
-  ],
-  "gil haskell": [
-   [
-    "Green Bay Packers",
-    "1997",
-    "Wide Receivers"
-   ],
-   [
-    "Los Angeles Rams",
-    "1983",
-    "Special Teams Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1986",
-    "Special Teams Coach"
-   ],
-   [
-    "Los Angeles Rams",
     "1987",
-    "Running Back Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1989",
-    "Running Back Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1990",
-    "Running Back Coach"
-   ]
-  ],
-  "control kent johnston": [
-   [
-    "Green Bay Packers",
-    "1997",
-    "Strength And Conditioning"
-   ]
-  ],
-  "jim lind": [
-   [
-    "Green Bay Packers",
-    "1997",
     "Linebackers"
-   ]
-  ],
-  "andy reid": [
+   ],
    [
-    "Green Bay Packers",
-    "1997",
-    "Quarterbacks"
-   ]
-  ],
-  "mike sherman": [
-   [
-    "Green Bay Packers",
-    "1997",
-    "Tight Ends"
-   ]
-  ],
-  "line harry syoney": [
-   [
-    "Green Bay Packers",
-    "1997",
-    "Running Backs"
-   ]
-  ],
-  "bob valesente": [
-   [
-    "Green Bay Packers",
-    "1997",
-    "Defensive Backs"
-   ]
-  ],
-  "running backs": [
-   [
-    "Green Bay Packers",
-    "2000",
-    "Tight Ends"
+    "Washington Redskins",
+    "2005",
+    "Linebackers"
    ]
   ],
   "mike holovak": [
@@ -8373,53 +5372,13 @@
     "New England Patriots",
     "1998",
     "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Offensive Line"
    ]
   ],
-  "bill parcells": [
+  "marion campbell": [
    [
-    "New England Patriots",
-    "1994",
-    "Head Coach"
-   ],
-   [
-    "New England Patriots",
-    "1995",
-    "Head Coach"
-   ],
-   [
-    "New England Patriots",
-    "1996",
-    "Head Coach"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Linebackers"
-   ],
-   [
-    "Seattle Seahawks",
-    "1983",
-    "Assistant Coach"
+    "Boston Patriots",
+    "1963",
+    "Defensive Line"
    ]
   ],
   "al groh": [
@@ -8437,68 +5396,6 @@
     "New England Patriots",
     "1996",
     "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Coordinator"
-   ]
-  ],
-  "chris palmer": [
-   [
-    "New England Patriots",
-    "1994",
-    "Wide Receivers"
-   ],
-   [
-    "New England Patriots",
-    "1995",
-    "Wide Receivers"
-   ],
-   [
-    "New England Patriots",
-    "1996",
-    "Quarterbacks"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Quarterbacks"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Wide Receivers"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Quarterbacks"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Wide Receivers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Quarterbacks"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Wide Receivers"
    ]
   ],
   "johnny parker": [
@@ -8528,21 +5425,11 @@
     "Strength And Conditioning"
    ]
   ],
-  "michael pope": [
+  "mike sweatman": [
    [
     "New England Patriots",
     "1994",
-    "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "1995",
-    "Tight Ends"
-   ],
-   [
-    "New England Patriots",
-    "1996",
-    "Tight Ends"
+    "Special Teams"
    ]
   ],
   "bob trott": [
@@ -8554,21 +5441,6 @@
    [
     "New England Patriots",
     "1995",
-    "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "2001",
     "Defensive Backs"
    ]
   ],
@@ -8592,46 +5464,11 @@
     "New England Patriots",
     "1998",
     "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Tight Ends"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Tight Ends"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Offensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Tight Ends"
    ]
   ],
   "maurice carthon": [
    [
     "New England Patriots",
-    "1994",
-    "Offensive Assistant"
-   ],
-   [
-    "New England Patriots",
     "1995",
     "Offensive Assistant"
    ],
@@ -8639,90 +5476,6 @@
     "New England Patriots",
     "1996",
     "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Offensive Assistant"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Offensive Assistant"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Offensive Assistant"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Running Backs"
-   ]
-  ],
-  "mike pope": [
-   [
-    "New England Patriots",
-    "1994",
-    "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "1995",
-    "Tight Ends"
-   ],
-   [
-    "New England Patriots",
-    "1996",
-    "Tight Ends"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Tight Ends"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Tight Ends"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Running Backs"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Tight Ends"
-   ]
-  ],
-  "teams romeo crennel": [
-   [
-    "New England Patriots",
-    "1995",
-    "Defensive Line"
    ]
   ],
   "dante scarnecchia": [
@@ -8740,43 +5493,6 @@
     "New England Patriots",
     "1998",
     "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Special Teams"
-   ]
-  ],
-  "mike sweatman": [
-   [
-    "New England Patriots",
-    "1995",
-    "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "1996",
-    "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Special Teams"
    ]
   ],
   "bill belichick": [
@@ -8791,27 +5507,12 @@
     "New England Patriots",
     "1996",
     "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Offensive Line"
    ]
   ],
   "pete carroll": [
    [
     "Minnesota Vikings",
-    "1985",
+    "1989",
     "Defensive Backs"
    ],
    [
@@ -8847,31 +5548,6 @@
     "New England Patriots",
     "1998",
     "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Linebackers"
-   ],
-   [
-    "New Orleans Saints",
-    "1987",
-    "Defensive Coordinator"
    ]
   ],
   "can smith": [
@@ -8881,38 +5557,23 @@
     "Asst. Head Coach"
    ]
   ],
+  "paul boudreau": [
+   [
+    "New England Patriots",
+    "1997",
+    "Offensive Line"
+   ],
+   [
+    "New England Patriots",
+    "1998",
+    "Offensive Line"
+   ]
+  ],
   "jeff davidson": [
    [
     "New England Patriots",
     "1997",
     "Tight Ends"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Tight Ends"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Tight Ends"
-   ]
-  ],
-  "ray hamilton": [
-   [
-    "New England Patriots",
-    "1997",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Line"
    ]
   ],
   "ron lynn": [
@@ -8925,32 +5586,12 @@
     "New England Patriots",
     "1998",
     "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Backs"
    ]
   ],
   "andre patterson": [
    [
     "New England Patriots",
     "1997",
-    "Defensive Assistant"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Assistant"
-   ],
-   [
-    "New England Patriots",
-    "2001",
     "Defensive Assistant"
    ]
   ],
@@ -8963,16 +5604,6 @@
    [
     "New England Patriots",
     "1998",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
     "Linebackers"
    ]
   ],
@@ -8992,21 +5623,6 @@
    [
     "New England Patriots",
     "1998",
-    "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Wide Receivers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "2001",
     "Wide Receivers"
    ]
   ],
@@ -9022,48 +5638,14 @@
     "Running Backs"
    ],
    [
-    "New England Patriots",
-    "1999",
-    "Running Backs"
+    "Pittsburgh Steelers",
+    "2012",
+    "Running Backs Coach"
    ],
    [
-    "New England Patriots",
-    "2001",
-    "Running Backs"
-   ]
-  ],
-  "line ray hamilton": [
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ]
-  ],
-  "carl smith": [
-   [
-    "New England Patriots",
-    "1998",
-    "Tight Ends"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Asst. Head Coach"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Asst. Head Coach"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Tight Ends"
-   ],
-   [
-    "New Orleans Saints",
-    "1986",
-    "Offensive Coordinator"
+    "Pittsburgh Steelers",
+    "2013",
+    "Running Backs Coach"
    ]
   ],
   "dewayne walker": [
@@ -9073,101 +5655,16 @@
     "Defensive Assistant"
    ],
    [
-    "New England Patriots",
-    "2001",
-    "Defensive Assistant"
+    "Washington Redskins",
+    "2005",
+    "Secondary"
    ]
   ],
-  "carl taseff": [
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Backs"
-   ]
-  ],
-  "jesse richardson": [
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Line"
-   ]
-  ],
-  "rommie loudd": [
-   [
-    "New England Patriots",
-    "1998",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Linebackers"
-   ]
-  ],
-  "jerry richardson": [
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Line"
-   ]
-  ],
-  "bruce beatty": [
+  "red miller": [
    [
     "New England Patriots",
     "1998",
     "Offensive Line"
-   ]
-  ],
-  "dick evans": [
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Line"
    ]
   ],
   "burnie miller": [
@@ -9175,429 +5672,34 @@
     "New England Patriots",
     "1998",
     "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Special Teams"
-   ]
-  ],
-  "bill nelsen": [
-   [
-    "New England Patriots",
-    "1998",
-    "Quarterbacks"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Quarterbacks"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Quarterbacks"
    ]
   ],
   "charlie sumner": [
    [
     "New England Patriots",
     "1998",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
     "Linebackers"
    ]
   ],
-  "jim valek": [
-   [
-    "New England Patriots",
-    "1998",
-    "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Special Teams"
-   ]
-  ],
-  "dick walker": [
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Backs"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Backs"
-   ]
-  ],
-  "jim ringo": [
-   [
-    "Los Angeles Rams",
-    "1982",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Offensive Line"
-   ]
-  ],
-  "gino cappelletti": [
-   [
-    "New England Patriots",
-    "1998",
-    "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Special Teams"
-   ]
-  ],
-  "babe parilli": [
-   [
-    "New England Patriots",
-    "1998",
-    "Quarterbacks"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Quarterbacks"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Quarterbacks"
-   ]
-  ],
-  "tommy brasher": [
-   [
-    "New England Patriots",
-    "1998",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Linebackers"
-   ]
-  ],
-  "rod humenuik": [
-   [
-    "New England Patriots",
-    "1998",
-    "Asst. Head Coach"
-   ],
-   [
-    "New England Patriots",
-    "1998",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Asst. Head Coach"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Offensive Line"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Asst. Head Coach"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Offensive Line"
-   ]
-  ],
-  "don shinnick": [
-   [
-    "New England Patriots",
-    "1998",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Linebackers"
-   ]
-  ],
-  "les steckel": [
-   [
-    "New England Patriots",
-    "1998",
-    "Quarterbacks"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Quarterbacks"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Quarterbacks"
-   ]
-  ],
-  "don blackmon": [
-   [
-    "New England Patriots",
-    "1998",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Linebackers"
-   ]
-  ],
-  "keith rowan": [
-   [
-    "New England Patriots",
-    "1998",
-    "Special Teams"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Special Teams"
-   ]
-  ],
-  "dale lindsey": [
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ]
-  ],
-  "steve nelson": [
-   [
-    "New England Patriots",
-    "1998",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Linebackers"
-   ]
-  ],
-  "ivan fears": [
-   [
-    "New England Patriots",
-    "1998",
-    "Wide Receivers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Wide Receivers"
-   ]
-  ],
-  "stan jones": [
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Line"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Line"
-   ]
-  ],
-  "joe collier": [
-   [
-    "New England Patriots",
-    "1998",
-    "Defensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "1999",
-    "Defensive Coordinator"
-   ]
-  ],
-  "tp art spinney": [
-   [
-    "New England Patriots",
-    "1999",
-    "Offensive Line"
-   ]
-  ],
-  "rick lantz": [
-   [
-    "New England Patriots",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Linebackers"
-   ]
-  ],
-  "tp carl smith": [
-   [
-    "New England Patriots",
-    "1999",
-    "Tight Ends"
-   ]
-  ],
-  "bill muir": [
-   [
-    "New England Patriots",
-    "2001",
-    "Offensive Line"
-   ]
-  ],
-  "jimmy raye": [
-   [
-    "Los Angeles Rams",
-    "1984",
-    "Offensive Coordinator"
-   ],
-   [
-    "New England Patriots",
-    "2001",
-    "Offensive Coordinator"
-   ]
-  ],
-  "brad seely": [
-   [
-    "New England Patriots",
-    "2001",
-    "Special Teams"
-   ]
-  ],
-  "hamilton mangini": [
-   [
-    "New England Patriots",
-    "2001",
-    "Defensive Backs"
-   ]
-  ],
-  "dick rehbein": [
-   [
-    "New England Patriots",
-    "2001",
-    "Quarterbacks"
-   ]
-  ],
-  "dave adolph.................... defense": [
-   [
-    "Los Angeles Raiders",
-    "1990",
-    "Linebackers"
-   ]
-  ],
-  "gunther cunningham defense": [
-   [
-    "Los Angeles Raiders",
-    "1992",
-    "Linebackers"
-   ]
-  ],
-  "partner al davis": [
-   [
-    "Oakland Raiders",
-    "1997",
-    "Head Coach"
-   ]
-  ],
-  "conditioning robert jenkins.": [
-   [
-    "Oakland Raiders",
-    "1998",
-    "Offensive Assistant"
-   ]
-  ],
-  "requests george allen": [
-   [
-    "Los Angeles Rams",
-    "1969",
-    "Head Coach"
-   ]
-  ],
-  "sander chuck knox": [
+  "chuck knox": [
    [
     "Los Angeles Rams",
     "1973",
+    "Head Coach"
+   ],
+   [
+    "Los Angeles Rams",
+    "1975",
+    "Head Coach"
+   ],
+   [
+    "Los Angeles Rams",
+    "1976",
+    "Head Coach"
+   ],
+   [
+    "Los Angeles Rams",
+    "1977",
     "Head Coach"
    ]
   ],
@@ -9609,25 +5711,21 @@
    ],
    [
     "Los Angeles Rams",
+    "1975",
+    "Receivers Coach"
+   ],
+   [
+    "Los Angeles Rams",
     "1976",
     "Receivers Coach"
    ]
   ],
-  "calif. tom catlin": [
+  "tom catlin": [
    [
     "Los Angeles Rams",
     "1973",
     "Linebacker Coach"
-   ]
-  ],
-  "ca. lee bennett": [
-   [
-    "Los Angeles Rams",
-    "1975",
-    "Receivers Coach"
-   ]
-  ],
-  "tom catlin": [
+   ],
    [
     "Los Angeles Rams",
     "1976",
@@ -9639,64 +5737,28 @@
     "Linebacker Coach"
    ]
   ],
-  "george allen": [
+  "frank lauterbur": [
    [
     "Los Angeles Rams",
-    "1978",
-    "Head Coach"
+    "1979",
+    "Linebackers Coach"
+   ],
+   [
+    "Los Angeles Rams",
+    "1980",
+    "Linebackers Coach"
    ]
   ],
   "lavern torgeson": [
    [
     "Los Angeles Rams",
-    "1978",
-    "Defensive Line"
-   ],
-   [
-    "Los Angeles Rams",
     "1979",
     "Defensive Line"
-   ]
-  ],
-  "charlie waller": [
-   [
-    "Los Angeles Rams",
-    "1978",
-    "Quarterbacks Coach"
-   ]
-  ],
-  "lionel taylor": [
-   [
-    "Los Angeles Rams",
-    "1978",
-    "Receivers Coach"
    ],
    [
     "Los Angeles Rams",
-    "1979",
-    "Receivers Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1981",
-    "Offensive Coordinator"
-   ]
-  ],
-  "paul lanham": [
-   [
-    "Los Angeles Rams",
-    "1978",
-    "Special Teams Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1979",
-    "Special Teams Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1981",
-    "Quarterbacks Coach"
+    "1980",
+    "Defensive Line"
    ]
   ],
   "dan radakovich": [
@@ -9711,349 +5773,42 @@
     "Offensive Line"
    ]
   ],
-  "playotfs bud carson": [
+  "lionel taylor": [
    [
     "Los Angeles Rams",
     "1979",
-    "Defensive Coordinator"
+    "Receivers Coach"
    ]
   ],
-  "ca. frank lauterbur": [
+  "paul lanham": [
    [
     "Los Angeles Rams",
     "1979",
-    "Linebackers Coach"
+    "Special Teams Coach"
+   ]
+  ],
+  "ray malavasi": [
+   [
+    "Los Angeles Rams",
+    "1979",
+    "Head Coach"
+   ],
+   [
+    "Los Angeles Rams",
+    "1980",
+    "Head Coach"
    ]
   ],
   "bud carson": [
    [
     "Los Angeles Rams",
-    "1980",
+    "1979",
     "Defensive Coordinator"
    ],
-   [
-    "Los Angeles Rams",
-    "1981",
-    "Defensive Coordinator"
-   ]
-  ],
-  "playolls bud carson": [
    [
     "Los Angeles Rams",
     "1980",
     "Defensive Coordinator"
-   ]
-  ],
-  "jim vechiaretla": [
-   [
-    "Los Angeles Rams",
-    "1981",
-    "Special Teams Coach"
-   ]
-  ],
-  "john hadi": [
-   [
-    "Los Angeles Rams",
-    "1982",
-    "Offensive Coordinator"
-   ]
-  ],
-  "jack snow": [
-   [
-    "Los Angeles Rams",
-    "1982",
-    "Receivers Coach"
-   ]
-  ],
-  "fred whittingham": [
-   [
-    "Los Angeles Rams",
-    "1982",
-    "Special Teams"
-   ],
-   [
-    "Los Angeles Rams",
-    "1990",
-    "Linebacker Coach"
-   ]
-  ],
-  "john robinson": [
-   [
-    "Los Angeles Rams",
-    "1983",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1984",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1985",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1986",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1987",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1989",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1990",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1991",
-    "Head Coach"
-   ]
-  ],
-  "bob baker": [
-   [
-    "Los Angeles Rams",
-    "1983",
-    "Quarterback Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1984",
-    "Quarterback Coach"
-   ]
-  ],
-  "marv goux": [
-   [
-    "Los Angeles Rams",
-    "1983",
-    "Defensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1984",
-    "Defensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1985",
-    "Defensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1987",
-    "Defensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1989",
-    "Defensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1990",
-    "Defensive Line"
-   ],
-   [
-    "Los Angeles Rams",
-    "1991",
-    "Defensive Line"
-   ]
-  ],
-  "bruce snyder": [
-   [
-    "Los Angeles Rams",
-    "1983",
-    "Running Back Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1984",
-    "Running Back Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1986",
-    "Running Back Coach"
-   ]
-  ],
-  "georgie daniels": [
-   [
-    "Los Angeles Rams",
-    "1984",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1985",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1986",
-    "Head Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1987",
-    "Head Coach"
-   ]
-  ],
-  "mary goux": [
-   [
-    "Los Angeles Rams",
-    "1986",
-    "Defensive Line"
-   ]
-  ],
-  "artie gigantino": [
-   [
-    "Los Angeles Rams",
-    "1987",
-    "Special Teams Coach"
-   ],
-   [
-    "Los Angeles Rams",
-    "1989",
-    "Special Teams Coach"
-   ]
-  ],
-  "jairo penaranda": [
-   [
-    "Los Angeles Rams",
-    "1990",
-    "Special Teams Coach"
-   ]
-  ],
-  "jeff fisher": [
-   [
-    "Los Angeles Rams",
-    "1991",
-    "Defensive Coordinator"
-   ]
-  ],
-  "ronnie jones": [
-   [
-    "Los Angeles Rams",
-    "1991",
-    "Linebacker Coach"
-   ]
-  ],
-  "john teerlinck": [
-   [
-    "Los Angeles Rams",
-    "1991",
-    "Defensive Line"
-   ]
-  ],
-  "jim colletto": [
-   [
-    "Baltimore Ravens",
-    "1999",
-    "Offensive Line"
-   ],
-   [
-    "Baltimore Ravens",
-    "2000",
-    "Offensive Line"
-   ]
-  ],
-  "jack del rio": [
-   [
-    "Baltimore Ravens",
-    "1999",
-    "Linebackers"
-   ],
-   [
-    "Baltimore Ravens",
-    "2000",
-    "Linebackers"
-   ]
-  ],
-  "jeff friday": [
-   [
-    "Baltimore Ravens",
-    "1999",
-    "Strength And Conditioning"
-   ],
-   [
-    "Baltimore Ravens",
-    "2000",
-    "Strength And Conditioning"
-   ]
-  ],
-  "wade harman": [
-   [
-    "Baltimore Ravens",
-    "1999",
-    "Tight Ends"
-   ],
-   [
-    "Baltimore Ravens",
-    "2000",
-    "Tight Ends"
-   ]
-  ],
-  "backs milt jackson": [
-   [
-    "Baltimore Ravens",
-    "1999",
-    "Wide Receivers"
-   ]
-  ],
-  "conditioning russ purnell": [
-   [
-    "Baltimore Ravens",
-    "1999",
-    "Special Teams"
-   ],
-   [
-    "Baltimore Ravens",
-    "2000",
-    "Special Teams"
-   ]
-  ],
-  "steve shafer": [
-   [
-    "Baltimore Ravens",
-    "1999",
-    "Defensive Backs"
-   ]
-  ],
-  "mike smith": [
-   [
-    "Baltimore Ravens",
-    "1999",
-    "Defensive Assistant"
-   ]
-  ],
-  "line donnie henderson": [
-   [
-    "Baltimore Ravens",
-    "2000",
-    "Secondary"
-   ]
-  ],
-  "milt jackson": [
-   [
-    "Baltimore Ravens",
-    "2000",
-    "Wide Receivers"
-   ]
-  ],
-  "ed hughes": [
-   [
-    "Washington Redskins",
-    "1965",
-    "Assistant Coach"
    ]
   ],
   "bill mcpeak": [
@@ -10077,516 +5832,449 @@
     "Assistant Coach"
    ]
   ],
-  "dickson tight ends": [
+  "steve spurrier": [
    [
     "Washington Redskins",
-    "1978",
-    "Special Teams"
-   ]
-  ],
-  "tight ends": [
-   [
-    "Washington Redskins",
-    "1978",
-    "Special Teams"
-   ]
-  ],
-  "o'connor tight ends": [
-   [
-    "Washington Redskins",
-    "1979",
-    "Special Teams"
-   ],
-   [
-    "Washington Redskins",
-    "1980",
-    "Special Teams"
-   ]
-  ],
-  "richie petitbon": [
-   [
-    "Washington Redskins",
-    "1981",
-    "Defensive Coordinator"
-   ],
-   [
-    "Washington Redskins",
-    "1982",
-    "Defensive Coordinator"
-   ]
-  ],
-  "joe bugel": [
-   [
-    "Washington Redskins",
-    "1981",
-    "Offensive Coordinator"
-   ],
-   [
-    "Washington Redskins",
-    "1982",
-    "Offensive Coordinator"
-   ]
-  ],
-  "warren simmons": [
-   [
-    "Washington Redskins",
-    "1981",
-    "Tight Ends"
-   ],
-   [
-    "Washington Redskins",
-    "1982",
-    "Tight Ends"
-   ],
-   [
-    "Washington Redskins",
-    "1983",
-    "Tight Ends"
-   ]
-  ],
-  "wayne sevier": [
-   [
-    "Washington Redskins",
-    "1981",
-    "Special Teams"
-   ],
-   [
-    "Washington Redskins",
-    "1982",
-    "Special Teams"
-   ],
-   [
-    "Washington Redskins",
-    "1983",
-    "Special Teams"
-   ]
-  ],
-  "jerry rhome": [
-   [
-    "Washington Redskins",
-    "1983",
-    "Quarterbacks Coach"
-   ]
-  ],
-  "va. larry peccatiello": [
-   [
-    "Washington Redskins",
-    "1984",
-    "Defensive Coordinator"
-   ]
-  ],
-  "marv matuszak": [
-   [
-    "New Orleans Saints",
-    "1971",
-    "Linebackers"
-   ],
-   [
-    "New Orleans Saints",
-    "1972",
-    "Linebackers"
-   ]
-  ],
-  "jim royer": [
-   [
-    "New Orleans Saints",
-    "1971",
-    "Offensive Line"
-   ],
-   [
-    "New Orleans Saints",
-    "1972",
-    "Offensive Line"
-   ]
-  ],
-  "la. ken shipp": [
-   [
-    "New Orleans Saints",
-    "1971",
-    "Offensive Coordinator"
-   ]
-  ],
-  "la. marv matuszak": [
-   [
-    "New Orleans Saints",
-    "1973",
-    "Linebackers"
-   ]
-  ],
-  "metairie. jim royer": [
-   [
-    "New Orleans Saints",
-    "1973",
-    "Offensive Line"
-   ]
-  ],
-  "presi bob cummings": [
-   [
-    "New Orleans Saints",
-    "1974",
-    "Defensive Line"
-   ]
-  ],
-  "bob cummings": [
-   [
-    "New Orleans Saints",
-    "1974",
-    "Defensive Line"
-   ]
-  ],
-  "lamar mchan": [
-   [
-    "New Orleans Saints",
-    "1974",
-    "Quarterback Coach"
-   ]
-  ],
-  "la. buck buchanan": [
-   [
-    "New Orleans Saints",
-    "1976",
-    "Defensive Line"
-   ]
-  ],
-  "la. whitey campbell": [
-   [
-    "New Orleans Saints",
-    "1976",
-    "Special Teams Coach"
-   ]
-  ],
-  "hank stram": [
-   [
-    "New Orleans Saints",
-    "1977",
+    "2002",
     "Head Coach"
    ]
   ],
-  "buck buchanan": [
+  "hue jackson": [
    [
-    "New Orleans Saints",
-    "1977",
-    "Defensive Line"
-   ]
-  ],
-  "ho king hill": [
-   [
-    "New Orleans Saints",
-    "1981",
-    "Offensive Coordinator"
-   ]
-  ],
-  "cody. wade phillips": [
-   [
-    "New Orleans Saints",
-    "1981",
-    "Defensive Coordinator"
-   ],
-   [
-    "New Orleans Saints",
-    "1983",
-    "Defensive Coordinator"
-   ],
-   [
-    "New Orleans Saints",
-    "1985",
-    "Defensive Coordinator"
-   ]
-  ],
-  "orleans. harold richardson": [
-   [
-    "New Orleans Saints",
-    "1981",
-    "Special Teams"
-   ]
-  ],
-  "destrehan. joe spencer": [
-   [
-    "New Orleans Saints",
-    "1981",
-    "Offensive Line"
-   ]
-  ],
-  "king hill": [
-   [
-    "New Orleans Saints",
-    "1982",
-    "Offensive Coordinator"
-   ],
-   [
-    "New Orleans Saints",
-    "1983",
-    "Offensive Coordinator"
-   ],
-   [
-    "New Orleans Saints",
-    "1985",
-    "Offensive Coordinator"
-   ]
-  ],
-  "wade phillips": [
-   [
-    "New Orleans Saints",
-    "1982",
-    "Defensive Coordinator"
-   ]
-  ],
-  "andy everest": [
-   [
-    "New Orleans Saints",
-    "1982",
-    "Tight Ends"
-   ],
-   [
-    "New Orleans Saints",
-    "1983",
-    "Tight Ends"
-   ],
-   [
-    "New Orleans Saints",
-    "1985",
-    "Tight Ends"
-   ]
-  ],
-  "cathy. lamar mchan": [
-   [
-    "New Orleans Saints",
-    "1982",
-    "Wide Receivers"
-   ]
-  ],
-  "destrehan. carl mauck": [
-   [
-    "New Orleans Saints",
-    "1985",
-    "Offensive Line"
-   ]
-  ],
-  "jefferson. harold richardson": [
-   [
-    "New Orleans Saints",
-    "1985",
-    "Wide Receivers"
-   ]
-  ],
-  "tyler. steve sidwell": [
-   [
-    "New Orleans Saints",
-    "1986",
-    "Defensive Coordinator"
-   ]
-  ],
-  "dom capers": [
-   [
-    "New Orleans Saints",
-    "1986",
-    "Defensive Backs"
-   ]
-  ],
-  "metairie. jim erkenbeck": [
-   [
-    "New Orleans Saints",
-    "1986",
-    "Offensive Line"
-   ]
-  ],
-  "jocelyne. vic fangio": [
-   [
-    "New Orleans Saints",
-    "1986",
-    "Linebackers"
-   ]
-  ],
-  "destrehan. joe marciano": [
-   [
-    "New Orleans Saints",
-    "1986",
-    "Tight Ends"
-   ]
-  ],
-  "or carl smith": [
-   [
-    "New Orleans Saints",
-    "1987",
-    "Offensive Coordinator"
-   ]
-  ],
-  "destrehan. dom capers": [
-   [
-    "New Orleans Saints",
-    "1987",
-    "Defensive Backs"
-   ]
-  ],
-  "joe marciano": [
-   [
-    "New Orleans Saints",
-    "1987",
-    "Tight Ends"
-   ]
-  ],
-  "special teams...": [
-   [
-    "New Orleans Saints",
-    "1991",
-    "Offensive Line"
-   ]
-  ],
-  "jack patera": [
-   [
-    "Seattle Seahawks",
-    "1977",
-    "Assistant Coach"
-   ]
-  ],
-  "arthur b. modell": [
-   [
-    "Seattle Seahawks",
-    "1982",
-    "Head Coach"
-   ]
-  ],
-  "paul e. brown": [
-   [
-    "Seattle Seahawks",
-    "1982",
-    "Head Coach"
-   ]
-  ],
-  "moore special teams": [
-   [
-    "Seattle Seahawks",
-    "1983",
-    "Tight Ends"
-   ]
-  ],
-  "stephenson special teams": [
-   [
-    "Seattle Seahawks",
-    "1985",
-    "Tight Ends"
-   ]
-  ],
-  "bot records": [
-   [
-    "Seattle Seahawks",
-    "1993",
-    "Head Coach"
-   ]
-  ],
-  "mudd special teams": [
-   [
-    "Seattle Seahawks",
-    "1993",
-    "Tight Ends"
-   ]
-  ],
-  "michigan. special teams": [
-   [
-    "Seattle Seahawks",
-    "1993",
-    "Tight Ends"
-   ]
-  ],
-  "mititwintinaceaiabeimees bog records": [
-   [
-    "Seattle Seahawks",
-    "1994",
-    "Head Coach"
-   ]
-  ],
-  "bud grant": [
-   [
-    "Minnesota Vikings",
-    "1981",
-    "Head Coach"
-   ],
-   [
-    "Minnesota Vikings",
-    "1982",
-    "Head Coach"
-   ],
-   [
-    "Minnesota Vikings",
-    "1985",
-    "Head Coach"
-   ]
-  ],
-  "tom cecchini": [
-   [
-    "Minnesota Vikings",
-    "1981",
-    "Defensive Line"
-   ],
-   [
-    "Minnesota Vikings",
-    "1982",
-    "Defensive Line"
-   ]
-  ],
-  "john michels": [
-   [
-    "Minnesota Vikings",
-    "1981",
-    "Offensive Line"
-   ],
-   [
-    "Minnesota Vikings",
-    "1982",
-    "Offensive Line"
-   ]
-  ],
-  "floyd reese": [
-   [
-    "Minnesota Vikings",
-    "1981",
-    "Linebackers"
-   ],
-   [
-    "Minnesota Vikings",
-    "1982",
-    "Linebackers"
-   ]
-  ],
-  "minn. john michels": [
-   [
-    "Minnesota Vikings",
-    "1985",
-    "Offensive Line"
-   ],
-   [
-    "Minnesota Vikings",
-    "1991",
-    "Offensive Line"
-   ]
-  ],
-  "minn. marc trestman": [
-   [
-    "Minnesota Vikings",
-    "1985",
+    "Washington Redskins",
+    "2002",
     "Running Backs"
    ]
   ],
-  "minn. floyd reese": [
+  "lawson holland": [
    [
-    "Minnesota Vikings",
-    "1985",
-    "Linebackers"
+    "Washington Redskins",
+    "2002",
+    "Tight Ends"
+   ]
+  ],
+  "chip morton": [
+   [
+    "Washington Redskins",
+    "2002",
+    "Strength And Conditioning"
+   ]
+  ],
+  "ricky hunley": [
+   [
+    "Washington Redskins",
+    "2002",
+    "Defensive Line"
+   ]
+  ],
+  "mike stock": [
+   [
+    "Washington Redskins",
+    "2002",
+    "Special Teams"
+   ]
+  ],
+  "joe gibbs": [
+   [
+    "Washington Redskins",
+    "2004",
+    "Head Coach"
+   ],
+   [
+    "Washington Redskins",
+    "2005",
+    "Head Coach"
+   ],
+   [
+    "Washington Redskins",
+    "2007",
+    "Head Coach"
+   ]
+  ],
+  "don breaux": [
+   [
+    "Washington Redskins",
+    "2005",
+    "Offensive Coordinator"
+   ],
+   [
+    "Washington Redskins",
+    "2007",
+    "Offensive Coordinator"
+   ]
+  ],
+  "earnest byner": [
+   [
+    "Washington Redskins",
+    "2005",
+    "Running Backs"
+   ],
+   [
+    "Washington Redskins",
+    "2007",
+    "Running Backs"
+   ]
+  ],
+  "bill musgrave": [
+   [
+    "Washington Redskins",
+    "2005",
+    "Quarterbacks"
+   ]
+  ],
+  "rennie simmons": [
+   [
+    "Washington Redskins",
+    "2005",
+    "Tight Ends"
+   ]
+  ],
+  "stan hixon": [
+   [
+    "Washington Redskins",
+    "2005",
+    "Wide Receivers"
+   ]
+  ],
+  "jack burns": [
+   [
+    "Washington Redskins",
+    "2005",
+    "Offensive Assistant"
+   ],
+   [
+    "Washington Redskins",
+    "2007",
+    "Offensive Assistant"
+   ]
+  ],
+  "bill lazor": [
+   [
+    "Washington Redskins",
+    "2005",
+    "Offensive Assistant"
+   ]
+  ],
+  "kirk olivadotti": [
+   [
+    "Washington Redskins",
+    "2005",
+    "Defensive Assistant"
+   ]
+  ],
+  "danny smith": [
+   [
+    "Pittsburgh Steelers",
+    "2013",
+    "Special Teams"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Special Teams"
+   ],
+   [
+    "Washington Redskins",
+    "2005",
+    "Special Teams"
+   ]
+  ],
+  "john hastings": [
+   [
+    "Washington Redskins",
+    "2005",
+    "Strength And Conditioning"
+   ]
+  ],
+  "bobby crumpler": [
+   [
+    "Washington Redskins",
+    "2005",
+    "Strength And Conditioning"
+   ],
+   [
+    "Washington Redskins",
+    "2007",
+    "Strength & Conditioning"
+   ]
+  ],
+  "harrison bernstein": [
+   [
+    "Washington Redskins",
+    "2007",
+    "Strength & Conditioning"
+   ]
+  ],
+  "jerry gray": [
+   [
+    "Washington Redskins",
+    "2007",
+    "Secondary"
+   ]
+  ],
+  "mike tomlin": [
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Head Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Head Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Head Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Head Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2013",
+    "Head Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Head Coach"
+   ]
+  ],
+  "dick lebeau": [
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Defensive Coordinator"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Defensive Coordinator"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Defensive Coordinator"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Defensive Coordinator"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2013",
+    "Defensive Coordinator"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Defensive Coordinator"
+   ]
+  ],
+  "ken anderson": [
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Quarterbacks Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Quarterbacks Coach"
+   ]
+  ],
+  "james daniel": [
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Tight Ends"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Tight Ends"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Tight Ends"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Tight Ends"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2013",
+    "Tight Ends"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Tight Ends"
+   ]
+  ],
+  "randy fichtner": [
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Wide Receivers"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Wide Receivers"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Quarterbacks Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Quarterbacks Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2013",
+    "Quarterbacks Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Quarterbacks Coach"
+   ]
+  ],
+  "bob ligashesky": [
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Special Teams"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Special Teams"
+   ]
+  ],
+  "lou spanos": [
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Defensive Assistant"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Defensive Assistant"
+   ]
+  ],
+  "ray horton": [
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Defensive Backs"
+   ]
+  ],
+  "jerry olsavsky": [
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Defensive Assistant"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Defensive Assistant"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2013",
+    "Defensive Assistant"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Defensive Assistant"
+   ]
+  ],
+  "carnell lake": [
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Defensive Backs"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2013",
+    "Defensive Backs"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Defensive Backs"
+   ]
+  ],
+  "sean kugler": [
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Offensive Line"
+   ]
+  ],
+  "shaun sarrett": [
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Offensive Assistant"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2013",
+    "Offensive Assistant"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Offensive Assistant"
+   ]
+  ],
+  "richard mann": [
+   [
+    "Pittsburgh Steelers",
+    "2013",
+    "Wide Receivers"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Wide Receivers"
+   ]
+  ],
+  "james saxon": [
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Running Backs Coach"
+   ]
+  ],
+  "joey porter": [
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Defensive Assistant"
    ]
   ],
   "jerry burns": [
    [
     "Minnesota Vikings",
-    "1986",
-    "Head Coach"
-   ],
-   [
-    "Minnesota Vikings",
-    "1987",
-    "Head Coach"
-   ],
-   [
-    "Minnesota Vikings",
     "1989",
     "Head Coach"
    ],
@@ -10596,48 +6284,21 @@
     "Head Coach"
    ]
   ],
-  "minn. bob schnelker": [
+  "floyd peters": [
    [
     "Minnesota Vikings",
-    "1986",
-    "Offensive Coordinator"
-   ],
-   [
-    "Minnesota Vikings",
-    "1987",
-    "Offensive Coordinator"
-   ],
+    "1989",
+    "Defensive Coordinator"
+   ]
+  ],
+  "bob schnelker": [
    [
     "Minnesota Vikings",
     "1989",
     "Offensive Coordinator"
    ]
   ],
-  "minn. pete carroll": [
-   [
-    "Minnesota Vikings",
-    "1986",
-    "Defensive Backs"
-   ],
-   [
-    "Minnesota Vikings",
-    "1987",
-    "Defensive Backs"
-   ],
-   [
-    "Minnesota Vikings",
-    "1989",
-    "Defensive Backs"
-   ]
-  ],
-  "minn. rollie dotsch": [
-   [
-    "Minnesota Vikings",
-    "1987",
-    "Running Backs"
-   ]
-  ],
-  "minn. jerry brown": [
+  "jerry brown": [
    [
     "Minnesota Vikings",
     "1989",
@@ -10649,95 +6310,31 @@
     "Defensive Backs"
    ]
   ],
-  "minn. maxie baughan": [
+  "maxie baughan": [
    [
     "Minnesota Vikings",
     "1991",
     "Linebackers"
    ]
   ],
-  "john brunner": [
+  "john michels": [
    [
     "Minnesota Vikings",
     "1991",
-    "Running Backs"
-   ]
-  ],
-  "minn. monte kiffin": [
-   [
-    "Minnesota Vikings",
-    "1991",
-    "Defensive Coordinator"
-   ]
-  ],
-  "jack white": [
-   [
-    "New York Yanks",
-    "1950",
-    "Assistant Coach"
-   ]
-  ],
-  "shelby c. calhoun": [
-   [
-    "New York Yanks",
-    "1950",
-    "Assistant Coach"
-   ],
-   [
-    "New York Yanks",
-    "1951",
-    "Line Coach"
-   ]
-  ],
-  "jimmy phelan": [
-   [
-    "New York Yanks",
-    "1951",
-    "Head Coach"
-   ]
-  ],
-  "joe sheeketski": [
-   [
-    "New York Yanks",
-    "1951",
-    "Backfield Coach"
-   ]
-  ],
-  "la. nick susoeff": [
-   [
-    "New York Yanks",
-    "1951",
-    "End Coach"
+    "Offensive Line"
    ]
   ]
  },
- "refused": [
-  {
-   "name": "hank bullough",
-   "clash": {
-    "1993": [
-     "Detroit Lions",
-     "Indianapolis Colts"
-    ]
-   }
-  },
-  {
-   "name": "jack reilly",
-   "clash": {
-    "2001": [
-     "Dallas Cowboys",
-     "New England Patriots"
-    ]
-   }
-  }
- ],
+ "refused": [],
  "rejected": {
-  "no staff section - guide skipped": 127,
-  "job word, not a name": 608,
+  "block unverifiable: no head coach named": 5154,
+  "no staff section - guide skipped": 209,
+  "job word, not a name": 512,
+  "block REJECTED: head coach does not match StatsCrew": 198,
   "too short": 2,
-  "club name": 242,
-  "phrase": 37,
-  "league-wide book: asserts no club": 15
+  "club name": 144,
+  "phrase": 2,
+  "league-wide book: asserts no club": 40
  },
- "guides_read": 1040
+ "guides_read": 1756
 }

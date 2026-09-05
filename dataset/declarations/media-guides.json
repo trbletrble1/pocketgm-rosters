@@ -128,6 +128,49 @@
   "fields": "a human inventory; field_availability is the enforced one",
   "scores": "provenance scoring notes, not yet an implemented policy",
   "retrieval": "how the files were obtained, including the archive.org 302 trap",
-  "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ - see src/gate_declarations_are_read.py. This list living in the declaration rather than in the gate means widening it shows up in a diff."
+  "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ - see src/gate_declarations_are_read.py. This list living in the declaration rather than in the gate means widening it shows up in a diff.",
+  "corpus": "a measurement record",
+  "coach_birth_date_rate": "a measurement record",
+  "extraction": "method and its measured precision"
+ },
+ "corpus": {
+  "_measured": "2026-09-04",
+  "texts_held": 1796,
+  "no_djvu_text": 302,
+  "failed": 7,
+  "zero_byte": 0,
+  "size": "1.8GB",
+  "decades": "1930s-2020s",
+  "_supersedes": "local.cached, which recorded 28 texts, all 1979"
+ },
+ "coach_birth_date_rate": {
+  "_measured": "2026-09-04 across all 1,796 texts",
+  "overall": 0.034,
+  "by_decade": {
+   "1930s": 0.0,
+   "1940s": 0.006,
+   "1950s": 0.028,
+   "1960s": 0.024,
+   "1970s": 0.044,
+   "1980s": 0.091,
+   "1990s": 0.049,
+   "2000s": 0.037,
+   "2010s": 0.022,
+   "2020s": 0.019
+  },
+  "_shape": "NOT monotonic. It PEAKS at 9.1% in the 1980s and falls to 1.9% in the 2020s. An earlier partial corpus (513 files, nothing after the 1980s) showed a rising trend; that was an artefact of where the download had reached, not a property of the guides.",
+  "_consequence": "never above 9.1% in any decade and 0% before 1940, so birth date cannot discriminate assistant coaches. Design 2.4's stint continuity stands, now on 1,796 files rather than 28."
+ },
+ "extraction": {
+  "_the_problem": "a name beside a title in a guide is not that club's staff for that season. Guides carry historical staff lists, opponent mentions, and directory pages, and OCR'd multi-column text bleeds the previous line into the name.",
+  "_validated_against": "StatsCrew's 2,363 known head-coach stints - the ONE dimension of a guide staff list that can be independently checked. Assistants cannot be checked against anything, which is why the guides are read at all.",
+  "precision_measured": {
+   "unanchored": 0.36,
+   "name_boundary_anchored": 0.65,
+   "head_coach_block_certification": 0.93
+  },
+  "BLOCK_CERTIFICATION": "if a staff list names the head coach StatsCrew records for that season, the list is that season's real staff and its assistants stand with it. If it names a different man, the block is a retrospective or a directory and EVERY name in it is dropped. 198 names dropped this way; 5,154 more dropped as unverifiable because their block named no head coach at all.",
+  "_the_trade": "recall 1,003 names -> 447, stints 3,600 -> 1,086. Correct for a claims store: an unverifiable stint has no discriminator that could clean it later.",
+  "residual_error": "~7% on the checkable dimension. Recorded here rather than implied, and the remaining failures are name bleeds ('ry jim mora', 'by tom landry')."
  }
 }

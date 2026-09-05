@@ -24,10 +24,34 @@
   "age_only": 330
  },
  "1980s": {
-  "titles": 2464,
-  "born": 101,
-  "age_only": 96,
-  "rejected_player_bio": 17
+  "titles": 20877,
+  "born": 1903,
+  "age_only": 531,
+  "rejected_player_bio": 247
+ },
+ "1990s": {
+  "titles": 38769,
+  "age_only": 870,
+  "rejected_player_bio": 233,
+  "born": 1911
+ },
+ "2000s": {
+  "titles": 65803,
+  "born": 2415,
+  "age_only": 927,
+  "rejected_player_bio": 212
+ },
+ "2010s": {
+  "titles": 91230,
+  "born": 2035,
+  "age_only": 796,
+  "rejected_player_bio": 133
+ },
+ "2020s": {
+  "titles": 65950,
+  "age_only": 504,
+  "born": 1241,
+  "rejected_player_bio": 104
  },
  "1930s": {
   "titles": 14

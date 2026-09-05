@@ -43,10 +43,17 @@ SECTION = 6000
 # so the name half matched at nearly every position - catastrophic backtracking,
 # and it silently discarded the "a name is capitalised" constraint that is doing
 # the work. The flag belongs on the TITLE only, where the era varies the casing.
-PAT = re.compile(r"([A-Z][A-Za-z'\.\-]+(?:\s+[A-Z][A-Za-z'\.\-]+){1,2})"
-                 r"\s*[,\-—:]{1,2}\s*((?i:" + TITLES + r"))")
+# The name must START at a boundary. Without one the regex simply takes the two
+# or three capitalised words before the title, and in OCR'd multi-column text
+# those are often the end of the previous line: "biographies Monte Clark",
+# "coaches Don Coryell", "balas Tom Landry". Measured against StatsCrew's known
+# head coaches, the unanchored version was 36% precise.
+PAT = re.compile(r"(?:^|[;.\n\|]|\s{2,})\s*"
+                 r"([A-Z][A-Za-z'\.\-]+(?:\s+[A-Z][A-Za-z'\.\-]+){1,2})"
+                 r"\s*[,\-—:]{1,2}\s*((?i:" + TITLES + r"))", re.M)
 # A word that is a job, not a name. These sit where a name sits in a header.
 NOT_A_NAME = re.compile(r"\b(coach|staff|coaching|football|club|team|"
+                        r"phone|city|biographies|biography|vice|jr|sr|inc|"
                         r"director|manager|trainer|scout|president|owner|coordinator|quarterbacks|linebackers|secondary|receivers|assistant)\b", re.I)
 
 
@@ -64,8 +71,50 @@ def club_stoplist(rows):
     return clubs
 
 
+def statscrew_head_coaches():
+    """year -> {head coach names}, from the StatsCrew coach store.
+
+    This is the ONE dimension of a guide's staff list we can independently
+    verify. Assistants cannot be checked against anything - that is why the
+    guides are being read at all - so the head coach is used to CERTIFY the
+    block: if a staff list names the head coach StatsCrew records for that
+    season, the list is that season's real staff and its assistants stand with
+    it. If it does not, the block is a historical retrospective or a staff
+    directory, and every name in it is dropped.
+    """
+    import collections as _c
+    p = os.path.join(BASE, "build", "coaches-nfl.json")
+    if not os.path.exists(p): return {}
+    d = json.load(open(p))
+    nm = {c["subject"][1]: str(c["value"]).lower()
+          for c in d["claims"] if c.get("predicate") == "name"}
+    out = _c.defaultdict(set)
+    for c in d["claims"]:
+        if c.get("predicate") == "is_head_coach":
+            n = nm.get(c["subject"][1])
+            if n:
+                out[str(c.get("observed_at"))].add(n)
+                w = [x for x in re.sub(r"[^a-z ]", "", n).split() if len(x) > 1]
+                if len(w) >= 2: out[str(c.get("observed_at"))].add(w[0][0] + "|" + w[-1])
+    return out
+
+
+def certified(found, year, sc):
+    """Did this block name the season's actual head coach?"""
+    hc = [n for n, t in found if t.lower() == "head coach"]
+    if not hc: return None                     # no head coach in the block
+    known = sc.get(str(year))
+    if not known: return None                  # nothing to check against
+    for n in hc:
+        if n in known: return True
+        w = [x for x in re.sub(r"[^a-z ]", "", n).split() if len(x) > 1]
+        if len(w) >= 2 and w[0][0] + "|" + w[-1] in known: return True
+    return False
+
+
 def main():
     write = "--write" in sys.argv
+    SC = statscrew_head_coaches()
     rows = list(csv.DictReader(open(os.path.join(ROOT, "index.csv"))))
     byid = {r["identifier"]: r for r in rows}
     stop = club_stoplist(rows)
@@ -95,6 +144,7 @@ def main():
         else:
             rej["no staff section - guide skipped"] += 1
             continue
+        found = []
         for m in PAT.finditer(t):
             nm = " ".join(m.group(1).split())
             low = nm.lower()
@@ -103,7 +153,16 @@ def main():
             if len(nm) < 6:            rej["too short"] += 1; continue
             if nm.isupper() and len(nm.split()) < 2: rej["header"] += 1; continue
             if low in ("most seasons", "high school", "head coach"): rej["phrase"] += 1; continue
-            stints[low].add((club, year, m.group(2).title()))
+            found.append((low, m.group(2).title()))
+        cert = certified(found, year, SC)
+        if cert is False:
+            rej["block REJECTED: head coach does not match StatsCrew"] += len(found)
+            continue
+        if cert is None:
+            rej["block unverifiable: no head coach named"] += len(found)
+            continue
+        for low, title in found:
+            stints[low].add((club, year, title))
 
     print(f"guides read {files}")
     print(f"distinct assistant/head-coach names {len(stints)}")

@@ -9,7 +9,8 @@
  "url_patterns": {
   "league_year": "https://www.statscrew.com/football/l-{league}/y-{year}",
   "team_roster": "https://www.statscrew.com/football/roster/t-{team}/y-{year}",
-  "person": "https://www.statscrew.com/football/stats/{slug}"
+  "person": "https://www.statscrew.com/football/stats/{slug}",
+  "team_stats": "https://www.statscrew.com/football/stats/t-{team}/y-{year}"
  },
  "person_id_scheme": {
   "pattern": "{prefix}-{surname[:5]}{forename[:3]}{NNN}",
