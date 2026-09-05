@@ -1414,10 +1414,10 @@
   "fields": "a human inventory; field_availability is the enforced one",
   "scores": "provenance scoring notes, not yet an implemented policy",
   "known_conflicts": "worked examples of conflicts already seen",
-  "person_id_scheme": "how the source builds its ids, with the traps; the ingest follows cross-reference links rather than parsing ids",
   "cfl": "narrative of the CFL sweep; its enforceable parts moved to league_codes and season_not_played",
   "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ - see src/gate_declarations_are_read.py. This list living in the declaration rather than in the gate means widening it shows up in a diff.",
   "league_codes.team_codes_are_globally_unique": "the measurement that makes R_{TEAM}_{YEAR} cache keys safe; the safety is in the key format, not a lookup",
-  "league_codes.leagues_the_brief_named_that_this_source_CANNOT_supply": "a negative result - leagues to seek elsewhere"
+  "league_codes.leagues_the_brief_named_that_this_source_CANNOT_supply": "a negative result - leagues to seek elsewhere",
+  "_correction_2026_09_04": "person_id_scheme was listed here as documentation. It was not: pattern {prefix}-{surname[:5]}{forename[:3]}{NNN} is a CONSTRAINT, and 36 stored slugs violated it, merging 46 men. It is now enforced by src/gate_slug_pattern.py. Marking a constraint 'documentation' is how a declaration stops being load-bearing without anyone editing it."
  }
 }

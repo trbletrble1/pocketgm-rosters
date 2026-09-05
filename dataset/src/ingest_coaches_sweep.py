@@ -14,7 +14,7 @@ import fetch_statscrew as F
 
 BASE = os.path.join(HERE, "..")
 CACHE = os.environ.get("SC_CACHE", os.path.expanduser("~/Documents/pgm3-sources/statscrew/sweep"))
-COACH = re.compile(r'Coach:\s*(?:<[^>]+>\s*)*<a[^>]*href="[^"]*/football/stats/(c-[a-z0-9]+)"[^>]*>([^<]+)</a>')
+COACH = re.compile(r'Coach:\s*(?:<[^>]+>\s*)*<a[^>]*href="[^"]*/football/stats/(c-[a-z0-9\-]+)"[^>]*>([^<]+)</a>')
 LOG = []
 def log(m): print(m, flush=True); LOG.append(m)
 
@@ -28,6 +28,13 @@ def main():
         team, year = m.group(1), int(m.group(2))
         for slug, name in COACH.findall(open(f, encoding="utf-8", errors="replace").read()):
             club_seasons[(team, year)].append((slug, name.strip()))
+
+    # slug -> the name the source printed. Previously this was read, used for
+    # logging, and DISCARDED: the coach store held no name at all, in any field.
+    slug_name = {}
+    for lst in club_seasons.values():
+        for slug, name in lst:
+            if name: slug_name.setdefault(slug, name)
 
     multi = {k: v for k, v in club_seasons.items() if len(v) > 1}
     log(f"club-seasons with a head coach: {len(club_seasons)}")
@@ -55,6 +62,9 @@ def main():
                           ("death_date", "deceased"), ("high_school", "high_school")):
             v = info.get(key)
             if v: store.add_claim(sr, ("person", p), pred, v, "fetch-2026")
+        if slug_name.get(slug):
+            store.add_claim(sr, ("person", p), "name", slug_name[slug],
+                            "fetch-2026", kind="observed", stated_by="StatsCrew")
         px = [x for x in info["xref"] if x.startswith("p-")]
         if px:
             xref += 1

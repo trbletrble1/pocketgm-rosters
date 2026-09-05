@@ -82,7 +82,11 @@ def parse_roster(page):
             continue
         cells = [_strip(c) for c in tds]
         rec = dict(zip(hdr, cells))
-        m = re.search(r"/football/stats/(p-[a-z0-9]+)", tr)
+        # The slug BODY can contain a hyphen: "Jean-Baptiste" truncates to
+        # "jean-", giving p-jean-jav001. [a-z0-9]+ stopped at that hyphen and
+        # collapsed NINE different Jean-* players onto the slug "p-jean".
+        # The declared pattern ends in {NNN}; anything without it is truncated.
+        m = re.search(r"/football/stats/(p-[a-z0-9\-]+)", tr)
         if m and rec.get("Player"):
             slugs[rec["Player"]] = m.group(1)
         rows.append(rec)

@@ -135,6 +135,15 @@ def run(store, log):
             store.declare_subject(("person_season", p, SEASON))
             stints.append((p, team, slug, nm))
 
+            # THE NAME IS A CLAIM. It was previously recoverable only by parsing
+            # it back out of the source_record identifier - reading a key as
+            # data - and for coaches it was discarded entirely. A person is an
+            # opaque id with no attributes; the name is something a source says
+            # about him, at a season, like any other observation.
+            if nm:
+                store.add_claim(sr, subj_person, "name", nm, YEAR,
+                                kind="observed", stated_by="StatsCrew")
+
             for col, pred in PERSON_PREDS.items():
                 if col not in cols_present:
                     continue

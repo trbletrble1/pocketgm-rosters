@@ -24,7 +24,7 @@ import os, sys, json, glob, re, collections
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = os.path.join(HERE, "..")
-SLUG = re.compile(r"(statscrew:)?([pc]-[a-z0-9]+)")
+SLUG = re.compile(r"(statscrew:)?([pc]-[a-z0-9\-]+)")
 
 
 class DSU:
@@ -83,8 +83,8 @@ def main():
         for c_ in d.get("claims") or []:
             if not isinstance(c_, dict) or c_.get("predicate") != "also_played":
                 continue
-            pm = re.search(r"\b(p-[a-z0-9]+)", str(c_.get("value", "")))
-            cm = re.search(r"\b(c-[a-z0-9]+)", str(c_.get("source_record", "")))
+            pm = re.search(r"\b(p-[a-z0-9\-]+)", str(c_.get("value", "")))
+            cm = re.search(r"\b(c-[a-z0-9\-]+)", str(c_.get("source_record", "")))
             if pm and cm:
                 dsu.union(("slug", pm.group(1)), ("slug", cm.group(1))); xref += 1
 

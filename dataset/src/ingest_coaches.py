@@ -111,7 +111,7 @@ def ingest_statscrew_1950_coaches(store, index):
     found = 0
     for team in F.teams_in("NFL", 1950):
         page = F.team_roster(team, 1950)
-        m = re.search(r"Coach:\s*(?:<[^>]+>\s*)*<a[^>]*href=\"[^\"]*/football/stats/(c-[a-z0-9]+)\"[^>]*>([^<]+)</a>", page)
+        m = re.search(r"Coach:\s*(?:<[^>]+>\s*)*<a[^>]*href=\"[^\"]*/football/stats/(c-[a-z0-9\-]+)\"[^>]*>([^<]+)</a>", page)
         if not m:
             m2 = re.search(r"Coach:\s*(?:<[^>]+>\s*)*([A-Z][A-Za-z.' -]{3,30})", page)
             log(f"  {team}: coach named but no c- link" if m2 else f"  {team}: no coach line")
