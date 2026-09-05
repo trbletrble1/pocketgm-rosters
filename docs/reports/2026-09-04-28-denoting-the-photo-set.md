@@ -97,3 +97,59 @@ store-local collision that made `p_000190` mean three different men.
 
 **Next: assistants (4 of 4)**, which depends on the pull finishing, and the coach
 birth-date re-measurement across decades that goes with it.
+
+---
+
+## Addendum — the refusal, measured
+
+Ryan sharpened the reasoning: a middle initial is not detail being discarded, it
+is **evidence that ambiguity exists in the photo set's own universe.** Somebody
+filed `michael m_lewis` rather than `michael_lewis` because there was another
+Michael Lewis. Stripping it discards the **warning**, not the detail.
+
+That is testable, so it was tested.
+
+> **657 photos carry a middle initial. For 488 of them, the bare form is ALSO a
+> photo in the set.**
+>
+> `reggie e white` **and** `reggie white`. `jim w kelly` **and** `jim kelly`.
+> `bob b smith` **and** `bob smith`.
+
+The set distinguishes these men itself. The hypothesis is now measured rather
+than plausible.
+
+Splitting all 657 by what stripping the initial would do:
+
+| | n | |
+|---|---|---|
+| bare name is ambiguous in our corpus | **613** | refused anyway |
+| unique here, **but a rival photo exists** | **18** | **would steal its face** |
+| unique, no rival photo | 13 | |
+| bare name matches nobody | 13 | |
+
+**The 18 are the concrete form of the argument.** Our corpus holds one Paul Johns.
+The source holds two photos — `paul c johns` and `paul johns`. Stripping the
+initial attaches **both to the same man**, so one of them is another man's face,
+rendered with no error anywhere. `tim a watson`, `john r gilliam`, `ray r hayes`,
+`derek g smith`, `al a jackson` are the same shape.
+
+**And 613 of 657 is the independent confirmation:** initials in this set mark
+almost exactly the names that need distinguishing.
+
+### Correction to this report
+
+Above I said normalisation would gain 597 and called the misses "systematic:
+middle initials, two-part forenames, punctuation." **The 597 came from punctuation
+and Jr/Sr only** — the normaliser never stripped a middle initial, so that group
+was never in the 597. Measured on its own, stripping initials gains at most 13
+safe matches against 18 that take another man's face.
+
+The decision is unchanged and better founded. The description of what produced
+the number was wrong.
+
+### The limit, now carried in the declaration
+
+Uniqueness is verified against **our** universe, not the world. If a photo is of a
+man we do not hold, and a same-named man we do hold is unique here, **the photo
+attaches to the wrong person and nothing fires**. The 20,779 figure carries that
+assumption and is declared never to be quoted without it.

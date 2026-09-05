@@ -17,7 +17,8 @@
    "name",
    "verified_unique_in_person_universe"
   ],
-  "tier": "3 - weaker than a source-native id and weaker than name+birth_date. It rests on the corpus being complete enough for uniqueness to mean something, which it is not for men who never appear in it."
+  "tier": "3 - weaker than a source-native id and weaker than name+birth_date. It rests on the corpus being complete enough for uniqueness to mean something, which it is not for men who never appear in it.",
+  "THE_LIMIT_TO_CARRY_EVERYWHERE_COVERAGE_IS_QUOTED": "Uniqueness is verified against OUR universe, not the world. If a photo is of a man we do not hold, and a same-named man we DO hold is unique here, the photo attaches to the wrong person and NOTHING FIRES. The 20,779 figure carries this assumption and must never be quoted without it."
  },
  "hard_rules": [
   "A photo whose name denotes MORE THAN ONE person is REFUSED. It is not attached to the likeliest man.",
@@ -32,11 +33,33 @@
   "refused_matches_nobody": 4096
  },
  "normalisation_DECLINED": {
-  "what_it_would_gain": 597,
-  "share_of_the_set": "2.3%",
-  "what_it_would_cost": "each of those 597 rests on discarding a middle initial - 'Michael M Lewis' becoming 'Michael Lewis'. That is not obviously the same man, and the failure is silent: a face rendered on the wrong person's page with no error anywhere.",
-  "also": "207 more would normalise onto an ambiguous name and be refused regardless; 3,292 would still match nobody",
-  "status": "AVAILABLE, NOT TAKEN. Needs a ruling. A gap is recoverable; a wrong face at scale is not."
+  "status": "AVAILABLE, NOT TAKEN. Ruled 2026-09-04: decline.",
+  "_the_reason_is_stronger_than_information_loss": "A middle initial is not merely detail being discarded. It is EVIDENCE THAT AMBIGUITY EXISTS IN THE PHOTO SET'S OWN UNIVERSE. Somebody filed 'michael m_lewis' rather than 'michael_lewis' because there was another Michael Lewis to distinguish him from. Stripping it discards the WARNING, not just the detail.",
+  "MEASURED_2026_09_04": {
+   "photos_carrying_a_middle_initial": 657,
+   "the_bare_form_ALSO_exists_as_a_photo": 488,
+   "_what_that_proves": "the set distinguishes these men ITSELF. 'reggie e white' and 'reggie white' are both present, as are 'jim w kelly' and 'jim kelly'. The initial is a disambiguator, demonstrated rather than assumed.",
+   "of_the_657_if_the_initial_were_stripped": {
+    "bare_name_is_ambiguous_in_our_corpus_refused_anyway": 613,
+    "unique_in_our_corpus_BUT_a_rival_photo_exists": 18,
+    "unique_with_no_rival_photo": 13,
+    "bare_name_matches_nobody": 13
+   },
+   "THE_18": {
+    "what_happens": "both photos attach to the SAME person, so one of them is another man's face, rendered with no error anywhere",
+    "examples": [
+     "paul c johns vs paul johns",
+     "tim a watson vs tim watson",
+     "john r gilliam vs john gilliam",
+     "ray r hayes vs ray hayes",
+     "derek g smith vs derek smith",
+     "al a jackson vs al jackson"
+    ],
+    "note": "our corpus holds ONE Paul Johns. The source holds TWO photos. The source knows something our person universe does not."
+   },
+   "and_613_of_657": "the bare name is ambiguous - independent confirmation that initials in this set mark exactly the names that need distinguishing"
+  },
+  "CORRECTION": "report 28 said normalisation would gain 597 and described the misses as 'systematic: middle initials, two-part forenames, punctuation'. The 597 came from punctuation and Jr/Sr only - the normaliser never stripped a middle initial, so that group was never in the 597. Measured separately, stripping initials would gain at most 13 safe matches and 18 dangerous ones."
  },
  "field_availability": {
   "skin_frac": {
