@@ -137,6 +137,30 @@
     "_why_it_matters": "nothing else in the collection has this shape. Five other figures relayed alongside it are ordinary salaries; this one is a different instrument and would have been silently mis-filed as salary_base."
    },
    "added_2026_09_05": "the first convention added from an instrument rather than from a newspaper's or a court's description of one"
+  },
+  "unpaid_wages_settlement": {
+   "definition": "A sum a club FAILED to pay, scheduled for later repayment. It is the record of money NOT received, not of money received.",
+   "_the_inversion": "filing it as salary records the exact opposite of what happened. Sam Silas's $15,749.95 is what the Portland Storm did not pay him.",
+   "instrument": "ADDENDUM TO 1974 PLAYER'S CONTRACT - between the player, 'A Club in the 1975 World Football League', and the WFL itself as a non-profit corporation",
+   "quotes": {
+    "novation": "such 1974 WFL Club is not a necessary party since it failed to fulfil its basic contractual obligation to pay player for services rendered. Player is no longer bound to such 1974 Club... hereby extinguish the 1974 Standard WFL Player's Contract with this unconditional addendum.",
+    "payment": "Club will pay to Player a total sum of $15,749.95 in the following installments: (which is undisputedly owed to Player)"
+   },
+   "mechanism": {
+    "first": "not more than 15% on completion of the WFL Reorganization, no later than 30 April 1975",
+    "balance": "semi-annual installments on 1 March and 1 September from September 1975, at SIX PER CENT simple annual interest on unpaid principal",
+    "funded_from": "the WFL Contingency Fund - the club deposits 1% of net ticket receipts, 1% of net income from WFL properties, 1/10% of net revenues per $20,000 assigned, and 5% of net national television revenues from 1976",
+    "_consequence": "the player's recovery depends on the LEAGUE's revenues, not his club's promise. Whether he was ever paid is unknown and not in the document."
+   },
+   "predicates": [
+    "unpaid_wages_owed",
+    "settlement_interest_rate"
+   ],
+   "hard_rules": [
+    "An unpaid_wages_owed figure is NOT salary and must never be pooled with one. It is a debt, and the amount actually recovered is UNKNOWN.",
+    "The 1974 WFL contract it extinguishes is a DIFFERENT instrument. This addendum does not state what he was contracted to earn, only what he was owed and unpaid."
+   ],
+   "added_2026_09_05": "read from the Sam Silas addendum; Wallace Williams carries the identical header, so the Portland Storm batch is settlements, not contracts"
   }
  },
  "hard_rules": [
@@ -329,6 +353,26 @@
     "Sugar 1961"
    ],
    "not_yet_a_claim": "it wants its own predicate and a check of how far the clause persists across eras before anything is written."
+  },
+  "PAYMENT_SCHEDULE_PERSISTENCE": {
+   "_question": "Ryan asked how far the 75/25 clause persists. Answered from six held contracts spanning 1938-1969.",
+   "1938": "NOT PRESENT - and not an NFL contract. Per-game, different league, different form entirely.",
+   "1951": "75% in weekly installments / 25% at the last regularly scheduled game (Groza, printed on the form)",
+   "1954": "identical (Atkins)",
+   "1961": "identical (Sugar)",
+   "1969": "CHANGED. The percentages are BLANK on the form ('...% of said amount'), installments are SEMI-MONTHLY, and compensation is subject to Paragraph 7 and changeable under Paragraph 10 (Cogdill).",
+   "_conclusion": "a fixed, printed 75/25 weekly schedule spans at least 1951-1961 and is GONE by 1969. That is a league-scoped system fact with a measured start and end, not a per-player one - but the ends are bounded by what we hold, not by what happened. Two more contracts either side would tighten it."
+  },
+  "LEAGUE_NAME_COLLISION": {
+   "trap": "the 1938 Franco contract says 'The American Professional Football Association'. That is a 1930s MINOR league. StatsCrew's APFA code means the 1920-21 league that became the NFL.",
+   "danger": "same shape as AFL3 resolving to the Arena Football League: a name that reads as a league we already hold, describing a different one.",
+   "rule": "a league named in a contract is the CONTRACT'S league, resolved against the era, never assumed to be the code we happen to use for that string."
+  },
+  "PORTLAND_STORM_BATCH_IS_NOT_CONTRACTS": {
+   "expected": "thirteen 1974 Portland Storm player contracts from one club in one season",
+   "actual": "thirteen WFL DEBT SETTLEMENTS. Every one read so far is an 'ADDENDUM TO 1974 PLAYER'S CONTRACT' extinguishing the original and scheduling repayment of wages the club failed to pay.",
+   "verified": "Sam Silas (read in full) and Wallace Williams (header identical)",
+   "why_it_matters": "the figures would have entered as 1974 WFL salaries. They are the opposite: sums the club did not pay. The batch is more historically interesting than a salary set - it is the WFL's collapse, documented player by player - but it answers a different question."
   }
  }
 }
