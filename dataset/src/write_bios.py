@@ -14,6 +14,14 @@ import os, re, sys, json, random, collections
 
 BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 IDX = json.load(open(os.path.join(BASE, "build-reports", "person-index.json")))
+CLUBS = IDX.pop("_clubs", {})
+
+
+def club(code, year):
+    """The club's name IN THAT SEASON. 26 team codes carry more than one name -
+    BU1 is the Buffalo All-Americans, then the Bisons, then the Rangers - so a
+    per-code name would be wrong for part of their history."""
+    return CLUBS.get(f"{code}|{year}") or code
 DECL = json.load(open(os.path.join(BASE, "declarations", "statscrew.json")))
 APPLIC = DECL["stat_columns"]["applicability"]
 UNRESOLVED = set(APPLIC.get("_unresolved", {}).get("columns", []))
@@ -85,19 +93,50 @@ def bio(g, p):
         for one in (v if isinstance(v, list) else [v]):
             if isinstance(one, dict): one = one.get("code")
             if one and one not in pos: pos.append(str(one))
-    S = []
-
-    # --- opening, varied by career length -------------------------------------
     born = clean(per.get("birth_date", [None])[0])
     college = clean(per.get("college", [None])[0])
     where = clean(per.get("hometown", [None])[0])
+
+    # A COACHING season is not a playing season. Both are `stint` subjects and
+    # only a role_title claim tells them apart - so "Mike McCarthy played 18
+    # seasons" came out of the same sentence that describes a player.
+    def is_coaching(s):
+        return bool(s["stint"].get("role_title")) and not s["stint"].get("position")
+    played = [s for s in ss if not is_coaching(s)]
+    coached = [s for s in ss if is_coaching(s)]
+    if not played and coached:
+        cy = sorted({s["year"] for s in coached})
+        cl = list(dict.fromkeys(s["club"] for s in coached))
+        lead = name
+        if born: lead += f", born {born}"
+        out = [f"{lead}, appears in the record as a coach, not a player."]
+        out.append(f"He coached {len(cy)} seasons between {cy[0]} and {cy[-1]}"
+                   + (f", with the {club(cl[0], str(cy[0]))}." if len(cl) == 1
+                      else ", for the " + ", the ".join(
+                          club(c, str(next(s['year'] for s in coached if s['club'] == c)))
+                          for c in cl[:3]) + "."))
+        if college: out.append(f"He came from {college}.")
+        for a, b in gaps(cy):
+            out.append(f"He appears on a staff in {a}, then not again until {b}.")
+        return " ".join(out)
+    ss_all = ss
+    ss = played or ss
+    yrs = sorted({s["year"] for s in ss})
+    clubs = list(dict.fromkeys(s["club"] for s in ss))
+    n_seasons = len(yrs)
+    span = (yrs[0], yrs[-1])
+
+    S = []
+
+    # --- opening, varied by career length -------------------------------------
     lead = name
     if born: lead += f", born {born}"
     if where: lead += f" in {where}"
     if n_seasons == 1:
         s0 = ss[0]
         S.append(f"{lead}, appears in the record for a single season: "
-                 f"{s0['year']} with {s0['club']} in {LEAGUE_NAME.get(s0['league'], s0['league'])}.")
+                 f"{s0['year']} with the {club(s0['club'], str(s0['year']))} in "
+                 f"{LEAGUE_NAME.get(s0['league'], s0['league'])}.")
     elif n_seasons <= 3:
         S.append(f"{lead}, played {n_seasons} seasons between {span[0]} and {span[1]}.")
     elif len(clubs) >= 4:
@@ -105,9 +144,13 @@ def bio(g, p):
                  f"between {span[0]} and {span[1]}.")
     else:
         S.append(f"{lead}, played {n_seasons} seasons from {span[0]} to {span[1]}"
-                 + (f", all of them with {clubs[0]}." if len(clubs) == 1
-                    else f", for {' and '.join(clubs)}."))
-    if college: S.append(f"He came from {college}.")
+                 + (f", all of them with the {club(clubs[0], str(yrs[0]))}."
+                    if len(clubs) == 1 else ", for the "
+                    + ", the ".join(club(c, str(next(s['year'] for s in ss if s['club'] == c)))
+                                    for c in clubs[:3]) + "."))
+    if college:
+        S.append(f"He came from {college}." if not college.endswith(".")
+                 else f"He came from {college}")
     if pos:
         if len(pos) == 1:
             S.append(f"The rosters list him at {pos[0]}.")
@@ -151,19 +194,21 @@ def bio(g, p):
         bv = num(best["stats"].get(k)) or 0
         if bv and len(ss) > 1 and bv >= 0.2 * tot[k]:
             S.append(f"His biggest recorded season was {best['year']} with "
-                     f"{best['club']}: {int(bv):,} {LABEL[k]}.")
+                     f"the {club(best['club'], str(best['year']))}: "
+                     f"{int(bv):,} {LABEL[k]}.")
         S.append(f"In all, the surviving statistics credit him with "
                  f"{int(tot[k]):,} {LABEL[k]}"
                  + (f" and {int(tot['TDs']):,} touchdowns."
-                    if tot.get("TDs") and k != "TDs" else "."))
+                    if tot.get("TDs") and k != "TDs" else ".")
+                 .replace("1 touchdowns", "1 touchdown"))
     elif not any(s["stats"] for s in ss):
         S.append("No statistics are recorded for him — only that he was there.")
 
     # --- coaching --------------------------------------------------------------
-    roles = sorted({v for s in ss for k, v in s["stint"].items()
+    roles = sorted({v for s in ss_all for k, v in s["stint"].items()
                     if k == "role_title" for v in ([v] if isinstance(v, str) else v)})
     if roles:
-        cy = sorted({s["year"] for s in ss if s["stint"].get("role_title")})
+        cy = sorted({s["year"] for s in ss_all if s["stint"].get("role_title")})
         S.append(f"He also appears as {roles[0].lower()}"
                  + (f" ({cy[0]}–{cy[-1]})." if len(cy) > 1 else f" in {cy[0]}."))
     return " ".join(S)

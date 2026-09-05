@@ -8,6 +8,13 @@ BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 
 def main():
     idm = json.load(open(os.path.join(BASE, "build-reports", "identity.json")))
+    clubs = {}
+    cp = os.path.join(BASE, "build", "club-names.json")
+    if os.path.exists(cp):
+        for c in json.load(open(cp))["claims"]:
+            s = c["subject"]                     # ("club_season", league, year, team)
+            if c.get("predicate") == "club_name":
+                clubs[(s[3], str(s[2]))] = c["value"]
     loc2g = {(s, p): g for g, v in idm.items() for s, p in v["local"]}
     P = collections.defaultdict(lambda: {"name": collections.Counter(), "seasons": {},
                                          "person": collections.defaultdict(list),
@@ -62,9 +69,10 @@ def main():
                "person_season": v["person_season"],
                "seasons": {"|".join(k): d for k, d in sorted(v["seasons"].items())}}
            for g, v in P.items()}
+    withseasons = sum(1 for v in out.values() if v["seasons"])
+    out["_clubs"] = {f"{k[0]}|{k[1]}": v for k, v in clubs.items()}
     p = os.path.join(BASE, "build-reports", "person-index.json")
     json.dump(out, open(p, "w"))
-    withseasons = sum(1 for v in out.values() if v["seasons"])
     print(f"people indexed: {len(out):,}   with at least one season: {withseasons:,}")
     print(f"wrote {p} ({os.path.getsize(p)/1e6:.0f} MB)")
 
