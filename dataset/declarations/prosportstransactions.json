@@ -1,0 +1,78 @@
+{
+ "source_id": "prosportstransactions",
+ "name": "Pro Sports Transactions Archive (prosportstransactions.com)",
+ "acquisition": "NOT YET ACQUIRED",
+ "stated_by": "a hand compilation, maintained since 2004",
+ "derived_from": [
+  "newspaper transaction columns, transcribed by hand over twenty years"
+ ],
+ "_status": "CHARACTERISED, NOT FETCHED. Nothing has been taken from this source.",
+ "ACCESS": {
+  "scripted_request": "HTTP 403 Forbidden",
+  "browser": "Cloudflare interstitial - 'Performing security verification ... protect against malicious bots'",
+  "what_I_did": "stopped. Bypassing or completing bot-detection is not something this project does, and no amount of the data being useful changes that. The structure below came from the Wayback CDX index, which is a different service and required no evasion.",
+  "what_would_unblock_it": "Ryan visiting the site himself, or an export/API if the compiler offers one. It is one person's twenty-year compilation; asking is the right route anyway."
+ },
+ "RANKING": {
+  "tier": "SECONDARY, below anything primary",
+  "why": "a hand compilation of newspaper transaction columns. Good, and not a document. It is one transcriber's reading of a contemporaneous report.",
+  "hard_rule": "where it disagrees with a court record, a contract, or a club's own document, IT LOSES. It may corroborate a primary source and may stand alone where nothing primary exists, but it never outranks one.",
+  "ruled": "2026-09-05, Ryan",
+  "_enforced_by": "policy/resolution.json :: source_rank.secondary_compilation, read by src/resolve_store.py"
+ },
+ "structure_from_CDX": {
+  "_measured": "2026-09-05, 14,311 archived URLs for the domain",
+  "by_sport": {
+   "basketball": 9604,
+   "hockey": 2019,
+   "football": 1613,
+   "baseball": 735,
+   "soccer": 280
+  },
+  "_what_that_shows": "basketball was compiled first and is far deeper. Football is a sixth of it by archived URL count - which measures what the Wayback crawler saw, not what the database holds.",
+  "football_sections": {
+   "Search": 856,
+   "DraftTrades": 391,
+   "Logos": 359
+  },
+  "_it_is_a_QUERY_INTERFACE": "there are no per-player pages to enumerate. Everything arrives through SearchResults.php with parameters, paginated in blocks of 25 (`start`)."
+ },
+ "fields_from_the_search_form": {
+  "who_and_when": [
+   "Player",
+   "Team",
+   "BeginDate",
+   "EndDate"
+  ],
+  "categories": {
+   "PlayerMovementChkBx": "trades, signings, waivings, releases - the dominant use, 785 of the archived queries",
+   "InjuriesChkBx": "injuries",
+   "ILChkBx": "injured list",
+   "DisciplinaryChkBx": "disciplinary actions",
+   "LegalChkBx": "legal actions",
+   "PersonalChkBx": "personal",
+   "NBADLChkBx": "a BASKETBALL field appearing in football URLs - the form is shared across sports, so the checkbox list is not evidence of what the football data contains"
+  }
+ },
+ "HOW_FAR_BACK_FOOTBALL_GOES": {
+  "answer": "UNKNOWN. This is the question that decides whether the source is useful for the historical eras, and the CDX index cannot answer it.",
+  "the_tempting_wrong_answer": "archived queries carry BeginDate values from 1920 to 2021. That is what people TYPED INTO A FORM, not what the database returned. Reading it as coverage would be inferring content from a request - the same error as counting headings and inferring tables (report 38).",
+  "how_to_settle_it": "one search on the live site with a 1920s date range"
+ },
+ "why_it_matters": {
+  "the_gap_it_fills": "report 37 found Pro Football Archives' transactions section gone from the live site - 3,945 pages, Wayback-only, out of reach. This is the same category from a source that still exists.",
+  "injuries": "nothing in the archive records why a career stopped or why a man missed a season. Every bio currently ends by simply stopping.",
+  "movement": "the archive knows a man was at Cleveland in 1953 and Ottawa in 1954. It does not know whether he jumped, was traded, or was waived."
+ },
+ "_documentation_only": {
+  "name": "human name",
+  "_status": "a state note",
+  "ACCESS": "a record of why nothing was fetched",
+  "structure_from_CDX": "a measurement record",
+  "fields_from_the_search_form": "a measurement record",
+  "HOW_FAR_BACK_FOOTBALL_GOES": "an open question",
+  "why_it_matters": "the reasoning",
+  "_rule": "keys addressed to a reader; RANKING is the enforceable part once anything is ingested",
+  "RANKING": "the RULE is implemented as policy/resolution.json :: source_rank.secondary_compilation (rank 1 against primary's 3), read by src/resolve_store.py:source_rank(). This block states the reasoning; the policy file carries the enforceable value. Verified: rank('prosportstransactions')=1, rank('courts')=3, rank(unknown)=None."
+ }
+}

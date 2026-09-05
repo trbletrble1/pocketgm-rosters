@@ -52,3 +52,14 @@ def main():
                for p,su,r in contested], open(os.path.join(base,'build','contested-'+store_file),'w'), indent=1)
 
 if __name__=="__main__": main()
+
+
+def source_rank(policy, source_id):
+    """Rank of a source per policy.source_rank. A secondary compilation loses to
+    a primary document however many claims it brings; an UNRANKED source returns
+    None and resolution must refuse rather than assume a floor."""
+    sr = policy.get("source_rank", {})
+    for group, spec in sr.items():
+        if not isinstance(spec, dict) or "sources" not in spec: continue
+        if source_id in spec["sources"]: return spec.get("rank")
+    return None

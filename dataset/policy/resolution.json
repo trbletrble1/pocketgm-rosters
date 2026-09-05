@@ -28,5 +28,28 @@
   "role_title",
   "position_played"
  ],
- "_set_valued_note": "Predicates whose subject may legitimately hold SEVERAL values at once. A coach can be Pass Game Coordinator AND Quarterbacks in one season; a 1950 player can be LOT and LDT. Resolving these as single-valued manufactured 344 false contests in the first coaching build - 100% of them from ONE source listing a man's roles. Set-valued predicates UNION within a lineage group and only contest ACROSS groups."
+ "_set_valued_note": "Predicates whose subject may legitimately hold SEVERAL values at once. A coach can be Pass Game Coordinator AND Quarterbacks in one season; a 1950 player can be LOT and LDT. Resolving these as single-valued manufactured 344 false contests in the first coaching build - 100% of them from ONE source listing a man's roles. Set-valued predicates UNION within a lineage group and only contest ACROSS groups.",
+ "source_rank": {
+  "_what": "Where two sources disagree, the LOWER-RANKED one loses regardless of how many claims it brings. Rank is about what a source IS, not how much it says.",
+  "_ruled": "2026-09-05, Ryan, on prosportstransactions",
+  "primary": {
+   "rank": 3,
+   "_what": "a document made by a party to the event - a court record, a contract, a club's own publication",
+   "sources": [
+    "courts",
+    "crs-RL34439",
+    "media-guides",
+    "statscrew"
+   ]
+  },
+  "secondary_compilation": {
+   "rank": 1,
+   "_what": "one person's transcription of contemporaneous reports, however careful. Good, and not a document.",
+   "sources": [
+    "prosportstransactions"
+   ],
+   "hard_rule": "where a secondary compilation disagrees with a primary source it LOSES. It may corroborate one, and may stand alone where nothing primary exists, but it never outranks one."
+  },
+  "_unranked_is_not_zero": "a source absent from this table is unranked, not bottom. Resolution must refuse rather than assume."
+ }
 }
