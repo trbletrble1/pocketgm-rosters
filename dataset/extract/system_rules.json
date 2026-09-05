@@ -1,0 +1,52 @@
+{
+ "_note": "League-scoped SYSTEM facts. Not a person's pay - a rule of the regime. These take a league subject and are refused on a person, per salary_conventions.system_rules.hard_rules.",
+ "sources": {
+  "crs-RL34439": {
+   "citation": "Congressional Research Service, RL34439, 'Retirement Benefits for Members of the National Football League' (146 pp.)",
+   "acquisition": "fetched",
+   "local": "$PGM3_SOURCES/crs/RL34439.pdf",
+   "why_good_provenance": "federal, public domain, named author, states its own sources with page numbers throughout",
+   "WHY_THAT_IS_NOT_ENOUGH_FOR_THIS_FIGURE": "the report's provenance is excellent FOR THE REPORT. This figure is a QUOTATION. The CRS did not observe the 1968 minimum; it quotes a 1994 popular history. Provenance records origin, not last hop - so the origin here is Fox 1994, and the CRS's federal authority does not transfer to a number it took from a trade book.",
+   "figures": [
+    {
+     "predicate": "league_minimum_salary",
+     "subject_scope": "league_season",
+     "subject": [
+      "league_season",
+      "NFL",
+      "1968"
+     ],
+     "value": 12000,
+     "currency": "USD",
+     "quote": "Negotiations resulted in \u201ca minimum salary of $12,000, better pay for exhibitions, and a doubling of the annual pension-fund contribution to $3 million.\u201d",
+     "verified_in_the_document": "2026-09-04, extracted from the PDF text, not taken from conversation. The figure was relayed to me in chat; a relayed number may never enter, so it was read from the source.",
+     "context": "the first CBA, effective July 15 1968 through February 1 1970",
+     "applies_to_seasons": [
+      1968,
+      1969
+     ],
+     "attribution_chain": [
+      {
+       "remove": 0,
+       "party": "Stephen Fox, Big Leagues: Professional Baseball, Football, and Basketball in National Memory (Lincoln, NE: University of Nebraska Press, 1994), p. 425",
+       "role": "ORIGIN as far as we can see - itself a secondary history, and it does not show us ITS source"
+      },
+      {
+       "remove": 1,
+       "party": "CRS RL34439, footnote 69",
+       "role": "quotes Fox"
+      },
+      {
+       "remove": 2,
+       "party": "this dataset",
+       "role": "read the CRS PDF directly"
+      }
+     ],
+     "kind": "source_derived",
+     "_why_not_observed": "nobody in this chain observed a 1968 negotiation. The CRS quotes a 1994 book whose own source is not shown. It is a stated figure with a named chain, not an observation.",
+     "what_it_unlocks": "it places Smith's $22,000 base (Smith v. Pro-Football, 1968) in a distribution for the first time: 1.83x the league minimum."
+    }
+   ]
+  }
+ }
+}

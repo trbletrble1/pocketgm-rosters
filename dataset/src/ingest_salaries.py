@@ -144,6 +144,29 @@ def main():
 
 
     # ---------------- newspapers ----------------------------------------
+    # LEAGUE-SCOPED system facts. A minimum salary is a rule of the regime, not
+    # a man's pay, and the store refuses it on a person subject.
+    sysp = os.path.join(BASE, "extract", "system_rules.json")
+    if os.path.exists(sysp):
+        for sid, src in json.load(open(sysp))["sources"].items():
+            store.add_source({"source_id": f"sys/{sid}",
+                              "acquisition": src.get("acquisition", "fetched"),
+                              "stated_by": src.get("citation", sid)})
+            for i, f in enumerate(src.get("figures", [])):
+                counts["figures seen"] += 1
+                subj = tuple(f["subject"])
+                store.declare_subject(subj)
+                sr = store.add_source_record(f"sys/{sid}", f"fig{i+1}")
+                store.add_claim(sr, subj, f["predicate"], f["value"],
+                                f.get("applies_to_seasons", [None])[0],
+                                kind=f.get("kind", "source_derived"),
+                                stated_by=src.get("citation", sid),
+                                attribution=[a["party"] for a in f.get("attribution_chain", [])],
+                                note=(f.get("quote") or "")[:200])
+                counts["claims written"] += 1
+                by_conv[f["predicate"]] += 1
+                counts["system rules"] += 1
+
     news = json.load(open(os.path.join(BASE, "extract", "newspapers.json")))
     for sid, src in sorted(news.items()):
         if sid.startswith("_"): continue          # _RELAYED_NOT_INGESTED etc.

@@ -168,7 +168,8 @@
    "club_workers_comp_self_insured_ceiling",
    "qualifying_offer_floor",
    "draft_compensation_ladder",
-   "player_movement_regime"
+   "player_movement_regime",
+   "league_minimum_salary"
   ],
   "hard_rules": [
    "A system_rule predicate REQUIRES a league-scoped subject and REFUSES a person.",
@@ -184,6 +185,22 @@
    "date": "2026-09-04",
    "by": "Ryan",
    "note": "recorded as an ABSENCE so the next session does not repeat the search - design 3.4"
+  },
+  {
+   "source": "The Business of Football 2001 (Carmel, CA: Paul Kagan Associates, Inc., 2001)",
+   "searched_for": "a 1968-1982 salary series; cited by CRS RL34439 for labour and economic history",
+   "result": "NOT HELD ANYWHERE SEARCHABLE. Zero archive.org hits for the title; the only 'Paul Kagan Associates' hit in the entire archive is a 1985 Newsweek broadcast.",
+   "date": "2026-09-04",
+   "by": "Claude",
+   "deflating_evidence": "the CRS cites it exactly FIVE times, pages 392-396 - five consecutive pages, all supporting the labour CHRONOLOGY. An author writing on NFL player compensation who had a salary series in hand would have cited it for one. The shape was promising; the citation pattern says chronology, not series."
+  },
+  {
+   "source": "archive.org FULL-TEXT search (not catalogue) for the Management Council table",
+   "searched_for": "\"highest salary paid\"+\"lowest salary paid\"+football; \"NFL Management Council\"+salary; \"average salary by position\"+football",
+   "result": "NOT FOUND. Full-text search reaches inside access-restricted items, so this was the last untried method. Staudohar WAS found this way, but its 'average salary by position' table is BASEBALL (Table 2.2, p.30) and its four Management Council hits are CBA text and footnotes.",
+   "date": "2026-09-04",
+   "by": "Claude",
+   "note": "a finding about the document, not about searching"
   }
  ],
  "owed_league_original": {
