@@ -612,3 +612,53 @@ person assumes the ingest honours it.
 *Corollary: the read-check is a string-literal grep, which is a proxy. It cannot
 see a key that is read and then ignored — only one that nothing so much as names.
 That is the failure it exists to catch, and the limit is stated in the gate.*
+
+---
+
+## A figure presented at a confidence its derivation does not support
+
+**Third instance, 2026-09-04, and the three form a ladder.**
+
+1. **The 1980 hearing's estimated column.** The document *says* it is a
+   projection. Reading it as measurement takes a stated caveat and drops it.
+2. **The NFLPA's flat $45,000 per assistant coach**, same hearing. The word
+   *"approximately"* is right there, and the flatness is the tell: nine men at
+   an identical salary is an estimating fill, not a distribution. The *count* —
+   nine assistants — is plausibly a real observation of 1980 practice. One row,
+   two confidences.
+   *(Adjacent, same family: a `qualifying_offer` is a floor a club had to clear.
+   Filed beside real salaries it would read as sixteen players earning exactly
+   $30,000 — a number nobody was paid.)*
+3. **StatsCrew's passer rating for 1950.** Green Bay 1950 lists Tobin Rote at
+   **26.7**, Paul Christman at **49.2**. The formula was adopted in **1973**.
+   Nobody in 1950 knew these numbers and no 1950 document states them.
+
+**The ladder is in how much the source tells you.** The first announces itself.
+The second hedges. **The third says nothing at all** — no footnote, no hedge, no
+formatting difference. Rote's 26.7 sits in the same row as his 224 attempts, and
+the attempts *were* counted in 1950. One row, one format, two epistemic statuses,
+and the source draws no line between them.
+
+So the third is the one that ships. The first two are caught by reading the
+document; the third can only be caught by asking a question the document does not
+prompt: **could this source have observed this, in this year?**
+
+**The rule, and it is checkable:** where a measure has a date of introduction, a
+value for a season before that date cannot be `observed`. It is `source_derived`
+— someone's calculation, recorded as theirs.
+
+`src/gate_anachronism.py` enforces it, driven by
+`statscrew.json :: stat_columns.measure_introduced`. Constructed against the real
+case — Rote's 26.7 filed as observed — it fires, while `Att=224` and `Yds=1231`
+in the same store correctly pass. Refiled as `source_derived`, it passes.
+
+*Recorded with its own limit: the gate is only as right as the declared year, and
+1973 is currently general knowledge rather than a citation from a held document.
+The declaration says so where the year is written, because a gate resting on an
+unsourced fact is itself a figure presented at a confidence its derivation does
+not support.*
+
+**Corollary — the arithmetic columns.** `Comp %`, `Yds/Att`, `TD %`, `Int %` have
+no introduction date because they never needed one: they are arithmetic on two
+counted columns, derived in *every* era including the ones that printed them. A
+source that prints a quotient has not observed a quotient.

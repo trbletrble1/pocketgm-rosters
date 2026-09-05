@@ -1418,6 +1418,62 @@
   "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ - see src/gate_declarations_are_read.py. This list living in the declaration rather than in the gate means widening it shows up in a diff.",
   "league_codes.team_codes_are_globally_unique": "the measurement that makes R_{TEAM}_{YEAR} cache keys safe; the safety is in the key format, not a lookup",
   "league_codes.leagues_the_brief_named_that_this_source_CANNOT_supply": "a negative result - leagues to seek elsewhere",
-  "_correction_2026_09_04": "person_id_scheme was listed here as documentation. It was not: pattern {prefix}-{surname[:5]}{forename[:3]}{NNN} is a CONSTRAINT, and 36 stored slugs violated it, merging 46 men. It is now enforced by src/gate_slug_pattern.py. Marking a constraint 'documentation' is how a declaration stops being load-bearing without anyone editing it."
+  "_correction_2026_09_04": "person_id_scheme was listed here as documentation. It was not: pattern {prefix}-{surname[:5]}{forename[:3]}{NNN} is a CONSTRAINT, and 36 stored slugs violated it, merging 46 men. It is now enforced by src/gate_slug_pattern.py. Marking a constraint 'documentation' is how a declaration stops being load-bearing without anyone editing it.",
+  "stat_columns.PARSE_TRAP": "how to parse, for a reader",
+  "stat_columns.era_native_columns": "a measurement record"
+ },
+ "stat_columns": {
+  "_why": "A statistics table mixes COUNTED things with CALCULATED ones and formats them identically. Green Bay 1950 lists Tobin Rote with a passer Rating of 26.7 in the same row as his 224 attempts. The attempts were counted in 1950. The rating was computed by this source from a formula adopted in 1973 - nobody in 1950 knew it and no 1950 document states it.",
+  "_rule": "A column whose measure did not exist in the season it describes CANNOT be observed. It enters as source_derived or not at all. Enforced by src/gate_anachronism.py.",
+  "measure_introduced": {
+   "Rating": {
+    "year": 1973,
+    "what": "NFL passer rating formula",
+    "basis": "GENERAL KNOWLEDGE, NOT YET CITED FROM A HELD SOURCE. The gate works off whatever year is declared here; if this year is wrong the gate is wrong, so it wants a citation before it is trusted as a fact.",
+    "measured_here": "the column is PRESENT and POPULATED in 1950 - Tobin Rote 26.7, Paul Christman 49.2, 4 of 5 rows filled. Measured 2026-09-04."
+   },
+   "Comp %": {
+    "year": null,
+    "what": "completions/attempts",
+    "note": "arithmetic on two counted columns. Derived in every era, including the ones that printed it."
+   },
+   "Yds/Att": {
+    "year": null,
+    "what": "yards/attempts",
+    "note": "as Comp %"
+   },
+   "TD %": {
+    "year": null,
+    "what": "as Comp %"
+   },
+   "Int %": {
+    "year": null,
+    "what": "as Comp %"
+   }
+  },
+  "counted_not_calculated": [
+   "Att",
+   "Comp",
+   "Yds",
+   "TDs",
+   "Ints",
+   "Long",
+   "No.",
+   "Sacked",
+   "Yds Lost",
+   "X/CA"
+  ],
+  "era_native_columns": {
+   "_measured": "2026-09-04 from cache",
+   "Sacked/Yds Lost": "absent from the 1950 passing table, present 1975 and 2023",
+   "X/CA": "present 1950 and CFL 1979, absent 2023",
+   "_treatment": "declare per era and translate at export, exactly as positions are"
+  },
+  "PARSE_TRAP": {
+   "what": "stat tables emit <tbody><td> with NO <tr>",
+   "symptom": "a naive row regex returns ONLY the Totals line - reproduced 2026-09-04, '1 row' for Green Bay 1950",
+   "fix": "chunk the <td> cells by header length",
+   "why_it_matters": "it fails as a plausible small number, not as an error"
+  }
  }
 }
