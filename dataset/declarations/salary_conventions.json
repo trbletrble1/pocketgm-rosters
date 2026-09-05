@@ -160,7 +160,25 @@
     "An unpaid_wages_owed figure is NOT salary and must never be pooled with one. It is a debt, and the amount actually recovered is UNKNOWN.",
     "The 1974 WFL contract it extinguishes is a DIFFERENT instrument. This addendum does not state what he was contracted to earn, only what he was owed and unpaid."
    ],
-   "added_2026_09_05": "read from the Sam Silas addendum; Wallace Williams carries the identical header, so the Portland Storm batch is settlements, not contracts"
+   "added_2026_09_05": "read from the Sam Silas addendum; Wallace Williams carries the identical header, so the Portland Storm batch is settlements, not contracts",
+   "TWO_VERSIONS_OF_THE_ADDENDUM": {
+    "_measured": "2026-09-05, from Silas and Billingsley",
+    "version_A_Silas": {
+     "obligor": "'Club will pay to Player a total sum of $15,749.95'",
+     "schedule": "semi-annual installments on March 1 and September 1 from September 1975, 6% simple annual interest"
+    },
+    "version_B_Billingsley": {
+     "obligor": "'Club AND WORLD FOOTBALL LEAGUE will pay to Player a total sum of $31,500.00'",
+     "schedule": "principal balance in TEN (10) annual installments, semi-annually on March 1st and September 1st"
+    },
+    "_why_it_matters": "in one version the league is a CO-OBLIGOR and in the other it is not. That changes who owed the money, which is the whole substance of the instrument. A transcription that captured only the figure would lose it.",
+    "_also_seen": "bleed-through from the reverse of the Billingsley sheet reads 'provide for a minimum of $1,000.00 per regularly scheduled season game for which Player is on active status' - a per-game minimum in the 1975 contract the addendum promises. Not yet read directly; recorded as a lead, not a figure."
+   },
+   "_counterparts_are_not_separate_instruments": {
+    "case": "Ron Billingsley appears in two Kayfabe lots (398120727238 and 257594925421). Both are ADDENDUM TO 1974 PLAYER'S CONTRACT, both $31,500.00, identical wording.",
+    "conclusion": "two counterparts of ONE instrument, not two documents. Counting them as two would double a debt that was owed once.",
+    "rule": "a second listing of the same instrument is a counterpart until its FIGURE or its TERMS differ. Check before treating it as new."
+   }
   },
   "postseason_pool_share": {
    "definition": "A player's share of a league-administered postseason player pool, paid BY THE LEAGUE, not by the club.",

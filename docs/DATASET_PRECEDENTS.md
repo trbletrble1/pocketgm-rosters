@@ -760,3 +760,43 @@ exists, say "every instance we hold" rather than "the league required".
 found it. The precedent exists so the next uniformity is doubted before it is
 promoted.*
 
+
+---
+
+## Hold a conclusion loosely while documents are still arriving
+
+**2026-09-05.** One finding — the NFL contract's 75/25 payment clause — was
+corrected **three times in a single day**, each time by a document that arrived
+after the conclusion:
+
+1. Reported as *"a league-scoped system fact spanning at least 1951–1961"*, from
+   three unamended contracts.
+2. **The 1923 Uniform Player's Contract** carries it as a printed default
+   twenty-eight years earlier — **and struck through, amended by hand to 90/10.**
+   So not a rule, and not starting in 1951.
+3. **Gregg 1966** carries 75/25 **semi-monthly**, where I had recorded the
+   interval changing at the same time as the split. Two variables, moving
+   independently, years apart.
+
+Nothing was misread. Each conclusion was sound on the documents then held, and
+each was wrong.
+
+**The failure mode is not carelessness — it is closure.** The pull toward
+settling a question is strongest exactly when evidence starts arriving, because
+the first few documents feel like the answer rather than the beginning of one.
+Three contracts looked like a pattern; the fourth made them a sample.
+
+**The rule: while a source is still being acquired, a finding is provisional and
+must say so.** Not hedged into uselessness — the figures were right, and stating
+them was right. What should have carried a caveat was the *shape*: "spans
+1951–1961" claims an extent, and extent is precisely what an incomplete corpus
+cannot support.
+
+**Say what the documents show and name the boundary as the corpus's, not the
+world's.** *"Every contract we hold, 1951 to 1961"* would have survived all three
+corrections intact.
+
+*Related but distinct: `absence of variation is not absence of the possibility of
+variation` is about inferring a constraint from uniform records. This is about
+inferring an EXTENT from an incomplete set — and unlike that one, more of the
+same evidence does fix it. The documents were still coming.*
