@@ -355,13 +355,18 @@
    "not_yet_a_claim": "it wants its own predicate and a check of how far the clause persists across eras before anything is written."
   },
   "PAYMENT_SCHEDULE_PERSISTENCE": {
-   "_question": "Ryan asked how far the 75/25 clause persists. Answered from six held contracts spanning 1938-1969.",
-   "1938": "NOT PRESENT - and not an NFL contract. Per-game, different league, different form entirely.",
-   "1951": "75% in weekly installments / 25% at the last regularly scheduled game (Groza, printed on the form)",
-   "1954": "identical (Atkins)",
-   "1961": "identical (Sugar)",
-   "1969": "CHANGED. The percentages are BLANK on the form ('...% of said amount'), installments are SEMI-MONTHLY, and compensation is subject to Paragraph 7 and changeable under Paragraph 10 (Cogdill).",
-   "_conclusion": "a fixed, printed 75/25 weekly schedule spans at least 1951-1961 and is GONE by 1969. That is a league-scoped system fact with a measured start and end, not a per-player one - but the ends are bounded by what we hold, not by what happened. Two more contracts either side would tighten it."
+   "_CORRECTED": "2026-09-05, hours after report 48. I wrote that the 75/25 clause spans 'at least 1951-1961'. It is on the NFL UNIFORM PLAYER'S CONTRACT in 1923 - twenty-eight years earlier - and it is NEGOTIABLE, which I had no evidence of. Both halves of my statement were wrong: the start date and the character.",
+   "1923": {
+    "form": "The National Football League UNIFORM PLAYER'S CONTRACT",
+    "printed_default": "Seventy-five per cent (75%) after each game and the remaining twenty-five per cent (25%) at the close of the season or upon release",
+    "AS_EXECUTED": "struck through and amended BY HAND to Ninety per cent (90%) after each game and ten per cent (10%) at the close",
+    "player": "Walter J. Pearce, Chicago Bears, $85.00 PER GAME, signed 24 August 1923 by Geo. S. Halas",
+    "_what_it_proves": "the schedule is a PRINTED DEFAULT that individual contracts could override, not a fixed league rule. A transcription reading the printed text would record 75/25 for a man who negotiated 90/10."
+   },
+   "1938": "the Union City / American Professional Football Association form carries paragraph 1 in NEARLY IDENTICAL WORDING to the 1923 NFL form - 'As to games scheduled but not played the player shall receive no compensation from the Club, other than actual expenses'. The minor league used a form derived from the NFL's. Its own schedule was handwritten: paid after each game.",
+   "1951_1954_1961": "75% weekly / 25% at the last regularly scheduled game, printed, and unamended in Groza, Atkins and Sugar",
+   "1969": "CHANGED - percentages blank on the form, semi-monthly installments, compensation subject to Paragraph 7 and changeable under Paragraph 10",
+   "_conclusion": "a printed default present from at least 1923, per-GAME in the 1920s and per-WEEK by 1951, negotiable at least in 1923, and replaced by a blank-percentage semi-monthly form by 1969. It is a form-level fact, not a league rule, and what any given player was actually paid on requires reading HIS contract rather than the era's."
   },
   "LEAGUE_NAME_COLLISION": {
    "trap": "the 1938 Franco contract says 'The American Professional Football Association'. That is a 1930s MINOR league. StatsCrew's APFA code means the 1920-21 league that became the NFL.",
@@ -373,6 +378,14 @@
    "actual": "thirteen WFL DEBT SETTLEMENTS. Every one read so far is an 'ADDENDUM TO 1974 PLAYER'S CONTRACT' extinguishing the original and scheduling repayment of wages the club failed to pay.",
    "verified": "Sam Silas (read in full) and Wallace Williams (header identical)",
    "why_it_matters": "the figures would have entered as 1974 WFL salaries. They are the opposite: sums the club did not pay. The batch is more historically interesting than a salary set - it is the WFL's collapse, documented player by player - but it answers a different question."
+  },
+  "A_DELETION_IS_DATA": {
+   "instances": [
+    "1923 Pearce - 75/25 struck through, amended to 90/10 by hand",
+    "1938 Franco - paragraph 4's release proviso struck through entirely"
+   ],
+   "rule": "a struck-through clause is a NEGOTIATED TERM and must be read as such. Reading only the printed text records the opposite of what the parties agreed, and no OCR pass catches a strike-through.",
+   "_consequence": "any future contract ingest must capture the AS-EXECUTED text, not the form's text. This is not a transcription convenience - it is the difference between what was printed and what was agreed."
   }
  }
 }

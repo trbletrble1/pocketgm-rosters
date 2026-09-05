@@ -20,6 +20,18 @@ You asked how far it persists. Measured, not inferred:
 > 1969.** That is a league-scoped system fact with a measured start and end — but
 > the ends are bounded by what we hold, not by what happened.
 
+> ### CORRECTED, same day — see report 49
+>
+> **Both halves of that are wrong.** The 1923 Lelands lot, fetched hours later,
+> is the NFL **Uniform Player's Contract** and carries the clause as a **printed
+> default in 1923** — twenty-eight years earlier. And it is **negotiable**: on
+> Walter Pearce's contract the 75/25 is **struck through and amended by hand to
+> 90/10**.
+>
+> So it is not a league rule with a start date. It is a **form-level default that
+> individual contracts could override** — and reading the printed text would have
+> recorded 75/25 for a man who negotiated 90/10.
+
 Amounts read directly: **Groza 1951 $10,800** and **Atkins 1954 $7,500**, both
 certain.
 
