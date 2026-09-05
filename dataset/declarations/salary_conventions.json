@@ -161,6 +161,22 @@
     "The 1974 WFL contract it extinguishes is a DIFFERENT instrument. This addendum does not state what he was contracted to earn, only what he was owed and unpaid."
    ],
    "added_2026_09_05": "read from the Sam Silas addendum; Wallace Williams carries the identical header, so the Portland Storm batch is settlements, not contracts"
+  },
+  "postseason_pool_share": {
+   "definition": "A player's share of a league-administered postseason player pool, paid BY THE LEAGUE, not by the club.",
+   "instrument": "NFL memorandum over Pete Rozelle's name, '1966 NFL Championship Game'",
+   "quote": "Enclosed is a check from the National Football League in the amount of $9813.63 which constitutes the payment of your share of the player pool of the championship game played on 1 January 1967 at Dallas, Texas.",
+   "payer": "the National Football League",
+   "gross": "'no deductions have been taken from your share for Federal income tax' - the figure is GROSS, which most salary figures in this collection are not stated to be either way",
+   "predicates": [
+    "postseason_pool_share"
+   ],
+   "hard_rules": [
+    "A postseason pool share is paid by the LEAGUE and must not be attributed to the club, nor pooled with club salary.",
+    "It is per-GAME and per-postseason, not per-season, and belongs to the game it names."
+   ],
+   "_why_it_is_new": "nothing in the archive held postseason compensation of any kind. The 182 salary figures are all club-paid regular-season pay.",
+   "added_2026_09_05": "from the Gregg lot"
   }
  },
  "hard_rules": [
@@ -366,7 +382,13 @@
    "1938": "the Union City / American Professional Football Association form carries paragraph 1 in NEARLY IDENTICAL WORDING to the 1923 NFL form - 'As to games scheduled but not played the player shall receive no compensation from the Club, other than actual expenses'. The minor league used a form derived from the NFL's. Its own schedule was handwritten: paid after each game.",
    "1951_1954_1961": "75% weekly / 25% at the last regularly scheduled game, printed, and unamended in Groza, Atkins and Sugar",
    "1969": "CHANGED - percentages blank on the form, semi-monthly installments, compensation subject to Paragraph 7 and changeable under Paragraph 10",
-   "_conclusion": "a printed default present from at least 1923, per-GAME in the 1920s and per-WEEK by 1951, negotiable at least in 1923, and replaced by a blank-percentage semi-monthly form by 1969. It is a form-level fact, not a league rule, and what any given player was actually paid on requires reading HIS contract rather than the era's."
+   "_conclusion": "a printed default present from at least 1923, per-GAME in the 1920s and per-WEEK by 1951, negotiable at least in 1923, and replaced by a blank-percentage semi-monthly form by 1969. It is a form-level fact, not a league rule, and what any given player was actually paid on requires reading HIS contract rather than the era's.",
+   "1966_67_Gregg": {
+    "_SECOND_CORRECTION": "my table listed 1951/1954/1961 as '75/25 weekly' and 1969 as 'blank percentages, semi-monthly', treating it as ONE change. It is TWO.",
+    "as_read": "75% of said salary in equal SEMI-MONTHLY installments commencing with the first regularly scheduled League game played by the Club during each season and continuing each semi-monthly period thereafter; The balance of 25% ... on the date of the last regularly scheduled League game.",
+    "so": "the percentages are still a printed 75/25 in 1966, but the INTERVAL has already changed from weekly to semi-monthly. Two independent changes: weekly -> semi-monthly between 1961 and 1966, and fixed 75/25 -> blank percentages between 1966 and 1969.",
+    "_lesson": "I read two variables as one because they changed in the same clause. A schedule has an interval AND a split, and they moved separately."
+   }
   },
   "LEAGUE_NAME_COLLISION": {
    "trap": "the 1938 Franco contract says 'The American Professional Football Association'. That is a 1930s MINOR league. StatsCrew's APFA code means the 1920-21 league that became the NFL.",
@@ -386,6 +408,12 @@
    ],
    "rule": "a struck-through clause is a NEGOTIATED TERM and must be read as such. Reading only the printed text records the opposite of what the parties agreed, and no OCR pass catches a strike-through.",
    "_consequence": "any future contract ingest must capture the AS-EXECUTED text, not the form's text. This is not a transcription convenience - it is the difference between what was printed and what was agreed."
+  },
+  "OPTION_YEAR_RATE_CONFIRMED_IN_AN_INSTRUMENT": {
+   "quote": "the Club may fix the rate of compensation to be paid by the Club to the Player during said period of renewal, which compensation shall not be less than ninety percent (90%) of the amount paid by the Club to the Player during the preceding season",
+   "source": "NFL Standard Players Contract, Green Bay Packers / Forrest Gregg, 1966 and 1967, paragraph 10",
+   "why_it_matters": "option_year_rate = 0.90 is already a declared SYSTEM predicate in this project, taken from secondary description. This is the rule stated in the INSTRUMENT ITSELF - a primary source for a system fact we had only at one remove.",
+   "also_in_paragraph_10": "'the phrase rate of compensation as above used shall not be understood to include bonus payments or payments of any nature whatsoever other than the precise sum set forth in Paragraph 3' - the 90% applies to BASE ONLY, which is exactly the convention distinction salary_base exists to preserve."
   }
  }
 }
