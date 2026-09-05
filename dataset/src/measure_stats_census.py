@@ -31,12 +31,22 @@ SIGNATURES = [
 def tables(html):
     """-> [(headers, [row dicts])]. Chunks cells by header length: these tables
     emit <tbody><td> with NO <tr>, so a row regex sees only Totals."""
-    t = re.sub(r"<script.*?</script>", "", html, flags=re.S)
+    # Strip COMMENTS as well as scripts. These pages carry commented-out
+    # grouping header rows - <!-- <th colspan=7>Tackles</th> ... --> - and
+    # reading them as columns invented a "Tackles" column filled 84% in the
+    # 1920s, half a century before tackles were recorded. The live header is
+    # "Tackle", singular.
+    t = re.sub(r"<!--.*?-->", "", html, flags=re.S)
+    t = re.sub(r"<script.*?</script>", "", t, flags=re.S)
     out = []
     for blk in t.split("<table")[1:]:
         blk = blk.split("</table>")[0]
         hdr = [re.sub("<[^>]+>", "", x).strip()
                for x in re.findall(r"<th[^>]*>(.*?)</th>", blk, re.S)]
+        # An unclosed <th> makes the regex swallow the NEXT tag, so a literal
+        # '<th class="dt-center"' arrived as a column name. A column name that
+        # contains markup is a parse artefact, not a column.
+        hdr = [c for c in hdr if c and "<" not in c and len(c) < 24]
         if not hdr:
             continue
         cells = [re.sub("<[^>]+>", "", x).strip()
