@@ -15,7 +15,7 @@ current numbers. Three rules the page must never break:
   THE POPULATION ROW MUST SUM TO THE ARCHIVE. If a decade column drops people,
   the dashboard would hide exactly the thing it exists to show.
 """
-import os, re, csv, sys, json, glob, html, hashlib, shutil, collections, datetime
+import os, re, csv, sys, json, glob, html, hashlib, shutil, subprocess, collections, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = os.path.join(HERE, "..")
@@ -310,6 +310,44 @@ def md5(path):
     return h.hexdigest()
 
 
+def provider_running(pattern):
+    """Is a sync client actually running for this target?
+
+    A directory existing proves nothing: ~/Library/CloudStorage/GoogleDrive-... sat
+    there for months after its client was uninstalled, and a copy into it verified
+    perfectly while syncing nowhere. So look for the process too.
+
+    This proves a CLIENT PROCESS EXISTS. It does not prove the client is signed in,
+    that sync is unpaused, that the folder is included in selective sync, or that
+    the upload succeeded. Those limits are stated in the target config and are not
+    claimed here.
+    """
+    try:
+        out = subprocess.run(["ps", "-Ao", "pid=,command="], capture_output=True,
+                             text=True, timeout=20).stdout
+    except Exception as e:
+        return None, f"could not inspect the process list ({e})"
+    me = {os.getpid(), os.getppid()}
+    hits = []
+    for line in out.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        pid, _, cmd = line.partition(" ")
+        if not pid.isdigit() or int(pid) in me:
+            continue
+        # MATCH ONLY THE EXECUTABLE PATH, never the arguments. Searching the whole
+        # command line makes the question answer itself: a shell or python process
+        # whose ARGUMENTS mention "Dropbox.app" matched, so asking whether a client
+        # was running returned True purely because the asking mentioned it. That is
+        # the same false positive as `grep -i "Google Drive"` matching its own grep.
+        argv0 = cmd.strip().split(" ")[0]
+        if pattern in argv0:
+            hits.append(cmd.strip())
+    return bool(hits), (hits[0][:80] if hits else "no process whose executable path "
+                        "contains %r" % pattern)
+
+
 def publish(src):
     """Copy the dashboard to every configured target.
 
@@ -334,8 +372,19 @@ def publish(src):
         d, name, req = t["dir"], t.get("name", t["dir"]), t.get("required", True)
         dest = os.path.join(d, os.path.basename(src))
         if not os.path.isdir(d):
-            msg = f"FAILED - the folder does not exist or is not synced: {d}"
+            msg = f"FAILED - the folder does not exist: {d}"
             results.append((name, msg, False)); ok = ok and not req; continue
+        pat = t.get("provider_process")
+        if pat:
+            live, detail = provider_running(pat)
+            if live is None:
+                results.append((name, f"FAILED - {detail}", False)); ok = ok and not req; continue
+            if not live:
+                results.append((name, f"FAILED - the folder exists but NO SYNC CLIENT IS "
+                                      f"RUNNING for it ({detail}). A leftover folder from an "
+                                      f"uninstalled client looks exactly like a live one.",
+                                False))
+                ok = ok and not req; continue
         existed = os.path.exists(dest)
         prev = md5(dest) if existed else None
         try:
@@ -347,10 +396,11 @@ def publish(src):
             results.append((name, f"FAILED - md5 mismatch after writing "
                                   f"({got[:12]} != {want[:12]})", False))
             ok = ok and not req; continue
+        live_note = f" [{t['provider_name']} running]" if t.get("provider_process") else ""
         note = ("overwrote an identical copy" if existed and prev == want else
                 f"OVERWROTE a DIFFERENT existing file (was {prev[:12]})" if existed else
                 "new file")
-        results.append((name, f"copied, md5 verified {want[:12]} - {note}", True))
+        results.append((name, f"copied, md5 verified {want[:12]}{live_note} - {note}", True))
     return results, ok
 
 

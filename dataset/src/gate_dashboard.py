@@ -89,7 +89,7 @@ def main():
         J.dump({"targets": [{"name": "gone", "dir": missing, "required": True}]}, open(cfgm, "w"))
         os.environ["PGM3_DASHBOARD_TARGETS"] = cfgm
         res, ok = B.publish(src)
-        if not ok and res and not res[0][2] and "does not exist or is not synced" in res[0][1]:
+        if not ok and res and not res[0][2] and "does not exist" in res[0][1]:
             checks.append("a missing or unsynced target FAILS and is reported, never skipped")
         else:
             fails.append(f"[FAIL] a missing target did not fail loudly: {res} ok={ok}")
@@ -110,6 +110,32 @@ def main():
             checks.append("overwriting a DIFFERENT existing file is announced, not silent")
         else:
             fails.append(f"[FAIL] a silent overwrite went unannounced: {res}")
+        # --- a folder with NO LIVE SYNC CLIENT must fail like a missing one ---
+        # This is the failure that actually happened: a leftover GoogleDrive
+        # folder whose client was uninstalled. The bytes copied and the md5
+        # verified while nothing synced. Bytes alone are not evidence of a sync.
+        cfgd = os.path.join(td, "dead.json")
+        J.dump({"targets": [{"name": "dead client", "dir": good,
+                             "provider_process": "NoSuchSyncClient.app",
+                             "provider_name": "Nothing", "required": True}]}, open(cfgd, "w"))
+        os.environ["PGM3_DASHBOARD_TARGETS"] = cfgd
+        res, ok = B.publish(src)
+        if not ok and "NO SYNC CLIENT IS RUNNING" in res[0][1]:
+            checks.append("a folder that exists but has NO LIVE SYNC CLIENT fails, "
+                          "exactly like a missing folder")
+        else:
+            fails.append(f"[FAIL] a dead sync target was accepted: {res}")
+
+        live, detail = B.provider_running("NoSuchSyncClient.app")
+        if live is False:
+            checks.append("provider_running() returns False for a client that is not running")
+        else:
+            fails.append(f"[FAIL] provider_running gave {live} for a missing client")
+        live, _ = B.provider_running("launchd")
+        if live is True:
+            checks.append("provider_running() returns True for a process that IS running")
+        else:
+            fails.append("[FAIL] provider_running could not see a known-running process")
         os.environ.pop("PGM3_DASHBOARD_TARGETS", None)
 
     for c in checks: print("  " + c)

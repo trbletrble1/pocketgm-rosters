@@ -1,11 +1,30 @@
 {
-  "_what": "Where build_dashboard.py copies the generated dashboard after writing it. Editable WITHOUT touching the script body; override the file itself with the PGM3_DASHBOARD_TARGETS environment variable.",
-  "_a_silent_copy_failure_is_the_danger": "A stale dashboard that looks current is exactly the failure this project keeps meeting. So a copy that cannot be made is reported as FAILED and the script exits non-zero. It is never skipped quietly.",
-  "_what_cannot_be_detected": "That the bytes reached Google's servers. This checks the file was written to the synced folder and reads back with a matching md5. Whether the Drive client then UPLOADS it is outside the filesystem and outside this script. The page carries its own generation timestamp, so a stale copy is visible on the page itself.",
+  "_what": "Where build_dashboard.py copies the dashboard after writing it. Editable WITHOUT touching the script body; replace the whole file with the PGM3_DASHBOARD_TARGETS environment variable.",
+
+  "_why_dropbox_and_not_google_drive": "On 2026-09-05 the dashboard was copied to ~/Library/CloudStorage/GoogleDrive-ryannecci@gmail.com/My Drive/Football Archive. The bytes landed and the md5 verified. NOTHING SYNCED THEM: no Google Drive.app is installed, no client process runs, no Google file-provider extension is registered, and the newest file anywhere in that My Drive was from February 2025. The folder is a leftover from an uninstalled client. That is the stale-looking-current failure, and the copy check could not see it because it only checked bytes.",
+
+  "PROVIDER_LIVENESS_CHECK": {
+    "what_it_does": "before declaring a copy successful, look for a running process matching provider_process. If a required target has no live provider, the publish FAILS with exit 2, exactly as a missing folder does.",
+    "what_it_CATCHES": "the failure that actually happened -- a leftover sync folder whose client is uninstalled or not running.",
+    "what_it_CANNOT_SEE_and_does_not_claim_to": [
+      "a client that is running but signed out",
+      "sync paused by the user",
+      "the folder excluded from selective sync",
+      "an upload that starts and fails server-side"
+    ],
+    "_the_honest_bound": "this proves a client process exists, not that the file reached the provider's servers. The page carries its own generation timestamp, so a stale copy shows an old time on its face. That remains the backstop."
+  },
+
+  "_a_silent_copy_failure_is_the_danger": "A copy that cannot be made, or whose provider is not running, is reported as FAILED and the script exits non-zero. It is never skipped quietly.",
+
+  "_note_on_this_machine": "~/Library/CloudStorage/Dropbox cannot be listed by this shell (macOS returns 'Operation not permitted' for directory enumeration) but IS writable. Reading back the copied file to verify its md5 works, which is what the check needs.",
+
   "targets": [
     {
-      "name": "Google Drive — Football Archive",
-      "dir": "/Users/ryannecci/Library/CloudStorage/GoogleDrive-ryannecci@gmail.com/My Drive/Football Archive",
+      "name": "Dropbox — Football Archive",
+      "dir": "/Users/ryannecci/Library/CloudStorage/Dropbox/Football Archive",
+      "provider_process": "Dropbox.app",
+      "provider_name": "Dropbox",
       "required": true
     }
   ]
