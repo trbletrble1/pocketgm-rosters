@@ -1,0 +1,428 @@
+{
+  "files": 1803,
+  "header_rows_found": 19045,
+  "distinct_header_signatures": 43,
+  "rows_under_a_header": 150716,
+  "headers_with_a_year_within_12_lines": 10502,
+  "headers_with_a_declared_W_L_T_record": 384,
+  "rows_by_section_context": {
+    "regular": 84207,
+    "preseason": 16417,
+    "postseason": 50092
+  },
+  "rows_by_year_decade": {
+    "1920": 81,
+    "1930": 606,
+    "1940": 1276,
+    "1950": 1171,
+    "1960": 6892,
+    "1970": 9452,
+    "1980": 8927,
+    "1990": 12224,
+    "2000": 16884,
+    "2010": 14065,
+    "2020": 7659
+  },
+  "families": {
+    "Date+attendance+result+score": {
+      "header_occurrences": 5234,
+      "rows_in_runs": 54577,
+      "rows_per_header": 10.4,
+      "with_at_or_vs": 20566,
+      "home_away_recoverable_pct": 37.7,
+      "with_attendance": 52098,
+      "with_wlt": 42018,
+      "wlt_fused_to_score": 8,
+      "with_played_started_flag": 111,
+      "examples": [
+        "08/02 -L 13-20 at San Diego 62,542",
+        "08/09 W 21-17 Seattle 50,153",
+        "08/23 LL 17-31 at Denver 69,874",
+        "08/31 OL 6-13 at Tampa Bay 62,554"
+      ]
+    },
+    "Date+result+score": {
+      "header_occurrences": 2330,
+      "rows_in_runs": 9027,
+      "rows_per_header": 3.9,
+      "with_at_or_vs": 3243,
+      "home_away_recoverable_pct": 35.9,
+      "with_attendance": 5623,
+      "with_wlt": 7435,
+      "wlt_fused_to_score": 5,
+      "with_played_started_flag": 21,
+      "examples": [
+        "08/30 W 16-8 \u2014 at Oakland",
+        "09/03 Lo 3-34 at Denver",
+        "S.6(N) a amen | 2/1: een L 0.27 |",
+        "S.2 BDC recsescsrnrnnns L | 028 @Houston."
+      ]
+    },
+    "Date+result": {
+      "header_occurrences": 1950,
+      "rows_in_runs": 13505,
+      "rows_per_header": 6.9,
+      "with_at_or_vs": 5704,
+      "home_away_recoverable_pct": 42.2,
+      "with_attendance": 2747,
+      "with_wlt": 10961,
+      "wlt_fused_to_score": 11,
+      "with_played_started_flag": 34,
+      "examples": [
+        "2/3 Bal. L. James FUMBLE [C. Upshaw] BAL 24 BAL 25 BAL 25 2 Touchdown (7)",
+        "Thursday, August 7 @ Baltimore 7:30 p.m. L, 3-23 KPIX 5",
+        "Sunday, August 17 Denver 1:00 p.m. L, 0-34 KPIX5",
+        "Sunday, August 24 San Diego 1:00 p.m. W, 21-7 FOX"
+      ]
+    },
+    "Date+player_ps": {
+      "header_occurrences": 1750,
+      "rows_in_runs": 27481,
+      "rows_per_header": 15.7,
+      "with_at_or_vs": 25912,
+      "home_away_recoverable_pct": 94.3,
+      "with_attendance": 1,
+      "with_wlt": 854,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 25668,
+      "examples": [
+        "Sep2 vs. S.F. 49ers P 0 0 0.0 0 oO 0 0",
+        "Sep8 vs. L.A. Rams P 3 2 83 nla 0 0 0",
+        "Sep 15 at Chicago P 0 0 0.0 0 0 0 0",
+        "Sep 22 vs. Cleveland P 0 0 0.0 0 oO 0 0"
+      ]
+    },
+    "Date+attendance": {
+      "header_occurrences": 1567,
+      "rows_in_runs": 9634,
+      "rows_per_header": 6.1,
+      "with_at_or_vs": 2616,
+      "home_away_recoverable_pct": 27.2,
+      "with_attendance": 7870,
+      "with_wlt": 8361,
+      "wlt_fused_to_score": 15,
+      "with_played_started_flag": 680,
+      "examples": [
+        "September 25 Seats W. 45,579 sosncos Riverfront",
+        "October 2 : L r San Diego",
+        "October 9 W Milwaukee County",
+        "October 23 Derer L. \u00b0 Rivrtront"
+      ]
+    },
+    "Date+score": {
+      "header_occurrences": 1308,
+      "rows_in_runs": 5679,
+      "rows_per_header": 4.3,
+      "with_at_or_vs": 893,
+      "home_away_recoverable_pct": 15.7,
+      "with_attendance": 650,
+      "with_wlt": 1142,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 24,
+      "examples": [
+        "Dec. 7, 1980 New Orleans 21-35 38-35(OT)",
+        "Nov. 1, 1981 at Pittsburgh 10-14 17-14",
+        "Nov. 22, 1981* at L.A. Rams 27-24 33-31",
+        "Jan. 10, 1982+ Dallas 21-27 28-27"
+      ]
+    },
+    "Date+attendance+score": {
+      "header_occurrences": 931,
+      "rows_in_runs": 7973,
+      "rows_per_header": 8.6,
+      "with_at_or_vs": 3470,
+      "home_away_recoverable_pct": 43.5,
+      "with_attendance": 7071,
+      "with_wlt": 6223,
+      "wlt_fused_to_score": 2,
+      "with_played_started_flag": 20,
+      "examples": [
+        "Sept 17 Mi 41-10 Pittsburgh 53,885",
+        "Sept. 25 W 21-14 Cloveland 55,996",
+        "Oct. 1 W 2t-17 al Kansas Cily 63,166",
+        "Oct.22 L 12-23 Indianapolis 57,642"
+      ]
+    },
+    "Date+attendance+result": {
+      "header_occurrences": 904,
+      "rows_in_runs": 5100,
+      "rows_per_header": 5.6,
+      "with_at_or_vs": 1900,
+      "home_away_recoverable_pct": 37.3,
+      "with_attendance": 3509,
+      "with_wlt": 1865,
+      "wlt_fused_to_score": 7,
+      "with_played_started_flag": 9,
+      "examples": [
+        "Sept.15 W 33-7 Cleveland 53,113",
+        "Sept.22 \u00a3 17-20 San Diegu 41,178",
+        "Sept. 29 W 21-3 af San Frangisem 49,895",
+        "Oct.6 W REIT Washington 56,175"
+      ]
+    },
+    "Day/Date+attendance+result+score+starter+venue": {
+      "header_occurrences": 821,
+      "rows_in_runs": 5246,
+      "rows_per_header": 6.4,
+      "with_at_or_vs": 821,
+      "home_away_recoverable_pct": 15.7,
+      "with_attendance": 4743,
+      "with_wlt": 4781,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 2,
+      "examples": [
+        "Fri., Aug. 10* 17-33. L Houston Oilers Atlanta, Ga. 11,50 Sat., Aug. 7* 24-30 L Kansas City Chiefs Univ. ",
+        "Sat., Aug.18* 24-31. L San Diego Chargers Balboa Stadium 19.168 Sat. Aug. 14* = 27-17, W_ Oakland Raiders",
+        "Fri., Aug. 24* 27-24 W__ Dallas Texans Fort Worth, Texas 18,00 Sat., Aug. 21* 6-21. L San Diego Chargers ",
+        "Fri., Aug. 31* 41-12 W Oakland Raiders Stockton, Calif. 500 Sat., Aug. 28* 3-25 L Houston Oilers Alamo St"
+      ]
+    },
+    "Date+result+starter": {
+      "header_occurrences": 415,
+      "rows_in_runs": 5217,
+      "rows_per_header": 12.6,
+      "with_at_or_vs": 1515,
+      "home_away_recoverable_pct": 29.0,
+      "with_attendance": 30,
+      "with_wlt": 5152,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 1,
+      "examples": [
+        "9/16 W 3416 @ OAK Davidson Flores 10720 Lk 17-38 8D Dawson Rote",
+        "9/25 W 17-10 LAC Davidson Kemp 10/27 L 7-28 @ HOU Dawson \u2014Blanda",
+        "Duncan 04 10 00 1-1 918 W410 @ NYY Dawson \u2014 Taliaferro",
+        "9/8} W 42-28 BOS Dawson Pari 1010 W 31-23 @ DEN Beathard Slaughter"
+      ]
+    },
+    "Date+attendance+result+score+venue": {
+      "header_occurrences": 253,
+      "rows_in_runs": 536,
+      "rows_per_header": 2.1,
+      "with_at_or_vs": 16,
+      "home_away_recoverable_pct": 3.0,
+      "with_attendance": 368,
+      "with_wlt": 314,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 2,
+      "examples": [
+        "Sept.6 @San Diego L..,13-29...,... 33,687 San Dieao/Fri. night",
+        "Sept. 29 San Diego... b,...,10-31......, 28,642 Nippert",
+        "Oct. 13 @Kansas City......... L.......3-13....... 47,096 Municipu!",
+        "Oth 20 MiAMIE .occcsscssssssen 22-24 oo... 25,942 Nippert"
+      ]
+    },
+    "Date+venue": {
+      "header_occurrences": 217,
+      "rows_in_runs": 184,
+      "rows_per_header": 0.8,
+      "with_at_or_vs": 15,
+      "home_away_recoverable_pct": 8.2,
+      "with_attendance": 18,
+      "with_wlt": 96,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 0,
+      "examples": [
+        "Doe. 3, 1989\" Denver LAColisourn 26 ovorime \u2014 16-13",
+        "Oct. 19, 191\u00b0 Seatio _Kingdome 37 ovorime 23-20",
+        "Dec. 3, 1989* Denver LA Coliseum 26 overtime 16-13",
+        "Oct. 13,1991\" Seattle Kingdome 37 overtime 23-20"
+      ]
+    },
+    "Date+attendance+starter": {
+      "header_occurrences": 209,
+      "rows_in_runs": 0,
+      "rows_per_header": 0.0,
+      "with_at_or_vs": 0,
+      "home_away_recoverable_pct": 0.0,
+      "with_attendance": 0,
+      "with_wlt": 0,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 0,
+      "examples": []
+    },
+    "Date+attendance+result+score+starter": {
+      "header_occurrences": 179,
+      "rows_in_runs": 1,
+      "rows_per_header": 0.0,
+      "with_at_or_vs": 0,
+      "home_away_recoverable_pct": 0.0,
+      "with_attendance": 0,
+      "with_wlt": 1,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 0,
+      "examples": [
+        "Sat, 6/18/l2  W 20-9 Sanfrancisco H 71,96 Reliant Stadium (closed) Grass NA 7:07 p.m. CT M. Schaub \u2014 A. S"
+      ]
+    },
+    "Date+result+venue": {
+      "header_occurrences": 141,
+      "rows_in_runs": 310,
+      "rows_per_header": 2.2,
+      "with_at_or_vs": 25,
+      "home_away_recoverable_pct": 8.1,
+      "with_attendance": 66,
+      "with_wlt": 191,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 1,
+      "examples": [
+        "Sept. 11), 2006 Green Bay Lambeau Field 84-yard punt return W, 26-0)",
+        "Oct. 16, 2006 Arizona U_ of Phoenix Stadium = -83-vard punt return W, 24-23",
+        "Nov. 12, 2006 NY Giants Giants Stadium 10S8-yard missed PG return*\u00ae W, 38-20",
+        "Dec. 3, 2006 Minnesota Soldier Field 45-yard punt return W, 23-13"
+      ]
+    },
+    "Date+result+score+venue": {
+      "header_occurrences": 117,
+      "rows_in_runs": 482,
+      "rows_per_header": 4.1,
+      "with_at_or_vs": 19,
+      "home_away_recoverable_pct": 3.9,
+      "with_attendance": 176,
+      "with_wlt": 356,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 0,
+      "examples": [
+        "Dec. 28, 2009 Minnesota Vikings SOLDIER FIELD W+ 36-30 W @ DET",
+        "Sept. 27, 2010 Green Bay Packers SOLDIER FIELD W 20-17 L @ NYG",
+        "Dec. 20, 2010 Minnesota Vikings TCF Bank Stadium W = 40-14 W NYJ",
+        "Nov. 29, 1971 Miami Dolphins Orange Bowl L 3-24 L @ DEN"
+      ]
+    },
+    "Day/Date+attendance+score+starter+venue": {
+      "header_occurrences": 104,
+      "rows_in_runs": 613,
+      "rows_per_header": 5.9,
+      "with_at_or_vs": 60,
+      "home_away_recoverable_pct": 9.8,
+      "with_attendance": 579,
+      "with_wlt": 459,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 0,
+      "examples": [
+        "Sat., Aug. 4* 6-7 Dallas Cowboys Texas Stadium 61,192 91 Weese Staubach",
+        "Sat., Aug. 11* 13-6 W Washington Redskins Mile High Stadium 58,799 78\u00b0 Morton Theismann",
+        "Fri., Aug. 24* 20-17 W New England Patriots (OT) Mile High Stadium 75,103 69\u00b0  Weese Grogan",
+        "Sat., Aug. 14* 33-20 Los Angeles Rams Anaheim Stadium 57,482 69 DeBerg Jones, B"
+      ]
+    },
+    "Date+starter": {
+      "header_occurrences": 103,
+      "rows_in_runs": 721,
+      "rows_per_header": 7.0,
+      "with_at_or_vs": 248,
+      "home_away_recoverable_pct": 34.4,
+      "with_attendance": 23,
+      "with_wlt": 702,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 1,
+      "examples": [
+        "Aug. 6 INDIANAPOLIS L 7-20 Tampa Stadium Tampa, FL 44,258 Testaverde",
+        "Aug. 13 CLEVELAND L 3-23 Tampa Stadium Tampa, FL 50,074 Testaverde",
+        "Aug. 20 at Atlanta L 14-19 Fulton County Atlanta, GA 18,141 Testaverde",
+        "Aug. 11 NY. JETS WwW 16-3 Raymond James Stadium Tampa, FL 65,015 Simms \u2014"
+      ]
+    },
+    "Date+score+venue": {
+      "header_occurrences": 88,
+      "rows_in_runs": 864,
+      "rows_per_header": 9.8,
+      "with_at_or_vs": 16,
+      "home_away_recoverable_pct": 1.9,
+      "with_attendance": 40,
+      "with_wlt": 686,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 0,
+      "examples": [
+        "Dec. 2, 1990 13 Lions Soldier Field 23-17 (OT)",
+        "Dec. 11, 1988 15 Lions Soldier Field 13-12",
+        "Dec. 6, 1987 13 Vikings Metrodome 30-24",
+        "Nov. 30, 1986 13 Steelers Soldier Field 13-10"
+      ]
+    },
+    "Date+attendance+venue": {
+      "header_occurrences": 79,
+      "rows_in_runs": 135,
+      "rows_per_header": 1.7,
+      "with_at_or_vs": 0,
+      "home_away_recoverable_pct": 0.0,
+      "with_attendance": 121,
+      "with_wlt": 88,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 0,
+      "examples": [
+        "September 24 .. Pittsburgh ...... va W",
+        "October 7 ..... .. @Cleveland L",
+        "October 15 ays. @Kansas City .... oe W",
+        "October 22 nn. @Los Angeles Rams ....... L"
+      ]
+    },
+    "Day/Date+attendance+result+score+venue": {
+      "header_occurrences": 69,
+      "rows_in_runs": 390,
+      "rows_per_header": 5.7,
+      "with_at_or_vs": 49,
+      "home_away_recoverable_pct": 12.6,
+      "with_attendance": 249,
+      "with_wlt": 338,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 0,
+      "examples": [
+        "Fri., Aug. 5* 6-43. L Boston Patriots Providence, R.I. 4,706",
+        "Sat., Aug. 13* 14-31 L Buffalo Bills Rochester, N.Y. 6,200",
+        "Sat., Aug. 20* 3-42 L Houston Oilers Jeppesen Stadium 19,500",
+        "Sat., Aug. 27* 0-48 L Dallas Texans Little Rock, Ark. 5,500"
+      ]
+    },
+    "Date+player_ps+result": {
+      "header_occurrences": 62,
+      "rows_in_runs": 378,
+      "rows_per_header": 6.1,
+      "with_at_or_vs": 155,
+      "home_away_recoverable_pct": 41.0,
+      "with_attendance": 0,
+      "with_wlt": 366,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 0,
+      "examples": [
+        "11/12 at Tampa Bay (P) 18 9 93 50.0 1 27t 1/2 L 83.8",
+        "09/08 at Oakland (S) o2 23 155 71.9 2 0 16 3/12 L 103.0",
+        "09/15 Arizona Special Teams Only L",
+        "09/22 at N.Y. Giants Special Teams Only L"
+      ]
+    },
+    "Date+attendance+result+venue": {
+      "header_occurrences": 57,
+      "rows_in_runs": 1271,
+      "rows_per_header": 22.3,
+      "with_at_or_vs": 354,
+      "home_away_recoverable_pct": 27.9,
+      "with_attendance": 1111,
+      "with_wlt": 470,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 0,
+      "examples": [
+        "Sept. 11 Buffalo iciccsace) Lens 6-10... 46,839 Riverfront",
+        "Sepl. 25 @Tampa Bay.......... W ... 23-17. 56,023 Tampa",
+        "Oct. 10 Pittsburgh. wk seu 14-24 cco. 56,086 Rivertront/Mon, night",
+        "S.11 Ww Boston Patriots 24-7 H 45,502"
+      ]
+    },
+    "Date+attendance+player_ps": {
+      "header_occurrences": 36,
+      "rows_in_runs": 501,
+      "rows_per_header": 13.9,
+      "with_at_or_vs": 410,
+      "home_away_recoverable_pct": 81.8,
+      "with_attendance": 0,
+      "with_wlt": 32,
+      "wlt_fused_to_score": 0,
+      "with_played_started_flag": 496,
+      "examples": [
+        "Sep9 vs. Pittsburgh* P 0/0 1/1 v0 Of OO O/0 1/1 1.000 2/2 1.000 5",
+        "Sep 17 at Atlanta P 00 Of Of O/f0 O/f0 O/f0 0/0 0.000 3/3 1.000 3",
+        "Sep 23 vs. Houston P oO 61/1 WW 8600 \u00ab61/1 0/0 3/8: 1.000 2/2 1.000 = 11",
+        "Sep 30 vs. Oakland* P oO 61/1 oo 1/1 1 = 0/0 3/8: 1.000 4/4 1.000 13"
+      ]
+    }
+  }
+}

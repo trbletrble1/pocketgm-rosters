@@ -1,6 +1,6 @@
 {
  "note": "THERE IS NO PREDICATE CALLED `salary`. Three incompatible conventions are in the sources and pooling them manufactures disagreements out of definitions. The convention is part of the PREDICATE NAME, so pooling is not expressible rather than merely forbidden - the same move as a person having no name.",
- "established": "2026-09-04, from the DocDump scan (report 14) and the \u00a78.4 revision (report 11)",
+ "established": "2026-09-04, from the DocDump scan (report 14) and the §8.4 revision (report 11)",
  "conventions": {
   "salary_base": {
    "definition": "base salary only - contracts stripped of bonuses and incentives",
@@ -69,7 +69,7 @@
    "sources": [
     "the League's figure as quoted by the NFLPA in the 1982 hearing"
    ],
-   "note": "This is what made the \u00a78.4 contest look factual when it was definitional. It is not a salary at all."
+   "note": "This is what made the §8.4 contest look factual when it was definitional. It is not a salary at all."
   },
   "qualifying_offer": {
    "definition": "a CONTRACTUAL THRESHOLD, not a measurement of pay - the minimum a club must offer to retain first-refusal or compensation rights",
@@ -340,7 +340,7 @@
   "why_it_is_different": "League-original. Every source held reaches the League's figures through the NFLPA, a newspaper, an agent or a court's summary of them.",
   "route": "records request, not a fetch",
   "decision": "Ryan's",
-  "if_never_obtained": "a legitimate resting state - \u00a78.4 stays at one party and one hearsay, which the design already records",
+  "if_never_obtained": "a legitimate resting state - §8.4 stays at one party and one hearsay, which the design already records",
   "date": "2026-09-04"
  },
  "_decoy_kinds": {
@@ -463,6 +463,123 @@
    "source": "NFL Standard Players Contract, Green Bay Packers / Forrest Gregg, 1966 and 1967, paragraph 10",
    "why_it_matters": "option_year_rate = 0.90 is already a declared SYSTEM predicate in this project, taken from secondary description. This is the rule stated in the INSTRUMENT ITSELF - a primary source for a system fact we had only at one remove.",
    "also_in_paragraph_10": "'the phrase rate of compensation as above used shall not be understood to include bonus payments or payments of any nature whatsoever other than the precise sum set forth in Paragraph 3' - the 90% applies to BASE ONLY, which is exactly the convention distinction salary_base exists to preserve."
+  },
+  "NAGURSKI_1933_TRANSCRIBED": {
+   "lot": "Memory Lane Inc., lot 94178 (live auction, closing 2026-09-26)",
+   "images_held": [
+    "01 recto 800x1057",
+    "02 signature detail",
+    "03 verso -- BLANK, bleed-through only",
+    "04 PSA Letter of Authenticity"
+   ],
+   "form": "The National Football League UNIFORM PLAYER'S CONTRACT",
+   "club": "Chicago Bears Football Club, Inc.",
+   "player_of": "International Falls, Minn.",
+   "RATE": "$225.00 dollars for each regularly scheduled League game played -- handwritten into the printed rate blank",
+   "rate_basis": "per_game, NOT a season salary. The printed form's unit is the game; a season total is a derivation, not a reading.",
+   "executed": "8th day of September",
+   "signatures": "George Halas (By ... President) and Bronko Nagurski (Player)",
+   "payment_schedule_as_executed": "75/25 -- printed default LEFT STANDING, not amended",
+   "_why_that_matters": "Pearce 1923 struck 75/25 through and amended it by hand to 90/10. Nagurski 1933 did not. Two observations, two outcomes: the clause is a negotiable default and the amendment is the variation, not the form. Second data point behind PAYMENT_SCHEDULE_PERSISTENCE, which until now rested on one.",
+   "single_leaf": "the verso is blank. Unlike the Kayfabe listings, where image 5 was page two, this instrument is one page and the set is complete at four images."
+  },
+  "THE_YEAR_WAS_SETTLED_INTERNALLY_NOT_BY_THE_LOT": {
+   "problem": "the year digit is typed in four places as '193_' and the glyph is ambiguous between 3 and 5 at every resolution held (800px is the seller's ceiling).",
+   "what_settled_it": "paragraph 8, the renewal-option clause, reads 'Any time prior to August 1st, 1934' -- and the option year is contract year + 1 by the clause's own terms. That fixes the contract year at 1933 on the instrument's internal cross-reference.",
+   "what_did_NOT_settle_it": "the lot description also says 1933, but a lot description is a RELAY. Agreement between a relay and a transcription is not confirmation by the relay; the transcription stands on its own.",
+   "LESSON": "an internal cross-reference can settle a field that is illegible in its own right. Look for the instrument's other mentions of a damaged value before recording it as uncertain -- and before accepting the seller's reading of it.",
+   "_generalises_to": "the OCR'd guide corpus: the same principle is why a season block's declared W-L-T can settle result lines the OCR mangled."
+  },
+  "AN_LOA_AUTHENTICATES_SIGNATURES_NOT_DATES": {
+   "read_from": "PSA Letter of Authenticity, certification AT03728, dated July 24 2026",
+   "what_it_asserts": "signer(s): George Halas and Bronko Nagurski. Item: 'contract'. An opinion that the signatures are authentic on slant, flow, pen pressure, letter size.",
+   "what_it_does_NOT_assert": "the year, the rate, the club, or that the document is what its title says. It never mentions 1933.",
+   "RULE": "a certificate of authenticity is evidence about signatures only. It may not be cited for any figure, date or term. Those come from the instrument or from nothing."
+  },
+  "PRACTICE_GAME_CLAUSE": {
+   "transcribed": "It is further agreed that practice games before Sept. 23 will be played without compensation, other than necessary traveling and hotel expenses.",
+   "form": "typed addendum inserted between paragraphs 1 and 2 and underscored -- NOT printed on the form",
+   "seen_in": [
+    "Nagurski 1933"
+   ],
+   "frequency": "1 of 21 distinct instruments held. No other document in the collection carries a practice-game term.",
+   "CONSEQUENCE_FOR_DERIVATION": "under a per-game rate, games played is not games paid. A season total derived as rate x appearances OVERSTATES 1933 Nagurski by every pre-Sept-23 exhibition game. A per_game rate may be multiplied only by REGULARLY SCHEDULED LEAGUE games -- and the media-guide corpus files preseason blocks in the same shape as regular-season ones, so the two findings of 2026-09-05 bear on each other directly.",
+   "_is_this_a_convention": "no. One instance is not a convention. It is recorded as a term observed once; how common it was is open."
+  },
+  "SURVIVORSHIP_THE_1961_BEARS_FIRE": {
+   "claim": "a 1961 fire at Chicago Bears headquarters destroyed club paperwork, which is why pre-1961 Bears documents are scarce.",
+   "acquisition_class": "RELAYED -- from the Memory Lane lot description via Ryan. Not in the instrument, not in the LOA. NOT verified and may not be cited as evidence.",
+   "_why_it_is_recorded_anyway": "it is a statement about the CORPUS, not about the document: it proposes a reason the sample is shaped as it is.",
+   "THE_RULE_IT_SUPPORTS": "scarcity of pre-1961 Bears paperwork is not evidence that the paperwork did not exist. An 'absent' claim over a club-era whose records are known to have burned is a claim about the archive, not about the world.",
+   "_generalises": "every source has a survival filter. This is the first NAMED one, and it should be looked for elsewhere rather than treated as a Bears peculiarity.",
+   "what_would_verify_it": "contemporary press, or a Bears club history. Not yet sought."
+  },
+  "NAGURSKI_IS_A_FOUR_POINT_SERIES": {
+   "_SUPERSEDED": "five points, not four -- WorthPoint's 1930 Goldin listing added a season figure that predates all of them. See NAGURSKI_SERIES_FIVE_POINTS.",
+   "_why_the_points_are_not_repeated_here": "keeping a second copy of the figures is the drift that already bit model.py, where salary conventions lived both in the declaration and as Python literals. The correction is recorded; the data is not duplicated."
+  },
+  "WORTHPOINT_1930_NAGURSKI": {
+   "url": "worthpoint.com/worthopedia/1930-bronko-nagurski-chicago-bears-4570352677",
+   "WHAT_IS_ACTUALLY_VISIBLE": "the FULL lot description is free. Only SOLD FOR and SOLD DATE are behind the trial wall. The caution about paywalling and watermarking was right in general and wrong for this page -- so it was worth checking rather than planning around.",
+   "no_image_held": "WorthPoint shows the item but the dataset holds no scan of it. Everything below is the auction house's reading, not ours.",
+   "original_auction": "Goldin",
+   "acquisition_class": "source_derived from a FETCHED description -- one step better than a relay (we read the page ourselves) and one step worse than a transcription (we did not read the instrument).",
+   "described_terms": {
+    "form": "The National Football League Uniform Player's Contract",
+    "club": "Chicago Bears Football Club, Inc.",
+    "player_of": "Minneapolis, Minn.",
+    "FIGURE": "$5,000 for the 1930 season",
+    "dated": "February 4, 1930",
+    "signatories": "Bronko Nagurski, Geo. S. Halas, and Edw. C. Sternaman",
+    "physical": "one page, 8.25 x 10.75in gray sheet, pre-printed black with BLACK TYPEWRITTEN AMENDMENTS",
+    "authentication": "LOA from the Nagurski family -- not a third-party authenticator"
+   },
+   "STERNAMAN_DATES_THE_SIGNING_AUTHORITY": "Sternaman co-signs in 1930 and does not appear on the 1933 instrument, where Halas signs alone as President. Who could bind the club is therefore a datable fact and not a constant -- the same shape of finding as the 75/25 clause being negotiable.",
+   "THE_of_FIELD_IS_RESIDENCE_NOT_ORIGIN": "1930 reads 'of Minneapolis, Minn.' and 1933 reads 'of International Falls, Minn.' -- the same man. Minneapolis is where he was at university; International Falls is where he was raised. The printed 'of ___' blank records where the player was AT SIGNING. It is not a hometown or birthplace claim and must never be ingested as one.",
+   "_leads_not_followed": [
+    "a 1932 Nagurski contract and a 1939 Chicago Bears contract (unsigned) both appear in WorthPoint's similar-items list"
+   ]
+  },
+  "NAGURSKI_SERIES_FIVE_POINTS": {
+   "_what": "the same person across thirteen years. No one else in the collection has more than three.",
+   "points": [
+    {
+     "year": 1930,
+     "figure": "$5,000 for the season",
+     "rate_unit": "season",
+     "acquisition": "source_derived (WorthPoint/Goldin description, fetched)",
+     "note": "rookie contract, dated 4 Feb 1930"
+    },
+    {
+     "year": 1932,
+     "figure": "$225.00 per regularly scheduled League game",
+     "rate_unit": "per_game",
+     "acquisition": "relayed -- image not held"
+    },
+    {
+     "year": 1933,
+     "figure": "$225.00 per regularly scheduled League game",
+     "rate_unit": "per_game",
+     "acquisition": "TRANSCRIBED from held image"
+    },
+    {
+     "year": 1937,
+     "figure": "$5,000",
+     "rate_unit": "unverified_total",
+     "acquisition": "relayed -- image not held"
+    },
+    {
+     "year": 1943,
+     "figure": "$3,500",
+     "rate_unit": "unverified_total",
+     "acquisition": "relayed -- image not held"
+    }
+   ],
+   "THE_UNIT_FLIPS_TWICE": "season (1930) -> per_game (1932, 1933) -> stated total (1937, 1943). These are not five values of one quantity and may never be plotted as one line. The 1930 figure being a SEASON salary kills the reading that per-game pay was a rookie or early-career arrangement -- his first contract was the season one, and the per-game structure came after.",
+   "_arithmetic_offered_as_arithmetic_only": "thirteen league games at $225 is $2,925. That is a multiplication, not a reading, and the practice-game clause is exactly why it is not a salary: see PRACTICE_GAME_CLAUSE.",
+   "_1930_and_1937_are_the_same_number": "$5,000 seven years apart. Worth noticing and not worth concluding from -- the 1937 figure is a relay and its basis is unverified.",
+   "_one_of_five_is_transcribed": "1933 alone rests on a document we hold. The other four stay out of the store.",
+   "_rate_unit_is_enforced": "src/gate_salary_rate_unit.py. rate_unit is required on every figure, must come from {season, per_game, unverified_total}, and two figures of different units may not be placed on one axis. Deliberately not called `basis`: model.py already uses that key for the resolution basis, and two meanings on one key is the league-name collision again."
   }
  }
 }
