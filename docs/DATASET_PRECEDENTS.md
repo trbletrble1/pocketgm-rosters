@@ -617,7 +617,8 @@ That is the failure it exists to catch, and the limit is stated in the gate.*
 
 ## A figure presented at a confidence its derivation does not support
 
-**Third instance, 2026-09-04, and the three form a ladder.**
+**Fourth instance, 2026-09-05. The first three form a ladder; the fourth moves the
+pattern off numbers entirely.**
 
 1. **The 1980 hearing's estimated column.** The document *says* it is a
    projection. Reading it as measurement takes a stated caveat and drops it.
@@ -657,6 +658,29 @@ in the same store correctly pass. Refiled as `source_derived`, it passes.
 The declaration says so where the year is written, because a gate resting on an
 unsourced fact is itself a figure presented at a confidence its derivation does
 not support.*
+
+
+### Fourth instance: a DATE, not a number
+
+**`prosportstransactions` marks some rows `(date approximate)`.** That is the
+compiler stating his own uncertainty, in his own words, about his own work — the
+rarest thing a secondary source can offer and the easiest to lose, because
+dropping it costs nothing and yields a clean date.
+
+**A date promoted from approximate to exact is the same failure as a projection
+read as a measurement.** Nothing about the pattern was ever specific to money;
+the first three instances were numbers only because money is what we happened to
+be extracting. The rule is about *any* value whose stated confidence is discarded
+in transit.
+
+**And this one runs the other way from the first three.** Those were cases where a
+source's hedge had to be *noticed* — "approximately", "estimated", or in the
+passer-rating case no hedge at all. Here the source hedges **explicitly, per row,
+in a field of its own.** The failure would not be missing the caveat; it would be
+receiving it and throwing it away.
+
+*Recorded before the ingest exists, so the ingest is written to carry it rather
+than retrofitted to.*
 
 **Corollary — the arithmetic columns.** `Comp %`, `Yds/Att`, `TD %`, `Int %` have
 no introduction date because they never needed one: they are arithmetic on two
