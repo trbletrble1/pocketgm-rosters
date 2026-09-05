@@ -1,7 +1,7 @@
 {
  "source_id": "prosportstransactions",
  "name": "Pro Sports Transactions Archive (prosportstransactions.com)",
- "acquisition": "NOT YET ACQUIRED",
+ "acquisition": "by_permission_only",
  "stated_by": "a hand compilation, maintained since 2004",
  "derived_from": [
   "newspaper transaction columns, transcribed by hand over twenty years"
@@ -11,7 +11,9 @@
   "scripted_request": "HTTP 403 Forbidden",
   "browser": "Cloudflare interstitial - 'Performing security verification ... protect against malicious bots'",
   "what_I_did": "stopped. Bypassing or completing bot-detection is not something this project does, and no amount of the data being useful changes that. The structure below came from the Wayback CDX index, which is a different service and required no evasion.",
-  "what_would_unblock_it": "Ryan visiting the site himself, or an export/API if the compiler offers one. It is one person's twenty-year compilation; asking is the right route anyway."
+  "what_would_unblock_it": "Ryan visiting the site himself, or an export/API if the compiler offers one. It is one person's twenty-year compilation; asking is the right route anyway.",
+  "access": "by_permission_only",
+  "ruled": "2026-09-05, Ryan. The site blocks automation, so there is no scripted route and no CDX-then-fetch route. The realistic path is to ASK. Copyright reads Frank Marousek; the site invites contact. Twenty years of one person's compilation, and a project like this asking politely is likelier to get a yes than any workaround. NOTHING IS INGESTED until that conversation happens."
  },
  "RANKING": {
   "tier": "SECONDARY, below anything primary",
@@ -55,9 +57,10 @@
   }
  },
  "HOW_FAR_BACK_FOOTBALL_GOES": {
-  "answer": "UNKNOWN. This is the question that decides whether the source is useful for the historical eras, and the CDX index cannot answer it.",
-  "the_tempting_wrong_answer": "archived queries carry BeginDate values from 1920 to 2021. That is what people TYPED INTO A FORM, not what the database returned. Reading it as coverage would be inferring content from a request - the same error as counting headings and inferring tables (report 38).",
-  "how_to_settle_it": "one search on the live site with a 1920s date range"
+  "answer": "AT LEAST 1935. Settled.",
+  "how": "a live search run by Ryan in a browser: 1 January 1935 to 1 January 1945, player movement, returns 93 pages of results.",
+  "_why_this_and_not_the_form": "the previous entry refused to answer from BeginDate values in archived queries, because those are what people TYPED INTO A FORM, not what the database returned. This is measured output, not an inferred capability - the distinction that made the refusal worth making.",
+  "measured": "2026-09-05"
  },
  "why_it_matters": {
   "the_gap_it_fills": "report 37 found Pro Football Archives' transactions section gone from the live site - 3,945 pages, Wayback-only, out of reach. This is the same category from a source that still exists.",
@@ -70,9 +73,32 @@
   "ACCESS": "a record of why nothing was fetched",
   "structure_from_CDX": "a measurement record",
   "fields_from_the_search_form": "a measurement record",
-  "HOW_FAR_BACK_FOOTBALL_GOES": "an open question",
+  "HOW_FAR_BACK_FOOTBALL_GOES": "a measurement record",
   "why_it_matters": "the reasoning",
   "_rule": "keys addressed to a reader; RANKING is the enforceable part once anything is ingested",
-  "RANKING": "the RULE is implemented as policy/resolution.json :: source_rank.secondary_compilation (rank 1 against primary's 3), read by src/resolve_store.py:source_rank(). This block states the reasoning; the policy file carries the enforceable value. Verified: rank('prosportstransactions')=1, rank('courts')=3, rank(unknown)=None."
+  "RANKING": "the RULE is implemented as policy/resolution.json :: source_rank.secondary_compilation (rank 1 against primary's 3), read by src/resolve_store.py:source_rank(). This block states the reasoning; the policy file carries the enforceable value. Verified: rank('prosportstransactions')=1, rank('courts')=3, rank(unknown)=None.",
+  "WHAT_IT_CARRIES_BEYOND_THE_FIELD_NAMES": "a relayed illustration, ingested by nothing",
+  "COMPILER_UNCERTAINTY_MUST_SURVIVE": "a rule for an ingest that does not exist yet; it becomes enforceable the moment one is written"
+ },
+ "WHAT_IT_CARRIES_BEYOND_THE_FIELD_NAMES": {
+  "_status": "RELAYED - shown to me in conversation, NOT fetched, NOT ingested. Recorded as an illustration of the source's shape. A relayed figure may never enter the store, and none of these has.",
+  "_sample_rows_from_1935": [
+   "1935-02-19  Packers   Don Hutson       signed free agent",
+   "1935-05-23  Packers   cash / Carl Jorgensen  trade with Eagles",
+   "1935-06-20  Bears     Red Grange       hired as assistant coach",
+   "1935-07-01  Redskins  Lone Star Dietz  replaced as head coach",
+   "1935-08-08  Packers   Clarke Hinkle    re-signed to a 1-year contract"
+  ],
+  "three_things_the_archive_cannot_currently_say": {
+   "contract_length": "'re-signed to a 1-year contract' - a term, in a note field. The archive holds 182 salary figures and no contract LENGTHS at all.",
+   "coaching_hires_and_firings_with_dates": "'hired as assistant coach', 'replaced as head coach', both dated. Report 21 recorded assistant coaches as unfillable from StatsCrew and report 33 got 447 of them from guides with SEASON granularity. This has DAY granularity, and in 1935.",
+   "cash_consideration_trades": "'cash / Carl Jorgensen, trade with Eagles' - a club-to-club transaction with a consideration, which is exactly the ('transfer', person, from_club, to_club, year) subject built for Kapp's $50,000 and currently holding one claim."
+  }
+ },
+ "COMPILER_UNCERTAINTY_MUST_SURVIVE": {
+  "feature": "several rows carry '(date approximate)'.",
+  "why_it_matters": "that is the compiler stating his own uncertainty, in his own words, about his own work. It is the rarest thing a secondary source can offer and the easiest to lose.",
+  "rule": "the ingest MUST preserve it - as a confidence marker on the claim, never flattened into a clean date. A date silently promoted from approximate to exact is a figure presented at a confidence its derivation does not support, which is a precedent this project already carries three instances of.",
+  "ruled": "2026-09-05, Ryan"
  }
 }

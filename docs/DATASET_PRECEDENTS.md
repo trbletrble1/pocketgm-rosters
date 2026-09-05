@@ -662,3 +662,38 @@ not support.*
 no introduction date because they never needed one: they are arithmetic on two
 counted columns, derived in *every* era including the ones that printed them. A
 source that prints a quotient has not observed a quotient.
+
+---
+
+## A documentation exemption is legitimate exactly when the rule lives somewhere else
+
+**2026-09-05.** `gate_declarations_are_read` refuses a declaration key that
+nothing reads, and the escape hatch is `_documentation_only`. Four times that
+hatch was covering a mistake:
+
+1. `JERSEY_USABLE` — computed and never referenced.
+2. `cfl.expected_fill` — right file, wrong block.
+3. `league_codes` — prose that nothing enforced, while `AFL3` silently loaded
+   the Arena Football League.
+4. `stat_columns.applicability` — nested **inside** a documentation-only block
+   *minutes after the rule against doing that was written down*.
+
+Every one was a real rule hidden where nothing could read it, and marking it
+documentation would have made the gate a rubber stamp.
+
+**The fifth was different, and the difference is worth stating.**
+`prosportstransactions.RANKING` describes a rule that genuinely lives elsewhere —
+`policy/resolution.json :: source_rank.secondary_compilation`, rank 1 against
+primary's 3, read by `resolve_store.source_rank()`. The declaration block is
+*commentary on* an enforced rule, not the rule itself.
+
+**The test is not "is this important?" — everything in a declaration is
+important. The test is: can you name the file and the function that acts on it?**
+If you can, the block is documentation and the exemption is honest. If you find
+yourself explaining why the rule matters instead, you are looking at instance
+five of the same mistake.
+
+*Recorded because the exemption is the mechanism that lets the gate be defeated,
+and after four abuses the first legitimate use needs to be visible as such — or
+the next honest exemption gets refused out of superstition.*
+
