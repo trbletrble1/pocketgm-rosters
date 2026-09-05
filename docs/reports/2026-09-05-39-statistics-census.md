@@ -78,6 +78,29 @@ statistic in 1994. The header is not the era signal; the fill is.
 **1969–2024, 56 years, no gaps**. Everything else in the 56-column vocabulary is
 present throughout and varies by fill.
 
+> **CORRECTED, same day.** That is wrong: **21 of 55 columns are era-native by
+> presence**, not two. I checked a hand-picked list of names I had thought of
+> instead of enumerating the vocabulary — the same error as counting headings and
+> inferring tables, one report earlier. Enumerated properly:
+>
+> | column | span | |
+> |---|---|---|
+> | `Sacked`, `Yds Lost` | 1969–2024 | |
+> | `Solo`, `Ast` | 1978–2024 | solo and assisted tackles |
+> | `KO`, `KOS`, `Yds.` | 1979–2021 | |
+> | `PD` | 2013–2021 | passes defensed |
+> | `TFL`, `TFLY`, `QBH` | 2018–2021 | tackles for loss, QB hits |
+> | `Att`, `Comp`, `Ints` + the passing percentages and `Rating` | 1923–2024 | no passing table in 1922 |
+> | **`FGS`, `PS`** | **1979 only** | a single season, both columns |
+>
+> `FGS` and `PS` appearing in **one season and never again** is the kind of thing
+> only an enumeration finds, and it wants explaining before those columns are
+> trusted.
+>
+> And **only one column is era-native by fill** — `Tackle`. The distinction still
+> matters and the declaration still keys on fill; the count of what falls either
+> side of it was wrong.
+
 So the declaration must key on **fill by era**, not presence. The `era_native_columns`
 entry as written would have declared `Tackle` universal and been wrong in every
 season before 1980.
