@@ -721,3 +721,42 @@ five of the same mistake.
 and after four abuses the first legitimate use needs to be visible as such — or
 the next honest exemption gets refused out of superstition.*
 
+---
+
+## Absence of variation is not absence of the possibility of variation
+
+**2026-09-05.** Three contracts — Groza 1951, Atkins 1954, Sugar 1961 — carry the
+NFL Standard Contract's 75/25 payment clause unamended. From that I reported *"a
+league-scoped system fact with a measured start and end."*
+
+**The 1923 Uniform Player's Contract carries the same clause struck through and
+amended by hand to 90/10.** So it is a **printed default individual contracts
+could override**, and three men who did not negotiate it were never evidence that
+it could not be negotiated.
+
+**This is not the sample-versus-census error, and the difference matters.** A
+sample tells you a field's typical value and hides its range — the fix is to
+count more. Here the three documents were **read correctly**, the observation was
+**accurate**, and counting more of the same would not have helped: fifty
+unamended contracts would have made the wrong conclusion feel stronger. What was
+wrong was the **inference from uniformity to necessity**.
+
+**The tell is a claim about what COULD happen, drawn from records of what DID.**
+"Every contract I hold says 75/25" is an observation. "The league required 75/25"
+is a claim about the rule behind the observation, and no quantity of conforming
+instances establishes it — only a document stating the rule, or a single
+counter-example destroying it. Pearce was the counter-example, and one was enough.
+
+**Where this bites hardest is exactly where the dataset is strongest**: a corpus
+large enough that uniformity feels like proof. 3.3 million claims will contain
+many patterns that hold in every case we have and were never obligatory.
+
+**The rule: a claim about a rule needs a source that states the rule.** Derive
+distributions from records; do not derive constraints from them. Where a
+constraint is asserted, name the document that imposes it — and where none
+exists, say "every instance we hold" rather than "the league required".
+
+*Recorded with its own instance count: this is one, and one counter-example
+found it. The precedent exists so the next uniformity is doubted before it is
+promoted.*
+
