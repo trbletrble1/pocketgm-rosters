@@ -3,3 +3,7 @@ __pycache__/
 *.pyc
 sources/
 pgm3-sources/
+
+# derived claim indexes - counts and analysis are committed, stores are not
+dataset/build-reports/person-index.json
+dataset/build-reports/stats-census.json
