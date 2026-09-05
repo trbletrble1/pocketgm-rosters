@@ -178,6 +178,37 @@
     "case": "Ron Billingsley appears in two Kayfabe lots (398120727238 and 257594925421). Both are ADDENDUM TO 1974 PLAYER'S CONTRACT, both $31,500.00, identical wording.",
     "conclusion": "two counterparts of ONE instrument, not two documents. Counting them as two would double a debt that was owed once.",
     "rule": "a second listing of the same instrument is a counterpart until its FIGURE or its TERMS differ. Check before treating it as new."
+   },
+   "PAGE_TWO_READ": {
+    "_from": "Mike Askea, image 05 - the addendum's second page",
+    "5_RELEASE": "Player releases the WFL, its officers and governors past and present; the WFL Club which employed him in 1974 and its owners; the WFL Player's Association; and the WFL PLAYER'S COMPENSATION TRUST and its Trustees, from all liability arising out of the 1974 WFL Contract or services provided.",
+    "6_1975_CONTRACT_STRUCK_THROUGH": {
+     "quote": "Should the World Football League be successfully reorganized with a minimum of eight organizations committed to fiscal continuance ... Club shall tender to Player on or before May 30, 1975, a Standard 1975 WFL Player's Contract which shall provide for a minimum of $500.00 per regularly scheduled season game for which Player is on 'active' status",
+     "STATUS": "STRUCK THROUGH, with 'see back page' handwritten beside it. The whole 1975-contract promise was deleted and replaced.",
+     "_third_instance": "a deletion is data - after Pearce's amended percentages and Franco's struck release proviso, this is the third, and the first where an entire numbered clause was removed."
+    },
+    "THE_PER_GAME_MINIMUM_VARIES": {
+     "Askea": "$500.00 per regularly scheduled season game",
+     "Billingsley": "$1,000.00 (read from bleed-through, not yet direct)",
+     "_so": "the promised 1975 minimum was NOT uniform across the batch. Two players, two figures - which is what makes reading each document rather than assuming the form necessary."
+    },
+    "7_MISCELLANEOUS": {
+     "quote": "contains their entire understanding IN FOUR COPIES ... governed by and construed under the laws of the State of Oregon",
+     "_it_settles_the_counterpart_question": "the instrument states that four copies exist. Ron Billingsley appearing in two lots at $31,500 with identical wording is two of those four, not two debts. The document answered the question I had already answered by comparison."
+    }
+   },
+   "PORTLAND_STORM_BATCH": {
+    "_measured": "2026-09-05",
+    "players_named_in_the_storefront": 21,
+    "held": 18,
+    "unavailable_at_fetch": [
+     "Bob Christiansen (HTTP 404, sold and delisted)",
+     "Drew Taylor (listing gone)",
+     "Darrell Mitchell (sold before fetch, no relist)"
+    ],
+    "images": 186,
+    "_what_it_is": "roughly half the paperwork of a forty-man roster, from a single season of a league that collapsed mid-year. Nothing else in the archive has this shape - it is not a sample of a league, it is most of one club's documentary record of being unable to pay its players.",
+    "_provenance_of_the_batch": "Kayfabe Memories deals in wrestling paperwork; the rest of the storefront is Houston and WWF contracts. The Portland Storm documents are an outlier in that inventory, consistent with a single collector consignment - somebody sold them a box. Ryan reports this is the complete football holding, so the batch will not grow from this seller."
    }
   },
   "postseason_pool_share": {
