@@ -64,7 +64,7 @@ def main():
         if not m: continue
         year = int(m.group(2)); dec = (year // 10) * 10
         lg = t2l.get((m.group(1), m.group(2)), "?")
-        for hdr, rows in tables(open(f, encoding="utf-8", errors="replace").read()):
+        for hdr, rows, _h in tables(open(f, encoding="utf-8", errors="replace").read()):
             for c in hdr:
                 if c == "Player": continue
                 present[c].add(year)

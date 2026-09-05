@@ -180,10 +180,20 @@ def bio(g, p):
     # total the man actually has and NAME the column, rather than pretending to
     # know which number defines him. Junior Seau's tackles ARE in the archive;
     # hardcoding "yards" reported a 20-year linebacker as having 238 of them.
-    LABEL = {"Yds": "yards", "TDs": "touchdowns", "Tackle": "tackles",
-             "Solo": "solo tackles", "Int": "interceptions", "Rec": "receptions",
-             "Points": "points", "FF": "forced fumbles", "Brup": "pass break-ups",
-             "Comp": "completions", "Att": "pass attempts", "No.": "plays"}
+    # keyed on TABLE.COLUMN now: a statistic that does not name its table is
+    # ambiguous, and "yards" alone was reporting punters as leading passers.
+    LABEL = {"rushing.Yds": "rushing yards", "receiving.Yds": "receiving yards",
+             "passing.Yds": "passing yards", "punting.Yds": "punting yards",
+             "punt_returns.Yds": "punt return yards",
+             "kick_returns.Yds": "kick return yards",
+             "interceptions.Yds": "interception return yards",
+             "defense_and_fumbles.Tackle": "tackles",
+             "defense_and_fumbles.Solo": "solo tackles",
+             "defense_and_fumbles.FF": "forced fumbles",
+             "receiving.No.": "receptions", "rushing.No.": "carries",
+             "interceptions.No.": "interceptions", "punting.No.": "punts",
+             "passing.Comp": "completions", "passing.TDs": "touchdown passes",
+             "total_scoring.Points": "points", "kicking.FGM": "field goals"}
     tot = collections.Counter()
     for s in ss:
         for k, v in s["stats"].items():
@@ -197,7 +207,10 @@ def bio(g, p):
         want = None
         for pcode in pos:
             f = POSFN.get(pcode, {}).get("salient_column")
-            if f and tot.get(f): want = f; break
+            if not f: continue
+            for cand in LABEL:
+                if cand.endswith("." + f) and tot.get(cand): want = cand; break
+            if want: break
         k = want or max(tot, key=lambda x: tot[x] * (2 if x in ("Tackle", "Yds", "Rec") else 1))
         best = max(ss, key=lambda s: num(s["stats"].get(k)) or 0)
         bv = num(best["stats"].get(k)) or 0

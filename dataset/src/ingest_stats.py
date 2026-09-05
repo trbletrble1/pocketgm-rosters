@@ -68,6 +68,7 @@ def main():
     teams = F.teams_in(LEAGUE, YEAR)
     rows = cells = obs = derived = 0
     refused_inapplicable = collections.Counter()
+    unnamed_tables = 0
     unknown_slug = 0
     fill = collections.defaultdict(lambda: [0, 0])
     for team in sorted(teams):
@@ -79,8 +80,16 @@ def main():
         # slug per player NAME, read from the links on this page
         slugs = dict((n.strip(), s) for s, n in
                      re.findall(r'/football/stats/(p-[a-z0-9\-]+)"[^>]*>([^<]+)</a>', html))
-        for hdr, rs in tables(html):
+        for hdr, rs, table_name in tables(html):
             if "Player" not in hdr: continue
+            # THE TABLE IS PART OF THE PREDICATE. `Yds` alone is passing yards,
+            # rushing yards or punting yards - Johnny Unitas 1963 and a punter
+            # both stored "Yds = 3481" and nothing distinguished them. The
+            # convention goes in the name, exactly as it does for money.
+            if not table_name:
+                unnamed_tables += 1
+                continue                       # refuse rather than store ambiguity
+            tprefix = re.sub(r"[^a-z0-9]+", "_", table_name.lower()).strip("_")
             for r in rs:
                 nm = r.get("Player", "").strip()
                 if not nm or nm.lower() in ("totals", "total"): continue
@@ -113,7 +122,7 @@ def main():
                         note = ("APPLICABILITY UNRESOLVED for this league: a zero "
                                 "here may be schema padding rather than a measured "
                                 "zero. Do not render as a fact about the person.")
-                    store.add_claim(sr, subj, c, v, YEAR,
+                    store.add_claim(sr, subj, f"{tprefix}.{c}", v, YEAR,
                                     kind="source_derived" if calc else "observed",
                                     stated_by="StatsCrew", note=note)
                     if calc: derived += 1
@@ -139,6 +148,8 @@ def main():
     if refused_inapplicable:
         log("  refused as INAPPLICABLE in this league: " +
             ", ".join(f"{k}={v}" for k, v in refused_inapplicable.most_common()))
+    if unnamed_tables:
+        log(f"  tables refused for having no heading: {unnamed_tables}")
     log(f"rows {rows}  cells {cells}  observed {obs}  source_derived {derived}  "
         f"rows refused for no slug {unknown_slug}")
     for d in DEV: log(f"  DEV {d[1]}: declared {d[2]} actual {d[3]} -- {d[4]}")

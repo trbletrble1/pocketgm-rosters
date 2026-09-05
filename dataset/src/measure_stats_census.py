@@ -38,8 +38,18 @@ def tables(html):
     # "Tackle", singular.
     t = re.sub(r"<!--.*?-->", "", html, flags=re.S)
     t = re.sub(r"<script.*?</script>", "", t, flags=re.S)
+    # THE SOURCE NAMES EACH TABLE and I discarded it. Every table is preceded by
+    # an <h2>: Passing, Rushing, Receiving, Kicking, Punting, Punt Returns, Kick
+    # Returns, Interceptions, Defense and Fumbles, Total Scoring. Without it a
+    # `Yds` claim is passing yards, rushing yards or punting yards and nothing
+    # says which - Johnny Unitas and a punter both stored "Yds = 3481".
     out = []
-    for blk in t.split("<table")[1:]:
+    chunks = t.split("<table")
+    heads = []
+    for ch in chunks[:-1] if len(chunks) > 1 else chunks:
+        hs = re.findall(r"<h2[^>]*>(.*?)</h2>", ch, re.S)
+        heads.append(re.sub("<[^>]+>", "", hs[-1]).strip().rstrip(":") if hs else None)
+    for i, blk in enumerate(chunks[1:]):
         blk = blk.split("</table>")[0]
         # A MULTI-LEVEL HEADER. The scoring table carries a grouping row
         #   <th colspan=8>Touchdowns</th><th colspan=5>Other</th><th>Total</th>
@@ -63,7 +73,7 @@ def tables(html):
         n = len(hdr)
         rows = [dict(zip(hdr, cells[i:i + n])) for i in range(0, len(cells) - n + 1, n)]
         rows = [r for r in rows if r.get(hdr[0], "").lower() != "totals"]
-        out.append((hdr, rows))
+        out.append((hdr, rows, heads[i] if i < len(heads) else None))
     return out
 
 
