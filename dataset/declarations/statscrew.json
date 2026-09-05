@@ -1421,7 +1421,8 @@
   "league_codes.leagues_the_brief_named_that_this_source_CANNOT_supply": "a negative result - leagues to seek elsewhere",
   "_correction_2026_09_04": "person_id_scheme was listed here as documentation. It was not: pattern {prefix}-{surname[:5]}{forename[:3]}{NNN} is a CONSTRAINT, and 36 stored slugs violated it, merging 46 men. It is now enforced by src/gate_slug_pattern.py. Marking a constraint 'documentation' is how a declaration stops being load-bearing without anyone editing it.",
   "stat_columns.PARSE_TRAP": "how to parse, for a reader",
-  "stat_columns.era_native_columns": "a measurement record"
+  "stat_columns.era_native_columns": "a measurement record",
+  "stat_columns.ZERO_IS_NOT_ABSENCE": "the reasoning; the enforceable part is stat_columns.applicability, read by model.py and src/gate_applicability.py"
  },
  "stat_columns": {
   "_why": "A statistics table mixes COUNTED things with CALCULATED ones and formats them identically. Green Bay 1950 lists Tobin Rote with a passer Rating of 26.7 in the same row as his 224 attempts. The attempts were counted in 1950. The rating was computed by this source from a formula adopted in 1973 - nobody in 1950 knew it and no 1950 document states it.",
@@ -5412,6 +5413,110 @@
    "Saf": 1970
   },
   "_generated": "by src/declare_stat_columns.py from the cache, 2026-09-05. NOT hand-pasted: a hand-written census is how a conditional figure came to sit in a field read as absolute (report 22).",
-  "_the_rule": "PRESENCE is nearly constant across eras; FILL is what is era-native. Declare and check fill_by_decade. A check keyed on presence would call Tackle universal and be wrong in every season before 1980."
+  "_the_rule": "PRESENCE is nearly constant across eras; FILL is what is era-native. Declare and check fill_by_decade. A check keyed on presence would call Tackle universal and be wrong in every season before 1980.",
+  "ZERO_IS_NOT_ABSENCE": {
+   "_the_general_form": "A source that writes ZERO where a measure does not apply is indistinguishable, BY FILL, from one that measured zero. `Single` is 100% filled in every league; in the NFL all 29,028 values are 0, because the rouge is a Canadian scoring play. A fill-based check cannot tell the difference, and a consumer reading fill sees a measurement.",
+   "_and_all_zero_is_ambiguous_too": "Measured 2026-09-04: 25 (column, league) pairs are entirely zero over 200+ values. But `MFG` - missed field goal return touchdowns - is ALSO all-zero across the same 29,028 NFL values, and that play is legal. It simply never happened. INAPPLICABLE and NEVER-OCCURRED cannot be told apart by the data. Inferring applicability from all-zero would be a guess wearing a measurement's clothes.",
+   "_so": "applicability is DECLARED per league, not inferred. A pair not declared is 'unresolved' and must not be rendered as a fact about a person.",
+   "measured_all_zero_pairs": {
+    "_over": "200+ values",
+    "Single": [
+     "AAFC",
+     "AFL",
+     "NFL",
+     "USFL",
+     "WFL",
+     "WLAF",
+     "XFL"
+    ],
+    "MFG": [
+     "AAFC",
+     "AFL",
+     "NFL",
+     "USFL",
+     "WFL",
+     "WLAF",
+     "XFL"
+    ],
+    "FTD": [
+     "UFL",
+     "UFL2",
+     "USFL2",
+     "XFL"
+    ],
+    "Fum": [
+     "AAFC",
+     "WFL"
+    ],
+    "Brup": [
+     "AFL",
+     "CFL"
+    ],
+    "FF": [
+     "AFL"
+    ],
+    "2Pt": [
+     "WFL"
+    ],
+    "Other": [
+     "CFL"
+    ]
+   },
+   "_consumer_rule": "An export, a bio or a player page must read `applicability` before rendering any statistic. Nothing may render '0 singles' for a 1962 Packer as though it were a fact about him.",
+   "_where_the_enforceable_part_lives": "stat_columns.applicability"
+  },
+  "applicability": {
+   "Single": {
+    "applicable_in": [
+     "CFL"
+    ],
+    "inapplicable_in": [
+     "NFL",
+     "AAFC",
+     "AFL",
+     "APFA",
+     "USFL",
+     "USFL2",
+     "WFL",
+     "WLAF",
+     "XFL",
+     "UFL",
+     "UFL2",
+     "AAF"
+    ],
+    "basis": "the single (rouge) is a Canadian scoring play. The CFL carries non-zero values; every other league is uniformly zero.",
+    "ruling": "RULED - the zeros outside the CFL are schema padding, not observations. They must not be written as claims."
+   },
+   "FGS": {
+    "applicable_in": [
+     "CFL"
+    ],
+    "inapplicable_in": [
+     "all others"
+    ],
+    "basis": "field goal singles - the same Canadian play; measured CFL-only at 97.5%",
+    "ruling": "RULED"
+   },
+   "MFG": {
+    "applicable_in": [
+     "ALL"
+    ],
+    "basis": "a missed field goal return touchdown is legal everywhere. All-zero means it did not occur, which is an OBSERVATION of zero.",
+    "ruling": "RULED - zero here is a real measurement and must be kept"
+   },
+   "_unresolved": {
+    "columns": [
+     "FTD",
+     "Fum",
+     "Brup",
+     "FF",
+     "2Pt",
+     "Other"
+    ],
+    "why": "all-zero in some leagues, non-zero in others, and nothing in the data says whether the league lacked the play or merely never saw it",
+    "consequence": "written, but flagged. An export must not render them as facts about a person until each is ruled."
+   },
+   "_hoisted": "This lived inside ZERO_IS_NOT_ABSENCE, which is marked documentation-only - so nothing read it and the guard silently passed everything. Fourth instance of 'a declaration in the wrong place is not a declaration', committed minutes after writing the rule down. Caught because the NFL 1950 ingest refused zero Single values when it should have refused 29,028 across the corpus."
+  }
  }
 }

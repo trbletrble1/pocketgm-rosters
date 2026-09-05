@@ -46,6 +46,19 @@ if os.path.exists(_p):
     for gid, v in json.load(open(_p)).items():
         for s in v["slugs"]: IDENT[s] = gid
 
+# APPLICABILITY, enforced at the write. A source that writes 0 where a measure
+# does not apply is indistinguishable by fill from one that measured 0 - so the
+# declaration says which, and a column inapplicable in this league is REFUSED
+# rather than filed as an observation of zero.
+APPLIC = SC.get("applicability", {})
+def inapplicable(col):
+    a = APPLIC.get(col)
+    if not a or not isinstance(a, dict) or "applicable_in" not in a: return False
+    ok = a["applicable_in"]
+    if ok == ["ALL"] or ok == "ALL": return False
+    return LEAGUE not in ok
+UNRESOLVED = set(APPLIC.get("_unresolved", {}).get("columns", []))
+
 LOG, DEV = [], []
 def log(m): LOG.append(m); print(m, flush=True)
 
@@ -54,6 +67,7 @@ def main():
     store = Store(); store.add_source(DECL)
     teams = F.teams_in(LEAGUE, YEAR)
     rows = cells = obs = derived = 0
+    refused_inapplicable = collections.Counter()
     unknown_slug = 0
     fill = collections.defaultdict(lambda: [0, 0])
     for team in sorted(teams):
@@ -88,14 +102,20 @@ def main():
                     v = r.get(c, "")
                     fill[c][1] += 1
                     if v == "": continue
+                    if inapplicable(c):
+                        refused_inapplicable[c] += 1
+                        continue          # schema padding, not an observation
                     fill[c][0] += 1; cells += 1
                     calc = c in CALCULATED
+                    note = ("computed by the source from counted columns; "
+                            "not an observation of this season") if calc else None
+                    if c in UNRESOLVED:
+                        note = ("APPLICABILITY UNRESOLVED for this league: a zero "
+                                "here may be schema padding rather than a measured "
+                                "zero. Do not render as a fact about the person.")
                     store.add_claim(sr, subj, c, v, YEAR,
                                     kind="source_derived" if calc else "observed",
-                                    stated_by="StatsCrew",
-                                    note=("computed by the source from counted columns; "
-                                          "not an observation of this season")
-                                         if calc else None)
+                                    stated_by="StatsCrew", note=note)
                     if calc: derived += 1
                     else: obs += 1
     # THE DECLARATION IS LOAD-BEARING: compare fill against the generated census
@@ -104,7 +124,7 @@ def main():
     # CFL recorded different things. Pooled, the 1950 NFL ingest deviated on nine
     # columns against numbers true of no league.
     for c, (a, b) in fill.items():
-        if not b: continue
+        if not b or inapplicable(c): continue   # padding is not a fill deviation
         actual = round(100.0 * a / b, 1)
         col = SC.get("columns", {}).get(c, {})
         dec = (YEAR // 10) * 10
@@ -116,6 +136,9 @@ def main():
         elif abs(actual - pred) > 20.0:
             DEV.append((SEASON, c, pred, actual,
                         f"fill deviates >20 points from the {LEAGUE} figure"))
+    if refused_inapplicable:
+        log("  refused as INAPPLICABLE in this league: " +
+            ", ".join(f"{k}={v}" for k, v in refused_inapplicable.most_common()))
     log(f"rows {rows}  cells {cells}  observed {obs}  source_derived {derived}  "
         f"rows refused for no slug {unknown_slug}")
     for d in DEV: log(f"  DEV {d[1]}: declared {d[2]} actual {d[3]} -- {d[4]}")
