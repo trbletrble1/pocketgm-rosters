@@ -69,13 +69,49 @@ on it later.
 Targeted from the page list, not a crawl. **461 priority pages** — every `afl`,
 `irfu`, `wifu` and `orfu` page the archive holds.
 
-**In progress: 280 fetched, 20 failed, 0 zero-byte** at the time of writing.
+**Complete: 418 fetched, 43 failed (all HTTP 404), 0 zero-byte.**
 
-*The 20 failures are expected and worth naming:* CDX returns every URL ever
-archived, including pages the live site no longer serves. A list built from
-history will always contain the dead. They are recorded, not retried.
+| league | pages | years | distinct player ids |
+|---|---|---|---|
+| **AFL** | 216 | 1926–1969 | 5,420 |
+| **IRFU** | 71 | 1946–1960 | 1,174 |
+| **WIFU** | 74 | 1946–1960 | 1,141 |
+| **ORFU** | 57 | 1946–1967 | 858 |
+| | **418** | | **8,023** |
 
-From the first 182 pages: **167 carry a roster, 3,392 distinct player ids.**
+349 club pages carry a roster.
+
+### The 43 failures, and why none of them lost a club
+
+CDX returns every URL ever archived, so a list built from history always contains
+the dead. But *"expected"* is not *"harmless"*, and a 404 has two very different
+meanings: **the page is gone**, or **the page was renamed and we already hold it
+under the other name.** Checked rather than assumed:
+
+| 404 | sibling | |
+|---|---|---|
+| `1946irfuhamt` | `1946irfuham` | **held** — 1946 Hamilton Tigers (IRFU) |
+| `1946irfuottr` | `1946irfuott` | **held** — 1946 Ottawa Rough Riders |
+| `1946orfuhamw` | `1946orfuham` | **held** — 1946 Hamilton Wildcats (ORFU) |
+| `1946orfuottt` | `1946orfuott` | **held** — 1946 Ottawa Trojans |
+| `1936aflbroroc` | `1936aflbro` | absent |
+| `1936aflsyrroc` | `1936aflsyr` | absent |
+
+Most are renames. Two are not — `broroc` and `syrroc`, mid-season relocations in
+the 1936 AFL, where neither the compound nor the base name resolves.
+
+**So the real question is whether a club is missing, and the league page is the
+authority on membership.** Checking all 54 league-season index pages against what
+we hold:
+
+> **17 links unheld — and every one is a boxscore or draft page, not a club.**
+> `1926afl-boxscores`, `1960afldraft`, `1969aflnfldraft`, and so on.
+
+**Club coverage is complete.** The two relocation URLs are dead pages from an
+older site layout that the current league pages no longer reference. Nothing was
+lost; it was verified rather than hoped.
+
+
 
 Page titles confirm the whole point of the source:
 
