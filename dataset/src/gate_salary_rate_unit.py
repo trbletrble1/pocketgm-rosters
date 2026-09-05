@@ -73,8 +73,13 @@ def series_entries(d):
     out = []
     for key, block in (d.get("contract_images") or {}).items():
         if isinstance(block, dict):
-            for pt in block.get("points") or []:
-                out.append((key, pt))
+            # both shapes: `points` (a series) and `entries` (a club batch).
+            # Reading only `points` let the 1952/1955/1957 Browns figures in
+            # unchecked -- a declaration the gate could not see is not declared.
+            for field in ("points", "entries"):
+                for pt in block.get(field) or []:
+                    if isinstance(pt, dict) and "figure" in pt:
+                        out.append(("%s.%s" % (key, field), pt))
     return out
 
 

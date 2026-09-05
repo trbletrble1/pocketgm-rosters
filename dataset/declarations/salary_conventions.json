@@ -226,6 +226,19 @@
    ],
    "_why_it_is_new": "nothing in the archive held postseason compensation of any kind. The 182 salary figures are all club-paid regular-season pay.",
    "added_2026_09_05": "from the Gregg lot"
+  },
+  "contracted_season_salary_no_appearance": {
+   "_what": "A season salary stated in an executed instrument for a player who does not appear on that club-season's roster. The money was contracted; there is no evidence it was earned.",
+   "_why_the_name_carries_it": "There is no predicate called salary_base for these. The convention lives in the NAME, so a figure that was never earned cannot be silently pooled with figures that were - the same rule that keeps salary_base and guaranteed_income_floor apart.",
+   "rate_unit": "season",
+   "required_evidence": "the roster check must have been RUN and returned absent. An unrun check is not an absence.",
+   "members": [
+    "Cannon",
+    "Robinson",
+    "Flowers",
+    "Howard D. Johnson 1955"
+   ],
+   "MUST_NOT": "be averaged, summed, or compared with salary_base. A club-season mean that includes a man who never played is not a wage."
   }
  },
  "hard_rules": [
@@ -580,6 +593,127 @@
    "_1930_and_1937_are_the_same_number": "$5,000 seven years apart. Worth noticing and not worth concluding from -- the 1937 figure is a relay and its basis is unverified.",
    "_one_of_five_is_transcribed": "1933 alone rests on a document we hold. The other four stay out of the store.",
    "_rate_unit_is_enforced": "src/gate_salary_rate_unit.py. rate_unit is required on every figure, must come from {season, per_game, unverified_total}, and two figures of different units may not be placed on one axis. Deliberately not called `basis`: model.py already uses that key for the resolution basis, and two meanings on one key is the league-name collision again."
+  },
+  "BROWNS_SERIES_1952_1955_1957": {
+   "_what": "Three NFL Standard Players Contracts, one club, three seasons. Read by this session from photographs held at ~/Desktop/Contracts RN Found.",
+   "_acquisition_correction": "The instruction said the images were not available and that these were human-read relays. THE IMAGES WERE PRESENT. Ryan confirmed. So these are TRANSCRIPTIONS from held documents, not relays, and the whole set moves up an acquisition class.",
+   "unit": "SEASON. The printed form reads 'the Club promises to pay the Player each football season during the term of this contract the sum of $X'. Explicit in the instrument, not inferred.",
+   "entries": [
+    {
+     "person": "William Willis",
+     "year": 1952,
+     "figure": "$7,700.00",
+     "rate_unit": "season",
+     "signed_by": "Paul E. Brown",
+     "approved": "Bert Bell 6/26/52",
+     "address": "1110 E. 97th Street, Cleveland, Ohio",
+     "enters_as": "salary_base"
+    },
+    {
+     "person": "Howard D. Johnson",
+     "year": 1955,
+     "figure": "$6,000.00",
+     "rate_unit": "season",
+     "signed_by": "Edward F. Ulinski",
+     "executed": "3/1/55",
+     "approved": "Bert Bell 3/8/55",
+     "address": "628 E. Lomita Blvd, Wilmington, Calif.",
+     "enters_as": "contracted_season_salary_no_appearance -- REFUSED as a salary"
+    },
+    {
+     "person": "Galen R. Fiss",
+     "year": 1957,
+     "figure": "$8,200.00",
+     "rate_unit": "season",
+     "signed_by": "Paul E. Brown",
+     "executed": "4-5-57",
+     "approved": "Bert Bell 4/12/57",
+     "address": "10106 Mission Road, Overland Park, Kansas",
+     "enters_as": "salary_base"
+    }
+   ],
+   "payment_schedule": "75/25 UNAMENDED in all three.",
+   "_HOW_TO_PHRASE_THAT": "'Unamended in every instance we hold' - 1923 Pearce being the sole amendment, to 90/10. NEVER 'the league required it'. Five observations of a printed default left standing is not a rule; it is five observations."
+  },
+  "THE_OPTION_RATE_ENTERED_THE_FORM_BETWEEN_1952_AND_1955": {
+   "_what": "Paragraph 10, the club's renewal option, changed in the printed NFL Standard Players Contract between 1952 and 1955.",
+   "1952_Willis": "renewal 'on the same terms, including rate of compensation to the Player, as are provided by this contract'. NO percentage. The club could not cut the player on renewal.",
+   "1955_Johnson": "renewal at a rate 'which compensation shall not be less than ninety percent (90%) of the amount paid by the Club to the Player during the preceding season'.",
+   "1957_Fiss": "same 90% wording as 1955.",
+   "1968_Gregg": "option_year_rate = 0.90, already held from a primary instrument.",
+   "WHY_IT_MATTERS": "This reframes the 0.90 already recorded from Gregg. It is not a rate one player negotiated - it is a PRINTED FORM TERM with a datable introduction, and it gave the club a right it did not have in 1952: to cut pay by ten per cent on renewal. Range for the 90% floor is now 1955-1968 observed, and it is ABSENT in 1952.",
+   "_the_bound_is_real_not_assumed": "1952 and 1955 are both held and both read. The change happened in that window. It is not an inference from silence."
+  },
+  "NEVERS_1927_IS_A_GAME_CONTRACT_NOT_A_SALARY": {
+   "_what": "Chicago Bears guaranteeing the Duluth Eskimos $4,000 for the game at Chicago on 11 December 1927. Executed 7 December; Sternaman and Halas for Chicago, Ole Haugsrud for Duluth.",
+   "_NOT_A_PLAYER_CONTRACT": "Club to club. No player is a party. It must not reach any money predicate scoped to a person.",
+   "the_option": "Duluth could take 40% of gross receipts after a 15% park-rental deduction INSTEAD of the guarantee. The instrument does not record which was taken.",
+   "SO_4000_IS_A_GUARANTEE_NOT_A_PAYMENT": "The floor of a payment whose actual value is unknown and could be higher. Recording $4,000 as what Duluth received would be the fourth instance of a figure presented at a confidence its derivation does not support.",
+   "PROPOSED_HOME_not_built": "A new subject scope ('fixture_settlement', league, date, home_club, away_club) alongside the ruled ('game', ...) subject - the same subject, different predicates. Predicates would be visitor_guarantee, gross_receipts_share_pct, park_rental_deduction_pct, and, when a document records it, amount_actually_settled. It is PROPOSED. Nothing is built and no claim is written.",
+   "_why_a_separate_scope": "Club economics is not player compensation and must not share a predicate space with it. Askea's WFL Contingency Fund percentages belong here too, not with salaries."
+  },
+  "ASKEA_1974_IS_MONEY_NOT_PAID": {
+   "_what": "ADDENDUM TO 1974 PLAYER'S CONTRACT. $11,812.50 'which is undisputedly owed to Player'.",
+   "REFUSED_AS_SALARY": "Entered as a salary it records the exact inverse of what happened. It is unpaid_wages_settlement, the convention already declared.",
+   "terms": "semi-annual installments 1 March and 1 September commencing 1 September 1975, simple annual interest 6% on the unpaid principal, each installment the player's pro rata share of the club's required allocation to the WFL Contingency Fund. WFL Reorganization to occur no later than 30 April 1975.",
+   "A_DELETION_IS_DATA_4th_instance": "'Not more than' struck through before 'fifteen (15%) percent', initialed GLB above the strike. The unstruck text would have CAPPED the first payment at 15%; struck, the 15% stands as the figure. The deletion changes the meaning of the clause, not its presentation.",
+   "NOVATION_IS_LEAGUE_WIDE_NOT_PORTLAND": "'for $1.00 and other good and valuable consideration hereby extinguish the 1974 Standard WFL Player's Contract' - structurally identical to the Portland Storm batch. Askea is a DIFFERENT club, so this is a WFL reorganisation instrument, not one club's failure. The precedent widens from club to league.",
+   "NOT_ATTRIBUTABLE_TO_A_CLUB": "Both the 1974 club and the 1975 club are left BLANK on the form. Confirmed by reading. A club-scoped claim cannot be made from this document.",
+   "_also_present_and_not_in_the_relay": "Paragraph (C): the club deposits into the WFL Contingency Fund 1% of net receipts from ticket sales (subject to gate sharing), 1% of net income from WFL properties, 1/10% of net revenues for each $20,000 assigned as its Contingency Fund share, and 5% of net television revenues commencing 1976. That is club economics and belongs with Nevers, not with salaries."
+  },
+  "NEWTON_IS_1985": {
+   "corrected": "Ryan's note said 1983. The instrument says 1985.",
+   "read_from_the_paper": "USFL Player Contract. Football Partners, Ltd., TAMPA BAY BANDITS, NATHANIEL NEWTON. '1985' handwritten at the head of the sheet.",
+   "paragraph_3": "'This Contract covers one (1) football season, and will begin on the date of execution or December 1, 19 84, whichever is later, and end on November 30, 19 85.'",
+   "compensation": "6.1A $50,000.00, rate_unit season. Method B checked.",
+   "_not_a_source_disagreement": "A personal working note is not a source. The note is corrected and nothing is recorded as contested."
+  },
+  "HEBERT_BASE_IS_REFUSED_AND_WHY": {
+   "SPELLING": "The instrument types HEBERT. Ryan's note and the filenames carry 'Herbert'. HEBERT is used everywhere, including any filename-derived key.",
+   "read_from_the_paper": "USFL Player Contract, THE MICHIGAN PANTHERS, Bobby Hebert, Rt. 1 Box 480E, Cut Off, La. 70345. 6.1A $130,000 initialed BH. Method B checked, initialed BH. Player and club dated 1-22-83; USFL Commissioner certification 2/16/83. Term ends November 30, 1986, initialed BH - legible and confirmed.",
+   "THE_ONE_LINE_NOBODY_HAS": "Paragraph 3 of this form reads 'This Contract covers ___ football season(s), and will begin on the date of execution or December 1, 19__, whichever is later, and end on November 30, 19__'. Newton's copy reads 'one (1)'. HEBERT'S COPY OF THAT LINE IS IN THE GAP BETWEEN PHOTOGRAPH a, which ends at the '3. TERM' heading, and photograph b, which begins mid-way through the second line. It is NOT illegible. It was not photographed.",
+   "WHAT_ONE_PHOTOGRAPH_WOULD_SETTLE": "The number of seasons. With it, $130,000 is either an annual rate across the term or an aggregate, and the question closes.",
+   "_where_this_session_differs_from_the_relay": "The relayed reading was that the $130,000 'covers the 1986 USFL season, which was never played'. The term ENDS 30 November 1986; it does not begin there. Executed 22 January 1983, and by paragraph 2.11 the contract years run 22 Jan 1983 - 30 Nov 1983, then three more to 30 Nov 1986. Paragraph 22.2 is an entire-agreement clause and there is no per-year schedule anywhere in the four pages. So the natural reading of 6.1A's printed 'for the regular League season, divided into units of pay equaling the number of scheduled regular season League games' is an ANNUAL rate covering 1983, 1984, 1985 and 1986. THAT IS A READING OF PRINTED FORM LANGUAGE, NOT A TRANSCRIPTION, and it is held loosely until the missing line is photographed.",
+   "NO_BASE_SALARY_IS_ENTERED": "Neither reading is written. Both the year span and whether the money was earned are open."
+  },
+  "HEBERT_INCENTIVES_ARE_THEIR_OWN_CLAIM_TYPE": {
+   "_read_from_the_paper": "Paragraph 23, ADDITIONAL PROVISIONS, six provisions each separately initialed BH. Transcribed, not relayed.",
+   "provisions": [
+    {
+     "ref": "23.1",
+     "amount": "$55,000",
+     "condition": "starts 15 games or more in the U.S.F.L. during the regular season"
+    },
+    {
+     "ref": "23.2",
+     "amount": "$15,000",
+     "condition": "named to the All-U.S.F.L. 1st team by a nationally recognized selection authority"
+    },
+    {
+     "ref": "23.3",
+     "amount": "$10,000",
+     "condition": "named All-U.S.F.L. 2nd team, ONLY IF not named 1st team"
+    },
+    {
+     "ref": "23.4",
+     "amount": "$10,000",
+     "condition": "leads the U.S.F.L. in total number of touchdowns during the regular season"
+    },
+    {
+     "ref": "23.5",
+     "amount": "$10,000",
+     "condition": "throws 21 or more touchdowns in the U.S.F.L. during the regular season"
+    },
+    {
+     "ref": "23.6",
+     "amount": "$5,000",
+     "condition": "highest gain per attempted pass in the U.S.F.L. during the regular season"
+    }
+   ],
+   "payment_method": "Paragraph 6.2 Method B is checked: 100% of each 6.1A game unit within two weeks following each game. NOT the 60/40 of Method A.",
+   "CONTINGENT_NEVER_SUMMED_INTO_BASE": "rate_unit is not 'season' for these and they are not salary. 23.1 alone is $55,000 - 42% of the stated base. Summing them into a base figure would invent a salary nobody was paid.",
+   "23.3_IS_CONDITIONAL_ON_23.2": "'only if not named 1st team' - 23.2 and 23.3 are MUTUALLY EXCLUSIVE. A consumer that adds all six reaches $105,000; the true maximum is $95,000. That exclusivity is in the instrument and must travel with the claims.",
+   "_why_its_own_type": "This is not the Gregg four-way split, which divided a known sum. These are six independent conditions on unknown outcomes, one of them excluding another. Flattening them into 'incentives' loses both the conditions and the exclusion."
   }
  }
 }
