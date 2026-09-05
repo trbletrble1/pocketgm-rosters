@@ -1,0 +1,222 @@
+{
+  "_what_this_is": "measurement only; no parser, no claim, no store",
+  "_THE_CARRY_FORWARD_DECADE_AXIS_IS_CONTAMINATED": "BY_DECADE bins each row by its carry-forward year -- the value under test. A row wrongly carried into 1925 is reported as a 1920s row. BY_PUBLICATION_DECADE is the independent axis and shows a different question: which guides supply mirrors, not which seasons are covered.",
+  "rows_with_NO_carry_forward_year": 0,
+  "_matching_never_used_the_year": true,
+  "files": 1803,
+  "rows_seen_under_a_header": 88322,
+  "rows_kept_with_a_mapped_opponent": 44744,
+  "dropped": {
+    "two_column_row": 8546,
+    "bad_date": 1423,
+    "impossible_score": 137,
+    "opponent_AMBIGUOUS_city": 14399,
+    "opponent_unmapped": 19033,
+    "opponent_empty": 40
+  },
+  "opponent_resolved_by": {
+    "nickname_present": 4669,
+    "unambiguous_city": 40075
+  },
+  "mirrored_groups": 949,
+  "BY_DECADE": {
+    "1920": {
+      "rows_with_a_mapped_opponent": 581,
+      "rows_in_a_mirrored_group": 192,
+      "mirror_coverage_pct": 33.0,
+      "home_away_pairs_checked": 22,
+      "home_away_agree": 20,
+      "home_away_agreement_pct": 90.9,
+      "carry_forward_pairs_with_both_years": 22,
+      "carry_forward_disagreements": 22,
+      "carry_forward_DISAGREEMENT_pct": 100.0
+    },
+    "1930": {
+      "rows_with_a_mapped_opponent": 769,
+      "rows_in_a_mirrored_group": 182,
+      "mirror_coverage_pct": 23.7,
+      "home_away_pairs_checked": 17,
+      "home_away_agree": 17,
+      "home_away_agreement_pct": 100.0,
+      "carry_forward_pairs_with_both_years": 17,
+      "carry_forward_disagreements": 17,
+      "carry_forward_DISAGREEMENT_pct": 100.0
+    },
+    "1940": {
+      "rows_with_a_mapped_opponent": 458,
+      "rows_in_a_mirrored_group": 1,
+      "mirror_coverage_pct": 0.2,
+      "home_away_pairs_checked": 0,
+      "home_away_agree": 0,
+      "home_away_agreement_pct": null,
+      "carry_forward_pairs_with_both_years": 0,
+      "carry_forward_disagreements": 0,
+      "carry_forward_DISAGREEMENT_pct": null
+    },
+    "1950": {
+      "rows_with_a_mapped_opponent": 1332,
+      "rows_in_a_mirrored_group": 184,
+      "mirror_coverage_pct": 13.8,
+      "home_away_pairs_checked": 6,
+      "home_away_agree": 6,
+      "home_away_agreement_pct": 100.0,
+      "carry_forward_pairs_with_both_years": 6,
+      "carry_forward_disagreements": 6,
+      "carry_forward_DISAGREEMENT_pct": 100.0
+    },
+    "1960": {
+      "rows_with_a_mapped_opponent": 4155,
+      "rows_in_a_mirrored_group": 1073,
+      "mirror_coverage_pct": 25.8,
+      "home_away_pairs_checked": 73,
+      "home_away_agree": 73,
+      "home_away_agreement_pct": 100.0,
+      "carry_forward_pairs_with_both_years": 73,
+      "carry_forward_disagreements": 61,
+      "carry_forward_DISAGREEMENT_pct": 83.6
+    },
+    "1970": {
+      "rows_with_a_mapped_opponent": 4472,
+      "rows_in_a_mirrored_group": 1044,
+      "mirror_coverage_pct": 23.3,
+      "home_away_pairs_checked": 73,
+      "home_away_agree": 71,
+      "home_away_agreement_pct": 97.3,
+      "carry_forward_pairs_with_both_years": 73,
+      "carry_forward_disagreements": 42,
+      "carry_forward_DISAGREEMENT_pct": 57.5
+    },
+    "1980": {
+      "rows_with_a_mapped_opponent": 6835,
+      "rows_in_a_mirrored_group": 2059,
+      "mirror_coverage_pct": 30.1,
+      "home_away_pairs_checked": 147,
+      "home_away_agree": 144,
+      "home_away_agreement_pct": 98.0,
+      "carry_forward_pairs_with_both_years": 147,
+      "carry_forward_disagreements": 101,
+      "carry_forward_DISAGREEMENT_pct": 68.7
+    },
+    "1990": {
+      "rows_with_a_mapped_opponent": 8273,
+      "rows_in_a_mirrored_group": 2347,
+      "mirror_coverage_pct": 28.4,
+      "home_away_pairs_checked": 175,
+      "home_away_agree": 170,
+      "home_away_agreement_pct": 97.1,
+      "carry_forward_pairs_with_both_years": 175,
+      "carry_forward_disagreements": 113,
+      "carry_forward_DISAGREEMENT_pct": 64.6
+    },
+    "2000": {
+      "rows_with_a_mapped_opponent": 7964,
+      "rows_in_a_mirrored_group": 2152,
+      "mirror_coverage_pct": 27.0,
+      "home_away_pairs_checked": 262,
+      "home_away_agree": 246,
+      "home_away_agreement_pct": 93.9,
+      "carry_forward_pairs_with_both_years": 262,
+      "carry_forward_disagreements": 207,
+      "carry_forward_DISAGREEMENT_pct": 79.0
+    },
+    "2010": {
+      "rows_with_a_mapped_opponent": 6566,
+      "rows_in_a_mirrored_group": 1907,
+      "mirror_coverage_pct": 29.0,
+      "home_away_pairs_checked": 114,
+      "home_away_agree": 114,
+      "home_away_agreement_pct": 100.0,
+      "carry_forward_pairs_with_both_years": 114,
+      "carry_forward_disagreements": 73,
+      "carry_forward_DISAGREEMENT_pct": 64.0
+    },
+    "2020": {
+      "rows_with_a_mapped_opponent": 3339,
+      "rows_in_a_mirrored_group": 890,
+      "mirror_coverage_pct": 26.7,
+      "home_away_pairs_checked": 60,
+      "home_away_agree": 58,
+      "home_away_agreement_pct": 96.7,
+      "carry_forward_pairs_with_both_years": 60,
+      "carry_forward_disagreements": 48,
+      "carry_forward_DISAGREEMENT_pct": 80.0
+    }
+  },
+  "BY_PUBLICATION_DECADE": {
+    "1980": {
+      "rows": 720,
+      "rows_in_a_mirrored_group": 187,
+      "mirror_coverage_pct": 26.0,
+      "home_away_pairs": 21,
+      "home_away_agreement_pct": 95.2,
+      "carry_forward_pairs": 21,
+      "carry_forward_DISAGREEMENT_pct": 66.7
+    },
+    "1990": {
+      "rows": 2790,
+      "rows_in_a_mirrored_group": 678,
+      "mirror_coverage_pct": 24.3,
+      "home_away_pairs": 115,
+      "home_away_agreement_pct": 97.4,
+      "carry_forward_pairs": 115,
+      "carry_forward_DISAGREEMENT_pct": 60.0
+    },
+    "2000": {
+      "rows": 6487,
+      "rows_in_a_mirrored_group": 1694,
+      "mirror_coverage_pct": 26.1,
+      "home_away_pairs": 409,
+      "home_away_agreement_pct": 97.1,
+      "carry_forward_pairs": 409,
+      "carry_forward_DISAGREEMENT_pct": 76.0
+    },
+    "2010": {
+      "rows": 18210,
+      "rows_in_a_mirrored_group": 5144,
+      "mirror_coverage_pct": 28.2,
+      "home_away_pairs": 299,
+      "home_away_agreement_pct": 96.3,
+      "carry_forward_pairs": 299,
+      "carry_forward_DISAGREEMENT_pct": 71.9
+    },
+    "2020": {
+      "rows": 15464,
+      "rows_in_a_mirrored_group": 4175,
+      "mirror_coverage_pct": 27.0,
+      "home_away_pairs": 105,
+      "home_away_agreement_pct": 97.1,
+      "carry_forward_pairs": 105,
+      "carry_forward_DISAGREEMENT_pct": 77.1
+    }
+  },
+  "detectors": {
+    "1_year_headings_non_decreasing": {
+      "adjacent_pairs_checked": 2320581,
+      "backwards_jumps": 590128,
+      "pct": 25.43
+    },
+    "2_rows_carried_past_a_season_length": {
+      "year_blocks_checked": 4022,
+      "unchecked_no_bound_available": 28,
+      "overruns_by_decade": {
+        "1930": 6,
+        "1940": 19,
+        "1950": 20,
+        "1960": 60,
+        "1970": 47,
+        "1980": 55,
+        "1990": 97,
+        "2000": 61,
+        "2010": 72,
+        "2020": 27
+      },
+      "_bound": "regular_season + 10, deliberately generous"
+    },
+    "3_declared_W_L_T_checksum": {
+      "blocks_with_a_declared_record": 188,
+      "matched_the_counted_rows": 9,
+      "did_not_match": 179,
+      "pct_matching": 4.8
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_what": "Regular-season games per club per season, as an UPPER-BOUND tripwire for detector 2: rows carried under one year heading that exceed what a season could hold.",
+  "_NOT_EVIDENCE": "No source_id. Nothing may cite this as evidence. It is a bound for a detector, not a record of any season.",
+  "_how_the_bound_is_used": "A year heading may legitimately be followed by preseason, regular-season AND postseason rows in one run, so the tripwire is regular_season + 10. That is deliberately generous: it will miss small overruns and will not false-positive on a normal block. A coarse tripwire that never cries wolf is worth more here than a tight one that does.",
+  "_pre_1933_is_unknown_not_zero": "Before 1933 the NFL had no fixed schedule and clubs played different numbers of games. Those years are UNCHECKED, and the detector reports them as unchecked rather than passing them.",
+  "nfl_regular_season_games": {
+    "1933": 13, "1934": 13, "1935": 12, "1936": 12,
+    "1937": 11, "1938": 11, "1939": 11, "1940": 11, "1941": 11, "1942": 11,
+    "1943": 10, "1944": 10, "1945": 10, "1946": 11,
+    "1947": 12, "1948": 12, "1949": 12,
+    "1950": 12, "1951": 12, "1952": 12, "1953": 12, "1954": 12, "1955": 12,
+    "1956": 12, "1957": 12, "1958": 12, "1959": 12, "1960": 12,
+    "1961": 14, "1962": 14, "1963": 14, "1964": 14, "1965": 14, "1966": 14,
+    "1967": 14, "1968": 14, "1969": 14, "1970": 14, "1971": 14, "1972": 14,
+    "1973": 14, "1974": 14, "1975": 14, "1976": 14, "1977": 14,
+    "1978": 16, "1979": 16, "1980": 16, "1981": 16,
+    "1982": 9, "1983": 16, "1984": 16, "1985": 16, "1986": 16,
+    "1987": 15, "1988": 16, "1989": 16,
+    "1990": 16, "1991": 16, "1992": 16, "1993": 16, "1994": 16, "1995": 16,
+    "1996": 16, "1997": 16, "1998": 16, "1999": 16,
+    "2000": 16, "2001": 16, "2002": 16, "2003": 16, "2004": 16, "2005": 16,
+    "2006": 16, "2007": 16, "2008": 16, "2009": 16, "2010": 16, "2011": 16,
+    "2012": 16, "2013": 16, "2014": 16, "2015": 16, "2016": 16, "2017": 16,
+    "2018": 16, "2019": 16, "2020": 16,
+    "2021": 17, "2022": 17, "2023": 17, "2024": 17, "2025": 17, "2026": 17
+  },
+  "_strike_years_are_real": "1982 is 9 and 1987 is 15. A detector that assumed 16 across the 1980s would call a correct block a violation."
+}

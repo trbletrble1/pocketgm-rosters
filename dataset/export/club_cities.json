@@ -1,0 +1,51 @@
+{
+  "_what": "A build artefact mapping the city text that media guides print in an opponent column to a club nickname. Guides overwhelmingly print CITIES, not nicknames.",
+  "_NOT_EVIDENCE": "There is deliberately no source_id and no source field. Nothing may cite this file as evidence for any claim. It exists so a measurement can decide whether two rows are about the same fixture; it is a lookup, not a finding. Same standing as export/position_labels.json.",
+  "_the_central_problem": "A city names a FRANCHISE ONLY WITHIN A PERIOD. Baltimore is the Colts until 1983 and the Ravens from 1996. Chicago is the Bears or the Cardinals before 1960. Disambiguating therefore requires the year -- and in the mirror measurement the year is the unknown. Resolving an ambiguous city by a carried-forward year would be circular and would MANUFACTURE the agreement being measured.",
+  "_the_rule": "Ambiguous cities are DROPPED, never guessed. Dropping can only understate mirror coverage, never overstate it. The drop count is reported by decade so the headroom is visible alongside the floor.",
+
+  "unambiguous": {
+    "green bay": "packers", "detroit": "lions", "minnesota": "vikings",
+    "seattle": "seahawks", "denver": "broncos", "kansas city": "chiefs",
+    "san diego": "chargers", "miami": "dolphins", "new england": "patriots",
+    "pittsburgh": "steelers", "philadelphia": "eagles", "atlanta": "falcons",
+    "new orleans": "saints", "tampa bay": "buccaneers", "jacksonville": "jaguars",
+    "carolina": "panthers", "indianapolis": "colts", "san francisco": "49ers",
+    "washington": "redskins", "arizona": "cardinals", "phoenix": "cardinals",
+    "oakland": "raiders", "tennessee": "titans", "green bay packers": "packers",
+    "las vegas": "raiders", "buffalo": "bills"
+  },
+
+  "unambiguous_when_the_nickname_is_present": {
+    "new york giants": "giants", "ny giants": "giants", "n.y. giants": "giants",
+    "new york jets": "jets", "ny jets": "jets", "n.y. jets": "jets",
+    "chicago bears": "bears", "chicago cardinals": "cardinals",
+    "baltimore colts": "colts", "baltimore ravens": "ravens",
+    "cleveland browns": "browns", "cleveland rams": "rams",
+    "st. louis cardinals": "cardinals", "st louis cardinals": "cardinals",
+    "st. louis rams": "rams", "st louis rams": "rams",
+    "los angeles rams": "rams", "l.a. rams": "rams", "la rams": "rams",
+    "los angeles raiders": "raiders", "l.a. raiders": "raiders", "la raiders": "raiders",
+    "los angeles chargers": "chargers", "l.a. chargers": "chargers",
+    "houston oilers": "oilers", "houston texans": "texans",
+    "boston patriots": "patriots", "boston redskins": "redskins",
+    "dallas cowboys": "cowboys", "dallas texans": "texans-afl",
+    "cincinnati bengals": "bengals", "tennessee oilers": "titans"
+  },
+
+  "AMBIGUOUS_city_only_ALWAYS_DROPPED": {
+    "chicago": ["bears", "cardinals (through 1959)"],
+    "boston": ["patriots (1960-70)", "redskins (1932-36)", "braves", "yanks"],
+    "new york": ["giants", "jets", "titans", "yanks", "bulldogs"],
+    "baltimore": ["colts (through 1983)", "ravens (1996-)"],
+    "cleveland": ["browns", "rams (1937-45)"],
+    "st. louis": ["cardinals (1960-87)", "rams (1995-2015)"],
+    "st louis": ["cardinals (1960-87)", "rams (1995-2015)"],
+    "los angeles": ["rams", "raiders (1982-94)", "chargers (1960, 2017-)"],
+    "l.a.": ["rams", "raiders", "chargers"],
+    "la": ["rams", "raiders", "chargers"],
+    "houston": ["oilers (1960-96)", "texans (2002-)"],
+    "dallas": ["cowboys (1960-)", "texans (1952)", "texans AFL (1960-62)"],
+    "cincinnati": ["bengals (1968-)", "reds (1933-34)"]
+  }
+}
