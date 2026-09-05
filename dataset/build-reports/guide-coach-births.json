@@ -1,0 +1,35 @@
+{
+ "1940s": {
+  "titles": 484,
+  "age_only": 20,
+  "born": 3,
+  "rejected_player_bio": 1
+ },
+ "1950s": {
+  "titles": 1918,
+  "age_only": 38,
+  "born": 53,
+  "rejected_player_bio": 3
+ },
+ "1960s": {
+  "titles": 3485,
+  "age_only": 133,
+  "born": 85,
+  "rejected_player_bio": 33
+ },
+ "1970s": {
+  "titles": 10363,
+  "born": 460,
+  "rejected_player_bio": 90,
+  "age_only": 330
+ },
+ "1980s": {
+  "titles": 2464,
+  "born": 101,
+  "age_only": 96,
+  "rejected_player_bio": 17
+ },
+ "1930s": {
+  "titles": 14
+ }
+}

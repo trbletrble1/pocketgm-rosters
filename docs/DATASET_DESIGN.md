@@ -291,6 +291,35 @@ roster-listing mentions as well as real bios, so 2.7% is a **lower bound** on
 bio-level coverage — but no plausible correction rescues a discriminator present
 in a quarter of the files and absent from the rest.
 
+> ### Re-measured on a corpus, 2026-09-04: the ruling holds
+>
+> The 2.7% above rests on **28 files, all of them 1979** — a prior, not a corpus
+> fact. Measured across **513 guides spanning the 1930s to the 1980s**:
+>
+> | decade | files | coach titles | with a birth date |
+> |---|---|---|---|
+> | 1930s | 4 | 14 | **0.0%** |
+> | 1940s | 42 | 484 | 0.6% |
+> | 1950s | 85 | 1,918 | 2.8% |
+> | 1960s | 138 | 3,485 | 2.4% |
+> | 1970s | 206 | 10,363 | 4.4% |
+> | 1980s | 38 | 2,464 | 4.1% |
+> | **all** | **513** | **18,728** | **3.7%** |
+>
+> **The conclusion is unchanged and now rests on 513 files instead of 28.** Birth
+> date never exceeds 4.4% in any decade and is 0% before 1940. It cannot be the
+> discriminator for assistant coaches, and §2.4's move to stint continuity stands.
+>
+> *Two false readings were caught before they were believed.* A first pass counted
+> the bare word "Coach" as a bio marker and returned **14.3%** — a five-fold jump
+> that turned out to be players' birth dates, and in one case a coach's children's
+> ("two sons, Duey, born March 13… David, born April 15, 1951"). A second pass,
+> restricted to explicit staff titles, returned 4.5%, still counting **144** player
+> bios sitting beside the staff pages. Excluding rows carrying a height-weight, a
+> listed position or a draft note gives 3.7%.
+>
+> 1990s–2020s guides are still downloading and this will be re-run.
+
 *What the guides do carry, richly:* the **exact title** — Pittsburgh's 1979 entry
 reads "WOODY WIDENHOFER / Defensive Coordinator" — the club, the season, and career
 history in prose ("in his 15th year of coaching", "came to the Steelers in 1973").
