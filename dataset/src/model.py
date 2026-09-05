@@ -84,6 +84,14 @@ class Store:
         self.persons.add(pid)
         return pid
 
+    def adopt_person(self, pid):
+        """Register a person minted ELSEWHERE - a global id from the identity
+        map. A store that denotes into the unified universe does not mint its
+        own ids; minting here would recreate the store-local collision that
+        made p_000190 mean three different men."""
+        self.persons.add(pid)
+        return pid
+
     # ---- sources ---------------------------------------------------------
     def add_source(self, decl):
         acq = decl.get("acquisition")

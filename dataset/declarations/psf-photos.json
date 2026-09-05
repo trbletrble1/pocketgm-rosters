@@ -1,0 +1,77 @@
+{
+ "source_id": "psf-photos",
+ "name": "PSFplayers photo set + measured.csv face measurements",
+ "acquisition": "held",
+ "stated_by": "unknown - the set was assembled before this project and carries no manifest",
+ "derived_from": [],
+ "note": "26,138 jpgs named Firstname_Lastname.jpg, plus measured.csv with per-face colour. An all-time set, not modern-only: verified 2026-09-04 by finding Chick Maggioli (an obscure 1950 back) present.",
+ "local": {
+  "root": "$PGM3_SOURCES/photos",
+  "images": "PSFplayers/{Name}.jpg",
+  "measurements": "measured.csv"
+ },
+ "THE_ONLY_KEY_IS_A_NAME": {
+  "problem": "this source carries NO birth date, NO club, NO season and NO id. A name is the entire identity claim it can make, and design 2.4 forbids a name as identity evidence.",
+  "what_makes_it_usable_at_all": "a name that denotes EXACTLY ONE person in the whole 40,745-person universe is not a name match; it is a name plus the verified absence of an alternative. That verification is the discriminator, and it is recorded as such.",
+  "discriminator": [
+   "name",
+   "verified_unique_in_person_universe"
+  ],
+  "tier": "3 - weaker than a source-native id and weaker than name+birth_date. It rests on the corpus being complete enough for uniqueness to mean something, which it is not for men who never appear in it."
+ },
+ "hard_rules": [
+  "A photo whose name denotes MORE THAN ONE person is REFUSED. It is not attached to the likeliest man.",
+  "A photo whose name denotes NOBODY is REFUSED. It is not normalised until it matches.",
+  "No normalisation. Stripping middle initials, punctuation or generational suffixes converts a non-match into a match by discarding the only distinguishing information the filename carries."
+ ],
+ "measured_2026_09_04": {
+  "photos": 26138,
+  "denote_exactly_one_person": 20779,
+  "refused_name_is_ambiguous": 1263,
+  "_those_cover_people": 2979,
+  "refused_matches_nobody": 4096
+ },
+ "normalisation_DECLINED": {
+  "what_it_would_gain": 597,
+  "share_of_the_set": "2.3%",
+  "what_it_would_cost": "each of those 597 rests on discarding a middle initial - 'Michael M Lewis' becoming 'Michael Lewis'. That is not obviously the same man, and the failure is silent: a face rendered on the wrong person's page with no error anywhere.",
+  "also": "207 more would normalise onto an ambiguous name and be refused regardless; 3,292 would still match nobody",
+  "status": "AVAILABLE, NOT TAKEN. Needs a ruling. A gap is recoverable; a wrong face at scale is not."
+ },
+ "field_availability": {
+  "skin_frac": {
+   "kind": "per_row"
+  },
+  "cheek_rgb": {
+   "kind": "per_row"
+  },
+  "crown_rgb": {
+   "kind": "per_row"
+  },
+  "face_detected": {
+   "kind": "per_row"
+  }
+ },
+ "absence_semantics": {
+  "status_no_face": "measured.csv rows with status 'no face' are an ABSENCE claim: the image was processed and no face was found. 5,131 of 9,472 measured rows.",
+  "photo_not_held": "a person with no photo is an absence of the SOURCE, declared here, not one absence claim per man"
+ },
+ "discriminators": [
+  {
+   "scope": "default",
+   "order": [
+    "name_verified_unique"
+   ],
+   "reason": "the source carries nothing else"
+  }
+ ],
+ "_documentation_only": {
+  "name": "human name",
+  "note": "free prose",
+  "local": "paths",
+  "measured_2026_09_04": "a measurement record",
+  "normalisation_DECLINED": "a decision record, awaiting a ruling",
+  "THE_ONLY_KEY_IS_A_NAME": "the reasoning behind the discriminator, which IS enforced",
+  "_rule": "keys addressed to a reader; everything else must be read by src/"
+ }
+}
