@@ -1,0 +1,49 @@
+{
+ "source_id": "wikipedia-en",
+ "name": "English Wikipedia",
+ "acquisition": "fetched",
+ "stated_by": "English Wikipedia",
+ "licence": "CC BY-SA; reuse permitted with attribution",
+ "access": "MediaWiki API, descriptive User-Agent with contact, serial ~1/second, cached on first fetch",
+ "RANK": {
+  "position": "BELOW media guides and contemporary newspapers",
+  "why": "user-edited, and its infobox fields are effectively uncited -- birth date 0%, college 0%, draft 0%, and only 6.7% of infoboxes (23 of 344) carry a reference anywhere.",
+  "uncited_is_not_unused": "for most of these men it is the only source for death date, high school and draft. It is attributed and ranked, not excluded."
+ },
+ "DISAGREEMENTS_ARE_HELD": "Never resolved. Where Wikipedia and StatsCrew differ, BOTH values stay, both attributed. The archive says what is known and says who says it.",
+ "IDENTITY": {
+  "pre_1950": "the article must NAME THE CLUB. A year match is never sufficient -- any football article about anybody mentions years.",
+  "from_1950": "club name, or year plus football context.",
+  "insufficient": "UNMATCHED. No claims at all, not a partial attachment.",
+  "_measured": "0 of 835 pre-1950 club-seasons hold two distinct people with the same name, so club+year discriminates within our universe and POSITION IS UNNECESSARY. The risk is a namesake OUTSIDE our universe, which is why the article must name the club.",
+  "_DEFECT_FOUND_AND_FIXED": "the club map is keyed {club_code}|{year}. Four earlier probes looked it up as {league}|{year}|{code}, which returns None for every club, so the club branch never fired and every 'confirmed on club and era' was era-only. Corrected before any ingest.",
+  "era_cut": 1950
+ },
+ "PHOTOGRAPHS": {
+  "rule": "GAP-FILL ONLY. Never overwrite a photograph already held.",
+  "licence": "PUBLIC DOMAIN or OPEN CC. Fair use is EXCLUDED.",
+  "_why_not_PD_alone": "all seven CFL images measured were open CC and none were public domain, so a PD-only filter would silently drop the CFL entirely.",
+  "_verified_keys": "lives in the GAME roster files under tools/, not in this store. This ingest writes only dataset/build/wikipedia.json and touches no game file.",
+  "licence_allow_pattern": "public domain|^pd\\b|^pd-|^cc[ -]?(by|0)",
+  "licence_refuse_pattern": "fair use|non-free"
+ },
+ "PROSE": {
+  "capture_the_citation": "a cited prose claim and an uncited one must be distinguishable in the store. 48.2% of narrative sentences carry an inline citation.",
+  "reference_list": "recorded independently of the claims. 1,012 newspaper citations across 344 articles is a map of documents that exist, built by people who already did the finding."
+ },
+ "hard_rules": [
+  "no claim without a source attribution",
+  "no photograph overwrites one already held",
+  "a fair-use image cannot be expressed, not merely forbidden",
+  "an unmatched person produces no claims at all",
+  "a prose claim records whether it is cited, queryably"
+ ],
+ "_documentation_only": {
+  "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ -- see src/gate_declarations_are_read.py.",
+  "licence": "the reuse terms of the source itself, a rights note",
+  "access": "how it was fetched; the politeness contract, not a code path",
+  "RANK": "where this source sits against guides and newspapers. Ranking is applied at resolution, not at ingest, so nothing here reads it yet.",
+  "DISAGREEMENTS_ARE_HELD": "a statement of policy; the ENFORCEMENT is that ingest_wikipedia never resolves, and gate_wikipedia proves both values survive",
+  "PROSE": "free prose about why citations travel with claims; the enforcement is the required `cited` field"
+ }
+}
