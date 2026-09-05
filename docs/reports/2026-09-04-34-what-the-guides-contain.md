@@ -69,6 +69,16 @@ That is the same shape as the StatsCrew statistics now being fetched, from an
 independent source, and it is the single largest thing in these files that
 nothing has looked at.
 
+> **CORRECTED, same day — see report 38.** The sentence above says these headings
+> mean the guides are a statistics source. **I counted headings and inferred
+> tables without reading what sits under them.** Measured on 15,076 statistical
+> headings across 220 guides: **only 9% are per-player tables.** 41% are prose,
+> 29% are records-and-leaders sections ("MOST / FEWEST", career highs by game).
+> The guides *do* carry per-player season statistics — but as a minority of what
+> these headings mark, not as their main content. The claim as written was an
+> inference from a word count, which is the error this report was written to
+> correct in report 11.
+
 Also unmatched and frequent: **club names as headings** (`NEW YORK GIANTS` 699,
 `GREEN BAY PACKERS` 636), which is the opponents/history sections naming their
 subjects, and `REGULAR SEASON` / `PRESEASON` / `POSTSEASON` — a **season-phase
