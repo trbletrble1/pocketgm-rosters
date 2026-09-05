@@ -135,13 +135,30 @@
  },
  "corpus": {
   "_measured": "2026-09-04",
-  "texts_held": 1796,
+  "texts_held": 1803,
   "no_djvu_text": 302,
-  "failed": 7,
+  "failed": 0,
   "zero_byte": 0,
   "size": "1.8GB",
   "decades": "1930s-2020s",
-  "_supersedes": "local.cached, which recorded 28 texts, all 1979"
+  "_supersedes": "local.cached, which recorded 28 texts, all 1979",
+  "recovered_on_retry": {
+   "n": 7,
+   "why": "six HTTP 500s and one timeout - TRANSIENT, not absent. A 500 is not a 404, and because the fetcher writes only after a successful read, nothing was cached and the retry was clean.",
+   "items": [
+    "broncos-1965",
+    "seahawks-1976",
+    "49ers-1990",
+    "bears-1995",
+    "redskins-2003",
+    "vikings-2019",
+    "panthers-2022"
+   ]
+  },
+  "texts_carrying_a_coach_title": 1789,
+  "texts_carrying_none": 14,
+  "_held_is_not_usable": "14 texts are OCR of cover and contents pages only - the smallest is 341 bytes and renders 'COACHING STAFF' as a graphic with no staff beneath it. They are non-empty, HTTP 200 and correctly cached, so every zero-byte check passes them. 'Texts held' is not 'guides usable'; the usable figure is 1,789 (99%).",
+  "median_text_size": "787KB"
  },
  "coach_birth_date_rate": {
   "_measured": "2026-09-04 across all 1,796 texts",
