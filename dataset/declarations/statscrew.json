@@ -1465,10 +1465,20 @@
    "X/CA"
   ],
   "era_native_columns": {
-   "_measured": "2026-09-04 from cache",
-   "Sacked/Yds Lost": "absent from the 1950 passing table, present 1975 and 2023",
-   "X/CA": "present 1950 and CFL 1979, absent 2023",
-   "_treatment": "declare per era and translate at export, exactly as positions are"
+   "_measured": "2026-09-04, from full table parses rather than a truncated header list",
+   "Sacked / Yds Lost": {
+    "era_native": true,
+    "absent": "1950 passing table",
+    "present": "2023 passing table",
+    "note": "genuinely era-native - the measure did not exist in 1950"
+   },
+   "X/CA": {
+    "era_native": false,
+    "CORRECTION": "report 31 recorded X/CA as 'present 1950 and CFL 1979, absent 2023'. That is WRONG. X/CA is present in BOTH, in the kicking table (table 3 of 10 in 1950, table 3 of 11 in 2023), with an identical header: Player, X/CA, X/CM, X/CP %, FGA, FGM, FG %, Pts.",
+    "why_I_got_it_wrong": "I printed only the first 26 header cells of each page. For 1950 that reached the kicking table; for 2023, with a wider passing table, it did not. I compared a truncated view against a fuller one and read the difference as an era change.",
+    "_the_lesson_again": "a sample tells you a field's typical value; only a census tells you its span. This time the sample was my own output buffer."
+   },
+   "_treatment": "declare per era and translate at export, as positions are - but only for columns a CENSUS shows to be era-native, not ones a truncated sample appeared to show"
   },
   "PARSE_TRAP": {
    "what": "stat tables emit <tbody><td> with NO <tr>",
