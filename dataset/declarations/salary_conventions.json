@@ -277,7 +277,8 @@
   "established": "the date a ruling was made",
   "sources_searched_and_empty": "a negative result - what was searched and held nothing",
   "owed_league_original": "a record of a document not obtained, and the decision about it",
-  "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ - see src/gate_declarations_are_read.py. This list living in the declaration rather than in the gate means widening it shows up in a diff."
+  "_rule": "keys addressed to a reader and to no code path. Everything NOT listed here must be read by something in src/ - see src/gate_declarations_are_read.py. This list living in the declaration rather than in the gate means widening it shows up in a diff.",
+  "contract_images": "a source record and its rights constraint; the enforceable parts are the acquisition classes already in 3.7"
  },
  "transfer_payments": {
   "_note": "A payment from one CLUB to another for a player's release or rights. It is not a salary - the player is not the payee - and it is not a system rule, because it is one transaction on one date rather than a statement of how the regime worked.",
@@ -298,5 +299,36 @@
    "A person-scoped money predicate REFUSES a transfer subject: the payee is a club, not the player.",
    "A transfer subject names BOTH clubs. A fee with one club is not a transfer; it is an unresolved claim."
   ]
+ },
+ "contract_images": {
+  "_what": "Auction-listing scans of player contracts, fetched so that readings are TRANSCRIPTIONS of held documents rather than relays.",
+  "local": "$PGM3_SOURCES/contracts/, hash-pinned in manifest.json",
+  "RIGHTS": {
+   "constraint": "an auction image belongs to the auction house. Held for private reference and citation only. The dataset cites the FIGURE and the LOT; it never republishes the scan. pgm3-sources is outside the repo and stays there.",
+   "alongside": "the eBay API note already in the spec"
+  },
+  "acquisition": "fetched (the image) -> transcribed (the figure)",
+  "_measured_2026_09_05": {
+   "fetched": 6,
+   "failed": 0,
+   "resolution_range": "578x949 to 1767x3000",
+   "hosts": {
+    "i.ebayimg.com": "s-l1600 is the ceiling; larger names return identical bytes, so the seller's upload sets the limit",
+    "dyn1.heritagestatic.com": "it=product IS the full version - 1650x3000 and 1767x3000 measured. Every other it= value returns HTTP 400, so one test settled it rather than thirty low-resolution fetches."
+   }
+  },
+  "LEGIBILITY_IS_NOT_GUARANTEED_BY_POSSESSION": {
+   "finding": "holding the image does not mean the figure is readable. Groza 1951 is certain at 1767x3000; Leo Sugar 1961 reads '13,?00.00' at 578x949 and the middle digit cannot be resolved at any available size.",
+   "rule": "a transcription carries the legibility of the image it was read from. An uncertain digit must travel as uncertain - the same rule as '(date approximate)', and the fourth instance of a value presented at a confidence its derivation does not support."
+  },
+  "STRUCTURAL_FINDING": {
+   "what": "the NFL Standard Players Contract states its own PAYMENT SCHEDULE: '75% of said salary in weekly installments commencing with the first and ending with the last regularly scheduled League game ... and the balance of 25% of said sum at the end of said last regularly scheduled League game.'",
+   "why_it_matters": "the archive holds 182 salary figures and NO payment structure. This is on the standard form, so it plausibly applies to every contract of the era - which makes it a LEAGUE-scoped system fact, not a per-player one.",
+   "seen_in": [
+    "Groza 1951",
+    "Sugar 1961"
+   ],
+   "not_yet_a_claim": "it wants its own predicate and a check of how far the clause persists across eras before anything is written."
+  }
  }
 }
