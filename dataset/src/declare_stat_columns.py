@@ -12,6 +12,32 @@ import os, re, sys, json, glob, collections
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 from measure_stats_census import tables
+
+
+def team_league():
+    """(team, YEAR) -> league, read from the roster stores rather than assumed.
+
+    Keyed on the PAIR. Cleveland and San Francisco played in the AAFC and then
+    the NFL, so a team->league map let whichever store loaded last win, and
+    `Sacked` - which the source carries only from 1969 - came out 100% filled
+    in the AAFC, a league that folded in 1949.
+    """
+    out = {}
+    for f in glob.glob(os.path.join(BASE, "build", "*.json")):
+        b = os.path.basename(f)[:-5]
+        if "-" not in b or b.split("-")[0] in ("stats", "devstats", "coaches",
+                                               "salaries", "photos", "assistants"):
+            continue
+        lg = b.split("-")[0].upper()
+        try: d = json.load(open(f))
+        except Exception: continue
+        if not isinstance(d, dict): continue
+        for c in d.get("claims") or []:
+            s = c.get("subject")
+            if isinstance(s, list) and len(s) == 4 and s[0] == "stint":
+                yr = str(s[3]).split("-")[-1]
+                out[(s[2], yr)] = lg
+    return out
 CACHE = os.environ.get("SC_CACHE", os.path.expanduser("~/Documents/pgm3-sources/statscrew/sweep"))
 
 CALCULATED = {"Comp %", "Yds/Att", "TD %", "Int %", "Rating", "X/CP %", "FG %"}
@@ -21,18 +47,34 @@ def main():
     write = "--write" in sys.argv
     fill = collections.defaultdict(lambda: collections.defaultdict(lambda: [0, 0]))
     present = collections.defaultdict(set)
-    league_of = {}
+    # PER LEAGUE, not pooled. The NFL is one league with a continuous statistical
+    # tradition; the AAFC, both AFLs, the WFL and the CFL each recorded different
+    # things. Pooling them produced a decade prediction true of no league: the
+    # 1950 ingest deviated on nine columns against pooled figures, and FGS - the
+    # Canadian single - read as a one-season NFL anomaly when it is CFL-only.
+    byleague = collections.defaultdict(lambda: collections.defaultdict(lambda: [0, 0]))
+    # LEAGUE x DECADE. fill_by_league still pools eras: the NFL's all-time Tackle
+    # figure is 52.9%, and 1950's is 0%. Third time this granularity lesson has
+    # arrived - per_era, then per_league_season on the rosters, now league x era
+    # on the columns.
+    byld = collections.defaultdict(lambda: collections.defaultdict(lambda: [0, 0]))
+    t2l = team_league()
     for f in glob.glob(os.path.join(CACHE, "S_*.html")):
         m = re.match(r"S_([A-Z0-9]+)_(\d{4})\.html$", os.path.basename(f))
         if not m: continue
         year = int(m.group(2)); dec = (year // 10) * 10
+        lg = t2l.get((m.group(1), m.group(2)), "?")
         for hdr, rows in tables(open(f, encoding="utf-8", errors="replace").read()):
             for c in hdr:
                 if c == "Player": continue
                 present[c].add(year)
                 for r in rows:
                     fill[c][dec][1] += 1
-                    if r.get(c, "") != "": fill[c][dec][0] += 1
+                    byleague[c][lg][1] += 1
+                    byld[c][f"{lg}-{dec}"][1] += 1
+                    if r.get(c, "") != "":
+                        fill[c][dec][0] += 1; byleague[c][lg][0] += 1
+                        byld[c][f"{lg}-{dec}"][0] += 1
     out = {}
     for c, decs in fill.items():
         yrs = sorted(present[c])
@@ -40,7 +82,12 @@ def main():
         # the era where a column STARTS carrying values, not where it appears
         first_filled = next((d for d in sorted(decs) if decs[d][1] and
                              100.0 * decs[d][0] / decs[d][1] >= 5.0), None)
-        out[c] = {"present_first": yrs[0], "present_last": yrs[-1],
+        bl = {l: round(100.0 * a / b, 1) for l, (a, b) in sorted(byleague[c].items()) if b}
+        bld = {k: round(100.0 * a / b, 1) for k, (a, b) in sorted(byld[c].items()) if b >= 20}
+        out[c] = {"fill_by_league_decade": bld,
+                  "fill_by_league": bl,
+                  "leagues_carrying_it": sorted(l for l, v in bl.items() if v > 0),
+                  "present_first": yrs[0], "present_last": yrs[-1],
                   "present_years": len(yrs),
                   "fill_by_decade": byd,
                   "first_decade_with_values": first_filled,

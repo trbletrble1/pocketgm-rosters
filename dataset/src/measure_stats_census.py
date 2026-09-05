@@ -41,8 +41,17 @@ def tables(html):
     out = []
     for blk in t.split("<table")[1:]:
         blk = blk.split("</table>")[0]
+        # A MULTI-LEVEL HEADER. The scoring table carries a grouping row
+        #   <th colspan=8>Touchdowns</th><th colspan=5>Other</th><th>Total</th>
+        # above the real column row. Flattening both gave 19 "columns" for a
+        # 15-column table, and every value shifted: Billy Grimes 1950 came out
+        # as Touchdowns=5, Other=1, Total=2, Player=0. Take the LAST <tr> of
+        # the <thead> - that is the column row.
+        head = blk.split("</thead>")[0] if "</thead>" in blk else blk
+        trs = re.findall(r"<tr[^>]*>(.*?)</tr>", head, re.S)
+        src_row = trs[-1] if trs else head
         hdr = [re.sub("<[^>]+>", "", x).strip()
-               for x in re.findall(r"<th[^>]*>(.*?)</th>", blk, re.S)]
+               for x in re.findall(r"<th[^>]*>(.*?)</th>", src_row, re.S)]
         # An unclosed <th> makes the regex swallow the NEXT tag, so a literal
         # '<th class="dt-center"' arrived as a column name. A column name that
         # contains markup is a parse artefact, not a column.
