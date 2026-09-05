@@ -20,6 +20,7 @@ RULE_ENFORCED_BY = {
     1: "gate_conventions_do_not_pool",
     2: "gate_bare_salary_refused",        # an undeclared money name is refused
     3: "export manifest - src/export_pgm3.py states the convention",
+    4: "gate_income_floor_is_not_pay",
 }
 SYSTEM_RULE_ENFORCED_BY = {
     0: "gate_system_rules_cannot_be_averaged",
@@ -31,6 +32,30 @@ TRANSFER_RULE_ENFORCED_BY = {
     1: "gate_transfer_is_not_a_rule_or_a_salary",
     2: "gate_transfer_is_not_a_rule_or_a_salary",
 }
+
+
+def gate_income_floor_is_not_pay(store_factory):
+    """A guaranteed income floor may not sit where pay sits.
+
+    It is owed only if the player's OUTSIDE earnings fall short, so a scheduled
+    figure is a ceiling on the club's exposure, not a sum anybody received.
+    Filed on a stint it would read as what he was paid that season.
+    """
+    s = store_factory()
+    s.add_source({"source_id": "inst", "acquisition": "held", "stated_by": "inst"})
+    sr = s.add_source_record("inst", "r1")
+    p = s.mint_person()
+    for subj, why in ((("stint", p, "CLE", "NFL-1964"), "a stint"),
+                      (("person", p), "a person")):
+        try:
+            s.add_claim(sr, subj, "guaranteed_income_floor_year", 5000, 1964)
+            return False, f"a guaranteed income floor was ACCEPTED on {why}"
+        except StoreError as e:
+            if "not pay" not in str(e):
+                return False, f"refused on {why}, but for the wrong reason: {str(e)[:80]}"
+    s.declare_subject(("contract", p, "CLE"))
+    s.add_claim(sr, ("contract", p, "CLE"), "guaranteed_income_floor_year", 5000, 1964)
+    return True, ("refused on stint and person; accepted only on a contract subject")
 
 
 def gate_every_hard_rule_has_a_gate():
@@ -286,6 +311,8 @@ def main():
     check("system rules cannot be averaged with player money", ok, d)
     ok, d = gate_transfer_is_not_a_rule_or_a_salary(sf)
     check("transfer fee is neither a rule nor a salary", ok, d)
+    ok, d = gate_income_floor_is_not_pay(sf)
+    check("a guaranteed income floor is not pay", ok, d)
     ok, d = gate_every_hard_rule_has_a_gate()
     check("every declared hard rule names an enforcing gate", ok, d)
     bad = [n for n,o,_ in FAILURES if not o]

@@ -1,0 +1,37 @@
+{
+ "_WHAT": "Figures relayed in conversation from documents Ryan holds and this project does NOT. NOTHING HERE IS A CLAIM and nothing is ingested.",
+ "_WHY_NOT": "A relayed figure may never enter the store. Ryan reading a scan is a TRANSCRIPTION of a held document - a legitimate acquisition class, the same as the Dallas Morning News scan - but the transcription has to arrive as a file to be one. Passing through chat makes it relayed, which is the class that never enters.",
+ "_WHAT_WOULD_CHANGE_IT": "the scans, or Ryan's own transcription as a file. Then acquisition is `transcribed`, stated_by the instrument, transcribed_by Ryan - and every figure below can be ingested as-is.",
+ "_recorded": "2026-09-05, so that nothing is lost while the documents are outstanding",
+ "figures": [
+  {"person": "Paul Hornung", "club": "Green Bay Packers", "season": 1960,
+   "value": 17500, "convention": "salary_base"},
+  {"person": "Granville Harrison", "club": "Green Bay Packers", "season": 1946,
+   "value": 350, "convention": "salary_per_game",
+   "note": "a PER-GAME rate, not a season figure - it needs its own predicate, and it extends the per-game era two years past Stonebraker's 1942"},
+  {"person": "Ed Modzelewski", "club": "Pittsburgh Steelers", "season": 1956,
+   "value": 11000, "convention": "salary_base"},
+  {"person": "Mike Ditka", "club": "Chicago Bears", "season": 1961,
+   "value": 12000, "signing_bonus": 6000,
+   "tier": "RETROSPECTIVE - the player's own account, decades later",
+   "source": "Mike Ditka, Huddle Up with Gus podcast, 2008: 'I was the fifth player picked in the draft - $12,000 with a $6,000 signing bonus.'",
+   "note": "the document exists and could not be read. This is the same tier as Kostka's 1979 recollection: a man remembering his own contract, not the instrument. It must enter as retrospective, never as read from the document, and the unreadable document is itself a fact to record."},
+  {"person": "Ernie Davis", "club": "Cleveland Browns", "instrument_dated": 1961,
+   "convention": "guaranteed_income_floor",
+   "schedule": {"1964": 5000, "1965": 7500, "1966": 10000,
+                "1967": 10000, "1968": 12500, "1969": 15000},
+   "signed_by": ["Ernest Davis", "Art Modell", "Paul Brown"],
+   "seal": "Cleveland Browns corporate seal, dated 1961",
+   "note": "NOT a salary. See declarations/salary_conventions.json :: conventions.guaranteed_income_floor - the convention was declared from this instrument's shape, which is design work and does not require the figures."}
+ ],
+ "instruments_referenced_but_NOT_HELD": {
+  "_note": "the Davis document names two other instruments. Both are declared absences: we know they exist and we do not have them.",
+  "Player Contract": "carries the playing salary. Not held.",
+  "Ancillary Rights Agreement": "subject unknown. Not held.",
+  "_consequence": "Davis's actual playing compensation is UNKNOWN, not zero and not the floor schedule."
+ },
+ "_context_that_is_NOT_a_claim": {
+  "Ernie Davis": "first overall pick in 1962; diagnosed with leukaemia before playing a professional down; died May 1963. The schedule runs 1964-1969 - years he did not live to see.",
+  "_rule": "this is a fact ABOUT THE DOCUMENT and its poignancy, not a claim to render in a bio. A bio may say the schedule existed and what it said. It may not narrate his death from a contract."
+ }
+}

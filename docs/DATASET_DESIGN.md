@@ -2168,3 +2168,75 @@ In order:
 7. Export it to PocketGM and see what breaks. The export is a good first test
    precisely because it demands every field, but it does not get a vote on what
    the dataset holds.
+
+---
+
+## 5.6 Game-level facts — the subject shape, ruled 2026-09-05
+
+Deferred twice: first on volume, which report 41 settled (season statistics
+doubled the archive to 1.4 GB, so scale is not the objection), then on shape.
+Two independent lines of work have now arrived at it — Pro Football Archives
+carries boxscores and gamelogs (report 37), and the guides' only unique
+contribution turned out to be single-game records (report 46). So it is decided
+here rather than deferred a third time.
+
+### A game states its own identity
+
+A boxscore's title reads **"November 3, 1991 — Detroit Lions at Chicago Bears"**.
+Date, away club, home club — all three from the source's own words, not from its
+URL. PFA's file is `1991nfl124.html`, and that sequence number is *the source's
+filing system*, not the game's identity. Keying on it would make our subject
+unresolvable against any other source, which is the mistake `AFL3` was.
+
+> **`("game", league, date, away_club, home_club)`**
+
+Every part is stated. Two sources describing the same game agree on it without
+either knowing the other's numbering.
+
+### An appearance is to a game what a stint is to a season
+
+The existing shape is `("stint", person, club, season)`. One level finer:
+
+> **`("appearance", person, club, game)`**
+
+Not a new idea — the same idea at a finer grain, which is what makes it safe. The
+`stint` shape already survived the test that matters: **5,007 person-seasons are
+at more than one club**, and an appearance inherits that, because a man traded
+mid-season appears for both.
+
+### Three things that must be settled before a page is fetched
+
+**1. A lineup entry is not a claim that he started.** A boxscore lists 57 names
+under *Offense* and *Defense*. Whether that is the starting lineup, everyone who
+played, or everyone dressed is **not stated**, and the three are different facts.
+Until a source says which, the honest predicate is `listed_in_lineup`, not
+`started`. *Season-level `games_started` already exists and would silently
+contradict a wrong reading.*
+
+**2. Game-level and season-level statistics will disagree.** A player's gamelog
+summed across a season will not always equal his season line — sources reconcile
+differently, and both are "observed". This is the four-bases `contested` case
+arriving at scale, and the resolution policy must be told which is preferred
+**before** the data lands, not after a million disagreements exist.
+
+**3. Volume is comparable, not catastrophic.** 4,929 boxscores × ~57 lineup
+entries ≈ **281,000 appearance claims**; gamelogs plausibly **~1 million**. That
+is the same order as the season statistics already held, and the archive absorbs
+it — but it is not free, and it doubles again.
+
+### What it buys
+
+- **Single-game records become checkable** rather than merely transcribable: the
+  guides' 2,288 single-game record lines could be *verified* against boxscores
+  instead of trusted.
+- **A career gets texture.** "He appears on a roster in 1941, then not again until
+  1946" becomes answerable at the level of which games he actually played.
+- **Attendance, scoring plays and quarter scores** are club-season facts nothing
+  currently holds.
+
+### What is still Ryan's
+
+Whether to take it at all. The shape above is a design, not a commitment, and the
+honest position is that **the archive is coherent without it** — season level is
+complete and verified. Game level is depth, not repair.
+

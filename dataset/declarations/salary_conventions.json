@@ -98,13 +98,53 @@
    "population": "all of a team's players, INCLUDING those who spent the year on injured reserve and did not play",
    "population_words": "The figures represent the average pay for all of a team's players, even if the player spent the year on injured reserve and didn't play.",
    "warning": "The exact mechanism producing an inversion is NOT determinable from the page. Recorded as the source states it; do not reconstruct the arithmetic."
+  },
+  "guaranteed_income_floor": {
+   "definition": "A FLOOR on the player's earnings from OUTSIDE EMPLOYMENT, which the club tops up if he falls short. It is not pay for football and it is not a payment at all until a shortfall exists.",
+   "_it_is_the_INVERSE_of_a_salary": "a salary is paid for playing. This is paid BECAUSE HE EARNED TOO LITTLE ELSEWHERE. The club's liability falls as the player's outside income rises, so filing a scheduled amount as compensation would record as received a sum the club may never have owed.",
+   "includes": [
+    "the scheduled floor for a named calendar year"
+   ],
+   "excludes": [
+    "playing salary, which is in the Player Contract",
+    "whatever the Ancillary Rights Agreement covers",
+    "any amount actually paid, which the document does not state"
+   ],
+   "mechanism": {
+    "offset": "compensation from Outside Employment - defined in the instrument as personal services for compensation other than under the Player Contract or the Ancillary Rights Agreement - is set against the floor",
+    "clawback": "if the club pays under the agreement and the player later exceeds a listed year's figure, he repays the excess by 10 January following",
+    "_consequence": "the schedule is a CEILING on the club's exposure and a FLOOR on the player's income. It is neither a salary nor a bonus, and it resolves to an amount only once outside earnings are known - which no source we hold states."
+   },
+   "predicates": [
+    "guaranteed_income_floor_year"
+   ],
+   "hard_rules": [
+    "A guaranteed_income_floor_year figure is NOT salary_base and must never be pooled with one, averaged with one, or rendered as what a man was paid.",
+    "It is a SCHEDULED FLOOR, not a payment. Absent a statement of outside earnings, the amount actually transferred is unknown - an `unknown` base, not a zero and not the scheduled figure.",
+    "A floor scheduled for a year the player did not play, or did not live to see, is still a fact about the instrument. It is not a fact about his career."
+   ],
+   "worked_example": {
+    "_status": "RELAYED, NOT INGESTED - the document is held by Ryan and has not reached this project. Recorded to fix the SHAPE, not the figures.",
+    "instrument": "Cleveland Browns, signed Ernest Davis, Art Modell, Paul Brown, corporate seal dated 1961",
+    "schedule": {
+     "1964": 5000,
+     "1965": 7500,
+     "1966": 10000,
+     "1967": 10000,
+     "1968": 12500,
+     "1969": 15000
+    },
+    "_why_it_matters": "nothing else in the collection has this shape. Five other figures relayed alongside it are ordinary salaries; this one is a different instrument and would have been silently mis-filed as salary_base."
+   },
+   "added_2026_09_05": "the first convention added from an instrument rather than from a newspaper's or a court's description of one"
   }
  },
  "hard_rules": [
   "A bare `salary` predicate is REFUSED at ingest. The convention is in the name.",
   "Resolution never compares across conventions. Two figures under different conventions are not a contest; they are two measurements of two quantities.",
   "A source declaration must name the convention it uses, per predicate, or its salary claims are ineligible.",
-  "An export that scales to a league average must state which convention that average was drawn on, in its manifest."
+  "An export that scales to a league average must state which convention that average was drawn on, in its manifest.",
+  "A guaranteed income floor is not compensation. It is an obligation contingent on the player's OTHER earnings, and it enters as guaranteed_income_floor_year on a contract subject, never as salary_base."
  ],
  "non_salary_figures_that_look_like_salaries": [
   {

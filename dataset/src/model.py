@@ -44,7 +44,14 @@ TRANSFER_SUBJECT_ARITY = len(_SAL["transfer_payments"]["subject_shape"])
 
 # The five named conventions, plus the itemised components nested under
 # `compensation_component.predicates`. Both come from the declaration.
-SALARY_CONVENTIONS = {c for c in _SAL["conventions"] if c != "compensation_component"}
+# A guaranteed income floor is NOT compensation - it is an obligation contingent
+# on the player's OTHER earnings, paid only if he earns too little elsewhere. It
+# must never pool with salary_base, so it lives in its own set.
+FLOOR_PREDICATES = set(_SAL["conventions"]
+                       .get("guaranteed_income_floor", {}).get("predicates", []))
+
+SALARY_CONVENTIONS = {c for c in _SAL["conventions"]
+                      if c not in ("compensation_component", "guaranteed_income_floor")}
 SALARY_CONVENTIONS |= set(_SAL["conventions"]["compensation_component"]["predicates"])
 
 # Anything that LOOKS like money must be one of the declared conventions. Without
@@ -122,6 +129,12 @@ class Store:
                 f"'{predicate}' is a SYSTEM rule and requires a league-scoped subject "
                 f"({sorted(LEAGUE_SCOPES)}), not '{scope}'. It describes how the system "
                 f"worked, not what a person was paid.")
+        if predicate in FLOOR_PREDICATES and scope in ("stint", "person"):
+            raise StoreError(
+                f"'{predicate}' is a guaranteed income FLOOR, not pay. It is "
+                f"contingent on the player's outside earnings and is owed only on "
+                f"a shortfall, so it cannot sit on a stint or a person as though "
+                f"it were received. Use a ('contract', person, club) subject.")
         if predicate in TRANSFER_PREDICATES and scope not in TRANSFER_SCOPES:
             raise StoreError(
                 f"'{predicate}' is a payment between CLUBS and requires a "
@@ -154,6 +167,7 @@ class Store:
                 and predicate not in SYSTEM_PREDICATES
                 and predicate not in COHORT_PREDICATES
                 and predicate not in TRANSFER_PREDICATES
+                and predicate not in FLOOR_PREDICATES
                 and predicate not in BARE_MONEY_PREDICATES):
             raise StoreError(
                 f"'{predicate}' looks like money but is not a declared convention. "
