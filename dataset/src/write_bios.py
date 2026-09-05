@@ -24,6 +24,8 @@ def club(code, year):
     return CLUBS.get(f"{code}|{year}") or code
 DECL = json.load(open(os.path.join(BASE, "declarations", "statscrew.json")))
 APPLIC = DECL["stat_columns"]["applicability"]
+_pf = os.path.join(BASE, "declarations", "position_function.json")
+POSFN = json.load(open(_pf))["codes"] if os.path.exists(_pf) else {}
 UNRESOLVED = set(APPLIC.get("_unresolved", {}).get("columns", []))
 
 LEAGUE_NAME = {"NFL": "the NFL", "APFA": "the APFA", "AAFC": "the AAFC",
@@ -189,7 +191,14 @@ def bio(g, p):
             n = num(v)
             if n: tot[k] += n
     if tot:
-        k = max(tot, key=lambda x: tot[x] * (2 if x in ("Tackle", "Yds", "Rec") else 1))
+        # WHICH statistic matters is decided by the position's derived function,
+        # not by which number happens to be biggest. Junior Seau's 238 interception
+        # return yards outranked his 1,686 tackles until this existed.
+        want = None
+        for pcode in pos:
+            f = POSFN.get(pcode, {}).get("salient_column")
+            if f and tot.get(f): want = f; break
+        k = want or max(tot, key=lambda x: tot[x] * (2 if x in ("Tackle", "Yds", "Rec") else 1))
         best = max(ss, key=lambda s: num(s["stats"].get(k)) or 0)
         bv = num(best["stats"].get(k)) or 0
         if bv and len(ss) > 1 and bv >= 0.2 * tot[k]:

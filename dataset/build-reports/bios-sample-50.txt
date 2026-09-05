@@ -6,7 +6,7 @@ Fred Putzier, born June 11, 1899 in Bird Island, MN USA, appears in the record f
 Wes Leaper, born October 23, 1900 in Green Bay, WI USA, appears in the record for a single season: 1923 with the Green Bay Packers in the NFL. He came from Wisconsin. The rosters list him at E. No statistics are recorded for him — only that he was there.
 
 [war gap]  P_016659
-Sam Busich, born November 17, 1913 in Lorain, OH USA, played 3 seasons between 1936 and 1943. He came from Ohio St. The rosters list him at ROE-RDE-LO, RE, LOE-LDE. He appears on a roster in 1937, then not again until 1943. His biggest recorded season was 1937 with the Cleveland Rams: 136 yards. In all, the surviving statistics credit him with 193 yards and 1 touchdown.
+Sam Busich, born November 17, 1913 in Lorain, OH USA, played 3 seasons between 1936 and 1943. He came from Ohio St. The rosters list him at ROE-RDE-LO, RE, LOE-LDE. He appears on a roster in 1937, then not again until 1943. His biggest recorded season was 1936 with the Boston Redskins: 1 receptions. In all, the surviving statistics credit him with 1 receptions and 1 touchdown.
 
 [war gap]  P_016960
 Clem Stralka, born May 19, 1913 in Glen Lyon, PA USA, played 7 seasons from 1938 to 1946, all of them with the Washington Redskins. He came from Georgetown (DC). The rosters list him at G, LG, LOG-LDG, and other positions. He appears on a roster in 1942, then not again until 1945. No statistics are recorded for him — only that he was there.
@@ -42,7 +42,7 @@ Bob White, played 2 seasons between 1963 and 1964. He came from St. James Rods. 
 Richard Sligh, born August 18, 1944 in Newberry, SC USA, appears in the record for a single season: 1967 with the Oakland Raiders in the AFL. He came from North Carolina Central. The rosters list him at RDT. No statistics are recorded for him — only that he was there.
 
 [1920s]  P_003023
-Ainer Cleve, born November 27, 1897 in Minneapolis, MN USA, played 4 seasons from 1921 to 1924, all of them with the Minneapolis Marines. The rosters list him at B, WB, TB. His career crosses leagues: the APFA (1921); the NFL (1922–1924). His biggest recorded season was 1922 with the Minneapolis Marines: 6 points. In all, the surviving statistics credit him with 12 points and 2 touchdowns.
+Ainer Cleve, born November 27, 1897 in Minneapolis, MN USA, played 4 seasons from 1921 to 1924, all of them with the Minneapolis Marines. The rosters list him at B, WB, TB. His career crosses leagues: the APFA (1921); the NFL (1922–1924). His biggest recorded season was 1922 with the Minneapolis Marines: 1 receptions. In all, the surviving statistics credit him with 2 receptions and 2 touchdowns.
 
 [1920s]  P_014958
 Baptiste Thunder in MN, appears in the record for a single season: 1922 with the Oorang Indians in the NFL. The rosters list him at T. No statistics are recorded for him — only that he was there.
@@ -54,7 +54,7 @@ Stan Galazin, born August 8, 1915 in Nanticoke, PA, played 3 seasons between 193
 Harry Field, born August 18, 1911 in Iao Valley, HI USA, played 3 seasons between 1934 and 1936. He came from Hawaii. The rosters list him at LT, T, RT. No statistics are recorded for him — only that he was there.
 
 [1940s]  P_017765
-Billy deCorrevont, born November 26, 1918 in Chicago, IL USA, spent 5 seasons across 4 clubs between 1945 and 1949. He came from Northwestern. The rosters list him at RH, WB, B, and other positions. His biggest recorded season was 1945 with the Washington Redskins: 210 yards. In all, the surviving statistics credit him with 483 yards.
+Billy deCorrevont, born November 26, 1918 in Chicago, IL USA, spent 5 seasons across 4 clubs between 1945 and 1949. He came from Northwestern. The rosters list him at RH, WB, B, and other positions. His biggest recorded season was 1946 with the Detroit Lions: 2 receptions. In all, the surviving statistics credit him with 2 receptions.
 
 [1940s]  P_003908
 Bob Shaw, born May 22, 1921 in Richwood, OH USA, spent 7 seasons across 5 clubs between 1945 and 1953. He came from Ohio St. The rosters list him at OE-DE, LE, RE, and other positions. His career crosses leagues: the NFL (1945–1950); the CFL (1951–1953). He appears on a roster in 1946, then not again until 1949. His biggest recorded season was 1951 with the Calgary Stampeders: 980 yards. In all, the surviving statistics credit him with 2,652 yards and 32 touchdowns. He also appears as head coach (1963–1977).
@@ -66,7 +66,7 @@ Lloyd Lowe, born December 18, 1928 in Prairie Hill, TX USA, played 2 seasons bet
 Gord Sturtridge in Winnipeg, MB, played 4 seasons from 1953 to 1956, all of them with the Saskatchewan Roughriders. He came from St. Boniface. The rosters list him at E. His biggest recorded season was 1953 with the Saskatchewan Roughriders: 21 yards. In all, the surviving statistics credit him with 36 yards.
 
 [1960s]  P_019085
-Terry Nofsinger, born July 13, 1938 in Salt Lake City, UT USA, played 7 seasons from 1961 to 1967, for the Pittsburgh Steelers, the St. Louis Cardinals, the Atlanta Falcons. He came from Utah. The rosters list him at QB. His biggest recorded season was 1963 with the Pittsburgh Steelers: 46 yards. In all, the surviving statistics credit him with 146 yards and 3 touchdowns.
+Terry Nofsinger, born July 13, 1938 in Salt Lake City, UT USA, played 7 seasons from 1961 to 1967, for the Pittsburgh Steelers, the St. Louis Cardinals, the Atlanta Falcons. He came from Utah. The rosters list him at QB. His biggest recorded season was 1966 with the St. Louis Cardinals: 68 completions. In all, the surviving statistics credit him with 118 completions and 3 touchdowns.
 
 [1960s]  P_001506
 John Cadwell, born September 16, 1930 in Oakland, CA USA, appears in the record for a single season: 1961 with the Dallas Texans in the AFL. He came from Oregon St. The rosters list him at OG. No statistics are recorded for him — only that he was there.
@@ -87,7 +87,7 @@ Steve Alvord, born October 2, 1964 in Bellingham, WA USA, played 4 seasons from 
 Peda Samuel, born September 27, 1965 in Iola, KS, appears in the record for a single season: 1991 with the Raleigh-Durham Skyhawks in the World League. He came from Kansas. The rosters list him at DB. In all, the surviving statistics credit him with 6 yards.
 
 [1990s]  P_026091
-Troy Taylor, born April 5, 1968 in Downey, CA USA, played 2 seasons between 1990 and 1991. He came from California. The rosters list him at QB. His biggest recorded season was 1991 with the New York Jets: 23 yards. In all, the surviving statistics credit him with 43 yards and 1 touchdown.
+Troy Taylor, born April 5, 1968 in Downey, CA USA, played 2 seasons between 1990 and 1991. He came from California. The rosters list him at QB. His biggest recorded season was 1990 with the New York Jets: 7 completions. In all, the surviving statistics credit him with 12 completions and 1 touchdown.
 
 [2000s]  P_029805
 Chris Brown, born May 9, 1978 in Atlanta, GA USA, appears in the record for a single season: 2003 with the Jacksonville Jaguars in the NFL. He came from Ala-Birmingham. The rosters list him at CB. No statistics are recorded for him — only that he was there.
@@ -129,7 +129,7 @@ John Meeger, appears in the record for a single season: 1975 with the San Antoni
 Ron Williams, born May 19, 1972 in Marietta, GA, spent 7 seasons across 4 clubs between 1996 and 2002. He came from Clemson. The rosters list him at RB. His biggest recorded season was 1999 with the Hamilton Tiger-Cats: 394 yards. In all, the surviving statistics credit him with 969 yards and 2 touchdowns.
 
 [random]  P_026933
-Bryan Reeves, born July 10, 1970 in Los Angeles, CA USA, played 2 seasons between 1994 and 1995. He came from Arizona St. The rosters list him at WR. His biggest recorded season was 1994 with the Arizona Cardinals: 83 yards. In all, the surviving statistics credit him with 124 yards.
+Bryan Reeves, born July 10, 1970 in Los Angeles, CA USA, played 2 seasons between 1994 and 1995. He came from Arizona St. The rosters list him at WR. His biggest recorded season was 1994 with the Arizona Cardinals: 1 receptions. In all, the surviving statistics credit him with 1 receptions.
 
 [random]  P_033316
 Sheldon Richardson, born November 29, 1990 in St. Louis, MO, spent 9 seasons across 4 clubs between 2013 and 2021. He came from Missouri. The rosters list him at DT,T, DT,DE/DT/L, DT,DE, and other positions. In all, the surviving statistics credit him with 397 tackles and 2 touchdowns.
@@ -138,7 +138,7 @@ Sheldon Richardson, born November 29, 1990 in St. Louis, MO, spent 9 seasons acr
 Jesse Baker, born July 10, 1957 in Conyers, GA USA, played 9 seasons from 1979 to 1987, for the Houston Oilers, the Dallas Cowboys. He came from Jacksonville St. The rosters list him at DE, RDE. His biggest recorded season was 1984 with the Houston Oilers: 11 plays. In all, the surviving statistics credit him with 35 plays.
 
 [random]  P_001169
-Bob Brodhead, born December 20, 1936 in Kittanning, PA USA, played 2 seasons between 1959 and 1960. He came from Duke. The rosters list him at QB. His career crosses leagues: the CFL (1959); the AFL (1960). His biggest recorded season was 1959 with the Saskatchewan Roughriders: 121 yards. In all, the surviving statistics credit him with 221 yards. He also appears as head coach in 1975.
+Bob Brodhead, born December 20, 1936 in Kittanning, PA USA, played 2 seasons between 1959 and 1960. He came from Duke. The rosters list him at QB. His career crosses leagues: the CFL (1959); the AFL (1960). His biggest recorded season was 1959 with the Saskatchewan Roughriders: 62 completions. In all, the surviving statistics credit him with 69 completions. He also appears as head coach in 1975.
 
 [random]  P_028513
 Kevin Landolt, born October 25, 1975 in Mount Holly, NJ USA, appears in the record for a single season: 1999 with the Jacksonville Jaguars in the NFL. He came from West Virginia. The rosters list him at DT. No statistics are recorded for him — only that he was there.
