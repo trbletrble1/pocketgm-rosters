@@ -15,7 +15,7 @@ current numbers. Three rules the page must never break:
   THE POPULATION ROW MUST SUM TO THE ARCHIVE. If a decade column drops people,
   the dashboard would hide exactly the thing it exists to show.
 """
-import os, re, csv, sys, json, glob, html, collections, datetime
+import os, re, csv, sys, json, glob, html, hashlib, shutil, collections, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = os.path.join(HERE, "..")
@@ -302,6 +302,58 @@ document.getElementById('checks').innerHTML='<div class="note">'+
 </script></div></body></html>"""
 
 
+def md5(path):
+    h = hashlib.md5()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def publish(src):
+    """Copy the dashboard to every configured target.
+
+    A copy that cannot be made is REPORTED AND FATAL, never skipped. A stale
+    dashboard that looks current is the failure mode this project keeps meeting,
+    and a silent skip is how you get one.
+
+    What this can prove: the file was written into the synced folder and reads
+    back with a matching md5. What it CANNOT prove: that the Drive client
+    uploaded it. That is outside the filesystem. The page carries its own
+    generation timestamp, so a stale copy shows an old time on its face.
+    """
+    cfg = os.environ.get("PGM3_DASHBOARD_TARGETS",
+                         os.path.join(BASE, "export", "dashboard-targets.json"))
+    if not os.path.exists(cfg):
+        log(f"  no target config at {cfg}; repo copy only")
+        return [], True
+    targets = json.load(open(cfg, encoding="utf-8")).get("targets", [])
+    want = md5(src)
+    results, ok = [], True
+    for t in targets:
+        d, name, req = t["dir"], t.get("name", t["dir"]), t.get("required", True)
+        dest = os.path.join(d, os.path.basename(src))
+        if not os.path.isdir(d):
+            msg = f"FAILED - the folder does not exist or is not synced: {d}"
+            results.append((name, msg, False)); ok = ok and not req; continue
+        existed = os.path.exists(dest)
+        prev = md5(dest) if existed else None
+        try:
+            shutil.copy2(src, dest)
+        except Exception as e:
+            results.append((name, f"FAILED - {e}", False)); ok = ok and not req; continue
+        got = md5(dest)
+        if got != want:
+            results.append((name, f"FAILED - md5 mismatch after writing "
+                                  f"({got[:12]} != {want[:12]})", False))
+            ok = ok and not req; continue
+        note = ("overwrote an identical copy" if existed and prev == want else
+                f"OVERWROTE a DIFFERENT existing file (was {prev[:12]})" if existed else
+                "new file")
+        results.append((name, f"copied, md5 verified {want[:12]} - {note}", True))
+    return results, ok
+
+
 def main():
     log("reading the store...")
     per = population()
@@ -347,6 +399,16 @@ def main():
     log(f"\nwrote {out}  ({os.path.getsize(out)/1024:.0f} KB)")
     for c in checks:
         log(("  PASS " if c["ok"] else "  FAIL ") + re.sub("&mdash;", "-", c["text"]))
+    log("\npublishing:")
+    pub, pub_ok = publish(out)
+    for name, msg, good in pub:
+        log(("  OK   " if good else "  FAIL ") + f"{name}: {msg}")
+    if not pub:
+        log("  (no targets configured)")
+    if not pub_ok:
+        log("\nA REQUIRED COPY FAILED. The repo dashboard is current; the target is "
+            "STALE and will look current unless you read its timestamp. Exiting non-zero.")
+        sys.exit(2)
     return dec, sets, per
 
 

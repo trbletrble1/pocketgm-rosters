@@ -78,6 +78,40 @@ def main():
         else:
             fails.append("[FAIL] the population row does not reconcile to the archive")
 
+    # --- the publish step must FAIL LOUDLY, never skip -----------------------
+    import tempfile, json as J
+    with tempfile.TemporaryDirectory() as td:
+        src = os.path.join(td, "coverage-dashboard.html")
+        open(src, "w").write("<html>x</html>")
+
+        missing = os.path.join(td, "no-such-folder")
+        cfgm = os.path.join(td, "m.json")
+        J.dump({"targets": [{"name": "gone", "dir": missing, "required": True}]}, open(cfgm, "w"))
+        os.environ["PGM3_DASHBOARD_TARGETS"] = cfgm
+        res, ok = B.publish(src)
+        if not ok and res and not res[0][2] and "does not exist or is not synced" in res[0][1]:
+            checks.append("a missing or unsynced target FAILS and is reported, never skipped")
+        else:
+            fails.append(f"[FAIL] a missing target did not fail loudly: {res} ok={ok}")
+
+        good = os.path.join(td, "dest"); os.makedirs(good)
+        cfgg = os.path.join(td, "g.json")
+        J.dump({"targets": [{"name": "ok", "dir": good, "required": True}]}, open(cfgg, "w"))
+        os.environ["PGM3_DASHBOARD_TARGETS"] = cfgg
+        res, ok = B.publish(src)
+        if ok and "md5 verified" in res[0][1] and "new file" in res[0][1]:
+            checks.append("a good target copies and VERIFIES the md5 after writing")
+        else:
+            fails.append(f"[FAIL] a good target did not verify: {res}")
+
+        open(os.path.join(good, "coverage-dashboard.html"), "w").write("<html>DIFFERENT</html>")
+        res, ok = B.publish(src)
+        if ok and "OVERWROTE a DIFFERENT existing file" in res[0][1]:
+            checks.append("overwriting a DIFFERENT existing file is announced, not silent")
+        else:
+            fails.append(f"[FAIL] a silent overwrite went unannounced: {res}")
+        os.environ.pop("PGM3_DASHBOARD_TARGETS", None)
+
     for c in checks: print("  " + c)
     for f_ in fails: print("  " + f_)
     if fails:
