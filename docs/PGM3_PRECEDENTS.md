@@ -2167,6 +2167,29 @@ stamina 1 across the seven files, or 1,622 counting every non-zero record
 including prospects; 2017 reads 24.9% rostered or 18.0% overall. Two correct
 measurements of different populations look like a disagreement otherwise.
 
+### Third instance: the target can be the wrong POPULATION, not the wrong width
+
+**2026-09-03, the 1979 coach floor.** The published files separate head coaches
+**in a job** from head coaches **in the pool**: across nine files and 288 sitting
+men the minimum rating is **58, without exception**, while the free-agent pool runs
+down to 32. Ranking our 32 sitting coaches by win percentage and mapping them
+across the *whole* published head-coach band — free agents included — put eight
+below that floor, and **Neill Armstrong, who took Chicago to the playoffs in 1979,
+on 32**: the lowest-rated coach this project has produced. Mapping onto the sitting
+band alone fixes it and leaves the ordering untouched.
+
+The metric was never wrong. Published coach ratings track real win percentage at
+**r = +0.66** across 373 matched men; the guess that they rated on something else
+was checked and refuted. **It was the band.**
+
+So the family now has three members, and they fail differently:
+- the 2026 stretch and the 1979 expansion pool — a source too NARROW to span its target;
+- the 2000 stamina block — a target CONTAMINATED by an artifact;
+- the 1979 coach floor — a target drawn from the wrong POPULATION.
+
+**Check that the target band comes from the population you are assigning to, not
+merely from the right field of the right file.**
+
 **Rule: clean the target before mapping onto it, not just the source.** "Find the
 real cohort before measuring anything" is normally applied to the input. A
 quantile map has two populations and the same discipline applies to both — the
@@ -4230,3 +4253,872 @@ If there isn't one, the rule does not apply and the action needs its own
 justification. A precedent invoked without its precondition is not a precedent,
 it is a rationalisation — and this one covered publishing files that were never
 handed over.
+
+---
+
+## A derived field is re-derived after EVERY stage that moves its input — three instances in one build
+
+Building the one 2026 write, the same bug surfaced three times in one evening,
+each caught only by measuring the gated artifact:
+
+1. **potential vs rookies.** Potential was drawn from 2017's curve, then the
+   rookie rescale lowered rating and left potential where it was. Rookie headroom
+   read 10 against 2017's 6.
+2. **decisions vs the QB range rule.** Stage 6 drew offensive `decisions` from
+   the archive; stage 8 then clamped it back to Madden's range for that field —
+   which at QB is 10-68, the unpopulated noise the draw had just replaced. 41
+   moves over the cap, max 31, all in one field.
+3. **decisions vs rating.** Stage 6 moved a field with weight 0.183 at QB and did
+   not recompute the overall. The rating invariant fell from 99.9% to 91.0%.
+
+**One rule:** a field that is a *function* of others — `rating` of attributes,
+`potential` of rating, `growthType` of potential − rating — is re-derived
+after every stage that touches any input, never once at a fixed point in the
+sequence. A stage order that reads "potential → rookies" cannot be honoured
+literally; it is honoured by re-deriving potential after rookies.
+
+**Corollary for range rules:** a clamp built from a source field must not apply
+to a value that was deliberately drawn from somewhere else. The source's range
+for an unpopulated field is the range of its noise.
+
+**And the probe caught itself once:** the "max move 19" that looked like a cap
+failure was the measurement diffing against a baseline that predated stage 6 —
+it was the archive draw, doing its job. Isolate a stage by building the artifact
+without it, not by assuming the last scratch file is the right baseline.
+
+
+---
+
+## A probe must not carry its verdict as a string — second instance in one day
+
+Audit 25f recorded a `print("ASSERTED: ...")` that stated a conclusion the
+assert beside it had not checked. The same evening a second probe ended with a
+hardcoded tell — *"weighted agreement well above the naive mean means the source
+ORDER is fine"* — printed under numbers reading 0.12 to 0.54, which the
+adjoining column explained as the 2K5 file covering only 21–75% of each
+position's weight mass. The correct reading was "inconclusive where coverage is
+low," and the sentence said the opposite.
+
+**The rule:** a probe prints numbers and labels. The verdict is written *after*
+reading them, by the person, in the report. A tell composed before the run is a
+prediction, and printing it beside the result makes a prediction look like a
+finding — whichever way the numbers went.
+
+
+---
+
+## A scope defined for one purpose becomes the scope for everything downstream unless each stage re-decides it
+
+One variable, set at line 69 of the 2026 tool for the rookie and potential
+questions — rostered questions — was inherited by every stage through the QB
+level. Nothing chose it; each stage used what was there. 465 free agents with
+real Madden ratings and the same stretch went untouched by a write built to fix
+the stretch. **A variable named for one cohort became the scope for eight stages
+that never chose it.**
+
+Ruled fix: each stage states its own cohort, in its own variable, even where the
+answer is the same — the bug was the absence of a decision, not the wrong one.
+Same family as the derived-field rule: a value set once and reused without
+reconsideration. And its sibling, found the same night: **a tool that reads the
+file it writes will run its stages twice** — take an explicit source, assert it
+is not the output.
+
+---
+
+## An in-band aggregate can hide wrong records — read the names inside it
+
+1979's CB/S ratio came in at 1.02, out of the published 1.06–1.30. The 2K5 save,
+labelling independently, read 1.28 — in band — and was recommended as the
+tiebreak. The 20 records in one direction of the disagreement included **Roger
+Wehrli, Raymond Clayborn, Lemar Parrish and Neal Colzie, labelled FS** by the
+in-band source. The recommendation was retracted; Wikipedia career positions
+then backed the out-of-band source **24 to 2**. No ratio test finds a Hall of
+Fame corner filed as a safety. Look at the names inside the number before
+trusting the number.
+
+---
+
+## A two-way disagreement can have a third answer
+
+1979's DB arbitration was framed as NFL79.ros says safety versus the 2K5 save
+says corner. Sixteen cases were left after the career-article check, and the
+ruling was to take NFL79's label for the twelve unresolved ones — cheap, and
+the direction was 24-2 plus 4-0 on the names that mattered.
+
+A scripted pass over the Wikipedia 1979 season rosters — one fetch per team,
+minutes — settled ten of the twelve in NFL79's favour and found two it could
+not have found: **Lawrence Johnson is a cornerback**, and **Ricky Jones is an
+outside linebacker**. Jones is the one that matters. Both sources called him a
+defensive back and the question "corner or safety?" had no room for the true
+answer. The framing of a disagreement silently asserts that one of the two
+sides is right.
+
+Sibling of the in-band-aggregate precedent: there the number hid the wrong
+records, here the question hid the right answer. **And a ruling made to avoid an
+expensive check is worth re-testing when the check turns out to be cheap** — the
+ruling's stated basis was cost, not evidence.
+
+
+---
+
+## A join on the exact name string measures the name format, not the coverage
+
+1979's brief named **17 players with no rating data of any kind** and had them
+down for hand-rating, approved. All 17 were in the source. The mod writes Bill
+for Billy, Tim for Timothy, Don for Donald, Arthur for Art, and disambiguates
+namesakes with a middle initial. One was a nickname a diminutive rule would
+never reach: footballdb's *Deac Sanders* is the mod's *John Sanders*, and the
+article confirms **John Maurice "Deac" Sanders**.
+
+Coverage went 97% to 100% by adding one tier — team + surname + compatible
+position — and the position gate earns its keep immediately, because Cleveland
+rostered **two Robert Jacksons** in 1979, a guard and a linebacker.
+
+**A coverage number is a claim about the join, not about the source.** Before
+reporting a cohort as unreachable, join it a second way.
+
+---
+
+## An out-of-band aggregate can be the wrong population rather than the wrong data
+
+The 1979 CB/S ratio escalated at 1.02 against a published band of 1.06-1.30, and
+three separate arbitration passes were run against the labels. The number
+reproduces — but it was taken over **the mod's own 28 rosters**, not the 1,408
+footballdb spine the file is built from. The mod carries 44 men who were not on a
+1979 roster, 13 safeties against 3 corners. On the population actually being
+built, the ratio is **1.14**, mid-band.
+
+The label work was not wasted; it found two real errors. But **check that a
+failing aggregate was computed over the population you are shipping** before
+concluding the data is wrong. Sibling of "read the names inside the number."
+
+---
+
+## A gate must measure the population the file will contain, not the population the source contains
+
+**Ruled by Ryan, 2026-09-02.** The 1979 CB/S gate read 1.02 against a published
+band of 1.06-1.30 and triggered three arbitration passes. It was computed over
+the mod's own 28 rosters. Over the 1,408-player spine the file is actually built
+from, the same source reads **1.17** — mid-band. The mod carries 44 men who were
+not on a 1979 roster, 13 safeties against 3 corners, and they were the whole
+discrepancy.
+
+Same class as the OLB coverage write: **a check run on a cohort adjacent to the
+one being shipped.** Before escalating a gate, state which population it was
+computed over and confirm it is the one going into the file.
+
+The passes earned their place regardless — they found Lawrence Johnson at corner
+and Ricky Jones at outside linebacker. **A binary escalation cannot surface a
+third option**; only reading the roster did.
+
+
+---
+
+## When a new measurement contradicts an old one on the same data, the contradiction is the signal
+
+The 1979 potential curve was computed from the published six and the 2017 column
+came out **all zeros**. The 2026 build had used **6/4/2** from that same file, on
+that same field. Nothing failed: the buckets were populated, the medians were
+plausible, no assert fired and no test existed that would have caught it.
+
+The defect was that `draftSeason` sits on the 2026 game clock in every file, so
+*(file year − draftSeason)* is negative for 100% of the 2004 roster and the
+filter dropped it. The curve rested on 243 players instead of 1,990.
+
+**What caught it was disagreement with our own prior work, not a test.** Both
+numbers came from the same file and the same field, so one of them had to be
+wrong. That is a stronger signal than plausibility, and it is available for free
+whenever a measurement has been made before — so **when you re-measure something
+the project has already measured, compare against the old number and treat any
+gap as a defect until you know which side it is on.**
+
+Ryan's framing: *one of them is wrong, and the contradiction is the signal.*
+
+---
+
+## A missing value that sorts is worse than one that errors
+
+The 1979 expansion allocation ordered Jacksonville's roster "cheapest first",
+which for 47 of the 308 pool members — men with no Madden record — meant a rating
+of **zero**. Zero is a valid rating, so the sort worked, raised nothing, and
+returned a plausible-looking roster. **30 of Jacksonville's 46 arrived that way,
+including Jackie Smith, Mick Tingelhoff, Emmitt Thomas, Chris Hanburger, Willie
+Brown and Jake Scott.** The franchise whose entire doctrine is never signing
+anyone expensive was handed the Hall of Fame.
+
+Nothing failed. The defect was visible only in the *shape* of the result.
+
+**Fix: hold the missing out of the comparison, do not rank them last.** A sort key
+that returns `(is_missing, value)` keeps them from competing on a number they do
+not have. Ranking them at the bottom is the same bug wearing a seatbelt — it still
+asserts an ordering the data cannot support.
+
+**And a fix that respects one constraint can violate another silently.** Splitting
+the unrated by doctrine left two rosters half unsourced; capping that sent the
+overflow to Memphis and aged it from 24 to 27, costing the one thing its doctrine
+asks for. Both were caught by re-reading the shape, not by a gate. Ryan's framing:
+*it was the shape check that caught it, not a gate.*
+
+---
+
+## A gate built from later files, applied to an earlier era, fails the correct file
+
+The 1979 face step asserted its rostered dark share against the published files'
+range, **64.4-72.9%**, and failed at **55.9%**. The published range is a
+1986-2021 population. The era's own archive says 1979 sat at **53.6%** over this
+file's names and **57.3%** over all 1,999 men in the 1979-80 save; 1981-82 reads
+48.2%, 1983-84 53.6%. The file was right.
+
+**The calibration is what made it decidable.** The archive and the published
+files agree within a point wherever both are trustworthy — 64.3 vs 64.4 in 1999,
+65.7 vs 65.3 in 2004, 68.1 vs 69.5 in 2012 — and diverge by about seven points at
+both ends: the published **1986** file reads 67.8% against its own era's save at
+58.6-60.7%, and **2021** reads 72.9 against 65.6. So the gate's floor was set by a
+file that itself runs seven points darker than its source.
+
+Same family as *a gate must measure the population the file will contain*, one
+step further: **a published range is a range over the eras that were published.
+Before applying it to a season outside them, measure the era's own source and
+gate on that** — and print the published range beside it, so the divergence is
+seen rather than smoothed.
+
+
+---
+
+## A validator run after a crashed build step reports on the previous file
+
+Twice in the 1979 assembly the build chain died before its write, the validators
+ran anyway on the files from the run before, and the failures they printed were
+read as evidence about the patches just made. They were not. Then a commit gate
+that counted every line containing "FAIL" counted the summary line "1 CHECK
+GROUP(S) FAILED" and refused a clean build. Put the validators *inside* the chain
+that writes the file, gate on the check lines and the exit codes, and print the
+build's own "wrote" line beside them. A result is about the file that exists, not
+the one you meant to make.
+
+---
+
+## "Coverage 100%" is a claim about the join
+
+Step 4 of 1979 reported every spine man joined to a mod record. It was true, and
+18 of them shared 9 records: tier 2 took a unique name anywhere in the mod without
+checking position or whether the record was already claimed, and a defensive end
+shipped with a running back's attributes. Found five steps later by a uniqueness
+assert in assembly. **Bind the strongest tier first and consume; assert one-to-one
+on the source side; and read a coverage number as what it measures.**
+
+---
+
+## Match the artifact's formatting, or the diff stops being a check
+
+Two files in this project are stored as a single line of compact JSON. Writing
+them back with `indent=1` produced **252,866 lines** for a two-record change to
+the 2026 roster, and **180,072** for a thirty-nine-face change to the registry.
+
+Nothing was wrong with either file. But `git diff` is the last check before a
+push — the one that catches a tool touching records it was never asked to touch —
+and a diff that large cannot be read, so the check silently stops working at
+exactly the moment the change is largest.
+
+**Write back in the format the file is stored in**, and confirm it: a two-record
+change should produce a one-line diff. Both write tools now pass
+`separators=(', ', ': ')`, and the semantic diff — records added, fields changed —
+is printed alongside, so the two can be compared.
+
+
+
+---
+
+## Do not assert provenance from a word you have not checked the meaning of
+
+**2026-09-03.** Asked which prospect-ceiling defects were ours, I reported that
+2004, 2007, 2010, 2013, 2017 and 2021 were "published originals" and 1986, 2000,
+2026 and 1979 were ours. **The first half was invented.** All ten files are this
+project's own work.
+
+The error was reading one word two ways. This project says *published* to mean
+*published by us to the repo* — the handoff's own sentence is **"one command gets
+all ten published files"** — and I read it as *shipped by the game's developer*.
+Nothing in the record ever claimed 2017 was inherited. `PGM3_PRECEDENTS.md` in fact
+records that **2017 originally had invented names above real ones and had to be
+fixed**, which is only possible for a file we build; I had the disproof in the same
+document I was writing into.
+
+**It changed a decision.** Ryan ruled to leave 2017 alone *because* it was
+inherited, and the ruling rested entirely on my claim. A false provenance statement
+is worse than a wrong measurement: a measurement gets re-run, while provenance is
+taken on trust and then cited.
+
+**Rule: provenance is a claim like any other and needs a source.** Before saying a
+file, field or convention came from somewhere, point at the thing that says so. And
+when a project word carries a specific local meaning — *published*, *donor*,
+*vanilla*, *archive* — check which sense the record is using rather than the sense
+it has elsewhere.
+
+
+---
+
+## A band computed from our own files describes our convention, not the engine
+
+**2026-09-03.** To gate a contract-compression transform I built a position-
+multiplier band from the eight files whose salary distribution already looked
+right, and used it to assert that no position could drift outside normal. It
+caught a real defect immediately — a transform sending quarterbacks to 5.9x the
+file median — so the gate worked.
+
+Then Ryan exported a **full vanilla league**, the first complete game-generated
+reference the project has ever held. **Seven of the ten positions in that file sit
+outside the band.** Kickers read **0.59** against our 1.00-1.92; corners 2.18
+against 0.83-1.01; tackles 0.86 against 1.06-1.26.
+
+That is not seven anomalies in the game. It is one systematic difference between
+what the engine does and what our files do, and the band was measuring the wrong
+side of it.
+
+**The sharpest instance: we paid 1979's kickers 0.77 as a DELIBERATE ERA DEPARTURE
+from a modern norm of 1.00-1.92 — and the game pays 0.59.** 1979 was closer to the
+engine than the eight files we called conforming. The "departure" was a partial
+correction toward the truth and the premium is ours.
+
+**Rule: before asserting that a value is normal, ask what population the norm was
+computed over.** Agreement among our own files is evidence of a shared ancestor,
+not of correctness — the same shape as ten files reporting a $197.4M payroll
+constant to the dollar against the game's $242.9M, and as five files reporting a
+contract ceiling that turned out to be one donor record. When the check is a
+guard against a specific failure, assert the failure and not the norm.
+
+
+---
+
+## THE ARCHIVE IS INTERNALLY CONSISTENT AND REPEATEDLY WRONG ABOUT THE GAME
+
+**The general form of four findings in two days, 2026-09-02 to 09-03.** State this
+one rather than the four.
+
+| what we believed | our ten files | the game |
+|---|---|---|
+| payroll constant | $197.4M, to the dollar | **$242.9M** |
+| position multipliers | a band from eight "conforming" files | **7 of 10 positions outside it** |
+| coach potential | median headroom 2, up to a third locked | **median 7, none locked** |
+| sitting head-coach floor | 58 | **64** |
+| free-agent coach pool | 21–33 men, down to rating 32 | **16 men, floored at 57** |
+| 2017's provenance | "a published original" | ours, like all ten |
+
+**Every one was reached by measuring our own files against each other**, finding
+tight agreement, and reading that agreement as evidence about the engine. It never
+was. Ten files agreeing to the dollar is **one ancestor wearing ten coats** — the
+donor file — and the tightness of the agreement is the tell, not the reassurance.
+
+**The cost is not academic.** Ryan asked whether a young coach could develop; I told
+him the two-point ceiling was PGM3's design and he ruled against widening it on
+that basis. It was ours. Pat Dye sits at 63 with two points of room because of a
+convention we invented and then mistook for a constraint.
+
+**Rules:**
+1. **A statement about the engine needs a game-generated file behind it.** Since
+   2026-09-03 one exists, in `sources/vanilla/`. Before that, no such claim could
+   be supported and several were made anyway.
+2. **Agreement among our own files is evidence of shared ancestry, never of
+   correctness** — and the closer the agreement, the stronger that reading.
+3. **Independent samples, not repeated exports.** The payroll constant earned its
+   confidence from two leagues with zero shared identifiers. The coach finding rests
+   on three exports of ONE league sharing all 432 identifiers, so it is n = 1 and
+   is labelled as such until a second lands.
+
+---
+
+## A gate that short-circuits reports its first failure as its only failure
+
+**2026-09-03.** `raise_payroll` asserted the mean position distance before the
+per-position guard. 2010 failed the mean by +0.007, the assertion raised, and the
+per-position check never ran. **The batch-1 report told Ryan that 2010 had one
+failure. It had two** — centre also moves 1.06 → 1.16 against vanilla's 0.55.
+
+Ryan then ruled on the +0.007 as noise, which it is. Had the second failure been
+visible the ruling would have been different, and it was: 2010 is now held.
+**A ruling made on a partial failure list is a ruling made on the wrong facts,
+and the tool chose which facts by the order its assertions happened to sit in.**
+
+It was found only by re-running every guard with the short-circuit removed. Nothing
+about the original output suggested anything was missing — a single clean
+`AssertionError` looks exactly like a complete answer.
+
+**Rules:**
+1. **A terminal gate evaluates every check and reports all failures.** Assert at the
+   end, on the collected list. `pgm3_validate.py` already works this way, which is
+   why its output can be trusted to be complete; the payroll guard did not.
+2. **Never rule on a failure list from a gate that stops at the first failure**
+   without re-running it to exhaustion first.
+
+**Where the structure still exists.** `pgm3_validate.py` collects and is safe.
+`build_1979_roster_file.py:gate_players` (11 independent checks) and `gate_staff`
+(5) are terminal gates that short-circuit. Nothing is masked today — 1979 passes
+all of them — but the next failure there will report as a singleton. Fix when 1979
+is next opened, which is batch 4.
+
+---
+
+## The post-write diff caught what the gates did not — the third time
+
+**2026-09-03.** `eSalary`/`eGuarantee` are extension terms — what a player wants to
+re-sign for, paired with `eLength`. Vanilla's Derrick Tunsil earns $3.1M on a
+one-year deal and wants **$7.7M over four**. `raise_payroll` assigned them *from*
+salary and guarantee, so every asking price became the current salary: **every
+extension free, nobody ever asking for a raise.** A gameplay defect, and it shipped
+in a6fb417 and sat live in 2026 through a play test.
+
+**No gate caught it.** Payroll totals were right, ordering was right, position
+ratios were right, and the roster gate returned ALL CLEAR. It was caught by
+counting which fields the diff changed: `guarantee` moved on 1,048 records and
+`eGuarantee` on 1,456. **Those two counts cannot differ if the fields started
+equal**, and that arithmetic was the whole of the detection.
+
+**Rule: diff the write by field and count, not just by line.** A gate tests the
+properties someone thought to encode. The diff shows everything that moved,
+including the field nobody knew was load-bearing.
+
+---
+
+## A count supplied with a task is what the supplier could see, not the population
+
+**2026-09-03, three times in two passes.** "96 under $500K" — the floor lifted 282,
+because the floor sits at $0.60M–$1.09M by position and band and the sub-$500K
+men were the visible end of it. "12 back under $500K after the transform" — the
+second pass lifted 369, same reason. "51 stars under $2M" — the real signature
+was 26+ and under $2M or anything under $500K, and vanilla itself carries 31
+stars under $2M on rookie deals.
+
+Each time the supplied number was true, and each time it was a symptom of a
+larger defect it could not see. **Measure the population before scoping the fix,
+and report the population beside the supplied count** — "282, of which your 96"
+— so the gap is visible and nobody plans against the smaller number.
+
+---
+
+## A snapshot's maximum is not the engine's ceiling — the fifth instance
+
+**2026-09-03.** Our ten files top at rating 98; the game's week-one export tops at
+98. A cap at 98 was inferred and applied to six men. Ryan loaded the file and
+three men read 99 — one of ours at 98, two never touched. A fresh league has
+nobody at 99 because nobody has developed yet: **the maximum of a snapshot is a
+fact about when the snapshot was taken.** Reverted the same day. The rule from
+the earlier precedent stands and gets a corollary: **a game-generated file
+supports a claim about what the engine PRODUCES at that moment, not about what
+it permits.** Play, or a simmed-forward export, is the evidence for a ceiling.
+
+---
+
+## `weights.json` is a fit, not the formula — fine for ordering, not for hitting a number
+
+**2026-09-03, from the same failed pass as the snapshot precedent.** The 98 cap
+shaved Micah Parsons' attributes until the weighted sum read 98.4; the game
+displayed **97**. The weights came from a regression on the build data. They have
+carried everything that needed ordering or a distribution — the quarterback
+alignment, the rating invariant, the outcome ceilings — and they will go on
+doing so. **What they cannot do is land a specific number.** Any work that
+targets a particular rating for a particular man is verified in game, not
+against the weights, before it is called done.
+
+---
+
+## A value correct in the source population is not a value — the third instance
+
+**2026-09-03.** The game's free-agent staff all ask a flat $0.20M. That is also
+the game's going rate for a 57–69 rated coach, and its pool contains nothing
+else — so in vanilla the flat value and the going rate are the same number and
+the file cannot tell you which one the engine means. Our 1979 pool holds Paul
+Brown at 88. Copying $0.20M would have priced him as a 60.
+
+The position band (measured from eight files that shared an ancestor) and the
+payroll constant ($197.4M, one donor wearing ten coats) were the first two. **The
+rule: before copying a value from a reference, ask what population it was
+measured on, and whether ours is the same population.** If the reference cannot
+distinguish two explanations for the value, take the one that survives a
+population ours has and theirs lacks.
+
+---
+
+## A label that says "sourced" and was drawn is worse than a missing label
+
+**2026-09-03.** 92 of the 100 pre-1990 faces Ryan verified by photograph carried
+the provenance `registry-1986 family` — a sourced label. Traced to the root, 23 of
+the 69 he found wrong were never in the 1986 decode at all: the 1986 face was
+drawn from a position distribution, the registry stored the draw as canonical,
+and 1979 inherited it as "registry-1986 family". Another 45 rested on a decoded
+field that was simply wrong. **The label defeated every check the project has**
+— the coverage sweep, the provenance ranking, the disagreement list — because
+each of them trusted "sourced" to mean sourced.
+
+**A missing label is honest: builders fall to the prior and say so. A draw
+recorded as a source is a guess that has stopped being visible.** Rules:
+
+1. **Provenance records the ORIGIN, not the last hop.** "registry-1986" is a hop.
+   "Xbox bit 1347 = 1" or "drawn, league prior, 1986 build" is an origin.
+2. **When a registry entry is created from a draw, it carries `drawn` in its
+   provenance forever**, and every file that inherits it inherits the word.
+3. **Never test a file against the registry it was written from.** The archive
+   read 95 of 95 against hand-verified truth because the files ARE the registry
+   for those men (249 of 249 identical). That test settled a design ruling and
+   could not see the error. Independence is a property of the comparison, not
+   of the truth set.
+
+---
+
+## Anything seeded per file diverges for a man who appears in two files — name-plus-position is the seed
+
+**2026-09-03, twice in one session.** The staff rename seeded new names on the
+per-file `iden`, and a generated man present in two files became two men. The
+Mike skin apply seeded the family draw on `iden`, and one man moved into the
+light band drew Head1 in 1979 and Head2 in 1986 — same class, and the faces
+gate, which compares the digit, reported 35 disagreements that were not there.
+
+The `iden` is a property of the record. The man is the thing that has to agree
+with himself across seasons. **Seed on the man — normalised name plus position —
+for anything a reader could compare across files: names, face families, hair,
+anything drawn.** Seed on `iden` only for what is legitimately per-record.
+
+---
+
+## Check for namesakes BEFORE applying anything by name — the seventh collision, the first caught in time
+
+**2026-09-03.** Ryan verified 100 men by photograph, each at a position, team
+and season. Applied by name across ten files, six of the verdicts would have
+landed on a different man: Bob Nelson MLB onto a DT and a DE, Mike Bell DE onto
+a 2007 running back, David Carter C onto three DTs. A namesake check run before
+the write — every record the name would reach, at what position, in what year —
+found all six; keying on name|position kept each verdict on its man.
+
+Six earlier collisions in this project were found after the fact (Gene
+Washington, the Clay Matthews and Kellen Winslow fathers and sons, the two
+James Joneses of 1986, Mark Brown, and the rename's cross-file repeats). **A
+name is a lookup key only inside one file and one season. Across files it is a
+hypothesis, and the check is cheap: list what the name reaches before you write
+to it.**
+
+---
+
+## A field that agrees with something you already know is not evidence about the thing you don't
+
+**2026-09-03.** Mike's `PHCL`, collapsed to black versus not-black, scored **90%**
+over the men with photographic truth. It was refused, because dark-skinned men
+sit at `PHCL 0` **99%** of the time and light-skinned men **11%** — the field was
+largely restating skin, which the project already holds from a source that beat
+the archive 95 to 4. **Restricted to light-skinned men, where the open question
+actually lives, it scored 86% against a 91% base rate for the constant answer
+"not black" — worse than guessing**, and it was right about one of the six such
+men it called black.
+
+Same family as the Mike files' shared 2003 base reading 98% because the anchor
+set lived inside it: **a headline accuracy is only evidence to the extent the
+test population contains the disagreement.** Before accepting a source on a
+score, condition on what is already known and re-score on the remainder. If the
+number collapses, the source was agreeing with the old evidence, not adding new.
+
+## Every defect fixed ships a check that catches it — same commit, property not instance, every file
+
+Ryan's standing rule, 2026-09-03. **The check goes in the commit with the fix,
+not a follow-up. It tests the property, not the instance — "no cell of one maps
+to a quantile", never "Josh Allen earns more than $500K". It runs on every file,
+because the reason a day gets long is that a fix reaches one file and the defect
+lives in ten. Where a check genuinely cannot be written, say so and why.**
+
+The evidence for the rule is the day it was made on. Almost everything fixed —
+the 99-rating ceiling, the singleton salary cell, the per-file seed, the flat
+beard draw, the wiped extension terms, the unpaid staff — existed in more than
+one file and was found once, by Ryan opening a file or by an ad hoc measurement.
+The three fixes that had gates behind them — the payroll ratio guard, the tied-
+block ordering assertion, the coverage sweep — **all three fired on their first
+run and caught something real.**
+
+**Calibration, learned the same day.** A gate needs a threshold, and the obvious
+one — the band the published files span — does not work on this archive: leave
+one out and **16 of 80 appearance slot/file pairs fall outside the span of the
+other nine**, the same way every published file fails the position-rate span.
+A gate calibrated on a heterogeneous archive fails the files it is calibrated
+on. Two forms that do work:
+
+- **Scale-free ratios.** "The bottom of the salary distribution is a wall, not a
+  tail": minimum within 10% of the 1st percentile. Nine files read 0.96-1.00 in
+  four different eras' dollars, and it needs no dollar constant to catch $2,288.
+- **Floors far below the archive's own minimum.** A uniform draw has a
+  commonest/rarest token ratio near 1; the archive's thinnest real slot is 30.
+  A floor at 15 catches the flat draw and cannot fire on a real file.
+
+Where the band is genuinely the only reference, it stays a WARN and says so.
+
+## A later fix can undo an earlier one through a field neither of them names
+
+Ryan's words for what the retrofitted gates caught on their first run, 2026-09-03.
+
+At `a95c793` the contract work put a floor on salary and 2017 came out with
+nobody under $500K. At `7b40c9a`, four commits later, the guarantee split moved
+money out of salary into guarantee for 1,016 of 2017's players. **Total
+compensation was preserved on every one of them and asserted to be. The cap
+arithmetic runs on salary plus guarantee, so it did not move either. And the
+salary floor was silently undone underneath it** — Elijah Wilkinson ended on
+$101,178 of salary against $494,049 of guarantee, and 185 men sat under $500K
+in a file where every other one holds nobody below $566K.
+
+**Nothing in the split's code mentioned the floor, and nothing in the floor's
+code mentioned the split.** Neither was wrong about what it named. The defect
+lives in the field they share and neither one owns, and no review of either
+commit on its own would find it: the split's own assertion — total pay
+unchanged — passes.
+
+The file was green under every check that existed the day before, and red on the
+first run of a check written the day after. **This is the case that makes the
+standing rule pay for itself, and it is the argument for the property form of a
+check over the instance form.** A check on "salary plus guarantee is unchanged"
+is a check on what the author was thinking about. A check on "the bottom of the
+salary distribution is a wall, not a tail" is a check on the file, and it does
+not care which commit broke it or whether anyone remembered the floor existed.
+
+**Corollary for anything that re-splits, rescales or redistributes a value:**
+the invariant the transform preserves is not the invariant that matters. Ask
+what property of the OUTPUT held before it ran, and check that.
+
+## The reference for what a cohort should look like is the archive, never the file under question
+
+2026-09-03. 2021's free agents carried the wrong draw of `injuryProne` and I
+cleared it, twice, before it was caught.
+
+The first clearance: I compared 2021's free agents against **2021's own
+rookies**, found them differently shaped, and concluded there was no cohort
+crossing. **2021's rookies are themselves anomalous** — they run p10 19 to p90
+41 where the archive's rookie draw runs 6 to 83. So the comparison put one
+defect beside another and passed both. **I tested one defect against another and
+passed both.**
+
+Against the right reference the answer was immediate and not close: 2021's free
+agents match the other nine files' rookies at KS 0.067 and their free agents at
+KS 0.263. A hundred and three men matching a pool of nine thousand that closely
+are the same draw.
+
+**The rule.** When you ask "does this cohort look right", the comparison set is
+every other file, never the file you are questioning and never a neighbouring
+cohort inside it. A file under suspicion has forfeited its right to be its own
+control. This is the same error as testing a file against the registry it was
+written from, and the same error as a source scoring 98% because the anchor set
+lived inside it — **a test whose reference is contaminated by the thing being
+tested returns a clean result and means nothing.**
+
+**And medians are not enough to find it.** The cohort read 34 against an archive
+49, which says something is wrong but not what; 34 also happens to be the
+archive's rookie median, which is suggestive and no more. The distribution
+identified the source. Compare shapes, not centres, when the question is "where
+did this come from".
+
+## The absence of a positive marker is not a negative one
+
+2026-09-04. I reported that 2010 carried "36 invented coordinator records" and
+Ryan ruled on that number. It was wrong. My classifier read the provenance
+sidecar and called a record invented whenever its value did not begin `real`,
+`sourced` or `named`. All 36 of 2010's actually read **`unknown (no real source,
+not from the invented lists)`** — which says the opposite of invented: it says
+nobody has checked. Against the Coaching Tree, **29 of the 36 were already the
+right man**, 22 of them stored with an initial (`D. Toub` for Dave Toub).
+
+**A test built as "not positively marked, therefore bad" manufactures defects.**
+It reported a hole where there was a column of unverified abbreviations, and it
+would have had a tool rewrite 29 correct records to "fix" them.
+
+The vocabulary a project actually uses is data, not decoration. This sidecar
+carries eight distinct provenance values and three of them are shades of "we do
+not know", which is a different state from "we made it up" and a different state
+again from "we checked". **Enumerate the values before writing a predicate over
+them** — one `Counter` over the column would have caught this before the report,
+let alone the ruling.
+
+## Check the file, not the framing — including your own
+
+Same pass, and the more dangerous of the two. I described 1979's four
+non-existent franchises as Carolina, Jacksonville, the Ravens and the Texans,
+and wrote that into a tool. **The 1979 file uses HISTORICAL team ids**: its
+Baltimore Colts sit at `BAL` and its Houston Oilers at `HOU`, both already
+carrying the real Maxie Baughan, George Boutselis, Ed Biles and John Paul Young,
+marked `sourced`. The ids with no 1979 team behind them are **IND and TEN** —
+the modern ids of those same two franchises.
+
+Had the pass trusted the framing it would have relabelled four real sourced
+coordinators as "this franchise did not exist", **which is the exact opposite of
+the truth, on the records most worth protecting.** What caught it was a
+diagnostic printing the current provenance of every record the tool was about to
+touch — not the plan, and not the reasoning that produced the plan.
+
+**Print what you are about to overwrite, keyed by what makes it valuable.** A
+count of records to be changed would not have caught this; a count of records to
+be changed BROKEN DOWN BY THEIR CURRENT PROVENANCE did, immediately.
+
+## A value set once and reused across records that do not share it — third instance
+
+2026-09-04. `move_1979_coordinators.py` held `SLOT = 'Off Co-ord'` as a module
+constant and looped three men through it. Ken Meyer and Jim Ringo were offensive
+coordinators; **Tom Bettis coached the Cardinals' defence**, and the pass put him
+on the wrong side of the ball. The pull file said `Def Co-ord` on his row the
+whole time; nothing read it.
+
+**Third instance of the same shape in this project:**
+
+1. the `ro` variable scoped across eight stages of a build when each stage had
+   its own roster,
+2. the per-file `iden` seeding that made one man diverge between files because
+   the seed belonged to the file rather than to him,
+3. this — one slot constant for three men who held two different jobs.
+
+**The tell is always the same: a value that describes ONE record living at a
+scope that spans MANY.** A module constant, a loop variable hoisted out, a seed
+taken from the container instead of the contents. It reads as tidy — three men,
+one job, why repeat yourself — and it is only correct while the records happen
+to agree.
+
+**The rule: if a value could differ per record, it is read per record, even when
+today's records all match.** The cost of `('Ken Meyer', 'CHI', 'Off Co-ord')`
+over `SLOT = 'Off Co-ord'` is nine characters a line. The cost of the constant
+was a Hall-of-Fame linebacker coaching the wrong side of the ball in a published
+file — and it survived a dry run, an assertion on record counts, an
+employed-staff count, a one-man-one-record check and all four gates, because
+every one of those was true of the wrong answer.
+
+## The attributes belong to the person, not to the slot
+
+2026-09-04, and the mechanism matters more than the count of records it damaged.
+
+**`startSeason` is not an independent fact that happens to correlate with age —
+it is computed from it.** Measured across the archive's employed staff:
+
+| file | r(age, startSeason) |
+|---|---|
+| 1979 | −0.942 |
+| 2000 | −0.928 |
+| 2004 | −0.967 |
+| 2013 | −0.988 |
+| 2026 | −0.961 |
+| **1986** | **−0.175** |
+
+Nine files run −0.93 to −0.99. **1986 is the exception at −0.175 and its
+startSeason is evidently NOT age-derived** — which is itself worth knowing before
+any correction pass assumes one convention across the archive.
+
+**The consequence for any age fix: correcting age and leaving startSeason
+produces a 63-year-old with a 27-year-old's experience — a worse artifact than
+the one being repaired.** Growth curves conditioned on age move for the same
+reason. `startSeason` is computed on the GAME clock, which runs 1989–2026 in
+every file including 1979, the same convention as `draftSeason`.
+
+**THE RULE. Any tool that places a person into a slot takes HIS attributes, not
+the slot's** — age, birth date, and everything derived from them travel with the
+man. A slot carries the job: rating, potential, the team's strength. It does not
+carry a birthday.
+
+**The proof the archive gave up**: one man appearing twice in a single file at
+two different ages, sixteen years apart, because each record wore its slot's age.
+Fixed in passing when those men were moved — the move tools took the man's own
+record — but fixing instances without fixing the mechanism means the next
+placement re-creates it, and **this session alone moved sixty-five coordinators.**
+
+**The gate: no two records of the same man in one file may differ in age.**
+Recorded namesakes are exempt, for the same reason they are exempt from the
+duplicate-names check: Jim Mora at 65 and his son at 39 in 2000 are two men and
+should differ.
+
+**It passes on all ten files today, so it was proved against the counterfactual
+it exists to prevent** — a fill writing a real man's name into a slot while his
+own record still stands elsewhere, which is exactly what the namesake guard
+refused three times this session. Injecting that case makes it fail: *one man,
+one age: paul|brown*. **A check that has only ever passed has not been tested;
+if the archive will not produce the failure, construct it.**
+
+## If the archive will not produce the failure, construct it
+
+2026-09-04. The one-man-one-age gate passed on all ten files the moment it was
+written, because the instances it exists to catch had already been fixed in
+passing. **A check that has only ever passed has not been tested** — it may be
+catching nothing because nothing is wrong, or because it is looking at the wrong
+field, or because a typo made its condition unreachable, and a green tick cannot
+tell those apart.
+
+So the failure was built: a fill writing a real man's name into a slot while his
+own record still stands elsewhere — precisely what the namesake guard refused
+three times that session. Injected into a copy of the file, the gate failed as
+designed: *one man, one age: paul|brown*.
+
+**The general form.** When a new check comes up green on first run, the run has
+told you nothing yet. Either find the historical commit where it fails, or
+synthesise the defect in a scratch copy and watch it fail there. **Cost: two
+minutes. What it buys: the difference between a check and a decoration.**
+
+This is the companion to *every fix ships with a gate*. A gate that has never
+failed is not yet a gate.
+
+## When a source returns less than expected, test the query before concluding about the source
+
+2026-09-04. StatsCrew's search scored **5 of 29** on a set of NFL coaches. As a
+number that reads like a fact about the source: thin coverage, an incomplete
+database. It was a fact about the query — filling the `searchnamefirst` field
+returns nothing at all, and last-name-only returns the full candidate list. The
+same set then scored **20 of 29**.
+
+**What caught it was not the number. It was two specific empties: Jim Ringo and
+Jack Christiansen.** Both are in the Hall of Fame. A football database missing
+two Hall of Famers is implausible in a way that "17% coverage" simply is not —
+low coverage has a hundred innocent explanations, a missing Jim Ringo has none.
+
+**The general form.** A disappointing result from a source is a hypothesis about
+the source AND a hypothesis about the request, and the second is cheaper to test.
+Before recording "this source only covers X%", ask it for something it certainly
+has. If that comes back empty, the query is wrong.
+
+**Same shape as the anchor tests that kept coming back thin** because our own
+verification set was thin, not the source's coverage — and as the file tested
+against the registry it was written from. **A measurement of a source is only as
+good as the question put to it.**
+
+## A name is not an identity, and a bigger sample is what proves it
+
+Same pass, and the correction cost two rounds.
+
+At n=29 the two age sources agreed **20 of 20, to the day**, and that read like
+verification. **At n=55 they disagreed four times, and every disagreement was
+StatsCrew matching a different man**: George Allen 1944 against 1918; John McKay
+1953 against 1923, which is the head coach's son, a receiver; **Bill Walsh 1927
+against 1931, which is Atlanta's offensive line coach against San Francisco's
+head coach.** The clean small sample was luck.
+
+**The fix was not a better matcher, it was the right database.** StatsCrew holds
+every professional footballer since 1920 and answers a name with whoever played
+under it; the Coaching Tree is a database OF COACHES and answers with the coach.
+For a coaching question the coaching source is primary, and the other fills gaps.
+Before that switch this pass produced **Joe Gibbs born 1988 and a head coach aged
+-16** — caught by a plausibility guard, which stays in place, because no age
+should reach a published file without being possible.
+
+## A disappointing diff is a hypothesis about the matcher too — third instance
+
+2026-09-04, and it is the same shape as the query lesson one layer up.
+
+Twenty-eight team media guides were diffed against 1979's 84 coordinator slots.
+The matcher returned **36 agree, 14 differ, 34 silent**. Reading the fourteen,
+**twelve dissolved**: Kansas City's book says `Defensive Coordinator/Linebacker
+Coach ... Rod Rust` and we have Rod Rust; New England's compound
+`Ass't Head Coach, Def. Coordinator/Linebackers: Hank Bullough` is ours; the
+Jets' `Defensive Coordinator, Secondary ... John Mazur` is our Johnny Mazur. A
+compound title, a dotted leader line or an OCR'd surname was enough to make a
+correct record look wrong. **Two real errors survived.**
+
+The "silent" third was the same illusion in the other direction: Cleveland's
+guide never uses the word coordinator, it says `Coach, Defensive Backs: CHUCK
+WEBER` and `Coach, Quarterbacks: JIM SHOFNER` — **the two men the career-standing
+rule had picked for those slots by arithmetic alone, confirmed by the team's own
+book.**
+
+**Three instances in one session, one shape:**
+
+1. a source scoring 5 of 29, which was a filled search field;
+2. thirty-six flat appearance slots, which were a leave-one-out artifact;
+3. fourteen file errors, which were twelve matcher artifacts.
+
+**The rule: before reporting that something is wrong with the data, spend the
+cheaper test on the instrument.** Read a handful of the failures in full. If they
+dissolve, the number was measuring your own query, your own fit, or your own
+regex — and a number that measures the instrument reads exactly like a number
+that measures the world.
