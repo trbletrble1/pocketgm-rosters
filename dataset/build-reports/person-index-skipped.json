@@ -1,0 +1,2496 @@
+{
+ "_what": "every stint claim build_person_index could not index, written on every build; gate_person_index P4 refuses a rebuild while any store here is not declared",
+ "unreadable_stores": [],
+ "stores_with_no_claims_block": [
+  {
+   "store": "PGMRoster_1950",
+   "bytes": 420874,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "assistants-identity",
+   "bytes": 64492,
+   "top_level_keys": [
+    "REFUSED",
+    "_evidence_rule",
+    "_ruling",
+    "counts",
+    "decided_at",
+    "declaration"
+   ]
+  },
+  {
+   "store": "club-key-normalisation",
+   "bytes": 1069205,
+   "top_level_keys": [
+    "REFUSED",
+    "applied_when_merging",
+    "counts",
+    "decided_at",
+    "decided_through",
+    "declaration"
+   ]
+  },
+  {
+   "store": "coach-promotions",
+   "bytes": 11632628,
+   "top_level_keys": [
+    "checked_against",
+    "counts",
+    "decided_at",
+    "guide_club_years_without_a_league",
+    "left_alone",
+    "people_after"
+   ]
+  },
+  {
+   "store": "college-guides-candidates",
+   "bytes": 138001,
+   "top_level_keys": [
+    "candidates",
+    "counts",
+    "documents_dropped_for_field_extraction",
+    "refused_fields",
+    "source"
+   ]
+  },
+  {
+   "store": "contested-1950",
+   "bytes": 4252,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "contested-coaches",
+   "bytes": 531,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "contested-nfl-1950",
+   "bytes": 4252,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "contested-salaries",
+   "bytes": 312,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "contested-wfl-1974",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-aaf-2019",
+   "bytes": 861,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-aafc-1946",
+   "bytes": 583,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-aafc-1947",
+   "bytes": 583,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-aafc-1948",
+   "bytes": 583,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-aafc-1949",
+   "bytes": 583,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-afl-1960",
+   "bytes": 579,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-afl-1961",
+   "bytes": 579,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-afl-1962",
+   "bytes": 579,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-afl-1963",
+   "bytes": 579,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-afl-1964",
+   "bytes": 579,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-afl-1965",
+   "bytes": 579,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-afl-1966",
+   "bytes": 579,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-afl-1967",
+   "bytes": 579,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-afl-1968",
+   "bytes": 579,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-afl-1969",
+   "bytes": 580,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-apfa-1920",
+   "bytes": 753,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-apfa-1921",
+   "bytes": 867,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1945",
+   "bytes": 1003,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1946",
+   "bytes": 1003,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1947",
+   "bytes": 1003,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1948",
+   "bytes": 1003,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1949",
+   "bytes": 1003,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1950",
+   "bytes": 711,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1951",
+   "bytes": 887,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1952",
+   "bytes": 887,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1953",
+   "bytes": 882,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1954",
+   "bytes": 883,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1955",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1956",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1957",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1958",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1959",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1960",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1961",
+   "bytes": 726,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1962",
+   "bytes": 726,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1963",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1964",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1965",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1966",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1967",
+   "bytes": 726,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1968",
+   "bytes": 726,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1969",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1970",
+   "bytes": 725,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1971",
+   "bytes": 726,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1972",
+   "bytes": 607,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1973",
+   "bytes": 607,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1974",
+   "bytes": 606,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1975",
+   "bytes": 606,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1976",
+   "bytes": 721,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1977",
+   "bytes": 890,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1978",
+   "bytes": 720,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1979",
+   "bytes": 606,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1980",
+   "bytes": 607,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1981",
+   "bytes": 606,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1982",
+   "bytes": 607,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1983",
+   "bytes": 723,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1984",
+   "bytes": 723,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1985",
+   "bytes": 723,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1986",
+   "bytes": 723,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1987",
+   "bytes": 551,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1988",
+   "bytes": 551,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1989",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1990",
+   "bytes": 551,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1991",
+   "bytes": 551,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1992",
+   "bytes": 551,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1993",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1994",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1995",
+   "bytes": 551,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1996",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1997",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1998",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-1999",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2000",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2001",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2002",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2003",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2004",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2005",
+   "bytes": 551,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2006",
+   "bytes": 551,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2007",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2008",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2009",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2010",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2011",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2012",
+   "bytes": 551,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2013",
+   "bytes": 553,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2014",
+   "bytes": 553,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2015",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2016",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2017",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2018",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2019",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2021",
+   "bytes": 551,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2022",
+   "bytes": 552,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2023",
+   "bytes": 550,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2024",
+   "bytes": 551,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-cfl-2025",
+   "bytes": 550,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1922",
+   "bytes": 606,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1923",
+   "bytes": 606,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1924",
+   "bytes": 605,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1925",
+   "bytes": 606,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1926",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1927",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1928",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1929",
+   "bytes": 606,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1930",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1931",
+   "bytes": 606,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1932",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1933",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1934",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1935",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1936",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1937",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1938",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1939",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1940",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1941",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1942",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1943",
+   "bytes": 591,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1944",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1945",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1946",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1947",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1948",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1949",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1950",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1951",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1952",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1953",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1954",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1955",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1956",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1957",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1958",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1959",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1960",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1961",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1962",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1963",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1964",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1965",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1966",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1967",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1968",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1969",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1970",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1971",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1972",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1973",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1974",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1975",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1976",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1977",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1978",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1979",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1980",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1981",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1982",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1983",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1984",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1985",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1986",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1987",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1988",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1989",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1990",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1991",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1992",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1993",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1994",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1995",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1996",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1997",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1998",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-1999",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2000",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2001",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2002",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2003",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2004",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2005",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2006",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2007",
+   "bytes": 436,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2008",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2009",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2010",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2011",
+   "bytes": 436,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2012",
+   "bytes": 434,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2013",
+   "bytes": 434,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2014",
+   "bytes": 435,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2015",
+   "bytes": 437,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2016",
+   "bytes": 434,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2017",
+   "bytes": 436,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2018",
+   "bytes": 436,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2019",
+   "bytes": 436,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2020",
+   "bytes": 592,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2021",
+   "bytes": 436,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2022",
+   "bytes": 434,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2023",
+   "bytes": 435,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-nfl-2024",
+   "bytes": 435,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-ufl-2009",
+   "bytes": 862,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-ufl-2010",
+   "bytes": 862,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-ufl-2011",
+   "bytes": 862,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-ufl-2012",
+   "bytes": 1033,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-ufl2-2024",
+   "bytes": 867,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-usfl-1983",
+   "bytes": 581,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-usfl-1984",
+   "bytes": 581,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-usfl-1985",
+   "bytes": 758,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-usfl2-2022",
+   "bytes": 873,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-usfl2-2023",
+   "bytes": 874,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-wfl-1974",
+   "bytes": 774,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-wfl-1975",
+   "bytes": 610,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-wlaf-1991",
+   "bytes": 868,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-wlaf-1992",
+   "bytes": 1044,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-xfl-2001",
+   "bytes": 691,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-xfl-2020",
+   "bytes": 576,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "dev-xfl-2023",
+   "bytes": 691,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-aaf-2019",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-aafc-1946",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-aafc-1947",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-aafc-1948",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-aafc-1949",
+   "bytes": 197,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-afl-1960",
+   "bytes": 292,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-afl-1961",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-afl-1962",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-afl-1963",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-afl-1964",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-afl-1965",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-afl-1966",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-afl-1967",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-afl-1968",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-afl-1969",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-apfa-1920",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-apfa-1921",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1945",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1946",
+   "bytes": 672,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1947",
+   "bytes": 672,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1948",
+   "bytes": 672,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1949",
+   "bytes": 672,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1950",
+   "bytes": 1636,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1951",
+   "bytes": 1254,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1952",
+   "bytes": 196,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1953",
+   "bytes": 98,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1954",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1955",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1956",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1957",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1958",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1959",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1960",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1961",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1962",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1963",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1964",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1965",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1966",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1967",
+   "bytes": 194,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1968",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1969",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1970",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1971",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1972",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1973",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1974",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1975",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1976",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1977",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1978",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1979",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1980",
+   "bytes": 292,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1981",
+   "bytes": 293,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1982",
+   "bytes": 292,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1983",
+   "bytes": 292,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1984",
+   "bytes": 292,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1985",
+   "bytes": 292,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1986",
+   "bytes": 293,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1987",
+   "bytes": 292,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1988",
+   "bytes": 196,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1989",
+   "bytes": 292,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1990",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1991",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1992",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1993",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1994",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1995",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1996",
+   "bytes": 192,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1997",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1998",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-1999",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2000",
+   "bytes": 192,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2001",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2002",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2003",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2004",
+   "bytes": 192,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2005",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2006",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2007",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2008",
+   "bytes": 192,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2009",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2010",
+   "bytes": 475,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2011",
+   "bytes": 475,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2012",
+   "bytes": 572,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2013",
+   "bytes": 477,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2014",
+   "bytes": 477,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2015",
+   "bytes": 575,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2016",
+   "bytes": 671,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2017",
+   "bytes": 478,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2018",
+   "bytes": 478,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2019",
+   "bytes": 476,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2021",
+   "bytes": 189,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2022",
+   "bytes": 479,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2023",
+   "bytes": 477,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2024",
+   "bytes": 477,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-cfl-2025",
+   "bytes": 477,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1922",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1923",
+   "bytes": 675,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1924",
+   "bytes": 97,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1925",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1926",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1927",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1928",
+   "bytes": 97,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1929",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1930",
+   "bytes": 572,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1931",
+   "bytes": 572,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1932",
+   "bytes": 289,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1933",
+   "bytes": 194,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1934",
+   "bytes": 194,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1935",
+   "bytes": 194,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1936",
+   "bytes": 194,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1937",
+   "bytes": 194,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1938",
+   "bytes": 387,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1939",
+   "bytes": 387,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1940",
+   "bytes": 285,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1941",
+   "bytes": 285,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1942",
+   "bytes": 285,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1943",
+   "bytes": 381,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1944",
+   "bytes": 285,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1945",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1946",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1947",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1948",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1949",
+   "bytes": 290,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1950",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1951",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1952",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1953",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1954",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1955",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1956",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1957",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1958",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1959",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1960",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1961",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1962",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1963",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1964",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1965",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1966",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1967",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1968",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1969",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1970",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1971",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1972",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1973",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1974",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1975",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1976",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1977",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1978",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1979",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1980",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1981",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1982",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1983",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1984",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1985",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1986",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1987",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1988",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1989",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1990",
+   "bytes": 291,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1991",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1992",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1993",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1994",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1995",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1996",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1997",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1998",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-1999",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2000",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2001",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2002",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2003",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2004",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2005",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2006",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2007",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2008",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2009",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2010",
+   "bytes": 98,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2011",
+   "bytes": 98,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2012",
+   "bytes": 98,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2013",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2014",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2015",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2016",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2017",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2018",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2019",
+   "bytes": 578,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2020",
+   "bytes": 477,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2021",
+   "bytes": 191,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2022",
+   "bytes": 194,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2023",
+   "bytes": 192,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-nfl-2024",
+   "bytes": 192,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-ufl-2009",
+   "bytes": 98,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-ufl-2010",
+   "bytes": 480,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-ufl-2011",
+   "bytes": 478,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-ufl-2012",
+   "bytes": 479,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-ufl2-2024",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-usfl-1983",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-usfl-1984",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-usfl-1985",
+   "bytes": 204,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-usfl2-2022",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-usfl2-2023",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-wfl-1974",
+   "bytes": 97,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-wfl-1975",
+   "bytes": 98,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-wlaf-1991",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-wlaf-1992",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-xfl-2001",
+   "bytes": 2,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-xfl-2020",
+   "bytes": 191,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "devstats-xfl-2023",
+   "bytes": 193,
+   "top_level_keys": "list"
+  },
+  {
+   "store": "guide-pre1950-delimited",
+   "bytes": 2302759,
+   "top_level_keys": [
+    "age_conflict_clustering",
+    "dropped_runs",
+    "generated",
+    "not_parsed_families",
+    "runs",
+    "scope"
+   ]
+  },
+  {
+   "store": "guide-prose-corpus-leads",
+   "bytes": 254005489,
+   "top_level_keys": [
+    "leads",
+    "n",
+    "source"
+   ]
+  },
+  {
+   "store": "person-merges",
+   "bytes": 509694,
+   "top_level_keys": [
+    "OPEN_ITEMS",
+    "REFUSED",
+    "counts",
+    "decided_at",
+    "declaration",
+    "merges"
+   ]
+  },
+  {
+   "store": "pfa-match",
+   "bytes": 628652,
+   "top_level_keys": [
+    "leads",
+    "matched",
+    "unmatched"
+   ]
+  },
+  {
+   "store": "player-promotions",
+   "bytes": 4687994,
+   "top_level_keys": [
+    "_ambiguous_and_refused_go_to_ryan",
+    "_rule",
+    "_what",
+    "ambiguous",
+    "counts",
+    "decided_at"
+   ]
+  }
+ ],
+ "chain_step_reports_not_read": [
+  {
+   "store": "cfl1945-season-restore",
+   "claims": 0,
+   "why": "a chain step's report, declared in report_stores_not_claim_sources"
+  },
+  {
+   "store": "clubs",
+   "claims": 0,
+   "why": "a chain step's report, declared in report_stores_not_claim_sources"
+  },
+  {
+   "store": "coach-demotions",
+   "claims": 0,
+   "why": "a chain step's report, declared in report_stores_not_claim_sources"
+  },
+  {
+   "store": "coach-seasons-promoted",
+   "claims": 17621,
+   "why": "a chain step's report, declared in report_stores_not_claim_sources"
+  },
+  {
+   "store": "officials-applied",
+   "claims": 0,
+   "why": "a chain step's report, declared in report_stores_not_claim_sources"
+  },
+  {
+   "store": "player-seasons-promoted",
+   "claims": 0,
+   "why": "a chain step's report, declared in report_stores_not_claim_sources"
+  }
+ ],
+ "skipped": [
+  {
+   "store": "assistants",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 883,
+   "example_subject": [
+    "stint",
+    "p_000001",
+    "San Francisco 49ers",
+    "y1977"
+   ]
+  },
+  {
+   "store": "stats-usfl-1984",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 211,
+   "example_subject": [
+    "stint",
+    "p_000157",
+    "USFLAZW",
+    "USFL-1984"
+   ]
+  },
+  {
+   "store": "stats-cfl-2021",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 117,
+   "example_subject": [
+    "stint",
+    "p_000807",
+    "CFLBC",
+    "CFL-2021"
+   ]
+  },
+  {
+   "store": "stats-usfl-1985",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 97,
+   "example_subject": [
+    "stint",
+    "p_000297",
+    "USFLAZO",
+    "USFL-1985"
+   ]
+  },
+  {
+   "store": "salaries",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 76,
+   "example_subject": [
+    "stint",
+    "p_000134",
+    "Dallas",
+    "y1984"
+   ]
+  },
+  {
+   "store": "stats-usfl-1983",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 68,
+   "example_subject": [
+    "stint",
+    "p_000854",
+    "USFLBIR",
+    "USFL-1983"
+   ]
+  },
+  {
+   "store": "stats-xfl-2001",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 36,
+   "example_subject": [
+    "stint",
+    "p_001850",
+    "XFLLAX",
+    "XFL-2001"
+   ]
+  },
+  {
+   "store": "stats-wfl-1974",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 31,
+   "example_subject": [
+    "stint",
+    "p_003660",
+    "WFLHAW",
+    "WFL-1974"
+   ]
+  },
+  {
+   "store": "stats-ufl-2012",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 27,
+   "example_subject": [
+    "stint",
+    "p_000652",
+    "UFLOMA",
+    "UFL-2012"
+   ]
+  },
+  {
+   "store": "stats-ufl-2010",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 14,
+   "example_subject": [
+    "stint",
+    "p_002396",
+    "UFLLVL",
+    "UFL-2010"
+   ]
+  },
+  {
+   "store": "stats-ufl-2011",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 12,
+   "example_subject": [
+    "stint",
+    "p_000935",
+    "UFLOMA",
+    "UFL-2011"
+   ]
+  },
+  {
+   "store": "stats-nfl-1987",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 10,
+   "example_subject": [
+    "stint",
+    "p_000167",
+    "ATL",
+    "NFL-1987"
+   ]
+  },
+  {
+   "store": "stats-nfl-2014",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 4,
+   "example_subject": [
+    "stint",
+    "p_026481",
+    "TEN",
+    "NFL-2014"
+   ]
+  },
+  {
+   "store": "stats-wlaf-1992",
+   "why": "s[1] is a local id identity.json does not hold for this store",
+   "stints": 4,
+   "example_subject": [
+    "stint",
+    "p_001831",
+    "WLAFMON",
+    "WLAF-1992"
+   ]
+  }
+ ],
+ "held": []
+}

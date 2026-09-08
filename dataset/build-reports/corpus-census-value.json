@@ -1,0 +1,116 @@
+{
+ "_date": "2026-09-07",
+ "_superseded_measurement": {
+  "what": "coverage by era, denominator = men with a roster-membership season key",
+  "result": "100.0% birth_date/college/hometown in every era including pre-1950",
+  "why_wrong": "selection effect -- those season keys come from PFA and PFA supplies those same fields for those same men; the denominator was supplied by the source being measured"
+ },
+ "coverage_by_pfa_knowledge": {
+  "known_to_pfa": {
+   "men": 38191,
+   "birth_date": {
+    "held": 37213,
+    "missing": 978,
+    "pct_held": 97.4
+   },
+   "college": {
+    "held": 37171,
+    "missing": 1020,
+    "pct_held": 97.3
+   },
+   "hometown": {
+    "held": 37204,
+    "missing": 987,
+    "pct_held": 97.4
+   },
+   "high_school": {
+    "held": 34014,
+    "missing": 4177,
+    "pct_held": 89.1
+   },
+   "height": {
+    "held": 36478,
+    "missing": 1713,
+    "pct_held": 95.5
+   },
+   "photograph": {
+    "held": 22229,
+    "missing": 15962,
+    "pct_held": 58.2
+   }
+  },
+  "not_known_to_pfa": {
+   "men": 5327,
+   "birth_date": {
+    "held": 3440,
+    "missing": 1887,
+    "pct_held": 64.6
+   },
+   "college": {
+    "held": 3430,
+    "missing": 1897,
+    "pct_held": 64.4
+   },
+   "hometown": {
+    "held": 3296,
+    "missing": 2031,
+    "pct_held": 61.9
+   },
+   "high_school": {
+    "held": 184,
+    "missing": 5143,
+    "pct_held": 3.5
+   },
+   "height": {
+    "held": 0,
+    "missing": 5327,
+    "pct_held": 0.0
+   },
+   "photograph": {
+    "held": 755,
+    "missing": 4572,
+    "pct_held": 14.2
+   }
+  }
+ },
+ "people_with_no_recorded_fact_and_not_known_to_pfa": 1887,
+ "decade_of_facts_for_men_not_known_to_pfa": {
+  "1920": 974,
+  "1930": 594,
+  "1940": 375,
+  "1950": 407,
+  "1960": 948,
+  "1970": 660,
+  "1980": 576,
+  "1990": 487,
+  "2000": 369,
+  "2010": 745,
+  "2020": 813
+ },
+ "guide_derived_predicates": {
+  "guide.prose_block": 9325,
+  "guide.vitals_as_printed": 8447,
+  "guide.BORN": 26,
+  "guide.HOME TOWN": 26,
+  "guide.HIGH SCHOOL FOOTBALL": 26,
+  "guide.COLLEGE FOOTBALL": 26,
+  "guide.MARITAL STATUS": 26,
+  "guide.SERVICE RECORD": 23,
+  "guide.HEIGHT": 20,
+  "guide.COLLEGE (HEADER)": 20,
+  "guide.WEIGHT": 20,
+  "guide.HONORS@HIGH SCHOOL FOOTBALL": 20,
+  "guide.MAJOR LEAGUE FOOTBALL": 19,
+  "guide.HONORS@COLLEGE FOOTBALL": 18,
+  "guide.SERVICE FOOTBALL": 14,
+  "guide.HONORS@MAJOR LEAGUE FOOTBALL": 6
+ },
+ "predicates_absent_entirely": [
+  "off-season occupation",
+  "fraternity",
+  "nickname",
+  "physical description (eye/hair colour)",
+  "street address"
+ ],
+ "total_people": 43518
+}

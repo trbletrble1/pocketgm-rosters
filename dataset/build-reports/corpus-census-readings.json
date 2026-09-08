@@ -1,0 +1,3810 @@
+[
+{
+"doc_id": "redskins-1934-media-guide-boston",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose | MISSED by the automated window, found by reading: 'SURNAME, First---prose' entries under 'Player Histories'"
+},
+{
+"doc_id": "redskins-1935-media-guide-boston",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "packers-1936-media-guide-green-bay-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "bears-1939-media-guide-chicago-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "cardinals-1940",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "packers-1940",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "packers-1941",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "bears-1942-media-guide-chicago",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "lions-1942-media-guide-detroit-cv-2-x",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "bears-1943-media-guide-chicago",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "bears-1944-media-guide-chicago",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "packers-1944-media-guide-green-bay-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "giants-1945-media-guide-new-york",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "steelers-1945-media-guide-pittsburgh",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "49ers-1946-media-guide-san-francisco",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose | MISSED by the automated window, found by reading: 'SURNAME, First / Height: / Weight:' then prose"
+},
+{
+"doc_id": "bears-1946-media-guide-chicago-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose | MISSED by the automated window, found by reading: 'NAME ... terse clauses' -- 'Personnel Thumbnail Sketches', p24"
+},
+{
+"doc_id": "boston-yanks-1946-media-guide-cover",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose | MISSED by the automated window, found by reading: 'NAME\u2014prose' plus a Name/Pos/Wt/Hgt/Age/Year table"
+},
+{
+"doc_id": "cardinals-1946",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "giants-1946-media-guide-new-york-cbd",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "lions-1946",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "packers-1946-v-2",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "philadelphia-eagles-1946-media-guide-cover",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose | MISSED by the automated window, found by reading: 'NAME, position from COLLEGE, is N years old'"
+},
+{
+"doc_id": "steelers-1946",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "49ers-1947-media-guide-san-francisco-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "boston-yanks-1947-media-guide-cover",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "browns-1947-media-guide-cleveland-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "colts-1947-media-guide-baltimore",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "giants-1947-media-guide-new-york-cbd",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose | MISSED by the automated window, found by reading: 'SURNAME, FIRST\u2014Position' then college, age, weight"
+},
+{
+"doc_id": "lions-1947-media-guide-detroit-cv-2-x",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose | MISSED by the automated window, found by reading: inline running prose: '... JIM LALIKOS, another rookie tackle, ...'"
+},
+{
+"doc_id": "packers-1947",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "rams-1947",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "redskins-1947-media-guide-washington-cbd",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "49ers-1948-media-guide-san-francisco-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "cleveland-browns-1948-media-guide-cover",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "colts-1948-media-guide-baltimore",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "giants-1948-media-guide-new-york-cbd",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose | MISSED by the automated window, found by reading: coach and player prose, no line-anchored name"
+},
+{
+"doc_id": "packers-1948",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "redskins-1948-media-guide-washington-cbd",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "49ers-1949-media-guide-san-francisco-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "bears-1949",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "cleveland-browns-1949-media-guide-cover-front-2",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "colts-1949-media-guide-baltimore",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "lions-1949",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "packers-1949",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "rams-1949",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose | probe counted 7 entries; contents lists Player Sketches pp.30-46 and they are present"
+},
+{
+"doc_id": "redskins-1949-media-guide-washington-a",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "brooklyn-dodgers-aafc-1946-media-guide",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "brooklyn-dodgers-aafc-1948-media-guide",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "los-angeles-dons-aafc-1947-media-guide-cv-3",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "buffalo-bisons-aafc-1946-media-guide-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "chicago-rockets-aafc-1946-media-guide",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "buffalo-bills-aafc-1948-media-guide-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "buffalo-bills-aafc-1947-media-guide-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "chicago-rockets-aafc-1947-media-guide",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "chicago-hornets-aafc-1949-media-guide",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "buffalo-bills-aafc-1949-media-guide-c",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "los-angeles-dons-aafc-1948-media-guide",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "los-angeles-dons-aafc-1949-media-guide",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "redskins-1936-media-guide-boston",
+"klass": "club media guide",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks",
+"note": "complete-stratum read: every pre-1950 held text carries per-man biography prose"
+},
+{
+"doc_id": "detroit-lions-1935-media-guide-cover",
+"klass": "club media guide, page 1 (mis-catalogued as a cover)",
+"per_player": "biography",
+"method": "read-2026-09-06-yearbooks",
+"note": "2 men, one truncated at the page foot; year proved from the printed 1935 schedule, not the title"
+},
+{
+"doc_id": "packers-1937",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1939",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "packers-1939",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bears-1940",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bears-1941",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1941-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1942-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1944-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "green-bay-packers-media-guide-1945-cover-front",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1945-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cleveland-browns-1946-media-guide-cover-front",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1946",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "washington-redskins-1946-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1947",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1947",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "boston-yanks-1948-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1948-rear.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "lions-1948",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1948-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1948",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1949",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-bulldogs-1949-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1949-media-guide-cover-front",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1950",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cleveland-browns-1950-media-guide-cover-rear",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "lions-1950",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1950-media-guide-cover-rear",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1951",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1951-yearbook-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1951",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1951",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1952",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cleveland-browns-1952-media-guide-cover-front",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "dallas-texans-1952-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1952",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "lions-1953",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "packers-1953",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "lions-1954",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1957",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cleveland-browns-1957-media-guide-cover-front",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1957-yearbook-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1957",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1958",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cleveland-browns-1958-media-guide-cover-front",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "lions-1958",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1958-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1958",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1959",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cleveland-browns-1959-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "lions-1959",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "packers-1959",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1959-yearbook-cover-front",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1959",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1960",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1960",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1960",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-1960",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1960-yearbook-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1960",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-1961-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1961",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1961",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-1962-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1962",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1962-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "lions-1962",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1962-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1962",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1962",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1962",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1963",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1963",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1963",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1963-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-1963",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-1963-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1963-yearbook-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1963",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1963",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1964",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1964",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1964",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1964-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-1964",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-1964-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "packers-1964",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1964-media-guide-cover-rear",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1964",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1964",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1964",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "washington-redskins-1964-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-1965-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1965",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1965",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-1965",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-1965-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1965",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1965",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-1966-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1966",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1966-media-guide-cover.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-1966-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-1966-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1966-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1966-poor",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1966",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1967",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-1967-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1967",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1967",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "falcons-1967",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-1967-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-1967-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1967-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1967",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1967",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bengals-1968",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1968",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1968",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-1968-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "lions-1968",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-1968-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1968-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1968",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1968",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bengals-1969",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1969",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1969",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1969",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "falcons-1969",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1969-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-1969-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-1969-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1969",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "falcons-1970",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1970-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1970-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1970",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1970",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-1971-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1971",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1971",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "falcons-1971",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1971-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1971-media-guide-cover-rear",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1971",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1971",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1972",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1972",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "falcons-1972",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1972-media-guide-cover-front",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-1972",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-1972-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1972-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-1972-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1972-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1972",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bengals-1973",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1973",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-1973-media-guide-cover.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "falcons-1973",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-1973-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1973",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1975",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-1975-media-guide-cover.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1975",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "falcons-1975",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1975-media-guide-cover-rear",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-1975-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1975",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1975",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bengals-1976",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buccaneers-1976",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1976",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-1976",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1976",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1977",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1977.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "falcons-1977",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-1977",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1977-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-1977-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "steelers-1977",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1978",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buccaneers-1978",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1978",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "falcons-1978",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1978-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-1978-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1978",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1980",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buccaneers-1980",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-1980-media-guide-cover.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1980",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1980",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1980-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1980-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-1980-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1982",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "los-angeles-raiders-1982-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1982-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "pittsburgh-steelers-1982-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1983-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "los-angeles-raiders-1983-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1983-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1983",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "los-angeles-raiders-1984-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1984",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buccaneers-1985",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1985",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1987",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "los-angeles-raiders-1985-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1985-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1986",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-1986-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-1986",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1986",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1986-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1986-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1987",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buccaneers-1987",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1987-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bengals-1988",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1988-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-1988-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-1988",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1988",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buccaneers-1989",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1989-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bengals-1990",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-1990-media-guide-cover.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-1990-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1990-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1990-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1990",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bengals-1992",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buccaneers-1992",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1992",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-1993-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1993",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "browns-1994",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buccaneers-1994",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-1994-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "atlanta-falcons-1995-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bengals-1995",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buccaneers-1995",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "carolina-panthers-1995-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-1995-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1995",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buccaneers-1996",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "carolina-panthers-1996-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "carolina-panthers-1997-media-guide-cover_20250428",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "houston-oilers-1997-media-guide-cover-tennessee",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-1998",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "carolina-panthers-1999-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-1999",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-1999",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "carolina-panthers-2000-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-2000",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-2000-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-2000-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-2000",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "carolina-panthers-2001-media-guide-cover-v-2",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-2001",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-2001-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-2001-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-2002-media-guide-cover.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-2003-media-guide-cover.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "tampa-bay-buccaneers-2003-media-guide-cover-poor",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "chargers-2004",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-2004-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "oakland-raiders-2004-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "carolina-panthers-2005-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "atlanta-falcons-2006-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bengals-2006",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cardinals-2006.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "carolina-panthers-2006-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-2006",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-2006-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "lions-2006",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-2006-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "packers-2006",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "rams-2006",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-2006",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "arizona-cardinals-2007-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "atlanta-falcons-2007-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bengals-2007",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-2007-media-guide-cover.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "packers-2007",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-2007-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "vikings-2007",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "atlanta-falcons-2008-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "bengals-2008",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "buffalo-bills-2008-media-guide-cover.jpg",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "jets-2008",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "kansas-city-chiefs-2008-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "new-york-giants-2008-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "packers-2008",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "philadelphia-eagles-2008-media-guide-cover",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "packers-2009",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "giants-2015-media-guide-new-york",
+"klass": "cover scan",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks",
+"note": "all 302 textless items scanned by metadata and all 319 images OCR'd; the 10 over 150 words are schedules and broadcast listings, nothing per-man"
+},
+{
+"doc_id": "cleveland-browns-1954-media-guide-cover-front",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "cardinals-1955-media-guide-st.-louis-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "lions-1952",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "titled 'Facts and Team History'"
+},
+{
+"doc_id": "cleveland-browns-1951-media-guide-cover-front",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "steelers-1956-media-guide-pittsburgh",
+"klass": "club media/press guide",
+"per_player": "biography+statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "redskins-1955-media-guide-washington-b",
+"klass": "club media/press guide",
+"per_player": "biography+statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "cowboys-1963-media-guide-dallas",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "roster carries Ht/Wt/Born; alphabetical + numerical + position rosters"
+},
+{
+"doc_id": "oilers-1968-media-guide-houston-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "cowboys-1965-media-guide-dallas",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "includes a pronunciation guide"
+},
+{
+"doc_id": "philadelphia-eagles-1961-media-guide-cover",
+"klass": "club media/press guide",
+"per_player": "biography+statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "broncos-1963-media-guide-denver",
+"klass": "club media/press guide",
+"per_player": "biography+statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "AFL; entries carry age/ht/wt/home town/college"
+},
+{
+"doc_id": "cord-sportfacts-pro-football-guide-1969-v-2-c",
+"klass": "league-wide statistics annual",
+"per_player": "statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "no per-man biography found in a 473 KB text"
+},
+{
+"doc_id": "complete-handbook-of-pro-football-1973-c",
+"klass": "commercial preview annual",
+"per_player": "statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "1 'born' phrase in 582 KB; prose is scouting narrative, not personal biography"
+},
+{
+"doc_id": "patriots-1977-media-guide-new-england-b",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "72 'born' lines in 280 KB -- the club-guide signature"
+},
+{
+"doc_id": "the-super-men-of-the-super-bowl-1978-c",
+"klass": "narrative book",
+"per_player": "statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "lions-1976",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "'Lions' Facts Book'"
+},
+{
+"doc_id": "pro-football-78-by-bear-kirow-c",
+"klass": "commercial preview annual",
+"per_player": "statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "player narrative, 2 'born' phrases in 177 KB"
+},
+{
+"doc_id": "49ers-1977-media-guide-san-francisco-b",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "explicit PLAYER / PERSONAL headings"
+},
+{
+"doc_id": "giants-1974-media-guide-new-york-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "pro-football-1973-c",
+"klass": "commercial preview annual",
+"per_player": "statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "0 'born' phrases in 423 KB"
+},
+{
+"doc_id": "the-sporting-news-pro-football-preview-1986-bears-c",
+"klass": "commercial preview annual",
+"per_player": "roster-table+statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "854 roster lines carrying No/Name/Pos/Ht/Wt/Exp/BIRTHDATE/College; 2 'born' phrases in 716 KB"
+},
+{
+"doc_id": "vikings-1985-media-guide-minnesota-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "roster carries birth date"
+},
+{
+"doc_id": "bengals-1980-media-guide-cincinnati-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "browns-1984-media-guide-cleveland-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "athlon-sports-pro-football-yearbook-1987-bears-c",
+"klass": "commercial preview annual",
+"per_player": "roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "915 roster lines, No/Name/Pos/Ht/Wt/Exp/Coll; no biography"
+},
+{
+"doc_id": "bengals-1982-media-guide-cincinnati-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "street-smith-pro-football-yearbook-1981-houston-atlana",
+"klass": "commercial preview annual",
+"per_player": "roster-table+statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "1,928 roster lines with age and experience; 0 'born' phrases in 775 KB"
+},
+{
+"doc_id": "49ers-1982",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "roster carries birth date"
+},
+{
+"doc_id": "chiefs-1992-media-guide-kansas-city-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "broncos-1996-media-guide-denver",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "nfl-record-fact-book-1995-c",
+"klass": "league record book",
+"per_player": "statistics+roster-table+biography",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "coach biographies with 'Personal: Born ...'; 2,855 roster lines; 1,155 statistics rows"
+},
+{
+"doc_id": "lions-1998-media-guide-detroit-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "browns-1990-media-guide-cleveland-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "49ers-report-1995-10-02-v-10.25-c",
+"klass": "club newsletter (weekly)",
+"per_player": "statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "85 KB match report; a practice-squad list is the only per-man table"
+},
+{
+"doc_id": "steelers-1994-media-guide-pittsburgh",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "eagles-1991-media-guide-philadelphia-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "texans-2005-media-guide-houston",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "browns-2002-media-guide-cleveland-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "steelers-2003-media-guide-pittsburgh-b",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "browns-2006-media-guide-cleveland-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "cowboys-2009-media-guide-dallas-b",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "lions-2005-media-guide-detroit-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "roster carries home town"
+},
+{
+"doc_id": "roto-world-fantasy-football-2017-draft-guide-c",
+"klass": "fantasy draft guide",
+"per_player": "none",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "rankings and projections; no per-man biography or roster of record"
+},
+{
+"doc_id": "bears-2010-media-guide-chicago-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "6 'born' phrases in 1.4 MB -- modern guides put the birth date in a FIELD, not prose, so a 'born' count is not a biography measure across eras"
+},
+{
+"doc_id": "bills-2019-media-guide-buffalo",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "chargers-2017-media-guide-los-angeles",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "athlon-pro-football-2015-jaguars",
+"klass": "commercial preview annual",
+"per_player": "roster-table+statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "2,089 roster lines; some player narrative, but no per-man personal record"
+},
+{
+"doc_id": "lions-2010-media-guide-detroit",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "jaguars-2010-media-guide-jacksonville",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "roster columns: No/Name/Pos/Ht/Wt/BIRTHDATE/Age/Exp/College/HOMETOWN"
+},
+{
+"doc_id": "buccaneers-2019-media-guide-tampa-bay-b",
+"klass": "club media/press guide",
+"per_player": "biography+statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "49ers-2022-media-guide-san-francisco-c",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "cleveland-browns-2021-season-review",
+"klass": "season review",
+"per_player": "statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "no biography"
+},
+{
+"doc_id": "lindys-pro-football-preview-2023-vol.-37-browns-bengals-cv",
+"klass": "commercial preview annual",
+"per_player": "roster-table+statistics",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": "790 roster lines with one-line player comments; no personal biography"
+},
+{
+"doc_id": "jaguars-2020-media-guide-jacksonville",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "bengals-2023-media-guide-cincinnati",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "buccaneers-2024-media-guide-tampa-bay",
+"klass": "club media/press guide",
+"per_player": "biography+statistics+roster-table",
+"method": "read-2026-09-07-yearbooks (stratified sample n=56 of 2,462 post-1950 texts, seed 20260907)",
+"note": ""
+},
+{
+"doc_id": "prog:1925 New York Giants vs Providence Steam Rollers Official Program NFL ",
+"klass": "NFL game programme, dealer beauty-shots plus two interior spreads",
+"per_player": "roster-table+captioned-photograph",
+"method": "read-2026-09-07-yearbooks (photographs opened and read by eye)",
+"note": "'Line-Up and Numbers of Both Teams' -- both starting elevens by number, name, COLLEGE and position, both sets of linesmen, the three officials with their colleges, the 1925 Giants schedule and the NATIONAL FOOTBALL LEAGUE STANDING to 15 Nov 1925; a second spread carries a four-man team photograph with a caption naming the men. OCR scored 0 of 8 photographs above 60 words -- it read none of this"
+},
+{
+"doc_id": "prog:1926 New York Giants v Kansas City Cowboys Program 10:24 Polo Grounds ",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "2 of 4 photographs carry >60 OCR words (364 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1926 New York Yankees Pacific Coast Wildcats Program AFL Red Grange ZJ",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR found no text",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "0 of 4 photographs carry >60 OCR words (111 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1926 Red Grange on Cover NY Football Yankees vs. Boston Bulldogs Progr",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "2 of 4 photographs carry >60 OCR words (717 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1926 \u201cRED GRANGE\u2019S record game\u201d CHICAGO BEARS v L.A. TIGERS Football P",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "9 of 12 photographs carry >60 OCR words (3019 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1934 1st College All Stars-Chicago Bears Football Program:RED GRANGE:B",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "11 of 14 photographs carry >60 OCR words (1419 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1934 Historic\u201dNew Fenway Park\u201d Boston Redskins vs Chicago Cards footba",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "13 of 13 photographs carry >60 OCR words (4061 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1934 WESTWOOD CUBS vs S.C. MAROONS: Pacific Football League Program:FA",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "7 of 8 photographs carry >60 OCR words (1947 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1935 BOSTON REDSKINS vs N.Y. GIANTS FOOTBALL PROGRAM:ORIGINAL REDSKIN ",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "5 of 6 photographs carry >60 OCR words (2232 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1935 COLLEGE ALL-AMERICANS VS CHICAGO BEARS Football Program:R.GRANGE:",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "21 of 24 photographs carry >60 OCR words (2896 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1935 NFL CHICAGO BEARS v PACIFIC A.S.FOOTBALL PROGRAM:RED GRANGE:BRONK",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "7 of 9 photographs carry >60 OCR words (2141 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1935 Westwood Cubs vs L.A. Maroons football program:BENNY LEFEBVRE!!",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "8 of 9 photographs carry >60 OCR words (1590 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1936 \u201cRare\u201dBoston Redskins vs Brooklyn Dodgers NFL football program:Bo",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "7 of 8 photographs carry >60 OCR words (1008 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1936\u201dRARE\u201d BOSTON REDSKINS v NEW YORK GIANTS NFL FOOTBALL PROGRAM:L.Y.",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "8 of 9 photographs carry >60 OCR words (2494 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1937 Brooklyn Dodgers vs New York Giants football program:Ace Parker c",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "5 of 6 photographs carry >60 OCR words (728 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1937 EAGLES v GREEN BAY FOOTBALL PROGRAM:LAMBEAU:HUTSON:HINKLE:HERBER:",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "10 of 14 photographs carry >60 OCR words (2774 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1937 HISTORIC Eagles vs Redskins...NFL CHAMPS in 1st Yr in D.C.footbal",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "7 of 10 photographs carry >60 OCR words (2023 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1937 N. Y. GIANTS vs. DETROIT LIONS FOOTBALL PROGRAM:DUTCH CLARK:TOM H",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "7 of 7 photographs carry >60 OCR words (1919 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1937 \u201cRare\u201dPittsburgh Pirates vs DETROIT NFL football program:DUTCH CL",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "9 of 12 photographs carry >60 OCR words (1724 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1937\u201dFamous\u201dGreen Bay vs New York Giants NFL football program:C.LAMBEA",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "8 of 8 photographs carry >60 OCR words (2909 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1938 DETROIT LIONS vs. WASHINGTON REDSKINS FOOTBALL PROGRAM:\u201cDUTCH\u201d CL",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "18 of 22 photographs carry >60 OCR words (7660 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1938 N. Y. GIANTS VS. GREEN BAY PACKERS FOOTBALL PROGRAM",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "10 of 11 photographs carry >60 OCR words (3962 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1938 N.Y. GIANTS v WASHINGTON REDSKINS NFL FOOTBALL PROGRAM:SAMMY BAUG",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "7 of 11 photographs carry >60 OCR words (3329 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1938 N.Y.GIANTS v PIRATES FOOTBALL PROGRAM:STEVE OWEN:HEIN:POOLE:\u201cWHIZ",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "11 of 12 photographs carry >60 OCR words (3319 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1939 DETROIT LIONS v CHICAGO BEARS FOOTBALL PROGRAM:SID LUCKMAN:LLOYD ",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "13 of 16 photographs carry >60 OCR words (6112 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1939 GREEN BAY VS. DETROIT FOOTBALL PROGRAM:DON HUTSON:CURLY LAMBEAU:E",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "17 of 19 photographs carry >60 OCR words (6729 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1939 GREEN BAY v CHICAGO CARDS-G.B.wins NFL Football Championship! PRO",
+"klass": "NFL game programme, photographed page by page",
+"per_player": "biography+roster-table+captioned-photograph",
+"method": "read-2026-09-07-yearbooks (photographs opened and read by eye)",
+"note": "lineup spread: BOTH clubs by number/surname/college/weight/position, plus the four officials by name and city; a player-biography page carrying six men with age, height, weight, marital status, home town, college and fraternity BESIDE a captioned headshot with jersey number (Thompson, Isbell, Becker, Schultz, Svendsen, Engerbretsen); 'Pro Grid Notes' league round-up; advertising"
+},
+{
+"doc_id": "prog:1939 Green Bay v Cleveland Rams Program:Pack Wins N.F.L. World Champio",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "10 of 12 photographs carry >60 OCR words (3157 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1939 Green Bay vs Redskins football program:PACK win NFL TITLE a few d",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "14 of 16 photographs carry >60 OCR words (4259 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1939 NFL LIONS v CHICAGO CARDINALS FOOTBALL PROGRAM:M.GOLDBERG:BUDDY P",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "16 of 20 photographs carry >60 OCR words (7830 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1939 NY GIANTS VS. PITTSBURGH PIRATES FOOTBALL PROGRAM:KEN STRONG H.O.",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "5 of 7 photographs carry >60 OCR words (714 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1939 NY GIANTS vs. BROOKLYN DODGERS FOOTBALL PROGRAM:ACE PARKER:SAM FR",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "7 of 9 photographs carry >60 OCR words (724 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1939 \u201cRARE\u201d Bears vs Lions Football Program:FABULOUS \u201cSTU MERRELL\u201dhist",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "11 of 16 photographs carry >60 OCR words (2129 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1939\u201dSTU MERRELL\u201d HISTORIC BEARS vs CHICAGO CARDINALS\u201dRARE\u201dNFL FOOTBAL",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "14 of 17 photographs carry >60 OCR words (3063 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1940 CLEVELAND RAMS v BEARS FOOTBALL PROGRAM:DANTE MAGNANI:JIM BENTON:",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "13 of 16 photographs carry >60 OCR words (2635 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1940 Cleveland Rams v N.Y. Giants NFL football program:DANTE MAGNANI:J",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "12 of 13 photographs carry >60 OCR words (3253 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1940 DETROIT v CHICAGO CARDINALS NFL FOOTBALL PROGRAM:LLOYD CARDWELL C",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "18 of 20 photographs carry >60 OCR words (6613 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1940 Detroit Lions vs Chicago Bears NFL football program Byron\u201dWhizzer",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "14 of 19 photographs carry >60 OCR words (3922 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1940 NFL All-Stars vs Chicago Bears NFL football DON HUTSON, Sammy BAU",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "13 of 14 photographs carry >60 OCR words (6450 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1940 NFL N.Y.GIANTS v BROOKLYN DODGERS FOOTBALL PROGRAM:MEL HEIN DAY!",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "11 of 13 photographs carry >60 OCR words (4678 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1940 Pittsburgh Steelers vs New York Giants NFL football program-S.OWE",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "9 of 10 photographs carry >60 OCR words (2572 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1941 Brooklyn Dodgers v New York Giants NFL football program:BRUISER K",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "7 of 8 photographs carry >60 OCR words (2174 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1941 Cleveland Rams v Washington Redskins football program:DUTCH CLARK",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "16 of 18 photographs carry >60 OCR words (6048 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1941 GREEN BAY v CHICAGO BEARS NFL FOOTBALL PROGRAM:DON HUTSON:CURLY L",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "12 of 17 photographs carry >60 OCR words (3317 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1941 GREEN BAY v DETROIT LIONS NFL FOOTBALL PROGRAM:DON HUTSON:CURLY L",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "3 of 4 photographs carry >60 OCR words (395 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1941 Green Bay v Chicago football program:HUTSON:LAMBEAU:LUCKMAN:BULLD",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "9 of 12 photographs carry >60 OCR words (1488 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1942 BEARS vs. GREEN BAY NFL FOOTBALL PROGRAM:CURLY LAMBEAU:DON HUTSON",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "6 of 17 photographs carry >60 OCR words (1831 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1942 NFL World Championship Chicago Bears-Washington Redskins football",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "11 of 11 photographs carry >60 OCR words (4573 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1943 CHICAGO CARDINALS v GREEN BAY:DON HUTSON:C.LAMBEAU :FOOTBALL PROG",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "13 of 16 photographs carry >60 OCR words (3425 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1943 PHILADELPHIA PITTSBURGH STEAGLES AUTOGRAPHED TYPE 1 PHOTO ENTIRE ",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "2 of 4 photographs carry >60 OCR words (642 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1944 BROOKLYN TIGERS vs NEW YORK GIANTS football program-ONE-OF-A-KIND",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "5 of 8 photographs carry >60 OCR words (1549 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1944 Hollywood Rangers vs San Diego Bombers CHAMPIONSHIP football game",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "8 of 13 photographs carry >60 OCR words (1938 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1944 LA Mustangs vs San Francisco Clippers\u201dWalt Disney\u201dfab football pr",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "11 of 13 photographs carry >60 OCR words (2677 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "prog:1946\u201dRARE\u201dMIAMI SEAHAWKS v L.A. DONS AAFC Football Program-\u201cOnly\u201dSEAHA",
+"klass": "AAFC game programme",
+"per_player": "biography",
+"method": "read-2026-09-07-yearbooks (photographs opened and read by eye)",
+"note": "coach and staff biography (Jack Meagher, Hank Crisp: career, service, colleges) and club narrative naming players; read from OCR"
+},
+{
+"doc_id": "prog:1976 Souvenir Copy of 1925 Program fr 1st NY Giants Home Football Game",
+"klass": "game programme (photographs of a physical copy)",
+"per_player": "unread -- OCR only",
+"method": "read-2026-09-07-yearbooks (OCR of all 667 photographs; OCR is a FLOOR on these angled dealer shots)",
+"note": "5 of 8 photographs carry >60 OCR words (1681 total). NOT a content verdict: the class was read in three listings and all three carried interior pages."
+},
+{
+"doc_id": "01-clemson-bowl-media-guides",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "01-clemson-football-media-guide-archive-spring",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "01-florida-gators",
+"klass": "container cover stub",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "first _djvu.txt of a container item is the cover: 0-31 bytes"
+},
+{
+"doc_id": "01-rutgers-football-media-guide-archive-cover",
+"klass": "container cover stub",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "first _djvu.txt of a container item is the cover: 0-31 bytes"
+},
+{
+"doc_id": "1924peabodyhighschoolyearbookmeta",
+"klass": "high-school yearbook (mis-filed as college)",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": ""
+},
+{
+"doc_id": "1928-10-06-nebraska-at-iowa-state-football-game-program",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "1935-10-05-nebraska-at-iowa-state-football-game-program",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "1935-10-12-minnesota-at-nebraska-football-game-program",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "1937-11-06-alabama-at-tulane",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "1939-11-11-alabama-at-tulane",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "1941-11-08-alabama-at-tulane",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "1943-10-16-nebraska-at-iowa-state-football-program",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "1944-sun-bowl-program-c",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "1945-11-03-kansas-at-nebraska-football-game-program-c",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "1946-09-28-tulane-vs.-alabama",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "1946-10-05-kansas-state-at-nebraska-football-game-program-c",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "2024-microcosm-city-college-of-new-york-ccny-yearbook",
+"klass": "college document",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape recorded in college-pre1950/REPORT.md, not per-row here"
+},
+{
+"doc_id": "39OsufootballMediaguide",
+"klass": "college document",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape recorded in college-pre1950/REPORT.md, not per-row here"
+},
+{
+"doc_id": "byu-football-1946-media-guide",
+"klass": "college document",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape recorded in college-pre1950/REPORT.md, not per-row here"
+},
+{
+"doc_id": "byu-football-1948-media-guide",
+"klass": "college document",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape recorded in college-pre1950/REPORT.md, not per-row here"
+},
+{
+"doc_id": "byu-football-1949-media-guide",
+"klass": "college document",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape recorded in college-pre1950/REPORT.md, not per-row here"
+},
+{
+"doc_id": "clemson-football-1944-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "clemson-football-1945-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "clemson-football-1946-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "clemson-football-1947-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "clemson-football-1948-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "clemson-football-1949-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "cstr_000382",
+"klass": "high-school yearbook (mis-filed as college)",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": ""
+},
+{
+"doc_id": "doc-051326-05132026091011",
+"klass": "college document",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape recorded in college-pre1950/REPORT.md, not per-row here"
+},
+{
+"doc_id": "doc-051326-05132026133713",
+"klass": "college document",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape recorded in college-pre1950/REPORT.md, not per-row here"
+},
+{
+"doc_id": "first-annual-corn-bowl-game_202112",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "florida-state-football-1949-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "football-program-1930-alabama-at-kentucky",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "football-program-1934-alabama-at-kentucky",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "football-program-1936-alabama-at-kentucky",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "football-program-1938-alabama-at-kentucky",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "football-program-1942-alabama-at-kentucky",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "football-program-1945-alabama-at-kentucky",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "kentucky-football-1939-media-guide-c",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "kentucky-football-1942-media-guide-c",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "kentucky-football-1946-media-guide-c",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "kentucky-football-1947-media-guide-c",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "kentucky-football-1948-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "kentucky-football-1949-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "nc-state-football-1939-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "nc-state-football-1947-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "nc-state-football-1949-media-guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "officialsouvenir00brad",
+"klass": "college document",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape recorded in college-pre1950/REPORT.md, not per-row here"
+},
+{
+"doc_id": "oregon-state-football-1939-media-guide",
+"klass": "college document",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape recorded in college-pre1950/REPORT.md, not per-row here"
+},
+{
+"doc_id": "second-annual-corn-bowl-game",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "spalding-guide-1934-national-champions",
+"klass": "national preview annual",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape C: hundreds of names, no per-man fields"
+},
+{
+"doc_id": "spalding-guide-1935-national-champions",
+"klass": "national preview annual",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape C: hundreds of names, no per-man fields"
+},
+{
+"doc_id": "spalding-guide-1936-national-champions",
+"klass": "national preview annual",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape C: hundreds of names, no per-man fields"
+},
+{
+"doc_id": "spaldingsoffici00campgoog",
+"klass": "national preview annual",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape C: hundreds of names, no per-man fields"
+},
+{
+"doc_id": "street-smith-1941-college-football-yearbook-c",
+"klass": "national preview annual",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape C: hundreds of names, no per-man fields"
+},
+{
+"doc_id": "street-smith-1942-college-football-yearbook-c",
+"klass": "national preview annual",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape C: hundreds of names, no per-man fields"
+},
+{
+"doc_id": "street-smith-1943-college-football-yearbook-c",
+"klass": "national preview annual",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape C: hundreds of names, no per-man fields"
+},
+{
+"doc_id": "sugar-bowl-1935-game-program-temple-vs.-tulane",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "tcu-1938",
+"klass": "college document",
+"per_player": "unread",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape recorded in college-pre1950/REPORT.md, not per-row here"
+},
+{
+"doc_id": "wisconsin_202303",
+"klass": "container cover stub",
+"per_player": "none",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "first _djvu.txt of a container item is the cover: 0-31 bytes"
+},
+{
+"doc_id": "1949_Gator_Bowl_Media_Guide",
+"klass": "college game programme",
+"per_player": "roster-table",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape D: numbered line-ups, sometimes weight and home town, no prose"
+},
+{
+"doc_id": "Florida_Football,_1946_Media_Guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "Florida_Football,_1947_Media_Guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "Florida_Football,_1948_Media_Guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "Florida_Football,_1949_Media_Guide",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "Rutgers_Football_1940_Media_Guide",
+"klass": "college media guide",
+"per_player": "biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape B: per-player thumbnail sketches"
+},
+{
+"doc_id": "Rutgers_Football_1941_Media_Guide",
+"klass": "college media guide",
+"per_player": "biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape B: per-player thumbnail sketches"
+},
+{
+"doc_id": "Rutgers_Football_1947_Media_Guide_(C)",
+"klass": "college media guide",
+"per_player": "biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape B: per-player thumbnail sketches"
+},
+{
+"doc_id": "Rutgers_Football_1948_Media_Guide_(C)",
+"klass": "college media guide",
+"per_player": "biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape B: per-player thumbnail sketches"
+},
+{
+"doc_id": "Rutgers_Football_1949_Media_Guide_(C)",
+"klass": "college media guide",
+"per_player": "biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape B: per-player thumbnail sketches"
+},
+{
+"doc_id": "Wisconsin_Football,_1947",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+},
+{
+"doc_id": "Wisconsin_Football,_1948",
+"klass": "college media guide",
+"per_player": "roster-table+biography",
+"method": "read-2026-09-06-yearbooks (college job; all 69 usable documents opened)",
+"note": "shape A/B: roster table with age, weight, height, class year, HOME TOWN and HIGH SCHOOL -- fields the professional record does not hold for these men"
+}
+]

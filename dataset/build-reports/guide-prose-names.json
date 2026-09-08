@@ -1,0 +1,105 @@
+{
+ "_note": "COUNTED, NEVER EXTRACTED. Same regex and same 90-character window as the Ghosts measurement so the two are comparable.",
+ "sampled_blocks": 4000,
+ "of_total_blocks": 39826,
+ "blocks_with_a_name": 3754,
+ "prose_words": 1393836,
+ "distinct_name_strings": 16915,
+ "total_occurrences": 45604,
+ "context_in_the_sentence_within_90_chars": {
+  "nothing identifying": 29050,
+  "a year": 8428,
+  "a role word": 4837,
+  "a role word + a year": 1403,
+  "a club": 1185,
+  "a club + a year": 451,
+  "a role word + a club": 153,
+  "a role word + a club + a year": 97
+ },
+ "context_including_what_the_block_already_carries": {
+  "a club (from the block) + a year (from the block)": 39114,
+  "a role word + a club (from the block) + a year (from the block)": 6490
+ },
+ "most_frequent_20": [
+  [
+   "Green Bay",
+   915
+  ],
+  [
+   "Kansas City",
+   819
+  ],
+  [
+   "Tampa Bay",
+   711
+  ],
+  [
+   "High School",
+   586
+  ],
+  [
+   "Pro Bowl",
+   558
+  ],
+  [
+   "Super Bowl",
+   325
+  ],
+  [
+   "Year Team",
+   291
+  ],
+  [
+   "Wild Card",
+   250
+  ],
+  [
+   "Special Teams",
+   246
+  ],
+  [
+   "Defensive Player",
+   246
+  ],
+  [
+   "Pro Football",
+   242
+  ],
+  [
+   "Big Ten",
+   240
+  ],
+  [
+   "No Yds",
+   229
+  ],
+  [
+   "Dallas Cowboys",
+   186
+  ],
+  [
+   "Associated Press",
+   184
+  ],
+  [
+   "Avg Lg",
+   173
+  ],
+  [
+   "Date Opponent",
+   168
+  ],
+  [
+   "Sacks Yds",
+   148
+  ],
+  [
+   "Divisional Playoff",
+   135
+  ],
+  [
+   "Yds Avg",
+   132
+  ]
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "labels": {
+  "COLLEGE": 9773,
+  "PERSONAL": 9087,
+  "PRO": 7913,
+  "": 4044,
+  "College": 1945,
+  "Pro Career": 1261,
+  "PRO CAREER": 1079,
+  "Personal": 905,
+  "TRANSACTIONS": 861,
+  "COLLEGE, PERSONAL": 610
+ },
+ "fact_labelled": {
+  "college | archive already holds it": 11709,
+  "hometown | archive already holds it": 9962,
+  "college | ARCHIVE HOLDS NOTHING": 9,
+  "hometown | ARCHIVE HOLDS NOTHING": 30
+ },
+ "distinct_people": {
+  "college": 5797,
+  "hometown": 5062
+ }
+}

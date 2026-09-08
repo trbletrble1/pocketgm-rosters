@@ -1,0 +1,8460 @@
+{
+ "_date": "2026-09-07",
+ "fetched": [
+  {
+   "title": "1987 Arena Football League season",
+   "revid": 1324623203,
+   "timestamp": "2025-11-28T18:50:21Z",
+   "missing": false,
+   "bytes": 10262
+  },
+  {
+   "title": "1987 Chicago Bruisers season",
+   "revid": 1349920220,
+   "timestamp": "2026-04-19T13:32:44Z",
+   "missing": false,
+   "bytes": 13116
+  },
+  {
+   "title": "1987 Denver Dynamite season",
+   "revid": 1357969466,
+   "timestamp": "2026-06-05T19:51:23Z",
+   "missing": false,
+   "bytes": 14411
+  },
+  {
+   "title": "1987 Pittsburgh Gladiators season",
+   "revid": 1293257793,
+   "timestamp": "2025-05-31T17:35:57Z",
+   "missing": false,
+   "bytes": 11220
+  },
+  {
+   "title": "1987 Washington Commandos season",
+   "revid": 1349920390,
+   "timestamp": "2026-04-19T13:33:58Z",
+   "missing": false,
+   "bytes": 11200
+  },
+  {
+   "title": "1988 Arena Football League season",
+   "revid": 1313983947,
+   "timestamp": "2025-09-29T03:35:58Z",
+   "missing": false,
+   "bytes": 5853
+  },
+  {
+   "title": "1988 Chicago Bruisers season",
+   "revid": 1357969930,
+   "timestamp": "2026-06-05T19:53:23Z",
+   "missing": false,
+   "bytes": 12610
+  },
+  {
+   "title": "1988 Detroit Drive season",
+   "revid": 1357294857,
+   "timestamp": "2026-06-01T21:18:03Z",
+   "missing": false,
+   "bytes": 9700
+  },
+  {
+   "title": "1988 Los Angeles Cobras season",
+   "revid": 1268505584,
+   "timestamp": "2025-01-10T03:15:59Z",
+   "missing": false,
+   "bytes": 10376
+  },
+  {
+   "title": "1988 New England Steamrollers season",
+   "revid": 1293416261,
+   "timestamp": "2025-06-01T15:54:57Z",
+   "missing": false,
+   "bytes": 9153
+  },
+  {
+   "title": "1988 New York Knights season",
+   "revid": 1268505942,
+   "timestamp": "2025-01-10T03:18:12Z",
+   "missing": false,
+   "bytes": 10629
+  },
+  {
+   "title": "1988 Pittsburgh Gladiators season",
+   "revid": 1268505971,
+   "timestamp": "2025-01-10T03:18:19Z",
+   "missing": false,
+   "bytes": 7489
+  },
+  {
+   "title": "1989 Arena Football League season",
+   "revid": 1342461035,
+   "timestamp": "2026-03-09T02:10:57Z",
+   "missing": false,
+   "bytes": 5348
+  },
+  {
+   "title": "1989 Chicago Bruisers season",
+   "revid": 1360147591,
+   "timestamp": "2026-06-19T15:03:49Z",
+   "missing": false,
+   "bytes": 4885
+  },
+  {
+   "title": "1989 Denver Dynamite season",
+   "revid": 1268506437,
+   "timestamp": "2025-01-10T03:21:38Z",
+   "missing": false,
+   "bytes": 6364
+  },
+  {
+   "title": "1989 Detroit Drive season",
+   "revid": 1357294862,
+   "timestamp": "2026-06-01T21:18:05Z",
+   "missing": false,
+   "bytes": 5378
+  },
+  {
+   "title": "1989 Maryland Commandos season",
+   "revid": 1268506456,
+   "timestamp": "2025-01-10T03:21:45Z",
+   "missing": false,
+   "bytes": 4307
+  },
+  {
+   "title": "1989 Pittsburgh Gladiators season",
+   "revid": 1317112619,
+   "timestamp": "2025-10-16T11:39:34Z",
+   "missing": false,
+   "bytes": 5254
+  },
+  {
+   "title": "2019 AAF season",
+   "revid": 1352672056,
+   "timestamp": "2026-05-05T16:00:38Z",
+   "missing": false,
+   "bytes": 87966
+  },
+  {
+   "title": "Template:2019 AAF standings",
+   "revid": 1373616168,
+   "timestamp": "2026-09-06T22:50:57Z",
+   "missing": false,
+   "bytes": 3559
+  },
+  {
+   "title": "1990 Albany Firebirds season",
+   "revid": 1268506494,
+   "timestamp": "2025-01-10T03:21:59Z",
+   "missing": false,
+   "bytes": 6001
+  },
+  {
+   "title": "1990 Arena Football League season",
+   "revid": 1316909228,
+   "timestamp": "2025-10-15T05:01:26Z",
+   "missing": false,
+   "bytes": 7078
+  },
+  {
+   "title": "1990 Dallas Texans season",
+   "revid": 1347941512,
+   "timestamp": "2026-04-09T18:59:35Z",
+   "missing": false,
+   "bytes": 6653
+  },
+  {
+   "title": "1990 Denver Dynamite season",
+   "revid": 1268506796,
+   "timestamp": "2025-01-10T03:24:02Z",
+   "missing": false,
+   "bytes": 6976
+  },
+  {
+   "title": "1990 Detroit Drive season",
+   "revid": 1357294875,
+   "timestamp": "2026-06-01T21:18:07Z",
+   "missing": false,
+   "bytes": 7261
+  },
+  {
+   "title": "1990 Pittsburgh Gladiators season",
+   "revid": 1268506802,
+   "timestamp": "2025-01-10T03:24:05Z",
+   "missing": false,
+   "bytes": 7159
+  },
+  {
+   "title": "1990 Washington Commandos season",
+   "revid": 1268506808,
+   "timestamp": "2025-01-10T03:24:07Z",
+   "missing": false,
+   "bytes": 6637
+  },
+  {
+   "title": "1991 Albany Firebirds season",
+   "revid": 1268506816,
+   "timestamp": "2025-01-10T03:24:10Z",
+   "missing": false,
+   "bytes": 6269
+  },
+  {
+   "title": "1991 Arena Football League season",
+   "revid": 1316909232,
+   "timestamp": "2025-10-15T05:01:28Z",
+   "missing": false,
+   "bytes": 7071
+  },
+  {
+   "title": "1991 Columbus Thunderbolts season",
+   "revid": 1268506828,
+   "timestamp": "2025-01-10T03:24:15Z",
+   "missing": false,
+   "bytes": 5363
+  },
+  {
+   "title": "1991 Dallas Texans season",
+   "revid": 1347941484,
+   "timestamp": "2026-04-09T18:59:23Z",
+   "missing": false,
+   "bytes": 5632
+  },
+  {
+   "title": "1991 Denver Dynamite season",
+   "revid": 1268506848,
+   "timestamp": "2025-01-10T03:24:20Z",
+   "missing": false,
+   "bytes": 7051
+  },
+  {
+   "title": "1991 Detroit Drive season",
+   "revid": 1357294882,
+   "timestamp": "2026-06-01T21:18:09Z",
+   "missing": false,
+   "bytes": 7457
+  },
+  {
+   "title": "1991 New Orleans Night season",
+   "revid": 1268506862,
+   "timestamp": "2025-01-10T03:24:27Z",
+   "missing": false,
+   "bytes": 6522
+  },
+  {
+   "title": "1991 Orlando Predators season",
+   "revid": 1268506883,
+   "timestamp": "2025-01-10T03:24:33Z",
+   "missing": false,
+   "bytes": 6485
+  },
+  {
+   "title": "1991 Tampa Bay Storm season",
+   "revid": 1268506887,
+   "timestamp": "2025-01-10T03:24:36Z",
+   "missing": false,
+   "bytes": 8199
+  },
+  {
+   "title": "1992 Albany Firebirds season",
+   "revid": 1285219906,
+   "timestamp": "2025-04-12T11:40:17Z",
+   "missing": false,
+   "bytes": 7611
+  },
+  {
+   "title": "1992 Arena Football League season",
+   "revid": 1316909236,
+   "timestamp": "2025-10-15T05:01:33Z",
+   "missing": false,
+   "bytes": 7335
+  },
+  {
+   "title": "1992 Arizona Rattlers season",
+   "revid": 1353367836,
+   "timestamp": "2026-05-09T21:34:18Z",
+   "missing": false,
+   "bytes": 6166
+  },
+  {
+   "title": "1992 Charlotte Rage season",
+   "revid": 1336569740,
+   "timestamp": "2026-02-04T14:48:32Z",
+   "missing": false,
+   "bytes": 6577
+  },
+  {
+   "title": "1992 Cincinnati Rockers season",
+   "revid": 1336569751,
+   "timestamp": "2026-02-04T14:48:35Z",
+   "missing": false,
+   "bytes": 7115
+  },
+  {
+   "title": "1992 Cleveland Thunderbolts season",
+   "revid": 1268506949,
+   "timestamp": "2025-01-10T03:25:00Z",
+   "missing": false,
+   "bytes": 6691
+  },
+  {
+   "title": "1992 Dallas Texans season",
+   "revid": 1347941460,
+   "timestamp": "2026-04-09T18:59:11Z",
+   "missing": false,
+   "bytes": 7404
+  },
+  {
+   "title": "1992 Detroit Drive season",
+   "revid": 1357294890,
+   "timestamp": "2026-06-01T21:18:11Z",
+   "missing": false,
+   "bytes": 7853
+  },
+  {
+   "title": "1992 New Orleans Night season",
+   "revid": 1268506961,
+   "timestamp": "2025-01-10T03:25:05Z",
+   "missing": false,
+   "bytes": 6972
+  },
+  {
+   "title": "1992 Orlando Predators season",
+   "revid": 1357969441,
+   "timestamp": "2026-06-05T19:51:19Z",
+   "missing": false,
+   "bytes": 8226
+  },
+  {
+   "title": "1992 Sacramento Attack season",
+   "revid": 1343118288,
+   "timestamp": "2026-03-12T10:38:56Z",
+   "missing": false,
+   "bytes": 7920
+  },
+  {
+   "title": "1992 San Antonio Force season",
+   "revid": 1336569904,
+   "timestamp": "2026-02-04T14:49:39Z",
+   "missing": false,
+   "bytes": 6414
+  },
+  {
+   "title": "1992 Tampa Bay Storm season",
+   "revid": 1341475003,
+   "timestamp": "2026-03-03T11:27:58Z",
+   "missing": false,
+   "bytes": 7826
+  },
+  {
+   "title": "1993 Albany Firebirds season",
+   "revid": 1268507094,
+   "timestamp": "2025-01-10T03:26:06Z",
+   "missing": false,
+   "bytes": 5172
+  },
+  {
+   "title": "1993 Arena Football League season",
+   "revid": 1268507103,
+   "timestamp": "2025-01-10T03:26:09Z",
+   "missing": false,
+   "bytes": 6589
+  },
+  {
+   "title": "1993 Arizona Rattlers season",
+   "revid": 1275895814,
+   "timestamp": "2025-02-15T18:38:56Z",
+   "missing": false,
+   "bytes": 8202
+  },
+  {
+   "title": "1993 Charlotte Rage season",
+   "revid": 1336569969,
+   "timestamp": "2026-02-04T14:50:09Z",
+   "missing": false,
+   "bytes": 6579
+  },
+  {
+   "title": "1993 Cincinnati Rockers season",
+   "revid": 1336569988,
+   "timestamp": "2026-02-04T14:50:17Z",
+   "missing": false,
+   "bytes": 7353
+  },
+  {
+   "title": "1993 Cleveland Thunderbolts season",
+   "revid": 1293717325,
+   "timestamp": "2025-06-03T07:57:15Z",
+   "missing": false,
+   "bytes": 7450
+  },
+  {
+   "title": "1993 Dallas Texans season",
+   "revid": 1347941394,
+   "timestamp": "2026-04-09T18:58:47Z",
+   "missing": false,
+   "bytes": 7563
+  },
+  {
+   "title": "1993 Detroit Drive season",
+   "revid": 1357294899,
+   "timestamp": "2026-06-01T21:18:13Z",
+   "missing": false,
+   "bytes": 7893
+  },
+  {
+   "title": "1993 Miami Hooters season",
+   "revid": 1268507245,
+   "timestamp": "2025-01-10T03:27:09Z",
+   "missing": false,
+   "bytes": 5225
+  },
+  {
+   "title": "1993 Orlando Predators season",
+   "revid": 1268507263,
+   "timestamp": "2025-01-10T03:27:17Z",
+   "missing": false,
+   "bytes": 7626
+  },
+  {
+   "title": "1993 Tampa Bay Storm season",
+   "revid": 1268507273,
+   "timestamp": "2025-01-10T03:27:19Z",
+   "missing": false,
+   "bytes": 8401
+  },
+  {
+   "title": "1994 Albany Firebirds season",
+   "revid": 1268507291,
+   "timestamp": "2025-01-10T03:27:31Z",
+   "missing": false,
+   "bytes": 6895
+  },
+  {
+   "title": "1994 Arena Football League season",
+   "revid": 1268507333,
+   "timestamp": "2025-01-10T03:27:45Z",
+   "missing": false,
+   "bytes": 6682
+  },
+  {
+   "title": "1994 Arizona Rattlers season",
+   "revid": 1275895557,
+   "timestamp": "2025-02-15T18:37:22Z",
+   "missing": false,
+   "bytes": 6980
+  },
+  {
+   "title": "1994 Charlotte Rage season",
+   "revid": 1268507382,
+   "timestamp": "2025-01-10T03:27:59Z",
+   "missing": false,
+   "bytes": 6506
+  },
+  {
+   "title": "1994 Cleveland Thunderbolts season",
+   "revid": 1336570198,
+   "timestamp": "2026-02-04T14:51:59Z",
+   "missing": false,
+   "bytes": 6368
+  },
+  {
+   "title": "1994 Fort Worth Cavalry season",
+   "revid": 1337440078,
+   "timestamp": "2026-02-09T13:39:19Z",
+   "missing": false,
+   "bytes": 19707
+  },
+  {
+   "title": "1994 Las Vegas Sting season",
+   "revid": 1268507442,
+   "timestamp": "2025-01-10T03:28:22Z",
+   "missing": false,
+   "bytes": 6501
+  },
+  {
+   "title": "1994 Massachusetts Marauders season",
+   "revid": 1357294904,
+   "timestamp": "2026-06-01T21:18:15Z",
+   "missing": false,
+   "bytes": 8354
+  },
+  {
+   "title": "1994 Miami Hooters season",
+   "revid": 1268507446,
+   "timestamp": "2025-01-10T03:28:23Z",
+   "missing": false,
+   "bytes": 5735
+  },
+  {
+   "title": "1994 Milwaukee Mustangs season",
+   "revid": 1268507451,
+   "timestamp": "2025-01-10T03:28:25Z",
+   "missing": false,
+   "bytes": 5670
+  },
+  {
+   "title": "1994 Orlando Predators season",
+   "revid": 1357969464,
+   "timestamp": "2026-06-05T19:51:23Z",
+   "missing": false,
+   "bytes": 7476
+  },
+  {
+   "title": "1994 Tampa Bay Storm season",
+   "revid": 1337326865,
+   "timestamp": "2026-02-08T20:16:51Z",
+   "missing": false,
+   "bytes": 5469
+  },
+  {
+   "title": "1995 Albany Firebirds season",
+   "revid": 1268507468,
+   "timestamp": "2025-01-10T03:28:31Z",
+   "missing": false,
+   "bytes": 7556
+  },
+  {
+   "title": "1995 Arena Football League season",
+   "revid": 1324987204,
+   "timestamp": "2025-11-30T16:25:32Z",
+   "missing": false,
+   "bytes": 7108
+  },
+  {
+   "title": "1995 Arizona Rattlers season",
+   "revid": 1268507481,
+   "timestamp": "2025-01-10T03:28:34Z",
+   "missing": false,
+   "bytes": 6986
+  },
+  {
+   "title": "1995 Charlotte Rage season",
+   "revid": 1268507486,
+   "timestamp": "2025-01-10T03:28:35Z",
+   "missing": false,
+   "bytes": 6003
+  },
+  {
+   "title": "1995 Connecticut Coyotes season",
+   "revid": 1268507492,
+   "timestamp": "2025-01-10T03:28:37Z",
+   "missing": false,
+   "bytes": 6033
+  },
+  {
+   "title": "1995 Iowa Barnstormers season",
+   "revid": 1357969225,
+   "timestamp": "2026-06-05T19:50:19Z",
+   "missing": false,
+   "bytes": 7870
+  },
+  {
+   "title": "1995 Las Vegas Sting season",
+   "revid": 1268507571,
+   "timestamp": "2025-01-10T03:29:01Z",
+   "missing": false,
+   "bytes": 5987
+  },
+  {
+   "title": "1995 Memphis Pharaohs season",
+   "revid": 1268507578,
+   "timestamp": "2025-01-10T03:29:04Z",
+   "missing": false,
+   "bytes": 7075
+  },
+  {
+   "title": "1995 Miami Hooters season",
+   "revid": 1268507588,
+   "timestamp": "2025-01-10T03:29:05Z",
+   "missing": false,
+   "bytes": 5532
+  },
+  {
+   "title": "1995 Milwaukee Mustangs season",
+   "revid": 1268507592,
+   "timestamp": "2025-01-10T03:29:07Z",
+   "missing": false,
+   "bytes": 6255
+  },
+  {
+   "title": "1995 Orlando Predators season",
+   "revid": 1268507596,
+   "timestamp": "2025-01-10T03:29:08Z",
+   "missing": false,
+   "bytes": 7924
+  },
+  {
+   "title": "1995 San Jose SaberCats season",
+   "revid": 1277983457,
+   "timestamp": "2025-02-27T21:24:40Z",
+   "missing": false,
+   "bytes": 7223
+  },
+  {
+   "title": "1995 St. Louis Stampede season",
+   "revid": 1268507607,
+   "timestamp": "2025-01-10T03:29:11Z",
+   "missing": false,
+   "bytes": 7115
+  },
+  {
+   "title": "1995 Tampa Bay Storm season",
+   "revid": 1268507612,
+   "timestamp": "2025-01-10T03:29:13Z",
+   "missing": false,
+   "bytes": 8245
+  },
+  {
+   "title": "1996 Albany Firebirds season",
+   "revid": 1268507614,
+   "timestamp": "2025-01-10T03:29:14Z",
+   "missing": false,
+   "bytes": 8676
+  },
+  {
+   "title": "1996 Arena Football League season",
+   "revid": 1316909240,
+   "timestamp": "2025-10-15T05:01:35Z",
+   "missing": false,
+   "bytes": 7367
+  },
+  {
+   "title": "1996 Charlotte Rage season",
+   "revid": 1268507621,
+   "timestamp": "2025-01-10T03:29:18Z",
+   "missing": false,
+   "bytes": 6188
+  },
+  {
+   "title": "1996 Connecticut Coyotes season",
+   "revid": 1268507625,
+   "timestamp": "2025-01-10T03:29:19Z",
+   "missing": false,
+   "bytes": 6321
+  },
+  {
+   "title": "1996 Florida Bobcats season",
+   "revid": 1268507631,
+   "timestamp": "2025-01-10T03:29:21Z",
+   "missing": false,
+   "bytes": 6351
+  },
+  {
+   "title": "1996 Orlando Predators season",
+   "revid": 1268507636,
+   "timestamp": "2025-01-10T03:29:23Z",
+   "missing": false,
+   "bytes": 7660
+  },
+  {
+   "title": "1996 Tampa Bay Storm season",
+   "revid": 1268507638,
+   "timestamp": "2025-01-10T03:29:24Z",
+   "missing": false,
+   "bytes": 8748
+  },
+  {
+   "title": "1996 Texas Terror season",
+   "revid": 1268507642,
+   "timestamp": "2025-01-10T03:29:26Z",
+   "missing": false,
+   "bytes": 6239
+  },
+  {
+   "title": "1997 Arena Football League season",
+   "revid": 1316909244,
+   "timestamp": "2025-10-15T05:01:37Z",
+   "missing": false,
+   "bytes": 7992
+  },
+  {
+   "title": "1998 Arena Football League season",
+   "revid": 1316909247,
+   "timestamp": "2025-10-15T05:01:40Z",
+   "missing": false,
+   "bytes": 8339
+  },
+  {
+   "title": "1999 Arena Football League season",
+   "revid": 1316909252,
+   "timestamp": "2025-10-15T05:01:42Z",
+   "missing": false,
+   "bytes": 8217
+  },
+  {
+   "title": "1999 Buffalo Destroyers season",
+   "revid": 1268507658,
+   "timestamp": "2025-01-10T03:29:31Z",
+   "missing": false,
+   "bytes": 8502
+  },
+  {
+   "title": "1999 New Jersey Red Dogs season",
+   "revid": 1296855390,
+   "timestamp": "2025-06-22T18:39:55Z",
+   "missing": false,
+   "bytes": 5580
+  },
+  {
+   "title": "2000 AF2 season",
+   "revid": 1357969062,
+   "timestamp": "2026-06-05T19:49:55Z",
+   "missing": false,
+   "bytes": 12818
+  },
+  {
+   "title": "2000 Arena Football League season",
+   "revid": 1316909260,
+   "timestamp": "2025-10-15T05:01:44Z",
+   "missing": false,
+   "bytes": 10589
+  },
+  {
+   "title": "2000 Buffalo Destroyers season",
+   "revid": 1268507670,
+   "timestamp": "2025-01-10T03:29:36Z",
+   "missing": false,
+   "bytes": 9422
+  },
+  {
+   "title": "2000 Oklahoma Wranglers season",
+   "revid": 1336680535,
+   "timestamp": "2026-02-05T03:40:27Z",
+   "missing": false,
+   "bytes": 6725
+  },
+  {
+   "title": "2001 AF2 season",
+   "revid": 1357969072,
+   "timestamp": "2026-06-05T19:49:56Z",
+   "missing": false,
+   "bytes": 14049
+  },
+  {
+   "title": "2001 Arena Football League season",
+   "revid": 1316909268,
+   "timestamp": "2025-10-15T05:01:49Z",
+   "missing": false,
+   "bytes": 10018
+  },
+  {
+   "title": "2001 Buffalo Destroyers season",
+   "revid": 1268507692,
+   "timestamp": "2025-01-10T03:29:42Z",
+   "missing": false,
+   "bytes": 8442
+  },
+  {
+   "title": "2001 Oklahoma Wranglers season",
+   "revid": 1336680837,
+   "timestamp": "2026-02-05T03:42:44Z",
+   "missing": false,
+   "bytes": 5778
+  },
+  {
+   "title": "2001 Toronto Phantoms season",
+   "revid": 1295806677,
+   "timestamp": "2025-06-16T00:01:53Z",
+   "missing": false,
+   "bytes": 7395
+  },
+  {
+   "title": "2002 AF2 season",
+   "revid": 1357968883,
+   "timestamp": "2026-06-05T19:49:12Z",
+   "missing": false,
+   "bytes": 16032
+  },
+  {
+   "title": "2002 Arena Football League season",
+   "revid": 1316909272,
+   "timestamp": "2025-10-15T05:01:51Z",
+   "missing": false,
+   "bytes": 9891
+  },
+  {
+   "title": "2002 Buffalo Destroyers season",
+   "revid": 1268507718,
+   "timestamp": "2025-01-10T03:29:50Z",
+   "missing": false,
+   "bytes": 9027
+  },
+  {
+   "title": "2002 Toronto Phantoms season",
+   "revid": 1295806704,
+   "timestamp": "2025-06-16T00:02:05Z",
+   "missing": false,
+   "bytes": 5040
+  },
+  {
+   "title": "2002 Wilkes-Barre/Scranton Pioneers season",
+   "revid": 1268507729,
+   "timestamp": "2025-01-10T03:29:54Z",
+   "missing": false,
+   "bytes": 5831
+  },
+  {
+   "title": "2003 AF2 season",
+   "revid": 1330694720,
+   "timestamp": "2026-01-01T23:21:09Z",
+   "missing": false,
+   "bytes": 12794
+  },
+  {
+   "title": "2003 Arena Football League season",
+   "revid": 1316909285,
+   "timestamp": "2025-10-15T05:02:03Z",
+   "missing": false,
+   "bytes": 9393
+  },
+  {
+   "title": "2003 Buffalo Destroyers season",
+   "revid": 1268507744,
+   "timestamp": "2025-01-10T03:29:59Z",
+   "missing": false,
+   "bytes": 8278
+  },
+  {
+   "title": "2003 Las Vegas Gladiators season",
+   "revid": 1268507748,
+   "timestamp": "2025-01-10T03:30:01Z",
+   "missing": false,
+   "bytes": 6868
+  },
+  {
+   "title": "2003 Wilkes-Barre/Scranton Pioneers season",
+   "revid": 1268507753,
+   "timestamp": "2025-01-10T03:30:02Z",
+   "missing": false,
+   "bytes": 6897
+  },
+  {
+   "title": "2004 AF2 season",
+   "revid": 1368860920,
+   "timestamp": "2026-08-11T13:46:00Z",
+   "missing": false,
+   "bytes": 11059
+  },
+  {
+   "title": "2004 Arena Football League season",
+   "revid": 1371089936,
+   "timestamp": "2026-08-24T14:29:43Z",
+   "missing": false,
+   "bytes": 9333
+  },
+  {
+   "title": "2004 Las Vegas Gladiators season",
+   "revid": 1343192553,
+   "timestamp": "2026-03-12T21:13:35Z",
+   "missing": false,
+   "bytes": 5751
+  },
+  {
+   "title": "2004 Orlando Predators season",
+   "revid": 1315409814,
+   "timestamp": "2025-10-06T14:19:27Z",
+   "missing": false,
+   "bytes": 6267
+  },
+  {
+   "title": "2004 Philadelphia Soul season",
+   "revid": 1306317733,
+   "timestamp": "2025-08-17T03:46:15Z",
+   "missing": false,
+   "bytes": 2486
+  },
+  {
+   "title": "2004 Wilkes-Barre/Scranton Pioneers season",
+   "revid": 1268507869,
+   "timestamp": "2025-01-10T03:30:50Z",
+   "missing": false,
+   "bytes": 6707
+  },
+  {
+   "title": "2005 AF2 season",
+   "revid": 1330694725,
+   "timestamp": "2026-01-01T23:21:13Z",
+   "missing": false,
+   "bytes": 11562
+  },
+  {
+   "title": "2005 Arena Football League season",
+   "revid": 1371089948,
+   "timestamp": "2026-08-24T14:29:48Z",
+   "missing": false,
+   "bytes": 9412
+  },
+  {
+   "title": "2005 Columbus Destroyers season",
+   "revid": 1295511735,
+   "timestamp": "2025-06-14T06:00:00Z",
+   "missing": false,
+   "bytes": 6319
+  },
+  {
+   "title": "2005 Las Vegas Gladiators season",
+   "revid": 1268507884,
+   "timestamp": "2025-01-10T03:30:55Z",
+   "missing": false,
+   "bytes": 4049
+  },
+  {
+   "title": "2005 Orlando Predators season",
+   "revid": 1278510690,
+   "timestamp": "2025-03-02T22:23:33Z",
+   "missing": false,
+   "bytes": 6869
+  },
+  {
+   "title": "2005 Philadelphia Soul season",
+   "revid": 1306317756,
+   "timestamp": "2025-08-17T03:46:21Z",
+   "missing": false,
+   "bytes": 2808
+  },
+  {
+   "title": "2005 Tampa Bay Storm season",
+   "revid": 1306318003,
+   "timestamp": "2025-08-17T03:47:59Z",
+   "missing": false,
+   "bytes": 10893
+  },
+  {
+   "title": "2005 Wilkes-Barre/Scranton Pioneers season",
+   "revid": 1268507907,
+   "timestamp": "2025-01-10T03:31:01Z",
+   "missing": false,
+   "bytes": 6370
+  },
+  {
+   "title": "2006 AF2 season",
+   "revid": 1330694734,
+   "timestamp": "2026-01-01T23:21:15Z",
+   "missing": false,
+   "bytes": 11743
+  },
+  {
+   "title": "2006 Arena Football League season",
+   "revid": 1371089962,
+   "timestamp": "2026-08-24T14:29:59Z",
+   "missing": false,
+   "bytes": 14156
+  },
+  {
+   "title": "2006 Austin Wranglers season",
+   "revid": 1371041320,
+   "timestamp": "2026-08-24T06:37:20Z",
+   "missing": false,
+   "bytes": 2828
+  },
+  {
+   "title": "2006 Chicago Rush season",
+   "revid": 1268507946,
+   "timestamp": "2025-01-10T03:31:17Z",
+   "missing": false,
+   "bytes": 2841
+  },
+  {
+   "title": "2006 Columbus Destroyers season",
+   "revid": 1227857711,
+   "timestamp": "2024-06-08T05:20:17Z",
+   "missing": false,
+   "bytes": 1317
+  },
+  {
+   "title": "2006 Georgia Force season",
+   "revid": 1321325769,
+   "timestamp": "2025-11-09T22:58:50Z",
+   "missing": false,
+   "bytes": 10871
+  },
+  {
+   "title": "2006 Kansas City Brigade season",
+   "revid": 1367722986,
+   "timestamp": "2026-08-04T20:14:13Z",
+   "missing": false,
+   "bytes": 18159
+  },
+  {
+   "title": "2006 Las Vegas Gladiators season",
+   "revid": 1268507961,
+   "timestamp": "2025-01-10T03:31:22Z",
+   "missing": false,
+   "bytes": 3992
+  },
+  {
+   "title": "2006 New York Dragons season",
+   "revid": 1294576616,
+   "timestamp": "2025-06-08T14:53:17Z",
+   "missing": false,
+   "bytes": 2878
+  },
+  {
+   "title": "2006 Orlando Predators season",
+   "revid": 1278509399,
+   "timestamp": "2025-03-02T22:14:44Z",
+   "missing": false,
+   "bytes": 1619
+  },
+  {
+   "title": "2006 Philadelphia Soul season",
+   "revid": 1306317768,
+   "timestamp": "2025-08-17T03:46:26Z",
+   "missing": false,
+   "bytes": 2593
+  },
+  {
+   "title": "2006 Tampa Bay Storm season",
+   "revid": 1315553525,
+   "timestamp": "2025-10-07T08:56:39Z",
+   "missing": false,
+   "bytes": 6566
+  },
+  {
+   "title": "2006 Utah Blaze season",
+   "revid": 1323291861,
+   "timestamp": "2025-11-20T22:21:20Z",
+   "missing": false,
+   "bytes": 6480
+  },
+  {
+   "title": "2006 Wilkes-Barre/Scranton Pioneers season",
+   "revid": 1268507984,
+   "timestamp": "2025-01-10T03:31:31Z",
+   "missing": false,
+   "bytes": 5969
+  },
+  {
+   "title": "2007 AF2 season",
+   "revid": 1330694738,
+   "timestamp": "2026-01-01T23:21:17Z",
+   "missing": false,
+   "bytes": 14440
+  },
+  {
+   "title": "2007 Arena Football League season",
+   "revid": 1348699954,
+   "timestamp": "2026-04-13T22:43:48Z",
+   "missing": false,
+   "bytes": 22952
+  },
+  {
+   "title": "2007 Arizona Rattlers season",
+   "revid": 1268508040,
+   "timestamp": "2025-01-10T03:31:53Z",
+   "missing": false,
+   "bytes": 17135
+  },
+  {
+   "title": "2007 Austin Wranglers season",
+   "revid": 1287527980,
+   "timestamp": "2025-04-26T20:48:01Z",
+   "missing": false,
+   "bytes": 15380
+  },
+  {
+   "title": "2007 Chicago Rush season",
+   "revid": 1323078586,
+   "timestamp": "2025-11-19T15:39:16Z",
+   "missing": false,
+   "bytes": 24108
+  },
+  {
+   "title": "2007 Colorado Crush season",
+   "revid": 1314533048,
+   "timestamp": "2025-10-01T22:58:53Z",
+   "missing": false,
+   "bytes": 16863
+  },
+  {
+   "title": "2007 Columbus Destroyers season",
+   "revid": 1359417206,
+   "timestamp": "2026-06-15T04:39:35Z",
+   "missing": false,
+   "bytes": 24633
+  },
+  {
+   "title": "2007 Dallas Desperados season",
+   "revid": 1278516464,
+   "timestamp": "2025-03-02T23:10:13Z",
+   "missing": false,
+   "bytes": 14848
+  },
+  {
+   "title": "2007 Georgia Force season",
+   "revid": 1360171679,
+   "timestamp": "2026-06-19T17:56:24Z",
+   "missing": false,
+   "bytes": 11856
+  },
+  {
+   "title": "2007 Grand Rapids Rampage season",
+   "revid": 1268506696,
+   "timestamp": "2025-01-10T03:23:15Z",
+   "missing": false,
+   "bytes": 11673
+  },
+  {
+   "title": "2007 Kansas City Brigade season",
+   "revid": 1341205105,
+   "timestamp": "2026-03-02T00:50:22Z",
+   "missing": false,
+   "bytes": 45372
+  },
+  {
+   "title": "2007 Las Vegas Gladiators season",
+   "revid": 1268508079,
+   "timestamp": "2025-01-10T03:32:06Z",
+   "missing": false,
+   "bytes": 11949
+  },
+  {
+   "title": "2007 Los Angeles Avengers season",
+   "revid": 1371089918,
+   "timestamp": "2026-08-24T14:29:34Z",
+   "missing": false,
+   "bytes": 28025
+  },
+  {
+   "title": "2007 Nashville Kats season",
+   "revid": 1341205177,
+   "timestamp": "2026-03-02T00:50:44Z",
+   "missing": false,
+   "bytes": 13077
+  },
+  {
+   "title": "2007 New Orleans VooDoo season",
+   "revid": 1335905331,
+   "timestamp": "2026-01-31T21:46:03Z",
+   "missing": false,
+   "bytes": 12486
+  },
+  {
+   "title": "2007 New York Dragons season",
+   "revid": 1360407588,
+   "timestamp": "2026-06-21T08:49:40Z",
+   "missing": false,
+   "bytes": 14558
+  },
+  {
+   "title": "2007 Orlando Predators season",
+   "revid": 1331810109,
+   "timestamp": "2026-01-08T08:58:23Z",
+   "missing": false,
+   "bytes": 19257
+  },
+  {
+   "title": "2007 Philadelphia Soul season",
+   "revid": 1306177596,
+   "timestamp": "2025-08-16T10:11:24Z",
+   "missing": false,
+   "bytes": 20436
+  },
+  {
+   "title": "2007 San Jose SaberCats season",
+   "revid": 1268508122,
+   "timestamp": "2025-01-10T03:32:18Z",
+   "missing": false,
+   "bytes": 13303
+  },
+  {
+   "title": "2007 Spokane Shock season",
+   "revid": 1370474779,
+   "timestamp": "2026-08-21T08:50:13Z",
+   "missing": false,
+   "bytes": 7913
+  },
+  {
+   "title": "2007 Tampa Bay Storm season",
+   "revid": 1371089849,
+   "timestamp": "2026-08-24T14:29:00Z",
+   "missing": false,
+   "bytes": 57959
+  },
+  {
+   "title": "2007 Utah Blaze season",
+   "revid": 1345158859,
+   "timestamp": "2026-03-24T16:27:17Z",
+   "missing": false,
+   "bytes": 19255
+  },
+  {
+   "title": "2007 Wilkes-Barre/Scranton Pioneers season",
+   "revid": 1268508155,
+   "timestamp": "2025-01-10T03:32:29Z",
+   "missing": false,
+   "bytes": 7839
+  },
+  {
+   "title": "2008 AF2 season",
+   "revid": 1330694743,
+   "timestamp": "2026-01-01T23:21:19Z",
+   "missing": false,
+   "bytes": 15707
+  },
+  {
+   "title": "2008 Arena Football League season",
+   "revid": 1316909318,
+   "timestamp": "2025-10-15T05:02:26Z",
+   "missing": false,
+   "bytes": 17393
+  },
+  {
+   "title": "2008 Arizona Rattlers season",
+   "revid": 1329405970,
+   "timestamp": "2025-12-25T23:23:35Z",
+   "missing": false,
+   "bytes": 41762
+  },
+  {
+   "title": "2008 Arkansas Twisters season",
+   "revid": 1336682882,
+   "timestamp": "2026-02-05T03:58:13Z",
+   "missing": false,
+   "bytes": 10114
+  },
+  {
+   "title": "2008 Chicago Rush season",
+   "revid": 1360587490,
+   "timestamp": "2026-06-22T12:26:55Z",
+   "missing": false,
+   "bytes": 41419
+  },
+  {
+   "title": "2008 Cleveland Gladiators season",
+   "revid": 1357321590,
+   "timestamp": "2026-06-02T00:11:29Z",
+   "missing": false,
+   "bytes": 46903
+  },
+  {
+   "title": "2008 Colorado Crush season",
+   "revid": 1329406167,
+   "timestamp": "2025-12-25T23:25:50Z",
+   "missing": false,
+   "bytes": 43132
+  },
+  {
+   "title": "2008 Columbus Destroyers season",
+   "revid": 1357321593,
+   "timestamp": "2026-06-02T00:11:32Z",
+   "missing": false,
+   "bytes": 36045
+  },
+  {
+   "title": "2008 Dallas Desperados season",
+   "revid": 1360587596,
+   "timestamp": "2026-06-22T12:28:03Z",
+   "missing": false,
+   "bytes": 42852
+  },
+  {
+   "title": "2008 Georgia Force season",
+   "revid": 1360587969,
+   "timestamp": "2026-06-22T12:31:45Z",
+   "missing": false,
+   "bytes": 42064
+  },
+  {
+   "title": "2008 Grand Rapids Rampage season",
+   "revid": 1360588000,
+   "timestamp": "2026-06-22T12:32:06Z",
+   "missing": false,
+   "bytes": 47188
+  },
+  {
+   "title": "2008 Kansas City Brigade season",
+   "revid": 1369407121,
+   "timestamp": "2026-08-14T19:57:46Z",
+   "missing": false,
+   "bytes": 37612
+  },
+  {
+   "title": "2008 Los Angeles Avengers season",
+   "revid": 1371089827,
+   "timestamp": "2026-08-24T14:28:48Z",
+   "missing": false,
+   "bytes": 41494
+  },
+  {
+   "title": "2008 New Orleans VooDoo season",
+   "revid": 1371089809,
+   "timestamp": "2026-08-24T14:28:43Z",
+   "missing": false,
+   "bytes": 38036
+  },
+  {
+   "title": "2008 New York Dragons season",
+   "revid": 1357321598,
+   "timestamp": "2026-06-02T00:11:34Z",
+   "missing": false,
+   "bytes": 41286
+  },
+  {
+   "title": "2008 Orlando Predators season",
+   "revid": 1357321611,
+   "timestamp": "2026-06-02T00:11:40Z",
+   "missing": false,
+   "bytes": 43557
+  },
+  {
+   "title": "2008 Philadelphia Soul season",
+   "revid": 1357321602,
+   "timestamp": "2026-06-02T00:11:37Z",
+   "missing": false,
+   "bytes": 47258
+  },
+  {
+   "title": "2008 San Jose SaberCats season",
+   "revid": 1369872533,
+   "timestamp": "2026-08-17T18:32:57Z",
+   "missing": false,
+   "bytes": 50124
+  },
+  {
+   "title": "2008 Tampa Bay Storm season",
+   "revid": 1357321616,
+   "timestamp": "2026-06-02T00:11:43Z",
+   "missing": false,
+   "bytes": 38787
+  },
+  {
+   "title": "2008 Utah Blaze season",
+   "revid": 1345158838,
+   "timestamp": "2026-03-24T16:27:08Z",
+   "missing": false,
+   "bytes": 43180
+  },
+  {
+   "title": "2008 Wilkes-Barre/Scranton Pioneers season",
+   "revid": 1368785271,
+   "timestamp": "2026-08-11T02:31:29Z",
+   "missing": false,
+   "bytes": 14046
+  },
+  {
+   "title": "2009 AF2 season",
+   "revid": 1357759911,
+   "timestamp": "2026-06-04T14:36:23Z",
+   "missing": false,
+   "bytes": 13278
+  },
+  {
+   "title": "2009 Arkansas Twisters season",
+   "revid": 1336701405,
+   "timestamp": "2026-02-05T06:24:27Z",
+   "missing": false,
+   "bytes": 27856
+  },
+  {
+   "title": "2009 Oklahoma City Yard Dawgz season",
+   "revid": 1333937642,
+   "timestamp": "2026-01-20T16:38:27Z",
+   "missing": false,
+   "bytes": 9727
+  },
+  {
+   "title": "2009 Wilkes-Barre/Scranton Pioneers season",
+   "revid": 1368836757,
+   "timestamp": "2026-08-11T10:32:56Z",
+   "missing": false,
+   "bytes": 16259
+  },
+  {
+   "title": "2010 Alabama Vipers season",
+   "revid": 1314859486,
+   "timestamp": "2025-10-03T15:38:30Z",
+   "missing": false,
+   "bytes": 47710
+  },
+  {
+   "title": "2010 Amarillo Venom season",
+   "revid": 1369907797,
+   "timestamp": "2026-08-17T23:12:19Z",
+   "missing": false,
+   "bytes": 10571
+  },
+  {
+   "title": "2010 Arena Football League season",
+   "revid": 1329568264,
+   "timestamp": "2025-12-26T20:51:23Z",
+   "missing": false,
+   "bytes": 31891
+  },
+  {
+   "title": "2010 Arizona Rattlers season",
+   "revid": 1371090128,
+   "timestamp": "2026-08-24T14:31:14Z",
+   "missing": false,
+   "bytes": 43598
+  },
+  {
+   "title": "2010 Arkansas Diamonds season",
+   "revid": 1369909571,
+   "timestamp": "2026-08-17T23:30:57Z",
+   "missing": false,
+   "bytes": 21774
+  },
+  {
+   "title": "2010 Bossier\u2013Shreveport Battle Wings season",
+   "revid": 1279116050,
+   "timestamp": "2025-03-06T17:17:37Z",
+   "missing": false,
+   "bytes": 50124
+  },
+  {
+   "title": "2010 Chicago Rush season",
+   "revid": 1279139471,
+   "timestamp": "2025-03-06T19:43:44Z",
+   "missing": false,
+   "bytes": 43943
+  },
+  {
+   "title": "2010 Cleveland Gladiators season",
+   "revid": 1334145048,
+   "timestamp": "2026-01-21T20:37:10Z",
+   "missing": false,
+   "bytes": 46474
+  },
+  {
+   "title": "2010 Dallas Vigilantes season",
+   "revid": 1371961643,
+   "timestamp": "2026-08-29T16:19:02Z",
+   "missing": false,
+   "bytes": 49030
+  },
+  {
+   "title": "2010 Iowa Barnstormers season",
+   "revid": 1279139480,
+   "timestamp": "2025-03-06T19:43:48Z",
+   "missing": false,
+   "bytes": 44647
+  },
+  {
+   "title": "2010 Jacksonville Sharks season",
+   "revid": 1371627251,
+   "timestamp": "2026-08-27T13:56:49Z",
+   "missing": false,
+   "bytes": 48920
+  },
+  {
+   "title": "2010 Milwaukee Iron season",
+   "revid": 1279116113,
+   "timestamp": "2025-03-06T17:18:01Z",
+   "missing": false,
+   "bytes": 60794
+  },
+  {
+   "title": "2010 Oklahoma City Yard Dawgz season",
+   "revid": 1371417074,
+   "timestamp": "2026-08-26T08:40:32Z",
+   "missing": false,
+   "bytes": 40901
+  },
+  {
+   "title": "2010 Orlando Predators season",
+   "revid": 1371976580,
+   "timestamp": "2026-08-29T17:44:24Z",
+   "missing": false,
+   "bytes": 52371
+  },
+  {
+   "title": "2010 Spokane Shock season",
+   "revid": 1357225323,
+   "timestamp": "2026-06-01T13:13:01Z",
+   "missing": false,
+   "bytes": 54950
+  },
+  {
+   "title": "2010 Tampa Bay Storm season",
+   "revid": 1279139464,
+   "timestamp": "2025-03-06T19:43:40Z",
+   "missing": false,
+   "bytes": 61740
+  },
+  {
+   "title": "2010 Tri-Cities Fever season",
+   "revid": 1370149161,
+   "timestamp": "2026-08-19T11:12:08Z",
+   "missing": false,
+   "bytes": 9372
+  },
+  {
+   "title": "2010 Tulsa Talons season",
+   "revid": 1279139474,
+   "timestamp": "2025-03-06T19:43:46Z",
+   "missing": false,
+   "bytes": 48527
+  },
+  {
+   "title": "2010 Utah Blaze season",
+   "revid": 1279116148,
+   "timestamp": "2025-03-06T17:18:15Z",
+   "missing": false,
+   "bytes": 46108
+  },
+  {
+   "title": "2011 Allen Wranglers season",
+   "revid": 1336868335,
+   "timestamp": "2026-02-06T05:00:33Z",
+   "missing": false,
+   "bytes": 21448
+  },
+  {
+   "title": "2011 Amarillo Venom season",
+   "revid": 1336868342,
+   "timestamp": "2026-02-06T05:00:37Z",
+   "missing": false,
+   "bytes": 7229
+  },
+  {
+   "title": "2011 Arena Football League season",
+   "revid": 1316909347,
+   "timestamp": "2025-10-15T05:02:49Z",
+   "missing": false,
+   "bytes": 32448
+  },
+  {
+   "title": "2011 Arizona Rattlers season",
+   "revid": 1268508383,
+   "timestamp": "2025-01-10T03:34:22Z",
+   "missing": false,
+   "bytes": 68886
+  },
+  {
+   "title": "2011 Chicago Rush season",
+   "revid": 1268508392,
+   "timestamp": "2025-01-10T03:34:25Z",
+   "missing": false,
+   "bytes": 62221
+  },
+  {
+   "title": "2011 Cleveland Gladiators season",
+   "revid": 1370438694,
+   "timestamp": "2026-08-21T03:23:39Z",
+   "missing": false,
+   "bytes": 64989
+  },
+  {
+   "title": "2011 Dallas Vigilantes season",
+   "revid": 1279116225,
+   "timestamp": "2025-03-06T17:18:48Z",
+   "missing": false,
+   "bytes": 67234
+  },
+  {
+   "title": "2011 Georgia Force season",
+   "revid": 1268508403,
+   "timestamp": "2025-01-10T03:34:29Z",
+   "missing": false,
+   "bytes": 65748
+  },
+  {
+   "title": "2011 Iowa Barnstormers season",
+   "revid": 1268508408,
+   "timestamp": "2025-01-10T03:34:31Z",
+   "missing": false,
+   "bytes": 63027
+  },
+  {
+   "title": "2011 Jacksonville Sharks season",
+   "revid": 1268508412,
+   "timestamp": "2025-01-10T03:34:33Z",
+   "missing": false,
+   "bytes": 74854
+  },
+  {
+   "title": "2011 Kansas City Command season",
+   "revid": 1373204322,
+   "timestamp": "2026-09-04T15:27:51Z",
+   "missing": false,
+   "bytes": 62433
+  },
+  {
+   "title": "2011 Milwaukee Mustangs season",
+   "revid": 1373204087,
+   "timestamp": "2026-09-04T15:26:18Z",
+   "missing": false,
+   "bytes": 59389
+  },
+  {
+   "title": "2011 New Orleans VooDoo season",
+   "revid": 1270269823,
+   "timestamp": "2025-01-18T19:19:37Z",
+   "missing": false,
+   "bytes": 63331
+  },
+  {
+   "title": "2011 Orlando Predators season",
+   "revid": 1371491225,
+   "timestamp": "2026-08-26T19:37:24Z",
+   "missing": false,
+   "bytes": 69918
+  },
+  {
+   "title": "2011 Philadelphia Soul season",
+   "revid": 1359121569,
+   "timestamp": "2026-06-13T06:29:59Z",
+   "missing": false,
+   "bytes": 61287
+  },
+  {
+   "title": "2011 Pittsburgh Power season",
+   "revid": 1370648236,
+   "timestamp": "2026-08-22T07:48:06Z",
+   "missing": false,
+   "bytes": 63813
+  },
+  {
+   "title": "2011 San Jose SaberCats season",
+   "revid": 1268508444,
+   "timestamp": "2025-01-10T03:34:48Z",
+   "missing": false,
+   "bytes": 59745
+  },
+  {
+   "title": "2011 Spokane Shock season",
+   "revid": 1268508450,
+   "timestamp": "2025-01-10T03:34:50Z",
+   "missing": false,
+   "bytes": 65560
+  },
+  {
+   "title": "2011 Tampa Bay Storm season",
+   "revid": 1270269856,
+   "timestamp": "2025-01-18T19:19:51Z",
+   "missing": false,
+   "bytes": 62703
+  },
+  {
+   "title": "2011 Tri-Cities Fever season",
+   "revid": 1337440689,
+   "timestamp": "2026-02-09T13:43:13Z",
+   "missing": false,
+   "bytes": 9881
+  },
+  {
+   "title": "2011 Tulsa Talons season",
+   "revid": 1268508460,
+   "timestamp": "2025-01-10T03:34:54Z",
+   "missing": false,
+   "bytes": 52837
+  },
+  {
+   "title": "2011 Utah Blaze season",
+   "revid": 1270269879,
+   "timestamp": "2025-01-18T19:19:59Z",
+   "missing": false,
+   "bytes": 61593
+  },
+  {
+   "title": "2012 Allen Wranglers season",
+   "revid": 1370900778,
+   "timestamp": "2026-08-23T17:07:56Z",
+   "missing": false,
+   "bytes": 20086
+  },
+  {
+   "title": "2012 Arena Football League season",
+   "revid": 1317248411,
+   "timestamp": "2025-10-17T04:38:04Z",
+   "missing": false,
+   "bytes": 28060
+  },
+  {
+   "title": "2012 Arizona Rattlers season",
+   "revid": 1322635609,
+   "timestamp": "2025-11-17T08:29:04Z",
+   "missing": false,
+   "bytes": 16174
+  },
+  {
+   "title": "2012 Chicago Rush season",
+   "revid": 1279116277,
+   "timestamp": "2025-03-06T17:19:12Z",
+   "missing": false,
+   "bytes": 13495
+  },
+  {
+   "title": "2012 Cleveland Gladiators season",
+   "revid": 1334144992,
+   "timestamp": "2026-01-21T20:36:49Z",
+   "missing": false,
+   "bytes": 14222
+  },
+  {
+   "title": "2012 Georgia Force season",
+   "revid": 1279116284,
+   "timestamp": "2025-03-06T17:19:15Z",
+   "missing": false,
+   "bytes": 14612
+  },
+  {
+   "title": "2012 Iowa Barnstormers season",
+   "revid": 1279116296,
+   "timestamp": "2025-03-06T17:19:19Z",
+   "missing": false,
+   "bytes": 15263
+  },
+  {
+   "title": "2012 Jacksonville Sharks season",
+   "revid": 1268508489,
+   "timestamp": "2025-01-10T03:35:08Z",
+   "missing": false,
+   "bytes": 13147
+  },
+  {
+   "title": "2012 Kansas City Command season",
+   "revid": 1324355953,
+   "timestamp": "2025-11-27T04:00:48Z",
+   "missing": false,
+   "bytes": 17288
+  },
+  {
+   "title": "2012 Milwaukee Mustangs season",
+   "revid": 1314863507,
+   "timestamp": "2025-10-03T16:07:06Z",
+   "missing": false,
+   "bytes": 19818
+  },
+  {
+   "title": "2012 New Orleans VooDoo season",
+   "revid": 1270270022,
+   "timestamp": "2025-01-18T19:20:50Z",
+   "missing": false,
+   "bytes": 19443
+  },
+  {
+   "title": "2012 Orlando Predators season",
+   "revid": 1371489936,
+   "timestamp": "2026-08-26T19:27:48Z",
+   "missing": false,
+   "bytes": 18061
+  },
+  {
+   "title": "2012 Philadelphia Soul season",
+   "revid": 1270270045,
+   "timestamp": "2025-01-18T19:20:56Z",
+   "missing": false,
+   "bytes": 16918
+  },
+  {
+   "title": "2012 Pittsburgh Power season",
+   "revid": 1279116314,
+   "timestamp": "2025-03-06T17:19:25Z",
+   "missing": false,
+   "bytes": 17872
+  },
+  {
+   "title": "2012 San Antonio Talons season",
+   "revid": 1279116319,
+   "timestamp": "2025-03-06T17:19:27Z",
+   "missing": false,
+   "bytes": 19978
+  },
+  {
+   "title": "2012 San Jose SaberCats season",
+   "revid": 1270270070,
+   "timestamp": "2025-01-18T19:21:10Z",
+   "missing": false,
+   "bytes": 17937
+  },
+  {
+   "title": "2012 Spokane Shock season",
+   "revid": 1268508502,
+   "timestamp": "2025-01-10T03:35:13Z",
+   "missing": false,
+   "bytes": 16704
+  },
+  {
+   "title": "2012 Tampa Bay Storm season",
+   "revid": 1270270083,
+   "timestamp": "2025-01-18T19:21:15Z",
+   "missing": false,
+   "bytes": 17487
+  },
+  {
+   "title": "2012 Tri-Cities Fever season",
+   "revid": 1337440051,
+   "timestamp": "2026-02-09T13:39:14Z",
+   "missing": false,
+   "bytes": 8281
+  },
+  {
+   "title": "2012 Utah Blaze season",
+   "revid": 1270270098,
+   "timestamp": "2025-01-18T19:21:19Z",
+   "missing": false,
+   "bytes": 18372
+  },
+  {
+   "title": "2013 Arena Football League season",
+   "revid": 1313618615,
+   "timestamp": "2025-09-27T06:25:14Z",
+   "missing": false,
+   "bytes": 23067
+  },
+  {
+   "title": "2013 Arizona Rattlers season",
+   "revid": 1270270135,
+   "timestamp": "2025-01-18T19:21:32Z",
+   "missing": false,
+   "bytes": 16580
+  },
+  {
+   "title": "2013 Chicago Rush season",
+   "revid": 1369151002,
+   "timestamp": "2026-08-13T05:22:54Z",
+   "missing": false,
+   "bytes": 20937
+  },
+  {
+   "title": "2013 Cleveland Gladiators season",
+   "revid": 1334144975,
+   "timestamp": "2026-01-21T20:36:39Z",
+   "missing": false,
+   "bytes": 14957
+  },
+  {
+   "title": "2013 Iowa Barnstormers season",
+   "revid": 1270270206,
+   "timestamp": "2025-01-18T19:22:00Z",
+   "missing": false,
+   "bytes": 14357
+  },
+  {
+   "title": "2013 Jacksonville Sharks season",
+   "revid": 1270270207,
+   "timestamp": "2025-01-18T19:22:01Z",
+   "missing": false,
+   "bytes": 16797
+  },
+  {
+   "title": "2013 New Orleans VooDoo season",
+   "revid": 1279116341,
+   "timestamp": "2025-03-06T17:19:40Z",
+   "missing": false,
+   "bytes": 15390
+  },
+  {
+   "title": "2013 Orlando Predators season",
+   "revid": 1371489977,
+   "timestamp": "2026-08-26T19:27:57Z",
+   "missing": false,
+   "bytes": 16709
+  },
+  {
+   "title": "2013 Philadelphia Soul season",
+   "revid": 1270270276,
+   "timestamp": "2025-01-18T19:22:22Z",
+   "missing": false,
+   "bytes": 17213
+  },
+  {
+   "title": "2013 Pittsburgh Power season",
+   "revid": 1270270278,
+   "timestamp": "2025-01-18T19:22:23Z",
+   "missing": false,
+   "bytes": 15085
+  },
+  {
+   "title": "2013 San Antonio Talons season",
+   "revid": 1368826696,
+   "timestamp": "2026-08-11T09:11:47Z",
+   "missing": false,
+   "bytes": 20826
+  },
+  {
+   "title": "2013 San Jose SaberCats season",
+   "revid": 1270270295,
+   "timestamp": "2025-01-18T19:22:29Z",
+   "missing": false,
+   "bytes": 16114
+  },
+  {
+   "title": "2013 Spokane Shock season",
+   "revid": 1270270308,
+   "timestamp": "2025-01-18T19:22:32Z",
+   "missing": false,
+   "bytes": 16678
+  },
+  {
+   "title": "2013 Tampa Bay Storm season",
+   "revid": 1348130572,
+   "timestamp": "2026-04-10T21:41:21Z",
+   "missing": false,
+   "bytes": 16342
+  },
+  {
+   "title": "2013 Texas Revolution season",
+   "revid": 1369122215,
+   "timestamp": "2026-08-13T01:43:28Z",
+   "missing": false,
+   "bytes": 37813
+  },
+  {
+   "title": "2013 Tri-Cities Fever season",
+   "revid": 1336869814,
+   "timestamp": "2026-02-06T05:12:59Z",
+   "missing": false,
+   "bytes": 7278
+  },
+  {
+   "title": "2013 Utah Blaze season",
+   "revid": 1270270321,
+   "timestamp": "2025-01-18T19:22:36Z",
+   "missing": false,
+   "bytes": 14708
+  },
+  {
+   "title": "2014 Arena Football League season",
+   "revid": 1316909403,
+   "timestamp": "2025-10-15T05:03:32Z",
+   "missing": false,
+   "bytes": 23132
+  },
+  {
+   "title": "2014 Arizona Rattlers season",
+   "revid": 1296225593,
+   "timestamp": "2025-06-18T17:34:09Z",
+   "missing": false,
+   "bytes": 16658
+  },
+  {
+   "title": "2014 Cleveland Gladiators season",
+   "revid": 1334144958,
+   "timestamp": "2026-01-21T20:36:30Z",
+   "missing": false,
+   "bytes": 18159
+  },
+  {
+   "title": "2014 Iowa Barnstormers season",
+   "revid": 1268508554,
+   "timestamp": "2025-01-10T03:35:33Z",
+   "missing": false,
+   "bytes": 14708
+  },
+  {
+   "title": "2014 Jacksonville Sharks season",
+   "revid": 1268508557,
+   "timestamp": "2025-01-10T03:35:35Z",
+   "missing": false,
+   "bytes": 15521
+  },
+  {
+   "title": "2014 Los Angeles Kiss season",
+   "revid": 1335876763,
+   "timestamp": "2026-01-31T18:38:27Z",
+   "missing": false,
+   "bytes": 19506
+  },
+  {
+   "title": "2014 New Orleans VooDoo season",
+   "revid": 1268508567,
+   "timestamp": "2025-01-10T03:35:39Z",
+   "missing": false,
+   "bytes": 14807
+  },
+  {
+   "title": "2014 Orlando Predators season",
+   "revid": 1371490097,
+   "timestamp": "2026-08-26T19:28:43Z",
+   "missing": false,
+   "bytes": 17201
+  },
+  {
+   "title": "2014 Philadelphia Soul season",
+   "revid": 1268508578,
+   "timestamp": "2025-01-10T03:35:42Z",
+   "missing": false,
+   "bytes": 16031
+  },
+  {
+   "title": "2014 Pittsburgh Power season",
+   "revid": 1268508582,
+   "timestamp": "2025-01-10T03:35:44Z",
+   "missing": false,
+   "bytes": 17979
+  },
+  {
+   "title": "2014 Portland Thunder season",
+   "revid": 1369195446,
+   "timestamp": "2026-08-13T12:26:51Z",
+   "missing": false,
+   "bytes": 15895
+  },
+  {
+   "title": "2014 San Antonio Talons season",
+   "revid": 1314862829,
+   "timestamp": "2025-10-03T16:02:04Z",
+   "missing": false,
+   "bytes": 16242
+  },
+  {
+   "title": "2014 San Jose SaberCats season",
+   "revid": 1268508595,
+   "timestamp": "2025-01-10T03:35:49Z",
+   "missing": false,
+   "bytes": 16681
+  },
+  {
+   "title": "2014 Spokane Shock season",
+   "revid": 1268508606,
+   "timestamp": "2025-01-10T03:35:53Z",
+   "missing": false,
+   "bytes": 16041
+  },
+  {
+   "title": "2014 Tampa Bay Storm season",
+   "revid": 1348130704,
+   "timestamp": "2026-04-10T21:42:47Z",
+   "missing": false,
+   "bytes": 15364
+  },
+  {
+   "title": "2014 Texas Revolution season",
+   "revid": 1372095105,
+   "timestamp": "2026-08-30T07:40:36Z",
+   "missing": false,
+   "bytes": 41415
+  },
+  {
+   "title": "2014 Tri-Cities Fever season",
+   "revid": 1350967680,
+   "timestamp": "2026-04-25T03:25:10Z",
+   "missing": false,
+   "bytes": 26821
+  },
+  {
+   "title": "2015 Amarillo Venom season",
+   "revid": 1372455228,
+   "timestamp": "2026-08-31T20:43:38Z",
+   "missing": false,
+   "bytes": 33840
+  },
+  {
+   "title": "2015 Arena Football League season",
+   "revid": 1316909421,
+   "timestamp": "2025-10-15T05:03:44Z",
+   "missing": false,
+   "bytes": 17822
+  },
+  {
+   "title": "2015 Arizona Rattlers season",
+   "revid": 1336870553,
+   "timestamp": "2026-02-06T05:19:14Z",
+   "missing": false,
+   "bytes": 16468
+  },
+  {
+   "title": "2015 Cleveland Gladiators season",
+   "revid": 1334144070,
+   "timestamp": "2026-01-21T20:30:37Z",
+   "missing": false,
+   "bytes": 16195
+  },
+  {
+   "title": "2015 Iowa Barnstormers season",
+   "revid": 1336870787,
+   "timestamp": "2026-02-06T05:21:05Z",
+   "missing": false,
+   "bytes": 11922
+  },
+  {
+   "title": "2015 Jacksonville Sharks season",
+   "revid": 1348130723,
+   "timestamp": "2026-04-10T21:42:59Z",
+   "missing": false,
+   "bytes": 16664
+  },
+  {
+   "title": "2015 Las Vegas Outlaws season",
+   "revid": 1336870804,
+   "timestamp": "2026-02-06T05:21:16Z",
+   "missing": false,
+   "bytes": 18493
+  },
+  {
+   "title": "2015 Los Angeles Kiss season",
+   "revid": 1336870818,
+   "timestamp": "2026-02-06T05:21:23Z",
+   "missing": false,
+   "bytes": 16092
+  },
+  {
+   "title": "2015 New Orleans VooDoo season",
+   "revid": 1326284136,
+   "timestamp": "2025-12-08T03:19:34Z",
+   "missing": false,
+   "bytes": 17063
+  },
+  {
+   "title": "2015 Orlando Predators season",
+   "revid": 1371490004,
+   "timestamp": "2026-08-26T19:28:03Z",
+   "missing": false,
+   "bytes": 16686
+  },
+  {
+   "title": "2015 Philadelphia Soul season",
+   "revid": 1268508654,
+   "timestamp": "2025-01-10T03:36:12Z",
+   "missing": false,
+   "bytes": 16296
+  },
+  {
+   "title": "2015 Portland Thunder season",
+   "revid": 1369307248,
+   "timestamp": "2026-08-14T04:58:01Z",
+   "missing": false,
+   "bytes": 17029
+  },
+  {
+   "title": "2015 San Jose SaberCats season",
+   "revid": 1336870998,
+   "timestamp": "2026-02-06T05:22:45Z",
+   "missing": false,
+   "bytes": 23173
+  },
+  {
+   "title": "2015 Spokane Shock season",
+   "revid": 1336871036,
+   "timestamp": "2026-02-06T05:23:06Z",
+   "missing": false,
+   "bytes": 15783
+  },
+  {
+   "title": "2015 Tampa Bay Storm season",
+   "revid": 1268508699,
+   "timestamp": "2025-01-10T03:36:34Z",
+   "missing": false,
+   "bytes": 15455
+  },
+  {
+   "title": "2015 Texas Revolution season",
+   "revid": 1372827422,
+   "timestamp": "2026-09-02T13:34:31Z",
+   "missing": false,
+   "bytes": 57545
+  },
+  {
+   "title": "2015 Tri-Cities Fever season",
+   "revid": 1336871095,
+   "timestamp": "2026-02-06T05:23:35Z",
+   "missing": false,
+   "bytes": 12308
+  },
+  {
+   "title": "2016 Arena Football League season",
+   "revid": 1316909426,
+   "timestamp": "2025-10-15T05:03:47Z",
+   "missing": false,
+   "bytes": 18586
+  },
+  {
+   "title": "2016 Arizona Rattlers season",
+   "revid": 1336871138,
+   "timestamp": "2026-02-06T05:24:00Z",
+   "missing": false,
+   "bytes": 15494
+  },
+  {
+   "title": "2016 Cleveland Gladiators season",
+   "revid": 1279116524,
+   "timestamp": "2025-03-06T17:21:08Z",
+   "missing": false,
+   "bytes": 12809
+  },
+  {
+   "title": "2016 Iowa Barnstormers season",
+   "revid": 1336871396,
+   "timestamp": "2026-02-06T05:25:43Z",
+   "missing": false,
+   "bytes": 13680
+  },
+  {
+   "title": "2016 Jacksonville Sharks season",
+   "revid": 1300846169,
+   "timestamp": "2025-07-16T18:15:15Z",
+   "missing": false,
+   "bytes": 14455
+  },
+  {
+   "title": "2016 Los Angeles Kiss season",
+   "revid": 1336871424,
+   "timestamp": "2026-02-06T05:25:57Z",
+   "missing": false,
+   "bytes": 15622
+  },
+  {
+   "title": "2016 Orlando Predators season",
+   "revid": 1371490676,
+   "timestamp": "2026-08-26T19:32:58Z",
+   "missing": false,
+   "bytes": 15535
+  },
+  {
+   "title": "2016 Philadelphia Soul season",
+   "revid": 1325522663,
+   "timestamp": "2025-12-03T15:11:05Z",
+   "missing": false,
+   "bytes": 14886
+  },
+  {
+   "title": "2016 Portland Steel season",
+   "revid": 1336871569,
+   "timestamp": "2026-02-06T05:26:55Z",
+   "missing": false,
+   "bytes": 15171
+  },
+  {
+   "title": "2016 Tampa Bay Storm season",
+   "revid": 1359981497,
+   "timestamp": "2026-06-18T13:30:54Z",
+   "missing": false,
+   "bytes": 13726
+  },
+  {
+   "title": "2016 Tri-Cities Fever season",
+   "revid": 1336871690,
+   "timestamp": "2026-02-06T05:27:41Z",
+   "missing": false,
+   "bytes": 12163
+  },
+  {
+   "title": "2017 Arena Football League season",
+   "revid": 1373652131,
+   "timestamp": "2026-09-07T03:22:19Z",
+   "missing": false,
+   "bytes": 29007
+  },
+  {
+   "title": "2017 Baltimore Brigade season",
+   "revid": 1279116576,
+   "timestamp": "2025-03-06T17:21:32Z",
+   "missing": false,
+   "bytes": 14279
+  },
+  {
+   "title": "2017 Cleveland Gladiators season",
+   "revid": 1291388954,
+   "timestamp": "2025-05-20T22:31:34Z",
+   "missing": false,
+   "bytes": 15919
+  },
+  {
+   "title": "2017 Iowa Barnstormers season",
+   "revid": 1336881753,
+   "timestamp": "2026-02-06T06:33:27Z",
+   "missing": false,
+   "bytes": 11544
+  },
+  {
+   "title": "2017 Jacksonville Sharks season",
+   "revid": 1285297896,
+   "timestamp": "2025-04-12T21:33:05Z",
+   "missing": false,
+   "bytes": 8513
+  },
+  {
+   "title": "2017 Philadelphia Soul season",
+   "revid": 1279116625,
+   "timestamp": "2025-03-06T17:21:48Z",
+   "missing": false,
+   "bytes": 16118
+  },
+  {
+   "title": "2017 Tampa Bay Storm season",
+   "revid": 1279116636,
+   "timestamp": "2025-03-06T17:21:54Z",
+   "missing": false,
+   "bytes": 15513
+  },
+  {
+   "title": "2017 Washington Valor season",
+   "revid": 1279116638,
+   "timestamp": "2025-03-06T17:21:56Z",
+   "missing": false,
+   "bytes": 14364
+  },
+  {
+   "title": "2018 Albany Empire season",
+   "revid": 1288282915,
+   "timestamp": "2025-05-01T17:01:05Z",
+   "missing": false,
+   "bytes": 8827
+  },
+  {
+   "title": "2018 Arena Football League season",
+   "revid": 1317256340,
+   "timestamp": "2025-10-17T05:42:17Z",
+   "missing": false,
+   "bytes": 27408
+  },
+  {
+   "title": "2018 Arizona Rattlers season",
+   "revid": 1336881961,
+   "timestamp": "2026-02-06T06:35:18Z",
+   "missing": false,
+   "bytes": 7197
+  },
+  {
+   "title": "2018 Baltimore Brigade season",
+   "revid": 1279116650,
+   "timestamp": "2025-03-06T17:22:01Z",
+   "missing": false,
+   "bytes": 6986
+  },
+  {
+   "title": "2018 Iowa Barnstormers season",
+   "revid": 1336882130,
+   "timestamp": "2026-02-06T06:36:27Z",
+   "missing": false,
+   "bytes": 6372
+  },
+  {
+   "title": "2018 Philadelphia Soul season",
+   "revid": 1279116699,
+   "timestamp": "2025-03-06T17:22:22Z",
+   "missing": false,
+   "bytes": 8150
+  },
+  {
+   "title": "2018 Washington Valor season",
+   "revid": 1286853868,
+   "timestamp": "2025-04-22T12:08:34Z",
+   "missing": false,
+   "bytes": 8023
+  },
+  {
+   "title": "2019 Albany Empire season",
+   "revid": 1279116737,
+   "timestamp": "2025-03-06T17:22:38Z",
+   "missing": false,
+   "bytes": 15843
+  },
+  {
+   "title": "2019 Arena Football League season",
+   "revid": 1317257359,
+   "timestamp": "2025-10-17T05:50:47Z",
+   "missing": false,
+   "bytes": 18268
+  },
+  {
+   "title": "2019 Atlantic City Blackjacks season",
+   "revid": 1296054751,
+   "timestamp": "2025-06-17T14:17:43Z",
+   "missing": false,
+   "bytes": 12437
+  },
+  {
+   "title": "2019 Baltimore Brigade season",
+   "revid": 1279116750,
+   "timestamp": "2025-03-06T17:22:44Z",
+   "missing": false,
+   "bytes": 15660
+  },
+  {
+   "title": "2019 Columbus Destroyers season",
+   "revid": 1295271177,
+   "timestamp": "2025-06-12T19:07:41Z",
+   "missing": false,
+   "bytes": 13468
+  },
+  {
+   "title": "2019 Philadelphia Soul season",
+   "revid": 1294734827,
+   "timestamp": "2025-06-09T13:56:52Z",
+   "missing": false,
+   "bytes": 13779
+  },
+  {
+   "title": "2019 Washington Valor season",
+   "revid": 1286853875,
+   "timestamp": "2025-04-22T12:08:38Z",
+   "missing": false,
+   "bytes": 12685
+  },
+  {
+   "title": "2025 Arizona Rattlers season",
+   "revid": 1336885785,
+   "timestamp": "2026-02-06T06:58:28Z",
+   "missing": false,
+   "bytes": 11696
+  },
+  {
+   "title": "1900 Toronto Argonauts season",
+   "revid": 1349463353,
+   "timestamp": "2026-04-17T12:53:36Z",
+   "missing": false,
+   "bytes": 3993
+  },
+  {
+   "title": "1901 Toronto Argonauts season",
+   "revid": 1349463326,
+   "timestamp": "2026-04-17T12:53:27Z",
+   "missing": false,
+   "bytes": 5154
+  },
+  {
+   "title": "1902 Toronto Argonauts season",
+   "revid": 1341793364,
+   "timestamp": "2026-03-05T02:40:59Z",
+   "missing": false,
+   "bytes": 2953
+  },
+  {
+   "title": "1903 Toronto Argonauts season",
+   "revid": 1341793386,
+   "timestamp": "2026-03-05T02:41:13Z",
+   "missing": false,
+   "bytes": 1043
+  },
+  {
+   "title": "1904 Toronto Argonauts season",
+   "revid": 1341793397,
+   "timestamp": "2026-03-05T02:41:22Z",
+   "missing": false,
+   "bytes": 3125
+  },
+  {
+   "title": "1905 Toronto Argonauts season",
+   "revid": 1341793417,
+   "timestamp": "2026-03-05T02:41:32Z",
+   "missing": false,
+   "bytes": 3823
+  },
+  {
+   "title": "1906 Toronto Argonauts season",
+   "revid": 1341793435,
+   "timestamp": "2026-03-05T02:41:42Z",
+   "missing": false,
+   "bytes": 3853
+  },
+  {
+   "title": "1907 Ottawa Rough Riders season",
+   "revid": 1341808336,
+   "timestamp": "2026-03-05T04:50:38Z",
+   "missing": false,
+   "bytes": 3982
+  },
+  {
+   "title": "Template:1987 Arena Football League standings",
+   "revid": 1313437084,
+   "timestamp": "2025-09-26T06:35:08Z",
+   "missing": false,
+   "bytes": 2640
+  },
+  {
+   "title": "Template:1988 Arena Football League standings",
+   "revid": 1313437053,
+   "timestamp": "2025-09-26T06:34:50Z",
+   "missing": false,
+   "bytes": 3234
+  },
+  {
+   "title": "Template:1989 Arena Football League standings",
+   "revid": 1313437068,
+   "timestamp": "2025-09-26T06:34:58Z",
+   "missing": false,
+   "bytes": 2784
+  },
+  {
+   "title": "Template:1990 Arena Football League standings",
+   "revid": 1313436993,
+   "timestamp": "2025-09-26T06:34:21Z",
+   "missing": false,
+   "bytes": 3026
+  },
+  {
+   "title": "Template:1991 Arena Football League standings",
+   "revid": 1313437114,
+   "timestamp": "2025-09-26T06:35:21Z",
+   "missing": false,
+   "bytes": 3505
+  },
+  {
+   "title": "Template:1992 Arena Football League standings",
+   "revid": 1313437206,
+   "timestamp": "2025-09-26T06:36:12Z",
+   "missing": false,
+   "bytes": 4770
+  },
+  {
+   "title": "Template:1993 Arena Football League standings",
+   "revid": 1313437183,
+   "timestamp": "2025-09-26T06:35:59Z",
+   "missing": false,
+   "bytes": 4770
+  },
+  {
+   "title": "Template:1994 Arena Football League standings",
+   "revid": 1313437159,
+   "timestamp": "2025-09-26T06:35:48Z",
+   "missing": false,
+   "bytes": 5106
+  },
+  {
+   "title": "Template:2015 AFL American Conference standings",
+   "revid": 1312832164,
+   "timestamp": "2025-09-22T21:23:58Z",
+   "missing": false,
+   "bytes": 3033
+  },
+  {
+   "title": "Template:2015 AFL National Conference standings",
+   "revid": 1312832202,
+   "timestamp": "2025-09-22T21:24:07Z",
+   "missing": false,
+   "bytes": 3009
+  },
+  {
+   "title": "Template:2016 AFL American Conference standings",
+   "revid": 1312832224,
+   "timestamp": "2025-09-22T21:24:16Z",
+   "missing": false,
+   "bytes": 2208
+  },
+  {
+   "title": "Template:2016 AFL National Conference standings",
+   "revid": 1312832271,
+   "timestamp": "2025-09-22T21:24:32Z",
+   "missing": false,
+   "bytes": 2218
+  },
+  {
+   "title": "1907 Toronto Argonauts season",
+   "revid": 1341793451,
+   "timestamp": "2026-03-05T02:41:51Z",
+   "missing": false,
+   "bytes": 4933
+  },
+  {
+   "title": "1908 Ottawa Rough Riders season",
+   "revid": 1341808357,
+   "timestamp": "2026-03-05T04:50:47Z",
+   "missing": false,
+   "bytes": 3588
+  },
+  {
+   "title": "1908 Toronto Argonauts season",
+   "revid": 1341793470,
+   "timestamp": "2026-03-05T02:42:02Z",
+   "missing": false,
+   "bytes": 4739
+  },
+  {
+   "title": "1909 Ottawa Rough Riders season",
+   "revid": 1341808370,
+   "timestamp": "2026-03-05T04:50:55Z",
+   "missing": false,
+   "bytes": 4054
+  },
+  {
+   "title": "1909 Toronto Argonauts season",
+   "revid": 1341793523,
+   "timestamp": "2026-03-05T02:42:34Z",
+   "missing": false,
+   "bytes": 3842
+  },
+  {
+   "title": "1910 Ottawa Rough Riders season",
+   "revid": 1341808389,
+   "timestamp": "2026-03-05T04:51:03Z",
+   "missing": false,
+   "bytes": 2748
+  },
+  {
+   "title": "1910 Regina Rugby Club season",
+   "revid": 1341789841,
+   "timestamp": "2026-03-05T02:14:25Z",
+   "missing": false,
+   "bytes": 1735
+  },
+  {
+   "title": "1910 Toronto Argonauts season",
+   "revid": 1341793539,
+   "timestamp": "2026-03-05T02:42:43Z",
+   "missing": false,
+   "bytes": 3896
+  },
+  {
+   "title": "1911 Ottawa Rough Riders season",
+   "revid": 1341808407,
+   "timestamp": "2026-03-05T04:51:14Z",
+   "missing": false,
+   "bytes": 2713
+  },
+  {
+   "title": "1911 Toronto Argonauts season",
+   "revid": 1341793571,
+   "timestamp": "2026-03-05T02:42:55Z",
+   "missing": false,
+   "bytes": 5547
+  },
+  {
+   "title": "1912 Ottawa Rough Riders season",
+   "revid": 1341808427,
+   "timestamp": "2026-03-05T04:51:23Z",
+   "missing": false,
+   "bytes": 2840
+  },
+  {
+   "title": "1912 Toronto Argonauts season",
+   "revid": 1341793594,
+   "timestamp": "2026-03-05T02:43:04Z",
+   "missing": false,
+   "bytes": 4381
+  },
+  {
+   "title": "1913 Ottawa Rough Riders season",
+   "revid": 1341808451,
+   "timestamp": "2026-03-05T04:51:36Z",
+   "missing": false,
+   "bytes": 2940
+  },
+  {
+   "title": "1913 Toronto Argonauts season",
+   "revid": 1341793616,
+   "timestamp": "2026-03-05T02:43:15Z",
+   "missing": false,
+   "bytes": 3479
+  },
+  {
+   "title": "1914 Ottawa Rough Riders season",
+   "revid": 1341808469,
+   "timestamp": "2026-03-05T04:51:45Z",
+   "missing": false,
+   "bytes": 3167
+  },
+  {
+   "title": "1914 Toronto Argonauts season",
+   "revid": 1341793636,
+   "timestamp": "2026-03-05T02:43:25Z",
+   "missing": false,
+   "bytes": 6020
+  },
+  {
+   "title": "1915 Ottawa Rough Riders season",
+   "revid": 1341808491,
+   "timestamp": "2026-03-05T04:51:55Z",
+   "missing": false,
+   "bytes": 3328
+  },
+  {
+   "title": "1915 Toronto Argonauts season",
+   "revid": 1341793659,
+   "timestamp": "2026-03-05T02:43:34Z",
+   "missing": false,
+   "bytes": 3456
+  },
+  {
+   "title": "1919 Ottawa Rough Riders season",
+   "revid": 1341808531,
+   "timestamp": "2026-03-05T04:52:15Z",
+   "missing": false,
+   "bytes": 2960
+  },
+  {
+   "title": "1919 Toronto Argonauts season",
+   "revid": 1349463137,
+   "timestamp": "2026-04-17T12:52:18Z",
+   "missing": false,
+   "bytes": 3639
+  },
+  {
+   "title": "1920 Ottawa Rough Riders season",
+   "revid": 1341808550,
+   "timestamp": "2026-03-05T04:52:25Z",
+   "missing": false,
+   "bytes": 2880
+  },
+  {
+   "title": "1920 Toronto Argonauts season",
+   "revid": 1349462850,
+   "timestamp": "2026-04-17T12:51:38Z",
+   "missing": false,
+   "bytes": 6154
+  },
+  {
+   "title": "1921 Ottawa Rough Riders season",
+   "revid": 1341808562,
+   "timestamp": "2026-03-05T04:52:32Z",
+   "missing": false,
+   "bytes": 2928
+  },
+  {
+   "title": "1921 Toronto Argonauts season",
+   "revid": 1349462756,
+   "timestamp": "2026-04-17T12:51:27Z",
+   "missing": false,
+   "bytes": 6956
+  },
+  {
+   "title": "1922 Ottawa Rough Riders season",
+   "revid": 1341808587,
+   "timestamp": "2026-03-05T04:52:43Z",
+   "missing": false,
+   "bytes": 3066
+  },
+  {
+   "title": "1922 Toronto Argonauts season",
+   "revid": 1349462704,
+   "timestamp": "2026-04-17T12:51:20Z",
+   "missing": false,
+   "bytes": 5311
+  },
+  {
+   "title": "1923 Ottawa Rough Riders season",
+   "revid": 1341808607,
+   "timestamp": "2026-03-05T04:52:51Z",
+   "missing": false,
+   "bytes": 2988
+  },
+  {
+   "title": "1923 Toronto Argonauts season",
+   "revid": 1349462618,
+   "timestamp": "2026-04-17T12:51:13Z",
+   "missing": false,
+   "bytes": 3836
+  },
+  {
+   "title": "1924 Ottawa Rough Riders season",
+   "revid": 1341808615,
+   "timestamp": "2026-03-05T04:52:59Z",
+   "missing": false,
+   "bytes": 3282
+  },
+  {
+   "title": "1924 Toronto Argonauts season",
+   "revid": 1349462539,
+   "timestamp": "2026-04-17T12:51:05Z",
+   "missing": false,
+   "bytes": 3817
+  },
+  {
+   "title": "1925 Ottawa Senators (CFL) season",
+   "revid": 1341808630,
+   "timestamp": "2026-03-05T04:53:09Z",
+   "missing": false,
+   "bytes": 4558
+  },
+  {
+   "title": "1925 Toronto Argonauts season",
+   "revid": 1349462518,
+   "timestamp": "2026-04-17T12:50:56Z",
+   "missing": false,
+   "bytes": 4050
+  },
+  {
+   "title": "1926 Ottawa Senators (CFL) season",
+   "revid": 1341808698,
+   "timestamp": "2026-03-05T04:53:59Z",
+   "missing": false,
+   "bytes": 4571
+  },
+  {
+   "title": "1926 Toronto Argonauts season",
+   "revid": 1349462493,
+   "timestamp": "2026-04-17T12:50:49Z",
+   "missing": false,
+   "bytes": 3639
+  },
+  {
+   "title": "1927 Ottawa Senators (CFL) season",
+   "revid": 1341808715,
+   "timestamp": "2026-03-05T04:54:07Z",
+   "missing": false,
+   "bytes": 3169
+  },
+  {
+   "title": "1927 Toronto Argonauts season",
+   "revid": 1349462464,
+   "timestamp": "2026-04-17T12:50:39Z",
+   "missing": false,
+   "bytes": 3834
+  },
+  {
+   "title": "1928 Ottawa Senators (CFL) season",
+   "revid": 1341808731,
+   "timestamp": "2026-03-05T04:54:15Z",
+   "missing": false,
+   "bytes": 3086
+  },
+  {
+   "title": "1928 Toronto Argonauts season",
+   "revid": 1349462433,
+   "timestamp": "2026-04-17T12:50:31Z",
+   "missing": false,
+   "bytes": 3636
+  },
+  {
+   "title": "1929 Ottawa Senators (CFL) season",
+   "revid": 1341808751,
+   "timestamp": "2026-03-05T04:54:23Z",
+   "missing": false,
+   "bytes": 3103
+  },
+  {
+   "title": "1929 Toronto Argonauts season",
+   "revid": 1349462408,
+   "timestamp": "2026-04-17T12:50:22Z",
+   "missing": false,
+   "bytes": 3595
+  },
+  {
+   "title": "1930 Ottawa Senators (CFL) season",
+   "revid": 1341808766,
+   "timestamp": "2026-03-05T04:54:31Z",
+   "missing": false,
+   "bytes": 3278
+  },
+  {
+   "title": "1930 Toronto Argonauts season",
+   "revid": 1349462375,
+   "timestamp": "2026-04-17T12:50:13Z",
+   "missing": false,
+   "bytes": 3547
+  },
+  {
+   "title": "1930 Winnipeg Winnipegs season",
+   "revid": 1341810355,
+   "timestamp": "2026-03-05T05:09:15Z",
+   "missing": false,
+   "bytes": 2347
+  },
+  {
+   "title": "1931 Ottawa Rough Riders season",
+   "revid": 1341808778,
+   "timestamp": "2026-03-05T04:54:39Z",
+   "missing": false,
+   "bytes": 3012
+  },
+  {
+   "title": "1931 Toronto Argonauts season",
+   "revid": 1349462344,
+   "timestamp": "2026-04-17T12:50:03Z",
+   "missing": false,
+   "bytes": 5782
+  },
+  {
+   "title": "1932 Ottawa Rough Riders season",
+   "revid": 1341808796,
+   "timestamp": "2026-03-05T04:54:49Z",
+   "missing": false,
+   "bytes": 2929
+  },
+  {
+   "title": "1932 Toronto Argonauts season",
+   "revid": 1349462310,
+   "timestamp": "2026-04-17T12:49:53Z",
+   "missing": false,
+   "bytes": 5328
+  },
+  {
+   "title": "1933 Ottawa Rough Riders season",
+   "revid": 1365626708,
+   "timestamp": "2026-07-23T14:26:05Z",
+   "missing": false,
+   "bytes": 3381
+  },
+  {
+   "title": "1933 Toronto Argonauts season",
+   "revid": 1349462267,
+   "timestamp": "2026-04-17T12:49:42Z",
+   "missing": false,
+   "bytes": 8939
+  },
+  {
+   "title": "1934 Ottawa Rough Riders season",
+   "revid": 1341808828,
+   "timestamp": "2026-03-05T04:55:07Z",
+   "missing": false,
+   "bytes": 2901
+  },
+  {
+   "title": "1934 Toronto Argonauts season",
+   "revid": 1349462226,
+   "timestamp": "2026-04-17T12:49:30Z",
+   "missing": false,
+   "bytes": 5453
+  },
+  {
+   "title": "1935 Ottawa Rough Riders season",
+   "revid": 1341808840,
+   "timestamp": "2026-03-05T04:55:16Z",
+   "missing": false,
+   "bytes": 3147
+  },
+  {
+   "title": "1935 Toronto Argonauts season",
+   "revid": 1349461984,
+   "timestamp": "2026-04-17T12:48:19Z",
+   "missing": false,
+   "bytes": 3887
+  },
+  {
+   "title": "1935 Winnipeg Winnipegs season",
+   "revid": 1341812095,
+   "timestamp": "2026-03-05T05:24:44Z",
+   "missing": false,
+   "bytes": 5450
+  },
+  {
+   "title": "1936 Ottawa Rough Riders season",
+   "revid": 1341809296,
+   "timestamp": "2026-03-05T04:59:20Z",
+   "missing": false,
+   "bytes": 4295
+  },
+  {
+   "title": "1936 Toronto Argonauts season",
+   "revid": 1349461948,
+   "timestamp": "2026-04-17T12:48:09Z",
+   "missing": false,
+   "bytes": 4736
+  },
+  {
+   "title": "1937 Ottawa Rough Riders season",
+   "revid": 1341809310,
+   "timestamp": "2026-03-05T04:59:28Z",
+   "missing": false,
+   "bytes": 3940
+  },
+  {
+   "title": "1937 Toronto Argonauts season",
+   "revid": 1355578649,
+   "timestamp": "2026-05-22T18:13:07Z",
+   "missing": false,
+   "bytes": 6931
+  },
+  {
+   "title": "1938 Ottawa Rough Riders season",
+   "revid": 1341809321,
+   "timestamp": "2026-03-05T04:59:36Z",
+   "missing": false,
+   "bytes": 3829
+  },
+  {
+   "title": "1938 Toronto Argonauts season",
+   "revid": 1355578654,
+   "timestamp": "2026-05-22T18:13:10Z",
+   "missing": false,
+   "bytes": 7161
+  },
+  {
+   "title": "1938 Winnipeg Blue Bombers season",
+   "revid": 1341810415,
+   "timestamp": "2026-03-05T05:09:53Z",
+   "missing": false,
+   "bytes": 2485
+  },
+  {
+   "title": "1939 Ottawa Rough Riders season",
+   "revid": 1341809331,
+   "timestamp": "2026-03-05T04:59:44Z",
+   "missing": false,
+   "bytes": 4409
+  },
+  {
+   "title": "1939 Toronto Argonauts season",
+   "revid": 1349461798,
+   "timestamp": "2026-04-17T12:47:27Z",
+   "missing": false,
+   "bytes": 6038
+  },
+  {
+   "title": "1939 Winnipeg Blue Bombers season",
+   "revid": 1355578660,
+   "timestamp": "2026-05-22T18:13:11Z",
+   "missing": false,
+   "bytes": 4661
+  },
+  {
+   "title": "1940 Ottawa Rough Riders season",
+   "revid": 1355578664,
+   "timestamp": "2026-05-22T18:13:13Z",
+   "missing": false,
+   "bytes": 4384
+  },
+  {
+   "title": "1940 Toronto Argonauts season",
+   "revid": 1341794087,
+   "timestamp": "2026-03-05T02:47:12Z",
+   "missing": false,
+   "bytes": 4101
+  },
+  {
+   "title": "1941 Ottawa Rough Riders season",
+   "revid": 1341809365,
+   "timestamp": "2026-03-05T05:00:02Z",
+   "missing": false,
+   "bytes": 4493
+  },
+  {
+   "title": "1941 Toronto Argonauts season",
+   "revid": 1341794103,
+   "timestamp": "2026-03-05T02:47:21Z",
+   "missing": false,
+   "bytes": 4464
+  },
+  {
+   "title": "1941 Winnipeg Blue Bombers season",
+   "revid": 1371498874,
+   "timestamp": "2026-08-26T20:36:47Z",
+   "missing": false,
+   "bytes": 7969
+  },
+  {
+   "title": "1942 Ottawa Rough Riders season",
+   "revid": 1341809384,
+   "timestamp": "2026-03-05T05:00:11Z",
+   "missing": false,
+   "bytes": 3435
+  },
+  {
+   "title": "1943 Hamilton Wildcats season",
+   "revid": 1341804321,
+   "timestamp": "2026-03-05T04:18:04Z",
+   "missing": false,
+   "bytes": 3445
+  },
+  {
+   "title": "1945 Calgary Stampeders season",
+   "revid": 1353313197,
+   "timestamp": "2026-05-09T14:36:47Z",
+   "missing": false,
+   "bytes": 3922
+  },
+  {
+   "title": "1945 Ottawa Rough Riders season",
+   "revid": 1341809403,
+   "timestamp": "2026-03-05T05:00:20Z",
+   "missing": false,
+   "bytes": 3321
+  },
+  {
+   "title": "1945 Toronto Argonauts season",
+   "revid": 1355578676,
+   "timestamp": "2026-05-22T18:13:16Z",
+   "missing": false,
+   "bytes": 6022
+  },
+  {
+   "title": "1945 Winnipeg Blue Bombers season",
+   "revid": 1341810466,
+   "timestamp": "2026-03-05T05:10:23Z",
+   "missing": false,
+   "bytes": 1696
+  },
+  {
+   "title": "1946 Calgary Stampeders season",
+   "revid": 1341867714,
+   "timestamp": "2026-03-05T15:18:53Z",
+   "missing": false,
+   "bytes": 4435
+  },
+  {
+   "title": "1946 Montreal Alouettes season",
+   "revid": 1341814618,
+   "timestamp": "2026-03-05T05:43:45Z",
+   "missing": false,
+   "bytes": 6027
+  },
+  {
+   "title": "1946 Ottawa Rough Riders season",
+   "revid": 1360450873,
+   "timestamp": "2026-06-21T15:31:19Z",
+   "missing": false,
+   "bytes": 5327
+  },
+  {
+   "title": "1946 Saskatchewan Roughriders season",
+   "revid": 1341789869,
+   "timestamp": "2026-03-05T02:14:41Z",
+   "missing": false,
+   "bytes": 4290
+  },
+  {
+   "title": "1946 Toronto Argonauts season",
+   "revid": 1355578685,
+   "timestamp": "2026-05-22T18:13:18Z",
+   "missing": false,
+   "bytes": 8217
+  },
+  {
+   "title": "1946 Winnipeg Blue Bombers season",
+   "revid": 1341810485,
+   "timestamp": "2026-03-05T05:10:32Z",
+   "missing": false,
+   "bytes": 2160
+  },
+  {
+   "title": "1947 Calgary Stampeders season",
+   "revid": 1341867732,
+   "timestamp": "2026-03-05T15:19:01Z",
+   "missing": false,
+   "bytes": 4846
+  },
+  {
+   "title": "1947 Ottawa Rough Riders season",
+   "revid": 1341809436,
+   "timestamp": "2026-03-05T05:00:36Z",
+   "missing": false,
+   "bytes": 6645
+  },
+  {
+   "title": "1947 Toronto Argonauts season",
+   "revid": 1361874571,
+   "timestamp": "2026-06-30T16:10:12Z",
+   "missing": false,
+   "bytes": 8722
+  },
+  {
+   "title": "1947 Winnipeg Blue Bombers season",
+   "revid": 1341810508,
+   "timestamp": "2026-03-05T05:10:41Z",
+   "missing": false,
+   "bytes": 2477
+  },
+  {
+   "title": "1948 Calgary Stampeders season",
+   "revid": 1355578694,
+   "timestamp": "2026-05-22T18:13:22Z",
+   "missing": false,
+   "bytes": 6688
+  },
+  {
+   "title": "1948 Ottawa Rough Riders season",
+   "revid": 1341809454,
+   "timestamp": "2026-03-05T05:00:45Z",
+   "missing": false,
+   "bytes": 7199
+  },
+  {
+   "title": "1948 Toronto Argonauts season",
+   "revid": 1349461624,
+   "timestamp": "2026-04-17T12:46:36Z",
+   "missing": false,
+   "bytes": 5109
+  },
+  {
+   "title": "1949 Calgary Stampeders season",
+   "revid": 1341867763,
+   "timestamp": "2026-03-05T15:19:18Z",
+   "missing": false,
+   "bytes": 4730
+  },
+  {
+   "title": "1949 Edmonton Eskimos season",
+   "revid": 1341812762,
+   "timestamp": "2026-03-05T05:30:09Z",
+   "missing": false,
+   "bytes": 7435
+  },
+  {
+   "title": "1949 Hamilton Tigers season",
+   "revid": 1341804418,
+   "timestamp": "2026-03-05T04:18:53Z",
+   "missing": false,
+   "bytes": 4668
+  },
+  {
+   "title": "1949 Hamilton Wildcats season",
+   "revid": 1330604112,
+   "timestamp": "2026-01-01T12:15:57Z",
+   "missing": false,
+   "bytes": 3909
+  },
+  {
+   "title": "1949 Montreal Alouettes season",
+   "revid": 1355578699,
+   "timestamp": "2026-05-22T18:13:24Z",
+   "missing": false,
+   "bytes": 6832
+  },
+  {
+   "title": "1949 Ottawa Rough Riders season",
+   "revid": 1341809468,
+   "timestamp": "2026-03-05T05:00:53Z",
+   "missing": false,
+   "bytes": 6772
+  },
+  {
+   "title": "1949 Toronto Argonauts season",
+   "revid": 1349461584,
+   "timestamp": "2026-04-17T12:46:25Z",
+   "missing": false,
+   "bytes": 4744
+  },
+  {
+   "title": "1950 Calgary Stampeders season",
+   "revid": 1341867780,
+   "timestamp": "2026-03-05T15:19:29Z",
+   "missing": false,
+   "bytes": 5971
+  },
+  {
+   "title": "1950 Hamilton Tiger-Cats season",
+   "revid": 1341804431,
+   "timestamp": "2026-03-05T04:19:05Z",
+   "missing": false,
+   "bytes": 6354
+  },
+  {
+   "title": "1950 Montreal Alouettes season",
+   "revid": 1341814675,
+   "timestamp": "2026-03-05T05:44:08Z",
+   "missing": false,
+   "bytes": 8609
+  },
+  {
+   "title": "1950 Ottawa Rough Riders season",
+   "revid": 1341809481,
+   "timestamp": "2026-03-05T05:01:02Z",
+   "missing": false,
+   "bytes": 5239
+  },
+  {
+   "title": "1950 Toronto Argonauts season",
+   "revid": 1355578704,
+   "timestamp": "2026-05-22T18:13:25Z",
+   "missing": false,
+   "bytes": 6388
+  },
+  {
+   "title": "1950 Winnipeg Blue Bombers season",
+   "revid": 1341812053,
+   "timestamp": "2026-03-05T05:24:21Z",
+   "missing": false,
+   "bytes": 2568
+  },
+  {
+   "title": "1951 Calgary Stampeders season",
+   "revid": 1341867794,
+   "timestamp": "2026-03-05T15:19:37Z",
+   "missing": false,
+   "bytes": 4382
+  },
+  {
+   "title": "1951 Ottawa Rough Riders season",
+   "revid": 1355578711,
+   "timestamp": "2026-05-22T18:13:27Z",
+   "missing": false,
+   "bytes": 7236
+  },
+  {
+   "title": "1951 Toronto Argonauts season",
+   "revid": 1349481049,
+   "timestamp": "2026-04-17T14:38:28Z",
+   "missing": false,
+   "bytes": 7696
+  },
+  {
+   "title": "1952 Calgary Stampeders season",
+   "revid": 1341867806,
+   "timestamp": "2026-03-05T15:19:45Z",
+   "missing": false,
+   "bytes": 5390
+  },
+  {
+   "title": "1952 Ottawa Rough Riders season",
+   "revid": 1341809516,
+   "timestamp": "2026-03-05T05:01:19Z",
+   "missing": false,
+   "bytes": 3377
+  },
+  {
+   "title": "1952 Toronto Argonauts season",
+   "revid": 1355578712,
+   "timestamp": "2026-05-22T18:13:29Z",
+   "missing": false,
+   "bytes": 6630
+  },
+  {
+   "title": "1953 Calgary Stampeders season",
+   "revid": 1341867817,
+   "timestamp": "2026-03-05T15:19:53Z",
+   "missing": false,
+   "bytes": 4830
+  },
+  {
+   "title": "1953 Hamilton Tiger-Cats season",
+   "revid": 1355578718,
+   "timestamp": "2026-05-22T18:13:32Z",
+   "missing": false,
+   "bytes": 5279
+  },
+  {
+   "title": "1953 Ottawa Rough Riders season",
+   "revid": 1341809526,
+   "timestamp": "2026-03-05T05:01:26Z",
+   "missing": false,
+   "bytes": 3630
+  },
+  {
+   "title": "1953 Toronto Argonauts season",
+   "revid": 1341794253,
+   "timestamp": "2026-03-05T02:48:45Z",
+   "missing": false,
+   "bytes": 4911
+  },
+  {
+   "title": "1953 Winnipeg Blue Bombers season",
+   "revid": 1341810538,
+   "timestamp": "2026-03-05T05:10:58Z",
+   "missing": false,
+   "bytes": 3207
+  },
+  {
+   "title": "1954 BC Lions season",
+   "revid": 1341791199,
+   "timestamp": "2026-03-05T02:24:56Z",
+   "missing": false,
+   "bytes": 6219
+  },
+  {
+   "title": "1954 Calgary Stampeders season",
+   "revid": 1341867834,
+   "timestamp": "2026-03-05T15:20:01Z",
+   "missing": false,
+   "bytes": 4841
+  },
+  {
+   "title": "1954 Edmonton Eskimos season",
+   "revid": 1355578723,
+   "timestamp": "2026-05-22T18:13:34Z",
+   "missing": false,
+   "bytes": 8884
+  },
+  {
+   "title": "1954 Ottawa Rough Riders season",
+   "revid": 1341809546,
+   "timestamp": "2026-03-05T05:01:34Z",
+   "missing": false,
+   "bytes": 3351
+  },
+  {
+   "title": "1954 Toronto Argonauts season",
+   "revid": 1341794270,
+   "timestamp": "2026-03-05T02:48:54Z",
+   "missing": false,
+   "bytes": 4271
+  },
+  {
+   "title": "1955 BC Lions season",
+   "revid": 1341791220,
+   "timestamp": "2026-03-05T02:25:05Z",
+   "missing": false,
+   "bytes": 6878
+  },
+  {
+   "title": "1955 Calgary Stampeders season",
+   "revid": 1341867862,
+   "timestamp": "2026-03-05T15:20:13Z",
+   "missing": false,
+   "bytes": 4864
+  },
+  {
+   "title": "1955 Edmonton Eskimos season",
+   "revid": 1355578727,
+   "timestamp": "2026-05-22T18:13:35Z",
+   "missing": false,
+   "bytes": 8376
+  },
+  {
+   "title": "1955 Ottawa Rough Riders season",
+   "revid": 1341809567,
+   "timestamp": "2026-03-05T05:01:42Z",
+   "missing": false,
+   "bytes": 4651
+  },
+  {
+   "title": "1955 Toronto Argonauts season",
+   "revid": 1349458499,
+   "timestamp": "2026-04-17T12:28:50Z",
+   "missing": false,
+   "bytes": 6124
+  },
+  {
+   "title": "1956 BC Lions season",
+   "revid": 1341791238,
+   "timestamp": "2026-03-05T02:25:14Z",
+   "missing": false,
+   "bytes": 7266
+  },
+  {
+   "title": "1956 Calgary Stampeders season",
+   "revid": 1341867877,
+   "timestamp": "2026-03-05T15:20:21Z",
+   "missing": false,
+   "bytes": 4895
+  },
+  {
+   "title": "1956 Edmonton Eskimos season",
+   "revid": 1355578731,
+   "timestamp": "2026-05-22T18:13:37Z",
+   "missing": false,
+   "bytes": 8718
+  },
+  {
+   "title": "1956 Ottawa Rough Riders season",
+   "revid": 1341809579,
+   "timestamp": "2026-03-05T05:01:51Z",
+   "missing": false,
+   "bytes": 3815
+  },
+  {
+   "title": "1956 Toronto Argonauts season",
+   "revid": 1349458529,
+   "timestamp": "2026-04-17T12:29:03Z",
+   "missing": false,
+   "bytes": 6684
+  },
+  {
+   "title": "1957 BC Lions season",
+   "revid": 1341791249,
+   "timestamp": "2026-03-05T02:25:24Z",
+   "missing": false,
+   "bytes": 7370
+  },
+  {
+   "title": "1957 Calgary Stampeders season",
+   "revid": 1341867887,
+   "timestamp": "2026-03-05T15:20:29Z",
+   "missing": false,
+   "bytes": 5439
+  },
+  {
+   "title": "1957 Hamilton Tiger-Cats season",
+   "revid": 1360173493,
+   "timestamp": "2026-06-19T18:12:25Z",
+   "missing": false,
+   "bytes": 5940
+  },
+  {
+   "title": "1957 Ottawa Rough Riders season",
+   "revid": 1341809599,
+   "timestamp": "2026-03-05T05:02:00Z",
+   "missing": false,
+   "bytes": 4047
+  },
+  {
+   "title": "1957 Toronto Argonauts season",
+   "revid": 1349461109,
+   "timestamp": "2026-04-17T12:44:09Z",
+   "missing": false,
+   "bytes": 5171
+  },
+  {
+   "title": "1957 Winnipeg Blue Bombers season",
+   "revid": 1341810559,
+   "timestamp": "2026-03-05T05:11:11Z",
+   "missing": false,
+   "bytes": 2491
+  },
+  {
+   "title": "1958 BC Lions season",
+   "revid": 1341791265,
+   "timestamp": "2026-03-05T02:25:33Z",
+   "missing": false,
+   "bytes": 5524
+  },
+  {
+   "title": "1958 CFL season",
+   "revid": 1307843167,
+   "timestamp": "2025-08-26T00:59:37Z",
+   "missing": false,
+   "bytes": 12119
+  },
+  {
+   "title": "1958 Calgary Stampeders season",
+   "revid": 1341867893,
+   "timestamp": "2026-03-05T15:20:37Z",
+   "missing": false,
+   "bytes": 5993
+  },
+  {
+   "title": "1958 Ottawa Rough Riders season",
+   "revid": 1341809610,
+   "timestamp": "2026-03-05T05:02:08Z",
+   "missing": false,
+   "bytes": 6979
+  },
+  {
+   "title": "1958 Toronto Argonauts season",
+   "revid": 1349461058,
+   "timestamp": "2026-04-17T12:43:52Z",
+   "missing": false,
+   "bytes": 5037
+  },
+  {
+   "title": "1958 Winnipeg Blue Bombers season",
+   "revid": 1355578740,
+   "timestamp": "2026-05-22T18:13:40Z",
+   "missing": false,
+   "bytes": 8053
+  },
+  {
+   "title": "1959 BC Lions season",
+   "revid": 1341791277,
+   "timestamp": "2026-03-05T02:25:41Z",
+   "missing": false,
+   "bytes": 6158
+  },
+  {
+   "title": "1959 CFL season",
+   "revid": 1313616146,
+   "timestamp": "2025-09-27T06:00:25Z",
+   "missing": false,
+   "bytes": 9747
+  },
+  {
+   "title": "1959 Calgary Stampeders season",
+   "revid": 1341867906,
+   "timestamp": "2026-03-05T15:20:45Z",
+   "missing": false,
+   "bytes": 4190
+  },
+  {
+   "title": "1959 Ottawa Rough Riders season",
+   "revid": 1341809623,
+   "timestamp": "2026-03-05T05:02:16Z",
+   "missing": false,
+   "bytes": 5504
+  },
+  {
+   "title": "1959 Toronto Argonauts season",
+   "revid": 1349461020,
+   "timestamp": "2026-04-17T12:43:40Z",
+   "missing": false,
+   "bytes": 7342
+  },
+  {
+   "title": "1959 Winnipeg Blue Bombers season",
+   "revid": 1355578745,
+   "timestamp": "2026-05-22T18:13:41Z",
+   "missing": false,
+   "bytes": 8146
+  },
+  {
+   "title": "1960 BC Lions season",
+   "revid": 1371154708,
+   "timestamp": "2026-08-24T22:35:20Z",
+   "missing": false,
+   "bytes": 7702
+  },
+  {
+   "title": "1960 CFL season",
+   "revid": 1360199349,
+   "timestamp": "2026-06-19T21:37:05Z",
+   "missing": false,
+   "bytes": 18078
+  },
+  {
+   "title": "1960 Calgary Stampeders season",
+   "revid": 1348769096,
+   "timestamp": "2026-04-14T05:18:33Z",
+   "missing": false,
+   "bytes": 7502
+  },
+  {
+   "title": "1960 Edmonton Eskimos season",
+   "revid": 1341812864,
+   "timestamp": "2026-03-05T05:30:52Z",
+   "missing": false,
+   "bytes": 11484
+  },
+  {
+   "title": "1960 Ottawa Rough Riders season",
+   "revid": 1355578748,
+   "timestamp": "2026-05-22T18:13:43Z",
+   "missing": false,
+   "bytes": 5853
+  },
+  {
+   "title": "1960 Saskatchewan Roughriders season",
+   "revid": 1341789909,
+   "timestamp": "2026-03-05T02:14:56Z",
+   "missing": false,
+   "bytes": 7130
+  },
+  {
+   "title": "1960 Toronto Argonauts season",
+   "revid": 1349460909,
+   "timestamp": "2026-04-17T12:43:02Z",
+   "missing": false,
+   "bytes": 8532
+  },
+  {
+   "title": "1960 Winnipeg Blue Bombers season",
+   "revid": 1341810620,
+   "timestamp": "2026-03-05T05:11:42Z",
+   "missing": false,
+   "bytes": 10617
+  },
+  {
+   "title": "1961 BC Lions season",
+   "revid": 1341791309,
+   "timestamp": "2026-03-05T02:26:01Z",
+   "missing": false,
+   "bytes": 7148
+  },
+  {
+   "title": "1961 CFL season",
+   "revid": 1360199072,
+   "timestamp": "2026-06-19T21:34:54Z",
+   "missing": false,
+   "bytes": 13197
+  },
+  {
+   "title": "1961 Calgary Stampeders season",
+   "revid": 1341867934,
+   "timestamp": "2026-03-05T15:21:01Z",
+   "missing": false,
+   "bytes": 5906
+  },
+  {
+   "title": "1961 Hamilton Tiger-Cats season",
+   "revid": 1355620311,
+   "timestamp": "2026-05-22T22:45:06Z",
+   "missing": false,
+   "bytes": 9786
+  },
+  {
+   "title": "1961 Toronto Argonauts season",
+   "revid": 1349460849,
+   "timestamp": "2026-04-17T12:42:40Z",
+   "missing": false,
+   "bytes": 8293
+  },
+  {
+   "title": "1961 Winnipeg Blue Bombers season",
+   "revid": 1355578751,
+   "timestamp": "2026-05-22T18:13:44Z",
+   "missing": false,
+   "bytes": 5852
+  },
+  {
+   "title": "1962 BC Lions season",
+   "revid": 1341791325,
+   "timestamp": "2026-03-05T02:26:10Z",
+   "missing": false,
+   "bytes": 5414
+  },
+  {
+   "title": "1962 CFL season",
+   "revid": 1360199065,
+   "timestamp": "2026-06-19T21:34:49Z",
+   "missing": false,
+   "bytes": 12145
+  },
+  {
+   "title": "1962 Calgary Stampeders season",
+   "revid": 1341867953,
+   "timestamp": "2026-03-05T15:21:10Z",
+   "missing": false,
+   "bytes": 6463
+  },
+  {
+   "title": "1962 Toronto Argonauts season",
+   "revid": 1341794387,
+   "timestamp": "2026-03-05T02:50:06Z",
+   "missing": false,
+   "bytes": 4404
+  },
+  {
+   "title": "1962 Winnipeg Blue Bombers season",
+   "revid": 1368255292,
+   "timestamp": "2026-08-08T00:16:04Z",
+   "missing": false,
+   "bytes": 6182
+  },
+  {
+   "title": "1963 BC Lions season",
+   "revid": 1341791356,
+   "timestamp": "2026-03-05T02:26:23Z",
+   "missing": false,
+   "bytes": 8103
+  },
+  {
+   "title": "1963 CFL season",
+   "revid": 1360199052,
+   "timestamp": "2026-06-19T21:34:42Z",
+   "missing": false,
+   "bytes": 11618
+  },
+  {
+   "title": "1963 Calgary Stampeders season",
+   "revid": 1341867959,
+   "timestamp": "2026-03-05T15:21:18Z",
+   "missing": false,
+   "bytes": 5094
+  },
+  {
+   "title": "1963 Hamilton Tiger-Cats season",
+   "revid": 1355578761,
+   "timestamp": "2026-05-22T18:13:48Z",
+   "missing": false,
+   "bytes": 7049
+  },
+  {
+   "title": "1963 Toronto Argonauts season",
+   "revid": 1341794395,
+   "timestamp": "2026-03-05T02:50:13Z",
+   "missing": false,
+   "bytes": 4452
+  },
+  {
+   "title": "1964 BC Lions season",
+   "revid": 1355578766,
+   "timestamp": "2026-05-22T18:13:50Z",
+   "missing": false,
+   "bytes": 10462
+  },
+  {
+   "title": "1964 CFL season",
+   "revid": 1360199031,
+   "timestamp": "2026-06-19T21:34:34Z",
+   "missing": false,
+   "bytes": 11174
+  },
+  {
+   "title": "1964 Calgary Stampeders season",
+   "revid": 1341867975,
+   "timestamp": "2026-03-05T15:21:27Z",
+   "missing": false,
+   "bytes": 5928
+  },
+  {
+   "title": "1964 Toronto Argonauts season",
+   "revid": 1341794413,
+   "timestamp": "2026-03-05T02:50:23Z",
+   "missing": false,
+   "bytes": 4649
+  },
+  {
+   "title": "1965 BC Lions season",
+   "revid": 1341791403,
+   "timestamp": "2026-03-05T02:26:44Z",
+   "missing": false,
+   "bytes": 5571
+  },
+  {
+   "title": "1965 CFL season",
+   "revid": 1361196213,
+   "timestamp": "2026-06-26T08:56:24Z",
+   "missing": false,
+   "bytes": 11679
+  },
+  {
+   "title": "1965 Calgary Stampeders season",
+   "revid": 1341867985,
+   "timestamp": "2026-03-05T15:21:36Z",
+   "missing": false,
+   "bytes": 5382
+  },
+  {
+   "title": "1965 Hamilton Tiger-Cats season",
+   "revid": 1355578769,
+   "timestamp": "2026-05-22T18:13:52Z",
+   "missing": false,
+   "bytes": 7141
+  },
+  {
+   "title": "1965 Toronto Argonauts season",
+   "revid": 1341794421,
+   "timestamp": "2026-03-05T02:50:32Z",
+   "missing": false,
+   "bytes": 4673
+  },
+  {
+   "title": "1966 BC Lions season",
+   "revid": 1341791413,
+   "timestamp": "2026-03-05T02:26:54Z",
+   "missing": false,
+   "bytes": 5370
+  },
+  {
+   "title": "1966 CFL season",
+   "revid": 1360199012,
+   "timestamp": "2026-06-19T21:34:24Z",
+   "missing": false,
+   "bytes": 12147
+  },
+  {
+   "title": "1966 Calgary Stampeders season",
+   "revid": 1341867997,
+   "timestamp": "2026-03-05T15:21:44Z",
+   "missing": false,
+   "bytes": 4346
+  },
+  {
+   "title": "1966 Saskatchewan Roughriders season",
+   "revid": 1355578778,
+   "timestamp": "2026-05-22T18:13:53Z",
+   "missing": false,
+   "bytes": 9237
+  },
+  {
+   "title": "1966 Toronto Argonauts season",
+   "revid": 1349460795,
+   "timestamp": "2026-04-17T12:42:22Z",
+   "missing": false,
+   "bytes": 6938
+  },
+  {
+   "title": "1967 BC Lions season",
+   "revid": 1370370030,
+   "timestamp": "2026-08-20T19:04:02Z",
+   "missing": false,
+   "bytes": 9374
+  },
+  {
+   "title": "1967 CFL season",
+   "revid": 1367743743,
+   "timestamp": "2026-08-04T23:09:28Z",
+   "missing": false,
+   "bytes": 12244
+  },
+  {
+   "title": "1967 Calgary Stampeders season",
+   "revid": 1341868009,
+   "timestamp": "2026-03-05T15:21:52Z",
+   "missing": false,
+   "bytes": 5365
+  },
+  {
+   "title": "1967 Hamilton Tiger-Cats season",
+   "revid": 1355621190,
+   "timestamp": "2026-05-22T22:52:07Z",
+   "missing": false,
+   "bytes": 7358
+  },
+  {
+   "title": "1967 Ottawa Rough Riders season",
+   "revid": 1341809755,
+   "timestamp": "2026-03-05T05:03:25Z",
+   "missing": false,
+   "bytes": 5737
+  },
+  {
+   "title": "1967 Toronto Argonauts season",
+   "revid": 1349460770,
+   "timestamp": "2026-04-17T12:42:12Z",
+   "missing": false,
+   "bytes": 8032
+  },
+  {
+   "title": "1968 BC Lions season",
+   "revid": 1341791452,
+   "timestamp": "2026-03-05T02:27:16Z",
+   "missing": false,
+   "bytes": 7673
+  },
+  {
+   "title": "1968 CFL season",
+   "revid": 1360198954,
+   "timestamp": "2026-06-19T21:33:59Z",
+   "missing": false,
+   "bytes": 11421
+  },
+  {
+   "title": "1968 Calgary Stampeders season",
+   "revid": 1341868057,
+   "timestamp": "2026-03-05T15:22:03Z",
+   "missing": false,
+   "bytes": 6178
+  },
+  {
+   "title": "1968 Hamilton Tiger-Cats season",
+   "revid": 1370419506,
+   "timestamp": "2026-08-21T01:28:35Z",
+   "missing": false,
+   "bytes": 7175
+  },
+  {
+   "title": "1968 Ottawa Rough Riders season",
+   "revid": 1355578787,
+   "timestamp": "2026-05-22T18:13:56Z",
+   "missing": false,
+   "bytes": 7624
+  },
+  {
+   "title": "1968 Toronto Argonauts season",
+   "revid": 1365592754,
+   "timestamp": "2026-07-23T09:53:22Z",
+   "missing": false,
+   "bytes": 8837
+  },
+  {
+   "title": "1969 BC Lions season",
+   "revid": 1341791475,
+   "timestamp": "2026-03-05T02:27:29Z",
+   "missing": false,
+   "bytes": 7510
+  },
+  {
+   "title": "1969 CFL season",
+   "revid": 1372942502,
+   "timestamp": "2026-09-03T02:45:01Z",
+   "missing": false,
+   "bytes": 12389
+  },
+  {
+   "title": "1969 Calgary Stampeders season",
+   "revid": 1341868093,
+   "timestamp": "2026-03-05T15:22:11Z",
+   "missing": false,
+   "bytes": 5484
+  },
+  {
+   "title": "1969 Hamilton Tiger-Cats season",
+   "revid": 1355621163,
+   "timestamp": "2026-05-22T22:52:00Z",
+   "missing": false,
+   "bytes": 5434
+  },
+  {
+   "title": "1969 Ottawa Rough Riders season",
+   "revid": 1355578790,
+   "timestamp": "2026-05-22T18:13:58Z",
+   "missing": false,
+   "bytes": 6937
+  },
+  {
+   "title": "1969 Toronto Argonauts season",
+   "revid": 1349460709,
+   "timestamp": "2026-04-17T12:41:50Z",
+   "missing": false,
+   "bytes": 6760
+  },
+  {
+   "title": "1970 BC Lions season",
+   "revid": 1341791499,
+   "timestamp": "2026-03-05T02:27:42Z",
+   "missing": false,
+   "bytes": 9464
+  },
+  {
+   "title": "1970 CFL season",
+   "revid": 1360049051,
+   "timestamp": "2026-06-18T22:29:11Z",
+   "missing": false,
+   "bytes": 12737
+  },
+  {
+   "title": "1970 Calgary Stampeders season",
+   "revid": 1341868109,
+   "timestamp": "2026-03-05T15:22:19Z",
+   "missing": false,
+   "bytes": 7702
+  },
+  {
+   "title": "1970 Hamilton Tiger-Cats season",
+   "revid": 1355621154,
+   "timestamp": "2026-05-22T22:51:56Z",
+   "missing": false,
+   "bytes": 5376
+  },
+  {
+   "title": "1970 Montreal Alouettes season",
+   "revid": 1363955080,
+   "timestamp": "2026-07-13T15:01:09Z",
+   "missing": false,
+   "bytes": 8851
+  },
+  {
+   "title": "1970 Ottawa Rough Riders season",
+   "revid": 1341809802,
+   "timestamp": "2026-03-05T05:03:51Z",
+   "missing": false,
+   "bytes": 4821
+  },
+  {
+   "title": "1970 Saskatchewan Roughriders season",
+   "revid": 1341789984,
+   "timestamp": "2026-03-05T02:15:28Z",
+   "missing": false,
+   "bytes": 7125
+  },
+  {
+   "title": "1970 Toronto Argonauts season",
+   "revid": 1349460679,
+   "timestamp": "2026-04-17T12:41:39Z",
+   "missing": false,
+   "bytes": 6651
+  },
+  {
+   "title": "1971 BC Lions season",
+   "revid": 1341791522,
+   "timestamp": "2026-03-05T02:27:55Z",
+   "missing": false,
+   "bytes": 8298
+  },
+  {
+   "title": "1971 CFL season",
+   "revid": 1360048906,
+   "timestamp": "2026-06-18T22:28:07Z",
+   "missing": false,
+   "bytes": 11974
+  },
+  {
+   "title": "1971 Calgary Stampeders season",
+   "revid": 1355620486,
+   "timestamp": "2026-05-22T22:46:32Z",
+   "missing": false,
+   "bytes": 8955
+  },
+  {
+   "title": "1971 Hamilton Tiger-Cats season",
+   "revid": 1355621175,
+   "timestamp": "2026-05-22T22:52:03Z",
+   "missing": false,
+   "bytes": 8200
+  },
+  {
+   "title": "1971 Ottawa Rough Riders season",
+   "revid": 1341809820,
+   "timestamp": "2026-03-05T05:04:00Z",
+   "missing": false,
+   "bytes": 6723
+  },
+  {
+   "title": "1971 Toronto Argonauts season",
+   "revid": 1349460645,
+   "timestamp": "2026-04-17T12:41:27Z",
+   "missing": false,
+   "bytes": 7800
+  },
+  {
+   "title": "1972 BC Lions season",
+   "revid": 1341791551,
+   "timestamp": "2026-03-05T02:28:12Z",
+   "missing": false,
+   "bytes": 7221
+  },
+  {
+   "title": "1972 CFL season",
+   "revid": 1360048864,
+   "timestamp": "2026-06-18T22:27:50Z",
+   "missing": false,
+   "bytes": 13704
+  },
+  {
+   "title": "1972 Calgary Stampeders season",
+   "revid": 1341875874,
+   "timestamp": "2026-03-05T17:52:48Z",
+   "missing": false,
+   "bytes": 4698
+  },
+  {
+   "title": "1972 Hamilton Tiger-Cats season",
+   "revid": 1355621162,
+   "timestamp": "2026-05-22T22:51:59Z",
+   "missing": false,
+   "bytes": 7496
+  },
+  {
+   "title": "1972 Ottawa Rough Riders season",
+   "revid": 1341809841,
+   "timestamp": "2026-03-05T05:04:10Z",
+   "missing": false,
+   "bytes": 7336
+  },
+  {
+   "title": "1972 Toronto Argonauts season",
+   "revid": 1341794604,
+   "timestamp": "2026-03-05T02:52:31Z",
+   "missing": false,
+   "bytes": 5014
+  },
+  {
+   "title": "1973 BC Lions season",
+   "revid": 1355580842,
+   "timestamp": "2026-05-22T18:26:10Z",
+   "missing": false,
+   "bytes": 10131
+  },
+  {
+   "title": "1973 CFL season",
+   "revid": 1360048303,
+   "timestamp": "2026-06-18T22:23:51Z",
+   "missing": false,
+   "bytes": 10600
+  },
+  {
+   "title": "1973 Calgary Stampeders season",
+   "revid": 1355580782,
+   "timestamp": "2026-05-22T18:26:01Z",
+   "missing": false,
+   "bytes": 6868
+  },
+  {
+   "title": "1973 Hamilton Tiger-Cats season",
+   "revid": 1355621168,
+   "timestamp": "2026-05-22T22:52:02Z",
+   "missing": false,
+   "bytes": 6790
+  },
+  {
+   "title": "1973 Ottawa Rough Riders season",
+   "revid": 1355580612,
+   "timestamp": "2026-05-22T18:25:03Z",
+   "missing": false,
+   "bytes": 11295
+  },
+  {
+   "title": "1973 Toronto Argonauts season",
+   "revid": 1355580508,
+   "timestamp": "2026-05-22T18:24:46Z",
+   "missing": false,
+   "bytes": 10069
+  },
+  {
+   "title": "1974 BC Lions season",
+   "revid": 1341791606,
+   "timestamp": "2026-03-05T02:28:49Z",
+   "missing": false,
+   "bytes": 10410
+  },
+  {
+   "title": "1974 CFL season",
+   "revid": 1360047968,
+   "timestamp": "2026-06-18T22:21:09Z",
+   "missing": false,
+   "bytes": 11423
+  },
+  {
+   "title": "1974 Calgary Stampeders season",
+   "revid": 1355580771,
+   "timestamp": "2026-05-22T18:25:59Z",
+   "missing": false,
+   "bytes": 7626
+  },
+  {
+   "title": "1974 Hamilton Tiger-Cats season",
+   "revid": 1355621160,
+   "timestamp": "2026-05-22T22:51:58Z",
+   "missing": false,
+   "bytes": 7918
+  },
+  {
+   "title": "1974 Montreal Alouettes season",
+   "revid": 1355621211,
+   "timestamp": "2026-05-22T22:52:13Z",
+   "missing": false,
+   "bytes": 10127
+  },
+  {
+   "title": "1974 Ottawa Rough Riders season",
+   "revid": 1355580775,
+   "timestamp": "2026-05-22T18:25:59Z",
+   "missing": false,
+   "bytes": 11025
+  },
+  {
+   "title": "1974 Toronto Argonauts season",
+   "revid": 1355580500,
+   "timestamp": "2026-05-22T18:24:44Z",
+   "missing": false,
+   "bytes": 9812
+  },
+  {
+   "title": "1975 BC Lions season",
+   "revid": 1355580850,
+   "timestamp": "2026-05-22T18:26:11Z",
+   "missing": false,
+   "bytes": 9754
+  },
+  {
+   "title": "1975 CFL season",
+   "revid": 1360047579,
+   "timestamp": "2026-06-18T22:17:21Z",
+   "missing": false,
+   "bytes": 10881
+  },
+  {
+   "title": "1975 Calgary Stampeders season",
+   "revid": 1369298130,
+   "timestamp": "2026-08-14T03:50:26Z",
+   "missing": false,
+   "bytes": 7624
+  },
+  {
+   "title": "1975 Edmonton Eskimos season",
+   "revid": 1355578827,
+   "timestamp": "2026-05-22T18:14:13Z",
+   "missing": false,
+   "bytes": 11742
+  },
+  {
+   "title": "1975 Hamilton Tiger-Cats season",
+   "revid": 1355621176,
+   "timestamp": "2026-05-22T22:52:03Z",
+   "missing": false,
+   "bytes": 9283
+  },
+  {
+   "title": "1975 Ottawa Rough Riders season",
+   "revid": 1355580603,
+   "timestamp": "2026-05-22T18:25:02Z",
+   "missing": false,
+   "bytes": 15402
+  },
+  {
+   "title": "1975 Toronto Argonauts season",
+   "revid": 1355580505,
+   "timestamp": "2026-05-22T18:24:45Z",
+   "missing": false,
+   "bytes": 9263
+  },
+  {
+   "title": "1976 BC Lions season",
+   "revid": 1355580859,
+   "timestamp": "2026-05-22T18:26:13Z",
+   "missing": false,
+   "bytes": 10511
+  },
+  {
+   "title": "1976 CFL season",
+   "revid": 1360047648,
+   "timestamp": "2026-06-18T22:18:01Z",
+   "missing": false,
+   "bytes": 10753
+  },
+  {
+   "title": "1976 Calgary Stampeders season",
+   "revid": 1369297779,
+   "timestamp": "2026-08-14T03:47:10Z",
+   "missing": false,
+   "bytes": 6883
+  },
+  {
+   "title": "1976 Hamilton Tiger-Cats season",
+   "revid": 1371952432,
+   "timestamp": "2026-08-29T15:17:44Z",
+   "missing": false,
+   "bytes": 9590
+  },
+  {
+   "title": "1976 Ottawa Rough Riders season",
+   "revid": 1355580607,
+   "timestamp": "2026-05-22T18:25:02Z",
+   "missing": false,
+   "bytes": 12405
+  },
+  {
+   "title": "1976 Toronto Argonauts season",
+   "revid": 1355580503,
+   "timestamp": "2026-05-22T18:24:45Z",
+   "missing": false,
+   "bytes": 7552
+  },
+  {
+   "title": "1977 BC Lions season",
+   "revid": 1355580828,
+   "timestamp": "2026-05-22T18:26:08Z",
+   "missing": false,
+   "bytes": 10947
+  },
+  {
+   "title": "1977 CFL season",
+   "revid": 1360047707,
+   "timestamp": "2026-06-18T22:18:31Z",
+   "missing": false,
+   "bytes": 10910
+  },
+  {
+   "title": "1977 Calgary Stampeders season",
+   "revid": 1355580594,
+   "timestamp": "2026-05-22T18:25:01Z",
+   "missing": false,
+   "bytes": 6773
+  },
+  {
+   "title": "1977 Hamilton Tiger-Cats season",
+   "revid": 1364132629,
+   "timestamp": "2026-07-14T18:24:11Z",
+   "missing": false,
+   "bytes": 8232
+  },
+  {
+   "title": "1977 Montreal Alouettes season",
+   "revid": 1355578840,
+   "timestamp": "2026-05-22T18:14:17Z",
+   "missing": false,
+   "bytes": 10883
+  },
+  {
+   "title": "1977 Ottawa Rough Riders season",
+   "revid": 1355580544,
+   "timestamp": "2026-05-22T18:24:51Z",
+   "missing": false,
+   "bytes": 11762
+  },
+  {
+   "title": "1977 Toronto Argonauts season",
+   "revid": 1355580496,
+   "timestamp": "2026-05-22T18:24:43Z",
+   "missing": false,
+   "bytes": 11220
+  },
+  {
+   "title": "1978 BC Lions season",
+   "revid": 1355580814,
+   "timestamp": "2026-05-22T18:26:05Z",
+   "missing": false,
+   "bytes": 9780
+  },
+  {
+   "title": "1978 CFL season",
+   "revid": 1360047743,
+   "timestamp": "2026-06-18T22:18:52Z",
+   "missing": false,
+   "bytes": 10667
+  },
+  {
+   "title": "1978 Calgary Stampeders season",
+   "revid": 1355580569,
+   "timestamp": "2026-05-22T18:24:56Z",
+   "missing": false,
+   "bytes": 7658
+  },
+  {
+   "title": "1978 Edmonton Eskimos season",
+   "revid": 1355578846,
+   "timestamp": "2026-05-22T18:14:19Z",
+   "missing": false,
+   "bytes": 11976
+  },
+  {
+   "title": "1978 Hamilton Tiger-Cats season",
+   "revid": 1355621110,
+   "timestamp": "2026-05-22T22:51:43Z",
+   "missing": false,
+   "bytes": 9639
+  },
+  {
+   "title": "1978 Montreal Alouettes season",
+   "revid": 1341814798,
+   "timestamp": "2026-03-05T05:44:59Z",
+   "missing": false,
+   "bytes": 11693
+  },
+  {
+   "title": "1978 Ottawa Rough Riders season",
+   "revid": 1355580504,
+   "timestamp": "2026-05-22T18:24:45Z",
+   "missing": false,
+   "bytes": 10219
+  },
+  {
+   "title": "1978 Toronto Argonauts season",
+   "revid": 1355580476,
+   "timestamp": "2026-05-22T18:24:40Z",
+   "missing": false,
+   "bytes": 7532
+  },
+  {
+   "title": "1978 Winnipeg Blue Bombers season",
+   "revid": 1354329861,
+   "timestamp": "2026-05-15T19:14:11Z",
+   "missing": false,
+   "bytes": 10858
+  },
+  {
+   "title": "1979 BC Lions season",
+   "revid": 1355580797,
+   "timestamp": "2026-05-22T18:26:03Z",
+   "missing": false,
+   "bytes": 13584
+  },
+  {
+   "title": "1979 CFL season",
+   "revid": 1360047773,
+   "timestamp": "2026-06-18T22:19:10Z",
+   "missing": false,
+   "bytes": 10404
+  },
+  {
+   "title": "1979 Calgary Stampeders season",
+   "revid": 1355580570,
+   "timestamp": "2026-05-22T18:24:56Z",
+   "missing": false,
+   "bytes": 8503
+  },
+  {
+   "title": "1979 Edmonton Eskimos season",
+   "revid": 1355578853,
+   "timestamp": "2026-05-22T18:14:21Z",
+   "missing": false,
+   "bytes": 11313
+  },
+  {
+   "title": "1979 Hamilton Tiger-Cats season",
+   "revid": 1355621086,
+   "timestamp": "2026-05-22T22:51:36Z",
+   "missing": false,
+   "bytes": 10235
+  },
+  {
+   "title": "1979 Montreal Alouettes season",
+   "revid": 1341814821,
+   "timestamp": "2026-03-05T05:45:07Z",
+   "missing": false,
+   "bytes": 11661
+  },
+  {
+   "title": "1979 Ottawa Rough Riders season",
+   "revid": 1355580511,
+   "timestamp": "2026-05-22T18:24:46Z",
+   "missing": false,
+   "bytes": 11518
+  },
+  {
+   "title": "1979 Toronto Argonauts season",
+   "revid": 1355580461,
+   "timestamp": "2026-05-22T18:24:36Z",
+   "missing": false,
+   "bytes": 9774
+  },
+  {
+   "title": "1979 Winnipeg Blue Bombers season",
+   "revid": 1355580933,
+   "timestamp": "2026-05-22T18:26:25Z",
+   "missing": false,
+   "bytes": 11057
+  },
+  {
+   "title": "1980 BC Lions season",
+   "revid": 1355580851,
+   "timestamp": "2026-05-22T18:26:12Z",
+   "missing": false,
+   "bytes": 9920
+  },
+  {
+   "title": "1980 CFL season",
+   "revid": 1361195934,
+   "timestamp": "2026-06-26T08:51:51Z",
+   "missing": false,
+   "bytes": 10724
+  },
+  {
+   "title": "1980 Calgary Stampeders season",
+   "revid": 1355580606,
+   "timestamp": "2026-05-22T18:25:02Z",
+   "missing": false,
+   "bytes": 8476
+  },
+  {
+   "title": "1980 Edmonton Eskimos season",
+   "revid": 1355578855,
+   "timestamp": "2026-05-22T18:14:22Z",
+   "missing": false,
+   "bytes": 11631
+  },
+  {
+   "title": "1980 Hamilton Tiger-Cats season",
+   "revid": 1355621123,
+   "timestamp": "2026-05-22T22:51:48Z",
+   "missing": false,
+   "bytes": 9676
+  },
+  {
+   "title": "1980 Montreal Alouettes season",
+   "revid": 1341814844,
+   "timestamp": "2026-03-05T05:45:15Z",
+   "missing": false,
+   "bytes": 9842
+  },
+  {
+   "title": "1980 Ottawa Rough Riders season",
+   "revid": 1355580574,
+   "timestamp": "2026-05-22T18:24:57Z",
+   "missing": false,
+   "bytes": 10087
+  },
+  {
+   "title": "1980 Toronto Argonauts season",
+   "revid": 1355580468,
+   "timestamp": "2026-05-22T18:24:38Z",
+   "missing": false,
+   "bytes": 10000
+  },
+  {
+   "title": "1980 Winnipeg Blue Bombers season",
+   "revid": 1371101815,
+   "timestamp": "2026-08-24T15:56:35Z",
+   "missing": false,
+   "bytes": 10652
+  },
+  {
+   "title": "1981 BC Lions season",
+   "revid": 1359857011,
+   "timestamp": "2026-06-17T17:26:34Z",
+   "missing": false,
+   "bytes": 9862
+  },
+  {
+   "title": "1981 CFL season",
+   "revid": 1363886569,
+   "timestamp": "2026-07-13T02:36:03Z",
+   "missing": false,
+   "bytes": 11349
+  },
+  {
+   "title": "1981 Calgary Stampeders season",
+   "revid": 1359856699,
+   "timestamp": "2026-06-17T17:23:55Z",
+   "missing": false,
+   "bytes": 8686
+  },
+  {
+   "title": "1981 Edmonton Eskimos season",
+   "revid": 1359856733,
+   "timestamp": "2026-06-17T17:24:12Z",
+   "missing": false,
+   "bytes": 10558
+  },
+  {
+   "title": "1981 Hamilton Tiger-Cats season",
+   "revid": 1359854472,
+   "timestamp": "2026-06-17T17:05:01Z",
+   "missing": false,
+   "bytes": 7699
+  },
+  {
+   "title": "1981 Montreal Alouettes season",
+   "revid": 1359855322,
+   "timestamp": "2026-06-17T17:11:46Z",
+   "missing": false,
+   "bytes": 11115
+  },
+  {
+   "title": "1981 Ottawa Rough Riders season",
+   "revid": 1359988382,
+   "timestamp": "2026-06-18T14:36:16Z",
+   "missing": false,
+   "bytes": 11400
+  },
+  {
+   "title": "1981 Toronto Argonauts season",
+   "revid": 1359855360,
+   "timestamp": "2026-06-17T17:12:03Z",
+   "missing": false,
+   "bytes": 8008
+  },
+  {
+   "title": "1981 Winnipeg Blue Bombers season",
+   "revid": 1359856790,
+   "timestamp": "2026-06-17T17:24:43Z",
+   "missing": false,
+   "bytes": 9545
+  },
+  {
+   "title": "1982 BC Lions season",
+   "revid": 1359867197,
+   "timestamp": "2026-06-17T18:48:37Z",
+   "missing": false,
+   "bytes": 10140
+  },
+  {
+   "title": "1982 CFL season",
+   "revid": 1373261048,
+   "timestamp": "2026-09-04T22:57:38Z",
+   "missing": false,
+   "bytes": 9683
+  },
+  {
+   "title": "1982 Calgary Stampeders season",
+   "revid": 1359867305,
+   "timestamp": "2026-06-17T18:49:30Z",
+   "missing": false,
+   "bytes": 9999
+  },
+  {
+   "title": "1982 Edmonton Eskimos season",
+   "revid": 1359867261,
+   "timestamp": "2026-06-17T18:49:08Z",
+   "missing": false,
+   "bytes": 10913
+  },
+  {
+   "title": "1982 Hamilton Tiger-Cats season",
+   "revid": 1359867693,
+   "timestamp": "2026-06-17T18:51:51Z",
+   "missing": false,
+   "bytes": 7976
+  },
+  {
+   "title": "1982 Montreal Concordes season",
+   "revid": 1359867654,
+   "timestamp": "2026-06-17T18:51:35Z",
+   "missing": false,
+   "bytes": 9017
+  },
+  {
+   "title": "1982 Ottawa Rough Riders season",
+   "revid": 1360701727,
+   "timestamp": "2026-06-23T02:15:49Z",
+   "missing": false,
+   "bytes": 10456
+  },
+  {
+   "title": "1982 Toronto Argonauts season",
+   "revid": 1359867572,
+   "timestamp": "2026-06-17T18:51:02Z",
+   "missing": false,
+   "bytes": 13276
+  },
+  {
+   "title": "1982 Winnipeg Blue Bombers season",
+   "revid": 1359867375,
+   "timestamp": "2026-06-17T18:49:49Z",
+   "missing": false,
+   "bytes": 9845
+  },
+  {
+   "title": "1983 BC Lions season",
+   "revid": 1359881365,
+   "timestamp": "2026-06-17T20:35:28Z",
+   "missing": false,
+   "bytes": 10795
+  },
+  {
+   "title": "1983 CFL season",
+   "revid": 1359881082,
+   "timestamp": "2026-06-17T20:33:24Z",
+   "missing": false,
+   "bytes": 9825
+  },
+  {
+   "title": "1983 Calgary Stampeders season",
+   "revid": 1359881485,
+   "timestamp": "2026-06-17T20:36:14Z",
+   "missing": false,
+   "bytes": 9643
+  },
+  {
+   "title": "1983 Hamilton Tiger-Cats season",
+   "revid": 1359865722,
+   "timestamp": "2026-06-17T18:36:24Z",
+   "missing": false,
+   "bytes": 7620
+  },
+  {
+   "title": "1983 Montreal Concordes season",
+   "revid": 1359865617,
+   "timestamp": "2026-06-17T18:35:28Z",
+   "missing": false,
+   "bytes": 8260
+  },
+  {
+   "title": "1983 Ottawa Rough Riders season",
+   "revid": 1359865694,
+   "timestamp": "2026-06-17T18:36:05Z",
+   "missing": false,
+   "bytes": 10342
+  },
+  {
+   "title": "1983 Toronto Argonauts season",
+   "revid": 1359865657,
+   "timestamp": "2026-06-17T18:35:50Z",
+   "missing": false,
+   "bytes": 13414
+  },
+  {
+   "title": "1983 Winnipeg Blue Bombers season",
+   "revid": 1359881426,
+   "timestamp": "2026-06-17T20:35:50Z",
+   "missing": false,
+   "bytes": 9896
+  },
+  {
+   "title": "1984 BC Lions season",
+   "revid": 1359882407,
+   "timestamp": "2026-06-17T20:42:53Z",
+   "missing": false,
+   "bytes": 10255
+  },
+  {
+   "title": "1984 CFL season",
+   "revid": 1359881994,
+   "timestamp": "2026-06-17T20:39:45Z",
+   "missing": false,
+   "bytes": 9457
+  },
+  {
+   "title": "1984 Calgary Stampeders season",
+   "revid": 1359882360,
+   "timestamp": "2026-06-17T20:42:30Z",
+   "missing": false,
+   "bytes": 7204
+  },
+  {
+   "title": "1984 Hamilton Tiger-Cats season",
+   "revid": 1359868436,
+   "timestamp": "2026-06-17T18:57:36Z",
+   "missing": false,
+   "bytes": 8916
+  },
+  {
+   "title": "1984 Montreal Concordes season",
+   "revid": 1359871441,
+   "timestamp": "2026-06-17T19:20:12Z",
+   "missing": false,
+   "bytes": 9067
+  },
+  {
+   "title": "1984 Ottawa Rough Riders season",
+   "revid": 1359871408,
+   "timestamp": "2026-06-17T19:19:55Z",
+   "missing": false,
+   "bytes": 8633
+  },
+  {
+   "title": "1984 Toronto Argonauts season",
+   "revid": 1359871361,
+   "timestamp": "2026-06-17T19:19:39Z",
+   "missing": false,
+   "bytes": 9745
+  },
+  {
+   "title": "1984 Winnipeg Blue Bombers season",
+   "revid": 1359882468,
+   "timestamp": "2026-06-17T20:43:13Z",
+   "missing": false,
+   "bytes": 9479
+  },
+  {
+   "title": "1985 BC Lions season",
+   "revid": 1363580294,
+   "timestamp": "2026-07-11T02:38:12Z",
+   "missing": false,
+   "bytes": 14238
+  },
+  {
+   "title": "1985 CFL season",
+   "revid": 1359883107,
+   "timestamp": "2026-06-17T20:47:06Z",
+   "missing": false,
+   "bytes": 8700
+  },
+  {
+   "title": "1985 Calgary Stampeders season",
+   "revid": 1368895820,
+   "timestamp": "2026-08-11T18:09:16Z",
+   "missing": false,
+   "bytes": 7312
+  },
+  {
+   "title": "1985 Hamilton Tiger-Cats season",
+   "revid": 1359868560,
+   "timestamp": "2026-06-17T18:58:31Z",
+   "missing": false,
+   "bytes": 9912
+  },
+  {
+   "title": "1985 Montreal Concordes season",
+   "revid": 1359871182,
+   "timestamp": "2026-06-17T19:18:23Z",
+   "missing": false,
+   "bytes": 9740
+  },
+  {
+   "title": "1985 Ottawa Rough Riders season",
+   "revid": 1359871165,
+   "timestamp": "2026-06-17T19:18:17Z",
+   "missing": false,
+   "bytes": 8845
+  },
+  {
+   "title": "1985 Toronto Argonauts season",
+   "revid": 1359871153,
+   "timestamp": "2026-06-17T19:18:11Z",
+   "missing": false,
+   "bytes": 6721
+  },
+  {
+   "title": "1985 Winnipeg Blue Bombers season",
+   "revid": 1359883288,
+   "timestamp": "2026-06-17T20:48:28Z",
+   "missing": false,
+   "bytes": 8942
+  },
+  {
+   "title": "1986 BC Lions season",
+   "revid": 1359884174,
+   "timestamp": "2026-06-17T20:54:51Z",
+   "missing": false,
+   "bytes": 11115
+  },
+  {
+   "title": "1986 CFL season",
+   "revid": 1359883899,
+   "timestamp": "2026-06-17T20:52:52Z",
+   "missing": false,
+   "bytes": 11289
+  },
+  {
+   "title": "1986 Calgary Stampeders season",
+   "revid": 1368895828,
+   "timestamp": "2026-08-11T18:09:23Z",
+   "missing": false,
+   "bytes": 9541
+  },
+  {
+   "title": "1986 Hamilton Tiger-Cats season",
+   "revid": 1359868599,
+   "timestamp": "2026-06-17T18:58:51Z",
+   "missing": false,
+   "bytes": 11340
+  },
+  {
+   "title": "1986 Montreal Alouettes season",
+   "revid": 1359870923,
+   "timestamp": "2026-06-17T19:16:18Z",
+   "missing": false,
+   "bytes": 9382
+  },
+  {
+   "title": "1986 Ottawa Rough Riders season",
+   "revid": 1371253418,
+   "timestamp": "2026-08-25T13:12:06Z",
+   "missing": false,
+   "bytes": 8476
+  },
+  {
+   "title": "1986 Toronto Argonauts season",
+   "revid": 1359868641,
+   "timestamp": "2026-06-17T18:59:14Z",
+   "missing": false,
+   "bytes": 11031
+  },
+  {
+   "title": "1986 Winnipeg Blue Bombers season",
+   "revid": 1359884202,
+   "timestamp": "2026-06-17T20:55:04Z",
+   "missing": false,
+   "bytes": 9312
+  },
+  {
+   "title": "1987 BC Lions season",
+   "revid": 1359868867,
+   "timestamp": "2026-06-17T19:00:44Z",
+   "missing": false,
+   "bytes": 9530
+  },
+  {
+   "title": "1987 CFL season",
+   "revid": 1372648916,
+   "timestamp": "2026-09-01T16:49:53Z",
+   "missing": false,
+   "bytes": 15259
+  },
+  {
+   "title": "1987 Calgary Stampeders season",
+   "revid": 1359870462,
+   "timestamp": "2026-06-17T19:12:43Z",
+   "missing": false,
+   "bytes": 6985
+  },
+  {
+   "title": "1987 Edmonton Eskimos season",
+   "revid": 1359870409,
+   "timestamp": "2026-06-17T19:12:18Z",
+   "missing": false,
+   "bytes": 8738
+  },
+  {
+   "title": "1987 Hamilton Tiger-Cats season",
+   "revid": 1359870640,
+   "timestamp": "2026-06-17T19:14:05Z",
+   "missing": false,
+   "bytes": 8636
+  },
+  {
+   "title": "1987 Montreal Alouettes season",
+   "revid": 1341815057,
+   "timestamp": "2026-03-05T05:46:35Z",
+   "missing": false,
+   "bytes": 4781
+  },
+  {
+   "title": "1987 Ottawa Rough Riders season",
+   "revid": 1359870680,
+   "timestamp": "2026-06-17T19:14:24Z",
+   "missing": false,
+   "bytes": 8476
+  },
+  {
+   "title": "1987 Saskatchewan Roughriders season",
+   "revid": 1359870360,
+   "timestamp": "2026-06-17T19:11:56Z",
+   "missing": false,
+   "bytes": 4089
+  },
+  {
+   "title": "1987 Toronto Argonauts season",
+   "revid": 1359868758,
+   "timestamp": "2026-06-17T18:59:58Z",
+   "missing": false,
+   "bytes": 11129
+  },
+  {
+   "title": "1987 Winnipeg Blue Bombers season",
+   "revid": 1359870714,
+   "timestamp": "2026-06-17T19:14:40Z",
+   "missing": false,
+   "bytes": 9432
+  },
+  {
+   "title": "1988 BC Lions season",
+   "revid": 1359869034,
+   "timestamp": "2026-06-17T19:01:53Z",
+   "missing": false,
+   "bytes": 10148
+  },
+  {
+   "title": "1988 CFL season",
+   "revid": 1359869939,
+   "timestamp": "2026-06-17T19:08:54Z",
+   "missing": false,
+   "bytes": 10055
+  },
+  {
+   "title": "1988 Calgary Stampeders season",
+   "revid": 1359870072,
+   "timestamp": "2026-06-17T19:09:45Z",
+   "missing": false,
+   "bytes": 9836
+  },
+  {
+   "title": "1988 Edmonton Eskimos season",
+   "revid": 1359870009,
+   "timestamp": "2026-06-17T19:09:23Z",
+   "missing": false,
+   "bytes": 11655
+  },
+  {
+   "title": "1988 Hamilton Tiger-Cats season",
+   "revid": 1370511782,
+   "timestamp": "2026-08-21T15:10:54Z",
+   "missing": false,
+   "bytes": 9732
+  },
+  {
+   "title": "1988 Ottawa Rough Riders season",
+   "revid": 1359870211,
+   "timestamp": "2026-06-17T19:10:48Z",
+   "missing": false,
+   "bytes": 9276
+  },
+  {
+   "title": "1988 Saskatchewan Roughriders season",
+   "revid": 1359869843,
+   "timestamp": "2026-06-17T19:08:20Z",
+   "missing": false,
+   "bytes": 11114
+  },
+  {
+   "title": "1988 Toronto Argonauts season",
+   "revid": 1359868966,
+   "timestamp": "2026-06-17T19:01:21Z",
+   "missing": false,
+   "bytes": 10303
+  },
+  {
+   "title": "1988 Winnipeg Blue Bombers season",
+   "revid": 1359870165,
+   "timestamp": "2026-06-17T19:10:29Z",
+   "missing": false,
+   "bytes": 8529
+  },
+  {
+   "title": "1989 BC Lions season",
+   "revid": 1359884782,
+   "timestamp": "2026-06-17T20:59:10Z",
+   "missing": false,
+   "bytes": 10173
+  },
+  {
+   "title": "1989 CFL season",
+   "revid": 1359884725,
+   "timestamp": "2026-06-17T20:58:46Z",
+   "missing": false,
+   "bytes": 10117
+  },
+  {
+   "title": "1989 Calgary Stampeders season",
+   "revid": 1359884829,
+   "timestamp": "2026-06-17T20:59:34Z",
+   "missing": false,
+   "bytes": 9732
+  },
+  {
+   "title": "1989 Edmonton Eskimos season",
+   "revid": 1359884806,
+   "timestamp": "2026-06-17T20:59:21Z",
+   "missing": false,
+   "bytes": 10192
+  },
+  {
+   "title": "1989 Hamilton Tiger-Cats season",
+   "revid": 1368905364,
+   "timestamp": "2026-08-11T19:29:31Z",
+   "missing": false,
+   "bytes": 12819
+  },
+  {
+   "title": "1989 Ottawa Rough Riders season",
+   "revid": 1371623055,
+   "timestamp": "2026-08-27T13:16:40Z",
+   "missing": false,
+   "bytes": 8207
+  },
+  {
+   "title": "1989 Saskatchewan Roughriders season",
+   "revid": 1359884862,
+   "timestamp": "2026-06-17T20:59:47Z",
+   "missing": false,
+   "bytes": 14404
+  },
+  {
+   "title": "1989 Toronto Argonauts season",
+   "revid": 1359869731,
+   "timestamp": "2026-06-17T19:07:23Z",
+   "missing": false,
+   "bytes": 9028
+  },
+  {
+   "title": "1989 Winnipeg Blue Bombers season",
+   "revid": 1359869529,
+   "timestamp": "2026-06-17T19:05:40Z",
+   "missing": false,
+   "bytes": 8842
+  },
+  {
+   "title": "1990 BC Lions season",
+   "revid": 1359885433,
+   "timestamp": "2026-06-17T21:03:41Z",
+   "missing": false,
+   "bytes": 10331
+  },
+  {
+   "title": "1990 CFL season",
+   "revid": 1361197261,
+   "timestamp": "2026-06-26T09:13:08Z",
+   "missing": false,
+   "bytes": 9651
+  },
+  {
+   "title": "1990 Calgary Stampeders season",
+   "revid": 1359885462,
+   "timestamp": "2026-06-17T21:03:54Z",
+   "missing": false,
+   "bytes": 10900
+  },
+  {
+   "title": "1990 Edmonton Eskimos season",
+   "revid": 1359885489,
+   "timestamp": "2026-06-17T21:04:12Z",
+   "missing": false,
+   "bytes": 9976
+  },
+  {
+   "title": "1990 Hamilton Tiger-Cats season",
+   "revid": 1359869212,
+   "timestamp": "2026-06-17T19:03:21Z",
+   "missing": false,
+   "bytes": 9292
+  },
+  {
+   "title": "1990 Ottawa Rough Riders season",
+   "revid": 1371623082,
+   "timestamp": "2026-08-27T13:16:54Z",
+   "missing": false,
+   "bytes": 9843
+  },
+  {
+   "title": "1990 Saskatchewan Roughriders season",
+   "revid": 1359885516,
+   "timestamp": "2026-06-17T21:04:25Z",
+   "missing": false,
+   "bytes": 12683
+  },
+  {
+   "title": "1990 Toronto Argonauts season",
+   "revid": 1359869386,
+   "timestamp": "2026-06-17T19:04:30Z",
+   "missing": false,
+   "bytes": 9969
+  },
+  {
+   "title": "1990 Winnipeg Blue Bombers season",
+   "revid": 1359869444,
+   "timestamp": "2026-06-17T19:05:01Z",
+   "missing": false,
+   "bytes": 10790
+  },
+  {
+   "title": "1991 BC Lions season",
+   "revid": 1359867907,
+   "timestamp": "2026-06-17T18:53:28Z",
+   "missing": false,
+   "bytes": 10704
+  },
+  {
+   "title": "1991 CFL season",
+   "revid": 1359867754,
+   "timestamp": "2026-06-17T18:52:24Z",
+   "missing": false,
+   "bytes": 9899
+  },
+  {
+   "title": "1991 Calgary Stampeders season",
+   "revid": 1359867955,
+   "timestamp": "2026-06-17T18:53:52Z",
+   "missing": false,
+   "bytes": 10988
+  },
+  {
+   "title": "1991 Edmonton Eskimos season",
+   "revid": 1359868041,
+   "timestamp": "2026-06-17T18:54:27Z",
+   "missing": false,
+   "bytes": 10320
+  },
+  {
+   "title": "1991 Hamilton Tiger-Cats season",
+   "revid": 1368909412,
+   "timestamp": "2026-08-11T20:06:06Z",
+   "missing": false,
+   "bytes": 10156
+  },
+  {
+   "title": "1991 Ottawa Rough Riders season",
+   "revid": 1371623104,
+   "timestamp": "2026-08-27T13:17:09Z",
+   "missing": false,
+   "bytes": 10383
+  },
+  {
+   "title": "1991 Saskatchewan Roughriders season",
+   "revid": 1359868007,
+   "timestamp": "2026-06-17T18:54:12Z",
+   "missing": false,
+   "bytes": 11130
+  },
+  {
+   "title": "1991 Toronto Argonauts season",
+   "revid": 1359868171,
+   "timestamp": "2026-06-17T18:55:20Z",
+   "missing": false,
+   "bytes": 18443
+  },
+  {
+   "title": "1991 Winnipeg Blue Bombers season",
+   "revid": 1359868333,
+   "timestamp": "2026-06-17T18:56:30Z",
+   "missing": false,
+   "bytes": 10568
+  },
+  {
+   "title": "1992 BC Lions season",
+   "revid": 1359490411,
+   "timestamp": "2026-06-15T15:49:30Z",
+   "missing": false,
+   "bytes": 10074
+  },
+  {
+   "title": "1992 CFL season",
+   "revid": 1359490579,
+   "timestamp": "2026-06-15T15:50:49Z",
+   "missing": false,
+   "bytes": 10144
+  },
+  {
+   "title": "1992 Calgary Stampeders season",
+   "revid": 1359490325,
+   "timestamp": "2026-06-15T15:48:52Z",
+   "missing": false,
+   "bytes": 11752
+  },
+  {
+   "title": "1992 Edmonton Eskimos season",
+   "revid": 1359490362,
+   "timestamp": "2026-06-15T15:49:09Z",
+   "missing": false,
+   "bytes": 8681
+  },
+  {
+   "title": "1992 Hamilton Tiger-Cats season",
+   "revid": 1368909448,
+   "timestamp": "2026-08-11T20:06:22Z",
+   "missing": false,
+   "bytes": 10568
+  },
+  {
+   "title": "1992 Ottawa Rough Riders season",
+   "revid": 1371623072,
+   "timestamp": "2026-08-27T13:16:48Z",
+   "missing": false,
+   "bytes": 8609
+  },
+  {
+   "title": "1992 Saskatchewan Roughriders season",
+   "revid": 1359490389,
+   "timestamp": "2026-06-15T15:49:19Z",
+   "missing": false,
+   "bytes": 11861
+  },
+  {
+   "title": "1992 Toronto Argonauts season",
+   "revid": 1359490657,
+   "timestamp": "2026-06-15T15:51:23Z",
+   "missing": false,
+   "bytes": 9408
+  },
+  {
+   "title": "1992 Winnipeg Blue Bombers season",
+   "revid": 1360317968,
+   "timestamp": "2026-06-20T18:20:32Z",
+   "missing": false,
+   "bytes": 9473
+  },
+  {
+   "title": "1993 BC Lions season",
+   "revid": 1359898414,
+   "timestamp": "2026-06-17T23:04:20Z",
+   "missing": false,
+   "bytes": 9655
+  },
+  {
+   "title": "1993 CFL season",
+   "revid": 1361199166,
+   "timestamp": "2026-06-26T09:40:40Z",
+   "missing": false,
+   "bytes": 10801
+  },
+  {
+   "title": "1993 Calgary Stampeders season",
+   "revid": 1359898436,
+   "timestamp": "2026-06-17T23:04:36Z",
+   "missing": false,
+   "bytes": 11552
+  },
+  {
+   "title": "1993 Edmonton Eskimos season",
+   "revid": 1359898477,
+   "timestamp": "2026-06-17T23:05:11Z",
+   "missing": false,
+   "bytes": 10649
+  },
+  {
+   "title": "1993 Hamilton Tiger-Cats season",
+   "revid": 1359898548,
+   "timestamp": "2026-06-17T23:05:53Z",
+   "missing": false,
+   "bytes": 10441
+  },
+  {
+   "title": "1993 Ottawa Rough Riders season",
+   "revid": 1372010588,
+   "timestamp": "2026-08-29T20:53:35Z",
+   "missing": false,
+   "bytes": 10501
+  },
+  {
+   "title": "1993 Sacramento Gold Miners season",
+   "revid": 1359898460,
+   "timestamp": "2026-06-17T23:04:54Z",
+   "missing": false,
+   "bytes": 8756
+  },
+  {
+   "title": "1993 Saskatchewan Roughriders season",
+   "revid": 1359898396,
+   "timestamp": "2026-06-17T23:04:07Z",
+   "missing": false,
+   "bytes": 12110
+  },
+  {
+   "title": "1993 Toronto Argonauts season",
+   "revid": 1359898554,
+   "timestamp": "2026-06-17T23:06:01Z",
+   "missing": false,
+   "bytes": 8566
+  },
+  {
+   "title": "1993 Winnipeg Blue Bombers season",
+   "revid": 1359898545,
+   "timestamp": "2026-06-17T23:05:53Z",
+   "missing": false,
+   "bytes": 9850
+  },
+  {
+   "title": "1994 BC Lions season",
+   "revid": 1359900368,
+   "timestamp": "2026-06-17T23:26:06Z",
+   "missing": false,
+   "bytes": 11757
+  },
+  {
+   "title": "1994 Baltimore CFLers season",
+   "revid": 1359900589,
+   "timestamp": "2026-06-17T23:28:04Z",
+   "missing": false,
+   "bytes": 11688
+  },
+  {
+   "title": "1994 CFL season",
+   "revid": 1366291790,
+   "timestamp": "2026-07-27T05:19:01Z",
+   "missing": false,
+   "bytes": 13322
+  },
+  {
+   "title": "1994 Calgary Stampeders season",
+   "revid": 1359900666,
+   "timestamp": "2026-06-17T23:28:42Z",
+   "missing": false,
+   "bytes": 9607
+  },
+  {
+   "title": "1994 Edmonton Eskimos season",
+   "revid": 1367360755,
+   "timestamp": "2026-08-02T16:54:53Z",
+   "missing": false,
+   "bytes": 10560
+  },
+  {
+   "title": "1994 Hamilton Tiger-Cats season",
+   "revid": 1359900645,
+   "timestamp": "2026-06-17T23:28:29Z",
+   "missing": false,
+   "bytes": 9320
+  },
+  {
+   "title": "1994 Las Vegas Posse season",
+   "revid": 1363897330,
+   "timestamp": "2026-07-13T04:24:17Z",
+   "missing": false,
+   "bytes": 9181
+  },
+  {
+   "title": "1994 Ottawa Rough Riders season",
+   "revid": 1359900628,
+   "timestamp": "2026-06-17T23:28:22Z",
+   "missing": false,
+   "bytes": 9109
+  },
+  {
+   "title": "1994 Sacramento Gold Miners season",
+   "revid": 1355615738,
+   "timestamp": "2026-05-22T22:08:26Z",
+   "missing": false,
+   "bytes": 8718
+  },
+  {
+   "title": "1994 Saskatchewan Roughriders season",
+   "revid": 1359900680,
+   "timestamp": "2026-06-17T23:28:48Z",
+   "missing": false,
+   "bytes": 11664
+  },
+  {
+   "title": "1994 Shreveport Pirates season",
+   "revid": 1371623123,
+   "timestamp": "2026-08-27T13:17:16Z",
+   "missing": false,
+   "bytes": 11796
+  },
+  {
+   "title": "1994 Toronto Argonauts season",
+   "revid": 1359900636,
+   "timestamp": "2026-06-17T23:28:26Z",
+   "missing": false,
+   "bytes": 8814
+  },
+  {
+   "title": "1994 Winnipeg Blue Bombers season",
+   "revid": 1359900648,
+   "timestamp": "2026-06-17T23:28:32Z",
+   "missing": false,
+   "bytes": 9192
+  },
+  {
+   "title": "1995 BC Lions season",
+   "revid": 1359999771,
+   "timestamp": "2026-06-18T16:16:20Z",
+   "missing": false,
+   "bytes": 10309
+  },
+  {
+   "title": "1995 Baltimore Stallions season",
+   "revid": 1360000107,
+   "timestamp": "2026-06-18T16:19:13Z",
+   "missing": false,
+   "bytes": 17985
+  },
+  {
+   "title": "1995 Birmingham Barracudas season",
+   "revid": 1360000132,
+   "timestamp": "2026-06-18T16:19:32Z",
+   "missing": false,
+   "bytes": 11809
+  },
+  {
+   "title": "1995 CFL season",
+   "revid": 1370814906,
+   "timestamp": "2026-08-23T06:01:38Z",
+   "missing": false,
+   "bytes": 16160
+  },
+  {
+   "title": "1995 Calgary Stampeders season",
+   "revid": 1359999914,
+   "timestamp": "2026-06-18T16:17:33Z",
+   "missing": false,
+   "bytes": 11697
+  },
+  {
+   "title": "1995 Edmonton Eskimos season",
+   "revid": 1359999997,
+   "timestamp": "2026-06-18T16:18:16Z",
+   "missing": false,
+   "bytes": 11701
+  },
+  {
+   "title": "1995 Hamilton Tiger-Cats season",
+   "revid": 1359999964,
+   "timestamp": "2026-06-18T16:18:03Z",
+   "missing": false,
+   "bytes": 11900
+  },
+  {
+   "title": "1995 Memphis Mad Dogs season",
+   "revid": 1360000153,
+   "timestamp": "2026-06-18T16:19:41Z",
+   "missing": false,
+   "bytes": 5980
+  },
+  {
+   "title": "1995 Ottawa Rough Riders season",
+   "revid": 1359999929,
+   "timestamp": "2026-06-18T16:17:42Z",
+   "missing": false,
+   "bytes": 10132
+  },
+  {
+   "title": "1995 San Antonio Texans season",
+   "revid": 1360000117,
+   "timestamp": "2026-06-18T16:19:22Z",
+   "missing": false,
+   "bytes": 10059
+  },
+  {
+   "title": "1995 Saskatchewan Roughriders season",
+   "revid": 1360000016,
+   "timestamp": "2026-06-18T16:18:26Z",
+   "missing": false,
+   "bytes": 10497
+  },
+  {
+   "title": "1995 Shreveport Pirates season",
+   "revid": 1360000097,
+   "timestamp": "2026-06-18T16:19:03Z",
+   "missing": false,
+   "bytes": 8463
+  },
+  {
+   "title": "1995 Toronto Argonauts season",
+   "revid": 1370589121,
+   "timestamp": "2026-08-22T00:26:29Z",
+   "missing": false,
+   "bytes": 10401
+  },
+  {
+   "title": "1995 Winnipeg Blue Bombers season",
+   "revid": 1360000057,
+   "timestamp": "2026-06-18T16:18:45Z",
+   "missing": false,
+   "bytes": 10954
+  },
+  {
+   "title": "1996 BC Lions season",
+   "revid": 1360002588,
+   "timestamp": "2026-06-18T16:40:38Z",
+   "missing": false,
+   "bytes": 8774
+  },
+  {
+   "title": "1996 CFL season",
+   "revid": 1360002240,
+   "timestamp": "2026-06-18T16:37:23Z",
+   "missing": false,
+   "bytes": 12665
+  },
+  {
+   "title": "1996 Calgary Stampeders season",
+   "revid": 1360002719,
+   "timestamp": "2026-06-18T16:41:36Z",
+   "missing": false,
+   "bytes": 9405
+  },
+  {
+   "title": "1996 Edmonton Eskimos season",
+   "revid": 1360002730,
+   "timestamp": "2026-06-18T16:41:43Z",
+   "missing": false,
+   "bytes": 7912
+  },
+  {
+   "title": "1996 Hamilton Tiger-Cats season",
+   "revid": 1360003040,
+   "timestamp": "2026-06-18T16:44:50Z",
+   "missing": false,
+   "bytes": 10592
+  },
+  {
+   "title": "1996 Montreal Alouettes season",
+   "revid": 1360003013,
+   "timestamp": "2026-06-18T16:44:38Z",
+   "missing": false,
+   "bytes": 15714
+  },
+  {
+   "title": "1996 Ottawa Rough Riders season",
+   "revid": 1360002957,
+   "timestamp": "2026-06-18T16:44:09Z",
+   "missing": false,
+   "bytes": 10230
+  },
+  {
+   "title": "1996 Saskatchewan Roughriders season",
+   "revid": 1360002683,
+   "timestamp": "2026-06-18T16:41:16Z",
+   "missing": false,
+   "bytes": 10181
+  },
+  {
+   "title": "1996 Toronto Argonauts season",
+   "revid": 1360002983,
+   "timestamp": "2026-06-18T16:44:23Z",
+   "missing": false,
+   "bytes": 13715
+  },
+  {
+   "title": "1996 Winnipeg Blue Bombers season",
+   "revid": 1360002857,
+   "timestamp": "2026-06-18T16:43:08Z",
+   "missing": false,
+   "bytes": 7052
+  },
+  {
+   "title": "1997 BC Lions season",
+   "revid": 1360007055,
+   "timestamp": "2026-06-18T17:20:32Z",
+   "missing": false,
+   "bytes": 9294
+  },
+  {
+   "title": "1997 CFL season",
+   "revid": 1361296826,
+   "timestamp": "2026-06-27T00:32:54Z",
+   "missing": false,
+   "bytes": 11475
+  },
+  {
+   "title": "1997 Calgary Stampeders season",
+   "revid": 1360008461,
+   "timestamp": "2026-06-18T17:30:27Z",
+   "missing": false,
+   "bytes": 8861
+  },
+  {
+   "title": "1997 Edmonton Eskimos season",
+   "revid": 1360008433,
+   "timestamp": "2026-06-18T17:30:16Z",
+   "missing": false,
+   "bytes": 7054
+  },
+  {
+   "title": "1997 Hamilton Tiger-Cats season",
+   "revid": 1360004153,
+   "timestamp": "2026-06-18T16:56:05Z",
+   "missing": false,
+   "bytes": 8868
+  },
+  {
+   "title": "1997 Montreal Alouettes season",
+   "revid": 1360004202,
+   "timestamp": "2026-06-18T16:56:31Z",
+   "missing": false,
+   "bytes": 12083
+  },
+  {
+   "title": "1997 Saskatchewan Roughriders season",
+   "revid": 1360008399,
+   "timestamp": "2026-06-18T17:29:57Z",
+   "missing": false,
+   "bytes": 10699
+  },
+  {
+   "title": "1997 Toronto Argonauts season",
+   "revid": 1360004176,
+   "timestamp": "2026-06-18T16:56:18Z",
+   "missing": false,
+   "bytes": 14478
+  },
+  {
+   "title": "1997 Winnipeg Blue Bombers season",
+   "revid": 1362031667,
+   "timestamp": "2026-07-01T15:07:22Z",
+   "missing": false,
+   "bytes": 7708
+  },
+  {
+   "title": "1998 BC Lions season",
+   "revid": 1360015441,
+   "timestamp": "2026-06-18T18:23:57Z",
+   "missing": false,
+   "bytes": 9569
+  },
+  {
+   "title": "1998 CFL season",
+   "revid": 1369240743,
+   "timestamp": "2026-08-13T19:11:38Z",
+   "missing": false,
+   "bytes": 10741
+  },
+  {
+   "title": "1998 Calgary Stampeders season",
+   "revid": 1360015407,
+   "timestamp": "2026-06-18T18:23:42Z",
+   "missing": false,
+   "bytes": 10736
+  },
+  {
+   "title": "1998 Edmonton Eskimos season",
+   "revid": 1360016132,
+   "timestamp": "2026-06-18T18:29:24Z",
+   "missing": false,
+   "bytes": 6933
+  },
+  {
+   "title": "1998 Hamilton Tiger-Cats season",
+   "revid": 1360016246,
+   "timestamp": "2026-06-18T18:30:19Z",
+   "missing": false,
+   "bytes": 10285
+  },
+  {
+   "title": "1998 Montreal Alouettes season",
+   "revid": 1360016271,
+   "timestamp": "2026-06-18T18:30:25Z",
+   "missing": false,
+   "bytes": 11785
+  },
+  {
+   "title": "1998 Saskatchewan Roughriders season",
+   "revid": 1360015463,
+   "timestamp": "2026-06-18T18:24:05Z",
+   "missing": false,
+   "bytes": 8636
+  },
+  {
+   "title": "1998 Toronto Argonauts season",
+   "revid": 1360016279,
+   "timestamp": "2026-06-18T18:30:30Z",
+   "missing": false,
+   "bytes": 11653
+  },
+  {
+   "title": "1998 Winnipeg Blue Bombers season",
+   "revid": 1360016238,
+   "timestamp": "2026-06-18T18:30:15Z",
+   "missing": false,
+   "bytes": 8511
+  },
+  {
+   "title": "1999 BC Lions season",
+   "revid": 1360019891,
+   "timestamp": "2026-06-18T19:00:12Z",
+   "missing": false,
+   "bytes": 9433
+  },
+  {
+   "title": "1999 CFL season",
+   "revid": 1361297012,
+   "timestamp": "2026-06-27T00:34:25Z",
+   "missing": false,
+   "bytes": 11938
+  },
+  {
+   "title": "1999 Calgary Stampeders season",
+   "revid": 1360019915,
+   "timestamp": "2026-06-18T19:00:23Z",
+   "missing": false,
+   "bytes": 9741
+  },
+  {
+   "title": "1999 Edmonton Eskimos season",
+   "revid": 1360019935,
+   "timestamp": "2026-06-18T19:00:33Z",
+   "missing": false,
+   "bytes": 7593
+  },
+  {
+   "title": "1999 Hamilton Tiger-Cats season",
+   "revid": 1362924304,
+   "timestamp": "2026-07-07T00:51:00Z",
+   "missing": false,
+   "bytes": 10952
+  },
+  {
+   "title": "1999 Montreal Alouettes season",
+   "revid": 1360020050,
+   "timestamp": "2026-06-18T19:01:17Z",
+   "missing": false,
+   "bytes": 10012
+  },
+  {
+   "title": "1999 Saskatchewan Roughriders season",
+   "revid": 1360019853,
+   "timestamp": "2026-06-18T18:59:59Z",
+   "missing": false,
+   "bytes": 8982
+  },
+  {
+   "title": "1999 Toronto Argonauts season",
+   "revid": 1369918835,
+   "timestamp": "2026-08-18T00:53:45Z",
+   "missing": false,
+   "bytes": 12349
+  },
+  {
+   "title": "1999 Winnipeg Blue Bombers season",
+   "revid": 1360020011,
+   "timestamp": "2026-06-18T19:01:03Z",
+   "missing": false,
+   "bytes": 7357
+  },
+  {
+   "title": "2000 BC Lions season",
+   "revid": 1360021000,
+   "timestamp": "2026-06-18T19:08:09Z",
+   "missing": false,
+   "bytes": 10231
+  },
+  {
+   "title": "2000 CFL season",
+   "revid": 1373070100,
+   "timestamp": "2026-09-03T21:59:27Z",
+   "missing": false,
+   "bytes": 11723
+  },
+  {
+   "title": "2000 Calgary Stampeders season",
+   "revid": 1360020943,
+   "timestamp": "2026-06-18T19:07:47Z",
+   "missing": false,
+   "bytes": 8461
+  },
+  {
+   "title": "2000 Edmonton Eskimos season",
+   "revid": 1360020975,
+   "timestamp": "2026-06-18T19:07:59Z",
+   "missing": false,
+   "bytes": 7133
+  },
+  {
+   "title": "2000 Hamilton Tiger-Cats season",
+   "revid": 1360021162,
+   "timestamp": "2026-06-18T19:09:19Z",
+   "missing": false,
+   "bytes": 9409
+  },
+  {
+   "title": "2000 Montreal Alouettes season",
+   "revid": 1360021139,
+   "timestamp": "2026-06-18T19:09:10Z",
+   "missing": false,
+   "bytes": 11425
+  },
+  {
+   "title": "2000 Saskatchewan Roughriders season",
+   "revid": 1360020923,
+   "timestamp": "2026-06-18T19:07:37Z",
+   "missing": false,
+   "bytes": 9072
+  },
+  {
+   "title": "2000 Toronto Argonauts season",
+   "revid": 1369918886,
+   "timestamp": "2026-08-18T00:54:08Z",
+   "missing": false,
+   "bytes": 10922
+  },
+  {
+   "title": "2000 Winnipeg Blue Bombers season",
+   "revid": 1360021213,
+   "timestamp": "2026-06-18T19:09:40Z",
+   "missing": false,
+   "bytes": 8384
+  },
+  {
+   "title": "2001 BC Lions season",
+   "revid": 1360022705,
+   "timestamp": "2026-06-18T19:19:28Z",
+   "missing": false,
+   "bytes": 10078
+  },
+  {
+   "title": "2001 CFL season",
+   "revid": 1360021965,
+   "timestamp": "2026-06-18T19:14:17Z",
+   "missing": false,
+   "bytes": 13436
+  },
+  {
+   "title": "2001 Calgary Stampeders season",
+   "revid": 1360022767,
+   "timestamp": "2026-06-18T19:19:52Z",
+   "missing": false,
+   "bytes": 11216
+  },
+  {
+   "title": "2001 Edmonton Eskimos season",
+   "revid": 1360022736,
+   "timestamp": "2026-06-18T19:19:40Z",
+   "missing": false,
+   "bytes": 9405
+  },
+  {
+   "title": "2001 Hamilton Tiger-Cats season",
+   "revid": 1360022653,
+   "timestamp": "2026-06-18T19:19:05Z",
+   "missing": false,
+   "bytes": 9440
+  },
+  {
+   "title": "2001 Montreal Alouettes season",
+   "revid": 1360022614,
+   "timestamp": "2026-06-18T19:18:49Z",
+   "missing": false,
+   "bytes": 10838
+  },
+  {
+   "title": "2001 Saskatchewan Roughriders season",
+   "revid": 1360022795,
+   "timestamp": "2026-06-18T19:20:05Z",
+   "missing": false,
+   "bytes": 9044
+  },
+  {
+   "title": "2001 Toronto Argonauts season",
+   "revid": 1360022575,
+   "timestamp": "2026-06-18T19:18:35Z",
+   "missing": false,
+   "bytes": 10244
+  },
+  {
+   "title": "2001 Winnipeg Blue Bombers season",
+   "revid": 1360022542,
+   "timestamp": "2026-06-18T19:18:21Z",
+   "missing": false,
+   "bytes": 9228
+  },
+  {
+   "title": "2002 BC Lions season",
+   "revid": 1360022851,
+   "timestamp": "2026-06-18T19:20:36Z",
+   "missing": false,
+   "bytes": 14269
+  },
+  {
+   "title": "2002 CFL season",
+   "revid": 1361278239,
+   "timestamp": "2026-06-26T21:51:16Z",
+   "missing": false,
+   "bytes": 16029
+  },
+  {
+   "title": "2002 Calgary Stampeders season",
+   "revid": 1360022969,
+   "timestamp": "2026-06-18T19:21:28Z",
+   "missing": false,
+   "bytes": 9490
+  },
+  {
+   "title": "2002 Edmonton Eskimos season",
+   "revid": 1360022886,
+   "timestamp": "2026-06-18T19:20:48Z",
+   "missing": false,
+   "bytes": 10234
+  },
+  {
+   "title": "2002 Hamilton Tiger-Cats season",
+   "revid": 1360023168,
+   "timestamp": "2026-06-18T19:22:43Z",
+   "missing": false,
+   "bytes": 9008
+  },
+  {
+   "title": "2002 Montreal Alouettes season",
+   "revid": 1369916126,
+   "timestamp": "2026-08-18T00:33:02Z",
+   "missing": false,
+   "bytes": 12346
+  },
+  {
+   "title": "2002 Ottawa Renegades season",
+   "revid": 1360023056,
+   "timestamp": "2026-06-18T19:22:01Z",
+   "missing": false,
+   "bytes": 11511
+  },
+  {
+   "title": "2002 Saskatchewan Roughriders season",
+   "revid": 1372734875,
+   "timestamp": "2026-09-02T01:34:12Z",
+   "missing": false,
+   "bytes": 9716
+  },
+  {
+   "title": "2002 Toronto Argonauts season",
+   "revid": 1360023120,
+   "timestamp": "2026-06-18T19:22:26Z",
+   "missing": false,
+   "bytes": 11616
+  },
+  {
+   "title": "2002 Winnipeg Blue Bombers season",
+   "revid": 1360022906,
+   "timestamp": "2026-06-18T19:21:03Z",
+   "missing": false,
+   "bytes": 9150
+  },
+  {
+   "title": "2003 BC Lions season",
+   "revid": 1360023405,
+   "timestamp": "2026-06-18T19:24:18Z",
+   "missing": false,
+   "bytes": 14470
+  },
+  {
+   "title": "2003 CFL season",
+   "revid": 1360022338,
+   "timestamp": "2026-06-18T19:16:55Z",
+   "missing": false,
+   "bytes": 12975
+  },
+  {
+   "title": "2003 Calgary Stampeders season",
+   "revid": 1360023440,
+   "timestamp": "2026-06-18T19:24:32Z",
+   "missing": false,
+   "bytes": 9920
+  },
+  {
+   "title": "2003 Edmonton Eskimos season",
+   "revid": 1360023515,
+   "timestamp": "2026-06-18T19:25:04Z",
+   "missing": false,
+   "bytes": 10172
+  },
+  {
+   "title": "2003 Hamilton Tiger-Cats season",
+   "revid": 1360023226,
+   "timestamp": "2026-06-18T19:23:08Z",
+   "missing": false,
+   "bytes": 9525
+  },
+  {
+   "title": "2003 Montreal Alouettes season",
+   "revid": 1360023253,
+   "timestamp": "2026-06-18T19:23:19Z",
+   "missing": false,
+   "bytes": 12057
+  },
+  {
+   "title": "2003 Ottawa Renegades season",
+   "revid": 1360023317,
+   "timestamp": "2026-06-18T19:23:41Z",
+   "missing": false,
+   "bytes": 9863
+  },
+  {
+   "title": "2003 Saskatchewan Roughriders season",
+   "revid": 1372735169,
+   "timestamp": "2026-09-02T01:36:24Z",
+   "missing": false,
+   "bytes": 9768
+  },
+  {
+   "title": "2003 Toronto Argonauts season",
+   "revid": 1360023283,
+   "timestamp": "2026-06-18T19:23:31Z",
+   "missing": false,
+   "bytes": 10620
+  },
+  {
+   "title": "2003 Winnipeg Blue Bombers season",
+   "revid": 1360023496,
+   "timestamp": "2026-06-18T19:24:55Z",
+   "missing": false,
+   "bytes": 8350
+  },
+  {
+   "title": "2004 BC Lions season",
+   "revid": 1356559417,
+   "timestamp": "2026-05-28T14:25:49Z",
+   "missing": false,
+   "bytes": 15102
+  },
+  {
+   "title": "2004 CFL season",
+   "revid": 1360024846,
+   "timestamp": "2026-06-18T19:33:04Z",
+   "missing": false,
+   "bytes": 15198
+  },
+  {
+   "title": "2004 Calgary Stampeders season",
+   "revid": 1356560488,
+   "timestamp": "2026-05-28T14:34:11Z",
+   "missing": false,
+   "bytes": 9666
+  },
+  {
+   "title": "2004 Edmonton Eskimos season",
+   "revid": 1346682287,
+   "timestamp": "2026-04-02T06:27:51Z",
+   "missing": false,
+   "bytes": 10156
+  },
+  {
+   "title": "2004 Hamilton Tiger-Cats season",
+   "revid": 1355620976,
+   "timestamp": "2026-05-22T22:50:49Z",
+   "missing": false,
+   "bytes": 10212
+  },
+  {
+   "title": "2004 Montreal Alouettes season",
+   "revid": 1355580879,
+   "timestamp": "2026-05-22T18:26:16Z",
+   "missing": false,
+   "bytes": 11296
+  },
+  {
+   "title": "2004 Ottawa Renegades season",
+   "revid": 1355621214,
+   "timestamp": "2026-05-22T22:52:15Z",
+   "missing": false,
+   "bytes": 10059
+  },
+  {
+   "title": "2004 Saskatchewan Roughriders season",
+   "revid": 1372735273,
+   "timestamp": "2026-09-02T01:37:13Z",
+   "missing": false,
+   "bytes": 10452
+  },
+  {
+   "title": "2004 Toronto Argonauts season",
+   "revid": 1360025182,
+   "timestamp": "2026-06-18T19:34:44Z",
+   "missing": false,
+   "bytes": 13144
+  },
+  {
+   "title": "2004 Winnipeg Blue Bombers season",
+   "revid": 1355580890,
+   "timestamp": "2026-05-22T18:26:18Z",
+   "missing": false,
+   "bytes": 8455
+  },
+  {
+   "title": "2005 BC Lions season",
+   "revid": 1355580551,
+   "timestamp": "2026-05-22T18:24:53Z",
+   "missing": false,
+   "bytes": 13890
+  },
+  {
+   "title": "2005 CFL season",
+   "revid": 1360025813,
+   "timestamp": "2026-06-18T19:38:47Z",
+   "missing": false,
+   "bytes": 15666
+  },
+  {
+   "title": "2005 Calgary Stampeders season",
+   "revid": 1355620372,
+   "timestamp": "2026-05-22T22:45:34Z",
+   "missing": false,
+   "bytes": 10002
+  },
+  {
+   "title": "2005 Edmonton Eskimos season",
+   "revid": 1366519604,
+   "timestamp": "2026-07-28T13:54:52Z",
+   "missing": false,
+   "bytes": 11338
+  },
+  {
+   "title": "2005 Hamilton Tiger-Cats season",
+   "revid": 1355621035,
+   "timestamp": "2026-05-22T22:51:22Z",
+   "missing": false,
+   "bytes": 9791
+  },
+  {
+   "title": "2005 Montreal Alouettes season",
+   "revid": 1355580935,
+   "timestamp": "2026-05-22T18:26:26Z",
+   "missing": false,
+   "bytes": 11797
+  },
+  {
+   "title": "2005 Ottawa Renegades season",
+   "revid": 1355615717,
+   "timestamp": "2026-05-22T22:08:15Z",
+   "missing": false,
+   "bytes": 10049
+  },
+  {
+   "title": "2005 Saskatchewan Roughriders season",
+   "revid": 1350267883,
+   "timestamp": "2026-04-21T01:08:46Z",
+   "missing": false,
+   "bytes": 10126
+  },
+  {
+   "title": "2005 Toronto Argonauts season",
+   "revid": 1360026102,
+   "timestamp": "2026-06-18T19:40:38Z",
+   "missing": false,
+   "bytes": 12215
+  },
+  {
+   "title": "2005 Winnipeg Blue Bombers season",
+   "revid": 1372721870,
+   "timestamp": "2026-09-02T00:05:01Z",
+   "missing": false,
+   "bytes": 8063
+  },
+  {
+   "title": "2006 BC Lions season",
+   "revid": 1357775899,
+   "timestamp": "2026-06-04T16:36:06Z",
+   "missing": false,
+   "bytes": 25656
+  },
+  {
+   "title": "2006 CFL season",
+   "revid": 1357525975,
+   "timestamp": "2026-06-03T03:49:12Z",
+   "missing": false,
+   "bytes": 17972
+  },
+  {
+   "title": "2006 Calgary Stampeders season",
+   "revid": 1369958672,
+   "timestamp": "2026-08-18T06:48:02Z",
+   "missing": false,
+   "bytes": 10323
+  },
+  {
+   "title": "2006 Edmonton Eskimos season",
+   "revid": 1366519670,
+   "timestamp": "2026-07-28T13:55:17Z",
+   "missing": false,
+   "bytes": 11293
+  },
+  {
+   "title": "2006 Hamilton Tiger-Cats season",
+   "revid": 1355621022,
+   "timestamp": "2026-05-22T22:51:15Z",
+   "missing": false,
+   "bytes": 13010
+  },
+  {
+   "title": "2006 Montreal Alouettes season",
+   "revid": 1368909093,
+   "timestamp": "2026-08-11T20:03:19Z",
+   "missing": false,
+   "bytes": 15081
+  },
+  {
+   "title": "2006 Saskatchewan Roughriders season",
+   "revid": 1350306823,
+   "timestamp": "2026-04-21T05:26:45Z",
+   "missing": false,
+   "bytes": 10215
+  },
+  {
+   "title": "2006 Toronto Argonauts season",
+   "revid": 1361394830,
+   "timestamp": "2026-06-27T17:57:10Z",
+   "missing": false,
+   "bytes": 14868
+  },
+  {
+   "title": "2006 Winnipeg Blue Bombers season",
+   "revid": 1355580880,
+   "timestamp": "2026-05-22T18:26:16Z",
+   "missing": false,
+   "bytes": 8650
+  },
+  {
+   "title": "2007 BC Lions season",
+   "revid": 1362624949,
+   "timestamp": "2026-07-05T05:57:44Z",
+   "missing": false,
+   "bytes": 38400
+  },
+  {
+   "title": "2007 CFL season",
+   "revid": 1360037944,
+   "timestamp": "2026-06-18T21:06:56Z",
+   "missing": false,
+   "bytes": 22643
+  },
+  {
+   "title": "2007 Calgary Stampeders season",
+   "revid": 1366304405,
+   "timestamp": "2026-07-27T07:04:50Z",
+   "missing": false,
+   "bytes": 44778
+  },
+  {
+   "title": "2007 Edmonton Eskimos season",
+   "revid": 1355580913,
+   "timestamp": "2026-05-22T18:26:21Z",
+   "missing": false,
+   "bytes": 14039
+  },
+  {
+   "title": "2007 Hamilton Tiger-Cats season",
+   "revid": 1355620638,
+   "timestamp": "2026-05-22T22:47:37Z",
+   "missing": false,
+   "bytes": 13621
+  },
+  {
+   "title": "2007 Montreal Alouettes season",
+   "revid": 1349865124,
+   "timestamp": "2026-04-19T06:54:48Z",
+   "missing": false,
+   "bytes": 14741
+  },
+  {
+   "title": "2007 Saskatchewan Roughriders season",
+   "revid": 1355578954,
+   "timestamp": "2026-05-22T18:15:00Z",
+   "missing": false,
+   "bytes": 21570
+  },
+  {
+   "title": "2007 Toronto Argonauts season",
+   "revid": 1355620215,
+   "timestamp": "2026-05-22T22:44:19Z",
+   "missing": false,
+   "bytes": 10923
+  },
+  {
+   "title": "2007 Winnipeg Blue Bombers season",
+   "revid": 1355621057,
+   "timestamp": "2026-05-22T22:51:28Z",
+   "missing": false,
+   "bytes": 9481
+  },
+  {
+   "title": "2008 BC Lions season",
+   "revid": 1355620495,
+   "timestamp": "2026-05-22T22:46:37Z",
+   "missing": false,
+   "bytes": 21233
+  },
+  {
+   "title": "2008 CFL season",
+   "revid": 1369141527,
+   "timestamp": "2026-08-13T03:49:25Z",
+   "missing": false,
+   "bytes": 23532
+  },
+  {
+   "title": "2008 Calgary Stampeders season",
+   "revid": 1355620318,
+   "timestamp": "2026-05-22T22:45:10Z",
+   "missing": false,
+   "bytes": 18971
+  },
+  {
+   "title": "2008 Edmonton Eskimos season",
+   "revid": 1363196990,
+   "timestamp": "2026-07-08T17:37:37Z",
+   "missing": false,
+   "bytes": 37605
+  },
+  {
+   "title": "2008 Hamilton Tiger-Cats season",
+   "revid": 1364025704,
+   "timestamp": "2026-07-14T01:34:02Z",
+   "missing": false,
+   "bytes": 24550
+  },
+  {
+   "title": "2008 Montreal Alouettes season",
+   "revid": 1355621144,
+   "timestamp": "2026-05-22T22:51:53Z",
+   "missing": false,
+   "bytes": 19964
+  },
+  {
+   "title": "2008 Saskatchewan Roughriders season",
+   "revid": 1360038977,
+   "timestamp": "2026-06-18T21:15:56Z",
+   "missing": false,
+   "bytes": 30359
+  },
+  {
+   "title": "2008 Toronto Argonauts season",
+   "revid": 1355620204,
+   "timestamp": "2026-05-22T22:44:11Z",
+   "missing": false,
+   "bytes": 27449
+  },
+  {
+   "title": "2008 Winnipeg Blue Bombers season",
+   "revid": 1355621082,
+   "timestamp": "2026-05-22T22:51:35Z",
+   "missing": false,
+   "bytes": 16148
+  },
+  {
+   "title": "2009 BC Lions season",
+   "revid": 1357775877,
+   "timestamp": "2026-06-04T16:36:02Z",
+   "missing": false,
+   "bytes": 21116
+  },
+  {
+   "title": "2009 CFL season",
+   "revid": 1360041225,
+   "timestamp": "2026-06-18T21:32:39Z",
+   "missing": false,
+   "bytes": 18231
+  },
+  {
+   "title": "2009 Calgary Stampeders season",
+   "revid": 1355620367,
+   "timestamp": "2026-05-22T22:45:31Z",
+   "missing": false,
+   "bytes": 16361
+  },
+  {
+   "title": "2009 Edmonton Eskimos season",
+   "revid": 1355621113,
+   "timestamp": "2026-05-22T22:51:44Z",
+   "missing": false,
+   "bytes": 13120
+  },
+  {
+   "title": "2009 Hamilton Tiger-Cats season",
+   "revid": 1355620604,
+   "timestamp": "2026-05-22T22:47:24Z",
+   "missing": false,
+   "bytes": 12826
+  },
+  {
+   "title": "2009 Montreal Alouettes season",
+   "revid": 1355621167,
+   "timestamp": "2026-05-22T22:52:01Z",
+   "missing": false,
+   "bytes": 15511
+  },
+  {
+   "title": "2009 Saskatchewan Roughriders season",
+   "revid": 1367968205,
+   "timestamp": "2026-08-06T07:07:08Z",
+   "missing": false,
+   "bytes": 26631
+  },
+  {
+   "title": "2009 Toronto Argonauts season",
+   "revid": 1355620187,
+   "timestamp": "2026-05-22T22:44:03Z",
+   "missing": false,
+   "bytes": 35708
+  },
+  {
+   "title": "2009 Winnipeg Blue Bombers season",
+   "revid": 1355621056,
+   "timestamp": "2026-05-22T22:51:28Z",
+   "missing": false,
+   "bytes": 16085
+  },
+  {
+   "title": "2010 BC Lions season",
+   "revid": 1357775882,
+   "timestamp": "2026-06-04T16:36:02Z",
+   "missing": false,
+   "bytes": 22426
+  },
+  {
+   "title": "2010 CFL season",
+   "revid": 1365553967,
+   "timestamp": "2026-07-23T03:38:33Z",
+   "missing": false,
+   "bytes": 23974
+  },
+  {
+   "title": "2010 Calgary Stampeders season",
+   "revid": 1355620283,
+   "timestamp": "2026-05-22T22:44:54Z",
+   "missing": false,
+   "bytes": 16672
+  },
+  {
+   "title": "2010 Edmonton Eskimos season",
+   "revid": 1355621156,
+   "timestamp": "2026-05-22T22:51:58Z",
+   "missing": false,
+   "bytes": 18122
+  },
+  {
+   "title": "2010 Hamilton Tiger-Cats season",
+   "revid": 1355620570,
+   "timestamp": "2026-05-22T22:47:08Z",
+   "missing": false,
+   "bytes": 11144
+  },
+  {
+   "title": "2010 Montreal Alouettes season",
+   "revid": 1357775957,
+   "timestamp": "2026-06-04T16:36:17Z",
+   "missing": false,
+   "bytes": 17653
+  },
+  {
+   "title": "2010 Saskatchewan Roughriders season",
+   "revid": 1355615517,
+   "timestamp": "2026-05-22T22:06:34Z",
+   "missing": false,
+   "bytes": 44877
+  },
+  {
+   "title": "2010 Toronto Argonauts season",
+   "revid": 1355620211,
+   "timestamp": "2026-05-22T22:44:16Z",
+   "missing": false,
+   "bytes": 14612
+  },
+  {
+   "title": "2010 Winnipeg Blue Bombers season",
+   "revid": 1357775936,
+   "timestamp": "2026-06-04T16:36:13Z",
+   "missing": false,
+   "bytes": 20502
+  },
+  {
+   "title": "2011 BC Lions season",
+   "revid": 1357775886,
+   "timestamp": "2026-06-04T16:36:03Z",
+   "missing": false,
+   "bytes": 28215
+  },
+  {
+   "title": "2011 CFL season",
+   "revid": 1357525872,
+   "timestamp": "2026-06-03T03:48:19Z",
+   "missing": false,
+   "bytes": 24303
+  },
+  {
+   "title": "2011 Calgary Stampeders season",
+   "revid": 1357775867,
+   "timestamp": "2026-06-04T16:35:59Z",
+   "missing": false,
+   "bytes": 14019
+  },
+  {
+   "title": "2011 Edmonton Eskimos season",
+   "revid": 1370814027,
+   "timestamp": "2026-08-23T05:53:40Z",
+   "missing": false,
+   "bytes": 18678
+  },
+  {
+   "title": "2011 Hamilton Tiger-Cats season",
+   "revid": 1357775934,
+   "timestamp": "2026-06-04T16:36:12Z",
+   "missing": false,
+   "bytes": 15753
+  },
+  {
+   "title": "2011 Montreal Alouettes season",
+   "revid": 1357775988,
+   "timestamp": "2026-06-04T16:36:24Z",
+   "missing": false,
+   "bytes": 20015
+  },
+  {
+   "title": "2011 Saskatchewan Roughriders season",
+   "revid": 1357775990,
+   "timestamp": "2026-06-04T16:36:25Z",
+   "missing": false,
+   "bytes": 16963
+  },
+  {
+   "title": "2011 Toronto Argonauts season",
+   "revid": 1357775839,
+   "timestamp": "2026-06-04T16:35:53Z",
+   "missing": false,
+   "bytes": 14413
+  },
+  {
+   "title": "2011 Winnipeg Blue Bombers season",
+   "revid": 1365711154,
+   "timestamp": "2026-07-24T00:40:52Z",
+   "missing": false,
+   "bytes": 21628
+  },
+  {
+   "title": "2012 BC Lions season",
+   "revid": 1357775901,
+   "timestamp": "2026-06-04T16:36:07Z",
+   "missing": false,
+   "bytes": 18832
+  },
+  {
+   "title": "2012 CFL season",
+   "revid": 1357525841,
+   "timestamp": "2026-06-03T03:48:02Z",
+   "missing": false,
+   "bytes": 30599
+  },
+  {
+   "title": "2012 Calgary Stampeders season",
+   "revid": 1372671961,
+   "timestamp": "2026-09-01T18:52:41Z",
+   "missing": false,
+   "bytes": 15296
+  },
+  {
+   "title": "2012 Edmonton Eskimos season",
+   "revid": 1357775983,
+   "timestamp": "2026-06-04T16:36:23Z",
+   "missing": false,
+   "bytes": 17073
+  },
+  {
+   "title": "2012 Hamilton Tiger-Cats season",
+   "revid": 1358348471,
+   "timestamp": "2026-06-08T03:41:11Z",
+   "missing": false,
+   "bytes": 11513
+  },
+  {
+   "title": "2012 Montreal Alouettes season",
+   "revid": 1357776000,
+   "timestamp": "2026-06-04T16:36:27Z",
+   "missing": false,
+   "bytes": 17421
+  },
+  {
+   "title": "2012 Saskatchewan Roughriders season",
+   "revid": 1357775976,
+   "timestamp": "2026-06-04T16:36:21Z",
+   "missing": false,
+   "bytes": 19950
+  },
+  {
+   "title": "2012 Toronto Argonauts season",
+   "revid": 1357775834,
+   "timestamp": "2026-06-04T16:35:53Z",
+   "missing": false,
+   "bytes": 18906
+  },
+  {
+   "title": "2012 Winnipeg Blue Bombers season",
+   "revid": 1357775963,
+   "timestamp": "2026-06-04T16:36:19Z",
+   "missing": false,
+   "bytes": 16243
+  },
+  {
+   "title": "2013 BC Lions season",
+   "revid": 1362321660,
+   "timestamp": "2026-07-03T05:17:52Z",
+   "missing": false,
+   "bytes": 17083
+  },
+  {
+   "title": "2013 CFL season",
+   "revid": 1357525823,
+   "timestamp": "2026-06-03T03:47:52Z",
+   "missing": false,
+   "bytes": 32610
+  },
+  {
+   "title": "2013 Calgary Stampeders season",
+   "revid": 1363048289,
+   "timestamp": "2026-07-07T19:00:41Z",
+   "missing": false,
+   "bytes": 14169
+  },
+  {
+   "title": "2013 Edmonton Eskimos season",
+   "revid": 1355676192,
+   "timestamp": "2026-05-23T06:39:56Z",
+   "missing": false,
+   "bytes": 13316
+  },
+  {
+   "title": "2013 Hamilton Tiger-Cats season",
+   "revid": 1358348544,
+   "timestamp": "2026-06-08T03:41:45Z",
+   "missing": false,
+   "bytes": 17227
+  },
+  {
+   "title": "2013 Montreal Alouettes season",
+   "revid": 1357775995,
+   "timestamp": "2026-06-04T16:36:26Z",
+   "missing": false,
+   "bytes": 17834
+  },
+  {
+   "title": "2013 Saskatchewan Roughriders season",
+   "revid": 1363520480,
+   "timestamp": "2026-07-10T18:36:16Z",
+   "missing": false,
+   "bytes": 60965
+  },
+  {
+   "title": "2013 Toronto Argonauts season",
+   "revid": 1355620230,
+   "timestamp": "2026-05-22T22:44:29Z",
+   "missing": false,
+   "bytes": 13832
+  },
+  {
+   "title": "2013 Winnipeg Blue Bombers season",
+   "revid": 1357775964,
+   "timestamp": "2026-06-04T16:36:19Z",
+   "missing": false,
+   "bytes": 13982
+  },
+  {
+   "title": "2014 BC Lions season",
+   "revid": 1362321421,
+   "timestamp": "2026-07-03T05:16:58Z",
+   "missing": false,
+   "bytes": 25540
+  },
+  {
+   "title": "2014 CFL season",
+   "revid": 1357525793,
+   "timestamp": "2026-06-03T03:47:38Z",
+   "missing": false,
+   "bytes": 39897
+  },
+  {
+   "title": "2014 Calgary Stampeders season",
+   "revid": 1363053594,
+   "timestamp": "2026-07-07T19:31:55Z",
+   "missing": false,
+   "bytes": 25200
+  },
+  {
+   "title": "2014 Edmonton Eskimos season",
+   "revid": 1363048305,
+   "timestamp": "2026-07-07T19:00:44Z",
+   "missing": false,
+   "bytes": 22052
+  },
+  {
+   "title": "2014 Hamilton Tiger-Cats season",
+   "revid": 1357775889,
+   "timestamp": "2026-06-04T16:36:04Z",
+   "missing": false,
+   "bytes": 26874
+  },
+  {
+   "title": "2014 Montreal Alouettes season",
+   "revid": 1369187202,
+   "timestamp": "2026-08-13T11:09:44Z",
+   "missing": false,
+   "bytes": 25844
+  },
+  {
+   "title": "2014 Ottawa Redblacks season",
+   "revid": 1369186341,
+   "timestamp": "2026-08-13T11:00:48Z",
+   "missing": false,
+   "bytes": 33884
+  },
+  {
+   "title": "2014 Saskatchewan Roughriders season",
+   "revid": 1358348623,
+   "timestamp": "2026-06-08T03:42:22Z",
+   "missing": false,
+   "bytes": 24210
+  },
+  {
+   "title": "2014 Toronto Argonauts season",
+   "revid": 1357775837,
+   "timestamp": "2026-06-04T16:35:53Z",
+   "missing": false,
+   "bytes": 23613
+  },
+  {
+   "title": "2014 Winnipeg Blue Bombers season",
+   "revid": 1359345909,
+   "timestamp": "2026-06-14T19:00:30Z",
+   "missing": false,
+   "bytes": 20592
+  },
+  {
+   "title": "2015 BC Lions season",
+   "revid": 1357762814,
+   "timestamp": "2026-06-04T14:57:04Z",
+   "missing": false,
+   "bytes": 25793
+  },
+  {
+   "title": "2015 CFL season",
+   "revid": 1372515527,
+   "timestamp": "2026-09-01T02:09:19Z",
+   "missing": false,
+   "bytes": 35330
+  },
+  {
+   "title": "2015 Calgary Stampeders season",
+   "revid": 1363053568,
+   "timestamp": "2026-07-07T19:31:43Z",
+   "missing": false,
+   "bytes": 23206
+  },
+  {
+   "title": "2015 Edmonton Eskimos season",
+   "revid": 1363048318,
+   "timestamp": "2026-07-07T19:00:46Z",
+   "missing": false,
+   "bytes": 27245
+  },
+  {
+   "title": "2015 Hamilton Tiger-Cats season",
+   "revid": 1357775945,
+   "timestamp": "2026-06-04T16:36:15Z",
+   "missing": false,
+   "bytes": 24581
+  },
+  {
+   "title": "2015 Montreal Alouettes season",
+   "revid": 1357775952,
+   "timestamp": "2026-06-04T16:36:16Z",
+   "missing": false,
+   "bytes": 24707
+  },
+  {
+   "title": "2015 Ottawa Redblacks season",
+   "revid": 1357829878,
+   "timestamp": "2026-06-04T22:43:00Z",
+   "missing": false,
+   "bytes": 30235
+  },
+  {
+   "title": "2015 Saskatchewan Roughriders season",
+   "revid": 1358338673,
+   "timestamp": "2026-06-08T02:36:50Z",
+   "missing": false,
+   "bytes": 26298
+  },
+  {
+   "title": "2015 Toronto Argonauts season",
+   "revid": 1358971316,
+   "timestamp": "2026-06-12T05:24:44Z",
+   "missing": false,
+   "bytes": 27451
+  },
+  {
+   "title": "2015 Winnipeg Blue Bombers season",
+   "revid": 1359348099,
+   "timestamp": "2026-06-14T19:12:45Z",
+   "missing": false,
+   "bytes": 21523
+  },
+  {
+   "title": "2016 BC Lions season",
+   "revid": 1357775884,
+   "timestamp": "2026-06-04T16:36:03Z",
+   "missing": false,
+   "bytes": 26581
+  },
+  {
+   "title": "2016 CFL season",
+   "revid": 1373139628,
+   "timestamp": "2026-09-04T06:36:27Z",
+   "missing": false,
+   "bytes": 36045
+  },
+  {
+   "title": "2016 Calgary Stampeders season",
+   "revid": 1363053344,
+   "timestamp": "2026-07-07T19:30:18Z",
+   "missing": false,
+   "bytes": 20848
+  },
+  {
+   "title": "2016 Edmonton Eskimos season",
+   "revid": 1355821685,
+   "timestamp": "2026-05-24T03:03:34Z",
+   "missing": false,
+   "bytes": 21808
+  },
+  {
+   "title": "2016 Hamilton Tiger-Cats season",
+   "revid": 1357775891,
+   "timestamp": "2026-06-04T16:36:04Z",
+   "missing": false,
+   "bytes": 20966
+  },
+  {
+   "title": "2016 Montreal Alouettes season",
+   "revid": 1357775950,
+   "timestamp": "2026-06-04T16:36:16Z",
+   "missing": false,
+   "bytes": 23130
+  },
+  {
+   "title": "2016 Ottawa Redblacks season",
+   "revid": 1357869760,
+   "timestamp": "2026-06-05T04:27:33Z",
+   "missing": false,
+   "bytes": 34893
+  },
+  {
+   "title": "2016 Saskatchewan Roughriders season",
+   "revid": 1373327768,
+   "timestamp": "2026-09-05T09:44:15Z",
+   "missing": false,
+   "bytes": 27093
+  },
+  {
+   "title": "2016 Toronto Argonauts season",
+   "revid": 1359235378,
+   "timestamp": "2026-06-14T00:52:12Z",
+   "missing": false,
+   "bytes": 28151
+  },
+  {
+   "title": "2016 Winnipeg Blue Bombers season",
+   "revid": 1359858965,
+   "timestamp": "2026-06-17T17:43:13Z",
+   "missing": false,
+   "bytes": 22983
+  },
+  {
+   "title": "2017 BC Lions season",
+   "revid": 1357775892,
+   "timestamp": "2026-06-04T16:36:05Z",
+   "missing": false,
+   "bytes": 31130
+  },
+  {
+   "title": "2017 CFL season",
+   "revid": 1357526080,
+   "timestamp": "2026-06-03T03:50:24Z",
+   "missing": false,
+   "bytes": 42144
+  },
+  {
+   "title": "2017 Calgary Stampeders season",
+   "revid": 1363053533,
+   "timestamp": "2026-07-07T19:31:24Z",
+   "missing": false,
+   "bytes": 23142
+  },
+  {
+   "title": "2017 Edmonton Eskimos season",
+   "revid": 1357762930,
+   "timestamp": "2026-06-04T14:57:50Z",
+   "missing": false,
+   "bytes": 22748
+  },
+  {
+   "title": "2017 Hamilton Tiger-Cats season",
+   "revid": 1357775913,
+   "timestamp": "2026-06-04T16:36:09Z",
+   "missing": false,
+   "bytes": 22165
+  },
+  {
+   "title": "2017 Montreal Alouettes season",
+   "revid": 1357775981,
+   "timestamp": "2026-06-04T16:36:23Z",
+   "missing": false,
+   "bytes": 28284
+  },
+  {
+   "title": "2017 Ottawa Redblacks season",
+   "revid": 1357872321,
+   "timestamp": "2026-06-05T05:00:14Z",
+   "missing": false,
+   "bytes": 32592
+  },
+  {
+   "title": "2017 Saskatchewan Roughriders season",
+   "revid": 1363433007,
+   "timestamp": "2026-07-10T03:58:29Z",
+   "missing": false,
+   "bytes": 29659
+  },
+  {
+   "title": "2017 Toronto Argonauts season",
+   "revid": 1359111001,
+   "timestamp": "2026-06-13T04:27:27Z",
+   "missing": false,
+   "bytes": 28216
+  },
+  {
+   "title": "2017 Winnipeg Blue Bombers season",
+   "revid": 1359858917,
+   "timestamp": "2026-06-17T17:42:50Z",
+   "missing": false,
+   "bytes": 22825
+  },
+  {
+   "title": "2018 BC Lions season",
+   "revid": 1357775851,
+   "timestamp": "2026-06-04T16:35:57Z",
+   "missing": false,
+   "bytes": 26235
+  },
+  {
+   "title": "2018 CFL season",
+   "revid": 1357526100,
+   "timestamp": "2026-06-03T03:50:37Z",
+   "missing": false,
+   "bytes": 44251
+  },
+  {
+   "title": "2018 Calgary Stampeders season",
+   "revid": 1363053490,
+   "timestamp": "2026-07-07T19:31:05Z",
+   "missing": false,
+   "bytes": 24187
+  },
+  {
+   "title": "2018 Edmonton Eskimos season",
+   "revid": 1357763097,
+   "timestamp": "2026-06-04T14:58:40Z",
+   "missing": false,
+   "bytes": 22249
+  },
+  {
+   "title": "2018 Hamilton Tiger-Cats season",
+   "revid": 1357775916,
+   "timestamp": "2026-06-04T16:36:10Z",
+   "missing": false,
+   "bytes": 36824
+  },
+  {
+   "title": "2018 Montreal Alouettes season",
+   "revid": 1362321179,
+   "timestamp": "2026-07-03T05:15:51Z",
+   "missing": false,
+   "bytes": 25719
+  },
+  {
+   "title": "2018 Ottawa Redblacks season",
+   "revid": 1357997539,
+   "timestamp": "2026-06-05T23:02:50Z",
+   "missing": false,
+   "bytes": 34239
+  },
+  {
+   "title": "2018 Saskatchewan Roughriders season",
+   "revid": 1358820703,
+   "timestamp": "2026-06-11T04:35:10Z",
+   "missing": false,
+   "bytes": 27684
+  },
+  {
+   "title": "2018 Toronto Argonauts season",
+   "revid": 1359254406,
+   "timestamp": "2026-06-14T03:59:36Z",
+   "missing": false,
+   "bytes": 27806
+  },
+  {
+   "title": "2018 Winnipeg Blue Bombers season",
+   "revid": 1359860355,
+   "timestamp": "2026-06-17T17:54:15Z",
+   "missing": false,
+   "bytes": 24483
+  },
+  {
+   "title": "2019 BC Lions season",
+   "revid": 1359921335,
+   "timestamp": "2026-06-18T02:14:40Z",
+   "missing": false,
+   "bytes": 27121
+  },
+  {
+   "title": "2019 CFL season",
+   "revid": 1357526347,
+   "timestamp": "2026-06-03T03:53:39Z",
+   "missing": false,
+   "bytes": 62747
+  },
+  {
+   "title": "2019 Calgary Stampeders season",
+   "revid": 1363053445,
+   "timestamp": "2026-07-07T19:30:51Z",
+   "missing": false,
+   "bytes": 25953
+  },
+  {
+   "title": "2019 Edmonton Eskimos season",
+   "revid": 1357762950,
+   "timestamp": "2026-06-04T14:57:55Z",
+   "missing": false,
+   "bytes": 27346
+  },
+  {
+   "title": "2019 Hamilton Tiger-Cats season",
+   "revid": 1369791351,
+   "timestamp": "2026-08-17T04:58:17Z",
+   "missing": false,
+   "bytes": 28646
+  },
+  {
+   "title": "2019 Montreal Alouettes season",
+   "revid": 1357775935,
+   "timestamp": "2026-06-04T16:36:12Z",
+   "missing": false,
+   "bytes": 36997
+  },
+  {
+   "title": "2019 Ottawa Redblacks season",
+   "revid": 1358042960,
+   "timestamp": "2026-06-06T05:28:24Z",
+   "missing": false,
+   "bytes": 31415
+  },
+  {
+   "title": "2019 Saskatchewan Roughriders season",
+   "revid": 1358822121,
+   "timestamp": "2026-06-11T04:46:54Z",
+   "missing": false,
+   "bytes": 28469
+  },
+  {
+   "title": "2019 Toronto Argonauts season",
+   "revid": 1359255792,
+   "timestamp": "2026-06-14T04:15:24Z",
+   "missing": false,
+   "bytes": 31446
+  },
+  {
+   "title": "2019 Winnipeg Blue Bombers season",
+   "revid": 1365168806,
+   "timestamp": "2026-07-20T18:25:02Z",
+   "missing": false,
+   "bytes": 27966
+  },
+  {
+   "title": "2020 BC Lions season",
+   "revid": 1357775912,
+   "timestamp": "2026-06-04T16:36:09Z",
+   "missing": false,
+   "bytes": 24566
+  },
+  {
+   "title": "2020 CFL season",
+   "revid": 1359385039,
+   "timestamp": "2026-06-15T00:09:32Z",
+   "missing": false,
+   "bytes": 36105
+  },
+  {
+   "title": "2020 Calgary Stampeders season",
+   "revid": 1357775902,
+   "timestamp": "2026-06-04T16:36:06Z",
+   "missing": false,
+   "bytes": 21868
+  },
+  {
+   "title": "2020 Edmonton Football Team season",
+   "revid": 1357763147,
+   "timestamp": "2026-06-04T14:59:06Z",
+   "missing": false,
+   "bytes": 21683
+  },
+  {
+   "title": "2020 Hamilton Tiger-Cats season",
+   "revid": 1357775972,
+   "timestamp": "2026-06-04T16:36:20Z",
+   "missing": false,
+   "bytes": 20830
+  },
+  {
+   "title": "2020 Montreal Alouettes season",
+   "revid": 1357776002,
+   "timestamp": "2026-06-04T16:36:27Z",
+   "missing": false,
+   "bytes": 21898
+  },
+  {
+   "title": "2020 Ottawa Redblacks season",
+   "revid": 1357776159,
+   "timestamp": "2026-06-04T16:37:28Z",
+   "missing": false,
+   "bytes": 24520
+  },
+  {
+   "title": "2020 Saskatchewan Roughriders season",
+   "revid": 1357776010,
+   "timestamp": "2026-06-04T16:36:29Z",
+   "missing": false,
+   "bytes": 20525
+  },
+  {
+   "title": "2020 Toronto Argonauts season",
+   "revid": 1357775848,
+   "timestamp": "2026-06-04T16:35:55Z",
+   "missing": false,
+   "bytes": 25604
+  },
+  {
+   "title": "2020 Winnipeg Blue Bombers season",
+   "revid": 1357775942,
+   "timestamp": "2026-06-04T16:36:14Z",
+   "missing": false,
+   "bytes": 22033
+  },
+  {
+   "title": "2021 BC Lions season",
+   "revid": 1359926578,
+   "timestamp": "2026-06-18T03:00:07Z",
+   "missing": false,
+   "bytes": 27237
+  },
+  {
+   "title": "2021 CFL season",
+   "revid": 1357526465,
+   "timestamp": "2026-06-03T03:55:01Z",
+   "missing": false,
+   "bytes": 32246
+  },
+  {
+   "title": "2021 Calgary Stampeders season",
+   "revid": 1362322283,
+   "timestamp": "2026-07-03T05:20:04Z",
+   "missing": false,
+   "bytes": 25651
+  },
+  {
+   "title": "2021 Edmonton Elks season",
+   "revid": 1361319938,
+   "timestamp": "2026-06-27T04:34:00Z",
+   "missing": false,
+   "bytes": 24845
+  },
+  {
+   "title": "2021 Hamilton Tiger-Cats season",
+   "revid": 1371180586,
+   "timestamp": "2026-08-25T02:04:26Z",
+   "missing": false,
+   "bytes": 26643
+  },
+  {
+   "title": "2021 Montreal Alouettes season",
+   "revid": 1371536572,
+   "timestamp": "2026-08-27T01:19:03Z",
+   "missing": false,
+   "bytes": 28256
+  },
+  {
+   "title": "2021 Ottawa Redblacks season",
+   "revid": 1362939208,
+   "timestamp": "2026-07-07T02:21:29Z",
+   "missing": false,
+   "bytes": 26275
+  },
+  {
+   "title": "2021 Saskatchewan Roughriders season",
+   "revid": 1363888294,
+   "timestamp": "2026-07-13T02:50:57Z",
+   "missing": false,
+   "bytes": 27731
+  },
+  {
+   "title": "2021 Toronto Argonauts season",
+   "revid": 1357775823,
+   "timestamp": "2026-06-04T16:35:49Z",
+   "missing": false,
+   "bytes": 33218
+  },
+  {
+   "title": "2021 Winnipeg Blue Bombers season",
+   "revid": 1364821145,
+   "timestamp": "2026-07-18T18:21:52Z",
+   "missing": false,
+   "bytes": 27571
+  },
+  {
+   "title": "2022 BC Lions season",
+   "revid": 1360371668,
+   "timestamp": "2026-06-21T02:13:24Z",
+   "missing": false,
+   "bytes": 29516
+  },
+  {
+   "title": "2022 CFL season",
+   "revid": 1357526497,
+   "timestamp": "2026-06-03T03:55:24Z",
+   "missing": false,
+   "bytes": 26646
+  },
+  {
+   "title": "2022 Calgary Stampeders season",
+   "revid": 1362322403,
+   "timestamp": "2026-07-03T05:20:28Z",
+   "missing": false,
+   "bytes": 24543
+  },
+  {
+   "title": "2022 Edmonton Elks season",
+   "revid": 1362322725,
+   "timestamp": "2026-07-03T05:23:51Z",
+   "missing": false,
+   "bytes": 27325
+  },
+  {
+   "title": "2022 Hamilton Tiger-Cats season",
+   "revid": 1371180616,
+   "timestamp": "2026-08-25T02:04:43Z",
+   "missing": false,
+   "bytes": 30303
+  },
+  {
+   "title": "2022 Montreal Alouettes season",
+   "revid": 1371536668,
+   "timestamp": "2026-08-27T01:19:42Z",
+   "missing": false,
+   "bytes": 30916
+  },
+  {
+   "title": "2022 Ottawa Redblacks season",
+   "revid": 1369791502,
+   "timestamp": "2026-08-17T04:59:58Z",
+   "missing": false,
+   "bytes": 27113
+  },
+  {
+   "title": "2022 Saskatchewan Roughriders season",
+   "revid": 1363901246,
+   "timestamp": "2026-07-13T05:13:52Z",
+   "missing": false,
+   "bytes": 26295
+  },
+  {
+   "title": "2022 Toronto Argonauts season",
+   "revid": 1364377498,
+   "timestamp": "2026-07-16T04:50:38Z",
+   "missing": false,
+   "bytes": 31808
+  },
+  {
+   "title": "2022 Winnipeg Blue Bombers season",
+   "revid": 1365076119,
+   "timestamp": "2026-07-20T03:40:16Z",
+   "missing": false,
+   "bytes": 30257
+  },
+  {
+   "title": "2023 BC Lions season",
+   "revid": 1360389753,
+   "timestamp": "2026-06-21T05:16:05Z",
+   "missing": false,
+   "bytes": 29553
+  },
+  {
+   "title": "2023 CFL season",
+   "revid": 1357526529,
+   "timestamp": "2026-06-03T03:55:47Z",
+   "missing": false,
+   "bytes": 113241
+  },
+  {
+   "title": "2023 Calgary Stampeders season",
+   "revid": 1362322465,
+   "timestamp": "2026-07-03T05:20:55Z",
+   "missing": false,
+   "bytes": 28177
+  },
+  {
+   "title": "2023 Edmonton Elks season",
+   "revid": 1362322690,
+   "timestamp": "2026-07-03T05:23:28Z",
+   "missing": false,
+   "bytes": 26369
+  },
+  {
+   "title": "2023 Hamilton Tiger-Cats season",
+   "revid": 1362322923,
+   "timestamp": "2026-07-03T05:26:18Z",
+   "missing": false,
+   "bytes": 29200
+  },
+  {
+   "title": "2023 Montreal Alouettes season",
+   "revid": 1371537095,
+   "timestamp": "2026-08-27T01:22:29Z",
+   "missing": false,
+   "bytes": 31961
+  },
+  {
+   "title": "2023 Ottawa Redblacks season",
+   "revid": 1369791541,
+   "timestamp": "2026-08-17T05:00:28Z",
+   "missing": false,
+   "bytes": 28963
+  },
+  {
+   "title": "2023 Saskatchewan Roughriders season",
+   "revid": 1364204863,
+   "timestamp": "2026-07-15T03:52:44Z",
+   "missing": false,
+   "bytes": 27212
+  },
+  {
+   "title": "2023 Toronto Argonauts season",
+   "revid": 1364382463,
+   "timestamp": "2026-07-16T05:32:43Z",
+   "missing": false,
+   "bytes": 33291
+  },
+  {
+   "title": "2023 Winnipeg Blue Bombers season",
+   "revid": 1365240905,
+   "timestamp": "2026-07-21T04:19:05Z",
+   "missing": false,
+   "bytes": 26934
+  },
+  {
+   "title": "2024 BC Lions season",
+   "revid": 1360394003,
+   "timestamp": "2026-06-21T05:55:53Z",
+   "missing": false,
+   "bytes": 28219
+  },
+  {
+   "title": "2024 CFL season",
+   "revid": 1357526545,
+   "timestamp": "2026-06-03T03:56:03Z",
+   "missing": false,
+   "bytes": 110996
+  },
+  {
+   "title": "2024 Calgary Stampeders season",
+   "revid": 1362322509,
+   "timestamp": "2026-07-03T05:21:23Z",
+   "missing": false,
+   "bytes": 25148
+  },
+  {
+   "title": "2024 Edmonton Elks season",
+   "revid": 1370630713,
+   "timestamp": "2026-08-22T04:57:25Z",
+   "missing": false,
+   "bytes": 26131
+  },
+  {
+   "title": "2024 Hamilton Tiger-Cats season",
+   "revid": 1362322950,
+   "timestamp": "2026-07-03T05:26:40Z",
+   "missing": false,
+   "bytes": 25844
+  },
+  {
+   "title": "2024 Montreal Alouettes season",
+   "revid": 1362913503,
+   "timestamp": "2026-07-06T23:53:57Z",
+   "missing": false,
+   "bytes": 29423
+  },
+  {
+   "title": "2024 Ottawa Redblacks season",
+   "revid": 1369791573,
+   "timestamp": "2026-08-17T05:00:56Z",
+   "missing": false,
+   "bytes": 28825
+  },
+  {
+   "title": "2024 Saskatchewan Roughriders season",
+   "revid": 1364212989,
+   "timestamp": "2026-07-15T05:07:07Z",
+   "missing": false,
+   "bytes": 28723
+  },
+  {
+   "title": "2024 Toronto Argonauts season",
+   "revid": 1364683547,
+   "timestamp": "2026-07-17T23:21:13Z",
+   "missing": false,
+   "bytes": 30802
+  },
+  {
+   "title": "2024 Winnipeg Blue Bombers season",
+   "revid": 1365319780,
+   "timestamp": "2026-07-21T17:41:09Z",
+   "missing": false,
+   "bytes": 27639
+  },
+  {
+   "title": "2025 BC Lions season",
+   "revid": 1373280455,
+   "timestamp": "2026-09-05T01:35:47Z",
+   "missing": false,
+   "bytes": 25004
+  },
+  {
+   "title": "2025 CFL season",
+   "revid": 1361001393,
+   "timestamp": "2026-06-25T00:45:31Z",
+   "missing": false,
+   "bytes": 114033
+  },
+  {
+   "title": "2025 Calgary Stampeders season",
+   "revid": 1372011096,
+   "timestamp": "2026-08-29T20:56:29Z",
+   "missing": false,
+   "bytes": 26100
+  },
+  {
+   "title": "2025 Edmonton Elks season",
+   "revid": 1373077586,
+   "timestamp": "2026-09-03T23:13:12Z",
+   "missing": false,
+   "bytes": 22194
+  },
+  {
+   "title": "2025 Hamilton Tiger-Cats season",
+   "revid": 1370239685,
+   "timestamp": "2026-08-19T23:54:37Z",
+   "missing": false,
+   "bytes": 27557
+  },
+  {
+   "title": "2025 Montreal Alouettes season",
+   "revid": 1365705970,
+   "timestamp": "2026-07-24T00:03:23Z",
+   "missing": false,
+   "bytes": 29947
+  },
+  {
+   "title": "2025 Ottawa Redblacks season",
+   "revid": 1363599135,
+   "timestamp": "2026-07-11T05:13:38Z",
+   "missing": false,
+   "bytes": 23233
+  },
+  {
+   "title": "2025 Saskatchewan Roughriders season",
+   "revid": 1371511378,
+   "timestamp": "2026-08-26T22:14:35Z",
+   "missing": false,
+   "bytes": 29090
+  },
+  {
+   "title": "2025 Toronto Argonauts season",
+   "revid": 1364685195,
+   "timestamp": "2026-07-17T23:34:05Z",
+   "missing": false,
+   "bytes": 26988
+  },
+  {
+   "title": "2025 Winnipeg Blue Bombers season",
+   "revid": 1369575810,
+   "timestamp": "2026-08-15T20:50:03Z",
+   "missing": false,
+   "bytes": 28026
+  },
+  {
+   "title": "2026 BC Lions season",
+   "revid": 1373642032,
+   "timestamp": "2026-09-07T02:11:53Z",
+   "missing": false,
+   "bytes": 20139
+  },
+  {
+   "title": "2026 CFL season",
+   "revid": 1372935242,
+   "timestamp": "2026-09-03T01:48:17Z",
+   "missing": false,
+   "bytes": 31015
+  },
+  {
+   "title": "2026 Calgary Stampeders season",
+   "revid": 1372041050,
+   "timestamp": "2026-08-30T00:30:44Z",
+   "missing": false,
+   "bytes": 17913
+  },
+  {
+   "title": "2026 Edmonton Elks season",
+   "revid": 1373069883,
+   "timestamp": "2026-09-03T21:56:53Z",
+   "missing": false,
+   "bytes": 19167
+  },
+  {
+   "title": "2026 Hamilton Tiger-Cats season",
+   "revid": 1373354484,
+   "timestamp": "2026-09-05T14:50:32Z",
+   "missing": false,
+   "bytes": 17828
+  },
+  {
+   "title": "2026 Montreal Alouettes season",
+   "revid": 1373293157,
+   "timestamp": "2026-09-05T03:20:06Z",
+   "missing": false,
+   "bytes": 20006
+  },
+  {
+   "title": "2026 Ottawa Redblacks season",
+   "revid": 1372413623,
+   "timestamp": "2026-08-31T16:57:43Z",
+   "missing": false,
+   "bytes": 19527
+  },
+  {
+   "title": "2026 Saskatchewan Roughriders season",
+   "revid": 1373644537,
+   "timestamp": "2026-09-07T02:30:13Z",
+   "missing": false,
+   "bytes": 19473
+  },
+  {
+   "title": "2026 Toronto Argonauts season",
+   "revid": 1372128132,
+   "timestamp": "2026-08-30T13:42:19Z",
+   "missing": false,
+   "bytes": 22487
+  },
+  {
+   "title": "2026 Winnipeg Blue Bombers season",
+   "revid": 1373644544,
+   "timestamp": "2026-09-07T02:30:15Z",
+   "missing": false,
+   "bytes": 18715
+  },
+  {
+   "title": "2009 California Redwoods season",
+   "revid": 1370466455,
+   "timestamp": "2026-08-21T07:09:39Z",
+   "missing": false,
+   "bytes": 16321
+  },
+  {
+   "title": "2009 Florida Tuskers season",
+   "revid": 1370948455,
+   "timestamp": "2026-08-23T21:55:37Z",
+   "missing": false,
+   "bytes": 24240
+  },
+  {
+   "title": "2009 Las Vegas Locomotives season",
+   "revid": 1371900994,
+   "timestamp": "2026-08-29T05:21:01Z",
+   "missing": false,
+   "bytes": 18144
+  },
+  {
+   "title": "2009 New York Sentinels season",
+   "revid": 1371570795,
+   "timestamp": "2026-08-27T04:38:20Z",
+   "missing": false,
+   "bytes": 16569
+  },
+  {
+   "title": "2009 UFL season",
+   "revid": 1371805963,
+   "timestamp": "2026-08-28T15:26:57Z",
+   "missing": false,
+   "bytes": 19593
+  },
+  {
+   "title": "2010 Florida Tuskers season",
+   "revid": 1371210413,
+   "timestamp": "2026-08-25T05:41:20Z",
+   "missing": false,
+   "bytes": 25678
+  },
+  {
+   "title": "2010 Hartford Colonials season",
+   "revid": 1371570963,
+   "timestamp": "2026-08-27T04:39:22Z",
+   "missing": false,
+   "bytes": 16415
+  },
+  {
+   "title": "2010 Las Vegas Locomotives season",
+   "revid": 1371389562,
+   "timestamp": "2026-08-26T04:50:59Z",
+   "missing": false,
+   "bytes": 16281
+  },
+  {
+   "title": "2010 Omaha Nighthawks season",
+   "revid": 1371722049,
+   "timestamp": "2026-08-28T02:28:51Z",
+   "missing": false,
+   "bytes": 14465
+  },
+  {
+   "title": "2010 Sacramento Mountain Lions season",
+   "revid": 1370548152,
+   "timestamp": "2026-08-21T19:39:08Z",
+   "missing": false,
+   "bytes": 15702
+  },
+  {
+   "title": "2010 UFL season",
+   "revid": 1370154001,
+   "timestamp": "2026-08-19T11:57:09Z",
+   "missing": false,
+   "bytes": 24166
+  },
+  {
+   "title": "2011 Las Vegas Locomotives season",
+   "revid": 1371452040,
+   "timestamp": "2026-08-26T14:41:49Z",
+   "missing": false,
+   "bytes": 13912
+  },
+  {
+   "title": "2011 Omaha Nighthawks season",
+   "revid": 1371740080,
+   "timestamp": "2026-08-28T04:49:39Z",
+   "missing": false,
+   "bytes": 17572
+  },
+  {
+   "title": "2011 Sacramento Mountain Lions season",
+   "revid": 1370789270,
+   "timestamp": "2026-08-23T02:53:04Z",
+   "missing": false,
+   "bytes": 15023
+  },
+  {
+   "title": "2011 UFL season",
+   "revid": 1370713634,
+   "timestamp": "2026-08-22T17:48:03Z",
+   "missing": false,
+   "bytes": 48919
+  },
+  {
+   "title": "2011 Virginia Destroyers season",
+   "revid": 1371211587,
+   "timestamp": "2026-08-25T05:51:28Z",
+   "missing": false,
+   "bytes": 14611
+  },
+  {
+   "title": "2012 Las Vegas Locomotives season",
+   "revid": 1371901046,
+   "timestamp": "2026-08-29T05:21:50Z",
+   "missing": false,
+   "bytes": 8278
+  },
+  {
+   "title": "2012 Omaha Nighthawks season",
+   "revid": 1348130528,
+   "timestamp": "2026-04-10T21:40:56Z",
+   "missing": false,
+   "bytes": 6989
+  },
+  {
+   "title": "2012 Sacramento Mountain Lions season",
+   "revid": 1371131490,
+   "timestamp": "2026-08-24T19:50:36Z",
+   "missing": false,
+   "bytes": 7883
+  },
+  {
+   "title": "2027 CFL season",
+   "revid": 1373309034,
+   "timestamp": "2026-09-05T05:39:02Z",
+   "missing": false,
+   "bytes": 11696
+  },
+  {
+   "title": "2012 UFL season",
+   "revid": 1371172014,
+   "timestamp": "2026-08-25T01:00:42Z",
+   "missing": false,
+   "bytes": 30450
+  },
+  {
+   "title": "2012 Virginia Destroyers season",
+   "revid": 1341166334,
+   "timestamp": "2026-03-01T20:51:25Z",
+   "missing": false,
+   "bytes": 6988
+  },
+  {
+   "title": "2020 DC Defenders season",
+   "revid": 1365553553,
+   "timestamp": "2026-07-23T03:35:59Z",
+   "missing": false,
+   "bytes": 19847
+  },
+  {
+   "title": "2020 Dallas Renegades season",
+   "revid": 1365549796,
+   "timestamp": "2026-07-23T03:13:20Z",
+   "missing": false,
+   "bytes": 21034
+  },
+  {
+   "title": "2020 Houston Roughnecks season",
+   "revid": 1365555733,
+   "timestamp": "2026-07-23T03:51:29Z",
+   "missing": false,
+   "bytes": 21456
+  },
+  {
+   "title": "2020 Los Angeles Wildcats season",
+   "revid": 1365560613,
+   "timestamp": "2026-07-23T04:24:55Z",
+   "missing": false,
+   "bytes": 26075
+  },
+  {
+   "title": "2020 New York Guardians season",
+   "revid": 1365559845,
+   "timestamp": "2026-07-23T04:20:33Z",
+   "missing": false,
+   "bytes": 23402
+  },
+  {
+   "title": "2020 Seattle Dragons season",
+   "revid": 1365731016,
+   "timestamp": "2026-07-24T03:02:04Z",
+   "missing": false,
+   "bytes": 27948
+  },
+  {
+   "title": "2020 St. Louis BattleHawks season",
+   "revid": 1365743307,
+   "timestamp": "2026-07-24T05:01:20Z",
+   "missing": false,
+   "bytes": 19362
+  },
+  {
+   "title": "2020 Tampa Bay Vipers season",
+   "revid": 1368242061,
+   "timestamp": "2026-08-07T22:22:41Z",
+   "missing": false,
+   "bytes": 18594
+  },
+  {
+   "title": "2020 XFL season",
+   "revid": 1361000947,
+   "timestamp": "2026-06-25T00:41:10Z",
+   "missing": false,
+   "bytes": 141393
+  },
+  {
+   "title": "2022 Birmingham Stallions season",
+   "revid": 1367630316,
+   "timestamp": "2026-08-04T06:28:03Z",
+   "missing": false,
+   "bytes": 26788
+  },
+  {
+   "title": "2022 Houston Gamblers season",
+   "revid": 1367630280,
+   "timestamp": "2026-08-04T06:27:30Z",
+   "missing": false,
+   "bytes": 22607
+  },
+  {
+   "title": "2022 Michigan Panthers season",
+   "revid": 1368126613,
+   "timestamp": "2026-08-07T04:24:32Z",
+   "missing": false,
+   "bytes": 31457
+  },
+  {
+   "title": "2022 New Jersey Generals season",
+   "revid": 1368467490,
+   "timestamp": "2026-08-09T05:44:13Z",
+   "missing": false,
+   "bytes": 18099
+  },
+  {
+   "title": "2022 New Orleans Breakers season",
+   "revid": 1368803495,
+   "timestamp": "2026-08-11T05:07:45Z",
+   "missing": false,
+   "bytes": 27059
+  },
+  {
+   "title": "2022 Philadelphia Stars season",
+   "revid": 1368974885,
+   "timestamp": "2026-08-12T04:21:35Z",
+   "missing": false,
+   "bytes": 18938
+  },
+  {
+   "title": "2022 Pittsburgh Maulers season",
+   "revid": 1369092116,
+   "timestamp": "2026-08-12T21:07:33Z",
+   "missing": false,
+   "bytes": 38925
+  },
+  {
+   "title": "2022 Tampa Bay Bandits season",
+   "revid": 1369296813,
+   "timestamp": "2026-08-14T03:37:39Z",
+   "missing": false,
+   "bytes": 14667
+  },
+  {
+   "title": "2022 USFL season",
+   "revid": 1361999669,
+   "timestamp": "2026-07-01T09:46:32Z",
+   "missing": false,
+   "bytes": 105600
+  },
+  {
+   "title": "2023 Arlington Renegades season",
+   "revid": 1365923740,
+   "timestamp": "2026-07-25T06:06:02Z",
+   "missing": false,
+   "bytes": 36675
+  },
+  {
+   "title": "2023 Birmingham Stallions season",
+   "revid": 1367281694,
+   "timestamp": "2026-08-02T03:53:25Z",
+   "missing": false,
+   "bytes": 13528
+  },
+  {
+   "title": "2023 DC Defenders season",
+   "revid": 1366089335,
+   "timestamp": "2026-07-26T05:23:42Z",
+   "missing": false,
+   "bytes": 40527
+  },
+  {
+   "title": "2023 Houston Gamblers season",
+   "revid": 1367630693,
+   "timestamp": "2026-08-04T06:31:42Z",
+   "missing": false,
+   "bytes": 14671
+  },
+  {
+   "title": "2023 Houston Roughnecks season",
+   "revid": 1366294521,
+   "timestamp": "2026-07-27T05:40:31Z",
+   "missing": false,
+   "bytes": 35654
+  },
+  {
+   "title": "2023 Memphis Showboats season",
+   "revid": 1369302941,
+   "timestamp": "2026-08-14T04:27:03Z",
+   "missing": false,
+   "bytes": 12718
+  },
+  {
+   "title": "2023 Michigan Panthers season",
+   "revid": 1368130031,
+   "timestamp": "2026-08-07T04:54:57Z",
+   "missing": false,
+   "bytes": 53371
+  },
+  {
+   "title": "2023 New Jersey Generals season",
+   "revid": 1368550500,
+   "timestamp": "2026-08-09T19:02:36Z",
+   "missing": false,
+   "bytes": 11666
+  },
+  {
+   "title": "2023 New Orleans Breakers season",
+   "revid": 1368899740,
+   "timestamp": "2026-08-11T18:39:29Z",
+   "missing": false,
+   "bytes": 42897
+  },
+  {
+   "title": "2023 Orlando Guardians season",
+   "revid": 1366468223,
+   "timestamp": "2026-07-28T05:05:57Z",
+   "missing": false,
+   "bytes": 36434
+  },
+  {
+   "title": "2023 Philadelphia Stars season",
+   "revid": 1369120669,
+   "timestamp": "2026-08-13T01:32:34Z",
+   "missing": false,
+   "bytes": 14797
+  },
+  {
+   "title": "2023 Pittsburgh Maulers season",
+   "revid": 1369124015,
+   "timestamp": "2026-08-13T01:57:13Z",
+   "missing": false,
+   "bytes": 12461
+  },
+  {
+   "title": "2023 San Antonio Brahmas season",
+   "revid": 1366622692,
+   "timestamp": "2026-07-29T03:09:15Z",
+   "missing": false,
+   "bytes": 29328
+  },
+  {
+   "title": "2023 Seattle Sea Dragons season",
+   "revid": 1366777280,
+   "timestamp": "2026-07-30T04:02:16Z",
+   "missing": false,
+   "bytes": 35758
+  },
+  {
+   "title": "2023 St. Louis Battlehawks season",
+   "revid": 1366872862,
+   "timestamp": "2026-07-30T18:10:46Z",
+   "missing": false,
+   "bytes": 31920
+  },
+  {
+   "title": "2023 USFL season",
+   "revid": 1364259238,
+   "timestamp": "2026-07-15T14:08:30Z",
+   "missing": false,
+   "bytes": 164193
+  },
+  {
+   "title": "2023 Vegas Vipers season",
+   "revid": 1367115430,
+   "timestamp": "2026-08-01T02:20:15Z",
+   "missing": false,
+   "bytes": 32580
+  },
+  {
+   "title": "2023 XFL season",
+   "revid": 1371439247,
+   "timestamp": "2026-08-26T12:51:57Z",
+   "missing": false,
+   "bytes": 266328
+  },
+  {
+   "title": "2024 Arlington Renegades season",
+   "revid": 1365907811,
+   "timestamp": "2026-07-25T03:18:04Z",
+   "missing": false,
+   "bytes": 11847
+  },
+  {
+   "title": "2024 Birmingham Stallions season",
+   "revid": 1367384256,
+   "timestamp": "2026-08-02T19:50:12Z",
+   "missing": false,
+   "bytes": 20891
+  },
+  {
+   "title": "2024 DC Defenders season",
+   "revid": 1366213395,
+   "timestamp": "2026-07-26T22:01:27Z",
+   "missing": false,
+   "bytes": 12701
+  },
+  {
+   "title": "2024 Houston Roughnecks season",
+   "revid": 1367877080,
+   "timestamp": "2026-08-05T18:54:14Z",
+   "missing": false,
+   "bytes": 13939
+  },
+  {
+   "title": "2024 Memphis Showboats season",
+   "revid": 1369633352,
+   "timestamp": "2026-08-16T04:40:02Z",
+   "missing": false,
+   "bytes": 13057
+  },
+  {
+   "title": "2024 Michigan Panthers season",
+   "revid": 1368297196,
+   "timestamp": "2026-08-08T06:37:30Z",
+   "missing": false,
+   "bytes": 11940
+  },
+  {
+   "title": "2024 San Antonio Brahmas season",
+   "revid": 1372010883,
+   "timestamp": "2026-08-29T20:55:24Z",
+   "missing": false,
+   "bytes": 21408
+  },
+  {
+   "title": "2024 St. Louis Battlehawks season",
+   "revid": 1366969853,
+   "timestamp": "2026-07-31T03:34:47Z",
+   "missing": false,
+   "bytes": 15125
+  },
+  {
+   "title": "2024 UFL season",
+   "revid": 1355657694,
+   "timestamp": "2026-05-23T03:28:55Z",
+   "missing": false,
+   "bytes": 236913
+  },
+  {
+   "title": "2024 USFL season",
+   "revid": 1348176105,
+   "timestamp": "2026-04-11T04:01:29Z",
+   "missing": false,
+   "bytes": 29243
+  },
+  {
+   "title": "2024 XFL season",
+   "revid": 1337123542,
+   "timestamp": "2026-02-07T17:03:06Z",
+   "missing": false,
+   "bytes": 40996
+  },
+  {
+   "title": "2025 Arlington Renegades season",
+   "revid": 1366194682,
+   "timestamp": "2026-07-26T20:35:41Z",
+   "missing": false,
+   "bytes": 11625
+  },
+  {
+   "title": "2025 Birmingham Stallions season",
+   "revid": 1367386566,
+   "timestamp": "2026-08-02T20:07:33Z",
+   "missing": false,
+   "bytes": 11056
+  },
+  {
+   "title": "2025 DC Defenders season",
+   "revid": 1366265243,
+   "timestamp": "2026-07-27T02:31:53Z",
+   "missing": false,
+   "bytes": 15285
+  },
+  {
+   "title": "2025 Houston Roughnecks season",
+   "revid": 1367881035,
+   "timestamp": "2026-08-05T19:25:50Z",
+   "missing": false,
+   "bytes": 9779
+  },
+  {
+   "title": "2025 Memphis Showboats season",
+   "revid": 1369716069,
+   "timestamp": "2026-08-16T18:05:06Z",
+   "missing": false,
+   "bytes": 11443
+  },
+  {
+   "title": "2025 Michigan Panthers season",
+   "revid": 1369800652,
+   "timestamp": "2026-08-17T06:53:59Z",
+   "missing": false,
+   "bytes": 13704
+  },
+  {
+   "title": "2025 San Antonio Brahmas season",
+   "revid": 1371028214,
+   "timestamp": "2026-08-24T05:10:33Z",
+   "missing": false,
+   "bytes": 14422
+  },
+  {
+   "title": "2025 St. Louis Battlehawks season",
+   "revid": 1366978938,
+   "timestamp": "2026-07-31T05:26:56Z",
+   "missing": false,
+   "bytes": 28325
+  },
+  {
+   "title": "2025 UFL season",
+   "revid": 1358333308,
+   "timestamp": "2026-06-08T01:55:19Z",
+   "missing": false,
+   "bytes": 175816
+  },
+  {
+   "title": "2026 Birmingham Stallions season",
+   "revid": 1371028411,
+   "timestamp": "2026-08-24T05:12:01Z",
+   "missing": false,
+   "bytes": 32810
+  },
+  {
+   "title": "2026 Columbus Aviators season",
+   "revid": 1369765515,
+   "timestamp": "2026-08-17T01:07:01Z",
+   "missing": false,
+   "bytes": 34330
+  },
+  {
+   "title": "2022 Birmingham Stallions season",
+   "revid": 1367630316,
+   "timestamp": "2026-08-04T06:28:03Z",
+   "missing": false,
+   "bytes": 26788
+  },
+  {
+   "title": "2022 Houston Gamblers season",
+   "revid": 1367630280,
+   "timestamp": "2026-08-04T06:27:30Z",
+   "missing": false,
+   "bytes": 22607
+  },
+  {
+   "title": "2022 Michigan Panthers season",
+   "revid": 1368126613,
+   "timestamp": "2026-08-07T04:24:32Z",
+   "missing": false,
+   "bytes": 31457
+  },
+  {
+   "title": "2022 New Jersey Generals season",
+   "revid": 1368467490,
+   "timestamp": "2026-08-09T05:44:13Z",
+   "missing": false,
+   "bytes": 18099
+  },
+  {
+   "title": "2022 New Orleans Breakers season",
+   "revid": 1368803495,
+   "timestamp": "2026-08-11T05:07:45Z",
+   "missing": false,
+   "bytes": 27059
+  },
+  {
+   "title": "2022 Philadelphia Stars season",
+   "revid": 1368974885,
+   "timestamp": "2026-08-12T04:21:35Z",
+   "missing": false,
+   "bytes": 18938
+  },
+  {
+   "title": "2022 Pittsburgh Maulers season",
+   "revid": 1369092116,
+   "timestamp": "2026-08-12T21:07:33Z",
+   "missing": false,
+   "bytes": 38925
+  },
+  {
+   "title": "2022 Tampa Bay Bandits season",
+   "revid": 1369296813,
+   "timestamp": "2026-08-14T03:37:39Z",
+   "missing": false,
+   "bytes": 14667
+  },
+  {
+   "title": "2022 USFL season",
+   "revid": 1361999669,
+   "timestamp": "2026-07-01T09:46:32Z",
+   "missing": false,
+   "bytes": 105600
+  },
+  {
+   "title": "2023 Birmingham Stallions season",
+   "revid": 1367281694,
+   "timestamp": "2026-08-02T03:53:25Z",
+   "missing": false,
+   "bytes": 13528
+  },
+  {
+   "title": "2023 Houston Gamblers season",
+   "revid": 1367630693,
+   "timestamp": "2026-08-04T06:31:42Z",
+   "missing": false,
+   "bytes": 14671
+  },
+  {
+   "title": "2023 Memphis Showboats season",
+   "revid": 1369302941,
+   "timestamp": "2026-08-14T04:27:03Z",
+   "missing": false,
+   "bytes": 12718
+  },
+  {
+   "title": "2023 Michigan Panthers season",
+   "revid": 1368130031,
+   "timestamp": "2026-08-07T04:54:57Z",
+   "missing": false,
+   "bytes": 53371
+  },
+  {
+   "title": "2026 DC Defenders season",
+   "revid": 1372460561,
+   "timestamp": "2026-08-31T21:14:29Z",
+   "missing": false,
+   "bytes": 47555
+  },
+  {
+   "title": "2026 Dallas Renegades season",
+   "revid": 1366202154,
+   "timestamp": "2026-07-26T21:09:43Z",
+   "missing": false,
+   "bytes": 33223
+  },
+  {
+   "title": "2026 Houston Gamblers season",
+   "revid": 1371028439,
+   "timestamp": "2026-08-24T05:12:20Z",
+   "missing": false,
+   "bytes": 37869
+  },
+  {
+   "title": "2026 Louisville Kings season",
+   "revid": 1369792433,
+   "timestamp": "2026-08-17T05:12:48Z",
+   "missing": false,
+   "bytes": 81927
+  },
+  {
+   "title": "2026 Orlando Storm season",
+   "revid": 1369801237,
+   "timestamp": "2026-08-17T07:01:14Z",
+   "missing": false,
+   "bytes": 36749
+  },
+  {
+   "title": "2026 St. Louis Battlehawks season",
+   "revid": 1366981048,
+   "timestamp": "2026-07-31T05:58:41Z",
+   "missing": false,
+   "bytes": 36489
+  },
+  {
+   "title": "2026 UFL season",
+   "revid": 1373238268,
+   "timestamp": "2026-09-04T19:49:13Z",
+   "missing": false,
+   "bytes": 115041
+  },
+  {
+   "title": "1974 World Football League season",
+   "revid": 1327001109,
+   "timestamp": "2025-12-12T02:00:41Z",
+   "missing": false,
+   "bytes": 13688
+  },
+  {
+   "title": "1975 World Football League season",
+   "revid": 1364333825,
+   "timestamp": "2026-07-16T00:04:06Z",
+   "missing": false,
+   "bytes": 9892
+  },
+  {
+   "title": "2020 DC Defenders season",
+   "revid": 1365553553,
+   "timestamp": "2026-07-23T03:35:59Z",
+   "missing": false,
+   "bytes": 19847
+  },
+  {
+   "title": "2020 Dallas Renegades season",
+   "revid": 1365549796,
+   "timestamp": "2026-07-23T03:13:20Z",
+   "missing": false,
+   "bytes": 21034
+  },
+  {
+   "title": "2020 Houston Roughnecks season",
+   "revid": 1365555733,
+   "timestamp": "2026-07-23T03:51:29Z",
+   "missing": false,
+   "bytes": 21456
+  },
+  {
+   "title": "2020 Los Angeles Wildcats season",
+   "revid": 1365560613,
+   "timestamp": "2026-07-23T04:24:55Z",
+   "missing": false,
+   "bytes": 26075
+  },
+  {
+   "title": "2020 New York Guardians season",
+   "revid": 1365559845,
+   "timestamp": "2026-07-23T04:20:33Z",
+   "missing": false,
+   "bytes": 23402
+  },
+  {
+   "title": "2020 Seattle Dragons season",
+   "revid": 1365731016,
+   "timestamp": "2026-07-24T03:02:04Z",
+   "missing": false,
+   "bytes": 27948
+  },
+  {
+   "title": "2020 St. Louis BattleHawks season",
+   "revid": 1365743307,
+   "timestamp": "2026-07-24T05:01:20Z",
+   "missing": false,
+   "bytes": 19362
+  },
+  {
+   "title": "2020 Tampa Bay Vipers season",
+   "revid": 1368242061,
+   "timestamp": "2026-08-07T22:22:41Z",
+   "missing": false,
+   "bytes": 18594
+  },
+  {
+   "title": "2020 XFL season",
+   "revid": 1361000947,
+   "timestamp": "2026-06-25T00:41:10Z",
+   "missing": false,
+   "bytes": 141393
+  },
+  {
+   "title": "2023 Arlington Renegades season",
+   "revid": 1365923740,
+   "timestamp": "2026-07-25T06:06:02Z",
+   "missing": false,
+   "bytes": 36675
+  },
+  {
+   "title": "2023 DC Defenders season",
+   "revid": 1366089335,
+   "timestamp": "2026-07-26T05:23:42Z",
+   "missing": false,
+   "bytes": 40527
+  },
+  {
+   "title": "2023 Houston Roughnecks season",
+   "revid": 1366294521,
+   "timestamp": "2026-07-27T05:40:31Z",
+   "missing": false,
+   "bytes": 35654
+  },
+  {
+   "title": "2023 New Jersey Generals season",
+   "revid": 1368550500,
+   "timestamp": "2026-08-09T19:02:36Z",
+   "missing": false,
+   "bytes": 11666
+  },
+  {
+   "title": "2023 New Orleans Breakers season",
+   "revid": 1368899740,
+   "timestamp": "2026-08-11T18:39:29Z",
+   "missing": false,
+   "bytes": 42897
+  },
+  {
+   "title": "2023 Philadelphia Stars season",
+   "revid": 1369120669,
+   "timestamp": "2026-08-13T01:32:34Z",
+   "missing": false,
+   "bytes": 14797
+  },
+  {
+   "title": "2023 Pittsburgh Maulers season",
+   "revid": 1369124015,
+   "timestamp": "2026-08-13T01:57:13Z",
+   "missing": false,
+   "bytes": 12461
+  },
+  {
+   "title": "2023 USFL season",
+   "revid": 1364259238,
+   "timestamp": "2026-07-15T14:08:30Z",
+   "missing": false,
+   "bytes": 164193
+  },
+  {
+   "title": "2024 USFL season",
+   "revid": 1348176105,
+   "timestamp": "2026-04-11T04:01:29Z",
+   "missing": false,
+   "bytes": 29243
+  },
+  {
+   "title": "2023 Orlando Guardians season",
+   "revid": 1366468223,
+   "timestamp": "2026-07-28T05:05:57Z",
+   "missing": false,
+   "bytes": 36434
+  },
+  {
+   "title": "2023 San Antonio Brahmas season",
+   "revid": 1366622692,
+   "timestamp": "2026-07-29T03:09:15Z",
+   "missing": false,
+   "bytes": 29328
+  },
+  {
+   "title": "2023 Seattle Sea Dragons season",
+   "revid": 1366777280,
+   "timestamp": "2026-07-30T04:02:16Z",
+   "missing": false,
+   "bytes": 35758
+  },
+  {
+   "title": "2023 St. Louis Battlehawks season",
+   "revid": 1366872862,
+   "timestamp": "2026-07-30T18:10:46Z",
+   "missing": false,
+   "bytes": 31920
+  },
+  {
+   "title": "2023 Vegas Vipers season",
+   "revid": 1367115430,
+   "timestamp": "2026-08-01T02:20:15Z",
+   "missing": false,
+   "bytes": 32580
+  },
+  {
+   "title": "2023 XFL season",
+   "revid": 1371439247,
+   "timestamp": "2026-08-26T12:51:57Z",
+   "missing": false,
+   "bytes": 266328
+  },
+  {
+   "title": "2024 XFL season",
+   "revid": 1337123542,
+   "timestamp": "2026-02-07T17:03:06Z",
+   "missing": false,
+   "bytes": 40996
+  }
+ ],
+ "http_errors": [],
+ "skipped": {
+  "off_target": 1,
+  "missing": 0,
+  "already_cached": 0
+ }
+}

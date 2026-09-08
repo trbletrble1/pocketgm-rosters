@@ -1,0 +1,466 @@
+{
+ "_note": "row-band probe; proved = exactly one bare number and at least one name",
+ "totals": {
+  "no_name": 216,
+  "proved": 292,
+  "merged": 407
+ },
+ "fields": {
+  "number": 292,
+  "name": 292,
+  "college": 171,
+  "position": 359,
+  "weight": 427,
+  "height": 75
+ },
+ "listings": [
+  {
+   "listing": "1936\u201dRARE\u201d BOSTON REDSKINS v NEW YORK GIANTS NFL FOOTBALL PROGRAM:L.Y. In Boston",
+   "pages": 1,
+   "proved": 30,
+   "merged": 13,
+   "no_name": 3,
+   "fields": {
+    "number": 30,
+    "name": 30,
+    "position": 45,
+    "height": 24,
+    "college": 18,
+    "weight": 26
+   }
+  },
+  {
+   "listing": "1934 Historic\u201dNew Fenway Park\u201d Boston Redskins vs Chicago Cards football program",
+   "pages": 1,
+   "merged": 12,
+   "proved": 22,
+   "fields": {
+    "position": 31,
+    "number": 22,
+    "name": 22,
+    "weight": 14,
+    "college": 11
+   }
+  },
+  {
+   "listing": "1940 NFL N.Y.GIANTS v BROOKLYN DODGERS FOOTBALL PROGRAM:MEL HEIN DAY!",
+   "pages": 3,
+   "proved": 22,
+   "merged": 20,
+   "no_name": 10,
+   "fields": {
+    "number": 22,
+    "name": 22,
+    "weight": 11,
+    "height": 2,
+    "position": 4,
+    "college": 1
+   }
+  },
+  {
+   "listing": "1944 LA Mustangs vs San Francisco Clippers\u201dWalt Disney\u201dfab football program-MINT",
+   "pages": 1,
+   "proved": 20,
+   "merged": 1,
+   "no_name": 2,
+   "fields": {
+    "number": 20,
+    "name": 20,
+    "weight": 10,
+    "college": 5
+   }
+  },
+  {
+   "listing": "1940 Cleveland Rams v N.Y. Giants NFL football program:DANTE MAGNANI:JIM BENTON!",
+   "pages": 3,
+   "merged": 8,
+   "no_name": 17,
+   "proved": 19,
+   "fields": {
+    "position": 14,
+    "number": 19,
+    "name": 19,
+    "college": 2,
+    "weight": 1
+   }
+  },
+  {
+   "listing": "1941 Brooklyn Dodgers v New York Giants NFL football program:BRUISER KINARD-MINT",
+   "pages": 4,
+   "merged": 49,
+   "no_name": 19,
+   "proved": 19,
+   "fields": {
+    "position": 52,
+    "college": 21,
+    "weight": 60,
+    "number": 19,
+    "name": 19
+   }
+  },
+  {
+   "listing": "1940 CLEVELAND RAMS v BEARS FOOTBALL PROGRAM:DANTE MAGNANI:JIM BENTON:ED MANSKE!",
+   "pages": 2,
+   "proved": 18,
+   "merged": 5,
+   "no_name": 17,
+   "fields": {
+    "number": 18,
+    "name": 18,
+    "weight": 34,
+    "college": 6,
+    "position": 2
+   }
+  },
+  {
+   "listing": "1939 NFL LIONS v CHICAGO CARDINALS FOOTBALL PROGRAM:M.GOLDBERG:BUDDY PARKER:MINT",
+   "pages": 2,
+   "merged": 6,
+   "proved": 15,
+   "no_name": 11,
+   "fields": {
+    "position": 27,
+    "weight": 29,
+    "number": 15,
+    "name": 15,
+    "college": 10,
+    "height": 1
+   }
+  },
+  {
+   "listing": "1940 NFL All-Stars vs Chicago Bears NFL football DON HUTSON, Sammy BAUGH-NRMT!!!",
+   "pages": 2,
+   "merged": 11,
+   "proved": 13,
+   "no_name": 8,
+   "fields": {
+    "weight": 11,
+    "number": 13,
+    "name": 13,
+    "height": 5,
+    "position": 3,
+    "college": 3
+   }
+  },
+  {
+   "listing": "1937\u201dFamous\u201dGreen Bay vs New York Giants NFL football program:C.LAMBEAU:D.HUTSON",
+   "pages": 2,
+   "proved": 9,
+   "merged": 26,
+   "no_name": 2,
+   "fields": {
+    "number": 9,
+    "name": 9,
+    "weight": 16,
+    "position": 1,
+    "height": 1
+   }
+  },
+  {
+   "listing": "1938 N.Y.GIANTS v PIRATES FOOTBALL PROGRAM:STEVE OWEN:HEIN:POOLE:\u201cWHIZZER\u201d WHITE",
+   "pages": 3,
+   "merged": 45,
+   "proved": 9,
+   "no_name": 2,
+   "fields": {
+    "position": 45,
+    "college": 19,
+    "weight": 46,
+    "number": 9,
+    "name": 9
+   }
+  },
+  {
+   "listing": "1941 Cleveland Rams v Washington Redskins football program:DUTCH CLARK:ED CIFERS",
+   "pages": 2,
+   "no_name": 3,
+   "merged": 8,
+   "proved": 9,
+   "fields": {
+    "weight": 11,
+    "college": 6,
+    "number": 9,
+    "name": 9,
+    "position": 2
+   }
+  },
+  {
+   "listing": "1935 NFL CHICAGO BEARS v PACIFIC A.S.FOOTBALL PROGRAM:RED GRANGE:BRONKO NAGURSKI",
+   "pages": 1,
+   "merged": 7,
+   "no_name": 20,
+   "proved": 8,
+   "fields": {
+    "position": 10,
+    "height": 10,
+    "weight": 33,
+    "number": 8,
+    "name": 8,
+    "college": 8
+   }
+  },
+  {
+   "listing": "1940 Pittsburgh Steelers vs New York Giants NFL football program-S.OWEN on cover",
+   "pages": 1,
+   "proved": 7,
+   "no_name": 4,
+   "merged": 2,
+   "fields": {
+    "number": 7,
+    "name": 7,
+    "position": 4,
+    "college": 1,
+    "weight": 1
+   }
+  },
+  {
+   "listing": "1938 N. Y. GIANTS VS. GREEN BAY PACKERS FOOTBALL PROGRAM",
+   "pages": 3,
+   "no_name": 6,
+   "merged": 36,
+   "proved": 6,
+   "fields": {
+    "position": 32,
+    "college": 20,
+    "weight": 27,
+    "number": 6,
+    "name": 6
+   }
+  },
+  {
+   "listing": "1939 DETROIT LIONS v CHICAGO BEARS FOOTBALL PROGRAM:SID LUCKMAN:LLOYD CARDWELL",
+   "pages": 1,
+   "merged": 18,
+   "proved": 6,
+   "no_name": 1,
+   "fields": {
+    "weight": 9,
+    "number": 6,
+    "name": 6
+   }
+  },
+  {
+   "listing": "1939 NY GIANTS VS. PITTSBURGH PIRATES FOOTBALL PROGRAM:KEN STRONG H.O.F. Legend!",
+   "pages": 1,
+   "merged": 6,
+   "proved": 6,
+   "no_name": 5,
+   "fields": {
+    "number": 6,
+    "name": 6,
+    "position": 5,
+    "college": 1,
+    "weight": 1
+   }
+  },
+  {
+   "listing": "1942 BEARS vs. GREEN BAY NFL FOOTBALL PROGRAM:CURLY LAMBEAU:DON HUTSON",
+   "pages": 1,
+   "no_name": 4,
+   "proved": 6,
+   "fields": {
+    "number": 6,
+    "name": 6,
+    "position": 1
+   }
+  },
+  {
+   "listing": "1942 NFL World Championship Chicago Bears-Washington Redskins football program!!",
+   "pages": 3,
+   "no_name": 4,
+   "merged": 36,
+   "proved": 6,
+   "fields": {
+    "weight": 9,
+    "number": 6,
+    "name": 6,
+    "position": 25,
+    "college": 14
+   }
+  },
+  {
+   "listing": "1946\u201dRARE\u201dMIAMI SEAHAWKS v L.A. DONS AAFC Football Program-\u201cOnly\u201dSEAHAWKS Season",
+   "pages": 2,
+   "proved": 6,
+   "merged": 25,
+   "no_name": 5,
+   "fields": {
+    "number": 6,
+    "name": 6,
+    "height": 31,
+    "weight": 32,
+    "position": 12,
+    "college": 10
+   }
+  },
+  {
+   "listing": "1926 Red Grange on Cover NY Football Yankees vs. Boston Bulldogs Program",
+   "pages": 1,
+   "proved": 5,
+   "merged": 6,
+   "no_name": 2,
+   "fields": {
+    "number": 5,
+    "name": 5,
+    "position": 8,
+    "college": 4
+   }
+  },
+  {
+   "listing": "1941 GREEN BAY v DETROIT LIONS NFL FOOTBALL PROGRAM:DON HUTSON:CURLY LAMBEAU!!!",
+   "pages": 1,
+   "no_name": 8,
+   "proved": 5,
+   "merged": 2,
+   "fields": {
+    "number": 5,
+    "name": 5,
+    "position": 1
+   }
+  },
+  {
+   "listing": "1936 \u201cRare\u201dBoston Redskins vs Brooklyn Dodgers NFL football program:Bos.last yr!",
+   "pages": 1,
+   "no_name": 3,
+   "proved": 4,
+   "merged": 3,
+   "fields": {
+    "number": 4,
+    "name": 4,
+    "position": 2
+   }
+  },
+  {
+   "listing": "1938 N.Y. GIANTS v WASHINGTON REDSKINS NFL FOOTBALL PROGRAM:SAMMY BAUGH:MEL HEIN",
+   "pages": 3,
+   "merged": 19,
+   "proved": 4,
+   "no_name": 8,
+   "fields": {
+    "weight": 9,
+    "number": 4,
+    "name": 4,
+    "position": 4,
+    "college": 1,
+    "height": 1
+   }
+  },
+  {
+   "listing": "1944 BROOKLYN TIGERS vs NEW YORK GIANTS football program-ONE-OF-A-KIND!!",
+   "pages": 1,
+   "proved": 4,
+   "merged": 7,
+   "no_name": 3,
+   "fields": {
+    "number": 4,
+    "name": 4,
+    "position": 8,
+    "college": 1,
+    "weight": 1
+   }
+  },
+  {
+   "listing": "1937 N. Y. GIANTS vs. DETROIT LIONS FOOTBALL PROGRAM:DUTCH CLARK:TOM HUPKE!!\ufffc",
+   "pages": 1,
+   "merged": 4,
+   "proved": 3,
+   "no_name": 1,
+   "fields": {
+    "number": 3,
+    "name": 3,
+    "weight": 1
+   }
+  },
+  {
+   "listing": "1939\u201dSTU MERRELL\u201d HISTORIC BEARS vs CHICAGO CARDINALS\u201dRARE\u201dNFL FOOTBALL PROGRAM!",
+   "pages": 1,
+   "merged": 11,
+   "proved": 3,
+   "no_name": 1,
+   "fields": {
+    "weight": 3,
+    "number": 3,
+    "name": 3
+   }
+  },
+  {
+   "listing": "1926 \u201cRED GRANGE\u2019S record game\u201d CHICAGO BEARS v L.A. TIGERS Football Program!!!",
+   "pages": 1,
+   "no_name": 7,
+   "proved": 2,
+   "merged": 5,
+   "fields": {
+    "number": 2,
+    "name": 2,
+    "college": 4
+   }
+  },
+  {
+   "listing": "1939 NY GIANTS vs. BROOKLYN DODGERS FOOTBALL PROGRAM:ACE PARKER:SAM FRANCIS!!",
+   "pages": 1,
+   "no_name": 4,
+   "proved": 2,
+   "merged": 4,
+   "fields": {
+    "number": 2,
+    "name": 2,
+    "college": 1,
+    "position": 4
+   }
+  },
+  {
+   "listing": "1943 CHICAGO CARDINALS v GREEN BAY:DON HUTSON:C.LAMBEAU :FOOTBALL PROGRAM-MINT!!",
+   "pages": 1,
+   "no_name": 1,
+   "merged": 4,
+   "proved": 2,
+   "fields": {
+    "position": 7,
+    "number": 2,
+    "name": 2
+   }
+  },
+  {
+   "listing": "1935 BOSTON REDSKINS vs N.Y. GIANTS FOOTBALL PROGRAM:ORIGINAL REDSKIN FRANCHISE",
+   "pages": 1,
+   "no_name": 1,
+   "merged": 4,
+   "proved": 1,
+   "fields": {
+    "college": 1,
+    "number": 1,
+    "name": 1
+   }
+  },
+  {
+   "listing": "1944 Hollywood Rangers vs San Diego Bombers CHAMPIONSHIP football game program!!",
+   "pages": 1,
+   "merged": 2,
+   "no_name": 22,
+   "proved": 1,
+   "fields": {
+    "weight": 25,
+    "college": 3,
+    "position": 4,
+    "number": 1,
+    "name": 1
+   }
+  },
+  {
+   "listing": "1937 Brooklyn Dodgers vs New York Giants football program:Ace Parker cover!!",
+   "pages": 1,
+   "merged": 2,
+   "no_name": 4,
+   "fields": {}
+  },
+  {
+   "listing": "1938 DETROIT LIONS vs. WASHINGTON REDSKINS FOOTBALL PROGRAM:\u201cDUTCH\u201d CLARK!!!",
+   "pages": 1,
+   "no_name": 8,
+   "fields": {
+    "position": 6,
+    "weight": 7
+   }
+  }
+ ]
+}
