@@ -1,8 +1,12 @@
-# PGM3 — Project context
+# The archive — project context
 
-*Written 7 September 2026, final revision that evening. Everything a new master session needs. Read it once, then work from it rather than asking Ryan to repeat himself.*
+*Written 7 September 2026. **Revised 8 September 2026**, after a day that added 2.7
+million claims and six precedents. Everything a new master session needs. Read it
+once, then work from it rather than asking Ryan to repeat himself.*
 
-**Put this file in the repo.** It has been living only in Ryan's Claude project, and the Claude Code sessions have been working from `CLAUDE.md` and the declarations, inferring the rest.
+**What was regenerated from measurement on 8 September is marked; what is Ryan's
+ruling was left alone.** Where a figure in this file has not been re-measured since
+7 September it says so rather than being restated as current — §8 in particular.
 
 ---
 
@@ -10,7 +14,8 @@
 
 A historical archive of professional football held as data. Every player and coach from 1920 to the present, across the NFL, APFA, AAFC, all four AFLs, the CFL and its predecessor unions, the WFL, both USFLs, the XFL, the UFL, the AAF, Arena and NFL Europe.
 
-**Roughly 43,500 people. 5.1 million claims. 474 stores.**
+**43,550 people. 7.9 million claims. 497 stores.** *(Measured 8 September 2026
+against the served model; was 5.1 million and 474 stores on 7 September.)*
 
 The differentiator is not the data. It is that **every value traces to the document it came from**, that **where sources disagree the archive holds both and says so**, and that **every one of those 43,500 men gets a written biography** — most of whom have never had a paragraph written about them anywhere.
 
@@ -127,7 +132,7 @@ The fix is always the same shape: **make the failure loud, and gate the property
 | source | what |
 |---|---|
 | **StatsCrew** | The roster spine. 3.27 M claims. Every professional league since 1920. |
-| **Pro Football Archives (PFA)** | 1.01 M claims. Player pages, boxscores 1920–59, coaches, officials, drafts, transactions, roster limits, training camps. |
+| **Pro Football Archives (PFA)** | **3.79 M claims.** Player pages, boxscores 1920–59, coaches, officials, transactions, roster limits, training camps — and, since 8 September: **203 draft pages** (12,777 selections the archive did not hold), **229 award pages** (10,247 honour-team selections and 866 named awards), **4,374 team-season pages** and their **2.70 M per-player statistic cells**. |
 | **PFA transactions** | 346,795 membership claims across nine predicates. |
 | **nflverse** | Rosters 1920–2026, contracts, draft picks. **See §5 — its disagreement report is not backed by claims.** |
 | **Wikipedia** | Ranked *below* media guides and contemporary newspapers. Claims, photographs, league and season articles. |
@@ -136,6 +141,7 @@ The fix is always the same shape: **make the failure loud, and gate the property
 | **Coaching Tree** | Head and assistant stints, with the period vocabulary normalised away. |
 | **1957 congressional hearing** | Club salary tables 1952–56, the printed Standard Players Contract. |
 | **Arena** | 404 club-seasons, 5,018 players, 1987–2019. |
+| **Ghosts of the Gridiron** | Preserved from the Wayback Machine, all 243 pages read. Facts ingested; **1,752 scans held pending permission, none published.** Names in prose are counted and located, not extracted. |
 
 ### Fetched, not yet used
 
@@ -143,8 +149,14 @@ The fix is always the same shape: **make the failure loud, and gate the property
 - **Crippen's AAFC register** — 636 men with death date and place, sent by the author. Uningested.
 - **PFR pages** saved by hand in `pgm3-sources/PFR PAGES/`. PFR blocks fetching; hand-saved pages work. Proven on 1943 Phil-Pitt, which matched the archive's derived roster 30 for 30.
 - **13,596 PFA player leads**, parked by ruling.
-- **21,548 PFA gamelogs**, deferred as season splits already held.
+- **21,548 PFA gamelogs** and **12,197 playoff logs**, per player per game. Nothing
+  held. *The largest body of material PFA has that the archive has never touched* —
+  about ten hours of polite fetching, and the least certain return.
+- **PFA leaderboards** — named by PFA's own navigation, nothing fetched.
 - **2,406 post-1950 corpus documents**, unread.
+- **1,469 team-season pages PFA's indexes named and the sweep never took** were
+  fetched on 8 September; **25 more are named and answer 404**, including Frankford
+  1923 and the 1926 Pacific Coast Wildcats. Those pages do not exist.
 
 ### Closed — do not re-tread
 
@@ -214,6 +226,12 @@ Ryan thanked him and stated plainly that the book is used as a reference and cit
 
 ## 8. Photographs — the biggest open problem
 
+> **Not re-measured since 7 September.** The day of 8 September went to PFA and did
+> not touch the photograph work; the model now holds 24,700 photograph claims against
+> the 22,984 people this section counts, and the two are not the same quantity. Treat
+> every figure below as of 7 September and re-measure before quoting one. The rulings
+> in it are Ryan's and stand.
+
 **The dashboard says 22,984 people have a photograph. The real usable, rights-clear figure is about 2,054.**
 
 **The PSF set is a video game mod.** A readme inside it, which nobody had opened, reads: *"PICTURE PACK for Pro Strategy Football 2022-2023... thanks to Andy Fernandez at the Second and Ten mod site for permitting the Pro Strategy Football mod crew the use of the Second and Ten player and coach mod pictures."* One modding community lending files to another. No photographer, no source, no copyright statement anywhere. A `rename.bat` shows the files arrived as numeric ids and were bulk-renamed to player names — **identity in that set is a filename and nothing else.**
@@ -280,6 +298,24 @@ Also untried: Cleveland Public Library press photographs, Ohio Memory, Temple's 
 
 ---
 
+### Added 8 September
+
+Six more, each with its evidence and its rejected alternative in
+`docs/DATASET_PRECEDENTS.md` (19 entries to 42). Summarised, not restated:
+
+- **A source with no denominator still has parts that have one.** Phil Flanagan, a
+  1936 Giants ninth-round pick, absent because his page sat unread and nothing said so.
+- **A selection with an order and no round is read as one, not given a round.**
+- **A named award is its own predicate**, separate from an honour-team selection.
+- **A nickname is a name, registered per man rather than read.** No string operation
+  turns Blood into McNally.
+- **A looser name match is safe only when a club-season holds it.** Cam Heyward, whose
+  2024 teammates were Connor and Cameron Heyward.
+- **An abbreviation folds only where it has exactly one possible school** — extended
+  from 6 folds to 81 on measured evidence.
+
+---
+
 ## 10. Open questions Ryan has not ruled on
 
 **The three-way birth-date split.** Measured across all 40,523 people:
@@ -305,19 +341,38 @@ Also open:
 
 ---
 
+### Added 8 September
+
+- **`pfa.draft_allocation` is not a member of the draft family**, so 602 held claims
+  and ~1,631 rounds-free selections still on disk reach nothing downstream. Measured:
+  adding it creates 1,995 ordered-against-existing pairs across 580 people and folds
+  **none** of them.
+- **The 14 new college synonym candidates** of the non-final-word shape, measured and
+  not folded.
+- **The 227 PFA club strings the table refuses** — 9,088 of the 9,743 men behind them
+  sit in leagues the archive holds no club-season in at all, so this is the
+  minor-league exclusion and not a table defect. 478 more sit in leagues it *does*
+  hold, in years it does not; **but AFL, UFL and WLAF each name several unrelated
+  competitions, and only WLAF 1995 turned out to be the same league.**
+
+---
+
 ## 11. Known defects, unfixed
 
 | | |
 |---|---|
 | **nflverse disagreement report** | 1,079 people marked `"ruling": "UNRESOLVED - both held"`; **1,021 hold no second claim.** The value exists only in the report. PFA does it correctly on identical ground. Needs a ruling, and a gate comparing every store's disagreement report against its own claims. |
-| **Draft representations** | ~3,200 people carry a fabricated disagreement: a parsed object and a raw string, same draft, compared by JSON. |
-| **51 guide heights** | `61"` against `6-1` and similar. False disagreements on the panel. |
+| ~~Draft representations~~ | **FIXED 8 September.** The reading is a dict carrying league, kind and numbering, and the fabricated disagreements are gone: RS-G6 reports 0 false disagreements across seven families. The 2,068 draft contests that remain are real. |
+| ~~51 guide heights~~ | **FIXED.** The height reading folds them; 3 height contests remain and RS-G6 confirms none is false. |
 | **G3** | 414 `club-names` claims name source records that were never registered. Published with `--force`, WARNING on every response. **No exception list — it should stay uncomfortable.** |
 | **RS-G5** | `guide-pre1950-delimited.json` nests its 1,653 claims under `runs.<club>.guides.<year>.claims` and has no top-level `claims` key, so the read model cannot see it. Correctly red, correctly not declared away — the corpus yields 38 pre-1950 claims against its 1,653. Fetching swept all 1,146 build files: **it is the only instance.** |
 | **Sampling gates** | `gate_guide_prose_corpus` samples 25 of 1,838 guides by default then prints "every property holds". `gate_pfa2` and `gate_anachronism` can exit 0 having checked nothing. Four more silently no-op a check. |
 | `gate_merged_clubs` M4 | Fails on `PIT\|1943`, held. |
 | `gate_club_keys` G7 = 1 | `assistants.json` holds a stint whose club is a guide *title*. |
-| 649 statistics claims | Across twelve `stats-*` stores, naming nobody — the ingest minted an id for a row it couldn't match and wrote no name. |
+| **631 statistics claims** | Across the `stats-*` stores, naming nobody — the ingest minted an id for a row it couldn't match and wrote no name. *(Re-measured 8 September; was reported as 649.)* |
+| **34 of 35 not-file-shaped declarations** | Declare no `enumerable_parts`. `gate_source_coverage` is red on them by design: an absent list cannot be told from nobody having looked. **Reported, not rewritten** — generating 34 declarations from a script would be 34 sentences nobody had thought about. Ryan's call. |
+| **PFA's `TKL`** | Demoted to its own predicate on 8 September: StatsCrew's `Tackle` is its own `Def + ST` and PFA's `TKL` is its own `DT + STT`. Whether either can be reconciled to the other is unruled. |
+| **28,202 → 65 misaligned statistic rows** | PFA renders rows under a fuller layout than the header it prints. 28,137 are now read by the row-length rule; **65 match no layout PFA uses anywhere** and are unread. |
 | 75 of 92 court-salaries people | Cannot be traced back to the man the court named. |
 | 15 scratchpad paths | Declared with owners, 5 closed. Four were under literal `/tmp` and are gone. |
 | The vitals panel | Names a disagreement only from certain stores. Reported by the service as `panel_quieter_than_the_claims`. **Reports, does not correct.** |
@@ -338,7 +393,16 @@ Read-only, on the mini, under launchd, surviving reboot and power failure.
 
 **When a tool is added, the connector must be removed and re-added.** A new chat is not enough — the tool list is cached from when the connector was created. This caused one false alarm where a session appeared to have invented a tool it had in fact built.
 
-**Six gates:** RS-G1 unreadable dates, RS-G2 unresolved persons, RS-G3 source records, RS-G4 population reconciliation, RS-G5 claim stores absent from the model, RS-G6 false contests. G3 and G5 are red for stated reasons. A rebuild is armed and has not fired.
+**Six gates:** RS-G1 unreadable dates, RS-G2 unresolved persons, RS-G3 source records, RS-G4 population reconciliation, RS-G5 claim stores absent from the model, RS-G6 false contests. **RS-G3 and RS-G5 are red for stated reasons; the other four pass** *(8 September)*.
+
+**RS-G6 now checks seven families, not two** — birth_date, birth_place, college,
+death_place, draft, height, weight — over 5,507 contested facts, 0 false. It was
+effectively inert while only two families were declared; it has since gone red twice
+on real findings and been cleared by a rebuild each time.
+
+**The club table has its own gate**, `gate_clubs`, now K1–K8: K7 covers a string a
+source misprinted, K8 a club's span extended by one adjacent year on outside
+corroboration.
 
 ---
 
@@ -352,8 +416,11 @@ Four questions worth asking systematically:
 3. Which claims rest on a reading nobody declared?
 4. Which measurements describe a build file rather than the archive?
 
-**Then, in rough order of value:**
-1. Wikimedia Commons by club and season.
+**Then, in rough order of value.** *Reordered 8 September on measured gain, not
+impression:*
+1. **PFA's awards and leaderboards** were empty and awards is now read; **leaderboards
+   is still unfetched** and is five minutes of work.
+2. Wikimedia Commons by club and season.
 2. Media guide headshot extraction, tagged by rights.
 3. The corpus inventory — 2,406 documents nobody has read.
 4. Crippen's AAFC register.
