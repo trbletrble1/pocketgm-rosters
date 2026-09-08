@@ -1,0 +1,246 @@
+{
+ "_rests_on": "The claims' own `source_record` locators. NOT the source_record tables: RS-G3 is red, 27 of 481 stores declare one at all, and the largest store in the archive (739,486 claims) declares none. A check resting on that coverage would be measuring the declaration a second time.",
+ "file_shaped": [
+  {
+   "source": "college-pre1950",
+   "acquired": 151,
+   "cited": 0,
+   "unread": 151,
+   "undeclared": 151,
+   "examples": [
+    "01-clemson-bowl-media-guides.json",
+    "01-clemson-bowl-media-guides.txt",
+    "01-clemson-football-media-guide-archive-spring.json",
+    "01-clemson-football-media-guide-archive-spring.txt",
+    "01-florida-gators.json"
+   ]
+  },
+  {
+   "source": "ghostsofthegridiron",
+   "acquired": 232,
+   "cited": 21,
+   "unread": 211,
+   "undeclared": 0,
+   "examples": []
+  },
+  {
+   "source": "media-guides",
+   "acquired": 2613,
+   "cited": 1096,
+   "unread": 1517,
+   "undeclared": 1517,
+   "examples": [
+    "1963-11-10-dallas-cowboys-at-san-francisco-49ers-game-program-c.txt",
+    "1965-11-21-los-angeles-rams-at-san-francisco-49ers-game-program-c.txt",
+    "1984-the-sporting-news-nfl-draft-guide.txt",
+    "2020-09-20-denver-broncos-at-pittsburgh-steelers-gameday-program-c.txt",
+    "2020-09-27-houston-texans-at-pittsburgh-steelers-gameday-program-c.txt"
+   ]
+  },
+  {
+   "source": "programme-corpus",
+   "acquired": 69,
+   "cited": 0,
+   "unread": 69,
+   "undeclared": 69,
+   "examples": [
+    "-4cAAeSwkaZppmjr.jpg",
+    "-80AAeSwJ0tppmjs.jpg",
+    "-LwAAeSwY3Zppmjs.jpg",
+    "-jsAAeSw0VBppmjs.jpg",
+    "-v0AAeSweoZppmjt.jpg"
+   ]
+  },
+  {
+   "source": "reference-books",
+   "acquired": 3,
+   "cited": 0,
+   "unread": 3,
+   "undeclared": 0,
+   "examples": []
+  }
+ ],
+ "not_covered_declared": [
+  {
+   "source": "coaching-tree",
+   "why": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/alabama-football-v-greenwood",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/beathard-v-chicago",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/bengals-v-bergey",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/dolphins-v-cowan",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/gardin-v-commissioner",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/hayes-v-nfl",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/heidel-v-commissioner",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/kapp-v-nfl",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/partee-v-chargers",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/rivers-v-jets",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/rudolph-v-dolphins",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "court/smith-v-pro-football",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "draft-picks-2001-2004",
+   "why": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "draft-picks-pre2001",
+   "why": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "hearing-1957-organized-professional-team-sports",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "media-guide-lad-1948",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "news/pampa-1984-10-18",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "news/register-1987-02-09-buffalo-survey",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "news/shapiro-1979-02-10",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "news/ud-1985-01-14",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "news/upi-1981-09-30-dean",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "nflverse",
+   "why": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "nflverse-rosters",
+   "why": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "pfa-boxscores",
+   "why": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "pfa-transactions",
+   "why": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "pfr-draft-listing",
+   "why": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "pre1936-assistants",
+   "why": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "pro-football-archives",
+   "why": "50,829 files against 45,072 pages cited. The difference may be duplicates, error pages, or material never parsed -- THE INGEST KEEPS NO LIST OF WHAT IT SKIPPED, so it cannot be attributed. Declared not-checkable rather than reported as unread, which would be a number about my own mapping.",
+   "enumerable_parts": 11
+  },
+  {
+   "source": "programme-1926-chi-lat",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "programme-1926-nyy-pcw",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "psf-photos",
+   "why": "26,146 files and 20,779 records; the gap is images denoted to nobody. That is a denotation question, not an unread-source one.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "statscrew",
+   "why": "14,417 files on disk produce 305,784 source records. Records exceed files by more than twenty to one because a record is a player-season. There is no denominator to divide by and no file-level notion of unread.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "sys/crs-RL34439",
+   "why": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing.",
+   "enumerable_parts": null
+  },
+  {
+   "source": "wikipedia-en",
+   "why": "The failure here is not an unread article. Every predicate the store holds is person-scoped, and the archive holds no club, season, draft or standings article at all -- so 255 of the 1950 draft's 391 picks are missing from a source already held and already allowed. Nothing on disk records that a page had a draft table nobody looked at. To check it, the gate would have to know what a source COULD have yielded, and that knowledge only exists after somebody reads it.",
+   "enumerable_parts": null
+  }
+ ],
+ "fails": [
+  "34 of 35 not-file-shaped sources declare no `enumerable_parts` -- an absent list cannot be told apart from nobody having looked: coaching-tree, court/alabama-football-v-greenwood, court/beathard-v-chicago, court/bengals-v-bergey, court/dolphins-v-cowan, court/gardin-v-commissioner ... +28 more",
+  "college-pre1950: 151 acquired files produce no claim and are explained by no declaration (of 151 acquired)",
+  "media-guides: 1,517 acquired files produce no claim and are explained by no declaration (of 2,613 acquired)",
+  "programme-corpus: 69 acquired files produce no claim and are explained by no declaration (of 69 acquired)"
+ ]
+}

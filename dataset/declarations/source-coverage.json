@@ -1,0 +1,314 @@
+{
+ "_what": "Which sources are FILE-SHAPED -- their acquired material is files on disk with a locator that maps to a filename -- and for those, what unread material is declared and why.",
+ "_what_it_rests_on": "The claims' own `source_record` locators. NOT the source_record tables: RS-G3 is red, 27 of 481 stores declare one at all, and the largest store in the archive (739,486 claims) declares none. A check resting on that coverage would be measuring the declaration a second time.",
+ "_refuse_by_default": "A source with claims that appears in NEITHER list is a failure. Silence is not an exemption -- that is the whole defect this gate exists for.",
+ "_locator_to_file": "How a cited locator becomes a filename. `basename` takes the last path segment; `flatten_slashes` replaces / with _ , which is how the PFA cache is stored; `identity` is a path relative to the source directory.",
+ "file_shaped": {
+  "ghostsofthegridiron": {
+   "dir": "ghostsofthegridiron/mirror",
+   "locator_to_file": "basename",
+   "include": [
+    "*.htm",
+    "*.html"
+   ],
+   "declared_unread": [
+    {
+     "glob": "*_roster.htm",
+     "reason": "club roster pages -- ALL SIXTEEN ARE INGESTED. The glob covers the four that are not club rosters by structure only; see the two entries below."
+    },
+    {
+     "glob": "*",
+     "reason": "READ AND CLASSIFIED 2026-09-08, page by page, all 243. What remains carries NO structured roster: 107 prose narratives, 80 indexes or fragments, 76 all-league selection tables, 20 schedules, 16 standings, 3 scoring tables. The names in them are in running prose and are counted, not extracted -- see build-reports/ghosts-prose-names.json. Extracting them is a CAPABILITY Ryan has not ruled on, not a job waiting to be done."
+    }
+   ],
+   "_read": "build-reports/ghosts-pages.json -- every page classified by structure"
+  },
+  "media-guides": {
+   "dir": "nfl-books/text_all",
+   "locator_to_file": "basename",
+   "include": [
+    "*.txt"
+   ],
+   "_note": "two ingests cite this source with DIFFERENT locator shapes -- guide-prose-corpus cites a FILE (`media-guides#49ers-1969.txt`) and the staff ingest cites a PERSON INSIDE a guide (`media-guides#staff/ken meyer`). Only the file-shaped one can be counted here.",
+   "declared_unread": []
+  },
+  "programme-corpus": {
+   "dir": "programs",
+   "locator_to_file": "basename",
+   "include": [
+    "*"
+   ],
+   "declared_unread": []
+  },
+  "reference-books": {
+   "dir": "Reference Books",
+   "locator_to_file": "basename",
+   "include": [
+    "*.epub",
+    "*.pdf"
+   ],
+   "declared_unread": [
+    {
+     "glob": "*",
+     "reason": "REFERENCE WORKS ARE CONSULTED AND CITED, NEVER PARSED WHOLESALE. Ryan's standing ruling. These are held and available to consult; 'unread' is their correct permanent state and not a backlog. Willis, Old Leather (Ohio 1920-1935); Webster, The League That Didn't Exist; Crippen, The All-America Football Conference."
+    }
+   ]
+  },
+  "college-pre1950": {
+   "dir": "college-pre1950",
+   "locator_to_file": "basename",
+   "include": [
+    "*"
+   ],
+   "declared_unread": []
+  }
+ },
+ "not_file_shaped": {
+  "_what": "Sources this gate CANNOT check, declared so that it reports them as NOT COVERED rather than passing green over the half it cannot see.",
+  "wikipedia-en": {
+   "unit": "an article, read for one KIND of fact and not another",
+   "why_no_denominator": "The failure here is not an unread article. Every predicate the store holds is person-scoped, and the archive holds no club, season, draft or standings article at all -- so 255 of the 1950 draft's 391 picks are missing from a source already held and already allowed. Nothing on disk records that a page had a draft table nobody looked at. To check it, the gate would have to know what a source COULD have yielded, and that knowledge only exists after somebody reads it."
+  },
+  "statscrew": {
+   "unit": "a player-season, not a page",
+   "why_no_denominator": "14,417 files on disk produce 305,784 source records. Records exceed files by more than twenty to one because a record is a player-season. There is no denominator to divide by and no file-level notion of unread."
+  },
+  "pro-football-archives": {
+   "unit": "a fetched URL, cached under a flattened name",
+   "why_no_denominator": "50,829 files against 45,072 pages cited. The difference may be duplicates, error pages, or material never parsed -- THE INGEST KEEPS NO LIST OF WHAT IT SKIPPED, so it cannot be attributed. Declared not-checkable rather than reported as unread, which would be a number about my own mapping.",
+   "sections_stated_by_the_source": "PFA's own top navigation, read from the topnav div of a cached season page (newer pages fetch it from /nav.html, which is not cached -- which is why parsing seasons.html for links returns nothing): Home, Leagues, Seasons, Teams, Players, Coaches, Drafts, Awards, Leaderboards.",
+   "how_the_counts_were_got": "`exists` is a LOWER BOUND from PFA's own link graph over the cache -- distinct pages of that shape some cached page links to. It cannot see a page nothing cached links to, so it is never an upper bound. `on_disk` is the cache. `cited` is distinct locators named by a claim under source_id pro-football-archives, pfa-transactions or pfa-boxscores. src/measure_pfa_sections.py, no network.",
+   "enumerable_parts": [
+    {
+     "part": "drafts",
+     "unit": "one page per year per league per kind",
+     "denominator": "ENUMERATED: 203 pages on disk over 21 (league, kind) combinations, 1936-2025, indexed by drafts.html, cfldrafts.html, usfldrafts.html, wfldrafts.html",
+     "exists": 230,
+     "on_disk": 208,
+     "cited": 198,
+     "measured": "35,161 picks on the pages; 12,807 not held, 22,245 agree, 92 disagree (src/measure_pfa_drafts.py)"
+    },
+    {
+     "part": "team-seasons",
+     "unit": "one page per club-season",
+     "denominator": "link graph lower bound; PFA's teams.html index is not cached",
+     "exists": 6438,
+     "on_disk": 2930,
+     "cited": 9,
+     "measured": "each page carries SCORES, a ROSTER table (Player, No, Pos, Ht, Wt, Age, College, GP, GS) and a DRAFT LIST. 2,930 on disk, 9 cited: the largest unread section of PFA already in hand"
+    },
+    {
+     "part": "awards",
+     "unit": "one page per year per league",
+     "denominator": "link graph lower bound from season pages; awards.html not cached",
+     "exists": 272,
+     "on_disk": 1,
+     "cited": 0,
+     "measured": "nothing from this section is in the archive"
+    },
+    {
+     "part": "leaderboards",
+     "unit": "unknown until the index is read",
+     "denominator": "unknown -- leaderboards.html is named by the navigation and is not cached; no leaderboard page is on disk",
+     "exists": "unknown",
+     "on_disk": 0,
+     "cited": 0,
+     "measured": "nothing from this section is in the archive"
+    },
+    {
+     "part": "boxscores",
+     "unit": "one page per game, under nflboxscores<n>/",
+     "denominator": "link graph lower bound from season and team pages",
+     "exists": 17499,
+     "on_disk": 2934,
+     "cited": 2890,
+     "measured": "106,781 claims, plus 11,776 under derived lineups/ locators"
+    },
+    {
+     "part": "season index",
+     "unit": "one page per year",
+     "denominator": "link graph lower bound; seasons.html is cached but builds its list client-side",
+     "exists": 117,
+     "on_disk": 106,
+     "cited": 0,
+     "measured": "read as a link source, never cited by a claim"
+    },
+    {
+     "part": "player game logs",
+     "unit": "one page per player",
+     "exists": 21581,
+     "denominator": "link graph lower bound from player pages",
+     "on_disk": 28,
+     "cited": 0,
+     "measured": "nothing from this section is in the archive"
+    },
+    {
+     "part": "player playoff logs",
+     "unit": "one page per player",
+     "exists": 12197,
+     "denominator": "link graph lower bound from player pages",
+     "on_disk": 0,
+     "cited": 0,
+     "measured": "nothing from this section is in the archive"
+    },
+    {
+     "part": "players",
+     "unit": "one page per person",
+     "denominator": "NOT ENUMERABLE from what is held. PFA's alphabetical player index is not cached, so 51,880 is only what cached pages happen to link to and the true count is unknown",
+     "exists": "unknown",
+     "on_disk": 39371,
+     "cited": 36860,
+     "measured": "1,161,289 claims -- the section the ingest actually read"
+    },
+    {
+     "part": "coaches / staff",
+     "unit": "one page per person",
+     "denominator": "NOT ENUMERABLE from what is held, as players",
+     "exists": "unknown",
+     "on_disk": 3910,
+     "cited": 3537,
+     "measured": "46,493 claims"
+    },
+    {
+     "part": "officials",
+     "unit": "one page per person",
+     "denominator": "NOT ENUMERABLE from what is held, as players",
+     "exists": "unknown",
+     "on_disk": 1329,
+     "cited": 1052,
+     "measured": "10,316 claims"
+    }
+   ],
+   "not_enumerable": "PFA whole. Three separate reasons, and they are not the same reason: (1) the person sections have no cached index, so their size is unknown; (2) the link graph is a lower bound by construction and can never bound a section from above; (3) the ingest recorded no skip list, so on-disk-minus-cited cannot be attributed. A part is declared enumerable only where the source itself publishes an index for it."
+  },
+  "psf-photos": {
+   "unit": "an image file, but the store is a denotation index",
+   "why_no_denominator": "26,146 files and 20,779 records; the gap is images denoted to nobody. That is a denotation question, not an unread-source one."
+  },
+  "court/alabama-football-v-greenwood": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "court/beathard-v-chicago": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "court/bengals-v-bergey": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "court/dolphins-v-cowan": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "court/gardin-v-commissioner": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "court/hayes-v-nfl": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "court/heidel-v-commissioner": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "court/kapp-v-nfl": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "court/partee-v-chargers": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "court/rivers-v-jets": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "court/rudolph-v-dolphins": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "court/smith-v-pro-football": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "hearing-1957-organized-professional-team-sports": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "sys/crs-RL34439": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "news/pampa-1984-10-18": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "news/register-1987-02-09-buffalo-survey": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "news/shapiro-1979-02-10": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "news/ud-1985-01-14": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "news/upi-1981-09-30-dean": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "media-guide-lad-1948": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "programme-1926-chi-lat": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "programme-1926-nyy-pcw": {
+   "unit": "ONE document, cited by an internal reference (a page, a table, a person inside it)",
+   "why_no_denominator": "There is no directory of acquired material to compare against: the source IS a single document. Whether the whole of it was read is a question about that document, not about a file count, and this gate cannot answer it. It is declared here so it is reported as NOT COVERED rather than passing."
+  },
+  "coaching-tree": {
+   "unit": "a fetched feed or dataset, not a directory of files this project keeps",
+   "why_no_denominator": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed."
+  },
+  "draft-picks-2001-2004": {
+   "unit": "a fetched feed or dataset, not a directory of files this project keeps",
+   "why_no_denominator": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed."
+  },
+  "draft-picks-pre2001": {
+   "unit": "a fetched feed or dataset, not a directory of files this project keeps",
+   "why_no_denominator": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed."
+  },
+  "nflverse": {
+   "unit": "a fetched feed or dataset, not a directory of files this project keeps",
+   "why_no_denominator": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed."
+  },
+  "nflverse-rosters": {
+   "unit": "a fetched feed or dataset, not a directory of files this project keeps",
+   "why_no_denominator": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed."
+  },
+  "pfa-boxscores": {
+   "unit": "a fetched feed or dataset, not a directory of files this project keeps",
+   "why_no_denominator": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed."
+  },
+  "pfa-transactions": {
+   "unit": "a fetched feed or dataset, not a directory of files this project keeps",
+   "why_no_denominator": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed."
+  },
+  "pfr-draft-listing": {
+   "unit": "a fetched feed or dataset, not a directory of files this project keeps",
+   "why_no_denominator": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed."
+  },
+  "pre1936-assistants": {
+   "unit": "a fetched feed or dataset, not a directory of files this project keeps",
+   "why_no_denominator": "The acquired material is a remote dataset or a derived extract; there is no local directory whose contents can be enumerated and compared with what the claims cite. Declared NOT COVERED rather than passed."
+  },
+  "_enumerable_parts": "A source whose WHOLE has no denominator may still have PARTS that do. Every entry here must say which -- `enumerable_parts` naming each part, its unit, how its denominator is obtained, and the three counts where they are known (exists / on disk / cited); `not_enumerable` saying what remains unmeasurable and why. `unknown` is a permitted value and is not a failure; an ABSENT list is. Evidence: Phil Flanagan, a 1936 New York Giants ninth-round pick, is not in the archive. He is on PFA's own 1936 NFL draft page, which was fetched in the original ingest and has sat unread on disk ever since. This entry said PFA had no denominator, and that was true of PFA whole and false of PFA's draft pages: they are one per year per league per kind, 203 on disk, and enumerating them took minutes and needed no network. The declaration's silence read as 'cannot be measured' when the truth was 'nobody said which half could be'."
+ }
+}
