@@ -4526,7 +4526,6 @@ change should produce a one-line diff. Both write tools now pass
 is printed alongside, so the two can be compared.
 
 
-
 ---
 
 ## Do not assert provenance from a word you have not checked the meaning of
@@ -5122,3 +5121,123 @@ cheaper test on the instrument.** Read a handful of the failures in full. If the
 dissolve, the number was measuring your own query, your own fit, or your own
 regex — and a number that measures the instrument reads exactly like a number
 that measures the world.
+
+## The instrument undercounts, and it looks exactly like a thin page
+
+2026-09-07. The same shape as the entry above this pair, arrived at from the
+opposite direction, and worth recording because the previous one only covers a
+number that is too *high*.
+
+`census_programs_*` reported **2 men** for the 1926 Bears/Tigers programme. The
+page carries **28 players and 4 staff**, and all 27 distinct surnames and all 4
+staff names are present in all three OCR texts. The extraction was not defeated by
+the photograph; it was defeated by its own assumptions:
+
+1. **The page is set in two columns.** Bands run across both, so a band collects
+   one entry from the left column and one from the right. The probe's row-merge
+   detector fires and drops the band — correctly by its own rule, but the merge is
+   of two *columns*, and the answer is to split columns first, not to drop.
+2. **The entries are bio paragraphs, not table cells.** `JACK NOLAN-25 years,
+   height 5 ft. 10 in.` is one line carrying name, age and height fused. The name
+   patterns are anchored `^...$`, so **every name on the page fails to match**, and
+   the band is dropped as "no name" while a perfectly legible name sits in it.
+3. **`th = 3.0 * median(gap)` cannot split a uniformly spaced page.** On a prose
+   page every gap is about the median, none exceeds three times it, and 111 lines
+   collapse into 3 bands. Then `if len(numbered) < 6: return []` discards the image
+   in silence.
+
+**Both of the 2 men it did report are false.** One is `New`, taken from "New York
+Univefsity"; the other is `DEWEY`, a forename whose surname arrived as
+`LYLE—29 years,`. The true yield of that page was **0 of 28**, reported as 2.
+
+Corpus-wide, over 55 listings and 667 images: **299 men reported**, against **407
+bands dropped as multi-number** (two or more men each) and **209 bands dropped
+carrying a number and an unmatched name**, with **536 of 667 images discarded
+before banding**.
+
+**The rule: a silent zero is the most expensive value an extractor can return.**
+A page that yields nothing and a page that has nothing are the same output, and the
+yield report's headline figures cannot tell you which it saw. Every drop must be
+counted where the count is published, not merely `continue`d.
+
+## Inventing provenance is worse than admitting you have none
+
+2026-09-07, Ryan presiding, made on the Ghosts of the Gridiron survey.
+
+A source can cite unevenly. John J. Fenton's site lists **twenty-one newspapers** on its
+`sources.htm`, and his prose pages name individual papers against individual facts — the
+*Bethlehem Globe-Times* five times on one page, once with his own hedge attached:
+*"reported — at least by the Bethlehem Globe-Times — to have led the Eastern League field
+goals."* **His roster pages name nothing at all.**
+
+The temptation is to attribute the rosters to the global list, on the reasoning that they
+must have come from one of those twenty-one papers. **That is manufacturing a citation
+the author never made.** The global list describes the site; it does not describe any
+page in it.
+
+**The ruling:**
+
+- Where the author names a paper, **cite the paper**. It is the source; the site is how
+  we found it.
+- Where he does not, record `underlying_source: unstated` as a **stated absence** — the
+  same distinction the archive already draws between a value that is absent and one that
+  was never measured — and cite the author as the **finding aid**.
+- Every claim carries the finding aid, in both cases. He did the work of locating the
+  material and the citation says so.
+
+**Inventing provenance is worse than admitting you have none.** A claim whose citation is
+a guess cannot be checked, cannot be corrected, and looks exactly like a claim whose
+citation was read off the page. And the gap is useful: *which paper did this roster come
+from* is now a specific question to put to a living author, which a fabricated citation
+would have closed off forever.
+
+## Keep the unit the game and two rulings stop colliding
+
+2026-09-07, Ryan presiding, on the 1926 Eastern League of Professional Football.
+
+Fenton's page enumerates ten clubs, with a full standings table, a two-deep all-league
+team and per-player scoring. Seven of the ten are in no club table the archive holds. Two
+standing rulings pointed opposite ways:
+
+- **The minor-league exclusion** — and Fenton calls the ELF *"a regional minor league"* in
+  his own words, which is as clear a trigger as it gets.
+- **A non-league professional club enters when a club in scope played it in a documented
+  game** — and the same page records **Frankford**, an NFL club, beating Atlantic City.
+
+**They only collide if the unit is the league.** Keep the unit the **game** and both hold
+intact: the exclusion keeps the ELF's *season* out — its standings, its championship, its
+ten club-seasons — while the non-league ruling admits **Atlantic City for the Frankford
+game and nothing else**. One club-game enters. A ten-club league does not.
+
+**And the standings table is the tell.** A complete, tidy, ten-row league table with W-L-T
+and points for and against is exactly the shape that makes a rule feel too narrow. It is
+the most tempting object on the site and the one to leave alone. **Note it, hold it,
+leave it.** The pull toward widening a rule is strongest precisely when the material is
+good, which is when the rule is doing the most work.
+
+## The value of a source is at the edges of what other sources cover
+
+2026-09-07, Ryan presiding, same survey, and the finding that outranks the league.
+
+The obvious prize on a site about defunct football is the defunct league. The actual prize
+was three club-seasons at the **edges of clubs the archive already holds**, and a
+fourth that gains a schedule but not a team:
+
+| | archive holds | the site has |
+|---|---|---|
+| Frankford Yellow Jackets 1922 | **0 men** | a roster page |
+| Frankford Yellow Jackets 1923 | **0 men** | a roster page |
+| Pottsville Maroons 1924 | **0 men** | a season schedule — games, not men |
+| Pottsville Maroons 1929 | **0 men** | a roster page |
+
+Frankford joined the NFL in 1924 and Pottsville ran 1925–28. Every source the archive
+holds for these two clubs is NFL-derived, so **every one of them starts and stops at the
+league boundary** — and the seasons either side are invisible to all of them at once. No
+amount of re-reading StatsCrew, PFA or the fandom wiki will ever produce them, because
+none of those is looking.
+
+**The rule: when judging a source, measure it against the boundaries of the sources you
+already have, not against their volume.** The middle years were well held and the site
+would have added 36 facts, mostly weight. The edge years were held at zero and the site
+takes them from nothing to a team. The same pages, ranked by the wrong question, look like
+the less interesting half of the site.

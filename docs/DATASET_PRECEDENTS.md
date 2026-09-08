@@ -800,3 +800,370 @@ corrections intact.
 variation` is about inferring a constraint from uniform records. This is about
 inferring an EXTENT from an incomplete set — and unlike that one, more of the
 same evidence does fix it. The documents were still coming.*
+
+---
+
+## A document may be held without becoming clubs
+
+2026-09-07, on a page of a hobbyist website that carried better evidence about
+the 1926 Eastern League of Professional Football than anything the archive
+held.
+
+`Bethlehem.htm` gives the league's full standings — ten clubs, W-L-T, points for
+and against, a note that Clifton Heights withdrew on 13 October — a two-deep
+22-man all-league team with clubs and positions, and a per-player scoring table
+separating league from non-league play. **Real evidence about real football**,
+and it could not be admitted, because admitting it meant creating ten
+club-seasons the archive cannot populate and lengthening a hunting list that
+already holds 128 empty ones.
+
+**The rule: a record of clubs, seasons or results may be registered as a source
+document — searchable and citable — without creating club-seasons in the club
+table. Nothing derives from it.** It sits until a roster turns up, and the club
+is created then, on the roster.
+
+*Alternatives rejected.* **Admit the league**, which turns the minor-league
+exclusion into *"excluded unless I happen to have a source"* — a rule that
+dissolves on contact with good material, which is exactly when a rule is doing
+its work. **Refuse the document entirely**, which throws away evidence because
+of a scope decision it has no bearing on; the document is not asking to be a
+club table, and refusing it confuses the two.
+
+**Applies retroactively** to the 1926 AFL standings and to the St. Louis Gunners'
+independent seasons 1931–33.
+
+**The caution, and it is the whole risk in this ruling.** A held document that
+starts answering *"which clubs existed in 1926"* is a club table by another
+name, reached by a route with none of the club table's gates on it. **It must
+stay inert.** Registered, cited, returned when asked for — and never joined,
+never counted, never summed.
+
+---
+
+## A non-league professional club enters when a club in scope played it
+
+2026-09-07. The 1926 Los Angeles Tigers, from a programme for a Chicago Bears
+game at the Los Angeles Coliseum.
+
+**A non-league professional club enters the archive when a club in scope played
+it in a documented game. It enters for that game only — not for its season, and
+not for its league.**
+
+*Alternative rejected:* a **date cutoff** admitting minor leagues before 1930 or
+1940. It reads as a modest concession and it admits hundreds of club-seasons of
+precisely the material the exclusion exists to keep out. A cutoff cannot
+distinguish a club a major club played from a club that merely existed at the
+same time, because a year is not evidence about a club.
+
+**This follows the merged-clubs precedent: the game is the evidence, not the
+league.** Card-Pitt and Phil-Pitt are their own clubs because men provably
+appeared in games for them, not because a league recognised them. The unit that
+carries evidence is the unit that enters.
+
+*Where two rulings appeared to collide — the minor-league exclusion against this
+one, on a page that recorded an NFL club beating an Eastern League club — they
+collided only because the unit was being taken as the league. Keep the unit the
+game and both hold: the exclusion keeps the season out, this admits the one
+club-game.*
+
+**And where a club is genuinely hard to call professional or not, stop and ask.**
+Do not decide it in passing while doing something else. The ruling admits *a
+professional club*; whether a given eleven was one is a judgement about that
+club, and making it silently while executing something else is how a scope
+decision gets made by nobody.
+
+---
+
+## College and service teams are named, not held
+
+2026-09-07, alongside the ruling above and constraining it.
+
+**A college or service team is recorded as the opponent string on a game. No
+club-season is created, and its players do not become people.**
+
+Without this, "a club in scope played it in a documented game" admits every
+college a professional club scrimmaged and every service eleven it met on tour —
+and with them, thousands of young men who were never professional footballers.
+**It keeps *no invented humans* intact**, which is the constraint the whole
+person model rests on.
+
+---
+
+## A probable line-up is not a boxscore line-up
+
+2026-09-07, from a programme printed before kickoff.
+
+`roster_membership.started_a_game` is defined as *named in a starting lineup,
+from a boxscore* — an after-the-fact record of what happened. A programme's
+line-up page is **a publisher's prediction, printed in advance**. They are
+different assertions about different things, and one of them can be wrong in a
+way the other cannot.
+
+**Separate predicate, with its own definition.** The document proved the gap in
+its own pages: it lists `22 McMillen` at right guard in the probable line-up and
+does not carry McMillen in the roster at all.
+
+**Fold them and they can never be separated again.** That is the asymmetry that
+decides it — keeping them apart costs a predicate; merging them costs the
+distinction permanently, because nothing downstream can recover which claim came
+from which kind of page.
+
+---
+
+## A team photograph is a third thing
+
+2026-09-07, from the caption to a team photograph of the 1926 Pacific Coast
+Wildcats, naming 22 men.
+
+**`programme.team_photograph` — named in the caption to a team photograph: this
+man was photographed with this club, as this club.**
+
+It is **weaker than roster membership**, which means a club or a source asserted
+a man's standing on a squad. It is **weaker than a probable line-up**, which
+means a publisher expected him to play in a particular game. A photograph
+asserts only that he was there when it was taken.
+
+It is worth having precisely because it is weak: `AFL|1926|AFLPC` is one of three
+club-seasons in the archive that no source ever gave a roster for, its ten held
+men were derived from box scores, and **a photograph is the only kind of evidence
+that can show a man who never got on the field.**
+
+*This is the second predicate in two days created rather than borrowed. The
+pattern is worth naming: when a new source asserts something at a different
+strength from anything held, the cost of a new predicate is one definition and
+the cost of borrowing one is a distinction that cannot be rebuilt.*
+
+---
+
+## A disagreeing value is always written as a claim
+
+2026-09-07, found by asking whether stores that report disagreements actually
+hold both sides.
+
+Three stores declare *"both held"* in their own reports and hold one side:
+**nflverse-rosters, 1,021 and 229; nflverse-draft, 164.** Pro Football Archives
+does the same job on identical ground and holds **628 of 628**, so this is not a
+limit of the material.
+
+**The rule: where a store records a disagreement, both values are written as
+claims.** A disagreement the archive can describe but cannot serve is not held —
+it is a note about a fact, in place of the fact.
+
+*Alternative rejected:* let the store's report stand as the record. It reads as
+economical and it means the archive's answer to *"what does this source say"*
+depends on which file you open. **A value the archive cannot serve is not held**,
+whatever a report beside it says.
+
+*One qualification found while executing it, and it is a real limit: a store can
+record a disagreement on an identity join it refuses to write a claim on. Where
+that is so, writing the missing side answers an open identity question by
+implication — and if the join is not good enough for a claim it is not good
+enough for a disagreement either. Check the join before writing the side.*
+
+---
+
+## A gate checks the claims, not the store's report of itself
+
+2026-09-07, after a gate that had passed for weeks turned out to be incapable of
+failing.
+
+The never-shrink photograph gate read a **boolean the build had written about
+itself** — `every_claim_strictly_larger` — computed as `all()` over a set that
+was empty, because none of the 1,667 claims had been decided on size. A gate
+reading a source's self-report is testing that the source can write a field.
+
+**Three requirements, and a gate meeting fewer is not a gate:**
+
+1. **Re-derive from the base state.** Recompute the property from the claims, not
+   from anything the thing being checked said about itself.
+2. **Refuse an empty denominator rather than pass on one.** `all()` over nothing
+   is `True`, and that is the archive's most common silent failure — it is why
+   RS-G6 was green across two families while meaning nothing.
+3. **Be shown failing in its own self-test.** A check nobody has watched fail is
+   a check nobody has tested.
+
+**Six further gates check a store's report of a disagreement rather than the
+claims.** Recorded here as a class, not repaired one at a time.
+
+*This generalises `a gate that fires must fire for its stated reason`. That entry
+is about a gate that fails for the wrong cause; this is about one that cannot
+fail at all — and the second is worse, because a wrong red gets investigated and
+a vacuous green does not.*
+
+---
+
+## Which facts can be contested, and why high school cannot
+
+2026-09-07. Declaring predicate families so that two spellings of one fact stop
+being recorded as two facts.
+
+**Declared: height, weight, draft, college.** College reads by expanding the
+abbreviation and dropping the word *University*, so `Ohio St.` and `Ohio State`
+are one school. `College` is never dropped — Boston College and Boston University
+are two schools, and a fold that merges them invents an agreement, which is worse
+than the two disagreements it hides.
+
+**Birth place and death place were approved conditionally**, on the trailing
+country fold measuring clean, and it did.
+
+**High school is refused.** `Central` against `Central (Detroit, MI)` cannot be
+settled by a fold, and that shape is most of the 1,350 literal disagreements.
+Folding them invents agreement; leaving them unfolded records disagreements the
+archive cannot judge. **Neither is an improvement on saying no.**
+
+**This is a refusal, not an oversight, and it is recorded so nobody reopens it
+quietly.** Seven families and one refusal is a worse-looking table than eight
+families. **Do not add it to make a count look complete.** It comes back when
+there is a real rule, not before.
+
+---
+
+## A state abbreviation is the same state; a qualifier is not
+
+2026-09-07, once birth place and death place became contestable families and the
+disagreements could be counted.
+
+**`Los Angeles, CA` and `Los Angeles, California` are one place.** The reading
+expands a trailing state abbreviation, and only a trailing one, and only when
+something precedes it — `IN`, `OR`, `OK`, `ME`, `LA` and `DE` are English words
+as well as states, and position is all that separates them.
+
+**A qualifier is not a state name.** `near Whitesboro, TX` reads to `near
+whitesboro texas` and `Whitesboro, Texas` to `whitesboro texas`, and they still
+disagree — because one source says the town and the other says somewhere nearby,
+and that difference was never about the state. **Nothing else is removed**, which
+is what preserves it.
+
+**Measured: 1,873 of 2,601 place contests collapsed. 728 genuine differences
+stayed.** The prediction before the reading was written was 1,873; it collapsed
+1,867. **Six fewer, and under-shooting is the safe direction** — a fold larger
+than its prediction is reaching past the thing it was scoped to.
+
+---
+
+## Nothing rebuilds on an unexplained red
+
+2026-09-07. `gate_person_merges` failed on 25 of 93 canonical people, and a
+rebuild would have cleared the symptom.
+
+**Measure before explaining, and explain before clearing.** The gate proved to be
+**stale bookkeeping and not lost data** — a `counts_before` snapshot taken a day
+earlier, against canonicals that had legitimately gained seasons since. Undo and
+reapply were byte-identical; 93 of 93 records were whole.
+
+**That was established, not assumed**, and the distinction is the entry. The
+standing hypothesis — that a later chain step had changed keys — was *wrong*, and
+would have been adopted if the red had been reasoned about instead of measured.
+
+**A red that a rebuild would clear is the most dangerous kind**, because the
+cheapest action available also destroys the evidence.
+
+---
+
+## An absence is not the string "None"
+
+2026-09-07. Not a new ruling — a record of where an existing one was broken, and
+of how long it survived.
+
+**7,077 people carried the literal string `"None"` in a value position** where an
+absence claim had been made. `build_person_index` was stringifying claim values
+without reading `kind`, so *a source stating that a man has no recorded hometown*
+and *a man whose hometown is the word None* became the same bytes.
+
+**A builder must not drop `kind`.** The distinction between an observed value, a
+stated absence and an unmeasured field is the archive's central one, and it is
+lost by a `str()` call.
+
+**How it survived:** every consumer downstream tested for the *presence of a
+predicate*, and the predicate was present. A measurement written this same week
+reported the pre-1934 record as complete on exactly that mistake — it counted
+keys, not values — and only a hand-checked example (`Backnor`, of the 1921
+Tonawanda Kardex, carrying three predicates all holding `"None"`) exposed it.
+
+*Related: `an empty result and a failed one are the same bytes`. This is that
+shape one layer in — an absent value and a present one became the same bytes, and
+every check above it inherited the confusion.*
+
+---
+
+## The club table must never be silently older than the claims that feed it
+
+2026-09-07, found by asking why a club that had been written, indexed, gated and
+served was invisible to `search_clubs`.
+
+`build_clubs.py` was **in no chain and run by no gate**. It had also been
+**unrunnable on this machine since the archive moved to it**, because a required
+input path was hardcoded to a Dropbox folder that exists only on the laptop — so
+it refused on a missing input every time, and nothing noticed for a day.
+
+**A derived table that nothing rebuilds is a cache pretending to be a table.**
+It goes in the rebuild chain, and a failure to build it fails the rebuild rather
+than publishing claims against a stale table.
+
+**But it is not an index patcher**, and the gate that guards the chain was right
+to refuse it: every chain step must write the index, and this one *consumes* the
+index and writes something else. **It gets its own declared phase carrying the
+inverse property — a derived table must not write the index — checked rather than
+assumed.** Weakening the first property to admit something it was never about
+would have cost more than it bought.
+
+*The failure mode is the general one: **the omission looked exactly like
+success.** Nothing was red, nothing was counted, and it surfaced only because a
+person searched for a club and got nothing back.*
+
+---
+
+## A finding aid is cited, and never stands in for a source
+
+2026-09-07, on a site whose author cites unevenly.
+
+John J. Fenton's *Ghosts of the Gridiron* lists **twenty-one newspapers** on its
+sources page, and its prose names individual papers against individual facts —
+the *Bethlehem Globe-Times* five times on one page, once with his own hedge
+attached. **Its roster pages name nothing at all.**
+
+**Where he names a paper, the paper is the source and Fenton is the finding aid.
+Where he names none, record `underlying_source: unstated` as a stated absence,
+and cite him as the finding aid. Every claim carries the finding aid in both
+cases** — he did the work of locating the material and the citation should say
+so.
+
+*Alternative rejected:* attribute the rosters to the global list, on the
+reasoning that they must have come from one of those twenty-one papers.
+**Attributing a roster to "one of these twenty-one newspapers" manufactures a
+citation the author never made.** The list describes the site; it describes no
+page in it. A claim whose citation is a guess cannot be checked, cannot be
+corrected, and is indistinguishable from one read off the page.
+
+**And the gap is useful.** *Which paper did this roster come from* is a specific
+question that can be put to a living author. A fabricated citation would have
+closed it forever.
+
+*This is the first source found for the archive that does not descend from Neft's
+1970s reconstruction — which makes what it is cited as, and what it is not,
+matter more than usual.*
+
+---
+
+## Facts may be used before permission; scans may not
+
+2026-09-07, on the same site, and settling what could be done with it while its
+author was being contacted.
+
+**Recording what a source says, cited, is ordinary scholarly use.** A roster of
+names, positions and colleges is a set of facts about 1920s footballers; facts
+are not owned, and citing where they were found is the normal obligation.
+
+**Reproducing its images is not.** The 1,752 scans are photographs of newspapers
+and programmes long out of copyright — but **the selection and the photography
+are the author's work**, and what is inside a scan being free does not make the
+scan free.
+
+**In practice for Ghosts of the Gridiron: rosters ingested and cited; 1,752
+images preserved, tagged `held-pending-permission`, and none published.** The
+same position already taken on media-guide headshots.
+
+*The asymmetry is the point. Preservation is not publication, and the two
+decisions have different answers — a dead site's images should be kept whatever
+the answer on publishing them turns out to be, because the copy may not exist to
+ask about later.*
