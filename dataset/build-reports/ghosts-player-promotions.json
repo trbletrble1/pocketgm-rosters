@@ -1,0 +1,549 @@
+{
+ "_what": "PLAYER promotions from the Ghosts of the Gridiron leads: men Fenton's 1922 and 1923 Frankford rosters name whom the archive holds nowhere.",
+ "_NOT_APPLIED": "There is no player-promotion chain step. apply_promotions.py reads build/coach-promotions.json only, and a promoted person's SEASONS are set by the applier rather than by claims -- a claim on a person who does not yet exist is skipped at read time. Applying this needs either a generalised applier or a new declared chain step, which is a build decision and not one to make while executing something else.",
+ "decided_at": "2026-09-08",
+ "promotions": [
+  {
+   "name": "Brainy Bowers",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Brainy Bowers",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 8,
+      "ids": [
+       "P_007167",
+       "P_012529",
+       "P_018570",
+       "P_028986",
+       "P_029226",
+       "P_036442"
+      ],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": false,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Charlie Lundgren",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Charlie Lundgren",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 0,
+      "ids": [],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": false,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Doc Peters",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Doc Peters",
+    "places_on": [
+     "IND",
+     1923,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1923_roster.htm@20091214052435"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 20,
+      "ids": [
+       "P_001375",
+       "P_001739",
+       "P_002427",
+       "P_011837",
+       "P_004469",
+       "P_006757"
+      ],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": false,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Dutch Seasholz",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Dutch Seasholz",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 0,
+      "ids": [],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": false,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Gorman",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Gorman",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 2,
+      "ids": [
+       "P_002956",
+       "P_014969"
+      ],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": true,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Harry Rosetsky",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Harry Rosetsky",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 0,
+      "ids": [],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": false,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Joe Alexander",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Joe Alexander",
+    "places_on": [
+     "IND",
+     1923,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1923_roster.htm@20091214052435"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 62,
+      "ids": [
+       "P_003064",
+       "P_025734",
+       "P_027786",
+       "P_029284",
+       "P_003110",
+       "P_003111"
+      ],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": false,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Joe Lightner",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Joe Lightner",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 1,
+      "ids": [
+       "P_039370"
+      ],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": false,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Joe Spagna",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Joe Spagna",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 1,
+      "ids": [
+       "P_002555"
+      ],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": false,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Lykes",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Lykes",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 0,
+      "ids": [],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": true,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Mellow",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Mellow",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 0,
+      "ids": [],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": true,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Rusty Yarnall",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Rusty Yarnall",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 0,
+      "ids": [],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": false,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Swinton",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Swinton",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 2,
+      "ids": [
+       "P_009645",
+       "P_044913"
+      ],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": true,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  },
+  {
+   "name": "Williams, Joe",
+   "source": "ghosts-player-lead",
+   "entered_by": "promotion_from_lead",
+   "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+   "identified_by": {
+    "name_as_printed": "Williams, Joe",
+    "places_on": [
+     "IND",
+     1922,
+     "DOC:FYJ-IND"
+    ],
+    "club_as_printed": "Frankford Yellow Jackets",
+    "lists": [
+     "ghostsofthegridiron#Yellowjackets_1922_roster.htm@20091214050549"
+    ]
+   },
+   "no_archive_match_evidence": {
+    "checked": [
+     {
+      "test": "exact normalised name across the whole archive",
+      "matches": 0,
+      "ids": []
+     },
+     {
+      "test": "same surname held anywhere",
+      "same_surname": 5,
+      "ids": [
+       "P_001039",
+       "P_001734",
+       "P_011173",
+       "P_039116",
+       "P_042991"
+      ],
+      "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+     }
+    ]
+   },
+   "_surname_only": false,
+   "why": "a person is someone who played at least one season. Fenton's roster places this man on Frankford's independent club, and no held person carries his name."
+  }
+ ],
+ "refusals": [
+  {
+   "name_as_printed": "Johnny Scott",
+   "held_candidates": [
+    "P_002552",
+    "P_008964"
+   ],
+   "ruling": "REFUSED. More than one held person carries this exact name; choosing between them is a per-man judgement this document cannot make. Stays a lead."
+  }
+ ],
+ "counts": {
+  "promotions": 14,
+  "refusals": 1,
+  "surname_only": 4
+ }
+}

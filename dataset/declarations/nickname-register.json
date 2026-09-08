@@ -1,0 +1,208 @@
+{
+ "_what": "One man under two printed names, where no string operation connects them. A RECORDED DECISION PER MAN -- the shape of a merge -- not a reading and not a rule.",
+ "_why_not_a_reading": "Nothing turns `Blood` into `McNally` or `Bruiser` into `Frank`. A reading is a function from a printed string to a fact and there is no such function here. Building this as a reading would mean inventing one, and it would then apply to strings nobody has looked at.",
+ "_ruled": "Ryan, 2026-09-08: where the archive holds a man on the very club-season a source names, and the only difference is a playing name against a legal name, they are one man and the register records it.",
+ "_the_names_are_equal": "The nickname is a NAME, not an alias for a name. Both go on the person as name claims with their own sources, and search must find him by either. Neither is filed under the other and neither is canonical: `Bruiser` is what the club called him and `Frank` is what his birth certificate said, and neither corrects the other. The archive does not choose between two things a source printed.",
+ "_what_is_refused": "An entry that cannot point at a club-season BOTH names share. Without it this is a surname rule, and a surname is not a man.",
+ "_what_this_is_NOT_for": "A MISSPELLING. `Solomon Eliminian` for `Solomon Elimimian`, `Aaron Doanld` for `Aaron Donald`, `Mark Muprhy`, `Corey Grahm`, `Alex McGogh`, `Chris Garett`, `Fred Denfield` -- seven on PFA's award pages. A typo is not a playing name, and the club misprint route is the shape for those. They are reported and left alone.",
+ "entries": [
+  {
+   "person": "P_002720",
+   "names": [
+    {
+     "name": "Steamer Horning",
+     "printed_by": "the archive's existing name claims",
+     "kind": "the name the archive already held"
+    },
+    {
+     "name": "Clarence Horning",
+     "printed_by": "pro-football-archives",
+     "locator": "award pages",
+     "kind": "the name this source prints"
+    }
+   ],
+   "shared_club_season": {
+    "club_id": "club-toledo-maroons-1922",
+    "year": 1922,
+    "league": "NFL"
+   },
+   "evidence": "Pro Football Archives' award pages name 'Clarence Horning' on club-toledo-maroons-1922 in 1922; the archive holds 'Steamer Horning' with a season on that exact club-season and nobody of the printed name anywhere."
+  },
+  {
+   "person": "P_000717",
+   "names": [
+    {
+     "name": "Bruiser Kinard",
+     "printed_by": "the archive's existing name claims",
+     "kind": "the name the archive already held"
+    },
+    {
+     "name": "Frank Kinard",
+     "printed_by": "pro-football-archives",
+     "locator": "award pages",
+     "kind": "the name this source prints"
+    }
+   ],
+   "shared_club_season": {
+    "club_id": "club-brooklyn-dodgers-1930",
+    "year": 1938,
+    "league": "NFL"
+   },
+   "evidence": "Pro Football Archives' award pages name 'Frank Kinard' on club-brooklyn-dodgers-1930 in 1938; the archive holds 'Bruiser Kinard' with a season on that exact club-season and nobody of the printed name anywhere."
+  },
+  {
+   "person": "P_017038",
+   "names": [
+    {
+     "name": "Socko Wiethe",
+     "printed_by": "the archive's existing name claims",
+     "kind": "the name the archive already held"
+    },
+    {
+     "name": "John Wiethe",
+     "printed_by": "pro-football-archives",
+     "locator": "award pages",
+     "kind": "the name this source prints"
+    }
+   ],
+   "shared_club_season": {
+    "club_id": "club-detroit-lions-1934",
+    "year": 1939,
+    "league": "NFL"
+   },
+   "evidence": "Pro Football Archives' award pages name 'John Wiethe' on club-detroit-lions-1934 in 1939; the archive holds 'Socko Wiethe' with a season on that exact club-season and nobody of the printed name anywhere."
+  },
+  {
+   "person": "P_017514",
+   "names": [
+    {
+     "name": "Bucko Kilroy",
+     "printed_by": "the archive's existing name claims",
+     "kind": "the name the archive already held"
+    },
+    {
+     "name": "Frank Kilroy",
+     "printed_by": "pro-football-archives",
+     "locator": "award pages",
+     "kind": "the name this source prints"
+    }
+   ],
+   "shared_club_season": {
+    "club_id": "club-philadelphia-eagles-1933",
+    "year": 1949,
+    "league": "NFL"
+   },
+   "evidence": "Pro Football Archives' award pages name 'Frank Kilroy' on club-philadelphia-eagles-1933 in 1949; the archive holds 'Bucko Kilroy' with a season on that exact club-season and nobody of the printed name anywhere."
+  },
+  {
+   "person": "P_001271",
+   "names": [
+    {
+     "name": "Goose Gonsoulin",
+     "printed_by": "the archive's existing name claims",
+     "kind": "the name the archive already held"
+    },
+    {
+     "name": "Austin Gonsoulin",
+     "printed_by": "pro-football-archives",
+     "locator": "award pages",
+     "kind": "the name this source prints"
+    }
+   ],
+   "shared_club_season": {
+    "club_id": "club-denver-broncos-1960",
+    "year": 1960,
+    "league": "AFL"
+   },
+   "evidence": "Pro Football Archives' award pages name 'Austin Gonsoulin' on club-denver-broncos-1960 in 1960; the archive holds 'Goose Gonsoulin' with a season on that exact club-season and nobody of the printed name anywhere."
+  },
+  {
+   "person": "P_019439",
+   "names": [
+    {
+     "name": "Spider Lockhart",
+     "printed_by": "the archive's existing name claims",
+     "kind": "the name the archive already held"
+    },
+    {
+     "name": "Carl Lockhart",
+     "printed_by": "pro-football-archives",
+     "locator": "award pages",
+     "kind": "the name this source prints"
+    }
+   ],
+   "shared_club_season": {
+    "club_id": "club-new-york-giants-1925",
+    "year": 1970,
+    "league": "NFL"
+   },
+   "evidence": "Pro Football Archives' award pages name 'Carl Lockhart' on club-new-york-giants-1925 in 1970; the archive holds 'Spider Lockhart' with a season on that exact club-season and nobody of the printed name anywhere."
+  },
+  {
+   "person": "P_002302",
+   "names": [
+    {
+     "name": "Buzz Highsmith",
+     "printed_by": "the archive's existing name claims",
+     "kind": "the name the archive already held"
+    },
+    {
+     "name": "Wally Highsmith",
+     "printed_by": "pro-football-archives",
+     "locator": "award pages",
+     "kind": "the name this source prints"
+    }
+   ],
+   "shared_club_season": {
+    "club_id": "club-memphis-southmen-1974",
+    "year": 1974,
+    "league": "WFL"
+   },
+   "evidence": "Pro Football Archives' award pages name 'Wally Highsmith' on club-memphis-southmen-1974 in 1974; the archive holds 'Buzz Highsmith' with a season on that exact club-season and nobody of the printed name anywhere."
+  },
+  {
+   "person": "P_033151",
+   "names": [
+    {
+     "name": "Ezekiel Ansah",
+     "printed_by": "the archive's existing name claims",
+     "kind": "the name the archive already held"
+    },
+    {
+     "name": "Ziggy Ansah",
+     "printed_by": "pro-football-archives",
+     "locator": "award pages",
+     "kind": "the name this source prints"
+    }
+   ],
+   "shared_club_season": {
+    "club_id": "club-detroit-lions-1934",
+    "year": 2015,
+    "league": "NFL"
+   },
+   "evidence": "Pro Football Archives' award pages name 'Ziggy Ansah' on club-detroit-lions-1934 in 2015; the archive holds 'Ezekiel Ansah' with a season on that exact club-season and nobody of the printed name anywhere."
+  },
+  {
+   "person": "P_014605",
+   "names": [
+    {
+     "name": "Johnny McNally",
+     "printed_by": "the archive's existing name claims",
+     "kind": "the name the archive already held"
+    },
+    {
+     "name": "Johnny Blood",
+     "printed_by": "pro-football-archives",
+     "locator": "award pages",
+     "kind": "the name this source prints"
+    }
+   ],
+   "shared_club_season": {
+    "club_id": "club-green-bay-packers-1921",
+    "year": 1931,
+    "league": "NFL"
+   },
+   "evidence": "Pro Football Archives' award pages name 'Johnny Blood' on club-green-bay-packers-1921 in 1931; the archive holds 'Johnny McNally' with a season on that exact club-season and nobody of the printed name anywhere."
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "_what": "every P_ id a claim names, against the decisions that create people",
+ "_origins_are_read_from": [
+  "build-reports/identity.json",
+  "build/coach-promotions.json",
+  "build/player-promotions.json",
+  "build/person-merges.json (both sides)",
+  "build/officials-applied.json"
+ ],
+ "origins": 43555,
+ "origins_by_kind": {
+  "identity": 40745,
+  "officials": 1052,
+  "merge": 186,
+  "coach_promotion": 1799,
+  "player_promotion": 33
+ },
+ "ids_in_claims": 42402,
+ "with_no_origin": 0,
+ "orphans_by_store": {},
+ "orphans": {},
+ "in_the_index_with_no_origin": {},
+ "_an_origin_with_no_person_is_not_a_failure": "demote_stintless.py removes the coach promotions that carry no coaching season, by declared design, so a handful of decided ids are legitimately absent from the index. Counted, never failed on.",
+ "fails": []
+}
