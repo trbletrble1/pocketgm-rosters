@@ -1,0 +1,4218 @@
+{
+ "totals": {
+  "statistic rows": 373877,
+  "joined by exact name, on that club-season": 336783,
+  "MAN AND SEASON HELD, THIS STATISTIC NOT": 36868,
+  "NOT HELD AT ALL": 16781,
+  "joined by exact name, unique, but no season held there": 12176,
+  "joined by surname and initial, on that club-season": 8137,
+  "RESTATES what is already held": 320228,
+  "pages whose club the table refuses -- SKIPPED": 222,
+  "  rushing yards AGREE": 29288,
+  "  passing yards AGREE": 11860,
+  "  receiving yards AGREE": 38950,
+  "  receiving yards DISAGREE": 358,
+  "  rushing yards DISAGREE": 218,
+  "  passing yards DISAGREE": 104
+ },
+ "by_category": {
+  "SCORING": {
+   "rows": 49906,
+   "stat missing": 3220,
+   "not held": 4311,
+   "restates": 42375
+  },
+  "FIELD GOALS": {
+   "rows": 3365,
+   "stat missing": 115,
+   "not held": 53,
+   "restates": 3197
+  },
+  "RUSHING": {
+   "rows": 35854,
+   "stat missing": 1334,
+   "not held": 1783,
+   "restates": 32737
+  },
+  "PASSING": {
+   "rows": 13765,
+   "stat missing": 945,
+   "not held": 788,
+   "restates": 12032
+  },
+  "RECEIVING": {
+   "rows": 44948,
+   "stat missing": 2445,
+   "not held": 2151,
+   "restates": 40352
+  },
+  "INTERCEPTIONS": {
+   "rows": 26055,
+   "stat missing": 945,
+   "restates": 24146,
+   "not held": 964
+  },
+  "PUNT RETURNS": {
+   "rows": 13178,
+   "stat missing": 817,
+   "restates": 11838,
+   "not held": 523
+  },
+  "FUMBLES": {
+   "rows": 62479,
+   "stat missing": 6989,
+   "not held": 870,
+   "restates": 54620
+  },
+  "KICKOFF RETURNS": {
+   "rows": 23676,
+   "stat missing": 1000,
+   "restates": 21845,
+   "not held": 831
+  },
+  "PUNTING": {
+   "rows": 5370,
+   "stat missing": 139,
+   "not held": 253,
+   "restates": 4978
+  },
+  "SACKS": {
+   "rows": 26677,
+   "stat missing": 3774,
+   "not held": 1191,
+   "restates": 21712
+  },
+  "DEFENSE": {
+   "rows": 68604,
+   "restates": 50396,
+   "stat missing": 15145,
+   "not held": 3063
+  }
+ },
+ "by_era": {
+  "1920": {
+   "rows": 2773,
+   "stat missing": 606,
+   "not held": 324,
+   "restates": 1843
+  },
+  "1930": {
+   "rows": 5357,
+   "restates": 3649,
+   "not held": 1218,
+   "stat missing": 490
+  },
+  "1940": {
+   "rows": 14901,
+   "stat missing": 1247,
+   "not held": 2253,
+   "restates": 11401
+  },
+  "1950": {
+   "rows": 17154,
+   "stat missing": 455,
+   "not held": 447,
+   "restates": 16252
+  },
+  "1960": {
+   "rows": 31525,
+   "restates": 25202,
+   "stat missing": 2969,
+   "not held": 3354
+  },
+  "1970": {
+   "rows": 35965,
+   "not held": 889,
+   "stat missing": 3902,
+   "restates": 31174
+  },
+  "1980": {
+   "rows": 44659,
+   "restates": 40622,
+   "not held": 338,
+   "stat missing": 3699
+  },
+  "1990": {
+   "rows": 49437,
+   "restates": 43641,
+   "stat missing": 4077,
+   "not held": 1719
+  },
+  "2000": {
+   "rows": 67073,
+   "restates": 55760,
+   "not held": 3702,
+   "stat missing": 7611
+  },
+  "2010": {
+   "rows": 64001,
+   "restates": 57944,
+   "stat missing": 5235,
+   "not held": 822
+  },
+  "2020": {
+   "rows": 41032,
+   "restates": 32740,
+   "not held": 1715,
+   "stat missing": 6577
+  }
+ },
+ "unmatched": {
+  "no person of that name": 16642,
+  "several by surname and initial on that club-season": 80,
+  "several of that exact name on that club-season": 59
+ },
+ "not_held_by_league": {
+  "APFA": 48,
+  "NFL": 3679,
+  "AFL": 1331,
+  "EFL": 19,
+  "IFL": 48,
+  "AA": 435,
+  "DFL": 458,
+  "MWFL": 106,
+  "PCFL": 692,
+  "AAFC": 67,
+  "IRFU": 61,
+  "ORFU": 82,
+  "WIFU": 170,
+  "CFL": 947,
+  "UFL": 647,
+  "ACFL": 1066,
+  "COFL": 1870,
+  "PFLA": 194,
+  "WFL": 20,
+  "USFL": 56,
+  "WLAF": 812,
+  "NFLE": 3939,
+  "XFL": 12,
+  "AAF": 22
+ },
+ "not_held_club_season_state": {
+  "the archive holds men on it and not him": 4118,
+  "the archive holds NOBODY on that club-season": 12663
+ },
+ "yards_disagreements": [
+  {
+   "person": "P_016351",
+   "year": 1933,
+   "category": "receiving",
+   "pfa": "43",
+   "archive": [
+    "25"
+   ],
+   "club": "Chicago Cardinals"
+  },
+  {
+   "person": "P_016048",
+   "year": 1933,
+   "category": "receiving",
+   "pfa": "3",
+   "archive": [
+    "15",
+    "21"
+   ],
+   "club": "Chicago Cardinals"
+  },
+  {
+   "person": "P_016421",
+   "year": 1933,
+   "category": "receiving",
+   "pfa": "383",
+   "archive": [
+    "283"
+   ],
+   "club": "Pittsburgh Pirates"
+  },
+  {
+   "person": "P_016432",
+   "year": 1933,
+   "category": "receiving",
+   "pfa": "127",
+   "archive": [
+    "107"
+   ],
+   "club": "Portsmouth Spartans"
+  },
+  {
+   "person": "P_016568",
+   "year": 1935,
+   "category": "rushing",
+   "pfa": "29",
+   "archive": [
+    "11",
+    "39"
+   ],
+   "club": "Pittsburgh Pirates"
+  },
+  {
+   "person": "P_017163",
+   "year": 1940,
+   "category": "rushing",
+   "pfa": "136",
+   "archive": [
+    "9"
+   ],
+   "club": "Jersey City Giants"
+  },
+  {
+   "person": "P_017163",
+   "year": 1940,
+   "category": "passing",
+   "pfa": "140",
+   "archive": [
+    "23"
+   ],
+   "club": "Jersey City Giants"
+  },
+  {
+   "person": "P_017112",
+   "year": 1940,
+   "category": "passing",
+   "pfa": "22",
+   "archive": [
+    "42"
+   ],
+   "club": "Jersey City Giants"
+  },
+  {
+   "person": "P_016790",
+   "year": 1940,
+   "category": "receiving",
+   "pfa": "228",
+   "archive": [
+    "224"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_017141",
+   "year": 1940,
+   "category": "receiving",
+   "pfa": "38",
+   "archive": [
+    "42"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_000724",
+   "year": 1941,
+   "category": "passing",
+   "pfa": "642",
+   "archive": [
+    "639"
+   ],
+   "club": "Brooklyn Dodgers"
+  },
+  {
+   "person": "P_000691",
+   "year": 1941,
+   "category": "passing",
+   "pfa": "112",
+   "archive": [
+    "118"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_000649",
+   "year": 1941,
+   "category": "passing",
+   "pfa": "79",
+   "archive": [
+    "69"
+   ],
+   "club": "New York Giants"
+  },
+  {
+   "person": "P_017000",
+   "year": 1942,
+   "category": "passing",
+   "pfa": "1023",
+   "archive": [
+    "1024"
+   ],
+   "club": "Chicago Bears"
+  },
+  {
+   "person": "P_000583",
+   "year": 1942,
+   "category": "passing",
+   "pfa": "43",
+   "archive": [
+    "53"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_017504",
+   "year": 1943,
+   "category": "passing",
+   "pfa": "390",
+   "archive": [
+    "396"
+   ],
+   "club": "New York Giants"
+  },
+  {
+   "person": "P_016704",
+   "year": 1943,
+   "category": "passing",
+   "pfa": "366",
+   "archive": [
+    "360"
+   ],
+   "club": "New York Giants"
+  },
+  {
+   "person": "P_017395",
+   "year": 1944,
+   "category": "receiving",
+   "pfa": "282",
+   "archive": [
+    "292"
+   ],
+   "club": "New York Giants"
+  },
+  {
+   "person": "P_000720",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "191",
+   "archive": [
+    "186"
+   ],
+   "club": "Boston Yanks"
+  },
+  {
+   "person": "P_014824",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "18",
+   "archive": [
+    "259"
+   ],
+   "club": "Chicago Bears"
+  },
+  {
+   "person": "P_017570",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "47",
+   "archive": [
+    "394"
+   ],
+   "club": "Chicago Bears"
+  },
+  {
+   "person": "P_000837",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "51",
+   "archive": [
+    "202"
+   ],
+   "club": "Chicago Bears"
+  },
+  {
+   "person": "P_014604",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "43",
+   "archive": [
+    "117"
+   ],
+   "club": "Chicago Bears"
+  },
+  {
+   "person": "P_016876",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "13",
+   "archive": [
+    "42"
+   ],
+   "club": "Chicago Bears"
+  },
+  {
+   "person": "P_017564",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "19",
+   "archive": [
+    "34"
+   ],
+   "club": "Chicago Bears"
+  },
+  {
+   "person": "P_017563",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "10",
+   "archive": [
+    "12"
+   ],
+   "club": "Chicago Bears"
+  },
+  {
+   "person": "P_017571",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "6",
+   "archive": [
+    "10"
+   ],
+   "club": "Chicago Bears"
+  },
+  {
+   "person": "P_017489",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "341",
+   "archive": [
+    "241"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_017275",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "474",
+   "archive": [
+    "464"
+   ],
+   "club": "Philadelphia Eagles"
+  },
+  {
+   "person": "P_017411",
+   "year": 1945,
+   "category": "receiving",
+   "pfa": "125",
+   "archive": [
+    "135"
+   ],
+   "club": "Philadelphia Eagles"
+  },
+  {
+   "person": "P_000496",
+   "year": 1946,
+   "category": "rushing",
+   "pfa": "9",
+   "archive": [
+    "6",
+    "60"
+   ],
+   "club": "Brooklyn Dodgers"
+  },
+  {
+   "person": "P_000496",
+   "year": 1946,
+   "category": "rushing",
+   "pfa": "57",
+   "archive": [
+    "6",
+    "60"
+   ],
+   "club": "Miami Seahawks"
+  },
+  {
+   "person": "P_003645",
+   "year": 1946,
+   "category": "rushing",
+   "pfa": "275",
+   "archive": [
+    "84"
+   ],
+   "club": "Akron Bears"
+  },
+  {
+   "person": "P_017660",
+   "year": 1946,
+   "category": "rushing",
+   "pfa": "115",
+   "archive": [
+    "0"
+   ],
+   "club": "Portsmouth Pirates"
+  },
+  {
+   "person": "P_017815",
+   "year": 1946,
+   "category": "receiving",
+   "pfa": "146",
+   "archive": [
+    "147"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_000527",
+   "year": 1947,
+   "category": "passing",
+   "pfa": "826",
+   "archive": [
+    "556"
+   ],
+   "club": "Chicago Rockets"
+  },
+  {
+   "person": "P_000635",
+   "year": 1947,
+   "category": "receiving",
+   "pfa": "219",
+   "archive": [
+    "158"
+   ],
+   "club": "Los Angeles Dons"
+  },
+  {
+   "person": "P_017950",
+   "year": 1947,
+   "category": "passing",
+   "pfa": "1122",
+   "archive": [
+    "30"
+   ],
+   "club": "Jersey City Giants"
+  },
+  {
+   "person": "P_000586",
+   "year": 1947,
+   "category": "passing",
+   "pfa": "485",
+   "archive": [
+    "18"
+   ],
+   "club": "Paterson Panthers"
+  },
+  {
+   "person": "P_017982",
+   "year": 1947,
+   "category": "rushing",
+   "pfa": "265",
+   "archive": [
+    "7"
+   ],
+   "club": "Wilmington Clippers"
+  },
+  {
+   "person": "P_000667",
+   "year": 1946,
+   "category": "rushing",
+   "pfa": "304",
+   "archive": [
+    "124",
+    "2"
+   ],
+   "club": "Hawaiian Warriors"
+  },
+  {
+   "person": "P_000843",
+   "year": 1948,
+   "category": "rushing",
+   "pfa": "30",
+   "archive": [
+    "48"
+   ],
+   "club": "Brooklyn Dodgers"
+  },
+  {
+   "person": "P_000843",
+   "year": 1948,
+   "category": "receiving",
+   "pfa": "255",
+   "archive": [
+    "315"
+   ],
+   "club": "Brooklyn Dodgers"
+  },
+  {
+   "person": "P_000709",
+   "year": 1948,
+   "category": "receiving",
+   "pfa": "227",
+   "archive": [
+    "167",
+    "60"
+   ],
+   "club": "Brooklyn Dodgers"
+  },
+  {
+   "person": "P_000843",
+   "year": 1948,
+   "category": "rushing",
+   "pfa": "18",
+   "archive": [
+    "48"
+   ],
+   "club": "Chicago Rockets"
+  },
+  {
+   "person": "P_000843",
+   "year": 1948,
+   "category": "receiving",
+   "pfa": "60",
+   "archive": [
+    "315"
+   ],
+   "club": "Chicago Rockets"
+  },
+  {
+   "person": "P_017778",
+   "year": 1948,
+   "category": "passing",
+   "pfa": "407",
+   "archive": [
+    "186"
+   ],
+   "club": "Wilmington Clippers"
+  },
+  {
+   "person": "P_003949",
+   "year": 1950,
+   "category": "passing",
+   "pfa": "405",
+   "archive": [
+    "31"
+   ],
+   "club": "Erie Vets"
+  },
+  {
+   "person": "P_004177",
+   "year": 1953,
+   "category": "rushing",
+   "pfa": "28",
+   "archive": [
+    "39"
+   ],
+   "club": "Saskatchewan Roughriders"
+  },
+  {
+   "person": "P_004322",
+   "year": 1956,
+   "category": "receiving",
+   "pfa": "16",
+   "archive": [
+    "182",
+    "198"
+   ],
+   "club": "British Columbia Lions"
+  },
+  {
+   "person": "P_004241",
+   "year": 1958,
+   "category": "rushing",
+   "pfa": "247",
+   "archive": [
+    "-26"
+   ],
+   "club": "Hamilton Tiger-Cats"
+  },
+  {
+   "person": "P_004027",
+   "year": 1958,
+   "category": "rushing",
+   "pfa": "169",
+   "archive": [
+    "-274"
+   ],
+   "club": "Montreal Alouettes"
+  },
+  {
+   "person": "P_004773",
+   "year": 1958,
+   "category": "rushing",
+   "pfa": "434",
+   "archive": [
+    "357"
+   ],
+   "club": "Ottawa Rough Riders"
+  },
+  {
+   "person": "P_001132",
+   "year": 1958,
+   "category": "rushing",
+   "pfa": "124",
+   "archive": [
+    "-31"
+   ],
+   "club": "Ottawa Rough Riders"
+  },
+  {
+   "person": "P_004543",
+   "year": 1958,
+   "category": "rushing",
+   "pfa": "95",
+   "archive": [
+    "-46"
+   ],
+   "club": "Ottawa Rough Riders"
+  },
+  {
+   "person": "P_004306",
+   "year": 1958,
+   "category": "rushing",
+   "pfa": "1018",
+   "archive": [
+    "969"
+   ],
+   "club": "Toronto Argonauts"
+  },
+  {
+   "person": "P_004483",
+   "year": 1958,
+   "category": "rushing",
+   "pfa": "74",
+   "archive": [
+    "-39"
+   ],
+   "club": "Toronto Argonauts"
+  },
+  {
+   "person": "P_004298",
+   "year": 1958,
+   "category": "rushing",
+   "pfa": "27",
+   "archive": [
+    "-47"
+   ],
+   "club": "Toronto Argonauts"
+  },
+  {
+   "person": "P_004919",
+   "year": 1962,
+   "category": "passing",
+   "pfa": "325",
+   "archive": [
+    "225",
+    "91"
+   ],
+   "club": "Edmonton Eskimos"
+  },
+  {
+   "person": "P_001464",
+   "year": 1963,
+   "category": "receiving",
+   "pfa": "472",
+   "archive": [
+    "471"
+   ],
+   "club": "Denver Broncos"
+  },
+  {
+   "person": "P_001308",
+   "year": 1963,
+   "category": "receiving",
+   "pfa": "436",
+   "archive": [
+    "437"
+   ],
+   "club": "Denver Broncos"
+  },
+  {
+   "person": "P_001512",
+   "year": 1963,
+   "category": "receiving",
+   "pfa": "783",
+   "archive": [
+    "785"
+   ],
+   "club": "Kansas City Chiefs"
+  },
+  {
+   "person": "P_001619",
+   "year": 1963,
+   "category": "receiving",
+   "pfa": "375",
+   "archive": [
+    "373"
+   ],
+   "club": "Kansas City Chiefs"
+  },
+  {
+   "person": "P_001222",
+   "year": 1963,
+   "category": "rushing",
+   "pfa": "1098",
+   "archive": [
+    "1099"
+   ],
+   "club": "Oakland Raiders"
+  },
+  {
+   "person": "P_001223",
+   "year": 1963,
+   "category": "rushing",
+   "pfa": "134",
+   "archive": [
+    "133"
+   ],
+   "club": "Oakland Raiders"
+  },
+  {
+   "person": "P_001706",
+   "year": 1963,
+   "category": "rushing",
+   "pfa": "201",
+   "archive": [
+    "199"
+   ],
+   "club": "San Diego Chargers"
+  },
+  {
+   "person": "P_005356",
+   "year": 1964,
+   "category": "receiving",
+   "pfa": "93",
+   "archive": [
+    "9"
+   ],
+   "club": "Chicago Bears"
+  },
+  {
+   "person": "P_019306",
+   "year": 1964,
+   "category": "passing",
+   "pfa": "963",
+   "archive": [
+    "3"
+   ],
+   "club": "Toledo Tornadoes"
+  },
+  {
+   "person": "P_005367",
+   "year": 1965,
+   "category": "receiving",
+   "pfa": "28",
+   "archive": [
+    "111",
+    "20"
+   ],
+   "club": "Hartford Charter Oaks"
+  },
+  {
+   "person": "P_005363",
+   "year": 1965,
+   "category": "rushing",
+   "pfa": "404",
+   "archive": [
+    "24"
+   ],
+   "club": "Norfolk Neptunes"
+  },
+  {
+   "person": "P_005394",
+   "year": 1965,
+   "category": "rushing",
+   "pfa": "146",
+   "archive": [
+    "105"
+   ],
+   "club": "Norfolk Neptunes"
+  },
+  {
+   "person": "P_005394",
+   "year": 1965,
+   "category": "receiving",
+   "pfa": "26",
+   "archive": [
+    "31"
+   ],
+   "club": "Norfolk Neptunes"
+  },
+  {
+   "person": "P_005330",
+   "year": 1965,
+   "category": "rushing",
+   "pfa": "35",
+   "archive": [
+    "30"
+   ],
+   "club": "Wheeling Ironmen"
+  },
+  {
+   "person": "P_005352",
+   "year": 1965,
+   "category": "receiving",
+   "pfa": "461",
+   "archive": [
+    "61"
+   ],
+   "club": "Wheeling Ironmen"
+  },
+  {
+   "person": "P_005330",
+   "year": 1965,
+   "category": "receiving",
+   "pfa": "312",
+   "archive": [
+    "45"
+   ],
+   "club": "Wheeling Ironmen"
+  },
+  {
+   "person": "P_005301",
+   "year": 1966,
+   "category": "receiving",
+   "pfa": "2",
+   "archive": [
+    "19",
+    "6"
+   ],
+   "club": "Montreal Beavers"
+  },
+  {
+   "person": "P_005394",
+   "year": 1966,
+   "category": "rushing",
+   "pfa": "1",
+   "archive": [
+    "114"
+   ],
+   "club": "Norfolk Neptunes"
+  },
+  {
+   "person": "P_005356",
+   "year": 1966,
+   "category": "receiving",
+   "pfa": "330",
+   "archive": [
+    "108"
+   ],
+   "club": "Atlanta Falcons"
+  },
+  {
+   "person": "P_019702",
+   "year": 1967,
+   "category": "rushing",
+   "pfa": "405",
+   "archive": [
+    "98"
+   ],
+   "club": "Westchester Bulls"
+  },
+  {
+   "person": "P_002193",
+   "year": 1967,
+   "category": "passing",
+   "pfa": "159",
+   "archive": [
+    "11"
+   ],
+   "club": "Akron Vulcans"
+  },
+  {
+   "person": "P_005292",
+   "year": 1967,
+   "category": "rushing",
+   "pfa": "4",
+   "archive": [
+    "23"
+   ],
+   "club": "Montreal Beavers"
+  },
+  {
+   "person": "P_005292",
+   "year": 1967,
+   "category": "passing",
+   "pfa": "437",
+   "archive": [
+    "935"
+   ],
+   "club": "Montreal Beavers"
+  },
+  {
+   "person": "P_005584",
+   "year": 1967,
+   "category": "receiving",
+   "pfa": "17",
+   "archive": [
+    "4"
+   ],
+   "club": "San Jose Apaches"
+  },
+  {
+   "person": "P_019732",
+   "year": 1967,
+   "category": "receiving",
+   "pfa": "13",
+   "archive": [
+    "2"
+   ],
+   "club": "San Jose Apaches"
+  },
+  {
+   "person": "P_002431",
+   "year": 1967,
+   "category": "rushing",
+   "pfa": "118",
+   "archive": [
+    "99"
+   ],
+   "club": "Toronto Rifles"
+  },
+  {
+   "person": "P_005587",
+   "year": 1967,
+   "category": "passing",
+   "pfa": "50",
+   "archive": [
+    "23"
+   ],
+   "club": "Toronto Rifles"
+  },
+  {
+   "person": "P_005097",
+   "year": 1967,
+   "category": "receiving",
+   "pfa": "230",
+   "archive": [
+    "16"
+   ],
+   "club": "Toronto Rifles"
+  },
+  {
+   "person": "P_005584",
+   "year": 1967,
+   "category": "receiving",
+   "pfa": "27",
+   "archive": [
+    "4"
+   ],
+   "club": "Toronto Rifles"
+  },
+  {
+   "person": "P_019722",
+   "year": 1967,
+   "category": "receiving",
+   "pfa": "358",
+   "archive": [
+    "16"
+   ],
+   "club": "Wheeling Ironmen"
+  },
+  {
+   "person": "P_001843",
+   "year": 1968,
+   "category": "rushing",
+   "pfa": "2",
+   "archive": [
+    "47"
+   ],
+   "club": "Oklahoma City Plainsmen"
+  },
+  {
+   "person": "P_001843",
+   "year": 1968,
+   "category": "passing",
+   "pfa": "160",
+   "archive": [
+    "864"
+   ],
+   "club": "Oklahoma City Plainsmen"
+  },
+  {
+   "person": "P_005690",
+   "year": 1968,
+   "category": "rushing",
+   "pfa": "171",
+   "archive": [
+    "26"
+   ],
+   "club": "Orange County Ramblers"
+  },
+  {
+   "person": "P_005690",
+   "year": 1968,
+   "category": "receiving",
+   "pfa": "56",
+   "archive": [
+    "6"
+   ],
+   "club": "Orange County Ramblers"
+  },
+  {
+   "person": "P_005731",
+   "year": 1969,
+   "category": "receiving",
+   "pfa": "572",
+   "archive": [
+    "206"
+   ],
+   "club": "Spokane Shockers"
+  },
+  {
+   "person": "P_005658",
+   "year": 1969,
+   "category": "rushing",
+   "pfa": "5",
+   "archive": [
+    "53"
+   ],
+   "club": "Tri-Cities Apollos"
+  },
+  {
+   "person": "P_005858",
+   "year": 1970,
+   "category": "rushing",
+   "pfa": "6",
+   "archive": [
+    "106"
+   ],
+   "club": "Indianapolis Capitols"
+  },
+  {
+   "person": "P_005601",
+   "year": 1971,
+   "category": "passing",
+   "pfa": "885",
+   "archive": [
+    "21",
+    "865"
+   ],
+   "club": "British Columbia Lions"
+  },
+  {
+   "person": "P_005601",
+   "year": 1971,
+   "category": "passing",
+   "pfa": "0",
+   "archive": [
+    "21",
+    "865"
+   ],
+   "club": "Ottawa Rough Riders"
+  },
+  {
+   "person": "P_019028",
+   "year": 1971,
+   "category": "receiving",
+   "pfa": "141",
+   "archive": [
+    "94"
+   ],
+   "club": "Minnesota Vikings"
+  },
+  {
+   "person": "P_006155",
+   "year": 1973,
+   "category": "passing",
+   "pfa": "1064",
+   "archive": [
+    "42"
+   ],
+   "club": "Bridgeport Jets"
+  },
+  {
+   "person": "P_019768",
+   "year": 1974,
+   "category": "rushing",
+   "pfa": "181",
+   "archive": [
+    "81"
+   ],
+   "club": "Chicago Fire"
+  },
+  {
+   "person": "P_038400",
+   "year": 1974,
+   "category": "passing",
+   "pfa": "17",
+   "archive": [
+    "22"
+   ],
+   "club": "Chicago Fire"
+  },
+  {
+   "person": "P_038381",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "398",
+   "archive": [
+    "12",
+    "498"
+   ],
+   "club": "Chicago Fire"
+  },
+  {
+   "person": "P_022356",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "227",
+   "archive": [
+    "228"
+   ],
+   "club": "The Hawaiians"
+  },
+  {
+   "person": "P_040348",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "65",
+   "archive": [
+    "64"
+   ],
+   "club": "The Hawaiians"
+  },
+  {
+   "person": "P_002431",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "31",
+   "archive": [
+    "29",
+    "62"
+   ],
+   "club": "The Hawaiians"
+  },
+  {
+   "person": "P_002498",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "421",
+   "archive": [
+    "409"
+   ],
+   "club": "Jacksonville Sharks"
+  },
+  {
+   "person": "P_021487",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "675",
+   "archive": [
+    "671"
+   ],
+   "club": "Memphis Southmen"
+  },
+  {
+   "person": "P_038575",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "167",
+   "archive": [
+    "164"
+   ],
+   "club": "Memphis Southmen"
+  },
+  {
+   "person": "P_040719",
+   "year": 1974,
+   "category": "passing",
+   "pfa": "97",
+   "archive": [
+    "98"
+   ],
+   "club": "Philadelphia Bell"
+  },
+  {
+   "person": "P_006066",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "129",
+   "archive": [
+    "145"
+   ],
+   "club": "Philadelphia Bell"
+  },
+  {
+   "person": "P_006193",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "372",
+   "archive": [
+    "369"
+   ],
+   "club": "Portland Storm"
+  },
+  {
+   "person": "P_020510",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "326",
+   "archive": [
+    "346"
+   ],
+   "club": "Portland Storm"
+  },
+  {
+   "person": "P_037942",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "320",
+   "archive": [
+    "316"
+   ],
+   "club": "Portland Storm"
+  },
+  {
+   "person": "P_040715",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "218",
+   "archive": [
+    "209"
+   ],
+   "club": "Portland Storm"
+  },
+  {
+   "person": "P_038466",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "289",
+   "archive": [
+    "290"
+   ],
+   "club": "Portland Storm"
+  },
+  {
+   "person": "P_006180",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "111",
+   "archive": [
+    "110"
+   ],
+   "club": "Portland Storm"
+  },
+  {
+   "person": "P_002335",
+   "year": 1974,
+   "category": "receiving",
+   "pfa": "34",
+   "archive": [
+    "30"
+   ],
+   "club": "Portland Storm"
+  },
+  {
+   "person": "P_006400",
+   "year": 1975,
+   "category": "receiving",
+   "pfa": "2",
+   "archive": [
+    "1",
+    "13"
+   ],
+   "club": "Charlotte Hornets"
+  },
+  {
+   "person": "P_006654",
+   "year": 1975,
+   "category": "rushing",
+   "pfa": "278",
+   "archive": [
+    "478"
+   ],
+   "club": "Jacksonville Express"
+  },
+  {
+   "person": "P_006049",
+   "year": 1975,
+   "category": "passing",
+   "pfa": "1675",
+   "archive": [
+    "1643"
+   ],
+   "club": "Jacksonville Express"
+  },
+  {
+   "person": "P_020181",
+   "year": 1975,
+   "category": "receiving",
+   "pfa": "552",
+   "archive": [
+    "545"
+   ],
+   "club": "Jacksonville Express"
+  },
+  {
+   "person": "P_037992",
+   "year": 1975,
+   "category": "receiving",
+   "pfa": "471",
+   "archive": [
+    "446"
+   ],
+   "club": "Jacksonville Express"
+  },
+  {
+   "person": "P_021201",
+   "year": 1981,
+   "category": "receiving",
+   "pfa": "211",
+   "archive": [
+    "217"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_021653",
+   "year": 1981,
+   "category": "receiving",
+   "pfa": "187",
+   "archive": [
+    "181"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_022672",
+   "year": 1982,
+   "category": "receiving",
+   "pfa": "146",
+   "archive": [
+    "153"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_022178",
+   "year": 1982,
+   "category": "receiving",
+   "pfa": "51",
+   "archive": [
+    "44"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_038313",
+   "year": 1983,
+   "category": "receiving",
+   "pfa": "56",
+   "archive": [
+    "50"
+   ],
+   "club": "New Jersey Generals"
+  },
+  {
+   "person": "P_022301",
+   "year": 1983,
+   "category": "rushing",
+   "pfa": "41",
+   "archive": [
+    "39"
+   ],
+   "club": "Philadelphia Stars"
+  },
+  {
+   "person": "P_007335",
+   "year": 1983,
+   "category": "rushing",
+   "pfa": "0",
+   "archive": [
+    "2"
+   ],
+   "club": "Philadelphia Stars"
+  },
+  {
+   "person": "P_040299",
+   "year": 1983,
+   "category": "receiving",
+   "pfa": "85",
+   "archive": [
+    "78"
+   ],
+   "club": "Tampa Bay Bandits"
+  },
+  {
+   "person": "P_040655",
+   "year": 1983,
+   "category": "receiving",
+   "pfa": "50",
+   "archive": [
+    "49"
+   ],
+   "club": "Tampa Bay Bandits"
+  },
+  {
+   "person": "P_022545",
+   "year": 1984,
+   "category": "receiving",
+   "pfa": "183",
+   "archive": [
+    "120"
+   ],
+   "club": "Arizona Wranglers"
+  },
+  {
+   "person": "P_022381",
+   "year": 1984,
+   "category": "rushing",
+   "pfa": "1487",
+   "archive": [
+    "1467"
+   ],
+   "club": "Birmingham Stallions"
+  },
+  {
+   "person": "P_024513",
+   "year": 1984,
+   "category": "rushing",
+   "pfa": "18",
+   "archive": [
+    "12"
+   ],
+   "club": "Houston Gamblers"
+  },
+  {
+   "person": "P_008000",
+   "year": 1984,
+   "category": "receiving",
+   "pfa": "218",
+   "archive": [
+    "231"
+   ],
+   "club": "Michigan Panthers"
+  },
+  {
+   "person": "P_007795",
+   "year": 1984,
+   "category": "rushing",
+   "pfa": "19",
+   "archive": [
+    "18"
+   ],
+   "club": "Oakland Invaders"
+  },
+  {
+   "person": "P_022092",
+   "year": 1984,
+   "category": "rushing",
+   "pfa": "89",
+   "archive": [
+    "75"
+   ],
+   "club": "Oklahoma Outlaws"
+  },
+  {
+   "person": "P_007598",
+   "year": 1984,
+   "category": "rushing",
+   "pfa": "24",
+   "archive": [
+    "19"
+   ],
+   "club": "Oklahoma Outlaws"
+  },
+  {
+   "person": "P_021934",
+   "year": 1984,
+   "category": "receiving",
+   "pfa": "146",
+   "archive": [
+    "149"
+   ],
+   "club": "Pittsburgh Maulers"
+  },
+  {
+   "person": "P_038058",
+   "year": 1984,
+   "category": "rushing",
+   "pfa": "418",
+   "archive": [
+    "410"
+   ],
+   "club": "San Antonio Gunslingers"
+  },
+  {
+   "person": "P_014634",
+   "year": 1984,
+   "category": "passing",
+   "pfa": "2544",
+   "archive": [
+    "2542"
+   ],
+   "club": "San Antonio Gunslingers"
+  },
+  {
+   "person": "P_007873",
+   "year": 1984,
+   "category": "receiving",
+   "pfa": "650",
+   "archive": [
+    "648"
+   ],
+   "club": "San Antonio Gunslingers"
+  },
+  {
+   "person": "P_040655",
+   "year": 1984,
+   "category": "rushing",
+   "pfa": "202",
+   "archive": [
+    "192"
+   ],
+   "club": "Tampa Bay Bandits"
+  },
+  {
+   "person": "P_022760",
+   "year": 1984,
+   "category": "receiving",
+   "pfa": "262",
+   "archive": [
+    "133"
+   ],
+   "club": "Tampa Bay Bandits"
+  },
+  {
+   "person": "P_006717",
+   "year": 1985,
+   "category": "receiving",
+   "pfa": "43",
+   "archive": [
+    "195"
+   ],
+   "club": "Edmonton Eskimos"
+  },
+  {
+   "person": "P_006717",
+   "year": 1985,
+   "category": "receiving",
+   "pfa": "152",
+   "archive": [
+    "195"
+   ],
+   "club": "Ottawa Rough Riders"
+  },
+  {
+   "person": "P_040705",
+   "year": 1985,
+   "category": "rushing",
+   "pfa": "7",
+   "archive": [
+    "112",
+    "194"
+   ],
+   "club": "Baltimore Stars"
+  },
+  {
+   "person": "P_007782",
+   "year": 1985,
+   "category": "receiving",
+   "pfa": "96",
+   "archive": [
+    "79"
+   ],
+   "club": "Memphis Showboats"
+  },
+  {
+   "person": "P_007751",
+   "year": 1985,
+   "category": "receiving",
+   "pfa": "115",
+   "archive": [
+    "79"
+   ],
+   "club": "Memphis Showboats"
+  },
+  {
+   "person": "P_038926",
+   "year": 1985,
+   "category": "receiving",
+   "pfa": "79",
+   "archive": [
+    "40"
+   ],
+   "club": "Memphis Showboats"
+  },
+  {
+   "person": "P_022760",
+   "year": 1985,
+   "category": "receiving",
+   "pfa": "559",
+   "archive": [
+    "257"
+   ],
+   "club": "Tampa Bay Bandits"
+  },
+  {
+   "person": "P_025582",
+   "year": 1991,
+   "category": "rushing",
+   "pfa": "168",
+   "archive": [
+    "163"
+   ],
+   "club": "New England Patriots"
+  },
+  {
+   "person": "P_026316",
+   "year": 1991,
+   "category": "rushing",
+   "pfa": "141",
+   "archive": [
+    "146"
+   ],
+   "club": "New England Patriots"
+  },
+  {
+   "person": "P_038682",
+   "year": 1991,
+   "category": "receiving",
+   "pfa": "28",
+   "archive": [
+    "38"
+   ],
+   "club": "Montreal Machine"
+  },
+  {
+   "person": "P_008460",
+   "year": 1991,
+   "category": "rushing",
+   "pfa": "815",
+   "archive": [
+    "185"
+   ],
+   "club": "San Antonio Riders"
+  },
+  {
+   "person": "P_008345",
+   "year": 1992,
+   "category": "rushing",
+   "pfa": "52",
+   "archive": [
+    "56"
+   ],
+   "club": "British Columbia Lions"
+  },
+  {
+   "person": "P_007936",
+   "year": 1992,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "58"
+   ],
+   "club": "British Columbia Lions"
+  },
+  {
+   "person": "P_038005",
+   "year": 1992,
+   "category": "receiving",
+   "pfa": "10",
+   "archive": [
+    "71"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_038005",
+   "year": 1992,
+   "category": "receiving",
+   "pfa": "61",
+   "archive": [
+    "71"
+   ],
+   "club": "Birmingham Fire"
+  },
+  {
+   "person": "P_040729",
+   "year": 1992,
+   "category": "rushing",
+   "pfa": "46",
+   "archive": [
+    "147"
+   ],
+   "club": "London Monarchs"
+  },
+  {
+   "person": "P_040729",
+   "year": 1992,
+   "category": "receiving",
+   "pfa": "3",
+   "archive": [
+    "206"
+   ],
+   "club": "London Monarchs"
+  },
+  {
+   "person": "P_040729",
+   "year": 1992,
+   "category": "rushing",
+   "pfa": "101",
+   "archive": [
+    "147"
+   ],
+   "club": "Montreal Machine"
+  },
+  {
+   "person": "P_040729",
+   "year": 1992,
+   "category": "receiving",
+   "pfa": "203",
+   "archive": [
+    "206"
+   ],
+   "club": "Montreal Machine"
+  },
+  {
+   "person": "P_007677",
+   "year": 1993,
+   "category": "receiving",
+   "pfa": "1274",
+   "archive": [
+    "1279"
+   ],
+   "club": "Ottawa Rough Riders"
+  },
+  {
+   "person": "P_026420",
+   "year": 1995,
+   "category": "rushing",
+   "pfa": "32",
+   "archive": [
+    "20"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_026420",
+   "year": 1995,
+   "category": "passing",
+   "pfa": "542",
+   "archive": [
+    "483"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_026913",
+   "year": 1995,
+   "category": "rushing",
+   "pfa": "44",
+   "archive": [
+    "5"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_026913",
+   "year": 1995,
+   "category": "passing",
+   "pfa": "543",
+   "archive": [
+    "519"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_027314",
+   "year": 1995,
+   "category": "rushing",
+   "pfa": "50",
+   "archive": [
+    "1"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_027314",
+   "year": 1995,
+   "category": "passing",
+   "pfa": "2394",
+   "archive": [
+    "212"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_009143",
+   "year": 1995,
+   "category": "receiving",
+   "pfa": "215",
+   "archive": [
+    "106",
+    "430"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_008996",
+   "year": 1996,
+   "category": "rushing",
+   "pfa": "22",
+   "archive": [
+    "25",
+    "6"
+   ],
+   "club": "Hamilton Tiger-Cats"
+  },
+  {
+   "person": "P_009322",
+   "year": 1996,
+   "category": "rushing",
+   "pfa": "3",
+   "archive": [
+    "1"
+   ],
+   "club": "Hamilton Tiger-Cats"
+  },
+  {
+   "person": "P_023877",
+   "year": 1996,
+   "category": "passing",
+   "pfa": "3162",
+   "archive": [
+    "3152"
+   ],
+   "club": "Atlanta Falcons"
+  },
+  {
+   "person": "P_027120",
+   "year": 1996,
+   "category": "rushing",
+   "pfa": "22",
+   "archive": [
+    "40"
+   ],
+   "club": "New York Jets"
+  },
+  {
+   "person": "P_027714",
+   "year": 1996,
+   "category": "rushing",
+   "pfa": "4",
+   "archive": [
+    "-16"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_027776",
+   "year": 1996,
+   "category": "receiving",
+   "pfa": "162",
+   "archive": [
+    "27"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_027703",
+   "year": 1996,
+   "category": "receiving",
+   "pfa": "328",
+   "archive": [
+    "87"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_009289",
+   "year": 1996,
+   "category": "receiving",
+   "pfa": "643",
+   "archive": [
+    "24"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_009342",
+   "year": 1996,
+   "category": "receiving",
+   "pfa": "545",
+   "archive": [
+    "93"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_008458",
+   "year": 1996,
+   "category": "receiving",
+   "pfa": "363",
+   "archive": [
+    "368"
+   ],
+   "club": "London Monarchs"
+  },
+  {
+   "person": "P_027719",
+   "year": 1996,
+   "category": "rushing",
+   "pfa": "153",
+   "archive": [
+    "17"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_027271",
+   "year": 1996,
+   "category": "receiving",
+   "pfa": "685",
+   "archive": [
+    "129"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_008907",
+   "year": 1996,
+   "category": "receiving",
+   "pfa": "172",
+   "archive": [
+    "21"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_026773",
+   "year": 1996,
+   "category": "receiving",
+   "pfa": "1023",
+   "archive": [
+    "422"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_028043",
+   "year": 1997,
+   "category": "rushing",
+   "pfa": "334",
+   "archive": [
+    "9"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_027539",
+   "year": 1997,
+   "category": "rushing",
+   "pfa": "290",
+   "archive": [
+    "14"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_028043",
+   "year": 1997,
+   "category": "passing",
+   "pfa": "2448",
+   "archive": [
+    "371"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_009545",
+   "year": 1997,
+   "category": "receiving",
+   "pfa": "738",
+   "archive": [
+    "48"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_009440",
+   "year": 1997,
+   "category": "rushing",
+   "pfa": "3",
+   "archive": [
+    "112"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_009110",
+   "year": 1998,
+   "category": "rushing",
+   "pfa": "544",
+   "archive": [
+    "599"
+   ],
+   "club": "Winnipeg Blue Bombers"
+  },
+  {
+   "person": "P_028342",
+   "year": 1998,
+   "category": "passing",
+   "pfa": "2101",
+   "archive": [
+    "39"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_028259",
+   "year": 1998,
+   "category": "receiving",
+   "pfa": "151",
+   "archive": [
+    "10"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_009553",
+   "year": 1998,
+   "category": "receiving",
+   "pfa": "169",
+   "archive": [
+    "237",
+    "46"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_028117",
+   "year": 1998,
+   "category": "rushing",
+   "pfa": "9",
+   "archive": [
+    "0"
+   ],
+   "club": "England Monarchs"
+  },
+  {
+   "person": "P_028117",
+   "year": 1998,
+   "category": "passing",
+   "pfa": "194",
+   "archive": [
+    "1"
+   ],
+   "club": "England Monarchs"
+  },
+  {
+   "person": "P_028228",
+   "year": 1998,
+   "category": "passing",
+   "pfa": "1857",
+   "archive": [
+    "85"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_009289",
+   "year": 1998,
+   "category": "receiving",
+   "pfa": "544",
+   "archive": [
+    "118"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_010740",
+   "year": 1998,
+   "category": "rushing",
+   "pfa": "122",
+   "archive": [
+    "-6"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_010740",
+   "year": 1998,
+   "category": "passing",
+   "pfa": "1997",
+   "archive": [
+    "10"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_028141",
+   "year": 1998,
+   "category": "receiving",
+   "pfa": "811",
+   "archive": [
+    "44"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_027174",
+   "year": 1998,
+   "category": "receiving",
+   "pfa": "239",
+   "archive": [
+    "4"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_027753",
+   "year": 1998,
+   "category": "receiving",
+   "pfa": "112",
+   "archive": [
+    "27"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_023297",
+   "year": 1998,
+   "category": "passing",
+   "pfa": "3479",
+   "archive": [
+    "3497"
+   ],
+   "club": "Miami Dolphins"
+  },
+  {
+   "person": "P_008320",
+   "year": 1999,
+   "category": "passing",
+   "pfa": "5334",
+   "archive": [
+    "5318"
+   ],
+   "club": "Hamilton Tiger-Cats"
+  },
+  {
+   "person": "P_009121",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "883",
+   "archive": [
+    "867"
+   ],
+   "club": "Hamilton Tiger-Cats"
+  },
+  {
+   "person": "P_009544",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "823",
+   "archive": [
+    "846"
+   ],
+   "club": "Montreal Alouettes"
+  },
+  {
+   "person": "P_008301",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "581",
+   "archive": [
+    "574"
+   ],
+   "club": "Montreal Alouettes"
+  },
+  {
+   "person": "P_009545",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "832",
+   "archive": [
+    "819"
+   ],
+   "club": "Montreal Alouettes"
+  },
+  {
+   "person": "P_008918",
+   "year": 1999,
+   "category": "passing",
+   "pfa": "1771",
+   "archive": [
+    "1772"
+   ],
+   "club": "Toronto Argonauts"
+  },
+  {
+   "person": "P_009426",
+   "year": 1999,
+   "category": "passing",
+   "pfa": "732",
+   "archive": [
+    "31"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_028606",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "62",
+   "archive": [
+    "29"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_010094",
+   "year": 1999,
+   "category": "rushing",
+   "pfa": "1021",
+   "archive": [
+    "144"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_028592",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "844",
+   "archive": [
+    "21"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_010094",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "247",
+   "archive": [
+    "152"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_028550",
+   "year": 1999,
+   "category": "rushing",
+   "pfa": "126",
+   "archive": [
+    "72"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_028550",
+   "year": 1999,
+   "category": "passing",
+   "pfa": "1410",
+   "archive": [
+    "521"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_028376",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "883",
+   "archive": [
+    "45"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_028030",
+   "year": 1999,
+   "category": "rushing",
+   "pfa": "960",
+   "archive": [
+    "287"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_010060",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "454",
+   "archive": [
+    "439"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_028030",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "86",
+   "archive": [
+    "209"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_028488",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "60",
+   "archive": [
+    "33"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_008560",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "752",
+   "archive": [
+    "28"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_010050",
+   "year": 1999,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "24"
+   ],
+   "club": "Miami Dolphins"
+  },
+  {
+   "person": "P_009809",
+   "year": 2000,
+   "category": "rushing",
+   "pfa": "1",
+   "archive": [
+    "0"
+   ],
+   "club": "Saskatchewan Roughriders"
+  },
+  {
+   "person": "P_008617",
+   "year": 2000,
+   "category": "passing",
+   "pfa": "2179",
+   "archive": [
+    "2180",
+    "906"
+   ],
+   "club": "Toronto Argonauts"
+  },
+  {
+   "person": "P_009475",
+   "year": 2000,
+   "category": "receiving",
+   "pfa": "1398",
+   "archive": [
+    "1399"
+   ],
+   "club": "Toronto Argonauts"
+  },
+  {
+   "person": "P_028441",
+   "year": 2000,
+   "category": "receiving",
+   "pfa": "794",
+   "archive": [
+    "6"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_028871",
+   "year": 2000,
+   "category": "receiving",
+   "pfa": "341",
+   "archive": [
+    "40"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_028674",
+   "year": 2000,
+   "category": "receiving",
+   "pfa": "170",
+   "archive": [
+    "80"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_028601",
+   "year": 2000,
+   "category": "receiving",
+   "pfa": "260",
+   "archive": [
+    "8"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_027974",
+   "year": 2000,
+   "category": "rushing",
+   "pfa": "80",
+   "archive": [
+    "-2"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_028163",
+   "year": 2000,
+   "category": "receiving",
+   "pfa": "635",
+   "archive": [
+    "24"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_028960",
+   "year": 2000,
+   "category": "rushing",
+   "pfa": "774",
+   "archive": [
+    "31"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_028960",
+   "year": 2000,
+   "category": "receiving",
+   "pfa": "276",
+   "archive": [
+    "15"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_027305",
+   "year": 2001,
+   "category": "receiving",
+   "pfa": "36",
+   "archive": [
+    "26"
+   ],
+   "club": "Atlanta Falcons"
+  },
+  {
+   "person": "P_010186",
+   "year": 2001,
+   "category": "rushing",
+   "pfa": "110",
+   "archive": [
+    "61"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_010186",
+   "year": 2001,
+   "category": "passing",
+   "pfa": "2041",
+   "archive": [
+    "418"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_010233",
+   "year": 2001,
+   "category": "receiving",
+   "pfa": "710",
+   "archive": [
+    "19"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_029059",
+   "year": 2001,
+   "category": "receiving",
+   "pfa": "34",
+   "archive": [
+    "15"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_029106",
+   "year": 2001,
+   "category": "receiving",
+   "pfa": "5",
+   "archive": [
+    "6"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_010463",
+   "year": 2001,
+   "category": "rushing",
+   "pfa": "287",
+   "archive": [
+    "7"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_010463",
+   "year": 2001,
+   "category": "passing",
+   "pfa": "1544",
+   "archive": [
+    "73"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_029122",
+   "year": 2001,
+   "category": "receiving",
+   "pfa": "658",
+   "archive": [
+    "165"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_029106",
+   "year": 2001,
+   "category": "receiving",
+   "pfa": "43",
+   "archive": [
+    "6"
+   ],
+   "club": "Barcelona Dragons"
+  },
+  {
+   "person": "P_028211",
+   "year": 2001,
+   "category": "rushing",
+   "pfa": "112",
+   "archive": [
+    "42"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_029029",
+   "year": 2001,
+   "category": "rushing",
+   "pfa": "46",
+   "archive": [
+    "0"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_028211",
+   "year": 2001,
+   "category": "passing",
+   "pfa": "2257",
+   "archive": [
+    "361"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_029050",
+   "year": 2001,
+   "category": "receiving",
+   "pfa": "582",
+   "archive": [
+    "20"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_029010",
+   "year": 2001,
+   "category": "rushing",
+   "pfa": "115",
+   "archive": [
+    "551"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_029010",
+   "year": 2001,
+   "category": "receiving",
+   "pfa": "104",
+   "archive": [
+    "45"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_028770",
+   "year": 2001,
+   "category": "rushing",
+   "pfa": "101",
+   "archive": [
+    "27"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_028825",
+   "year": 2001,
+   "category": "rushing",
+   "pfa": "12",
+   "archive": [
+    "10"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_028770",
+   "year": 2001,
+   "category": "passing",
+   "pfa": "1866",
+   "archive": [
+    "314"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_009544",
+   "year": 2002,
+   "category": "receiving",
+   "pfa": "1076",
+   "archive": [
+    "1060"
+   ],
+   "club": "Montreal Alouettes"
+  },
+  {
+   "person": "P_009938",
+   "year": 2002,
+   "category": "receiving",
+   "pfa": "352",
+   "archive": [
+    "368"
+   ],
+   "club": "Montreal Alouettes"
+  },
+  {
+   "person": "P_009285",
+   "year": 2002,
+   "category": "receiving",
+   "pfa": "1862",
+   "archive": [
+    "1896"
+   ],
+   "club": "Winnipeg Blue Bombers"
+  },
+  {
+   "person": "P_009990",
+   "year": 2002,
+   "category": "receiving",
+   "pfa": "1062",
+   "archive": [
+    "1028"
+   ],
+   "club": "Winnipeg Blue Bombers"
+  },
+  {
+   "person": "P_028347",
+   "year": 2002,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "94"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_029428",
+   "year": 2002,
+   "category": "rushing",
+   "pfa": "751",
+   "archive": [
+    "57"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_029212",
+   "year": 2002,
+   "category": "receiving",
+   "pfa": "546",
+   "archive": [
+    "26"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_029428",
+   "year": 2002,
+   "category": "receiving",
+   "pfa": "238",
+   "archive": [
+    "4"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_010061",
+   "year": 2002,
+   "category": "rushing",
+   "pfa": "831",
+   "archive": [
+    "58"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_010056",
+   "year": 2002,
+   "category": "rushing",
+   "pfa": "81",
+   "archive": [
+    "12"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_010061",
+   "year": 2002,
+   "category": "receiving",
+   "pfa": "263",
+   "archive": [
+    "6"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_010082",
+   "year": 2002,
+   "category": "receiving",
+   "pfa": "197",
+   "archive": [
+    "19"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_028001",
+   "year": 2003,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "106"
+   ],
+   "club": "Baltimore Ravens"
+  },
+  {
+   "person": "P_029099",
+   "year": 2003,
+   "category": "passing",
+   "pfa": "0",
+   "archive": [
+    "37"
+   ],
+   "club": "Dallas Cowboys"
+  },
+  {
+   "person": "P_009645",
+   "year": 2003,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "100"
+   ],
+   "club": "Dallas Cowboys"
+  },
+  {
+   "person": "P_010028",
+   "year": 2003,
+   "category": "receiving",
+   "pfa": "233",
+   "archive": [
+    "29"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_010473",
+   "year": 2003,
+   "category": "rushing",
+   "pfa": "635",
+   "archive": [
+    "8"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_009407",
+   "year": 2003,
+   "category": "rushing",
+   "pfa": "59",
+   "archive": [
+    "16"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_009407",
+   "year": 2003,
+   "category": "passing",
+   "pfa": "589",
+   "archive": [
+    "130"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_010473",
+   "year": 2003,
+   "category": "receiving",
+   "pfa": "234",
+   "archive": [
+    "60"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_029823",
+   "year": 2003,
+   "category": "receiving",
+   "pfa": "437",
+   "archive": [
+    "55"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_029734",
+   "year": 2003,
+   "category": "receiving",
+   "pfa": "167",
+   "archive": [
+    "29"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_010782",
+   "year": 2003,
+   "category": "rushing",
+   "pfa": "871",
+   "archive": [
+    "4"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_029773",
+   "year": 2003,
+   "category": "rushing",
+   "pfa": "41",
+   "archive": [
+    "-2"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_029952",
+   "year": 2003,
+   "category": "receiving",
+   "pfa": "518",
+   "archive": [
+    "38"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_030149",
+   "year": 2004,
+   "category": "rushing",
+   "pfa": "10",
+   "archive": [
+    "12"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_030149",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "593",
+   "archive": [
+    "178"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_030235",
+   "year": 2004,
+   "category": "rushing",
+   "pfa": "669",
+   "archive": [
+    "54"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_029508",
+   "year": 2004,
+   "category": "rushing",
+   "pfa": "64",
+   "archive": [
+    "-1"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_029508",
+   "year": 2004,
+   "category": "passing",
+   "pfa": "1676",
+   "archive": [
+    "54"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_030235",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "368",
+   "archive": [
+    "15"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_029988",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "447",
+   "archive": [
+    "5"
+   ],
+   "club": "Cologne Centurions"
+  },
+  {
+   "person": "P_010431",
+   "year": 2004,
+   "category": "rushing",
+   "pfa": "611",
+   "archive": [
+    "39"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_030163",
+   "year": 2004,
+   "category": "rushing",
+   "pfa": "188",
+   "archive": [
+    "141"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_011656",
+   "year": 2004,
+   "category": "rushing",
+   "pfa": "138",
+   "archive": [
+    "-2"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_010431",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "212",
+   "archive": [
+    "11"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_030163",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "87",
+   "archive": [
+    "12"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_027512",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "129",
+   "archive": [
+    "4"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_010330",
+   "year": 2004,
+   "category": "rushing",
+   "pfa": "405",
+   "archive": [
+    "497"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_030115",
+   "year": 2004,
+   "category": "rushing",
+   "pfa": "203",
+   "archive": [
+    "42"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_029411",
+   "year": 2004,
+   "category": "rushing",
+   "pfa": "52",
+   "archive": [
+    "14"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_029411",
+   "year": 2004,
+   "category": "passing",
+   "pfa": "1356",
+   "archive": [
+    "903"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_029206",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "208",
+   "archive": [
+    "219"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_029992",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "183",
+   "archive": [
+    "35"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_010330",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "84",
+   "archive": [
+    "58"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_029755",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "215",
+   "archive": [
+    "73"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_030279",
+   "year": 2004,
+   "category": "rushing",
+   "pfa": "329",
+   "archive": [
+    "362"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_010623",
+   "year": 2004,
+   "category": "rushing",
+   "pfa": "201",
+   "archive": [
+    "26"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_030279",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "128",
+   "archive": [
+    "154"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_030159",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "191",
+   "archive": [
+    "8"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_010623",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "101",
+   "archive": [
+    "10"
+   ],
+   "club": "Scottish Claymores"
+  },
+  {
+   "person": "P_028611",
+   "year": 2004,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "59"
+   ],
+   "club": "San Diego Chargers"
+  },
+  {
+   "person": "P_010483",
+   "year": 2005,
+   "category": "rushing",
+   "pfa": "0",
+   "archive": [
+    "4"
+   ],
+   "club": "Calgary Stampeders"
+  },
+  {
+   "person": "P_010283",
+   "year": 2005,
+   "category": "receiving",
+   "pfa": "194",
+   "archive": [
+    "179"
+   ],
+   "club": "Toronto Argonauts"
+  },
+  {
+   "person": "P_010866",
+   "year": 2005,
+   "category": "rushing",
+   "pfa": "578",
+   "archive": [
+    "105"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_010866",
+   "year": 2005,
+   "category": "receiving",
+   "pfa": "160",
+   "archive": [
+    "30"
+   ],
+   "club": "Amsterdam Admirals"
+  },
+  {
+   "person": "P_010522",
+   "year": 2005,
+   "category": "rushing",
+   "pfa": "37",
+   "archive": [
+    "38"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_010522",
+   "year": 2005,
+   "category": "passing",
+   "pfa": "1299",
+   "archive": [
+    "666"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_010503",
+   "year": 2005,
+   "category": "rushing",
+   "pfa": "101",
+   "archive": [
+    "31"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_030445",
+   "year": 2005,
+   "category": "receiving",
+   "pfa": "384",
+   "archive": [
+    "11"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_030346",
+   "year": 2006,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "126"
+   ],
+   "club": "Arizona Cardinals"
+  },
+  {
+   "person": "P_030875",
+   "year": 2006,
+   "category": "receiving",
+   "pfa": "207",
+   "archive": [
+    "10"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_030869",
+   "year": 2006,
+   "category": "receiving",
+   "pfa": "59",
+   "archive": [
+    "14"
+   ],
+   "club": "Cologne Centurions"
+  },
+  {
+   "person": "P_029699",
+   "year": 2006,
+   "category": "receiving",
+   "pfa": "370",
+   "archive": [
+    "17"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_030111",
+   "year": 2006,
+   "category": "receiving",
+   "pfa": "62",
+   "archive": [
+    "25"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_030869",
+   "year": 2006,
+   "category": "rushing",
+   "pfa": "34",
+   "archive": [
+    "29"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_030869",
+   "year": 2006,
+   "category": "receiving",
+   "pfa": "2",
+   "archive": [
+    "14"
+   ],
+   "club": "Rhein Fire"
+  },
+  {
+   "person": "P_030109",
+   "year": 2006,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "61"
+   ],
+   "club": "Green Bay Packers"
+  },
+  {
+   "person": "P_010121",
+   "year": 2007,
+   "category": "passing",
+   "pfa": "683",
+   "archive": [
+    "699"
+   ],
+   "club": "Toronto Argonauts"
+  },
+  {
+   "person": "P_009990",
+   "year": 2007,
+   "category": "receiving",
+   "pfa": "839",
+   "archive": [
+    "855"
+   ],
+   "club": "Toronto Argonauts"
+  },
+  {
+   "person": "P_031194",
+   "year": 2007,
+   "category": "rushing",
+   "pfa": "756",
+   "archive": [
+    "3"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_031194",
+   "year": 2007,
+   "category": "receiving",
+   "pfa": "146",
+   "archive": [
+    "13"
+   ],
+   "club": "Berlin Thunder"
+  },
+  {
+   "person": "P_030760",
+   "year": 2007,
+   "category": "receiving",
+   "pfa": "112",
+   "archive": [
+    "18"
+   ],
+   "club": "Cologne Centurions"
+  },
+  {
+   "person": "P_011656",
+   "year": 2007,
+   "category": "rushing",
+   "pfa": "110",
+   "archive": [
+    "-10"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_011656",
+   "year": 2007,
+   "category": "passing",
+   "pfa": "2203",
+   "archive": [
+    "148"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_031102",
+   "year": 2007,
+   "category": "receiving",
+   "pfa": "540",
+   "archive": [
+    "70"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_010754",
+   "year": 2007,
+   "category": "receiving",
+   "pfa": "255",
+   "archive": [
+    "12"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_010848",
+   "year": 2007,
+   "category": "receiving",
+   "pfa": "12",
+   "archive": [
+    "21"
+   ],
+   "club": "Frankfurt Galaxy"
+  },
+  {
+   "person": "P_030620",
+   "year": 2007,
+   "category": "receiving",
+   "pfa": "499",
+   "archive": [
+    "5"
+   ],
+   "club": "Hamburg Sea Devils"
+  },
+  {
+   "person": "P_031194",
+   "year": 2007,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "13"
+   ],
+   "club": "New Orleans Saints"
+  },
+  {
+   "person": "P_030772",
+   "year": 2007,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "23"
+   ],
+   "club": "Tampa Bay Buccaneers"
+  },
+  {
+   "person": "P_030448",
+   "year": 2007,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "90"
+   ],
+   "club": "Tennessee Titans"
+  },
+  {
+   "person": "P_010821",
+   "year": 2008,
+   "category": "rushing",
+   "pfa": "1",
+   "archive": [
+    "0"
+   ],
+   "club": "Hamilton Tiger-Cats"
+  },
+  {
+   "person": "P_011056",
+   "year": 2008,
+   "category": "rushing",
+   "pfa": "548",
+   "archive": [
+    "645"
+   ],
+   "club": "Toronto Argonauts"
+  },
+  {
+   "person": "P_030393",
+   "year": 2008,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "380"
+   ],
+   "club": "Chicago Bears"
+  },
+  {
+   "person": "P_010058",
+   "year": 2009,
+   "category": "rushing",
+   "pfa": "296",
+   "archive": [
+    "206"
+   ],
+   "club": "Edmonton Eskimos"
+  },
+  {
+   "person": "P_010702",
+   "year": 2009,
+   "category": "rushing",
+   "pfa": "601",
+   "archive": [
+    "501"
+   ],
+   "club": "Saskatchewan Roughriders"
+  },
+  {
+   "person": "P_010924",
+   "year": 2009,
+   "category": "rushing",
+   "pfa": "1317",
+   "archive": [
+    "1371"
+   ],
+   "club": "Winnipeg Blue Bombers"
+  },
+  {
+   "person": "P_031621",
+   "year": 2009,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "178"
+   ],
+   "club": "Arizona Cardinals"
+  },
+  {
+   "person": "P_031144",
+   "year": 2009,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "45"
+   ],
+   "club": "Jacksonville Jaguars"
+  },
+  {
+   "person": "P_029865",
+   "year": 2009,
+   "category": "receiving",
+   "pfa": "506",
+   "archive": [
+    "566"
+   ],
+   "club": "Minnesota Vikings"
+  },
+  {
+   "person": "P_030603",
+   "year": 2009,
+   "category": "rushing",
+   "pfa": "243",
+   "archive": [
+    "343"
+   ],
+   "club": "San Diego Chargers"
+  },
+  {
+   "person": "P_030772",
+   "year": 2010,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "59"
+   ],
+   "club": "Detroit Lions"
+  },
+  {
+   "person": "P_030603",
+   "year": 2010,
+   "category": "rushing",
+   "pfa": "567",
+   "archive": [
+    "267"
+   ],
+   "club": "San Diego Chargers"
+  },
+  {
+   "person": "P_030972",
+   "year": 2010,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "9"
+   ],
+   "club": "Seattle Seahawks"
+  },
+  {
+   "person": "P_029124",
+   "year": 2010,
+   "category": "rushing",
+   "pfa": "547",
+   "archive": [
+    "172",
+    "551"
+   ],
+   "club": "Florida Tuskers"
+  },
+  {
+   "person": "P_011559",
+   "year": 2010,
+   "category": "rushing",
+   "pfa": "7",
+   "archive": [
+    "19"
+   ],
+   "club": "Florida Tuskers"
+  },
+  {
+   "person": "P_030213",
+   "year": 2010,
+   "category": "passing",
+   "pfa": "1101",
+   "archive": [
+    "1089"
+   ],
+   "club": "Florida Tuskers"
+  },
+  {
+   "person": "P_011559",
+   "year": 2010,
+   "category": "receiving",
+   "pfa": "172",
+   "archive": [
+    "160"
+   ],
+   "club": "Florida Tuskers"
+  },
+  {
+   "person": "P_011737",
+   "year": 2010,
+   "category": "rushing",
+   "pfa": "35",
+   "archive": [
+    "30"
+   ],
+   "club": "Hartford Colonials"
+  },
+  {
+   "person": "P_028992",
+   "year": 2010,
+   "category": "rushing",
+   "pfa": "318",
+   "archive": [
+    "313"
+   ],
+   "club": "Las Vegas Locomotives"
+  },
+  {
+   "person": "P_010589",
+   "year": 2010,
+   "category": "rushing",
+   "pfa": "37",
+   "archive": [
+    "42"
+   ],
+   "club": "Las Vegas Locomotives"
+  },
+  {
+   "person": "P_011663",
+   "year": 2010,
+   "category": "rushing",
+   "pfa": "31",
+   "archive": [
+    "27"
+   ],
+   "club": "Las Vegas Locomotives"
+  },
+  {
+   "person": "P_010741",
+   "year": 2010,
+   "category": "receiving",
+   "pfa": "299",
+   "archive": [
+    "304"
+   ],
+   "club": "Las Vegas Locomotives"
+  },
+  {
+   "person": "P_030337",
+   "year": 2010,
+   "category": "receiving",
+   "pfa": "134",
+   "archive": [
+    "129"
+   ],
+   "club": "Las Vegas Locomotives"
+  },
+  {
+   "person": "P_028043",
+   "year": 2011,
+   "category": "passing",
+   "pfa": "67",
+   "archive": [
+    "87"
+   ],
+   "club": "Dallas Cowboys"
+  },
+  {
+   "person": "P_032151",
+   "year": 2011,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "39"
+   ],
+   "club": "New England Patriots"
+  },
+  {
+   "person": "P_032301",
+   "year": 2011,
+   "category": "receiving",
+   "pfa": "146",
+   "archive": [
+    "138"
+   ],
+   "club": "Washington Redskins"
+  },
+  {
+   "person": "P_032641",
+   "year": 2011,
+   "category": "receiving",
+   "pfa": "68",
+   "archive": [
+    "76"
+   ],
+   "club": "Washington Redskins"
+  },
+  {
+   "person": "P_030337",
+   "year": 2011,
+   "category": "receiving",
+   "pfa": "216",
+   "archive": [
+    "126"
+   ],
+   "club": "Las Vegas Locomotives"
+  },
+  {
+   "person": "P_011738",
+   "year": 2011,
+   "category": "rushing",
+   "pfa": "35",
+   "archive": [
+    "27"
+   ],
+   "club": "Virginia Destroyers"
+  },
+  {
+   "person": "P_011174",
+   "year": 2012,
+   "category": "receiving",
+   "pfa": "26",
+   "archive": [
+    "36"
+   ],
+   "club": "Edmonton Eskimos"
+  },
+  {
+   "person": "P_031622",
+   "year": 2012,
+   "category": "rushing",
+   "pfa": "356",
+   "archive": [
+    "357"
+   ],
+   "club": "Arizona Cardinals"
+  },
+  {
+   "person": "P_012224",
+   "year": 2012,
+   "category": "rushing",
+   "pfa": "217",
+   "archive": [
+    "216"
+   ],
+   "club": "Arizona Cardinals"
+  },
+  {
+   "person": "P_031325",
+   "year": 2012,
+   "category": "receiving",
+   "pfa": "395",
+   "archive": [
+    "396"
+   ],
+   "club": "Atlanta Falcons"
+  },
+  {
+   "person": "P_032402",
+   "year": 2012,
+   "category": "receiving",
+   "pfa": "251",
+   "archive": [
+    "247"
+   ],
+   "club": "Dallas Cowboys"
+  },
+  {
+   "person": "P_031396",
+   "year": 2012,
+   "category": "receiving",
+   "pfa": "262",
+   "archive": [
+    "266"
+   ],
+   "club": "Dallas Cowboys"
+  },
+  {
+   "person": "P_032752",
+   "year": 2012,
+   "category": "rushing",
+   "pfa": "330",
+   "archive": [
+    "327"
+   ],
+   "club": "Denver Broncos"
+  },
+  {
+   "person": "P_031688",
+   "year": 2012,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "6"
+   ],
+   "club": "Philadelphia Eagles"
+  },
+  {
+   "person": "P_011995",
+   "year": 2012,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "15"
+   ],
+   "club": "Philadelphia Eagles"
+  },
+  {
+   "person": "P_011116",
+   "year": 2012,
+   "category": "receiving",
+   "pfa": "42",
+   "archive": [
+    "402"
+   ],
+   "club": "Las Vegas Locomotives"
+  },
+  {
+   "person": "P_038766",
+   "year": 2012,
+   "category": "receiving",
+   "pfa": "24",
+   "archive": [
+    "42"
+   ],
+   "club": "Sacramento Mountain Lions"
+  },
+  {
+   "person": "P_029379",
+   "year": 2012,
+   "category": "rushing",
+   "pfa": "15",
+   "archive": [
+    "132"
+   ],
+   "club": "Virginia Destroyers"
+  },
+  {
+   "person": "P_011714",
+   "year": 2013,
+   "category": "receiving",
+   "pfa": "4",
+   "archive": [
+    "40"
+   ],
+   "club": "British Columbia Lions"
+  },
+  {
+   "person": "P_011602",
+   "year": 2013,
+   "category": "rushing",
+   "pfa": "91",
+   "archive": [
+    "19"
+   ],
+   "club": "Hamilton Tiger-Cats"
+  },
+  {
+   "person": "P_010898",
+   "year": 2013,
+   "category": "receiving",
+   "pfa": "966",
+   "archive": [
+    "986"
+   ],
+   "club": "Toronto Argonauts"
+  },
+  {
+   "person": "P_031970",
+   "year": 2013,
+   "category": "rushing",
+   "pfa": "933",
+   "archive": [
+    "927"
+   ],
+   "club": "Buffalo Bills"
+  },
+  {
+   "person": "P_031033",
+   "year": 2013,
+   "category": "rushing",
+   "pfa": "890",
+   "archive": [
+    "896"
+   ],
+   "club": "Buffalo Bills"
+  },
+  {
+   "person": "P_012421",
+   "year": 2013,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "10"
+   ],
+   "club": "Carolina Panthers"
+  },
+  {
+   "person": "P_032372",
+   "year": 2013,
+   "category": "passing",
+   "pfa": "4293",
+   "archive": [
+    "4296"
+   ],
+   "club": "Cincinnati Bengals"
+  },
+  {
+   "person": "P_031999",
+   "year": 2013,
+   "category": "receiving",
+   "pfa": "458",
+   "archive": [
+    "461"
+   ],
+   "club": "Cincinnati Bengals"
+  },
+  {
+   "person": "P_032402",
+   "year": 2013,
+   "category": "rushing",
+   "pfa": "1121",
+   "archive": [
+    "1124"
+   ],
+   "club": "Dallas Cowboys"
+  },
+  {
+   "person": "P_010966",
+   "year": 2013,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "4"
+   ],
+   "club": "Miami Dolphins"
+  },
+  {
+   "person": "P_033284",
+   "year": 2013,
+   "category": "receiving",
+   "pfa": "0",
+   "archive": [
+    "63"
+   ],
+   "club": "New England Patriots"
+  },
+  {
+   "person": "P_009956",
+   "year": 2014,
+   "category": "passing",
+   "pfa": "3018",
+   "archive": [
+    "3918"
+   ],
+   "club": "British Columbia Lions"
+  },
+  {
+   "person": "P_011973",
+   "year": 2014,
+   "category": "receiving",
+   "pfa": "29",
+   "archive": [
+    "473"
+   ],
+   "club": "Hamilton Tiger-Cats"
+  },
+  {
+   "person": "P_011973",
+   "year": 2014,
+   "category": "receiving",
+   "pfa": "444",
+   "archive": [
+    "473"
+   ],
+   "club": "Winnipeg Blue Bombers"
+  },
+  {
+   "person": "P_030723",
+   "year": 2014,
+   "category": "rushing",
+   "pfa": "539",
+   "archive": [
+    "219"
+   ],
+   "club": "Carolina Panthers"
+  },
+  {
+   "person": "P_030168",
+   "year": 2014,
+   "category": "receiving",
+   "pfa": "494",
+   "archive": [
+    "464"
+   ],
+   "club": "Denver Broncos"
+  },
+  {
+   "person": "P_032972",
+   "year": 2014,
+   "category": "receiving",
+   "pfa": "275",
+   "archive": [
+    "375"
+   ],
+   "club": "St. Louis Rams"
+  },
+  {
+   "person": "P_033835",
+   "year": 2014,
+   "category": "receiving",
+   "pfa": "59",
+   "archive": [
+    "58"
+   ],
+   "club": "Tampa Bay Buccaneers"
+  },
+  {
+   "person": "P_032301",
+   "year": 2014,
+   "category": "rushing",
+   "pfa": "21",
+   "archive": [
+    "22"
+   ],
+   "club": "Washington Redskins"
+  },
+  {
+   "person": "P_011088",
+   "year": 2015,
+   "category": "passing",
+   "pfa": "1053",
+   "archive": [
+    "1953"
+   ],
+   "club": "British Columbia Lions"
+  },
+  {
+   "person": "P_011565",
+   "year": 2015,
+   "category": "rushing",
+   "pfa": "377",
+   "archive": [
+    "374"
+   ],
+   "club": "Calgary Stampeders"
+  },
+  {
+   "person": "P_009407",
+   "year": 2015,
+   "category": "passing",
+   "pfa": "5693",
+   "archive": [
+    "5683"
+   ],
+   "club": "Ottawa REDBLACKS"
+  }
+ ]
+}
