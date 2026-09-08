@@ -149,9 +149,14 @@ The fix is always the same shape: **make the failure loud, and gate the property
 - **Crippen's AAFC register** — 636 men with death date and place, sent by the author. Uningested.
 - **PFR pages** saved by hand in `pgm3-sources/PFR PAGES/`. PFR blocks fetching; hand-saved pages work. Proven on 1943 Phil-Pitt, which matched the archive's derived roster 30 for 30.
 - **13,596 PFA player leads**, parked by ruling.
-- **21,548 PFA gamelogs** and **12,197 playoff logs**, per player per game. Nothing
-  held. *The largest body of material PFA has that the archive has never touched* —
-  about ten hours of polite fetching, and the least certain return.
+- **PFA gamelogs and playoff logs are NOT on disk.** Corrected 8 September: the
+  earlier note that 21,548 gamelogs were "fetched, not yet used" counted the pages
+  PFA's own indexes LINK TO, not files. What is actually held is the **index** — 26
+  alphabetical `nflgamelogs-*` pages and one top page — plus **one** per-player
+  gamelog, and **no** playoff log at all. Linked from that index: 21,607 gamelogs and
+  12,197 playoff logs. *The largest body of material PFA has that the archive has
+  never touched*, and it needs the fetch it was thought not to need — about ten hours
+  at the polite rate, and the least certain return of anything outstanding.
 - **PFA leaderboards** — named by PFA's own navigation, nothing fetched.
 - **2,406 post-1950 corpus documents**, unread.
 - **1,469 team-season pages PFA's indexes named and the sweep never took** were
