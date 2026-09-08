@@ -102,6 +102,17 @@ def static_checks():
             fails.append(f"P1  declared chain step {c['script']} does not exist")
         elif c["script"] not in W:
             fails.append(f"P1  declared chain step {c['script']} does not write the index -- stale declaration")
+    # DERIVED TABLES: the INVERSE property. These read the finished index and write a
+    # different artifact, so P1's rule for `chain` is exactly wrong for them -- and
+    # weakening that rule to fit them in would have cost the property it holds. Checked
+    # rather than assumed: one that DID write the index would be a patcher wearing the
+    # wrong label, and P3 would read its work as an unexplained gain.
+    for c in (decl.get("derived_tables_after_the_chain", {}) or {}).get("steps", []):
+        if not os.path.exists(os.path.join(HERE, c["script"])):
+            fails.append(f"P1  declared derived table {c['script']} does not exist")
+        elif c["script"] in W:
+            fails.append(f"P1  declared derived table {c['script']} WRITES THE INDEX -- it is "
+                         f"an index patcher and belongs in `chain`, where P3 can see it")
     for f, i, t in in_place_writes():
         fails.append(f"P2  {f}:{i} writes the index in place: {t}")
     # P4

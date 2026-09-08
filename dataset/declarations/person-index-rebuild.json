@@ -26,6 +26,13 @@
    "must_precede": "demote_stintless.py -- which reverses 201 of these"
   },
   {
+   "script": "apply_player_promotions.py",
+   "args": [],
+   "adds": "entered_by, promotion_ref, forename_unknown and _entered_as_a_player for the players promoted from document leads in build/player-promotions.json",
+   "must_follow": "apply_promotions.py -- one mechanism, two subject types, and the coach route runs first because its promotions can create people this one then reads past",
+   "_it_does_not_own_seasons": "a promoted player's seasons come from the ingest's CLAIMS (resolve_person returns any P_ id as itself), so unlike apply_promotions this step owns only the promotion metadata. It counts promoted_but_holding_none rather than creating a season, so a promotion whose claims did not land is visible instead of papered over."
+  },
+  {
    "script": "demote_stintless.py",
    "args": [],
    "adds": "reverses the 201 promoted coaches with no coaching stint (build/coach-demotions.json)"
@@ -57,7 +64,9 @@
   "_what": "stores the builder reads, COUNTS and REPORTS but does not index, pending a ruling. Not a silent skip: build_person_index prints them and writes them to build-reports/person-index-skipped.json on every build.",
   "_history": {
    "nfl-2020-lvr": "held 2026-09-07 00:xx pending Ryan's word; released 2026-09-07 on his direct confirmation: 'fill LVR 2020 from another source ... nflverse it is, with the definition difference recorded'. The 86 nflverse men land on the rebuild that follows."
-  }
+  },
+  "pfa-drafts": "Ingested 2026-09-08 from PFA's 203 draft pages. Every pick carries a STORE-LOCAL id (`pfadraft_NNNNNN`) because a draft selection names a man and identifying him is a separate act: 12,777 of these selections are people the archive does not hold at all, and joining the rest on a printed name would be the surname trap at 35,096 rows. The store's own denotations carry the candidates -- 21,296 asserted on the same selection AND the same name, 1,017 candidates where the archive holds the selection and no name, 6 held as disagreements. Resolving them into identity.json is the next act and is not this one.",
+  "pfa-wlaf-1995": "Ingested 2026-09-08, the 45-man 1995 Scottish Claymores roster. Store-local ids for the same reason: the club-season is new to the archive and none of these men is joined on a name."
  },
  "known_unresolvable_stores": {
   "_what": "stores where some stint subjects carry a LOCAL id identity.json does not hold, under the store's own name or (for stats-<store>) the roster store's. NOT A RULING: nothing written says these men are leads; this is an unexplained identity gap, counted on every build and printed, waiting for the identity job. P4 lets the rebuild proceed ONLY for stores listed here, each with what is measured.",
@@ -78,7 +87,27 @@
  },
  "store_league_tokens": {
   "_what": "build_person_index derives a stint's league from the STORE FILENAME (stats-nfl-1987 -> NFL). A store whose name is not its league is declared here.",
-  "assistants": "COACHES -- the media guides' staff lists are coaching seasons, and they must land on the same key shape as the Coaching Tree's so a guide's role string attaches to the season it corroborates rather than opening a parallel ASSISTANTS league. Declared 2026-09-07 with Ryan's ruling that a club's own guide naming a man as its coach documents that he worked that season."
+  "assistants": "COACHES -- the media guides' staff lists are coaching seasons, and they must land on the same key shape as the Coaching Tree's so a guide's role string attaches to the season it corroborates rather than opening a parallel ASSISTANTS league. Declared 2026-09-07 with Ryan's ruling that a club's own guide naming a man as its coach documents that he worked that season.",
+  "programme-1926-chi-lat": "NFL -- the store is one DOCUMENT, not a league. Its Bears claims are corroboration for club-seasons the archive already holds, so they must land on NFL|1925|CHI. Without this the filename token opened a parallel PROGRAMME league and Red Grange gained a PROGRAMME|1925|CHI season beside his real one -- the same failure this block was created to stop for `assistants`. Found 2026-09-07 by reading the index after the rebuild, not before it. Carries Ryan's ruling that the Bears corroboration joins NFL|1925|CHI.",
+  "programme-1926-nyy-pcw": "AFL -- the store is one DOCUMENT, not a league. Its ten corroborating claims must land on AFL|1926|AFLPC, the club-season they confirm. Without this the filename token would open a parallel PROGRAMME league, exactly as it did for programme-1926-chi-lat before that store was declared.",
+  "ghostsofthegridiron": "NFL -- Fenton's NFL-era rosters. A store carries ONE league and this source covers two, so it is split; the AFL half is ghostsofthegridiron-afl.",
+  "ghostsofthegridiron-afl": "AFL -- the 1926 Philadelphia Quakers roster. Without this the filename token would put them on an NFL key and the eight positions this page fills would land on a club-season that does not exist.",
+  "ghostsofthegridiron-ind": "IND -- NOT A LEAGUE. Frankford's 1922 and 1923 independent seasons assert no league at all; the club table carries the club with an EMPTY league, as it already does for six PFA independents. The index key needs a token in the league position and there is no way to write an empty one, so IND is that token and means 'independent, no league asserted'. It must never be read as a competition and no club-season outside this store may use it.",
+  "pfa-wlaf-1995": "WLAF -- the store is named for its SOURCE and its season, so the filename's first token is `pfa`, which is not a league. The 45 men are the 1995 Scottish Claymores of the World League of American Football, the same league the archive holds for 1991 and 1992. Declared 2026-09-08 rather than renaming the file, because the store's name says truthfully where it came from.",
+  "pfa-drafts": "DRAFT -- the store holds draft SELECTIONS, not club-seasons; its claims are person-scoped and carry their own league inside the draft reading, which is where a consumer must look. The filename token `pfa` is a source, not a league.",
+  "nickname-register": "NOT A LEAGUE -- the store holds NAME claims on people the archive already has, and its claims are person-scoped. `nickname` is the filename's first token and names nothing.",
+  "pfa-awards": "NOT A LEAGUE -- honour_team_selection and award_won are person-scoped and carry their league inside the value. The filename token `pfa` is a source.",
+  "pfa-stats-1920s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
+  "pfa-stats-1930s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
+  "pfa-stats-1940s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
+  "pfa-stats-1950s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
+  "pfa-stats-1960s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
+  "pfa-stats-1970s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
+  "pfa-stats-1980s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
+  "pfa-stats-1990s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
+  "pfa-stats-2000s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
+  "pfa-stats-2010s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
+  "pfa-stats-2020s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league."
  },
  "identity_is_edited_in_place": "unify_identity.py assigns global ids by ENUMERATION ORDER, so re-running it against a changed store set renumbers every person in the archive. build-reports/identity.json is the authority and is edited in place by appliers (src/apply_assistants_identity.py), exactly as the person merges are. Do not re-run unify_identity.py --write.",
  "report_stores_not_claim_sources": {
@@ -88,7 +117,9 @@
   "officials-applied.json": "apply_officials.py's report, same shape.",
   "cfl1945-season-restore.json": "restore_cfl1945_seasons.py's report.",
   "coach-demotions.json": "demote_stintless.py's report.",
-  "_derived_not_only_declared": "build_person_index derives this set from the chain scripts themselves (which build/ files they write) and REFUSES to build if a chain step writes a store this declaration does not name. The list is the record; the derivation is the check. Raised by Fetching 2026-09-07: declaring four by name closes four instances, not the class."
+  "_derived_not_only_declared": "build_person_index derives this set from the chain scripts themselves (which build/ files they write) and REFUSES to build if a chain step writes a store this declaration does not name. The list is the record; the derivation is the check. Raised by Fetching 2026-09-07: declaring four by name closes four instances, not the class.",
+  "clubs.json": "build_clubs.py's output: the club table. It is a TABLE, not a source -- every entry is assembled from claims the archive already holds, and declarations/clubs.json says so in its own words ('Nothing here is fetched'). It carries no top-level claims key and must never be read back in as one.",
+  "player-seasons-promoted.json": "apply_player_promotions.py's report. It carries an EMPTY claims list on purpose -- a promoted player's seasons come from the ingest's claims, not from here -- and must never be read back in as a source."
  },
  "p3_transitions_completed": {
   "2026-09-07": {
@@ -100,5 +131,24 @@
    "ruling": "Ryan, 2026-09-07: yes, the rebuild may drop the 1,598. Enable, rebuild, then delete this block.",
    "_the_block_is_deleted": "P3 forgives nothing by default again. This records that it once forgave exactly these ids, on this evidence, on this ruling."
   }
+ },
+ "derived_tables_after_the_chain": {
+  "_what": "Scripts that read the FINISHED, P3-proved index and build a derived artifact from it. They are part of the rebuild -- if one fails, the rebuild fails and rolls back -- but they are not index patchers and P1 must not treat them as such.",
+  "_the_property": "Every script here exists, and NONE of them writes the index. That is the inverse of P1's rule for `chain`, and it is checked, not assumed: a derived table that quietly wrote the index would be a patcher wearing the wrong label and P3 would see its work as an unexplained gain.",
+  "_why_after_P3": "A derived table built from an index that lost work would carry the loss forward and look fine. P3 proves nothing fell first.",
+  "steps": [
+   {
+    "script": "build_clubs.py",
+    "args": [
+     "--write"
+    ],
+    "adds": "build/clubs.json -- the club table, rebuilt from the FINISHED index so it can never be older than the claims that feed it",
+    "must_follow": "every step above it. build_clubs reads build-reports/person-index.json in its final state, and it imports apply_club_keys and apply_person_merges to UNDO their layers itself (it needs the pre-merge view to test lineage). Running it earlier would hand it an index the chain had not finished patching, and it would undo layers that were not yet applied.",
+    "_why_it_is_here": "Ryan's ruling 2026-09-07: the club table must never be silently older than the claims that feed it. It was in NO chain and NO gate ran it, so it sat frozen from the machine move on 2026-09-07 until 22:00 that night -- and it could not have run anyway, because its fandom-survey path was hardcoded to the laptop's Dropbox. Nothing was red. A club written, indexed and served was invisible to search_clubs and the omission looked exactly like success.",
+    "_it_can_now_fail_the_rebuild": "Deliberate. If the club table cannot be built the rebuild stops and rolls back, rather than publishing claims against a stale table. That is the ruling's whole point, and it is why the missing-input refusal in build_clubs now lists every path it tried.",
+    "_why_not_in_the_chain": "P1 requires every `chain` step to WRITE THE INDEX, and it was right to refuse this one. build_clubs.py is not an index patcher: it CONSUMES the finished index and writes a different artifact. Forcing it into `chain` would have meant weakening the property P1 exists to hold. It gets its own phase with the INVERSE property instead -- a derived table must NOT write the index.",
+    "runs": "after the chain and after P3 has proved nothing fell"
+   }
+  ]
  }
 }

@@ -291,20 +291,26 @@ def g6(conn, ctx):
         except (TypeError, ValueError): continue
         if len(groups) < 2: continue
         checked += 1
-        reps = [g[0] for g in groups if g]
-        reads = [RV.read(fam, v) for v in reps]
+        # RE-GROUP EVERY VALUE WITH THE SHARED GROUPER, and compare the COUNT to what the
+        # model recorded. Comparing one representative per group with same() is not the
+        # same test and gives the wrong answer on a dict reading: same() is not transitive,
+        # so a draft value stating no league matches BOTH an AFL fact and an NFL one, and
+        # whichever it represents makes two real groups look like one. RV.group refines a
+        # group's fact as values join it, which is what makes first-match grouping safe --
+        # and this gate must use that same code, not a second reading of the same rule.
+        vals = [v for g in groups for v in g]
+        reads = [RV.read(fam, v) for v in vals]
         if any(x is None for x in reads):
             unread_families.append(fam); continue          # unreadable takes no part
-        for i in range(len(reads)):
-            for j in range(i + 1, len(reads)):
-                if RV.same(fam, reads[i], reads[j]):
-                    false.append({"person": r[0], "family": fam,
-                                  "group_a": groups[i], "group_b": groups[j],
-                                  "both_read_as": reads[i],
-                                  "why": "two groups the model records as disagreeing read to the same thing",
-                                  "remedy": "the grouping must use the declared reading before it records a disagreement"})
-                    break
-            if false and false[-1]["person"] == r[0]: break
+        gs, unread = RV.group(fam, vals)
+        if len(gs) + len(unread) < len(groups):
+            false.append({"person": r[0], "family": fam,
+                          "model_groups": len(groups), "reader_groups": len(gs) + len(unread),
+                          "groups": groups[:3],
+                          "why": "the model records more groups than the declared reading "
+                                 "supports: values it calls different read to the same fact",
+                          "remedy": "the grouping must use the declared reading -- and the "
+                                    "SAME implementation of it -- before recording a disagreement"})
     return {"name": "RS-G6 no false disagreement",
             "status": "FAIL" if false else "PASS",
             "counts": {"families_with_a_reading": len(fams), "contested_facts_checked": checked,

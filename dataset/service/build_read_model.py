@@ -378,15 +378,16 @@ def build_contested(conn, fam):
             vals = [v for v in vals if v is not None]
             if len(vals) < 2: continue
             if f in has_reading:
-                groups, facts = [], []
-                for v in vals:
-                    r = RV.read(f, v)
-                    if r is None:
-                        groups.append([v]); facts.append(None); continue   # unreadable stands alone
-                    for i, g in enumerate(facts):
-                        if g is not None and RV.same(f, g, r): groups[i].append(v); break
-                    else:
-                        groups.append([v]); facts.append(r)
+                # USE THE SHARED GROUPER, NOT A COPY OF IT. This block used to carry its
+                # own loop, and it was subtly different: RV.group REFINES a group's fact
+                # as values join it (`facts[gi] = {**f, **r}`) and this one did not. With
+                # a dict reading that difference decides the answer -- a draft value
+                # stating no league matched an AFL fact, joined it, and then the NFL value
+                # matched the same unrefined fact and joined too, folding two leagues'
+                # selections into one. same() is not transitive, and only the refinement
+                # makes first-match grouping safe. One ruling, one implementation.
+                gs, unread = RV.group(f, vals)
+                groups = [[vals[i] for i in g["indices"]] for g in gs] + [[vals[i]] for i in unread]
                 if len(groups) < len(vals): n_false += len(vals) - len(groups)
             else:
                 groups = [[v] for v in vals]

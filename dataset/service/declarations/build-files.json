@@ -1,81 +1,85 @@
 {
-  "_ruling": "Ryan, 2026-09-07: every file in build/ that is not a store in the read model must be EXPLAINED here, not assumed. Four gates was never a magic number - it was how many properties needed checking at the time. This is the fifth.",
-  "_why": "build_read_model.py reads a file only if it is a JSON object with a top-level `claims` list. Anything else it skipped in silence: no log, no count, no gate. A store that broke, was truncated, or was written in a shape the reader does not know would have vanished with the build still reporting success. Seventh instance of that defect across this project; the first six were found by accident.",
-  "_how_to_use": "A file listed here is a file someone LOOKED AT and said is not a claim store. If G5 names a file that is not here, do not add it to make the gate pass - work out why it is not a store first. If G5 says a declared file has GROWN a claims list, the declaration is stale and the file is now a store the reader is dropping.",
-  "not_a_claim_store": {
-    "by_shape": [
-      {
-        "when": "top_level_is_an_array",
-        "why": "the reader takes a JSON object with a `claims` list. A bare array is a worklist, a development dump or a game roster file - never a claim store in this archive.",
-        "n_when_declared": 440,
-        "families_when_declared": {
-          "dev-*": 217,
-          "contested-*": 5,
-          "PGMRoster_*": 1,
-          "other": 217
-        },
-        "examples": [
-          "dev-aafc-1946",
-          "contested-nfl-1950",
-          "PGMRoster_1950"
-        ]
-      }
-    ],
-    "by_name": {
-      "clubs": {
-        "why": "the CLUB TABLE. The build reads it through paths.CLUBS as a table, not as claims.",
-        "read_as": "table"
-      },
-      "person-merges": {
-        "why": "the merge DECLARATION. Read through paths.PERSON_MERGES and applied to identity, not ingested as claims.",
-        "read_as": "declaration"
-      },
-      "club-key-normalisation": {
-        "why": "a decision record: which club keys were normalised, what was REFUSED, and when it was decided.",
-        "read_as": "decision record"
-      },
-      "assistants-identity": {
-        "why": "a decision record for the assistants store's identity, carrying its ruling and its refusals.",
-        "read_as": "decision record"
-      },
-      "coach-promotions": {
-        "why": "a decision record: which coaching seasons were promoted, what was left alone, and what it was checked against. Its claims reach the model through coach-seasons-promoted.",
-        "read_as": "decision record"
-      },
-      "coach-demotions": {
-        "why": "a decision record and its leads.",
-        "read_as": "decision record"
-      },
-      "officials-applied": {
-        "why": "a record of what the officials application did, including the dual-role men.",
-        "read_as": "decision record"
-      },
-      "cfl1945-season-restore": {
-        "why": "a record of a restore: what was restored, what had no club in its record, which slugs did not match.",
-        "read_as": "decision record"
-      },
-      "pfa-match": {
-        "why": "match leads: matched, unmatched, and leads. Evidence for a decision, not claims.",
-        "read_as": "leads"
-      },
-      "college-guides-candidates": {
-        "why": "candidate documents and the fields refused, before anything was ingested.",
-        "read_as": "leads"
-      },
-      "guide-prose-corpus-leads": {
-        "why": "254 MB of leads for the prose corpus. The claims it led to are the guide-prose-corpus store.",
-        "read_as": "leads"
-      }
-    }
-  },
-  "_deliberately_not_declared": {
-    "guide-pre1950-delimited": {
-      "status": "RS-G5 fails on this file ON PURPOSE. The red is correct and MUST NOT be cleared.",
-      "the_ruling_is_not_here": "dataset/declarations/guide-pre1950-delimited.json",
-      "why_it_is_not_here": "Parsing owns that file and wrote the ruling into it: the 38-against-1,653 measurement, the unmapped-label vocabulary, and Fetching's sweep recording it as the only nested-claims file in all 1,146 build files. Restating any of that here would make two places able to say different things about one ruling - the defect this service spent 2026-09-07 removing twice (RS-G5's own copy of the reader's test; a duplicate readings.py that took the bio endpoint down). Read theirs.",
-      "what_this_gate_adds": "only that the file is not a store in the read model and is not declared away here. The reason it is not declared away lives with Parsing.",
-      "for_whoever_arrives_in_a_hurry": "Ryan's instruction: an unexplained red gets 'fixed' by someone in a hurry. This one is explained - in the file named above. Do not declare it here to make the gate green."
-    }
-  },
-  "_bounded": "Fetching's sweep of all 1,146 build files (2026-09-07) found guide-pre1950-delimited to be the only file holding claims below the top level, so RS-G5 has exactly one outstanding case rather than an unknown number. The measurement itself is recorded in dataset/declarations/guide-pre1950-delimited.json; it is referenced here, not restated."
+ "_ruling": "Ryan, 2026-09-07: every file in build/ that is not a store in the read model must be EXPLAINED here, not assumed. Four gates was never a magic number - it was how many properties needed checking at the time. This is the fifth.",
+ "_why": "build_read_model.py reads a file only if it is a JSON object with a top-level `claims` list. Anything else it skipped in silence: no log, no count, no gate. A store that broke, was truncated, or was written in a shape the reader does not know would have vanished with the build still reporting success. Seventh instance of that defect across this project; the first six were found by accident.",
+ "_how_to_use": "A file listed here is a file someone LOOKED AT and said is not a claim store. If G5 names a file that is not here, do not add it to make the gate pass - work out why it is not a store first. If G5 says a declared file has GROWN a claims list, the declaration is stale and the file is now a store the reader is dropping.",
+ "not_a_claim_store": {
+  "by_shape": [
+   {
+    "when": "top_level_is_an_array",
+    "why": "the reader takes a JSON object with a `claims` list. A bare array is a worklist, a development dump or a game roster file - never a claim store in this archive.",
+    "n_when_declared": 440,
+    "families_when_declared": {
+     "dev-*": 217,
+     "contested-*": 5,
+     "PGMRoster_*": 1,
+     "other": 217
+    },
+    "examples": [
+     "dev-aafc-1946",
+     "contested-nfl-1950",
+     "PGMRoster_1950"
+    ]
+   }
+  ],
+  "by_name": {
+   "clubs": {
+    "why": "the CLUB TABLE. The build reads it through paths.CLUBS as a table, not as claims.",
+    "read_as": "table"
+   },
+   "person-merges": {
+    "why": "the merge DECLARATION. Read through paths.PERSON_MERGES and applied to identity, not ingested as claims.",
+    "read_as": "declaration"
+   },
+   "club-key-normalisation": {
+    "why": "a decision record: which club keys were normalised, what was REFUSED, and when it was decided.",
+    "read_as": "decision record"
+   },
+   "assistants-identity": {
+    "why": "a decision record for the assistants store's identity, carrying its ruling and its refusals.",
+    "read_as": "decision record"
+   },
+   "coach-promotions": {
+    "why": "a decision record: which coaching seasons were promoted, what was left alone, and what it was checked against. Its claims reach the model through coach-seasons-promoted.",
+    "read_as": "decision record"
+   },
+   "coach-demotions": {
+    "why": "a decision record and its leads.",
+    "read_as": "decision record"
+   },
+   "officials-applied": {
+    "why": "a record of what the officials application did, including the dual-role men.",
+    "read_as": "decision record"
+   },
+   "cfl1945-season-restore": {
+    "why": "a record of a restore: what was restored, what had no club in its record, which slugs did not match.",
+    "read_as": "decision record"
+   },
+   "pfa-match": {
+    "why": "match leads: matched, unmatched, and leads. Evidence for a decision, not claims.",
+    "read_as": "leads"
+   },
+   "college-guides-candidates": {
+    "why": "candidate documents and the fields refused, before anything was ingested.",
+    "read_as": "leads"
+   },
+   "guide-prose-corpus-leads": {
+    "why": "254 MB of leads for the prose corpus. The claims it led to are the guide-prose-corpus store.",
+    "read_as": "leads"
+   },
+   "player-promotions": {
+    "why": "a decision record, the same shape as coach-promotions: which players were promoted from a lead, which were refused, and what each was checked against. NOT the same in one respect, stated here rather than left to be assumed -- player-seasons-promoted carries ZERO claims where coach-seasons-promoted carries 17,621, because a promoted player's seasons already reach the model from the ingest that named him. The applied store verified this rather than assuming it: 33 promoted, 33 holding at least one season, 0 holding none.",
+    "read_as": "decision record"
+   }
+  }
+ },
+ "_deliberately_not_declared": {
+  "guide-pre1950-delimited": {
+   "status": "RS-G5 fails on this file ON PURPOSE. The red is correct and MUST NOT be cleared.",
+   "the_ruling_is_not_here": "dataset/declarations/guide-pre1950-delimited.json",
+   "why_it_is_not_here": "Parsing owns that file and wrote the ruling into it: the 38-against-1,653 measurement, the unmapped-label vocabulary, and Fetching's sweep recording it as the only nested-claims file in all 1,146 build files. Restating any of that here would make two places able to say different things about one ruling - the defect this service spent 2026-09-07 removing twice (RS-G5's own copy of the reader's test; a duplicate readings.py that took the bio endpoint down). Read theirs.",
+   "what_this_gate_adds": "only that the file is not a store in the read model and is not declared away here. The reason it is not declared away lives with Parsing.",
+   "for_whoever_arrives_in_a_hurry": "Ryan's instruction: an unexplained red gets 'fixed' by someone in a hurry. This one is explained - in the file named above. Do not declare it here to make the gate green."
+  }
+ },
+ "_bounded": "Fetching's sweep of all 1,146 build files (2026-09-07) found guide-pre1950-delimited to be the only file holding claims below the top level, so RS-G5 has exactly one outstanding case rather than an unknown number. The measurement itself is recorded in dataset/declarations/guide-pre1950-delimited.json; it is referenced here, not restated."
 }

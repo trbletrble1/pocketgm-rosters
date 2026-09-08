@@ -32,7 +32,10 @@ def _chain_step_outputs():
     out = {}
     if not os.path.exists(DECL): return out
     d = json.load(open(DECL))
-    for step in [d.get("builder")] + [c["script"] for c in d.get("chain", [])]:
+    steps = ([d.get("builder")] + [c["script"] for c in d.get("chain", [])]
+             + [c["script"] for c in (d.get("derived_tables_after_the_chain", {})
+                                      or {}).get("steps", [])])
+    for step in steps:
         p = os.path.join(HERE, step or "")
         if not step or not os.path.exists(p): continue
         src = open(p).read()
@@ -252,6 +255,16 @@ def rebuild():
         for k, a in after["counts"].items():
             b = before["counts"].get(k, "-") if before else "-"
             print(f"  {k:22} {str(b):>9} -> {a:>9}")
+        # DERIVED TABLES, after P3. Ryan's ruling 2026-09-07: the club table must never
+        # be silently older than the claims that feed it. They run inside the try, so a
+        # failure here fails the rebuild and rolls the index back -- refusing to publish
+        # claims against a table that could not be rebuilt is the point of the ruling.
+        for step in (decl.get("derived_tables_after_the_chain", {}) or {}).get("steps", []):
+            args = list(step.get("args", []))
+            print(f"derived table: {step['script']} {' '.join(args)}".rstrip(), flush=True)
+            r = subprocess.run([sys.executable, os.path.join(HERE, step["script"])] + args, cwd=HERE)
+            if r.returncode != 0:
+                raise RuntimeError(f"{step['script']} exited {r.returncode}")
         IO.dump_atomic({"counts": after["counts"], "chain": [s["script"] for s in decl["chain"]],
                         "_what": "last-known-good population of person-index.json, written by "
                                  "build_person_index.rebuild() after P3 passed"},
