@@ -1,0 +1,3742 @@
+{
+ "refused": [
+  {
+   "page": "1926eflcoa.html",
+   "year": 1926,
+   "league": "EFL",
+   "club": "Coaldale Big Green",
+   "men_on_the_page": 0,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1926eflshe.html",
+   "year": 1926,
+   "league": "EFL",
+   "club": "Shenandoah Red Jackets",
+   "men_on_the_page": 0,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1927eflatl.html",
+   "year": 1927,
+   "league": "EFL",
+   "club": "Atlantic City Roses",
+   "men_on_the_page": 0,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1927eflcoa.html",
+   "year": 1927,
+   "league": "EFL",
+   "club": "Coaldale Big Green",
+   "men_on_the_page": 0,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1927eflshe.html",
+   "year": 1927,
+   "league": "EFL",
+   "club": "Shenandoah Red Jackets",
+   "men_on_the_page": 0,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1934aflcha.html",
+   "year": 1934,
+   "league": "AFL",
+   "club": "Charlotte Purols",
+   "men_on_the_page": 29,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "charlotte rage",
+    "charlotte hornets"
+   ]
+  },
+  {
+   "page": "1934afllou.html",
+   "year": 1934,
+   "league": "AFL",
+   "club": "Louisville Bourbons",
+   "men_on_the_page": 26,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "lousville bourbons",
+    "louisville colonels",
+    "louisville brecks"
+   ]
+  },
+  {
+   "page": "1936afaora.html",
+   "year": 1936,
+   "league": "AA",
+   "club": "Orange Tornadoes",
+   "men_on_the_page": 29,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "orange tornadoes",
+     "club_id": "club-orange-tornadoes-1929",
+     "first": 1929,
+     "last": 1929,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1936afapas.html",
+   "year": 1936,
+   "league": "AA",
+   "club": "Wessington Red Devils",
+   "men_on_the_page": 31,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1936afasta.html",
+   "year": 1936,
+   "league": "AA",
+   "club": "Stapleton Buffaloes",
+   "men_on_the_page": 34,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "stapeton buffaloes"
+   ]
+  },
+  {
+   "page": "1936afawp.html",
+   "year": 1936,
+   "league": "AA",
+   "club": "White Plains Bears",
+   "men_on_the_page": 31,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "white plains bears",
+     "club_id": "club-white-plains-bears-1937",
+     "first": 1937,
+     "last": 1937,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1936dflnor.html",
+   "year": 1936,
+   "league": "DFL",
+   "club": "Norfolk Clancys",
+   "men_on_the_page": 25,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1936mwflcint.html",
+   "year": 1936,
+   "league": "MWFL",
+   "club": "Cincinnati Treslers",
+   "men_on_the_page": 21,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "cincinnati reds",
+    "cincinnati rockers",
+    "cincinnati celts"
+   ]
+  },
+  {
+   "page": "1936mwflday.html",
+   "year": 1936,
+   "league": "MWFL",
+   "club": "Dayton Rosies",
+   "men_on_the_page": 30,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "dayton rosies",
+     "club_id": "club-dayton-rosies-1937",
+     "first": 1937,
+     "last": 1938,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1936mwflind.html",
+   "year": 1936,
+   "league": "MWFL",
+   "club": "Indianapolis Leon Tailors",
+   "men_on_the_page": 30,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "indianapolis warriors",
+    "indianapolis colts",
+    "indianapolis capitols"
+   ]
+  },
+  {
+   "page": "1937dflnor.html",
+   "year": 1937,
+   "league": "DFL",
+   "club": "Norfolk Clancys",
+   "men_on_the_page": 26,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1937mwflcin.html",
+   "year": 1937,
+   "league": "MWFL",
+   "club": "Cincinnati Models",
+   "men_on_the_page": 23,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "cincinnati models",
+     "club_id": "club-cincinnati-models-1936",
+     "first": 1936,
+     "last": 1936,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1937mwflind.html",
+   "year": 1937,
+   "league": "MWFL",
+   "club": "Indianapolis Indians",
+   "men_on_the_page": 31,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "indianapolis colts",
+    "indianapolis warriors",
+    "indianapolis capitols"
+   ]
+  },
+  {
+   "page": "1938afabkne.html",
+   "year": 1938,
+   "league": "AA",
+   "club": "Brooklyn Eagles",
+   "men_on_the_page": 26,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "brooklyn eagles",
+     "club_id": "club-brooklyn-eagles-1937",
+     "first": 1937,
+     "last": 1937,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "brooklyn eagles",
+     "club_id": "club-brooklyn-eagles-1939",
+     "first": 1939,
+     "last": 1939,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1938afanew.html",
+   "year": 1938,
+   "league": "AA",
+   "club": "Newark Tornadoes",
+   "men_on_the_page": 23,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "newark tornadoes",
+     "club_id": "club-orange-tornadoes-1929",
+     "first": 1930,
+     "last": 1930,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "newark tornadoes",
+     "club_id": "club-newark-tornadoes-1937",
+     "first": 1937,
+     "last": 1937,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1938cafloak.html",
+   "year": 1938,
+   "league": "CAFL",
+   "club": "Oakland Cardinals",
+   "men_on_the_page": 21,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "oakland invaders"
+   ]
+  },
+  {
+   "page": "1938dflale.html",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Alexandria Celtics",
+   "men_on_the_page": 23,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "alexandria celtics",
+     "club_id": "club-alexandria-celtics-1936",
+     "first": 1936,
+     "last": 1937,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1938dflnor.html",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Norfolk Shamrocks",
+   "men_on_the_page": 22,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "norfolk shamrocks",
+     "club_id": "club-norfolk-shamrocks-1946",
+     "first": 1946,
+     "last": 1946,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "norfolk shamrocks",
+     "club_id": "club-norfolk-shamrocks-1940",
+     "first": 1940,
+     "last": 1941,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1938eflrea.html",
+   "year": 1938,
+   "league": "EFL",
+   "club": "Reading Rams",
+   "men_on_the_page": 25,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "reading keys"
+   ]
+  },
+  {
+   "page": "1938eflscr.html",
+   "year": 1938,
+   "league": "EFL",
+   "club": "Scranton Miners",
+   "men_on_the_page": 26,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "scranton miners",
+     "club_id": "club-scranton-miners-1966",
+     "first": 1966,
+     "last": 1966,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "scranton miners",
+     "club_id": "club-scranton-miners-1946",
+     "first": 1946,
+     "last": 1946,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1938eflwb.html",
+   "year": 1938,
+   "league": "EFL",
+   "club": "Wilkes-Barre Panthers",
+   "men_on_the_page": 26,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "wilkes barre barons",
+    "wilkes barre scranton pioneers",
+    "wilkes barre bullets"
+   ]
+  },
+  {
+   "page": "1939dflnn.html",
+   "year": 1939,
+   "league": "DFL",
+   "club": "Newport News Builders",
+   "men_on_the_page": 27,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "newport news builders",
+     "club_id": "club-newport-news-builders-1941",
+     "first": 1941,
+     "last": 1941,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "newport news builders",
+     "club_id": "club-newport-news-builders-1946",
+     "first": 1946,
+     "last": 1946,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1939dflnor.html",
+   "year": 1939,
+   "league": "DFL",
+   "club": "Norfolk Shamrocks",
+   "men_on_the_page": 30,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "norfolk shamrocks",
+     "club_id": "club-norfolk-shamrocks-1946",
+     "first": 1946,
+     "last": 1946,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "norfolk shamrocks",
+     "club_id": "club-norfolk-shamrocks-1940",
+     "first": 1940,
+     "last": 1941,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1940aflmil.html",
+   "year": 1940,
+   "league": "AFL",
+   "club": "Milwaukee Chiefs",
+   "men_on_the_page": 32,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "milwaukee chiefs",
+     "club_id": "club-milwaukee-chiefs-1941",
+     "first": 1941,
+     "last": 1941,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1940dflnn.html",
+   "year": 1940,
+   "league": "DFL",
+   "club": "Newport News Builders",
+   "men_on_the_page": 26,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "newport news builders",
+     "club_id": "club-newport-news-builders-1941",
+     "first": 1941,
+     "last": 1941,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "newport news builders",
+     "club_id": "club-newport-news-builders-1946",
+     "first": 1946,
+     "last": 1946,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1940dflroa.html",
+   "year": 1940,
+   "league": "DFL",
+   "club": "Roanoke Travelers",
+   "men_on_the_page": 23,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "roanoke travelers",
+     "club_id": "club-roanoke-travelers-1941",
+     "first": 1941,
+     "last": 1941,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1941aflcin.html",
+   "year": 1941,
+   "league": "AFL",
+   "club": "Cincinnati Bengals",
+   "men_on_the_page": 36,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "cincinnati bengals",
+     "club_id": "club-cincinnati-bengals-1937",
+     "first": 1937,
+     "last": 1937,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "cincinnati bengals",
+     "club_id": "club-cincinnati-bengals-1968",
+     "first": 1968,
+     "last": 2024,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "cincinnati bengals",
+     "club_id": "club-cincinnati-bengals-1939",
+     "first": 1939,
+     "last": 1940,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1942nwiflspo.html",
+   "year": 1942,
+   "league": "NWIFL",
+   "club": "Spokane Manlowes",
+   "men_on_the_page": 29,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1942nwiflvan.html",
+   "year": 1942,
+   "league": "NWIFL",
+   "club": "Vancouver Warcos",
+   "men_on_the_page": 35,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1944pcfloak.html",
+   "year": 1944,
+   "league": "PCFL",
+   "club": "Oakland Giants",
+   "men_on_the_page": 37,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "oakland giants",
+     "club_id": "club-oakland-giants-1940",
+     "first": 1940,
+     "last": 1940,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "oakland giants",
+     "club_id": "club-oakland-giants-1945",
+     "first": 1945,
+     "last": 1946,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "oakland giants",
+     "club_id": "club-oakland-giants-1943",
+     "first": 1943,
+     "last": 1943,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1944pcflsj.html",
+   "year": 1944,
+   "league": "PCFL",
+   "club": "San Jose Mustangs",
+   "men_on_the_page": 33,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1945pcflsj.html",
+   "year": 1945,
+   "league": "PCFL",
+   "club": "San Jose Mustangs",
+   "men_on_the_page": 39,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1946orfuham.html",
+   "year": 1946,
+   "league": "ORFU",
+   "club": "Hamilton Wildcats",
+   "men_on_the_page": 36,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "hamilton wildcats",
+     "club_id": "club-hamilton-tigers-1945",
+     "first": 1948,
+     "last": 1949,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1946orfuott.html",
+   "year": 1946,
+   "league": "ORFU",
+   "club": "Ottawa Trojans",
+   "men_on_the_page": 36,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "ottawa trojans",
+     "club_id": "club-ottawa-trojans-1947",
+     "first": 1947,
+     "last": 1947,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1946orfusar.html",
+   "year": 1946,
+   "league": "ORFU",
+   "club": "Sarnia Imperials",
+   "men_on_the_page": 33,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "sarnia imperials",
+     "club_id": "club-sarnia-imperials-1951",
+     "first": 1951,
+     "last": 1952,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1946orfutori.html",
+   "year": 1946,
+   "league": "ORFU",
+   "club": "Toronto Indians",
+   "men_on_the_page": 34,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "akron indians",
+    "oorang indians"
+   ]
+  },
+  {
+   "page": "1946orfuwin.html",
+   "year": 1946,
+   "league": "ORFU",
+   "club": "Windsor Rockets",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1946pcflsac.html",
+   "year": 1946,
+   "league": "PCFL",
+   "club": "Sacramento Nuggets",
+   "men_on_the_page": 33,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "sacramento nuggets",
+     "club_id": "club-sacramento-nuggets-1947",
+     "first": 1947,
+     "last": 1947,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1947orfuham.html",
+   "year": 1947,
+   "league": "ORFU",
+   "club": "Hamilton Wildcats",
+   "men_on_the_page": 37,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "hamilton wildcats",
+     "club_id": "club-hamilton-tigers-1945",
+     "first": 1948,
+     "last": 1949,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1947orfusar.html",
+   "year": 1947,
+   "league": "ORFU",
+   "club": "Sarnia Imperials",
+   "men_on_the_page": 37,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "sarnia imperials",
+     "club_id": "club-sarnia-imperials-1951",
+     "first": 1951,
+     "last": 1952,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1947orfutori.html",
+   "year": 1947,
+   "league": "ORFU",
+   "club": "Toronto Indians",
+   "men_on_the_page": 35,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "akron indians",
+    "oorang indians"
+   ]
+  },
+  {
+   "page": "1947orfuwin.html",
+   "year": 1947,
+   "league": "ORFU",
+   "club": "Windsor Rockets",
+   "men_on_the_page": 36,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1948orfusar.html",
+   "year": 1948,
+   "league": "ORFU",
+   "club": "Sarnia Imperials",
+   "men_on_the_page": 36,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "sarnia imperials",
+     "club_id": "club-sarnia-imperials-1951",
+     "first": 1951,
+     "last": 1952,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1948orfutorbi.html",
+   "year": 1948,
+   "league": "ORFU",
+   "club": "Toronto Beaches-Indians",
+   "men_on_the_page": 34,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1948orfuwin.html",
+   "year": 1948,
+   "league": "ORFU",
+   "club": "Windsor Rockets",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1949orfusar.html",
+   "year": 1949,
+   "league": "ORFU",
+   "club": "Sarnia Imperials",
+   "men_on_the_page": 34,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "sarnia imperials",
+     "club_id": "club-sarnia-imperials-1951",
+     "first": 1951,
+     "last": 1952,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1949orfuwin.html",
+   "year": 1949,
+   "league": "ORFU",
+   "club": "Windsor Rockets",
+   "men_on_the_page": 46,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1950orfusar.html",
+   "year": 1950,
+   "league": "ORFU",
+   "club": "Sarnia Imperials",
+   "men_on_the_page": 36,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "sarnia imperials",
+     "club_id": "club-sarnia-imperials-1951",
+     "first": 1951,
+     "last": 1952,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1950orfuwin.html",
+   "year": 1950,
+   "league": "ORFU",
+   "club": "Windsor Rockets",
+   "men_on_the_page": 50,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1951orfumcm.html",
+   "year": 1951,
+   "league": "ORFU",
+   "club": "McMaster University",
+   "men_on_the_page": 0,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1951orfutorb.html",
+   "year": 1951,
+   "league": "ORFU",
+   "club": "Toronto Balmy Beach",
+   "men_on_the_page": 39,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "toronto balmy beach",
+     "club_id": "club-toronto-balmy-beach-1945",
+     "first": 1945,
+     "last": 1946,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "toronto balmy beach",
+     "club_id": "club-toronto-balmy-beach-1945",
+     "first": 1953,
+     "last": 1953,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "toronto balmy beach",
+     "club_id": "club-toronto-balmy-beach-1945",
+     "first": 1950,
+     "last": 1950,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1951orfuwin.html",
+   "year": 1951,
+   "league": "ORFU",
+   "club": "Windsor Royals",
+   "men_on_the_page": 48,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1952orfubra.html",
+   "year": 1952,
+   "league": "ORFU",
+   "club": "Brantford Redskins",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1952orfutorb.html",
+   "year": 1952,
+   "league": "ORFU",
+   "club": "Toronto Balmy Beach",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "toronto balmy beach",
+     "club_id": "club-toronto-balmy-beach-1945",
+     "first": 1945,
+     "last": 1946,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "toronto balmy beach",
+     "club_id": "club-toronto-balmy-beach-1945",
+     "first": 1953,
+     "last": 1953,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "toronto balmy beach",
+     "club_id": "club-toronto-balmy-beach-1945",
+     "first": 1950,
+     "last": 1950,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1952orfuwin.html",
+   "year": 1952,
+   "league": "ORFU",
+   "club": "Windsor Royals",
+   "men_on_the_page": 42,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1953orfubra.html",
+   "year": 1953,
+   "league": "ORFU",
+   "club": "Brantford Redskins",
+   "men_on_the_page": 46,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1953orfusar.html",
+   "year": 1953,
+   "league": "ORFU",
+   "club": "Sarnia Imperials",
+   "men_on_the_page": 39,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "sarnia imperials",
+     "club_id": "club-sarnia-imperials-1951",
+     "first": 1951,
+     "last": 1952,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1954orfusar.html",
+   "year": 1954,
+   "league": "ORFU",
+   "club": "Sarnia Imperials",
+   "men_on_the_page": 33,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "sarnia imperials",
+     "club_id": "club-sarnia-imperials-1951",
+     "first": 1951,
+     "last": 1952,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1954orfutorb.html",
+   "year": 1954,
+   "league": "ORFU",
+   "club": "Toronto Balmy Beach",
+   "men_on_the_page": 41,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "toronto balmy beach",
+     "club_id": "club-toronto-balmy-beach-1945",
+     "first": 1945,
+     "last": 1946,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "toronto balmy beach",
+     "club_id": "club-toronto-balmy-beach-1945",
+     "first": 1953,
+     "last": 1953,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "toronto balmy beach",
+     "club_id": "club-toronto-balmy-beach-1945",
+     "first": 1950,
+     "last": 1950,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1962acflans.html",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Ansonia Black Knights",
+   "men_on_the_page": 40,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1962acflfra.html",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Frankfort Falcons",
+   "men_on_the_page": 53,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "frankford legion"
+   ]
+  },
+  {
+   "page": "1962acflpat.html",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Paterson Miners",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "paterson panthers",
+    "paterson giants"
+   ]
+  },
+  {
+   "page": "1962acflpor.html",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Portland Sea Hawks",
+   "men_on_the_page": 43,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "portland breakers"
+   ]
+  },
+  {
+   "page": "1962acflpro.html",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Providence Steam Roller",
+   "men_on_the_page": 33,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "providence steam roller",
+     "club_id": "club-providence-steam-roller-1939",
+     "first": 1939,
+     "last": 1940,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "providence steam roller",
+     "club_id": "club-providence-steam-roller-1925",
+     "first": 1925,
+     "last": 1931,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1962acflsta.html",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Stamford Golden Bears",
+   "men_on_the_page": 40,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1962uflchi.html",
+   "year": 1962,
+   "league": "UFL",
+   "club": "Chicago Bulls",
+   "men_on_the_page": 53,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "chicago bulls",
+     "club_id": "club-chicago-bulls-1926",
+     "first": 1926,
+     "last": 1926,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1962uflcol.html",
+   "year": 1962,
+   "league": "UFL",
+   "club": "Columbus Capitols",
+   "men_on_the_page": 40,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "columbus aviators"
+   ]
+  },
+  {
+   "page": "1962uflgr.html",
+   "year": 1962,
+   "league": "UFL",
+   "club": "Grand Rapids Blazers",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "grand rapids blazers",
+     "club_id": "club-grand-rapids-blazers-1963",
+     "first": 1963,
+     "last": 1965,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1962ufllou.html",
+   "year": 1962,
+   "league": "UFL",
+   "club": "Louisville Raiders",
+   "men_on_the_page": 46,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "louisville brecks",
+    "louisville fire",
+    "louisville tanks"
+   ]
+  },
+  {
+   "page": "1962uflwhe.html",
+   "year": 1962,
+   "league": "UFL",
+   "club": "Wheeling Ironmen",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "wheeling ironmen",
+     "club_id": "club-wheeling-ironmen-1965",
+     "first": 1965,
+     "last": 1967,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1963acflans.html",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Ansonia Black Knights",
+   "men_on_the_page": 58,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1963acflbos.html",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Boston Nu-Way Sweepers",
+   "men_on_the_page": 51,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "boston sweepers"
+   ]
+  },
+  {
+   "page": "1963acflharr.html",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Harrisburg Capitols",
+   "men_on_the_page": 52,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "harrisburg capitol colts"
+   ]
+  },
+  {
+   "page": "1963acflmv.html",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Mohawk Valley Falcons",
+   "men_on_the_page": 40,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1963acflpor.html",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Portland Sea Hawks",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "portland breakers"
+   ]
+  },
+  {
+   "page": "1963acflpro.html",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Providence Steam Roller",
+   "men_on_the_page": 39,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "providence steam roller",
+     "club_id": "club-providence-steam-roller-1939",
+     "first": 1939,
+     "last": 1940,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "providence steam roller",
+     "club_id": "club-providence-steam-roller-1925",
+     "first": 1925,
+     "last": 1931,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1963acflpv.html",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Pittsburgh Valley Ironmen",
+   "men_on_the_page": 42,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "ohio valley ironmen"
+   ]
+  },
+  {
+   "page": "1963acflspr.html",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Springfield Acorns",
+   "men_on_the_page": 48,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "springfield acorns",
+     "club_id": "club-springfield-acorns-1964",
+     "first": 1964,
+     "last": 1964,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1963acflwes.html",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Westchester Crusaders",
+   "men_on_the_page": 59,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "westchester bulls"
+   ]
+  },
+  {
+   "page": "1963uflwhe.html",
+   "year": 1963,
+   "league": "UFL",
+   "club": "Wheeling Ironmen",
+   "men_on_the_page": 40,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "wheeling ironmen",
+     "club_id": "club-wheeling-ironmen-1965",
+     "first": 1965,
+     "last": 1967,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1964acflharr.html",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Harrisburg Capitols",
+   "men_on_the_page": 51,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "harrisburg capitol colts"
+   ]
+  },
+  {
+   "page": "1964acfljc.html",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Jersey City Giants",
+   "men_on_the_page": 49,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "jersey city giants",
+     "club_id": "club-jersey-city-giants-1938",
+     "first": 1938,
+     "last": 1941,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "jersey city giants",
+     "club_id": "club-jersey-city-giants-1946",
+     "first": 1946,
+     "last": 1950,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1964acflmv.html",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Mohawk Valley Falcons",
+   "men_on_the_page": 52,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1964acflpor.html",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Portland Sea Hawks",
+   "men_on_the_page": 53,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "portland breakers"
+   ]
+  },
+  {
+   "page": "1964acflpro.html",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Providence Steamrollers",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "near-identical, a misprint away",
+     "name": "providence steamroller",
+     "club_id": "club-providence-steamroller-1941",
+     "first": 1941,
+     "last": 1941,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1964acflpv.html",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Pittsburgh Valley Ironmen",
+   "men_on_the_page": 48,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "ohio valley ironmen"
+   ]
+  },
+  {
+   "page": "1964acflric.html",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Richmond Rebels",
+   "men_on_the_page": 49,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "richmond rebels",
+     "club_id": "club-richmond-rebels-1946",
+     "first": 1946,
+     "last": 1950,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "richmond rebels",
+     "club_id": "club-richmond-rebels-1966",
+     "first": 1966,
+     "last": 1966,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1964acflwes.html",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Westchester Crusaders",
+   "men_on_the_page": 64,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "westchester bulls"
+   ]
+  },
+  {
+   "page": "1964sflchat.html",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Chattanooga Cherokees",
+   "men_on_the_page": 46,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1964sflcol.html",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Columbus Warriors",
+   "men_on_the_page": 50,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "columbus aviators",
+    "columbus tigers",
+    "columbus destroyers"
+   ]
+  },
+  {
+   "page": "1964sfldb.html",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Daytona Beach Thunderbirds",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1964sflgad.html",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Gadsden Raiders",
+   "men_on_the_page": 51,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1964sflhun.html",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Huntsville Rockets",
+   "men_on_the_page": 46,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1964sfljac.html",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Jacksonville Robins",
+   "men_on_the_page": 49,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "jacksonville bulls",
+    "jacksonville jaguars",
+    "jacksonville express"
+   ]
+  },
+  {
+   "page": "1964sflmob.html",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Mobile Buccaneers",
+   "men_on_the_page": 56,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1964sflorl.html",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Orlando Broncos",
+   "men_on_the_page": 56,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "orlando broncos",
+     "club_id": "club-orlando-broncos-1963",
+     "first": 1963,
+     "last": 1963,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1964uflwhe.html",
+   "year": 1964,
+   "league": "UFL",
+   "club": "Wheeling Ironmen",
+   "men_on_the_page": 40,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "wheeling ironmen",
+     "club_id": "club-wheeling-ironmen-1965",
+     "first": 1965,
+     "last": 1967,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965acflbos.html",
+   "year": 1965,
+   "league": "ACFL",
+   "club": "Boston Steamrollers",
+   "men_on_the_page": 52,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "boston shamrocks"
+   ]
+  },
+  {
+   "page": "1965acflharr.html",
+   "year": 1965,
+   "league": "ACFL",
+   "club": "Harrisburg Capitols",
+   "men_on_the_page": 46,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "harrisburg capitol colts"
+   ]
+  },
+  {
+   "page": "1965acfljer.html",
+   "year": 1965,
+   "league": "ACFL",
+   "club": "Jersey Jets",
+   "men_on_the_page": 55,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "jersey tigers",
+    "jersey giants"
+   ]
+  },
+  {
+   "page": "1965acflmv.html",
+   "year": 1965,
+   "league": "ACFL",
+   "club": "Mohawk Valley Falcons",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965acflpv.html",
+   "year": 1965,
+   "league": "ACFL",
+   "club": "Pittsburgh Valley Ironmen",
+   "men_on_the_page": 58,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "ohio valley ironmen"
+   ]
+  },
+  {
+   "page": "1965acflscr.html",
+   "year": 1965,
+   "league": "ACFL",
+   "club": "Scranton Miners",
+   "men_on_the_page": 53,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "scranton miners",
+     "club_id": "club-scranton-miners-1966",
+     "first": 1966,
+     "last": 1966,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "scranton miners",
+     "club_id": "club-scranton-miners-1946",
+     "first": 1946,
+     "last": 1946,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965coflri.html",
+   "year": 1965,
+   "league": "COFL",
+   "club": "Rhode Island Indians",
+   "men_on_the_page": 46,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "long island indians"
+   ]
+  },
+  {
+   "page": "1965coflric.html",
+   "year": 1965,
+   "league": "COFL",
+   "club": "Richmond Rebels",
+   "men_on_the_page": 67,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "richmond rebels",
+     "club_id": "club-richmond-rebels-1946",
+     "first": 1946,
+     "last": 1950,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "richmond rebels",
+     "club_id": "club-richmond-rebels-1966",
+     "first": 1966,
+     "last": 1966,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965naflann.html",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Annapolis Sailors",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "indianapolis warriors"
+   ]
+  },
+  {
+   "page": "1965naflbal.html",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Baltimore Broncos",
+   "men_on_the_page": 40,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "baltimore colts",
+    "baltimore ravens",
+    "baltimore cfls"
+   ]
+  },
+  {
+   "page": "1965naflfla.html",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Florida Brahmans",
+   "men_on_the_page": 43,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965naflhun.html",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Huntsville Rockets",
+   "men_on_the_page": 40,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965naflmob.html",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Mobile Tarpons",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965naflpen.html",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Pennsylvania Mustangs",
+   "men_on_the_page": 50,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965naflwil.html",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Wilmington Comets",
+   "men_on_the_page": 48,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "wilmington clippers"
+   ]
+  },
+  {
+   "page": "1965pfladm.html",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Des Moines Warriors",
+   "men_on_the_page": 49,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965pflajol.html",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Joliet Explorers",
+   "men_on_the_page": 46,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965pflalin.html",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Lincoln Comets",
+   "men_on_the_page": 43,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965pflaoma.html",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Omaha Mustangs",
+   "men_on_the_page": 42,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "omaha mustangs",
+     "club_id": "club-omaha-mustangs-1967",
+     "first": 1967,
+     "last": 1967,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965pflari.html",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Rock Island Raiders",
+   "men_on_the_page": 52,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "oakland raiders",
+    "rock island independents"
+   ]
+  },
+  {
+   "page": "1965sflchar.html",
+   "year": 1965,
+   "league": "SFL",
+   "club": "Charlotte Vikings",
+   "men_on_the_page": 43,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965sflchat.html",
+   "year": 1965,
+   "league": "SFL",
+   "club": "Chattanooga Cherokees",
+   "men_on_the_page": 39,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965sfljac.html",
+   "year": 1965,
+   "league": "SFL",
+   "club": "Jacksonville Robins",
+   "men_on_the_page": 35,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "jacksonville bulls",
+    "jacksonville jaguars",
+    "jacksonville express"
+   ]
+  },
+  {
+   "page": "1965sflkno.html",
+   "year": 1965,
+   "league": "SFL",
+   "club": "Knoxville Bears",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1965sflorl.html",
+   "year": 1965,
+   "league": "SFL",
+   "club": "Orlando Thunderbirds",
+   "men_on_the_page": 38,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "orlando thunder",
+    "portland thunder",
+    "orlando panthers"
+   ]
+  },
+  {
+   "page": "1966acflac.html",
+   "year": 1966,
+   "league": "ACFL",
+   "club": "Atlantic City Sentaors",
+   "men_on_the_page": 55,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966acflharr.html",
+   "year": 1966,
+   "league": "ACFL",
+   "club": "Harrisburg Capitols",
+   "men_on_the_page": 58,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "harrisburg capitol colts"
+   ]
+  },
+  {
+   "page": "1966acfljer.html",
+   "year": 1966,
+   "league": "ACFL",
+   "club": "Jersey Jets",
+   "men_on_the_page": 55,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "jersey tigers",
+    "jersey giants"
+   ]
+  },
+  {
+   "page": "1966acfllow.html",
+   "year": 1966,
+   "league": "ACFL",
+   "club": "Lowell Giants",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966acflnb.html",
+   "year": 1966,
+   "league": "ACFL",
+   "club": "New Bedford Sweepers",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "new bedford sweepers",
+     "club_id": "club-new-bedford-sweepers-1965",
+     "first": 1965,
+     "last": 1965,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966acflva.html",
+   "year": 1966,
+   "league": "ACFL",
+   "club": "Virginia Sailors",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "virginia destroyers"
+   ]
+  },
+  {
+   "page": "1966naflchat.html",
+   "year": 1966,
+   "league": "NAFL",
+   "club": "Chattanooga Redskins",
+   "men_on_the_page": 59,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966naflhun.html",
+   "year": 1966,
+   "league": "NAFL",
+   "club": "Huntsville Rockets",
+   "men_on_the_page": 39,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966nafljac.html",
+   "year": 1966,
+   "league": "NAFL",
+   "club": "Jacksonville Jaguars",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "jacksonville jaguars",
+     "club_id": "club-jacksonville-jaguars-1995",
+     "first": 1995,
+     "last": 2024,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966naflkno.html",
+   "year": 1966,
+   "league": "NAFL",
+   "club": "Knoxville SOK",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966nafllak.html",
+   "year": 1966,
+   "league": "NAFL",
+   "club": "Lakeland Brahmans",
+   "men_on_the_page": 43,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966naflmob.html",
+   "year": 1966,
+   "league": "NAFL",
+   "club": "Mobile Tarpons",
+   "men_on_the_page": 43,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966naflsav.html",
+   "year": 1966,
+   "league": "NAFL",
+   "club": "Savannah Chiefs",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966naflstp.html",
+   "year": 1966,
+   "league": "NAFL",
+   "club": "St. Petersburg Blazers",
+   "men_on_the_page": 49,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966pfladm.html",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Des Moines Warriors",
+   "men_on_the_page": 42,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966pflajol.html",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Joliet Explorers",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966pflaoma.html",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Omaha Mustangs",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "omaha mustangs",
+     "club_id": "club-omaha-mustangs-1967",
+     "first": 1967,
+     "last": 1967,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966pflaqc.html",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Quad-City Raiders",
+   "men_on_the_page": 42,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "quad cities raiders"
+   ]
+  },
+  {
+   "page": "1966tflbur.html",
+   "year": 1966,
+   "league": "TFL",
+   "club": "Burkburnett Kings",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966tfldal.html",
+   "year": 1966,
+   "league": "TFL",
+   "club": "Dallas County Rockets",
+   "men_on_the_page": 48,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966tflpas.html",
+   "year": 1966,
+   "league": "TFL",
+   "club": "Pasadena Pistols",
+   "men_on_the_page": 42,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1966tfltul.html",
+   "year": 1966,
+   "league": "TFL",
+   "club": "Tulsa Oilers",
+   "men_on_the_page": 43,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "tulsa oilers",
+     "club_id": "club-tulsa-oilers-1934",
+     "first": 1934,
+     "last": 1934,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967acflharr.html",
+   "year": 1967,
+   "league": "ACFL",
+   "club": "Harrisburg Capitols",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "harrisburg capitol colts"
+   ]
+  },
+  {
+   "page": "1967acfllow.html",
+   "year": 1967,
+   "league": "ACFL",
+   "club": "Lowell Giants",
+   "men_on_the_page": 49,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967acflva.html",
+   "year": 1967,
+   "league": "ACFL",
+   "club": "Virginia Sailors",
+   "men_on_the_page": 51,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "virginia destroyers"
+   ]
+  },
+  {
+   "page": "1967acflwat.html",
+   "year": 1967,
+   "league": "ACFL",
+   "club": "Waterbury Orbits",
+   "men_on_the_page": 58,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "waterbury orbits",
+     "club_id": "club-waterbury-orbits-1966",
+     "first": 1966,
+     "last": 1966,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967acflwil.html",
+   "year": 1967,
+   "league": "ACFL",
+   "club": "Wilmington Clippers/Renegades",
+   "men_on_the_page": 49,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "wilmington clippers"
+   ]
+  },
+  {
+   "page": "1967coflcha.html",
+   "year": 1967,
+   "league": "COFL",
+   "club": "Charleston Rockets",
+   "men_on_the_page": 46,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "charleston rockets",
+     "club_id": "club-charleston-rockets-1964",
+     "first": 1964,
+     "last": 1966,
+     "active_that_year": false
+    },
+    {
+     "strength": "same name, different years",
+     "name": "charleston rockets",
+     "club_id": "club-charleston-rockets-1968",
+     "first": 1968,
+     "last": 1968,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967cofleug.html",
+   "year": 1967,
+   "league": "COFL",
+   "club": "Eugene Bombers",
+   "men_on_the_page": 50,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967coflora.html",
+   "year": 1967,
+   "league": "COFL",
+   "club": "Orange County Ramblers",
+   "men_on_the_page": 61,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "orange county ramblers",
+     "club_id": "club-orange-county-ramblers-1968",
+     "first": 1968,
+     "last": 1968,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967coflsac.html",
+   "year": 1967,
+   "league": "COFL",
+   "club": "Sacramento Buccaneers",
+   "men_on_the_page": 52,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967coflsea.html",
+   "year": 1967,
+   "league": "COFL",
+   "club": "Seattle Rangers",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "seattle dragons",
+    "seattle bombers",
+    "allen wranglers"
+   ]
+  },
+  {
+   "page": "1967coflvic.html",
+   "year": 1967,
+   "league": "COFL",
+   "club": "Victoria Steelers",
+   "men_on_the_page": 71,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967pflachi.html",
+   "year": 1967,
+   "league": "PFLA",
+   "club": "Chicago Owls",
+   "men_on_the_page": 54,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "chicago winds",
+    "chicago bulls",
+    "chicago rush"
+   ]
+  },
+  {
+   "page": "1967pfladm.html",
+   "year": 1967,
+   "league": "PFLA",
+   "club": "Des Moines Warriors",
+   "men_on_the_page": 51,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967pflaqc.html",
+   "year": 1967,
+   "league": "PFLA",
+   "club": "Quad-City Raiders",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "quad cities raiders"
+   ]
+  },
+  {
+   "page": "1967tfldal.html",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Dallas Rockets",
+   "men_on_the_page": 43,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "dallas rams"
+   ]
+  },
+  {
+   "page": "1967tflftw.html",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Fort Worth Texans",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967tflpas.html",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Pasadena Pistols",
+   "men_on_the_page": 40,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967tflsa.html",
+   "year": 1967,
+   "league": "TFL",
+   "club": "San Antonio Toros",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "san antonio talons",
+    "san antonio force",
+    "san antonio texans"
+   ]
+  },
+  {
+   "page": "1967tfltul.html",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Tulsa Thunderbirds",
+   "men_on_the_page": 53,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1967tflwf.html",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Wichita Falls Kings",
+   "men_on_the_page": 49,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1968acflbri.html",
+   "year": 1968,
+   "league": "ACFL",
+   "club": "Bridgepot Jets",
+   "men_on_the_page": 53,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "bridgeport jets"
+   ]
+  },
+  {
+   "page": "1968acfllow.html",
+   "year": 1968,
+   "league": "ACFL",
+   "club": "Lowell Giants",
+   "men_on_the_page": 41,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1968acflric.html",
+   "year": 1968,
+   "league": "ACFL",
+   "club": "Richmond Roadrunners",
+   "men_on_the_page": 40,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "richmond roadrunners",
+     "club_id": "club-richmond-roadrunners-1969",
+     "first": 1969,
+     "last": 1969,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1968acflva.html",
+   "year": 1968,
+   "league": "ACFL",
+   "club": "Virginia Sailors",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "virginia destroyers"
+   ]
+  },
+  {
+   "page": "1968coflark.html",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Arkansas Diamonds",
+   "men_on_the_page": 54,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "arkansas diamonds",
+     "club_id": "club-arkansas-diamonds-2010",
+     "first": 2010,
+     "last": 2010,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1968coflchi.html",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Chicago Owls",
+   "men_on_the_page": 51,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "chicago winds",
+    "chicago bulls",
+    "chicago rush"
+   ]
+  },
+  {
+   "page": "1968coflmic.html",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Michigan Arrows",
+   "men_on_the_page": 80,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "michigan panthers",
+    "richmond arrows"
+   ]
+  },
+  {
+   "page": "1968cofloma.html",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Omaha Mustangs",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "omaha mustangs",
+     "club_id": "club-omaha-mustangs-1967",
+     "first": 1967,
+     "last": 1967,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1968coflqc.html",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Quad-City Raiders",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "quad cities raiders"
+   ]
+  },
+  {
+   "page": "1968coflsac.html",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Sacramento Capitols",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "sacramento attack"
+   ]
+  },
+  {
+   "page": "1968coflsea.html",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Seattle Rangers",
+   "men_on_the_page": 49,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "seattle dragons",
+    "seattle bombers",
+    "allen wranglers"
+   ]
+  },
+  {
+   "page": "1968coflspo.html",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Spokane Shockers",
+   "men_on_the_page": 57,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "spokane shockers",
+     "club_id": "club-spokane-shockers-1969",
+     "first": 1969,
+     "last": 1969,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1968tflbea.html",
+   "year": 1968,
+   "league": "TFL",
+   "club": "Beaumont Golden Vikings",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1968tfldal.html",
+   "year": 1968,
+   "league": "TFL",
+   "club": "Dallas Rockets",
+   "men_on_the_page": 46,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "dallas rams"
+   ]
+  },
+  {
+   "page": "1968tflep.html",
+   "year": 1968,
+   "league": "TFL",
+   "club": "El Paso Jets",
+   "men_on_the_page": 69,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1968tflftw.html",
+   "year": 1968,
+   "league": "TFL",
+   "club": "Fort Worth Braves",
+   "men_on_the_page": 58,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "fort worth cavalry"
+   ]
+  },
+  {
+   "page": "1968tflsa.html",
+   "year": 1968,
+   "league": "TFL",
+   "club": "San Antonio Toros",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "san antonio talons",
+    "san antonio force",
+    "san antonio texans"
+   ]
+  },
+  {
+   "page": "1968tfltex.html",
+   "year": 1968,
+   "league": "TFL",
+   "club": "Texarkana Titans",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1969acflharr.html",
+   "year": 1969,
+   "league": "ACFL",
+   "club": "Harrisburg Capitol Colts",
+   "men_on_the_page": 51,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "harrisburg capitol colts",
+     "club_id": "club-harrisburg-capitol-colts-1968",
+     "first": 1968,
+     "last": 1968,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1969acflqui.html",
+   "year": 1969,
+   "league": "ACFL",
+   "club": "Quincy Giants",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1969acflroa.html",
+   "year": 1969,
+   "league": "ACFL",
+   "club": "Roanoke Buckskins",
+   "men_on_the_page": 50,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1969coflala.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Alabama Hawks",
+   "men_on_the_page": 50,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "alabama hawks",
+     "club_id": "club-alabama-hawks-1967",
+     "first": 1967,
+     "last": 1968,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1969coflark.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Arkansas Diamonds",
+   "men_on_the_page": 43,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "arkansas diamonds",
+     "club_id": "club-arkansas-diamonds-2010",
+     "first": 2010,
+     "last": 2010,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1969coflchi.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Chicago Owls",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "chicago winds",
+    "chicago bulls",
+    "chicago rush"
+   ]
+  },
+  {
+   "page": "1969cofldal.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Dallas Rockets",
+   "men_on_the_page": 49,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "dallas rams"
+   ]
+  },
+  {
+   "page": "1969coflftw.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Fort Worth Braves",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "fort worth cavalry"
+   ]
+  },
+  {
+   "page": "1969cofljerj.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Jersey Jays",
+   "men_on_the_page": 57,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "jersey giants"
+   ]
+  },
+  {
+   "page": "1969cofllv.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Las Vegas Cowboys",
+   "men_on_the_page": 62,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "las vegas outlaws",
+    "las vegas posse",
+    "las vegas locomotives"
+   ]
+  },
+  {
+   "page": "1969coflmex.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Mexico Golden Aztecs",
+   "men_on_the_page": 35,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1969coflokl.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Oklahoma Thunderbirds",
+   "men_on_the_page": 48,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1969cofloma.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Omaha Mustangs",
+   "men_on_the_page": 46,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "omaha mustangs",
+     "club_id": "club-omaha-mustangs-1967",
+     "first": 1967,
+     "last": 1967,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1969coflsa.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "San Antonio Toros",
+   "men_on_the_page": 56,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "san antonio talons",
+    "san antonio force",
+    "san antonio texans"
+   ]
+  },
+  {
+   "page": "1969coflsac.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Sacramento Capitols",
+   "men_on_the_page": 61,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "sacramento attack"
+   ]
+  },
+  {
+   "page": "1969coflsea.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Seattle Rangers",
+   "men_on_the_page": 51,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "seattle dragons",
+    "seattle bombers",
+    "allen wranglers"
+   ]
+  },
+  {
+   "page": "1969cofltex.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Texarkana Titans",
+   "men_on_the_page": 57,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1969coflwt.html",
+   "year": 1969,
+   "league": "COFL",
+   "club": "West Texas Rufneks",
+   "men_on_the_page": 67,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1970acfljerj.html",
+   "year": 1970,
+   "league": "ACFL",
+   "club": "Jersey Jays",
+   "men_on_the_page": 55,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "jersey giants"
+   ]
+  },
+  {
+   "page": "1970acflorl.html",
+   "year": 1970,
+   "league": "ACFL",
+   "club": "Orlando Panthers",
+   "men_on_the_page": 54,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "orlando panthers",
+     "club_id": "club-orlando-panthers-1966",
+     "first": 1966,
+     "last": 1969,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1970acflroa.html",
+   "year": 1970,
+   "league": "ACFL",
+   "club": "Roanoke Buckskins",
+   "men_on_the_page": 44,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1970tflbar.html",
+   "year": 1970,
+   "league": "TFL",
+   "club": "Bartlesville Quickicks",
+   "men_on_the_page": 28,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1970tfldal.html",
+   "year": 1970,
+   "league": "TFL",
+   "club": "Dallas Rockets",
+   "men_on_the_page": 30,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "dallas rams"
+   ]
+  },
+  {
+   "page": "1970tflftw.html",
+   "year": 1970,
+   "league": "TFL",
+   "club": "Fort Worth Braves",
+   "men_on_the_page": 55,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "fort worth cavalry"
+   ]
+  },
+  {
+   "page": "1970tfloma.html",
+   "year": 1970,
+   "league": "TFL",
+   "club": "Omaha Mustangs",
+   "men_on_the_page": 40,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "omaha mustangs",
+     "club_id": "club-omaha-mustangs-1967",
+     "first": 1967,
+     "last": 1967,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1970tflsa.html",
+   "year": 1970,
+   "league": "TFL",
+   "club": "San Antonio Toros",
+   "men_on_the_page": 41,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "san antonio talons",
+    "san antonio force",
+    "san antonio texans"
+   ]
+  },
+  {
+   "page": "1970tfltex.html",
+   "year": 1970,
+   "league": "TFL",
+   "club": "Texarkana Titans",
+   "men_on_the_page": 42,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1971acflroa.html",
+   "year": 1971,
+   "league": "ACFL",
+   "club": "Roanoke Buckskins",
+   "men_on_the_page": 48,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1971tafldal.html",
+   "year": 1971,
+   "league": "TAFL",
+   "club": "Dallas Rockets",
+   "men_on_the_page": 38,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "dallas rams"
+   ]
+  },
+  {
+   "page": "1971taflftw.html",
+   "year": 1971,
+   "league": "TAFL",
+   "club": "Fort Worth Texans",
+   "men_on_the_page": 43,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1971taflsa.html",
+   "year": 1971,
+   "league": "TAFL",
+   "club": "San Antonio Toros",
+   "men_on_the_page": 42,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "san antonio talons",
+    "san antonio force",
+    "san antonio texans"
+   ]
+  },
+  {
+   "page": "1971tafltex.html",
+   "year": 1971,
+   "league": "TAFL",
+   "club": "Texarkana Titans",
+   "men_on_the_page": 43,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1973acflhart.html",
+   "year": 1973,
+   "league": "ACFL",
+   "club": "Hartford Knights",
+   "men_on_the_page": 55,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "hartford knights",
+     "club_id": "club-hartford-knights-1968",
+     "first": 1968,
+     "last": 1971,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1973acflli.html",
+   "year": 1973,
+   "league": "ACFL",
+   "club": "Long Island Chiefs",
+   "men_on_the_page": 49,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "long island indians",
+    "long island bulls"
+   ]
+  },
+  {
+   "page": "1973acflny.html",
+   "year": 1973,
+   "league": "ACFL",
+   "club": "New York Crusaders",
+   "men_on_the_page": 47,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": false,
+   "look_alikes": [],
+   "weak_resemblances": [
+    "new york stars",
+    "new york tigers",
+    "new york guardians"
+   ]
+  },
+  {
+   "page": "1987arflchi.html",
+   "year": 1987,
+   "league": "ARENA",
+   "club": "Chicago Brusiers",
+   "men_on_the_page": 23,
+   "archive_holds_this_league_that_year": true,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "near-identical, a misprint away",
+     "name": "chicago bruisers",
+     "club_id": "club-chicago-bruisers-1987",
+     "first": 1987,
+     "last": 1989,
+     "active_that_year": true
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1995arflmem.html",
+   "year": 1995,
+   "league": "ARENA",
+   "club": "Memphis Pharoahs",
+   "men_on_the_page": 28,
+   "archive_holds_this_league_that_year": true,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "near-identical, a misprint away",
+     "name": "memphis pharaohs",
+     "club_id": "club-memphis-pharaohs-1995",
+     "first": 1995,
+     "last": 1996,
+     "active_that_year": true
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "1995wlafsco.html",
+   "year": 1995,
+   "league": "WLAF",
+   "club": "Scottish Claymores",
+   "men_on_the_page": 45,
+   "archive_holds_this_league_that_year": false,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "same name, different years",
+     "name": "scottish claymores",
+     "club_id": "club-scottish-claymores-1996",
+     "first": 1996,
+     "last": 2004,
+     "active_that_year": false
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "2001xflbir.html",
+   "year": 2001,
+   "league": "XFL",
+   "club": "Birmingham Bolts",
+   "men_on_the_page": 55,
+   "archive_holds_this_league_that_year": true,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "same city, one nickname inside the other",
+     "name": "birmingham thunderbolts",
+     "club_id": "club-birmingham-thunderbolts-2001",
+     "first": 2001,
+     "last": 2001,
+     "active_that_year": true
+    }
+   ],
+   "weak_resemblances": []
+  },
+  {
+   "page": "2023xflsa.html",
+   "year": 2023,
+   "league": "XFL",
+   "club": "San Antonio Brahamas",
+   "men_on_the_page": 71,
+   "archive_holds_this_league_that_year": true,
+   "archive_holds_this_league_at_all": true,
+   "look_alikes": [
+    {
+     "strength": "near-identical, a misprint away",
+     "name": "san antonio brahmas",
+     "club_id": "club-san-antonio-brahmas-2023",
+     "first": 2023,
+     "last": 2024,
+     "active_that_year": true
+    }
+   ],
+   "weak_resemblances": []
+  }
+ ],
+ "by_league": {
+  "EFL": {
+   "pages": 8,
+   "men": 77,
+   "years": [
+    1926,
+    1927,
+    1938
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "AFL": {
+   "pages": 4,
+   "men": 123,
+   "years": [
+    1934,
+    1940,
+    1941
+   ],
+   "held_that_year": 0,
+   "held_ever": true
+  },
+  "AA": {
+   "pages": 6,
+   "men": 174,
+   "years": [
+    1936,
+    1938
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "DFL": {
+   "pages": 8,
+   "men": 202,
+   "years": [
+    1936,
+    1937,
+    1938,
+    1939,
+    1940
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "MWFL": {
+   "pages": 5,
+   "men": 135,
+   "years": [
+    1936,
+    1937
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "CAFL": {
+   "pages": 1,
+   "men": 21,
+   "years": [
+    1938
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "NWIFL": {
+   "pages": 2,
+   "men": 64,
+   "years": [
+    1942
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "PCFL": {
+   "pages": 4,
+   "men": 142,
+   "years": [
+    1944,
+    1945,
+    1946
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "ORFU": {
+   "pages": 26,
+   "men": 989,
+   "years": [
+    1946,
+    1947,
+    1948,
+    1949,
+    1950,
+    1951,
+    1952,
+    1953,
+    1954
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "ACFL": {
+   "pages": 54,
+   "men": 2642,
+   "years": [
+    1962,
+    1963,
+    1964,
+    1965,
+    1966,
+    1967,
+    1968,
+    1969,
+    1970,
+    1971,
+    1973
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "UFL": {
+   "pages": 7,
+   "men": 310,
+   "years": [
+    1962,
+    1963,
+    1964
+   ],
+   "held_that_year": 0,
+   "held_ever": true
+  },
+  "SFL": {
+   "pages": 13,
+   "men": 598,
+   "years": [
+    1964,
+    1965
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "COFL": {
+   "pages": 31,
+   "men": 1639,
+   "years": [
+    1965,
+    1967,
+    1968,
+    1969
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "NAFL": {
+   "pages": 15,
+   "men": 682,
+   "years": [
+    1965,
+    1966
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "PFLA": {
+   "pages": 12,
+   "men": 556,
+   "years": [
+    1965,
+    1966,
+    1967
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "TFL": {
+   "pages": 22,
+   "men": 1001,
+   "years": [
+    1966,
+    1967,
+    1968,
+    1970
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "TAFL": {
+   "pages": 4,
+   "men": 166,
+   "years": [
+    1971
+   ],
+   "held_that_year": 0,
+   "held_ever": false
+  },
+  "ARENA": {
+   "pages": 2,
+   "men": 51,
+   "years": [
+    1987,
+    1995
+   ],
+   "held_that_year": 2,
+   "held_ever": true
+  },
+  "WLAF": {
+   "pages": 1,
+   "men": 45,
+   "years": [
+    1995
+   ],
+   "held_that_year": 0,
+   "held_ever": true
+  },
+  "XFL": {
+   "pages": 2,
+   "men": 126,
+   "years": [
+    2001,
+    2023
+   ],
+   "held_that_year": 2,
+   "held_ever": true
+  }
+ },
+ "men_in_leagues_held": 655,
+ "men_in_leagues_not_held": 9088
+}

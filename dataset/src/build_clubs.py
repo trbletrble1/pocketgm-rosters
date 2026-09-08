@@ -598,8 +598,21 @@ def main():
         index_names()
 
     # ---------------------------------------------------------------- 7b. the fandom redirect survey (Fetching's, read from Dropbox; Ryan's ruling: a string source)
-    FANDOM = os.path.expanduser("~/Library/CloudStorage/Dropbox/Football Archive/reports/2026-09-06-fandom-club-name-variants.json")
-    if not os.path.exists(FANDOM): raise SystemExit(f"build_clubs: the fandom survey is missing at {FANDOM}")
+    # DROPBOX IS NOT IN THE SAME PLACE ON EVERY MACHINE: the laptop syncs to
+    # ~/Library/CloudStorage/Dropbox, this mini to a plain ~/Dropbox. This path was
+    # hardcoded to the laptop's, so build_clubs.py could NOT RUN AT ALL on the machine
+    # the archive moved to on 2026-09-07 -- it refused on a missing input every time.
+    # Nothing caught that, because the script is in no chain and no gate runs it.
+    # Same resolution as service/status.py, which is why that one kept working.
+    _tried = [os.path.expanduser(os.path.join(b, "reports",
+                                              "2026-09-06-fandom-club-name-variants.json"))
+              for b in (os.environ.get("FOOTBALL_ARCHIVE_DROPBOX") or "",
+                        "~/Library/CloudStorage/Dropbox/Football Archive",
+                        "~/Dropbox/Football Archive") if b]
+    FANDOM = next((x for x in _tried if os.path.exists(x)), None)
+    if FANDOM is None:
+        raise SystemExit("build_clubs: the fandom survey is missing. Looked in:\n  "
+                         + "\n  ".join(_tried))
     FD = json.load(open(FANDOM))
     club_names_all = collections.defaultdict(set)                       # norm(name) -> club ids bearing it in any year
     for c in clubs:
@@ -769,6 +782,178 @@ def main():
     unresolved["strings"] = sorted(({**{kk: v for kk, v in e.items() if kk != "years"}, "first": min(e["years"]) if e["years"] else None,
                                      "last": max(e["years"]) if e["years"] else None, "n_years": len(e["years"])} for e in coll.values()),
                                    key=lambda r: (r["source"], -(r["n_years"] or 0), r["string"]))
+    # NAMES FOR A CLUB ALREADY HELD. Adds to `names` only -- search_clubs and get_club
+    # read that array, and a name that reaches the table only as a `strings` entry is held
+    # but unfindable. This route CANNOT create a club and refuses if the id is unknown.
+    for spec in DECL.get("NAMES_FOR_A_CLUB_THE_ARCHIVE_ALREADY_HOLDS", {}).get("names", []):
+        tgt = next((c for c in clubs if c["id"] == spec["club_id"]), None)
+        if tgt is None:
+            raise SystemExit(f"NAMES_FOR_A_CLUB_THE_ARCHIVE_ALREADY_HOLDS: no club "
+                             f"{spec['club_id']} in the table. This route adds a NAME to a "
+                             "club that exists; it never creates one.")
+        if any(n["name"] == spec["name"] and n["first"] == spec["first"] for n in tgt["names"]):
+            continue
+        tgt["names"].append({"name": spec["name"], "first": spec["first"],
+                             "last": spec["last"], "kind": spec["kind"],
+                             "source": spec["source"]})
+        if not any(x["string"] == spec["name"] and x["source"] == spec["source"]
+                   for x in tgt["strings"]):
+            tgt["strings"].append({"string": spec["name"], "source": spec["source"],
+                                   "kind": "printed_name" if spec["kind"] == "official" else "alias",
+                                   "league": tgt["leagues"][0]["league"] if tgt["leagues"] else "",
+                                   "first": spec["first"], "last": spec["last"]})
+
+    # A CLUB'S SPAN EXTENDED BY ONE YEAR. Ryan's ruling of 2026-09-08. A league in
+    # scope is in scope for its own seasons, so a club the table already holds may gain
+    # an adjacent year -- but ONLY on corroboration from a source other than the one
+    # proposing it. A span extension on one source's say-so is a way to invent seasons:
+    # the source asserts the club played, nothing contradicts it because nothing else
+    # has looked, and the archive gains a club-season whose only evidence is the
+    # document that asked for it.
+    for spec in DECL.get("SPAN_EXTENSIONS", {}).get("extensions", []):
+        tgt = next((c for c in clubs if c["id"] == spec["club_id"]), None)
+        if tgt is None:
+            raise SystemExit(f"SPAN_EXTENSIONS: no club {spec['club_id']} in the table. "
+                             "This route extends a club that exists; it never creates one.")
+        y = int(spec["year"])
+        if tgt["first"] <= y <= tgt["last"]:
+            raise SystemExit(f"SPAN_EXTENSIONS: {spec['club_id']} already spans {y} "
+                             f"({tgt['first']}-{tgt['last']}); there is nothing to extend.")
+        if y not in (tgt["first"] - 1, tgt["last"] + 1):
+            raise SystemExit(f"SPAN_EXTENSIONS: {y} is not adjacent to "
+                             f"{spec['club_id']}'s span {tgt['first']}-{tgt['last']}. This "
+                             "route moves a span ONE year at a time; reaching further "
+                             "means declaring each year with its own evidence.")
+        corr = [x for x in (spec.get("corroboration") or [])
+                if x.get("source_id") and x["source_id"] != spec.get("proposed_by")]
+        if not corr:
+            raise SystemExit(f"SPAN_EXTENSIONS: {spec['club_id']} {y} is corroborated by "
+                             f"nothing outside {spec.get('proposed_by')!r}. A span "
+                             "extension on one source's say-so invents a season.")
+        if any(not x.get("locator") for x in corr):
+            raise SystemExit(f"SPAN_EXTENSIONS: {spec['club_id']} {y} has a corroboration "
+                             "with no locator. Evidence a reader cannot go and check is "
+                             "an assertion, not evidence.")
+        lg = spec.get("league", "")
+        before = (tgt["first"], tgt["last"])
+        tgt["first"] = min(tgt["first"], y); tgt["last"] = max(tgt["last"], y)
+        seg = tgt["segments"][0] if y < before[0] else tgt["segments"][-1]
+        seg["first"] = min(seg["first"], y); seg["last"] = max(seg["last"], y)
+        for L in seg.get("leagues", []) + tgt.get("leagues", []):
+            if L.get("league") == lg or not lg:
+                L["first"] = min(L["first"], y); L["last"] = max(L["last"], y)
+        for nm in tgt["names"]:
+            if nm["first"] == before[0]: nm["first"] = tgt["first"]
+            if nm["last"] == before[1]: nm["last"] = tgt["last"]
+        # THE ID STAYS. Moving the first year moves the anchor key
+        # `<first code>|<first year>`, and gate_clubs K5 requires that key to point at
+        # this club. Register the new key against the SAME id -- the club has not
+        # become a different club by gaining a season. The old key is left in place so
+        # an id already issued under it stays issued.
+        anchor[f"{seg['code']}|{tgt['first']}"] = tgt["id"]
+        tgt.setdefault("_span_extensions", []).append(
+            {"year": y, "league": lg, "was": list(before),
+             "proposed_by": spec.get("proposed_by"),
+             "proposed_by_locator": spec.get("proposed_by_locator"),
+             "evidence": spec.get("evidence"), "corroboration": corr})
+
+    # A STRING A SOURCE MISPRINTED. Ryan's ruling of 2026-09-08. `San Antonio Brahamas`
+    # is not a name the club bore -- it is a typing error on one website for a club the
+    # table already holds, in a year that club was active. It is registered as a STRING
+    # so the source's page resolves, and never as a NAME, because a name goes into
+    # search_clubs and get_club where a reader could not tell it from the real one. The
+    # source is not corrected: the misprint is held verbatim, the way a name wrong for
+    # its season is recorded as wrong rather than rewritten.
+    for spec in DECL.get("NAMES_A_SOURCE_MISPRINTED", {}).get("strings", []):
+        tgt = next((c for c in clubs if c["id"] == spec["club_id"]), None)
+        if tgt is None:
+            raise SystemExit(f"NAMES_A_SOURCE_MISPRINTED: no club {spec['club_id']} in "
+                             "the table. This route records a misprint OF a club that "
+                             "exists; it never creates one.")
+        y = int(spec["year"])
+        if not (tgt["first"] <= y <= tgt["last"]):
+            raise SystemExit(f"NAMES_A_SOURCE_MISPRINTED: {spec['club_id']} is held "
+                             f"{tgt['first']}-{tgt['last']} and the misprint is dated {y}. "
+                             "A misprint is a SPELLING of a club that was there; if the "
+                             "club was not there that year the question is a season, not "
+                             "a spelling, and this route refuses it.")
+        if any(norm(n["name"]) == norm(spec["printed"]) for n in tgt["names"]):
+            raise SystemExit(f"NAMES_A_SOURCE_MISPRINTED: {spec['printed']!r} is already a "
+                             f"NAME of {spec['club_id']}, so it is not a misprint.")
+        if not any(x["string"] == spec["printed"] and x["source"] == spec["source"]
+                   for x in tgt["strings"]):
+            tgt["strings"].append({"string": spec["printed"], "source": spec["source"],
+                                   "kind": "name_misprinted", "first": y, "last": y,
+                                   "league": tgt["leagues"][0]["league"] if tgt["leagues"] else "",
+                                   "evidence": spec["evidence"]})
+
+    # CLUBS A DOCUMENT NAMES. Ryan's ruling of 2026-09-07: a non-league professional club
+    # enters when a club in scope played it in a documented game. Such a club appears in no
+    # roster, no PFA cell, no transaction and no Wikipedia season page, so before this it
+    # had NO WAY INTO THE TABLE -- the 1926 Los Angeles Tigers were written, served and
+    # invisible to search_clubs. The league is the empty string because none is asserted;
+    # the table already holds six independents that way.
+    for spec in DECL.get("CLUBS_NAMED_BY_A_DOCUMENT", {}).get("clubs", []):
+        y = int(spec["year"]); lg = spec.get("league", "")
+        # ANCHOR IT LIKE ANY OTHER CLUB. gate_clubs K5 requires
+        # id_anchor["<first code>|<first year>"] == the club id, so that an id stays
+        # stable across rebuilds. Appending a club without registering its anchor made
+        # K5 fail on exactly one club -- mine -- which is the gate doing its job.
+        akey = f"{spec['code']}|{spec.get('_anchor_year', y)}"
+        cid = spec.get("club_id") or anchor.get(akey) or f"club-{slug(spec['name'])}-{y}"
+        anchor[akey] = cid
+        prev_doc = next((c for c in clubs if c["id"] == cid and c["origin"] == "document_only"), None)
+        if prev_doc is not None:
+            # SAME DECLARED CLUB, ANOTHER SEASON. Extend its span rather than refusing:
+            # Frankford's 1922 and 1923 independent seasons are one club, declared twice.
+            prev_doc["last"] = max(prev_doc["last"], y)
+            seg = prev_doc["segments"][0]; seg["last"] = max(seg["last"], y)
+            seg["leagues"][0]["last"] = max(seg["leagues"][0]["last"], y)
+            prev_doc["leagues"][0]["last"] = seg["leagues"][0]["last"]
+            prev_doc["names"][0]["last"] = max(prev_doc["names"][0]["last"], y)
+            for st_ in prev_doc["strings"]: st_["last"] = max(st_["last"], y)
+            prev_doc["_document"].setdefault("further_seasons", []).append(
+                {"year": y, "source_record": spec["source_record"], "evidence": spec["evidence"]})
+            continue
+        if any(c["id"] == cid for c in clubs):
+            raise SystemExit(f"CLUBS_NAMED_BY_A_DOCUMENT: {cid} is already in the table and "
+                             "is NOT a document-named club. A document must not create a "
+                             "second copy of a club the archive already holds -- rule on "
+                             "the two before declaring.")
+        ev = f"named by a document, no league asserted: {spec['source_record']}"
+        lgs = [{"league": lg, "first": y, "last": y, "evidence": ev}]
+        clubs.append({
+            "id": cid, "origin": "document_only", "first": y, "last": y,
+            "segments": [{"code": spec["code"], "first": y, "last": y, "leagues": lgs,
+                          "dark_years": [], "_dark_note": ""}],
+            "names": [{"name": spec["name"], "first": y, "last": y, "kind": "official",
+                       "source": spec["source_id"]}],
+            "leagues": lgs, "beyond_the_archive_frontier": False,
+            "lineage": {"kind": "unknown", "links": [], "merger_of": [],
+                        "merger_seasons": {}, "merged_into": {},
+                        "_why": spec.get("lineage", "UNKNOWN. Not linked to anything.")},
+            "strings": [{"string": spec["name_as_printed"], "source": spec["source_id"],
+                         "kind": "printed_name", "league": lg, "first": y, "last": y},
+                        {"string": spec["code"], "source": spec["source_id"],
+                         "kind": "code", "league": lg, "first": y, "last": y}],
+            "_document": {"source_id": spec["source_id"],
+                          "source_record": spec["source_record"],
+                          "evidence": spec["evidence"],
+                          "opponent_in_scope": spec.get("opponent_in_scope"),
+                          **({"_holds_no_men":
+                               "this club's roster is keyed to the GAME, not to a "
+                               "club-season, so it holds no men here by ruling and not "
+                               "by omission"}
+                              if spec.get("roster_is_keyed_to_the_game") else {})}})
+        lc = spec.get("lineage_candidate")
+        if lc:
+            unresolved["lineage_candidates"].append({
+                "kind": "document-named club: a shared nickname and nothing else",
+                "from": [spec["code"], y, spec["name"]],
+                "to": [lc["other"], y, lc["other"]],
+                "men_carried": [0, 0],
+                "why": lc["why_not_a_link"]})
+
     for c in clubs: c["strings"].sort(key=lambda s: (s["source"], s["first"], s["string"]))
     clubs.sort(key=lambda c: (c["first"], c["id"]))
     ids = collections.Counter(c["id"] for c in clubs)

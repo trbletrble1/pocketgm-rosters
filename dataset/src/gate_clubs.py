@@ -4,6 +4,11 @@
   K2  year scoping: 1946 'Buffalo Bisons' is the AAFC club; 1986 'Buffalo Bisons' is the Bills, recorded wrong-for-season
   K3  no claim lost or moved: the builder is not an index writer; the person index is untouched; the declared writer count is 8
   K4  an unmappable string fails loudly: resolve() records it, census() lists it, report() prints it
+  K7  a misprinted string is a SPELLING of a club that was there: it names a club the table
+      holds, in a year that club was active, is not one of that club's own names, and is not
+      any OTHER club's real name that year -- which would make it a false join, not a misprint
+  K8  a span extension is corroborated OUTSIDE the source that proposed it, is adjacent to
+      the span it extends, and every corroboration carries a locator
   K5  internal: unique ids, stable anchors, one club per code-year, every segment year named, merged clubs never chained,
       every string year-scoped inside its club's span, the unresolved list carries reasons and is not truncated
 
@@ -89,7 +94,13 @@ def main():
     check(hashlib.sha256(open(idx_path, "rb").read()).hexdigest() == before, "person index unchanged while the gate ran")
     decl = json.load(open(os.path.join(BASE, "declarations", "person-index-rebuild.json")))
     writers = [decl["builder"]] + [s["script"] for s in decl["chain"]] + list(decl.get("exempt", {}).keys())
-    check(len(writers) == 8 and not any("clubs" in w for w in writers), f"{len(writers)} declared index writers (builder, chain, exempt helper); build_clubs is not among them")
+    # THE PROPERTY IS THAT BUILD_CLUBS IS NOT AN INDEX WRITER. It used to also assert
+    # `len(writers) == 8`, which is a BASELINE and not a property: the count is legitimately
+    # 9 the moment a chain step is added, and adding apply_player_promotions.py failed this
+    # gate for a reason that had nothing to do with the club table. P1 already checks that
+    # every declared chain step writes the index, so the number was redundant as well as
+    # brittle. Count reported, property asserted.
+    check(not any("clubs" in w for w in writers), f"build_clubs is not among the {len(writers)} declared index writers (builder, chain, exempt helper)")
     total_claims = sum(len(p.get("seasons") or {}) for p in IDX.values())
     check(total_claims > 0, f"{total_claims:,} player seasons in the index, none touched")
 
@@ -127,15 +138,63 @@ def main():
     print("K6  no league in scope has sources naming it and no club")
     P = T["per_league"]; art = {"Ohio", "AFL-1926", "AFL-1940", "Arena"}   # the fandom survey's own league labels, not archive tokens
     fam = {"IRFU", "WIFU", "ORFU"}                                        # PFA's pre-1958 Canadian unions: their clubs are held under the archive's CFL codes
+    # NOT LEAGUES AT ALL, declared rather than hardcoded: a token the index needs in the
+    # league position for a club that asserts no league. Its clubs ARE in this table,
+    # under league ''. Read from declarations/clubs.json so the ruling and the gate cannot
+    # drift -- adding one here instead would be a second place to state the same thing.
+    _decl = json.load(open(os.path.join(BASE, "declarations", "clubs.json")))
+    nol = {k for k in (_decl.get("LEAGUE_TOKENS_THAT_ARE_NOT_LEAGUES") or {})
+           if not k.startswith("_")}
     zero = [lg for lg, v in P.items() if v["ZERO_CLUBS"]]
-    unexplained = [lg for lg in zero if lg not in art | fam]
+    unexplained = [lg for lg in zero if lg not in art | fam | nol]
     check(not unexplained, f"{len(P)} leagues; {len(zero)} hold no club and every one is explained "
-          f"({sorted(art & set(zero))} are the fandom survey's labels, {sorted(fam & set(zero))} are family-mapped to CFL with 0 refusals)"
+          f"({sorted(art & set(zero))} are the fandom survey's labels, {sorted(fam & set(zero))} are family-mapped to CFL with 0 refusals, {sorted(nol & set(zero))} are not leagues)"
           if not unexplained else f"leagues with sources but no club: {unexplained}")
     silent = [lg for lg in fam & set(zero) if P[lg]["strings_refused"]]
     check(not silent or all(lg == "ORFU" for lg in silent), f"a family-mapped league refusing strings is reported, not silent: {[(lg, P[lg]['strings_refused']) for lg in silent]}")
     arfl = P.get("ARFL", {})
     check(arfl.get("clubs", 0) > 0 and arfl.get("club_seasons", 0) > 0, f"ARFL: {arfl.get('clubs')} clubs, {arfl.get('club_seasons')} club-seasons, {arfl.get('strings_refused')} strings still refusing")
+    # ---- K7  misprinted strings
+    print("K7  a misprinted string is a spelling of a club that was there")
+    misprints = [(c, x) for c in T["clubs"] for x in c["strings"]
+                 if x.get("kind") == "name_misprinted"]
+    real_names = collections.defaultdict(set)          # normalised name -> club ids
+    for c in T["clubs"]:
+        for n in c["names"]:
+            for y in range(int(n["first"]), int(n["last"]) + 1):
+                real_names[(norm(n["name"]), y)].add(c["id"])
+    bad_year = [f"{x['string']!r} on {c['id']} dated {x['first']} (club held {c['first']}-{c['last']})"
+                for c, x in misprints if not (c["first"] <= int(x["first"]) <= c["last"])]
+    self_name = [f"{x['string']!r} is already a name of {c['id']}"
+                 for c, x in misprints
+                 if any(norm(n["name"]) == norm(x["string"]) for n in c["names"])]
+    other_club = [f"{x['string']!r} is {sorted(real_names[(norm(x['string']), int(x['first']))] - {c['id']})}'s "
+                  "real name that year -- a false join, not a misprint"
+                  for c, x in misprints
+                  if real_names.get((norm(x["string"]), int(x["first"])), set()) - {c["id"]}]
+    check(not bad_year, f"every misprint falls inside its club's span ({len(bad_year)} do not: {bad_year[:3]})")
+    check(not self_name, f"no misprint is also one of the club's own names ({len(self_name)}: {self_name[:3]})")
+    check(not other_club, f"no misprint is another club's real name that year ({len(other_club)}: {other_club[:3]})")
+    if misprints:
+        check(all(x.get("evidence") for _, x in misprints),
+              f"every misprint carries its evidence ({len(misprints)} declared)")
+    # ---- K8  span extensions
+    print("K8  a span extension is corroborated outside the source that proposed it")
+    exts = [(c, e) for c in T["clubs"] for e in (c.get("_span_extensions") or [])]
+    alone = [f"{c['id']} {e['year']}: nothing outside {e.get('proposed_by')!r}"
+             for c, e in exts
+             if not [x for x in e.get("corroboration", [])
+                     if x.get("source_id") and x["source_id"] != e.get("proposed_by")]]
+    noloc = [f"{c['id']} {e['year']}" for c, e in exts
+             if any(not x.get("locator") for x in e.get("corroboration", []))]
+    faraway = [f"{c['id']} {e['year']} onto {e['was']}" for c, e in exts
+               if int(e["year"]) not in (int(e["was"][0]) - 1, int(e["was"][1]) + 1)]
+    check(not alone, f"every extension has corroboration from another source ({len(alone)}: {alone[:3]})")
+    check(not noloc, f"every corroboration carries a locator ({len(noloc)}: {noloc[:3]})")
+    check(not faraway, f"every extension is adjacent to the span it extends ({len(faraway)}: {faraway[:3]})")
+    if exts:
+        check(True, f"{len(exts)} span extension(s) declared: "
+                    + ", ".join(f"{c['id']} {e['year']}" for c, e in exts[:4]))
     print()
     if fails:
         print(f"CLUB TABLE GATE: {len(fails)} FAILURE(S)"); [print("   -", f) for f in fails]; return 1

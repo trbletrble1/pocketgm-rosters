@@ -103,5 +103,176 @@
   "identity": "the segment code is 'ARENA:<normalised printed name>' -- the source's own stable token for the club-season, namespaced so it can never collide with an NFL code. One segment per contiguous run of one name.",
   "lineage": "unchanged and applied harder here, because Arena franchises move constantly: a link needs the nickname carried into the next year AND the men carried (>=4 and >=25% of the smaller roster). Everything else is a candidate or a split, listed.",
   "what_is_NOT_done": "no club is invented from a string. A string that names no attested club-season in its year refuses and is counted. Arena ROSTERS are not held anywhere in this archive or its source cache (the StatsCrew sweep holds 228 club tokens, none of them Arena), so these clubs carry no roster and their men are only those PFA transactions name."
+ },
+ "CLUBS_NAMED_BY_A_DOCUMENT": {
+  "_what": "A club that enters the table because a DOCUMENT the archive holds names it, under Ryan's ruling of 2026-09-07: a non-league professional club enters when a club in scope played it in a documented game, FOR THAT GAME ONLY.",
+  "_why": "build_clubs reads rosters, PFA cells, transactions and Wikipedia season pages. A club that appears in none of those -- because it played one documented game and no source ever gave it a season -- had no way into the table at all. The 1926 Los Angeles Tigers were written, served and INVISIBLE to search_clubs and get_club for exactly this reason. Found 2026-09-07 by Ryan asking why a search returned nothing.",
+  "_the_year_is_the_document_year": "The club-season key for the ROSTER is the game, not a season -- that ruling is unchanged and the roster claims live on the game subject. The club's own entry here is scoped to the calendar year the document was printed in, which is the only year any source names it. These do not conflict: the table already holds six independents with an EMPTY league ('PFA prints no league: an independent'), so a club-year asserting no league is a shape the table supports.",
+  "_no_league_is_asserted": "league is the empty string. The club played a game; nothing here says it played in a competition.",
+  "_a_code_is_not_a_source_code": "DOC: prefixes the code so it can never collide with a StatsCrew or PFA code, the way PFA: does for pfa_only clubs.",
+  "_empty_is_expected": "These clubs hold no men, because their roster is not a club-season. They will appear in archive_code_years_without_players and that is correct, not a fetch gap.",
+  "clubs": [
+   {
+    "code": "DOC:LAT",
+    "name": "Los Angeles Tigers",
+    "year": 1926,
+    "league": "",
+    "source_id": "programme-1926-chi-lat",
+    "source_record": "programme-1926-chi-lat#front-spread",
+    "name_as_printed": "LOS ANGELES TIGERS",
+    "evidence": "OFFICIAL GRID PROGRAM, Chicago Bears vs Los Angeles Tigers, Los Angeles Coliseum, January 16 1926, published by The Frank Meline Co. The club's name is printed on the front spread and its 28 men on page seven.",
+    "opponent_in_scope": "NFL|1925|CHI -- the Chicago Bears, whom the archive holds",
+    "lineage": "UNKNOWN. Not linked to anything.",
+    "lineage_candidate": {
+     "other": "club-san-francisco-tigers-1926",
+     "why_not_a_link": "a shared nickname in the same calendar year, in a league (PCFL) this club is not stated to have played in. The resemblance is suggestive and is not evidence. No men are shared, because this club has no men in the table at all, so the archive's own test for a relocation -- do the men carry over -- cannot even be run."
+    },
+    "roster_is_keyed_to_the_game": true
+   },
+   {
+    "code": "DOC:FYJ-IND",
+    "name": "Frankford Yellow Jackets",
+    "year": 1922,
+    "league": "",
+    "source_id": "ghostsofthegridiron",
+    "source_record": "ghostsofthegridiron#Yellowjackets_1922_roster.htm",
+    "name_as_printed": "Frankford Yellow Jackets",
+    "evidence": "Fenton's 1922 roster page: 27 men and head coach Heinie Miller. The page's own title is 'Player Roster', not 'NFL Team Roster' as his 1924-31 pages are -- the distinction is the author's, not mine.",
+    "opponent_in_scope": null,
+    "lineage": "UNKNOWN. NOT linked to club-frankford-yellow-jackets-1924.",
+    "lineage_candidate": {
+     "other": "club-frankford-yellow-jackets-1924",
+     "why_not_a_link": "The archive holds the Frankford NFL club from 1924. Whether these independent seasons are the same franchise is a LINEAGE QUESTION and Ryan ruled it must not be assumed. What is true and not sufficient: same name, same city, contiguous years, and five men carry over (Dayhoff, Bull Lowe, Herb Stein, Russ Stein, Whitey Thomas). What is missing is the archive's own mechanical test -- a source stating the continuation, or a code the sources carry across the boundary. Five men moving between two Philadelphia clubs in 1923-24 is not that."
+    },
+    "club_id": "club-frankford-yellow-jackets-1922",
+    "_club_id_note": "stated, not derived from the year, because this club has TWO declared seasons and deriving the id per entry would make two clubs out of one.",
+    "_anchor_year": 1922,
+    "roster_is_keyed_to_the_game": false
+   },
+   {
+    "code": "DOC:FYJ-IND",
+    "name": "Frankford Yellow Jackets",
+    "year": 1923,
+    "league": "",
+    "source_id": "ghostsofthegridiron",
+    "source_record": "ghostsofthegridiron#Yellowjackets_1923_roster.htm",
+    "name_as_printed": "Frankford Yellow Jackets",
+    "evidence": "Fenton's 1923 roster page: 20 men and head coach Lou Little. The page's own title is 'Player Roster', not 'NFL Team Roster' as his 1924-31 pages are -- the distinction is the author's, not mine.",
+    "opponent_in_scope": null,
+    "lineage": "UNKNOWN. NOT linked to club-frankford-yellow-jackets-1924.",
+    "lineage_candidate": {
+     "other": "club-frankford-yellow-jackets-1924",
+     "why_not_a_link": "The archive holds the Frankford NFL club from 1924. Whether these independent seasons are the same franchise is a LINEAGE QUESTION and Ryan ruled it must not be assumed. What is true and not sufficient: same name, same city, contiguous years, and five men carry over (Dayhoff, Bull Lowe, Herb Stein, Russ Stein, Whitey Thomas). What is missing is the archive's own mechanical test -- a source stating the continuation, or a code the sources carry across the boundary. Five men moving between two Philadelphia clubs in 1923-24 is not that."
+    },
+    "club_id": "club-frankford-yellow-jackets-1922",
+    "_club_id_note": "stated, not derived from the year, because this club has TWO declared seasons and deriving the id per entry would make two clubs out of one.",
+    "_anchor_year": 1922,
+    "roster_is_keyed_to_the_game": false
+   }
+  ],
+  "_roster_is_keyed_to_the_game": "TRUE only where the club enters for a documented GAME and has no club-season -- the 1926 Los Angeles Tigers. It is what makes a club EMPTY BY RULING rather than a gap. Frankford's 1922-23 independent seasons are real club-seasons with real men on them and must NOT carry it: they were briefly reported as 'empty by ruling' while holding 45 men, because the flag was written for one club and inherited by every club that used the same declaration route."
+ },
+ "NAMES_FOR_A_CLUB_THE_ARCHIVE_ALREADY_HOLDS": {
+  "_what": "Additional printed names for a club the table ALREADY holds. One club, several names. This route can only ADD A NAME; it can never create a club, and it refuses if the club_id is not already in the table.",
+  "_why": "search_clubs and get_club read the `names` array. A name that reaches the table only as a `strings` entry is held but NOT FINDABLE: 'Pacific Coast Wildcats' and 'Los Angeles Wildcats' were both already in this club's strings from the fandom survey, and search_clubs('Pacific Coast Wildcats', 1926) returned nothing. Found 2026-09-07 while ingesting a programme that prints the club under that very name on its cover.",
+  "_a_string_is_not_a_name": "strings are what sources called a club, collected so a lookup can resolve them. names are what the club was called, scoped to years. Promoting a string to a name is a judgement about the club, not about the source, which is why it is declared here rather than derived.",
+  "names": [
+   {
+    "club_id": "club-wilson-s-wildcats-1926",
+    "name": "Pacific Coast Wildcats",
+    "first": 1926,
+    "last": 1926,
+    "kind": "official",
+    "source": "programme-1926-nyy-pcw",
+    "evidence": "printed on the cover AND on the team-photograph caption of the N. Y. Football Yankees v Pacific Coast Wildcats programme, Yankee Stadium, 24 October 1926. A document the club played under, not a later reference work."
+   },
+   {
+    "club_id": "club-wilson-s-wildcats-1926",
+    "name": "Los Angeles Wildcats",
+    "first": 1926,
+    "last": 1926,
+    "kind": "alias",
+    "source": "fandom_redirect",
+    "evidence": "contemporary and later usage; already held as a string on this club from the 2026-09-06 fandom club-name survey, matched on the nickname."
+   },
+   {
+    "club_id": "club-wilson-s-wildcats-1926",
+    "name": "Los Angeles Wilson Wildcats",
+    "first": 1926,
+    "last": 1926,
+    "kind": "alias",
+    "source": "fandom_redirect",
+    "evidence": "contemporary usage; already held as a string on this club from the same survey, by its prose route."
+   },
+   {
+    "club_id": "club-birmingham-thunderbolts-2001",
+    "name": "Birmingham Bolts",
+    "first": 2001,
+    "last": 2001,
+    "kind": "alias",
+    "source": "pfa_team_season_page",
+    "evidence": "Pro Football Archives prints the club as `Birmingham Bolts` in the H1 of its 2001 XFL team-season page, 55 men on the roster table. The archive holds the same club-season as `Birmingham Thunderbolts` with 57 men. One club, two printed names -- the Newark Bears and Demons shape. Ruled by Ryan, 2026-09-08. An ALIAS and not an official name: PFA is a reference work, not a document the club played under, which is what made the Pacific Coast Wildcats' cover name official and this one not."
+   }
+  ]
+ },
+ "LEAGUE_TOKENS_THAT_ARE_NOT_LEAGUES": {
+  "_what": "Tokens that appear in the LEAGUE position of an index season key but are not competitions. They hold no club in this table because their clubs are held with an EMPTY league, which is how the table records an independent.",
+  "_why": "build_person_index writes a season key as (league, year, club) and has no way to write an empty league. A club that asserts none therefore needs a token, and the token then looks to gate_clubs K6 like a league with sources and no club. It is not. Declared here rather than hardcoded in the gate.",
+  "IND": "independent, no league asserted. Frankford Yellow Jackets 1922-1923. Their clubs are in this table under league '' -- the same shape as the six PFA independents -- and the two keys are joined on (year, code) by anything that walks both."
+ },
+ "NAMES_A_SOURCE_MISPRINTED": {
+  "_what": "A string a source MISSPELT for a club the table already holds, in a year that club was active. It is registered so the source's page RESOLVES, and it is registered as a misprint so nothing reads it as a name the club bore.",
+  "_why_not_a_name": "`names` is what the club was called. `Brahamas` is not what anyone called the San Antonio Brahmas; it is a typing error on one website. Promoting it to a name would put it in search_clubs and get_club beside the real one, and a reader would have no way to tell which the club answered to.",
+  "_held_as_printed": "The source is NOT corrected. The misprint is recorded verbatim, with the club it belongs to, exactly as a wrong-for-season name is recorded as wrong rather than rewritten. Ruled by Ryan, 2026-09-08.",
+  "_the_test_it_must_pass": "The club must already be in the table AND active in that year. A misprint is a spelling of a club that was there; if the club was not there that year the question is a season, not a spelling, and this route refuses it.",
+  "strings": [
+   {
+    "club_id": "club-san-antonio-brahmas-2023",
+    "printed": "San Antonio Brahamas",
+    "year": 2023,
+    "source": "pfa_team_season_page",
+    "evidence": "PFA's 2023 XFL team-season page, H1 `2023 San Antonio Brahamas (XFL)`, 71 men. The table holds San Antonio Brahmas 2023-2024. `Brahamas` for `Brahmas`."
+   },
+   {
+    "club_id": "club-memphis-pharaohs-1995",
+    "printed": "Memphis Pharoahs",
+    "year": 1995,
+    "source": "pfa_team_season_page",
+    "evidence": "PFA's 1995 Arena team-season page, 28 men. The table holds Memphis Pharaohs 1995. `Pharoahs` for `Pharaohs`."
+   },
+   {
+    "club_id": "club-chicago-bruisers-1987",
+    "printed": "Chicago Brusiers",
+    "year": 1987,
+    "source": "pfa_team_season_page",
+    "evidence": "PFA's 1987 Arena team-season page, 23 men. The table holds Chicago Bruisers 1987. `Brusiers` for `Bruisers`."
+   }
+  ]
+ },
+ "SPAN_EXTENSIONS": {
+  "_what": "A club the table already holds, played a season in a year just outside its recorded span. This route moves the span by ONE year at a time. It never creates a club and never reaches a year that is not adjacent to what is already held.",
+  "_ruled": "Ryan, 2026-09-08, on the WLAF 1995 Scottish Claymores: a league in scope is in scope for its own seasons.",
+  "_the_evidence_required": "CORROBORATION FROM A SOURCE OTHER THAN THE ONE PROPOSING THE EXTENSION. A span extension on one source's say-so is a way to invent seasons: the source asserts the club played, nothing contradicts it because nothing else has looked, and the archive gains a club-season whose only evidence is the document that asked for it. At least one corroboration must name a different source_id, and each carries its locator so a reader can go and disagree.",
+  "_one_year_at_a_time": "The year must be adjacent to the club's current span -- first-1 or last+1. A club held 1996-2004 cannot gain 1970 in one step. Reaching further means declaring each year with its own evidence, which is the point: an extent inferred from an incomplete set is the error this archive has already made once.",
+  "_what_it_does_NOT_do": "It does not create the roster. Extending the span makes the club-season expressible; the men come from an ingest, separately, with their own claims and their own source records.",
+  "extensions": [
+   {
+    "club_id": "club-scottish-claymores-1996",
+    "year": 1995,
+    "league": "WLAF",
+    "proposed_by": "pro-football-archives",
+    "proposed_by_locator": "1995wlafsco.html",
+    "evidence": "PFA's 1995 WLAF team-season page, H1 `1995 Scottish Claymores (WLAF)`, 45 men on the roster table. The club table holds the Claymores 1996-2004; 1995 is adjacent.",
+    "corroboration": [
+     {
+      "source_id": "statscrew",
+      "locator": "statscrew/build1950/P_p-ismaihes001.html",
+      "quote": "Hesham Ismail played from 1994 to 1995 during his career with the Scottish Claymores and Tampa Bay Storm.",
+      "note": "A source other than PFA, on disk since the StatsCrew sweep. It places a named man on this club in 1995. The archive does not hold Hesham Ismail as a person -- the page is acquired and this part of it unread -- so the corroboration is a DOCUMENT, cited by locator, not a claim."
+     }
+    ],
+    "league_continuity": "The archive holds WLAF player rosters for Barcelona Dragons and Frankfurt Galaxy in 1991 and 1992 and COACHES claims for the same clubs from 1995 onwards, so it already follows this league across the hiatus. That is context, not the corroboration: it attests the LEAGUE ran in 1995, not that this club did."
+   }
+  ]
  }
 }
