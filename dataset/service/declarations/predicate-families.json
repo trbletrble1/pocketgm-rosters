@@ -62,11 +62,13 @@
     "college",
     "pfa.college",
     "guide.COLLEGE FOOTBALL",
-    "guide.COLLEGE (HEADER)"
+    "guide.COLLEGE (HEADER)",
+    "ghosts.college"
    ],
    "reading": "src/readings.py college",
    "ruled": "Ryan, 2026-09-07",
-   "_pfa_college_season_is_NOT_here": "pfa.college_season answers WHICH YEARS he attended, not which school. A different question."
+   "_pfa_college_season_is_NOT_here": "pfa.college_season answers WHICH YEARS he attended, not which school. A different question.",
+   "_ghosts": "added 2026-09-08. Fenton's colleges were first written only inside the value dict of ghosts.roster_as_printed, so the family never saw them and the archive's first non-Neft disagreement was invisible to list_contested -- it existed only in a report. A disagreeing value is written as a CLAIM the family can see, or it is not held."
   },
   "birth_place": {
    "kind": "value",

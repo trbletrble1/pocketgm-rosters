@@ -702,13 +702,20 @@ def _differ(field, rows):
     be read takes no part -- it can neither corroborate nor contradict -- so it is
     excluded here, kept on the panel verbatim, and counted by gate_readings.
     """
-    seen, unread = set(), 0
-    for r in rows:
-        rd = r.get("reads_as") or readings.read(field, r["value"])
-        if rd is None:
-            if readings.READERS.get(field): unread += 1; continue
-            rd = json.dumps(r["value"], sort_keys=True)       # no reader: compare as written
-        seen.add(rd)
+    if readings.READERS.get(field):
+        # THE SHARED GROUPING, not a set of readings. A reading can be a DICT -- the
+        # draft reading is {year, league, kind, numbering, ...} -- and two dicts that
+        # `same()` calls one fact are not equal and are not hashable. A set here
+        # therefore both crashed and, before the reading became a dict, silently
+        # counted `{year, round, overall}` against `{year, round, overall, league}` as
+        # a disagreement. RV.group is the one implementation of this rule.
+        import sys as _sys, os as _os
+        _sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)),
+                                          "..", "service"))
+        import reading_view as RV
+        groups, unreadable = RV.group(field, [r["value"] for r in rows])
+        return len(groups) > 1
+    seen = {json.dumps(r["value"], sort_keys=True) for r in rows}   # no reader: as written
     return len(seen) > 1
 
 

@@ -37,6 +37,8 @@ import os, sys, json, collections
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 import readings
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "service"))
+import reading_view as RV
 from bio_select import Tables, vitals
 
 DECL = json.load(open(os.path.join(BASE, "declarations", "readings.json"), encoding="utf-8"))
@@ -74,15 +76,17 @@ def sweep(T):
         for field, rows in V.items():
             if field in ("disagreements", "position") or not readings.READERS.get(field):
                 continue
-            reads, un = set(), 0
             for r in rows:
                 total[field] += 1
                 key = json.dumps(r["value"], sort_keys=True)   # NOT str(): a dict must
                 forms[field][key] += 1                          # stay a dict for the reader
                 sample.setdefault((field, key), r["value"])
-                rd = readings.read(field, r["value"])
-                if rd is None: un += 1
-                else: reads.add(rd)
+            # THE SHARED GROUPING. A reading can be a dict -- the draft reading is one
+            # -- and dicts are neither hashable nor equal when `same()` calls them one
+            # fact. This was a private set; it is now the one implementation, which is
+            # the third place that rule has had to be pulled back into RV.group.
+            groups, unreadable = RV.group(field, [r["value"] for r in rows])
+            n_reads, un = len(groups), len(unreadable)
             unread[field] += un
             if field not in (V.get("disagreements") or []): continue
             # One value cannot disagree with itself. A single-row field flagged here
@@ -92,7 +96,7 @@ def sweep(T):
             # not this gate's business. Counted below, never silently passed over.
             if len(rows) < 2:
                 single.append((g, field)); continue
-            if len(reads) <= 1 and not un:
+            if n_reads <= 1 and not un:
                 collapsed.append((g, T.people[g].get("name"), field, [r["value"] for r in rows]))
     return ids, collapsed, single, unread, total, forms, sample
 

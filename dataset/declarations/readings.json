@@ -57,27 +57,27 @@
     "6:1",
     "6/1\"",
     "6'1\"",
-    "6’1”",
+    "6\u20191\u201d",
     "61\"",
     "6 feet 1",
     "5 ft. 11in,",
     "5ft.10in.",
     "6",
-    "6’"
+    "6\u2019"
    ],
    "refused_by_example": [
     "6/114\"",
     "6:134",
     "6:142",
-    "6/112”",
-    "5/1112”",
-    "6°1%2\"",
+    "6/112\u201d",
+    "5/1112\u201d",
+    "6\u00b01%2\"",
     "6'V2\"",
-    "5’11!4”",
-    "63!”",
-    "671”",
-    "5’10!2,”",
-    "61°",
+    "5\u201911!4\u201d",
+    "63!\u201d",
+    "671\u201d",
+    "5\u201910!2,\u201d",
+    "61\u00b0",
     "& feet 3"
    ],
    "why_refused": "A fraction mark the scanner mangled, or more digits than a height has. 6/114\" is not 6-11 and 6:142 is not 6-14; reading them would be a guess. 174 of 189 printed heights read, 15 refused."
@@ -105,8 +105,8 @@
    "why_refused": "Only a spelled-out month is read. A bare numeric date is never reordered: 2001-12-10 and 2001-10-12 stay two different dates, because deciding which number is the day would be a correction, not a reading."
   },
   "draft": {
-   "reads_to": "YYYY r{round} p{overall_pick}",
-   "the_club_is_not_part_of_the_reading": "An overall pick number is unique within a draft year, so year+round+overall IS the selection; the club follows from the pick rather than being an independent fact about it. That is what makes PFR's TAM and nflverse's TB one selection rather than two. Both strings stay on the panel verbatim -- the reading decides only whether two records are the same selection, never what is displayed.",
+   "reads_to": "{year, league, kind, numbering} with EITHER {round, overall} OR {order} -- a DICT, not a string",
+   "the_club_is_not_part_of_the_reading": "Still true, and for the original reason: the club follows from the pick within a draft, which is what makes PFR's TAM and nflverse's TB one selection. What was wrong was believing the pick alone identified the draft.",
    "accepted_forms_by_example": [
     "9th round (80th overall) 1940 New York Giants",
     "5th round (36th overall) 1941 New York Giants",
@@ -114,7 +114,23 @@
    ],
    "why_this_is_not_a_club_table_job": "The club table resolves the archive's own vocabulary (GB, SF, NE, TB, KC) but not PFR's (GNB, SFO, NWE, TAM, KAN), and LV/LAC/LA do not resolve either. Teaching it a second source's draft vocabulary is a separate ruling; comparing selections by pick number does not need one.",
    "_object_forms_also_read": "PFR's and nflverse's {year, round, overall_pick, team} and PFA's draft_selection object both read by their year/round/overall_pick fields. They are not listed under accepted_forms_by_example because that list is checked as literal strings by gate_readings R1.",
-   "_the_overall_pick_ordinal_is_optional": "Pro Football Archives prints both '(80th overall)' and '(86 overall)'. Requiring the suffix left five of its own selections unreadable. Widened 2026-09-07 under the same principle as gate_readings R3: a reader that cannot read the archive hides real disagreements while claiming to remove false ones."
+   "_the_overall_pick_ordinal_is_optional": "Pro Football Archives prints both '(80th overall)' and '(86 overall)'. Requiring the suffix left five of its own selections unreadable. Widened 2026-09-07 under the same principle as gate_readings R3: a reader that cannot read the archive hides real disagreements while claiming to remove false ones.",
+   "_CORRECTED_2026_09_08": {
+    "what_was_wrong": "This entry read to `YYYY r{round} p{overall}` and justified excluding the club with: 'An overall pick number is unique within a draft year, so year+round+overall IS the selection.' THAT PREMISE IS FALSE.",
+    "measured": "Across the whole range, 1936-2025: 72 of 90 years hold more than one draft numbering its picks from 1, and one year holds five. 1950 has an NFL draft and an AAFC allocation draft -- overall pick 1 is Leon Hart in one and Chet Mutryn in the other. 1965 has NFL, AFL and CFL.",
+    "the_fix": "league and kind are IN THE READING, where a consumer has to see them, instead of inside a value where they can be ignored. They were always present as league_from_filename and draft_kind; nothing was obliged to look.",
+    "silence_is_not_a_difference": "league and kind are OMITTED when unknown, never filled with a placeholder. reading_view.same() compares dict readings on the fields BOTH carry, so a record stating no league still matches one that does -- which is right, because 135 contested rows are a source declining to name the league, not a second draft. A placeholder would turn that silence into a claim.",
+    "what_it_cost": "5 people had two genuinely different selections -- one AFL and one NFL, or NFL and USFL -- read identically and folded into one, which is the direction that loses information silently. And 1,783 contested rows were two TRUE selections recorded as a disagreement: a man drafted by both the AAFC and the NFL was drafted twice, and that is a fact, not a conflict."
+   },
+   "_ORDER_RULING_2026_09_08": {
+    "ruled_by": "Ryan, 8 September 2026",
+    "the_rule": "An expansion, allocation or dispersal selection has an ORDER and no round. The reading carries `order`; `round` and `overall` are ABSENT.",
+    "why_absent_and_not_zero_or_null": "Absent is the only one of the three that means the document does not say. A zero would sort as a round; a null is a value and would compare as one. PFA prints these pages with the columns `Team | Player | Pos | College | Notes` -- there is no Round column and no Overall column on them at all.",
+    "why_a_numbering_FIELD_was_also_needed": "Omitting round and overall is not sufficient, and the gate proved it before this was written. `same()` compares the fields BOTH readings carry, so an ordered selection and a numbered one would have shared only year and league and been called ONE selection -- the same rule that rightly protects an unstated league would have joined a 1960 AFL allocation pick to a 1960 AFL draft pick. `numbering` is stated by both forms and by neither silently, so the difference is compared instead of assumed away.",
+    "what_it_covers": "602 pfa.draft_allocation claims and 91 pfa.draft_selection claims now read, where they read as nothing before. Roughly 1,631 further rounds-free selections sit on 26 cached PFA pages, unread.",
+    "what_it_does_NOT_cover": "461 pfa.draft claims are printed strings naming a SITTING and no number at all -- `First Selections 1960 Dallas Texans`. They have no round, no pick and no order, so they stay unreadable. An order invented from row position would be a fact the document does not contain.",
+    "still_needing_a_ruling": "`pfa.draft_allocation` is not a member of the draft family, so nothing downstream reads these claims yet. MEASURED, not done: adding it would create 1,995 ordered-against-existing pairs across 580 people and fold NONE of them. That is Ryan's call, because family membership changes what the contested table holds."
+   }
   },
   "college": {
    "reads_to": "the school, lower-cased, abbreviation expanded, the word University dropped",
@@ -140,10 +156,438 @@
    "why_refused": "a placeholder is not a school. An empty or 'none' value is left as printed and takes no part.",
    "St_IS_EXPANDED_ONLY_AS_THE_LAST_WORD": "Ohio St. is Ohio State; St. Mary's is Saint Mary's. Position separates them and position is all that is used -- reading St. Mary's as State Mary's would be a guess wearing a reading's clothes.",
    "College_IS_NEVER_DROPPED": "Boston College and Boston University are two schools. Dropping both words would make them one, and a false agreement is worse than the two disagreements it hides. Only University goes.",
-   "_the_stated_limit": "A value carrying a trailing attendance year -- 'University of Tulsa (1940-42).', the LA Dons guide's house style -- does not collapse against 'Tulsa'. The year is not part of the school's name, but removing it is a second reading and was not ruled. 26 guide values are affected; they stay recorded as disagreements until someone rules on it."
+   "_the_stated_limit": "A value carrying a trailing attendance year -- 'University of Tulsa (1940-42).', the LA Dons guide's house style -- does not collapse against 'Tulsa'. The year is not part of the school's name, but removing it is a second reading and was not ruled. 26 guide values are affected; they stay recorded as disagreements until someone rules on it.",
+   "COLLEGE_SYNONYMS": {
+    "_ruled": "Ryan, 2026-09-07: a college abbreviation folds only when it has EXACTLY ONE possible school. Where two real schools compete for the same short form it does not fold, and the pair stays a disagreement -- which is correct.",
+    "_built_from": "the 28 reading-gap rows measured on the Ghosts of the Gridiron ingest, 2026-09-08 -- ten distinct pairs. NOT from a general list of American colleges: a list nobody measured is a list nobody can defend. EXTENDED 2026-09-08 from the 18,279 college disagreements measured between PFA's 2,926 team-season roster tables and the archive -- 662 distinct one-to-one pairs over 14,615 rows. Every fold and every refusal is in src/measure_college_synonyms.py and build-reports/college-synonyms.json, with the evidence that decided it.",
+    "_the_shape_it_refuses": "`Miami` could be Miami of Ohio or Miami in Florida and both played football. Same shape as the state rule's refusal of a lone `LA`, and the same shape as the college reading's own refusal to drop `College` -- Boston College and Boston University are two schools.",
+    "refuses": {
+     "georgetown vs georgetown dc": "Georgetown University in DC and Georgetown College in Kentucky BOTH played football. The archive's own value writes `(DC)` precisely to distinguish them, which is evidence the ambiguity is real and not theoretical.",
+     "cornell vs cornell col": "Cornell University in New York and Cornell College in Iowa both played football. The archive writes `Cornell Col.` to separate them.",
+     "nebraska vs nebraska wesleyan": "Nebraska and Nebraska Wesleyan are two different schools, both of which played football. A prefix is not an abbreviation.",
+     "lebanon vs lebanon valley": "THE CLOSEST CALL, and refused for consistency rather than certainty. `Lebanon` is a prefix of `Lebanon Valley`, which is exactly the shape of `Nebraska` against `Nebraska Wesleyan` -- and there the prefix is a different school. Folding one prefix while refusing the other would mean the rule was really 'fold where I happen to know of no competitor', which is not a rule. Stays a disagreement.",
+     "new york vs nyu": "the archive also holds 'new york tech' beside 'new york', so the long form does not name exactly one school [62 rows measured]",
+     "central florida vs ucf": "the archive also holds 'central florida cc' beside 'central florida', so the long form does not name exactly one school [24 rows measured]",
+     "mississippi college vs mississippi": "the archive also holds 'mississippi delta cc', 'mississippi gulf coast cc', 'mississippi gulf coast j c' beside 'mississippi', so the short form does not name exactly one school [15 rows measured]",
+     "texas a&m vs texas": "the archive also holds 'texas - arlington', 'texas - el paso', 'texas a & m college' beside 'texas', so the short form does not name exactly one school [14 rows measured]",
+     "northwestern state vs northwestern": "the archive also holds 'northwestern mississippi cc', 'northwestern state-louisiana' beside 'northwestern', so the short form does not name exactly one school [12 rows measured]",
+     "central washington vs cwu": "the archive also holds 'central washington state' beside 'central washington', so the long form does not name exactly one school [2 rows measured]",
+     "western new mexico vs west new mexico": "the archive also holds 'western new mexico state' beside 'western new mexico', so the long form does not name exactly one school [4 rows measured]",
+     "san diego state vs san diego": "the archive also holds 'san diego jc' beside 'san diego', so the short form does not name exactly one school [1 rows measured]",
+     "northland vs north": "the archive also holds 'north bay roughriders int', 'north bay tiger-cats', 'north carolina' beside 'north', so the short form does not name exactly one school [1 rows measured]"
+    },
+    "folds": {
+     "penn": {
+      "to": "pennsylvania",
+      "why": "Penn is the University of Pennsylvania and nothing else. Penn State keeps `state` in the reading, so the two cannot collide."
+     },
+     "pitt": {
+      "to": "pittsburgh",
+      "why": "Pitt is the University of Pittsburgh and nothing else."
+     },
+     "franklin & marshal": {
+      "to": "franklin & marshall",
+      "why": "a one-letter printed error for the only Franklin & Marshall there is. Fenton's spelling is held as printed; only the reading folds."
+     },
+     "haskell": {
+      "to": "haskell indian",
+      "why": "one institution under two names -- Haskell Institute, later Haskell Indian Nations University. A rename, not two schools."
+     },
+     "detroit": {
+      "to": "detroit mercy",
+      "why": "one institution: the University of Detroit became the University of Detroit Mercy in 1990. A 1920s player attended the same school under its earlier name."
+     },
+     "w va wesleyan": {
+      "to": "west virginia wesleyan",
+      "why": "a pure abbreviation of one school's full name."
+     },
+     "usc": {
+      "to": "southern california",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'usc'.",
+      "measured_rows": 1912
+     },
+     "lsu": {
+      "to": "louisiana state",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'lsu'.",
+      "measured_rows": 1791
+     },
+     "boston col": {
+      "to": "boston college",
+      "why": "the last word shortened, 'college' to 'col', and no second school in the corpus competes for 'boston col'.",
+      "measured_rows": 960
+     },
+     "smu": {
+      "to": "southern methodist",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'smu'.",
+      "measured_rows": 614
+     },
+     "tcu": {
+      "to": "texas christian",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'tcu'.",
+      "measured_rows": 576
+     },
+     "byu": {
+      "to": "brigham young",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'byu'.",
+      "measured_rows": 530
+     },
+     "southern miss": {
+      "to": "southern mississippi",
+      "why": "the last word shortened, 'mississippi' to 'miss', and no second school in the corpus competes for 'southern miss'.",
+      "measured_rows": 439
+     },
+     "ubc": {
+      "to": "british columbia",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'ubc'.",
+      "measured_rows": 330
+     },
+     "bowling green": {
+      "to": "bowling green state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'bowling green'.",
+      "measured_rows": 279
+     },
+     "unlv": {
+      "to": "nevada-las vegas",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'unlv'.",
+      "measured_rows": 210
+     },
+     "north carolina a&t": {
+      "to": "north carolina a&t state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'north carolina a&t'.",
+      "measured_rows": 177
+     },
+     "prairie view": {
+      "to": "prairie view a&m",
+      "why": "the long form with the generic word 'a&m' dropped, and no second school in the corpus competes for 'prairie view'.",
+      "measured_rows": 102
+     },
+     "missouri southern": {
+      "to": "missouri southern state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'missouri southern'.",
+      "measured_rows": 48
+     },
+     "mississippi col": {
+      "to": "mississippi college",
+      "why": "the last word shortened, 'college' to 'col', and no second school in the corpus competes for 'mississippi col'.",
+      "measured_rows": 33
+     },
+     "vmi": {
+      "to": "virginia military institute",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'vmi'.",
+      "measured_rows": 26
+     },
+     "stephen f austin": {
+      "to": "stephen f austin state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'stephen f austin'.",
+      "measured_rows": 25
+     },
+     "utep": {
+      "to": "texas-el paso",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'utep'.",
+      "measured_rows": 25
+     },
+     "american int": {
+      "to": "american international",
+      "why": "the last word shortened, 'international' to 'int', and no second school in the corpus competes for 'american int'.",
+      "measured_rows": 23
+     },
+     "middle tennessee": {
+      "to": "middle tennessee state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'middle tennessee'.",
+      "measured_rows": 16
+     },
+     "missouri western": {
+      "to": "missouri western state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'missouri western'.",
+      "measured_rows": 15
+     },
+     "southeast missouri": {
+      "to": "southeast missouri state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'southeast missouri'.",
+      "measured_rows": 11
+     },
+     "uab": {
+      "to": "alabama-birmingham",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'uab'.",
+      "measured_rows": 11
+     },
+     "colorado col": {
+      "to": "colorado college",
+      "why": "the last word shortened, 'college' to 'col', and no second school in the corpus competes for 'colorado col'.",
+      "measured_rows": 9
+     },
+     "pei": {
+      "to": "prince edward island",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'pei'.",
+      "measured_rows": 9
+     },
+     "austin peay": {
+      "to": "austin peay state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'austin peay'.",
+      "measured_rows": 7
+     },
+     "vcu": {
+      "to": "virginia commonwealth",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'vcu'.",
+      "measured_rows": 7
+     },
+     "grambling": {
+      "to": "grambling state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'grambling'.",
+      "measured_rows": 4
+     },
+     "central connecticut": {
+      "to": "central connecticut state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'central connecticut'.",
+      "measured_rows": 4
+     },
+     "ulm": {
+      "to": "louisiana-monroe",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'ulm'.",
+      "measured_rows": 3
+     },
+     "rpi": {
+      "to": "rensselaer polytechnic institute",
+      "why": "the initialism of the long form, with or without the University, and no second school in the corpus competes for 'rpi'.",
+      "measured_rows": 3
+     },
+     "southern connecticut": {
+      "to": "southern connecticut state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'southern connecticut'.",
+      "measured_rows": 3
+     },
+     "southwestern oklahoma": {
+      "to": "southwestern oklahoma state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'southwestern oklahoma'.",
+      "measured_rows": 2
+     },
+     "grand valley": {
+      "to": "grand valley state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'grand valley'.",
+      "measured_rows": 2
+     },
+     "western connecticut": {
+      "to": "western connecticut state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'western connecticut'.",
+      "measured_rows": 1
+     },
+     "saginaw valley": {
+      "to": "saginaw valley state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'saginaw valley'.",
+      "measured_rows": 1
+     },
+     "framingham": {
+      "to": "framingham state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'framingham'.",
+      "measured_rows": 1
+     },
+     "east michigan": {
+      "to": "eastern michigan",
+      "why": "word 1 shortened, 'eastern' to 'east', and no second school in the corpus competes for 'east michigan'.",
+      "measured_rows": 203
+     },
+     "west michigan": {
+      "to": "western michigan",
+      "why": "word 1 shortened, 'western' to 'west', and no second school in the corpus competes for 'west michigan'.",
+      "measured_rows": 188
+     },
+     "tenn-chattanooga": {
+      "to": "tennessee-chattanooga",
+      "why": "word 1 shortened, 'tennessee' to 'tenn', and no second school in the corpus competes for 'tenn-chattanooga'.",
+      "measured_rows": 147
+     },
+     "east kentucky": {
+      "to": "eastern kentucky",
+      "why": "word 1 shortened, 'eastern' to 'east', and no second school in the corpus competes for 'east kentucky'.",
+      "measured_rows": 146
+     },
+     "west illinois": {
+      "to": "western illinois",
+      "why": "word 1 shortened, 'western' to 'west', and no second school in the corpus competes for 'west illinois'.",
+      "measured_rows": 134
+     },
+     "ark-pine bluff": {
+      "to": "arkansas-pine bluff",
+      "why": "word 1 shortened, 'arkansas' to 'ark', and no second school in the corpus competes for 'ark-pine bluff'.",
+      "measured_rows": 126
+     },
+     "middle tenn state": {
+      "to": "middle tennessee state",
+      "why": "word 2 shortened, 'tennessee' to 'tenn', and no second school in the corpus competes for 'middle tenn state'.",
+      "measured_rows": 126
+     },
+     "west kentucky": {
+      "to": "western kentucky",
+      "why": "word 1 shortened, 'western' to 'west', and no second school in the corpus competes for 'west kentucky'.",
+      "measured_rows": 109
+     },
+     "miss valley state": {
+      "to": "mississippi valley state",
+      "why": "word 1 shortened, 'mississippi' to 'miss', and no second school in the corpus competes for 'miss valley state'.",
+      "measured_rows": 107
+     },
+     "east illinois": {
+      "to": "eastern illinois",
+      "why": "word 1 shortened, 'eastern' to 'east', and no second school in the corpus competes for 'east illinois'.",
+      "measured_rows": 106
+     },
+     "west carolina": {
+      "to": "western carolina",
+      "why": "word 1 shortened, 'western' to 'west', and no second school in the corpus competes for 'west carolina'.",
+      "measured_rows": 106
+     },
+     "east washington": {
+      "to": "eastern washington",
+      "why": "word 1 shortened, 'eastern' to 'east', and no second school in the corpus competes for 'east washington'.",
+      "measured_rows": 95
+     },
+     "ala-birmingham": {
+      "to": "alabama-birmingham",
+      "why": "word 1 shortened, 'alabama' to 'ala', and no second school in the corpus competes for 'ala-birmingham'.",
+      "measured_rows": 70
+     },
+     "new mex highlands": {
+      "to": "new mexico highlands",
+      "why": "word 2 shortened, 'mexico' to 'mex', and no second school in the corpus competes for 'new mex highlands'.",
+      "measured_rows": 44
+     },
+     "west ontario": {
+      "to": "western ontario",
+      "why": "word 1 shortened, 'western' to 'west', and no second school in the corpus competes for 'west ontario'.",
+      "measured_rows": 26
+     },
+     "east new mexico": {
+      "to": "eastern new mexico",
+      "why": "word 1 shortened, 'eastern' to 'east', and no second school in the corpus competes for 'east new mexico'.",
+      "measured_rows": 23
+     },
+     "wisc-whitewater": {
+      "to": "wisconsin-whitewater",
+      "why": "word 1 shortened, 'wisconsin' to 'wisc', and no second school in the corpus competes for 'wisc-whitewater'.",
+      "measured_rows": 22
+     },
+     "wisc-superior": {
+      "to": "wisconsin-superior",
+      "why": "word 1 shortened, 'wisconsin' to 'wisc', and no second school in the corpus competes for 'wisc-superior'.",
+      "measured_rows": 20
+     },
+     "wisc-stevens point": {
+      "to": "wisconsin-stevens point",
+      "why": "word 1 shortened, 'wisconsin' to 'wisc', and no second school in the corpus competes for 'wisc-stevens point'.",
+      "measured_rows": 20
+     },
+     "west washington": {
+      "to": "western washington",
+      "why": "word 1 shortened, 'western' to 'west', and no second school in the corpus competes for 'west washington'.",
+      "measured_rows": 12
+     },
+     "north illinois": {
+      "to": "northern illinois",
+      "why": "word 1 shortened, 'northern' to 'north', and no second school in the corpus competes for 'north illinois'.",
+      "measured_rows": 11
+     },
+     "minn state-mankato": {
+      "to": "minnesota state-mankato",
+      "why": "word 1 shortened, 'minnesota' to 'minn', and no second school in the corpus competes for 'minn state-mankato'.",
+      "measured_rows": 11
+     },
+     "wisc-milwaukee": {
+      "to": "wisconsin-milwaukee",
+      "why": "word 1 shortened, 'wisconsin' to 'wisc', and no second school in the corpus competes for 'wisc-milwaukee'.",
+      "measured_rows": 10
+     },
+     "col idaho": {
+      "to": "college idaho",
+      "why": "word 1 shortened, 'college' to 'col', and no second school in the corpus competes for 'col idaho'.",
+      "measured_rows": 8
+     },
+     "wisc-stout": {
+      "to": "wisconsin-stout",
+      "why": "word 1 shortened, 'wisconsin' to 'wisc', and no second school in the corpus competes for 'wisc-stout'.",
+      "measured_rows": 6
+     },
+     "wisc-platteville": {
+      "to": "wisconsin-platteville",
+      "why": "word 1 shortened, 'wisconsin' to 'wisc', and no second school in the corpus competes for 'wisc-platteville'.",
+      "measured_rows": 6
+     },
+     "tenn-martin": {
+      "to": "tennessee-martin",
+      "why": "word 1 shortened, 'tennessee' to 'tenn', and no second school in the corpus competes for 'tenn-martin'.",
+      "measured_rows": 6
+     },
+     "northwest oklahoma state": {
+      "to": "northwestern oklahoma state",
+      "why": "word 1 shortened, 'northwestern' to 'northwest', and no second school in the corpus competes for 'northwest oklahoma state'.",
+      "measured_rows": 6
+     },
+     "midwestern": {
+      "to": "midwestern state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'midwestern'.",
+      "measured_rows": 3
+     },
+     "wisc-eau claire": {
+      "to": "wisconsin-eau claire",
+      "why": "word 1 shortened, 'wisconsin' to 'wisc', and no second school in the corpus competes for 'wisc-eau claire'.",
+      "measured_rows": 3
+     },
+     "winston-salem": {
+      "to": "winston-salem state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'winston-salem'.",
+      "measured_rows": 2
+     },
+     "south utah": {
+      "to": "southern utah",
+      "why": "word 1 shortened, 'southern' to 'south', and no second school in the corpus competes for 'south utah'.",
+      "measured_rows": 2
+     },
+     "southeast oklahoma state": {
+      "to": "southeastern oklahoma state",
+      "why": "word 1 shortened, 'southeastern' to 'southeast', and no second school in the corpus competes for 'southeast oklahoma state'.",
+      "measured_rows": 2
+     },
+     "wisc-oshkosh": {
+      "to": "wisconsin-oshkosh",
+      "why": "word 1 shortened, 'wisconsin' to 'wisc', and no second school in the corpus competes for 'wisc-oshkosh'.",
+      "measured_rows": 1
+     },
+     "southeastern oklahoma": {
+      "to": "southeastern oklahoma state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'southeastern oklahoma'.",
+      "measured_rows": 1
+     },
+     "col emporia": {
+      "to": "college emporia",
+      "why": "word 1 shortened, 'college' to 'col', and no second school in the corpus competes for 'col emporia'.",
+      "measured_rows": 1
+     },
+     "western wash": {
+      "to": "western washington",
+      "why": "the last word shortened, 'washington' to 'wash', and no second school in the corpus competes for 'western wash'.",
+      "measured_rows": 1
+     },
+     "emporia": {
+      "to": "emporia state",
+      "why": "the long form with the generic word 'state' dropped, and no second school in the corpus competes for 'emporia'.",
+      "measured_rows": 1
+     },
+     "southwest oklahoma state": {
+      "to": "southwestern oklahoma state",
+      "why": "word 1 shortened, 'southwestern' to 'southwest', and no second school in the corpus competes for 'southwest oklahoma state'.",
+      "measured_rows": 1
+     }
+    },
+    "_how_a_pair_qualifies": {
+     "three_named_shapes": "A short form folds only when it is (1) the INITIALISM of the long form, with or without the University that the long form omits -- USC, UBC and UNLV carry it in front, LSU, SMU, TCU and BYU behind; (2) the long form with a trailing GENERIC word dropped -- `bowling green state` to `bowling green`; or (3) the long form with its LAST word shortened -- `boston college` to `boston col`. Anything else is a guess about which school is meant, and is refused on shape.",
+     "state_is_not_always_generic": "`State` is NOT dropped where what remains is a state's own name. South Carolina State and South Carolina are two real universities, as are South Dakota's; there `State` is the whole of the distinction, and dropping it merges two schools instead of expanding an abbreviation. Two pairs were folded by an earlier version of this rule and are now refused.",
+     "a_rival_must_be_a_rival": "A second school competes only when it could ITSELF abbreviate to that short form. `usc` disagrees with `davidson` twice in the corpus -- that is one man's college disputed between two sources, not evidence that USC is ambiguous. Counting every disagreement as a rival refused all ten pairs Ryan named.",
+     "a_fused_cell_is_not_a_school": "`tcu ohio state` looks like a school beginning with `tcu` and is two colleges in one cell. It is distinguished by the remainder: if what follows the short form is itself a college the archive holds, the value is a fused cell and says nothing about ambiguity. `georgetown dc` survives that test, because `dc` is not a college."
+    },
+    "_the_shortened_word_rule": "Ruled by Ryan, 2026-09-08, after 14 candidates surfaced on the 1,444 team-season pages fetched that day: a shortened NON-FINAL word is the same shape as a shortened last word. `eastern michigan` and `east michigan` are one school. SHORTENING a word is not DROPPING one -- which is why `minnesota state-mankato` to `minn state-mankato` folds and `minnesota state-mankato` to `minnesota state` still does not: one token shorter, not one token fewer. Comparison is token by token with hyphens split out, so `tennessee-chattanooga` and `tenn-chattanooga` line up and a hyphen is never mistaken for part of a word; the separators must match too. THE REFUSAL TEST IS UNCHANGED and did real work here: `texas a&m` vs `texas`, `northwestern state` vs `northwestern`, `mississippi college` vs `mississippi` and `san diego state` vs `san diego` all fit the shape and are all refused, because the corpus holds a second school the short form could equally be."
+   }
   },
   "birth_place": {
-   "reads_to": "the place as printed, with a TRAILING country token removed and case and punctuation folded",
+   "reads_to": "the place as printed, with a TRAILING country token removed, a TRAILING state abbreviation expanded to the state's name, and case and punctuation folded",
    "ruled": "Ryan, 2026-09-07, conditionally: add it if the trailing USA fold is clean across all pairs. MEASURED CLEAN -- of 2,874 people holding more than one birth place, 995 collapse and every collapse is a trailing country token (589), a trailing space (383), punctuation (22) or case (1). No collapse is semantic.",
    "accepted_forms_by_example": [
     "New Castle, PA",
@@ -153,7 +597,10 @@
     "Bethesda, Maryland, U.S.",
     "Dunn, NC",
     "Lomma, Sweden",
-    "Mexico City, Mexico"
+    "Mexico City, Mexico",
+    "Los Angeles, CA  ==  Los Angeles, California, U.S",
+    "New York, NY  ==  New York, New York",
+    "Washington, DC  ==  Washington, District of Columbia"
    ],
    "refused_by_example": [
     "USA",
@@ -162,10 +609,25 @@
    ],
    "why_refused": "a bare country is not a place this can compare; it is left as printed and takes no part.",
    "NOTHING_ELSE_IS_REMOVED": "The city and the state stay, in the order printed. Reducing a place to its city would make Springfield, IL and Springfield, MA one place; a fold that can do that is not a reading. The city-only fold was measured (2,392 of 2,872 birth places and 603 of 723 death places 'agree' under it) and is REFUSED for exactly that reason.",
-   "_the_country_token_has_four_printed_forms": "USA, U.S, U.S. and 'United States'. Wikipedia writes 'U.S' and PFA writes 'USA'; reading only 'USA' left 1,808 pairs looking like disagreements over a country name. A trailing token only -- 'US Virgin Islands' keeps its US, because it is not trailing."
+   "_the_country_token_has_four_printed_forms": "USA, U.S, U.S. and 'United States'. Wikipedia writes 'U.S' and PFA writes 'USA'; reading only 'USA' left 1,808 pairs looking like disagreements over a country name. A trailing token only -- 'US Virgin Islands' keeps its US, because it is not trailing.",
+   "ruled_state_expansion": {
+    "ruled": "Ryan, 2026-09-07: `Los Angeles, CA` and `Los Angeles, California` are one place.",
+    "scope": "ONLY the last token, and only when something precedes it. The fifty states and DC, by USPS abbreviation.",
+    "why_position_is_the_whole_rule": "`IN`, `OR`, `OK`, `ME`, `LA`, `DE`, `MS`, `MT`, `PA` and `HI` are English words as well as states. Position is what separates them, and position is all that is used -- the same discipline that expands `St.` to State only as a college's last word.",
+    "a_qualifier_is_not_a_state": "`near Whitesboro, TX` reads to `near whitesboro texas` and `Whitesboro, Texas` to `whitesboro texas`. They still DISAGREE, because one source says the town and the other says somewhere nearby, and that difference was never about the state name.",
+    "no_city_is_ever_dropped": "`Springfield, IL` and `Chicago, IL` stay two places.",
+    "measured_before_it_was_added": "Predicted 1,873 of 2,601 place contests would collapse. The reading collapses 1,867 -- SIX FEWER, which is the safe direction. A fold larger than the prediction would have meant it was reaching past the state name.",
+    "the_six_it_declines": "A place that is a bare state and nothing else: `FL` against `Florida, U.S`, and five like it (`IL`, `MN`, `TN`, `NJ`, `TX`). They are the same state written two ways and Ryan's own wording ('TX and Texas are the same state and collapse') would fold them -- but a LONE token cannot be told from a city, and `LA` alone is Los Angeles at least as often as Louisiana. Left as printed and reported rather than widened. UNRULED."
+   },
+   "refused_to_fold_by_example": [
+    "near Whitesboro, TX  !=  Whitesboro, Texas",
+    "Springfield, IL  !=  Springfield, MA",
+    "Springfield, IL  !=  Chicago, IL",
+    "FL  !=  Florida, U.S  (a lone token is not expanded)"
+   ]
   },
   "death_place": {
-   "reads_to": "as birth_place; the same reader",
+   "reads_to": "the place as printed, with a TRAILING country token removed, a TRAILING state abbreviation expanded to the state's name, and case and punctuation folded",
    "ruled": "Ryan, 2026-09-07, conditionally, as birth_place. MEASURED CLEAN, and it gains almost nothing: of 723 people holding more than one death place, exactly ONE collapses ('Washington, DC' against 'Washington, DC, United States'). Recorded so nobody re-measures it expecting a haul.",
    "accepted_forms_by_example": [
     "Washington, DC",
@@ -177,7 +639,22 @@
     "USA",
     "none"
    ],
-   "why_refused": "as birth_place."
+   "why_refused": "as birth_place.",
+   "ruled_state_expansion": {
+    "ruled": "Ryan, 2026-09-07: `Los Angeles, CA` and `Los Angeles, California` are one place.",
+    "scope": "ONLY the last token, and only when something precedes it. The fifty states and DC, by USPS abbreviation.",
+    "why_position_is_the_whole_rule": "`IN`, `OR`, `OK`, `ME`, `LA`, `DE`, `MS`, `MT`, `PA` and `HI` are English words as well as states. Position is what separates them, and position is all that is used -- the same discipline that expands `St.` to State only as a college's last word.",
+    "a_qualifier_is_not_a_state": "`near Whitesboro, TX` reads to `near whitesboro texas` and `Whitesboro, Texas` to `whitesboro texas`. They still DISAGREE, because one source says the town and the other says somewhere nearby, and that difference was never about the state name.",
+    "no_city_is_ever_dropped": "`Springfield, IL` and `Chicago, IL` stay two places.",
+    "measured_before_it_was_added": "Predicted 1,873 of 2,601 place contests would collapse. The reading collapses 1,867 -- SIX FEWER, which is the safe direction. A fold larger than the prediction would have meant it was reaching past the state name.",
+    "the_six_it_declines": "A place that is a bare state and nothing else: `FL` against `Florida, U.S`, and five like it (`IL`, `MN`, `TN`, `NJ`, `TX`). They are the same state written two ways and Ryan's own wording ('TX and Texas are the same state and collapse') would fold them -- but a LONE token cannot be told from a city, and `LA` alone is Los Angeles at least as often as Louisiana. Left as printed and reported rather than widened. UNRULED."
+   },
+   "refused_to_fold_by_example": [
+    "near Whitesboro, TX  !=  Whitesboro, Texas",
+    "Springfield, IL  !=  Springfield, MA",
+    "Springfield, IL  !=  Chicago, IL",
+    "FL  !=  Florida, U.S  (a lone token is not expanded)"
+   ]
   }
  },
  "_documentation_only": {

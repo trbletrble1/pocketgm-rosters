@@ -98,24 +98,110 @@ _DRAFT_STR = re.compile(r"(\d+)(?:st|nd|rd|th)\s+round\s*\((\d+)(?:st|nd|rd|th)?
 
 
 def draft(v):
-    """A draft selection -> 'YYYY r{round} p{overall}'.
+    """A draft selection -> a DICT: {year, league, kind, numbering} with either
+    {round, overall} or {order}.
 
-    The club is deliberately NOT part of the reading. An overall pick number is
-    unique within a draft year, so year+round+overall IS the selection; the club
-    follows from the pick rather than being an independent fact about it. That is
-    what makes PFR's 'TAM' and nflverse's 'TB' the same selection rather than two.
-    Both strings stay on the panel verbatim -- the reading decides only whether
-    the two records are the same selection, never what is displayed.
+    A SELECTION IS NOT IDENTIFIED BY YEAR AND PICK. This reading used to be the string
+    `YYYY r{round} p{overall}`, on the stated ground that "an overall pick number is
+    unique within a draft year". **It is not.** Measured 2026-09-08 across the whole
+    range: 72 of 90 years hold more than one draft numbering its picks from 1, and one
+    year holds five. 1950 has an NFL draft and an AAFC allocation draft -- overall pick
+    1 is Leon Hart in one and Chet Mutryn in the other. 1965 has NFL, AFL and CFL.
+
+    LEAGUE AND KIND ARE IN THE READING, where a consumer has to see them, rather than
+    inside a value where they can be ignored. They were always present as
+    `league_from_filename` and `draft_kind`; nothing downstream was obliged to look, and
+    a naive join on (year, pick) put one man's selection under another's name.
+
+    A FIELD ONLY ONE SIDE CARRIES IS SILENCE, NOT A DIFFERENCE. reading_view.same()
+    compares dict readings on the fields BOTH carry, so a record that states no league
+    still matches one that does -- which is right, because 135 contested rows are a
+    source declining to name the league and not a second draft. `league` and `kind` are
+    therefore OMITTED when unknown rather than filled with a placeholder, which would
+    turn silence into a claim.
+
+    A SELECTION WITH AN ORDER AND NO ROUND IS READ AS ONE. Ruled by Ryan, 2026-09-08.
+    An expansion, allocation or dispersal draft is not run in rounds: PFA prints those
+    pages with the columns `Team | Player | Pos | College | Notes` and NO Round and NO
+    Overall at all. The 1960 AFL draft is printed as two sittings, team by team. Such a
+    selection reads to {year, order, league, kind} -- `round` and `overall` are ABSENT,
+    not zero and not null, because absent is the only one of the three that means the
+    document does not say. Zero would sort; null would compare. 602 held claims and
+    roughly 1,631 selections still on disk are behind this.
+
+    AND THAT IS NOT ENOUGH ON ITS OWN, which is why `numbering` is here. Omitting
+    `round` and `overall` would leave an ordered selection and a numbered one sharing
+    only year and league -- and `same()` compares the fields BOTH carry, so it would
+    call them one selection. The rule that protects an unstated league would join a
+    1960 AFL allocation pick to a 1960 AFL draft pick. So the reading states HOW it is
+    numbered, in a field both forms carry and neither can be silent about: `order` or
+    `round_and_pick`. A field only one side carries is silence; a field both sides
+    carry is a comparison, and this difference must be compared.
     """
     if isinstance(v, dict):
         y, r, p = v.get("year"), v.get("round"), v.get("overall_pick")
-        return "%s r%s p%s" % (y, r, p) if None not in (y, r, p) else None
+        if y is not None and None in (r, p):
+            o = v.get("printed_order", v.get("order"))
+            if o is None: return None
+            out = {"year": int(y), "order": int(o), "numbering": "order"}
+            lg = (v.get("league_from_filename") or v.get("league_from_link")
+                  or v.get("league"))
+            if lg and str(lg) != "?": out["league"] = str(lg).upper()
+            k = v.get("draft_kind")
+            if k: out["kind"] = str(k)
+            return out
+        if None in (y, r, p): return None
+        out = {"year": int(y), "round": int(r), "overall": int(p),
+               "numbering": "round_and_pick"}
+        lg = (v.get("league_from_filename") or v.get("league_from_link")
+              or v.get("league"))
+        if lg and str(lg) != "?": out["league"] = str(lg).upper()
+        k = v.get("draft_kind")
+        if k: out["kind"] = str(k)
+        return out
     m = _DRAFT_STR.search(str(v))
-    return "%s r%s p%s" % (m.group(3), int(m.group(1)), int(m.group(2))) if m else None
+    if not m: return None
+    # a printed string states no league and no kind: silence, not a placeholder
+    return {"year": int(m.group(3)), "round": int(m.group(1)), "overall": int(m.group(2)),
+            "numbering": "round_and_pick"}
 
 
 _SAINT = re.compile(r"^s(?:t|aint)\.?$", re.I)
 _COUNTRY = re.compile(r"[\s,.]*(?:u\.?\s?s\.?\s?a\.?|u\.?\s?s\.?|united\s+states(?:\s+of\s+america)?)[\s,.]*$", re.I)
+# THE FIFTY STATES AND DC, by their USPS abbreviation. Ruled by Ryan, 2026-09-07:
+# `Los Angeles, CA` and `Los Angeles, California` are one place.
+_STATES = {
+ "al": "alabama", "ak": "alaska", "az": "arizona", "ar": "arkansas", "ca": "california",
+ "co": "colorado", "ct": "connecticut", "de": "delaware", "fl": "florida", "ga": "georgia",
+ "hi": "hawaii", "ia": "iowa", "id": "idaho", "il": "illinois", "in": "indiana",
+ "ks": "kansas", "ky": "kentucky", "la": "louisiana", "ma": "massachusetts",
+ "md": "maryland", "me": "maine", "mi": "michigan", "mn": "minnesota", "mo": "missouri",
+ "ms": "mississippi", "mt": "montana", "nc": "north carolina", "nd": "north dakota",
+ "ne": "nebraska", "nh": "new hampshire", "nj": "new jersey", "nm": "new mexico",
+ "nv": "nevada", "ny": "new york", "oh": "ohio", "ok": "oklahoma", "or": "oregon",
+ "pa": "pennsylvania", "ri": "rhode island", "sc": "south carolina", "sd": "south dakota",
+ "tn": "tennessee", "tx": "texas", "ut": "utah", "va": "virginia", "vt": "vermont",
+ "wa": "washington", "wi": "wisconsin", "wv": "west virginia", "wy": "wyoming",
+ "dc": "district of columbia",
+}
+# A COLLEGE ABBREVIATION FOLDS ONLY WHERE IT HAS EXACTLY ONE POSSIBLE SCHOOL.
+# Ruled by Ryan 2026-09-07 and DECLARED in declarations/readings.json under
+# VALUE_READINGS.college.COLLEGE_SYNONYMS, with a reason on every entry and on every
+# refusal. Read from the declaration, never typed here, so the rule and the code
+# cannot drift. Six fold; `georgetown`, `cornell`, `nebraska` and `lebanon` are
+# refused because a second real school competes for the same short form, and a
+# refused pair stays a disagreement.
+def _load_college_synonyms():
+    d = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..",
+                     "declarations", "readings.json")
+    try:
+        v = json.load(open(d))["VALUE_READINGS"]["college"]["COLLEGE_SYNONYMS"]["folds"]
+    except Exception:
+        return {}
+    return {k: x["to"] for k, x in v.items()}
+
+
+_COLLEGE_SYNONYMS = _load_college_synonyms()
 _COLLEGE_DROP = {"university", "of", "the"}
 _COLLEGE_ABBR = {"univ": "university", "u": "university"}
 
@@ -145,7 +231,8 @@ def college(v):
     if _SAINT.match(words[-1]) and len(words) > 1:
         words[-1] = "state"                      # trailing St. -> State
     out = [w for w in words if w not in _COLLEGE_DROP]
-    return " ".join(out) or None
+    k = " ".join(out) or None
+    return _COLLEGE_SYNONYMS.get(k, k)
 
 
 def place(v):
@@ -155,15 +242,37 @@ def place(v):
     it makes is a trailing `USA`, a trailing space, punctuation or case, and none is
     semantic.
 
-    NOTHING ELSE IS REMOVED. The city and the state stay, in the order printed. Reducing
-    a place to its city would make `Springfield, IL` and `Springfield, MA` one place, and
-    a fold that can do that is not a reading.
+    A TRAILING STATE ABBREVIATION IS EXPANDED. Ruled by Ryan, 2026-09-07: `Los Angeles,
+    CA` and `Los Angeles, California` are one place. Three limits keep it a reading
+    rather than a rewrite, and all three are what stop it reaching further:
+
+      1. ONLY THE LAST TOKEN, and only when something precedes it. Position is what
+         separates a state from a word, exactly as it does for `St.` in college(). `IN`,
+         `OR`, `OK`, `ME`, `LA` and `DE` are all English words as well as states, and a
+         lone `LA` is a place this reader will not guess at -- it stays as printed.
+      2. NOTHING ELSE IS REMOVED. The city and every qualifier stay, in the order
+         printed. `near Whitesboro, TX` reads to `near whitesboro texas` and
+         `Whitesboro, Texas` to `whitesboro texas`, and those still DISAGREE -- because
+         one source says the town and the other says somewhere nearby, and that
+         difference was never about the state name.
+      3. NO CITY IS EVER DROPPED. Reducing a place to its state would make
+         `Springfield, IL` and `Chicago, IL` one place, and a fold that can do that is
+         not a reading.
+
+    The trailing country is removed first, so `Chicago, Illinois, U.S` and `Chicago, IL`
+    both reach `chicago illinois`.
     """
     t = unicodedata.normalize("NFKC", str(v)).strip()
     if not t or t.lower() in ("none", "null", "n/a", "-"):
         return None
     t = _COUNTRY.sub("", t)
     k = re.sub(r"\s+", " ", re.sub(r"[^\w\s]", " ", t.lower())).strip()
+    if not k:
+        return None
+    w = k.split()
+    if len(w) > 1 and w[-1] in _STATES:          # a state, never a lone token
+        w[-1:] = _STATES[w[-1]].split()
+        k = " ".join(w)
     return k or None
 
 
