@@ -71,7 +71,22 @@ def facts_from_rows(rows, readings=None):
         if kind == "date" and positive:
             items = []; seen = set()
             for (v, p), g in groups.items():
-                lit = json.loads(v); rd = dates.read(lit)
+                # THE SOURCE DECIDES HOW A NUMERIC DATE READS. Ruled 2026-09-08:
+                # a source that declared its numeric order, with the evidence, is read
+                # in that order. build_read_model passes the source and this did not,
+                # so 610 Crippen death dates read as a calendar day in the model and
+                # came back through the service as unreadable -- the archive
+                # disagreeing with itself about its own value, in the path a reader
+                # actually sees. The plain reading is tried first, so a value that
+                # already read is never reinterpreted; a declared format can only
+                # RESCUE one the shared reading refuses.
+                lit = json.loads(v)
+                rd = dates.read(lit)
+                if rd is None:
+                    for _sid in {x["source_id"] for x in g if x["source_id"]}:
+                        rd = dates.read(lit, _sid)
+                        if rd is not None:
+                            break
                 if v not in seen: seen.add(v); items.append((None if lit is None else str(lit), rd))
                 if rd: 
                     for val in values:

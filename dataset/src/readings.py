@@ -80,6 +80,52 @@ _MONTH = {m: i + 1 for i, m in enumerate(
      "august", "september", "october", "november", "december"])}
 
 
+_APOSTROPHE = re.compile(r"['\u2019]")
+
+
+def person_name(v):
+    """A printed name reduced for comparison. THE one implementation.
+
+    There were 29 of these across src/ and service/, in 8 distinct behaviours, and
+    four pairs of them decided the same question differently -- the awards ingest
+    against the measurement of its own leads, the player promotion route against the
+    coach one, duplicate detection against promotion, two ingests joining on the same
+    index. About 1,200 names carry the punctuation they disagreed on.
+
+    THE THREE CHOICES, made deliberately and measured first:
+
+    An APOSTROPHE IS INSIDE A WORD and is deleted: `O'Brien` and `OBrien` both give
+    `obrien`, and a source that prints one is matched by a source that prints the
+    other. Turning it into a space would have made them disagree.
+
+    EVERY OTHER PUNCTUATION MARK SEPARATES and becomes a space: `Jean-Paul` and
+    `Jean Paul` both give `jean paul`, `Y.A.` and `Y. A.` both give `y a`. The two
+    rules pull opposite ways on the same input, which is why one blanket rule was
+    wrong in both directions before.
+
+    A SUFFIX IS KEPT. `Tony Adamle Jr.` stays `tony adamle jr`. Stripping it would
+    unify one more man in the whole archive and would silently merge a father with a
+    son -- a name is not a person, and the cheap direction is the one that never
+    conflates. A source that omits the suffix is still reached by the surname-and-
+    initial rule held to a club-season, which is where that job belongs.
+
+    ACCENTS FOLD, they are not deleted. `Jose` and `Jose` are one man; eleven of the
+    old implementations turned `Jose` into `Jos` by stripping the letter with its mark.
+
+    Measured over the archive's 40,255 distinct printed names: this unifies 11 of the
+    1,760 people held under more than one name -- the rest are genuinely different
+    names, like Johnny Blood and Johnny McNally -- and puts 2,137 people in a key they
+    share with someone else, which is the base rate of men with the same name and is
+    within 8 of every alternative tested. THE CHOICE IS NEARLY FREE; what was costly
+    was having eight of them.
+    """
+    t = unicodedata.normalize("NFKD", str(v or ""))
+    t = "".join(ch for ch in t if not unicodedata.combining(ch)).lower()
+    t = _APOSTROPHE.sub("", t)
+    t = re.sub(r"[^a-z0-9]", " ", t)
+    return " ".join(t.split())
+
+
 def birth_date(v, source_id=None):
     """A printed date -> `YYYY-MM-DD`, or None where the string carries no calendar day.
 

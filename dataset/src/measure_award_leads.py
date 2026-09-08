@@ -24,15 +24,17 @@ BASE = os.path.join(HERE, "..")
 sys.path.insert(0, os.path.join(BASE, "service"))
 import paths
 import clubs as ac
+from readings import person_name as _person_name
 
 STORE = os.path.join(BASE, "build", "pfa-awards.json")
 OUT = os.path.join(BASE, "build-reports", "award-leads.json")
 
 
 def norm(s):
-    s = re.sub(r"[^a-z ]", " ", str(s or "").lower())
-    s = re.sub(r"\b(jr|sr|ii|iii|iv)\b", " ", s)
-    return " ".join(s.split())
+    """THE one name reading -- readings.person_name. This file used to carry
+    its own copy, and the copies disagreed on apostrophes, initials, hyphens
+    and suffixes across about 1,200 names."""
+    return _person_name(s)
 
 
 def main():

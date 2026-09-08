@@ -29,6 +29,7 @@ sys.path.insert(0, os.path.join(BASE, "service"))
 import paths
 from readings import READERS
 import dates as model_dates   # service/dates.py -- the reading the MODEL uses
+from readings import person_name as _person_name
 
 DOC = os.path.expanduser("~/Documents/pgm3-sources/____Abridged Player Register.doc")
 OUT = os.path.join(BASE, "build", "crippen-aafc.json")
@@ -63,9 +64,10 @@ def read_held(d):
 
 
 def norm(s):
-    s = re.sub(r"[^a-z ]", " ", str(s or "").lower())
-    s = re.sub(r"\b(jr|sr|ii|iii|iv)\b", " ", s)
-    return " ".join(s.split())
+    """THE one name reading -- readings.person_name. This file used to carry
+    its own copy, and the copies disagreed on apostrophes, initials, hyphens
+    and suffixes across about 1,200 names."""
+    return _person_name(s)
 
 
 def flip(name):

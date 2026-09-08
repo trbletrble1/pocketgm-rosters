@@ -25,6 +25,7 @@ import os, re, sys, json, glob, unicodedata, collections, datetime
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 import index_io as IO
+from readings import person_name as _person_name
 OUT = os.path.join(BASE, "build", "player-promotions.json")
 DECL = os.path.join(BASE, "declarations", "player-promotions.json")
 
@@ -47,9 +48,10 @@ class PromoteError(Exception):
 
 
 def norm(s):
-    s = unicodedata.normalize("NFKD", str(s))
-    s = "".join(c for c in s if not unicodedata.combining(c))
-    return " ".join(re.sub(r"[^a-z ]", " ", s.lower()).split())
+    """THE one name reading -- readings.person_name. This file used to carry
+    its own copy, and the copies disagreed on apostrophes, initials, hyphens
+    and suffixes across about 1,200 names."""
+    return _person_name(s)
 
 
 def new_person_id(IDX, taken):

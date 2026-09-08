@@ -81,14 +81,19 @@ def families():
     return of, kind
 
 
-def read_value(field, kind, v):
+def read_value(field, kind, v, source_id=None):
     """The comparable form of a value, or None when it cannot be read. A date reads to its
     calendar day; a value family reads through its declared reading; anything else compares
     as the string it was printed as."""
     if v is None: return None
     if kind == "date":
         if DATES is None: return None                 # a reader that cannot run is not a pass
-        r = DATES.read(str(v))
+        # THE SOURCE IS PASSED, for the same reason the model passes it. This gate
+        # imported the reading rather than reimplementing it and STILL disagreed with
+        # the model, because it called it with one argument fewer -- the duplication
+        # had moved from the body of the function to its call site. A gate that agrees
+        # with the model only until the model changes is the failure it exists to catch.
+        r = DATES.read(str(v), source_id) if source_id else DATES.read(str(v))
         return ("day",) + tuple(DATES.key(r)) if r else None
     if readings.READERS.get(field):
         r = readings.read(field, v)
@@ -192,7 +197,8 @@ def held_values(persons, fields, of, kind, log=print):
             pid = raw if isinstance(raw, str) and raw.startswith("P_") else resolve_person(st, raw, loc2g)
             if pid not in persons: continue
             fam = of.get(p, p)
-            r = read_value(fam, kind.get(fam, "value"), c.get("value"))
+            r = read_value(fam, kind.get(fam, "value"), c.get("value"),
+                           c.get("source_id"))
             if r is not None: held[(pid, fam)].add(r)
     log(f"  claims read from build/: {sum(len(v) for v in held.values()):,} readable values "
         f"over {len(held):,} (person, family) pairs, for {len(persons):,} people and "
@@ -256,7 +262,11 @@ def check(stores, held, of, kind, value_blocks=None, other_blocks=None):
         h = held.get((pid, fam), set())
         missing = []
         for src, v in sides.items():
-            rv = read_value(fam, k, v)
+            # `src` is the disagreement report's own label for the side. Where it
+            # happens to be a source_id with a declared format the reading uses it;
+            # where it is not, the format lookup misses and the plain reading applies,
+            # which is what a source with no declaration should get anyway.
+            rv = read_value(fam, k, v, src)
             if rv is None:
                 per_store[key]["side_value_unreadable"] += 1; counts["side_value_unreadable"] += 1
                 continue

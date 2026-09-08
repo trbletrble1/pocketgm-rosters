@@ -28,12 +28,20 @@ refusal earns its keep: a city match alone would have rewritten 'Chicago Cardina
 Football Club' to the Chicago BEARS.
 """
 import os, re, json, collections
+from clubs import norm as _clubs_norm
 
 BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 
 
 def norm(s):
-    return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+    """THE club-string reading -- clubs.norm. This file carried its own copy and
+    the two disagreed on one character class: clubs.py FOLDS an accent
+    (Montreal Alouettes -> montrealalouettes) and this deleted the letter along
+    with its mark (-> montralalouettes). It cost nothing, because the archive
+    holds zero club strings and zero club names carrying a non-ASCII character --
+    but the CFL is in scope and Montreal is a CFL club, so the first source that
+    spells it properly would have made two club tables out of one."""
+    return _clubs_norm(s)
 
 
 class ClubKeys:

@@ -31,6 +31,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 sys.path.insert(0, os.path.join(BASE, "service"))
 import paths
+from readings import person_name as _person_name
 
 AWARDS = os.path.expanduser("~/Documents/pgm3-sources/pfa-awards")
 OUT = os.path.join(BASE, "build", "pfa-awards.json")
@@ -80,7 +81,10 @@ def text(x):
 
 
 def norm(s):
-    return " ".join(re.sub(r"[^a-z ]", " ", str(s or "").lower()).split())
+    """THE one name reading -- readings.person_name. This file used to carry
+    its own copy, and the copies disagreed on apostrophes, initials, hyphens
+    and suffixes across about 1,200 names."""
+    return _person_name(s)
 
 
 def people_by_name(conn):
