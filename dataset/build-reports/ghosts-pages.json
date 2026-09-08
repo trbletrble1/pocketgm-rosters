@@ -1,0 +1,2767 @@
+{
+ "_note": "classified by structure. Prose names are COUNTED, never extracted.",
+ "pages": 243,
+ "kinds": {
+  "all-league selections": 76,
+  "prose narrative": 107,
+  "schedule": 20,
+  "standings": 16,
+  "index or fragment": 80,
+  "scoring": 3,
+  "roster": 20
+ },
+ "rows": [
+  {
+   "page": "Ambulance.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 3,
+   "roster_rows": 0,
+   "prose_words": 2721,
+   "distinct_names_in_prose": 100,
+   "snapshot": "20090722032920"
+  },
+  {
+   "page": "Ambulance_1917_stats.htm",
+   "kinds": [
+    "schedule",
+    "standings"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 24,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20081204134029"
+  },
+  {
+   "page": "Ambulance_Meade_1917.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 448,
+   "distinct_names_in_prose": 19,
+   "snapshot": "20121109235548"
+  },
+  {
+   "page": "Ambulance_PSU_1917.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 312,
+   "distinct_names_in_prose": 15,
+   "snapshot": "20121109235613"
+  },
+  {
+   "page": "Ambulance_USMC_1_1917.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 444,
+   "distinct_names_in_prose": 18,
+   "snapshot": "20121025202001"
+  },
+  {
+   "page": "Ambulance_announce_1918.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 208,
+   "distinct_names_in_prose": 23,
+   "snapshot": "20121109235601"
+  },
+  {
+   "page": "Athletics_Kanaweola_1902.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 52,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20121109044714"
+  },
+  {
+   "page": "Athletics_PRRYMCA_1902.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 379,
+   "distinct_names_in_prose": 13,
+   "snapshot": "20121109044735"
+  },
+  {
+   "page": "Athletics_Phillies_1902_1.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 602,
+   "distinct_names_in_prose": 10,
+   "snapshot": "20121109044727"
+  },
+  {
+   "page": "Athletics_Phillies_1902_2.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 196,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20121109044546"
+  },
+  {
+   "page": "Athletics_Phillies_1902_3.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 1016,
+   "distinct_names_in_prose": 21,
+   "snapshot": "20121109044742"
+  },
+  {
+   "page": "Athletics_Pittsburgh_1902_1.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 485,
+   "distinct_names_in_prose": 7,
+   "snapshot": "20121109044647"
+  },
+  {
+   "page": "Athletics_Pittsburgh_1902_2.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 628,
+   "distinct_names_in_prose": 11,
+   "snapshot": "20121109044856"
+  },
+  {
+   "page": "Athletics_Pittsburgh_1902_3.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 12,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20151002085825"
+  },
+  {
+   "page": "Athletics_Syracuse_1903.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 312,
+   "distinct_names_in_prose": 8,
+   "snapshot": "20121109044524"
+  },
+  {
+   "page": "Bethlehem.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "scoring",
+    "standings"
+   ],
+   "tables": 6,
+   "roster_rows": 0,
+   "prose_words": 4715,
+   "distinct_names_in_prose": 121,
+   "snapshot": "20080905120643"
+  },
+  {
+   "page": "Bethlehem_Gilberton_1926.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 673,
+   "distinct_names_in_prose": 24,
+   "snapshot": "20121109055755"
+  },
+  {
+   "page": "Bethlehem_Gooch.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 18,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20121109055555"
+  },
+  {
+   "page": "Bethlehem_Lancaster_1926_2.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 495,
+   "distinct_names_in_prose": 22,
+   "snapshot": "20121109055819"
+  },
+  {
+   "page": "Bethlehem_Shenandoah_1926.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 399,
+   "distinct_names_in_prose": 16,
+   "snapshot": "20121109055451"
+  },
+  {
+   "page": "Conshohocken.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "standings"
+   ],
+   "tables": 4,
+   "roster_rows": 0,
+   "prose_words": 2883,
+   "distinct_names_in_prose": 90,
+   "snapshot": "20090511164839"
+  },
+  {
+   "page": "Conshohocken_Bethlehem_1920.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 253,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20151002085817"
+  },
+  {
+   "page": "Conshohocken_Holmesburg_1919.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 186,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20121109102358"
+  },
+  {
+   "page": "Conshohocken_Kaywood_1919.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 64,
+   "distinct_names_in_prose": 3,
+   "snapshot": "20121110052047"
+  },
+  {
+   "page": "Corley.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "schedule",
+    "standings"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 928,
+   "distinct_names_in_prose": 46,
+   "snapshot": "20081011175856"
+  },
+  {
+   "page": "Corley_Reliance_1910.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 227,
+   "distinct_names_in_prose": 7,
+   "snapshot": "20151002085421"
+  },
+  {
+   "page": "ELF_Gilberton_1926_stats.htm",
+   "kinds": [
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 22,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20151002085728"
+  },
+  {
+   "page": "ELF_Shenandoah_1926_stats.htm",
+   "kinds": [
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 23,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20151002085728"
+  },
+  {
+   "page": "Frankford_AtlanticCity_1899.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 53,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20091214050534"
+  },
+  {
+   "page": "Frankford_Conshohocken_1900.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 53,
+   "distinct_names_in_prose": 3,
+   "snapshot": "20151002085819"
+  },
+  {
+   "page": "Frankford_East-Falls_1900.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 61,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20151002085819"
+  },
+  {
+   "page": "Frankford_Haddonfield_1901.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 42,
+   "distinct_names_in_prose": 3,
+   "snapshot": "20081204133722"
+  },
+  {
+   "page": "Frankford_Mutes_1902.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 92,
+   "distinct_names_in_prose": 7,
+   "snapshot": "20151002085819"
+  },
+  {
+   "page": "Frankford_P-RYMCA_1899_1.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 63,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20151002085820"
+  },
+  {
+   "page": "Frankford_P-RYMCA_1899_2.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 148,
+   "distinct_names_in_prose": 9,
+   "snapshot": "20091214033728"
+  },
+  {
+   "page": "Frankford_Princeton_1901.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 117,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20081204134208"
+  },
+  {
+   "page": "Holmesburg.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "standings"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 1608,
+   "distinct_names_in_prose": 86,
+   "snapshot": "20081012064249"
+  },
+  {
+   "page": "Holmesburg_1921_stats.htm",
+   "kinds": [
+    "schedule",
+    "standings"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 23,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20151002085729"
+  },
+  {
+   "page": "Holmesburg_Bridesburg_1920.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 78,
+   "distinct_names_in_prose": 6,
+   "snapshot": "20151002085823"
+  },
+  {
+   "page": "Holmesburg_Chesbrook_1920.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 177,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20151002085823"
+  },
+  {
+   "page": "Holmesburg_Coaldale_1919.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 288,
+   "distinct_names_in_prose": 10,
+   "snapshot": "20121109102343"
+  },
+  {
+   "page": "Holmesburg_Conshohocken_1920.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 71,
+   "distinct_names_in_prose": 6,
+   "snapshot": "20151002085817"
+  },
+  {
+   "page": "Holmesburg_Conshohocken_1921.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 196,
+   "distinct_names_in_prose": 11,
+   "snapshot": "20081204133459"
+  },
+  {
+   "page": "Holmesburg_Parkside_1919.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 168,
+   "distinct_names_in_prose": 7,
+   "snapshot": "20121109102352"
+  },
+  {
+   "page": "Holmesburg_Rex_1919.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 218,
+   "distinct_names_in_prose": 11,
+   "snapshot": "20081204135040"
+  },
+  {
+   "page": "Holmesburg_USSMichigan_1919.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 225,
+   "distinct_names_in_prose": 8,
+   "snapshot": "20121109102548"
+  },
+  {
+   "page": "Holmesburg_Washington_1921.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 311,
+   "distinct_names_in_prose": 8,
+   "snapshot": "20151002085729"
+  },
+  {
+   "page": "Holmesburg_article.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 878,
+   "distinct_names_in_prose": 46,
+   "snapshot": "20121109102402"
+  },
+  {
+   "page": "Holmesburg_article2.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 212,
+   "distinct_names_in_prose": 7,
+   "snapshot": "20151002085824"
+  },
+  {
+   "page": "Legion.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "standings"
+   ],
+   "tables": 3,
+   "roster_rows": 0,
+   "prose_words": 3379,
+   "distinct_names_in_prose": 123,
+   "snapshot": "20081011174943"
+  },
+  {
+   "page": "Legion_Columbia_1932.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 109,
+   "distinct_names_in_prose": 10,
+   "snapshot": "20111022084823"
+  },
+  {
+   "page": "Legion_Philadelphia_1933.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 171,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20111022084828"
+  },
+  {
+   "page": "Legion_Roxborough_1932.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 47,
+   "distinct_names_in_prose": 8,
+   "snapshot": "20111022090213"
+  },
+  {
+   "page": "Legion_Shamokin_1931.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 237,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20111022090218"
+  },
+  {
+   "page": "Legion_Thanksgiving_1931.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 297,
+   "distinct_names_in_prose": 11,
+   "snapshot": "20111022084833"
+  },
+  {
+   "page": "Legion_Thanksgiving_1932.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 138,
+   "distinct_names_in_prose": 10,
+   "snapshot": "20111022084838"
+  },
+  {
+   "page": "Legion_no-affiliation.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 108,
+   "distinct_names_in_prose": 6,
+   "snapshot": "20111022090223"
+  },
+  {
+   "page": "Legion_preparations_1931.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 284,
+   "distinct_names_in_prose": 32,
+   "snapshot": "20111022090228"
+  },
+  {
+   "page": "Legion_preparations_1933.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 195,
+   "distinct_names_in_prose": 26,
+   "snapshot": "20111022084843"
+  },
+  {
+   "page": "Legion_preparations_1934.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 222,
+   "distinct_names_in_prose": 33,
+   "snapshot": "20151002085821"
+  },
+  {
+   "page": "Legion_stadium.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 287,
+   "distinct_names_in_prose": 28,
+   "snapshot": "20111022090233"
+  },
+  {
+   "page": "Maritime.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 1505,
+   "distinct_names_in_prose": 57,
+   "snapshot": "20080830033258"
+  },
+  {
+   "page": "Maritime_Chester-Ship_stats.htm",
+   "kinds": [
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 7,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20151002085456"
+  },
+  {
+   "page": "Maritime_Hog-Island_Germantown_1919.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 92,
+   "distinct_names_in_prose": 8,
+   "snapshot": "20081204134927"
+  },
+  {
+   "page": "Maritime_Hog-Island_NYS_1919.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 158,
+   "distinct_names_in_prose": 9,
+   "snapshot": "20151002085455"
+  },
+  {
+   "page": "Maritime_Hog-Island_stats.htm",
+   "kinds": [
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 9,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20151002085456"
+  },
+  {
+   "page": "Maritime_League-Island_stats.htm",
+   "kinds": [
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 7,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20151002085456"
+  },
+  {
+   "page": "Maritime_Merchant-Ship_stats.htm",
+   "kinds": [
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 22,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20151002085456"
+  },
+  {
+   "page": "Maritime_NY-Ship_stats.htm",
+   "kinds": [
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 8,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20151002085456"
+  },
+  {
+   "page": "Maritime_NYS_Merchant_1919.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 100,
+   "distinct_names_in_prose": 8,
+   "snapshot": "20151002085455"
+  },
+  {
+   "page": "Maritime_Sun-Ship_stats.htm",
+   "kinds": [
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 7,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20151002085456"
+  },
+  {
+   "page": "Maroons.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "standings"
+   ],
+   "tables": 10,
+   "roster_rows": 0,
+   "prose_words": 3513,
+   "distinct_names_in_prose": 140,
+   "snapshot": "20090215153235"
+  },
+  {
+   "page": "Maroons_1924_stats.htm",
+   "kinds": [
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 7,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20121108071725"
+  },
+  {
+   "page": "Maroons_1925_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 21,
+   "prose_words": 6,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20121108071202"
+  },
+  {
+   "page": "Maroons_1926_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 20,
+   "prose_words": 6,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20121108071755"
+  },
+  {
+   "page": "Maroons_1926_stats.htm",
+   "kinds": [
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 22,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20151002085729"
+  },
+  {
+   "page": "Maroons_1927_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 28,
+   "prose_words": 6,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20121108071330"
+  },
+  {
+   "page": "Maroons_1927_stats.htm",
+   "kinds": [
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 22,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20151002085728"
+  },
+  {
+   "page": "Maroons_1928_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 17,
+   "prose_words": 6,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20121108071310"
+  },
+  {
+   "page": "Maroons_1929.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 53,
+   "distinct_names_in_prose": 20,
+   "snapshot": "20121108070755"
+  },
+  {
+   "page": "Maroons_1929_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 22,
+   "prose_words": 6,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20121108071220"
+  },
+  {
+   "page": "Maroons_Akron_1926.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 4,
+   "roster_rows": 0,
+   "prose_words": 341,
+   "distinct_names_in_prose": 11,
+   "snapshot": "20121108071709"
+  },
+  {
+   "page": "Maroons_Atlantic-City_1924.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 4,
+   "roster_rows": 0,
+   "prose_words": 1476,
+   "distinct_names_in_prose": 53,
+   "snapshot": "20121025083011"
+  },
+  {
+   "page": "Maroons_Atlantic-City_1925.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 349,
+   "distinct_names_in_prose": 16,
+   "snapshot": "20121108071234"
+  },
+  {
+   "page": "Maroons_Bufallo_1926.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 4,
+   "roster_rows": 0,
+   "prose_words": 254,
+   "distinct_names_in_prose": 17,
+   "snapshot": "20121108072125"
+  },
+  {
+   "page": "Maroons_Cards_refuse.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 83,
+   "distinct_names_in_prose": 8,
+   "snapshot": "20120302052035"
+  },
+  {
+   "page": "Maroons_Chicago_1925.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 573,
+   "distinct_names_in_prose": 19,
+   "snapshot": "20121108071226"
+  },
+  {
+   "page": "Maroons_Coaldale_1923_1.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 241,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20151002085828"
+  },
+  {
+   "page": "Maroons_Coaldale_1924_2.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 254,
+   "distinct_names_in_prose": 17,
+   "snapshot": "20121108072638"
+  },
+  {
+   "page": "Maroons_Colwyn_1924.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 3,
+   "roster_rows": 0,
+   "prose_words": 64,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20151002085828"
+  },
+  {
+   "page": "Maroons_Gilberton_1924_2.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 4,
+   "roster_rows": 0,
+   "prose_words": 106,
+   "distinct_names_in_prose": 7,
+   "snapshot": "20151002085829"
+  },
+  {
+   "page": "Maroons_Kenneally.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 131,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20121108072653"
+  },
+  {
+   "page": "Maroons_NotreDame_1925_1.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 577,
+   "distinct_names_in_prose": 19,
+   "snapshot": "20121108070713"
+  },
+  {
+   "page": "Maroons_NotreDame_1925_2.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 4,
+   "roster_rows": 0,
+   "prose_words": 1231,
+   "distinct_names_in_prose": 36,
+   "snapshot": "20121025075719"
+  },
+  {
+   "page": "Maroons_Rendell.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 249,
+   "distinct_names_in_prose": 10,
+   "snapshot": "20121108071322"
+  },
+  {
+   "page": "Maroons_Rochester_1924.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 326,
+   "distinct_names_in_prose": 17,
+   "snapshot": "20121108071207"
+  },
+  {
+   "page": "Maroons_Wilkes-Barre_1924.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 4,
+   "roster_rows": 0,
+   "prose_words": 85,
+   "distinct_names_in_prose": 8,
+   "snapshot": "20151002085829"
+  },
+  {
+   "page": "Maroons_all-pros.htm",
+   "kinds": [
+    "all-league selections",
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 14,
+   "prose_words": 5,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20121108071339"
+  },
+  {
+   "page": "Maroons_celebrate_1.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 319,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20121108072706"
+  },
+  {
+   "page": "Maroons_celebrate_2.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 936,
+   "distinct_names_in_prose": 44,
+   "snapshot": "20121108071305"
+  },
+  {
+   "page": "Maroons_denied_2003.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 1315,
+   "distinct_names_in_prose": 54,
+   "snapshot": "20121023014346"
+  },
+  {
+   "page": "Maroons_marker.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 810,
+   "distinct_names_in_prose": 51,
+   "snapshot": "20121108070812"
+  },
+  {
+   "page": "Maroons_reflections.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 753,
+   "distinct_names_in_prose": 16,
+   "snapshot": "20151002085826"
+  },
+  {
+   "page": "Maroons_resolution.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 414,
+   "distinct_names_in_prose": 18,
+   "snapshot": "20121108071704"
+  },
+  {
+   "page": "Maroons_road.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 304,
+   "distinct_names_in_prose": 19,
+   "snapshot": "20121108071300"
+  },
+  {
+   "page": "Maroons_rumors.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 133,
+   "distinct_names_in_prose": 6,
+   "snapshot": "20121108072644"
+  },
+  {
+   "page": "Maroons_sale.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 5,
+   "roster_rows": 0,
+   "prose_words": 111,
+   "distinct_names_in_prose": 8,
+   "snapshot": "20121108072003"
+  },
+  {
+   "page": "Maroons_suspension.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 683,
+   "distinct_names_in_prose": 32,
+   "snapshot": "20121108070640"
+  },
+  {
+   "page": "Maroons_trophy.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 92,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20121108071850"
+  },
+  {
+   "page": "Millville.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "scoring",
+    "standings"
+   ],
+   "tables": 6,
+   "roster_rows": 0,
+   "prose_words": 7823,
+   "distinct_names_in_prose": 188,
+   "snapshot": "20090511164854"
+  },
+  {
+   "page": "PRR_YMCA.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "schedule"
+   ],
+   "tables": 7,
+   "roster_rows": 0,
+   "prose_words": 471,
+   "distinct_names_in_prose": 30,
+   "snapshot": "20090831172242"
+  },
+  {
+   "page": "PRR_YMCA_Ormiston_1898.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 67,
+   "distinct_names_in_prose": 3,
+   "snapshot": "20121109064215"
+  },
+  {
+   "page": "PRR_YMCA_Penn_1903.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 76,
+   "distinct_names_in_prose": 6,
+   "snapshot": "20121109064206"
+  },
+  {
+   "page": "PRR_YMCA_Phoenix_1899.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 187,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20121109064219"
+  },
+  {
+   "page": "PRR_YMCA_Trinity_1898.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 102,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20121109064211"
+  },
+  {
+   "page": "Phillies-Athletics.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "schedule",
+    "standings"
+   ],
+   "tables": 5,
+   "roster_rows": 0,
+   "prose_words": 1263,
+   "distinct_names_in_prose": 62,
+   "snapshot": "20081013072835"
+  },
+  {
+   "page": "Phillies_Orange_1902.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 117,
+   "distinct_names_in_prose": 7,
+   "snapshot": "20121109044653"
+  },
+  {
+   "page": "Phillies_Pittsburgh_1902.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 769,
+   "distinct_names_in_prose": 15,
+   "snapshot": "20151002085825"
+  },
+  {
+   "page": "Phillies_Steelton_1902.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 203,
+   "distinct_names_in_prose": 10,
+   "snapshot": "20151002085825"
+  },
+  {
+   "page": "Phillies_Wilmington_1902.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 51,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20121109044852"
+  },
+  {
+   "page": "Pittsburgh_H.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 138,
+   "distinct_names_in_prose": 3,
+   "snapshot": "20151002085911"
+  },
+  {
+   "page": "Professionals.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "schedule",
+    "standings"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 599,
+   "distinct_names_in_prose": 25,
+   "snapshot": "20090524025952"
+  },
+  {
+   "page": "Pros_Conshohocken_1901.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 160,
+   "distinct_names_in_prose": 7,
+   "snapshot": "20151001173828"
+  },
+  {
+   "page": "Pros_Homestead_1901.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 1672,
+   "distinct_names_in_prose": 29,
+   "snapshot": "20120302031838"
+  },
+  {
+   "page": "Pros_Homestead_1901_hype.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 407,
+   "distinct_names_in_prose": 27,
+   "snapshot": "20151001173834"
+  },
+  {
+   "page": "Pros_Lafayette_1901.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 1036,
+   "distinct_names_in_prose": 15,
+   "snapshot": "20151001173832"
+  },
+  {
+   "page": "Pros_pro-football.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 1485,
+   "distinct_names_in_prose": 32,
+   "snapshot": "20151001173832"
+  },
+  {
+   "page": "Pros_prospects.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 373,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20151001173828"
+  },
+  {
+   "page": "Quakers.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "roster",
+    "standings"
+   ],
+   "tables": 5,
+   "roster_rows": 4,
+   "prose_words": 776,
+   "distinct_names_in_prose": 39,
+   "snapshot": "20090122175133"
+  },
+  {
+   "page": "Quakers2.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 3,
+   "roster_rows": 0,
+   "prose_words": 5736,
+   "distinct_names_in_prose": 143,
+   "snapshot": "20081011175837"
+  },
+  {
+   "page": "Quakers_1921_scoring.htm",
+   "kinds": [
+    "scoring"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 7,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20091214033733"
+  },
+  {
+   "page": "Quakers_1926_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 24,
+   "prose_words": 4,
+   "distinct_names_in_prose": 1,
+   "snapshot": "20151002085711"
+  },
+  {
+   "page": "Quakers_1926_stats.htm",
+   "kinds": [
+    "all-league selections",
+    "schedule",
+    "standings"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 22,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20151002022514"
+  },
+  {
+   "page": "Quakers_Chicago_1926_2.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 381,
+   "distinct_names_in_prose": 13,
+   "snapshot": "20151002091647"
+  },
+  {
+   "page": "Quakers_Coaldale_1921.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 159,
+   "distinct_names_in_prose": 6,
+   "snapshot": "20091214033743"
+  },
+  {
+   "page": "Quakers_Elliott.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 285,
+   "distinct_names_in_prose": 17,
+   "snapshot": "20121025165609"
+  },
+  {
+   "page": "Quakers_Frankford_1920.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 627,
+   "distinct_names_in_prose": 18,
+   "snapshot": "20121110041633"
+  },
+  {
+   "page": "Quakers_Holmesburg_1921.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 275,
+   "distinct_names_in_prose": 10,
+   "snapshot": "20091214033748"
+  },
+  {
+   "page": "Quakers_NY-Giants_1921.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 255,
+   "distinct_names_in_prose": 14,
+   "snapshot": "20091214033753"
+  },
+  {
+   "page": "Quakers_NY-Giants_1926.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 594,
+   "distinct_names_in_prose": 28,
+   "snapshot": "20121024024814"
+  },
+  {
+   "page": "Quakers_Thorpe.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 35,
+   "distinct_names_in_prose": 9,
+   "snapshot": "20121110041325"
+  },
+  {
+   "page": "Quakers_Yankees_1926_3.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 1063,
+   "distinct_names_in_prose": 48,
+   "snapshot": "20151002022501"
+  },
+  {
+   "page": "Quakers_Yellowjackets_1926.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 485,
+   "distinct_names_in_prose": 27,
+   "snapshot": "20151002022507"
+  },
+  {
+   "page": "Quakers_cancelled.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 185,
+   "distinct_names_in_prose": 20,
+   "snapshot": "20091214033758"
+  },
+  {
+   "page": "Quakers_challenge.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 135,
+   "distinct_names_in_prose": 14,
+   "snapshot": "20151002022514"
+  },
+  {
+   "page": "Quakers_dispute.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 397,
+   "distinct_names_in_prose": 21,
+   "snapshot": "20091214033805"
+  },
+  {
+   "page": "Quakers_stadium.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 95,
+   "distinct_names_in_prose": 10,
+   "snapshot": "20081204135833"
+  },
+  {
+   "page": "Union.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "standings"
+   ],
+   "tables": 6,
+   "roster_rows": 0,
+   "prose_words": 4553,
+   "distinct_names_in_prose": 122,
+   "snapshot": "20090226022913"
+  },
+  {
+   "page": "Wheelmen.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 853,
+   "distinct_names_in_prose": 27,
+   "snapshot": "20081012170559"
+  },
+  {
+   "page": "Wheelmen_1892.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 881,
+   "distinct_names_in_prose": 16,
+   "snapshot": "20151002085346"
+  },
+  {
+   "page": "Wheelmen_1893a.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 329,
+   "distinct_names_in_prose": 9,
+   "snapshot": "20151002085346"
+  },
+  {
+   "page": "Wheelmen_1893b.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 1429,
+   "distinct_names_in_prose": 25,
+   "snapshot": "20151002085346"
+  },
+  {
+   "page": "Wheelmen_Burlington-Central_1893.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 77,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20151002085817"
+  },
+  {
+   "page": "Wheelmen_Burlington-PM_1893.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 118,
+   "distinct_names_in_prose": 9,
+   "snapshot": "20151002085346"
+  },
+  {
+   "page": "Wheelmen_Century-Camden_1892.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 67,
+   "distinct_names_in_prose": 7,
+   "snapshot": "20151002085345"
+  },
+  {
+   "page": "Yellowjackets.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative",
+    "standings"
+   ],
+   "tables": 17,
+   "roster_rows": 0,
+   "prose_words": 5994,
+   "distinct_names_in_prose": 185,
+   "snapshot": "20081012170627"
+  },
+  {
+   "page": "Yellowjackets_1921_stats.htm",
+   "kinds": [
+    "all-league selections",
+    "schedule",
+    "standings"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 23,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20151002085729"
+  },
+  {
+   "page": "Yellowjackets_1922.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 20,
+   "distinct_names_in_prose": 3,
+   "snapshot": "20091214052430"
+  },
+  {
+   "page": "Yellowjackets_1922_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 27,
+   "prose_words": 6,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20091214050549"
+  },
+  {
+   "page": "Yellowjackets_1923_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 20,
+   "prose_words": 6,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20091214052435"
+  },
+  {
+   "page": "Yellowjackets_1924_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 30,
+   "prose_words": 6,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20091214052440"
+  },
+  {
+   "page": "Yellowjackets_1925_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 32,
+   "prose_words": 6,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20121108061447"
+  },
+  {
+   "page": "Yellowjackets_1926_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 26,
+   "prose_words": 6,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20091214052450"
+  },
+  {
+   "page": "Yellowjackets_1926_stats.htm",
+   "kinds": [
+    "all-league selections",
+    "schedule"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 23,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20151002085729"
+  },
+  {
+   "page": "Yellowjackets_1927_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 34,
+   "prose_words": 7,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20091214052455"
+  },
+  {
+   "page": "Yellowjackets_1928_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 20,
+   "prose_words": 7,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20091214052505"
+  },
+  {
+   "page": "Yellowjackets_1929_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 25,
+   "prose_words": 7,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20091214050722"
+  },
+  {
+   "page": "Yellowjackets_1930_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 41,
+   "prose_words": 7,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20091214052510"
+  },
+  {
+   "page": "Yellowjackets_1931_roster.htm",
+   "kinds": [
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 22,
+   "prose_words": 7,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20091214050738"
+  },
+  {
+   "page": "Yellowjackets_Akron_1922.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 36,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20151002085730"
+  },
+  {
+   "page": "Yellowjackets_Akron_1923.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 36,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20151002085730"
+  },
+  {
+   "page": "Yellowjackets_All-Phila_1922.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 165,
+   "distinct_names_in_prose": 11,
+   "snapshot": "20151002085818"
+  },
+  {
+   "page": "Yellowjackets_Battery-H_1929.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 180,
+   "distinct_names_in_prose": 8,
+   "snapshot": "20091214052515"
+  },
+  {
+   "page": "Yellowjackets_Behman_2.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 261,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20091214052520"
+  },
+  {
+   "page": "Yellowjackets_Berryman.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 525,
+   "distinct_names_in_prose": 14,
+   "snapshot": "20091214050748"
+  },
+  {
+   "page": "Yellowjackets_Calhoun.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 304,
+   "distinct_names_in_prose": 24,
+   "snapshot": "20091214050753"
+  },
+  {
+   "page": "Yellowjackets_Canton_1923.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 706,
+   "distinct_names_in_prose": 16,
+   "snapshot": "20091214051101"
+  },
+  {
+   "page": "Yellowjackets_Chamberlin.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 525,
+   "distinct_names_in_prose": 21,
+   "snapshot": "20091214023730"
+  },
+  {
+   "page": "Yellowjackets_Chicago_1925_2.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 381,
+   "distinct_names_in_prose": 13,
+   "snapshot": "20091214033815"
+  },
+  {
+   "page": "Yellowjackets_Clifton_1926_2.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 173,
+   "distinct_names_in_prose": 11,
+   "snapshot": "20151002085729"
+  },
+  {
+   "page": "Yellowjackets_Drum-Corps.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 480,
+   "distinct_names_in_prose": 24,
+   "snapshot": "20091214051106"
+  },
+  {
+   "page": "Yellowjackets_Duluth_1926.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 3,
+   "roster_rows": 0,
+   "prose_words": 386,
+   "distinct_names_in_prose": 9,
+   "snapshot": "20091214051114"
+  },
+  {
+   "page": "Yellowjackets_Elkins.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 777,
+   "distinct_names_in_prose": 34,
+   "snapshot": "20091214052525"
+  },
+  {
+   "page": "Yellowjackets_Evans.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 186,
+   "distinct_names_in_prose": 9,
+   "snapshot": "20151002085821"
+  },
+  {
+   "page": "Yellowjackets_Gilberton_1923.htm",
+   "kinds": [
+    "prose narrative",
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 3,
+   "prose_words": 771,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20091214051119"
+  },
+  {
+   "page": "Yellowjackets_Hamer.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 63,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20151002085821"
+  },
+  {
+   "page": "Yellowjackets_Holden.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 446,
+   "distinct_names_in_prose": 17,
+   "snapshot": "20091214051124"
+  },
+  {
+   "page": "Yellowjackets_Holmesburg_1922.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 1220,
+   "distinct_names_in_prose": 41,
+   "snapshot": "20091214052530"
+  },
+  {
+   "page": "Yellowjackets_Joesting.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 566,
+   "distinct_names_in_prose": 24,
+   "snapshot": "20091214052535"
+  },
+  {
+   "page": "Yellowjackets_Lady_Yellow_Jackets_1926.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 516,
+   "distinct_names_in_prose": 32,
+   "snapshot": "20151002085817"
+  },
+  {
+   "page": "Yellowjackets_Little.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 178,
+   "distinct_names_in_prose": 6,
+   "snapshot": "20091214051129"
+  },
+  {
+   "page": "Yellowjackets_Moran.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 295,
+   "distinct_names_in_prose": 17,
+   "snapshot": "20091214033820"
+  },
+  {
+   "page": "Yellowjackets_Moran_2.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 822,
+   "distinct_names_in_prose": 33,
+   "snapshot": "20091214052540"
+  },
+  {
+   "page": "Yellowjackets_New_Haven_1923.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 36,
+   "distinct_names_in_prose": 4,
+   "snapshot": "20081204135633"
+  },
+  {
+   "page": "Yellowjackets_Orange_1922.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 199,
+   "distinct_names_in_prose": 10,
+   "snapshot": "20151002085819"
+  },
+  {
+   "page": "Yellowjackets_Pottsville_1925_2.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 4,
+   "roster_rows": 0,
+   "prose_words": 433,
+   "distinct_names_in_prose": 13,
+   "snapshot": "20091214051134"
+  },
+  {
+   "page": "Yellowjackets_Providence_1926_3.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 356,
+   "distinct_names_in_prose": 11,
+   "snapshot": "20091214052545"
+  },
+  {
+   "page": "Yellowjackets_Riverside_1923.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 4,
+   "roster_rows": 0,
+   "prose_words": 464,
+   "distinct_names_in_prose": 17,
+   "snapshot": "20151002085820"
+  },
+  {
+   "page": "Yellowjackets_Rochester_1924.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 445,
+   "distinct_names_in_prose": 25,
+   "snapshot": "20091214051139"
+  },
+  {
+   "page": "Yellowjackets_Thanksgiving_1922.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 440,
+   "distinct_names_in_prose": 16,
+   "snapshot": "20091214052550"
+  },
+  {
+   "page": "Yellowjackets_Thanksgiving_1923.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 496,
+   "distinct_names_in_prose": 13,
+   "snapshot": "20091214051144"
+  },
+  {
+   "page": "Yellowjackets_Thanksgiving_1924.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 1118,
+   "distinct_names_in_prose": 36,
+   "snapshot": "20091214051149"
+  },
+  {
+   "page": "Yellowjackets_Thanksgiving_1925.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 3,
+   "roster_rows": 0,
+   "prose_words": 485,
+   "distinct_names_in_prose": 14,
+   "snapshot": "20091214051154"
+  },
+  {
+   "page": "Yellowjackets_Thanksgiving_1926-30.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 5,
+   "roster_rows": 0,
+   "prose_words": 1044,
+   "distinct_names_in_prose": 34,
+   "snapshot": "20091220212736"
+  },
+  {
+   "page": "Yellowjackets_all-pros.htm",
+   "kinds": [
+    "all-league selections",
+    "roster"
+   ],
+   "tables": 2,
+   "roster_rows": 24,
+   "prose_words": 21,
+   "distinct_names_in_prose": 5,
+   "snapshot": "20091214052555"
+  },
+  {
+   "page": "Yellowjackets_all-pros_1928.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 165,
+   "distinct_names_in_prose": 16,
+   "snapshot": "20151002085820"
+  },
+  {
+   "page": "Yellowjackets_band.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 13,
+   "distinct_names_in_prose": 3,
+   "snapshot": "20091214052600"
+  },
+  {
+   "page": "Yellowjackets_charity.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 793,
+   "distinct_names_in_prose": 31,
+   "snapshot": "20091214051159"
+  },
+  {
+   "page": "Yellowjackets_cheers.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 8,
+   "distinct_names_in_prose": 3,
+   "snapshot": "20091214052605"
+  },
+  {
+   "page": "Yellowjackets_disband.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 415,
+   "distinct_names_in_prose": 25,
+   "snapshot": "20091214052610"
+  },
+  {
+   "page": "Yellowjackets_fire.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 525,
+   "distinct_names_in_prose": 19,
+   "snapshot": "20091214033825"
+  },
+  {
+   "page": "Yellowjackets_forfeit.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 117,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20081204135005"
+  },
+  {
+   "page": "Yellowjackets_girls.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 259,
+   "distinct_names_in_prose": 21,
+   "snapshot": "20081204135113"
+  },
+  {
+   "page": "Yellowjackets_girls_1.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 6,
+   "distinct_names_in_prose": 0,
+   "snapshot": "20151002091630"
+  },
+  {
+   "page": "Yellowjackets_girls_2.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 6,
+   "distinct_names_in_prose": 0,
+   "snapshot": "20151002091630"
+  },
+  {
+   "page": "Yellowjackets_girls_3.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 6,
+   "distinct_names_in_prose": 0,
+   "snapshot": "20151002091631"
+  },
+  {
+   "page": "Yellowjackets_preparations_1924.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 121,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20091214051204"
+  },
+  {
+   "page": "Yellowjackets_program.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 19,
+   "distinct_names_in_prose": 2,
+   "snapshot": "20091214052620"
+  },
+  {
+   "page": "Yellowjackets_reminiscence.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 790,
+   "distinct_names_in_prose": 25,
+   "snapshot": "20091214052625"
+  },
+  {
+   "page": "Yellowjackets_spirit.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 1039,
+   "distinct_names_in_prose": 42,
+   "snapshot": "20091214052631"
+  },
+  {
+   "page": "Yellowjackets_stadium.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 622,
+   "distinct_names_in_prose": 26,
+   "snapshot": "20091214052636"
+  },
+  {
+   "page": "Yellowjackets_support.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 326,
+   "distinct_names_in_prose": 14,
+   "snapshot": "20091214051718"
+  },
+  {
+   "page": "Yellowjackets_traveling.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 346,
+   "distinct_names_in_prose": 29,
+   "snapshot": "20091214052641"
+  },
+  {
+   "page": "articles.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 4601,
+   "distinct_names_in_prose": 139,
+   "snapshot": "20081011155821"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 439,
+   "distinct_names_in_prose": 41,
+   "snapshot": "20080706003611"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 215,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20081204135547"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 7,
+   "roster_rows": 0,
+   "prose_words": 244,
+   "distinct_names_in_prose": 16,
+   "snapshot": "20091214020509"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 7,
+   "roster_rows": 0,
+   "prose_words": 298,
+   "distinct_names_in_prose": 19,
+   "snapshot": "20091214020512"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 221,
+   "distinct_names_in_prose": 11,
+   "snapshot": "20121109091146"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 7,
+   "roster_rows": 0,
+   "prose_words": 188,
+   "distinct_names_in_prose": 17,
+   "snapshot": "20091214020517"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 416,
+   "distinct_names_in_prose": 23,
+   "snapshot": "20121109044901"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 315,
+   "distinct_names_in_prose": 16,
+   "snapshot": "20091213005842"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "prose narrative"
+   ],
+   "tables": 5,
+   "roster_rows": 0,
+   "prose_words": 622,
+   "distinct_names_in_prose": 26,
+   "snapshot": "20091214020522"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 15,
+   "roster_rows": 0,
+   "prose_words": 470,
+   "distinct_names_in_prose": 28,
+   "snapshot": "20091213010030"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 143,
+   "distinct_names_in_prose": 8,
+   "snapshot": "20091214020527"
+  },
+  {
+   "page": "index.htm",
+   "kinds": [
+    "index or fragment"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 245,
+   "distinct_names_in_prose": 12,
+   "snapshot": "20091214020532"
+  },
+  {
+   "page": "index.root-20090727182819.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 444,
+   "distinct_names_in_prose": 41,
+   "snapshot": "20090727182819"
+  },
+  {
+   "page": "library.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 2,
+   "roster_rows": 0,
+   "prose_words": 105,
+   "distinct_names_in_prose": 3,
+   "snapshot": "20090227140013"
+  },
+  {
+   "page": "links.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 2435,
+   "distinct_names_in_prose": 237,
+   "snapshot": "20081007101938"
+  },
+  {
+   "page": "rivalry.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 3,
+   "roster_rows": 0,
+   "prose_words": 1636,
+   "distinct_names_in_prose": 46,
+   "snapshot": "20121108063657"
+  },
+  {
+   "page": "sources.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 1,
+   "roster_rows": 0,
+   "prose_words": 723,
+   "distinct_names_in_prose": 117,
+   "snapshot": "20080907202908"
+  },
+  {
+   "page": "stadiums.htm",
+   "kinds": [
+    "all-league selections",
+    "prose narrative"
+   ],
+   "tables": 10,
+   "roster_rows": 0,
+   "prose_words": 1596,
+   "distinct_names_in_prose": 102,
+   "snapshot": "20081214135544"
+  },
+  {
+   "page": "updates.htm",
+   "kinds": [
+    "all-league selections"
+   ],
+   "tables": 6,
+   "roster_rows": 0,
+   "prose_words": 138,
+   "distinct_names_in_prose": 3,
+   "snapshot": "20081007162831"
+  }
+ ]
+}

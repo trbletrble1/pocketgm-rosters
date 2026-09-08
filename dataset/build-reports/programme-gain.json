@@ -1,0 +1,1104 @@
+{
+ "_note": "MEASUREMENT ONLY. No store written. The extractor is unchanged; the two-column work-around lives in this script.",
+ "_the_three_are_not_added": "A is candidates, not new people. B is the gap. C is corroboration, not a gap.",
+ "listings": [
+  {
+   "listing": "1938 N.Y. GIANTS v WASHINGTON REDSKINS NFL FOOTBALL PROGRAM:SAMMY BAUGH:MEL HEIN",
+   "club_seasons": [
+    "NFL|1938|NYG",
+    "NFL|1938|WAS"
+   ],
+   "cohort_held": 64,
+   "men_read": 71,
+   "A_candidates_not_held": [
+    {
+     "name_as_printed": "FIELD GOALS",
+     "surname": "goals",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "After",
+     "surname": "after",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "SCLDY",
+     "surname": "scldy",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Sam",
+     "surname": "sam",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "ALL-STAR TEAM BALLOT",
+     "surname": "ballot",
+     "page_carries": [
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "CANADA DRY",
+     "surname": "dry",
+     "page_carries": [
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Cork-Tipped",
+     "surname": "tipped",
+     "page_carries": [
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "CORK",
+     "surname": "cork",
+     "page_carries": [
+      "college",
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    }
+   ],
+   "ambiguous_on_surname": [],
+   "B_held_but_missing": [
+    {
+     "name_as_printed": "Shaffer",
+     "person": "P_016628",
+     "held_as": "Lee Shaffer",
+     "page_carries": [
+      "weight"
+     ],
+     "archive_holds": [
+      "age",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": [
+      "weight"
+     ]
+    }
+   ],
+   "C_pure_duplication": [
+    {
+     "name_as_printed": "Barnum",
+     "person": "P_016921",
+     "held_as": "Len Barnum",
+     "page_carries": [
+      "weight"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Howell",
+     "person": "P_014524",
+     "held_as": "Jim Howell",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Cole",
+     "person": "P_016803",
+     "held_as": "Pete Cole",
+     "page_carries": [
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Dell Isola",
+     "person": "P_016504",
+     "held_as": "Johnny Dell Isola",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Widseth",
+     "person": "P_016818",
+     "held_as": "Ed Widseth",
+     "page_carries": [
+      "weight",
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Falaschi",
+     "person": "P_016923",
+     "held_as": "Nello Falaschi",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Poole",
+     "person": "P_016813",
+     "held_as": "Jim Poole",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Karcher",
+     "person": "P_016663",
+     "held_as": "Jim Karcher",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Smith",
+     "person": "P_016666",
+     "held_as": "Riley Smith",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Olsson",
+     "person": "P_016444",
+     "held_as": "Les Olsson",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Edwards",
+     "person": "P_014441",
+     "held_as": "Turk Edwards",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Millner",
+     "person": "P_014616",
+     "held_as": "Wayne Millner",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    }
+   ],
+   "counts": {
+    "read": 71,
+    "A": 8,
+    "ambiguous": 0,
+    "B": 1,
+    "C": 12,
+    "B_field_gaps": {
+     "weight": 1
+    }
+   }
+  },
+  {
+   "listing": "1941 Brooklyn Dodgers v New York Giants NFL football program:BRUISER KINARD-MINT",
+   "club_seasons": [
+    "NFL|1941|BRO",
+    "NFL|1941|NYG"
+   ],
+   "cohort_held": 67,
+   "men_read": 53,
+   "A_candidates_not_held": [
+    {
+     "name_as_printed": "Age",
+     "surname": "age",
+     "page_carries": [
+      "college"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Santa Barbara",
+     "surname": "barbara",
+     "page_carries": [
+      "weight",
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Pro",
+     "surname": "pro",
+     "page_carries": [
+      "college"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "George",
+     "surname": "george",
+     "page_carries": [
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Fordbam",
+     "surname": "fordbam",
+     "page_carries": [
+      "college"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "NEXT SUNDAY",
+     "surname": "sunday",
+     "page_carries": [
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Philadelphia",
+     "surname": "philadelphia",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Cleveland",
+     "surname": "cleveland",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Green Bay",
+     "surname": "bay",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Chicago Cards",
+     "surname": "cards",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    }
+   ],
+   "ambiguous_on_surname": [],
+   "B_held_but_missing": [],
+   "C_pure_duplication": [
+    {
+     "name_as_printed": "MELLUS",
+     "person": "P_000759",
+     "held_as": "John Mellus",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "FALASCHI",
+     "person": "P_016923",
+     "held_as": "Nello Falaschi",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "LEO STASICA",
+     "person": "P_017201",
+     "held_as": "Leo Stasica",
+     "page_carries": [
+      "weight",
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "LARRY PEACE",
+     "person": "P_017199",
+     "held_as": "Larry Peace",
+     "page_carries": [
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "RUCINSKI",
+     "person": "P_017200",
+     "held_as": "Ed Rucinski",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "MERRILL",
+     "person": "P_017099",
+     "held_as": "Walt Merrill",
+     "page_carries": [
+      "college"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "MANDERS",
+     "person": "P_000719",
+     "held_as": "Pug Manders",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "ALFSON",
+     "person": "P_017190",
+     "held_as": "Warren Alfson",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "HOWELL",
+     "person": "P_014524",
+     "held_as": "Jim Howell",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "LEEMANS",
+     "person": "P_016704",
+     "held_as": "Tuffy Leemans",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "PEDERSEN",
+     "person": "P_017259",
+     "held_as": "Win Pedersen",
+     "page_carries": [
+      "college",
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "OLDERSHAW",
+     "person": "P_017055",
+     "held_as": "Doug Oldershaw",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "HEIN",
+     "person": "P_014512",
+     "held_as": "Mel Hein",
+     "page_carries": [
+      "weight",
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "POOLE",
+     "person": "P_016813",
+     "held_as": "Jim Poole",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    }
+   ],
+   "counts": {
+    "read": 53,
+    "A": 10,
+    "ambiguous": 0,
+    "B": 0,
+    "C": 14,
+    "B_field_gaps": {}
+   }
+  },
+  {
+   "listing": "1942 NFL World Championship Chicago Bears-Washington Redskins football program!!",
+   "club_seasons": [
+    "NFL|1942|CHI",
+    "NFL|1942|WAS"
+   ],
+   "cohort_held": 67,
+   "men_read": 84,
+   "A_candidates_not_held": [
+    {
+     "name_as_printed": "Private Dinners",
+     "surname": "dinners",
+     "page_carries": [
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "BEARS",
+     "surname": "bears",
+     "page_carries": [
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Single",
+     "surname": "single",
+     "page_carries": [
+      "college",
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Married",
+     "surname": "married",
+     "page_carries": [
+      "college",
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "The Bears'",
+     "surname": "bears",
+     "page_carries": [
+      "college"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Flaherty",
+     "surname": "flaherty",
+     "page_carries": [
+      "college"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Seventh",
+     "surname": "seventh",
+     "page_carries": [
+      "weight",
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "George",
+     "surname": "george",
+     "page_carries": [
+      "weight",
+      "college"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Fourth",
+     "surname": "fourth",
+     "page_carries": [
+      "weight",
+      "college",
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Third",
+     "surname": "third",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "National",
+     "surname": "national",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "All-",
+     "surname": "all",
+     "page_carries": [
+      "college"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    }
+   ],
+   "ambiguous_on_surname": [],
+   "B_held_but_missing": [],
+   "C_pure_duplication": [
+    {
+     "name_as_printed": "Poillon",
+     "person": "P_017439",
+     "held_as": "Dick Poillon",
+     "page_carries": [
+      "weight"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "McChesney",
+     "person": "P_016664",
+     "held_as": "Bob McChesney",
+     "page_carries": [
+      "weight"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    }
+   ],
+   "counts": {
+    "read": 84,
+    "A": 12,
+    "ambiguous": 0,
+    "B": 0,
+    "C": 2,
+    "B_field_gaps": {}
+   }
+  },
+  {
+   "listing": "1935 NFL CHICAGO BEARS v PACIFIC A.S.FOOTBALL PROGRAM:RED GRANGE:BRONKO NAGURSKI",
+   "club_seasons": [
+    "NFL|1935|CHI"
+   ],
+   "cohort_held": 29,
+   "men_read": 26,
+   "A_candidates_not_held": [
+    {
+     "name_as_printed": "Page Two",
+     "surname": "two",
+     "page_carries": [
+      "weight",
+      "college",
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "BEAR FACTS",
+     "surname": "facts",
+     "page_carries": [
+      "age",
+      "weight",
+      "college"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Committee",
+     "surname": "committee",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Postion",
+     "surname": "postion",
+     "page_carries": [
+      "college"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "William",
+     "surname": "william",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    }
+   ],
+   "ambiguous_on_surname": [],
+   "B_held_but_missing": [],
+   "C_pure_duplication": [],
+   "counts": {
+    "read": 26,
+    "A": 5,
+    "ambiguous": 0,
+    "B": 0,
+    "C": 0,
+    "B_field_gaps": {}
+   }
+  },
+  {
+   "listing": "1946\u201dRARE\u201dMIAMI SEAHAWKS v L.A. DONS AAFC Football Program-\u201cOnly\u201dSEAHAWKS Season",
+   "club_seasons": [
+    "AAFC|1946|MIS",
+    "AAFC|1946|LAD"
+   ],
+   "cohort_held": 81,
+   "men_read": 47,
+   "A_candidates_not_held": [
+    {
+     "name_as_printed": "COOLER",
+     "surname": "cooler",
+     "page_carries": [
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "New Orleans",
+     "surname": "orleans",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Tulane-LSU",
+     "surname": "lsu",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Cleveland",
+     "surname": "cleveland",
+     "page_carries": [
+      "college",
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Tonight's Game",
+     "surname": "game",
+     "page_carries": [
+      "position"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Hermosa Beach",
+     "surname": "beach",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Lancaster",
+     "surname": "lancaster",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Honolulu",
+     "surname": "honolulu",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Turlock",
+     "surname": "turlock",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Minneapolis",
+     "surname": "minneapolis",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "San Jose",
+     "surname": "jose",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Monrovia",
+     "surname": "monrovia",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    },
+    {
+     "name_as_printed": "Puente",
+     "surname": "puente",
+     "page_carries": [
+      "weight"
+     ],
+     "height": null,
+     "what_separates_them": "no person on any of this game's club-seasons carries this surname",
+     "IS_A_CANDIDATE_NOT_A_PERSON": true
+    }
+   ],
+   "ambiguous_on_surname": [],
+   "B_held_but_missing": [],
+   "C_pure_duplication": [
+    {
+     "name_as_printed": "HAMP POOL",
+     "person": "P_000690",
+     "held_as": "Hampton Pool",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "TOTAL PRICE",
+     "person": "P_000691",
+     "held_as": "Cotton Price",
+     "page_carries": [
+      "weight"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    },
+    {
+     "name_as_printed": "Aguirre",
+     "person": "P_000635",
+     "held_as": "Joe Aguirre",
+     "page_carries": [
+      "position"
+     ],
+     "archive_holds": [
+      "age",
+      "weight",
+      "college",
+      "position"
+     ],
+     "archive_lacks_that_the_page_carries": []
+    }
+   ],
+   "counts": {
+    "read": 47,
+    "A": 13,
+    "ambiguous": 0,
+    "B": 0,
+    "C": 3,
+    "B_field_gaps": {}
+   }
+  }
+ ]
+}

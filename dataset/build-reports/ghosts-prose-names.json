@@ -1,0 +1,225 @@
+{
+ "_note": "COUNTED AND LOCATED, NEVER EXTRACTED. A name here may be a player, a coach, a league president, a reporter, a stadium namesake or a photographer. Deciding which is where a parser invents people.",
+ "pages_with_a_name_in_prose": 229,
+ "distinct_name_strings": 2444,
+ "total_occurrences": 6318,
+ "context_within_90_characters": {
+  "nothing identifying": 2086,
+  "a year": 1155,
+  "a club": 1015,
+  "a club + a year": 888,
+  "a role word": 726,
+  "a role word + a club": 221,
+  "a role word + a year": 144,
+  "a role word + a club + a year": 83
+ },
+ "most_frequent_20": [
+  [
+   "Yellow Jackets",
+   196
+  ],
+  [
+   "Frankford Yellow",
+   122
+  ],
+  [
+   "Pottsville Maroons",
+   107
+  ],
+  [
+   "Union Club",
+   70
+  ],
+  [
+   "Thanksgiving Day",
+   68
+  ],
+  [
+   "Public Ledger",
+   65
+  ],
+  [
+   "Documentary Scrapbook",
+   62
+  ],
+  [
+   "National Football",
+   61
+  ],
+  [
+   "Big Blue",
+   57
+  ],
+  [
+   "Frankford Legion",
+   57
+  ],
+  [
+   "Philadelphia Record",
+   56
+  ],
+  [
+   "Atlantic City",
+   51
+  ],
+  [
+   "Pro Football",
+   50
+  ],
+  [
+   "Johnny Scott",
+   48
+  ],
+  [
+   "National League",
+   45
+  ],
+  [
+   "Philadelphia November",
+   43
+  ],
+  [
+   "Park Avenue",
+   43
+  ],
+  [
+   "Green Bay",
+   41
+  ],
+  [
+   "Heinie Miller",
+   39
+  ],
+  [
+   "Notre Dame",
+   38
+  ]
+ ],
+ "per_page": [
+  {
+   "page": "links.htm",
+   "distinct_names": 203,
+   "words": 2435
+  },
+  {
+   "page": "Yellowjackets.htm",
+   "distinct_names": 147,
+   "words": 5994
+  },
+  {
+   "page": "Millville.htm",
+   "distinct_names": 145,
+   "words": 7823
+  },
+  {
+   "page": "articles.htm",
+   "distinct_names": 130,
+   "words": 4601
+  },
+  {
+   "page": "Maroons.htm",
+   "distinct_names": 110,
+   "words": 3513
+  },
+  {
+   "page": "Quakers2.htm",
+   "distinct_names": 105,
+   "words": 5736
+  },
+  {
+   "page": "sources.htm",
+   "distinct_names": 103,
+   "words": 723
+  },
+  {
+   "page": "Legion.htm",
+   "distinct_names": 97,
+   "words": 3379
+  },
+  {
+   "page": "Union.htm",
+   "distinct_names": 94,
+   "words": 4553
+  },
+  {
+   "page": "Bethlehem.htm",
+   "distinct_names": 90,
+   "words": 4715
+  },
+  {
+   "page": "stadiums.htm",
+   "distinct_names": 89,
+   "words": 1596
+  },
+  {
+   "page": "Ambulance.htm",
+   "distinct_names": 82,
+   "words": 2721
+  },
+  {
+   "page": "Conshohocken.htm",
+   "distinct_names": 76,
+   "words": 2883
+  },
+  {
+   "page": "Holmesburg.htm",
+   "distinct_names": 76,
+   "words": 1608
+  },
+  {
+   "page": "Phillies-Athletics.htm",
+   "distinct_names": 47,
+   "words": 1263
+  },
+  {
+   "page": "Maroons_marker.htm",
+   "distinct_names": 46,
+   "words": 810
+  },
+  {
+   "page": "Maroons_Atlantic-City_1924.htm",
+   "distinct_names": 45,
+   "words": 1476
+  },
+  {
+   "page": "Holmesburg_article.htm",
+   "distinct_names": 44,
+   "words": 878
+  },
+  {
+   "page": "Maroons_denied_2003.htm",
+   "distinct_names": 42,
+   "words": 1315
+  },
+  {
+   "page": "Maritime.htm",
+   "distinct_names": 41,
+   "words": 1505
+  },
+  {
+   "page": "Quakers_Yankees_1926_3.htm",
+   "distinct_names": 41,
+   "words": 1063
+  },
+  {
+   "page": "Corley.htm",
+   "distinct_names": 39,
+   "words": 928
+  },
+  {
+   "page": "Maroons_celebrate_2.htm",
+   "distinct_names": 38,
+   "words": 936
+  },
+  {
+   "page": "index.root-20090727182819.htm",
+   "distinct_names": 38,
+   "words": 444
+  },
+  {
+   "page": "Yellowjackets_Holmesburg_1922.htm",
+   "distinct_names": 36,
+   "words": 1220
+  }
+ ]
+}

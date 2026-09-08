@@ -44,16 +44,56 @@ def norm(s):
     return re.sub(r"[^a-z ]", "", s.lower()).strip()
 
 
-def men_of(image):
-    bs = bands(image)
-    if not bs: return []
-    numbered = [b for b in bs if sum(1 for _, _, t in b if RE_NUM.match(t)) >= 1]
-    if len(numbered) < 6: return []
+# A CAPITALISED WORD OF THREE LETTERS OR MORE. Not a name pattern -- deliberately
+# weaker than RE_MAN/RE_SUR, because the point of the drop log is to show what the
+# strict patterns could not see. `JACK NOLAN-25 years` matches here and nowhere else.
+RE_READABLE = re.compile(r"\b[A-Z][A-Za-z'’\-]{2,}\b")
+
+
+def readable_names(toks):
+    """Text in a band that a human would read as a name, whether or not the anchored
+    patterns match it. Reported, never used to accept a man."""
     out = []
-    for b in numbered:
+    for t in toks:
+        w = RE_READABLE.findall(t)
+        if w: out.append({"token": t[:120], "capitalised_words": w[:8]})
+    return out[:12]
+
+
+def men_of(image, drops=None):
+    """UNCHANGED in what it accepts. Every drop is now recorded in `drops`.
+
+    Before this, each of the four exits below was a bare `return []` or `continue`.
+    A page the parser could not read and a page with nothing on it produced the same
+    output -- no men, no note, nothing to count. That is the archive's standing
+    defect class and this is the instrument for it, not the fix for it."""
+    def drop(why, **kw):
+        if drops is not None:
+            drops.append({"image": image.get("image"), "why": why,
+                          "orientation": image.get("orientation"),
+                          "lines": len(image.get("lines") or []), **kw})
+    bs = bands(image)
+    if not bs:
+        n = len(image.get("lines") or [])
+        drop("no_bands", detail=("fewer than 12 lines" if n < 12 else
+             "no positive gaps between lines"), bands=0)
+        return []
+    numbered = [b for b in bs if sum(1 for _, _, t in b if RE_NUM.match(t)) >= 1]
+    if len(numbered) < 6:
+        drop("image_under_6_numbered_bands", bands=len(bs), numbered_bands=len(numbered),
+             numbers_seen=sum(sum(1 for _, _, t in b if RE_NUM.match(t)) for b in numbered),
+             readable=readable_names([t.strip() for b in numbered for _, _, t in b]))
+        return []
+    out = []
+    for bi, b in enumerate(numbered):
         toks = [t.strip() for _, _, t in b]
         nums = [t for t in toks if RE_NUM.match(t)]
-        if len(nums) != 1: continue                  # pairs are not forced -- see docstring
+        if len(nums) != 1:
+            # Pairs are not forced -- see docstring. But a two-column PAGE also lands
+            # here, and there the two numbers are two columns, not two merged rows.
+            drop("band_multi_number", band=bi, numbers=nums, tokens=len(toks),
+                 men_at_least=len(nums), readable=readable_names(toks))
+            continue
         # EACH TOKEN IS ASSIGNED TO AT MOST ONE FIELD, in priority order. Without
         # this, "Washington State" matches the name pattern as well as the college
         # pattern and every roster row looks like it carries two men. An earlier
@@ -75,7 +115,13 @@ def men_of(image):
         names = full + sur
         names = [n for n in names if n.strip().lower() not in
                  ("college", "name", "position", "height", "weight", "no", "total")]
-        if not names: continue
+        if not names:
+            # A number, and not one token that is NOTHING BUT a name. On a bio page
+            # every entry reads `JACK NOLAN-25 years, height 5 ft. 10 in.` and the
+            # anchored patterns cannot match any of them.
+            drop("band_no_name_matched", band=bi, numbers=nums, tokens=len(toks),
+                 men_at_least=1, readable=readable_names(toks))
+            continue
         # SURPLUS IS THE PROOF CONDITION. Two colleges, or two heights, on one row
         # means two men's rows merged and one man's number was lost -- the case that
         # gave Charlie Malone another man's college and height, and the only kind of
@@ -94,30 +140,51 @@ def men_of(image):
 
 def main():
     match = "--match" in sys.argv
-    listings = []
+    listings, all_drops = [], []
     for f in sorted(os.listdir(SRC)):
         if not f.endswith(".json"): continue
         d = json.load(open(os.path.join(SRC, f)))
-        men, pages = [], 0
+        men, pages, drops = [], 0, []
         for im in d["images"]:
-            m = men_of(im)
+            m = men_of(im, drops)
             if m: pages += 1; men.extend(m)
         # one listing photographs the same page more than once; dedupe on number+name
-        seen, uniq = set(), []
+        seen, uniq, deduped = set(), [], 0
         for m in men:
             k = (m["number"], norm(m["name"]))
-            if k in seen: continue
+            if k in seen: deduped += 1; continue
             seen.add(k); uniq.append(m)
-        if uniq:
-            listings.append({"listing": d["listing"], "pages": pages, "men": uniq})
+        # LOST is the floor, not the estimate: every dropped band demonstrably held at
+        # least `men_at_least` men, and a multi-number band holds at least as many men
+        # as it holds numbers. The true figure is higher wherever a man's number was
+        # never read at all.
+        lost = sum(x.get("men_at_least", 0) for x in drops)
+        rec = {"listing": d["listing"], "file": f, "pages": pages, "men": uniq,
+               "reported": len(uniq), "deduped": deduped,
+               "dropped_bands": sum(1 for x in drops if x["why"].startswith("band_")),
+               "dropped_images": sum(1 for x in drops if not x["why"].startswith("band_")),
+               "men_lost_at_least": lost,
+               "images": len(d["images"]), "drops": drops}
+        listings.append(rec)
+        all_drops.extend({**x, "listing": d["listing"]} for x in drops)
 
     tot = sum(len(x["men"]) for x in listings)
+    lost = sum(x["men_lost_at_least"] for x in listings)
+    if not tot:
+        raise SystemExit("REFUSING TO REPORT: no listing yielded a man, so every "
+                         "percentage below would divide by zero and the report would "
+                         "describe nothing.")
     fc = collections.Counter()
     for x in listings:
         for m in x["men"]:
             for k in ("position", "college", "height", "weight"): fc[k] += k in m
             fc["full_name"] += m["full_name"]
-    print(f"listings yielding men: {len(listings)}   men on forced rows: {tot}")
+    yielding = sum(1 for x in listings if x["men"])
+    print(f"listings: {len(listings)}   yielding men: {yielding}   "
+          f"men on forced rows: {tot}")
+    print(f"DROPPED, uncounted until now: {sum(x['dropped_bands'] for x in listings)} bands "
+          f"and {sum(x['dropped_images'] for x in listings)} images, "
+          f"holding AT LEAST {lost:,} men -- {lost/max(tot,1):.1f}x what was reported")
     print("\nfields carried, of those men:")
     for k in ("full_name", "position", "college", "height", "weight"):
         print(f"   {k:<10} {fc[k]:>4}  {fc[k]/tot:>5.0%}")
@@ -126,8 +193,20 @@ def main():
         wc = sum(1 for m in x["men"] if "college" in m)
         print(f"   {len(x['men']):>3} men ({wc:>2} with college)   {x['listing'][:58]}")
 
+    import collections as _c
+    by_why = _c.Counter(x["why"] for x in all_drops)
     res = {"_note": "men on rows forced by geometry; two-number rows excluded as unforced",
-           "men_total": tot, "fields": dict(fc), "listings": listings}
+           "_drops_note": "every exit that discards a band or an image now records what it "
+                          "threw away. men_lost_at_least is a FLOOR: a band holding two "
+                          "numbers held at least two men. Nothing here is a fix -- the "
+                          "extractor accepts exactly what it accepted before.",
+           "men_total": tot, "men_lost_at_least": lost,
+           "drops_by_reason": dict(by_why),
+           "fields": dict(fc), "listings": listings}
+    json.dump({"_note": res["_drops_note"], "men_total": tot, "men_lost_at_least": lost,
+               "drops_by_reason": dict(by_why), "drops": all_drops},
+              open(os.path.join(BASE, "build-reports",
+                                "corpus-census-programs-drops.json"), "w"), indent=1)
     if match:
         import index_io as IO
         IDX = json.load(open(os.path.join(BASE, "build-reports", "person-index.json")))
