@@ -1,0 +1,410 @@
+{
+ "counts": {
+  "joined by exact name, in the AAFC cohort 1946-49": 593,
+  "death date the archive holds, and Crippen agrees": 557,
+  "death place the archive already holds something for": 548,
+  "lead: no person of that name": 11,
+  "joined by exact name, unique in the archive": 4,
+  "joined by surname and forename initial, in the AAFC cohort": 13,
+  "DEATH DATE THE ARCHIVE DOES NOT HOLD": 24,
+  "DEATH PLACE THE ARCHIVE DOES NOT HOLD": 50,
+  "DEATH DATE THE ARCHIVE HOLDS AND CRIPPEN DISAGREES": 29,
+  "lead: several of that exact name in the AAFC cohort": 2,
+  "lead: several by surname and initial in the cohort": 3
+ },
+ "refusals": [
+  {
+   "line": "Jones, Billy (Deceased: February 1988, Lexington, NC)",
+   "why": "the date does not parse: 'February 1988, Lexington, NC'"
+  },
+  {
+   "line": "Lamana, Peter (8/7/2007, Berwyn, IL)",
+   "why": "not of the register's shape"
+  },
+  {
+   "line": "Maloney, Ned (Deceased: 10/7/11, West Lafayette, IN)",
+   "why": "the date does not parse: '10/7/11, West Lafayette, IN'"
+  },
+  {
+   "line": "Mitchell, Bob (Deceased: 7/17/97, Helendale, CA)",
+   "why": "the date does not parse: '7/17/97, Helendale, CA'"
+  },
+  {
+   "line": "Reinhard, Bill 9Deceased: 1/30/2017, Palm Desert, CA)",
+   "why": "not of the register's shape"
+  },
+  {
+   "line": "Roskie, Ken (Deceased: August 1986, Redmond, WA)",
+   "why": "the date does not parse: 'August 1986, Redmond, WA'"
+  },
+  {
+   "line": "Stuart, Roy J. Jr. (Deceased: 2/27, 2013, Tulsa, OK)",
+   "why": "the date does not parse: '2/27, 2013, Tulsa, OK'"
+  },
+  {
+   "line": "Tittle, Y.A. (Deceased: 10/82017, Stanford, CA)",
+   "why": "the date does not parse: '10/82017, Stanford, CA'"
+  },
+  {
+   "line": "Whalen, Jerry (Deceased: November 1973, Buffalo, NY)",
+   "why": "the date does not parse: 'November 1973, Buffalo, NY'"
+  },
+  {
+   "line": "Wozniak, John (Deceased: August 1982, Tuscaloosa, AL)",
+   "why": "the date does not parse: 'August 1982, Tuscaloosa, AL'"
+  }
+ ],
+ "disagreements": [
+  {
+   "person": "P_000707",
+   "name": "Jack Baldwin",
+   "crippen": "9/13/1989",
+   "the_archive": [
+    "August 28, 1989"
+   ]
+  },
+  {
+   "person": "P_000570",
+   "name": "Herb Coleman",
+   "crippen": "1/1/1985",
+   "the_archive": [
+    "July 7, 1985"
+   ]
+  },
+  {
+   "person": "P_000525",
+   "name": "Marty Comer",
+   "crippen": "3/22/1998",
+   "the_archive": [
+    "March 15, 1998"
+   ]
+  },
+  {
+   "person": "P_000777",
+   "name": "Armand Cure",
+   "crippen": "12/5/2003",
+   "the_archive": [
+    "November 28, 2003"
+   ]
+  },
+  {
+   "person": "P_000532",
+   "name": "John Fekete",
+   "crippen": "7/26/1988",
+   "the_archive": [
+    "December 20, 2003"
+   ]
+  },
+  {
+   "person": "P_000751",
+   "name": "Bill Fisk",
+   "crippen": "3/27/2007",
+   "the_archive": [
+    "2007-3-28",
+    "March 28, 2007"
+   ]
+  },
+  {
+   "person": "P_000495",
+   "name": "Jack Freeman",
+   "crippen": "7/23/1970",
+   "the_archive": [
+    "July 23, 1990"
+   ]
+  },
+  {
+   "person": "P_017070",
+   "name": "Ted Grabinski",
+   "crippen": "11/30/2000",
+   "the_archive": [
+    "July 11, 1995"
+   ]
+  },
+  {
+   "person": "P_000989",
+   "name": "Nelson Greene",
+   "crippen": "5/3/1983",
+   "the_archive": [
+    "October 2, 2004"
+   ]
+  },
+  {
+   "person": "P_000991",
+   "name": "Glenn Johnson",
+   "crippen": "10/31/2001",
+   "the_archive": [
+    "2001-10-13",
+    "October 13, 2001"
+   ]
+  },
+  {
+   "person": "P_000865",
+   "name": "Bob Kelly",
+   "crippen": "December 31, 2026",
+   "the_archive": [
+    "December 31, 2016"
+   ]
+  },
+  {
+   "person": "P_000823",
+   "name": "John Kerns",
+   "crippen": "6/17/1988",
+   "the_archive": [
+    "June 7, 1988"
+   ]
+  },
+  {
+   "person": "P_000646",
+   "name": "John Kimbrough",
+   "crippen": "5/9/2006",
+   "the_archive": [
+    "2006-5-8",
+    "May 8, 2006"
+   ]
+  },
+  {
+   "person": "P_000938",
+   "name": "George Kisiday",
+   "crippen": "11/9/1970",
+   "the_archive": [
+    "November 8, 1970"
+   ]
+  },
+  {
+   "person": "P_000787",
+   "name": "Floyd Konetsky",
+   "crippen": "11/15/1987",
+   "the_archive": [
+    "November 10, 1987"
+   ]
+  },
+  {
+   "person": "P_001064",
+   "name": "Warren Lahr",
+   "crippen": "1/13/1975",
+   "the_archive": [
+    "January 19, 1969"
+   ]
+  },
+  {
+   "person": "P_000619",
+   "name": "Bill Lund",
+   "crippen": "9/27/2008",
+   "the_archive": [
+    "September 30, 2008"
+   ]
+  },
+  {
+   "person": "P_000502",
+   "name": "Phil Martinovich",
+   "crippen": "9/22/1964",
+   "the_archive": [
+    "September 21, 1964"
+   ]
+  },
+  {
+   "person": "P_000941",
+   "name": "Bill \"Zeke\" O\u2019Connor",
+   "crippen": "3/8/2021",
+   "the_archive": [
+    "2021-03-06",
+    "March 6, 2021"
+   ]
+  },
+  {
+   "person": "P_000550",
+   "name": "John Perko",
+   "crippen": "6/7/1994",
+   "the_archive": [
+    "June 7, 1984"
+   ]
+  },
+  {
+   "person": "P_000552",
+   "name": "Felto Prewitt",
+   "crippen": "3/15/1998",
+   "the_archive": [
+    "March 23, 1998"
+   ]
+  },
+  {
+   "person": "P_000662",
+   "name": "Bill Radovich",
+   "crippen": "3/6/2002",
+   "the_archive": [
+    "March 7, 2002"
+   ]
+  },
+  {
+   "person": "P_000926",
+   "name": "Ralph Sazio",
+   "crippen": "9/25/2008",
+   "the_archive": [
+    "September 26, 2008"
+   ]
+  },
+  {
+   "person": "P_000516",
+   "name": "George Sergienko",
+   "crippen": "12/4/1994",
+   "the_archive": [
+    "December 4, 1993"
+   ]
+  },
+  {
+   "person": "P_001001",
+   "name": "Stephen Sieradzki",
+   "crippen": "5/2/1968",
+   "the_archive": [
+    "May 1968 (age 45)"
+   ]
+  },
+  {
+   "person": "P_000736",
+   "name": "Henry Stanton",
+   "crippen": "3/11/1975",
+   "the_archive": [
+    "April 11, 1975"
+   ]
+  },
+  {
+   "person": "P_000593",
+   "name": "Tony Sumpter",
+   "crippen": "10/9/2017",
+   "the_archive": [
+    "December 9, 2017"
+   ]
+  },
+  {
+   "person": "P_000521",
+   "name": "Tex Warrington",
+   "crippen": "9/20/1983",
+   "the_archive": [
+    "September 20, 1993"
+   ]
+  },
+  {
+   "person": "P_000705",
+   "name": "George Zorich",
+   "crippen": "10/14/1962",
+   "the_archive": [
+    "1967-10-14",
+    "October 14, 1967"
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "O\u2019Neal Adams",
+   "death_date": "10/27/1998",
+   "death_place": "Sand Springs, OK",
+   "why": "no person of that name"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Ezzret Anderson",
+   "death_date": "3/8/2017",
+   "death_place": "Calgary, Alberta, Canada",
+   "why": "no person of that name"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "John Burkhardt",
+   "death_date": "5/25/1994",
+   "death_place": "West Reading, PA",
+   "why": "no person of that name"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Paul Evensen",
+   "death_date": "7/13/2002",
+   "death_place": "Medord, OR",
+   "why": "no person of that name"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Bob Kennedy",
+   "death_date": "7/29/2010",
+   "death_place": "Boise, ID",
+   "why": "several of that exact name in the AAFC cohort"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Robert M. Kennedy",
+   "death_date": "7/5/1991",
+   "death_place": "Richwood, NJ",
+   "why": "no person of that name"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mike Kostiuk",
+   "death_date": "7/26/2015",
+   "death_place": "Sterling Heights, MI",
+   "why": "no person of that name"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Jim Larkin",
+   "death_date": "4/14/1993",
+   "death_place": "St. Petersburg, FL",
+   "why": "no person of that name"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "George Maddock",
+   "death_date": "2/20/2008",
+   "death_place": "Valparaiso, IN",
+   "why": "no person of that name"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Johnny Sanchez",
+   "death_date": "9/11/1992",
+   "death_place": "Hayward, CA",
+   "why": "no person of that name"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "George W. Smith",
+   "death_date": "3/5/1986",
+   "death_place": "Walnut Creek, CA",
+   "why": "several by surname and initial in the cohort"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "James Dale Smith",
+   "death_date": "8/2/1977",
+   "death_place": "Rochester, MN",
+   "why": "several by surname and initial in the cohort"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Robert M. Stefik",
+   "death_date": "4/9/2008",
+   "death_place": "Lewiston, NY",
+   "why": "no person of that name"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Bob Sullivan",
+   "death_date": "6/19/1981",
+   "death_place": "North Andover, MA",
+   "why": "several of that exact name in the AAFC cohort"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Bob G. Sullivan",
+   "death_date": "11/12/1992",
+   "death_place": "Carmichael, CA",
+   "why": "several by surname and initial in the cohort"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Alois Vogt",
+   "death_date": "2/26/2002",
+   "death_place": null,
+   "why": "no person of that name"
+  }
+ ]
+}
