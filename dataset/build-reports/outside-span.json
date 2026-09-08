@@ -1,0 +1,569 @@
+{
+ "_note": "MEASUREMENT ONLY. No club-season is created. Four routes kept apart because they are not equally good evidence.",
+ "_cannot_do": "No founded/folded year exists on disk. The fandom survey carries no year fields at all and the wikipedia store is person-scoped. A real founded/folded sweep needs a fetch.",
+ "A_string_attests_a_year_outside_the_span": [
+  {
+   "club": "club-boston-yanks-1944",
+   "club_name": "Boston Yanks",
+   "held": [
+    1944,
+    1948
+   ],
+   "year_attested": 1970,
+   "side": "after",
+   "gap_years": 22,
+   "string": "Boston Yanks",
+   "source": "coaching_tree",
+   "why_it_refused": "no club under that name that year"
+  },
+  {
+   "club": "club-new-york-new-jersey-hitmen-2001",
+   "club_name": "New York/New Jersey Hitmen",
+   "held": [
+    2001,
+    2001
+   ],
+   "year_attested": 2020,
+   "side": "after",
+   "gap_years": 19,
+   "string": "New York/New Jersey Hitmen",
+   "source": "coaching_tree",
+   "why_it_refused": "no club under that name that year"
+  },
+  {
+   "club": "club-harrisburg-capitol-colts-1968",
+   "club_name": "Harrisburg Capitol Colts",
+   "held": [
+    1968,
+    1968
+   ],
+   "year_attested": 1963,
+   "side": "before",
+   "gap_years": 5,
+   "string": "Harrisburg Capitol Colts",
+   "source": "coaching_tree",
+   "why_it_refused": "nickname matches Baltimore Colts but the city differs: not resolved on a nickname alone"
+  },
+  {
+   "club": "club-birmingham-americans-1974",
+   "club_name": "Birmingham Americans",
+   "held": [
+    1974,
+    1974
+   ],
+   "year_attested": 1977,
+   "side": "after",
+   "gap_years": 3,
+   "string": "Birmingham Americans",
+   "source": "season_key:SALARIES",
+   "why_it_refused": "no club under that name that year"
+  },
+  {
+   "club": "club-wheeling-ironmen-1965",
+   "club_name": "Wheeling Ironmen",
+   "held": [
+    1965,
+    1967
+   ],
+   "year_attested": 1962,
+   "side": "before",
+   "gap_years": 3,
+   "string": "Wheeling Ironmen",
+   "source": "coaching_tree",
+   "why_it_refused": "no club under that name that year"
+  },
+  {
+   "club": "club-birmingham-americans-1974",
+   "club_name": "Birmingham Americans",
+   "held": [
+    1974,
+    1974
+   ],
+   "year_attested": 1976,
+   "side": "after",
+   "gap_years": 2,
+   "string": "Birmingham Americans",
+   "source": "season_key:SALARIES",
+   "why_it_refused": "no club under that name that year"
+  },
+  {
+   "club": "club-wheeling-ironmen-1965",
+   "club_name": "Wheeling Ironmen",
+   "held": [
+    1965,
+    1967
+   ],
+   "year_attested": 1963,
+   "side": "before",
+   "gap_years": 2,
+   "string": "Wheeling Ironmen",
+   "source": "coaching_tree",
+   "why_it_refused": "no club under that name that year"
+  },
+  {
+   "club": "club-birmingham-americans-1974",
+   "club_name": "Birmingham Americans",
+   "held": [
+    1974,
+    1974
+   ],
+   "year_attested": 1975,
+   "side": "after",
+   "gap_years": 1,
+   "string": "Birmingham Americans",
+   "source": "season_key:SALARIES",
+   "why_it_refused": "no club under that name that year"
+  },
+  {
+   "club": "club-chicago-winds-1975",
+   "club_name": "Chicago Winds",
+   "held": [
+    1975,
+    1975
+   ],
+   "year_attested": 1974,
+   "side": "before",
+   "gap_years": 1,
+   "string": "Chicago Winds",
+   "source": "coaching_tree",
+   "why_it_refused": "no club under that name that year"
+  },
+  {
+   "club": "club-wheeling-ironmen-1965",
+   "club_name": "Wheeling Ironmen",
+   "held": [
+    1965,
+    1967
+   ],
+   "year_attested": 1964,
+   "side": "before",
+   "gap_years": 1,
+   "string": "Wheeling Ironmen",
+   "source": "coaching_tree",
+   "why_it_refused": "no club under that name that year"
+  }
+ ],
+ "B_pfa_only_gaps": [
+  {
+   "code": "BKNE",
+   "name": "Brooklyn Eagles",
+   "earlier": [
+    1937,
+    1937
+   ],
+   "later_from": 1939,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "BRI",
+   "name": "Bridgeport Jets",
+   "earlier": [
+    1969,
+    1971
+   ],
+   "later_from": 1973,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "CHA",
+   "name": "Charleston Rockets",
+   "earlier": [
+    1964,
+    1966
+   ],
+   "later_from": 1968,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "CHA",
+   "name": "Charlotte Clippers",
+   "earlier": [
+    1941,
+    1941
+   ],
+   "later_from": 1946,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "CIN",
+   "name": "Cincinnati Bengals",
+   "earlier": [
+    1937,
+    1937
+   ],
+   "later_from": 1939,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "CLI",
+   "name": "Clifton Wessingtons",
+   "earlier": [
+    1933,
+    1933
+   ],
+   "later_from": 1938,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "GR",
+   "name": "Grand Rapids Shamrocks",
+   "earlier": [
+    1961,
+    1961
+   ],
+   "later_from": 1966,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "HOL",
+   "name": "Hollywood Bears",
+   "earlier": [
+    1940,
+    1942
+   ],
+   "later_from": 1945,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "HOL",
+   "name": "Hollywood Bears",
+   "earlier": [
+    1945,
+    1946
+   ],
+   "later_from": 1948,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "JC",
+   "name": "Jersey City Giants",
+   "earlier": [
+    1938,
+    1941
+   ],
+   "later_from": 1946,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "JOL",
+   "name": "Joliet Chargers",
+   "earlier": [
+    1964,
+    1964
+   ],
+   "later_from": 1967,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "LA",
+   "name": "Los Angeles Bulldogs",
+   "earlier": [
+    1937,
+    1937
+   ],
+   "later_from": 1939,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "LAB",
+   "name": "Los Angeles Bulldogs",
+   "earlier": [
+    1936,
+    1936
+   ],
+   "later_from": 1938,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "LAB",
+   "name": "Los Angeles Bulldogs",
+   "earlier": [
+    1938,
+    1938
+   ],
+   "later_from": 1940,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "LI",
+   "name": "Long Island Indians",
+   "earlier": [
+    1940,
+    1941
+   ],
+   "later_from": 1946,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "NEW",
+   "name": "Newark Bears",
+   "earlier": [
+    1939,
+    1941
+   ],
+   "later_from": 1963,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "NN",
+   "name": "Newport News Builders",
+   "earlier": [
+    1941,
+    1941
+   ],
+   "later_from": 1946,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "NOR",
+   "name": "Norfolk Shamrocks",
+   "earlier": [
+    1940,
+    1941
+   ],
+   "later_from": 1946,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "NR",
+   "name": "New Rochelle Bulldogs",
+   "earlier": [
+    1932,
+    1932
+   ],
+   "later_from": 1936,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "NY",
+   "name": "New York Yankees",
+   "earlier": [
+    1936,
+    1937
+   ],
+   "later_from": 1940,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "OAK",
+   "name": "Oakland Giants",
+   "earlier": [
+    1940,
+    1940
+   ],
+   "later_from": 1943,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "OAK",
+   "name": "Oakland Giants",
+   "earlier": [
+    1943,
+    1943
+   ],
+   "later_from": 1945,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "PAS",
+   "name": "Passaic Red Devils",
+   "earlier": [
+    1932,
+    1933
+   ],
+   "later_from": 1936,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "PAT",
+   "name": "Paterson Panthers",
+   "earlier": [
+    1936,
+    1941
+   ],
+   "later_from": 1946,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "REA",
+   "name": "Reading Keys",
+   "earlier": [
+    1933,
+    1933
+   ],
+   "later_from": 1936,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "RIC",
+   "name": "Richmond Rebels",
+   "earlier": [
+    1946,
+    1950
+   ],
+   "later_from": 1966,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "SCR",
+   "name": "Scranton Miners",
+   "earlier": [
+    1946,
+    1946
+   ],
+   "later_from": 1966,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "WIL",
+   "name": "Wilmington Clippers",
+   "earlier": [
+    1938,
+    1941
+   ],
+   "later_from": 1946,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  },
+  {
+   "code": "WIL",
+   "name": "Wilmington Clippers",
+   "earlier": [
+    1946,
+    1949
+   ],
+   "later_from": 1966,
+   "why": "same PFA code and name either side of a hole: two clubs until a ruling says otherwise"
+  }
+ ],
+ "C_same_name_across_a_long_hole": [
+  {
+   "league": "ARFL",
+   "name": "Arizona Rattlers",
+   "earlier": [
+    2018,
+    2018
+   ],
+   "later": [
+    2025,
+    2025
+   ],
+   "hole_years": 6,
+   "men_carried": 0,
+   "wikipedia_disambiguator": [
+    "Arizona Rattlers(3)"
+   ],
+   "why": "held as ONE club: this source's standings are demonstrably incomplete (1997-2005 carry 0-2 clubs of a 14-19 club league), so a hole is not evidence the club did not play. A ruling could split it -- Wikipedia's own disambiguator is the evidence where there is one."
+  },
+  {
+   "league": "ARFL",
+   "name": "Iowa Barnstormers",
+   "earlier": [
+    2001,
+    2001
+   ],
+   "later": [
+    2008,
+    2018
+   ],
+   "hole_years": 6,
+   "men_carried": 0,
+   "wikipedia_disambiguator": [],
+   "why": "held as ONE club: this source's standings are demonstrably incomplete (1997-2005 carry 0-2 clubs of a 14-19 club league), so a hole is not evidence the club did not play. A ruling could split it -- Wikipedia's own disambiguator is the evidence where there is one."
+  },
+  {
+   "league": "ARFL",
+   "name": "Iowa Barnstormers",
+   "earlier": [
+    2001,
+    2009
+   ],
+   "later": [
+    2015,
+    2018
+   ],
+   "hole_years": 5,
+   "men_carried": 0,
+   "wikipedia_disambiguator": [],
+   "why": "held as ONE club: this source's standings are demonstrably incomplete (1997-2005 carry 0-2 clubs of a 14-19 club league), so a hole is not evidence the club did not play. A ruling could split it -- Wikipedia's own disambiguator is the evidence where there is one."
+  },
+  {
+   "league": "ARFL",
+   "name": "Tennessee Valley Vipers",
+   "earlier": [
+    2000,
+    2000
+   ],
+   "later": [
+    2008,
+    2008
+   ],
+   "hole_years": 7,
+   "men_carried": 0,
+   "wikipedia_disambiguator": [],
+   "why": "held as ONE club: this source's standings are demonstrably incomplete (1997-2005 carry 0-2 clubs of a 14-19 club league), so a hole is not evidence the club did not play. A ruling could split it -- Wikipedia's own disambiguator is the evidence where there is one."
+  },
+  {
+   "league": "ARFL",
+   "name": "Amarillo Venom",
+   "earlier": [
+    2010,
+    2011
+   ],
+   "later": [
+    2015,
+    2015
+   ],
+   "hole_years": 3,
+   "men_carried": 0,
+   "wikipedia_disambiguator": [],
+   "why": "held as ONE club: this source's standings are demonstrably incomplete (1997-2005 carry 0-2 clubs of a 14-19 club league), so a hole is not evidence the club did not play. A ruling could split it -- Wikipedia's own disambiguator is the evidence where there is one."
+  }
+ ],
+ "D_established_from_a_document": [
+  {
+   "club": "Frankford Yellow Jackets",
+   "code": "FYJ",
+   "held": "NFL 1924-1931",
+   "outside": [
+    1922,
+    1923
+   ],
+   "status": "independent, pre-NFL",
+   "evidence": "Yellowjackets_1922_roster.htm (27 men, head coach Heinie Miller) and _1923_roster.htm (20 men, head coach Lou Little) -- ROSTER PAGES. Both INGESTED 2026-09-08 as leads: 47 men held as leads on a club-season the club table does not carry, waiting for a ruling that creates it.",
+   "source_kind": "hobbyist site working from Philadelphia newspaper microfilm (not Neft)"
+  },
+  {
+   "club": "Pottsville Maroons",
+   "code": "POT",
+   "held": "NFL 1925-1928",
+   "outside": [
+    1924
+   ],
+   "status": "Anthracite League before",
+   "evidence": "Maroons_1924_stats.htm is a season SCHEDULE -- games, opponents, dates and scores, NOT men. It does not take the club-season from nothing to a team.",
+   "source_kind": "as above",
+   "_1929_was_wrong_twice": "Maroons_1929_roster.htm was reported here as a Pottsville club-season the archive holds nothing for. It is not. The page's OWN TITLE is `Boston Bulldogs 1929 NFL Team Roster` -- the franchise moved for 1929 -- and the archive holds NFL|1929|BO2 with 22 men, all 22 of whom the page names. It is corroboration, not a gap. The error was reading the FILENAME and not the page, and it survived two reports."
+  },
+  {
+   "club": "St. Louis Gunners",
+   "code": "SLG",
+   "held": "NFL 1934 only",
+   "outside": [
+    1931,
+    1932,
+    1933
+   ],
+   "status": "independent, before buying the 1934 Cincinnati Reds' place",
+   "evidence": "the fandom club page names four head coaches -- Conzelman 1931, Baker 1932, Henry 1933, Walsh 1934. Only 1934 is held. NOT INGESTED: the fandom survey was scoped strings-only and read no staff.",
+   "source_kind": "wiki, unranked and Neft-seeded -- a LEAD, not a source"
+  }
+ ],
+ "counts": {
+  "A": 10,
+  "A_clubs": 6,
+  "B": 29,
+  "C": 5,
+  "D": 3,
+  "D_club_seasons": 6
+ }
+}

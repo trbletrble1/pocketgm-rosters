@@ -1,0 +1,8357 @@
+{
+ "_note": "MEASUREMENT ONLY. Nothing ingested. Colleges compared on the DECLARED reading, not the literal.",
+ "years": [
+  {
+   "year": 1936,
+   "site_picks": 81,
+   "site_rows_at_a_repeated_overall_pick": 0,
+   "archive_picks_with_an_overall": 27,
+   "archive_rows_excluded_as_another_draft": {},
+   "not_held": [
+    {
+     "year": 1936,
+     "round": 1,
+     "pick_in_round": 1,
+     "overall": 1,
+     "name": "Jay Berwanger",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Chicago"
+    },
+    {
+     "year": 1936,
+     "round": 1,
+     "pick_in_round": 3,
+     "overall": 3,
+     "name": "Bill Shakespeare",
+     "team": "Steelers",
+     "position": "B",
+     "college": "Notre Dame"
+    },
+    {
+     "year": 1936,
+     "round": 2,
+     "pick_in_round": 1,
+     "overall": 10,
+     "name": "John McCauley",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Rice"
+    },
+    {
+     "year": 1936,
+     "round": 2,
+     "pick_in_round": 2,
+     "overall": 11,
+     "name": "Keith Topping",
+     "team": "Redskins",
+     "position": "E",
+     "college": "Stanford"
+    },
+    {
+     "year": 1936,
+     "round": 2,
+     "pick_in_round": 4,
+     "overall": 13,
+     "name": "Vernal (Babe) LeVoir",
+     "team": "Dodgers",
+     "position": "B",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1936,
+     "round": 2,
+     "pick_in_round": 6,
+     "overall": 15,
+     "name": "Gomer Jones",
+     "team": "Cardinals",
+     "position": "C",
+     "college": "Ohio State"
+    },
+    {
+     "year": 1936,
+     "round": 2,
+     "pick_in_round": 7,
+     "overall": 16,
+     "name": "J.W. Wheeler",
+     "team": "Packers",
+     "position": "T",
+     "college": "Oklahoma"
+    },
+    {
+     "year": 1936,
+     "round": 2,
+     "pick_in_round": 8,
+     "overall": 17,
+     "name": "Chuck Cheshire",
+     "team": "Lions",
+     "position": "B",
+     "college": "UCLA"
+    },
+    {
+     "year": 1936,
+     "round": 3,
+     "pick_in_round": 1,
+     "overall": 19,
+     "name": "Wes Muller",
+     "team": "Eagles",
+     "position": "C",
+     "college": "Stanford"
+    },
+    {
+     "year": 1936,
+     "round": 3,
+     "pick_in_round": 3,
+     "overall": 21,
+     "name": "Bobby Grayson",
+     "team": "Steelers",
+     "position": "B",
+     "college": "Stanford"
+    },
+    {
+     "year": 1936,
+     "round": 3,
+     "pick_in_round": 5,
+     "overall": 23,
+     "name": "Eddie Erdelatz",
+     "team": "Cardinals",
+     "position": "E",
+     "college": "St. Mary's (CA)"
+    },
+    {
+     "year": 1936,
+     "round": 3,
+     "pick_in_round": 6,
+     "overall": 24,
+     "name": "George Roscoe",
+     "team": "Bears",
+     "position": "B",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1936,
+     "round": 3,
+     "pick_in_round": 8,
+     "overall": 26,
+     "name": "Andy Pilney",
+     "team": "Lions",
+     "position": "B",
+     "college": "Notre Dame"
+    },
+    {
+     "year": 1936,
+     "round": 3,
+     "pick_in_round": 9,
+     "overall": 27,
+     "name": "Frank (Butch) Loebs",
+     "team": "Giants",
+     "position": "E",
+     "college": "Purdue"
+    },
+    {
+     "year": 1936,
+     "round": 4,
+     "pick_in_round": 1,
+     "overall": 28,
+     "name": "Bill Wallace",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Rice"
+    },
+    {
+     "year": 1936,
+     "round": 4,
+     "pick_in_round": 2,
+     "overall": 29,
+     "name": "Paul Tangora",
+     "team": "Redskins",
+     "position": "G",
+     "college": "Northwestern"
+    },
+    {
+     "year": 1936,
+     "round": 4,
+     "pick_in_round": 3,
+     "overall": 30,
+     "name": "Truman Spain",
+     "team": "Steelers",
+     "position": "T",
+     "college": "Southern Methodist"
+    },
+    {
+     "year": 1936,
+     "round": 4,
+     "pick_in_round": 4,
+     "overall": 31,
+     "name": "Paul (Bear) Bryant",
+     "team": "Dodgers",
+     "position": "E",
+     "college": "Alabama"
+    },
+    {
+     "year": 1936,
+     "round": 4,
+     "pick_in_round": 6,
+     "overall": 33,
+     "name": "Ed Brett",
+     "team": "Cardinals",
+     "position": "E",
+     "college": "Washington State"
+    },
+    {
+     "year": 1936,
+     "round": 4,
+     "pick_in_round": 7,
+     "overall": 34,
+     "name": "Theron Ward",
+     "team": "Packers",
+     "position": "B",
+     "college": "Idaho"
+    },
+    {
+     "year": 1936,
+     "round": 4,
+     "pick_in_round": 8,
+     "overall": 35,
+     "name": "Sheldon Biese",
+     "team": "Lions",
+     "position": "B",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1936,
+     "round": 5,
+     "pick_in_round": 1,
+     "overall": 37,
+     "name": "Harry Shuford",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Southern Methodist"
+    },
+    {
+     "year": 1936,
+     "round": 5,
+     "pick_in_round": 2,
+     "overall": 38,
+     "name": "Wilson Groseclose",
+     "team": "Redskins",
+     "position": "T",
+     "college": "Texas Christian"
+    },
+    {
+     "year": 1936,
+     "round": 5,
+     "pick_in_round": 5,
+     "overall": 41,
+     "name": "Stan Riordan",
+     "team": "Cardinals",
+     "position": "E",
+     "college": "Oregon"
+    },
+    {
+     "year": 1936,
+     "round": 5,
+     "pick_in_round": 8,
+     "overall": 44,
+     "name": "Kavanaugh Francis",
+     "team": "Lions",
+     "position": "C",
+     "college": "Alabama"
+    },
+    {
+     "year": 1936,
+     "round": 5,
+     "pick_in_round": 9,
+     "overall": 45,
+     "name": "Ed Jontos",
+     "team": "Giants",
+     "position": "G",
+     "college": "Syracuse"
+    },
+    {
+     "year": 1936,
+     "round": 6,
+     "pick_in_round": 1,
+     "overall": 46,
+     "name": "Al Barabas",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Columbia"
+    },
+    {
+     "year": 1936,
+     "round": 6,
+     "pick_in_round": 2,
+     "overall": 47,
+     "name": "Larry Lutz",
+     "team": "Redskins",
+     "position": "T",
+     "college": "California"
+    },
+    {
+     "year": 1936,
+     "round": 6,
+     "pick_in_round": 3,
+     "overall": 48,
+     "name": "Maurice Orr",
+     "team": "Steelers",
+     "position": "T",
+     "college": "Southern Methodist"
+    },
+    {
+     "year": 1936,
+     "round": 6,
+     "pick_in_round": 5,
+     "overall": 50,
+     "name": "Ted Christofferson",
+     "team": "Bears",
+     "position": "B",
+     "college": "Washington State"
+    },
+    {
+     "year": 1936,
+     "round": 6,
+     "pick_in_round": 6,
+     "overall": 51,
+     "name": "Ettore Antonini",
+     "team": "Cardinals",
+     "position": "E",
+     "college": "Indiana"
+    },
+    {
+     "year": 1936,
+     "round": 6,
+     "pick_in_round": 8,
+     "overall": 53,
+     "name": "Abe Mickal",
+     "team": "Lions",
+     "position": "B",
+     "college": "Louisiana State"
+    },
+    {
+     "year": 1936,
+     "round": 6,
+     "pick_in_round": 9,
+     "overall": 54,
+     "name": "Gus Durner",
+     "team": "Giants",
+     "position": "T",
+     "college": "Duke"
+    },
+    {
+     "year": 1936,
+     "round": 7,
+     "pick_in_round": 1,
+     "overall": 55,
+     "name": "Jack Weller",
+     "team": "Eagles",
+     "position": "G",
+     "college": "Princeton"
+    },
+    {
+     "year": 1936,
+     "round": 7,
+     "pick_in_round": 3,
+     "overall": 57,
+     "name": "Marty Peters",
+     "team": "Steelers",
+     "position": "E",
+     "college": "Notre Dame"
+    },
+    {
+     "year": 1936,
+     "round": 7,
+     "pick_in_round": 4,
+     "overall": 58,
+     "name": "Herb Schreiber",
+     "team": "Dodgers",
+     "position": "B",
+     "college": "St. Mary's (CA)"
+    },
+    {
+     "year": 1936,
+     "round": 7,
+     "pick_in_round": 5,
+     "overall": 59,
+     "name": "Tack Dennis",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "Tulsa"
+    },
+    {
+     "year": 1936,
+     "round": 7,
+     "pick_in_round": 6,
+     "overall": 60,
+     "name": "Dick Smith",
+     "team": "Bears",
+     "position": "T",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1936,
+     "round": 7,
+     "pick_in_round": 7,
+     "overall": 61,
+     "name": "Wally Fromhart",
+     "team": "Packers",
+     "position": "B",
+     "college": "Notre Dame"
+    },
+    {
+     "year": 1936,
+     "round": 7,
+     "pick_in_round": 8,
+     "overall": 62,
+     "name": "Charlie Wasicek",
+     "team": "Lions",
+     "position": "T",
+     "college": "Colgate"
+    },
+    {
+     "year": 1936,
+     "round": 7,
+     "pick_in_round": 9,
+     "overall": 63,
+     "name": "Bob Peeples",
+     "team": "Giants",
+     "position": "T",
+     "college": "Marquette"
+    },
+    {
+     "year": 1936,
+     "round": 8,
+     "pick_in_round": 1,
+     "overall": 64,
+     "name": "Pepper Constable",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Princeton"
+    },
+    {
+     "year": 1936,
+     "round": 8,
+     "pick_in_round": 4,
+     "overall": 67,
+     "name": "Bob (Bones) Hamilton",
+     "team": "Dodgers",
+     "position": "B",
+     "college": "Stanford"
+    },
+    {
+     "year": 1936,
+     "round": 8,
+     "pick_in_round": 5,
+     "overall": 68,
+     "name": "John Sylvester",
+     "team": "Bears",
+     "position": "E",
+     "college": "Rice"
+    },
+    {
+     "year": 1936,
+     "round": 8,
+     "pick_in_round": 7,
+     "overall": 70,
+     "name": "Wally Cruice",
+     "team": "Packers",
+     "position": "B",
+     "college": "Northwestern"
+    },
+    {
+     "year": 1936,
+     "round": 8,
+     "pick_in_round": 8,
+     "overall": 71,
+     "name": "Dale Rennebohn",
+     "team": "Lions",
+     "position": "C",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1936,
+     "round": 8,
+     "pick_in_round": 9,
+     "overall": 72,
+     "name": "Dick Heekin",
+     "team": "Giants",
+     "position": "B",
+     "college": "Ohio State"
+    },
+    {
+     "year": 1936,
+     "round": 9,
+     "pick_in_round": 1,
+     "overall": 73,
+     "name": "Paul Pauk",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Princeton"
+    },
+    {
+     "year": 1936,
+     "round": 9,
+     "pick_in_round": 2,
+     "overall": 74,
+     "name": "Marcel Saunders",
+     "team": "Redskins",
+     "position": "G",
+     "college": "Loyola (CA)"
+    },
+    {
+     "year": 1936,
+     "round": 9,
+     "pick_in_round": 3,
+     "overall": 75,
+     "name": "Joe Meglen",
+     "team": "Steelers",
+     "position": "B",
+     "college": "Georgetown (DC)"
+    },
+    {
+     "year": 1936,
+     "round": 9,
+     "pick_in_round": 5,
+     "overall": 77,
+     "name": "Niels Larsen",
+     "team": "Cardinals",
+     "position": "T",
+     "college": "Stanford"
+    },
+    {
+     "year": 1936,
+     "round": 9,
+     "pick_in_round": 7,
+     "overall": 79,
+     "name": "J.C. Wetsel",
+     "team": "Packers",
+     "position": "G",
+     "college": "Southern Methodist"
+    },
+    {
+     "year": 1936,
+     "round": 9,
+     "pick_in_round": 8,
+     "overall": 80,
+     "name": "Bob (Choo-Choo) Train",
+     "team": "Lions",
+     "position": "E",
+     "college": "Yale"
+    },
+    {
+     "year": 1936,
+     "round": 9,
+     "pick_in_round": 9,
+     "overall": 81,
+     "name": "Phil Flanagan",
+     "team": "Giants",
+     "position": "G",
+     "college": "Holy Cross"
+    }
+   ],
+   "disagree": [
+    {
+     "overall": 5,
+     "site_name": "Jim Lawrence",
+     "held_name": "Jimmy Lawrence",
+     "person": "P_016685",
+     "fields": {
+      "name": [
+       "Jim Lawrence",
+       "Jimmy Lawrence"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 14,
+     "site_name": "Eddie Micheals",
+     "held_name": "Eddie Michaels",
+     "person": "P_003656",
+     "fields": {
+      "name": [
+       "Eddie Micheals",
+       "Eddie Michaels"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 18,
+     "site_name": "Tuffy Leemans",
+     "held_name": "Tuffy Leemans",
+     "person": "P_016704",
+     "fields": {
+      "position": [
+       "RB",
+       "B"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 20,
+     "site_name": "Ed Smith",
+     "held_name": "Ed Smith",
+     "person": "P_016665",
+     "fields": {
+      "college": [
+       "NYU",
+       "New York University"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 22,
+     "site_name": "Wagner Jorgenson",
+     "held_name": "Wagner Jorgensen",
+     "person": "P_016673",
+     "fields": {
+      "name": [
+       "Wagner Jorgenson",
+       "Wagner Jorgensen"
+      ],
+      "college": [
+       "St. Mary's (CA)",
+       "St. Mary's (California)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 39,
+     "site_name": "Wayne Sandefur",
+     "held_name": "Dick Sandefur",
+     "person": "P_016727",
+     "fields": {
+      "name": [
+       "Wayne Sandefur",
+       "Dick Sandefur"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 40,
+     "site_name": "Bob Wilson",
+     "held_name": "Bobby Wilson",
+     "person": "P_016678",
+     "fields": {
+      "name": [
+       "Bob Wilson",
+       "Bobby Wilson"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 42,
+     "site_name": "Vern Oech",
+     "held_name": "Verne Oech",
+     "person": "P_016690",
+     "fields": {
+      "name": [
+       "Vern Oech",
+       "Verne Oech"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 76,
+     "site_name": "Jim (Monk) Moscrip",
+     "held_name": "Monk Moscrip",
+     "person": "P_016903",
+     "fields": {
+      "name": [
+       "Jim (Monk) Moscrip",
+       "Monk Moscrip"
+      ],
+      "position": [
+       "E",
+       "B"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 78,
+     "site_name": "Dan Fortmann",
+     "held_name": "Danny Fortmann",
+     "person": "P_016688",
+     "fields": {
+      "name": [
+       "Dan Fortmann",
+       "Danny Fortmann"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    }
+   ],
+   "exact": 17
+  },
+  {
+   "year": 1950,
+   "site_picks": 391,
+   "site_rows_at_a_repeated_overall_pick": 0,
+   "archive_picks_with_an_overall": 136,
+   "archive_rows_excluded_as_another_draft": {
+    "allocationdraft/NFL": 100
+   },
+   "not_held": [
+    {
+     "year": 1950,
+     "round": 1,
+     "pick_in_round": 4,
+     "overall": 4,
+     "name": "Clayton Tonnemaker",
+     "team": "Packers",
+     "position": "C",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1950,
+     "round": 2,
+     "pick_in_round": 10,
+     "overall": 24,
+     "name": "John (Kayo) Dottley",
+     "team": "Bears",
+     "position": "B",
+     "college": "Mississippi"
+    },
+    {
+     "year": 1950,
+     "round": 2,
+     "pick_in_round": 11,
+     "overall": 25,
+     "name": "Bob Fuchs",
+     "team": "Rams",
+     "position": "C",
+     "college": "Missouri"
+    },
+    {
+     "year": 1950,
+     "round": 3,
+     "pick_in_round": 3,
+     "overall": 30,
+     "name": "Gordy Soltau",
+     "team": "Packers",
+     "position": "E",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1950,
+     "round": 3,
+     "pick_in_round": 11,
+     "overall": 38,
+     "name": "Don Murray",
+     "team": "Rams",
+     "position": "T",
+     "college": "Penn State"
+    },
+    {
+     "year": 1950,
+     "round": 3,
+     "pick_in_round": 12,
+     "overall": 39,
+     "name": "Jimmy Joe Robinson",
+     "team": "Browns",
+     "position": "B",
+     "college": "Pittsburgh"
+    },
+    {
+     "year": 1950,
+     "round": 3,
+     "pick_in_round": 13,
+     "overall": 40,
+     "name": "Bob Sanders",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Oregon"
+    },
+    {
+     "year": 1950,
+     "round": 4,
+     "pick_in_round": 1,
+     "overall": 41,
+     "name": "Earl Murray",
+     "team": "Colts",
+     "position": "G",
+     "college": "Purdue"
+    },
+    {
+     "year": 1950,
+     "round": 4,
+     "pick_in_round": 4,
+     "overall": 44,
+     "name": "Ernie Kiely",
+     "team": "Lions",
+     "position": "G",
+     "college": "Texas-El Paso"
+    },
+    {
+     "year": 1950,
+     "round": 4,
+     "pick_in_round": 6,
+     "overall": 46,
+     "name": "Porter Payne",
+     "team": "Giants",
+     "position": "G",
+     "college": "Georgia"
+    },
+    {
+     "year": 1950,
+     "round": 4,
+     "pick_in_round": 8,
+     "overall": 48,
+     "name": "Tom Novak",
+     "team": "Bears",
+     "position": "C",
+     "college": "Nebraska"
+    },
+    {
+     "year": 1950,
+     "round": 4,
+     "pick_in_round": 9,
+     "overall": 49,
+     "name": "Morris Bailey",
+     "team": "49ers",
+     "position": "E",
+     "college": "Texas Christian"
+    },
+    {
+     "year": 1950,
+     "round": 4,
+     "pick_in_round": 10,
+     "overall": 50,
+     "name": "Dom Papaleo",
+     "team": "Bears",
+     "position": "G",
+     "college": "Boston College"
+    },
+    {
+     "year": 1950,
+     "round": 4,
+     "pick_in_round": 11,
+     "overall": 51,
+     "name": "Ben Proctor",
+     "team": "Rams",
+     "position": "E",
+     "college": "Texas"
+    },
+    {
+     "year": 1950,
+     "round": 4,
+     "pick_in_round": 12,
+     "overall": 52,
+     "name": "Bob (Red) Wilson",
+     "team": "Browns",
+     "position": "C",
+     "college": "Wisconsin"
+    },
+    {
+     "year": 1950,
+     "round": 5,
+     "pick_in_round": 3,
+     "overall": 56,
+     "name": "Tom Rowe",
+     "team": "Steelers",
+     "position": "E",
+     "college": "Dartmouth"
+    },
+    {
+     "year": 1950,
+     "round": 5,
+     "pick_in_round": 4,
+     "overall": 57,
+     "name": "Hal Fitkin",
+     "team": "Lions",
+     "position": "B",
+     "college": "Dartmouth"
+    },
+    {
+     "year": 1950,
+     "round": 5,
+     "pick_in_round": 8,
+     "overall": 61,
+     "name": "Carl Kiilsgaard",
+     "team": "Cardinals",
+     "position": "T",
+     "college": "Idaho"
+    },
+    {
+     "year": 1950,
+     "round": 5,
+     "pick_in_round": 10,
+     "overall": 63,
+     "name": "Harry Kane",
+     "team": "49ers",
+     "position": "C",
+     "college": "Pacific"
+    },
+    {
+     "year": 1950,
+     "round": 5,
+     "pick_in_round": 13,
+     "overall": 66,
+     "name": "Mike Kaysserian",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Detroit"
+    },
+    {
+     "year": 1950,
+     "round": 6,
+     "pick_in_round": 6,
+     "overall": 72,
+     "name": "Gaspar Perricone",
+     "team": "Bears",
+     "position": "B",
+     "college": "Northwestern"
+    },
+    {
+     "year": 1950,
+     "round": 6,
+     "pick_in_round": 7,
+     "overall": 73,
+     "name": "Warren Wood",
+     "team": "Cardinals",
+     "position": "G",
+     "college": "Puget Sound"
+    },
+    {
+     "year": 1950,
+     "round": 6,
+     "pick_in_round": 8,
+     "overall": 74,
+     "name": "Ed Mattson",
+     "team": "Steelers",
+     "position": "B",
+     "college": "Trinity (TX)"
+    },
+    {
+     "year": 1950,
+     "round": 6,
+     "pick_in_round": 9,
+     "overall": 75,
+     "name": "Don Van Pool",
+     "team": "49ers",
+     "position": "E",
+     "college": "Oklahoma State"
+    },
+    {
+     "year": 1950,
+     "round": 6,
+     "pick_in_round": 11,
+     "overall": 77,
+     "name": "Orville Langrell",
+     "team": "Rams",
+     "position": "T",
+     "college": "Oklahoma City"
+    },
+    {
+     "year": 1950,
+     "round": 7,
+     "pick_in_round": 1,
+     "overall": 80,
+     "name": "Art Bok",
+     "team": "Colts",
+     "position": "B",
+     "college": "Dayton"
+    },
+    {
+     "year": 1950,
+     "round": 7,
+     "pick_in_round": 4,
+     "overall": 83,
+     "name": "Bill Leverman",
+     "team": "Lions",
+     "position": "B",
+     "college": "St. Edward's"
+    },
+    {
+     "year": 1950,
+     "round": 7,
+     "pick_in_round": 11,
+     "overall": 90,
+     "name": "Cliff Coggin",
+     "team": "Rams",
+     "position": "E",
+     "college": "Southern Mississippi"
+    },
+    {
+     "year": 1950,
+     "round": 7,
+     "pick_in_round": 12,
+     "overall": 91,
+     "name": "Win Carter",
+     "team": "Browns",
+     "position": "B",
+     "college": "Missouri"
+    },
+    {
+     "year": 1950,
+     "round": 7,
+     "pick_in_round": 13,
+     "overall": 92,
+     "name": "Mel Olix",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Miami (OH)"
+    },
+    {
+     "year": 1950,
+     "round": 8,
+     "pick_in_round": 1,
+     "overall": 93,
+     "name": "Dick Harris",
+     "team": "Colts",
+     "position": "C",
+     "college": "Texas"
+    },
+    {
+     "year": 1950,
+     "round": 8,
+     "pick_in_round": 2,
+     "overall": 94,
+     "name": "Jack Archer",
+     "team": "Bulldogs",
+     "position": "B",
+     "college": "Texas Christian"
+    },
+    {
+     "year": 1950,
+     "round": 8,
+     "pick_in_round": 3,
+     "overall": 95,
+     "name": "Harry Szulborski",
+     "team": "Packers",
+     "position": "B",
+     "college": "Purdue"
+    },
+    {
+     "year": 1950,
+     "round": 8,
+     "pick_in_round": 5,
+     "overall": 97,
+     "name": "John Rohde",
+     "team": "Redskins",
+     "position": "E",
+     "college": "Pacific"
+    },
+    {
+     "year": 1950,
+     "round": 8,
+     "pick_in_round": 12,
+     "overall": 104,
+     "name": "Russ Frizzell",
+     "team": "Browns",
+     "position": "T",
+     "college": "Tulsa"
+    },
+    {
+     "year": 1950,
+     "round": 8,
+     "pick_in_round": 13,
+     "overall": 105,
+     "name": "Dick O'Hanlon",
+     "team": "Eagles",
+     "position": "T",
+     "college": "Ohio State"
+    },
+    {
+     "year": 1950,
+     "round": 9,
+     "pick_in_round": 1,
+     "overall": 106,
+     "name": "Bill Bass",
+     "team": "Colts",
+     "position": "B",
+     "college": "Arkansas"
+    },
+    {
+     "year": 1950,
+     "round": 9,
+     "pick_in_round": 2,
+     "overall": 107,
+     "name": "Floyd (Breezy) Reid",
+     "team": "Bears",
+     "position": "B",
+     "college": "Georgia"
+    },
+    {
+     "year": 1950,
+     "round": 9,
+     "pick_in_round": 3,
+     "overall": 108,
+     "name": "Roger Wilson",
+     "team": "Packers",
+     "position": "E",
+     "college": "South Carolina"
+    },
+    {
+     "year": 1950,
+     "round": 9,
+     "pick_in_round": 4,
+     "overall": 109,
+     "name": "Ed Wood",
+     "team": "Lions",
+     "position": "G",
+     "college": "Detroit"
+    },
+    {
+     "year": 1950,
+     "round": 9,
+     "pick_in_round": 5,
+     "overall": 110,
+     "name": "Don Winslow",
+     "team": "Redskins",
+     "position": "T",
+     "college": "Iowa"
+    },
+    {
+     "year": 1950,
+     "round": 9,
+     "pick_in_round": 6,
+     "overall": 111,
+     "name": "Vince Cisterna",
+     "team": "Giants",
+     "position": "E",
+     "college": "Northern Arizona"
+    },
+    {
+     "year": 1950,
+     "round": 9,
+     "pick_in_round": 9,
+     "overall": 114,
+     "name": "Dick Braznell",
+     "team": "Bears",
+     "position": "B",
+     "college": "Missouri"
+    },
+    {
+     "year": 1950,
+     "round": 9,
+     "pick_in_round": 10,
+     "overall": 115,
+     "name": "Pete Zinach",
+     "team": "49ers",
+     "position": "B",
+     "college": "West Virginia"
+    },
+    {
+     "year": 1950,
+     "round": 9,
+     "pick_in_round": 13,
+     "overall": 118,
+     "name": "Bobby Wilson",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Mississippi"
+    },
+    {
+     "year": 1950,
+     "round": 10,
+     "pick_in_round": 1,
+     "overall": 119,
+     "name": "Errol Fry",
+     "team": "Colts",
+     "position": "G",
+     "college": "Texas"
+    },
+    {
+     "year": 1950,
+     "round": 10,
+     "pick_in_round": 2,
+     "overall": 120,
+     "name": "Melvin Lyle",
+     "team": "Bulldogs",
+     "position": "E",
+     "college": "Louisiana State"
+    },
+    {
+     "year": 1950,
+     "round": 10,
+     "pick_in_round": 3,
+     "overall": 121,
+     "name": "Bob Mealey",
+     "team": "Packers",
+     "position": "T",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1950,
+     "round": 10,
+     "pick_in_round": 4,
+     "overall": 122,
+     "name": "Roland Malcolm",
+     "team": "Lions",
+     "position": "B",
+     "college": "Gustavus Adolphus"
+    },
+    {
+     "year": 1950,
+     "round": 10,
+     "pick_in_round": 7,
+     "overall": 125,
+     "name": "Walt Grothaus",
+     "team": "Cardinals",
+     "position": "C",
+     "college": "Notre Dame"
+    },
+    {
+     "year": 1950,
+     "round": 10,
+     "pick_in_round": 8,
+     "overall": 126,
+     "name": "Milt Lavigne",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "Southeastern Louisiana"
+    },
+    {
+     "year": 1950,
+     "round": 10,
+     "pick_in_round": 10,
+     "overall": 128,
+     "name": "Al Wahl",
+     "team": "Bears",
+     "position": "T",
+     "college": "Michigan"
+    },
+    {
+     "year": 1950,
+     "round": 10,
+     "pick_in_round": 11,
+     "overall": 129,
+     "name": "Jay Van Noy",
+     "team": "Rams",
+     "position": "B",
+     "college": "Utah State"
+    },
+    {
+     "year": 1950,
+     "round": 10,
+     "pick_in_round": 12,
+     "overall": 130,
+     "name": "Frank O'Pella",
+     "team": "Browns",
+     "position": "B",
+     "college": "William & Mary"
+    },
+    {
+     "year": 1950,
+     "round": 10,
+     "pick_in_round": 13,
+     "overall": 131,
+     "name": "Ernie Johnson",
+     "team": "Eagles",
+     "position": "B",
+     "college": "UCLA"
+    },
+    {
+     "year": 1950,
+     "round": 11,
+     "pick_in_round": 1,
+     "overall": 132,
+     "name": "Joe Romanosky",
+     "team": "Colts",
+     "position": "T",
+     "college": "St. Bonaventure"
+    },
+    {
+     "year": 1950,
+     "round": 11,
+     "pick_in_round": 2,
+     "overall": 133,
+     "name": "Roger McAuley",
+     "team": "Bulldogs",
+     "position": "G",
+     "college": "Texas Christian"
+    },
+    {
+     "year": 1950,
+     "round": 11,
+     "pick_in_round": 3,
+     "overall": 134,
+     "name": "Gene Lorendo",
+     "team": "Packers",
+     "position": "E",
+     "college": "Georgia"
+    },
+    {
+     "year": 1950,
+     "round": 11,
+     "pick_in_round": 4,
+     "overall": 135,
+     "name": "Jack Wilson",
+     "team": "Lions",
+     "position": "T",
+     "college": "Ohio State"
+    },
+    {
+     "year": 1950,
+     "round": 11,
+     "pick_in_round": 5,
+     "overall": 136,
+     "name": "Dan Brown",
+     "team": "Redskins",
+     "position": "E",
+     "college": "Villanova"
+    },
+    {
+     "year": 1950,
+     "round": 11,
+     "pick_in_round": 6,
+     "overall": 137,
+     "name": "Jay Roundy",
+     "team": "Rams",
+     "position": "B",
+     "college": "USC"
+    },
+    {
+     "year": 1950,
+     "round": 11,
+     "pick_in_round": 7,
+     "overall": 138,
+     "name": "Charley Williams",
+     "team": "Steelers",
+     "position": "E",
+     "college": "Sam Houston State"
+    },
+    {
+     "year": 1950,
+     "round": 11,
+     "pick_in_round": 8,
+     "overall": 139,
+     "name": "J.D. Ison",
+     "team": "Cardinals",
+     "position": "E",
+     "college": "Baylor"
+    },
+    {
+     "year": 1950,
+     "round": 11,
+     "pick_in_round": 11,
+     "overall": 142,
+     "name": "Fred Stuvek",
+     "team": "Rams",
+     "position": "G",
+     "college": "West Virginia"
+    },
+    {
+     "year": 1950,
+     "round": 11,
+     "pick_in_round": 12,
+     "overall": 143,
+     "name": "Bob Plotz",
+     "team": "Browns",
+     "position": "G",
+     "college": "Pittsburgh"
+    },
+    {
+     "year": 1950,
+     "round": 11,
+     "pick_in_round": 13,
+     "overall": 144,
+     "name": "Bobby Lantrip",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Rice"
+    },
+    {
+     "year": 1950,
+     "round": 12,
+     "pick_in_round": 1,
+     "overall": 145,
+     "name": "Bill Dey",
+     "team": "Colts",
+     "position": "B",
+     "college": "Dartmouth"
+    },
+    {
+     "year": 1950,
+     "round": 12,
+     "pick_in_round": 2,
+     "overall": 146,
+     "name": "Andy Hillhouse",
+     "team": "Bulldogs",
+     "position": "E",
+     "college": "Texas A&M"
+    },
+    {
+     "year": 1950,
+     "round": 12,
+     "pick_in_round": 3,
+     "overall": 147,
+     "name": "Andy Pavich",
+     "team": "Packers",
+     "position": "E",
+     "college": "Denver"
+    },
+    {
+     "year": 1950,
+     "round": 12,
+     "pick_in_round": 4,
+     "overall": 148,
+     "name": "Bucky Walters",
+     "team": "Lions",
+     "position": "T",
+     "college": "Brown"
+    },
+    {
+     "year": 1950,
+     "round": 12,
+     "pick_in_round": 5,
+     "overall": 149,
+     "name": "Bill Chauncey",
+     "team": "Redskins",
+     "position": "B",
+     "college": "Iowa State"
+    },
+    {
+     "year": 1950,
+     "round": 12,
+     "pick_in_round": 7,
+     "overall": 151,
+     "name": "Frank Wallheiser",
+     "team": "Cardinals",
+     "position": "E",
+     "college": "Western Kentucky"
+    },
+    {
+     "year": 1950,
+     "round": 12,
+     "pick_in_round": 8,
+     "overall": 152,
+     "name": "Bob Sharpe",
+     "team": "Cardinals",
+     "position": "G",
+     "college": "Davidson"
+    },
+    {
+     "year": 1950,
+     "round": 12,
+     "pick_in_round": 10,
+     "overall": 154,
+     "name": "Kenny Roof",
+     "team": "Bears",
+     "position": "B",
+     "college": "Oklahoma State"
+    },
+    {
+     "year": 1950,
+     "round": 12,
+     "pick_in_round": 11,
+     "overall": 155,
+     "name": "John Lunney",
+     "team": "Rams",
+     "position": "G",
+     "college": "Arkansas"
+    },
+    {
+     "year": 1950,
+     "round": 12,
+     "pick_in_round": 13,
+     "overall": 157,
+     "name": "Frank Mahoney",
+     "team": "Eagles",
+     "position": "E",
+     "college": "Brown"
+    },
+    {
+     "year": 1950,
+     "round": 13,
+     "pick_in_round": 1,
+     "overall": 158,
+     "name": "Ray Stone",
+     "team": "Colts",
+     "position": "E",
+     "college": "Texas"
+    },
+    {
+     "year": 1950,
+     "round": 13,
+     "pick_in_round": 2,
+     "overall": 159,
+     "name": "Jack Morton",
+     "team": "Bulldogs",
+     "position": "B",
+     "college": "West Virginia"
+    },
+    {
+     "year": 1950,
+     "round": 13,
+     "pick_in_round": 4,
+     "overall": 161,
+     "name": "Jim Ryan",
+     "team": "Lions",
+     "position": "B",
+     "college": "San Francisco"
+    },
+    {
+     "year": 1950,
+     "round": 13,
+     "pick_in_round": 5,
+     "overall": 162,
+     "name": "Clay Davis",
+     "team": "Redskins",
+     "position": "C",
+     "college": "Oklahoma State"
+    },
+    {
+     "year": 1950,
+     "round": 13,
+     "pick_in_round": 6,
+     "overall": 163,
+     "name": "Joe Kelly",
+     "team": "Giants",
+     "position": "C",
+     "college": "Wisconsin"
+    },
+    {
+     "year": 1950,
+     "round": 13,
+     "pick_in_round": 7,
+     "overall": 164,
+     "name": "Negley Norton",
+     "team": "Steelers",
+     "position": "T",
+     "college": "Penn State"
+    },
+    {
+     "year": 1950,
+     "round": 13,
+     "pick_in_round": 10,
+     "overall": 167,
+     "name": "Lou (Bimbo) Cecconi",
+     "team": "49ers",
+     "position": "B",
+     "college": "Pittsburgh"
+    },
+    {
+     "year": 1950,
+     "round": 13,
+     "pick_in_round": 11,
+     "overall": 168,
+     "name": "Tom Winbigler",
+     "team": "Rams",
+     "position": "B",
+     "college": "College of Idaho"
+    },
+    {
+     "year": 1950,
+     "round": 13,
+     "pick_in_round": 12,
+     "overall": 169,
+     "name": "Rupe Wright",
+     "team": "Browns",
+     "position": "G",
+     "college": "Baylor"
+    },
+    {
+     "year": 1950,
+     "round": 14,
+     "pick_in_round": 1,
+     "overall": 171,
+     "name": "Mitch Smiarowski",
+     "team": "Colts",
+     "position": "C",
+     "college": "St. Bonaventure"
+    },
+    {
+     "year": 1950,
+     "round": 14,
+     "pick_in_round": 2,
+     "overall": 172,
+     "name": "Ed Carmichael",
+     "team": "Bulldogs",
+     "position": "G",
+     "college": "Oregon State"
+    },
+    {
+     "year": 1950,
+     "round": 14,
+     "pick_in_round": 3,
+     "overall": 173,
+     "name": "Fred Leon",
+     "team": "Packers",
+     "position": "T",
+     "college": "Nevada"
+    },
+    {
+     "year": 1950,
+     "round": 14,
+     "pick_in_round": 4,
+     "overall": 174,
+     "name": "Cliff Squires",
+     "team": "Lions",
+     "position": "C",
+     "college": "Nebraska-Wesleyan"
+    },
+    {
+     "year": 1950,
+     "round": 14,
+     "pick_in_round": 5,
+     "overall": 175,
+     "name": "Lyle Button",
+     "team": "Redskins",
+     "position": "T",
+     "college": "Illinois"
+    },
+    {
+     "year": 1950,
+     "round": 14,
+     "pick_in_round": 6,
+     "overall": 176,
+     "name": "Gene Fritz",
+     "team": "Giants",
+     "position": "T",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1950,
+     "round": 14,
+     "pick_in_round": 7,
+     "overall": 177,
+     "name": "Dee Andros",
+     "team": "Cardinals",
+     "position": "G",
+     "college": "Oklahoma"
+    },
+    {
+     "year": 1950,
+     "round": 14,
+     "pick_in_round": 9,
+     "overall": 179,
+     "name": "Tom Payne",
+     "team": "49ers",
+     "position": "E",
+     "college": "Santa Clara"
+    },
+    {
+     "year": 1950,
+     "round": 14,
+     "pick_in_round": 10,
+     "overall": 180,
+     "name": "Al Hover",
+     "team": "Bears",
+     "position": "G",
+     "college": "Louisiana State"
+    },
+    {
+     "year": 1950,
+     "round": 14,
+     "pick_in_round": 11,
+     "overall": 181,
+     "name": "Bill Trautwein",
+     "team": "Rams",
+     "position": "T",
+     "college": "Ohio State"
+    },
+    {
+     "year": 1950,
+     "round": 14,
+     "pick_in_round": 12,
+     "overall": 182,
+     "name": "Packard Harrington",
+     "team": "Browns",
+     "position": "C",
+     "college": "St. Mary's (CA)"
+    },
+    {
+     "year": 1950,
+     "round": 15,
+     "pick_in_round": 2,
+     "overall": 185,
+     "name": "Norm Messeroll",
+     "team": "Bulldogs",
+     "position": "T",
+     "college": "Tennessee"
+    },
+    {
+     "year": 1950,
+     "round": 15,
+     "pick_in_round": 3,
+     "overall": 186,
+     "name": "Gene Huebern",
+     "team": "Packers",
+     "position": "C",
+     "college": "Baylor"
+    },
+    {
+     "year": 1950,
+     "round": 15,
+     "pick_in_round": 6,
+     "overall": 189,
+     "name": "Bill Roberson",
+     "team": "Giants",
+     "position": "T",
+     "college": "Stephen F. Austin"
+    },
+    {
+     "year": 1950,
+     "round": 15,
+     "pick_in_round": 7,
+     "overall": 190,
+     "name": "Harry Russell",
+     "team": "Steelers",
+     "position": "B",
+     "college": "San Jose State"
+    },
+    {
+     "year": 1950,
+     "round": 15,
+     "pick_in_round": 8,
+     "overall": 191,
+     "name": "Al Langford",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "Howard Payne"
+    },
+    {
+     "year": 1950,
+     "round": 15,
+     "pick_in_round": 9,
+     "overall": 192,
+     "name": "Jimmy Glisson",
+     "team": "Bears",
+     "position": "B",
+     "college": "Tulane"
+    },
+    {
+     "year": 1950,
+     "round": 15,
+     "pick_in_round": 10,
+     "overall": 193,
+     "name": "Leo Crampsey",
+     "team": "49ers",
+     "position": "E",
+     "college": "St. Bonaventure"
+    },
+    {
+     "year": 1950,
+     "round": 15,
+     "pick_in_round": 12,
+     "overall": 195,
+     "name": "Ted Meland",
+     "team": "Browns",
+     "position": "G",
+     "college": "Oregon"
+    },
+    {
+     "year": 1950,
+     "round": 15,
+     "pick_in_round": 13,
+     "overall": 196,
+     "name": "Herb Carey",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Dartmouth"
+    },
+    {
+     "year": 1950,
+     "round": 16,
+     "pick_in_round": 1,
+     "overall": 197,
+     "name": "Dave Fisher",
+     "team": "Colts",
+     "position": "B",
+     "college": "Southwestern Louisiana"
+    },
+    {
+     "year": 1950,
+     "round": 16,
+     "pick_in_round": 2,
+     "overall": 198,
+     "name": "Bill Stetter",
+     "team": "Bulldogs",
+     "position": "C",
+     "college": "Holy Cross"
+    },
+    {
+     "year": 1950,
+     "round": 16,
+     "pick_in_round": 3,
+     "overall": 199,
+     "name": "Frank Kuzma",
+     "team": "Packers",
+     "position": "B",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1950,
+     "round": 16,
+     "pick_in_round": 4,
+     "overall": 200,
+     "name": "Jerry Greiner",
+     "team": "Lions",
+     "position": "C",
+     "college": "Detroit"
+    },
+    {
+     "year": 1950,
+     "round": 16,
+     "pick_in_round": 7,
+     "overall": 203,
+     "name": "Harry Bierman",
+     "team": "Cardinals",
+     "position": "E",
+     "college": "Furman"
+    },
+    {
+     "year": 1950,
+     "round": 16,
+     "pick_in_round": 8,
+     "overall": 204,
+     "name": "Bernie Barkouskie",
+     "team": "Steelers",
+     "position": "G",
+     "college": "Pittsburgh"
+    },
+    {
+     "year": 1950,
+     "round": 16,
+     "pick_in_round": 11,
+     "overall": 207,
+     "name": "Jim Maloney",
+     "team": "Rams",
+     "position": "E",
+     "college": "Fordham"
+    },
+    {
+     "year": 1950,
+     "round": 16,
+     "pick_in_round": 12,
+     "overall": 208,
+     "name": "Art King",
+     "team": "Browns",
+     "position": "G",
+     "college": "Ball State"
+    },
+    {
+     "year": 1950,
+     "round": 16,
+     "pick_in_round": 13,
+     "overall": 209,
+     "name": "Jim Marck",
+     "team": "Eagles",
+     "position": "T",
+     "college": "Xavier"
+    },
+    {
+     "year": 1950,
+     "round": 17,
+     "pick_in_round": 1,
+     "overall": 210,
+     "name": "Ralph Murphy",
+     "team": "Colts",
+     "position": "G",
+     "college": "Rice"
+    },
+    {
+     "year": 1950,
+     "round": 17,
+     "pick_in_round": 2,
+     "overall": 211,
+     "name": "Joe Dean Tidwell",
+     "team": "Bulldogs",
+     "position": "B",
+     "college": "Midwestern State (TX)"
+    },
+    {
+     "year": 1950,
+     "round": 17,
+     "pick_in_round": 3,
+     "overall": 212,
+     "name": "Hal Otterback",
+     "team": "Packers",
+     "position": "G",
+     "college": "Wisconsin"
+    },
+    {
+     "year": 1950,
+     "round": 17,
+     "pick_in_round": 4,
+     "overall": 213,
+     "name": "Connie Callahan",
+     "team": "Lions",
+     "position": "B",
+     "college": "Morningside"
+    },
+    {
+     "year": 1950,
+     "round": 17,
+     "pick_in_round": 9,
+     "overall": 218,
+     "name": "Ray Janaszek",
+     "team": "Bears",
+     "position": "B",
+     "college": "Dayton"
+    },
+    {
+     "year": 1950,
+     "round": 17,
+     "pick_in_round": 10,
+     "overall": 219,
+     "name": "Cliff Van Meter",
+     "team": "49ers",
+     "position": "B",
+     "college": "Tulane"
+    },
+    {
+     "year": 1950,
+     "round": 17,
+     "pick_in_round": 11,
+     "overall": 220,
+     "name": "Harry Neugold",
+     "team": "Rams",
+     "position": "T",
+     "college": "Rensselaer"
+    },
+    {
+     "year": 1950,
+     "round": 17,
+     "pick_in_round": 12,
+     "overall": 221,
+     "name": "Hal McKinney",
+     "team": "Browns",
+     "position": "G",
+     "college": "Missouri Valley"
+    },
+    {
+     "year": 1950,
+     "round": 17,
+     "pick_in_round": 13,
+     "overall": 222,
+     "name": "Jerry Taylor",
+     "team": "Eagles",
+     "position": "C",
+     "college": "Mississippi State"
+    },
+    {
+     "year": 1950,
+     "round": 18,
+     "pick_in_round": 1,
+     "overall": 223,
+     "name": "Charley Schoolmaster",
+     "team": "Colts",
+     "position": "C",
+     "college": "Western Michigan"
+    },
+    {
+     "year": 1950,
+     "round": 18,
+     "pick_in_round": 5,
+     "overall": 227,
+     "name": "Alvin Duke",
+     "team": "Redskins",
+     "position": "B",
+     "college": "Arkansas"
+    },
+    {
+     "year": 1950,
+     "round": 18,
+     "pick_in_round": 7,
+     "overall": 229,
+     "name": "Ray Espenan",
+     "team": "Cardinals",
+     "position": "E",
+     "college": "Notre Dame"
+    },
+    {
+     "year": 1950,
+     "round": 18,
+     "pick_in_round": 8,
+     "overall": 230,
+     "name": "Kenneth Powell",
+     "team": "Steelers",
+     "position": "E",
+     "college": "North Carolina"
+    },
+    {
+     "year": 1950,
+     "round": 18,
+     "pick_in_round": 9,
+     "overall": 231,
+     "name": "Ralph Genito",
+     "team": "49ers",
+     "position": "B",
+     "college": "Kentucky"
+    },
+    {
+     "year": 1950,
+     "round": 18,
+     "pick_in_round": 12,
+     "overall": 234,
+     "name": "Joe Travue",
+     "team": "Browns",
+     "position": "B",
+     "college": "Louisville"
+    },
+    {
+     "year": 1950,
+     "round": 18,
+     "pick_in_round": 13,
+     "overall": 235,
+     "name": "Ed Tunnicliff",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Northwestern"
+    },
+    {
+     "year": 1950,
+     "round": 19,
+     "pick_in_round": 1,
+     "overall": 236,
+     "name": "Bill Waddail",
+     "team": "Colts",
+     "position": "B",
+     "college": "Auburn"
+    },
+    {
+     "year": 1950,
+     "round": 19,
+     "pick_in_round": 3,
+     "overall": 238,
+     "name": "Earl Rowan",
+     "team": "Packers",
+     "position": "T",
+     "college": "Hardin-Simmons"
+    },
+    {
+     "year": 1950,
+     "round": 19,
+     "pick_in_round": 5,
+     "overall": 240,
+     "name": "Ed White",
+     "team": "Redskins",
+     "position": "E",
+     "college": "Alabama"
+    },
+    {
+     "year": 1950,
+     "round": 19,
+     "pick_in_round": 8,
+     "overall": 243,
+     "name": "Loran Day",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "Northwestern"
+    },
+    {
+     "year": 1950,
+     "round": 19,
+     "pick_in_round": 10,
+     "overall": 245,
+     "name": "Forest Klein",
+     "team": "49ers",
+     "position": "G",
+     "college": "California"
+    },
+    {
+     "year": 1950,
+     "round": 19,
+     "pick_in_round": 11,
+     "overall": 246,
+     "name": "John Smith",
+     "team": "Rams",
+     "position": "E",
+     "college": "Arizona"
+    },
+    {
+     "year": 1950,
+     "round": 19,
+     "pick_in_round": 13,
+     "overall": 248,
+     "name": "Darrell Robinson",
+     "team": "Eagles",
+     "position": "E",
+     "college": "Oregon"
+    },
+    {
+     "year": 1950,
+     "round": 20,
+     "pick_in_round": 1,
+     "overall": 249,
+     "name": "Sheldon Dunlap",
+     "team": "Colts",
+     "position": "G",
+     "college": "Cincinnati"
+    },
+    {
+     "year": 1950,
+     "round": 20,
+     "pick_in_round": 2,
+     "overall": 250,
+     "name": "Darrell Royal",
+     "team": "Bulldogs",
+     "position": "B",
+     "college": "Oklahoma"
+    },
+    {
+     "year": 1950,
+     "round": 20,
+     "pick_in_round": 3,
+     "overall": 251,
+     "name": "Jim Howe",
+     "team": "Packers",
+     "position": "B",
+     "college": "Kentucky"
+    },
+    {
+     "year": 1950,
+     "round": 20,
+     "pick_in_round": 4,
+     "overall": 252,
+     "name": "Fred Davis",
+     "team": "Lions",
+     "position": "E",
+     "college": "Maryland"
+    },
+    {
+     "year": 1950,
+     "round": 20,
+     "pick_in_round": 5,
+     "overall": 253,
+     "name": "George Bayer",
+     "team": "Redskins",
+     "position": "T",
+     "college": "Washington"
+    },
+    {
+     "year": 1950,
+     "round": 20,
+     "pick_in_round": 6,
+     "overall": 254,
+     "name": "Joe Tangaro",
+     "team": "Giants",
+     "position": "T",
+     "college": "Utah"
+    },
+    {
+     "year": 1950,
+     "round": 20,
+     "pick_in_round": 7,
+     "overall": 255,
+     "name": "Webb Halbert",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "Iowa State"
+    },
+    {
+     "year": 1950,
+     "round": 20,
+     "pick_in_round": 8,
+     "overall": 256,
+     "name": "Mike DeNoia",
+     "team": "Steelers",
+     "position": "B",
+     "college": "Scranton"
+    },
+    {
+     "year": 1950,
+     "round": 20,
+     "pick_in_round": 10,
+     "overall": 258,
+     "name": "Jim (Tank) Crawford",
+     "team": "Bears",
+     "position": "G",
+     "college": "Mississippi"
+    },
+    {
+     "year": 1950,
+     "round": 20,
+     "pick_in_round": 11,
+     "overall": 259,
+     "name": "Bill Young",
+     "team": "Rams",
+     "position": "B",
+     "college": "Hillsdale"
+    },
+    {
+     "year": 1950,
+     "round": 20,
+     "pick_in_round": 12,
+     "overall": 260,
+     "name": "John Hackney",
+     "team": "Browns",
+     "position": "G",
+     "college": "Murray State"
+    },
+    {
+     "year": 1950,
+     "round": 21,
+     "pick_in_round": 1,
+     "overall": 262,
+     "name": "Tom Phillips",
+     "team": "Colts",
+     "position": "B",
+     "college": "Baldwin-Wallace"
+    },
+    {
+     "year": 1950,
+     "round": 21,
+     "pick_in_round": 2,
+     "overall": 263,
+     "name": "Bud French",
+     "team": "Bulldogs",
+     "position": "B",
+     "college": "Kansas"
+    },
+    {
+     "year": 1950,
+     "round": 21,
+     "pick_in_round": 3,
+     "overall": 264,
+     "name": "Gene Evans",
+     "team": "Packers",
+     "position": "B",
+     "college": "Wisconsin"
+    },
+    {
+     "year": 1950,
+     "round": 21,
+     "pick_in_round": 4,
+     "overall": 265,
+     "name": "George Brewer",
+     "team": "Lions",
+     "position": "B",
+     "college": "Oklahoma"
+    },
+    {
+     "year": 1950,
+     "round": 21,
+     "pick_in_round": 8,
+     "overall": 269,
+     "name": "Howard Blumhardt",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "South Dakota"
+    },
+    {
+     "year": 1950,
+     "round": 21,
+     "pick_in_round": 9,
+     "overall": 270,
+     "name": "Bob Angie",
+     "team": "Bears",
+     "position": "B",
+     "college": "Iowa State"
+    },
+    {
+     "year": 1950,
+     "round": 21,
+     "pick_in_round": 10,
+     "overall": 271,
+     "name": "Guerin Alker",
+     "team": "49ers",
+     "position": "C",
+     "college": "Loyola (CA)"
+    },
+    {
+     "year": 1950,
+     "round": 21,
+     "pick_in_round": 11,
+     "overall": 272,
+     "name": "Bill Klein",
+     "team": "Rams",
+     "position": "E",
+     "college": "Hanover"
+    },
+    {
+     "year": 1950,
+     "round": 21,
+     "pick_in_round": 12,
+     "overall": 273,
+     "name": "Leroy Vogts",
+     "team": "Browns",
+     "position": "G",
+     "college": "Washington (MO)"
+    },
+    {
+     "year": 1950,
+     "round": 21,
+     "pick_in_round": 13,
+     "overall": 274,
+     "name": "Marv Cross",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Washington State"
+    },
+    {
+     "year": 1950,
+     "round": 22,
+     "pick_in_round": 1,
+     "overall": 275,
+     "name": "Chip Armstrong",
+     "team": "Colts",
+     "position": "C",
+     "college": "Occidental"
+    },
+    {
+     "year": 1950,
+     "round": 22,
+     "pick_in_round": 2,
+     "overall": 276,
+     "name": "R.V. Johnson",
+     "team": "Bulldogs",
+     "position": "T",
+     "college": "St. Mary's (CA)"
+    },
+    {
+     "year": 1950,
+     "round": 22,
+     "pick_in_round": 3,
+     "overall": 277,
+     "name": "Chuck Beatty",
+     "team": "Packers",
+     "position": "C",
+     "college": "Penn State"
+    },
+    {
+     "year": 1950,
+     "round": 22,
+     "pick_in_round": 4,
+     "overall": 278,
+     "name": "Jim Tate",
+     "team": "Lions",
+     "position": "T",
+     "college": "Purdue"
+    },
+    {
+     "year": 1950,
+     "round": 22,
+     "pick_in_round": 5,
+     "overall": 279,
+     "name": "John deLaurentis",
+     "team": "Redskins",
+     "position": "T",
+     "college": "Waynesburg"
+    },
+    {
+     "year": 1950,
+     "round": 22,
+     "pick_in_round": 8,
+     "overall": 282,
+     "name": "Stan Burak",
+     "team": "Steelers",
+     "position": "B",
+     "college": "George Washington"
+    },
+    {
+     "year": 1950,
+     "round": 22,
+     "pick_in_round": 10,
+     "overall": 284,
+     "name": "Jim Byler",
+     "team": "Bears",
+     "position": "G",
+     "college": "North Carolina State"
+    },
+    {
+     "year": 1950,
+     "round": 22,
+     "pick_in_round": 11,
+     "overall": 285,
+     "name": "Doug Barber",
+     "team": "Rams",
+     "position": "B",
+     "college": "Dakota Wesleyan"
+    },
+    {
+     "year": 1950,
+     "round": 22,
+     "pick_in_round": 12,
+     "overall": 286,
+     "name": "Jim Dowling",
+     "team": "Browns",
+     "position": "G",
+     "college": "Santa Clara"
+    },
+    {
+     "year": 1950,
+     "round": 22,
+     "pick_in_round": 13,
+     "overall": 287,
+     "name": "Jim Hague",
+     "team": "Eagles",
+     "position": "E",
+     "college": "Ohio State"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 1,
+     "overall": 288,
+     "name": "Harrry Weittlaufer",
+     "team": "Colts",
+     "position": "E",
+     "college": "Pennsylvania"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 2,
+     "overall": 289,
+     "name": "Dick Sheffield",
+     "team": "Bulldogs",
+     "position": "E",
+     "college": "Tulane"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 3,
+     "overall": 290,
+     "name": "George Mattey",
+     "team": "Packers",
+     "position": "G",
+     "college": "Ohio State"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 4,
+     "overall": 291,
+     "name": "Irv Heller",
+     "team": "Lions",
+     "position": "T",
+     "college": "Boston University"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 5,
+     "overall": 292,
+     "name": "Joe Zuravleff",
+     "team": "Redskins",
+     "position": "E",
+     "college": "Northwestern"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 6,
+     "overall": 293,
+     "name": "Warren Davis",
+     "team": "Giants",
+     "position": "C",
+     "college": "Colgate"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 7,
+     "overall": 294,
+     "name": "Walt Kerulis",
+     "team": "Steelers",
+     "position": "E",
+     "college": "Illinois"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 8,
+     "overall": 295,
+     "name": "Bill Mongtomery",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "Fresno State"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 9,
+     "overall": 296,
+     "name": "Willie Bigham",
+     "team": "Bears",
+     "position": "T",
+     "college": "Midwestern State (TX)"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 10,
+     "overall": 297,
+     "name": "Jim (Froggy) Williams",
+     "team": "49ers",
+     "position": "E",
+     "college": "Rice"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 11,
+     "overall": 298,
+     "name": "Jim Bird",
+     "team": "Rams",
+     "position": "T",
+     "college": "USC"
+    },
+    {
+     "year": 1950,
+     "round": 23,
+     "pick_in_round": 13,
+     "overall": 300,
+     "name": "Al Lesko",
+     "team": "Eagles",
+     "position": "T",
+     "college": "St. Bonaventure"
+    },
+    {
+     "year": 1950,
+     "round": 24,
+     "pick_in_round": 1,
+     "overall": 301,
+     "name": "Bill Petroski",
+     "team": "Colts",
+     "position": "T",
+     "college": "Holy Cross"
+    },
+    {
+     "year": 1950,
+     "round": 24,
+     "pick_in_round": 2,
+     "overall": 302,
+     "name": "Bill DeYoung",
+     "team": "Bulldogs",
+     "position": "B",
+     "college": "Stanford"
+    },
+    {
+     "year": 1950,
+     "round": 24,
+     "pick_in_round": 3,
+     "overall": 303,
+     "name": "Don Delph",
+     "team": "Packers",
+     "position": "B",
+     "college": "Dayton"
+    },
+    {
+     "year": 1950,
+     "round": 24,
+     "pick_in_round": 4,
+     "overall": 304,
+     "name": "Jim McDowell",
+     "team": "Lions",
+     "position": "G",
+     "college": "William & Mary"
+    },
+    {
+     "year": 1950,
+     "round": 24,
+     "pick_in_round": 5,
+     "overall": 305,
+     "name": "Dick Tilton",
+     "team": "Redskins",
+     "position": "T",
+     "college": "Nevada"
+    },
+    {
+     "year": 1950,
+     "round": 24,
+     "pick_in_round": 9,
+     "overall": 309,
+     "name": "Bill Wyman",
+     "team": "49ers",
+     "position": "T",
+     "college": "Rice"
+    },
+    {
+     "year": 1950,
+     "round": 24,
+     "pick_in_round": 10,
+     "overall": 310,
+     "name": "Walt Polenske",
+     "team": "Bears",
+     "position": "B",
+     "college": "Pacific"
+    },
+    {
+     "year": 1950,
+     "round": 24,
+     "pick_in_round": 11,
+     "overall": 311,
+     "name": "Joe Joiner",
+     "team": "Rams",
+     "position": "E",
+     "college": "Austin"
+    },
+    {
+     "year": 1950,
+     "round": 24,
+     "pick_in_round": 12,
+     "overall": 312,
+     "name": "Jack Woodland",
+     "team": "Browns",
+     "position": "B",
+     "college": "Bowling Green"
+    },
+    {
+     "year": 1950,
+     "round": 24,
+     "pick_in_round": 13,
+     "overall": 313,
+     "name": "Tom DeSylvia",
+     "team": "Eagles",
+     "position": "G",
+     "college": "Oregon State"
+    },
+    {
+     "year": 1950,
+     "round": 25,
+     "pick_in_round": 1,
+     "overall": 314,
+     "name": "Jim Pepper",
+     "team": "Colts",
+     "position": "G",
+     "college": "Syracuse"
+    },
+    {
+     "year": 1950,
+     "round": 25,
+     "pick_in_round": 2,
+     "overall": 315,
+     "name": "Steve Dotur",
+     "team": "Bulldogs",
+     "position": "G",
+     "college": "Oregon"
+    },
+    {
+     "year": 1950,
+     "round": 25,
+     "pick_in_round": 3,
+     "overall": 316,
+     "name": "Frank Waters",
+     "team": "Packers",
+     "position": "B",
+     "college": "Michigan State"
+    },
+    {
+     "year": 1950,
+     "round": 25,
+     "pick_in_round": 4,
+     "overall": 317,
+     "name": "Gene Glick",
+     "team": "Lions",
+     "position": "B",
+     "college": "Michigan State"
+    },
+    {
+     "year": 1950,
+     "round": 25,
+     "pick_in_round": 6,
+     "overall": 319,
+     "name": "Ken Beiersdorf",
+     "team": "Giants",
+     "position": "B",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1950,
+     "round": 25,
+     "pick_in_round": 7,
+     "overall": 320,
+     "name": "Bob Numbers",
+     "team": "Steelers",
+     "position": "C",
+     "college": "Lehigh"
+    },
+    {
+     "year": 1950,
+     "round": 25,
+     "pick_in_round": 8,
+     "overall": 321,
+     "name": "Lee Truman",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "Kentucky"
+    },
+    {
+     "year": 1950,
+     "round": 25,
+     "pick_in_round": 9,
+     "overall": 322,
+     "name": "Perry Samuels",
+     "team": "Bears",
+     "position": "B",
+     "college": "Texas"
+    },
+    {
+     "year": 1950,
+     "round": 25,
+     "pick_in_round": 10,
+     "overall": 323,
+     "name": "Bob Dunn",
+     "team": "49ers",
+     "position": "G",
+     "college": "Dayton"
+    },
+    {
+     "year": 1950,
+     "round": 25,
+     "pick_in_round": 12,
+     "overall": 325,
+     "name": "Jim Brasher",
+     "team": "Browns",
+     "position": "C",
+     "college": "Maryland"
+    },
+    {
+     "year": 1950,
+     "round": 25,
+     "pick_in_round": 13,
+     "overall": 326,
+     "name": "Jim Eagles",
+     "team": "Eagles",
+     "position": "C",
+     "college": "North Texas State"
+    },
+    {
+     "year": 1950,
+     "round": 26,
+     "pick_in_round": 2,
+     "overall": 328,
+     "name": "Red Noonan",
+     "team": "Bulldogs",
+     "position": "B",
+     "college": "Alabama"
+    },
+    {
+     "year": 1950,
+     "round": 26,
+     "pick_in_round": 3,
+     "overall": 329,
+     "name": "Claude Radtke",
+     "team": "Packers",
+     "position": "E",
+     "college": "Lawrence"
+    },
+    {
+     "year": 1950,
+     "round": 26,
+     "pick_in_round": 4,
+     "overall": 330,
+     "name": "Bobby Coy Lee",
+     "team": "Lions",
+     "position": "B",
+     "college": "Texas"
+    },
+    {
+     "year": 1950,
+     "round": 26,
+     "pick_in_round": 5,
+     "overall": 331,
+     "name": "Earl Roth",
+     "team": "Redskins",
+     "position": "B",
+     "college": "Maryland"
+    },
+    {
+     "year": 1950,
+     "round": 26,
+     "pick_in_round": 6,
+     "overall": 332,
+     "name": "Carl Copp",
+     "team": "Giants",
+     "position": "T",
+     "college": "Vanderbilt"
+    },
+    {
+     "year": 1950,
+     "round": 26,
+     "pick_in_round": 7,
+     "overall": 333,
+     "name": "Jim Pittman",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "Mississippi State"
+    },
+    {
+     "year": 1950,
+     "round": 26,
+     "pick_in_round": 8,
+     "overall": 334,
+     "name": "Nick Vaccaro",
+     "team": "Steelers",
+     "position": "B",
+     "college": "Florida"
+    },
+    {
+     "year": 1950,
+     "round": 26,
+     "pick_in_round": 10,
+     "overall": 336,
+     "name": "George Sella",
+     "team": "Bears",
+     "position": "B",
+     "college": "Princeton"
+    },
+    {
+     "year": 1950,
+     "round": 26,
+     "pick_in_round": 11,
+     "overall": 337,
+     "name": "Otto Haldy",
+     "team": "Rams",
+     "position": "T",
+     "college": "Mankato State"
+    },
+    {
+     "year": 1950,
+     "round": 26,
+     "pick_in_round": 12,
+     "overall": 338,
+     "name": "Charley Toogood",
+     "team": "Browns",
+     "position": "T",
+     "college": "Nebraska"
+    },
+    {
+     "year": 1950,
+     "round": 26,
+     "pick_in_round": 13,
+     "overall": 339,
+     "name": "Rod Franz",
+     "team": "Eagles",
+     "position": "G",
+     "college": "California"
+    },
+    {
+     "year": 1950,
+     "round": 27,
+     "pick_in_round": 1,
+     "overall": 340,
+     "name": "Mitford Johnson",
+     "team": "Colts",
+     "position": "B",
+     "college": "Baylor"
+    },
+    {
+     "year": 1950,
+     "round": 27,
+     "pick_in_round": 2,
+     "overall": 341,
+     "name": "Chuck Olson",
+     "team": "Bulldogs",
+     "position": "E",
+     "college": "Washington"
+    },
+    {
+     "year": 1950,
+     "round": 27,
+     "pick_in_round": 3,
+     "overall": 342,
+     "name": "Bill Osborne",
+     "team": "Packers",
+     "position": "B",
+     "college": "Nevada"
+    },
+    {
+     "year": 1950,
+     "round": 27,
+     "pick_in_round": 5,
+     "overall": 344,
+     "name": "Ed Lee",
+     "team": "Redskins",
+     "position": "T",
+     "college": "Kansas"
+    },
+    {
+     "year": 1950,
+     "round": 27,
+     "pick_in_round": 6,
+     "overall": 345,
+     "name": "Art Sweet",
+     "team": "Giants",
+     "position": "B",
+     "college": "Baylor"
+    },
+    {
+     "year": 1950,
+     "round": 27,
+     "pick_in_round": 7,
+     "overall": 346,
+     "name": "Elmer Kreiser",
+     "team": "Steelers",
+     "position": "E",
+     "college": "Bloomsburg (PA)"
+    },
+    {
+     "year": 1950,
+     "round": 27,
+     "pick_in_round": 9,
+     "overall": 348,
+     "name": "Wilton (Hook) Davis",
+     "team": "Bears",
+     "position": "B",
+     "college": "Hardin-Simmons"
+    },
+    {
+     "year": 1950,
+     "round": 27,
+     "pick_in_round": 10,
+     "overall": 349,
+     "name": "Ken Johnson",
+     "team": "49ers",
+     "position": "G",
+     "college": "Pacific"
+    },
+    {
+     "year": 1950,
+     "round": 27,
+     "pick_in_round": 11,
+     "overall": 350,
+     "name": "Hal Kilman",
+     "team": "Rams",
+     "position": "T",
+     "college": "Texas Christian"
+    },
+    {
+     "year": 1950,
+     "round": 27,
+     "pick_in_round": 12,
+     "overall": 351,
+     "name": "Dick Gray",
+     "team": "Browns",
+     "position": "B",
+     "college": "Oregon State"
+    },
+    {
+     "year": 1950,
+     "round": 27,
+     "pick_in_round": 13,
+     "overall": 352,
+     "name": "Bill Martin",
+     "team": "Eagles",
+     "position": "B",
+     "college": "USC"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 1,
+     "overall": 353,
+     "name": "John Adcock",
+     "team": "Colts",
+     "position": "T",
+     "college": "Auburn"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 2,
+     "overall": 354,
+     "name": "Ed Petty",
+     "team": "Bulldogs",
+     "position": "C",
+     "college": "Hardin-Simmons"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 3,
+     "overall": 355,
+     "name": "Herm Hering",
+     "team": "Packers",
+     "position": "B",
+     "college": "Rutgers"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 5,
+     "overall": 357,
+     "name": "Ralph Shoaf",
+     "team": "Redskins",
+     "position": "B",
+     "college": "West Virginia"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 6,
+     "overall": 358,
+     "name": "Don McAuliffe",
+     "team": "Giants",
+     "position": "B",
+     "college": "Michigan State"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 7,
+     "overall": 359,
+     "name": "Sonny Jones",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "Wyoming"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 8,
+     "overall": 360,
+     "name": "Jerry Diehl",
+     "team": "Steelers",
+     "position": "B",
+     "college": "Idaho"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 9,
+     "overall": 361,
+     "name": "Charley Hall",
+     "team": "49ers",
+     "position": "B",
+     "college": "Arizona"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 10,
+     "overall": 362,
+     "name": "Jim Kenary",
+     "team": "Bears",
+     "position": "B",
+     "college": "Harvard"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 11,
+     "overall": 363,
+     "name": "Junior Morgan",
+     "team": "Rams",
+     "position": "E",
+     "college": "San Jose State"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 12,
+     "overall": 364,
+     "name": "Billy Pyle",
+     "team": "Browns",
+     "position": "B",
+     "college": "Texas"
+    },
+    {
+     "year": 1950,
+     "round": 28,
+     "pick_in_round": 13,
+     "overall": 365,
+     "name": "Don Burson",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Northwestern"
+    },
+    {
+     "year": 1950,
+     "round": 29,
+     "pick_in_round": 1,
+     "overall": 366,
+     "name": "Bob (Snakey) Graham",
+     "team": "Colts",
+     "position": "B",
+     "college": "Pennsylvania"
+    },
+    {
+     "year": 1950,
+     "round": 29,
+     "pick_in_round": 2,
+     "overall": 367,
+     "name": "Ed Jasonek",
+     "team": "Bulldogs",
+     "position": "B",
+     "college": "Furman"
+    },
+    {
+     "year": 1950,
+     "round": 29,
+     "pick_in_round": 3,
+     "overall": 368,
+     "name": "Ben Zaranka",
+     "team": "Packers",
+     "position": "E",
+     "college": "Kentucky"
+    },
+    {
+     "year": 1950,
+     "round": 29,
+     "pick_in_round": 4,
+     "overall": 369,
+     "name": "Russ Steger",
+     "team": "Lions",
+     "position": "B",
+     "college": "Illinois"
+    },
+    {
+     "year": 1950,
+     "round": 29,
+     "pick_in_round": 5,
+     "overall": 370,
+     "name": "Johnny Lundin",
+     "team": "Redskins",
+     "position": "G",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1950,
+     "round": 29,
+     "pick_in_round": 7,
+     "overall": 372,
+     "name": "Carl DePasqua",
+     "team": "Steelers",
+     "position": "B",
+     "college": "Pittsburgh"
+    },
+    {
+     "year": 1950,
+     "round": 29,
+     "pick_in_round": 8,
+     "overall": 373,
+     "name": "Bill Montagne",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "California"
+    },
+    {
+     "year": 1950,
+     "round": 29,
+     "pick_in_round": 9,
+     "overall": 374,
+     "name": "Fred Nadherny",
+     "team": "Bears",
+     "position": "B",
+     "college": "Yale"
+    },
+    {
+     "year": 1950,
+     "round": 29,
+     "pick_in_round": 10,
+     "overall": 375,
+     "name": "Bob Whelan",
+     "team": "49ers",
+     "position": "B",
+     "college": "Boston University"
+    },
+    {
+     "year": 1950,
+     "round": 29,
+     "pick_in_round": 11,
+     "overall": 376,
+     "name": "Bob Heck",
+     "team": "Rams",
+     "position": "B",
+     "college": "Pacific"
+    },
+    {
+     "year": 1950,
+     "round": 29,
+     "pick_in_round": 13,
+     "overall": 378,
+     "name": "Wes Curtier",
+     "team": "Eagles",
+     "position": "T",
+     "college": "Richmond"
+    },
+    {
+     "year": 1950,
+     "round": 30,
+     "pick_in_round": 2,
+     "overall": 380,
+     "name": "John Poulos",
+     "team": "Bulldogs",
+     "position": "B",
+     "college": "Pacific"
+    },
+    {
+     "year": 1950,
+     "round": 30,
+     "pick_in_round": 4,
+     "overall": 382,
+     "name": "Rube DeRoin",
+     "team": "Lions",
+     "position": "C",
+     "college": "Oklahoma State"
+    },
+    {
+     "year": 1950,
+     "round": 30,
+     "pick_in_round": 5,
+     "overall": 383,
+     "name": "Bob Noppinger",
+     "team": "Redskins",
+     "position": "E",
+     "college": "Georgetown (DC)"
+    },
+    {
+     "year": 1950,
+     "round": 30,
+     "pick_in_round": 7,
+     "overall": 385,
+     "name": "Vick Banonis",
+     "team": "Cardinals",
+     "position": "C",
+     "college": "Georgetown (DC)"
+    },
+    {
+     "year": 1950,
+     "round": 30,
+     "pick_in_round": 8,
+     "overall": 386,
+     "name": "Ed Hudak",
+     "team": "Steelers",
+     "position": "T",
+     "college": "Notre Dame"
+    },
+    {
+     "year": 1950,
+     "round": 30,
+     "pick_in_round": 9,
+     "overall": 387,
+     "name": "Bob Stillwell",
+     "team": "49ers",
+     "position": "E",
+     "college": "USC"
+    },
+    {
+     "year": 1950,
+     "round": 30,
+     "pick_in_round": 10,
+     "overall": 388,
+     "name": "Allen Markert",
+     "team": "Bears",
+     "position": "T",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1950,
+     "round": 30,
+     "pick_in_round": 12,
+     "overall": 390,
+     "name": "Jim Massey",
+     "team": "Browns",
+     "position": "B",
+     "college": "Detroit"
+    },
+    {
+     "year": 1950,
+     "round": 30,
+     "pick_in_round": 13,
+     "overall": 391,
+     "name": "Dud Parker",
+     "team": "Eagles",
+     "position": "B",
+     "college": "Baylor"
+    }
+   ],
+   "disagree": [
+    {
+     "overall": 3,
+     "site_name": "Chuck Hunsinger",
+     "held_name": "Chuck Hunsinger",
+     "person": "P_004153",
+     "fields": {
+      "position": [
+       "RB",
+       "B"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 8,
+     "site_name": "Lynn Chandois",
+     "held_name": "Lynn Chandnois",
+     "person": "P_018230",
+     "fields": {
+      "name": [
+       "Lynn Chandois",
+       "Lynn Chandnois"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 10,
+     "site_name": "Fred (Curly) Morrison",
+     "held_name": "Fred Morrison",
+     "person": "P_018182",
+     "fields": {
+      "name": [
+       "Fred (Curly) Morrison",
+       "Fred Morrison"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 11,
+     "site_name": "Leo Nomellini",
+     "held_name": "Leo Nomellini",
+     "person": "P_018242",
+     "fields": {
+      "position": [
+       "DT",
+       "T"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 14,
+     "site_name": "Harry (Bud) Grant",
+     "held_name": "Bud Grant",
+     "person": "P_004200",
+     "fields": {
+      "name": [
+       "Harry (Bud) Grant",
+       "Bud Grant"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 15,
+     "site_name": "Leon (Muscles) Campbell",
+     "held_name": "Leon Campbell",
+     "person": "P_018161",
+     "fields": {
+      "name": [
+       "Leon (Muscles) Campbell",
+       "Leon Campbell"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 22,
+     "site_name": "Ernie Stautner",
+     "held_name": "Ernie Stautner",
+     "person": "P_018235",
+     "fields": {
+      "position": [
+       "DT",
+       "T"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 27,
+     "site_name": "Thurman (Furn) McGraw",
+     "held_name": "Thurman McGraw",
+     "person": "P_018196",
+     "fields": {
+      "name": [
+       "Thurman (Furn) McGraw",
+       "Thurman McGraw"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 43,
+     "site_name": "Laryy Coutre",
+     "held_name": "Larry Coutre",
+     "person": "P_018203",
+     "fields": {
+      "name": [
+       "Laryy Coutre",
+       "Larry Coutre"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 65,
+     "site_name": "Don (Dopey) Phelps",
+     "held_name": "Don Phelps",
+     "person": "P_018189",
+     "fields": {
+      "name": [
+       "Don (Dopey) Phelps",
+       "Don Phelps"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 68,
+     "site_name": "Ben Aldridge",
+     "held_name": "Bennie Aldridge",
+     "person": "P_018225",
+     "fields": {
+      "name": [
+       "Ben Aldridge",
+       "Bennie Aldridge"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 82,
+     "site_name": "Leon Manley",
+     "held_name": "Willie Manley",
+     "person": "P_004123",
+     "fields": {
+      "name": [
+       "Leon Manley",
+       "Willie Manley"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 86,
+     "site_name": "Truett Smith",
+     "held_name": "Truett Smith",
+     "person": "P_018234",
+     "fields": {
+      "college": [
+       "Mississippi State",
+       "Wyoming"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 87,
+     "site_name": "Eddie Bagdon",
+     "held_name": "Ed Bagdon",
+     "person": "P_018172",
+     "fields": {
+      "name": [
+       "Eddie Bagdon",
+       "Ed Bagdon"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 112,
+     "site_name": "Max Drue",
+     "held_name": "Max Druen",
+     "person": "P_003865",
+     "fields": {
+      "name": [
+       "Max Drue",
+       "Max Druen"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 113,
+     "site_name": "Vito Regazzo",
+     "held_name": "Vito Ragazzo",
+     "person": "P_004141",
+     "fields": {
+      "name": [
+       "Vito Regazzo",
+       "Vito Ragazzo"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 153,
+     "site_name": "Don Burke",
+     "held_name": "Don Burke",
+     "person": "P_018237",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 160,
+     "site_name": "Carlton Elliott",
+     "held_name": "Carl Elliott",
+     "person": "P_018285",
+     "fields": {
+      "name": [
+       "Carlton Elliott",
+       "Carl Elliott"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 165,
+     "site_name": "Jerry Hennessey",
+     "held_name": "Jerry Hennessy",
+     "person": "P_018173",
+     "fields": {
+      "name": [
+       "Jerry Hennessey",
+       "Jerry Hennessy"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 170,
+     "site_name": "Norm (Wildman) Willey",
+     "held_name": "Norm Willey",
+     "person": "P_018229",
+     "fields": {
+      "name": [
+       "Norm (Wildman) Willey",
+       "Norm Willey"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 178,
+     "site_name": "Jim Kynes",
+     "held_name": "Jimmy Kynes",
+     "person": "P_003867",
+     "fields": {
+      "name": [
+       "Jim Kynes",
+       "Jimmy Kynes"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 194,
+     "site_name": "Dave (Trapper) Stephenson",
+     "held_name": "Dave Stephenson",
+     "person": "P_018214",
+     "fields": {
+      "name": [
+       "Dave (Trapper) Stephenson",
+       "Dave Stephenson"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 201,
+     "site_name": "Charlie (Choo-Choo) Justice",
+     "held_name": "Charlie Justice",
+     "person": "P_018253",
+     "fields": {
+      "name": [
+       "Charlie (Choo-Choo) Justice",
+       "Charlie Justice"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 202,
+     "site_name": "Bob (Stonewall) Jackson",
+     "held_name": "Bob Jackson",
+     "person": "P_018221",
+     "fields": {
+      "name": [
+       "Bob (Stonewall) Jackson",
+       "Bob Jackson"
+      ],
+      "college": [
+       "North Carolina A&T",
+       "North Carolina A&T State"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 205,
+     "site_name": "Charley Shaw",
+     "held_name": "Charlie Shaw",
+     "person": "P_018244",
+     "fields": {
+      "name": [
+       "Charley Shaw",
+       "Charlie Shaw"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 225,
+     "site_name": "Arnold Galiffa",
+     "held_name": "Arnie Galiffa",
+     "person": "P_004326",
+     "fields": {
+      "name": [
+       "Arnold Galiffa",
+       "Arnie Galiffa"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 232,
+     "site_name": "Rupert Andrews",
+     "held_name": "Rupe Andrews",
+     "person": "P_004224",
+     "fields": {
+      "name": [
+       "Rupert Andrews",
+       "Rupe Andrews"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 237,
+     "site_name": "Bob Griffin",
+     "held_name": "Bobbie Griffin",
+     "person": "P_018309",
+     "fields": {
+      "name": [
+       "Bob Griffin",
+       "Bobbie Griffin"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 247,
+     "site_name": "Butch Songin",
+     "held_name": "Butch Songin",
+     "person": "P_001160",
+     "fields": {
+      "position": [
+       "QB",
+       "B"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 257,
+     "site_name": "Jack Nix",
+     "held_name": "Jack Nix",
+     "person": "P_003955",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 266,
+     "site_name": "Cas (Slug) Witucki",
+     "held_name": "Cas Witucki",
+     "person": "P_004438",
+     "fields": {
+      "name": [
+       "Cas (Slug) Witucki",
+       "Cas Witucki"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 299,
+     "site_name": "Don Moselle",
+     "held_name": "Dom Moselle",
+     "person": "P_004351",
+     "fields": {
+      "name": [
+       "Don Moselle",
+       "Dom Moselle"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 308,
+     "site_name": "John Weaver",
+     "held_name": "John Weaver",
+     "person": "P_018126",
+     "fields": {
+      "college": [
+       "Miami (OH)",
+       "Miami (Ohio)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 318,
+     "site_name": "Art Stewart",
+     "held_name": "Art Stewart",
+     "person": "P_004077",
+     "fields": {
+      "college": [
+       "Southeastern Oklahoma",
+       "Southeastern Oklahoma State"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 324,
+     "site_name": "Dan (Deacon) Towler",
+     "held_name": "Dan Towler",
+     "person": "P_018216",
+     "fields": {
+      "name": [
+       "Dan (Deacon) Towler",
+       "Dan Towler"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 327,
+     "site_name": "Gino Mazzanti",
+     "held_name": "Geno Mazzanti",
+     "person": "P_004053",
+     "fields": {
+      "name": [
+       "Gino Mazzanti",
+       "Geno Mazzanti"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 335,
+     "site_name": "Jim Powers",
+     "held_name": "Jim Powers",
+     "person": "P_018243",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 377,
+     "site_name": "Bob Schnelker",
+     "held_name": "Bob Schnelker",
+     "person": "P_018497",
+     "fields": {
+      "college": [
+       "Bowling Green",
+       "Bowling Green State"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 384,
+     "site_name": "Hampton Tanner",
+     "held_name": "Hamp Tanner",
+     "person": "P_018332",
+     "fields": {
+      "name": [
+       "Hampton Tanner",
+       "Hamp Tanner"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    }
+   ],
+   "exact": 97
+  },
+  {
+   "year": 1965,
+   "site_picks": 281,
+   "site_rows_at_a_repeated_overall_pick": 2,
+   "archive_picks_with_an_overall": 176,
+   "archive_rows_excluded_as_another_draft": {
+    "None/AFL": 151,
+    "None/CFL": 10,
+    "draft/AFL": 105,
+    "draft/CFL": 10
+   },
+   "not_held": [
+    {
+     "year": 1965,
+     "round": 2,
+     "pick_in_round": 0,
+     "overall": 0,
+     "name": "Fred Biletnikoff",
+     "team": "Raiders",
+     "position": "WR",
+     "college": "Florida State"
+    },
+    {
+     "year": 1965,
+     "round": 4,
+     "pick_in_round": 10,
+     "overall": 52,
+     "name": "Wall Mahle",
+     "team": "Packers",
+     "position": "B",
+     "college": "Syracuse"
+    },
+    {
+     "year": 1965,
+     "round": 4,
+     "pick_in_round": 14,
+     "overall": 56,
+     "name": "Dave Johnson",
+     "team": "Colts",
+     "position": "WR",
+     "college": "San Jose State"
+    },
+    {
+     "year": 1965,
+     "round": 5,
+     "pick_in_round": 5,
+     "overall": 61,
+     "name": "Roger Pettee",
+     "team": "Cowboys",
+     "position": "LB",
+     "college": "Florida"
+    },
+    {
+     "year": 1965,
+     "round": 5,
+     "pick_in_round": 11,
+     "overall": 67,
+     "name": "John Flynn",
+     "team": "Lions",
+     "position": "E",
+     "college": "Oklahoma"
+    },
+    {
+     "year": 1965,
+     "round": 5,
+     "pick_in_round": 12,
+     "overall": 68,
+     "name": "Bob Bonds",
+     "team": "Cardinals",
+     "position": "RB",
+     "college": "San Jose State"
+    },
+    {
+     "year": 1965,
+     "round": 5,
+     "pick_in_round": 13,
+     "overall": 69,
+     "name": "Bill Irwin",
+     "team": "Browns",
+     "position": "T",
+     "college": "Mississippi"
+    },
+    {
+     "year": 1965,
+     "round": 5,
+     "pick_in_round": 14,
+     "overall": 70,
+     "name": "John McGuire",
+     "team": "Colts",
+     "position": "WR",
+     "college": "Syracuse"
+    },
+    {
+     "year": 1965,
+     "round": 6,
+     "pick_in_round": 3,
+     "overall": 73,
+     "name": "Tony Carey",
+     "team": "Bears",
+     "position": "RB",
+     "college": "Notre Dame"
+    },
+    {
+     "year": 1965,
+     "round": 6,
+     "pick_in_round": 8,
+     "overall": 78,
+     "name": "Bill Harrison",
+     "team": "Rams",
+     "position": "E",
+     "college": "Elon"
+    },
+    {
+     "year": 1965,
+     "round": 6,
+     "pick_in_round": 9,
+     "overall": 79,
+     "name": "Jim Grisham",
+     "team": "Vikings",
+     "position": "B",
+     "college": "Oklahoma"
+    },
+    {
+     "year": 1965,
+     "round": 6,
+     "pick_in_round": 11,
+     "overall": 81,
+     "name": "Earl Hawkins",
+     "team": "Lions",
+     "position": "B",
+     "college": "Emory & Henry"
+    },
+    {
+     "year": 1965,
+     "round": 6,
+     "pick_in_round": 12,
+     "overall": 82,
+     "name": "Glen Ray Hines",
+     "team": "Cardinals",
+     "position": "T",
+     "college": "Arkansas"
+    },
+    {
+     "year": 1965,
+     "round": 6,
+     "pick_in_round": 13,
+     "overall": 83,
+     "name": "Corwyn Aldredge",
+     "team": "Browns",
+     "position": "WR",
+     "college": "Northwestern State (LA)"
+    },
+    {
+     "year": 1965,
+     "round": 7,
+     "pick_in_round": 1,
+     "overall": 85,
+     "name": "Jerry Roberts",
+     "team": "Packers",
+     "position": "B",
+     "college": "Baldwin-Wallace"
+    },
+    {
+     "year": 1965,
+     "round": 7,
+     "pick_in_round": 2,
+     "overall": 86,
+     "name": "Roger Jacobazzi",
+     "team": "Packers",
+     "position": "T",
+     "college": "Wisconsin"
+    },
+    {
+     "year": 1965,
+     "round": 7,
+     "pick_in_round": 14,
+     "overall": 98,
+     "name": "John Kolocek",
+     "team": "Colts",
+     "position": "T",
+     "college": "Corpus Christi State"
+    },
+    {
+     "year": 1965,
+     "round": 8,
+     "pick_in_round": 4,
+     "overall": 102,
+     "name": "Bill Howley",
+     "team": "Steelers",
+     "position": "E",
+     "college": "Pittsburgh"
+    },
+    {
+     "year": 1965,
+     "round": 8,
+     "pick_in_round": 6,
+     "overall": 104,
+     "name": "Al Piraino",
+     "team": "Eagles",
+     "position": "T",
+     "college": "Wisconsin"
+    },
+    {
+     "year": 1965,
+     "round": 8,
+     "pick_in_round": 8,
+     "overall": 106,
+     "name": "Stan Dzura",
+     "team": "Rams",
+     "position": "T",
+     "college": "California"
+    },
+    {
+     "year": 1965,
+     "round": 8,
+     "pick_in_round": 10,
+     "overall": 108,
+     "name": "Mike Shinn",
+     "team": "Packers",
+     "position": "E",
+     "college": "Kansas"
+    },
+    {
+     "year": 1965,
+     "round": 8,
+     "pick_in_round": 11,
+     "overall": 109,
+     "name": "Larry Harbin",
+     "team": "Lions",
+     "position": "B",
+     "college": "Appalachian State"
+    },
+    {
+     "year": 1965,
+     "round": 9,
+     "pick_in_round": 1,
+     "overall": 113,
+     "name": "John Frick",
+     "team": "Giants",
+     "position": "E",
+     "college": "Ohio"
+    },
+    {
+     "year": 1965,
+     "round": 9,
+     "pick_in_round": 4,
+     "overall": 116,
+     "name": "Ken Ambrusko",
+     "team": "Bears",
+     "position": "B",
+     "college": "Maryland"
+    },
+    {
+     "year": 1965,
+     "round": 9,
+     "pick_in_round": 5,
+     "overall": 117,
+     "name": "Jim Zanios",
+     "team": "Cowboys",
+     "position": "RB",
+     "college": "Texas Tech"
+    },
+    {
+     "year": 1965,
+     "round": 9,
+     "pick_in_round": 8,
+     "overall": 120,
+     "name": "Frank McClendon",
+     "team": "Vikings",
+     "position": "T",
+     "college": "Alabama"
+    },
+    {
+     "year": 1965,
+     "round": 9,
+     "pick_in_round": 10,
+     "overall": 122,
+     "name": "Larry Bulaich",
+     "team": "Packers",
+     "position": "B",
+     "college": "Texas Christian"
+    },
+    {
+     "year": 1965,
+     "round": 10,
+     "pick_in_round": 1,
+     "overall": 127,
+     "name": "Ben Crenshaw",
+     "team": "Giants",
+     "position": "B",
+     "college": "Jackson State"
+    },
+    {
+     "year": 1965,
+     "round": 10,
+     "pick_in_round": 5,
+     "overall": 131,
+     "name": "Gaylon McCullough",
+     "team": "Cowboys",
+     "position": "C",
+     "college": "Alabama"
+    },
+    {
+     "year": 1965,
+     "round": 10,
+     "pick_in_round": 8,
+     "overall": 134,
+     "name": "Jim Burt",
+     "team": "Rams",
+     "position": "RB",
+     "college": "Western Kentucky"
+    },
+    {
+     "year": 1965,
+     "round": 10,
+     "pick_in_round": 9,
+     "overall": 135,
+     "name": "Jerald Schweiger",
+     "team": "Vikings",
+     "position": "T",
+     "college": "Wisconsin-Superior"
+    },
+    {
+     "year": 1965,
+     "round": 10,
+     "pick_in_round": 11,
+     "overall": 137,
+     "name": "Frank Pennie",
+     "team": "Lions",
+     "position": "T",
+     "college": "Florida"
+    },
+    {
+     "year": 1965,
+     "round": 10,
+     "pick_in_round": 12,
+     "overall": 138,
+     "name": "Chuck Drulis",
+     "team": "Cardinals",
+     "position": "E",
+     "college": "Duke"
+    },
+    {
+     "year": 1965,
+     "round": 10,
+     "pick_in_round": 13,
+     "overall": 139,
+     "name": "Pat Screen",
+     "team": "Browns",
+     "position": "QB",
+     "college": "Louisiana State"
+    },
+    {
+     "year": 1965,
+     "round": 11,
+     "pick_in_round": 2,
+     "overall": 142,
+     "name": "Steve Mass",
+     "team": "49ers",
+     "position": "T",
+     "college": "Detroit"
+    },
+    {
+     "year": 1965,
+     "round": 11,
+     "pick_in_round": 7,
+     "overall": 147,
+     "name": "Louis James",
+     "team": "Eagles",
+     "position": "RB",
+     "college": "Texas-El Paso"
+    },
+    {
+     "year": 1965,
+     "round": 11,
+     "pick_in_round": 9,
+     "overall": 149,
+     "name": "Merlin Walet",
+     "team": "Rams",
+     "position": "RB",
+     "college": "McNeese State"
+    },
+    {
+     "year": 1965,
+     "round": 11,
+     "pick_in_round": 12,
+     "overall": 152,
+     "name": "Bud Frenc",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "Alabama"
+    },
+    {
+     "year": 1965,
+     "round": 11,
+     "pick_in_round": 13,
+     "overall": 153,
+     "name": "Olie Cordill",
+     "team": "Browns",
+     "position": "B",
+     "college": "Memphis State"
+    },
+    {
+     "year": 1965,
+     "round": 11,
+     "pick_in_round": 14,
+     "overall": 154,
+     "name": "Lamar Richardson",
+     "team": "Colts",
+     "position": "WR",
+     "college": "Fisk"
+    },
+    {
+     "year": 1965,
+     "round": 12,
+     "pick_in_round": 3,
+     "overall": 157,
+     "name": "Steve Cox",
+     "team": "Bears",
+     "position": "T",
+     "college": "South Carolina"
+    },
+    {
+     "year": 1965,
+     "round": 12,
+     "pick_in_round": 4,
+     "overall": 158,
+     "name": "Craig Lofquist",
+     "team": "Steelers",
+     "position": "B",
+     "college": "Minnesota"
+    },
+    {
+     "year": 1965,
+     "round": 12,
+     "pick_in_round": 6,
+     "overall": 160,
+     "name": "John Strohmeyer",
+     "team": "Redskins",
+     "position": "T",
+     "college": "Nebraska"
+    },
+    {
+     "year": 1965,
+     "round": 12,
+     "pick_in_round": 7,
+     "overall": 161,
+     "name": "John Kuznieski",
+     "team": "Eagles",
+     "position": "RB",
+     "college": "Purdue"
+    },
+    {
+     "year": 1965,
+     "round": 12,
+     "pick_in_round": 11,
+     "overall": 165,
+     "name": "Jim Moore",
+     "team": "Lions",
+     "position": "LB",
+     "college": "North Texas State"
+    },
+    {
+     "year": 1965,
+     "round": 12,
+     "pick_in_round": 12,
+     "overall": 166,
+     "name": "Glen Sasser",
+     "team": "Cardinals",
+     "position": "E",
+     "college": "North Carolina State"
+    },
+    {
+     "year": 1965,
+     "round": 13,
+     "pick_in_round": 5,
+     "overall": 173,
+     "name": "Jack Schraub",
+     "team": "Cowboys",
+     "position": "E",
+     "college": "California"
+    },
+    {
+     "year": 1965,
+     "round": 13,
+     "pick_in_round": 6,
+     "overall": 174,
+     "name": "Biff Bracy",
+     "team": "Redskins",
+     "position": "RB",
+     "college": "Duke"
+    },
+    {
+     "year": 1965,
+     "round": 13,
+     "pick_in_round": 7,
+     "overall": 175,
+     "name": "John Fouse",
+     "team": "Eagles",
+     "position": "E",
+     "college": "Arizona"
+    },
+    {
+     "year": 1965,
+     "round": 13,
+     "pick_in_round": 12,
+     "overall": 180,
+     "name": "Steve Murphy",
+     "team": "Cardinals",
+     "position": "RB",
+     "college": "Northwestern"
+    },
+    {
+     "year": 1965,
+     "round": 13,
+     "pick_in_round": 13,
+     "overall": 181,
+     "name": "Henry Pickett",
+     "team": "Browns",
+     "position": "RB",
+     "college": "Baylor"
+    },
+    {
+     "year": 1965,
+     "round": 13,
+     "pick_in_round": 14,
+     "overall": 182,
+     "name": "Bruce Airheart",
+     "team": "Colts",
+     "position": "RB",
+     "college": "North Dakota State"
+    },
+    {
+     "year": 1965,
+     "round": 14,
+     "pick_in_round": 7,
+     "overall": 189,
+     "name": "Dave Estrada",
+     "team": "Redskins",
+     "position": "RB",
+     "college": "Arizona State"
+    },
+    {
+     "year": 1965,
+     "round": 14,
+     "pick_in_round": 8,
+     "overall": 190,
+     "name": "Bill Robertson",
+     "team": "Rams",
+     "position": "E",
+     "college": "Austin"
+    },
+    {
+     "year": 1965,
+     "round": 14,
+     "pick_in_round": 10,
+     "overall": 192,
+     "name": "John Putnam",
+     "team": "Packers",
+     "position": "RB",
+     "college": "Drake"
+    },
+    {
+     "year": 1965,
+     "round": 14,
+     "pick_in_round": 11,
+     "overall": 193,
+     "name": "Larry Brown",
+     "team": "Lions",
+     "position": "B",
+     "college": "Oklahoma"
+    },
+    {
+     "year": 1965,
+     "round": 14,
+     "pick_in_round": 13,
+     "overall": 195,
+     "name": "Dan Simrell",
+     "team": "Browns",
+     "position": "QB",
+     "college": "Toledo"
+    },
+    {
+     "year": 1965,
+     "round": 14,
+     "pick_in_round": 14,
+     "overall": 196,
+     "name": "Jerry Fishman",
+     "team": "Colts",
+     "position": "LB",
+     "college": "Maryland"
+    },
+    {
+     "year": 1965,
+     "round": 15,
+     "pick_in_round": 1,
+     "overall": 197,
+     "name": "Mike Giers",
+     "team": "Giants",
+     "position": "G",
+     "college": "USC"
+    },
+    {
+     "year": 1965,
+     "round": 15,
+     "pick_in_round": 2,
+     "overall": 198,
+     "name": "Joe Pabian",
+     "team": "49ers",
+     "position": "T",
+     "college": "West Virginia"
+    },
+    {
+     "year": 1965,
+     "round": 15,
+     "pick_in_round": 4,
+     "overall": 200,
+     "name": "Art Robinson",
+     "team": "Bears",
+     "position": "B",
+     "college": "Cal State-Los Angeles"
+    },
+    {
+     "year": 1965,
+     "round": 15,
+     "pick_in_round": 6,
+     "overall": 202,
+     "name": "Ben Baldwin",
+     "team": "Redskins",
+     "position": "B",
+     "college": "Vanderbilt"
+    },
+    {
+     "year": 1965,
+     "round": 15,
+     "pick_in_round": 8,
+     "overall": 204,
+     "name": "Phillip Morgan",
+     "team": "Vikings",
+     "position": "B",
+     "college": "East Tennessee State"
+    },
+    {
+     "year": 1965,
+     "round": 15,
+     "pick_in_round": 12,
+     "overall": 208,
+     "name": "Harlan Lane",
+     "team": "Cardinals",
+     "position": "B",
+     "college": "Baylor"
+    },
+    {
+     "year": 1965,
+     "round": 16,
+     "pick_in_round": 4,
+     "overall": 214,
+     "name": "Doug Dusenbury",
+     "team": "Steelers",
+     "position": "K",
+     "college": "Kansas State"
+    },
+    {
+     "year": 1965,
+     "round": 16,
+     "pick_in_round": 5,
+     "overall": 215,
+     "name": "Doug McDougal",
+     "team": "Cowboys",
+     "position": "E",
+     "college": "Oregon State"
+    },
+    {
+     "year": 1965,
+     "round": 16,
+     "pick_in_round": 9,
+     "overall": 219,
+     "name": "Paul Labinski",
+     "team": "Vikings",
+     "position": "T",
+     "college": "St. John's (MN)"
+    },
+    {
+     "year": 1965,
+     "round": 16,
+     "pick_in_round": 11,
+     "overall": 221,
+     "name": "John Smith",
+     "team": "Lions",
+     "position": "T",
+     "college": "Maryland-Eastern Shore"
+    },
+    {
+     "year": 1965,
+     "round": 17,
+     "pick_in_round": 1,
+     "overall": 225,
+     "name": "Dave Powless",
+     "team": "Giants",
+     "position": "G",
+     "college": "Illinois"
+    },
+    {
+     "year": 1965,
+     "round": 17,
+     "pick_in_round": 2,
+     "overall": 226,
+     "name": "Len Frketich",
+     "team": "49ers",
+     "position": "E",
+     "college": "Oregon State"
+    },
+    {
+     "year": 1965,
+     "round": 17,
+     "pick_in_round": 4,
+     "overall": 228,
+     "name": "Tom LaFramboise",
+     "team": "Bears",
+     "position": "QB",
+     "college": "Louisville"
+    },
+    {
+     "year": 1965,
+     "round": 17,
+     "pick_in_round": 6,
+     "overall": 230,
+     "name": "Gary Hart",
+     "team": "Redskins",
+     "position": "E",
+     "college": "Vanderbilt"
+    },
+    {
+     "year": 1965,
+     "round": 17,
+     "pick_in_round": 7,
+     "overall": 231,
+     "name": "Dave Austin",
+     "team": "Eagles",
+     "position": "E",
+     "college": "Georgia Tech"
+    },
+    {
+     "year": 1965,
+     "round": 17,
+     "pick_in_round": 8,
+     "overall": 232,
+     "name": "Veran Smith",
+     "team": "Vikings",
+     "position": "B",
+     "college": "Utah State"
+    },
+    {
+     "year": 1965,
+     "round": 17,
+     "pick_in_round": 9,
+     "overall": 233,
+     "name": "Ed Blecksmith",
+     "team": "Rams",
+     "position": "B",
+     "college": "USC"
+    },
+    {
+     "year": 1965,
+     "round": 17,
+     "pick_in_round": 10,
+     "overall": 234,
+     "name": "Steve Clark",
+     "team": "Packers",
+     "position": "K",
+     "college": "Oregon State"
+    },
+    {
+     "year": 1965,
+     "round": 17,
+     "pick_in_round": 11,
+     "overall": 235,
+     "name": "Sonny Odom",
+     "team": "Lions",
+     "position": "RB",
+     "college": "Duke"
+    },
+    {
+     "year": 1965,
+     "round": 17,
+     "pick_in_round": 13,
+     "overall": 237,
+     "name": "John Boyette",
+     "team": "Browns",
+     "position": "T",
+     "college": "Clemson"
+    },
+    {
+     "year": 1965,
+     "round": 17,
+     "pick_in_round": 14,
+     "overall": 238,
+     "name": "Rick Reichardt",
+     "team": "Colts",
+     "position": "RB",
+     "college": "Wisconsin"
+    },
+    {
+     "year": 1965,
+     "round": 18,
+     "pick_in_round": 2,
+     "overall": 240,
+     "name": "Leon Standridge",
+     "team": "49ers",
+     "position": "E",
+     "college": "San Diego State"
+    },
+    {
+     "year": 1965,
+     "round": 18,
+     "pick_in_round": 3,
+     "overall": 241,
+     "name": "Mike Schwager",
+     "team": "Bears",
+     "position": "T",
+     "college": "Northwestern"
+    },
+    {
+     "year": 1965,
+     "round": 18,
+     "pick_in_round": 4,
+     "overall": 242,
+     "name": "Bob Howard",
+     "team": "Steelers",
+     "position": "B",
+     "college": "Stanford"
+    },
+    {
+     "year": 1965,
+     "round": 18,
+     "pick_in_round": 6,
+     "overall": 244,
+     "name": "Bill Marcordes",
+     "team": "Eagles",
+     "position": "E",
+     "college": "Bradley"
+    },
+    {
+     "year": 1965,
+     "round": 18,
+     "pick_in_round": 8,
+     "overall": 246,
+     "name": "Leo Lowery",
+     "team": "Rams",
+     "position": "RB",
+     "college": "Texas Tech"
+    },
+    {
+     "year": 1965,
+     "round": 18,
+     "pick_in_round": 10,
+     "overall": 248,
+     "name": "Jeff White",
+     "team": "Packers",
+     "position": "E",
+     "college": "Texas Tech"
+    },
+    {
+     "year": 1965,
+     "round": 18,
+     "pick_in_round": 13,
+     "overall": 251,
+     "name": "Dick Arrington",
+     "team": "Browns",
+     "position": "G",
+     "college": "Notre Dame"
+    },
+    {
+     "year": 1965,
+     "round": 19,
+     "pick_in_round": 2,
+     "overall": 254,
+     "name": "Dale Ford",
+     "team": "49ers",
+     "position": "RB",
+     "college": "Washington State"
+    },
+    {
+     "year": 1965,
+     "round": 19,
+     "pick_in_round": 3,
+     "overall": 255,
+     "name": "Lonnie Price",
+     "team": "Steelers",
+     "position": "B",
+     "college": "Southwestern Louisiana"
+    },
+    {
+     "year": 1965,
+     "round": 19,
+     "pick_in_round": 4,
+     "overall": 256,
+     "name": "Lou Bobich",
+     "team": "Bears",
+     "position": "K",
+     "college": "Michigan State"
+    },
+    {
+     "year": 1965,
+     "round": 19,
+     "pick_in_round": 5,
+     "overall": 257,
+     "name": "Marv Rettenmund",
+     "team": "Cowboys",
+     "position": "RB",
+     "college": "Ball State"
+    },
+    {
+     "year": 1965,
+     "round": 19,
+     "pick_in_round": 6,
+     "overall": 258,
+     "name": "Roosevelt Ellerbe",
+     "team": "Redskins",
+     "position": "B",
+     "college": "Iowa State"
+    },
+    {
+     "year": 1965,
+     "round": 19,
+     "pick_in_round": 7,
+     "overall": 259,
+     "name": "Charley Englehart",
+     "team": "Eagles",
+     "position": "T",
+     "college": "John Carroll"
+    },
+    {
+     "year": 1965,
+     "round": 19,
+     "pick_in_round": 9,
+     "overall": 261,
+     "name": "Billy Guy Anderson",
+     "team": "Rams",
+     "position": "QB",
+     "college": "Tulsa"
+    },
+    {
+     "year": 1965,
+     "round": 19,
+     "pick_in_round": 10,
+     "overall": 262,
+     "name": "Len Sears",
+     "team": "Packers",
+     "position": "T",
+     "college": "South Carolina"
+    },
+    {
+     "year": 1965,
+     "round": 19,
+     "pick_in_round": 11,
+     "overall": 263,
+     "name": "Preston Love",
+     "team": "Lions",
+     "position": "B",
+     "college": "Nebraska"
+    },
+    {
+     "year": 1965,
+     "round": 19,
+     "pick_in_round": 13,
+     "overall": 265,
+     "name": "Ed Orazen",
+     "team": "Browns",
+     "position": "G",
+     "college": "Ohio State"
+    },
+    {
+     "year": 1965,
+     "round": 20,
+     "pick_in_round": 1,
+     "overall": 267,
+     "name": "John Torok",
+     "team": "Giants",
+     "position": "QB",
+     "college": "Arizona State"
+    },
+    {
+     "year": 1965,
+     "round": 20,
+     "pick_in_round": 4,
+     "overall": 270,
+     "name": "Craig Fertig",
+     "team": "Steelers",
+     "position": "QB",
+     "college": "USC"
+    },
+    {
+     "year": 1965,
+     "round": 20,
+     "pick_in_round": 5,
+     "overall": 271,
+     "name": "Don Barlow",
+     "team": "Cowboys",
+     "position": "T",
+     "college": "Kansas State"
+    },
+    {
+     "year": 1965,
+     "round": 20,
+     "pick_in_round": 7,
+     "overall": 273,
+     "name": "Ray Johnson",
+     "team": "Colts",
+     "position": "C",
+     "college": "Prairie View A&M"
+    },
+    {
+     "year": 1965,
+     "round": 20,
+     "pick_in_round": 8,
+     "overall": 274,
+     "name": "Billy Scott",
+     "team": "Rams",
+     "position": "E",
+     "college": "Northeastern State (OK)"
+    },
+    {
+     "year": 1965,
+     "round": 20,
+     "pick_in_round": 10,
+     "overall": 276,
+     "name": "Jim Chandler",
+     "team": "Packers",
+     "position": "RB",
+     "college": "Benedictine"
+    },
+    {
+     "year": 1965,
+     "round": 20,
+     "pick_in_round": 12,
+     "overall": 278,
+     "name": "Tony Giacobazzi",
+     "team": "Cardinals",
+     "position": "E",
+     "college": "Iowa"
+    },
+    {
+     "year": 1965,
+     "round": 20,
+     "pick_in_round": 13,
+     "overall": 279,
+     "name": "Frank Goldberg",
+     "team": "Browns",
+     "position": "LB",
+     "college": "Central Michigan"
+    },
+    {
+     "year": 1965,
+     "round": 20,
+     "pick_in_round": 14,
+     "overall": 280,
+     "name": "George Haffner",
+     "team": "Colts",
+     "position": "QB",
+     "college": "McNeese State"
+    }
+   ],
+   "disagree": [
+    {
+     "overall": 1,
+     "site_name": "Tucker Frederickson",
+     "held_name": "Tucker Frederickson",
+     "person": "P_019437",
+     "fields": {
+      "position": [
+       "RB",
+       "B"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 2,
+     "site_name": "Ken Willard",
+     "held_name": "Ken Willard",
+     "person": "P_019465",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 4,
+     "site_name": "Gale Sayers",
+     "held_name": "Gale Sayers",
+     "person": "P_019388",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 7,
+     "site_name": "Donny Anderson",
+     "held_name": "Donny Anderson",
+     "person": "P_019530",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 8,
+     "site_name": "Jack Snow",
+     "held_name": "Jack Snow",
+     "person": "P_019423",
+     "fields": {
+      "position": [
+       "WR",
+       "E"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 9,
+     "site_name": "Clancy Williams",
+     "held_name": "Clancy Williams",
+     "person": "P_019424",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 10,
+     "site_name": "Lawrence Elkins",
+     "held_name": "Larry Elkins",
+     "person": "P_002020",
+     "fields": {
+      "name": [
+       "Lawrence Elkins",
+       "Larry Elkins"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 11,
+     "site_name": "Tom Nowatzke",
+     "held_name": "Tom Nowatzke",
+     "person": "P_019406",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 18,
+     "site_name": "Roy Jefferson",
+     "held_name": "Roy Jefferson",
+     "person": "P_019453",
+     "fields": {
+      "position": [
+       "WR",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 22,
+     "site_name": "Gerry Bussell",
+     "held_name": "Gerry Bussell",
+     "person": "P_001905",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 23,
+     "site_name": "Lance Rentzel",
+     "held_name": "Lance Rentzel",
+     "person": "P_019430",
+     "fields": {
+      "position": [
+       "WR",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 24,
+     "site_name": "Alphonse Dotson",
+     "held_name": "Al Dotson",
+     "person": "P_001931",
+     "fields": {
+      "name": [
+       "Alphonse Dotson",
+       "Al Dotson"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 27,
+     "site_name": "Walter Johnson",
+     "held_name": "Walter Johnson",
+     "person": "P_019392",
+     "fields": {
+      "college": [
+       "Cal State-Los Angeles",
+       "Los Angeles State"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 31,
+     "site_name": "Chuck Mercein",
+     "held_name": "Chuck Mercein",
+     "person": "P_019440",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 32,
+     "site_name": "Bo Scott",
+     "held_name": "Bo Scott",
+     "person": "P_005308",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 35,
+     "site_name": "Al Nelson",
+     "held_name": "Al Nelson",
+     "person": "P_019444",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 37,
+     "site_name": "Fred Brown",
+     "held_name": "Fred Brown",
+     "person": "P_019413",
+     "fields": {
+      "college": [
+       "Miami (FL)",
+       "Miami (Florida)"
+      ],
+      "position": [
+       "E",
+       "E-LB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 39,
+     "site_name": "Fred Biletnikoff",
+     "held_name": "Fred Biletnikoff",
+     "person": "P_001950",
+     "fields": {
+      "position": [
+       "WR",
+       "FL"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 43,
+     "site_name": "Henry Carr",
+     "held_name": "Henry Carr",
+     "person": "P_019434",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 44,
+     "site_name": "Larry Todd",
+     "held_name": "Larry Todd",
+     "person": "P_001960",
+     "fields": {
+      "position": [
+       "WR",
+       "FL"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 45,
+     "site_name": "Jim Nance",
+     "held_name": "Jim Nance",
+     "person": "P_001893",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 46,
+     "site_name": "Tommy Myers",
+     "held_name": "Tom Myers",
+     "person": "P_019405",
+     "fields": {
+      "name": [
+       "Tommy Myers",
+       "Tom Myers"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 47,
+     "site_name": "Jimmy Sidle",
+     "held_name": "Jimmy Sidle",
+     "person": "P_005527",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 48,
+     "site_name": "Fred Hill",
+     "held_name": "Fred Hill",
+     "person": "P_019443",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ],
+      "position": [
+       "WR",
+       "E"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 53,
+     "site_name": "Bob Svihus",
+     "held_name": "Bob Svihus",
+     "person": "P_001959",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 54,
+     "site_name": "Johnny Roland",
+     "held_name": "Johnny Roland",
+     "person": "P_019594",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 57,
+     "site_name": "Tommy Vaughn",
+     "held_name": "Tom Vaughn",
+     "person": "P_019408",
+     "fields": {
+      "name": [
+       "Tommy Vaughn",
+       "Tom Vaughn"
+      ],
+      "position": [
+       "B",
+       "DB"
+      ]
+     },
+     "compared_against": "pfr.draft_selection"
+    },
+    {
+     "overall": 65,
+     "site_name": "Doug Woodlief",
+     "held_name": "Doug Woodlief",
+     "person": "P_006016",
+     "fields": {
+      "college": [
+       "Memphis State",
+       "Memphis"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 66,
+     "site_name": "Doug Goodwin",
+     "held_name": "Doug Goodwin",
+     "person": "P_001986",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 71,
+     "site_name": "Bobby Felts",
+     "held_name": "Bobby Felts",
+     "person": "P_005745",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 74,
+     "site_name": "Rich Koeper",
+     "held_name": "Dick Koeper",
+     "person": "P_005518",
+     "fields": {
+      "name": [
+       "Rich Koeper",
+       "Dick Koeper"
+      ]
+     },
+     "compared_against": "pfr.draft_selection"
+    },
+    {
+     "overall": 75,
+     "site_name": "Sonny Utz",
+     "held_name": "Sonny Utz",
+     "person": "P_005598",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 77,
+     "site_name": "Gary Garrison",
+     "held_name": "Gary Garrison",
+     "person": "P_002096",
+     "fields": {
+      "position": [
+       "WR",
+       "E"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 80,
+     "site_name": "Bill Symons",
+     "held_name": "Bill Symons",
+     "person": "P_005439",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 87,
+     "site_name": "Charley Browning",
+     "held_name": "Charlie Browning",
+     "person": "P_001937",
+     "fields": {
+      "name": [
+       "Charley Browning",
+       "Charlie Browning"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 88,
+     "site_name": "Dick Gordon",
+     "held_name": "Dick Gordon",
+     "person": "P_019384",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 92,
+     "site_name": "Gregg Kent",
+     "held_name": "Greg Kent",
+     "person": "P_002088",
+     "fields": {
+      "name": [
+       "Gregg Kent",
+       "Greg Kent"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 94,
+     "site_name": "Junior Coffey",
+     "held_name": "Junior Coffey",
+     "person": "P_019410",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 100,
+     "site_name": "Jhn Hankinson",
+     "held_name": "John Hankinson",
+     "person": "P_005627",
+     "fields": {
+      "name": [
+       "Jhn Hankinson",
+       "John Hankinson"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 105,
+     "site_name": "Don Croftcheck",
+     "held_name": "Don Croftcheck",
+     "person": "P_019473",
+     "fields": {
+      "position": [
+       "G",
+       "G-LB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 107,
+     "site_name": "Jeff Jordon",
+     "held_name": "Jeff Jordan",
+     "person": "P_019427",
+     "fields": {
+      "name": [
+       "Jeff Jordon",
+       "Jeff Jordan"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 111,
+     "site_name": "Mike Howell",
+     "held_name": "Mike Howell",
+     "person": "P_019391",
+     "fields": {
+      "position": [
+       "DB",
+       "B"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 112,
+     "site_name": "Rossevelt Davis",
+     "held_name": "Rosey Davis",
+     "person": "P_019436",
+     "fields": {
+      "name": [
+       "Rossevelt Davis",
+       "Rosey Davis"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 114,
+     "site_name": "Wayne Swinford",
+     "held_name": "Wayne Swinford",
+     "person": "P_019464",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 118,
+     "site_name": "Jerry Smith",
+     "held_name": "Jerry Smith",
+     "person": "P_019479",
+     "fields": {
+      "position": [
+       "TE",
+       "E"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 128,
+     "site_name": "Bob Cappadona",
+     "held_name": "Bob Cappadona",
+     "person": "P_001975",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 132,
+     "site_name": "Rick Redman",
+     "held_name": "Rick Redman",
+     "person": "P_001970",
+     "fields": {
+      "position": [
+       "C",
+       "G"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 133,
+     "site_name": "Bob Briggs",
+     "held_name": "Bob Briggs",
+     "person": "P_019472",
+     "fields": {
+      "college": [
+       "Central State (OK)",
+       "Central Oklahoma"
+      ],
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 136,
+     "site_name": "Bud Marshall",
+     "held_name": "Bud Marshall",
+     "person": "P_002166",
+     "fields": {
+      "college": [
+       "Stephen F. Austin",
+       "Stephen F. Austin State"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 141,
+     "site_name": "Ernie Koy",
+     "held_name": "Ernie Koy",
+     "person": "P_019438",
+     "fields": {
+      "position": [
+       "RB",
+       "B"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 150,
+     "site_name": "Jim Wetherwas",
+     "held_name": "Jim Weatherwax",
+     "person": "P_019535",
+     "fields": {
+      "name": [
+       "Jim Wetherwas",
+       "Jim Weatherwax"
+      ],
+      "college": [
+       "Cal State-Los Angeles",
+       "Los Angeles State"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 151,
+     "site_name": "Jim Kearne",
+     "held_name": "Jim Kearney",
+     "person": "P_002173",
+     "fields": {
+      "name": [
+       "Jim Kearne",
+       "Jim Kearney"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 156,
+     "site_name": "Dave Plump",
+     "held_name": "Dave Plump",
+     "person": "P_002105",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 159,
+     "site_name": "Ernie Kellerman",
+     "held_name": "Ernie Kellermann",
+     "person": "P_019509",
+     "fields": {
+      "name": [
+       "Ernie Kellerman",
+       "Ernie Kellermann"
+      ],
+      "college": [
+       "Miami (OH)",
+       "Miami (Ohio)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 162,
+     "site_name": "Bob Werl",
+     "held_name": "Bob Werl",
+     "person": "P_002079",
+     "fields": {
+      "college": [
+       "Miami (FL)",
+       "Miami (Florida)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 164,
+     "site_name": "Gene Jeter",
+     "held_name": "Gene Jeter",
+     "person": "P_001910",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 167,
+     "site_name": "Justin Canale",
+     "held_name": "Justin Canale",
+     "person": "P_001886",
+     "fields": {
+      "position": [
+       "G",
+       "OG"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 169,
+     "site_name": "Carl Lockhart",
+     "held_name": "Spider Lockhart",
+     "person": "P_019439",
+     "fields": {
+      "name": [
+       "Carl Lockhart",
+       "Spider Lockhart"
+      ],
+      "college": [
+       "North Texas State",
+       "North Texas"
+      ]
+     },
+     "compared_against": "pfr.draft_selection"
+    },
+    {
+     "overall": 171,
+     "site_name": "J.R. Wilburn",
+     "held_name": "J.R. Wilburn",
+     "person": "P_019579",
+     "fields": {
+      "position": [
+       "WR",
+       "B"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 183,
+     "site_name": "Olin Underwood",
+     "held_name": "Olen Underwood",
+     "person": "P_002033",
+     "fields": {
+      "name": [
+       "Olin Underwood",
+       "Olen Underwood"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 184,
+     "site_name": "Frank Andruski",
+     "held_name": "Frank Andruski",
+     "person": "P_005441",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 185,
+     "site_name": "Dave Pivec",
+     "held_name": "Dave Pivec",
+     "person": "P_002445",
+     "fields": {
+      "position": [
+       "WR",
+       "E"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 186,
+     "site_name": "Jim (Cannonball) Butler",
+     "held_name": "Cannonball Butler",
+     "person": "P_019449",
+     "fields": {
+      "name": [
+       "Jim (Cannonball) Butler",
+       "Cannonball Butler"
+      ],
+      "position": [
+       "B",
+       "RB"
+      ]
+     },
+     "compared_against": "pfr.draft_selection"
+    },
+    {
+     "overall": 187,
+     "site_name": "Gary Porterfield",
+     "held_name": "Garry Porterfield",
+     "person": "P_005338",
+     "fields": {
+      "name": [
+       "Gary Porterfield",
+       "Garry Porterfield"
+      ],
+      "position": [
+       "WR",
+       "E"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 203,
+     "site_name": "Otis Taylor",
+     "held_name": "Otis Taylor",
+     "person": "P_001934",
+     "fields": {
+      "position": [
+       "WR",
+       "B"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 205,
+     "site_name": "Marvin Davis",
+     "held_name": "Marvin Davis",
+     "person": "P_001996",
+     "fields": {
+      "position": [
+       "E",
+       "DE"
+      ]
+     },
+     "compared_against": "pfr.draft_selection"
+    },
+    {
+     "overall": 207,
+     "site_name": "Wallace Dickey",
+     "held_name": "Wallace Dickey",
+     "person": "P_002293",
+     "fields": {
+      "college": [
+       "Southwest Texas State",
+       "Texas State"
+      ],
+      "position": [
+       "T",
+       "E"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 210,
+     "site_name": "Roy Hilton",
+     "held_name": "Roy Hilton",
+     "person": "P_019381",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 213,
+     "site_name": "Frank Pitts",
+     "held_name": "Frank Pitts",
+     "person": "P_001933",
+     "fields": {
+      "position": [
+       "WR",
+       "E"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 217,
+     "site_name": "Robert Reed",
+     "held_name": "Robert Reed",
+     "person": "P_005505",
+     "fields": {
+      "college": [
+       "Tennessee A&I",
+       "Tennessee St."
+      ]
+     },
+     "compared_against": "pfr.draft_selection"
+    },
+    {
+     "overall": 220,
+     "site_name": "Phil Vandersea",
+     "held_name": "Phil Vandersea",
+     "person": "P_006055",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 223,
+     "site_name": "Mel Anthony",
+     "held_name": "Mel Anthony",
+     "person": "P_005360",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 227,
+     "site_name": "Whit Canale",
+     "held_name": "Whit Canale",
+     "person": "P_002045",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 236,
+     "site_name": "Mike Melinkovich",
+     "held_name": "Mike Melinkovich",
+     "person": "P_019468",
+     "fields": {
+      "college": [
+       "Gray's Harbor J.C.",
+       "Grays Harbor JC"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 245,
+     "site_name": "Chris Hanburger",
+     "held_name": "Chris Hanburger",
+     "person": "P_019475",
+     "fields": {
+      "position": [
+       "LB",
+       "C-LB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 252,
+     "site_name": "Charley King",
+     "held_name": "Charlie King",
+     "person": "P_001988",
+     "fields": {
+      "name": [
+       "Charley King",
+       "Charlie King"
+      ],
+      "position": [
+       "RB",
+       "DB"
+      ]
+     },
+     "compared_against": "pfr.draft_selection"
+    },
+    {
+     "overall": 260,
+     "site_name": "Ellis Johnson",
+     "held_name": "Ellis Johnson",
+     "person": "P_001891",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 264,
+     "site_name": "Roy Shivers",
+     "held_name": "Roy Shivers",
+     "person": "P_019595",
+     "fields": {
+      "position": [
+       "RB",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 266,
+     "site_name": "Barry Brown",
+     "held_name": "Barry Brown",
+     "person": "P_002389",
+     "fields": {
+      "position": [
+       "E",
+       "E-LB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 268,
+     "site_name": "Dennis Duncan",
+     "held_name": "Dennis Duncan",
+     "person": "P_005647",
+     "fields": {
+      "college": [
+       "Louisiana College",
+       "Louisiana Christian"
+      ],
+      "position": [
+       "B",
+       "HB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 269,
+     "site_name": "Ralph Kurek",
+     "held_name": "Ralph Kurek",
+     "person": "P_019385",
+     "fields": {
+      "position": [
+       "RB",
+       "FB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 272,
+     "site_name": "Bobby Shann",
+     "held_name": "Bob Shann",
+     "person": "P_019446",
+     "fields": {
+      "name": [
+       "Bobby Shann",
+       "Bob Shann"
+      ],
+      "college": [
+       "Boston College",
+       "Boston Col."
+      ],
+      "position": [
+       "E",
+       "DB"
+      ]
+     },
+     "compared_against": "pfr.draft_selection"
+    },
+    {
+     "overall": 277,
+     "site_name": "George Wilson",
+     "held_name": "George Wilson",
+     "person": "P_002066",
+     "fields": {
+      "college": [
+       "Xavier",
+       "Xavier (Ohio)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    }
+   ],
+   "exact": 93
+  },
+  {
+   "year": 1980,
+   "site_picks": 333,
+   "site_rows_at_a_repeated_overall_pick": 0,
+   "archive_picks_with_an_overall": 246,
+   "archive_rows_excluded_as_another_draft": {
+    "None/CFL": 20,
+    "draft/CFL": 20
+   },
+   "not_held": [
+    {
+     "year": 1980,
+     "round": 3,
+     "pick_in_round": 18,
+     "overall": 74,
+     "name": "Larry Carter",
+     "team": "Broncos",
+     "position": "DB",
+     "college": "Kentucky"
+    },
+    {
+     "year": 1980,
+     "round": 3,
+     "pick_in_round": 27,
+     "overall": 83,
+     "name": "Ray Sydnor",
+     "team": "Steelers",
+     "position": "TE",
+     "college": "Wisconsin"
+    },
+    {
+     "year": 1980,
+     "round": 4,
+     "pick_in_round": 15,
+     "overall": 98,
+     "name": "David Hodge",
+     "team": "49ers",
+     "position": "LB",
+     "college": "Houston"
+    },
+    {
+     "year": 1980,
+     "round": 5,
+     "pick_in_round": 5,
+     "overall": 115,
+     "name": "Dan Pensick",
+     "team": "Chiefs",
+     "position": "DT",
+     "college": "Nebraska"
+    },
+    {
+     "year": 1980,
+     "round": 5,
+     "pick_in_round": 7,
+     "overall": 117,
+     "name": "Brad Vassar",
+     "team": "Falcons",
+     "position": "LB",
+     "college": "Pacific"
+    },
+    {
+     "year": 1980,
+     "round": 5,
+     "pick_in_round": 9,
+     "overall": 119,
+     "name": "Jeff Pyburn",
+     "team": "Bills",
+     "position": "DB",
+     "college": "Georgia"
+    },
+    {
+     "year": 1980,
+     "round": 5,
+     "pick_in_round": 12,
+     "overall": 122,
+     "name": "Paul Jones",
+     "team": "Vikings",
+     "position": "RB",
+     "college": "California"
+    },
+    {
+     "year": 1980,
+     "round": 5,
+     "pick_in_round": 13,
+     "overall": 123,
+     "name": "Jim Zidd",
+     "team": "Jets",
+     "position": "LB",
+     "college": "Kansas"
+    },
+    {
+     "year": 1980,
+     "round": 5,
+     "pick_in_round": 16,
+     "overall": 126,
+     "name": "John Adams",
+     "team": "Raiders",
+     "position": "LB",
+     "college": "Louisiana State"
+    },
+    {
+     "year": 1980,
+     "round": 5,
+     "pick_in_round": 17,
+     "overall": 127,
+     "name": "Joe Steele",
+     "team": "Seahawks",
+     "position": "RB",
+     "college": "Washington"
+    },
+    {
+     "year": 1980,
+     "round": 5,
+     "pick_in_round": 18,
+     "overall": 128,
+     "name": "William Bowens",
+     "team": "Raiders",
+     "position": "LB",
+     "college": "North Alabama"
+    },
+    {
+     "year": 1980,
+     "round": 5,
+     "pick_in_round": 22,
+     "overall": 132,
+     "name": "Daniel Jacobs",
+     "team": "Seahawks",
+     "position": "DE",
+     "college": "Winston-Salem State"
+    },
+    {
+     "year": 1980,
+     "round": 6,
+     "pick_in_round": 12,
+     "overall": 150,
+     "name": "Lester Boyd",
+     "team": "Saints",
+     "position": "LB",
+     "college": "Kentucky"
+    },
+    {
+     "year": 1980,
+     "round": 6,
+     "pick_in_round": 14,
+     "overall": 152,
+     "name": "Tom Schremp",
+     "team": "Jets",
+     "position": "DE",
+     "college": "Wisconsin"
+    },
+    {
+     "year": 1980,
+     "round": 6,
+     "pick_in_round": 15,
+     "overall": 153,
+     "name": "Mark McNeal",
+     "team": "Seahawks",
+     "position": "DE",
+     "college": "Idaho"
+    },
+    {
+     "year": 1980,
+     "round": 6,
+     "pick_in_round": 25,
+     "overall": 163,
+     "name": "Wayne Hamilton",
+     "team": "Chargers",
+     "position": "LB",
+     "college": "Alabama"
+    },
+    {
+     "year": 1980,
+     "round": 7,
+     "pick_in_round": 12,
+     "overall": 177,
+     "name": "Mike Morucci",
+     "team": "Saints",
+     "position": "RB",
+     "college": "Bloomsburg (PA)"
+    },
+    {
+     "year": 1980,
+     "round": 7,
+     "pick_in_round": 15,
+     "overall": 180,
+     "name": "Tom Kearns",
+     "team": "Patriots",
+     "position": "G",
+     "college": "Kentucky"
+    },
+    {
+     "year": 1980,
+     "round": 7,
+     "pick_in_round": 19,
+     "overall": 184,
+     "name": "John Havekost",
+     "team": "Broncos",
+     "position": "G",
+     "college": "Nebraska"
+    },
+    {
+     "year": 1980,
+     "round": 7,
+     "pick_in_round": 23,
+     "overall": 188,
+     "name": "Terrell Ward",
+     "team": "Eagles",
+     "position": "DB",
+     "college": "San Diego State"
+    },
+    {
+     "year": 1980,
+     "round": 7,
+     "pick_in_round": 25,
+     "overall": 190,
+     "name": "Bennie Leverett",
+     "team": "Jets",
+     "position": "RB",
+     "college": "Bethune-Cookman"
+    },
+    {
+     "year": 1980,
+     "round": 7,
+     "pick_in_round": 26,
+     "overall": 191,
+     "name": "Stuart Dodds",
+     "team": "Chargers",
+     "position": "P",
+     "college": "Montana State"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 3,
+     "overall": 196,
+     "name": "Mark Lyles",
+     "team": "Bengals",
+     "position": "RB",
+     "college": "Florida State"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 4,
+     "overall": 197,
+     "name": "Don Coleman",
+     "team": "Broncos",
+     "position": "WR",
+     "college": "Oregon"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 5,
+     "overall": 198,
+     "name": "Dupree Branch",
+     "team": "Cardinals",
+     "position": "DB",
+     "college": "Colorado State"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 7,
+     "overall": 200,
+     "name": "Ken Harris",
+     "team": "Giants",
+     "position": "RB",
+     "college": "Alabama"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 10,
+     "overall": 203,
+     "name": "Sam Stepney",
+     "team": "Chiefs",
+     "position": "LB",
+     "college": "Boston University"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 12,
+     "overall": 205,
+     "name": "Jeff Dziama",
+     "team": "Jets",
+     "position": "LB",
+     "college": "Boston College"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 14,
+     "overall": 207,
+     "name": "Jack Cosgrove",
+     "team": "Seahawks",
+     "position": "C",
+     "college": "Pacific"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 15,
+     "overall": 208,
+     "name": "Mike House",
+     "team": "Patriots",
+     "position": "TE",
+     "college": "Pacific"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 16,
+     "overall": 209,
+     "name": "Jeff Copeland",
+     "team": "Browns",
+     "position": "LB",
+     "college": "Texas Tech"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 18,
+     "overall": 211,
+     "name": "Grant Hudson",
+     "team": "Cardinals",
+     "position": "DT",
+     "college": "Virginia"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 20,
+     "overall": 213,
+     "name": "Derrick Goddard",
+     "team": "Buccaneers",
+     "position": "DB",
+     "college": "Drake"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 26,
+     "overall": 219,
+     "name": "Curtis Sirmones",
+     "team": "Chargers",
+     "position": "RB",
+     "college": "North Alabama"
+    },
+    {
+     "year": 1980,
+     "round": 8,
+     "pick_in_round": 27,
+     "overall": 220,
+     "name": "Tom Pettigrew",
+     "team": "Rams",
+     "position": "T",
+     "college": "Eastern Illinois"
+    },
+    {
+     "year": 1980,
+     "round": 9,
+     "pick_in_round": 6,
+     "overall": 227,
+     "name": "Mark Bright",
+     "team": "Colts",
+     "position": "RB",
+     "college": "Temple"
+    },
+    {
+     "year": 1980,
+     "round": 9,
+     "pick_in_round": 7,
+     "overall": 228,
+     "name": "Glen Keller",
+     "team": "Falcons",
+     "position": "C",
+     "college": "West Texas State"
+    },
+    {
+     "year": 1980,
+     "round": 9,
+     "pick_in_round": 11,
+     "overall": 232,
+     "name": "Dennis Mosley",
+     "team": "Vikings",
+     "position": "RB",
+     "college": "Iowa"
+    },
+    {
+     "year": 1980,
+     "round": 9,
+     "pick_in_round": 12,
+     "overall": 233,
+     "name": "Frank Mordica",
+     "team": "Saints",
+     "position": "RB",
+     "college": "Vanderbilt"
+    },
+    {
+     "year": 1980,
+     "round": 9,
+     "pick_in_round": 14,
+     "overall": 235,
+     "name": "Barry Burdet",
+     "team": "Patriots",
+     "position": "LB",
+     "college": "Oklahoma"
+    },
+    {
+     "year": 1980,
+     "round": 9,
+     "pick_in_round": 16,
+     "overall": 237,
+     "name": "Dan Hartwig",
+     "team": "49ers",
+     "position": "QB",
+     "college": "California-Lutheran"
+    },
+    {
+     "year": 1980,
+     "round": 9,
+     "pick_in_round": 17,
+     "overall": 238,
+     "name": "Jim Swift",
+     "team": "Seahawks",
+     "position": "T",
+     "college": "Iowa"
+    },
+    {
+     "year": 1980,
+     "round": 9,
+     "pick_in_round": 20,
+     "overall": 241,
+     "name": "Lawrence McCullough",
+     "team": "Redskins",
+     "position": "WR",
+     "college": "Illinois"
+    },
+    {
+     "year": 1980,
+     "round": 9,
+     "pick_in_round": 23,
+     "overall": 244,
+     "name": "Ed Harris",
+     "team": "Oilers",
+     "position": "RB",
+     "college": "Bishop"
+    },
+    {
+     "year": 1980,
+     "round": 9,
+     "pick_in_round": 26,
+     "overall": 247,
+     "name": "Steve Whitman",
+     "team": "Chargers",
+     "position": "RB",
+     "college": "Alabama"
+    },
+    {
+     "year": 1980,
+     "round": 9,
+     "pick_in_round": 28,
+     "overall": 249,
+     "name": "Ron McCall",
+     "team": "Steelers",
+     "position": "WR",
+     "college": "Arkansas-Pine Bluff"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 2,
+     "overall": 251,
+     "name": "Henry Henderson",
+     "team": "Lions",
+     "position": "DB",
+     "college": "Utah State"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 5,
+     "overall": 254,
+     "name": "Larry Stewart",
+     "team": "Colts",
+     "position": "T",
+     "college": "Maryland"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 7,
+     "overall": 256,
+     "name": "Joe Sanford",
+     "team": "Giants",
+     "position": "T",
+     "college": "Washington"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 8,
+     "overall": 257,
+     "name": "Walt Bellamy",
+     "team": "Falcons",
+     "position": "DB",
+     "college": "Virginia Military Inst"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 12,
+     "overall": 261,
+     "name": "Rob Martinovich",
+     "team": "Chiefs",
+     "position": "T",
+     "college": "Notre Dame"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 13,
+     "overall": 262,
+     "name": "Tanya Webb",
+     "team": "Saints",
+     "position": "DE",
+     "college": "Michigan State"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 14,
+     "overall": 263,
+     "name": "Kevin Fiedel",
+     "team": "Browns",
+     "position": "C",
+     "college": "San Diego State"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 17,
+     "overall": 266,
+     "name": "Rom Daniel",
+     "team": "Patriots",
+     "position": "C",
+     "college": "Georgia Tech"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 20,
+     "overall": 269,
+     "name": "Willie Stephens",
+     "team": "Bears",
+     "position": "DB",
+     "college": "Texas Tech"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 22,
+     "overall": 271,
+     "name": "Doug Lantz",
+     "team": "Dolphins",
+     "position": "C",
+     "college": "Miami (OH)"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 23,
+     "overall": 272,
+     "name": "Ben Long",
+     "team": "Dolphins",
+     "position": "LB",
+     "college": "South Dakota"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 25,
+     "overall": 274,
+     "name": "Billy Rivers",
+     "team": "Seahawks",
+     "position": "WR",
+     "college": "Morris Brown"
+    },
+    {
+     "year": 1980,
+     "round": 10,
+     "pick_in_round": 28,
+     "overall": 277,
+     "name": "Ken Fritz",
+     "team": "Steelers",
+     "position": "G",
+     "college": "Ohio State"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 2,
+     "overall": 279,
+     "name": "Phil Driscoll",
+     "team": "Dolphins",
+     "position": "DE",
+     "college": "Mankato State"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 3,
+     "overall": 280,
+     "name": "Ed Whitley",
+     "team": "Colts",
+     "position": "TE",
+     "college": "Kansas State"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 5,
+     "overall": 282,
+     "name": "Delrick Brown",
+     "team": "Cardinals",
+     "position": "DB",
+     "college": "Houston"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 6,
+     "overall": 283,
+     "name": "Ricky Skiles",
+     "team": "Packers",
+     "position": "LB",
+     "college": "Louisville"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 7,
+     "overall": 284,
+     "name": "Mike Babb",
+     "team": "Falcons",
+     "position": "DB",
+     "college": "Oklahoma"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 8,
+     "overall": 285,
+     "name": "Steve Bernish",
+     "team": "Giants",
+     "position": "DE",
+     "college": "South Carolina"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 9,
+     "overall": 286,
+     "name": "Joe Gordon",
+     "team": "Bills",
+     "position": "DT",
+     "college": "Grambling State"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 12,
+     "overall": 289,
+     "name": "George Woodard",
+     "team": "Saints",
+     "position": "RB",
+     "college": "Texas A&M"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 14,
+     "overall": 291,
+     "name": "Mike Massey",
+     "team": "Raiders",
+     "position": "LB",
+     "college": "Arkansas"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 15,
+     "overall": 292,
+     "name": "Tali Ena",
+     "team": "Seahawks",
+     "position": "RB",
+     "college": "Washington State"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 19,
+     "overall": 296,
+     "name": "Chris Judge",
+     "team": "Bears",
+     "position": "DB",
+     "college": "Texas Christian"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 20,
+     "overall": 297,
+     "name": "Phil Farris",
+     "team": "Broncos",
+     "position": "WR",
+     "college": "North Carolina"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 21,
+     "overall": 298,
+     "name": "Lee Jukes",
+     "team": "Eagles",
+     "position": "WR",
+     "college": "North Carolina State"
+    },
+    {
+     "year": 1980,
+     "round": 11,
+     "pick_in_round": 24,
+     "overall": 301,
+     "name": "Eddie Preston",
+     "team": "Oilers",
+     "position": "WR",
+     "college": "Western Kentucky"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 1,
+     "overall": 306,
+     "name": "Charles Vaclavik",
+     "team": "Steelers",
+     "position": "DB",
+     "college": "Texas"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 3,
+     "overall": 308,
+     "name": "Mike Wright",
+     "team": "Bengals",
+     "position": "QB",
+     "college": "Vanderbilt"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 6,
+     "overall": 311,
+     "name": "Randy Bielski",
+     "team": "Colts",
+     "position": "K",
+     "college": "Towson State"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 8,
+     "overall": 313,
+     "name": "Quinn Jones",
+     "team": "Falcons",
+     "position": "RB",
+     "college": "Tulsa"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 10,
+     "overall": 315,
+     "name": "Thomas Lane",
+     "team": "Vikings",
+     "position": "DB",
+     "college": "Florida A&M"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 11,
+     "overall": 316,
+     "name": "Roger Lapham",
+     "team": "Bills",
+     "position": "TE",
+     "college": "Maine"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 12,
+     "overall": 317,
+     "name": "David Dumars",
+     "team": "Jets",
+     "position": "DB",
+     "college": "N.E. Louisiana"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 13,
+     "overall": 318,
+     "name": "Kiser Lewis",
+     "team": "Saints",
+     "position": "LB",
+     "college": "Florida A&M"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 14,
+     "overall": 319,
+     "name": "Presnell Gilbert",
+     "team": "Seahawks",
+     "position": "DB",
+     "college": "U.S. International"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 20,
+     "overall": 325,
+     "name": "Chuck Stone",
+     "team": "Dolphins",
+     "position": "G",
+     "college": "North Carolina State"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 21,
+     "overall": 326,
+     "name": "Gene Coleman",
+     "team": "Buccaneers",
+     "position": "DB",
+     "college": "Miami (FL)"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 22,
+     "overall": 327,
+     "name": "Marcene Emmett",
+     "team": "Redskins",
+     "position": "DB",
+     "college": "North Alabama"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 26,
+     "overall": 331,
+     "name": "Harry Price",
+     "team": "Chargers",
+     "position": "WR",
+     "college": "McNeese State"
+    },
+    {
+     "year": 1980,
+     "round": 12,
+     "pick_in_round": 27,
+     "overall": 332,
+     "name": "Kevin Scanlon",
+     "team": "Rams",
+     "position": "QB",
+     "college": "Arkansas"
+    }
+   ],
+   "disagree": [
+    {
+     "overall": 3,
+     "site_name": "Anthony Munoz",
+     "held_name": "Anthony Munoz",
+     "person": "P_022400",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 4,
+     "site_name": "Bruce Clark",
+     "held_name": "Bruce Clark",
+     "person": "P_007046",
+     "fields": {
+      "position": [
+       "DT",
+       "DE"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 11,
+     "site_name": "Brad Budde",
+     "held_name": "Brad Budde",
+     "person": "P_022457",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 25,
+     "site_name": "Vegas Ferguson",
+     "held_name": "Vagas Ferguson",
+     "person": "P_022492",
+     "fields": {
+      "name": [
+       "Vegas Ferguson",
+       "Vagas Ferguson"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 27,
+     "site_name": "Charles White",
+     "held_name": "Charles White",
+     "person": "P_022412",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 45,
+     "site_name": "Larry McGrew",
+     "held_name": "Larry McGrew",
+     "person": "P_022496",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 47,
+     "site_name": "Ralph Clayton",
+     "held_name": "Ralph Clayton",
+     "person": "P_022837",
+     "fields": {
+      "position": [
+       "WR",
+       "WR-RB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 55,
+     "site_name": "Mat Mendenhal",
+     "held_name": "Mat Mendenhall",
+     "person": "P_022863",
+     "fields": {
+      "name": [
+       "Mat Mendenhal",
+       "Mat Mendenhall"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 64,
+     "site_name": "Myron Lapka",
+     "held_name": "Myron Lapka",
+     "person": "P_022515",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 79,
+     "site_name": "Tim Smith",
+     "held_name": "Tim Smith",
+     "person": "P_022456",
+     "fields": {
+      "position": [
+       "WR",
+       "WR-P"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 82,
+     "site_name": "Phillip Murphy",
+     "held_name": "Phil Murphy",
+     "person": "P_022473",
+     "fields": {
+      "name": [
+       "Phillip Murphy",
+       "Phil Murphy"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 86,
+     "site_name": "Bill Glass",
+     "held_name": "William Glass",
+     "person": "P_022394",
+     "fields": {
+      "name": [
+       "Bill Glass",
+       "William Glass"
+      ]
+     },
+     "compared_against": "pfr.draft_selection"
+    },
+    {
+     "overall": 88,
+     "site_name": "Ray Butler",
+     "held_name": "Ray Butler",
+     "person": "P_022370",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 92,
+     "site_name": "Dennis Johnson",
+     "held_name": "Dennis Johnson",
+     "person": "P_022486",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 94,
+     "site_name": "Dave Klug",
+     "held_name": "Dave Klug",
+     "person": "P_022701",
+     "fields": {
+      "college": [
+       "Concordia",
+       "Concordia (Moncordia)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 99,
+     "site_name": "Ron Crews",
+     "held_name": "Ron Crews",
+     "person": "P_022403",
+     "fields": {
+      "college": [
+       "UNLV",
+       "Nevada-Las Vegas"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 109,
+     "site_name": "Paul McDonald",
+     "held_name": "Paul McDonald",
+     "person": "P_022407",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 110,
+     "site_name": "Bill Hurley",
+     "held_name": "Bill Hurley",
+     "person": "P_023031",
+     "fields": {
+      "position": [
+       "DB",
+       "QB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 112,
+     "site_name": "Kenneth Times",
+     "held_name": "Ken Times",
+     "person": "P_007076",
+     "fields": {
+      "name": [
+       "Kenneth Times",
+       "Ken Times"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 120,
+     "site_name": "Tom Ginn",
+     "held_name": "Tommie Ginn",
+     "person": "P_022431",
+     "fields": {
+      "name": [
+       "Tom Ginn",
+       "Tommie Ginn"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 124,
+     "site_name": "Doug McDougald",
+     "held_name": "Doug McDougald",
+     "person": "P_022495",
+     "fields": {
+      "position": [
+       "DE",
+       "DE-DT"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 125,
+     "site_name": "Kenny Lewis",
+     "held_name": "Kenny Lewis",
+     "person": "P_022536",
+     "fields": {
+      "position": [
+       "RB",
+       "LB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 140,
+     "site_name": "Chris Dietrich",
+     "held_name": "Chris Dieterich",
+     "person": "P_022429",
+     "fields": {
+      "name": [
+       "Chris Dietrich",
+       "Chris Dieterich"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 144,
+     "site_name": "Chris Foote",
+     "held_name": "Chris Foote",
+     "person": "P_022373",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 148,
+     "site_name": "Ray Yakavonis",
+     "held_name": "Ray Yakavonis",
+     "person": "P_022730",
+     "fields": {
+      "college": [
+       "East Stroudsburg (PA)",
+       "East Stroudsburg"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 149,
+     "site_name": "George Visger",
+     "held_name": "George Visger",
+     "person": "P_022578",
+     "fields": {
+      "position": [
+       "DE",
+       "DE-DT"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 162,
+     "site_name": "Tim Newsome",
+     "held_name": "Timmy Newsome",
+     "person": "P_022417",
+     "fields": {
+      "name": [
+       "Tim Newsome",
+       "Timmy Newsome"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 165,
+     "site_name": "Tunch Ilkin",
+     "held_name": "Tunch Ilkin",
+     "person": "P_022550",
+     "fields": {
+      "position": [
+       "T",
+       "C"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 167,
+     "site_name": "Ron Simplins",
+     "held_name": "Ron Simpkins",
+     "person": "P_022401",
+     "fields": {
+      "name": [
+       "Ron Simplins",
+       "Ron Simpkins"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 170,
+     "site_name": "Wesley Roberts",
+     "held_name": "Wes Roberts",
+     "person": "P_022540",
+     "fields": {
+      "name": [
+       "Wesley Roberts",
+       "Wes Roberts"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 178,
+     "site_name": "Bob Batton",
+     "held_name": "Bobby Batton",
+     "person": "P_022529",
+     "fields": {
+      "name": [
+       "Bob Batton",
+       "Bobby Batton"
+      ],
+      "college": [
+       "UNLV",
+       "Nevada-Las Vegas"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 179,
+     "site_name": "Darry Hebert",
+     "held_name": "Bud Hebert",
+     "person": "P_022514",
+     "fields": {
+      "name": [
+       "Darry Hebert",
+       "Bud Hebert"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 194,
+     "site_name": "Ken Hill",
+     "held_name": "Kenny Hill",
+     "person": "P_022777",
+     "fields": {
+      "name": [
+       "Ken Hill",
+       "Kenny Hill"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 204,
+     "site_name": "Vic Minor",
+     "held_name": "Vic Minor",
+     "person": "P_022566",
+     "fields": {
+      "college": [
+       "N.E. Louisiana",
+       "Louisiana-Monroe"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 217,
+     "site_name": "Harold Bailey",
+     "held_name": "Harold Bailey",
+     "person": "P_007520",
+     "fields": {
+      "position": [
+       "QB",
+       "RB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 234,
+     "site_name": "Joe Peters",
+     "held_name": "Joel Peters",
+     "person": "P_039836",
+     "fields": {
+      "name": [
+       "Joe Peters",
+       "Joel Peters"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 245,
+     "site_name": "Bob Harris",
+     "held_name": "Bob Harris",
+     "person": "P_006988",
+     "fields": {
+      "college": [
+       "Bowling Green",
+       "Bowling Green State"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 252,
+     "site_name": "Sandro Vitello",
+     "held_name": "Sandro Vitiello",
+     "person": "P_022402",
+     "fields": {
+      "name": [
+       "Sandro Vitello",
+       "Sandro Vitiello"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 253,
+     "site_name": "Jafus White",
+     "held_name": "Jafus White",
+     "person": "P_007191",
+     "fields": {
+      "college": [
+       "Texas A&I",
+       "Texas A&M-Kingsville"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 267,
+     "site_name": "Andy Hawkins",
+     "held_name": "Andy Hawkins",
+     "person": "P_022596",
+     "fields": {
+      "college": [
+       "Texas A&I",
+       "Texas A&M-Kingsville"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 270,
+     "site_name": "Virgina Seay",
+     "held_name": "Virgil Seay",
+     "person": "P_022865",
+     "fields": {
+      "name": [
+       "Virgina Seay",
+       "Virgil Seay"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 275,
+     "site_name": "Brett Davis",
+     "held_name": "Brett Davis",
+     "person": "P_007212",
+     "fields": {
+      "college": [
+       "UNLV",
+       "Nevada-Las Vegas"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 293,
+     "site_name": "Mike Hubach",
+     "held_name": "Mike Hubach",
+     "person": "P_022493",
+     "fields": {
+      "college": [
+       "Kansas State",
+       "Kansas"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 294,
+     "site_name": "Roland Sales",
+     "held_name": "Roland Sales",
+     "person": "P_007005",
+     "fields": {
+      "position": [
+       "RB",
+       "B"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 299,
+     "site_name": "Terry Jones",
+     "held_name": "Terry Jones",
+     "person": "P_021923",
+     "fields": {
+      "college": [
+       "Central State (OK)",
+       "Central Oklahoma"
+      ]
+     },
+     "compared_against": "pfr.draft_selection"
+    },
+    {
+     "overall": 307,
+     "site_name": "Ray Williams",
+     "held_name": "Ray Williams",
+     "person": "P_022440",
+     "fields": {
+      "position": [
+       "WR",
+       "KR"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 309,
+     "site_name": "Tyrone Gray",
+     "held_name": "Ty Gray",
+     "person": "P_006825",
+     "fields": {
+      "name": [
+       "Tyrone Gray",
+       "Ty Gray"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 310,
+     "site_name": "James Stewart",
+     "held_name": "James Stewart",
+     "person": "P_040305",
+     "fields": {
+      "college": [
+       "Memphis State",
+       "Memphis"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 323,
+     "site_name": "Robert Fisher",
+     "held_name": "Bob Fisher",
+     "person": "P_022387",
+     "fields": {
+      "name": [
+       "Robert Fisher",
+       "Bob Fisher"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    }
+   ],
+   "exact": 197
+  },
+  {
+   "year": 2000,
+   "site_picks": 254,
+   "site_rows_at_a_repeated_overall_pick": 0,
+   "archive_picks_with_an_overall": 222,
+   "archive_rows_excluded_as_another_draft": {
+    "None/CFL": 28,
+    "draft/CFL": 28
+   },
+   "not_held": [
+    {
+     "year": 2000,
+     "round": 1,
+     "pick_in_round": 29,
+     "overall": 29,
+     "name": "R. Jay Soward",
+     "team": "Jaguars",
+     "position": "WR",
+     "college": "USC"
+    },
+    {
+     "year": 2000,
+     "round": 3,
+     "pick_in_round": 3,
+     "overall": 65,
+     "name": "Giovanni Carmazzi",
+     "team": "49ers",
+     "position": "QB",
+     "college": "Hofstra"
+    },
+    {
+     "year": 2000,
+     "round": 4,
+     "pick_in_round": 10,
+     "overall": 104,
+     "name": "Kaulana Noa",
+     "team": "Rams",
+     "position": "T",
+     "college": "Hawaii"
+    },
+    {
+     "year": 2000,
+     "round": 4,
+     "pick_in_round": 20,
+     "overall": 114,
+     "name": "Anthony Lucas",
+     "team": "Packers",
+     "position": "WR",
+     "college": "Arkansas"
+    },
+    {
+     "year": 2000,
+     "round": 4,
+     "pick_in_round": 29,
+     "overall": 123,
+     "name": "Joey Chustz",
+     "team": "Jaguars",
+     "position": "T",
+     "college": "Louisiana Tech"
+    },
+    {
+     "year": 2000,
+     "round": 4,
+     "pick_in_round": 33,
+     "overall": 127,
+     "name": "Greg Robinson-Randall",
+     "team": "Patriots",
+     "position": "T",
+     "college": "Michigan State"
+    },
+    {
+     "year": 2000,
+     "round": 5,
+     "pick_in_round": 5,
+     "overall": 134,
+     "name": "Anthony Midget",
+     "team": "Falcons",
+     "position": "DB",
+     "college": "Virginia Tech"
+    },
+    {
+     "year": 2000,
+     "round": 5,
+     "pick_in_round": 9,
+     "overall": 138,
+     "name": "Matt Johnson",
+     "team": "Colts",
+     "position": "G",
+     "college": "Brigham Young"
+    },
+    {
+     "year": 2000,
+     "round": 5,
+     "pick_in_round": 19,
+     "overall": 148,
+     "name": "Richard Mercier",
+     "team": "Ravens",
+     "position": "G",
+     "college": "Miami (FL)"
+    },
+    {
+     "year": 2000,
+     "round": 5,
+     "pick_in_round": 22,
+     "overall": 151,
+     "name": "Joey Jamison",
+     "team": "Packers",
+     "position": "WR",
+     "college": "Texas Southern"
+    },
+    {
+     "year": 2000,
+     "round": 5,
+     "pick_in_round": 25,
+     "overall": 154,
+     "name": "Muneer Moore",
+     "team": "Broncos",
+     "position": "WR",
+     "college": "Richmond"
+    },
+    {
+     "year": 2000,
+     "round": 5,
+     "pick_in_round": 26,
+     "overall": 155,
+     "name": "Quincy Sanders",
+     "team": "Redskins",
+     "position": "DB",
+     "college": "UNLV"
+    },
+    {
+     "year": 2000,
+     "round": 5,
+     "pick_in_round": 32,
+     "overall": 161,
+     "name": "Jeff Marriott",
+     "team": "Patriots",
+     "position": "DT",
+     "college": "Missouri"
+    },
+    {
+     "year": 2000,
+     "round": 6,
+     "pick_in_round": 5,
+     "overall": 171,
+     "name": "Thomas Hamner",
+     "team": "Eagles",
+     "position": "RB",
+     "college": "Minnesota"
+    },
+    {
+     "year": 2000,
+     "round": 6,
+     "pick_in_round": 15,
+     "overall": 181,
+     "name": "Quinton Reese",
+     "team": "Lions",
+     "position": "DE",
+     "college": "Auburn"
+    },
+    {
+     "year": 2000,
+     "round": 6,
+     "pick_in_round": 19,
+     "overall": 185,
+     "name": "Tim Watson",
+     "team": "Seahawks",
+     "position": "DT",
+     "college": "Rowan"
+    },
+    {
+     "year": 2000,
+     "round": 6,
+     "pick_in_round": 26,
+     "overall": 192,
+     "name": "John Romero",
+     "team": "Eagles",
+     "position": "C",
+     "college": "California"
+    },
+    {
+     "year": 2000,
+     "round": 6,
+     "pick_in_round": 38,
+     "overall": 204,
+     "name": "Jason Gavadza",
+     "team": "Steelers",
+     "position": "TE",
+     "college": "Kent State"
+    },
+    {
+     "year": 2000,
+     "round": 6,
+     "pick_in_round": 39,
+     "overall": 205,
+     "name": "JaJuan Seider",
+     "team": "Chargers",
+     "position": "QB",
+     "college": "Florida A&M"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 2,
+     "overall": 208,
+     "name": "Desmond Kitchings",
+     "team": "Chiefs",
+     "position": "WR",
+     "college": "Furman"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 3,
+     "overall": 209,
+     "name": "Eric Chandler",
+     "team": "Browns",
+     "position": "DE",
+     "college": "Jackson State"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 12,
+     "overall": 218,
+     "name": "Richard Seals",
+     "team": "Jets",
+     "position": "DT",
+     "college": "Utah"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 14,
+     "overall": 220,
+     "name": "Andrew Kline",
+     "team": "Rams",
+     "position": "G",
+     "college": "San Diego State"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 20,
+     "overall": 226,
+     "name": "Casey Tisdale",
+     "team": "Patriots",
+     "position": "LB",
+     "college": "New Mexico"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 25,
+     "overall": 231,
+     "name": "Clifton Black",
+     "team": "Raiders",
+     "position": "DB",
+     "college": "Southwest Texas State"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 26,
+     "overall": 232,
+     "name": "Jeff Harris",
+     "team": "Dolphins",
+     "position": "DB",
+     "college": "Georgia"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 29,
+     "overall": 235,
+     "name": "Rob Renes",
+     "team": "Colts",
+     "position": "DT",
+     "college": "Michigan"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 34,
+     "overall": 240,
+     "name": "Mike Malano",
+     "team": "Vikings",
+     "position": "C",
+     "college": "San Diego State"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 38,
+     "overall": 244,
+     "name": "Giles Cole",
+     "team": "Vikings",
+     "position": "TE",
+     "college": "Texas A&M-Kingsville"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 40,
+     "overall": 246,
+     "name": "Leroy Fields",
+     "team": "Broncos",
+     "position": "WR",
+     "college": "Jackson State"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 41,
+     "overall": 247,
+     "name": "Mark Baniewicz",
+     "team": "Jaguars",
+     "position": "T",
+     "college": "Syracuse"
+    },
+    {
+     "year": 2000,
+     "round": 7,
+     "pick_in_round": 44,
+     "overall": 250,
+     "name": "Ethan Howell",
+     "team": "Redskins",
+     "position": "WR",
+     "college": "Oklahoma State"
+    }
+   ],
+   "disagree": [
+    {
+     "overall": 14,
+     "site_name": "Bubba Franks",
+     "held_name": "Bubba Franks",
+     "person": "P_028794",
+     "fields": {
+      "college": [
+       "Miami (FL)",
+       "Miami (Florida)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 37,
+     "site_name": "Travis Claridge",
+     "held_name": "Travis Claridge",
+     "person": "P_010520",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ],
+      "position": [
+       "G",
+       "T"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 40,
+     "site_name": "Ian Gold",
+     "held_name": "Ian Gold",
+     "person": "P_028779",
+     "fields": {
+      "position": [
+       "DB",
+       "LB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 56,
+     "site_name": "Michael Boireau",
+     "held_name": "Michael Boireau",
+     "person": "P_010100",
+     "fields": {
+      "college": [
+       "Miami (FL)",
+       "Miami (Florida)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 59,
+     "site_name": "Marcus Washington",
+     "held_name": "Marcus Washington",
+     "person": "P_028809",
+     "fields": {
+      "position": [
+       "DE",
+       "LB"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 61,
+     "site_name": "Bobbie Williams",
+     "held_name": "Bobbie Williams",
+     "person": "P_029222",
+     "fields": {
+      "position": [
+       "T",
+       "G"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 63,
+     "site_name": "Travis Prentice",
+     "held_name": "Travis Prentice",
+     "person": "P_028753",
+     "fields": {
+      "college": [
+       "Miami (OH)",
+       "Miami (Ohio)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 73,
+     "site_name": "Ron Dixon",
+     "held_name": "Ron Dixon",
+     "person": "P_028873",
+     "fields": {
+      "college": [
+       "Lambuth (TN)",
+       "Lambuth"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 82,
+     "site_name": "Leander Jordan",
+     "held_name": "Leander Jordan",
+     "person": "P_029040",
+     "fields": {
+      "college": [
+       "Indiana (PA)",
+       "Indiana (Pennsylvania)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 85,
+     "site_name": "Gregory Wesley",
+     "held_name": "Greg Wesley",
+     "person": "P_028831",
+     "fields": {
+      "name": [
+       "Gregory Wesley",
+       "Greg Wesley"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 87,
+     "site_name": "Dustin Lyman",
+     "held_name": "Dustin Lyman",
+     "person": "P_028732",
+     "fields": {
+      "position": [
+       "LB",
+       "TE"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 90,
+     "site_name": "Nate Webster",
+     "held_name": "Nate Webster",
+     "person": "P_028961",
+     "fields": {
+      "college": [
+       "Miami (FL)",
+       "Miami (Florida)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 100,
+     "site_name": "Michael Thompson",
+     "held_name": "Michael Thompson",
+     "person": "P_028690",
+     "fields": {
+      "position": [
+       "G",
+       "T"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 109,
+     "site_name": "Kareem Larrimore",
+     "held_name": "Kareem Larrimore",
+     "person": "P_028766",
+     "fields": {
+      "college": [
+       "West Texas State",
+       "West Texas A&M"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 111,
+     "site_name": "Trevor Gaylor",
+     "held_name": "Trevor Gaylor",
+     "person": "P_010343",
+     "fields": {
+      "college": [
+       "Miami (OH)",
+       "Miami (Ohio)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 113,
+     "site_name": "Leonardo Carson",
+     "held_name": "Leonardo Carson",
+     "person": "P_028914",
+     "fields": {
+      "position": [
+       "DE",
+       "DT"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 136,
+     "site_name": "Falemao Tosi",
+     "held_name": "Mao Tosi",
+     "person": "P_028678",
+     "fields": {
+      "name": [
+       "Falemao Tosi",
+       "Mao Tosi"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 143,
+     "site_name": "Windrell Hayes",
+     "held_name": "Windrell Hayes",
+     "person": "P_028885",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 144,
+     "site_name": "Michael Wiley",
+     "held_name": "Michael Wiley",
+     "person": "P_028773",
+     "fields": {
+      "position": [
+       "RB",
+       "WR"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 149,
+     "site_name": "Kabeer Gbaja-Biamila",
+     "held_name": "Kabeer Gbaja-Biamila",
+     "person": "P_028795",
+     "fields": {
+      "position": [
+       "LB",
+       "DE"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 162,
+     "site_name": "Patrick Dennis",
+     "held_name": "Pat Dennis",
+     "person": "P_028824",
+     "fields": {
+      "name": [
+       "Patrick Dennis",
+       "Pat Dennis"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 166,
+     "site_name": "Chad Morton",
+     "held_name": "Chad Morton",
+     "person": "P_028866",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 173,
+     "site_name": "Chris Combs",
+     "held_name": "Chris Combs",
+     "person": "P_028906",
+     "fields": {
+      "position": [
+       "DE",
+       "DT"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 176,
+     "site_name": "Jabari Issa",
+     "held_name": "Jabari Issa",
+     "person": "P_010344",
+     "fields": {
+      "position": [
+       "DE",
+       "DT"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 182,
+     "site_name": "Jeno James",
+     "held_name": "Jeno James",
+     "person": "P_028721",
+     "fields": {
+      "position": [
+       "G",
+       "T"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 183,
+     "site_name": "Spergon Wynn",
+     "held_name": "Spergon Wynn",
+     "person": "P_010186",
+     "fields": {
+      "college": [
+       "Southwest Texas State",
+       "Texas State"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 188,
+     "site_name": "Darnell Alford",
+     "held_name": "Darnell Alford",
+     "person": "P_028822",
+     "fields": {
+      "position": [
+       "G",
+       "T"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 193,
+     "site_name": "David Gibson",
+     "held_name": "David Gibson",
+     "person": "P_028957",
+     "fields": {
+      "college": [
+       "USC",
+       "Southern California"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 194,
+     "site_name": "Leif Larsen",
+     "held_name": "Leif Larsen",
+     "person": "P_028705",
+     "fields": {
+      "position": [
+       "DE",
+       "DT"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 210,
+     "site_name": "Brad St. Louis",
+     "held_name": "Brad St. Louis",
+     "person": "P_028742",
+     "fields": {
+      "college": [
+       "SW Missouri State",
+       "Missouri State"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 211,
+     "site_name": "Darrick Vaughn",
+     "held_name": "Darrick Vaughn",
+     "person": "P_028691",
+     "fields": {
+      "college": [
+       "Southwest Texas State",
+       "Texas State"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 223,
+     "site_name": "James Cotton",
+     "held_name": "James Cotton",
+     "person": "P_009892",
+     "fields": {
+      "position": [
+       "LB",
+       "DE"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 224,
+     "site_name": "Mark Tauscher",
+     "held_name": "Mark Tauscher",
+     "person": "P_028800",
+     "fields": {
+      "position": [
+       "G",
+       "T"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 227,
+     "site_name": "Mondriel Fulcher",
+     "held_name": "Mondriel Fulcher",
+     "person": "P_028891",
+     "fields": {
+      "college": [
+       "Miami (FL)",
+       "Miami (Florida)"
+      ],
+      "position": [
+       "RB",
+       "TE"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 229,
+     "site_name": "Ron Moore",
+     "held_name": "Ron Moore",
+     "person": "P_029005",
+     "fields": {
+      "college": [
+       "Northwestern Oklahoma",
+       "Northwestern Oklahoma State"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 237,
+     "site_name": "Wes Shivers",
+     "held_name": "Wes Shivers",
+     "person": "P_028687",
+     "fields": {
+      "position": [
+       "T",
+       "G"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 241,
+     "site_name": "Rob Meier",
+     "held_name": "Rob Meier",
+     "person": "P_028815",
+     "fields": {
+      "position": [
+       "DT",
+       "DE"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 253,
+     "site_name": "Alfonso Boone",
+     "held_name": "Alfonso Boone",
+     "person": "P_029047",
+     "fields": {
+      "college": [
+       "Mt. San Antonio JC",
+       "Mount San Antonio JC"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    },
+    {
+     "overall": 254,
+     "site_name": "Michael Green",
+     "held_name": "Michael Green",
+     "person": "P_028730",
+     "fields": {
+      "college": [
+       "Northwestern State (LA)",
+       "Northwestern State (Louisiana)"
+      ]
+     },
+     "compared_against": "pfa.draft_selection"
+    }
+   ],
+   "exact": 183
+  }
+ ],
+ "totals": {
+  "not_held": 533,
+  "exact": 587,
+  "diff_name": 76,
+  "disagree": 220,
+  "diff_position": 97,
+  "diff_college": 67,
+  "site": 1340
+ }
+}
