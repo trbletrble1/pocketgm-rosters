@@ -1,0 +1,220 @@
+import re
+from guide_delimited_runs import POS
+G = "/Users/ryannecci/Documents/pgm3-sources/nfl-books/text_all/"
+
+# Each run: header (splits entries), anchor (must be exactly 1 per span),
+# label_kind ('colon'|'dash'|'both'|None), notes labels, section marker.
+SPECS = {
+"dons": {
+ "club": "Los Angeles Dons", "league": "AAFC", "code": "lad",
+ "note": "One house style 1947-1949. 1947 uses em-dashes, 1948 colons, 1949 mixed. "
+         "Same fields, same order. The 1948 parse is reused, not rebuilt.",
+ "guides": [
+   ("los-angeles-dons-aafc-1947-media-guide-cv-3.txt", 1947,
+    "Los Angeles Dons (AAFC) 1947 Press and Radio Guide", "los-angeles-dons-aafc-1947-media-guide-cv-3"),
+   ("los-angeles-dons-aafc-1948-media-guide.txt", 1948,
+    "Los Angeles Dons (AAFC) 1948 Press and Radio Guide", "los-angeles-dons-aafc-1948-media-guide"),
+   ("los-angeles-dons-aafc-1949-media-guide.txt", 1949,
+    "Los Angeles Dons (AAFC) 1949 Press and Radio Guide", "los-angeles-dons-aafc-1949-media-guide"),
+ ],
+ "per_year": {
+   1947: {"header": re.compile(r"^\s*([A-Z][^\n]{3,50}?)\s+(?:[=~]\s*)?(\d{2,3})\s*[,.]?\s+("+POS+r")\s*$"),
+          "anchor": re.compile(r"(?i)\bB[O0Q]RN\b\s*[—–:-]"), "labels": "both", "hdr_fields": [], "split_ht": True},
+   1948: {"header": re.compile(r"^\s*([A-Z][A-Z.'’()\- ]{2,40}?)\s*[^A-Za-z]{3,}\s*("+POS+r")\s*$"),
+          "anchor": re.compile(r"^\s*BORN\s*:"), "labels": "colon", "hdr_fields": []},
+   1949: {"header": re.compile(r"^\s*([A-Z][A-Za-z.'’()\- ]{3,34}?)\s*[—–-]{1,4}\s*("+POS+r"),?\s+Age[ :]*(\d{2})[~,\s]*Ht\.?[ :]*([\d.’'”\" /]+?),?\s+Wt\.?[ :]*(\d{2,3})\s*$"),
+          "anchor": re.compile(r"\bAge\s*\d{2}\b"), "labels": "colon", "hdr_fields": ["POSITION (HEADER)","AGE","HT","WT"]},
+ },
+ "notes": ("NOTES",), "honour_parents": ("HIGH SCHOOL FOOTBALL","COLLEGE FOOTBALL",
+           "MAJOR LEAGUE FOOTBALL","SERVICE FOOTBALL","SERVICE RECORD","COLLEGE"),
+},
+"packers_c": {
+ "club": "Green Bay Packers", "league": "NFL", "code": "gnb",
+ "note": "Packers settle into a 3-line header 1947-1949: NAME / No.NN - Position - College / Height, Weight. Born in place, date.",
+ "guides": [("packers-1947.txt",1947,"Green Bay Packers 1947 Press and Radio Guide","packers-1947"),
+            ("packers-1948.txt",1948,"Green Bay Packers 1948 Press and Radio Guide","packers-1948"),
+            ("packers-1949.txt",1949,"Green Bay Packers 1949 Press and Radio Guide","packers-1949")],
+ "style": "packers3",
+ "anchor": re.compile(r"(?i)\bB[o0]rn\s+in\b"),
+ "hdr2": re.compile(r"^\s*No\.?\s*(\d{1,2})\s*[—–-]+\s*(.+?)\s*[—–-]+\s*(.+?)\s*$"),
+ "hdr3": re.compile(r"(?i)^\s*Height\s*[,:]\s*(.+?)\.?\s*Weight\s*[,:]\s*(\d{2,3})\.?\s*(?:Born\s+in\s+(.+?))?\s*$"),
+ "notes": (),
+},
+"bears_c": {
+ "club": "Chicago Bears", "league": "NFL", "code": "chi",
+ "note": "Bears adopt the same 3-line header by 1949 (position-college line has no jersey number).",
+ "guides": [("bears-1949.txt",1949,"Chicago Bears 1949 Press and Radio Guide","bears-1949")],
+ "style": "packers3",
+ "anchor": re.compile(r"(?i)\bB[o0]rn\b"),
+ "hdr2": re.compile(r"^\s*()("+POS+r")\s*[—–-]+\s*(.+?)\s*$"),
+ "hdr3": re.compile(r"(?i)^\s*Height\s*[,:]\s*(.+?)[.,]\s*Weight\s*[,:]\s*(\d{2,3})\.?\s*(?:Born\s+(.+?))?\s*$"),
+ "notes": (),
+},
+"lions_c": {
+ "club": "Detroit Lions", "league": "NFL", "code": "det",
+ "note": "Same 3-line shape, em-dash separators, physical line ordered Weight-Height-Born.",
+ "guides": [("lions-1946.txt",1946,"Detroit Lions 1946 Press and Radio Guide","lions-1946")],
+ "style": "packers3",
+ "anchor": re.compile(r"(?i)\bB[o0]rn\s+in\b"),
+ "hdr2": re.compile(r"^\s*()("+POS+r")\s*[—–-]+\s*(.+?)\s*$"),
+ "hdr3": re.compile(r"(?i)^\s*Weight\s+(\d{2,3})\s*[—–-]\s*Height\s+([\d:. ]+?)\s*[—–-]\s*Born\s+in\s+(.+?)\s*$"),
+ "notes": (),
+},
+"steelers_c": {
+ "club": "Pittsburgh Steelers", "league": "NFL", "code": "pit",
+ "note": "Same 3-line shape with colon labels on the physical line.",
+ "guides": [("steelers-1946.txt",1946,"Pittsburgh Steelers 1946 Press and Radio Guide","steelers-1946")],
+ "style": "packers3",
+ "anchor": re.compile(r"(?i)\bB[o0]rn\b"),
+ "hdr2": re.compile(r"^\s*()("+POS+r")\s*[—–-]+\s*(.+?)\s*$"),
+ "hdr3": re.compile(r"(?i)^\s*[tH]?[el]?[ei]?[ig]?h?t?\s*:\s*([\d.]+)\s+Weight\s*:\s*(\d{2,3})\s*[,.]?\s*Born\s*:?\s*(.+?)\s*$"),
+ "notes": (),
+},
+"bills": {
+ "club": "Buffalo Bills", "league": "AAFC", "code": "buf",
+ "note": "Bills 1947-1949: NAME-Position / [Age] Ht. Wt. / hometown + high school / college. Age added in 1948.",
+ "guides": [("buffalo-bills-aafc-1947-media-guide-c.txt",1947,"Buffalo Bills (AAFC) 1947 Press and Radio Guide","buffalo-bills-aafc-1947-media-guide-c"),
+            ("buffalo-bills-aafc-1948-media-guide-c.txt",1948,"Buffalo Bills (AAFC) 1948 Press and Radio Guide","buffalo-bills-aafc-1948-media-guide-c"),
+            ("buffalo-bills-aafc-1949-media-guide-c.txt",1949,"Buffalo Bills (AAFC) 1949 Press and Radio Guide","buffalo-bills-aafc-1949-media-guide-c")],
+ "style": "bills",
+ "header": re.compile(r"^\s*([A-Z][A-Za-z.'’\-]+,\s*[A-Z][A-Za-z.'’\- ]*?(?:\([A-Za-z .'’\-]+\))?)\s*[—–-]+\s*("+POS+r")\s*(.*)$"),
+ "anchor": re.compile(r"(?i)\bHt\.?\s*[:.]?\s*\d"),
+ "notes": (),
+},
+"browns": {
+ "club": "Cleveland Browns", "league": "AAFC", "code": "cle",
+ "note": "Identical form all three years: SURNAME, FIRST (Nick) POSITION on one line, then prose opening with Born in place, date.",
+ "guides": [("browns-1947-media-guide-cleveland-c.txt",1947,"Cleveland Browns (AAFC) 1947 Press and Radio Guide","browns-1947-media-guide-cleveland-c"),
+            ("cleveland-browns-1948-media-guide-cover.txt",1948,"Cleveland Browns (AAFC) 1948 Press and Radio Guide","cleveland-browns-1948-media-guide-cover"),
+            ("cleveland-browns-1949-media-guide-cover-front-2.txt",1949,"Cleveland Browns (AAFC) 1949 Press and Radio Guide","cleveland-browns-1949-media-guide-cover-front-2")],
+ "style": "browns",
+ "header": re.compile(r"^\s*([A-Z][A-Z.'’\-]{2,20},\s*[A-Z][A-Za-z.'’\- ]{1,24}?(?:\s*\([A-Za-z .'’\-]{2,18}\))?)\s{1,}((?:HALF ?BACK|FULL ?BACK|QUARTER ?BACK|TACKLE|GUARD|CENTER|END|BACK|KICKER)S?)\s*$"),
+ "anchor": re.compile(r"(?i)\bB[o0]rn\s+in\b"),
+ "notes": (),
+},
+"niners": {
+ "club": "San Francisco 49ers", "league": "AAFC", "code": "sfo",
+ "note": "One line carrying Height and Weight, 1946-1949. Colon after Height in 1946 only; position added to the header in 1949.",
+ "guides": [("49ers-1946-media-guide-san-francisco.txt",1946,"San Francisco 49ers (AAFC) 1946 Information Booklet","49ers-1946-media-guide-san-francisco"),
+            ("49ers-1947-media-guide-san-francisco-c.txt",1947,"San Francisco 49ers (AAFC) 1947 Press and Radio Guide","49ers-1947-media-guide-san-francisco-c"),
+            ("49ers-1948-media-guide-san-francisco-c.txt",1948,"San Francisco 49ers (AAFC) 1948 Press and Radio Guide","49ers-1948-media-guide-san-francisco-c"),
+            ("49ers-1949-media-guide-san-francisco-c.txt",1949,"San Francisco 49ers (AAFC) 1949 Press and Radio Guide","49ers-1949-media-guide-san-francisco-c")],
+ "style": "niners",
+ "header": re.compile(r"^\s*([A-Z][A-Za-z.'’\-]+,\s*[A-Z][A-Za-z.'’\- ]*?)\s*(?:[—–-]\s*("+POS+r"))?\s*Heigh[t?]?\s*:?\s*(.+?)\s+Weigh[t?]?\s*:?\s*(\d{2,3})\s*$"),
+ "anchor": re.compile(r"(?i)\bWeigh[t?]\s*:?\s*\d{2,3}"),
+ "notes": (),
+},
+"hornets": {
+ "club": "Chicago Hornets", "league": "AAFC", "code": "chh",
+ "note": "One line: SURNAME, FIRST Position Age NN Ht. X Wt. Y College.",
+ "guides": [("chicago-hornets-aafc-1949-media-guide.txt",1949,"Chicago Hornets (AAFC) 1949 Press and Radio Guide","chicago-hornets-aafc-1949-media-guide")],
+ "style": "hornets",
+ "header": re.compile(r"^\s*([A-Z][A-Za-z.'’\-]{2,20},\s*[A-Z][A-Za-z.'’\- ]{1,24}?)\s+("+POS+r")\s+Age[ .]*(\d{2})\s+Ht[.: ]*([^\s]+(?:\s\S+)??)\s+Wt[.: ]*(\d{2,3})\s*(.*)$"),
+ "anchor": re.compile(r"\bAge[ .]*\d{2}\b"),
+ "notes": (),
+},
+"colts_1949": {
+ "club": "Baltimore Colts", "league": "AAFC", "code": "bal",
+ "note": "1949 only: SURNAME, FIRST Age NN Height X Weight Y / Position COLLEGE.",
+ "guides": [("colts-1949-media-guide-baltimore.txt",1949,"Baltimore Colts (AAFC) 1949 Press and Radio Guide","colts-1949-media-guide-baltimore")],
+ "style": "colts49",
+ "header": re.compile(r"^\s*([A-Z][A-Z.'’\-]{2,20},\s*[A-Z][A-Za-z.'’\- ]{1,22}?)\s+Age\s*(\d{2})\s+Height\s*([\d.: ]+?)\s+Weight\s*(\d{2,3})\s*$"),
+ "anchor": re.compile(r"\bAge\s*\d{2}\b"),
+ "notes": (),
+},
+"rams_1949": {
+ "club": "Los Angeles Rams", "league": "NFL", "code": "lar",
+ "note": "1949: NAME / College Ht: Wt: Age: With Rams: / Born in: ... (OCR renders Ht:/Wt: as Het:/Wet:).",
+ "guides": [("rams-1949.txt",1949,"Los Angeles Rams 1949 Press and Radio Guide","rams-1949")],
+ "style": "rams49",
+ "hdr2": re.compile(r"(?i)^\s*(.+?)\s+\S{2,5}\s*[:;]\s*([\dftin., ]+?)\s+\S{2,6}\s*[:;]?\s*(\d{2,3})\s+\S{2,4}\s*[:;]\s*(\d{1,2})\s+[WV]ith\s+\S+\s*[:;]\s*(.*)$"),
+ "anchor": re.compile(r"(?i)\bB[o0]rn\s+in\b"),
+ "notes": (),
+},
+"rams_1947": {
+ "club": "Los Angeles Rams", "league": "NFL", "code": "lar",
+ "note": "1947: em-dash typed labels Age-/Height-/Weight-/College-/Service Record-/Professional Record-/General Information-.",
+ "guides": [("rams-1947.txt",1947,"Los Angeles Rams 1947 Press and Radio Guide","rams-1947")],
+ "style": "labels_only",
+ "header": re.compile(r"^\s*([A-Z][A-Z.'’\- ]{4,30}?)(?:\s*[—–]\s*No\.\s*\d{1,2})?\s*$"),
+ "anchor": re.compile(r"(?i)^\s*(?:College|Colleye|Collcge)\s*[—–]"),
+ "labels": "dash",
+ "confirm": (re.compile(r"(?i)^\s*(?:Age|bye|Height|Weight|College|Service Record)\s*[—–]"), 6),
+ "notes": ("GENERAL INFORMATION", "GENERAL TNFORMATION"),
+},
+"brooklyn_1948": {
+ "club": "Brooklyn Dodgers", "league": "AAFC", "code": "bkn",
+ "note": "1948: SURNAME-Firstname-Born date, place, then prose.",
+ "guides": [("brooklyn-dodgers-aafc-1948-media-guide.txt",1948,"Brooklyn Dodgers (AAFC) 1948 Press Brochure","brooklyn-dodgers-aafc-1948-media-guide")],
+ "style": "brooklyn",
+ "header": re.compile(r"^\s*([A-Z][A-Z.'’\-]{2,20})\s*[—–]\s*([A-Z][A-Za-z.'’\- ]{2,28}?)\s*[—–]\s*B[o0]rn\s+(.+?)\s*$"),
+ "anchor": re.compile(r"(?i)\bB[o0]rn\b"),
+ "notes": (),
+},
+}
+
+# ---- runs added with a generic header-group map (hdr_map names groups 2..n) ----
+SPECS["giants"] = {
+ "club": "New York Giants", "league": "NFL", "code": "nyg",
+ "note": "Giants 1945-1948: SURNAME, First-Position/College then a compact age-weight-height "
+         "triple and Home-. Age is printed IN WORDS 1945-1947 ('Twenty-four') and as 'Age 23' "
+         "from 1948. The word form is captured verbatim and NOT converted.",
+ "guides": [("giants-1945-media-guide-new-york.txt",1945,"New York Giants 1945 Official Review and Roster","giants-1945-media-guide-new-york"),
+            ("giants-1946-media-guide-new-york-cbd.txt",1946,"New York Giants 1946 Official Review and Roster","giants-1946-media-guide-new-york-cbd"),
+            ("giants-1947-media-guide-new-york-cbd.txt",1947,"New York Giants 1947 Official Review and Roster","giants-1947-media-guide-new-york-cbd"),
+            ("giants-1948-media-guide-new-york-cbd.txt",1948,"New York Giants 1948 Official Review and Roster","giants-1948-media-guide-new-york-cbd")],
+ "style": "generic",
+ "header": re.compile(r"^\s*([A-Z][A-Za-z.'’\-]+,\s*[A-Z][A-Za-z.'’()\- ]{1,30}?)\s*[—–.]\s*([A-Za-z][^\n]*?)\s*$"),
+ "hdr_map": ["_hdr_tail"],
+ "confirm": (re.compile(r"(?i)\bHome\s*[—–:-]"), 16),
+ "anchor": re.compile(r"(?i)\bHome\s*[—–:-]"),
+ "labels": "dash", "notes": (),
+}
+SPECS["packers_d"] = {
+ "club": "Green Bay Packers", "league": "NFL", "code": "gnb",
+ "note": "Packers 1946 only - the year between the 1936-44 style and the 1947-49 three-line header.",
+ "guides": [("packers-1946-v-2.txt",1946,"Green Bay Packers 1946 Press and Radio Guide","packers-1946-v-2")],
+ "style": "generic",
+ "header": re.compile(r"^\s*([A-Z][^\n]{4,50}?)\s*[—–]\s*(.+?)\s*No\.?\s*(\d{1,2})\s*[—–]?\s*$"),
+ "hdr_map": ["POSITION (HEADER)","No."],
+ "anchor": re.compile(r"\bNo\.?\s*\d{1,2}\s*[—–-]"),
+ "labels": None, "notes": (),
+}
+SPECS["colts_1948"] = {
+ "club": "Baltimore Colts", "league": "AAFC", "code": "bal",
+ "note": "1948 only: NAME (pronunciation) position, lower-case position. The parenthesis is a "
+         "PRONUNCIATION GUIDE, not a nickname, and is kept under its own label.",
+ "guides": [("colts-1948-media-guide-baltimore.txt",1948,"Baltimore Colts (AAFC) 1948 Press and Radio Guide","colts-1948-media-guide-baltimore")],
+ "style": "generic",
+ "header": re.compile(r"^\s*([A-Z][A-Za-z.'’\- ]{3,30}?)\s*(\([a-z][^)]{1,24}\))?\s*(“[^”]{1,18}”)?\s*([Tt]ackle|[Gg]uard|[Cc]enter|[Ee]nd|[Bb]ack|[HhFfQq][a-z]{3,10}back)\s*$"),
+ "hdr_map": ["PRONUNCIATION","NICKNAME (HEADER)","POSITION (HEADER)"],
+ "anchor": re.compile(r"(?i)\bB[o0]rn\s+in\b"),
+ "labels": None, "notes": (),
+}
+SPECS["rockets_1946"] = {
+ "club": "Chicago Rockets", "league": "AAFC", "code": "chr",
+ "note": "1946: dot-delimited header carrying age, position, height, weight and high school.",
+ "guides": [("chicago-rockets-aafc-1946-media-guide.txt",1946,"Chicago Rockets (AAFC) 1946 Press and Radio Guide","chicago-rockets-aafc-1946-media-guide")],
+ "style": "generic",
+ "header": re.compile(r"^\s*([A-Z][A-Za-z.,'’ ]{3,32}?)\s*\.\.\s*(\d{2})\s*yrs\.?\s*\.\.\s*(.+?)\s*\.\.\s*(.+?)\s*\.\.\s*(\d{2,3})\s*\.\.\s*(.*)$"),
+ "hdr_map": ["yrs","POSITION (HEADER)","HEIGHT","WEIGHT","HIGH SCHOOL (HEADER)"],
+ "anchor": re.compile(r"\.\.\s*\d{2}\s*yrs"),
+ "labels": None, "notes": (),
+}
+SPECS["rockets_1947"] = {
+ "club": "Chicago Rockets", "league": "AAFC", "code": "chr",
+ "note": "1947: comma-delimited header - NAME, age, height, weight, college.",
+ "guides": [("chicago-rockets-aafc-1947-media-guide.txt",1947,"Chicago Rockets (AAFC) 1947 Press and Radio Guide","chicago-rockets-aafc-1947-media-guide")],
+ "style": "generic",
+ "header": re.compile(r"^\s*([A-Z][A-Za-z.'’ ]{3,30}?),\s*(\d{2}),\s*([^,]{2,18}?),\s*(\d{2,3}),\s*(.+?)\.?\s*$"),
+ "hdr_map": ["age","HEIGHT","WEIGHT","COLLEGE (HEADER)"],
+ "anchor": re.compile(r"^[A-Z][A-Za-z., '’]{4,30},\s*\d{2},"),
+ "labels": None, "notes": (),
+}
+DROPPED_RUNS = {
+ "lions_1942": {"guide":"lions-1942-media-guide-detroit-cv-2-x.txt","club":"Detroit Lions","year":1942,
+   "reason":"NOT PARSED. The header (CAPS NAME POSITION COLLEGE, space-separated) carries no "
+            "delimiter and the guide prints no per-man field line: 6 Born mentions across ~25 men. "
+            "There is no token a man has exactly once, so the split cannot be proved and a merge "
+            "would be undetectable. Dropped whole rather than parsed unproved."},
+}
