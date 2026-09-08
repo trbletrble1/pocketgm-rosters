@@ -1,0 +1,8217 @@
+{
+ "counts": {
+  "register: joined": 600,
+  "name": 600,
+  "position": 600,
+  "height": 600,
+  "weight": 600,
+  "WEIGHT DISAGREES -- both held": 88,
+  "college": 743,
+  "college agrees": 552,
+  "birth_date": 598,
+  "birth date agrees": 590,
+  "birth_place": 582,
+  "death_date": 551,
+  "death_place": 539,
+  "weight agrees": 481,
+  "college differs": 191,
+  "weight: the archive holds none": 31,
+  "BIRTH PLACE the archive holds none": 34,
+  "death date: the archive holds none": 5,
+  "death place: the archive holds none": 5,
+  "register: left as a lead": 11,
+  "BIRTH DATE DISAGREES -- both held": 8,
+  "AAFC draft rows read": 570,
+  "allocation draft rows read": 137,
+  "draft row joined": 278,
+  "crippen.draft_round": 274,
+  "draft row: left as a lead": 429,
+  "crippen.reserve_list_rights": 35,
+  "coach row joined": 34,
+  "crippen.coaching_season": 34,
+  "coach row: left as a lead": 6,
+  "exhibition games": 15,
+  "crippen.exhibition_game": 15,
+  "attendance figures": 203,
+  "crippen.attendance": 203
+ },
+ "weight_disagreements": [
+  {
+   "person": "P_000847",
+   "name": "ADAMLE, Anthony (Tony)",
+   "crippen": "215",
+   "the_archive": [
+    "210"
+   ],
+   "page": 168
+  },
+  {
+   "person": "P_000599",
+   "name": "ADAMS, Chester Frank (Chet)",
+   "crippen": "233",
+   "the_archive": [
+    "240"
+   ],
+   "page": 168
+  },
+  {
+   "person": "P_000834",
+   "name": "AGASE, Alexander Arrasi (Alex)",
+   "crippen": "212",
+   "the_archive": [
+    "210"
+   ],
+   "page": 170
+  },
+  {
+   "person": "P_000600",
+   "name": "AKINS, Albert George (Al)",
+   "crippen": "199",
+   "the_archive": [
+    "195"
+   ],
+   "page": 170
+  },
+  {
+   "person": "P_000740",
+   "name": "ALBERT, Frank Cullen (Frankie)",
+   "crippen": "166",
+   "the_archive": [
+    "160"
+   ],
+   "page": 171
+  },
+  {
+   "person": "P_000637",
+   "name": "AUDET, Earl Toussaint",
+   "crippen": "252",
+   "the_archive": [
+    "251"
+   ],
+   "page": 174
+  },
+  {
+   "person": "P_001051",
+   "name": "BAILEY, James Arrelaus ( Jim)",
+   "crippen": "215",
+   "the_archive": [
+    "210"
+   ],
+   "page": 174
+  },
+  {
+   "person": "P_000816",
+   "name": "BALDWIN, Alton (Al)",
+   "crippen": "201",
+   "the_archive": [
+    "205"
+   ],
+   "page": 174
+  },
+  {
+   "person": "P_000859",
+   "name": "BALDWIN, Burr Browning",
+   "crippen": "197",
+   "the_archive": [
+    "198",
+    "199"
+   ],
+   "page": 175
+  },
+  {
+   "person": "P_000744",
+   "name": "BEALS, Alyn Richard",
+   "crippen": "188",
+   "the_archive": [
+    "190"
+   ],
+   "page": 177
+  },
+  {
+   "person": "P_000671",
+   "name": "BEREZNEY, Paul Lawrence",
+   "crippen": "220",
+   "the_archive": [
+    "221"
+   ],
+   "page": 178
+  },
+  {
+   "person": "P_000487",
+   "name": "BILLMAN, John Arthur",
+   "crippen": "202",
+   "the_archive": [
+    "201"
+   ],
+   "page": 179
+  },
+  {
+   "person": "P_000935",
+   "name": "CALLAHAN, Robert Francis (Bob)",
+   "crippen": "205",
+   "the_archive": [
+    "212"
+   ],
+   "page": 185
+  },
+  {
+   "person": "P_000915",
+   "name": "CAMP, James Vernon ( Jim)",
+   "crippen": "162",
+   "the_archive": [
+    "170"
+   ],
+   "page": 185
+  },
+  {
+   "person": "P_000817",
+   "name": "CARPENTER, Jack Chrisman",
+   "crippen": "240",
+   "the_archive": [
+    "235"
+   ],
+   "page": 185
+  },
+  {
+   "person": "P_000918",
+   "name": "COOPER, James Paul ( Jim)",
+   "crippen": "205",
+   "the_archive": [
+    "191"
+   ],
+   "page": 195
+  },
+  {
+   "person": "P_000818",
+   "name": "CORLEY, Elbert Ellis (Bert)",
+   "crippen": "210",
+   "the_archive": [
+    "215"
+   ],
+   "page": 196
+  },
+  {
+   "person": "P_001010",
+   "name": "COX, James Ellingson ( Jim)",
+   "crippen": "208",
+   "the_archive": [
+    "205"
+   ],
+   "page": 196
+  },
+  {
+   "person": "P_000949",
+   "name": "CZAROBSKI, Zygmont Peter (Ziggy)",
+   "crippen": "230",
+   "the_archive": [
+    "235"
+   ],
+   "page": 197
+  },
+  {
+   "person": "P_000862",
+   "name": "DANEHE, Richard Michael (Dick)",
+   "crippen": "235",
+   "the_archive": [
+    "237",
+    "240"
+   ],
+   "page": 198
+  },
+  {
+   "person": "P_000799",
+   "name": "DAUKAS, Louis James (Lou)",
+   "crippen": "203",
+   "the_archive": [
+    "205"
+   ],
+   "page": 199
+  },
+  {
+   "person": "P_000527",
+   "name": "DEKDEBRUN, Allen, Edward (Al)",
+   "crippen": "185",
+   "the_archive": [
+    "182"
+   ],
+   "page": 201
+  },
+  {
+   "person": "P_001091",
+   "name": "DOSS, Noble Webster",
+   "crippen": "186",
+   "the_archive": [
+    "189"
+   ],
+   "page": 203
+  },
+  {
+   "person": "P_000876",
+   "name": "DURISHAN, John Donald ( Jack)",
+   "crippen": "230",
+   "the_archive": [
+    "228"
+   ],
+   "page": 205
+  },
+  {
+   "person": "P_000751",
+   "name": "FISK, William G. (Bill)",
+   "crippen": "200",
+   "the_archive": [
+    "199"
+   ],
+   "page": 212
+  },
+  {
+   "person": "P_000754",
+   "name": "FREITAS, Jesse",
+   "crippen": "170",
+   "the_archive": [
+    "175"
+   ],
+   "page": 214
+  },
+  {
+   "person": "P_000863",
+   "name": "GALLAGHER, Bernard John, Jr. (Bernie)",
+   "crippen": "234",
+   "the_archive": [
+    "220"
+   ],
+   "page": 216
+  },
+  {
+   "person": "P_000936",
+   "name": "GOMPERS, William George (Bill)",
+   "crippen": "185",
+   "the_archive": [
+    "190"
+   ],
+   "page": 220
+  },
+  {
+   "person": "P_017070",
+   "name": "GRABINSKI, Thaddeus (Ted)",
+   "crippen": "270",
+   "the_archive": [
+    "195"
+   ],
+   "page": 220
+  },
+  {
+   "person": "P_000610",
+   "name": "GREENWOOD, Donald Adams (Don)",
+   "crippen": "190",
+   "the_archive": [
+    "195"
+   ],
+   "page": 221
+  },
+  {
+   "person": "P_000573",
+   "name": "GRIFFIN, Donald Dean (Don)",
+   "crippen": "190",
+   "the_archive": [
+    "195"
+   ],
+   "page": 222
+  },
+  {
+   "person": "P_000712",
+   "name": "HARE, Raymond Lewis (Ray)",
+   "crippen": "204",
+   "the_archive": [
+    "205"
+   ],
+   "page": 226
+  },
+  {
+   "person": "P_001057",
+   "name": "HECK, Robert Elgin (Bob)",
+   "crippen": "210",
+   "the_archive": [
+    "207"
+   ],
+   "page": 227
+  },
+  {
+   "person": "P_000681",
+   "name": "HEKKERS, George James",
+   "crippen": "241",
+   "the_archive": [
+    "229"
+   ],
+   "page": 227
+  },
+  {
+   "person": "P_000574",
+   "name": "HEYWOOD, Ralph Alvin",
+   "crippen": "203",
+   "the_archive": [
+    "205"
+   ],
+   "page": 228
+  },
+  {
+   "person": "P_000965",
+   "name": "JAMES, Thomas Laverne, Jr. (Tommy)",
+   "crippen": "185",
+   "the_archive": [
+    "184"
+   ],
+   "page": 236
+  },
+  {
+   "person": "P_000954",
+   "name": "JOHNSON, Farnham James",
+   "crippen": "215",
+   "the_archive": [
+    "210"
+   ],
+   "page": 237
+  },
+  {
+   "person": "P_000865",
+   "name": "KELLY, Robert Joseph (Bob)",
+   "crippen": "190",
+   "the_archive": [
+    "193"
+   ],
+   "page": 242
+  },
+  {
+   "person": "P_014059",
+   "name": "KENNEDY, Robert Henry (Bob H.)",
+   "crippen": "195",
+   "the_archive": [
+    "185"
+   ],
+   "page": 243
+  },
+  {
+   "person": "P_014059",
+   "name": "KENNEDY, Robert Michael (Bob M.)",
+   "crippen": "178",
+   "the_archive": [
+    "185"
+   ],
+   "page": 243
+  },
+  {
+   "person": "P_000580",
+   "name": "LAHEY, Thomas Patrick (Pat)",
+   "crippen": "218",
+   "the_archive": [
+    "219"
+   ],
+   "page": 250
+  },
+  {
+   "person": "P_000867",
+   "name": "LENNON, Reid",
+   "crippen": "235",
+   "the_archive": [
+    "232"
+   ],
+   "page": 254
+  },
+  {
+   "person": "P_000618",
+   "name": "LEWIS, Clifford Allen (Cliff )",
+   "crippen": "167",
+   "the_archive": [
+    "168"
+   ],
+   "page": 254
+  },
+  {
+   "person": "P_000924",
+   "name": "MARCOLINI, Hugo Francis",
+   "crippen": "204",
+   "the_archive": [
+    "203"
+   ],
+   "page": 260
+  },
+  {
+   "person": "P_000839",
+   "name": "MATTINGLY, Francis Edward (Fran)",
+   "crippen": "212",
+   "the_archive": [
+    "215"
+   ],
+   "page": 264
+  },
+  {
+   "person": "P_000508",
+   "name": "MORROW, Russell Lee (Russ)",
+   "crippen": "210",
+   "the_archive": [
+    "205"
+   ],
+   "page": 270
+  },
+  {
+   "person": "P_000841",
+   "name": "NEGUS, Frederick Wilson (Fred)",
+   "crippen": "208",
+   "the_archive": [
+    "210"
+   ],
+   "page": 272
+  },
+  {
+   "person": "P_000842",
+   "name": "NIEDZIELA, Bruno Joseph",
+   "crippen": "225",
+   "the_archive": [
+    "220"
+   ],
+   "page": 273
+  },
+  {
+   "person": "P_000905",
+   "name": "NORTH, John Puckett",
+   "crippen": "199",
+   "the_archive": [
+    "200"
+   ],
+   "page": 275
+  },
+  {
+   "person": "P_000977",
+   "name": "OTTELE, Richard G. (Dick)",
+   "crippen": "210",
+   "the_archive": [
+    "212"
+   ],
+   "page": 277
+  },
+  {
+   "person": "P_001100",
+   "name": "PANCIERA, Donald Matthew (Don)",
+   "crippen": "192",
+   "the_archive": [
+    "195"
+   ],
+   "page": 278
+  },
+  {
+   "person": "P_000588",
+   "name": "PARKS, Edward Harry (Mickey)",
+   "crippen": "225",
+   "the_archive": [
+    "228"
+   ],
+   "page": 280
+  },
+  {
+   "person": "P_000967",
+   "name": "PARSEGHIAN, Ara Raoul",
+   "crippen": "194",
+   "the_archive": [
+    "193"
+   ],
+   "page": 280
+  },
+  {
+   "person": "P_000808",
+   "name": "PATANELLI, Michael Joseph (Mike)",
+   "crippen": "218",
+   "the_archive": [
+    "215"
+   ],
+   "page": 280
+  },
+  {
+   "person": "P_000511",
+   "name": "PERDUE, Charles Willard (Bolo)",
+   "crippen": "170",
+   "the_archive": [
+    "206"
+   ],
+   "page": 281
+  },
+  {
+   "person": "P_000550",
+   "name": "PERKO, John Francis",
+   "crippen": "225",
+   "the_archive": [
+    "200"
+   ],
+   "page": 282
+  },
+  {
+   "person": "P_000512",
+   "name": "PERPICH, George Rudolph",
+   "crippen": "223",
+   "the_archive": [
+    "233"
+   ],
+   "page": 282
+  },
+  {
+   "person": "P_000978",
+   "name": "PERROTTI, Michael Anthony (Mike)",
+   "crippen": "243",
+   "the_archive": [
+    "245"
+   ],
+   "page": 282
+  },
+  {
+   "person": "P_001022",
+   "name": "PERRY, Fletcher Joseph ( Joe)",
+   "crippen": "200",
+   "the_archive": [
+    "203"
+   ],
+   "page": 282
+  },
+  {
+   "person": "P_000869",
+   "name": "PIGGOTT, Bert Coley",
+   "crippen": "195",
+   "the_archive": [
+    "196"
+   ],
+   "page": 284
+  },
+  {
+   "person": "P_000661",
+   "name": "POLANSKI, John B.",
+   "crippen": "211",
+   "the_archive": [
+    "210"
+   ],
+   "page": 285
+  },
+  {
+   "person": "P_000552",
+   "name": "PREWITT, Felton Winters (Felto)",
+   "crippen": "207",
+   "the_archive": [
+    "212"
+   ],
+   "page": 286
+  },
+  {
+   "person": "P_000691",
+   "name": "PRICE, Charles Walemon (Cotton)",
+   "crippen": "180",
+   "the_archive": [
+    "182"
+   ],
+   "page": 286
+  },
+  {
+   "person": "P_001023",
+   "name": "PUDDY, Marvin Harold (Hal)",
+   "crippen": "220",
+   "the_archive": [
+    "225"
+   ],
+   "page": 288
+  },
+  {
+   "person": "P_000764",
+   "name": "RENFRO, Golie Richard (Dick)",
+   "crippen": "200",
+   "the_archive": [
+    "197"
+   ],
+   "page": 293
+  },
+  {
+   "person": "P_000730",
+   "name": "ROBERTSON, Thomas Blane (Tom)",
+   "crippen": "199",
+   "the_archive": [
+    "218"
+   ],
+   "page": 294
+  },
+  {
+   "person": "P_000765",
+   "name": "ROSKIE, Kenneth (Ken)*",
+   "crippen": "220",
+   "the_archive": [
+    "225"
+   ],
+   "page": 295
+  },
+  {
+   "person": "P_000591",
+   "name": "RUETZ, Joseph Hubert ( Joe)",
+   "crippen": "200",
+   "the_archive": [
+    "198"
+   ],
+   "page": 296
+  },
+  {
+   "person": "P_000554",
+   "name": "SANDIG, Curtis Walter (Curt)",
+   "crippen": "170",
+   "the_archive": [
+    "175"
+   ],
+   "page": 300
+  },
+  {
+   "person": "P_000926",
+   "name": "SAZIO, Ralph Joseph",
+   "crippen": "250",
+   "the_archive": [
+    "220"
+   ],
+   "page": 300
+  },
+  {
+   "person": "P_000942",
+   "name": "SCHNEIDER, Donald Paul (Don)",
+   "crippen": "170",
+   "the_archive": [
+    "175"
+   ],
+   "page": 301
+  },
+  {
+   "person": "P_000999",
+   "name": "SCHNELLBACHER, Otto Ole",
+   "crippen": "188",
+   "the_archive": [
+    "185"
+   ],
+   "page": 301
+  },
+  {
+   "person": "P_000980",
+   "name": "SEXTON, Linwood Bookard (Lin)",
+   "crippen": "180",
+   "the_archive": [
+    "175"
+   ],
+   "page": 304
+  },
+  {
+   "person": "P_000927",
+   "name": "SMITH, James Robert (Bob)",
+   "crippen": "191",
+   "the_archive": [
+    "198"
+   ],
+   "page": 309
+  },
+  {
+   "person": "P_000909",
+   "name": "SMITH, Joe H., Jr.",
+   "crippen": "183",
+   "the_archive": [
+    "198"
+   ],
+   "page": 311
+  },
+  {
+   "person": "P_000811",
+   "name": "TEVIS, Lee Kessler",
+   "crippen": "190",
+   "the_archive": [
+    "200"
+   ],
+   "page": 322
+  },
+  {
+   "person": "P_001003",
+   "name": "TEW, Lowell William",
+   "crippen": "195",
+   "the_archive": [
+    "180"
+   ],
+   "page": 322
+  },
+  {
+   "person": "P_000769",
+   "name": "THORNTON, Rupert Vance (Rupe)",
+   "crippen": "205",
+   "the_archive": [
+    "210"
+   ],
+   "page": 323
+  },
+  {
+   "person": "P_000911",
+   "name": "TITTLE, Yelberton Abraham (Y.A.)",
+   "crippen": "192",
+   "the_archive": [
+    "182"
+   ],
+   "page": 325
+  },
+  {
+   "person": "P_000846",
+   "name": "VACANTI, Samuel Filadelfo (Sam)",
+   "crippen": "203",
+   "the_archive": [
+    "202"
+   ],
+   "page": 327
+  },
+  {
+   "person": "P_000563",
+   "name": "VANDEWEGHE, Alfred Bernard (Al)",
+   "crippen": "200",
+   "the_archive": [
+    "201"
+   ],
+   "page": 328
+  },
+  {
+   "person": "P_000594",
+   "name": "VERRY, David Norman (Norm)",
+   "crippen": "240",
+   "the_archive": [
+    "245"
+   ],
+   "page": 329
+  },
+  {
+   "person": "P_001049",
+   "name": "VOLZ, Wilbur Edward",
+   "crippen": "192",
+   "the_archive": [
+    "190"
+   ],
+   "page": 331
+  },
+  {
+   "person": "P_000596",
+   "name": "WASSERBACH, Lloyd George",
+   "crippen": "205",
+   "the_archive": [
+    "203"
+   ],
+   "page": 332
+  },
+  {
+   "person": "P_000947",
+   "name": "WHALEN, Gerald Cornelius ( Jerry)",
+   "crippen": "235",
+   "the_archive": [
+    "240"
+   ],
+   "page": 333
+  },
+  {
+   "person": "P_000982",
+   "name": "WINKLER, Bernard Arthur (Bernie)",
+   "crippen": "232",
+   "the_archive": [
+    "234"
+   ],
+   "page": 336
+  },
+  {
+   "person": "P_000565",
+   "name": "WUKITS, Albert Robert (Al)",
+   "crippen": "218",
+   "the_archive": [
+    "213"
+   ],
+   "page": 338
+  },
+  {
+   "person": "P_000888",
+   "name": "YOUNG, Claude Henry K. (Buddy)",
+   "crippen": "175",
+   "the_archive": [
+    "173"
+   ],
+   "page": 339
+  }
+ ],
+ "other_disagreements": {
+  "college": [
+   {
+    "person": "P_000834",
+    "crippen": "Illinois",
+    "the_archive": [
+     "Purdue"
+    ],
+    "page": 170
+   },
+   {
+    "person": "P_000635",
+    "crippen": "St. Mary\u2019s (CA)",
+    "the_archive": [
+     "ST. MARY'S COLLEGE",
+     "St. Mary's (CA)",
+     "St. Mary's College (1938-40)."
+    ],
+    "page": 170
+   },
+   {
+    "person": "P_000600",
+    "crippen": "Washington State",
+    "the_archive": [
+     "Washington"
+    ],
+    "page": 170
+   },
+   {
+    "person": "P_000636",
+    "crippen": "California",
+    "the_archive": [
+     "Santa Clara"
+    ],
+    "page": 173
+   },
+   {
+    "person": "P_001050",
+    "crippen": "North Carolina",
+    "the_archive": [
+     "Marquette"
+    ],
+    "page": 173
+   },
+   {
+    "person": "P_001050",
+    "crippen": "Northwestern",
+    "the_archive": [
+     "Marquette"
+    ],
+    "page": 173
+   },
+   {
+    "person": "P_000637",
+    "crippen": "Georgetown",
+    "the_archive": [
+     "Georgetown (DC)"
+    ],
+    "page": 174
+   },
+   {
+    "person": "P_000637",
+    "crippen": "USC",
+    "the_archive": [
+     "Georgetown (DC)"
+    ],
+    "page": 174
+   },
+   {
+    "person": "P_000969",
+    "crippen": "USC",
+    "the_archive": [
+     "Alabama"
+    ],
+    "page": 174
+   },
+   {
+    "person": "P_000835",
+    "crippen": "UNLV",
+    "the_archive": [
+     "Tennessee St."
+    ],
+    "page": 176
+   },
+   {
+    "person": "P_000774",
+    "crippen": "Texas Tech",
+    "the_archive": [
+     "Texas"
+    ],
+    "page": 177
+   },
+   {
+    "person": "P_000798",
+    "crippen": "Northwestern",
+    "the_archive": [
+     "LSU"
+    ],
+    "page": 178
+   },
+   {
+    "person": "P_000672",
+    "crippen": "Mississippi State",
+    "the_archive": [
+     "Duke"
+    ],
+    "page": 180
+   },
+   {
+    "person": "P_000914",
+    "crippen": "Tulsa",
+    "the_archive": [
+     "SMU"
+    ],
+    "page": 181
+   },
+   {
+    "person": "P_001052",
+    "crippen": "San Francisco",
+    "the_archive": [
+     "Purdue"
+    ],
+    "page": 183
+   },
+   {
+    "person": "P_000709",
+    "crippen": "Hardin- Simmons",
+    "the_archive": [
+     "Hardin-Simmons"
+    ],
+    "page": 184
+   },
+   {
+    "person": "P_000935",
+    "crippen": "Michigan",
+    "the_archive": [
+     "Missouri"
+    ],
+    "page": 185
+   },
+   {
+    "person": "P_000915",
+    "crippen": "North Carolina",
+    "the_archive": [
+     "Randolph-Macon"
+    ],
+    "page": 185
+   },
+   {
+    "person": "P_000915",
+    "crippen": "Randolph- Macon",
+    "the_archive": [
+     "Randolph-Macon"
+    ],
+    "page": 185
+   },
+   {
+    "person": "P_000873",
+    "crippen": "Baldwin- Wallace",
+    "the_archive": [
+     "Notre Dame"
+    ],
+    "page": 185
+   },
+   {
+    "person": "P_000817",
+    "crippen": "Michigan",
+    "the_archive": [
+     "Columbia"
+    ],
+    "page": 185
+   },
+   {
+    "person": "P_000817",
+    "crippen": "Missouri",
+    "the_archive": [
+     "Columbia"
+    ],
+    "page": 185
+   },
+   {
+    "person": "P_000776",
+    "crippen": "Georgetown",
+    "the_archive": [
+     "Georgetown (DC)"
+    ],
+    "page": 188
+   },
+   {
+    "person": "P_001102",
+    "crippen": "California\u2014Santa Barbara",
+    "the_archive": [
+     "California-Santa Barbara"
+    ],
+    "page": 188
+   },
+   {
+    "person": "P_001009",
+    "crippen": "Fresno State",
+    "the_archive": [
+     "San Jose St."
+    ],
+    "page": 193
+   },
+   {
+    "person": "P_001009",
+    "crippen": "USC",
+    "the_archive": [
+     "San Jose St."
+    ],
+    "page": 193
+   },
+   {
+    "person": "P_000489",
+    "crippen": "Miramonte Junior College",
+    "the_archive": [
+     "Miramonte JC",
+     "none"
+    ],
+    "page": 194
+   },
+   {
+    "person": "P_000747",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "St. Mary's (CA)"
+    ],
+    "page": 195
+   },
+   {
+    "person": "P_000918",
+    "crippen": "North Texas",
+    "the_archive": [
+     "TCU"
+    ],
+    "page": 195
+   },
+   {
+    "person": "P_001010",
+    "crippen": "Stanford",
+    "the_archive": [
+     "California"
+    ],
+    "page": 196
+   },
+   {
+    "person": "P_001011",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "St. Mary's (CA)"
+    ],
+    "page": 197
+   },
+   {
+    "person": "P_000891",
+    "crippen": "Hardin- Simmons",
+    "the_archive": [
+     "Hardin-Simmons"
+    ],
+    "page": 197
+   },
+   {
+    "person": "P_000491",
+    "crippen": "Columbia",
+    "the_archive": [
+     "DePaul"
+    ],
+    "page": 198
+   },
+   {
+    "person": "P_000491",
+    "crippen": "Michigan",
+    "the_archive": [
+     "DePaul"
+    ],
+    "page": 198
+   },
+   {
+    "person": "P_000491",
+    "crippen": "Minnesota",
+    "the_archive": [
+     "DePaul"
+    ],
+    "page": 198
+   },
+   {
+    "person": "P_000950",
+    "crippen": "Villanova",
+    "the_archive": [
+     "Notre Dame"
+    ],
+    "page": 199
+   },
+   {
+    "person": "P_000527",
+    "crippen": "Cornell",
+    "the_archive": [
+     "Columbia"
+    ],
+    "page": 201
+   },
+   {
+    "person": "P_001103",
+    "crippen": "Texas- El Paso",
+    "the_archive": [
+     "Texas-El Paso"
+    ],
+    "page": 210
+   },
+   {
+    "person": "P_000971",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "ST. MARY'S COLLEGE",
+     "St. Mary's (CA)",
+     "St. Mary's College (1946-47)."
+    ],
+    "page": 212
+   },
+   {
+    "person": "P_000920",
+    "crippen": "Army",
+    "the_archive": [
+     "Texas A&M"
+    ],
+    "page": 212
+   },
+   {
+    "person": "P_000972",
+    "crippen": "Michigan",
+    "the_archive": [
+     "Morgan St."
+    ],
+    "page": 213
+   },
+   {
+    "person": "P_000899",
+    "crippen": "Arkansas",
+    "the_archive": [
+     "Arkansas Tech"
+    ],
+    "page": 213
+   },
+   {
+    "person": "P_000863",
+    "crippen": "Pennsylvania",
+    "the_archive": [
+     "Princeton"
+    ],
+    "page": 216
+   },
+   {
+    "person": "P_000900",
+    "crippen": "Maryland",
+    "the_archive": [
+     "Indiana"
+    ],
+    "page": 216
+   },
+   {
+    "person": "P_001094",
+    "crippen": "Central Missouri State",
+    "the_archive": [
+     "North Texas"
+    ],
+    "page": 217
+   },
+   {
+    "person": "P_001094",
+    "crippen": "Oregon",
+    "the_archive": [
+     "North Texas"
+    ],
+    "page": 217
+   },
+   {
+    "person": "P_000608",
+    "crippen": "Auburn",
+    "the_archive": [
+     "Marshall"
+    ],
+    "page": 217
+   },
+   {
+    "person": "P_000644",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "St. Mary's (CA)",
+     "Washington State College (1939-41)."
+    ],
+    "page": 217
+   },
+   {
+    "person": "P_000644",
+    "crippen": "Washington State",
+    "the_archive": [
+     "St. Mary's (CA)",
+     "Washington State College (1939-41)."
+    ],
+    "page": 217
+   },
+   {
+    "person": "P_001037",
+    "crippen": "Purdue",
+    "the_archive": [
+     "Valparaiso"
+    ],
+    "page": 218
+   },
+   {
+    "person": "P_000497",
+    "crippen": "Tulsa",
+    "the_archive": [
+     "Cameron"
+    ],
+    "page": 218
+   },
+   {
+    "person": "P_000853",
+    "crippen": "Nevada- Reno",
+    "the_archive": [
+     "Ohio St."
+    ],
+    "page": 219
+   },
+   {
+    "person": "P_000610",
+    "crippen": "Illinois",
+    "the_archive": [
+     "Missouri"
+    ],
+    "page": 221
+   },
+   {
+    "person": "P_000800",
+    "crippen": "George Washington",
+    "the_archive": [
+     "Dartmouth"
+    ],
+    "page": 225
+   },
+   {
+    "person": "P_001013",
+    "crippen": "San Francisco",
+    "the_archive": [
+     "Duquesne"
+    ],
+    "page": 225
+   },
+   {
+    "person": "P_000821",
+    "crippen": "Tulsa",
+    "the_archive": [
+     "Oklahoma"
+    ],
+    "page": 227
+   },
+   {
+    "person": "P_001056",
+    "crippen": "North Carolina",
+    "the_archive": [
+     "Purdue"
+    ],
+    "page": 227
+   },
+   {
+    "person": "P_000576",
+    "crippen": "Michigan",
+    "the_archive": [
+     "Wisconsin"
+    ],
+    "page": 229
+   },
+   {
+    "person": "P_001095",
+    "crippen": "Nevada- Reno",
+    "the_archive": [
+     "Iowa"
+    ],
+    "page": 233
+   },
+   {
+    "person": "P_000854",
+    "crippen": "La- Lafayette",
+    "the_archive": [
+     "Rice"
+    ],
+    "page": 234
+   },
+   {
+    "person": "P_000578",
+    "crippen": "Benedictine",
+    "the_archive": [
+     "St. Mary's (TX)"
+    ],
+    "page": 235
+   },
+   {
+    "person": "P_000578",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "St. Mary's (TX)"
+    ],
+    "page": 235
+   },
+   {
+    "person": "P_000578",
+    "crippen": "Wyoming",
+    "the_archive": [
+     "St. Mary's (TX)"
+    ],
+    "page": 235
+   },
+   {
+    "person": "P_000804",
+    "crippen": "Oklahoma State",
+    "the_archive": [
+     "Oklahoma"
+    ],
+    "page": 236
+   },
+   {
+    "person": "P_000954",
+    "crippen": "Wisconsin",
+    "the_archive": [
+     "Michigan"
+    ],
+    "page": 237
+   },
+   {
+    "person": "P_000805",
+    "crippen": "West Virginia Wesleyan",
+    "the_archive": [
+     "Charleston (WV)"
+    ],
+    "page": 239
+   },
+   {
+    "person": "P_000499",
+    "crippen": "LSU",
+    "the_archive": [
+     "Tulane"
+    ],
+    "page": 239
+   },
+   {
+    "person": "P_000536",
+    "crippen": "Wake Forest",
+    "the_archive": [
+     "Franklin & Marshall"
+    ],
+    "page": 240
+   },
+   {
+    "person": "P_000784",
+    "crippen": "Alabama",
+    "the_archive": [
+     "Union (TN)"
+    ],
+    "page": 240
+   },
+   {
+    "person": "P_000500",
+    "crippen": "La- Lafayette",
+    "the_archive": [
+     "La-Lafayette"
+    ],
+    "page": 240
+   },
+   {
+    "person": "P_000500",
+    "crippen": "Tulsa",
+    "the_archive": [
+     "La-Lafayette"
+    ],
+    "page": 240
+   },
+   {
+    "person": "P_000785",
+    "crippen": "Purdue",
+    "the_archive": [
+     "Illinois"
+    ],
+    "page": 242
+   },
+   {
+    "person": "P_000865",
+    "crippen": "Navy",
+    "the_archive": [
+     "Notre Dame",
+     "UNIVERSITY OF NOTRE DAME",
+     "University of Notre Dame (1943-44). U. S$. Naval Academy (1945)."
+    ],
+    "page": 242
+   },
+   {
+    "person": "P_014059",
+    "crippen": "Washington State",
+    "the_archive": [
+     "North Carolina State"
+    ],
+    "page": 243
+   },
+   {
+    "person": "P_014059",
+    "crippen": "North Carolina",
+    "the_archive": [
+     "North Carolina State"
+    ],
+    "page": 243
+   },
+   {
+    "person": "P_000823",
+    "crippen": "Duke",
+    "the_archive": [
+     "Ohio"
+    ],
+    "page": 243
+   },
+   {
+    "person": "P_000823",
+    "crippen": "North Carolina",
+    "the_archive": [
+     "Ohio"
+    ],
+    "page": 243
+   },
+   {
+    "person": "P_001031",
+    "crippen": "McNeese State",
+    "the_archive": [
+     "LSU"
+    ],
+    "page": 245
+   },
+   {
+    "person": "P_000938",
+    "crippen": "Columbia",
+    "the_archive": [
+     "Duquesne"
+    ],
+    "page": 245
+   },
+   {
+    "person": "P_000824",
+    "crippen": "Baylor",
+    "the_archive": [
+     "St. Mary's (TX)"
+    ],
+    "page": 247
+   },
+   {
+    "person": "P_000824",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "St. Mary's (TX)"
+    ],
+    "page": 247
+   },
+   {
+    "person": "P_000786",
+    "crippen": "Purdue",
+    "the_archive": [
+     "Butler"
+    ],
+    "page": 247
+   },
+   {
+    "person": "P_000966",
+    "crippen": "Notre Dame",
+    "the_archive": [
+     "Marquette"
+    ],
+    "page": 248
+   },
+   {
+    "person": "P_000685",
+    "crippen": "Holy Cross",
+    "the_archive": [
+     "Notre Dame"
+    ],
+    "page": 248
+   },
+   {
+    "person": "P_000826",
+    "crippen": "Notre Dame",
+    "the_archive": [
+     "Marquette"
+    ],
+    "page": 249
+   },
+   {
+    "person": "P_000543",
+    "crippen": "Notre Dame",
+    "the_archive": [
+     "Minnesota"
+    ],
+    "page": 249
+   },
+   {
+    "person": "P_000788",
+    "crippen": "Dartmouth",
+    "the_archive": [
+     "Holy Cross"
+    ],
+    "page": 251
+   },
+   {
+    "person": "P_000545",
+    "crippen": "Northwestern",
+    "the_archive": [
+     "Washington (MO)"
+    ],
+    "page": 253
+   },
+   {
+    "person": "P_000789",
+    "crippen": "Georgetown",
+    "the_archive": [
+     "Georgetown (DC)"
+    ],
+    "page": 256
+   },
+   {
+    "person": "P_001041",
+    "crippen": "(None)",
+    "the_archive": [
+     "none"
+    ],
+    "page": 257
+   },
+   {
+    "person": "P_000648",
+    "crippen": "Weber Junior College",
+    "the_archive": [
+     "WEBER COLLEGE",
+     "Weber College (1941).",
+     "Weber JC"
+    ],
+    "page": 257
+   },
+   {
+    "person": "P_000940",
+    "crippen": "Illinois",
+    "the_archive": [
+     "Indiana"
+    ],
+    "page": 258
+   },
+   {
+    "person": "P_000940",
+    "crippen": "Notre Dame",
+    "the_archive": [
+     "Indiana"
+    ],
+    "page": 258
+   },
+   {
+    "person": "P_000649",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "St. Mary's (CA)"
+    ],
+    "page": 260
+   },
+   {
+    "person": "P_000720",
+    "crippen": "Miami",
+    "the_archive": [
+     "Miami (FL)"
+    ],
+    "page": 261
+   },
+   {
+    "person": "P_001019",
+    "crippen": "Texas- El Paso",
+    "the_archive": [
+     "Cameron"
+    ],
+    "page": 262
+   },
+   {
+    "person": "P_000839",
+    "crippen": "exas A&M",
+    "the_archive": [
+     "Texas A&M"
+    ],
+    "page": 264
+   },
+   {
+    "person": "P_000839",
+    "crippen": "Texas A&M-Kingsville",
+    "the_archive": [
+     "Texas A&M"
+    ],
+    "page": 264
+   },
+   {
+    "person": "P_000828",
+    "crippen": "(None)",
+    "the_archive": [
+     "none"
+    ],
+    "page": 264
+   },
+   {
+    "person": "P_000904",
+    "crippen": "Baylor",
+    "the_archive": [
+     "Schreiner College"
+    ],
+    "page": 265
+   },
+   {
+    "person": "P_000904",
+    "crippen": "Southwestern",
+    "the_archive": [
+     "Schreiner College"
+    ],
+    "page": 265
+   },
+   {
+    "person": "P_001020",
+    "crippen": "USC",
+    "the_archive": [
+     "Washington"
+    ],
+    "page": 265
+   },
+   {
+    "person": "P_001078",
+    "crippen": "Army",
+    "the_archive": [
+     "Mississippi St."
+    ],
+    "page": 266
+   },
+   {
+    "person": "P_001106",
+    "crippen": "Southern Miss",
+    "the_archive": [
+     "McNeese St."
+    ],
+    "page": 269
+   },
+   {
+    "person": "P_000584",
+    "crippen": "Northwestern",
+    "the_archive": [
+     "Illinois"
+    ],
+    "page": 269
+   },
+   {
+    "person": "P_000655",
+    "crippen": "Purdue",
+    "the_archive": [
+     "Missouri"
+    ],
+    "page": 270
+   },
+   {
+    "person": "P_000621",
+    "crippen": "Nevada- Reno",
+    "the_archive": [
+     "South Carolina St."
+    ],
+    "page": 270
+   },
+   {
+    "person": "P_000840",
+    "crippen": "North Dakota State",
+    "the_archive": [
+     "Minnesota"
+    ],
+    "page": 271
+   },
+   {
+    "person": "P_000548",
+    "crippen": "Xavier",
+    "the_archive": [
+     "Xavier (OH)"
+    ],
+    "page": 271
+   },
+   {
+    "person": "P_000976",
+    "crippen": "USC",
+    "the_archive": [
+     "Hawaii"
+    ],
+    "page": 272
+   },
+   {
+    "person": "P_000841",
+    "crippen": "Wisconsin",
+    "the_archive": [
+     "Michigan"
+    ],
+    "page": 272
+   },
+   {
+    "person": "P_000659",
+    "crippen": "San Jose State",
+    "the_archive": [
+     "Gustavus Adolphus"
+    ],
+    "page": 275
+   },
+   {
+    "person": "P_000587",
+    "crippen": "Southwestern (TX)",
+    "the_archive": [
+     "TCU"
+    ],
+    "page": 276
+   },
+   {
+    "person": "P_000587",
+    "crippen": "Texas- El Paso",
+    "the_archive": [
+     "TCU"
+    ],
+    "page": 276
+   },
+   {
+    "person": "P_000879",
+    "crippen": "Oregon State",
+    "the_archive": [
+     "USC"
+    ],
+    "page": 277
+   },
+   {
+    "person": "P_001058",
+    "crippen": "Oklahoma",
+    "the_archive": [
+     "Tulsa"
+    ],
+    "page": 278
+   },
+   {
+    "person": "P_001100",
+    "crippen": "San Francisco",
+    "the_archive": [
+     "Boston Col."
+    ],
+    "page": 278
+   },
+   {
+    "person": "P_000967",
+    "crippen": "Miami (OH)",
+    "the_archive": [
+     "Akron"
+    ],
+    "page": 280
+   },
+   {
+    "person": "P_000808",
+    "crippen": "Ball State",
+    "the_archive": [
+     "Manchester"
+    ],
+    "page": 280
+   },
+   {
+    "person": "P_000808",
+    "crippen": "Bowling Green",
+    "the_archive": [
+     "Manchester"
+    ],
+    "page": 280
+   },
+   {
+    "person": "P_000762",
+    "crippen": "(None)",
+    "the_archive": [
+     "none"
+    ],
+    "page": 281
+   },
+   {
+    "person": "P_000511",
+    "crippen": "Arkansas",
+    "the_archive": [
+     "Duke"
+    ],
+    "page": 281
+   },
+   {
+    "person": "P_000550",
+    "crippen": "Notre Dame",
+    "the_archive": [
+     "Minnesota"
+    ],
+    "page": 282
+   },
+   {
+    "person": "P_000512",
+    "crippen": "Georgetown",
+    "the_archive": [
+     "Georgetown (DC)"
+    ],
+    "page": 282
+   },
+   {
+    "person": "P_001022",
+    "crippen": "Compton Community College",
+    "the_archive": [
+     "Compton CC (CA)"
+    ],
+    "page": 282
+   },
+   {
+    "person": "P_000906",
+    "crippen": "Purdue",
+    "the_archive": [
+     "Kings Point"
+    ],
+    "page": 283
+   },
+   {
+    "person": "P_000794",
+    "crippen": "Western Maryland",
+    "the_archive": [
+     "West. Maryland"
+    ],
+    "page": 284
+   },
+   {
+    "person": "P_000690",
+    "crippen": "Army",
+    "the_archive": [
+     "California"
+    ],
+    "page": 285
+   },
+   {
+    "person": "P_000690",
+    "crippen": "Stanford",
+    "the_archive": [
+     "California"
+    ],
+    "page": 285
+   },
+   {
+    "person": "P_001101",
+    "crippen": "Army",
+    "the_archive": [
+     "Mississippi"
+    ],
+    "page": 285
+   },
+   {
+    "person": "P_001101",
+    "crippen": "North Carolina",
+    "the_archive": [
+     "Mississippi"
+    ],
+    "page": 285
+   },
+   {
+    "person": "P_000880",
+    "crippen": "Mississippi",
+    "the_archive": [
+     "North Carolina"
+    ],
+    "page": 286
+   },
+   {
+    "person": "P_000553",
+    "crippen": "(None)",
+    "the_archive": [
+     "none"
+    ],
+    "page": 288
+   },
+   {
+    "person": "P_001107",
+    "crippen": "Tyler Junior College",
+    "the_archive": [
+     "Tyler JC"
+    ],
+    "page": 289
+   },
+   {
+    "person": "P_000881",
+    "crippen": "Indiana",
+    "the_archive": [
+     "William & Mary"
+    ],
+    "page": 290
+   },
+   {
+    "person": "P_000959",
+    "crippen": "Oklahoma",
+    "the_archive": [
+     "West. Michigan"
+    ],
+    "page": 291
+   },
+   {
+    "person": "P_000830",
+    "crippen": "Southeastern Louisiana",
+    "the_archive": [
+     "SE Louisiana"
+    ],
+    "page": 292
+   },
+   {
+    "person": "P_000730",
+    "crippen": "LSU",
+    "the_archive": [
+     "Kansas"
+    ],
+    "page": 294
+   },
+   {
+    "person": "P_000730",
+    "crippen": "Tulsa",
+    "the_archive": [
+     "Kansas"
+    ],
+    "page": 294
+   },
+   {
+    "person": "P_000893",
+    "crippen": "Texas Tech",
+    "the_archive": [
+     "Texas A&M"
+    ],
+    "page": 294
+   },
+   {
+    "person": "P_001081",
+    "crippen": "North Carolina",
+    "the_archive": [
+     "Alabama"
+    ],
+    "page": 295
+   },
+   {
+    "person": "P_000882",
+    "crippen": "San Francisco",
+    "the_archive": [
+     "Baylor"
+    ],
+    "page": 296
+   },
+   {
+    "person": "P_000883",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "St. Mary's (CA)"
+    ],
+    "page": 296
+   },
+   {
+    "person": "P_001034",
+    "crippen": "SMU",
+    "the_archive": [
+     "Sam Houston St."
+    ],
+    "page": 297
+   },
+   {
+    "person": "P_000831",
+    "crippen": "Illinois",
+    "the_archive": [
+     "Notre Dame"
+    ],
+    "page": 297
+   },
+   {
+    "person": "P_001108",
+    "crippen": "San Francisco",
+    "the_archive": [
+     "Wayne State (MI)"
+    ],
+    "page": 299
+   },
+   {
+    "person": "P_000554",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "Baylor"
+    ],
+    "page": 300
+   },
+   {
+    "person": "P_000555",
+    "crippen": "Oklahoma",
+    "the_archive": [
+     "Oklahoma City"
+    ],
+    "page": 301
+   },
+   {
+    "person": "P_000968",
+    "crippen": "Ohio State",
+    "the_archive": [
+     "Army"
+    ],
+    "page": 304
+   },
+   {
+    "person": "P_000516",
+    "crippen": "American International College",
+    "the_archive": [
+     "American Int."
+    ],
+    "page": 304
+   },
+   {
+    "person": "P_000885",
+    "crippen": "Nevada- Reno",
+    "the_archive": [
+     "Duke"
+    ],
+    "page": 305
+   },
+   {
+    "person": "P_001000",
+    "crippen": "Oklahoma City",
+    "the_archive": [
+     "Oklahoma St."
+    ],
+    "page": 306
+   },
+   {
+    "person": "P_000908",
+    "crippen": "Detroit Mercy",
+    "the_archive": [
+     "Maryland"
+    ],
+    "page": 307
+   },
+   {
+    "person": "P_000927",
+    "crippen": "Iowa",
+    "the_archive": [
+     "Tulsa"
+    ],
+    "page": 309
+   },
+   {
+    "person": "P_000909",
+    "crippen": "Texas Tech",
+    "the_archive": [
+     "Schreiner College"
+    ],
+    "page": 311
+   },
+   {
+    "person": "P_000666",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "Weber St."
+    ],
+    "page": 311
+   },
+   {
+    "person": "P_000697",
+    "crippen": "Illinois",
+    "the_archive": [
+     "South Carolina"
+    ],
+    "page": 313
+   },
+   {
+    "person": "P_000629",
+    "crippen": "DePauw",
+    "the_archive": [
+     "Missouri"
+    ],
+    "page": 314
+   },
+   {
+    "person": "P_000886",
+    "crippen": "Missouri",
+    "the_archive": [
+     "Notre Dame"
+    ],
+    "page": 314
+   },
+   {
+    "person": "P_000930",
+    "crippen": "Notre Dame",
+    "the_archive": [
+     "Texas A&M"
+    ],
+    "page": 316
+   },
+   {
+    "person": "P_000518",
+    "crippen": "(None)",
+    "the_archive": [
+     "none"
+    ],
+    "page": 320
+   },
+   {
+    "person": "P_000698",
+    "crippen": "Tennessee",
+    "the_archive": [
+     "Samford"
+    ],
+    "page": 321
+   },
+   {
+    "person": "P_000811",
+    "crippen": "Miami (OH)",
+    "the_archive": [
+     "George Washington"
+    ],
+    "page": 322
+   },
+   {
+    "person": "P_001036",
+    "crippen": "Oklahoma",
+    "the_archive": [
+     "SW Oklahoma St."
+    ],
+    "page": 324
+   },
+   {
+    "person": "P_001036",
+    "crippen": "Southwest Oklahoma State",
+    "the_archive": [
+     "SW Oklahoma St."
+    ],
+    "page": 324
+   },
+   {
+    "person": "P_000519",
+    "crippen": "Georgia",
+    "the_archive": [
+     "Clemson"
+    ],
+    "page": 324
+   },
+   {
+    "person": "P_000796",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "St. Mary's (CA)"
+    ],
+    "page": 326
+   },
+   {
+    "person": "P_000667",
+    "crippen": "Alfred",
+    "the_archive": [
+     "Vermont"
+    ],
+    "page": 326
+   },
+   {
+    "person": "P_000846",
+    "crippen": "Nebraska",
+    "the_archive": [
+     "Iowa"
+    ],
+    "page": 327
+   },
+   {
+    "person": "P_000846",
+    "crippen": "Perdue",
+    "the_archive": [
+     "Iowa"
+    ],
+    "page": 327
+   },
+   {
+    "person": "P_000702",
+    "crippen": "(None)",
+    "the_archive": [
+     "none"
+    ],
+    "page": 328
+   },
+   {
+    "person": "P_001048",
+    "crippen": "Texas",
+    "the_archive": [
+     "USC"
+    ],
+    "page": 329
+   },
+   {
+    "person": "P_000897",
+    "crippen": "Compton Community College",
+    "the_archive": [
+     "Compton CC (CA)"
+    ],
+    "page": 331
+   },
+   {
+    "person": "P_000521",
+    "crippen": "Auburn",
+    "the_archive": [
+     "William & Mary"
+    ],
+    "page": 332
+   },
+   {
+    "person": "P_000981",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "St. Mary's (CA)"
+    ],
+    "page": 332
+   },
+   {
+    "person": "P_001005",
+    "crippen": "Georgetown",
+    "the_archive": [
+     "Georgetown (DC)"
+    ],
+    "page": 333
+   },
+   {
+    "person": "P_000597",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "St. Mary's (CA)"
+    ],
+    "page": 334
+   },
+   {
+    "person": "P_001026",
+    "crippen": "Louisiana- Lafayette",
+    "the_archive": [
+     "La-Lafayette"
+    ],
+    "page": 334
+   },
+   {
+    "person": "P_001026",
+    "crippen": "Texas",
+    "the_archive": [
+     "La-Lafayette"
+    ],
+    "page": 334
+   },
+   {
+    "person": "P_000598",
+    "crippen": "Boston University",
+    "the_archive": [
+     "Boston Univ."
+    ],
+    "page": 335
+   },
+   {
+    "person": "P_000912",
+    "crippen": "La- Lafayette",
+    "the_archive": [
+     "Rice"
+    ],
+    "page": 335
+   },
+   {
+    "person": "P_001087",
+    "crippen": "North Carolina",
+    "the_archive": [
+     "Apprentice"
+    ],
+    "page": 335
+   },
+   {
+    "person": "P_000982",
+    "crippen": "Texas Tech",
+    "the_archive": [
+     "Millsaps"
+    ],
+    "page": 336
+   },
+   {
+    "person": "P_001110",
+    "crippen": "St. Louis",
+    "the_archive": [
+     "Miami (OH)"
+    ],
+    "page": 336
+   },
+   {
+    "person": "P_001110",
+    "crippen": "Washington (MO)",
+    "the_archive": [
+     "Miami (OH)"
+    ],
+    "page": 336
+   },
+   {
+    "person": "P_000833",
+    "crippen": "Holy Cross",
+    "the_archive": [
+     "Dartmouth"
+    ],
+    "page": 336
+   },
+   {
+    "person": "P_000772",
+    "crippen": "St. Mary\u2019s",
+    "the_archive": [
+     "Denver"
+    ],
+    "page": 337
+   },
+   {
+    "person": "P_000669",
+    "crippen": "(None)",
+    "the_archive": [
+     "none"
+    ],
+    "page": 338
+   },
+   {
+    "person": "P_000898",
+    "crippen": "(None)",
+    "the_archive": [
+     "none"
+    ],
+    "page": 339
+   },
+   {
+    "person": "P_000634",
+    "crippen": "Baldwin- Wallace",
+    "the_archive": [
+     "Baldwin-Wallace"
+    ],
+    "page": 340
+   },
+   {
+    "person": "P_000634",
+    "crippen": "Georgia",
+    "the_archive": [
+     "Baldwin-Wallace"
+    ],
+    "page": 340
+   }
+  ],
+  "birth_date": [
+   {
+    "person": "P_000641",
+    "crippen": "June 23, 1920",
+    "the_archive": [
+     "October 31, 1917"
+    ],
+    "page": 208
+   },
+   {
+    "person": "P_014059",
+    "crippen": "June 29, 1921",
+    "the_archive": [
+     "1999-09-30",
+     "September 30, 1999"
+    ],
+    "page": 243
+   },
+   {
+    "person": "P_014059",
+    "crippen": "September 16, 1928",
+    "the_archive": [
+     "1999-09-30",
+     "September 30, 1999"
+    ],
+    "page": 243
+   },
+   {
+    "person": "P_000762",
+    "crippen": "May 18, 1921",
+    "the_archive": [
+     "June 15, 1921"
+    ],
+    "page": 281
+   },
+   {
+    "person": "P_000626",
+    "crippen": "August 26, 1918",
+    "the_archive": [
+     "1917-08-26",
+     "1917-8-26",
+     "August 26, 1917"
+    ],
+    "page": 303
+   },
+   {
+    "person": "P_000980",
+    "crippen": "April 16, 1925",
+    "the_archive": [
+     "1926-04-16",
+     "1926-4-16",
+     "April 16, 1926",
+     "April 26, 1926"
+    ],
+    "page": 304
+   },
+   {
+    "person": "P_000738",
+    "crippen": "August 21, 1924",
+    "the_archive": [
+     "1923-08-21",
+     "August 21, 1923"
+    ],
+    "page": 331
+   },
+   {
+    "person": "P_000704",
+    "crippen": "August 20, 1918",
+    "the_archive": [
+     "1919-08-21",
+     "August 21, 1919"
+    ],
+    "page": 334
+   }
+  ]
+ },
+ "leads": [
+  {
+   "IS_NOT_A_PERSON": true,
+   "page_pdf": 183,
+   "book_page": 176,
+   "name_as_printed": "BARWEGAN, Richard James (Dick)",
+   "position_as_printed": "G",
+   "height_as_printed": "6'1\"",
+   "weight_as_printed": "227",
+   "colleges_as_printed": "Purdue",
+   "born_as_printed": "December 25, 1921, Chicago, IL",
+   "deceased_as_printed": "September 3, 1966, Baltimore, MD"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "page_pdf": 196,
+   "book_page": 189,
+   "name_as_printed": "CHAPPIUS, Robert Richard (Bob)",
+   "position_as_printed": "TB-DB",
+   "height_as_printed": "6'0\"",
+   "weight_as_printed": "190",
+   "colleges_as_printed": "Michigan",
+   "born_as_printed": "February 24, 1923, Toledo, OH",
+   "deceased_as_printed": "June 14, 2012, Ann Arbor, MI"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "page_pdf": 207,
+   "book_page": 200,
+   "name_as_printed": "DAVIS, Raymond Lamar",
+   "position_as_printed": "E-DE",
+   "height_as_printed": "6'1\"",
+   "weight_as_printed": "185",
+   "colleges_as_printed": "Georgia",
+   "born_as_printed": "June 15, 1921, Brunswick, GA",
+   "deceased_as_printed": "February 23, 2008"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "page_pdf": 216,
+   "book_page": 209,
+   "name_as_printed": "ERICKSON, William Clarence",
+   "position_as_printed": "G",
+   "height_as_printed": "6'2\"",
+   "weight_as_printed": "210",
+   "colleges_as_printed": "Mississippi, North Carolina",
+   "born_as_printed": "December 4, 1921",
+   "deceased_as_printed": "November 18, 2010, Parker, CO"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "page_pdf": 237,
+   "book_page": 230,
+   "name_as_printed": "HOERNSCHEMEYER, Robert James",
+   "position_as_printed": "B",
+   "height_as_printed": "5'11\"",
+   "weight_as_printed": "194",
+   "colleges_as_printed": "Indiana, Navy",
+   "born_as_printed": "September 24, 1925, Cincinnati, OH",
+   "deceased_as_printed": "June 17, 1980, Detroit, MI"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "page_pdf": 241,
+   "book_page": 234,
+   "name_as_printed": "HOWELL, John Clarence Maurice",
+   "position_as_printed": "E",
+   "height_as_printed": "6'1\"",
+   "weight_as_printed": "188",
+   "colleges_as_printed": "Texas A&M",
+   "born_as_printed": "April 7, 1927",
+   "deceased_as_printed": "October 6, 1981, Houston, TX"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "page_pdf": 242,
+   "book_page": 235,
+   "name_as_printed": "IVERSEN, Christopher Arnold (Duke)",
+   "position_as_printed": "B",
+   "height_as_printed": "6'2\"",
+   "weight_as_printed": "208",
+   "colleges_as_printed": "Oregon",
+   "born_as_printed": "February 26, 1920, Petaluma, CA",
+   "deceased_as_printed": "May 20, 2011, Petaluma, CA"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "page_pdf": 283,
+   "book_page": 276,
+   "name_as_printed": "O\u2019CONNOR, William Francis, Jr.",
+   "position_as_printed": "E-DE",
+   "height_as_printed": "6'4\"",
+   "weight_as_printed": "220",
+   "colleges_as_printed": "Notre Dame",
+   "born_as_printed": "May 2, 1926, New York, NY",
+   "deceased_as_printed": ""
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "page_pdf": 324,
+   "book_page": 317,
+   "name_as_printed": "SULLIVAN, Robert Gerard (Bob)",
+   "position_as_printed": "HB",
+   "height_as_printed": "5'9\"",
+   "weight_as_printed": "191",
+   "colleges_as_printed": "Holy Cross, Iowa",
+   "born_as_printed": "December 24, 1924, Attleboro, MA",
+   "deceased_as_printed": "November 12, 1992, Carmichael, CA"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "page_pdf": 324,
+   "book_page": 317,
+   "name_as_printed": "SULLIVAN, Robert Joseph (Bob)",
+   "position_as_printed": "HB-DB",
+   "height_as_printed": "5'10\"",
+   "weight_as_printed": "190",
+   "colleges_as_printed": "Holy Cross",
+   "born_as_printed": "August 15, 1923, Lowell, MA",
+   "deceased_as_printed": "June 19, 1981, North Andover, MA"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "page_pdf": 337,
+   "book_page": 330,
+   "name_as_printed": "VOGT, Alois, Jr. (Allie)",
+   "position_as_printed": "B",
+   "height_as_printed": "6'0\"",
+   "weight_as_printed": "185",
+   "colleges_as_printed": "Wisconsin",
+   "born_as_printed": "June 20, 1921, Germany",
+   "deceased_as_printed": "February 26, 2002, Milwaukee, WI"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 4,
+   "player": "George Sullivan",
+   "pos": "E",
+   "college": "Notre Dame",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 1,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 10,
+   "player": "Bob T. Davis",
+   "pos": "T",
+   "college": "Georgia Tech",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 2,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 12,
+   "player": "Ray Manieri",
+   "pos": "B",
+   "college": "Wake Forest",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 2,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 14,
+   "player": "Bob Weise",
+   "pos": "B",
+   "college": "Michigan",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 2,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 15,
+   "player": "Monte Moncrief",
+   "pos": "T",
+   "college": "Texas A&M",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 2,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 21,
+   "player": "Lloyd Merriman",
+   "pos": "B",
+   "college": "Stanford",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 3,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 23,
+   "player": "Bill Collins",
+   "pos": "G",
+   "college": "Southwestern (TX), Texas",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 3,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 26,
+   "player": "Joe Andrejco",
+   "pos": "B",
+   "college": "Fordham",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 4,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 27,
+   "player": "Jim Wright",
+   "pos": "G",
+   "college": "SMU, Texas-Arlington",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 4,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 29,
+   "player": "Cal Rossi",
+   "pos": "B",
+   "college": "UCLA",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 4,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 33,
+   "player": "Russ Deal",
+   "pos": "T",
+   "college": "Indiana",
+   "drafted_by": "Baltimore Colts*",
+   "rights": null,
+   "round": 5,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 36,
+   "player": "Jim Pharr",
+   "pos": "C",
+   "college": "Auburn",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 5,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 37,
+   "player": "Boyd Clement",
+   "pos": "T",
+   "college": "Oregon State",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 5,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 40,
+   "player": "Bill Gri\ufb03n",
+   "pos": "T",
+   "college": "Kentucky",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 5,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 41,
+   "player": "Don Malmberg",
+   "pos": "T",
+   "college": "UCLA",
+   "drafted_by": "Baltimore Colts*",
+   "rights": null,
+   "round": 6,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 43,
+   "player": "Binks Bushmiaer",
+   "pos": "B",
+   "college": "Vanderbilt",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 6,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 47,
+   "player": "Walt Dropo",
+   "pos": "E",
+   "college": "Connecticut",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 6,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 48,
+   "player": "Jack Bush",
+   "pos": "T",
+   "college": "Georgia",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 6,
+   "year": 1947,
+   "page": 149
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 50,
+   "player": "Ernie Knotts",
+   "pos": "G",
+   "college": "Duke",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 7,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 54,
+   "player": "Gene Knight",
+   "pos": "B",
+   "college": "Louisiana State",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 7,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 59,
+   "player": "Jim Hefti",
+   "pos": "B",
+   "college": "St. Lawrence",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 8,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 60,
+   "player": "Matt Bolger",
+   "pos": "E",
+   "college": "Notre Dame",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 8,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 61,
+   "player": "Don Paul            LB-G-C",
+   "pos": "UCLA",
+   "college": "",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 8,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 62,
+   "player": "Charley Malmberg",
+   "pos": "T",
+   "college": "Rice",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 8,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 68,
+   "player": "Charlie Eikenberg",
+   "pos": "QB",
+   "college": "La-Lafayette, Rice",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 9,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 69,
+   "player": "Paul Hart",
+   "pos": "B",
+   "college": "Delaware",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 9,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 72,
+   "player": "Ralph Ellsworth",
+   "pos": "B",
+   "college": "Texas",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 9,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 73,
+   "player": "Gaston Bourgeois",
+   "pos": "G",
+   "college": "Tulane",
+   "drafted_by": "Baltimore Colts*",
+   "rights": null,
+   "round": 10,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 78,
+   "player": "Frank Broyles",
+   "pos": "QB",
+   "college": "Georgia Tech",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 10,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 81,
+   "player": "Jim Brieske",
+   "pos": "C",
+   "college": "Michigan",
+   "drafted_by": "Baltimore Colts*",
+   "rights": null,
+   "round": 11,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 82,
+   "player": "Baxter Jarrell",
+   "pos": "T",
+   "college": "North Carolina",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 11,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 84,
+   "player": "Marty Chaves",
+   "pos": "G",
+   "college": "Oregon State",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 11,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 85,
+   "player": "Mike Dimitro",
+   "pos": "G",
+   "college": "UCLA",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 11,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 87,
+   "player": "Bill Healy",
+   "pos": "G",
+   "college": "Georgia Tech",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 11,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 88,
+   "player": "Bill Huber",
+   "pos": "E",
+   "college": "Illinois",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 11,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 90,
+   "player": "Chet Lipka",
+   "pos": "T",
+   "college": "Boston College",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 12,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 91,
+   "player": "Marv Goodman",
+   "pos": "E",
+   "college": "Willamette",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 12,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 92,
+   "player": "George Jernigan",
+   "pos": "G",
+   "college": "Georgia",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 12,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 95,
+   "player": "Ed Sikorski",
+   "pos": "B",
+   "college": "Muhlenberg",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 12,
+   "year": 1947,
+   "page": 150
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 97,
+   "player": "Gerry Doherty",
+   "pos": "B",
+   "college": "Delaware",
+   "drafted_by": "Baltimore Colts*",
+   "rights": null,
+   "round": 13,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 98,
+   "player": "Joe Sowinski",
+   "pos": "G",
+   "college": "Indiana",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 13,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 100,
+   "player": "R.J. Jordan",
+   "pos": "E",
+   "college": "Georgia Tech",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 13,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 103,
+   "player": "Bill Miklich          LB-BB-C",
+   "pos": "Idaho",
+   "college": "",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 13,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 109,
+   "player": "Gene Wilson",
+   "pos": "E",
+   "college": "SMU",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 14,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 110,
+   "player": "Earl Wheeler",
+   "pos": "C",
+   "college": "Arkansas",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 14,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 114,
+   "player": "Bronco Kosanovich",
+   "pos": "C",
+   "college": "Penn State",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 15,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 115,
+   "player": "Gus Shannon",
+   "pos": "G",
+   "college": "Colorado",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 15,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 116,
+   "player": "Bill Ivy",
+   "pos": "T",
+   "college": "Northwestern",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 15,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 118,
+   "player": "Les Proctor",
+   "pos": "G",
+   "college": "Texas",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 15,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 120,
+   "player": "Dean Widseth",
+   "pos": "T",
+   "college": "Bemidji State",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 15,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 123,
+   "player": "Joe Cook",
+   "pos": "B",
+   "college": "Hardin-Simmons",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 16,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 124,
+   "player": "Bruno Miedziela",
+   "pos": "T",
+   "college": "Iowa",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 16,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 131,
+   "player": "Bob G. Sullivan",
+   "pos": "HB",
+   "college": "Holy Cross, Iowa",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 17,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 132,
+   "player": "Earl Tullos",
+   "pos": "T",
+   "college": "Louisiana State",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 17,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 136,
+   "player": "Mac Wenskunas",
+   "pos": "C",
+   "college": "Illinois",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 18,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 137,
+   "player": "Lou Cullen",
+   "pos": "B",
+   "college": "New Mexico",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 18,
+   "year": 1947,
+   "page": 151
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 139,
+   "player": "Johnny Simms",
+   "pos": "B",
+   "college": "Tulane",
+   "drafted_by": "Baltimore Colts*",
+   "rights": null,
+   "round": 19,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 141,
+   "player": "Dick Hagen",
+   "pos": "E",
+   "college": "Washington",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 19,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 142,
+   "player": "Tony Graham",
+   "pos": "C",
+   "college": "St. Mary\u2019s",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 19,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 143,
+   "player": "John Killilea",
+   "pos": "B",
+   "college": "Boston College",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 19,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 145,
+   "player": "Burt VanderClute",
+   "pos": "G",
+   "college": "Wesleyan",
+   "drafted_by": "Baltimore Colts*",
+   "rights": null,
+   "round": 20,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 148,
+   "player": "Russ Benda",
+   "pos": "G",
+   "college": "Iowa",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 20,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 151,
+   "player": "Tony Stalloni",
+   "pos": "T",
+   "college": "Delaware",
+   "drafted_by": "Baltimore Colts*",
+   "rights": null,
+   "round": 21,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 153,
+   "player": "Harry Furman",
+   "pos": "T",
+   "college": "Cornell",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 21,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 154,
+   "player": "George Watkins",
+   "pos": "T",
+   "college": "Texas",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 21,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 155,
+   "player": "Jean Lamoure",
+   "pos": "G",
+   "college": "Fresno State",
+   "drafted_by": "Baltimore Colts*",
+   "rights": null,
+   "round": 22,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 156,
+   "player": "John Furey",
+   "pos": "T",
+   "college": "Boston College",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 22,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 157,
+   "player": "Walt Kretz",
+   "pos": "B",
+   "college": "Cornell",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 22,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 159,
+   "player": "Leo Daniels",
+   "pos": "B",
+   "college": "Texas A&M",
+   "drafted_by": "Baltimore Colts*",
+   "rights": null,
+   "round": 23,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 161,
+   "player": "John Monahan",
+   "pos": "E",
+   "college": "Dartmouth",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 23,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 162,
+   "player": "Len Zenkevitch",
+   "pos": "T",
+   "college": "Idaho",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 23,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 163,
+   "player": "Tex Reilly",
+   "pos": "B",
+   "college": "Colorado",
+   "drafted_by": "Baltimore Colts*",
+   "rights": null,
+   "round": 24,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 164,
+   "player": "Chan Highsmith",
+   "pos": "C",
+   "college": "North Carolina",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 24,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 165,
+   "player": "Bruce Bailey",
+   "pos": "B",
+   "college": "Virginia",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 24,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 166,
+   "player": "Dave Day",
+   "pos": "G",
+   "college": "Iowa",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 24,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 169,
+   "player": "Ray L. Evans",
+   "pos": "G-T",
+   "college": "Texas-El Paso",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 25,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 170,
+   "player": "Bill Franks",
+   "pos": "T",
+   "college": "Illinois",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 25,
+   "year": 1947,
+   "page": 152
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 1,
+   "player": "Tony Manisi",
+   "pos": "HB",
+   "college": "Pennsylvania",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 1,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 4,
+   "player": "Vaughan Mancha",
+   "pos": "C-LB",
+   "college": "Alabama",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 1,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 11,
+   "player": "John Nolan",
+   "pos": "T",
+   "college": "Holy Cross, Penn State",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 3,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 12,
+   "player": "Earl Cooke",
+   "pos": "G",
+   "college": "Southern Methodist",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 3,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 22,
+   "player": "John Novitsky",
+   "pos": "T",
+   "college": "Oklahoma City",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 4,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 24,
+   "player": "Zeke O\u2019Connor",
+   "pos": "E-DE",
+   "college": "Notre Dame",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 4,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 25,
+   "player": "William H. (John) Walsh*",
+   "pos": "C",
+   "college": "Notre Dame",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 5,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 26,
+   "player": "Joe Smith",
+   "pos": "E-DB",
+   "college": "Schreiner College, Texas Tech",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 5,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 28,
+   "player": "Vince DiFrancisca",
+   "pos": "G",
+   "college": "Northwestern",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 6,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 29,
+   "player": "Gene Raczkowski",
+   "pos": "T",
+   "college": "Ohio University",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 6,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 30,
+   "player": "William J. (Jim) Smith",
+   "pos": "E",
+   "college": "Mississippi Southern",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 6,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 34,
+   "player": "John Rhodemeyer",
+   "pos": "C-LB",
+   "college": "Kentucky",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 7,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 35,
+   "player": "Jim Batchelor",
+   "pos": "HB",
+   "college": "East Texas State",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 7,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 38,
+   "player": "Phil O\u2019Reilly",
+   "pos": "T",
+   "college": "Purdue",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 7,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 41,
+   "player": "Tommy W. Thompson",
+   "pos": "LB-C",
+   "college": "William & Mary",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 7,
+   "year": 1948,
+   "page": 153
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 42,
+   "player": "Jim Turner",
+   "pos": "T",
+   "college": "California",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 8,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 43,
+   "player": "Rex Olson",
+   "pos": "HB",
+   "college": "Brigham Young",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 8,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 46,
+   "player": "Myron Miller",
+   "pos": "C",
+   "college": "Oklahoma A&M",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 9,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 48,
+   "player": "Jim Minor",
+   "pos": "T",
+   "college": "Arkansas",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 9,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 50,
+   "player": "William Luongo",
+   "pos": "FB",
+   "college": "Pennsylvania",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 9,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 51,
+   "player": "Louis King",
+   "pos": "HB",
+   "college": "Iowa",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 9,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 53,
+   "player": "Bill Smith",
+   "pos": "T",
+   "college": "North Carolina",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 9,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 54,
+   "player": "Phil Schlosburg",
+   "pos": "HB",
+   "college": "Temple",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 10,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 55,
+   "player": "Jack Fitch",
+   "pos": "B",
+   "college": "North Carolina",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 10,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 57,
+   "player": "Malechi Mills",
+   "pos": "G",
+   "college": "VMI",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 10,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 58,
+   "player": "Jack Swaner",
+   "pos": "B",
+   "college": "California",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 11,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 60,
+   "player": "Charles Borey Newman",
+   "pos": "E",
+   "college": "Louisiana Tech",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 11,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 61,
+   "player": "Lou Mihailovich",
+   "pos": "DE",
+   "college": "Indiana",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 11,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 62,
+   "player": "Robert Steckroth",
+   "pos": "E",
+   "college": "William & Mary",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 11,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 63,
+   "player": "John Finney",
+   "pos": "HB",
+   "college": "Compton Jr. College",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 11,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 64,
+   "player": "Jack Weisenberger",
+   "pos": "B",
+   "college": "Michigan",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 11,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 65,
+   "player": "Ralph Maughan",
+   "pos": "C",
+   "college": "Utah State",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 11,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 66,
+   "player": "Thurman Gay",
+   "pos": "T",
+   "college": "Oklahoma A&M",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 12,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 67,
+   "player": "Paul Red\ufb01eld",
+   "pos": "T",
+   "college": "Colgate",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 12,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 71,
+   "player": "Richard Johnson",
+   "pos": "G",
+   "college": "Baylor",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 12,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 74,
+   "player": "Francis Parker*",
+   "pos": "T",
+   "college": "Holy Cross",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 13,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 75,
+   "player": "Stan Madgziak",
+   "pos": "B",
+   "college": "William & Mary",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 13,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 76,
+   "player": "Bob Koch",
+   "pos": "B",
+   "college": "Oregon",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 13,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 78,
+   "player": "Leonard Modzelski",
+   "pos": "T",
+   "college": "Scranton Univ.",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 13,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 81,
+   "player": "Mike Rubish",
+   "pos": "E",
+   "college": "North Carolina",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 13,
+   "year": 1948,
+   "page": 154
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 83,
+   "player": "Dick Deranek",
+   "pos": "B",
+   "college": "Indiana",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 14,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 84,
+   "player": "John White",
+   "pos": "C",
+   "college": "Michigan",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 14,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 86,
+   "player": "Les Rideout",
+   "pos": "T",
+   "college": "Bowling Green",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 14,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 89,
+   "player": "Alex Sarkesian",
+   "pos": "C",
+   "college": "Northwestern",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 14,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 90,
+   "player": "J.F. McCarthy",
+   "pos": "E",
+   "college": "Pennsylvania",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 15,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 91,
+   "player": "Robert Norman",
+   "pos": "B",
+   "college": "Washington & Lee",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 15,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 92,
+   "player": "Robert Terry*",
+   "pos": "T",
+   "college": "Texas A&M",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 15,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 95,
+   "player": "Frank Ballard",
+   "pos": "G",
+   "college": "V.P.I.",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 15,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 98,
+   "player": "Rudy Krall",
+   "pos": "B",
+   "college": "New Mexico",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 16,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 102,
+   "player": "Wallace Matulich",
+   "pos": "B",
+   "college": "Mississippi State",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 16,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 103,
+   "player": "James H. Walthall",
+   "pos": "HB",
+   "college": "West Virginia",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 16,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 104,
+   "player": "Bob Ramsey",
+   "pos": "B",
+   "college": "S.M.U.",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 16,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 107,
+   "player": "George Sparter",
+   "pos": "C",
+   "college": "North Carolina",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 17,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 112,
+   "player": "Charles Wright",
+   "pos": "E",
+   "college": "Texas A&M",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 17,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 113,
+   "player": "Russ Steger",
+   "pos": "FB",
+   "college": "Illinois",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 17,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 115,
+   "player": "Rollin W. Prather*",
+   "pos": "E",
+   "college": "Kansas State",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 18,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 116,
+   "player": "Joseph E. Jurich",
+   "pos": "E",
+   "college": "West Chester State",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 18,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 117,
+   "player": "Wayman Sellers",
+   "pos": "E",
+   "college": "Georgia",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 18,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 118,
+   "player": "William Pritula",
+   "pos": "T",
+   "college": "Michigan",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 18,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 119,
+   "player": "Dud Waybright",
+   "pos": "E",
+   "college": "Notre Dame",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 18,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 121,
+   "player": "Lou Hoistma",
+   "pos": "E",
+   "college": "William & Mary",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 18,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 122,
+   "player": "Byron Gillory*",
+   "pos": "B",
+   "college": "Texas",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 19,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 124,
+   "player": "Bill Cromer",
+   "pos": "B",
+   "college": "North Texas State",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 19,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 126,
+   "player": "Art Fitzgerald",
+   "pos": "B",
+   "college": "Yale",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 19,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 127,
+   "player": "Wade Walker",
+   "pos": "T",
+   "college": "Oklahoma",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 19,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 128,
+   "player": "Tom Landry             DB-HB-QB",
+   "pos": "Texas",
+   "college": "",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 19,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 129,
+   "player": "Pete Ashbaugh",
+   "pos": "B",
+   "college": "Notre Dame",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 19,
+   "year": 1948,
+   "page": 155
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 131,
+   "player": "Carmen Ragonese",
+   "pos": "B",
+   "college": "New Hampshire",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 20,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 132,
+   "player": "Richard U. Scott",
+   "pos": "C",
+   "college": "Navy",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 20,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 135,
+   "player": "Roger Stephens",
+   "pos": "HB",
+   "college": "Cincinnati",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 20,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 136,
+   "player": "Bobby Forbes",
+   "pos": "B",
+   "college": "Florida",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 20,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 137,
+   "player": "Dave Templeton",
+   "pos": "G",
+   "college": "Ohio State",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 20,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 139,
+   "player": "Bob Walker",
+   "pos": "B",
+   "college": "Colorado Mines",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 21,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 140,
+   "player": "Walt Marusa",
+   "pos": "G",
+   "college": "Delaware",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 21,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 141,
+   "player": "Ed Smith",
+   "pos": "HB-DB",
+   "college": "Texas-El Paso",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 21,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 145,
+   "player": "Dwight Eddleman",
+   "pos": "HB",
+   "college": "Illinois",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 21,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 146,
+   "player": "Phil Tinsley",
+   "pos": "E",
+   "college": "UCLA",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 22,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 147,
+   "player": "Ray Borneman",
+   "pos": "B",
+   "college": "Texas",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 22,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 148,
+   "player": "Knute Dobkins",
+   "pos": "E",
+   "college": "Butler",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 22,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 149,
+   "player": "Paul Mortelello",
+   "pos": "G",
+   "college": "Florida",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 22,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 154,
+   "player": "Glen Treichler",
+   "pos": "B",
+   "college": "Colgate",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 23,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 156,
+   "player": "Frederick Westphal",
+   "pos": "E",
+   "college": "Cornell",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 23,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 157,
+   "player": "Ted Ken\ufb01eld",
+   "pos": "B",
+   "college": "California",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 23,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 158,
+   "player": "Floyd Lanhorne",
+   "pos": "G",
+   "college": "Texas Tech",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 23,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 159,
+   "player": "George Bloomquist",
+   "pos": "E",
+   "college": "North Carolina State",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 23,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 160,
+   "player": "John Cunningham",
+   "pos": "E",
+   "college": "California",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 23,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 161,
+   "player": "Jim McDowell",
+   "pos": "G",
+   "college": "William & Mary",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 23,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 164,
+   "player": "Merle Dinkins",
+   "pos": "E",
+   "college": "Oklahoma",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 24,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 165,
+   "player": "Buddy Mulligan",
+   "pos": "HB",
+   "college": "Duke",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 24,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 166,
+   "player": "Goble W. Bryant",
+   "pos": "T",
+   "college": "West Point",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 24,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 167,
+   "player": "J.D. Cheek",
+   "pos": "T",
+   "college": "Oklahoma A&M",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 24,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 168,
+   "player": "Nick Ognovich",
+   "pos": "B",
+   "college": "Wake Forest",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 24,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 169,
+   "player": "Heywood Fowle",
+   "pos": "T",
+   "college": "North Carolina",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 24,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 170,
+   "player": "Ron Sockalov",
+   "pos": "T",
+   "college": "California",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 25,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 172,
+   "player": "Walt Pupa",
+   "pos": "FB",
+   "college": "North Carolina",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 25,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 173,
+   "player": "George Lambert",
+   "pos": "T",
+   "college": "Mississippi",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 25,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 174,
+   "player": "Bill Talarico",
+   "pos": "FB",
+   "college": "Pennsylvania",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 25,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 175,
+   "player": "Robert Rennebohm",
+   "pos": "E",
+   "college": "Wisconsin",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 25,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 176,
+   "player": "Mike Zelezanak",
+   "pos": "B",
+   "college": "Kansas State",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 25,
+   "year": 1948,
+   "page": 156
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 178,
+   "player": "Earl Eugene Corum",
+   "pos": "G",
+   "college": "West Virginia",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 26,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 179,
+   "player": "Sam Zatkoff*",
+   "pos": "E",
+   "college": "Illinois",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 26,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 182,
+   "player": "Everett Marshall",
+   "pos": "T",
+   "college": "Pennsylvania",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 26,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 183,
+   "player": "Ted Andrus",
+   "pos": "G",
+   "college": "SW Louisiana",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 26,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 185,
+   "player": "Horace (Todd) Saylor",
+   "pos": "E",
+   "college": "Lafayette",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 26,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 186,
+   "player": "John Daniels",
+   "pos": "C",
+   "college": "Santa Barbara",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 27,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 188,
+   "player": "Ott Hurrle",
+   "pos": "C",
+   "college": "Butler",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 27,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 189,
+   "player": "Charles Tatom",
+   "pos": "G",
+   "college": "Texas",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 27,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 191,
+   "player": "Ray Brown",
+   "pos": "HB",
+   "college": "Virginia",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 27,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 193,
+   "player": "Harry W. Caughron",
+   "pos": "T",
+   "college": "William & Mary",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 27,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 194,
+   "player": "Al Hoisch",
+   "pos": "B",
+   "college": "UCLA",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 28,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 195,
+   "player": "Ben Bendrick*",
+   "pos": "B",
+   "college": "Wisconsin",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 28,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 196,
+   "player": "Warren Lowans",
+   "pos": "T",
+   "college": "West Chester",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 28,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 198,
+   "player": "Harold William Bell",
+   "pos": "QB",
+   "college": "Muhlenberg",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 28,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 199,
+   "player": "Lou Corriere",
+   "pos": "HB",
+   "college": "Buffalo",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 28,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 201,
+   "player": "Pete Lanzi",
+   "pos": "E",
+   "college": "Youngstown State",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 28,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 203,
+   "player": "Rex Grossman",
+   "pos": "LB-FB",
+   "college": "Indiana",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 29,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 204,
+   "player": "Art Littleton",
+   "pos": "E",
+   "college": "Pennsylvania",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 29,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 207,
+   "player": "John Wosloski",
+   "pos": "C",
+   "college": "Penn State",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 29,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 210,
+   "player": "Thomas N. Finical",
+   "pos": "E",
+   "college": "Princeton",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 30,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 211,
+   "player": "Dick Reinking",
+   "pos": "E",
+   "college": "SMU",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 30,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 213,
+   "player": "A.B. Kitchens*",
+   "pos": "T",
+   "college": "Tulsa",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 30,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 214,
+   "player": "Frank Williams",
+   "pos": "FB-LB",
+   "college": "Utah State",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 30,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 215,
+   "player": "Talley Stevens*",
+   "pos": "E",
+   "college": "Utah State",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 30,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 216,
+   "player": "Bill Clements",
+   "pos": "E",
+   "college": "UCAL",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 30,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 217,
+   "player": "Mel Sheehan",
+   "pos": "E",
+   "college": "Missouri",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 30,
+   "year": 1948,
+   "page": 157
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 2,
+   "player": "Levi Jackson*",
+   "pos": "B",
+   "college": "Yale",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 30,
+   "year": 1949,
+   "page": 158
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 1,
+   "player": "Terry Brennan",
+   "pos": "B",
+   "college": "Notre Dame",
+   "drafted_by": "Chicago Rockets",
+   "rights": null,
+   "round": 30,
+   "year": 1949,
+   "page": 158
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 1,
+   "player": "Pete Elliott",
+   "pos": "B",
+   "college": "Michigan",
+   "drafted_by": "From N.Y. Yankees",
+   "rights": null,
+   "round": 30,
+   "year": 1949,
+   "page": 158
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 1,
+   "player": "Gene Derricotte",
+   "pos": "B",
+   "college": "Michigan",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 30,
+   "year": 1949,
+   "page": 158
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 2,
+   "player": "Dick Kempthorn",
+   "pos": "B",
+   "college": "Michigan",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 30,
+   "year": 1949,
+   "page": 158
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 2,
+   "player": "Jack Price",
+   "pos": "B",
+   "college": "Baylor",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 30,
+   "year": 1949,
+   "page": 158
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 2,
+   "player": "Johnny Rauch",
+   "pos": "QB",
+   "college": "Georgia",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 30,
+   "year": 1949,
+   "page": 158
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 7,
+   "player": "Chester Fritz",
+   "pos": "T",
+   "college": "Missouri",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 1,
+   "year": 1949,
+   "page": 158
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 8,
+   "player": "Jack Mitchell",
+   "pos": "QB",
+   "college": "Oklahoma",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 1,
+   "year": 1949,
+   "page": 158
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 11,
+   "player": "Bill Walsh",
+   "pos": "C",
+   "college": "Notre Dame",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 2,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 14,
+   "player": "Bobby Gage",
+   "pos": "B",
+   "college": "Clemson",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 2,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 15,
+   "player": "Hugh Keeney",
+   "pos": "B",
+   "college": "Rice",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 2,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 16,
+   "player": "Wally Tripplett",
+   "pos": "B",
+   "college": "Penn State",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 3,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 18,
+   "player": "Hosea Rogers",
+   "pos": "B",
+   "college": "North Carolina",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 3,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 23,
+   "player": "Dolph Tokarczyk",
+   "pos": "G",
+   "college": "Pennsylvania",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 4,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 25,
+   "player": "Ralph Kohl",
+   "pos": "T",
+   "college": "Michigan",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 4,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 26,
+   "player": "Bob Meinert",
+   "pos": "B",
+   "college": "Oklahoma State",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 4,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 28,
+   "player": "Mike DeNoia",
+   "pos": "B",
+   "college": "Scranton",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 4,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 29,
+   "player": "Bill McLellan",
+   "pos": "T",
+   "college": "Brown",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 4,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 30,
+   "player": "Carmen Falcone",
+   "pos": "B",
+   "college": "Pennsylvania",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 5,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 31,
+   "player": "Joe Quinn",
+   "pos": "G",
+   "college": "Cornell",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 5,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 32,
+   "player": "George Maddock",
+   "pos": "T",
+   "college": "Northwestern",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 5,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 33,
+   "player": "Wally Jones",
+   "pos": "E",
+   "college": "Kentucky",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 5,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 37,
+   "player": "Ed McNeill",
+   "pos": "E",
+   "college": "Michigan",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 5,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 41,
+   "player": "Frank Pattee",
+   "pos": "B",
+   "college": "Kansas",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 6,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 43,
+   "player": "Frank Guess",
+   "pos": "B",
+   "college": "Texas",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 6,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 44,
+   "player": "John Hamberger",
+   "pos": "T",
+   "college": "SMU",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 6,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 47,
+   "player": "Lynn Chewing",
+   "pos": "B",
+   "college": "Hampden-Sydney",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 7,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 49,
+   "player": "Frank Folger",
+   "pos": "B",
+   "college": "Duke",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 7,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 50,
+   "player": "Bill Renna",
+   "pos": "C",
+   "college": "Santa Clara",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 7,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 51,
+   "player": "Harold Ensminger",
+   "pos": "QB",
+   "college": "Missouri",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 7,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 52,
+   "player": "Dan Steigman",
+   "pos": "C",
+   "college": "North Carolina",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 7,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 53,
+   "player": "Phil Alexander",
+   "pos": "T",
+   "college": "South Carolina",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 7,
+   "year": 1949,
+   "page": 159
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 54,
+   "player": "Jim Cain",
+   "pos": "E",
+   "college": "Alabama",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 8,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 55,
+   "player": "Bob McCurry",
+   "pos": "C",
+   "college": "Michigan State",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 8,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 56,
+   "player": "Brian Bell",
+   "pos": "B",
+   "college": "Washington & Lee",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 8,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 57,
+   "player": "Bob Prymuski",
+   "pos": "T",
+   "college": "Illinois",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 8,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 60,
+   "player": "Bernie Reid",
+   "pos": "G",
+   "college": "Georgia",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 8,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 61,
+   "player": "Mike Cannevino",
+   "pos": "B",
+   "college": "Ohio State",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 8,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 62,
+   "player": "Tino Sabucco",
+   "pos": "C",
+   "college": "San Francisco",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 9,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 63,
+   "player": "Chuck Klemovitch",
+   "pos": "G",
+   "college": "Columbia",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 9,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 64,
+   "player": "Al Mastrangeli",
+   "pos": "C",
+   "college": "Illinois",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 9,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 65,
+   "player": "Everett Faunce",
+   "pos": "B",
+   "college": "Minnesota",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 9,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 66,
+   "player": "Mike Rubish",
+   "pos": "E",
+   "college": "North Carolina",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 9,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 67,
+   "player": "Alex Verdova",
+   "pos": "B",
+   "college": "Ohio State",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 9,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 68,
+   "player": "Fred Wendt",
+   "pos": "B",
+   "college": "Texas-El Paso",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 9,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 70,
+   "player": "Warren Huey",
+   "pos": "E",
+   "college": "Michigan State",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 10,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 71,
+   "player": "Bob Duncan",
+   "pos": "E",
+   "college": "Duke",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 10,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 73,
+   "player": "Kale Alexander",
+   "pos": "T",
+   "college": "South Carolina",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 10,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 74,
+   "player": "Jerry Krall",
+   "pos": "B",
+   "college": "Ohio State",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 10,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 77,
+   "player": "Norb Adams",
+   "pos": "B",
+   "college": "Purdue",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 10,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 79,
+   "player": "Hilary Chollet",
+   "pos": "B",
+   "college": "Cornell",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 11,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 80,
+   "player": "Ben Bendrick",
+   "pos": "B",
+   "college": "Wisconsin",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 11,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 83,
+   "player": "Ernie Settembre",
+   "pos": "T",
+   "college": "Miami",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 11,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 84,
+   "player": "Bob Lund",
+   "pos": "B",
+   "college": "Tennessee",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 11,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 85,
+   "player": "Negley Norton",
+   "pos": "T",
+   "college": "Penn State",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 11,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 86,
+   "player": "Jay Van Noy",
+   "pos": "B",
+   "college": "Utah State",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 12,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 88,
+   "player": "Frank Van Deren",
+   "pos": "E",
+   "college": "California",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 12,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 90,
+   "player": "Larry Klosterman",
+   "pos": "G",
+   "college": "North Carolina",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 12,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 91,
+   "player": "Milt Kormarnicki",
+   "pos": "C",
+   "college": "Villanova",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 12,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 92,
+   "player": "Jon Baker",
+   "pos": "G",
+   "college": "California",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 12,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 93,
+   "player": "Frank Burns",
+   "pos": "B",
+   "college": "Rutgers",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 12,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 96,
+   "player": "Eddie Berrang",
+   "pos": "E",
+   "college": "Villanova",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 13,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 100,
+   "player": "Jim Reichert",
+   "pos": "G",
+   "college": "Arkansas",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 13,
+   "year": 1949,
+   "page": 160
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 102,
+   "player": "Ivan Snowden",
+   "pos": "T",
+   "college": "Texas A&I",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 14,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 103,
+   "player": "Murray Alexander",
+   "pos": "E",
+   "college": "Mississippi State",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 14,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 104,
+   "player": "Bob Doormink",
+   "pos": "T",
+   "college": "Washington State",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 14,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 105,
+   "player": "David Moon",
+   "pos": "B",
+   "college": "SMU",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 14,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 106,
+   "player": "Dick Lorenz",
+   "pos": "E",
+   "college": "Oregon State",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 14,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 107,
+   "player": "Leon Cooper",
+   "pos": "T",
+   "college": "Hardin-Simmons",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 14,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 109,
+   "player": "Walt Kersulis",
+   "pos": "E",
+   "college": "Illinois",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 14,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 110,
+   "player": "Abbie Reynolds",
+   "pos": "B",
+   "college": "Texas Tech",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 15,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 111,
+   "player": "Howard Derrick",
+   "pos": "B",
+   "college": "Tenn-Chattanooga",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 15,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 112,
+   "player": "Jack Glenn",
+   "pos": "T",
+   "college": "Georgia Tech",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 15,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 114,
+   "player": "Bob Bastian",
+   "pos": "G",
+   "college": "USC",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 15,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 117,
+   "player": "Bobby Jack Stuart",
+   "pos": "B",
+   "college": "Army",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 15,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 118,
+   "player": "Dick Monroe",
+   "pos": "C",
+   "college": "Kansas",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 16,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 119,
+   "player": "Dale Armstrong",
+   "pos": "E",
+   "college": "Dartmouth",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 16,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 120,
+   "player": "Jack Bruce",
+   "pos": "B",
+   "college": "William & Mary",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 16,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 121,
+   "player": "Johnny O\u2019Quinn",
+   "pos": "E",
+   "college": "Wake Forest",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 16,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 122,
+   "player": "Art Steffen",
+   "pos": "B",
+   "college": "UCLA",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 16,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 125,
+   "player": "Dinky Bowen",
+   "pos": "B",
+   "college": "Georgia Tech",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 16,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 126,
+   "player": "George Guerre",
+   "pos": "B",
+   "college": "Michigan State",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 17,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 129,
+   "player": "Clyde Geary",
+   "pos": "T",
+   "college": "Connecticut Wes.",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 17,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 130,
+   "player": "Tom Gannon",
+   "pos": "B",
+   "college": "Harvard",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 17,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 132,
+   "player": "John Phillips",
+   "pos": "B",
+   "college": "Southern Mississippi",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 18,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 133,
+   "player": "Mitchell Holgren",
+   "pos": "T",
+   "college": "Hartford",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 18,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 136,
+   "player": "Larry Hatch",
+   "pos": "B",
+   "college": "Washington",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 18,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 137,
+   "player": "Jim Goodman",
+   "pos": "T",
+   "college": "Maryland",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 18,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 138,
+   "player": "Verda Smith",
+   "pos": "B",
+   "college": "Abilene Christian",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 19,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 139,
+   "player": "Frank Weaver",
+   "pos": "B",
+   "college": "Moravian",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 19,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 140,
+   "player": "Hal Jensen",
+   "pos": "B",
+   "college": "San Francisco",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 19,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 141,
+   "player": "Guy Sundheim",
+   "pos": "C",
+   "college": "Northwestern",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 19,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 142,
+   "player": "Jerry Tiblier",
+   "pos": "B",
+   "college": "Mississippi",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 19,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 143,
+   "player": "Merlin London",
+   "pos": "E",
+   "college": "Oklahoma State",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 19,
+   "year": 1949,
+   "page": 161
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 144,
+   "player": "Clayton Davis",
+   "pos": "C",
+   "college": "Oklahoma State",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 20,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 147,
+   "player": "Mernie Lazier",
+   "pos": "B",
+   "college": "Illinois",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 20,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 148,
+   "player": "Gene Frasseto",
+   "pos": "T",
+   "college": "California",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 20,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 149,
+   "player": "Marty Breen",
+   "pos": "C",
+   "college": "Canisius",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 20,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 150,
+   "player": "George Benigni",
+   "pos": "E",
+   "college": "Georgetown",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 21,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 151,
+   "player": "John Geosits",
+   "pos": "T",
+   "college": "Bucknell",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 21,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 152,
+   "player": "Al Beasley",
+   "pos": "G",
+   "college": "St. Mary\u2019s",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 21,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 153,
+   "player": "Harry Larche",
+   "pos": "T",
+   "college": "Arkansas State",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 21,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 155,
+   "player": "John Simon",
+   "pos": "G",
+   "college": "Penn State",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 21,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 156,
+   "player": "R.M. Patterson",
+   "pos": "T",
+   "college": "McMurry",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 22,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 157,
+   "player": "Tom Brennan",
+   "pos": "G",
+   "college": "Boston College",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 22,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 158,
+   "player": "Ernie Tolman",
+   "pos": "E",
+   "college": "USC",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 22,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 159,
+   "player": "Bill Kemplin",
+   "pos": "E",
+   "college": "North Texas State",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 23,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 161,
+   "player": "Gerry Morrical",
+   "pos": "T",
+   "college": "Indiana",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 23,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 162,
+   "player": "Bill Cadenhead",
+   "pos": "B",
+   "college": "Alabama",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 24,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 163,
+   "player": "Bobby Folson",
+   "pos": "E",
+   "college": "SMU",
+   "drafted_by": "Brooklyn Dodgers",
+   "rights": null,
+   "round": 24,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 164,
+   "player": "Bob Hood",
+   "pos": "E",
+   "college": "Alabama",
+   "drafted_by": "New York Yankees",
+   "rights": null,
+   "round": 24,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 165,
+   "player": "Phil Poole",
+   "pos": "G",
+   "college": "Mississippi",
+   "drafted_by": "Chicago Hornets",
+   "rights": null,
+   "round": 25,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 168,
+   "player": "Joe Grothus",
+   "pos": "G",
+   "college": "Iowa",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 25,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 169,
+   "player": "Ed Ralston",
+   "pos": "B",
+   "college": "Richmond",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 25,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 171,
+   "player": "Paul Schoults",
+   "pos": "B",
+   "college": "Miami (OH)",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 25,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 172,
+   "player": "Larry Cooney",
+   "pos": "B",
+   "college": "Penn State",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 25,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 173,
+   "player": "Byron Gillory",
+   "pos": "B",
+   "college": "Texas",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 26,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 175,
+   "player": "Bobby Deuber",
+   "pos": "B",
+   "college": "Pennsylvania",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 26,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 176,
+   "player": "Jack Kelly",
+   "pos": "T",
+   "college": "Louisiana Tech",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 26,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 178,
+   "player": "Bob Cox",
+   "pos": "E",
+   "college": "North Carolina",
+   "drafted_by": "Baltimore Colts",
+   "rights": null,
+   "round": 27,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 179,
+   "player": "Lloyd Eisenberg",
+   "pos": "T",
+   "college": "Duke",
+   "drafted_by": "Los Angeles Dons",
+   "rights": null,
+   "round": 27,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 180,
+   "player": "Floyd Lewis",
+   "pos": "G",
+   "college": "SMU",
+   "drafted_by": "Buffalo Bills",
+   "rights": null,
+   "round": 27,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 181,
+   "player": "Jasper Flanakin",
+   "pos": "E",
+   "college": "Baylor",
+   "drafted_by": "San Francisco 49ers",
+   "rights": null,
+   "round": 27,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 182,
+   "player": "Verne Gagne",
+   "pos": "E",
+   "college": "Minnesota",
+   "drafted_by": "Cleveland Browns",
+   "rights": null,
+   "round": 27,
+   "year": 1949,
+   "page": 162
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 184,
+   "player": "George Pastre",
+   "pos": "T",
+   "college": "UCLA",
+   "drafted_by": "",
+   "rights": "Los Angeles Dons",
+   "round": 28,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 186,
+   "player": "Rudy",
+   "pos": "Smith",
+   "college": "T",
+   "drafted_by": "Louisiana Tech",
+   "rights": "San Francisco 49ers",
+   "round": 28,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 187,
+   "player": "Jim",
+   "pos": "Moran",
+   "college": "B",
+   "drafted_by": "John Carroll",
+   "rights": "Cleveland Browns",
+   "round": 28,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 188,
+   "player": "George",
+   "pos": "Pryor",
+   "college": "F",
+   "drafted_by": "Wake Forest",
+   "rights": "Baltimore Colts",
+   "round": 29,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 190,
+   "player": "Joe Leonard",
+   "pos": "T",
+   "college": "Virginia",
+   "drafted_by": "",
+   "rights": "Buffalo Bills",
+   "round": 29,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 191,
+   "player": "Gordon",
+   "pos": "Long",
+   "college": "B",
+   "drafted_by": "Arkansas",
+   "rights": "San Francisco 49ers",
+   "round": 29,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 2,
+   "player": "George Taliaferro  HB Indiana            New York",
+   "pos": "Yanks",
+   "college": "LA Dons",
+   "drafted_by": "",
+   "rights": "New York Yanks",
+   "round": 1,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 3,
+   "player": "Billy Grimes       HB Oklahoma A&M Green Bay Packers LA",
+   "pos": "Dons",
+   "college": "",
+   "drafted_by": "",
+   "rights": "Green Bay Packers",
+   "round": 1,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 4,
+   "player": "Bob Hoernschemeyer HB Indiana            Det",
+   "pos": "Lions",
+   "college": "",
+   "drafted_by": "",
+   "rights": "Chi Hornets Detroit Lions",
+   "round": 1,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 7,
+   "player": "Bud Tinsley",
+   "pos": "T",
+   "college": "Baylor",
+   "drafted_by": "Pittsburgh Steelers LA Dons",
+   "rights": "Did Not Play",
+   "round": 1,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 8,
+   "player": "Bob Reinhart",
+   "pos": "T",
+   "college": "U. of California Chicago Cardinals LA Dons",
+   "drafted_by": "Los Angeles Rams",
+   "rights": "Traded to Los",
+   "round": 1,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 9,
+   "player": "Harper",
+   "pos": "Davis",
+   "college": "HB",
+   "drafted_by": "Mississippi State Chicago Bears",
+   "rights": "LA Dons         Chicago Bears",
+   "round": 1,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 13,
+   "player": "Lindell Pearson",
+   "pos": "HB",
+   "college": "Oklahoma",
+   "drafted_by": "Philadelphia Eagles",
+   "rights": "N/A             Detroit Lions       Traded to Lions",
+   "round": 1,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 14,
+   "player": "Bob Livingstone   HB Notre",
+   "pos": "Dame",
+   "college": "Baltimore Colts",
+   "drafted_by": "Buffalo Bills",
+   "rights": "Baltimore Colts",
+   "round": 2,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 15,
+   "player": "Nate Johnson",
+   "pos": "T",
+   "college": "Illinois",
+   "drafted_by": "New York Yanks",
+   "rights": "Chic Hornets   New York Yanks",
+   "round": 2,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 18,
+   "player": "Chuck Drazenovich FB Penn",
+   "pos": "State",
+   "college": "Wash. Redskins",
+   "drafted_by": "Penn State",
+   "rights": "Wash. Redskins Drafted by Dons in",
+   "round": 2,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 19,
+   "player": "Ollie",
+   "pos": "Cline",
+   "college": "FB Ohio State",
+   "drafted_by": "New York Giants4 Buffalo Bills",
+   "rights": "Detroit Lions",
+   "round": 2,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 21,
+   "player": "Martin Wendell    G Notre",
+   "pos": "Dame",
+   "college": "Chicago Cardinals Chi Hornets",
+   "drafted_by": "",
+   "rights": "Did Not Play",
+   "round": 2,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 22,
+   "player": "Fred",
+   "pos": "Negus",
+   "college": "C",
+   "drafted_by": "Wisconsin",
+   "rights": "Chicago Bears       Chi Hornets    Chicago Bears",
+   "round": 2,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 23,
+   "player": "Ed",
+   "pos": "Henke",
+   "college": "T",
+   "drafted_by": "USC",
+   "rights": "San Francisco 49ers LA Dons        Did Not Play     Played for \u201951 49ers.",
+   "round": 2,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 24,
+   "player": "Vic Vasicek       G",
+   "pos": "USC",
+   "college": "Los Angeles Rams Buffalo Bills",
+   "drafted_by": "",
+   "rights": "LA Rams",
+   "round": 2,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 25,
+   "player": "Len",
+   "pos": "Ford",
+   "college": "E",
+   "drafted_by": "Michigan",
+   "rights": "Cleveland Browns LA Dons           Cleveland Browns",
+   "round": 2,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 26,
+   "player": "Jerry",
+   "pos": "Krall",
+   "college": "FB Ohio State",
+   "drafted_by": "Philadelphia Eagles LA Dons",
+   "rights": "Detroit Lions",
+   "round": 2,
+   "year": null,
+   "page": 163
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 27,
+   "player": "Rip Collins          HB",
+   "pos": "LSU",
+   "college": "Baltimore Colts",
+   "drafted_by": "Chi Hornets",
+   "rights": "Baltimore Colts",
+   "round": 3,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 29,
+   "player": "Homer",
+   "pos": "Paine",
+   "college": "T",
+   "drafted_by": "Oklahoma Green Bay Packers Chi Hornets",
+   "rights": "Did Not Play",
+   "round": 3,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 31,
+   "player": "Roland",
+   "pos": "Dale",
+   "college": "T",
+   "drafted_by": "Mississippi Wash. Redskins",
+   "rights": "MS in 1949       Wash. Redskins Drafted by Dodgers \u201949",
+   "round": 3,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 32,
+   "player": "Vince",
+   "pos": "Mazza",
+   "college": "E",
+   "drafted_by": "(None)",
+   "rights": "New York Giants     Buffalo Bills    Did Not Play    Went to CFL",
+   "round": 3,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 33,
+   "player": "Tom McWilliams       HB MS",
+   "pos": "State",
+   "college": "Pittsburgh Steelers LA Dons",
+   "drafted_by": "",
+   "rights": "Pitts Steelers",
+   "round": 3,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 35,
+   "player": "James",
+   "pos": "Clark",
+   "college": "T",
+   "drafted_by": "Mississippi Chicago Bears",
+   "rights": "MS in 1949       Did Not Play",
+   "round": 3,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 38,
+   "player": "Bill Schroll         HB",
+   "pos": "LSU",
+   "college": "Cleveland Browns Buffalo Bills",
+   "drafted_by": "Detroit Lions",
+   "rights": "Traded to Det Lions6",
+   "round": 3,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 39,
+   "player": "George Pastre",
+   "pos": "T",
+   "college": "UCLA",
+   "drafted_by": "Philadelphia Eagles LA Dons",
+   "rights": "Did Not Play    Drafted by Dons in \u201949",
+   "round": 3,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 42,
+   "player": "Ed",
+   "pos": "King",
+   "college": "G",
+   "drafted_by": "Boston College Balt Colts",
+   "rights": "Buffalo Bills     Balt Colts",
+   "round": null,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 46,
+   "player": "Wilbur E. Volz",
+   "pos": "HB",
+   "college": "Missouri",
+   "drafted_by": "Green Bay Packers Buffalo Bills",
+   "rights": "Did Not Play",
+   "round": 4,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 47,
+   "player": "William",
+   "pos": "Kay",
+   "college": "T",
+   "drafted_by": "Iowa",
+   "rights": "Detroit Lions       Buffalo Bills   Did Not Play Drafted by Bills in 1949.",
+   "round": 4,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 48,
+   "player": "Lloyd Eisenberg",
+   "pos": "T",
+   "college": "Duke",
+   "drafted_by": "Wash. Redskins",
+   "rights": "LA Dons         Did Not Play Drafted by Dons in \u201949.",
+   "round": 4,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 49,
+   "player": "Alfred Schmid",
+   "pos": "E",
+   "college": "",
+   "drafted_by": "Villanova",
+   "rights": "New York Giants Villanova in \u201949 Did Not Play",
+   "round": 4,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 52,
+   "player": "Glenn Dobbs, Jr. QB-HB",
+   "pos": "Tulsa",
+   "college": "Chi Bears",
+   "drafted_by": "LA Dons",
+   "rights": "Did Not Play Went to CFL",
+   "round": 4,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 54,
+   "player": "Wade Walker",
+   "pos": "T",
+   "college": "Oklahoma",
+   "drafted_by": "LA Rams",
+   "rights": "Buffalo Bills   Did Not Play Drafted by Buffalo in \u201949.",
+   "round": 4,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 56,
+   "player": "Paul Gibson",
+   "pos": "E",
+   "college": "NC State",
+   "drafted_by": "Phil Eagles",
+   "rights": "Buffalo Bills   Did Not Play",
+   "round": 4,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 58,
+   "player": "Bob H. Kennedy FB WA",
+   "pos": "State",
+   "college": "NY Yanks",
+   "drafted_by": "NY Yankees New York Yanks",
+   "rights": "Drafted by Pitt-Phila in \u201943.",
+   "round": 5,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 59,
+   "player": "John E.",
+   "pos": "Kerns",
+   "college": "T",
+   "drafted_by": "Ohio",
+   "rights": "GB Packers       Buffalo Bills",
+   "round": 5,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 60,
+   "player": "Richard Rifenberg",
+   "pos": "E",
+   "college": "Michigan",
+   "drafted_by": "Detroit Lions",
+   "rights": "NY Yankees Detroit Lions            Drafted by Yankees in \u201949.",
+   "round": 5,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 61,
+   "player": "Hardy",
+   "pos": "Brown",
+   "college": "FB Tulsa",
+   "drafted_by": "",
+   "rights": "WA Redskins Chicago Hornets Wash. Redskins7",
+   "round": 5,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 62,
+   "player": "Joe Sullivan       QB Dartmouth NY Giants",
+   "pos": "N/A",
+   "college": "Did Not Play",
+   "drafted_by": "",
+   "rights": "On \u201947 Lions Res. List.",
+   "round": 5,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 63,
+   "player": "Herb St.",
+   "pos": "John",
+   "college": "G",
+   "drafted_by": "Georgia",
+   "rights": "Pitt. Steelers Chicago Hornets Did Not Play",
+   "round": 5,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 64,
+   "player": "Jim",
+   "pos": "Still",
+   "college": "QB GA Tech. Chi Cardinals Buffalo Bills",
+   "drafted_by": "",
+   "rights": "Did Not Play",
+   "round": 5,
+   "year": null,
+   "page": 164
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 65,
+   "player": "Al Beasley",
+   "pos": "G",
+   "college": "St. Mary\u2019s Chi Bears",
+   "drafted_by": "New York Yankees",
+   "rights": "Did Not Play   Drafted by Yankees in \u201949.",
+   "round": 5,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 66,
+   "player": "John",
+   "pos": "Brown",
+   "college": "C",
+   "drafted_by": "NC",
+   "rights": "SF 49ers     Los Angeles Dons       Did Not Play",
+   "round": 5,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 67,
+   "player": "Ernest Williamson",
+   "pos": "T",
+   "college": "NC",
+   "drafted_by": "LA Rams",
+   "rights": "Los Angeles Dons       Did Not Play",
+   "round": 5,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 68,
+   "player": "Walter",
+   "pos": "Clay",
+   "college": "FB Colorado Clev. Browns Los Angeles Dons",
+   "drafted_by": "",
+   "rights": "Did Not Play",
+   "round": 5,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 69,
+   "player": "Joe Sutton        HB Temple       Phil. Eagles Buffalo",
+   "pos": "Bills",
+   "college": "",
+   "drafted_by": "",
+   "rights": "Philadelphia Eagles",
+   "round": 5,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 70,
+   "player": "Robert Deuber      HB Penn.        Balt",
+   "pos": "Colts",
+   "college": "Penn. in 1949",
+   "drafted_by": "Did Not Play",
+   "rights": "Drafted by Bills in 1949.",
+   "round": null,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 71,
+   "player": "Ted",
+   "pos": "Cook",
+   "college": "E",
+   "drafted_by": "Alabama",
+   "rights": "GB Packers     Green Bay Packers   GB Packers     Cut in 1949 and redrafted.",
+   "round": null,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 72,
+   "player": "Mike Perrotti     T Cincinnati Balt",
+   "pos": "Colts",
+   "college": "Los Angeles Dons",
+   "drafted_by": "",
+   "rights": "Did Not Play",
+   "round": 6,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 73,
+   "player": "Chet",
+   "pos": "Adams",
+   "college": "T Ohio",
+   "drafted_by": "NY Yanks",
+   "rights": "Buffalo Bills          NY Yanks",
+   "round": 6,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 76,
+   "player": "Buckets Hirsch    LB",
+   "pos": "NWern",
+   "college": "WA Redskins Buffalo Bills",
+   "drafted_by": "",
+   "rights": "Did Not Play",
+   "round": 6,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 77,
+   "player": "Dick Woodard      C",
+   "pos": "Iowa",
+   "college": "NY Giants",
+   "drafted_by": "Los Angeles Dons",
+   "rights": "NY Giants",
+   "round": 6,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 78,
+   "player": "George Grimes     HB Virginia     Pitt. Steelers Buffalo",
+   "pos": "Bills",
+   "college": "",
+   "drafted_by": "Did Not Play",
+   "rights": "Drafted by Bills in \u201948.",
+   "round": 6,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 80,
+   "player": "John Cunningham",
+   "pos": "E",
+   "college": "U of Cali. Chicago Bears N/A",
+   "drafted_by": "Did Not Play",
+   "rights": "On \u201947 Bears Reserve List",
+   "round": 6,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 81,
+   "player": "George Murphy     QB",
+   "pos": "USC",
+   "college": "SF 49ers",
+   "drafted_by": "Los Angeles Dons",
+   "rights": "Did Not Play",
+   "round": 6,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 82,
+   "player": "Bill",
+   "pos": "Renna",
+   "college": "C Santa Clara LA Rams",
+   "drafted_by": "Los Angeles Dons",
+   "rights": "Did Not Play   Drafted by Dons in 1949.",
+   "round": 6,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 84,
+   "player": "Hosea Rodgers     FB",
+   "pos": "NC",
+   "college": "Phil Eagles",
+   "drafted_by": "Los Angeles Dons",
+   "rights": "Did Not Play",
+   "round": 6,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 85,
+   "player": "Bill Gompers    HB Notre",
+   "pos": "Dame",
+   "college": "Balt Colts",
+   "drafted_by": "Buffalo Bills",
+   "rights": "Did Not Play Retired after \u201948 season",
+   "round": 7,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 86,
+   "player": "Paul",
+   "pos": "Crowe",
+   "college": "HB St. Mary\u2019s",
+   "drafted_by": "NY Yanks",
+   "rights": "LA Dons         Did Not Play Played for \u201951 NY Yanks",
+   "round": 7,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 87,
+   "player": "Denver Crawford",
+   "pos": "T",
+   "college": "TN",
+   "drafted_by": "GB Packers NY Yankees",
+   "rights": "Did Not Play Retired after \u201948 season",
+   "round": 7,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 88,
+   "player": "George Benigni",
+   "pos": "E",
+   "college": "Georgetown",
+   "drafted_by": "Detroit Lions Chi Hornets",
+   "rights": "Did Not Play Drafted by Hornets in \u201949",
+   "round": 7,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 89,
+   "player": "Ed",
+   "pos": "Smith",
+   "college": "B",
+   "drafted_by": "TX Mines",
+   "rights": "WA Redskins N/A                Did Not Play On \u201948 Packers Res. List",
+   "round": 7,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 90,
+   "player": "Henry Foldberg",
+   "pos": "E",
+   "college": "Army",
+   "drafted_by": "NY Giants",
+   "rights": "Chi Hornets     Did Not Play",
+   "round": 7,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 91,
+   "player": "Ben Verick      FB Wisconsin        Pitt. Steelers",
+   "pos": "N/A",
+   "college": "",
+   "drafted_by": "",
+   "rights": "Did Not Play On 1949 Bears Res. List",
+   "round": 7,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 92,
+   "player": "Alex Sarkisian",
+   "pos": "C",
+   "college": "NWern",
+   "drafted_by": "Chi Cardinals N/A",
+   "rights": "Did Not Play On 1947 Eagles Res. List",
+   "round": 7,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 93,
+   "player": "John Donaldson HB Georgia           Chi",
+   "pos": "Bears",
+   "college": "LA Dons",
+   "drafted_by": "",
+   "rights": "Did Not Play",
+   "round": 7,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 95,
+   "player": "Jack Swaner     HB U of Cali.       LA",
+   "pos": "Rams",
+   "college": "Chi Hornets",
+   "drafted_by": "",
+   "rights": "Did Not Play Drafted by Hornets in \u201948.",
+   "round": 7,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 98,
+   "player": "William Stanton",
+   "pos": "E",
+   "college": "North Carolina St.",
+   "drafted_by": "Baltimore Colts",
+   "rights": "Buffalo Bills   Did Not Play",
+   "round": null,
+   "year": null,
+   "page": 165
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 100,
+   "player": "Vito Kissell    FB Holy",
+   "pos": "Cross",
+   "college": "Balt Colts",
+   "drafted_by": "Buffalo Bills",
+   "rights": "Balt Colts",
+   "round": 8,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 101,
+   "player": "Mickey Colmer FB Miramonte Jr. Coll. NY",
+   "pos": "Yanks",
+   "college": "NY Yankees",
+   "drafted_by": "",
+   "rights": "Did Not Play",
+   "round": 8,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 102,
+   "player": "Ziggy Czarobski T Notre",
+   "pos": "Dame",
+   "college": "GB Packers Chi Hornets",
+   "drafted_by": "",
+   "rights": "Did Not Play",
+   "round": 8,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 103,
+   "player": "Gerald Morrical T Indiana            Det",
+   "pos": "Lions",
+   "college": "NY Yankees",
+   "drafted_by": "",
+   "rights": "Did Not Play Drafted by Yankees in \u201949",
+   "round": 8,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 104,
+   "player": "Leon McLaughlin C",
+   "pos": "UCLA",
+   "college": "WA Redskins LA Dons",
+   "drafted_by": "",
+   "rights": "Did Not Play Drafted by Dons in \u201948.",
+   "round": 8,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 105,
+   "player": "Bob",
+   "pos": "Heck",
+   "college": "E Purdue",
+   "drafted_by": "NY Giants",
+   "rights": "Chi Hornets     Did Not Play Went to CFL.",
+   "round": 8,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 107,
+   "player": "Phil O\u2019Reilly   T Purdue             Chi Cardinals",
+   "pos": "N/A",
+   "college": "",
+   "drafted_by": "",
+   "rights": "Did Not Play On 1948 Steelers Res. List",
+   "round": 8,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 108,
+   "player": "George Maddock T Northwestern        Chi",
+   "pos": "Bears",
+   "college": "Chi Hornets",
+   "drafted_by": "",
+   "rights": "Did Not Play On 1947 Cards Res. List",
+   "round": 8,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 109,
+   "player": "Paul Cleary     E",
+   "pos": "USC",
+   "college": "SF 49ers",
+   "drafted_by": "Chi Hornets",
+   "rights": "Did Not Play",
+   "round": 8,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 110,
+   "player": "Richard",
+   "pos": "Scott",
+   "college": "C Navy",
+   "drafted_by": "LA Rams",
+   "rights": "Brklyn Dodgers Did Not Play Drafted by Dodgers in \u201948",
+   "round": 8,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 112,
+   "player": "Tex Warrington C William &",
+   "pos": "Mary",
+   "college": "",
+   "drafted_by": "Phil Eagles",
+   "rights": "Brklyn Dodgers Did Not Play Retired after 1948 season",
+   "round": 8,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 113,
+   "player": "Robert",
+   "pos": "Hatch",
+   "college": "QB-HB Boston U",
+   "drafted_by": "Balt Colts",
+   "rights": "N/A             Did Not Play     On \u201948 Giants Res. List",
+   "round": 9,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 117,
+   "player": "Murray Alexander",
+   "pos": "E",
+   "college": "MS State",
+   "drafted_by": "WA Redskins Brklyn Dodgers Did Not Play",
+   "rights": "Drafted by Dodgers in \u201949.",
+   "round": 9,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 118,
+   "player": "Henry Kalver",
+   "pos": "T",
+   "college": "OK City",
+   "drafted_by": "NY Giants",
+   "rights": "N/A             Did Not Play       On \u201949 Eagles Res. List",
+   "round": 9,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 119,
+   "player": "Robert Forbes",
+   "pos": "HB",
+   "college": "Florida",
+   "drafted_by": "Pitt Steelers N/A",
+   "rights": "Did Not Play       On \u201948 Boston Yanks Res.",
+   "round": 9,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 120,
+   "player": "Ralph",
+   "pos": "Sazio",
+   "college": "T",
+   "drafted_by": "Wil. & Mary Chi Cardinals Buffalo Bills",
+   "rights": "Did Not Play        Drafted by Bills in 1949",
+   "round": 9,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 122,
+   "player": "Ernest Tolman",
+   "pos": "E",
+   "college": "USC",
+   "drafted_by": "SF 49ers",
+   "rights": "NY Yankees      Did Not Play        Drafted by Yankees in \u201949",
+   "round": 9,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 125,
+   "player": "Carmen Falcone",
+   "pos": "QB",
+   "college": "Pennsylvania Phil Eagles",
+   "drafted_by": "N/A",
+   "rights": "Did Not Play",
+   "round": 9,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 127,
+   "player": "Paul",
+   "pos": "Duke",
+   "college": "C",
+   "drafted_by": "Georgia Tech.",
+   "rights": "Green Bay Packers NY Yankees      Did Not Play      Retired after 1947 season.",
+   "round": null,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 128,
+   "player": "Lou",
+   "pos": "Agase",
+   "college": "T",
+   "drafted_by": "Illinois",
+   "rights": "Balt Colts    Chi Hornets     Did Not Play On \u201948 Packers Res. List",
+   "round": 10,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 129,
+   "player": "Tom Colella     HB Canisius       NY",
+   "pos": "Yanks",
+   "college": "",
+   "drafted_by": "Buffalo Bills",
+   "rights": "Did Not Play",
+   "round": 10,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 130,
+   "player": "R.M. Patterson",
+   "pos": "T",
+   "college": "McMurray, TX GB Packers Chi Hornets",
+   "drafted_by": "",
+   "rights": "Did Not Play On \u201949 Lions Res. List",
+   "round": 10,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 131,
+   "player": "Ray Coates      HB",
+   "pos": "LSU",
+   "college": "Det Lions",
+   "drafted_by": "NY Giants",
+   "rights": "Did Not Play Giants cut. Lions redrafted",
+   "round": 10,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 132,
+   "player": "Dewey Nelson    HB",
+   "pos": "Utah",
+   "college": "WA Redskins NY Bulldogs",
+   "drafted_by": "",
+   "rights": "Did Not Play On \u201948 Boston Yanks Res. List",
+   "round": 10,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 133,
+   "player": "Dwight Eddleman HB Illinois       NY Giants",
+   "pos": "N/A",
+   "college": "",
+   "drafted_by": "",
+   "rights": "Did Not Play On \u201947 Bears Reserve List",
+   "round": 10,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 134,
+   "player": "Robert Meinert",
+   "pos": "LB",
+   "college": "OK A&M",
+   "drafted_by": "Pitt Steelers LA Dons",
+   "rights": "Did Not Play Drafted by Dons in 1949.",
+   "round": 10,
+   "year": null,
+   "page": 166
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 137,
+   "player": "Dick Lorenz",
+   "pos": "E",
+   "college": "Oregon State SF 49ers",
+   "drafted_by": "LA Dons",
+   "rights": "Did Not Play Drafted by Dons in 1949.",
+   "round": 10,
+   "year": null,
+   "page": 167
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 138,
+   "player": "Dale Armstrong",
+   "pos": "E",
+   "college": "Dartmouth",
+   "drafted_by": "LA Rams",
+   "rights": "Brklyn Dodgers Did Not Play Drafted by Dodgers in 1949.",
+   "round": 10,
+   "year": null,
+   "page": 167
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "draft",
+   "no": 140,
+   "player": "Gil Johnson      QB-HB",
+   "pos": "SMU",
+   "college": "Phil Eagles",
+   "drafted_by": "NY Yankees",
+   "rights": "Did Not Play Given to Detroit",
+   "round": 10,
+   "year": null,
+   "page": 167
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "coach",
+   "name_as_printed": "DEFLIPPO, Louis Phillip (Lou)",
+   "year": 1948,
+   "club_as_printed": "Baltimore Colts",
+   "position_as_printed": "Assistant",
+   "page": 345
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "coach",
+   "name_as_printed": "GALLAGHER, Richard F. (Dick)                                                  Position",
+   "year": 1946,
+   "club_as_printed": "Cleveland Browns",
+   "position_as_printed": "Guards",
+   "page": 346
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "coach",
+   "name_as_printed": "GALLAGHER, Richard F. (Dick)                                                  Position",
+   "year": 1949,
+   "club_as_printed": "Cleveland Browns",
+   "position_as_printed": "Guards",
+   "page": 346
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "coach",
+   "name_as_printed": "GALLAGHER, Richard F. (Dick)                                                  Position",
+   "year": 1949,
+   "club_as_printed": "Cleveland Browns",
+   "position_as_printed": "Ends",
+   "page": 346
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "coach",
+   "name_as_printed": "MCLEAN, Raymond Tuttle (Scooter)                                      Statistics",
+   "year": 1949,
+   "club_as_printed": "Chicago Hornets",
+   "position_as_printed": "Ends",
+   "page": 348
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "kind": "coach",
+   "name_as_printed": "STIDHAM, Thomas Edward (Tom)                                   Assistant Coach",
+   "year": 1948,
+   "club_as_printed": "Baltimore Colts",
+   "position_as_printed": "Line",
+   "page": 350
+  }
+ ]
+}

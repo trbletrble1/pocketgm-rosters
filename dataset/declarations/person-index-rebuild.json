@@ -107,7 +107,8 @@
   "pfa-stats-1990s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
   "pfa-stats-2000s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
   "pfa-stats-2010s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
-  "pfa-stats-2020s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league."
+  "pfa-stats-2020s": "NOT A LEAGUE -- these are person-scoped statistic claims carrying their club-season inside the value. `pfa` is a source, not a league.",
+  "crippen-book": "NOT A LEAGUE -- the store holds person-scoped claims from a published reference work, plus game-scoped attendance and exhibition results. `crippen` is an author."
  },
  "identity_is_edited_in_place": "unify_identity.py assigns global ids by ENUMERATION ORDER, so re-running it against a changed store set renumbers every person in the archive. build-reports/identity.json is the authority and is edited in place by appliers (src/apply_assistants_identity.py), exactly as the person merges are. Do not re-run unify_identity.py --write.",
  "report_stores_not_claim_sources": {
