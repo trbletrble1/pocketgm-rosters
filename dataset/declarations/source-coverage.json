@@ -136,11 +136,11 @@
     {
      "part": "player game logs",
      "unit": "one page per player",
-     "exists": 21581,
+     "exists": 21607,
      "denominator": "link graph lower bound from player pages",
-     "on_disk": 28,
+     "on_disk": 1,
      "cited": 0,
-     "measured": "nothing from this section is in the archive"
+     "measured": "nothing from this section is in the archive. CORRECTED 8 September: the source register recorded 21,548 gamelogs as ON DISK, deferred by ruling. That was a count of the pages PFA's indexes LINK TO. What is held is the index -- 26 alphabetical nflgamelogs-* pages and one top page -- plus ONE per-player gamelog. This is the error `enumerable_parts` exists to prevent: exists, on disk and cited are three numbers and the register stated one of them."
     },
     {
      "part": "player playoff logs",
@@ -149,7 +149,7 @@
      "denominator": "link graph lower bound from player pages",
      "on_disk": 0,
      "cited": 0,
-     "measured": "nothing from this section is in the archive"
+     "measured": "nothing from this section is in the archive, and no page is on disk. See the game logs above: the same register entry implied these were held too."
     },
     {
      "part": "players",
