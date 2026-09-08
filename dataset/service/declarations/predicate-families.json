@@ -1,0 +1,94 @@
+{
+ "_what": "Which predicates ask the SAME QUESTION. The service groups values within a family and refuses to group across anything not declared here. A predicate in no family is its own family of one. Ruled 2026-09-07 by Ryan.",
+ "_why": "The ingests namespaced predicates by source (birth_date / pfa.birth_date / nflverse.birth_date / wikipedia.birth_date) to avoid pooling at ingest. The cost is that a man whose sources give two different birth days holds two single-valued predicates and nothing sees a disagreement: measured 2026-09-07, 2,417 men differ on the calendar day of birth and 105 on the day of death, invisible until the four predicates are read as one question.",
+ "_not_folded": {
+  "hometown vs birth_place": "where a man was FROM and where he was BORN are different facts. hometown, birthplace, pfa.birth_place and wikipedia.birth_place stay separate. Ruled 2026-09-07.",
+  "high_school": "STAYS OUT, ruled 2026-09-07 by Ryan, with the reason recorded so nobody reopens it quietly: 'Central' and 'Central (Detroit, MI)' cannot be settled by a fold, and that shape is most of the 1,350 literal disagreements. Adding it would either invent agreement or record disagreements the archive cannot judge. It comes back when there is a real rule, not before."
+ },
+ "families": {
+  "birth_date": {
+   "kind": "date",
+   "predicates": [
+    "birth_date",
+    "pfa.birth_date",
+    "nflverse.birth_date",
+    "wikipedia.birth_date",
+    "guide.BORN"
+   ]
+  },
+  "death_date": {
+   "kind": "date",
+   "predicates": [
+    "death_date",
+    "pfa.death_date",
+    "wikipedia.death_date"
+   ]
+  },
+  "height": {
+   "kind": "value",
+   "predicates": [
+    "pfa.height",
+    "guide.HEIGHT"
+   ],
+   "reading": "src/readings.py height",
+   "ruled": "Ryan, 2026-09-07"
+  },
+  "weight": {
+   "kind": "value",
+   "predicates": [
+    "pfa.weight",
+    "guide.WEIGHT"
+   ],
+   "reading": "src/readings.py weight",
+   "ruled": "Ryan, 2026-09-07"
+  },
+  "draft": {
+   "kind": "value",
+   "predicates": [
+    "draft.selection",
+    "pfa.draft_selection",
+    "pfa.draft",
+    "pfr.draft_selection",
+    "nflverse.draft_selection"
+   ],
+   "reading": "src/readings.py draft -- year + round + overall pick; the club is not part of the reading",
+   "ruled": "Ryan, 2026-09-07",
+   "_draft_overall_pick_only_is_NOT_here": "draft_picks_pre2001.csv has no round column, and draft.overall_pick_only exists to say so. Folding it into this family would pool a partial fact with complete ones -- the very thing the predicate name was created to prevent (gate_drafts D2). It stays its own family of one.",
+   "_wikipedia_draft_year_round_pick_are_NOT_here": "three separate scalar fields, never assembled into a selection. A round on its own is not a draft pick."
+  },
+  "college": {
+   "kind": "value",
+   "predicates": [
+    "college",
+    "pfa.college",
+    "guide.COLLEGE FOOTBALL",
+    "guide.COLLEGE (HEADER)"
+   ],
+   "reading": "src/readings.py college",
+   "ruled": "Ryan, 2026-09-07",
+   "_pfa_college_season_is_NOT_here": "pfa.college_season answers WHICH YEARS he attended, not which school. A different question."
+  },
+  "birth_place": {
+   "kind": "value",
+   "predicates": [
+    "birthplace",
+    "pfa.birth_place",
+    "statscrew.birth_place",
+    "wikipedia.birth_place"
+   ],
+   "reading": "src/readings.py place",
+   "ruled": "Ryan, 2026-09-07, conditionally on the trailing-country fold being clean. Measured clean over all 2,874 pairs; see declarations/readings.json birth_place.",
+   "_hometown_is_still_NOT_here": "where a man was FROM and where he was BORN are different facts. Ruled 2026-09-07 and unchanged."
+  },
+  "death_place": {
+   "kind": "value",
+   "predicates": [
+    "pfa.death_place",
+    "wikipedia.death_place"
+   ],
+   "reading": "src/readings.py place",
+   "ruled": "Ryan, 2026-09-07, conditionally, as birth_place. Clean, and it collapses exactly one pair of 723."
+  }
+ },
+ "_why_a_family_needs_a_reading": "A family is what lets the model RECORD a disagreement; the reading is what stops it recording a false one. build_read_model.build_contested groups a value family by its declared reading where one exists, so RS-G6 has something to check and finds nothing -- rather than passing because the population is empty. Before 2026-09-07 only the two date families existed, and RS-G6 could not fire on any data the model could hold."
+}

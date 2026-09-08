@@ -1,0 +1,56 @@
+{
+ "_what": "Date strings a source printed that the service's date reader cannot read as a calendar day, month or year, declared here so gate G1 can tell 'a source printed something odd' from 'the reader is defective'. A string in a date family that neither parses nor appears here FAILS G1. Every entry carries a source record so it can be looked at.",
+ "_rule": "The stored string is never rewritten. Declaring a string here records that it was looked at; it does not make it a date. The claim stays in the store and on the person, marked unreadable, beside any other value the man holds.",
+ "_status": "CONFIRMED by Ryan 2026-09-07: nothing can be done with these; they stay declared as unreadable with their source records. Each entry stays provisional in the sense that if the source ever corrects the string, G1 fails on the stale entry and it must be REMOVED here rather than the corrected string being silently reread.",
+ "accepted_as_printed": [
+  {
+   "string": "April 0, 1996",
+   "predicate": "birth_date",
+   "source_record": "statscrew#roster/US2MIP-2022#Cole Murphy",
+   "n": 2,
+   "looked_at": "StatsCrew prints a day of 0. Not a reader defect: no calendar has an April 0. The source's own error, kept as printed."
+  },
+  {
+   "string": "January 0, 1964",
+   "predicate": "death_date",
+   "source_record": "statscrew#person/c-dellher001",
+   "n": 1,
+   "looked_at": "StatsCrew prints a day of 0, as above."
+  },
+  {
+   "string": "April 39, 1932",
+   "predicate": "pfa.birth_date",
+   "source_record": "pro-football-archives#players/r/rose02040.html",
+   "n": 1,
+   "looked_at": "Pro Football Archives prints a 39th of April. Plausibly a typo for 19 or 29 or 9; the service does not guess which."
+  },
+  {
+   "string": "July 32, 1932",
+   "predicate": "pfa.birth_date",
+   "source_record": "pro-football-archives#players/l/lums00200.html",
+   "n": 1,
+   "looked_at": "Pro Football Archives prints a 32nd of July, as above."
+  },
+  {
+   "string": "1888-8-17 or 1890-5-15",
+   "predicate": "wikipedia.birth_date",
+   "source_record": "wikipedia-en#Paddy Quinn (American football)",
+   "n": 1,
+   "looked_at": "Wikipedia states two candidate dates in one field. It is one claim carrying two dates; reading it as either would be choosing. Held as printed."
+  },
+  {
+   "string": "c",
+   "predicate": "wikipedia.birth_date",
+   "source_record": "wikipedia-en#Roy Smith (Canadian football)",
+   "n": 2,
+   "looked_at": "A fragment of a wikitext template ({{circa}} or similar) that the wikipedia ingest cut before the year. Not a date. The ingest's to fix if anyone's; held as printed here."
+  },
+  {
+   "string": "c",
+   "predicate": "wikipedia.death_date",
+   "source_record": "wikipedia-en#Mark Ingle",
+   "n": 1,
+   "looked_at": "As above."
+  }
+ ]
+}

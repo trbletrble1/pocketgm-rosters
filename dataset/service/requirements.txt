@@ -1,0 +1,18 @@
+# The service's dependencies. Install into a venv made from Python 3.13:
+#     /usr/local/bin/python3 -m venv ~/.venvs/football-archive-service
+#     ~/.venvs/football-archive-service/bin/pip install -r requirements.txt
+#
+# 3.10 is a hard floor: mcp, fastapi, uvicorn and starlette all require it, and the
+# route and tool signatures use `int | None`, which 3.9 cannot parse at import.
+#
+# Versions are floors, not pins, because nothing here has needed a pin yet -- but the
+# two machines DID drift, and both were tested:
+#     laptop (macbook-pro-3, x86_64, macOS 14):  mcp 2.1.1, cryptography 48.0.1
+#     mini   (bghq-mac,      arm64,  macOS 15):  mcp 2.2.0, cryptography 50.0.1
+# The full test suite and the gate self-test pass on both. If a future version breaks
+# something, pin it here with the reason, rather than silently downgrading.
+
+fastapi>=0.141
+uvicorn>=0.52
+httpx>=0.28
+mcp>=2.1
