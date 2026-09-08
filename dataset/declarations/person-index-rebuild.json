@@ -1,0 +1,104 @@
+{
+ "_what": "How build-reports/person-index.json is rebuilt WITHOUT losing the work of scripts that patch it after the claims build. Read by src/build_person_index.py (which runs the chain) and src/gate_person_index.py (which refuses a rebuild if any writer is missing from here).",
+ "_why": "On 2026-09-06 a rebuild silently discarded 60 CFL 1945 seasons, 476 club-key rewrites, 2,576 coaching seasons and 1,052 officiating records, because five scripts wrote the index directly and nothing recorded that they must be re-run. It was caught only because one session measured season-holders before and after by hand.",
+ "builder": "build_person_index.py",
+ "chain": [
+  {
+   "script": "apply_club_keys.py",
+   "args": [
+    "--write"
+   ],
+   "adds": "club-key normalisation from build/club-key-normalisation.json; marks each rewritten season with _club_as_printed",
+   "must_precede": "apply_person_merges.py -- its own docstring: the index must be normalised BEFORE merging, because merges union seasons by key"
+  },
+  {
+   "script": "apply_person_merges.py",
+   "args": [
+    "--write"
+   ],
+   "adds": "build/person-merges.json, RE-applied: the builder applies merges at build time, but club-key normalisation runs after that and may change keys, so merges are applied again (undo-then-apply, idempotent)",
+   "must_precede": "apply_promotions.py -- the promotion decisions were made against the MERGED index (promote_coaches.py: 'checked_against ... AFTER the 92 merges'); applying them before merges could attach a season to an absorbed record"
+  },
+  {
+   "script": "apply_promotions.py",
+   "args": [],
+   "adds": "coaching_seasons, entered_by, promotion_ref, _playing_fields_do_not_apply from build/coach-promotions.json; creates the coaching-only people",
+   "must_precede": "demote_stintless.py -- which reverses 201 of these"
+  },
+  {
+   "script": "demote_stintless.py",
+   "args": [],
+   "adds": "reverses the 201 promoted coaches with no coaching stint (build/coach-demotions.json)"
+  },
+  {
+   "script": "restore_cfl1945_seasons.py",
+   "args": [],
+   "adds": "the 60 CFL 1945 season keys the ingest never wrote as stints (build/cfl1945-season-restore.json)",
+   "runs_last_because": "it writes final-form keys CFL|1945|CFLCGY and CFL|1945|CFLWPG and skips a key already present; club-key-normalisation.json does rewrite CFLCGY/CFLWPG codes (though no 1945 entry today), so running AFTER normalisation guarantees the restored keys are never un-normalised or duplicated"
+  },
+  {
+   "script": "apply_officials.py",
+   "args": [],
+   "adds": "the 978 officials created by ingest_officials.py (name, roles, officiating_seasons, identified_by.officials_pfa_code) plus officiating_seasons on the 74 players who already existed -- 1,052 men from build/pfa-officials.json",
+   "runs_last_because": "MEASURED, not assumed: today it has no hard dependency on any earlier step -- 0 official ids are absorbed by a person-merge, 0 collide with a promoted coach id, 0 share a person_id or a PFA code with the 201 demoted coaches, and officials carry no playing seasons for apply_club_keys to rewrite. It is placed last because that is the position that stays correct if any of those becomes non-zero: running after the merges attaches officiating to the surviving record rather than an absorbed one, and running after demote_stintless re-establishes as an OFFICIAL any man that step removes as a coach, which is what Ryan's ruling requires.",
+   "idempotent": "YES, in both directions. Every value is a pure function of build/pfa-officials.json and is SET rather than skipped, so a fresh index and a half-applied one converge to the same result. Its report is built from all 1,052 men every run rather than from that run's delta -- which is the specific way apply_promotions.py is NOT idempotent: run by hand against an index that already holds its ids it writes an EMPTY coach-seasons-promoted.json over a good one.",
+   "own_output_not_covered_by_rollback": "build/officials-applied.json. The rollback restores the INDEX only, so after a rollback this report describes a run that was undone. Re-running the script fixes it."
+  }
+ ],
+ "order_is_required": true,
+ "_order_note": "Steps 1->2, 2->3 and 3->4 are hard dependencies (see must_precede). Step 5's position is a safety rule, not a hard dependency today: with the current normalisation file either position gives the same index. Keep it last anyway.",
+ "exempt": {
+  "index_io.py": "the atomic-write helper itself; every writer above goes through save_index"
+ },
+ "known_missing_steps": [],
+ "how_a_new_patcher_is_picked_up": "It is not picked up automatically -- it FAILS LOUDLY. gate_person_index.py scans every src/*.py for a write to the index (open(<index>,'w'), save_index(, dump_atomic(...,<index>)). Any writer not named in `chain` or `exempt` fails P1 by filename with the offending line, and build_person_index.py refuses to rebuild while P1 fails. To add a patcher: write it using index_io.save_index, then add it to `chain` in the right position with `must_precede` / `adds` filled in.",
+ "_known_missing_steps_note": "Emptied 2026-09-06: the officials applier that was recorded here is now src/apply_officials.py, step 6 of the chain.",
+ "held_stores": {
+  "_what": "stores the builder reads, COUNTS and REPORTS but does not index, pending a ruling. Not a silent skip: build_person_index prints them and writes them to build-reports/person-index-skipped.json on every build.",
+  "_history": {
+   "nfl-2020-lvr": "held 2026-09-07 00:xx pending Ryan's word; released 2026-09-07 on his direct confirmation: 'fill LVR 2020 from another source ... nflverse it is, with the definition difference recorded'. The 86 nflverse men land on the rebuild that follows."
+  }
+ },
+ "known_unresolvable_stores": {
+  "_what": "stores where some stint subjects carry a LOCAL id identity.json does not hold, under the store's own name or (for stats-<store>) the roster store's. NOT A RULING: nothing written says these men are leads; this is an unexplained identity gap, counted on every build and printed, waiting for the identity job. P4 lets the rebuild proceed ONLY for stores listed here, each with what is measured.",
+  "assistants": "1,086 of 1,086 stints and 447 person claims: identity.json has NO entry for the store (its source field is null), so nothing from this store has ever entered the index. The 447 men reached the index through coach-promotions.json by another path; every field this store holds that the promotions store does not has never been seen. Measured 2026-09-07 by Fetching and here. Unexplained; the identity job's.",
+  "salaries": "76 of 135 stints: local ids identity.json does not hold for the store (it holds 92). Unexplained; the identity job's.",
+  "stats-usfl-1983": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's.",
+  "stats-usfl-1984": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's.",
+  "stats-usfl-1985": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's.",
+  "stats-cfl-2021": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's.",
+  "stats-xfl-2001": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's.",
+  "stats-ufl-2010": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's.",
+  "stats-ufl-2011": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's.",
+  "stats-ufl-2012": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's.",
+  "stats-wfl-1974": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's.",
+  "stats-nfl-1987": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's.",
+  "stats-nfl-2014": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's.",
+  "stats-wlaf-1992": "local ids identity.json holds under NEITHER the stats store's name nor the roster store's (the 26 that were under the roster store's name now resolve). Statistics for men the roster store never placed. Unexplained; the identity job's."
+ },
+ "store_league_tokens": {
+  "_what": "build_person_index derives a stint's league from the STORE FILENAME (stats-nfl-1987 -> NFL). A store whose name is not its league is declared here.",
+  "assistants": "COACHES -- the media guides' staff lists are coaching seasons, and they must land on the same key shape as the Coaching Tree's so a guide's role string attaches to the season it corroborates rather than opening a parallel ASSISTANTS league. Declared 2026-09-07 with Ryan's ruling that a club's own guide naming a man as its coach documents that he worked that season."
+ },
+ "identity_is_edited_in_place": "unify_identity.py assigns global ids by ENUMERATION ORDER, so re-running it against a changed store set renumbers every person in the archive. build-reports/identity.json is the authority and is edited in place by appliers (src/apply_assistants_identity.py), exactly as the person merges are. Do not re-run unify_identity.py --write.",
+ "report_stores_not_claim_sources": {
+  "_what": "Files under build/ that a CHAIN STEP writes as its own report and that carry a 'claims' key. build_person_index globs build/*.json and reads anything with claims, so without this the index reads its own previous run's output back in as a source.",
+  "_why": "coach-seasons-promoted.json is apply_promotions' report of what it applied, keyed on the person ids of THAT run. The builder read it as a claim store and minted 1,598 empty people (no name, no seasons, one pfa.coaching_season each) for the ids of the PREVIOUS generation of promotions. When apply_promotions refreshed the report with the current ids, the next rebuild lost all 1,598 and P3 refused it -- correctly. The index's population must not depend on its own last run. Found 2026-09-07.",
+  "coach-seasons-promoted.json": "apply_promotions.py's report. Its claims are a restatement of build/coach-promotions.json, which apply_promotions already applies directly.",
+  "officials-applied.json": "apply_officials.py's report, same shape.",
+  "cfl1945-season-restore.json": "restore_cfl1945_seasons.py's report.",
+  "coach-demotions.json": "demote_stintless.py's report.",
+  "_derived_not_only_declared": "build_person_index derives this set from the chain scripts themselves (which build/ files they write) and REFUSES to build if a chain step writes a store this declaration does not name. The list is the record; the derivation is the check. Raised by Fetching 2026-09-07: declaring four by name closes four instances, not the class."
+ },
+ "p3_transitions_completed": {
+  "2026-09-07": {
+   "count": 1598,
+   "first": "P_040746",
+   "last": "P_042346",
+   "why": "They exist only because build_person_index read a chain step's own report (build/coach-seasons-promoted.json, apply_promotions' output) back in as a claim source. They are the person ids of the PREVIOUS generation of promotions: no name, no seasons, no counted field, one pfa.coaching_season person claim each -- a restatement of build/coach-promotions.json, which apply_promotions applies directly to the 1,794 people that carry those seasons now.",
+   "verified_no_loss": "checked 2026-09-07 on all 1,598: none carries a name, a season, a coaching_seasons or an officiating_seasons field, and for every one of them EVERY coaching season it restates is also carried by a promoted person in build/coach-promotions.json. 0 uncovered.",
+   "ruling": "Ryan, 2026-09-07: yes, the rebuild may drop the 1,598. Enable, rebuild, then delete this block.",
+   "_the_block_is_deleted": "P3 forgives nothing by default again. This records that it once forgave exactly these ids, on this evidence, on this ruling."
+  }
+ }
+}

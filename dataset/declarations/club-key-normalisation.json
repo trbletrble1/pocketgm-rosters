@@ -1,0 +1,42 @@
+{
+ "source_id": "club-key-normalisation",
+ "name": "Club-key normalisation decisions",
+ "acquisition": "decided",
+ "stated_by": "this project",
+ "_this_is_not_a_source": "Like declarations/person-merges.json, this records DECISIONS made here on evidence held here. It says that a season key written with a club NAME denotes the same club-season as one written with a club CODE.",
+ "THE_DEFECT": "A season key is LEAGUE|YEAR|CLUB. Most of the archive writes CLUB as a code; the Coaching Tree store writes a name, and to anything that compares keys those are two clubs. Measured 2026-09-06: 2,607 keys carry a name, 2,581 of them coaching seasons. It split Marv Levy's twelve Buffalo years into twelve one-year runs and made Elijah Pitts coach the Buffalo Bisons from 1985 to 1997.",
+ "THE_MAP_IS_SEASON_AWARE": "There WAS a Buffalo Bisons, in 1946, in the AAFC, and a Cleveland Bulldogs in the 1920s. A 1946 Bisons is right and a 1986 Bisons is wrong. Every lookup is (name, year), so the real club keeps its own code and only the wrong one is corrected.",
+ "TWO_CASES_KEPT_APART": {
+  "mapping_gap": "the name IS what the club was called that season, or is its city with the nickname left off. Mechanical, and recorded as such.",
+  "source_defect": "the name is NOT what the club was called that season. Coaching Tree calls Buffalo the Bisons from 1978, Cleveland the Bulldogs from 1978, Oakland the Hornets in the 1960s. Normalising these silently would hide that the source is wrong, so each is recorded as a defect and the printed name is kept on the season it was read from.",
+  "why_this_matters": "a mapping gap is our omission. A source defect is the source's error. Folding them together would lose the second."
+ },
+ "A_SOURCE_DEFECT_NEEDS_CORROBORATION": "a city match alone is not enough. Some person must hold BOTH the printed name and the target code for one league-year -- the archive itself saying the two keys are one season. Without it the mapping is refused. That refusal earns its keep: on a city match alone, 'Chicago Cardinals Football Club' would have been rewritten to the Chicago Bears.",
+ "WHAT_IS_NEVER_TOUCHED": {
+  "absorbed_records": "the 92 halves absorbed by the merges of 2026-09-06 are preserved whole and are the undo information for those merges. Their keys stay exactly as the source printed them.",
+  "refused_mappings": "ambiguous names, names no club-season can match, and uncorroborated source defects are left alone and listed."
+ },
+ "REVERSIBILITY": {
+  "the_printed_form_is_kept": "every normalised season carries `_club_as_printed`, so a later reader can still see that the source said Bisons.",
+  "how_to_reverse": "delete the decision from build/club-key-normalisation.json and re-run src/apply_club_keys.py, which reverses every recorded rewrite before applying the current set.",
+  "collisions": "where a normalised key lands on a key the person already holds, the two season records are joined and the fields taken are recorded, along with the whole original record, so the split can be restored exactly."
+ },
+ "ORDER_OF_OPERATIONS": [
+  "src/apply_club_keys.py --write   (merges off, keys normalised, index left unmerged)",
+  "src/merge_people.py --write      (re-derive the merges from the normalised base)",
+  "src/apply_person_merges.py --write"
+ ],
+ "hard_rules": [
+  "the map is keyed on name AND year",
+  "a source defect needs corroboration",
+  "no absorbed record is altered",
+  "the printed form stays retrievable",
+  "every rewrite is reversible"
+ ],
+ "DECIDED_THROUGH_THE_CLUB_TABLE": "Since patch 4 of the club job (2026-09-06) normalise_club_keys.py decides every key through build/clubs.json: Clubs.resolve(name, year, league) gives the club, its code that year and the kind of match; a source defect is accepted only where the table's string carries its corroboration count (a name and a code one man holds for one season, computed in build_clubs.py from the base-plus-merge view). The output shape is unchanged; apply_club_keys.py, merge_people.py and gate_club_keys.py read it as before. club_keys.py stays as the reference decider gate_club_key_decisions.py compares against. Proven on 2026-09-06: 476 rewrites, 1,929 merge-time records and 39 refusals identical; undo + apply(regenerated) + merges reproduces the index byte-for-byte.",
+ "WHERE_THE_TABLE_AND_THE_OLD_DECIDER_DIVERGE": {
+  "_what": "src/club_keys.py is kept as the reference decider gate_club_key_decisions D2 compares against. It is superseded, and the club table has since learned things it does not know, so an exact match is no longer the right contract. Every divergence is named here with its reason; a divergence NOT named here still fails D2.",
+  "Cleveland Bulldogs 1992, 1993, 1994": "the table RESOLVES these to CLE, the old decider refuses them. Corroboration is a PAIR rule (Ryan's ruling, applied 2026-09-06): a name and a code one man holds for one season identify the club in every year it existed under that code in that city -- Coaching Tree calls Cleveland the Bulldogs from 1978 and the Browns held CLE throughout. The old decider counts corroboration per year and so loses the years nobody happens to co-hold.",
+  "Miami Dolphins 1985 Super Bowl XIX Media Guide 1985": "the table REFUSES this, the old decider maps it to MIA on a city-prefix match. It is a guide TITLE that the media-guides ingest parsed as a club, not a club name; mapping it would be the 'Chicago Cardinals Football Club -> Bears' error landing on the right club by luck. Reported to the ingest's owner; it is the one case gate_club_keys G7 still names."
+ }
+}

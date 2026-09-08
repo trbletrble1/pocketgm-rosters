@@ -1,0 +1,35 @@
+{
+  "_what_this_is": "Why build/guide-pre1950-delimited.json is NOT in the read model, why the read service's G5 fails on it, and why that failure is correct and must not be cleared.",
+
+  "THE_RED_IS_CORRECT": {
+    "ruled_by": "Ryan, 2026-09-07",
+    "what_fails": "The read service's G5 (`every build file accounted for`) fails on build/guide-pre1950-delimited.json: 1,653 claims over 238 people from 32 guides, none of them in the read model.",
+    "leave_it_failing": "Do not declare it away and do not ingest it to clear it. An unexplained red gets fixed by someone in a hurry; this file exists so the red is explained and the hurry has somewhere to stop.",
+    "what_would_clear_it_honestly": "A ruling from Ryan on label to field mapping for this file's vocabulary -- not an ingest, and not an entry in the read service's build-files.json."
+  },
+
+  "WHY_NOT_INGESTED": {
+    "not_superseded_by_the_corpus": "guide-prose-corpus covers the same documents -- all 32 have a same-club, same-year counterpart -- but extracts only guide.prose_block and guide.vitals_as_printed, and yields 38 claims from pre-1950 guides against this file's 1,653 over 238 people. The pre-1950 house style is a label:value table, not prose, which is why the delimited parser exists at all. Declaring this file away as superseded would quietly drop about 1,600 claims.",
+    "not_ingestable_as_it_stands": "Every guide in it carries `_labels_are_not_normalised`: 'Labels are kept exactly as printed. Mapping them to modern field names is a ruling, not a parsing step.' That ruling has been made only in part -- see declarations/readings.json LABELS, which maps the six unambiguous fields the bio panel consumes. The rest of the 80+ predicate vocabulary is unmapped by ruling, including OCR damage (guide.Aye, guide.A ge, guide.Cracral Information, guide.Prafessional Record, guide.Hionors) and section headings and club statistics that are not person facts at all (guide.GIANTS vs. PORTSMOUTH, guide.Total Yards Gained, guide.Longest Punt). Ingesting that vocabulary would put OCR noise into the read model wearing a store's authority."
+  },
+
+  "THE_NESTED_SHAPE_IS_A_ONE_OFF": {
+    "fact": "This is the ONLY file in the build tree whose claims are nested. Fetching swept all 1,146 build files: every other store either presents a top-level `claims` list or is not a claim store at all.",
+    "why_state_it_positively": "build_read_model.py reads a top-level `claims` list and skipped anything else in silence, so the obvious worry is a second silent store waiting on the same axis. There is not one. The sweep is what makes that a fact rather than an assumption, and it means the read service's G5 has exactly one outstanding case, not an unknown number.",
+    "shape": "runs[<club_run>].guides[<year>].claims[] -- grouped by club run and year because the parse is per guide edition and a run shares a house style."
+  },
+
+  "WHAT_THE_BIOS_TAKE_FROM_IT": {
+    "read_by": "src/bio_select.py, as a required input via required('build','guide-pre1950-delimited.json')",
+    "fields": "The six labels mapped in declarations/readings.json (height, weight, birth_date_as_printed, hometown, college, high_school), plus guide.NOTES* for the bio close and guide.SERVICE RECORD / guide.MARITAL STATUS.",
+    "the_panel_is_honest_about_it": "Every panel value names its source, so a guide value is labelled 'guide' and sits beside the archive's own. Of the 139 people carrying a guide height or weight, the number for whom the archive holds nothing is one -- Martin Wendell, whose printed height is '5’10!2,”' and unreadable. The bios are not asserting facts the archive lacks; what the archive cannot do is serve the evidence behind the guide half of each pair, which is what the read service's G5 is measuring."
+  },
+
+  "_documentation_only": {
+    "_what_this_is": "prose",
+    "THE_RED_IS_CORRECT": "prose addressed to whoever finds the red gate and reaches for a fix",
+    "WHY_NOT_INGESTED": "prose",
+    "THE_NESTED_SHAPE_IS_A_ONE_OFF": "prose; the sweep behind it is Fetching's, recorded here so the fact travels with the red",
+    "WHAT_THE_BIOS_TAKE_FROM_IT": "prose; the mapped labels themselves are declared and read in declarations/readings.json"
+  }
+}

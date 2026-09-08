@@ -1,0 +1,47 @@
+{
+  "source_id": "wikipedia-en",
+  "name": "English Wikipedia, league-season and team-season articles",
+  "stated_by": "English Wikipedia",
+  "acquisition": "fetched 2026-09-07; raw API responses with revision ids cached in pgm3-sources/wiki_cache",
+  "scope": "Stage B (Arena) and Stage C (CFL) plus WFL, AAF, USFL 2022-, XFL, UFL -- the leagues Stage A never reached. Standings, head coaches, club-season records, results, and every man the archive does not hold.",
+
+  "RANK": {
+    "position": "BELOW media guides and contemporary newspapers, as declarations/wikipedia.json already rules for player articles.",
+    "why": "user-edited; infobox facts are effectively uncited (measured 6.7% of infoboxes carry any reference), prose ~48% cited."
+  },
+
+  "ATTRIBUTION": {
+    "rule": "every fact carries the article title AND the revision id AND its timestamp. A Wikipedia fact without a revision id is not attributable: the page will change.",
+    "cited": "every fact records whether an inline <ref> sits on the value or its table row. Cited and uncited must stay distinguishable in the store."
+  },
+
+  "CLUBS": {
+    "rule": "every club string is resolved through build/clubs.json (src/clubs.py Clubs.resolve, with the season year and league). An unresolved string is kept AS PRINTED with the resolver's reason; nothing is guessed.",
+    "arena": "MEASURED 2026-09-07: build/clubs.json holds no Arena club and the person index holds no Arena league key. Every Arena club string will be a refusal until the club table learns the league. That is a finding, recorded, not a parser failure."
+  },
+
+  "IDENTITY": {
+    "head_coach_match": [
+      "club-year evidence: the candidate holds a season key at that club and year (COACHES|y{year}|{code}, or any league key at that code and year) -> method club-year",
+      "otherwise, a unique name in the person universe AND a coaching history (any COACHES| key) -> method name-unique+coach-history",
+      "otherwise NO MATCH: the coach is a LEAD. A unique name alone is not identity -- the promotion check caught a second Red Grange."
+    ],
+    "pre_1950": "before era_cut (1950) only club-year evidence matches; declarations/wikipedia.json IDENTITY applies.",
+    "leads_are_not_people": "an unmatched coach is written as a lead with everything needed for a later ruling (name as printed, league, year, club, article, revision). Nothing is promoted here. The promotion check refused 350 last time; it stays a ruling.",
+    "no_claims_for_unmatched": "an unmatched man produces no claims at all."
+  },
+
+  "DISAGREEMENTS_ARE_HELD": {
+    "rule": "where Wikipedia's head coach differs from the archive's (COACHES| season keys with is_head_coach), BOTH stay, both attributed; the disagreement is counted by league and field and written in full.",
+    "no_counterpart": "the archive holds no standings or results for any league, so those facts have nothing to disagree with; they are recorded as new, attributed facts and counted as such. For Arena there is no counterpart of any kind."
+  },
+
+  "OUTPUT": {
+    "files": "build/wikipedia-seasons-{league}.json, one per league",
+    "claims": "person-subject claims only (wikipedia.head_coach), so every existing consumer that globs build/*.json for claims reads them unchanged",
+    "club_seasons": "standings rows and team-season records/results live under `club_seasons`, NOT under `claims`: the store's subject vocabulary is person/stint/person_season and no consumer expects a club subject",
+    "written_by": "src/ingest_wikipedia_seasons.py, atomic via index_io.dump_atomic"
+  },
+
+  "_documentation_only": ["scope", "RANK.why", "CLUBS.arena", "DISAGREEMENTS_ARE_HELD.no_counterpart"]
+}

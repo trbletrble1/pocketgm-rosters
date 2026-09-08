@@ -1,0 +1,34 @@
+{
+ "source_id": "media-guides",
+ "body": "club press guide prose, 1950s-2000s",
+ "name": "NFL club press and media guides, per-player prose",
+ "acquisition": "held",
+ "stated_by": "the club",
+ "local": {"root": "$PGM3_SOURCES/nfl-books/text_all", "files": "OCR text of scanned guides"},
+ "WHY_PROSE_AND_NOT_FIELDS": "Measured 2026-09-06 over twenty guides: 3,999 field-instances carried, 3,223 already held, and of the 776 not held, 737 were the prose. College, birth date and jersey are held at 100%. A field parser would extract 39 new structured values from twenty guides. What the archive does not have is what a club publicist wrote about a man that year.",
+ "SCOPE": "twenty guides, two clubs per decade 1950s-2000s, chosen so the result is checkable against that measurement. The other 1,429 are not run.",
+ "THE_BOUNDARY_IS_PROVED_NEVER_INFERRED": {
+  "why": "a block attached to the wrong man is undetectable and permanent. It has happened twice here and a check caught it both times: Perko's 1946 notes ran on into Tony Compagno's entry, and Wedemeyer's header split across two lines nearly merged two men.",
+  "the_proof": ["a span runs from one header-shaped line to the next, so it opens on a header by construction", "no OTHER rostered man may appear in header position inside the span -- the Perko check, made from the roster rather than the layout", "the span must carry a per-player label and be of sane length"],
+  "header_shape_is_generic": "a name-like line carrying at least two vitals signals, detected without reference to the roster, so a man the archive does not hold still breaks the span instead of being swallowed into his neighbour's entry.",
+  "a_split_header_is_one_header": "real headers closer than 150 characters are collapsed, which is the Wedemeyer case.",
+  "unbounded_entries_are_DROPPED_and_counted": true
+ },
+ "THE_PROSE_IS_WHOLE_AND_VERBATIM": {
+  "no_normalisation": "not summarised, rewritten, normalised or OCR-corrected. The value is that a publicist chose those words; guide.Hionors is already held as printed and this follows the same rule.",
+  "not_broken_into_fields": "Agase's notes hold seven unrelated claims and structuring them would mean inventing a schema for 'biggest thrill'.",
+  "the_guide_s_own_label_is_kept": "PERSONAL, PRO, COLLEGE, TRANSACTIONS, or null for unlabelled trailing prose. These may prove to be different things and are not merged.",
+  "round_trips": "every block records its byte offsets and is checked character-for-character against the source file."
+ },
+ "PER_SEASON_VITALS": {
+  "what": "height, weight and jersey AS THAT GUIDE PRINTED THEM, for that club-season.",
+  "not_a_correction": "62 of 80 differ from the archive's PFA weight, median five to seven pounds. A man's weight that summer and his career-level figure are TWO FACTS. Both are held and nothing is resolved.",
+  "cannot_overwrite": "written under predicate guide.vitals_as_printed with subject person and the club-season inside the value, so it can never land on a stint or displace a career-level claim."
+ },
+ "IDENTITY": {
+  "route": "club and season, which the guide establishes by construction, plus the printed name.",
+  "name_rule": "surname exact, forename by its first three letters within a short span, so 'John McKee (Johnny) Allen' finds Johnny Allen. NEVER surname alone: that is how a namesake takes another man's entry.",
+  "unresolved": "a LEAD carrying the prose, in the same structure as the other leads. Never guessed."
+ },
+ "hard_rules": ["no prose block attaches to a man whose boundary was not proved", "every block round-trips against its source", "a per-season vital never overwrites a career-level one", "no claim attaches to an unresolved man", "prose is stored exactly as printed"]
+}

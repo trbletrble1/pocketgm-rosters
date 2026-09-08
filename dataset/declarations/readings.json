@@ -1,0 +1,217 @@
+{
+ "_what_this_is": "The ruling that a printed label may be mapped to a field and a printed value read into a canonical form, plus the labels and forms that ruling covers. src/readings.py derives its label map from LABELS here; src/gate_readings.py checks the property.",
+ "RULING": {
+  "ruled_by": "Ryan, 2026-09-07",
+  "rule": "A printed label may be mapped to a field, and a printed value may be read into a canonical form. Both are READINGS, not corrections: the store keeps what the source printed, the reading sits beside it labelled derived, and it can be recomputed or withdrawn without touching a claim.",
+  "precedent": "birth_date_as_printed, which already carries the printed string beside the parsed date.",
+  "map_only_the_unambiguous": "Where a label is not clearly a field, leave it and COUNT it. guide.Aye, guide.A ge, guide.Cracral Information, guide.Prafessional Record and guide.Hionors are OCR damage; guide.GIANTS vs. PORTSMOUTH, guide.Total Yards Gained and guide.Longest Punt are section headings and club statistics, not person fields. Mapping any of them would be inventing structure the source does not have.",
+  "refusals_are_counted_never_silent": "A value that cannot be read without guessing is left as printed and counted. gate_readings prints the count on every run. A silent refusal would be the same defect in a new coat.",
+  "why": "The bio panel was manufacturing disagreements between sources that agree. 51 of 73 unparsable guide heights agree with PFA once read as digits (PFA 6-1 against the guide's '61\"'), and 182 of 275 sampled draft disagreements are one selection under two club vocabularies (GNB/GB, SFO/SF, NWE/NE, TAM/TB). A fabricated disagreement is worse than a hole: a hole you can see, while this looks like scholarship -- two sources, both cited, honestly held apart -- and it survives every gate, because the gates check that disagreements are HELD, and they were being held faithfully, having been invented."
+ },
+ "A_DISAGREEMENT_IS": {
+  "rule": "More than one distinct READING among the values of a field. Two values that read to the same thing are one value written twice, not a disagreement.",
+  "unread_values_take_no_part": "A value that cannot be read can neither corroborate nor contradict, so it is excluded from the test, kept on the panel verbatim, and counted.",
+  "the_stated_limit": "Two unreadable strings that genuinely differ will not be flagged. That is the price of not guessing, and the refusal count is how it stays visible."
+ },
+ "LABELS": {
+  "height": [
+   "Height",
+   "HEIGHT",
+   "Ht.",
+   "HT",
+   "Ht"
+  ],
+  "weight": [
+   "Weight",
+   "WEIGHT",
+   "Wt.",
+   "WT",
+   "Wt"
+  ],
+  "birth_date_as_printed": [
+   "BORN",
+   "Born",
+   "Born in"
+  ],
+  "hometown": [
+   "HOME TOWN",
+   "HOMETOWN"
+  ],
+  "college": [
+   "COLLEGE FOOTBALL",
+   "College",
+   "COLLEGE (HEADER)"
+  ],
+  "high_school": [
+   "HIGH SCHOOL FOOTBALL",
+   "HIGH SCHOOL"
+  ]
+ },
+ "_labels_left_as_printed": "Everything else in build/guide-pre1950-delimited.json -- 80+ predicates. Notably Age/age/AGE are NOT mapped here: the field is unambiguous but nothing consumes it, and a mapping nothing reads is a note wearing a declaration's authority (see gate_declarations_are_read). guide.Aye and guide.A ge stay as printed under the ruling above.",
+ "VALUE_READINGS": {
+  "height": {
+   "reads_to": "F-I",
+   "accepted_forms_by_example": [
+    "6-1",
+    "6.1",
+    "6:1",
+    "6/1\"",
+    "6'1\"",
+    "6’1”",
+    "61\"",
+    "6 feet 1",
+    "5 ft. 11in,",
+    "5ft.10in.",
+    "6",
+    "6’"
+   ],
+   "refused_by_example": [
+    "6/114\"",
+    "6:134",
+    "6:142",
+    "6/112”",
+    "5/1112”",
+    "6°1%2\"",
+    "6'V2\"",
+    "5’11!4”",
+    "63!”",
+    "671”",
+    "5’10!2,”",
+    "61°",
+    "& feet 3"
+   ],
+   "why_refused": "A fraction mark the scanner mangled, or more digits than a height has. 6/114\" is not 6-11 and 6:142 is not 6-14; reading them would be a guess. 174 of 189 printed heights read, 15 refused."
+  },
+  "weight": {
+   "reads_to": "pounds as a bare integer string",
+   "accepted_forms_by_example": [
+    "210",
+    "195",
+    "195 lbs"
+   ],
+   "refused_by_example": [],
+   "why_refused": "All 189 printed weights read; the 37 distinct forms are already bare integers. '180.' with a trailing point is NOT accepted -- no weight in the corpus carries one, and loosening a reader for a form that does not occur is how a reader starts guessing."
+  },
+  "birth_date": {
+   "reads_to": "YYYY-MM-DD",
+   "accepted_forms_by_example": [
+    "July 17, 1982",
+    "1982-07-17"
+   ],
+   "refused_by_example": [
+    "17/7/82",
+    "1982"
+   ],
+   "why_refused": "Only a spelled-out month is read. A bare numeric date is never reordered: 2001-12-10 and 2001-10-12 stay two different dates, because deciding which number is the day would be a correction, not a reading."
+  },
+  "draft": {
+   "reads_to": "YYYY r{round} p{overall_pick}",
+   "the_club_is_not_part_of_the_reading": "An overall pick number is unique within a draft year, so year+round+overall IS the selection; the club follows from the pick rather than being an independent fact about it. That is what makes PFR's TAM and nflverse's TB one selection rather than two. Both strings stay on the panel verbatim -- the reading decides only whether two records are the same selection, never what is displayed.",
+   "accepted_forms_by_example": [
+    "9th round (80th overall) 1940 New York Giants",
+    "5th round (36th overall) 1941 New York Giants",
+    "3rd round (86 overall) 2013 Indianapolis Colts"
+   ],
+   "why_this_is_not_a_club_table_job": "The club table resolves the archive's own vocabulary (GB, SF, NE, TB, KC) but not PFR's (GNB, SFO, NWE, TAM, KAN), and LV/LAC/LA do not resolve either. Teaching it a second source's draft vocabulary is a separate ruling; comparing selections by pick number does not need one.",
+   "_object_forms_also_read": "PFR's and nflverse's {year, round, overall_pick, team} and PFA's draft_selection object both read by their year/round/overall_pick fields. They are not listed under accepted_forms_by_example because that list is checked as literal strings by gate_readings R1.",
+   "_the_overall_pick_ordinal_is_optional": "Pro Football Archives prints both '(80th overall)' and '(86 overall)'. Requiring the suffix left five of its own selections unreadable. Widened 2026-09-07 under the same principle as gate_readings R3: a reader that cannot read the archive hides real disagreements while claiming to remove false ones."
+  },
+  "college": {
+   "reads_to": "the school, lower-cased, abbreviation expanded, the word University dropped",
+   "ruled": "Ryan, 2026-09-07: College reads by dropping the abbreviation and the word University, so Ohio St. and Ohio State are one school.",
+   "accepted_forms_by_example": [
+    "Ohio St.",
+    "Ohio State",
+    "University of Wisconsin",
+    "U. of Wisconsin",
+    "Wisconsin",
+    "Marquette University",
+    "San Jose St.",
+    "Texas A&M",
+    "UCLA",
+    "St. Mary's (CA)",
+    "Boston College"
+   ],
+   "refused_by_example": [
+    "none",
+    "N/A",
+    "-"
+   ],
+   "why_refused": "a placeholder is not a school. An empty or 'none' value is left as printed and takes no part.",
+   "St_IS_EXPANDED_ONLY_AS_THE_LAST_WORD": "Ohio St. is Ohio State; St. Mary's is Saint Mary's. Position separates them and position is all that is used -- reading St. Mary's as State Mary's would be a guess wearing a reading's clothes.",
+   "College_IS_NEVER_DROPPED": "Boston College and Boston University are two schools. Dropping both words would make them one, and a false agreement is worse than the two disagreements it hides. Only University goes.",
+   "_the_stated_limit": "A value carrying a trailing attendance year -- 'University of Tulsa (1940-42).', the LA Dons guide's house style -- does not collapse against 'Tulsa'. The year is not part of the school's name, but removing it is a second reading and was not ruled. 26 guide values are affected; they stay recorded as disagreements until someone rules on it."
+  },
+  "birth_place": {
+   "reads_to": "the place as printed, with a TRAILING country token removed and case and punctuation folded",
+   "ruled": "Ryan, 2026-09-07, conditionally: add it if the trailing USA fold is clean across all pairs. MEASURED CLEAN -- of 2,874 people holding more than one birth place, 995 collapse and every collapse is a trailing country token (589), a trailing space (383), punctuation (22) or case (1). No collapse is semantic.",
+   "accepted_forms_by_example": [
+    "New Castle, PA",
+    "New Castle, PA USA",
+    "Washington, DC, United States",
+    "Dallas, Texas, U.S",
+    "Bethesda, Maryland, U.S.",
+    "Dunn, NC",
+    "Lomma, Sweden",
+    "Mexico City, Mexico"
+   ],
+   "refused_by_example": [
+    "USA",
+    "none",
+    "-"
+   ],
+   "why_refused": "a bare country is not a place this can compare; it is left as printed and takes no part.",
+   "NOTHING_ELSE_IS_REMOVED": "The city and the state stay, in the order printed. Reducing a place to its city would make Springfield, IL and Springfield, MA one place; a fold that can do that is not a reading. The city-only fold was measured (2,392 of 2,872 birth places and 603 of 723 death places 'agree' under it) and is REFUSED for exactly that reason.",
+   "_the_country_token_has_four_printed_forms": "USA, U.S, U.S. and 'United States'. Wikipedia writes 'U.S' and PFA writes 'USA'; reading only 'USA' left 1,808 pairs looking like disagreements over a country name. A trailing token only -- 'US Virgin Islands' keeps its US, because it is not trailing."
+  },
+  "death_place": {
+   "reads_to": "as birth_place; the same reader",
+   "ruled": "Ryan, 2026-09-07, conditionally, as birth_place. MEASURED CLEAN, and it gains almost nothing: of 723 people holding more than one death place, exactly ONE collapses ('Washington, DC' against 'Washington, DC, United States'). Recorded so nobody re-measures it expecting a haul.",
+   "accepted_forms_by_example": [
+    "Washington, DC",
+    "Washington, DC, United States",
+    "Plymouth, Minnesota, U.S",
+    "Plymouth, MN"
+   ],
+   "refused_by_example": [
+    "USA",
+    "none"
+   ],
+   "why_refused": "as birth_place."
+  }
+ },
+ "_documentation_only": {
+  "_what_this_is": "prose",
+  "RULING": "prose addressed to a reader; src/readings.py reads LABELS and gate_readings prints RULING.rule",
+  "A_DISAGREEMENT_IS": "prose stating the rule the code implements",
+  "_labels_left_as_printed": "prose",
+  "VALUE_READINGS": "prose, EXCEPT accepted_forms_by_example and refused_by_example, which gate_readings R1 executes against src/readings.py -- a declared form that stops reading is a gate failure",
+  "ONE_RULING_ONE_DEFINITION": "prose, EXCEPT known_module_name_collisions, which gate_readings R5 reads"
+ },
+ "ONE_RULING_ONE_DEFINITION": {
+  "rule": "A ruling has one implementation. A reading in particular must exist once, because two readers that answer differently make the archive disagree with itself about what the same fact is.",
+  "why": "2026-09-07: the read service and Parsing implemented this ruling in parallel, ten minutes apart, each with its own reader and its own declaration. It did not stay theoretical for an hour -- both modules were named `readings`, service/app.py puts service/ first on sys.path, and once a name is in sys.modules every later import gets that one. bio_select asked for a reading, got the service's module, and every bio 503'd on `unhashable type: dict`. The duplication did not cause a disagreement in the answers; it caused a crash, which is the lucky version.",
+  "the_definition": "dataset/declarations/readings.json is the ruling; dataset/src/readings.py is the implementation. Anything else that needs a reading imports that module rather than writing a second one, and says 'no reading available' if it cannot -- never falling back to a reader that might answer differently.",
+  "known_module_name_collisions": [
+   {
+    "name": "gates",
+    "in": [
+     "src",
+     "service"
+    ],
+    "owner": "Service",
+    "note": "pre-dates this ruling and unrelated to readings. Measured 2026-09-07, both sessions independently: NO module in src/ imports any name the service defines (0 of 166 files), so this is latent, not live. Declared rather than renamed to avoid churning two working gate files for a collision nothing triggers."
+   },
+   {
+    "name": "gate_selftest",
+    "in": [
+     "src",
+     "service"
+    ],
+    "owner": "Service",
+    "note": "pre-dates this ruling and unrelated to readings. Measured 2026-09-07, both sessions independently: NO module in src/ imports any name the service defines (0 of 166 files), so this is latent, not live. Declared rather than renamed to avoid churning two working gate files for a collision nothing triggers."
+   }
+  ],
+  "how_the_live_one_was_resolved": "The service now loads dataset/src/readings.py BY FILE PATH under the module name archive_readings (importlib spec_from_file_location), so it cannot be satisfied by anything else called `readings` whatever is on sys.path or already in sys.modules. That is a better fix than renaming this module, because it removes import order from the question instead of betting on it."
+ }
+}

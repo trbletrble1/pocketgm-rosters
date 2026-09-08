@@ -1,0 +1,46 @@
+{
+  "source_id": "pro-football-archives",
+  "name": "Pro Football Archives (profootballarchives.com)",
+  "acquisition": "fetched",
+  "stated_by": "Pro Football Archives",
+  "access": "one request per second maximum, descriptive User-Agent with a contact address, cached on first fetch and never re-pulled. A small site run by one person since 2006.",
+
+  "RANK": {
+    "position": "a SECOND VOICE alongside StatsCrew, not above it",
+    "why": "it is strongest exactly where the archive is thinnest -- high school 100% of pages in every band, transaction log 100%, death date 86-100% pre-1930 and 1930s-40s -- but it is a compilation, not a primary document, and it is one person's work.",
+    "disagreements": "HELD, never resolved. Where PFA and StatsCrew differ, both values stay, both attributed."
+  },
+
+  "IDENTITY": {
+    "rule": "resolve through the CLUB-SEASON ROSTER, never by guessing a player code. {year}.html gives club display names, {year}{league}{club}.html gives the roster, each name links to its player page.",
+    "why": "this confirms identity structurally -- the man is on PFA's own roster for that club in that year -- which satisfies the pre-1950 club rule by construction rather than by string matching.",
+    "_a_guessed_code_returned_the_wrong_man": "players/q/quic00100.html is Brian Quick. Vernon Quick is quic00800.html. Codes are sequential within a surname prefix and cannot be derived.",
+    "name_variants": "declared contractions and prefixes only (Walt/Walter, Len/Leonard, Bob/Robert). A surname that differs by even one letter is NOT matched -- Audette is not Audet.",
+    "unresolved": "left UNMATCHED. Never guessed."
+  },
+
+  "TRANSACTION_LOG": {
+    "_what": "not a field on a person but a sequence of events: team, date, type. 2,053 entries across 264 men in the census, median 7 each.",
+    "ONLY_44_9_PERCENT_CARRY_A_DATE": "the rest give team and type only.",
+    "shape": "one claim per entry, predicate pfa.transaction, value {team, date, type, season_context}, plus dated (bool) and printed_row (int).",
+    "printed_row_IS_NOT_A_CHRONOLOGY": "it records the row's position ON THE PAGE, which is what the source shows. It must never be read as a date, and an undated entry MUST NOT acquire one from its neighbours. A log that silently orders undated events asserts a sequence the source does not give.",
+    "raw_types_not_normalised": "44 distinct strings including Signed, Released, Free Agent, Draft, Allocation Draft, Expansion Draft, Signed by League. Allocation and Expansion Draft are different mechanisms from Draft, and Signed by League is not a club act at all. The mapping is a ruling and has not been made."
+  },
+
+  "LEADS": {
+    "ruling": "men on a PFA roster who never played a game do NOT become people. The archive is built on who played.",
+    "but": "they are captured as LEADS with every field PFA carries, exactly as for a matched man, so a later promotion is a DECISION and not a re-fetch.",
+    "_evidence_for_the_ruling": "PFA's 1948 Los Angeles Dons roster holds 64 men against the archive's 41. Gus Kitchens was signed 17 March 1948 and released 26 August 1948 -- in the press guide, never in a game.",
+    "structure": "the same lead shape built for the LA Dons guide: category, name as printed, source record, the club-season it places him on, why matching failed, candidate person, fields."
+  },
+
+  "PHOTOGRAPHS": "NONE. Measured at 0% across all 264 census pages -- the only image on a player page is the site logo. Do not look for them.",
+
+  "hard_rules": [
+    "no claim attaches to an unmatched person",
+    "a lead carries the same field set as a matched man",
+    "a lead cannot become a person without an explicit ruling",
+    "an undated transaction cannot acquire a date",
+    "a disagreement with StatsCrew is held, never resolved"
+  ]
+}

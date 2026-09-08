@@ -1,0 +1,107 @@
+{
+ "source_id": "clubs",
+ "name": "The club table",
+ "acquisition": "derived",
+ "stated_by": "this project, assembled from held sources",
+ "_this_is_not_a_source": "Nothing here is fetched. Every entry is assembled from material already held -- StatsCrew roster titles, PFA club cells, Coaching Tree and media-guide stint clubs, nflverse abbreviations, the boxscore strings, the club-key normalisation decisions, the merged-club table -- and every string keeps the source it came from.",
+ "WHY": "Club identity was patched four times by three sessions for one missing thing: clubs existed only as strings inside season keys, every source spelt them differently, and there was nothing to resolve against. (1) Coaching Tree calls Buffalo the Bisons in 1986; bio run-building preferred the code to survive it. (2) The merged clubs needed a hardcoded table in gate_merged_clubs.py, and the next merged club fails the same way. (3) The prose extractor derived 2,415 club-season keys from person_season because no club table existed, and left 41 unmapped. (4) club-key-normalisation.json rewrote 476 keys holding a name where a code belongs. This table is the thing they were all standing in for.",
+ "THE_ATOM_IS_THE_CLUB_NOT_THE_CODE": "StatsCrew codes are not franchise-stable. The Colts are BAC to 1983 and IND from 1984; the Rams LAN, then STL, then LAN; the Cardinals CHC, SLC, PHO, ARI. And one code can hide two clubs: NY1 is the 1921 Brickley Giants and the 1927 Yankees. So a club is a CHAIN of code-segments, each segment one code over a run of years.",
+ "LINEAGE_IS_DERIVED_ONLY_WHERE_THE_EVIDENCE_IS_MECHANICAL": {
+  "same_code_consecutive_years": "one club. A league-wide season not played (2020 CFL, 2021-22 XFL) is not a break; the segment records it as dark_years and carries the club across it under its last name.",
+  "code_change_nickname_carried_into_the_next_year_AND_men_carried": "one club, a relocation or recode -- but only when at least 4 men and a quarter of the smaller roster are on both sides: BAC 1983 Colts -> IND 1984 (37 of 57 men). A shared nickname alone is not a relocation: Kenosha Maroons 1924 -> Pottsville Maroons 1925 carried 0 of 21 men and is NOT linked; it is listed under unresolved.lineage_candidates.",
+  "code_change_men_carried_nickname_NOT_carried": "NOT linked, listed as a candidate: Dallas Texans 1962 -> Kansas City Chiefs 1963 (27 of 38 men), Cleveland Browns 1995 -> Baltimore Ravens 1996 (31 of 57). A relocation that also renamed is a ruling.",
+  "same_code_same_nickname_after_a_gap": "linked as 'resumed', with the men carried stated; where fewer than 4 carried the link is marked NOT corroborated (Cleveland Browns 1995 -> 1999: 2 of 57; Montreal Alouettes 1986 -> 1996: 0 of 62). Both are held for a ruling in the report.",
+  "same_code_after_a_gap_under_a_different_nickname": "TWO clubs, split, listed under unresolved.lineage_splits. NY1 1921 Brickley Giants and NY1 1927 Yankees are not one club because they share three letters.",
+  "mergers": "their own clubs, by Ryan's ruling -- Card-Pitt existed and men played for it. merger_of names the parents; the parents carry merged_into for that year and are SILENT in it (PIT|1943 in _clubs is dropped and reported under unresolved.silenced_code_years). The 1945 Boston Yanks/Brooklyn Tigers season stays on the Yanks with merger_seasons, exactly as gate_merged_clubs holds it -- a held question, since that treatment predates the Card-Pitt ruling.",
+  "pfa_only_clubs": "clubs PFA's coaching cells and transactions name in a league and year the archive holds no club for (NFL Europe, the 1936-41 and 1946-50 AFLs, PCFL, AFA, DFL, COFL, ACFL ...). One club = one PFA code with one printed name over consecutive years, chained across a league rename (WLAF 1997 -> NFLE 1998). A hole is a hole: the same code and name either side of one are two clubs, listed under unresolved.pfa_only_gaps. Twelve of them sit beyond the archive's fetch frontier (NFLE, UFL 2026) and are flagged beyond_the_archive_frontier."
+ },
+ "YEAR_SCOPING_IS_NOT_OPTIONAL": "There WAS a Buffalo Bisons -- 1924-25 and 1927-29 in the NFL under BU1, and 1946 in the AAFC under BUA. A 1986 Buffalo Bisons is wrong. Cleveland Bulldogs are real in 1924-27 and wrong in the 1980s. Every name carries the years it applied, and a lookup is always (string, year).",
+ "A_NAME_WRONG_FOR_ITS_SEASON_IS_RECORDED_AS_WRONG": {
+  "rule": "a string resolves to a club with kind wrong_for_season, carrying correct_name_then, ONLY when one of these holds: (1) the club itself bore that exact name in another year (Saskatchewan Roughriders 1946 -> Regina Roughriders; New England Patriots 1970 -> Boston Patriots); (2) it is a parent's name, or one half of a slash name, in a merger year (Pittsburgh Steelers 1943 -> Philadelphia Eagles/Pittsburgh Steelers); (3) a club-key-normalisation decision already ruled it a source defect (Buffalo Bisons 1970-97 -> Bills); (4) the source's own code resolves to that club within three years and the nickname or city agrees (PFA's Decatur Staleys 1921 under code CHI -> Chicago Staleys).",
+  "what_never_resolves": "a nickname shared with a different city. 'Hollywood Bears' 1940 is not the Chicago Bears; 'Harrisburg Capitol Colts' 1963 is not the Baltimore Colts. These are refused with the reason 'nickname matches X but the city differs' and counted.",
+  "spelling_variants": "a nickname match whose city is the same place differently printed -- equal, initials (BC / British Columbia), a prefix (New York / New York Brickley), or within two letters (Minnneapolis) -- is kind printed_name, with official_name_then beside it.",
+  "compound_strings": "'Brooklyn-New York Yankees' resolves through the half that names a club that year, kind compound_printed_name. A compound whose halves name two clubs (Houston Texans-Shreveport Steamer 1974) or a slash string not in the merged-club table (New York Stars/Charlotte Hornets 1974) is refused: needs a ruling.",
+  "beyond_the_archive": "a string dated after the archive's last held season for that league (PFA's 2025 NFL cells, nflverse 2025) is recorded on the club that bore the name in the last held season with kind beyond_archive; no season is held, and the string's role (code or name) is kept beside it.",
+  "corroboration": "Ryan's ruling from the club-spelling job, now computed here: a source defect is accepted only where some man holds BOTH the printed name and a club code for one league-year (read from the plain base with the merge pairing, since the rewrite and the merge each destroy the evidence). The corroborated (name, code) PAIR is the source's habit and applies to every year the club existed under that code with the same city -- Coaching Tree's Bisons rewrite to BUF in every year 1970-97 on 21 person-seasons. The count travels on the string as person_seasons and into the decisions file as evidence.",
+  "city_only": "'Washington' with the nickname left off resolves to the one club of that city that year, kind printed_name, matched_on 'the source gave the city and left the nickname off'."
+ },
+ "STRINGS_KEEP_THEIR_SOURCE_AND_THEIR_PRINTED_FORM": {
+  "rule": "official (StatsCrew roster title), pfa_cell (PFA's own code and printed name, which run together as 'Columbus TigersCOL'), pfa_transaction, nflverse (its abbreviation, mapped by the men who hold both), coaching_tree, media_guide, boxscore (including 'Chicago Cardinals-Pittsburgh Steelers C-P'), normalisation (what club-key-normalisation rewrote), merged_club_table.",
+  "fandom_redirect": "Fetching's fandom redirect survey (Dropbox reports/2026-09-06-fandom-club-name-variants.json; 59 entries, 81 variants, route redirect or prose), on Ryan's ruling of 2026-09-06 that it enters as a string source. The survey carries no years, so a variant that is not one of the club's own names is scoped to the club's whole span and says so (years_from). Fandom's disambiguator '(NFL)', '(football)' is stripped for matching and kept in the printed form. An entry the survey dates (the 1926 Wildcats) binds to that year. Its unverified lead (Los Angeles Tigers, 16 January 1926) is carried under unresolved.leads, not as a string. Arena and Ohio League canonicals the archive does not hold are refused and counted.",
+  "season_keys_are_read_from_the_base": "the index on disk holds NORMALISED keys; the builder reads season keys from the plain base (rewrites undone, merges undone, then the merge pairing) so the table records what the sources printed. A fandom canonical that is one of the club's own names is scoped to the years it bore it."
+ },
+ "THE_FAILURE_IS_LOUD": {
+  "rule": "clubs.resolve() never returns None silently. Every string it cannot map is counted in clubs.census() with its source, years and cost in person-seasons, in the same shape club_keys.census() already reports through build_dashboard. gate_clubs.py proves that a string invented at test time appears in the census.",
+  "what_is_reported": "unresolved.strings (every refused string with its source, league, years and reason), lineage_splits, lineage_candidates, code_conflicts (one source code on two clubs in one year: PFA's 'LV' 2020 names both the Raiders and a Chargers cell), pfa_only_gaps, silenced_code_years, same_name_same_year, archive_code_years_without_players (LVR 2020: the archive holds no Raiders season that year at all).",
+  "index_census": "clubs.report_index() -- every non-code season-key token the table cannot place, in the club_keys.census shape; wired into build_dashboard in place of club_keys.report."
+ },
+ "STABLE_ID": "club-<first official name, slugged>-<first year>, deterministic from held data and carried forward across rebuilds through the table's own id_anchor map, so a club keeps its id even if the derivation gains a segment.",
+ "NOT_AN_INDEX_WRITER": "build_clubs.py writes build/clubs.json only. It does not touch person-index.json, so it is not a ninth writer and needs no declaration in person-index-rebuild.json. Retiring the four patches is a separate, incremental step per patch.",
+ "hard_rules": [
+  "a lookup is always (string, year)",
+  "a wrong-for-season name is recorded as wrong, never silently mapped",
+  "no merged club resolves to a parent",
+  "no lineage without mechanical evidence; the rest is listed unresolved",
+  "every unmappable string is counted and reported",
+  "the printed form is never lost"
+ ],
+ "GATE": "src/gate_clubs.py K1-K5: every club-season resolves or is in the unresolved list; 1946 Bisons survives, 1986 Bisons is the Bills marked wrong; the builder is not an index writer and the index hash is unchanged; an invented string is refused, counted and printed; ids unique and anchored, one club per code-year, every year named, every string year-scoped.",
+ "BUILDS": "src/build_clubs.py --write -> build/clubs.json (only). Idempotent: two runs are byte-identical.",
+ "MERGERS": {
+  "_what": "Ryan's ruling: a merged club is its own club. These are the wartime mergers, stated by NAME as the archive prints them; the builder finds the codes -- the merged club is the code-year carrying the merged name that holds the men, the parents are the clubs bearing the parent names the year before. No code is written here.",
+  "rulings": [
+   {
+    "league": "NFL",
+    "year": 1943,
+    "merged": "Philadelphia Eagles/Pittsburgh Steelers",
+    "of": [
+     "Philadelphia Eagles",
+     "Pittsburgh Steelers"
+    ],
+    "kind": "merger"
+   },
+   {
+    "league": "NFL",
+    "year": 1944,
+    "merged": "Chi/Pit Cards/Steelers",
+    "of": [
+     "Chicago Cardinals",
+     "Pittsburgh Steelers"
+    ],
+    "kind": "merger"
+   },
+   {
+    "league": "NFL",
+    "year": 1945,
+    "merged": "Boston Yanks/Brooklyn Tigers",
+    "of": [
+     "Brooklyn Tigers"
+    ],
+    "kind": "absorbed",
+    "_note": "Boston continued under its own code and Brooklyn folded into it: a merger season of the Yanks, not a new club. Held: this treatment predates the Card-Pitt ruling."
+   }
+  ],
+  "consumers": "build_clubs.py (lineage.merger_of / merged_into / merger_seasons, silenced code-years) and gate_merged_clubs.py, which derives its MERGED table from build/clubs.json and holds no string of its own."
+ },
+ "KNOWN_EMPTY_CODE_YEARS": {
+  "_what": "code-years the archive holds with no men, where the reason is established and is not a fetch gap; the builder prints the reason on archive_code_years_without_players",
+  "LVR|2020": "SOURCE GAP, not a fetch gap: StatsCrew serves the 2020 Las Vegas Raiders page with an empty roster table ('The Stats Crew is looking for more information on this team'); every other Raiders season parses. Established by Fetching 2026-09-06. Closing it needs another source and a ruling (nflverse names 86 men on 2020|LV, a wider definition than StatsCrew's ~69)."
+ },
+ "LEAGUES_THE_ARCHIVE_HOLDS_NO_CLUB_MAP_FOR": {
+  "_what": "A league whose club-seasons are attested by a source but which has no entry in the person index's _clubs map (StatsCrew's code|year -> name). The table builds its clubs from the ATTESTATION -- a printed name with a league and a year -- never from a bare string.",
+  "_why": "Arena had 559 source strings refusing and not one club in the table, because every club the table held came from _clubs or from PFA's coach cells. A league nobody swept has no codes, so it had no clubs, so every string naming one refused. Found 2026-09-07.",
+  "attested_only_leagues": {
+   "ARFL": {
+    "name": "Arena Football League",
+    "club_season_source": "build/wikipedia-seasons-arena.json club_seasons (league-season standings templates: club_as_printed, year, W/L/T)",
+    "men_source": "build/pfa-transaction-membership.json roster_membership.* values 'ARFL|YEAR|CODE' with person subjects",
+    "_note": "PFA writes Arena clubs under CITY codes that collide with the NFL's (CLE, PIT, DAL): they are recorded as source strings scoped to league ARFL and are never segment codes.",
+    "club_season_league_token": "ARENA",
+    "_two_tokens_one_league": "PFA's transactions call it ARFL and Wikipedia calls it ARENA. The table uses ARFL, the token the archive's own census and transaction store use, and records the source token beside it rather than rewriting either."
+   }
+  },
+  "identity": "the segment code is 'ARENA:<normalised printed name>' -- the source's own stable token for the club-season, namespaced so it can never collide with an NFL code. One segment per contiguous run of one name.",
+  "lineage": "unchanged and applied harder here, because Arena franchises move constantly: a link needs the nickname carried into the next year AND the men carried (>=4 and >=25% of the smaller roster). Everything else is a candidate or a split, listed.",
+  "what_is_NOT_done": "no club is invented from a string. A string that names no attested club-season in its year refuses and is counted. Arena ROSTERS are not held anywhere in this archive or its source cache (the StatsCrew sweep holds 228 club tokens, none of them Arena), so these clubs carry no roster and their men are only those PFA transactions name."
+ }
+}

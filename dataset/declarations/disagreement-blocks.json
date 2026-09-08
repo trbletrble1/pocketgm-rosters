@@ -1,0 +1,51 @@
+{
+  "_what_this_is": "Which `disagreements` blocks in build/*.json compare two VALUES OF ONE FIELD -- the only shape where 'both values are held' means anything -- and which compare something else. src/gate_disagreements_are_claims.py reads this; a block shape that is not named here FAILS that gate rather than being skipped.",
+
+  "RULING": {
+    "ruled_by": "Ryan, 2026-09-07",
+    "rule": "For every store with a disagreements block, compare each side against the archive's own claims. A value the archive cannot serve is not held.",
+    "why_this_file_exists": "Not every disagreement is two values of one field. PFA's coaching comparison asks whether a SEASON appears in two stores; its role-string pairs tabulate a VOCABULARY difference between sources that are not in conflict about a fact; the pre-1950 roster rows say one source places a man on a club-season and the other does not. Running the value test over those would report 51,545 failures that are not failures. Running no test and skipping them quietly would be the defect this gate was built to stop. So each is named, with what it does compare and why it is not a value.",
+    "a_shape_not_named_here_fails": "Deliberately. A new store's new block shape is an unread row, and an unread row is not a passing row."
+  },
+
+  "value_comparison": {
+    "_what": "two values of one field, about one person. Checked: every side must be a claim the archive holds for that person in that field's family, under the field's declared reading.",
+    "blocks": [
+      "nflverse-rosters:birth_date_vs_statscrew",
+      "nflverse-rosters:birth_date_vs_pfa",
+      "nflverse-draft:(list)",
+      "pfa-coaches:birth_date_vs_statscrew",
+      "pfa-coaches:coach_page_vs_player_page",
+      "pfa-stage3:(list)",
+      "pfa-pre1950:(list)"
+    ]
+  },
+
+  "not_a_value_comparison": {
+    "pfa-coaches:coaching_stores": {
+      "compares": "whether a COACHING SEASON appears in PFA and in the archive's coaching stores, season by season, plus whether the role STRING differs where both hold it.",
+      "why_not_a_value": "the unit is a season's presence, not two readings of one field. `season_in_pfa_not_in_store` has no second value to hold -- the other side is an absence, and an absence is not a value the archive can be asked to serve.",
+      "what_gates_it_instead": "gate_pfa_coaches G7 (nothing is resolved) and the store's own kinds."
+    },
+    "pfa-coaches:role_string_pairs": {
+      "compares": "a tabulation of DISTINCT role-string pairs across sources -- 'Special Teams' against 'Special Teams Assistant', with a count -- so the mapping ruling can be made from evidence.",
+      "why_not_a_value": "it is about a vocabulary, not about a man. There is no person on the row and the store itself flags these `_not_a_conflict_about_a_fact`.",
+      "what_gates_it_instead": "gate_pfa_coaches G7."
+    },
+    "pfa-pre1950:club_season_roster": {
+      "compares": "PFA places a man on a club-season roster and StatsCrew does not.",
+      "why_not_a_value": "one side is 'not on this club-season roster' -- an absence, not a value. Membership is held as roster_membership claims elsewhere; this row is the comparison, not the fact.",
+      "what_gates_it_instead": "gate_pfa G6, and the membership stores' own gates."
+    },
+    "wikipedia-seasons-cfl:head_coach": {
+      "compares": "which PERSON Wikipedia names as a club's head coach against which person the archive's coaching seasons name.",
+      "why_not_a_value": "both sides are person ids, not values of a field on one person. gate_wikipedia_seasons D already requires both sides to be people the index holds AND the Wikipedia side to be a claim -- which is this gate's property, enforced there, in the right shape for a person comparison.",
+      "what_gates_it_instead": "gate_wikipedia_seasons check D."
+    }
+  },
+
+  "_documentation_only": {
+    "_what_this_is": "prose",
+    "RULING": "prose; the enforceable parts are value_comparison.blocks and not_a_value_comparison, both read by src/gate_disagreements_are_claims.py"
+  }
+}

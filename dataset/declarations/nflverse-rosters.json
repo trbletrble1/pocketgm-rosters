@@ -1,0 +1,39 @@
+{
+ "source_id": "nflverse-rosters",
+ "name": "nflverse historical rosters, roster_{year}.csv 1920-2026",
+ "stated_by": "nflverse",
+ "acquisition": "fetched",
+ "_not_the_same_source_as_nflverse": "declarations/nflverse.json covers players.csv and its DRAFT records. This covers the 107 per-season roster files. Different body, different id, so neither ingest can silently absorb the other.",
+ "local": {"root": "$PGM3_SOURCES/nflverse/rosters", "files": "roster_{year}.csv"},
+ "retrieval": {
+  "pattern": "https://github.com/nflverse/nflverse-data/releases/download/rosters/roster_{year}.csv",
+  "measured_2026_09_06": {"years": 107, "range": "1920-2026", "gaps": 0,
+                          "http_200": 107, "failures": 0, "rows": 142631, "rows_pre_1950": 11701}
+ },
+ "WHAT_IS_INGESTED": {
+  "birth_date": "near-total before 1950 -- 96.7% of the 1920s, 99.5% of the 1930s, 100.0% of the 1940s. This is the join and the reason the source is worth holding.",
+  "roster_membership": "person on a club in a season. A THIRD voice beside StatsCrew and PFA for the pre-1950 era, where the archive had two."
+ },
+ "WHAT_IS_REFUSED_AND_WHY": {
+  "headshot_url": "MEASURED 2026-09-06 and REFUSED. Present on 100% of rows in every decade, which is why it looks valuable. 15 of 20 sampled URLs -- fifteen DIFFERENT urls -- return one byte-identical file: 382,225 bytes, PNG 1400x1000, md5 f63433b569d11ff3..., a generic helmeted silhouette. A url is not an image. Ingesting it would record 11,701 pre-1950 photographs that do not exist.",
+  "position": "MEASURED and REFUSED. The archive holds 324 distinct position codes before 1950; this source holds 19. On 8,700 comparable season-pairs the archive is more specific 796 times and this source 42. It also collapses WB, TB, BB and FB to a single HB on 2,112 rows. Ingesting it would add noise to a field the archive already carries better.",
+  "college": "REFUSED. 0.0% populated before 1980. The field exists and is empty for every pre-1950 row.",
+  "depth_chart_position": "REFUSED with position. Zero rows in 1920-1940 contain a '/' -- it is one code per row, not the per-season multi-position data it was hoped to be."
+ },
+ "IDENTITY": {
+  "_name_alone_is_a_bug": "2,470 nflverse people match an archive name uniquely and would be a GUESS; 286 match a name shared by two or more archive people and would be a BUG. Neither route is used.",
+  "routes": ["name + birth_date, unique in the archive", "birth_date alone, unique in the archive"],
+  "measured_2026_09_06": {"nflverse_distinct_people": 34730, "matched": 28174,
+                          "route_name_and_birth_date": 26764, "route_birth_date_alone": 1410,
+                          "unmatched": 6556, "unmatched_first_season_pre_1950": 630},
+  "unmatched_are_LEADS": "A person this source holds and the archive does not is a LEAD, not a person. Same structure as the PFA and media-guide leads. Promotion is a ruling."
+ },
+ "DISAGREEMENTS": {
+  "rule": "HELD, never resolved. Both values stay and neither is preferred.",
+  "_the_join_is_never_the_field_compared": "Matching on birth date and then comparing birth dates proves nothing. Disagreements are found on a join of unique archive name plus at least one shared season.",
+  "measured_2026_09_06": {"birth_date_vs_statscrew_agree": 23600, "birth_date_vs_statscrew_disagree": 1080,
+                          "birth_date_vs_pfa_agree": 2992, "birth_date_vs_pfa_disagree": 579,
+                          "nflverse_has_a_date_the_archive_lacks": 59}
+ },
+ "games": "ABSENT BY CONSTRUCTION. 30 columns and not one is a game, start or snap count. There is nothing here to compare against StatsCrew on games."
+}

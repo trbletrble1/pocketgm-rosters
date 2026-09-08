@@ -1,0 +1,34 @@
+{
+ "source_id": "college-guides",
+ "name": "College football guides and game programs, pre-1950",
+ "acquisition": "fetched",
+ "stated_by": "the university or the programme publisher, per document",
+ "local": {"root": "$PGM3_SOURCES/college-pre1950", "text": "text/{id}.txt or text_container/{doc}.txt"},
+ "_THIS_IS_NOT_A_SCOPE_RULING": "College football has NOT been taken into scope. 110 of 6,238 archive men (1.8%) appear in these documents. This ingest exists because 69 documents were already on disk and carry high school, hometown and class year for men in the decade where the professional record holds almost none of it. It implies nothing about the other 2,089 college items on archive.org.",
+ "SOURCE_CLASS": {
+  "what": "a COLLEGE publication about a man who later played professionally",
+  "why_it_must_be_distinguishable": "a hometown from a 1948 Wisconsin college guide is not a hometown from a club press guide. The men are undergraduates, the publisher is a university, and the observation predates the professional career. Predicates are prefixed college. and every record names its document.",
+  "rank": "BELOW a club's own media guide for anything about a professional career; it is contemporaneous only for the college years."
+ },
+ "EVERYTHING_HERE_IS_A_CANDIDATE": {
+  "rule": "A college guide naming a man who shares a name AND a college with someone in the archive is STRONG EVIDENCE, NOT PROOF.",
+  "how_matched": "strict test only - forename and surname adjacent (or initial + surname), and the archive man's recorded college equals the document's institution.",
+  "what_is_NOT_used": "the 184 loose matches, where only the surname appears, are excluded entirely.",
+  "storage": "records carry candidate_person, never subject. There is no claims array in the build, so nothing here can be consumed as an observed fact about a person by mistake.",
+  "promotion": "requires an explicit ruling. No code path does it."
+ },
+ "COLUMN_BINDING": {
+  "rule": "A FIELD READ BY POSITION IS NOT WRITTEN.",
+  "_the_failure_this_prevents": "the PFA parse produced high_school = 'Year' by taking a value from a column position. The same error here would put one man's hometown on another.",
+  "what_is_allowed": "a value is written only when its binding is STRUCTURAL: the man's name is on the SAME LINE as the value, and the value is identified by its own PATTERN (a height reads 6-1, a weight is 140-259, a class is Soph./Jr./Sr., a hometown is 'City, State'), not by which column it sits in.",
+  "what_is_refused": "AGE. A bare two-digit number in an unlabelled table cannot be distinguished from a jersey number or years-of-eligibility by pattern alone, so no age is written from any document.",
+  "DOCUMENTS_DROPPED_FOR_THIS": "Wisconsin Football 1947 and 1948. The OCR separates the name column from the data columns entirely - the names sit above the header and the rows below carry no names. Joining them would be positional. Both are dropped for field extraction."
+ },
+ "PROSE": {
+  "rule": "captured WHOLE and verbatim, attributed to its document, never split into fields, never summarised, never OCR-corrected.",
+  "proof": "every block is round-tripped against the source file before writing."
+ },
+ "EXCLUDED": {
+  "unidentified_institution": "18 documents whose institution could not be determined contribute nothing and are listed by identifier for a later look."
+ }
+}

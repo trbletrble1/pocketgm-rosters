@@ -1,0 +1,35 @@
+{
+ "source_id": "pro-football-archives",
+ "body": "coaches",
+ "name": "Pro Football Archives, coach pages (/coaches/{code}.html) and the four coach lists",
+ "_same_source_as": "declarations/pfa.json carries the source, its rank, its access terms and its identity rule. This file declares the COACH body only: 3,903 pages reached from nfl-head-coaches, nfl-assistant-coaches, cfl-head-coaches and cfl-assistant-coaches.",
+ "WHY": "assistant coaching staff before 1960 is the oldest structural gap in the project. The Coaching Tree store holds assistants but returns them in MODERN vocabulary (Offensive Line, Running Backs, Defensive Assistant): whoever built it made the mapping Ryan reserved for himself, and the period strings are gone at that layer. PFA prints them raw -- Defensive Front Seven, Offensive Backs, Line, Chief Offense -- and nothing else on disk holds that.",
+ "THE_ROLE_STRING": {
+  "column": "the coaching table's column is headed Position, not Role. A search for Role returns nothing for that reason.",
+  "kept_exactly_as_printed": "no normalising, no mapping to modern names, no typo repair. 'Defemsive Line' and 'Strength and Condtioning' are the source's own spelling and they stay.",
+  "three_separators_none_interchangeable": ["Quarterbacks; Offensive Coordinator", "Secondary/Cornerbacks", "Defensive Backs-Nickels"],
+  "COMPOUND_ROLES_ARE_NOT_SPLIT": "'Assistant Offensive Coordinator/Offensive Line/Running Backs' is one printed role held by one man in one season. Splitting asserts a structure the source does not state; 'Assistant Offensive Line/Offensive Line' would split into a role and its own assistant form as if they contradicted. Whether a compound decomposes is Ryan's ruling and unmade.",
+  "predicate": "pfa.coaching_season, value.position_as_printed; PLAYOFFS rows under pfa.coaching_playoffs"
+ },
+ "IDENTITY": {
+  "unit_on_the_pfa_side": "the PFA code. 4,553 listings across the four lists deduplicate to 3,903 codes because a man appears in both the head and assistant lists, or in both NFL and CFL. One code, one record.",
+  "officials": "22 codes in the officials list are also coach codes. Those are ONE record with ONE canonical URL under /coaches/. No second person, no second lead.",
+  "routes_to_an_archive_person": {
+   "playing_record": "the page's own 'Playing Record' link names the /players/ code, which stages one and two already resolved to an archive person. Any OTHER /players/ link on the page is a relative's (a father's) and is evidence for nobody.",
+   "name+coaching_club_season": "the printed name and a coaching club-season the archive already holds for a person of that name -- structural, like the club-season roster rule for players.",
+   "name+birth_date": "the printed name and the full printed birth date, unique in the archive."
+  },
+  "never": "name alone. A route conflict (two routes, two people) resolves NOBODY and is held as a lead naming both candidates.",
+  "unresolved": "a LEAD with every field the page carries, in the player-lead structure. Never guessed."
+ },
+ "THE_CLUB_CELL": "runs two renderings of one club together, '1995 Winnipeg Blue Bombers (CFL)' and '1995 WPG CFL', around one link /1995cflwpg.html. The short rendering's three tokens are the split (two when the club had no league); the href is kept whole as the page id and CHECKED against them -- where it disagrees (the Raiders' 2020 cell prints LV over a /nfloak/ page) both are kept and the row is flagged.",
+ "WHAT_IS_WRITTEN": ["one claim per REGULAR SEASON row: year, league, club code, club as printed, position as printed, conference, division, seq, finish, the club's printed record", "one claim per PLAYOFFS row, separately", "biographical fields in the player-page predicates: birth date and place, death date and place, high school, military service, college seasons, kin, the printed full name", "a bio value the man's PLAYER page already states is not written twice; a value that DIFFERS from his player page is written and indexed as an intra-source disagreement"],
+ "WHAT_IS_NOT_WRITTEN": {"draft": "on 945 coach pages; the draft body belongs to the fetching session's stage three and is left to it", "transactions": "coach pages carry none"},
+ "DISAGREEMENTS_WITH_THE_COACHING_STORES": {
+  "stores": ["coaching-tree (build/coaches.json)", "statscrew head coaches (build/coaches-nfl.json)", "media-guide assistants (build/assistants.json)"],
+  "held_never_resolved": true,
+  "role_string_differs_is_not_a_conflict_about_a_fact": "where PFA prints 'Line' and the Coaching Tree says 'Offensive Line', one source preserved what the other normalised. The pair is recorded under kind role_string_differs with both strings verbatim and the flag _not_a_conflict_about_a_fact, and the distinct pairs are tabulated so the mapping ruling can be made from evidence.",
+  "kinds": ["role_string_identical", "role_string_differs_in_case_only", "role_string_differs", "season_in_pfa_not_in_store", "season_in_store_not_in_pfa"]
+ },
+ "hard_rules": ["no role string is altered between source and store", "no compound role is split", "no claim attaches to an unresolved man", "a lead carries every field a matched man would", "an official sharing a coach code is the same record"]
+}

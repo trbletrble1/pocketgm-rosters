@@ -1,0 +1,39 @@
+{
+ "source_id": "person-merges",
+ "name": "Person merge decisions",
+ "acquisition": "decided",
+ "stated_by": "this project",
+ "_this_is_not_a_source": "Every other declaration describes something the world published. This one records DECISIONS made here, on evidence held here, and is the only file in the archive that says two person ids are one man.",
+ "WHY_THIS_LAYER_EXISTS": {
+  "the_defect": "unify_identity.py joins two local records on ONE kind of evidence, a source-native id, and refuses to join on a name -- rightly, since 1,586 names in this corpus denote more than one person. A source arriving with no id therefore produces people who unify with nothing.",
+  "measured_2026_09_06": "the Coaching Tree cache carries a StatsCrew slug for 13 of its 144 coaches. The other 131 became their own person records, nameless, beside the men they already were. Chuck Noll stood as two records holding 32 and 30 club-seasons; Mike Ditka as 23 and 26. Not a man beside a fragment -- two half-men.",
+  "why_not_fix_unify_identity": "its gate asserts that every merge rests on a source-native id, and that property is worth keeping. These merges rest on something else and say so, in their own layer, each with its evidence."
+ },
+ "WHAT_MAY_BE_MERGED": {
+  "scope": "exactly one half is an orphaned person from the `coaches` store -- no source-native id, no name in the index -- and the other is an archive person carrying both. That store holds two bodies: the Coaching Tree cache and the pre-1936 assistants CSV, and orphans arise from each.",
+  "evidence_required": "the verdict `duplicate` from person_duplicates.py, which demands a matching name (recovered for the nameless half from its own store) AND either an exact birth date, or a birth date within one component together with a shared club-season and an agreeing origin.",
+  "the_name_is_recovered_for_MATCHING_ONLY": "a Coaching Tree slug is read back to match on. It is never written to the store as a name claim; the merged person takes the name the archive already held.",
+  "a_nameless_half_must_still_agree_on_a_surname": "where the index holds no name, the record's own `full_name` field supplies the surname -- the pre-1936 assistants CSV writes 'Harold Edward Grange' beside a blank name. Without an agreeing surname the pair is unclassifiable, because an exact birth date with a shared club-season is exactly the shape that produces coincidences: 994 such pairs in this archive are two different men."
+ },
+ "WHAT_IS_REFUSED": {
+  "statscrew_against_itself": "7 pairs where both halves are StatsCrew players and the SOURCE ITSELF asserts two men -- it carries p-geathcli001 and p-geathcli002 for Clifton Geathers. Merging there overrides a source rather than joining two, which is a different act and a different ruling. Held as a source contradiction, both records standing.",
+  "unclassifiable": "34 pairs folded neither way. The largest group is already contaminated: Robert Jackson carries two birth dates and two colleges on each of his two records. Eleven are court-salaries people whose half carries no birth date at all.",
+  "namesakes": "7 pairs ruled two men.",
+  "mis_attached_source_records": "5 cases of ONE source record attached to TWO men -- a Wikipedia article covering Sam Adams father and son, a defunct-franchise roster list on two Canton players. The reverse defect, recorded, never merged.",
+  "a_name_alone": "never, in any circumstance."
+ },
+ "REVERSIBILITY_IS_THE_CONDITION": {
+  "nothing_is_deleted": "both constituent person records survive in the index. The absorbed record stays whole and gains `merged_into`; the canonical gains `merged_from`.",
+  "every_contribution_is_recorded": "each decision names the season keys the canonical gained from the absorbed half, the keys both held, the stint fields taken, and the person values added. Un-merging subtracts exactly that and needs nothing re-derived.",
+  "how_to_un_merge": "delete the decision from build/person-merges.json and re-run src/apply_person_merges.py."
+ },
+ "THE_CLUB_SEASON_KEY": "Coaching Tree writes club NAMES and StatsCrew writes CODES, so one club-season appears as COACHES|y1969|Pittsburgh Steelers and COACHES|y1969|PIT. The merged person's club-seasons are the UNION with the name form rewritten to the code through the archive's own club-name map, so a season held by both is counted once. Every rewrite is recorded on the decision.",
+ "DISAGREEMENTS_ARE_NOT_RESOLVED_BY_A_MERGE": "where both halves state the same stint field with different values, or the same person field with different values, both are kept and the pair is recorded on the decision. A merge joins two records; it does not adjudicate between them.",
+ "hard_rules": [
+  "no merge without recorded evidence",
+  "no constituent record is deleted",
+  "every merge is reversible from what is stored",
+  "a name alone never merges anyone",
+  "a merge never resolves a disagreement"
+ ]
+}

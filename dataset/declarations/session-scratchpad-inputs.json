@@ -1,0 +1,181 @@
+{
+  "_what_this_is": "A ruling about WHERE a build input may live, and a register of the code that still breaks it. The gate derives from this file: src/gate_no_scratchpad_inputs.py.",
+  "RULING": {
+    "rule": "No script may take an input from a session scratchpad or from /tmp. Inputs live in dataset/build/ (a result), dataset/declarations/ (a ruling) or dataset/cache/ (a fetched page). Nowhere else.",
+    "why": "A scratchpad path carries a session id. The id changes when the session restarts, and the directory does not survive a reboot or a move between machines. Code holding such a path is correct exactly once, on one machine, in one session, and silently wrong everywhere after.",
+    "the_instance_that_produced_this_ruling": "bio_select.py read the Pro Football Archives claims from SCRATCH/nflverse/pfa-copy.json behind an os.path.exists guard. The archive moved to bghq-mac on 2026-09-07, the path died with the laptop session, the guard turned a missing 44 MB input into an empty dict, and every PFA fact left the bios without one word of complaint: 2,249 military-service claims, 4,232 death dates, 4,166 death places, plus high school, kin, height, weight and draft. gate_coach_runs R4 caught it only as a prose diff -- 'He was a United States Army veteran.' gone from Les Dodson -- never as 'an input is missing'. The identical claims were in build/pfa-pre1950.json, byte-for-byte, the entire time (sha256 5757efe2b2dc9b50051df2f8f51828d39d3205700e58294d4786bba8cde785fb).",
+    "the_guard_is_the_bug": "os.path.exists(p) around a load-bearing read does not make the code robust, it makes the failure invisible. A required input that is absent must stop the run. bio_select.required() is the shape: resolve under BASE, raise SystemExit naming the file.",
+    "recovery": "The laptop scratchpads were preserved at ~/Documents/session-scratch-from-laptop-2026-09-07/<session-id>/scratchpad/. Every path below except the four under literal /tmp can still be read from there. That folder is explicitly temporary and goes when the laptop's copy of the archive goes, so recovering a file means MOVING it into dataset/build/, not repointing at the preserved copy."
+  },
+  "_how_to_close_one": "Decide what the file is. If it is a RESULT, move it into dataset/build/ and read it from there. If it is a true INTERMEDIATE, the script that consumes it must also produce it, in the same run. Then delete the entry. An entry may not be deleted merely because the path was repointed at the preserved folder.",
+  "_open_question_for_ryan": {
+    "media-guide-prose-census.json: measured, recommendation is to KEEP it": "Asked Yearbooks which census ingest_guide_prose should read; its session ended before answering, so I measured it. RESULT: all 20 guides I need are in build-reports/corpus-census.csv, joinable on filename -- its doc_id is the file stem ('bears-1985-media-guide-chicago-c'), which carries club and year in the same convention my mapping uses. So the census CAN serve the (club, year) -> file join; no club column is needed and the join I feared is not one. BUT it does not supersede the file: the census's classification columns are 'unread' for most post-1950 rows (Yearbooks read pre-1950 completely and post-1950 on a stated sample of 56 of 2,462), where classified4 carries measurements for all 1,880. RECOMMENDATION: keep build-reports/media-guide-prose-census.json. It is frozen, self-contained and gates cleanly, where the census is mid-build and its klass column is still filling in. Switching would couple a stable ingest to a moving file to save one artefact. Revisit if the census is ever finished and someone wants the duplicate gone -- the join is known to work."
+  },
+  "_note_on_outstanding": "Every path below is dead on this machine, verified 2026-09-07. 'preserved' = still readable from the carried-over laptop scratchpads. 'silent' = the read is guarded and degrades without complaint; 'loud' = it raises. Silent is the dangerous kind.",
+  "OUTSTANDING": [
+    {
+      "script": "census_programs_ocr.py",
+      "line": 24,
+      "file": "prog-ocr/",
+      "session": "775492f6",
+      "preserved": true,
+      "read": "loud",
+      "owner": "Yearbooks"
+    },
+    {
+      "script": "census_table.py",
+      "line": 28,
+      "file": "readings.json",
+      "session": "775492f6",
+      "preserved": true,
+      "read": "loud",
+      "owner": "Yearbooks"
+    },
+    {
+      "script": "fetch_pfa.py",
+      "line": 19,
+      "file": "/tmp/pfa_pages.json",
+      "session": null,
+      "preserved": false,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "gate_pfa2.py",
+      "line": 84,
+      "file": "pfa2_match.json",
+      "session": "8d717785",
+      "preserved": true,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "ingest_afl1926.py",
+      "line": 29,
+      "file": "scratchpad/",
+      "session": "8d717785",
+      "preserved": true,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "ingest_arena.py",
+      "line": 49,
+      "file": "/tmp/arena_rosters.json",
+      "session": null,
+      "preserved": false,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "ingest_arena_pages.py",
+      "line": 38,
+      "file": "/tmp/arena_pages.json",
+      "session": null,
+      "preserved": false,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "ingest_boxscore_leads.py",
+      "line": 16,
+      "file": "scratchpad/",
+      "session": "8d717785",
+      "preserved": true,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "ingest_boxscores.py",
+      "line": 24,
+      "file": "scratchpad/",
+      "session": "8d717785",
+      "preserved": true,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "ingest_cin1934.py",
+      "line": 89,
+      "file": "pfa_code2pid.json",
+      "session": "8d717785",
+      "preserved": true,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "ingest_hearing1957.py",
+      "line": 23,
+      "file": "scratchpad/",
+      "session": "8d717785",
+      "preserved": true,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "ingest_officials.py",
+      "line": 22,
+      "file": "scratchpad/",
+      "session": "8d717785",
+      "preserved": true,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "ingest_pfa2.py",
+      "line": 24,
+      "file": "scratchpad/",
+      "session": "8d717785",
+      "preserved": true,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "ingest_pfa3.py",
+      "line": 23,
+      "file": "scratchpad/",
+      "session": "8d717785",
+      "preserved": true,
+      "read": "loud",
+      "owner": "Fetching"
+    },
+    {
+      "script": "ingest_transaction_membership.py",
+      "line": 291,
+      "file": "/tmp/stage2_dry.json",
+      "session": null,
+      "preserved": false,
+      "read": "write",
+      "owner": "Fetching"
+    }
+  ],
+  "CLOSED": [
+    {
+      "script": "bio_select.py",
+      "note": "closed 2026-09-07 by Parsing. SCRATCH deleted; the five load-bearing inputs now resolve under build/ through required(), which raises SystemExit when one is missing. The three bio prints reprint identical to the 2026-09-06 baseline. It must never reappear in OUTSTANDING."
+    },
+    {
+      "script": "ingest_guide_prose.py",
+      "note": "closed 2026-09-07 by Parsing. Read census/classified4.json from the laptop session scratchpad (ccc7c2b9). It is a RESULT -- 1,880 classified documents -- so it moved to build-reports/media-guide-prose-census.json (sha256 6a281cc77aa88c9b9e1f4a49b3220cfcccdfc549e90d66afa0cf40cafc2dc193) rather than being repointed at the carried-over copy."
+    },
+    {
+      "script": "ingest_guide_prose_corpus.py",
+      "note": "closed 2026-09-07 by Parsing, same file and same move as ingest_guide_prose.py."
+    },
+    {
+      "script": "gate_pfa.py",
+      "note": "closed 2026-09-07 by Fetching. Read pfa_match.json from the 8d717785 scratchpad behind an exists-guard, so MATCH became {} and G8 could check nothing. The match table now lives at build/pfa-match.json and is read through required(). This was one of the two SILENT ones. AMENDED by Fetching, same day: the entry above records only the MATCH read. gate_pfa.py held a SECOND silent read, and it was the worse of the two -- build/pfa-pre1950.json behind `json.load(open(bp)) if os.path.exists(bp) else {}`, so G5 (lead field set) and G6 (disagreements held) ran over an empty dict and PRINTED PASS. A gate reporting success over no claims at all, which is the failure this whole register exists to stop. Both reads are required() now, and the gate additionally refuses a build that holds zero claims rather than passing on it. Proven by hiding each input in turn: it exits naming the missing file. With both present it runs against 39,368 cached pages and 75,008 built claims, nine gates passing."
+    },
+    {
+      "script": "ingest_pfa.py",
+      "note": "closed 2026-09-07 by Fetching, same file and same move as gate_pfa.py. The other of the two silent ones."
+    }
+  ],
+  "_documentation_only": {
+    "_what_this_is": "prose",
+    "_how_to_close_one": "prose",
+    "_open_question_for_ryan": "prose",
+    "_note_on_outstanding": "prose",
+    "RULING": "prose addressed to a reader. gate_no_scratchpad_inputs prints RULING.rule on every run so the rule travels with its verdict, but the rest is explanation, not structure the code honours."
+  }
+}

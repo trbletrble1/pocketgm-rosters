@@ -1,0 +1,24 @@
+{
+ "source_id": "nflverse",
+ "name": "nflverse players.csv",
+ "stated_by": "nflverse",
+ "acquisition": "held",
+ "_what_this_is": "A community-maintained player table. 25,064 rows, of which 12,495 carry a complete draft record: draft_year, draft_round, draft_pick and draft_team, with no partials among them.",
+ "SCOPE": {
+  "draft_years": "1974-2026",
+  "_only_draft_is_ingested": "players.csv also carries height, weight, college, position, jersey and several external ids (gsis, pfr, pff, otc, espn). None of that is written here. This ingest is about the draft.",
+  "_the_ids_are_kept": "gsis_id and pfr_id ride along on every claim. They are the join key to nflverse and to Pro-Football-Reference, and recording them now means a future source does not have to re-derive this match.",
+  "_the_one_exception_to_only_draft": "A BIRTH DATE THIS INGEST DISAGREES ABOUT IS WRITTEN AS A CLAIM. Ruled by Ryan, 2026-09-07: a disagreeing value is always written as a claim, because a value the archive cannot serve is not held. The secondary identity route accepts a man whose birth date differs from the archive's in exactly one component, and it then RECORDED that difference without writing the nflverse side -- 164 of 270 rows named a date no store held, so the read model reported the man's birth date as settled. The claim is written under predicate nflverse.birth_date for those men only, each already resolved by a permitted route, and carries resolved_by. Nothing else from players.csv is written."
+ },
+ "IDENTITY": {
+  "_name_alone_is_a_bug": "Measured on the archive's post-1970 population: 923 names are shared by 2 people, 172 by 3, and one by 11 (Mike Williams). 283 names collide inside nflverse itself. Matching on name alone would attach a draft to the wrong man silently and permanently.",
+  "primary": "normalised name AND exact birth date. Both sides carry a birth date on 100% of the relevant rows, so this is the join.",
+  "secondary": "where the name matches and NO candidate's birth date agrees, the man is accepted only if exactly one candidate's career window contains the draft year AND the two birth dates differ in exactly ONE of year, month or day. A single-component difference is the signature of a transcription error; a two-component difference is not evidence of anything.",
+  "_college_corroborates_but_never_rejects": "College cannot be used to rule a man out. nflverse writes 'UCF' where the archive writes 'Central Florida', and 'Southeast Missouri State' against 'SE Missouri St.'. Rejecting on that would discard real men over an alias table that does not exist here.",
+  "unresolved": "left unresolved, never guessed. A missing draft is a gap; a draft on the wrong man is undetectable."
+ },
+ "DISAGREEMENTS": {
+  "_held_never_resolved": "Where the archive and nflverse give different birth dates for a man confirmed by career window, BOTH are held and nothing is preferred -- held meaning WRITTEN AS A CLAIM, not merely recorded in a report. Gated by src/gate_disagreements_are_claims.py, which compares each side against the archive's own claims.",
+  "_second_voice": "nflverse ranks beside StatsCrew, not above it."
+ }
+}
