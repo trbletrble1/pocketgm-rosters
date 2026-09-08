@@ -1230,3 +1230,579 @@ same position already taken on media-guide headshots.
 decisions have different answers — a dead site's images should be kept whatever
 the answer on publishing them turns out to be, because the copy may not exist to
 ask about later.*
+
+---
+
+## A club a document establishes enters as itself, not as a league member
+
+2026-09-07, on Frankford's 1922 and 1923 seasons, which the archive held nothing
+for while a preserved roster page named 47 men on them.
+
+The archive holds the Frankford Yellow Jackets from **1924**, when they joined the
+NFL. Every source it holds for them is league-derived and therefore starts in
+1924. Two seasons of professional football before that were invisible to all of
+them at once.
+
+**The rule: a professional club a document establishes is created as itself. No
+league is asserted, and none is invented to hold it.** The club table already
+carries independents with an empty league string, so this needed no new shape —
+only the discipline not to reach for one.
+
+*Alternative rejected:* **extend the NFL club's span backwards to 1922.** It is
+one edit, it makes the seasons appear immediately, and it silently answers a
+question nobody asked. Same name, same city, contiguous years and five men
+carrying over are **suggestive and are not the archive's own test**, which is a
+source stating the continuation or a code the sources carry across the boundary.
+The club is created with `lineage: unknown` and the NFL club recorded as an
+*unresolved candidate* — the evidence written down, the conclusion not drawn.
+
+**A second-order cost worth recording.** The index builds a season key as
+`(league, year, club)` and derives the league from the store filename, with no
+way to write an empty one. A club asserting *no league* therefore has nowhere to
+go in the key. The token `IND` was declared for it, in words that say it is **not
+a competition** and may be used by no other store. *That is a workaround, and
+naming it as one is the point: the key's shape assumes every club-season belongs
+to a league, and this is the first that does not.*
+
+**And the men.** 47 roster rows, 33 distinct men: 18 already held, **14 held
+nowhere**, one refused because two held people share his exact name. The 14 meet
+the standing rule — *a person is someone who played at least one season* — and
+their promotion decisions are written with the no-match evidence recorded per
+man. **They are not applied**, because the applier reads coach promotions only
+and a promoted person's seasons are set by the applier rather than by claims; a
+claim on a person who does not yet exist is skipped at read time. Four of the 14
+are a surname and nothing else, which is a thin thing to make a person from and
+is flagged on each.
+
+---
+
+## An abbreviation folds only where it has exactly one possible school
+
+2026-09-07, from 28 measured rows where a source and the archive named the same
+man's college differently without disagreeing about the man.
+
+**`Penn` and `Pennsylvania` are one school. `Pitt` and `Pittsburgh` are one
+school. `Miami` is two, and both played football.**
+
+**The rule: a short form folds to a long one only when exactly one real school
+competes for it. Where two do, it does not fold, and the pair stays a
+disagreement — which is correct, because the sources genuinely have not said the
+same thing.**
+
+Six pairs fold: `penn`→`pennsylvania`, `pitt`→`pittsburgh`, `franklin &
+marshal`→`franklin & marshall` (a one-letter printed error), `haskell`→`haskell
+indian` and `detroit`→`detroit mercy` (both one institution renamed), `w va
+wesleyan`→`west virginia wesleyan`.
+
+**Four are refused, and the reasons are the entry.** `georgetown` — Georgetown
+University in DC and Georgetown College in Kentucky both played football, and the
+archive's own value writes `(DC)` precisely to separate them, which is evidence
+the ambiguity is real rather than theoretical. `cornell` — Cornell University in
+New York and Cornell College in Iowa. `nebraska` — Nebraska and Nebraska Wesleyan
+are two schools.
+
+And `lebanon` against `lebanon valley`, **refused for consistency rather than
+certainty.** It is a prefix, which is exactly the shape of `nebraska` against
+`nebraska wesleyan` — and there the prefix is a different school. Folding one
+prefix while refusing the other would mean the rule was really *fold where I
+happen to know of no competitor*, which is not a rule at all.
+
+*Alternative rejected:* build the synonym list from a general list of American
+colleges. **A list nobody measured is a list nobody can defend**, and it would
+have carried hundreds of pairs the archive has never met in order to fix ten it
+had. The list is built from the 28 rows that were actually observed.
+
+**This is the third instance of one shape**, and they should be read together:
+the state reading expands a trailing abbreviation *but refuses a lone `LA`*,
+because `LA` is Los Angeles as often as Louisiana; the college reading drops
+`University` *but never `College`*, because Boston College and Boston University
+are two schools. **A fold that cannot tell two things apart must not merge them,
+and the correct output is a disagreement rather than a false agreement.**
+
+**Measured before and after, on the same model.** RS-G6, evaluated with the new
+list against a model built without it: **FAIL, 9 false disagreements.** Rebuilt:
+**PASS, 0.** Contested `college` rows fell from **107 to 98** — the nine that
+folded — and the four refused pairs are still there, still contested, as they
+should be.
+
+### Extended 2026-09-08, and the rule survived contact with 662 pairs
+
+The list grew from 6 folds to **42**, built from the **18,279 college disagreements**
+measured between PFA's 2,926 team-season roster tables and the archive — 662 distinct
+one-to-one pairs over 14,615 rows. **36 fold, covering 8,209 rows. The rest stay
+disagreements.**
+
+**Three named shapes, and nothing else folds.** A short form qualifies only as (1)
+the **initialism** of the long form, with or without the University the long form
+omits — USC, UBC and UNLV carry it in front, LSU, SMU, TCU and BYU behind; (2) the
+long form with a trailing **generic** word dropped, `bowling green state` to `bowling
+green`; or (3) the long form with its **last word shortened**, `boston college` to
+`boston col`. Anything outside those three is a guess about which school is meant.
+
+**Four things the first version of the rule got wrong, each caught by a pair it
+mishandled:**
+
+**`State` is not always generic.** An early pass folded `south carolina state` to
+`south carolina` and `south dakota state` to `south dakota`. Those are two real
+universities each; there `State` is the whole of the distinction. `State` is now
+never dropped where what remains is a **state's own name**, taken from the fifty in
+the declared place reading rather than retyped.
+
+**A rival must be a rival.** Counting every school a short form disagreed with
+refused all ten pairs Ryan had named. `usc` disagrees with `davidson` twice in the
+corpus — one man's college disputed between two sources, not evidence that USC is
+ambiguous. A second school competes only when **it could itself abbreviate to that
+short form**.
+
+**A fused cell is not a school.** `tcu ohio state` looks like a school beginning with
+`tcu`. It is two colleges in one cell, and it refused `texas christian`. The
+discriminator is the remainder: if what follows the short form is itself a college
+the archive holds, the value is a fused cell. `georgetown dc` survives that test,
+because `dc` is not a college — so Georgetown stays refused, correctly.
+
+**A prefix that drops the front is not an abbreviation.** `st francis xavier` to
+`xavier` and `clark atlanta` to `clark` both passed an earlier truncation test. Xavier
+of Ohio and Clark of Massachusetts are real schools. Only trailing words may go.
+
+**Measured before and after, on the same built model.** Contested `college` rows:
+**104 with the 6 folds, 101 with the 42** — and RS-G6 goes **PASS → FAIL, 4 false
+disagreements**, which is the gate working: the model's contested table was built
+under the old reading and the new one says four of its rows are not disagreements.
+It clears on the next rebuild.
+
+### Extended again the same day: a shortened word, wherever it sits
+
+**Ruled by Ryan, 2026-09-08.** A shortened **non-final** word is the same shape as a
+shortened last word. `eastern michigan` and `east michigan` are one school. The rule
+now folds where **exactly one word is shortened and every other word is identical**,
+wherever that word sits — **35 more pairs, 1,905 rows**, taking the declared list to
+**81 folds and 13 refusals**.
+
+**Shortening a word is not dropping one**, and that distinction is the whole of it:
+`minnesota state-mankato` → `minn state-mankato` folds; `minnesota state-mankato` →
+`minnesota state` still does not. One token shorter, not one token fewer. Comparison
+is token by token with hyphens split out and separators required to match, so
+`tennessee-chattanooga` and `tenn-chattanooga` line up and a hyphen is never mistaken
+for part of a word.
+
+**The refusal test is unchanged and it earned its keep here.** Five pairs fit the new
+shape exactly and are refused, because the corpus holds a second school the short form
+could equally be: `texas a&m` vs `texas`, `northwestern state` vs `northwestern`,
+`mississippi college` vs `mississippi`, `western new mexico` vs `west new mexico`,
+`san diego state` vs `san diego`. A wider shape does not mean a weaker test.
+
+**Before adding, the 36 folds declared that morning were re-run against the tightened
+rule: none would now be refused.** A declaration holding a fold its own rule rejects is
+the drift the declaration exists to prevent, and checking is cheap.
+
+**Why only three rows moved when 8,209 were covered.** The contested table holds
+disagreements *within* the archive. The 8,209 are between PFA's team-season pages and
+the archive, and those pages are not ingested. The folds are worth having for what
+they prevent on ingestion, not for what they resolve today, and reporting 8,209 as
+though it were the second number would be the same error as counting rows where men
+were asked for.
+
+---
+
+## An ingest declares what it read a source for, and what it left
+
+2026-09-08, after measuring what is on disk against what any claim traces back to.
+
+**The archive tracks claims well and tracks sources badly.** *"Wikipedia is
+ingested"* reads as finished. It was read for **people** — every predicate in the
+store is person-scoped — and never for drafts, rosters, clubs or standings. Nobody
+wrote that down, so **255 of the 391 picks in the 1950 draft are missing from a
+source the archive already holds and already allows**, and the gap looked like an
+acquisition problem for months.
+
+**The rule: an ingest declares what it read a source for, and what it left.** Not
+what it took — the claims already say that, and a declaration of what was taken is
+precisely the blind spot. What it *left*, and why.
+
+**The evidence that the omission is invisible without this.**
+`corpus-census-frame.json` catalogued **3,110 documents** in September. It carries a
+`class` field, and its own header says that field is *"filled by reading"*. **It is
+null on all 3,110 rows.** The reading was never done, and **nothing anywhere
+recorded that it wasn't** — no red gate, no open item, no note. Measured against the
+claims instead, 2,014 of those documents have never produced one, of which **1,727
+are media guides**: the largest single block of unread material in the archive,
+catalogued and then simply left.
+
+*Alternative rejected:* keep a register of unread material as a document. It was
+written that way first, and it is wrong for the reason every hand-maintained
+inventory is wrong — **it goes stale silently, and a stale register is worse than
+none because it is believed.** It is now regenerated from the disk and the stores by
+`src/write_source_register.py`, the same way the hunting documents are.
+
+### Half of this is gateable, and the half that is not must be refused out loud
+
+`src/gate_source_coverage.py` holds the file-shaped half: enumerate the source
+directory, collect the locators the claims cite, and require every unread file to be
+declared with a reason. On the day it was written it went red on **1,952 files** —
+1,517 media guides, 215 Ghosts pages, 151 college documents, 69 programmes — and it
+will catch the next seventeen hundred the same way.
+
+**It rests on the claims' own `source_record` locators, never on the
+`source_record` tables.** RS-G3 is red: 27 of 481 stores declare a record table and
+the largest store in the archive, at 739,486 claims, declares none. A check resting
+on that coverage would be measuring the declaration a second time — which is the
+defect, not the test for it.
+
+**And the half it cannot see is declared, not skipped.** A source whose unit is not
+a file — Wikipedia's article read for one kind of fact, StatsCrew's player-seasons
+with no denominator, a source that *is* a single document — must be declared
+not-file-shaped **with the reason it has no denominator**, and is then reported as
+NOT COVERED. A source with claims that appears in neither list **fails**: silence is
+not an exemption, and a gate that passed over what it could not see would report
+green across exactly the half the rule exists for.
+
+**The limit, stated plainly because hiding it would make the rule look stronger than
+it is.** No gate can check that *"what I read this source for, and what I left"* is
+**true**. It can only check that the sentence exists. A wrong declaration and an
+honest one are the same bytes, and the only defence against the wrong one is that it
+is written down where the next reader can disagree with it — which is worth
+something, and is less than a proof.
+
+*Related: `an empty result and a failed one are the same bytes` is the same family
+one layer down — there, a mechanism reports nothing and nothing objects; here, a
+source is read in part and nothing records the part that was skipped.*
+
+---
+
+## A source with no denominator still has parts that have one
+
+**Ruling, 8 September 2026.** A `not_file_shaped` declaration may not stop at *"this
+source cannot be measured."* It must say **which of its parts can be**, and give each
+part its unit and how its denominator is obtained. `unknown` is a permitted answer.
+**An absent list is not**, because an absent list and nobody having looked are the
+same bytes.
+
+### The evidence is a man
+
+**Phil Flanagan**, a guard out of Holy Cross, ninth round, 81st overall, taken by the
+New York Giants in the 1936 NFL draft. Forty men named Flanagan are in the archive.
+He is not one of them.
+
+He is on `drafts_1936nfldraft.html`, in a table headed
+`Round | Overall | Team | Player | Pos | College | Notes`. That file was fetched in
+the original PFA ingest and has been sitting on this disk, unread, ever since. He is
+not missing because the document is lost, or hard to read, or contested. He is
+missing because nothing ever said his page had not been read.
+
+PFA's entry said this, and every word of it was true:
+
+> 50,829 files against 44,550 pages cited. The difference may be duplicates, error
+> pages, or material never parsed — **the ingest keeps no list of what it skipped**,
+> so the difference cannot be attributed.
+
+True of PFA whole. **False of PFA's draft pages**, which are one per year per league
+per kind, indexed by the source itself at `drafts.html`, `cfldrafts.html`,
+`usfldrafts.html` and `wfldrafts.html` — **203 of them on disk, 21 (league, kind)
+combinations, 1936 to 2025**. Enumerating them took minutes and no network. Reading
+them found **35,161 picks, of which 12,807 the archive does not hold**.
+
+The declaration was not wrong. It was silent in a way that read as *cannot be
+measured* when the truth was *nobody has said which half could be*.
+
+### What the rule requires
+
+Each part names its unit, how its denominator is obtained, and the three counts kept
+apart — **exists / on disk / cited**. They are three different numbers and the
+difference between them is the finding.
+
+**Where the denominator is a lower bound, it must say so.** PFA's non-draft sections
+were sized from PFA's own link graph over the cache: distinct pages of that shape
+some cached page links to. That can never bound a section from above — it cannot see
+a page nothing cached links to — so it is a place to look, never a denominator. It is
+labelled that way in the declaration, in those words.
+
+**It found a second thing immediately.** PFA's **2,930 team-season pages** are on
+disk and **nine** are cited. Each carries a roster table with number, position,
+height, weight, age, college, games played and games started. That is the largest
+unread body of PFA material already in hand, and no measurement before this one had
+a shape that could report it.
+
+### The alternative, and why not
+
+**A source-level exemption** — mark a source *not measurable* and move on — is
+simpler, and it is exactly the thing that hid this. One flag cannot distinguish
+*"no part of this has a denominator"* from *"nobody has checked whether any part
+does."* Requiring the parts costs a paragraph per source and makes the second case
+impossible to write down by accident.
+
+### What it caught, unrewritten
+
+`src/gate_source_coverage.py` now refuses a not-file-shaped entry that declares no
+`enumerable_parts`. It goes red on **34 of 35**. `src/measure_declaration_parts.py`
+sorts them by the evidence and rules on none of them:
+
+| | |
+|---|---|
+| declares its parts | 1 — `pro-football-archives` |
+| **same problem, regular** — many locators, few shapes | 5 — `pfa-transactions`, `nflverse-rosters`, `pfr-draft-listing`, `draft-picks-pre2001`, `draft-picks-2001-2004` |
+| **same problem, irregular** — many locators, no repeating shape; the source's own index must be read | 6 — `statscrew`, `wikipedia-en`, `psf-photos`, `pfa-boxscores`, `nflverse`, `coaching-tree` |
+| **one document** — the whole is the only part, and the entry should say so | 22 — the court opinions, the news clippings, the two programmes, the 1948 media guide, the 1957 hearing |
+| unknown from the read model alone | 1 — `pre1936-assistants` |
+
+The 34 are **reported, not rewritten**. Writing 34 declarations from a script would
+produce 34 sentences nobody had thought about, which is the defect wearing the
+rule's clothes.
+
+*Related: `every acquired file either produces a claim or is declared unread with a
+reason` — this is that rule applied one level down, to the sources that were exempt
+from it.*
+
+---
+
+## A selection with an order and no round is read as one, not given a round
+
+**Ruling, 8 September 2026.** An expansion, allocation or dispersal draft is not run
+in rounds. Its selections have an **order**. The draft reading now carries `order`,
+and `round` and `overall` are **absent** — not zero, not null.
+
+### Why absent, and not zero or null
+
+Three ways to say a document is silent, and only one of them is true. **Zero sorts**:
+a round-0 pick takes a place in an ordering the document never printed. **Null
+compares**: it is a value, and two nulls agree with each other about something nobody
+asserted. **Absent** is the only one that means the document does not say, and it is
+the only one `reading_view.same()` already handles correctly — a field only one side
+carries is silence.
+
+PFA prints these pages with the columns `Team | Player | Pos | College | Notes`.
+There is no Round column and no Overall column on them at all. The 1960 AFL draft is
+printed as two sittings, team by team, 422 selections, not one round number among
+them.
+
+### Absence alone was not enough, and the gate said so before this was written
+
+Omitting `round` and `overall` leaves an ordered selection and a numbered one sharing
+only `year` and `league` — and `same()` compares the fields **both** carry. The rule
+that rightly protects a source declining to name its league would have joined a 1960
+AFL allocation pick to a 1960 AFL draft pick. The gate's new property caught it on
+the first run, before any of this reached a declaration.
+
+So the reading states **how it is numbered**, in a field both forms carry and neither
+can be silent about: `numbering` is `order` or `round_and_pick`. **A field only one
+side carries is silence; a field both sides carry is a comparison** — and this
+difference must be compared, not assumed away.
+
+### The alternative, and why not
+
+**Synthesising a round from printed order** — call the first eight picks round one,
+and so on — would make every allocation selection joinable on the ordinary key. It
+is the tempting option precisely because it costs nothing and makes the data look
+uniform.
+
+It would be a fact the document does not contain. There is no round in an expansion
+draft to be right or wrong about; the number would be an artefact of how many clubs
+happened to be selecting, and it would then be indistinguishable from a round a
+source actually printed. The archive would hold, under the same predicate and the
+same shape, some rounds that were asserted and some that were invented, with nothing
+recording which was which.
+
+### What it unlocks, and what it does not
+
+**Now readable:** 602 `pfa.draft_allocation` claims and 91 `pfa.draft_selection`
+claims, which read as nothing before. Roughly **1,631 further rounds-free selections**
+sit on 26 cached PFA pages, unread.
+
+**Still unreadable, and rightly:** 461 `pfa.draft` claims are printed strings naming
+a sitting and no number at all — `First Selections 1960 Dallas Texans`. No round, no
+pick, no order. An order inferred from row position would be the same invention in a
+smaller disguise.
+
+**Still needing a ruling:** `pfa.draft_allocation` is not a member of the draft
+family, so nothing downstream reads these claims yet. Measured rather than done:
+adding it would create **1,995 ordered-against-existing pairs across 580 people and
+fold none of them**. Family membership changes what the contested table holds, so it
+is Ryan's call and not a consequence of this one.
+
+### What it broke, which is worth more than what it fixed
+
+Making the draft reading a dict — done the day before, for the league-and-kind
+collision — left **two private copies of the grouping rule** comparing readings in a
+`set`. A dict is neither hashable nor equal to another dict that `same()` calls the
+same fact, so `src/bio_select.py` and `src/gate_readings.py` both raised
+`TypeError: unhashable type: 'dict'` the moment a draft reading reached them. Both
+now call `RV.group`.
+
+That is the **third** time this rule has had to be pulled back into one
+implementation. The crash was the lucky outcome: before the reading became a dict,
+the same `set` was silently counting `{year, round, overall}` against
+`{year, round, overall, league}` as a disagreement, and nothing objected.
+
+**A visible side effect:** RS-G6 now checks **seven** families where it checked two,
+5,510 contested facts, zero false disagreements. The gate that "cannot fire" fires.
+
+*Related: `a draft selection is identified by year, league and kind alongside round
+and pick` — this is the same key, finished. The earlier ruling fixed which draft a
+pick belongs to; this one covers the drafts that have no picks to number.*
+
+---
+
+## A named award is its own predicate, separate from an honour-team selection
+
+**Ruling, 8 September 2026**, on Pro Football Archives' 229 award pages.
+
+**They are two assertions.** An all-league selection names a man to a team **at a
+position** — one of eleven, or twenty-two. A named award says he **won a singular
+thing**: no position, no team, no seat.
+
+| | |
+|---|---|
+| `honour_team_selection` | 10,693 rows. Year, honour as printed (`All-NFL`), position, club, selectors. |
+| `award_won` | 909 rows. Year, award as printed, league, club, selectors. **No position, because there is none.** |
+
+### The evidence is one line on one page
+
+**1957 NFL Player of the Year: Jim Brown, Johnny Unitas and Y. A. Tittle.** Three
+men, three rows, three selectors — AP, NEA and UP. Not a contested fact. Three bodies
+gave three awards and PFA prints all three.
+
+**130 of 778 (year, award) pairs have more than one winner.** So **the selector is
+part of the claim and not metadata about it.** Drop it and one year in six becomes a
+false disagreement the archive would then be asked to resolve — a disagreement nobody
+is having.
+
+### The alternative, and why not
+
+**One widened predicate covering both** is simpler: one definition, one family, one
+thing for a consumer to learn. It fails on the field that would have to be there and
+would mean nothing. **`position` is real on 10,693 claims and meaningless on 909**,
+and a reader could only tell which by testing whether it was null — which is not the
+same question as *what kind of honour is this*, and would silently agree with it most
+of the time.
+
+Every consumer would carry that test. **Merging two predicates later is easy;
+separating one later is not** — by then the claims are written and nothing records
+which kind each was. Same shape as the probable-line-up and team-photograph rulings:
+when the assertion differs, the predicate differs.
+
+### The club is not membership, on either
+
+Stated in both definitions, as `ghosts.honour_selection` already said it. The subject
+is the **person**; neither predicate is ever scoped as a stint. `club_as_printed` says
+who he was with when he was honoured — nothing more. A man can be named All-NFL by two
+selectors and by neither of two others; the honour is the selector's act, not the
+club's.
+
+### Renamed, not twinned
+
+`ghosts.honour_selection` became **`honour_team_selection`**. **Renamed** — there is
+one predicate and both sources write it, rather than a `pfa.` twin beside a `ghosts.`
+one. A source prefix belongs on a predicate where sources **mean different things**;
+`roster_membership.*` is prefixed for exactly that reason. Fenton and PFA mean the
+same thing by an all-league selection, and `source_id` already records which said it.
+
+The Ghosts ingest was re-run rather than the store edited, so the 34 claims are
+derived under the new name and nothing was rewritten in place.
+
+### Selectors are held as printed
+
+`AP` stays `AP`, with that page's own legend beside it in `selector_legend` —
+`AP=Associated Press`, `NEA=Newspaper Enterprise Association`, `UP=United Press`.
+Expanding it in the value would be the archive rewriting a source's shorthand, and
+the legend differs by era: 1957 says `UP`, 1965 says `UPI`, and they are the same
+agency on either side of a merger. **That is a reading, and readings are declared
+elsewhere.**
+
+### What it cost, and what it refused
+
+**10,892 claims joined; 710 left as leads.** A name is not a person: a row whose name
+matches nobody is a lead and not a join.
+
+**Corrected the same day.** The first pass joined on the NAME ALONE and left 2,113
+leads, Jim Brown's 1957 award among them — while the row said *Cleveland Browns,
+1957*, and only one of the two men of that name held a season there. The club and the
+season are on the claim and must be used: **1,206 ambiguous names were settled by
+them**, and the leads fell from 2,113 to 710. The counts above are also corrected:
+the first pass read 30 header rows (`All-AFL | Position | Team | Selectors`) as
+awards.
+
+*Related: `an honour is not club membership` — this splits that ruling in two, because
+one of the two honours has no position and the other cannot do without one.*
+
+---
+
+## A nickname is a name, and it is registered per man rather than read
+
+**Ruling, 8 September 2026.** Where the archive holds a man on the very club-season a
+source names, and the only difference is a **playing name against a legal name**, they
+are one man and a register records it.
+
+### Why it is not a reading
+
+**No string operation turns `Blood` into `McNally`, or `Bruiser` into `Frank`.** A
+reading is a function from a printed string to a fact; there is no such function here.
+Building it as one would mean inventing the function, and it would then apply itself
+to strings nobody had looked at. **It is a recorded decision per man — the shape of a
+merge** — carrying the two names, the club-season that establishes them as one man,
+and the source that printed each.
+
+### Neither name is canonical
+
+**The nickname is a name, not an alias for a name.** Both go on the person as name
+claims with their own sources; neither is filed under the other; search finds him by
+either. `Bruiser` is what the club called him and `Frank` is what his birth
+certificate said, and **neither corrects the other**. The archive does not choose
+between two things a source printed — the same rule that makes it hold three birth
+dates.
+
+Confirmed on the built model before this was called done: `Johnny Blood` and `Johnny
+McNally` both return `P_014605`; `Frank Kinard` and `Bruiser Kinard` both return
+`P_000717`.
+
+### What is refused, and it was seen to be refused
+
+**An entry that cannot point at a club-season both names share.** Without it this is a
+surname rule, and a surname is not a man — the trap this archive has walked into
+repeatedly. The route's self-test runs first and each refusal was made to happen:
+
+| | |
+|---|---|
+| a person the archive does not hold | refuses |
+| no club-season at all | refuses — *"without one this is a surname rule, and a surname is not a man"* |
+| a club-season the man holds no season on | refuses |
+| fewer than two names | refuses |
+| a person holding neither name | refuses |
+
+Nine entries: Steamer/Clarence Horning, Bruiser/Frank Kinard, Socko/John Wiethe,
+Bucko/Frank Kilroy, Goose/Austin Gonsoulin, Spider/Carl Lockhart, Buzz/Wally
+Highsmith, Ezekiel/Ziggy Ansah, Johnny McNally/Johnny Blood. **It is a route, not a
+list** — Frank Kinard is seven award rows today and the next source will bring more.
+
+### What it is NOT for
+
+**A misspelling.** `Solomon Eliminian` for Elimimian, `Aaron Doanld` for Donald, `Mark
+Muprhy`, `Corey Grahm`, `Alex McGogh`, `Chris Garett`, `Fred Denfield` — seven on
+PFA's award pages. **A typo is not a playing name.** The club misprint route is the
+shape for those; these are reported and left alone, and the register refuses to become
+a place where any two similar strings can be declared one man.
+
+*Related: `an alternative name is not a misprint` — the club-table version of the same
+distinction, one level up.*
+
+---
+
+## A looser name match is safe only when a club-season holds it
+
+**Ruling, 8 September 2026.** A match on **surname plus forename initial** joins only
+where the candidate **holds a season on that exact club-season**. The club-season is
+what makes it safe; without it the rule is the surname trap.
+
+**199 joined**, across 71 people — Oke/Oak Smith at Rock Island 1920, Ink/Inky
+Williams at Hammond 1923, Lavern/Lavvie Dilweg at Green Bay 1927–31, Eddie/Ed Lynch,
+Charley/Charlie Trippi, Clay/Clayton Tonnemaker, Gordy/Gordie Soltau.
+
+**One was refused, and it is the whole argument for the guard.** *Cam Heyward*, 2024
+Pittsburgh Steelers: the candidates are **Connor Heyward and Cameron Heyward**,
+teammates on that very club-season. Surname and initial match both. The rule refuses
+rather than choosing, and a rule without the club-season would not even have noticed.
+
+**Measured effect on the award ingest: leads 710 → 511**, and with the nickname
+register **→ 489**.
+
+*Related: `a join must use every field on the row` — the same lesson, one step
+earlier: the club and season settled 1,206 ambiguous names before this rule was
+reached at all.*
