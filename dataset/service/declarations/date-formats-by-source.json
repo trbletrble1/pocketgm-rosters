@@ -1,0 +1,21 @@
+{
+ "_what": "A source that writes dates in a CONSISTENT ORDER may declare that order, and the reading uses it for that source's values only. Ruled by Ryan, 2026-09-08.",
+ "_nothing_is_reordered_in_the_store": "The stored value stays the string the source sent. This is a READING, derived at read time, labelled, and shown beside the original -- the same as every other reading. If a format declaration would ever rewrite a stored value, stop.",
+ "_the_evidence_is_required_not_the_format": "A later reader must be able to see why the order was believed. A source with no measurement behind it does NOT get a declared format: it stays unreadable and declared as printed, which is the honest state. Every entry below carries `measured` and the counts that produced it.",
+ "_why_a_bare_numeric_date_is_otherwise_refused": "2001-12-10 and 2001-10-12 are two different dates and deciding which number is the day would be a correction, not a reading. That standing ruling is unchanged; this declares the answer where a source has been measured, rather than guessing it per value.",
+ "sources": {
+  "crippen-aafc-register": {
+   "numeric_order": "MDY",
+   "applies_to": "a bare numeric date of the form N/N/YYYY",
+   "measured": "Read against the death dates the archive already holds for the same men: 520 of his slash dates agree as MONTH/DAY/YEAR and 0 agree as DAY/MONTH/YEAR. A further 14 agree either way, the day being 12 or less, and 27 agree neither way and are real disagreements about the date.",
+   "counts": {
+    "agree_only_as_MDY": 520,
+    "agree_only_as_DMY": 0,
+    "agree_either_way": 14,
+    "agree_neither_way": 27
+   },
+   "measured_by": "src/ingest_crippen_aafc.py, 2026-09-08, against the served model",
+   "who": "Ken Crippen's own compilation, sent in correspondence -- a US compiler writing US dates, which the measurement confirms rather than assumes."
+  }
+ }
+}

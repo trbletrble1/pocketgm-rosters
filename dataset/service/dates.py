@@ -10,7 +10,7 @@ is labelled as one wherever it is shown.
 A string this cannot read returns None, and gate G1 refuses to publish a read
 model holding one that is not declared in declarations/dates-as-printed.json.
 """
-import re
+import os, re
 
 RECIPE = "date-reading@v1"
 
@@ -29,12 +29,44 @@ _MDY = re.compile(r"^([A-Za-z]+)\.?\s+(\d{1,2}),?\s+(\d{4})$")
 _MY = re.compile(r"^([A-Za-z]+)\.?,?\s+(\d{4})$")
 _DMY = re.compile(r"^(\d{1,2})\s+([A-Za-z]+)\.?,?\s+(\d{4})$")
 _CIRCA = re.compile(r"^(?:c\.?|ca\.?|circa|about|abt\.?)\s*(\d{4})$", re.I)
+_SLASH = re.compile(r"^(\d{1,2})/(\d{1,2})/(\d{4})$")
 _QUERY = re.compile(r"^(\d{4})\s*\?$")
 # a date followed by a place: "April 3, 1925 in Warren, Ohio." / "August 7, 1901Avilés, Asturias, Spain"
 _LEADING = re.compile(r"^((?:[A-Za-z]+\.?\s+\d{1,2},?\s+\d{4})|(?:\d{4}-\d{1,2}-\d{1,2}))(?=\s+in\s|[A-Za-z(\)])")
 
 
-def read(s):
+def _load_source_formats():
+    """A source that writes dates in a consistent order may declare it, WITH the
+    evidence. Ruled by Ryan, 2026-09-08. Read from the declaration so the rule and the
+    code cannot drift; a source that is not in it stays unreadable, which is honest."""
+    import json
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                     "declarations", "date-formats-by-source.json")
+    try:
+        d = json.load(open(p))["sources"]
+    except Exception:
+        return {}
+    return {k: v["numeric_order"] for k, v in d.items() if v.get("numeric_order")}
+
+
+SOURCE_FORMATS = _load_source_formats()
+
+
+def read(s, source_id=None):
+    """`source_id` opts a source into its DECLARED numeric order, and nothing else
+    changes. Without it a bare numeric date is still refused, because deciding which
+    number is the day would be a correction rather than a reading."""
+    order = SOURCE_FORMATS.get(source_id) if source_id else None
+    if order:
+        m = _SLASH.match(str(s).strip())
+        if m:
+            a, b, y = int(m.group(1)), int(m.group(2)), int(m.group(3))
+            mo, dd = (a, b) if order == "MDY" else (b, a)
+            return _mk(y, mo, dd, "day", False, None)
+    return _read(s)
+
+
+def _read(s):
     """-> {"year", "month", "day", "precision": day|month|year, "approximate": bool,
            "trailing": str|None} or None if the string cannot be read as a date."""
     if s is None: return None

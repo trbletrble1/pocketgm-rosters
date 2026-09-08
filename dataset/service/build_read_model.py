@@ -241,7 +241,10 @@ def build(dst, force=False):
                          kind, json.dumps(c.get("observed_at")), observed_year(c.get("observed_at")), c.get("note"),
                          json.dumps(extra) if extra else None))
             if pred in date_preds and kind != "absent":
-                r = dates.read(val)
+                # THE SOURCE IS PASSED. A source that has DECLARED its numeric date
+                # order, with the measurement behind it, is read in that order; every
+                # other source still refuses a bare numeric date. Ruled 2026-09-08.
+                r = dates.read(val, c.get("source_id"))
                 drows.append((rowid, famname, None if val is None else str(val), r and r["year"], r and r["month"], r and r["day"],
                               r and r["precision"], r and int(r["approximate"]), r and r["trailing"], int(r is not None)))
             if person:

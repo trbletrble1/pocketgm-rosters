@@ -44,32 +44,20 @@ MONTHS = {m: i + 1 for i, m in enumerate(
 
 
 def read_for_the_report(d):
-    """Crippen's `10/7/2000` as a calendar day -- FOR THE COMPARISON IN THIS REPORT
-    ONLY. The value written to the store is the string he sent, untouched.
+    """Crippen's date as a calendar day, through THE reading.
 
-    The declared date reading REFUSES a bare numeric date, and rightly: `2001-12-10`
-    and `2001-10-12` are two different dates and deciding which number is the day
-    would be a correction, not a reading. That ruling is not set aside here.
-
-    But the register's order is not a guess. Read against the death dates the archive
-    already holds, his slash dates agree **520 times as month/day/year and 0 times as
-    day/month/year** (14 more agree either way, being days of 12 or less). That is a
-    measured fact about this one source, and it is what the counts below rest on --
-    not a reading, and not applied to any other source."""
-    m = MDY.match(str(d).strip())
-    if not m:
-        r = model_dates.read(d)
-        return None if not r else (r["year"], r["month"], r["day"])
-    return (int(m.group(3)), int(m.group(1)), int(m.group(2)))
+    This used to carry its own M/D/YYYY parse, because the reading refused a bare
+    numeric date. Ryan then ruled that a source may declare its own date format with
+    the evidence behind it, so `crippen-aafc-register` declares MDY in
+    service/declarations/date-formats-by-source.json and there is nothing to parse
+    here. A fourth private implementation of a reading, deleted rather than kept."""
+    r = model_dates.read(d, "crippen-aafc-register")
+    return None if not r else (r["year"], r["month"], r["day"])
 
 
 def read_held(d):
-    """A date the archive holds, on THE MODEL'S OWN reading -- service/dates.py, not
-    src/readings.py. The two are not the same: `2005-8-14` reads as a day in the
-    model and as nothing in src/readings, and comparing on the wrong one manufactured
-    a dozen disagreements that were the same date written two ways. A second
-    implementation of a reading, differing on real values -- the third such pair found
-    today."""
+    """A date another source holds, on the same reading with no source of its own --
+    so a bare numeric date from an undeclared source is still refused."""
     r = model_dates.read(d)
     return None if not r else (r["year"], r["month"], r["day"])
 
@@ -143,10 +131,16 @@ def main():
     for p, nm in conn.execute("select person, name from person_name"):
         k = norm(nm)
         if k: byname[k].add(p); names_of[p].add(k)
+    # THE BASE STATE, NOT THIS INGEST'S OWN LAYER. Once this store is in the model, a
+    # re-run that reads every death_date sees Crippen's own claims as prior evidence:
+    # every man then "already has" a date, the 24 the archive did not hold vanish, and
+    # the disagreement count doubles as his dates are compared against themselves. A
+    # decider reading its own output decides nothing, silently.
     held_date, held_place = collections.defaultdict(set), collections.defaultdict(set)
     for p, fam, v in conn.execute(
             "select person, family, value_text from claim where family in "
-            "('death_date','death_place') and person is not null"):
+            "('death_date','death_place') and person is not null "
+            "and source_id != 'crippen-aafc-register'"):
         (held_date if fam == "death_date" else held_place)[p].add(str(v).strip())
 
     n = collections.Counter()

@@ -32,7 +32,14 @@ An unread value can neither corroborate nor contradict, so it takes no part in
 the disagreement test. It stays on the panel verbatim and is counted. That is a
 stated limit: two unreadable strings that genuinely differ will not be flagged.
 """
-import os, re, json, unicodedata
+import os, re, sys, json, unicodedata
+
+# THE date reading. Loaded by path because src/ and service/ are not one package;
+# there is one implementation and this is it.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                "..", "service"))
+import dates as _model_dates
+
 
 BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 DECL = os.path.join(BASE, "declarations", "readings.json")
@@ -73,21 +80,32 @@ _MONTH = {m: i + 1 for i, m in enumerate(
      "august", "september", "october", "november", "december"])}
 
 
-def birth_date(v):
-    """'July 17, 1982' -> '1982-07-17'. An already-ISO date reads as itself.
+def birth_date(v, source_id=None):
+    """A printed date -> `YYYY-MM-DD`, or None where the string carries no calendar day.
 
-    Only a spelled-out month is read. A bare numeric date is NOT reordered:
-    '2001-12-10' and '2001-10-12' are left as two different dates, because
-    deciding which is day and which is month would be a correction, not a reading.
+    ONE IMPLEMENTATION, IMPORTED. This used to be a second, poorer date reader living
+    beside `service/dates.py`: it read `2005-08-14` and not `2005-8-14`, knew nothing
+    of `c. 1948`, `(aged 72)` or `17 July 1982`, and the difference showed up as a
+    dozen manufactured disagreements in Crippen's register. The archive's own standing
+    rule is that a gate or a reader which reimplements what it checks can pass while
+    the thing it checks has changed -- and this was the third pair of duplicate
+    implementations found on 2026-09-08, after the grouping rule in bio_select and
+    gate_readings. `service/dates.py` is the reading; this is a thin adapter to the
+    key shape the family comparison wants.
+
+    A BARE NUMERIC DATE IS STILL NOT REORDERED unless its source has DECLARED its
+    order with the measurement behind it -- see
+    service/declarations/date-formats-by-source.json. `2001-12-10` and `2001-10-12`
+    remain two different dates for a source that has not been measured.
+
+    Only a day-precision reading returns a value, as before: a year or a year-month
+    is not a day, and folding one into a day would be the coarsening this family has
+    always refused.
     """
-    t = str(v).strip()
-    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", t)
-    if m:
-        return t
-    m = re.match(r"^([A-Za-z]+)\.?\s+(\d{1,2}),?\s+(\d{4})$", t)
-    if m and m.group(1).lower() in _MONTH:
-        return "%s-%02d-%02d" % (m.group(3), _MONTH[m.group(1).lower()], int(m.group(2)))
-    return None
+    r = _model_dates.read(v, source_id) if source_id else _model_dates.read(v)
+    if not r or r.get("precision") != "day":
+        return None
+    return "%04d-%02d-%02d" % (r["year"], r["month"], r["day"])
 
 
 # The ordinal suffix on the OVERALL PICK is optional: Pro Football Archives prints both
