@@ -12,15 +12,72 @@ HERE = os.path.dirname(os.path.abspath(__file__)); BASE = os.path.join(HERE, "..
 DOCS = os.path.expanduser("~/Dropbox/Football Archive/docs")
 T = json.load(open(os.path.join(BASE, "build-reports", "thin-archive.json")))
 O = json.load(open(os.path.join(BASE, "build-reports", "outside-span.json")))
+# WHAT IS ALREADY IN HAND. A list that sends Ryan to eBay for a fact sitting on his own
+# disk is worse than no list, so every gap is checked against the documents already
+# acquired before it is published as a gap. Added 2026-09-08, after PFA's team-season
+# pages were read for the first time.
+try:
+    H = json.load(open(os.path.join(BASE, "build-reports", "gaps-already-in-hand.json")))
+except Exception:
+    H = None
 C = T["counts"]
+
+
+def in_hand_section():
+    """What is already held, or already coming, and therefore not a hunt."""
+    if not H:
+        return ("\n> **Not checked against what is already on disk.** Run "
+                "`src/measure_gaps_already_in_hand.py` first.\n")
+    c = H["counts"]; tot = sum(c.values())
+    fill = c.get("fillable from a PFA page already on disk", 0)
+    why = H.get("why_not_fillable", {})
+    return f"""
+## Before you hunt: what is already in hand
+
+**{tot:,} missing facts were checked against the documents the archive already
+holds.** {fill:,} of them -- {100.0*fill/tot:.0f}% -- can be filled from a Pro
+Football Archives team-season page **already on this disk**. Those are an ingest, not
+a hunt, and they are excluded from everything below.
+
+**The other {tot-fill:,} cannot be filled by anything already held**, and the reason
+matters more than the number:
+
+| | |
+|---|---:|
+| the man is **not on PFA's roster page at all** | {why.get('not on the page', 0):,} |
+| PFA's own cell is empty, or prints `none` | {why.get("PFA's cell is empty or `none`", 0):,} |
+| there is no PFA page for that club-season | {why.get('no PFA page', 0):,} |
+
+**That first row is the whole reason this list still exists.** These men were derived
+from box scores -- they appeared in a game and the archive holds them for it -- and
+PFA's roster table never listed them. No amount of re-reading what is on disk will
+produce a college for a man the source does not name.
+
+### The gamelogs will not change this
+
+PFA's 21,607 player game logs are unfetched, and when they arrive **they will not
+shrink this list**. A game log is per-player and holds a date, an opponent, a score and
+per-game statistics -- **no college, no weight, no age, no position**, which are the
+four fields counted here. And it is a page *per player PFA already has*, so a
+club-season the archive holds nobody for gains nothing from it.
+
+They are worth fetching for game-level detail on men already held. They are not a
+hunting answer, and no gap below is waiting on them.
+
+"""
 
 
 def full():
     o = []
     w = o.append
     w("# Where the archive is thin\n")
-    w("*Regenerated 2026-09-08 from the cohort instrument — no reader, no OCR, just the\n"
-      "archive measured against itself. Written to browse eBay listings against.*\n")
+    w("*Regenerated 2026-09-08, after the day's ingests, from the cohort instrument — no\n"
+      "reader, no OCR, just the archive measured against itself. Written to browse eBay\n"
+      "listings against.*\n")
+    w("**This list is only the gaps no source already on the disk can fill.** That test\n"
+      "is new: on 8 September the archive read PFA's team-season pages for the first\n"
+      "time and had to find out how much of this list they answered. The answer is\n"
+      "below, and it is smaller than expected.\n")
     w("**The rule of thumb.** A **prose page with ages and colleges** is worth far more\n"
       "than a lineup of names and numbers. And **both are worth almost nothing for\n"
       "1934–46** — that era is finished: 135 club-seasons, 4,553 men, 2.2% of the four\n"
@@ -33,6 +90,7 @@ def full():
     w(f"| men held but no coach or staff | {C['no_coach']} |")
     w(f"| **thin** — men held, facts missing | **{C['thin']}**, missing **{C['missing_facts_total']:,}** facts |")
     w(f"| no source ever gave a roster row | {C['no_roster_source']} |\n")
+    w(in_hand_section())
     w("---\n")
     # ---- one
     w("## One — the empty club-seasons\n")
@@ -179,6 +237,11 @@ def short():
       "Regenerated 2026-09-08.*\n")
     w("---\n")
     w("## The one-line rule\n")
+    w("**Everything here is a gap nothing on your own disk can fill.** 345 measured\n"
+      "gaps could be filled from PFA pages already on the machine and have been\n"
+      "taken out -- those are an ingest, not a hunt. The unfetched game logs will\n"
+      "not shrink this list either: they carry a date, an opponent and per-game\n"
+      "statistics, and none of the four facts counted below.\n")
     w("**Buy 1920s. Skip 1934–46.** That era is finished — the archive already holds\n"
       "almost everything a programme from it would print.\n")
     w("---\n")
