@@ -1,0 +1,3171 @@
+{
+ "buckets": {
+  "matched nobody": 312,
+  "matched more than one": 70,
+  "failed on name form": 56,
+  "failed on name form, and ambiguous even then": 51
+ },
+ "matched_nobody": [
+  {
+   "name": "Fred Denfield",
+   "year": 1920,
+   "league": "APFA",
+   "club": "Rock Island Independents",
+   "predicate": "honour_team_selection",
+   "club_id": "club-rock-island-independents-1920",
+   "men_the_archive_holds_on_that_club_season": 31,
+   "candidates_on_that_club_season": [
+    "fred chicken",
+    "fred denfeld"
+   ]
+  },
+  {
+   "name": "Forrest Douds",
+   "year": 1930,
+   "league": "NFL",
+   "club": "Providence Steam Roller - Portsmouth Spartans",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dutch Kreuter",
+   "year": 1934,
+   "league": "AFL",
+   "club": "Charlotte Purols",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "George Mougin",
+   "year": 1934,
+   "league": "AFL",
+   "club": "Charlotte Purols",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Gordon Reddick",
+   "year": 1934,
+   "league": "AFL",
+   "club": "Charlotte Purols",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Fred Hambright",
+   "year": 1934,
+   "league": "AFL",
+   "club": "Charlotte Purols",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Casey Kimbrell",
+   "year": 1934,
+   "league": "AFL",
+   "club": "Louisville Bourbons",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ted Saussele",
+   "year": 1934,
+   "league": "AFL",
+   "club": "Memphis Tigers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-memphis-tigers-1934",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John Tobin",
+   "year": 1934,
+   "league": "AFL",
+   "club": "Memphis Tigers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-memphis-tigers-1934",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Charles Reiss",
+   "year": 1936,
+   "league": "DFL",
+   "club": "Baltimore Orioles",
+   "predicate": "honour_team_selection",
+   "club_id": "club-baltimore-orioles-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Duane Sands",
+   "year": 1936,
+   "league": "DFL",
+   "club": "Washington Pros",
+   "predicate": "honour_team_selection",
+   "club_id": "club-washington-pros-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Chris Mendolis",
+   "year": 1936,
+   "league": "DFL",
+   "club": "Alexandria Celtics",
+   "predicate": "honour_team_selection",
+   "club_id": "club-alexandria-celtics-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Archie Pratali",
+   "year": 1936,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bill Andorka",
+   "year": 1936,
+   "league": "DFL",
+   "club": "Washington Pros",
+   "predicate": "honour_team_selection",
+   "club_id": "club-washington-pros-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Johnny Fenlon",
+   "year": 1936,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Don Bomba",
+   "year": 1936,
+   "league": "DFL",
+   "club": "Alexandria Celtics",
+   "predicate": "honour_team_selection",
+   "club_id": "club-alexandria-celtics-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Red Mays",
+   "year": 1937,
+   "league": "AFA",
+   "club": "Paterson Panthers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-paterson-panthers-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Leo Paquin",
+   "year": 1937,
+   "league": "AFA",
+   "club": "Newark Tornadoes",
+   "predicate": "honour_team_selection",
+   "club_id": "club-newark-tornadoes-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ed Marinowski",
+   "year": 1937,
+   "league": "AFA",
+   "club": "Newark Tornadoes",
+   "predicate": "honour_team_selection",
+   "club_id": "club-newark-tornadoes-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ted Beck",
+   "year": 1937,
+   "league": "AFA",
+   "club": "White Plains Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-white-plains-bears-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ray Otlowski",
+   "year": 1937,
+   "league": "AFA",
+   "club": "Newark Tornadoes",
+   "predicate": "honour_team_selection",
+   "club_id": "club-newark-tornadoes-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Floyd Sexton",
+   "year": 1937,
+   "league": "AFA",
+   "club": "Brooklyn Eagles",
+   "predicate": "honour_team_selection",
+   "club_id": "club-brooklyn-eagles-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Rudy Choborda",
+   "year": 1937,
+   "league": "AFA",
+   "club": "Newark Tornadoes",
+   "predicate": "honour_team_selection",
+   "club_id": "club-newark-tornadoes-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Mandell",
+   "year": 1937,
+   "league": "AFA",
+   "club": "White Plains Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-white-plains-bears-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bernie Buscher",
+   "year": 1937,
+   "league": "DFL",
+   "club": "Washington Presidents",
+   "predicate": "honour_team_selection",
+   "club_id": "club-washington-presidents-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bill Formwalt",
+   "year": 1937,
+   "league": "DFL",
+   "club": "Baltimore Blue Birds",
+   "predicate": "honour_team_selection",
+   "club_id": "club-baltimore-blue-birds-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Duane Sands",
+   "year": 1937,
+   "league": "DFL",
+   "club": "Washington Presidents",
+   "predicate": "honour_team_selection",
+   "club_id": "club-washington-presidents-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Angus Lamond",
+   "year": 1937,
+   "league": "DFL",
+   "club": "Washington Presidents",
+   "predicate": "honour_team_selection",
+   "club_id": "club-washington-presidents-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Irvin Payne",
+   "year": 1937,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jack MacKenna",
+   "year": 1937,
+   "league": "MWFL",
+   "club": "Cincinnati Models",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Rupert",
+   "year": 1937,
+   "league": "MWFL",
+   "club": "Ashland Armcos",
+   "predicate": "honour_team_selection",
+   "club_id": "club-ashland-armcos-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dick Gumm",
+   "year": 1937,
+   "league": "MWFL",
+   "club": "Ashland Armcos",
+   "predicate": "honour_team_selection",
+   "club_id": "club-ashland-armcos-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Leo Sack",
+   "year": 1937,
+   "league": "MWFL",
+   "club": "Cincinnati Models",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Eddie Crum",
+   "year": 1937,
+   "league": "MWFL",
+   "club": "Louisville Tanks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-louisville-tanks-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jimmy Ippolito",
+   "year": 1938,
+   "league": "AFA",
+   "club": "Paterson Panthers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-paterson-panthers-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Harry Kline",
+   "year": 1938,
+   "league": "AFA",
+   "club": "Jersey City Giants",
+   "predicate": "honour_team_selection",
+   "club_id": "club-jersey-city-giants-1938",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Nat Pierce",
+   "year": 1938,
+   "league": "AFA",
+   "club": "Clifton Wessingtons",
+   "predicate": "honour_team_selection",
+   "club_id": "club-clifton-wessingtons-1938",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bob Baltzell",
+   "year": 1938,
+   "league": "AFA",
+   "club": "Paterson Panthers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-paterson-panthers-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Floyd Sexton",
+   "year": 1938,
+   "league": "AFA",
+   "club": "Brooklyn Eagles",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Vince Renzo",
+   "year": 1938,
+   "league": "AFA",
+   "club": "Paterson Panthers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-paterson-panthers-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Vernon Miles",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Norfolk Shamrocks",
+   "predicate": "award_won",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Kenny Fulk",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Washington Presidents",
+   "predicate": "honour_team_selection",
+   "club_id": "club-washington-presidents-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Allen Holt",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Alexandria Celtics",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mason Bugg",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Portsmouth Cubs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-portsmouth-cubs-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Vernon Miles",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Norfolk Shamrocks",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Irvin Payne",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Zuzu Stewart",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Alexandria Celtics",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Allen Nixon",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Norfolk Shamrocks",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Allen Keen",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Coleman Headley",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Washington Presidents",
+   "predicate": "honour_team_selection",
+   "club_id": "club-washington-presidents-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mush DeLotto",
+   "year": 1938,
+   "league": "DFL",
+   "club": "Norfolk Shamrocks",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Yurcic",
+   "year": 1939,
+   "league": "AFA",
+   "club": "Jersey City Giants",
+   "predicate": "honour_team_selection",
+   "club_id": "club-jersey-city-giants-1938",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Frank Coker",
+   "year": 1939,
+   "league": "AFA",
+   "club": "Wilmington Clippers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-wilmington-clippers-1938",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Fella Gintoff",
+   "year": 1939,
+   "league": "AFA",
+   "club": "Providence Steam Roller",
+   "predicate": "honour_team_selection",
+   "club_id": "club-providence-steam-roller-1939",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ozzie Simmons",
+   "year": 1939,
+   "league": "AFA",
+   "club": "Paterson Panthers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-paterson-panthers-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Rudy Choborda",
+   "year": 1939,
+   "league": "AFA",
+   "club": "Newark Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-newark-bears-1939",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bernie Buscher",
+   "year": 1939,
+   "league": "DFL",
+   "club": "Washington Presidents",
+   "predicate": "honour_team_selection",
+   "club_id": "club-washington-presidents-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Billy Weeks",
+   "year": 1939,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Irvin Payne",
+   "year": 1939,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Anthonavage",
+   "year": 1939,
+   "league": "DFL",
+   "club": "Washington Presidents",
+   "predicate": "honour_team_selection",
+   "club_id": "club-washington-presidents-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mush DeLotto",
+   "year": 1939,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "A.B. Conner",
+   "year": 1939,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John Pitzer",
+   "year": 1939,
+   "league": "DFL",
+   "club": "Portsmouth Cubs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-portsmouth-cubs-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jack Daly",
+   "year": 1940,
+   "league": "AFA",
+   "club": "Jersey City Giants",
+   "predicate": "honour_team_selection",
+   "club_id": "club-jersey-city-giants-1938",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Sam Aills",
+   "year": 1940,
+   "league": "AFA",
+   "club": "Jersey City Giants",
+   "predicate": "honour_team_selection",
+   "club_id": "club-jersey-city-giants-1938",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Frank Coker",
+   "year": 1940,
+   "league": "AFA",
+   "club": "Wilmington Clippers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-wilmington-clippers-1938",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Emilio Daddario",
+   "year": 1940,
+   "league": "AFA",
+   "club": "Providence Steam Roller",
+   "predicate": "honour_team_selection",
+   "club_id": "club-providence-steam-roller-1939",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Johnny Boyda",
+   "year": 1940,
+   "league": "AFA",
+   "club": "Paterson Panthers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-paterson-panthers-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Sherman Barnes",
+   "year": 1940,
+   "league": "AFA",
+   "club": "Milwaukee Chiefs",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Harlan Gustafson",
+   "year": 1940,
+   "league": "AFA",
+   "club": "New York Yankees",
+   "predicate": "honour_team_selection",
+   "club_id": "club-new-york-yankees-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Alex Drobnitch",
+   "year": 1940,
+   "league": "AFA",
+   "club": "Buffalo Indians",
+   "predicate": "honour_team_selection",
+   "club_id": "club-buffalo-indians-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Aleskus",
+   "year": 1940,
+   "league": "AFA",
+   "club": "Columbus Bullies",
+   "predicate": "honour_team_selection",
+   "club_id": "club-columbus-bullies-1939",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Andy Karpus",
+   "year": 1940,
+   "league": "AFA",
+   "club": "Boston Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-boston-bears-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Al Novakofski",
+   "year": 1940,
+   "league": "AFA",
+   "club": "Milwaukee Chiefs",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "A.B. Conner",
+   "year": 1940,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "award_won",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Frank Pierce",
+   "year": 1940,
+   "league": "DFL",
+   "club": "Portsmouth Cubs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-portsmouth-cubs-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Duane Sands",
+   "year": 1940,
+   "league": "DFL",
+   "club": "Washington Presidents",
+   "predicate": "honour_team_selection",
+   "club_id": "club-washington-presidents-1937",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ed Merrick",
+   "year": 1940,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "A.B. Conner",
+   "year": 1940,
+   "league": "DFL",
+   "club": "Richmond Arrows",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-arrows-1936",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John Zontini",
+   "year": 1940,
+   "league": "DFL",
+   "club": "Norfolk Shamrocks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-norfolk-shamrocks-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Felix Gangemi",
+   "year": 1941,
+   "league": "AFA",
+   "club": "Jersey City Giants",
+   "predicate": "honour_team_selection",
+   "club_id": "club-jersey-city-giants-1938",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ed Farrell",
+   "year": 1941,
+   "league": "AFA",
+   "club": "Wilmington Clippers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-wilmington-clippers-1938",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Pat Fehley",
+   "year": 1941,
+   "league": "AFA",
+   "club": "Long Island Indians",
+   "predicate": "honour_team_selection",
+   "club_id": "club-long-island-indians-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Kruse",
+   "year": 1941,
+   "league": "AFL",
+   "club": "Cincinnati Bengals",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bill McGannon",
+   "year": 1941,
+   "league": "AFL",
+   "club": "Cincinnati Bengals",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Pete Sachon",
+   "year": 1941,
+   "league": "DFL",
+   "club": "Norfolk Shamrocks",
+   "predicate": "award_won",
+   "club_id": "club-norfolk-shamrocks-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Tony Ruffa",
+   "year": 1941,
+   "league": "DFL",
+   "club": "Norfolk Shamrocks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-norfolk-shamrocks-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Morris Katz",
+   "year": 1941,
+   "league": "DFL",
+   "club": "Charlotte Clippers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-charlotte-clippers-1941",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Pete Sachon",
+   "year": 1941,
+   "league": "DFL",
+   "club": "Norfolk Shamrocks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-norfolk-shamrocks-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Frank Swiger",
+   "year": 1941,
+   "league": "DFL",
+   "club": "Charlotte Clippers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-charlotte-clippers-1941",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Nick Katzmeyer",
+   "year": 1941,
+   "league": "PCFL",
+   "club": "San Francisco Packers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-san-francisco-packers-1941",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John Frawley",
+   "year": 1941,
+   "league": "PCFL",
+   "club": "Los Angeles Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-los-angeles-bulldogs-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Willard Goodhue",
+   "year": 1941,
+   "league": "PCFL",
+   "club": "Hollywood Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-hollywood-bears-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jack Mulkey",
+   "year": 1944,
+   "league": "AFL",
+   "club": "San Francisco Clippers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-san-francisco-clippers-1944",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "George Truckell",
+   "year": 1944,
+   "league": "PCFL",
+   "club": "San Francisco Packers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-san-francisco-packers-1941",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Sal Mena",
+   "year": 1944,
+   "league": "PCFL",
+   "club": "San Diego Bombers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-san-diego-bombers-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "George Toombs",
+   "year": 1944,
+   "league": "PCFL",
+   "club": "Los Angeles Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-los-angeles-bulldogs-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jim Ohlsen",
+   "year": 1944,
+   "league": "PCFL",
+   "club": "Los Angeles Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-los-angeles-bulldogs-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dale Byers",
+   "year": 1945,
+   "league": "PCFL",
+   "club": "Oakland Giants",
+   "predicate": "honour_team_selection",
+   "club_id": "club-oakland-giants-1945",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Johnny Petrovich",
+   "year": 1945,
+   "league": "PCFL",
+   "club": "Hollywood Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-hollywood-bears-1945",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jack Rosenthal",
+   "year": 1946,
+   "league": "AFL",
+   "club": "Newark Bombers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-newark-bombers-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Carl Stravinski",
+   "year": 1946,
+   "league": "AFL",
+   "club": "Scranton Miners",
+   "predicate": "honour_team_selection",
+   "club_id": "club-scranton-miners-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mort Hochheiser",
+   "year": 1946,
+   "league": "AFL",
+   "club": "Scranton Miners",
+   "predicate": "honour_team_selection",
+   "club_id": "club-scranton-miners-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Kroll",
+   "year": 1946,
+   "league": "AFL",
+   "club": "Scranton Miners",
+   "predicate": "honour_team_selection",
+   "club_id": "club-scranton-miners-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Floyd Wheeler",
+   "year": 1946,
+   "league": "AFL",
+   "club": "Akron Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-akron-bears-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Leonard Darnell",
+   "year": 1946,
+   "league": "DFL",
+   "club": "Greensboro Patriots",
+   "predicate": "honour_team_selection",
+   "club_id": "club-greensboro-patriots-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Rocci Spadaccini",
+   "year": 1946,
+   "league": "DFL",
+   "club": "Charlotte Clippers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-charlotte-clippers-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Milt Parlow",
+   "year": 1946,
+   "league": "DFL",
+   "club": "Richmond Rebels",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-rebels-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jim Tharp",
+   "year": 1946,
+   "league": "DFL",
+   "club": "Richmond Rebels",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-rebels-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Pawlowski",
+   "year": 1946,
+   "league": "DFL",
+   "club": "Portsmouth Pirates",
+   "predicate": "honour_team_selection",
+   "club_id": "club-portsmouth-pirates-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Tony Ruffa",
+   "year": 1946,
+   "league": "DFL",
+   "club": "Norfolk Shamrocks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-norfolk-shamrocks-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Gus Letchas",
+   "year": 1946,
+   "league": "DFL",
+   "club": "Portsmouth Pirates",
+   "predicate": "honour_team_selection",
+   "club_id": "club-portsmouth-pirates-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Earl Younglove",
+   "year": 1946,
+   "league": "PCFL",
+   "club": "Tacoma Indians",
+   "predicate": "honour_team_selection",
+   "club_id": "club-tacoma-indians-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Nate DeFrancisco",
+   "year": 1946,
+   "league": "PCFL",
+   "club": "Hollywood Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-hollywood-bears-1945",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jack Shanks",
+   "year": 1946,
+   "league": "PCFL",
+   "club": "Los Angeles Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-los-angeles-bulldogs-1940",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Izzy Cantor",
+   "year": 1946,
+   "league": "PCFL",
+   "club": "Hollywood Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-hollywood-bears-1945",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Marv Harshman",
+   "year": 1946,
+   "league": "PCFL",
+   "club": "Tacoma Indians",
+   "predicate": "honour_team_selection",
+   "club_id": "club-tacoma-indians-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Kaulukukui",
+   "year": 1946,
+   "league": "PCFL",
+   "club": "Hawaiian Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": "club-hawaiian-warriors-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Marv Tommervik",
+   "year": 1946,
+   "league": "PCFL",
+   "club": "Tacoma Indians",
+   "predicate": "honour_team_selection",
+   "club_id": "club-tacoma-indians-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jack Rosenthal",
+   "year": 1947,
+   "league": "AFL",
+   "club": "Bloomfield Cardinals",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bloomfield-cardinals-1947",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "George Turner",
+   "year": 1947,
+   "league": "AFL",
+   "club": "Bethlehem Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bethlehem-bulldogs-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bob Ferri",
+   "year": 1947,
+   "league": "AFL",
+   "club": "Bloomfield Cardinals",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bloomfield-cardinals-1947",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Wally Hopp",
+   "year": 1947,
+   "league": "AFL",
+   "club": "Bethlehem Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bethlehem-bulldogs-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dom Fusci",
+   "year": 1948,
+   "league": "AFL",
+   "club": "Paterson Panthers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-paterson-panthers-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Marty Petroskas",
+   "year": 1948,
+   "league": "AFL",
+   "club": "Wilkes-Barre Bullets",
+   "predicate": "honour_team_selection",
+   "club_id": "club-wilkes-barre-bullets-1948",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bill Pugh",
+   "year": 1948,
+   "league": "AFL",
+   "club": "Paterson Panthers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-paterson-panthers-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Wally Hopp",
+   "year": 1948,
+   "league": "AFL",
+   "club": "Bethlehem Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bethlehem-bulldogs-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jack Rosenthal",
+   "year": 1949,
+   "league": "AFL",
+   "club": "Bethlehem Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bethlehem-bulldogs-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bob Mirth",
+   "year": 1949,
+   "league": "AFL",
+   "club": "Richmond Rebels",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-rebels-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Marty Petroskas",
+   "year": 1949,
+   "league": "AFL",
+   "club": "Wilkes-Barre Bullets",
+   "predicate": "honour_team_selection",
+   "club_id": "club-wilkes-barre-bullets-1948",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Carmen Falcone",
+   "year": 1949,
+   "league": "AFL",
+   "club": "Paterson Panthers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-paterson-panthers-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Byron Gillory",
+   "year": 1949,
+   "league": "AFL",
+   "club": "Richmond Rebels",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-rebels-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John Drew",
+   "year": 1961,
+   "league": "UFL",
+   "club": "Cleveland Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-cleveland-browns-1946",
+   "men_the_archive_holds_on_that_club_season": 37,
+   "candidates_on_that_club_season": [
+    "john morrow",
+    "john wooten"
+   ]
+  },
+  {
+   "name": "Joe Sopcak",
+   "year": 1961,
+   "league": "UFL",
+   "club": "Louisville Raiders",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ernie Spychalski",
+   "year": 1961,
+   "league": "UFL",
+   "club": "Columbus Colts",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bob Beaver",
+   "year": 1961,
+   "league": "UFL",
+   "club": "Grand Rapids Shamrocks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-grand-rapids-shamrocks-1961",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dennis Gedman",
+   "year": 1961,
+   "league": "UFL",
+   "club": "Indianapolis Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dave Muntean",
+   "year": 1961,
+   "league": "UFL",
+   "club": "Grand Rapids Shamrocks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-grand-rapids-shamrocks-1961",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Frank Kremblas",
+   "year": 1961,
+   "league": "UFL",
+   "club": "Columbus Colts",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Emil Caprara",
+   "year": 1961,
+   "league": "UFL",
+   "club": "Grand Rapids Shamrocks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-grand-rapids-shamrocks-1961",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Fred Dennen",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Providence Steam Roller",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Fred Mautino",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Frankfort Falcons",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Larry McHugh",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Ansonia Black Knights",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John Skubel",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Stamford Golden Bears",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Richie Walsh",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Paterson Miners",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Willie Greenlaw",
+   "year": 1962,
+   "league": "ACFL",
+   "club": "Portland Sea Hawks",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Don Benbow",
+   "year": 1962,
+   "league": "UFL",
+   "club": "Indianapolis Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": "club-indianapolis-warriors-1962",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Don Donatelli",
+   "year": 1962,
+   "league": "UFL",
+   "club": "Indianapolis Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": "club-indianapolis-warriors-1962",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John Drew",
+   "year": 1962,
+   "league": "UFL",
+   "club": "Cleveland Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-cleveland-browns-1946",
+   "men_the_archive_holds_on_that_club_season": 38,
+   "candidates_on_that_club_season": [
+    "john brown",
+    "john morrow",
+    "john wooten"
+   ]
+  },
+  {
+   "name": "Bob Finowski",
+   "year": 1962,
+   "league": "UFL",
+   "club": "Cleveland Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-cleveland-browns-1946",
+   "men_the_archive_holds_on_that_club_season": 38,
+   "candidates_on_that_club_season": [
+    "bob gain"
+   ]
+  },
+  {
+   "name": "Elmo Hodge",
+   "year": 1962,
+   "league": "UFL",
+   "club": "Wheeling Ironmen",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Tom Gunderman",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Newark Bears",
+   "predicate": "award_won",
+   "club_id": "club-newark-bears-1963",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Frank Horvath",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Harrisburg Capitols",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bob Shaunessy",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Providence Steam Roller",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Al Calligaris",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Jersey Giants",
+   "predicate": "honour_team_selection",
+   "club_id": "club-jersey-giants-1963",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Nick DeCicco",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Newark Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-newark-bears-1963",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Richie Walsh",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Newark Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-newark-bears-1963",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bill Strumke",
+   "year": 1963,
+   "league": "ACFL",
+   "club": "Westchester Crusaders",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ivan Toncic",
+   "year": 1963,
+   "league": "UFL",
+   "club": "Wheeling Ironmen",
+   "predicate": "award_won",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bobby Lee Hultz",
+   "year": 1963,
+   "league": "UFL",
+   "club": "Wheeling Ironmen",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jerry Barto",
+   "year": 1963,
+   "league": "UFL",
+   "club": "Grand Rapids Blazers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-grand-rapids-blazers-1963",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Don Benbow",
+   "year": 1963,
+   "league": "UFL",
+   "club": "Indianapolis Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": "club-indianapolis-warriors-1962",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ed Burke",
+   "year": 1963,
+   "league": "UFL",
+   "club": "Indianapolis Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": "club-indianapolis-warriors-1962",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Leo Bland",
+   "year": 1963,
+   "league": "UFL",
+   "club": "Cleveland Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-cleveland-browns-1946",
+   "men_the_archive_holds_on_that_club_season": 43,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Al Calligaris",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Jersey City Giants",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Paul D'Allesandro",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Providence Steamrollers",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Richie Walsh",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Newark Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-newark-bears-1963",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Hugh Rohrschneider",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Portland Sea Hawks",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mel Meeks",
+   "year": 1964,
+   "league": "ACFL",
+   "club": "Springfield Acorns",
+   "predicate": "honour_team_selection",
+   "club_id": "club-springfield-acorns-1964",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Herschel Hogan",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Daytona Beach Thunderbirds",
+   "predicate": "award_won",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe D'Auria",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Huntsville Rockets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bobby Garvin",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Jacksonville Robins",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jack Katz",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Orlando Broncos",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Houston Patton",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Huntsville Rockets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Fred Pickard",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Daytona Beach Thunderbirds",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Paul Vandergriff",
+   "year": 1964,
+   "league": "SFL",
+   "club": "Chattanooga Cherokees",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John Drew",
+   "year": 1964,
+   "league": "UFL",
+   "club": "Canton Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-canton-bulldogs-1964",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bill Zorn",
+   "year": 1964,
+   "league": "UFL",
+   "club": "Grand Rapids Blazers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-grand-rapids-blazers-1963",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Don Benbow",
+   "year": 1964,
+   "league": "UFL",
+   "club": "Indianapolis Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": "club-indianapolis-warriors-1962",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Lowell Vaught",
+   "year": 1964,
+   "league": "UFL",
+   "club": "Indianapolis Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": "club-indianapolis-warriors-1962",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bruce Puterbaugh",
+   "year": 1964,
+   "league": "UFL",
+   "club": "Canton Bulldogs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-canton-bulldogs-1964",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dick Limerick",
+   "year": 1965,
+   "league": "COFL",
+   "club": "Toronto Rifles",
+   "predicate": "honour_team_selection",
+   "club_id": "club-toronto-rifles-1965",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jim Bogdalek",
+   "year": 1965,
+   "league": "COFL",
+   "club": "Toronto Rifles",
+   "predicate": "honour_team_selection",
+   "club_id": "club-toronto-rifles-1965",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Arlen Cullors",
+   "year": 1965,
+   "league": "COFL",
+   "club": "Charleston Rockets",
+   "predicate": "honour_team_selection",
+   "club_id": "club-charleston-rockets-1964",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Don Donatelli",
+   "year": 1965,
+   "league": "COFL",
+   "club": "Wheeling Ironmen",
+   "predicate": "honour_team_selection",
+   "club_id": "club-wheeling-ironmen-1965",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ed Buettner",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Annapolis Sailors",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Rich Koeper",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Mobile Tarpons",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Pat Stillman",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Wilmington Comets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bill Wieseman",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Huntsville Rockets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Paul Gore",
+   "year": 1965,
+   "league": "NAFL",
+   "club": "Florida Brahmans",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ed Francois",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Joliet Explorers",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ken Dostal",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Omaha Mustangs",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Walt Nichols",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Joliet Explorers",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dave Swenson",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Grand Rapids Blazers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-grand-rapids-blazers-1963",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Wylie Fox",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Joliet Explorers",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mark Manders",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Des Moines Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Max Broderson",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Omaha Mustangs",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mike Eger",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Lincoln Comets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Eddie Fletcher",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Grand Rapids Blazers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-grand-rapids-blazers-1963",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Chuck Billings",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Joliet Explorers",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ken McGhie",
+   "year": 1965,
+   "league": "PFLA",
+   "club": "Joliet Explorers",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Rich Lucka",
+   "year": 1966,
+   "league": "COFL",
+   "club": "Toronto Rifles",
+   "predicate": "honour_team_selection",
+   "club_id": "club-toronto-rifles-1965",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bob Blakely",
+   "year": 1966,
+   "league": "COFL",
+   "club": "Toronto Rifles",
+   "predicate": "honour_team_selection",
+   "club_id": "club-toronto-rifles-1965",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ken Berry",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Omaha Mustangs",
+   "predicate": "award_won",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Steve Valasek",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Des Moines Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ken Dostal",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Omaha Mustangs",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dave Mulderink",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Joliet Explorers",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mark Manders",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Des Moines Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John McSwaney",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Des Moines Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ollie Cromwell",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Joliet Explorers",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ed Francois",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Joliet Explorers",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ken Berry",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Omaha Mustangs",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Larry Stednitz",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Omaha Mustangs",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bob Miranda",
+   "year": 1966,
+   "league": "PFLA",
+   "club": "Des Moines Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ken Higginbotham",
+   "year": 1966,
+   "league": "TFL",
+   "club": "Pasadena Pistols",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ted Polser",
+   "year": 1966,
+   "league": "TFL",
+   "club": "Sherman-Denison Jets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dave Pursley",
+   "year": 1966,
+   "league": "TFL",
+   "club": "Odessa-Midland Comets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bob Windham",
+   "year": 1966,
+   "league": "TFL",
+   "club": "Odessa-Midland Comets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Cecil McClendon",
+   "year": 1966,
+   "league": "TFL",
+   "club": "Sherman-Denison Jets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jim Prda",
+   "year": 1966,
+   "league": "TFL",
+   "club": "Dallas County Rockets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Paul Hudson",
+   "year": 1967,
+   "league": "PFLA",
+   "club": "Joliet Chargers",
+   "predicate": "award_won",
+   "club_id": "club-joliet-chargers-1967",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Walt Nichols",
+   "year": 1967,
+   "league": "PFLA",
+   "club": "Joliet Chargers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-joliet-chargers-1967",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dick Schafroth",
+   "year": 1967,
+   "league": "PFLA",
+   "club": "Alabama Hawks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-alabama-hawks-1967",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jim Dyar",
+   "year": 1967,
+   "league": "PFLA",
+   "club": "Alabama Hawks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-alabama-hawks-1967",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mark Manders",
+   "year": 1967,
+   "league": "PFLA",
+   "club": "Des Moines Warriors",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Gaylon McCollough",
+   "year": 1967,
+   "league": "PFLA",
+   "club": "Alabama Hawks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-alabama-hawks-1967",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ken Berry",
+   "year": 1967,
+   "league": "PFLA",
+   "club": "Omaha Mustangs",
+   "predicate": "honour_team_selection",
+   "club_id": "club-omaha-mustangs-1967",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Paul Hudson",
+   "year": 1967,
+   "league": "PFLA",
+   "club": "Joliet Chargers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-joliet-chargers-1967",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Harvey Cernosek",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Pasadena Pistols",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ken Higginbotham",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Pasadena Pistols",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Harold Lathum",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Tulsa Thunderbirds",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ronnie Pack",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Odessa-Midland Comets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dave Pursley",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Odessa-Midland Comets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Larry Bohannon",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Tulsa Thunderbirds",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Charlie Cheeks",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Pasadena Pistols",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Johnny Kennard",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Fort Worth Texans",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Doug Broadus",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Sherman-Denison Jets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Sonny Gossett",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Wichita Falls Kings",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Luz Pedraza",
+   "year": 1967,
+   "league": "TFL",
+   "club": "San Antonio Toros",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bill Hodges",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Sherman-Denison Jets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Charlie Barnhart",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Tulsa Thunderbirds",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Earl Lattimer",
+   "year": 1967,
+   "league": "TFL",
+   "club": "Fort Worth Texans",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Roger Milici",
+   "year": 1968,
+   "league": "ACFL",
+   "club": "Bridgepot Jets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ernie Colquette",
+   "year": 1968,
+   "league": "ACFL",
+   "club": "Hartford Knights",
+   "predicate": "honour_team_selection",
+   "club_id": "club-hartford-knights-1968",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Doug McNeill",
+   "year": 1968,
+   "league": "ACFL",
+   "club": "Richmond Roadrunners",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jack Von Bischoffshausen",
+   "year": 1968,
+   "league": "ACFL",
+   "club": "Westchester Bulls",
+   "predicate": "honour_team_selection",
+   "club_id": "club-westchester-bulls-1967",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mel Meeks",
+   "year": 1968,
+   "league": "ACFL",
+   "club": "Hartford Knights",
+   "predicate": "honour_team_selection",
+   "club_id": "club-hartford-knights-1968",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Wynns",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Indianapolis Capitols",
+   "predicate": "honour_team_selection",
+   "club_id": "club-indianapolis-capitols-1968",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mike Capshaw",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Norfolk Neptunes",
+   "predicate": "honour_team_selection",
+   "club_id": "club-norfolk-neptunes-1965",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dick Fitzgerald",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Omaha Mustangs",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Sam Works",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Orlando Panthers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-orlando-panthers-1966",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Tom Mitrakos",
+   "year": 1968,
+   "league": "COFL",
+   "club": "Spokane Shockers",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Truman Franks",
+   "year": 1968,
+   "league": "TFL",
+   "club": "San Antonio Toros",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bill Nunnallee",
+   "year": 1968,
+   "league": "TFL",
+   "club": "Fort Worth Braves",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ronnie Pack",
+   "year": 1968,
+   "league": "TFL",
+   "club": "Odessa Comets/West Texas Rufneks",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Larry Bohannon",
+   "year": 1968,
+   "league": "TFL",
+   "club": "Tulsa Thunderbirds",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John Osmond",
+   "year": 1968,
+   "league": "TFL",
+   "club": "Tulsa Thunderbirds",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Sal Olivas",
+   "year": 1968,
+   "league": "TFL",
+   "club": "El Paso Jets",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Charlie Barnhart",
+   "year": 1968,
+   "league": "TFL",
+   "club": "Tulsa Thunderbirds",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Roger Milici",
+   "year": 1969,
+   "league": "ACFL",
+   "club": "Bridgeport Jets",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bridgeport-jets-1969",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Hershel McLeod",
+   "year": 1969,
+   "league": "ACFL",
+   "club": "Roanoke Buckskins",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Tom Sarkisian",
+   "year": 1969,
+   "league": "ACFL",
+   "club": "Pottstown Firebirds",
+   "predicate": "honour_team_selection",
+   "club_id": "club-pottstown-firebirds-1968",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jack Calcaterra",
+   "year": 1969,
+   "league": "ACFL",
+   "club": "Hartford Knights",
+   "predicate": "honour_team_selection",
+   "club_id": "club-hartford-knights-1968",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Doug McNeill",
+   "year": 1969,
+   "league": "ACFL",
+   "club": "Richmond Roadrunners",
+   "predicate": "honour_team_selection",
+   "club_id": "club-richmond-roadrunners-1969",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Henry McKay",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Norfolk Neptunes",
+   "predicate": "honour_team_selection",
+   "club_id": "club-norfolk-neptunes-1965",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Al Gonzales",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Texarkana Titans",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John Osmond",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Oklahoma Thunderbirds",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ray Jeffords",
+   "year": 1969,
+   "league": "COFL",
+   "club": "Alabama Hawks",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "A.C. Lex",
+   "year": 1969,
+   "league": "COFL",
+   "club": "San Antonio Toros",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Henry McKay",
+   "year": 1970,
+   "league": "ACFL",
+   "club": "Norfolk Neptunes",
+   "predicate": "honour_team_selection",
+   "club_id": "club-norfolk-neptunes-1965",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Marcel Courtillet",
+   "year": 1970,
+   "league": "ACFL",
+   "club": "Roanoke Buckskins",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "George Barron",
+   "year": 1970,
+   "league": "ACFL",
+   "club": "Jersey Jays",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mike Hannigan",
+   "year": 1970,
+   "league": "ACFL",
+   "club": "Orlando Panthers",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Jack Von Bischoffshausen",
+   "year": 1970,
+   "league": "ACFL",
+   "club": "Jersey Tigers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-jersey-tigers-1970",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Marcel Courtillet",
+   "year": 1971,
+   "league": "ACFL",
+   "club": "Roanoke Buckskins",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Pierre Marchando",
+   "year": 1971,
+   "league": "ACFL",
+   "club": "Hartford Knights",
+   "predicate": "honour_team_selection",
+   "club_id": "club-hartford-knights-1968",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Dennis Fitzgibbons",
+   "year": 1971,
+   "league": "ACFL",
+   "club": "Hartford Knights",
+   "predicate": "honour_team_selection",
+   "club_id": "club-hartford-knights-1968",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Kevin Moran",
+   "year": 1971,
+   "league": "ACFL",
+   "club": "Norfolk Neptunes",
+   "predicate": "honour_team_selection",
+   "club_id": "club-norfolk-neptunes-1965",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Ginnetti",
+   "year": 1971,
+   "league": "ACFL",
+   "club": "Bridgeport Jets",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bridgeport-jets-1969",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Harris Wood",
+   "year": 1971,
+   "league": "ACFL",
+   "club": "Norfolk Neptunes",
+   "predicate": "honour_team_selection",
+   "club_id": "club-norfolk-neptunes-1965",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Don Abbey",
+   "year": 1971,
+   "league": "ACFL",
+   "club": "Hartford Knights",
+   "predicate": "honour_team_selection",
+   "club_id": "club-hartford-knights-1968",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Billy Brockhouse",
+   "year": 1971,
+   "league": "TAFL",
+   "club": "Texarkana Titans",
+   "predicate": "award_won",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Louie Spreen",
+   "year": 1971,
+   "league": "TAFL",
+   "club": "San Antonio Toros",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bill Lehman",
+   "year": 1971,
+   "league": "TAFL",
+   "club": "San Antonio Toros",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Marty Whelan",
+   "year": 1971,
+   "league": "TAFL",
+   "club": "Texarkana Titans",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Pierre Marchando",
+   "year": 1973,
+   "league": "ACFL",
+   "club": "Western Massachusetts Pioneers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-western-massachusetts-pioneers-1973",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Joe Ginnetti",
+   "year": 1973,
+   "league": "ACFL",
+   "club": "Hartford Knights",
+   "predicate": "honour_team_selection",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "John Hulecki",
+   "year": 1973,
+   "league": "ACFL",
+   "club": "New England Colonials",
+   "predicate": "honour_team_selection",
+   "club_id": "club-new-england-colonials-1973",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Bob Wattigney",
+   "year": 1973,
+   "league": "ACFL",
+   "club": "Western Massachusetts Pioneers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-western-massachusetts-pioneers-1973",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ted DeMars",
+   "year": 1973,
+   "league": "ACFL",
+   "club": "New England Colonials",
+   "predicate": "honour_team_selection",
+   "club_id": "club-new-england-colonials-1973",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Mark Muprhy",
+   "year": 1983,
+   "league": "NFL",
+   "club": "Washington Redskins",
+   "predicate": "honour_team_selection",
+   "club_id": "club-boston-braves-1932",
+   "men_the_archive_holds_on_that_club_season": 52,
+   "candidates_on_that_club_season": [
+    "mark may",
+    "mark mcgrath",
+    "mark moseley"
+   ]
+  },
+  {
+   "name": "Mark Muprhy",
+   "year": 1983,
+   "league": "NFC",
+   "club": "Washington Redskins",
+   "predicate": "honour_team_selection",
+   "club_id": "club-boston-braves-1932",
+   "men_the_archive_holds_on_that_club_season": 52,
+   "candidates_on_that_club_season": [
+    "mark may",
+    "mark mcgrath",
+    "mark moseley"
+   ]
+  },
+  {
+   "name": "Waynes Fones",
+   "year": 1991,
+   "league": "NFL",
+   "club": "Detroit Lions",
+   "predicate": "award_won",
+   "club_id": "club-detroit-lions-1934",
+   "men_the_archive_holds_on_that_club_season": 56,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Corey Grahm",
+   "year": 2011,
+   "league": "NFC",
+   "club": "Chicago Bears",
+   "predicate": "honour_team_selection",
+   "club_id": "club-decatur-staleys-1920",
+   "men_the_archive_holds_on_that_club_season": 62,
+   "candidates_on_that_club_season": [
+    "corey graham",
+    "corey wootton"
+   ]
+  },
+  {
+   "name": "Solomon Eliminian",
+   "year": 2011,
+   "league": "CFL",
+   "club": "British Columbia Lions",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bc-lions-1954",
+   "men_the_archive_holds_on_that_club_season": 66,
+   "candidates_on_that_club_season": [
+    "solomon elimimian"
+   ]
+  },
+  {
+   "name": "Bruce Aroans",
+   "year": 2014,
+   "league": null,
+   "club": "Arizona Cardinals",
+   "predicate": "award_won",
+   "club_id": "club-chicago-cardinals-1920",
+   "men_the_archive_holds_on_that_club_season": 65,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Solomon Eliminian",
+   "year": 2014,
+   "league": "CFL",
+   "club": "British Columbia Lions",
+   "predicate": "award_won",
+   "club_id": "club-bc-lions-1954",
+   "men_the_archive_holds_on_that_club_season": 69,
+   "candidates_on_that_club_season": [
+    "solomon elimimian"
+   ]
+  },
+  {
+   "name": "Solomon Eliminian",
+   "year": 2014,
+   "league": "CFL",
+   "club": "British Columbia Lions",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bc-lions-1954",
+   "men_the_archive_holds_on_that_club_season": 69,
+   "candidates_on_that_club_season": [
+    "solomon elimimian"
+   ]
+  },
+  {
+   "name": "Solomon Eliminian",
+   "year": 2016,
+   "league": "CFL",
+   "club": "British Columbia Lions",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bc-lions-1954",
+   "men_the_archive_holds_on_that_club_season": 62,
+   "candidates_on_that_club_season": [
+    "solomon elimimian"
+   ]
+  },
+  {
+   "name": "Aaron Doanld",
+   "year": 2017,
+   "league": null,
+   "club": "Los Angeles Rams",
+   "predicate": "award_won",
+   "club_id": "club-cleveland-rams-1937",
+   "men_the_archive_holds_on_that_club_season": 61,
+   "candidates_on_that_club_season": [
+    "aaron donald",
+    "aaron neary"
+   ]
+  },
+  {
+   "name": "Solomon Eliminian",
+   "year": 2017,
+   "league": "CFL",
+   "club": "British Columbia Lions",
+   "predicate": "honour_team_selection",
+   "club_id": "club-bc-lions-1954",
+   "men_the_archive_holds_on_that_club_season": 67,
+   "candidates_on_that_club_season": [
+    "solomon elimimian"
+   ]
+  },
+  {
+   "name": "Alex McGogh",
+   "year": 2023,
+   "league": "USFL",
+   "club": "Birmingham Stallions",
+   "predicate": "award_won",
+   "club_id": "club-birmingham-stallions-2022",
+   "men_the_archive_holds_on_that_club_season": 71,
+   "candidates_on_that_club_season": [
+    "alex mcgough"
+   ]
+  },
+  {
+   "name": "Washington Commanders",
+   "year": 2024,
+   "league": null,
+   "club": "PFWA TSN",
+   "predicate": "award_won",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Washington Commanders",
+   "year": 2024,
+   "league": null,
+   "club": "PFWA",
+   "predicate": "award_won",
+   "club_id": null,
+   "men_the_archive_holds_on_that_club_season": null,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Chris Garett",
+   "year": 2024,
+   "league": "UFL",
+   "club": "St. Louis Battlehawks",
+   "predicate": "award_won",
+   "club_id": "club-st-louis-battlehawks-2020",
+   "men_the_archive_holds_on_that_club_season": 59,
+   "candidates_on_that_club_season": [
+    "chris garrett",
+    "chris payton jones"
+   ]
+  },
+  {
+   "name": "Upton Stout",
+   "year": 2025,
+   "league": "NFL",
+   "club": "San Francisco 49ers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-san-francisco-49ers-1946",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Chimere Dike",
+   "year": 2025,
+   "league": "NFL",
+   "club": "Tennessee Titans",
+   "predicate": "honour_team_selection",
+   "club_id": "club-houston-oilers-1960",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Gottlieb Ayedze",
+   "year": 2026,
+   "league": "UFL",
+   "club": "Houston Gamblers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-houston-gamblers-2026",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Michael Gonzalez",
+   "year": 2026,
+   "league": "UFL",
+   "club": "Orlando Storm",
+   "predicate": "honour_team_selection",
+   "club_id": "club-orlando-storm-2026",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Ryan Sanborn",
+   "year": 2026,
+   "league": "UFL",
+   "club": "St. Louis Battlehawks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-st-louis-battlehawks-2020",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Sean Fresch",
+   "year": 2026,
+   "league": "UFL",
+   "club": "St. Louis Battlehawks",
+   "predicate": "honour_team_selection",
+   "club_id": "club-st-louis-battlehawks-2020",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  },
+  {
+   "name": "Marco Ortiz",
+   "year": 2026,
+   "league": "UFL",
+   "club": "Houston Gamblers",
+   "predicate": "honour_team_selection",
+   "club_id": "club-houston-gamblers-2026",
+   "men_the_archive_holds_on_that_club_season": 0,
+   "candidates_on_that_club_season": []
+  }
+ ]
+}

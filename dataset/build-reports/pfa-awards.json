@@ -1,0 +1,1207 @@
+{
+ "pages": 229,
+ "counts": {
+  "all-league selections": 10861,
+  "named awards": 939
+ },
+ "awards": {
+  "All-AFL": 7,
+  "All-DFL": 7,
+  "All-AFA": 6,
+  "All-MWFL": 1,
+  "Player of the Year": 16,
+  "Most Valuable Player": 37,
+  "Al Cohen": 1,
+  "All-PCFL": 4,
+  "NFL Player of the Year": 93,
+  "AAFC Player of the Year": 5,
+  "Glenn Knox": 1,
+  "Marion Butler": 1,
+  "Jim Jones": 1,
+  "NFL Rookie of the Year": 54,
+  "NFL Coach of the Year": 47,
+  "AFL Player of the Year": 14,
+  "AFL Rookie of the Year": 11,
+  "NFL Offensive Player of the Year": 48,
+  "NFL Defensive Player of the Year": 55,
+  "All-ACFL": 1,
+  "AFL Offensive Player of the Year": 1,
+  "NFL Offfensive Player of the Year": 1,
+  "AFL Defensive Player of the Year": 1,
+  "Most Outstanding Player of the Year": 56,
+  "Offensive Most Valuable Player": 2,
+  "Defensive Most Valuable Player": 2,
+  "AFL Coach of the Year": 3,
+  "AFL Offensive Rookie of the Year": 3,
+  "NFL Offensive Rookie of the Year": 38,
+  "AFL Defensive Rookie of the Year": 5,
+  "NFL Defensive Rookie of the Year": 38,
+  "AFC Player of the Year": 14,
+  "NFC Player of the Year": 14,
+  "AFC Rookie of the Year": 27,
+  "NFC Rookie of the Year": 31,
+  "AFC Offensive Player of the Year": 19,
+  "NFC Offensive Player of the Year": 19,
+  "AFC Defensive Player of the Year": 20,
+  "NFC Defensive Player of the Year": 19,
+  "NFL Deffensive Rookie of the Year": 1,
+  "Coach of the Year": 36,
+  "Most Valuable Player/players/ of the Year": 7,
+  "Offensive Player of the Year": 40,
+  "Defensive Player of the Year": 34,
+  "Rookie of the Year": 23,
+  "Offensive Rookie of the Year": 24,
+  "Defensive Rookie of the Year": 22,
+  "Most Valauble Player/players/ of the Year": 3,
+  "Most Valauble Player": 2,
+  "Most Valuable Player of the Year": 1,
+  "Most Valuale Player/players/ of the Year": 1,
+  "Defensive Rookie Player of the Year": 4,
+  "Most Outstanding Player": 7,
+  "Deffensive Player of the Year": 1,
+  "Special Teams Player of the Year": 4,
+  "Rookie of the Year Jayden Daniels": 1,
+  "Offensive Rookie of the Year Jayden Daniels": 1,
+  "Most Outstanding Defensive Player": 2,
+  "Most Outstanding Special Teams Player": 2
+ },
+ "all_league": {
+  "All-APFA": 25,
+  "All-NFL": 3154,
+  "null": 660,
+  "All-AAFC": 50,
+  "All-AFL": 319,
+  "All-CFL": 1706,
+  "All-Pro (AFL and NFL)": 66,
+  "All-AFC": 2734,
+  "All-NFC": 1828,
+  "All-WFL": 11,
+  "All-USFL": 191,
+  "All-XFL": 32,
+  "All-UFL": 85
+ },
+ "selectors": {
+  "RI": 11,
+  "BC": 10,
+  "BEN": 11,
+  "GC": 11,
+  "GH": 11,
+  "GB": 121,
+  "UP": 417,
+  "OFF": 1026,
+  "Selectors": 197,
+  "COACH": 11,
+  "AP": 2975,
+  "INS": 100,
+  "NY": 678,
+  "PFWA": 1485,
+  "PFI": 82,
+  "SP": 22,
+  "AP*": 3,
+  "CO": 22,
+  "TSN": 1945,
+  "NEA": 1096,
+  "UPI": 2213,
+  "MAX": 37,
+  "POY": 1,
+  "PFD": 37,
+  "Official": 1701,
+  "TSNNEA": 1,
+  "NEA+": 2,
+  "(tie)": 4,
+  "PFW": 4286,
+  "SI": 33,
+  "PB": 2833,
+  "PFWUPITSN": 1,
+  "AAP": 1,
+  "PFWA+": 8,
+  "SN": 250,
+  "TSN*": 2,
+  "CPFN": 47,
+  "OFF*": 1,
+  "PFW*": 1,
+  "PFEA": 1,
+  "PF": 1,
+  "PFE": 1,
+  "AP+": 5,
+  "PFW+": 1,
+  "AFC": 112,
+  "NFC": 163,
+  "PFWA?": 1,
+  "NFL": 124,
+  "PFF": 1,
+  "FWA": 1,
+  "All": 56
+ },
+ "awards_with_several_winners": [
+  [
+   1938,
+   "Player of the Year",
+   [
+    "Ace Parker",
+    "Mel Hein"
+   ]
+  ],
+  [
+   1948,
+   "AAFC Player of the Year",
+   [
+    "Frankie Albert",
+    "Otto Graham"
+   ]
+  ],
+  [
+   1954,
+   "NFL Player of the Year",
+   [
+    "Joe Perry",
+    "Lou Groza"
+   ]
+  ],
+  [
+   1955,
+   "NFL Player of the Year",
+   [
+    "Harlon Hill",
+    "Otto Graham"
+   ]
+  ],
+  [
+   1957,
+   "NFL Player of the Year",
+   [
+    "Jim Brown",
+    "Johnny Unitas",
+    "Y.A. Tittle"
+   ]
+  ],
+  [
+   1959,
+   "NFL Player of the Year",
+   [
+    "Charley Conerly",
+    "Johnny Unitas"
+   ]
+  ],
+  [
+   1959,
+   "NFL Rookie of the Year",
+   [
+    "Boyd Dowler",
+    "Nick Pietrosante"
+   ]
+  ],
+  [
+   1960,
+   "NFL Player of the Year",
+   [
+    "Joe Schmidt",
+    "Norm Van Brocklin"
+   ]
+  ],
+  [
+   1961,
+   "NFL Player of the Year",
+   [
+    "Paul Hornung",
+    "Y.A. Tittle"
+   ]
+  ],
+  [
+   1962,
+   "Most Valuable Player",
+   [
+    "Ed Chlebek",
+    "Willie Bethea"
+   ]
+  ],
+  [
+   1962,
+   "AFL Player of the Year",
+   [
+    "Cookie Gilchrist",
+    "Len Dawson"
+   ]
+  ],
+  [
+   1962,
+   "NFL Player of the Year",
+   [
+    "Andy Robustelli",
+    "Jimmy Taylor",
+    "Y.A. Tittle"
+   ]
+  ],
+  [
+   1963,
+   "AFL Player of the Year",
+   [
+    "Clem Daniels",
+    "Lance Alworth",
+    "Tobin Rote"
+   ]
+  ],
+  [
+   1963,
+   "NFL Player of the Year",
+   [
+    "Jim Brown",
+    "Y.A. Tittle"
+   ]
+  ],
+  [
+   1964,
+   "NFL Player of the Year",
+   [
+    "Johnny Unitas",
+    "Lenny Moore"
+   ]
+  ],
+  [
+   1964,
+   "Most Valuable Player",
+   [
+    "Bob Brodhead",
+    "Herschel Hogan"
+   ]
+  ],
+  [
+   1965,
+   "AFL Player of the Year",
+   [
+    "Jack Kemp",
+    "Paul Lowe"
+   ]
+  ],
+  [
+   1965,
+   "NFL Player of the Year",
+   [
+    "Jim Brown",
+    "Pete Retzlaff"
+   ]
+  ],
+  [
+   1965,
+   "Most Valuable Player",
+   [
+    "Bob Brodhead",
+    "Joe Williams"
+   ]
+  ],
+  [
+   1966,
+   "NFL Player of the Year",
+   [
+    "Bart Starr",
+    "Don Meredith"
+   ]
+  ],
+  [
+   1966,
+   "NFL Rookie of the Year",
+   [
+    "Johnny Roland",
+    "Tommy Nobis"
+   ]
+  ],
+  [
+   1966,
+   "Most Valuable Player",
+   [
+    "Don Jonas",
+    "Ken Berry"
+   ]
+  ],
+  [
+   1967,
+   "NFL Coach of the Year",
+   [
+    "Don Shula",
+    "George Allen",
+    "Vince Lombardi"
+   ]
+  ],
+  [
+   1968,
+   "NFL Player of the Year",
+   [
+    "Earl Morrall",
+    "Leroy Kelly"
+   ]
+  ],
+  [
+   1968,
+   "AFL Defensive Rookie of the Year",
+   [
+    "Dick Anderson",
+    "George Atkinson"
+   ]
+  ],
+  [
+   1969,
+   "AFL Rookie of the Year",
+   [
+    "Carl Garrett",
+    "Greg Cook"
+   ]
+  ],
+  [
+   1969,
+   "AFL Defensive Rookie of the Year",
+   [
+    "Bill Bergey",
+    "Jim Marsalis"
+   ]
+  ],
+  [
+   1970,
+   "NFL Player of the Year",
+   [
+    "George Blanda",
+    "John Brodie"
+   ]
+  ],
+  [
+   1971,
+   "NFL Player of the Year",
+   [
+    "Alan Page",
+    "Bob Griese",
+    "Otis Taylor",
+    "Roger Staubach"
+   ]
+  ],
+  [
+   1971,
+   "AFC Player of the Year",
+   [
+    "Bob Griese",
+    "Otis Taylor"
+   ]
+  ],
+  [
+   1971,
+   "NFC Player of the Year",
+   [
+    "Alan Page",
+    "John Brockington",
+    "Roger Staubach"
+   ]
+  ],
+  [
+   1971,
+   "NFL Offensive Player of the Year",
+   [
+    "Bob Griese",
+    "Otis Taylor"
+   ]
+  ],
+  [
+   1971,
+   "NFL Offensive Rookie of the Year",
+   [
+    "Jim Plunkett",
+    "John Brockington"
+   ]
+  ],
+  [
+   1972,
+   "AFC Player of the Year",
+   [
+    "Earl Morrall",
+    "O.J. Simpson"
+   ]
+  ],
+  [
+   1972,
+   "NFC Rookie of the Year",
+   [
+    "Chester Marcol",
+    "Willie Buchanon"
+   ]
+  ],
+  [
+   1972,
+   "NFL Defensive Rookie of the Year",
+   [
+    "Sherm White",
+    "Willie Buchanon"
+   ]
+  ],
+  [
+   1973,
+   "NFL Defensive Player of the Year",
+   [
+    "Alan Page",
+    "Dick Anderson",
+    "Paul Smith"
+   ]
+  ],
+  [
+   1973,
+   "NFC Rookie of the Year",
+   [
+    "Charle Young",
+    "Chuck Foreman"
+   ]
+  ],
+  [
+   1974,
+   "NFL Player of the Year",
+   [
+    "Chuck Foreman",
+    "Jim Hart",
+    "Ken Stabler",
+    "Merlin Olsen"
+   ]
+  ],
+  [
+   1974,
+   "NFL Offensive Player of the Year",
+   [
+    "Jim Hart",
+    "Ken Stabler"
+   ]
+  ],
+  [
+   1974,
+   "NFC Rookie of the Year",
+   [
+    "Chuck Foreman",
+    "John Hicks"
+   ]
+  ],
+  [
+   1975,
+   "NFL Defensive Player of the Year",
+   [
+    "Curley Culp",
+    "Jack Ham",
+    "Mel Blount"
+   ]
+  ],
+  [
+   1975,
+   "NFC Rookie of the Year",
+   [
+    "Mike Thomas",
+    "Steve Bartkowski"
+   ]
+  ],
+  [
+   1975,
+   "NFL Offensive Rookie of the Year",
+   [
+    "Mike Thomas",
+    "Steve Bartkowski"
+   ]
+  ],
+  [
+   1976,
+   "NFL Player of the Year",
+   [
+    "Bert Jones",
+    "Ken Stabler"
+   ]
+  ],
+  [
+   1976,
+   "NFL Offensive Player of the Year",
+   [
+    "Bert Jones",
+    "Ken Stabler"
+   ]
+  ],
+  [
+   1976,
+   "NFL Defensive Player of the Year",
+   [
+    "Jack Lambert",
+    "Jerry Sherk"
+   ]
+  ],
+  [
+   1977,
+   "NFL Player of the Year",
+   [
+    "Bob Griese",
+    "Walter Payton"
+   ]
+  ],
+  [
+   1978,
+   "NFL Player of the Year",
+   [
+    "Earl Campbell",
+    "Terry Bradshaw"
+   ]
+  ],
+  [
+   1979,
+   "NFL Defensive Rookie of the Year",
+   [
+    "Jesse Baker",
+    "Jim Haslett"
+   ]
+  ],
+  [
+   1980,
+   "NFL Player of the Year",
+   [
+    "Brian Sipe",
+    "Earl Campbell",
+    "Ron Jaworski"
+   ]
+  ],
+  [
+   1980,
+   "NFL Offensive Player of the Year",
+   [
+    "Brian Sipe",
+    "Earl Campbell"
+   ]
+  ],
+  [
+   1980,
+   "NFL Defensive Rookie of the Year",
+   [
+    "Al Richardson",
+    "Buddy Curry"
+   ]
+  ],
+  [
+   1981,
+   "NFL Defensive Player of the Year",
+   [
+    "Joe Klecko",
+    "Lawrence Taylor"
+   ]
+  ],
+  [
+   1981,
+   "NFL Rookie of the Year",
+   [
+    "George Rogers",
+    "Lawrence Taylor"
+   ]
+  ],
+  [
+   1982,
+   "NFL Player of the Year",
+   [
+    "Dan Fouts",
+    "Joe Theismann",
+    "Mark Moseley"
+   ]
+  ],
+  [
+   1982,
+   "NFL Defensive Player of the Year",
+   [
+    "Dan Hampton",
+    "Lawrence Taylor"
+   ]
+  ],
+  [
+   1983,
+   "NFL Player of the Year",
+   [
+    "Eric Dickerson",
+    "Joe Theismann",
+    "John Riggins"
+   ]
+  ],
+  [
+   1983,
+   "NFL Defensive Player of the Year",
+   [
+    "Bob Baumhower",
+    "Doug Betters",
+    "Jack Lambert"
+   ]
+  ],
+  [
+   1983,
+   "NFL Rookie of the Year",
+   [
+    "Dan Marino",
+    "Eric Dickerson"
+   ]
+  ],
+  [
+   1984,
+   "NFL Defensive Player of the Year",
+   [
+    "Kenny Easley",
+    "Mike Haynes"
+   ]
+  ],
+  [
+   1984,
+   "NFL Defensive Rookie of the Year",
+   [
+    "Bill Maas",
+    "Tom Flynn"
+   ]
+  ],
+  [
+   1985,
+   "NFL Player of the Year",
+   [
+    "Marcus Allen",
+    "Walter Payton"
+   ]
+  ],
+  [
+   1985,
+   "NFL Offensive Player of the Year",
+   [
+    "Marcus Allen",
+    "Walter Payton"
+   ]
+  ],
+  [
+   1985,
+   "NFL Defensive Player of the Year",
+   [
+    "Andre Tippett",
+    "Howie Long",
+    "Mike Singletary"
+   ]
+  ],
+  [
+   1986,
+   "NFL Player of the Year",
+   [
+    "Jerry Rice",
+    "Lawrence Taylor",
+    "Phil Simms"
+   ]
+  ],
+  [
+   1986,
+   "NFL Offensive Player of the Year",
+   [
+    "Eric Dickerson",
+    "Jerry Rice",
+    "Phil Simms"
+   ]
+  ],
+  [
+   1986,
+   "NFL Defensive Rookie of the Year",
+   [
+    "John Offerdahl",
+    "Leslie O'Neal"
+   ]
+  ],
+  [
+   1987,
+   "NFL Player of the Year",
+   [
+    "Jerry Rice",
+    "John Elway"
+   ]
+  ],
+  [
+   1987,
+   "NFL Rookie of the Year",
+   [
+    "Bo Jackson",
+    "Rob Awalt",
+    "Shane Conlan"
+   ]
+  ],
+  [
+   1988,
+   "NFL Player of the Year",
+   [
+    "Boomer Esiason",
+    "Mike Ditka",
+    "Randall Cunningham",
+    "Roger Craig"
+   ]
+  ],
+  [
+   1988,
+   "NFL Offensive Player of the Year",
+   [
+    "Boomer Esiason",
+    "Roger Craig"
+   ]
+  ],
+  [
+   1988,
+   "AFC Defensive Player of the Year",
+   [
+    "Bruce Smith",
+    "Cornelius Bennett"
+   ]
+  ],
+  [
+   1988,
+   "NFL Rookie of the Year",
+   [
+    "John Stephens",
+    "Keith Jackson"
+   ]
+  ],
+  [
+   1988,
+   "NFL Offensive Rookie of the Year",
+   [
+    "John Stephens",
+    "Keith Jackson"
+   ]
+  ],
+  [
+   1989,
+   "NFL Defensive Player of the Year",
+   [
+    "Keith Millard",
+    "Tim Harris"
+   ]
+  ],
+  [
+   1990,
+   "NFL Coach of the Year",
+   [
+    "Art Shell",
+    "Jimmy Johnson"
+   ]
+  ],
+  [
+   1990,
+   "NFL Player of the Year",
+   [
+    "Jerry Rice",
+    "Joe Montana",
+    "Randall Cunningham",
+    "Warren Moon"
+   ]
+  ],
+  [
+   1990,
+   "NFL Offensive Player of the Year",
+   [
+    "Randall Cunningham",
+    "Warren Moon"
+   ]
+  ],
+  [
+   1990,
+   "NFL Rookie of the Year",
+   [
+    "Eric Green",
+    "Mark Carrier",
+    "Richmond Webb"
+   ]
+  ],
+  [
+   1991,
+   "NFL Player of the Year",
+   [
+    "Barry Sanders",
+    "Thurman Thomas"
+   ]
+  ],
+  [
+   1991,
+   "NFL Defensive Player of the Year",
+   [
+    "Pat Swilling",
+    "Reggie White"
+   ]
+  ],
+  [
+   1992,
+   "NFL Coach of the Year",
+   [
+    "Bill Cowher",
+    "Bobby Ross"
+   ]
+  ],
+  [
+   1992,
+   "NFL Defensive Player of the Year",
+   [
+    "Cortez Kennedy",
+    "Junior Seau"
+   ]
+  ],
+  [
+   1992,
+   "NFL Rookie of the Year",
+   [
+    "Dale Carter",
+    "Santana Dotson"
+   ]
+  ],
+  [
+   1992,
+   "NFL Offensive Rookie of the Year",
+   [
+    "Carl Pickens",
+    "Jason Hanson"
+   ]
+  ],
+  [
+   1993,
+   "NFL Offensive Player of the Year",
+   [
+    "Emmitt Smith",
+    "Jerry Rice"
+   ]
+  ],
+  [
+   1993,
+   "NFL Defensive Player of the Year",
+   [
+    "Bruce Smith",
+    "Rod Woodson"
+   ]
+  ],
+  [
+   1995,
+   "NFL Coach of the Year",
+   [
+    "Dom Capers",
+    "Ray Rhodes"
+   ]
+  ],
+  [
+   1996,
+   "NFL Offensive Player of the Year",
+   [
+    "Brett Favre",
+    "Terrell Davis"
+   ]
+  ],
+  [
+   1996,
+   "NFL Defensive Player of the Year",
+   [
+    "Bruce Smith",
+    "Kevin Greene"
+   ]
+  ],
+  [
+   1997,
+   "NFL Player of the Year",
+   [
+    "Barry Sanders",
+    "Brett Favre"
+   ]
+  ],
+  [
+   1998,
+   "NFL Offensive Player of the Year",
+   [
+    "Barry Sanders",
+    "Terrell Davis"
+   ]
+  ],
+  [
+   1999,
+   "NFL Offensive Player of the Year",
+   [
+    "Kurt Warner",
+    "Marshall Faulk"
+   ]
+  ],
+  [
+   2002,
+   "Offensive Player of the Year",
+   [
+    "Priest Holmes",
+    "Rich Gannon"
+   ]
+  ],
+  [
+   2003,
+   "Most Valauble Player",
+   [
+    "Jamal Lewis",
+    "Steve McNair"
+   ]
+  ],
+  [
+   2003,
+   "Offensive Player of the Year",
+   [
+    "Jamal Lewis",
+    "Peyton Manning"
+   ]
+  ],
+  [
+   2004,
+   "Defensive Rookie of the Year",
+   [
+    "Dunta Robinson",
+    "Jonathan Vilma"
+   ]
+  ],
+  [
+   2008,
+   "Coach of the Year",
+   [
+    "Mike Smith",
+    "Tony Sparano"
+   ]
+  ],
+  [
+   2008,
+   "NFL Defensive Player of the Year",
+   [
+    "Albert Haynesworth",
+    "James Harrison"
+   ]
+  ],
+  [
+   2009,
+   "Offensive Player of the Year",
+   [
+    "Andre Johnson",
+    "Drew Brees",
+    "Peyton Manning"
+   ]
+  ],
+  [
+   2010,
+   "Defensive Player of the Year",
+   [
+    "Clay Matthews",
+    "Troy Polamalu"
+   ]
+  ],
+  [
+   2011,
+   "Offensive Player of the Year",
+   [
+    "Aaron Rodgers",
+    "Drew Brees"
+   ]
+  ],
+  [
+   2011,
+   "Defensive Player of the Year",
+   [
+    "Jared Allen",
+    "Terrell Suggs"
+   ]
+  ],
+  [
+   2011,
+   "Defensive Rookie of the Year",
+   [
+    "Aldon Smith",
+    "Von Miller"
+   ]
+  ],
+  [
+   2013,
+   "Defensive Player of the Year",
+   [
+    "Luke Kuechly",
+    "Robert Quinn"
+   ]
+  ],
+  [
+   2013,
+   "Offensive Rookie of the Year",
+   [
+    "Eddie Lacy",
+    "Keenan Allen"
+   ]
+  ],
+  [
+   2013,
+   "Defensive Rookie Player of the Year",
+   [
+    "Kiko Alonso",
+    "Sheldon Richardson"
+   ]
+  ],
+  [
+   2014,
+   "Defensive Player of the Year",
+   [
+    "J.J. Watt",
+    "Luke Kuechly"
+   ]
+  ],
+  [
+   2016,
+   "Coach of the Year",
+   [
+    "Andy Reid",
+    "Jason Garrett"
+   ]
+  ],
+  [
+   2016,
+   "Offensive Player of the Year",
+   [
+    "Matt Ryan",
+    "Tom Brady"
+   ]
+  ],
+  [
+   2017,
+   "Offensive Player of the Year",
+   [
+    "Antonio Brown",
+    "Todd Gurley"
+   ]
+  ],
+  [
+   2017,
+   "Defensive Player of the Year",
+   [
+    "Aaron Doanld",
+    "Calais Campbell"
+   ]
+  ],
+  [
+   2017,
+   "Offensive Rookie of the Year",
+   [
+    "Alvin Kamara",
+    "Kareem Hunt"
+   ]
+  ],
+  [
+   2019,
+   "Offensive Player of the Year",
+   [
+    "Lamar Jackson",
+    "Michael Thomas"
+   ]
+  ],
+  [
+   2021,
+   "Coach of the Year",
+   [
+    "Mike O'Shea",
+    "Mike Vrabel"
+   ]
+  ],
+  [
+   2022,
+   "Coach of the Year",
+   [
+    "Brian Daboll",
+    "Mike Riley"
+   ]
+  ],
+  [
+   2022,
+   "Offensive Player of the Year",
+   [
+    "Darius Victor",
+    "Justin Jefferson"
+   ]
+  ],
+  [
+   2022,
+   "Defensive Player of the Year",
+   [
+    "Chris Odom",
+    "Nick Bosa"
+   ]
+  ],
+  [
+   2022,
+   "Rookie of the Year",
+   [
+    "Ahmad Gardner",
+    "Garrett Wilson"
+   ]
+  ],
+  [
+   2023,
+   "Coach of the Year",
+   [
+    "Reggie Barlow",
+    "Ryan Dinwiddie",
+    "Skip Holtz"
+   ]
+  ],
+  [
+   2023,
+   "Offensive Player of the Year",
+   [
+    "Jordan Ta'amu",
+    "Mark Thompson",
+    "Pita Taumoepenu"
+   ]
+  ],
+  [
+   2024,
+   "Coach of the Year",
+   [
+    "Jason Maas",
+    "Kevin O'Connell",
+    "Mike Nolan"
+   ]
+  ],
+  [
+   2024,
+   "Most Valuable Player",
+   [
+    "Josh Allen",
+    "Lamar Jackson"
+   ]
+  ],
+  [
+   2024,
+   "Offensive Player of the Year",
+   [
+    "Hakeem Butler",
+    "Saquon Barkley"
+   ]
+  ],
+  [
+   2024,
+   "Defensive Player of the Year",
+   [
+    "Breeland Speaks",
+    "Myles Garrett",
+    "Pat Surtain"
+   ]
+  ],
+  [
+   2025,
+   "Coach of the Year",
+   [
+    "Mike Vrabel",
+    "Shannon Harris"
+   ]
+  ],
+  [
+   2025,
+   "Most Valuable Player",
+   [
+    "Josh Allen",
+    "Matthew Stafford"
+   ]
+  ],
+  [
+   2025,
+   "Offensive Player of the Year",
+   [
+    "Bryce Perkins",
+    "Jaxon Smith-Njigba"
+   ]
+  ],
+  [
+   2025,
+   "Defensive Player of the Year",
+   [
+    "Myles Garrett",
+    "Pita Taumoepenu"
+   ]
+  ]
+ ]
+}

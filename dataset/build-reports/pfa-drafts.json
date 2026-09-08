@@ -1,0 +1,7243 @@
+{
+ "_note": "MEASUREMENT ONLY, from the cache. Compared on the declared readings.",
+ "pages_enumerated": 203,
+ "totals": {
+  "pfa_picks": 35161,
+  "missing": 12807,
+  "agree": 22245,
+  "disagree": 92,
+  "pages_with_no_table": 11
+ },
+ "pages": [
+  {
+   "page": "drafts_1936nfldraft.html",
+   "year": 1936,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 81,
+   "not_held": 54,
+   "agree": 27,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": 1,
+     "name": "Jay Berwanger",
+     "team": "Philadelphia Eagles",
+     "college": "Chicago"
+    },
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Bill Shakespeare",
+     "team": "Pittsburgh Pirates",
+     "college": "Notre Dame"
+    },
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "John McCauley",
+     "team": "Philadelphia Eagles",
+     "college": "Rice"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1937nfldraft.html",
+   "year": 1937,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 100,
+   "not_held": 61,
+   "agree": 39,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 14,
+     "round": 2,
+     "name": "Art White",
+     "team": "New York Giants",
+     "college": "Alabama"
+    },
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Bob Finley",
+     "team": "Pittsburgh Pirates",
+     "college": "Southern Methodist"
+    },
+    {
+     "overall": 17,
+     "round": 2,
+     "name": "Charley Hamrick",
+     "team": "Detroit Lions",
+     "college": "Ohio State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1938nfldraft.html",
+   "year": 1938,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 110,
+   "not_held": 41,
+   "agree": 69,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 1,
+     "name": "Joe Gray",
+     "team": "Chicago Bears",
+     "college": "Oregon State"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Joe Kilgrow",
+     "team": "Brooklyn Dodgers",
+     "college": "Alabama"
+    },
+    {
+     "overall": 16,
+     "round": 3,
+     "name": "Joe Routt",
+     "team": "Cleveland Rams",
+     "college": "Texas A&M"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1939nfldraft.html",
+   "year": 1939,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 200,
+   "not_held": 109,
+   "agree": 91,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 8,
+     "round": 1,
+     "name": "I.B. Hale",
+     "team": "Washington Redskins",
+     "college": "Texas Christian"
+    },
+    {
+     "overall": 16,
+     "round": 3,
+     "name": "Alvord Wolff",
+     "team": "Chicago Cardinals",
+     "college": "Santa Clara"
+    },
+    {
+     "overall": 18,
+     "round": 3,
+     "name": "Elmer Tarbox",
+     "team": "Cleveland Rams",
+     "college": "Texas Tech"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1940nfldraft.html",
+   "year": 1940,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 200,
+   "not_held": 109,
+   "agree": 91,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 6,
+     "round": 1,
+     "name": "Doyle Nave",
+     "team": "Detroit Lions",
+     "college": "Southern California"
+    },
+    {
+     "overall": 8,
+     "round": 1,
+     "name": "Ed Boell",
+     "team": "Washington Redskins",
+     "college": "New York University"
+    },
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "George Stirnweiss",
+     "team": "Chicago Cardinals",
+     "college": "North Carolina"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1941nfldraft.html",
+   "year": 1941,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 204,
+   "not_held": 103,
+   "agree": 101,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 9,
+     "round": 1,
+     "name": "Don Scott",
+     "team": "Chicago Bears",
+     "college": "Ohio State"
+    },
+    {
+     "overall": 10,
+     "round": 1,
+     "name": "Forest Evashevski",
+     "team": "Washington Redskins",
+     "college": "Michigan"
+    },
+    {
+     "overall": 14,
+     "round": 2,
+     "name": "Marshall Shires",
+     "team": "Cleveland Rams",
+     "college": "Tennessee"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1942nfldraft.html",
+   "year": 1942,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 200,
+   "not_held": 103,
+   "agree": 97,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 7,
+     "round": 1,
+     "name": "Bobbie Robertson",
+     "team": "Brooklyn Dodgers",
+     "college": "Southern California"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "Bob Dethman",
+     "team": "Detroit Lions",
+     "college": "Oregon State"
+    },
+    {
+     "overall": 25,
+     "round": 3,
+     "name": "Joe Boratyn",
+     "team": "Chicago Bears",
+     "college": "Holy Cross"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1943nfldraft.html",
+   "year": 1943,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 300,
+   "not_held": 171,
+   "agree": 129,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Dave Schreiner",
+     "team": "Detroit Lions",
+     "college": "Wisconsin"
+    },
+    {
+     "overall": 16,
+     "round": 3,
+     "name": "Dick Ashcom",
+     "team": "Detroit Lions",
+     "college": "Oregon"
+    },
+    {
+     "overall": 19,
+     "round": 3,
+     "name": "George Ceithaml",
+     "team": "Brooklyn Dodgers",
+     "college": "Michigan"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1944nfldraft.html",
+   "year": 1944,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 330,
+   "not_held": 225,
+   "agree": 105,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Creighton Miller",
+     "team": "Brooklyn Tigers",
+     "college": "Notre Dame"
+    },
+    {
+     "overall": 10,
+     "round": 1,
+     "name": "Johnny Podesto",
+     "team": "Pittsburgh Steelers",
+     "college": "St. Mary's (California)"
+    },
+    {
+     "overall": 11,
+     "round": 1,
+     "name": "Tony Butkovich",
+     "team": "Cleveland Rams",
+     "college": "Purdue"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1945nfldraft.html",
+   "year": 1945,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 331,
+   "not_held": 222,
+   "agree": 109,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": 1,
+     "name": "Charley Trippi",
+     "team": "Chicago Cardinals",
+     "college": "Georgia"
+    },
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Joe Renfroe",
+     "team": "Brooklyn Tigers",
+     "college": "Tulane"
+    },
+    {
+     "overall": 7,
+     "round": 1,
+     "name": "Don Lund",
+     "team": "Chicago Bears",
+     "college": "Michigan"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1946nfldraft.html",
+   "year": 1946,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 300,
+   "not_held": 225,
+   "agree": 75,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Doc Blanchard",
+     "team": "Pittsburgh Steelers",
+     "college": "Army"
+    },
+    {
+     "overall": 7,
+     "round": 1,
+     "name": "Leo Riggs",
+     "team": "Philadelphia Eagles",
+     "college": "Southern California"
+    },
+    {
+     "overall": 8,
+     "round": 1,
+     "name": "Bill Dellastatious",
+     "team": "Detroit Lions",
+     "college": "Missouri"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1947aafcdraft.html",
+   "year": 1947,
+   "league": "AAFC",
+   "kind": "draft",
+   "picks_on_the_page": 170,
+   "not_held": 74,
+   "agree": 96,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Charley Conerly",
+     "team": "Brooklyn Dodgers",
+     "college": "Mississippi"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Ray Manieri",
+     "team": "Chicago Rockets",
+     "college": "Wake Forest"
+    },
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Monte Moncrief",
+     "team": "New York Yankees",
+     "college": "Texas A&M"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1947aafcspecialdraft.html",
+   "year": 1947,
+   "league": "AAFCSPECIAL",
+   "kind": "draft",
+   "picks_on_the_page": 16,
+   "not_held": 0,
+   "agree": 0,
+   "disagree": 0,
+   "examples_not_held": [],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1947nfldraft.html",
+   "year": 1947,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 300,
+   "not_held": 172,
+   "agree": 128,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Bob Fenimore",
+     "team": "Chicago Bears",
+     "college": "Oklahoma State"
+    },
+    {
+     "overall": 4,
+     "round": 1,
+     "name": "Cal Rossi",
+     "team": "Washington Redskins",
+     "college": "UCLA"
+    },
+    {
+     "overall": 17,
+     "round": 3,
+     "name": "Gene Knight",
+     "team": "Washington Redskins",
+     "college": "Louisiana State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1948aafcdraft.html",
+   "year": 1948,
+   "league": "AAFC",
+   "kind": "draft",
+   "picks_on_the_page": 217,
+   "not_held": 119,
+   "agree": 98,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": 1,
+     "name": "Tony Minisi",
+     "team": "Chicago Rockets",
+     "college": "Pennsylvania"
+    },
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Bill Garrett",
+     "team": "Baltimore Colts",
+     "college": "Mississippi State"
+    },
+    {
+     "overall": 12,
+     "round": 3,
+     "name": "Earl Cook",
+     "team": "Baltimore Colts",
+     "college": "Southern Methodist"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1948nfldraft.html",
+   "year": 1948,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 300,
+   "not_held": 188,
+   "agree": 112,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Harry Gilmer",
+     "team": "Washington Redskins",
+     "college": "Alabama"
+    },
+    {
+     "overall": 2,
+     "round": 1,
+     "name": "Tony Minisi",
+     "team": "New York Giants",
+     "college": "Pennsylvania"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "George Quist",
+     "team": "Detroit Lions",
+     "college": "Stanford"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1949aafcdraft.html",
+   "year": 1949,
+   "league": "AAFC",
+   "kind": "draft",
+   "picks_on_the_page": 192,
+   "not_held": 119,
+   "agree": 73,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 8,
+     "round": 1,
+     "name": "Jack Mitchell",
+     "team": "Cleveland Browns",
+     "college": "Oklahoma"
+    },
+    {
+     "overall": 15,
+     "round": 3,
+     "name": "Huey Keeney",
+     "team": "Buffalo Bills",
+     "college": "Rice"
+    },
+    {
+     "overall": 19,
+     "round": 3,
+     "name": "Veto Kissell",
+     "team": "Buffalo Bills",
+     "college": "Holy Cross"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1949nfldraft.html",
+   "year": 1949,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 251,
+   "not_held": 157,
+   "agree": 94,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Chuck Bednarik",
+     "team": "Philadelphia Eagles",
+     "college": "Pennsylvania"
+    },
+    {
+     "overall": 11,
+     "round": 1,
+     "name": "Dick Harris",
+     "team": "Chicago Bears",
+     "college": "Texas"
+    },
+    {
+     "overall": 19,
+     "round": 2,
+     "name": "Frank Burns",
+     "team": "Philadelphia Eagles",
+     "college": "Rutgers"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1950nflallocationdraft.html",
+   "year": 1950,
+   "league": "NFL",
+   "kind": "allocationdraft",
+   "picks_on_the_page": 140,
+   "not_held": 25,
+   "agree": 115,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 39,
+     "round": 3,
+     "name": "George Pastre",
+     "team": "Philadelphia Eagles",
+     "college": "UCLA"
+    },
+    {
+     "overall": 48,
+     "round": 4,
+     "name": "Lloyd Eisenberg",
+     "team": "Washington Redskins",
+     "college": "Duke"
+    },
+    {
+     "overall": 49,
+     "round": 4,
+     "name": "Al Schmid",
+     "team": "New York Giants",
+     "college": "Villanova"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1950nfldraft.html",
+   "year": 1950,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 391,
+   "not_held": 256,
+   "agree": 135,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Leon Hart",
+     "team": "Detroit Lions",
+     "college": "Notre Dame"
+    },
+    {
+     "overall": 4,
+     "round": 1,
+     "name": "Clay Tonnemaker",
+     "team": "Green Bay Packers",
+     "college": "Minnesota"
+    },
+    {
+     "overall": 24,
+     "round": 2,
+     "name": "Kayo Dottley",
+     "team": "Chicago Bears",
+     "college": "Mississippi"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1951nfldraft.html",
+   "year": 1951,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 362,
+   "not_held": 212,
+   "agree": 150,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Kyle Rote",
+     "team": "New York Giants",
+     "college": "Southern Methodist"
+    },
+    {
+     "overall": 2,
+     "round": 1,
+     "name": "Bobby Williams",
+     "team": "Chicago Bears",
+     "college": "Notre Dame"
+    },
+    {
+     "overall": 14,
+     "round": 1,
+     "name": "Kenny Konz",
+     "team": "Cleveland Browns",
+     "college": "Louisiana State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1952cfldraft.html",
+   "year": 1952,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 19,
+   "not_held": 7,
+   "agree": 12,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 2,
+     "round": 1,
+     "name": "Marsh Hames",
+     "team": "Toronto Argonauts",
+     "college": "Toronto"
+    },
+    {
+     "overall": 9,
+     "round": 3,
+     "name": "Gene Robillard",
+     "team": "Montreal Alouettes",
+     "college": "McGill"
+    },
+    {
+     "overall": 10,
+     "round": 3,
+     "name": "Ross McKelvey",
+     "team": "Toronto Argonauts",
+     "college": "Queen's"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1952nfldraft.html",
+   "year": 1952,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 360,
+   "not_held": 217,
+   "agree": 143,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Billy Wade",
+     "team": "Los Angeles Rams",
+     "college": "Vanderbilt"
+    },
+    {
+     "overall": 12,
+     "round": 1,
+     "name": "Harry Agganis",
+     "team": "Cleveland Browns",
+     "college": "Boston University"
+    },
+    {
+     "overall": 24,
+     "round": 2,
+     "name": "Bill Hughes",
+     "team": "Cleveland Browns",
+     "college": "Michigan State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1953cfldraft.html",
+   "year": 1953,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 40,
+   "not_held": 28,
+   "agree": 12,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 6,
+     "round": 2,
+     "name": "Stu Kennedy",
+     "team": "Ottawa Rough Riders",
+     "college": "Queen's"
+    },
+    {
+     "overall": 10,
+     "round": 3,
+     "name": "Tony Arnoldi",
+     "team": "Ottawa Rough Riders",
+     "college": "Queen's"
+    },
+    {
+     "overall": 11,
+     "round": 3,
+     "name": "Don Griffin",
+     "team": "Toronto Argonauts",
+     "college": "Queen's"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1953nfldraft.html",
+   "year": 1953,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 361,
+   "not_held": 237,
+   "agree": 124,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Harry Babcock",
+     "team": "San Francisco 49ers",
+     "college": "Georgia"
+    },
+    {
+     "overall": 10,
+     "round": 1,
+     "name": "Tommy Stolhandske",
+     "team": "San Francisco 49ers",
+     "college": "Texas"
+    },
+    {
+     "overall": 18,
+     "round": 2,
+     "name": "John Henry Johnson",
+     "team": "Pittsburgh Steelers",
+     "college": "Arizona State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1954cfldraft.html",
+   "year": 1954,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 32,
+   "not_held": 26,
+   "agree": 6,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Don Mattason",
+     "team": "Montreal Alouettes",
+     "college": "Toronto"
+    },
+    {
+     "overall": 8,
+     "round": 2,
+     "name": "Jimmy Dodds",
+     "team": "Hamilton Tiger-Cats",
+     "college": "McMaster"
+    },
+    {
+     "overall": 9,
+     "round": 3,
+     "name": "Wilmer Crawford",
+     "team": "Toronto Argonauts",
+     "college": "McMaster"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1954nfldraft.html",
+   "year": 1954,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 360,
+   "not_held": 247,
+   "agree": 113,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Bobby Garrett",
+     "team": "Cleveland Browns",
+     "college": "Stanford"
+    },
+    {
+     "overall": 13,
+     "round": 1,
+     "name": "Dick Chapman",
+     "team": "Detroit Lions",
+     "college": "Rice"
+    },
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Bob Fleck",
+     "team": "Green Bay Packers",
+     "college": "Syracuse"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1955cfldraft.html",
+   "year": 1955,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 43,
+   "not_held": 33,
+   "agree": 10,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 4,
+     "round": 1,
+     "name": "Ernie Darragh",
+     "team": "Montreal Alouettes",
+     "college": "McMaster"
+    },
+    {
+     "overall": 8,
+     "round": 2,
+     "name": "Lionel Quinn",
+     "team": "Montreal Alouettes",
+     "college": "McGill"
+    },
+    {
+     "overall": 9,
+     "round": 3,
+     "name": "Pete Nicholson",
+     "team": "Ottawa Rough Riders",
+     "college": "Queen's"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1955nfldraft.html",
+   "year": 1955,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 360,
+   "not_held": 231,
+   "agree": 129,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "George Shaw",
+     "team": "Baltimore Colts",
+     "college": "Oregon"
+    },
+    {
+     "overall": 28,
+     "round": 3,
+     "name": "Ray Perkins",
+     "team": "Washington Redskins",
+     "college": "Syracuse"
+    },
+    {
+     "overall": 33,
+     "round": 3,
+     "name": "Frank Eidom",
+     "team": "Philadelphia Eagles",
+     "college": "Southern Methodist"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1956cfldraft.html",
+   "year": 1956,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 34,
+   "not_held": 31,
+   "agree": 3,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Don Cheeseman",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Toronto"
+    },
+    {
+     "overall": 4,
+     "round": 1,
+     "name": "Al Kocman",
+     "team": "British Columbia Lions",
+     "college": "Queen's"
+    },
+    {
+     "overall": 6,
+     "round": 1,
+     "name": "Doug Drew",
+     "team": "Saskatchewan Roughriders",
+     "college": "Western Ontario"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1956nfldraft.html",
+   "year": 1956,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 359,
+   "not_held": 227,
+   "agree": 132,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Gary Glick",
+     "team": "Pittsburgh Steelers",
+     "college": "Colorado State"
+    },
+    {
+     "overall": 10,
+     "round": 1,
+     "name": "Tex Schriewer",
+     "team": "Chicago Bears",
+     "college": "Texas"
+    },
+    {
+     "overall": 34,
+     "round": 3,
+     "name": "Larry Ross",
+     "team": "Cleveland Browns",
+     "college": "Denver"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1957cfldraft.html",
+   "year": 1957,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 35,
+   "not_held": 31,
+   "agree": 4,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 2,
+     "round": 1,
+     "name": "Ed Skrzpek",
+     "team": "British Columbia Lions",
+     "college": "Toronto"
+    },
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Russ Radchuk",
+     "team": "Ottawa Rough Riders",
+     "college": "Queen's"
+    },
+    {
+     "overall": 4,
+     "round": 1,
+     "name": "George Rawlyk",
+     "team": "British Columbia Lions",
+     "college": "McMaster"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1957nfldraft.html",
+   "year": 1957,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 360,
+   "not_held": 224,
+   "agree": 136,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Paul Hornung",
+     "team": "Green Bay Packers",
+     "college": "Notre Dame"
+    },
+    {
+     "overall": 22,
+     "round": 2,
+     "name": "Tom Maentz",
+     "team": "Chicago Cardinals",
+     "college": "Michigan"
+    },
+    {
+     "overall": 26,
+     "round": 3,
+     "name": "Billy Ray Smith",
+     "team": "Los Angeles Rams",
+     "college": "Arkansas"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1958cfldraft.html",
+   "year": 1958,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 35,
+   "not_held": 27,
+   "agree": 8,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": 1,
+     "name": "Len Sigurdson",
+     "team": "Saskatchewan Roughriders",
+     "college": "McGill"
+    },
+    {
+     "overall": 7,
+     "round": 1,
+     "name": "Bill Casanova",
+     "team": "Calgary Stampeders",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 7,
+     "round": 1,
+     "name": "Jan Sandzelius",
+     "team": "Winnipeg Blue Bombers",
+     "college": "McGill"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1958nfldraft.html",
+   "year": 1958,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 360,
+   "not_held": 232,
+   "agree": 128,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "King Hill",
+     "team": "Chicago Cardinals",
+     "college": "Rice"
+    },
+    {
+     "overall": 2,
+     "round": 1,
+     "name": "John David Crow",
+     "team": "Chicago Cardinals",
+     "college": "Texas A&M"
+    },
+    {
+     "overall": 5,
+     "round": 1,
+     "name": "Jim Phillips",
+     "team": "Los Angeles Rams",
+     "college": "Auburn"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1959cfldraft.html",
+   "year": 1959,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 22,
+   "not_held": 17,
+   "agree": 5,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": 1,
+     "name": "Larry Stacey",
+     "team": "Toronto Argonauts",
+     "college": "Toronto"
+    },
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Bob Miller",
+     "team": "Montreal Alouettes",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 4,
+     "round": 1,
+     "name": "Jocko Thompson",
+     "team": "Ottawa Rough Riders",
+     "college": "Queen's"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1959nfldraft.html",
+   "year": 1959,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 360,
+   "not_held": 199,
+   "agree": 161,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 27,
+     "round": 3,
+     "name": "Jim Butler",
+     "team": "Chicago Cardinals",
+     "college": "Vanderbilt"
+    },
+    {
+     "overall": 36,
+     "round": 3,
+     "name": "Ron Luciano",
+     "team": "Detroit Lions",
+     "college": "Syracuse"
+    },
+    {
+     "overall": 37,
+     "round": 4,
+     "name": "Gary Prahst",
+     "team": "Cleveland Browns",
+     "college": "Michigan"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1960aflallocationdraft.html",
+   "year": 1960,
+   "league": "AFL",
+   "kind": "allocationdraft",
+   "picks_on_the_page": 0,
+   "note": "no table with a Round/Pick/Overall header"
+  },
+  {
+   "page": "drafts_1960afldraft.html",
+   "year": 1960,
+   "league": "AFL",
+   "kind": "draft",
+   "picks_on_the_page": 0,
+   "note": "no table with a Round/Pick/Overall header"
+  },
+  {
+   "page": "drafts_1960cfldraft.html",
+   "year": 1960,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 24,
+   "not_held": 20,
+   "agree": 3,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Lionel Conacher, Jr.",
+     "team": "Montreal Alouettes",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 6,
+     "round": 2,
+     "name": "Bruce Jackson",
+     "team": "Toronto Argonauts",
+     "college": "Toronto"
+    },
+    {
+     "overall": 7,
+     "round": 2,
+     "name": "John Humphrey",
+     "team": "Calgary Stampeders",
+     "college": "Western Ontario"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 4,
+     "name": "Steve Chisolm",
+     "fields": {
+      "college": [
+       "Toronto",
+       "Penn St."
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1960nfldraft.html",
+   "year": 1960,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 240,
+   "not_held": 85,
+   "agree": 154,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 45,
+     "round": 4,
+     "name": "Jack Cummings",
+     "team": "Philadelphia Eagles",
+     "college": "North Carolina"
+    },
+    {
+     "overall": 54,
+     "round": 5,
+     "name": "George Phelps",
+     "team": "St. Louis Cardinals",
+     "college": "Cornell (Iowa)"
+    },
+    {
+     "overall": 58,
+     "round": 5,
+     "name": "Marv Lasater",
+     "team": "Baltimore Colts",
+     "college": "Texas Christian"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 78,
+     "name": "Lonnie Dennis",
+     "fields": {
+      "college": [
+       "Brigham Young",
+       "BYU"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1960nflexpansiondraft.html",
+   "year": 1960,
+   "league": "NFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 0,
+   "note": "no table with a Round/Pick/Overall header"
+  },
+  {
+   "page": "drafts_1961afldraft.html",
+   "year": 1961,
+   "league": "AFL",
+   "kind": "draft",
+   "picks_on_the_page": 240,
+   "not_held": 106,
+   "agree": 133,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 19,
+     "round": 3,
+     "name": "Danny Larose",
+     "team": "Boston Patriots",
+     "college": "Missouri"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "Bo Strange",
+     "team": "Denver Broncos",
+     "college": "Louisiana State"
+    },
+    {
+     "overall": 27,
+     "round": 4,
+     "name": "Mike Zeno",
+     "team": "Boston Patriots",
+     "college": "Virginia Tech"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 3,
+     "name": "Tom Brown",
+     "fields": {
+      "college": [
+       "Minnesota",
+       "Illinois"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1961cfldraft.html",
+   "year": 1961,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 24,
+   "not_held": 19,
+   "agree": 4,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 5,
+     "round": 1,
+     "name": "Paul Burroughs",
+     "team": "Ottawa Rough Riders",
+     "college": "Toronto"
+    },
+    {
+     "overall": 6,
+     "round": 2,
+     "name": "Wallie Barrie",
+     "team": "Hamilton Tiger-Cats",
+     "college": "McGill"
+    },
+    {
+     "overall": 8,
+     "round": 2,
+     "name": "Wayne Neal",
+     "team": "Montreal Alouettes",
+     "college": "Western Ontario"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 3,
+     "name": "John Ware",
+     "fields": {
+      "college": [
+       "Queen's",
+       "Illinois"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1961nfldraft.html",
+   "year": 1961,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 280,
+   "not_held": 112,
+   "agree": 168,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 28,
+     "round": 2,
+     "name": "Bo Strange",
+     "team": "Philadelphia Eagles",
+     "college": "Louisiana State"
+    },
+    {
+     "overall": 31,
+     "round": 3,
+     "name": "Billy Wilson",
+     "team": "St. Louis Cardinals",
+     "college": "Auburn"
+    },
+    {
+     "overall": 32,
+     "round": 3,
+     "name": "Harold Beaty",
+     "team": "Los Angeles Rams",
+     "college": "Oklahoma State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1961nflexpansiondraft.html",
+   "year": 1961,
+   "league": "NFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 0,
+   "note": "no table with a Round/Pick/Overall header"
+  },
+  {
+   "page": "drafts_1962afldraft.html",
+   "year": 1962,
+   "league": "AFL",
+   "kind": "draft",
+   "picks_on_the_page": 272,
+   "not_held": 128,
+   "agree": 143,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 18,
+     "round": 3,
+     "name": "Charlie Holmes",
+     "team": "Denver Broncos",
+     "college": "Maryland-Eastern Shore"
+    },
+    {
+     "overall": 26,
+     "round": 4,
+     "name": "John Furman",
+     "team": "Denver Broncos",
+     "college": "Texas-El Paso"
+    },
+    {
+     "overall": 31,
+     "round": 4,
+     "name": "Bob Bill",
+     "team": "San Diego Chargers",
+     "college": "Notre Dame"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 4,
+     "name": "Ernie Davis",
+     "fields": {
+      "college": [
+       "Syracuse",
+       "Maryland"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1962aflequalizationdraft.html",
+   "year": 1962,
+   "league": "AFL",
+   "kind": "equalizationdraft",
+   "picks_on_the_page": 15,
+   "not_held": 5,
+   "agree": 9,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 7,
+     "round": 5,
+     "name": "Charles Bolden",
+     "team": "Denver Broncos",
+     "college": null
+    },
+    {
+     "overall": 9,
+     "round": 5,
+     "name": "Joe Fowlkes",
+     "team": "Buffalo Bills",
+     "college": null
+    },
+    {
+     "overall": 10,
+     "round": 5,
+     "name": "Frank Gardner",
+     "team": "Houston Oilers",
+     "college": null
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1962cfldraft.html",
+   "year": 1962,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 38,
+   "not_held": 33,
+   "agree": 4,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": 1,
+     "name": "Harvey Scott",
+     "team": "Calgary Stampeders",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Doug Boyd",
+     "team": "Calgary Stampeders",
+     "college": "Toronto"
+    },
+    {
+     "overall": 6,
+     "round": 2,
+     "name": "Ron Crawford",
+     "team": "Montreal Alouettes",
+     "college": "Toronto"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 5,
+     "name": "Brian Cooper",
+     "fields": {
+      "college": [
+       "Toronto",
+       "Ohio St."
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1962nfldraft.html",
+   "year": 1962,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 280,
+   "not_held": 128,
+   "agree": 152,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": 1,
+     "name": "Ernie Davis",
+     "team": "Washington Redskins",
+     "college": "Syracuse"
+    },
+    {
+     "overall": 26,
+     "round": 2,
+     "name": "Bob Bill",
+     "team": "New York Giants",
+     "college": "Notre Dame"
+    },
+    {
+     "overall": 32,
+     "round": 3,
+     "name": "Jim Bates",
+     "team": "Chicago Bears",
+     "college": "Southern California"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1963afldraft.html",
+   "year": 1963,
+   "league": "AFL",
+   "kind": "draft",
+   "picks_on_the_page": 232,
+   "not_held": 104,
+   "agree": 128,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Rufus Guthrie",
+     "team": "San Diego Chargers",
+     "college": "Georgia Tech"
+    },
+    {
+     "overall": 21,
+     "round": 3,
+     "name": "Tommy Janik",
+     "team": "Denver Broncos",
+     "college": "Texas A&M-Kingsville"
+    },
+    {
+     "overall": 22,
+     "round": 3,
+     "name": "Jerry Cook",
+     "team": "Houston Oilers",
+     "college": "Texas"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1963cfldraft.html",
+   "year": 1963,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 71,
+   "not_held": 55,
+   "agree": 9,
+   "disagree": 7,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Fred Endley",
+     "team": "Edmonton Eskimos",
+     "college": "Queen's"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Noal Bates",
+     "team": "British Columbia Lions",
+     "college": "Toronto"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Paul Benoit",
+     "team": "Ottawa Rough Riders",
+     "college": "Carleton"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 2,
+     "name": "Ken Rysdale",
+     "fields": {
+      "college": [
+       "Western Ontario",
+       "LSU"
+      ]
+     }
+    },
+    {
+     "overall": 4,
+     "name": "Bill Miklas",
+     "fields": {
+      "college": [
+       "Queen's",
+       "Michigan St."
+      ]
+     }
+    },
+    {
+     "overall": 5,
+     "name": "Jim Hogan",
+     "fields": {
+      "college": [
+       "Western Ontario",
+       "Ohio St."
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1963nfldraft.html",
+   "year": 1963,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 280,
+   "not_held": 121,
+   "agree": 158,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 1,
+     "name": "Rufus Guthrie",
+     "team": "Los Angeles Rams",
+     "college": "Georgia Tech"
+    },
+    {
+     "overall": 33,
+     "round": 3,
+     "name": "Mike Fracchia",
+     "team": "St. Louis Cardinals",
+     "college": "Alabama"
+    },
+    {
+     "overall": 41,
+     "round": 3,
+     "name": "Dick Skelly",
+     "team": "New York Giants",
+     "college": "Florida"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 106,
+     "name": "Gene Sykes",
+     "fields": {
+      "college": [
+       "Louisiana State",
+       "LSU"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1964afldraft.html",
+   "year": 1964,
+   "league": "AFL",
+   "kind": "draft",
+   "picks_on_the_page": 208,
+   "not_held": 87,
+   "agree": 121,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Billy Martin",
+     "team": "Kansas City Chiefs",
+     "college": "Georgia Tech"
+    },
+    {
+     "overall": 22,
+     "round": 3,
+     "name": "Bobby Crenshaw",
+     "team": "Houston Oilers",
+     "college": "Baylor"
+    },
+    {
+     "overall": 23,
+     "round": 3,
+     "name": "George Bednar",
+     "team": "Oakland Raiders",
+     "college": "Notre Dame"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1964cfldraft.html",
+   "year": 1964,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 58,
+   "not_held": 47,
+   "agree": 9,
+   "disagree": 2,
+   "examples_not_held": [
+    {
+     "overall": 2,
+     "round": 1,
+     "name": "Phil Watters",
+     "team": "Toronto Argonauts",
+     "college": "Toronto"
+    },
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Jack Cowin",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 6,
+     "round": 1,
+     "name": "Mike Hollett",
+     "team": "Calgary Stampeders",
+     "college": "Toronto"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 4,
+     "name": "Bill Edwards",
+     "fields": {
+      "college": [
+       "Queen's",
+       "Texas"
+      ]
+     }
+    },
+    {
+     "overall": 15,
+     "name": "Bob Rens",
+     "fields": {
+      "college": [
+       "Saskatchewan",
+       "Miami (FL)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1964nfldraft.html",
+   "year": 1964,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 280,
+   "not_held": 117,
+   "agree": 161,
+   "disagree": 2,
+   "examples_not_held": [
+    {
+     "overall": 12,
+     "round": 1,
+     "name": "Joe Don Looney",
+     "team": "New York Giants",
+     "college": "Oklahoma"
+    },
+    {
+     "overall": 23,
+     "round": 2,
+     "name": "Pat Crain",
+     "team": "Chicago Bears",
+     "college": "Clemson"
+    },
+    {
+     "overall": 31,
+     "round": 3,
+     "name": "John Mims",
+     "team": "Los Angeles Rams",
+     "college": "Rice"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 169,
+     "name": "Bob Brown",
+     "fields": {
+      "college": [
+       "Arkansas-Pine Bluff",
+       "Ark-Pine Bluff"
+      ]
+     }
+    },
+    {
+     "overall": 214,
+     "name": "Tommy Walters",
+     "fields": {
+      "college": [
+       "Southern Mississippi",
+       "Southern Miss"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1965afldraft.html",
+   "year": 1965,
+   "league": "AFL",
+   "kind": "draft",
+   "picks_on_the_page": 160,
+   "not_held": 47,
+   "agree": 112,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 39,
+     "round": 5,
+     "name": "Corwyn Aldredge",
+     "team": "Boston Patriots",
+     "college": "Northwestern State (Louisiana)"
+    },
+    {
+     "overall": 49,
+     "round": 7,
+     "name": "Gloster Richardson",
+     "team": "Kansas City Chiefs",
+     "college": "Jackson State"
+    },
+    {
+     "overall": 53,
+     "round": 7,
+     "name": "Lou Bobich",
+     "team": "Kansas City Chiefs",
+     "college": "Michigan State"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 8,
+     "name": "Jim Davidson",
+     "fields": {
+      "college": [
+       "Ohio State",
+       "Notre Dame"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1965cfldraft.html",
+   "year": 1965,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 60,
+   "not_held": 43,
+   "agree": 10,
+   "disagree": 7,
+   "examples_not_held": [
+    {
+     "overall": 4,
+     "round": 1,
+     "name": "Doug Buckman",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Toronto"
+    },
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Jim Ware",
+     "team": "Toronto Argonauts",
+     "college": "Queen's"
+    },
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "John Crouchman",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Queen's"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 5,
+     "name": "Bob Apps",
+     "fields": {
+      "college": [
+       "McMaster",
+       "California"
+      ]
+     }
+    },
+    {
+     "overall": 6,
+     "name": "Brian Bentley",
+     "fields": {
+      "college": [
+       "Mount Allison",
+       "Tennessee"
+      ]
+     }
+    },
+    {
+     "overall": 7,
+     "name": "Brian Conacher",
+     "fields": {
+      "college": [
+       "Western Ontario",
+       "Texas Tech"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1965nfldraft.html",
+   "year": 1965,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 280,
+   "not_held": 104,
+   "agree": 174,
+   "disagree": 2,
+   "examples_not_held": [
+    {
+     "overall": 52,
+     "round": 4,
+     "name": "Wally Mahle",
+     "team": "Green Bay Packers",
+     "college": "Syracuse"
+    },
+    {
+     "overall": 56,
+     "round": 4,
+     "name": "Dave Johnson",
+     "team": "Baltimore Colts",
+     "college": "San Jose State"
+    },
+    {
+     "overall": 61,
+     "round": 5,
+     "name": "Roger Pettee",
+     "team": "Dallas Cowboys",
+     "college": "Florida"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 148,
+     "name": "John Thomas",
+     "fields": {
+      "college": [
+       "Southern California",
+       "USC"
+      ]
+     }
+    },
+    {
+     "overall": 272,
+     "name": "Bobby Shann",
+     "fields": {
+      "college": [
+       "Boston College",
+       "Boston Col."
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1966afldraft.html",
+   "year": 1966,
+   "league": "AFL",
+   "kind": "draft",
+   "picks_on_the_page": 181,
+   "not_held": 69,
+   "agree": 112,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 30,
+     "round": 4,
+     "name": "Elijah Gibson",
+     "team": "Kansas City Chiefs",
+     "college": "Bethune-Cookman"
+    },
+    {
+     "overall": 33,
+     "round": 4,
+     "name": "Phil Sheridan",
+     "team": "New York Jets",
+     "college": "Notre Dame"
+    },
+    {
+     "overall": 43,
+     "round": 6,
+     "name": "Dan Irby",
+     "team": "Boston Patriots",
+     "college": "Louisiana Tech"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1966aflexpansiondraft.html",
+   "year": 1966,
+   "league": "AFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 0,
+   "note": "no table with a Round/Pick/Overall header"
+  },
+  {
+   "page": "drafts_1966cfldraft.html",
+   "year": 1966,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 63,
+   "not_held": 48,
+   "agree": 8,
+   "disagree": 7,
+   "examples_not_held": [
+    {
+     "overall": 2,
+     "round": 1,
+     "name": "Ross Nicholson",
+     "team": "Toronto Argonauts",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Bob Bennett",
+     "team": "Edmonton Eskimos",
+     "college": "Alberta"
+    },
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Andy Szandiner",
+     "team": "Toronto Argonauts",
+     "college": "Toronto"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 4,
+     "name": "Vern Simonson",
+     "fields": {
+      "college": [
+       "Alberta",
+       "Indiana"
+      ]
+     }
+    },
+    {
+     "overall": 5,
+     "name": "Jim Greenwood",
+     "fields": {
+      "college": [
+       "Queen's",
+       "Iowa"
+      ]
+     }
+    },
+    {
+     "overall": 6,
+     "name": "Mike Williams",
+     "fields": {
+      "college": [
+       "Loyola (Quebec)",
+       "Princeton"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1966nfldraft.html",
+   "year": 1966,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 305,
+   "not_held": 131,
+   "agree": 173,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 23,
+     "round": 2,
+     "name": "Hal Lucas",
+     "team": "St. Louis Cardinals",
+     "college": "Michigan State"
+    },
+    {
+     "overall": 40,
+     "round": 3,
+     "name": "Tom Fisher",
+     "team": "New York Giants",
+     "college": "Tennessee"
+    },
+    {
+     "overall": 41,
+     "round": 3,
+     "name": "Dan Bland",
+     "team": "San Francisco 49ers",
+     "college": "Mississippi State"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 288,
+     "name": "Dave Moton",
+     "fields": {
+      "college": [
+       "Southern California",
+       "USC"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1966nflexpansiondraft.html",
+   "year": 1966,
+   "league": "NFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 0,
+   "note": "no table with a Round/Pick/Overall header"
+  },
+  {
+   "page": "drafts_1967aflnfldraft.html",
+   "year": 1967,
+   "league": "AFLNFL",
+   "kind": "draft",
+   "picks_on_the_page": 445,
+   "not_held": 228,
+   "agree": 216,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 20,
+     "round": 1,
+     "name": "Jim Detwiler",
+     "team": "Baltimore Colts",
+     "college": "Michigan"
+    },
+    {
+     "overall": 37,
+     "round": 2,
+     "name": "Rich Sheron",
+     "team": "New York Jets",
+     "college": "Washington State"
+    },
+    {
+     "overall": 44,
+     "round": 2,
+     "name": "Jon Brooks",
+     "team": "Philadelphia Eagles",
+     "college": "Kent State"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 206,
+     "name": "Tommy Fussell",
+     "fields": {
+      "college": [
+       "Louisiana State",
+       "LSU"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1967aflredshirtdraft.html",
+   "year": 1967,
+   "league": "AFL",
+   "kind": "redshirtdraft",
+   "picks_on_the_page": 4,
+   "not_held": 1,
+   "agree": 0,
+   "disagree": 3,
+   "examples_not_held": [
+    {
+     "overall": 4,
+     "round": 1,
+     "name": "Bill Risio",
+     "team": "New York Jets",
+     "college": "Boston College"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 1,
+     "name": "Jim Bohl",
+     "fields": {
+      "college": [
+       "New Mexico State",
+       "Michigan St."
+      ]
+     }
+    },
+    {
+     "overall": 2,
+     "name": "Homer Williams",
+     "fields": {
+      "college": [
+       "Southern California",
+       "Michigan St."
+      ]
+     }
+    },
+    {
+     "overall": 3,
+     "name": "Jim Breland",
+     "fields": {
+      "college": [
+       "Georgia Tech",
+       "Florida"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1967cfldraft.html",
+   "year": 1967,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 44,
+   "not_held": 33,
+   "agree": 8,
+   "disagree": 3,
+   "examples_not_held": [
+    {
+     "overall": 4,
+     "round": 1,
+     "name": "Laird Elliott",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Toronto"
+    },
+    {
+     "overall": 6,
+     "round": 1,
+     "name": "Jim Kellam",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Toronto"
+    },
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Mike Shvio",
+     "team": "Toronto Argonauts",
+     "college": "Manitoba"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 2,
+     "name": "Dick Kohler",
+     "fields": {
+      "college": [
+       "Manitoba",
+       "Michigan St."
+      ]
+     }
+    },
+    {
+     "overall": 3,
+     "name": "Al Scanlon",
+     "fields": {
+      "college": [
+       "Ottawa",
+       "Florida"
+      ]
+     }
+    },
+    {
+     "overall": 8,
+     "name": "Greg McQueen",
+     "fields": {
+      "college": [
+       "Waterloo",
+       "Michigan St."
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1967nflexpansiondraft.html",
+   "year": 1967,
+   "league": "NFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 0,
+   "note": "no table with a Round/Pick/Overall header"
+  },
+  {
+   "page": "drafts_1967nflredshirtdraft.html",
+   "year": 1967,
+   "league": "NFL",
+   "kind": "redshirtdraft",
+   "picks_on_the_page": 20,
+   "not_held": 4,
+   "agree": 8,
+   "disagree": 8,
+   "examples_not_held": [
+    {
+     "overall": 4,
+     "round": 1,
+     "name": "Tommy Burnett",
+     "team": "Pittsburgh Steelers",
+     "college": "Arkansas"
+    },
+    {
+     "overall": 15,
+     "round": 1,
+     "name": "John Gary",
+     "team": "Baltimore Colts",
+     "college": "Grambling State"
+    },
+    {
+     "overall": 17,
+     "round": 1,
+     "name": "Roger Marshall",
+     "team": "Atlanta Falcons",
+     "college": "Baylor"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 9,
+     "name": "Jerry Durling",
+     "fields": {
+      "college": [
+       "Wyoming",
+       "Boston Col."
+      ]
+     }
+    },
+    {
+     "overall": 11,
+     "name": "Bill Ogle",
+     "fields": {
+      "college": [
+       "Stanford",
+       "Northwestern"
+      ]
+     }
+    },
+    {
+     "overall": 12,
+     "name": "Brent Caston",
+     "fields": {
+      "college": [
+       "Mississippi",
+       "Notre Dame"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1968aflexpansiondraft.html",
+   "year": 1968,
+   "league": "AFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 0,
+   "note": "no table with a Round/Pick/Overall header"
+  },
+  {
+   "page": "drafts_1968cfldraft.html",
+   "year": 1968,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 73,
+   "not_held": 59,
+   "agree": 12,
+   "disagree": 2,
+   "examples_not_held": [
+    {
+     "overall": 8,
+     "round": 1,
+     "name": "Pete Gilbert",
+     "team": "Saskatchewan Roughriders",
+     "college": "Alberta"
+    },
+    {
+     "overall": 8,
+     "round": 1,
+     "name": "Ron Wakelin",
+     "team": "Ottawa Rough Riders",
+     "college": "Toronto"
+    },
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Bob Johnston",
+     "team": "Calgary Stampeders",
+     "college": "McMaster"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 6,
+     "name": "Darryl Burgess",
+     "fields": {
+      "college": [
+       "St. Mary's (Nova Scotia)",
+       "North Carolina St."
+      ]
+     }
+    },
+    {
+     "overall": 9,
+     "name": "Dan Cooper",
+     "fields": {
+      "college": [
+       "Bishop's",
+       "San Diego St."
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1969aflnfldraft.html",
+   "year": 1969,
+   "league": "AFLNFL",
+   "kind": "draft",
+   "picks_on_the_page": 442,
+   "not_held": 205,
+   "agree": 236,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 46,
+     "round": 2,
+     "name": "Gene Epps",
+     "team": "Washington Redskins",
+     "college": "Texas-El Paso"
+    },
+    {
+     "overall": 62,
+     "round": 3,
+     "name": "Ed Cross",
+     "team": "Washington Redskins",
+     "college": "Arkansas-Pine Bluff"
+    },
+    {
+     "overall": 85,
+     "round": 4,
+     "name": "Dennis Hale",
+     "team": "New Orleans Saints",
+     "college": "Minnesota"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 61,
+     "name": "Billy Thompson",
+     "fields": {
+      "college": [
+       "Maryland-Eastern Shore",
+       "MD-Eastern Shore"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1969cfldraft.html",
+   "year": 1969,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 67,
+   "not_held": 51,
+   "agree": 14,
+   "disagree": 2,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "John Robinson",
+     "team": "Montreal Alouettes",
+     "college": "Windsor"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Norm Miner",
+     "team": "Edmonton Eskimos",
+     "college": "Calgary"
+    },
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Bruce Haugh",
+     "team": "Saskatchewan Roughriders",
+     "college": "Western Ontario"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 6,
+     "name": "Alex Squires",
+     "fields": {
+      "college": [
+       "Toronto",
+       "Florida St."
+      ]
+     }
+    },
+    {
+     "overall": 8,
+     "name": "Brent Gilbert",
+     "fields": {
+      "college": [
+       "Wilfrid Laurier",
+       "Florida"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1970cfldraft.html",
+   "year": 1970,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 76,
+   "not_held": 59,
+   "agree": 11,
+   "disagree": 6,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Burns McPherson",
+     "team": "Montreal Alouettes",
+     "college": "St. Francis Xavier"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Jim Hensall",
+     "team": "Edmonton Eskimos",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Tony D'Aloisio",
+     "team": "British Columbia Lions",
+     "college": "Windsor"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 3,
+     "name": "Evald Timusk",
+     "fields": {
+      "college": [
+       "Wilfrid Laurier",
+       "Purdue"
+      ]
+     }
+    },
+    {
+     "overall": 4,
+     "name": "John McManus",
+     "fields": {
+      "college": [
+       "Alberta",
+       "Utah St."
+      ]
+     }
+    },
+    {
+     "overall": 5,
+     "name": "Jim Bennett",
+     "fields": {
+      "college": [
+       "Toronto",
+       "USC"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1970nfldraft.html",
+   "year": 1970,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 442,
+   "not_held": 203,
+   "agree": 238,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 60,
+     "round": 3,
+     "name": "Chip Bennett",
+     "team": "Cincinnati Bengals",
+     "college": "Abilene Christian"
+    },
+    {
+     "overall": 61,
+     "round": 3,
+     "name": "Billy Bob Barnett",
+     "team": "Kansas City Chiefs",
+     "college": "Texas A&M"
+    },
+    {
+     "overall": 63,
+     "round": 3,
+     "name": "John Kohler",
+     "team": "Denver Broncos",
+     "college": "South Dakota"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 301,
+     "name": "Greg Jones",
+     "fields": {
+      "college": [
+       "Wisconsin-Whitewater",
+       "Wisconsin\u2013Whitewater"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1971cfldraft.html",
+   "year": 1971,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 70,
+   "not_held": 53,
+   "agree": 14,
+   "disagree": 3,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Joe Petrone",
+     "team": "Calgary Stampeders",
+     "college": "Calgary"
+    },
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Bob Folusewych",
+     "team": "Ottawa Rough Riders",
+     "college": "Guelph"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Mike Leveille",
+     "team": "British Columbia Lions",
+     "college": "Ottawa"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 2,
+     "name": "Bob Eccles",
+     "fields": {
+      "college": [
+       "Carleton",
+       "Mississippi"
+      ]
+     }
+    },
+    {
+     "overall": 8,
+     "name": "Cam Innnes",
+     "fields": {
+      "college": [
+       "Queen's",
+       "Grambling St."
+      ]
+     }
+    },
+    {
+     "overall": 9,
+     "name": "John Gauthier",
+     "fields": {
+      "college": [
+       "Ottawa",
+       "Ohio St."
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1971nfldraft.html",
+   "year": 1971,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 442,
+   "not_held": 184,
+   "agree": 256,
+   "disagree": 2,
+   "examples_not_held": [
+    {
+     "overall": 42,
+     "round": 2,
+     "name": "Scott Lewis",
+     "team": "Kansas City Chiefs",
+     "college": "Grambling State"
+    },
+    {
+     "overall": 61,
+     "round": 3,
+     "name": "Jim Livesay",
+     "team": "St. Louis Cardinals",
+     "college": "Richmond"
+    },
+    {
+     "overall": 76,
+     "round": 3,
+     "name": "Eddie Hackett",
+     "team": "Minnesota Vikings",
+     "college": "Alcorn State"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 228,
+     "name": "Joe Schmidt",
+     "fields": {
+      "college": [
+       "Miami (Florida)",
+       "Miami (FL)"
+      ]
+     }
+    },
+    {
+     "overall": 343,
+     "name": "Dickie Adams",
+     "fields": {
+      "college": [
+       "Miami (Ohio)",
+       "Miami (OH)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1972cfldraft.html",
+   "year": 1972,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 70,
+   "not_held": 53,
+   "agree": 12,
+   "disagree": 5,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Alexander Baptist",
+     "team": "Montreal Alouettes",
+     "college": "Bishop's"
+    },
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Bruce Miatello",
+     "team": "Winnipeg Blue Bombers",
+     "college": "McMaster"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Stew Francis",
+     "team": "Toronto Argonauts",
+     "college": "Simon Fraser"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 3,
+     "name": "Steve Szapka",
+     "fields": {
+      "college": [
+       "Simon Fraser",
+       "Southern Illinois"
+      ]
+     }
+    },
+    {
+     "overall": 5,
+     "name": "Pete Paliotti",
+     "fields": {
+      "college": [
+       "Loyola (Quebec)",
+       "Houston"
+      ]
+     }
+    },
+    {
+     "overall": 6,
+     "name": "John Harris",
+     "fields": {
+      "college": [
+       "York",
+       "Stanford"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1972nfldraft.html",
+   "year": 1972,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 442,
+   "not_held": 186,
+   "agree": 255,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 51,
+     "round": 2,
+     "name": "Les Sims",
+     "team": "Cleveland Browns",
+     "college": "Alabama State"
+    },
+    {
+     "overall": 53,
+     "round": 3,
+     "name": "Fred Swendsen",
+     "team": "Buffalo Bills",
+     "college": "Notre Dame"
+    },
+    {
+     "overall": 58,
+     "round": 3,
+     "name": "Bill Phillips",
+     "team": "Denver Broncos",
+     "college": "Arkansas State"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 199,
+     "name": "Tom Graham",
+     "fields": {
+      "college": [
+       "Baldwin-Wallace",
+       "Baldwin Wallace"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1973cfldraft.html",
+   "year": 1973,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 75,
+   "not_held": 56,
+   "agree": 16,
+   "disagree": 3,
+   "examples_not_held": [
+    {
+     "overall": 4,
+     "round": 1,
+     "name": "Pierre LeFebvre",
+     "team": "Montreal Alouettes",
+     "college": "St. Mary's (Nova Scotia)"
+    },
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Paul Giroday",
+     "team": "British Columbia Lions",
+     "college": "California"
+    },
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Greg Higson",
+     "team": "Toronto Argonauts",
+     "college": "McMaster"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 1,
+     "name": "Brian Sopatyk",
+     "fields": {
+      "college": [
+       "Boise State",
+       "Tampa"
+      ]
+     }
+    },
+    {
+     "overall": 5,
+     "name": "Jacob Schwartzberg",
+     "fields": {
+      "college": [
+       "Alberta",
+       "Purdue"
+      ]
+     }
+    },
+    {
+     "overall": 7,
+     "name": "Dave McGillis",
+     "fields": {
+      "college": [
+       "Calgary",
+       "Michigan"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1973nfldraft.html",
+   "year": 1973,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 442,
+   "not_held": 151,
+   "agree": 288,
+   "disagree": 3,
+   "examples_not_held": [
+    {
+     "overall": 20,
+     "round": 1,
+     "name": "Billy Joe Dupree",
+     "team": "Dallas Cowboys",
+     "college": "Michigan State"
+    },
+    {
+     "overall": 50,
+     "round": 2,
+     "name": "Ken Phares",
+     "team": "Pittsburgh Steelers",
+     "college": "Mississippi State"
+    },
+    {
+     "overall": 58,
+     "round": 3,
+     "name": "John Brady",
+     "team": "Detroit Lions",
+     "college": "Washington"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 182,
+     "name": "Tom Smith",
+     "fields": {
+      "college": [
+       "Miami (Florida)",
+       "Miami (FL)"
+      ]
+     }
+    },
+    {
+     "overall": 250,
+     "name": "Walter Love",
+     "fields": {
+      "college": [
+       "Westminster (Utah)",
+       "Westminster (UT)"
+      ]
+     }
+    },
+    {
+     "overall": 392,
+     "name": "Frank Dowsing",
+     "fields": {
+      "college": [
+       "Mississippi State",
+       "Louisville"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1974cfldraft.html",
+   "year": 1974,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 79,
+   "not_held": 61,
+   "agree": 18,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Tom Dufault",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Wisconsin-LaCrosse"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Morris Cousineau",
+     "team": "Calgary Stampeders",
+     "college": "Windsor"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Mark Stevenson",
+     "team": "British Columbia Lions",
+     "college": "Simon Fraser"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1974nfldraft.html",
+   "year": 1974,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 442,
+   "not_held": 130,
+   "agree": 311,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 84,
+     "round": 4,
+     "name": "Tony Bell",
+     "team": "Baltimore Colts",
+     "college": "Bowling Green State"
+    },
+    {
+     "overall": 95,
+     "round": 4,
+     "name": "Carlester Crumpler",
+     "team": "Buffalo Bills",
+     "college": "East Carolina"
+    },
+    {
+     "overall": 101,
+     "round": 4,
+     "name": "Andy Andrade",
+     "team": "Dallas Cowboys",
+     "college": "Northern Michigan"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 202,
+     "name": "Johnny McDaniel",
+     "fields": {
+      "college": [
+       "Lincoln (Missouri)",
+       "Lincoln (MO)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1974wfldraft.html",
+   "year": 1974,
+   "league": "WFL",
+   "kind": "draft",
+   "picks_on_the_page": 432,
+   "not_held": 143,
+   "agree": 289,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 30,
+     "round": 3,
+     "name": "Carlester Crumpler",
+     "team": "Portland Storm",
+     "college": "East Carolina"
+    },
+    {
+     "overall": 36,
+     "round": 3,
+     "name": "Ed Jones",
+     "team": "Detroit Wheels",
+     "college": "Tennessee State"
+    },
+    {
+     "overall": 56,
+     "round": 5,
+     "name": "Marty Woolbright",
+     "team": "Philadelphia Bell",
+     "college": "South Carolina"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1974wflprodraft.html",
+   "year": 1974,
+   "league": "WFL",
+   "kind": "prodraft",
+   "picks_on_the_page": 480,
+   "not_held": 196,
+   "agree": 284,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 22,
+     "round": 3,
+     "name": "Ted Hendricks",
+     "team": "Southern California Sun",
+     "college": null
+    },
+    {
+     "overall": 30,
+     "round": 3,
+     "name": "Paul Costa",
+     "team": "Detroit Wheels",
+     "college": null
+    },
+    {
+     "overall": 36,
+     "round": 3,
+     "name": "Dave Williams",
+     "team": "New York Stars/Charlotte Hornets",
+     "college": null
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1975cfldraft.html",
+   "year": 1975,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 66,
+   "not_held": 52,
+   "agree": 14,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Maurice Charbonneau",
+     "team": "Calgary Stampeders",
+     "college": "McMaster"
+    },
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "John Martin",
+     "team": "Edmonton Eskimos",
+     "college": "Carleton"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Phil Monckton",
+     "team": "Saskatchewan Roughriders",
+     "college": "Western Ontario"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1975nfldraft.html",
+   "year": 1975,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 442,
+   "not_held": 168,
+   "agree": 272,
+   "disagree": 2,
+   "examples_not_held": [
+    {
+     "overall": 34,
+     "round": 2,
+     "name": "Elmore Stephens",
+     "team": "Kansas City Chiefs",
+     "college": "Kentucky"
+    },
+    {
+     "overall": 43,
+     "round": 2,
+     "name": "Charlie Smith",
+     "team": "Denver Broncos",
+     "college": "North Carolina Central"
+    },
+    {
+     "overall": 52,
+     "round": 2,
+     "name": "Art Riley",
+     "team": "Minnesota Vikings",
+     "college": "Southern California"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 242,
+     "name": "Otha Bradley",
+     "fields": {
+      "college": [
+       "Southern California",
+       "USC"
+      ]
+     }
+    },
+    {
+     "overall": 337,
+     "name": "Mike Hurd",
+     "fields": {
+      "college": [
+       "Michigan State",
+       "Miss. Valley St."
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1975wfldispersaldraft.html",
+   "year": 1975,
+   "league": "WFL",
+   "kind": "dispersaldraft",
+   "picks_on_the_page": 0,
+   "note": "no table with a Round/Pick/Overall header"
+  },
+  {
+   "page": "drafts_1976cfldraft.html",
+   "year": 1976,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 88,
+   "not_held": 66,
+   "agree": 22,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "John Turecki",
+     "team": "British Columbia Lions",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Jay Parry",
+     "team": "Calgary Stampeders",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Barry Cozac",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Mount Allison"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1976nfldraft.html",
+   "year": 1976,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 487,
+   "not_held": 224,
+   "agree": 263,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": 1,
+     "name": "Lee Roy Selmon",
+     "team": "Tampa Bay Buccaneers",
+     "college": "Oklahoma"
+    },
+    {
+     "overall": 56,
+     "round": 2,
+     "name": "Jim Files",
+     "team": "Pittsburgh Steelers",
+     "college": "McNeese State"
+    },
+    {
+     "overall": 91,
+     "round": 3,
+     "name": "Steve Maughan",
+     "team": "Tampa Bay Buccaneers",
+     "college": "Utah State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1976nflexpansiondraft.html",
+   "year": 1976,
+   "league": "NFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 0,
+   "note": "no table with a Round/Pick/Overall header"
+  },
+  {
+   "page": "drafts_1977cfldraft.html",
+   "year": 1977,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 88,
+   "not_held": 66,
+   "agree": 22,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Robin Adair",
+     "team": "British Columbia Lions",
+     "college": "Saskatchewan"
+    },
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Cliff Pelham",
+     "team": "Toronto Argonauts",
+     "college": "Dalhousie"
+    },
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "J.P. Brescacin",
+     "team": "Edmonton Eskimos",
+     "college": "North Dakota"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1977nfldraft.html",
+   "year": 1977,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 335,
+   "not_held": 96,
+   "agree": 239,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 71,
+     "round": 3,
+     "name": "Mike Watson",
+     "team": "Miami Dolphins",
+     "college": "Miami (Ohio)"
+    },
+    {
+     "overall": 74,
+     "round": 3,
+     "name": "Rick Scribner",
+     "team": "Green Bay Packers",
+     "college": "Idaho State"
+    },
+    {
+     "overall": 88,
+     "round": 4,
+     "name": "Mike Vaughan",
+     "team": "New York Giants",
+     "college": "Oklahoma"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1978cfldraft.html",
+   "year": 1978,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 72,
+   "not_held": 53,
+   "agree": 19,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Larry Colbey",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Simon Fraser"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Gary Boecheler",
+     "team": "Montreal Alouettes",
+     "college": "Saskatchewan"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Bob Stracina",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Acadia"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1978nfldraft.html",
+   "year": 1978,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 334,
+   "not_held": 95,
+   "agree": 239,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 49,
+     "round": 2,
+     "name": "Willie Fry",
+     "team": "Pittsburgh Steelers",
+     "college": "Notre Dame"
+    },
+    {
+     "overall": 80,
+     "round": 3,
+     "name": "Leon White",
+     "team": "Los Angeles Rams",
+     "college": "Colorado"
+    },
+    {
+     "overall": 84,
+     "round": 3,
+     "name": "Dave Hudgens",
+     "team": "Dallas Cowboys",
+     "college": "Oklahoma"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1979cfldraft.html",
+   "year": 1979,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 63,
+   "not_held": 45,
+   "agree": 18,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Bernie Crump",
+     "team": "Saskatchewan Roughriders",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Chris Curran",
+     "team": "British Columbia Lions",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Jim O'Keefe",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Wilfrid Laurier"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1979nfldraft.html",
+   "year": 1979,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 330,
+   "not_held": 74,
+   "agree": 256,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 15,
+     "round": 1,
+     "name": "Eddie Lee Ivery",
+     "team": "Green Bay Packers",
+     "college": "Georgia Tech"
+    },
+    {
+     "overall": 65,
+     "round": 3,
+     "name": "Ronnie Lee",
+     "team": "Miami Dolphins",
+     "college": "Baylor"
+    },
+    {
+     "overall": 99,
+     "round": 4,
+     "name": "Derwin Tucker",
+     "team": "Los Angeles Rams",
+     "college": "Illinois"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1980cfldraft.html",
+   "year": 1980,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 62,
+   "not_held": 39,
+   "agree": 23,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Ken Vallevand",
+     "team": "Calgary Stampeders",
+     "college": "U.S. International"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Derry Donaldson",
+     "team": "Edmonton Eskimos",
+     "college": "Tulane"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Neville Edwards",
+     "team": "Ottawa Rough Riders",
+     "college": "Western Ontario"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1980nfldraft.html",
+   "year": 1980,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 333,
+   "not_held": 87,
+   "agree": 246,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 74,
+     "round": 3,
+     "name": "Larry Carter",
+     "team": "Denver Broncos",
+     "college": "Kentucky"
+    },
+    {
+     "overall": 83,
+     "round": 3,
+     "name": "Ray Sydnor",
+     "team": "Pittsburgh Steelers",
+     "college": "Wisconsin"
+    },
+    {
+     "overall": 98,
+     "round": 4,
+     "name": "David Hodge",
+     "team": "San Francisco 49ers",
+     "college": "Houston"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1981cfldraft.html",
+   "year": 1981,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 63,
+   "not_held": 40,
+   "agree": 23,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Don Burns",
+     "team": "Ottawa Rough Riders",
+     "college": "Ottawa"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Samuel Marshall",
+     "team": "Montreal Alouettes",
+     "college": "Simon Fraser"
+    },
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Fred Prinzen",
+     "team": "Montreal Alouettes",
+     "college": "Queen's"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1981nfldraft.html",
+   "year": 1981,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 332,
+   "not_held": 61,
+   "agree": 271,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 87,
+     "round": 4,
+     "name": "Scott Phillips",
+     "team": "Seattle Seahawks",
+     "college": "Brigham Young"
+    },
+    {
+     "overall": 88,
+     "round": 4,
+     "name": "Steve Rhodes",
+     "team": "St. Louis Cardinals",
+     "college": "Oklahoma"
+    },
+    {
+     "overall": 96,
+     "round": 4,
+     "name": "Brad Wright",
+     "team": "Miami Dolphins",
+     "college": "New Mexico"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1982cfldraft.html",
+   "year": 1982,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 54,
+   "not_held": 31,
+   "agree": 23,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Gerald Prud'homme",
+     "team": "Saskatchewan Roughriders",
+     "college": "Concordia (Quebec)"
+    },
+    {
+     "overall": 16,
+     "round": 2,
+     "name": "Dave Zilli",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Toronto"
+    },
+    {
+     "overall": 17,
+     "round": 2,
+     "name": "Peter Langford",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Guelph"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1982nfldraft.html",
+   "year": 1982,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 334,
+   "not_held": 57,
+   "agree": 277,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 43,
+     "round": 2,
+     "name": "John Meyer",
+     "team": "Pittsburgh Steelers",
+     "college": "Arizona State"
+    },
+    {
+     "overall": 67,
+     "round": 3,
+     "name": "Bill Bechtold",
+     "team": "Los Angeles Rams",
+     "college": "Oklahoma"
+    },
+    {
+     "overall": 93,
+     "round": 4,
+     "name": "Van Williams",
+     "team": "Buffalo Bills",
+     "college": "Carson-Newman"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1983cfldraft.html",
+   "year": 1983,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 72,
+   "not_held": 44,
+   "agree": 28,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 6,
+     "round": 1,
+     "name": "Chris Byrne",
+     "team": "Calgary Stampeders",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 14,
+     "round": 2,
+     "name": "Kevin Lapa",
+     "team": "British Columbia Lions",
+     "college": "Weber State"
+    },
+    {
+     "overall": 16,
+     "round": 2,
+     "name": "Dale Kinney",
+     "team": "Edmonton Eskimos",
+     "college": "St. Francis Xavier"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1983nfldraft.html",
+   "year": 1983,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 335,
+   "not_held": 61,
+   "agree": 274,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 5,
+     "round": 1,
+     "name": "Billy Ray Smith",
+     "team": "San Diego Chargers",
+     "college": "Arkansas"
+    },
+    {
+     "overall": 6,
+     "round": 1,
+     "name": "Jim Covert",
+     "team": "Chicago Bears",
+     "college": "Pittsburgh"
+    },
+    {
+     "overall": 73,
+     "round": 3,
+     "name": "Walker Lee Ashley",
+     "team": "Minnesota Vikings",
+     "college": "Penn State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1983usfldraft.html",
+   "year": 1983,
+   "league": "USFL",
+   "kind": "draft",
+   "picks_on_the_page": 288,
+   "not_held": 76,
+   "agree": 212,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Jimmy Payne",
+     "team": "Tampa Bay Bandits",
+     "college": "Georgia"
+    },
+    {
+     "overall": 38,
+     "round": 4,
+     "name": "George Harris",
+     "team": "Boston Breakers",
+     "college": "Houston"
+    },
+    {
+     "overall": 43,
+     "round": 4,
+     "name": "Matt VandenBoom",
+     "team": "Chicago Blitz",
+     "college": "Wisconsin"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1984cfldraft.html",
+   "year": 1984,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 72,
+   "not_held": 41,
+   "agree": 31,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 2,
+     "round": 2,
+     "name": "Ian Sinclair",
+     "team": "Montreal Concordes",
+     "college": "Miami (Florida)"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Tony Marrone",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Concordia (Quebec)"
+    },
+    {
+     "overall": 18,
+     "round": 2,
+     "name": "Dave Lovegrove",
+     "team": "Toronto Argonauts",
+     "college": "Wilfrid Laurier"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1984nfldraft.html",
+   "year": 1984,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 336,
+   "not_held": 78,
+   "agree": 258,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 31,
+     "round": 2,
+     "name": "Bob Slater",
+     "team": "Washington Redskins",
+     "college": "Oklahoma"
+    },
+    {
+     "overall": 115,
+     "round": 5,
+     "name": "Clint Harris",
+     "team": "New York Giants",
+     "college": "East Carolina"
+    },
+    {
+     "overall": 120,
+     "round": 5,
+     "name": "Golden Tate",
+     "team": "Indianapolis Colts",
+     "college": "Tennessee State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1984usfldraft.html",
+   "year": 1984,
+   "league": "USFL",
+   "kind": "draft",
+   "picks_on_the_page": 402,
+   "not_held": 171,
+   "agree": 231,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 82,
+     "round": 4,
+     "name": "James King",
+     "team": "Chicago Blitz",
+     "college": "Western Kentucky"
+    },
+    {
+     "overall": 88,
+     "round": 5,
+     "name": "Richard Dukes",
+     "team": "Memphis Showboats",
+     "college": "Western Carolina"
+    },
+    {
+     "overall": 89,
+     "round": 5,
+     "name": "Nakita Robertson",
+     "team": "Washington Federals",
+     "college": "Central Arkansas"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1984usflexpansiondraft.html",
+   "year": 1984,
+   "league": "USFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 144,
+   "not_held": 138,
+   "agree": 6,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 7,
+     "round": 2,
+     "name": "Leo Biedermann",
+     "team": "Memphis Showboats",
+     "college": null
+    },
+    {
+     "overall": 8,
+     "round": 2,
+     "name": "Dave Otey",
+     "team": "Jacksonville Bulls",
+     "college": null
+    },
+    {
+     "overall": 9,
+     "round": 2,
+     "name": "Rich Garza",
+     "team": "San Antonio Gunslingers",
+     "college": null
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1985cfldraft.html",
+   "year": 1985,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 81,
+   "not_held": 45,
+   "agree": 36,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Tom Munro",
+     "team": "Ottawa Rough Riders",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 14,
+     "round": 2,
+     "name": "Bruce Barnett",
+     "team": "British Columbia Lions",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 16,
+     "round": 2,
+     "name": "Joe Pariselli",
+     "team": "British Columbia Lions",
+     "college": "York"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1985nfldraft.html",
+   "year": 1985,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 335,
+   "not_held": 87,
+   "agree": 248,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 18,
+     "round": 1,
+     "name": "Freddie Joe Nunn",
+     "team": "St. Louis Cardinals",
+     "college": "Mississippi"
+    },
+    {
+     "overall": 92,
+     "round": 4,
+     "name": "Mike Heaven",
+     "team": "Tampa Bay Buccaneers",
+     "college": "Illinois"
+    },
+    {
+     "overall": 93,
+     "round": 4,
+     "name": "Greg Naron",
+     "team": "Philadelphia Eagles",
+     "college": "North Carolina"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1985usflallocationdraft.html",
+   "year": 1985,
+   "league": "USFL",
+   "kind": "allocationdraft",
+   "picks_on_the_page": 0,
+   "note": "no table with a Round/Pick/Overall header"
+  },
+  {
+   "page": "drafts_1985usfldraft.html",
+   "year": 1985,
+   "league": "USFL",
+   "kind": "draft",
+   "picks_on_the_page": 221,
+   "not_held": 88,
+   "agree": 133,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 19,
+     "round": 2,
+     "name": "Mike Pendleton",
+     "team": "Jacksonville Bulls",
+     "college": "Indiana"
+    },
+    {
+     "overall": 20,
+     "round": 2,
+     "name": "Peter Muldoon",
+     "team": "New Jersey Generals",
+     "college": "Holy Cross"
+    },
+    {
+     "overall": 24,
+     "round": 2,
+     "name": "Greg Greely",
+     "team": "San Antonio Gunslingers",
+     "college": "Nicholls State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1986cfldraft.html",
+   "year": 1986,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 72,
+   "not_held": 44,
+   "agree": 28,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Dwayne Derban",
+     "team": "Toronto Argonauts",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 14,
+     "round": 2,
+     "name": "Andy Stubbert",
+     "team": "Calgary Stampeders",
+     "college": "Queen's"
+    },
+    {
+     "overall": 18,
+     "round": 2,
+     "name": "Mark Turner",
+     "team": "British Columbia Lions",
+     "college": "Miami (Ohio)"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1986nfldraft.html",
+   "year": 1986,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 333,
+   "not_held": 66,
+   "agree": 267,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 15,
+     "round": 1,
+     "name": "John L. Williams",
+     "team": "Seattle Seahawks",
+     "college": "Florida"
+    },
+    {
+     "overall": 72,
+     "round": 3,
+     "name": "Robbie Bosco",
+     "team": "Green Bay Packers",
+     "college": "Brigham Young"
+    },
+    {
+     "overall": 80,
+     "round": 3,
+     "name": "Brad Cochran",
+     "team": "Los Angeles Raiders",
+     "college": "Michigan"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1987cfldispersaldraft.html",
+   "year": 1987,
+   "league": "CFL",
+   "kind": "dispersaldraft",
+   "picks_on_the_page": 23,
+   "not_held": 0,
+   "agree": 23,
+   "disagree": 0,
+   "examples_not_held": [],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1987cfldraft.html",
+   "year": 1987,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 72,
+   "not_held": 42,
+   "agree": 30,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Sean Orr",
+     "team": "Winnipeg Blue Bombers",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 16,
+     "round": 2,
+     "name": "Luc Gerritsen",
+     "team": "British Columbia Lions",
+     "college": "Wilfrid Laurier"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "David Braitwaite",
+     "team": "Edmonton Eskimos",
+     "college": "Toronto"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1987nfldraft.html",
+   "year": 1987,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 335,
+   "not_held": 45,
+   "agree": 290,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 48,
+     "round": 2,
+     "name": "Wally Kleine",
+     "team": "Washington Redskins",
+     "college": "Notre Dame"
+    },
+    {
+     "overall": 102,
+     "round": 4,
+     "name": "Derrick Beasley",
+     "team": "New England Patriots",
+     "college": "Winston-Salem State"
+    },
+    {
+     "overall": 115,
+     "round": 5,
+     "name": "Nelson Jones",
+     "team": "San Diego Chargers",
+     "college": "North Carolina State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1988cfldraft.html",
+   "year": 1988,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 64,
+   "not_held": 28,
+   "agree": 36,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Wayne Yearwood",
+     "team": "Calgary Stampeders",
+     "college": "West Virginia"
+    },
+    {
+     "overall": 17,
+     "round": 3,
+     "name": "Brian Wise",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Utah"
+    },
+    {
+     "overall": 24,
+     "round": 3,
+     "name": "Greg Nyte",
+     "team": "Edmonton Eskimos",
+     "college": "Simon Fraser"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1988nfldraft.html",
+   "year": 1988,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 333,
+   "not_held": 83,
+   "agree": 248,
+   "disagree": 2,
+   "examples_not_held": [
+    {
+     "overall": 50,
+     "round": 2,
+     "name": "Michael Dean Perry",
+     "team": "Cleveland Browns",
+     "college": "Clemson"
+    },
+    {
+     "overall": 64,
+     "round": 3,
+     "name": "Matt Patchan",
+     "team": "Philadelphia Eagles",
+     "college": "Miami (Florida)"
+    },
+    {
+     "overall": 67,
+     "round": 3,
+     "name": "Mark Hutson",
+     "team": "Dallas Cowboys",
+     "college": "Oklahoma"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 105,
+     "name": "Jim Thornton",
+     "fields": {
+      "college": [
+       "Fullerton State",
+       "Cal State-Fullerton"
+      ]
+     }
+    },
+    {
+     "overall": 176,
+     "name": "Todd White",
+     "fields": {
+      "college": [
+       "Fullerton State",
+       "Cal State-Fullerton"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1989cfldraft.html",
+   "year": 1989,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 64,
+   "not_held": 30,
+   "agree": 34,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 14,
+     "round": 2,
+     "name": "Craig Keller",
+     "team": "Toronto Argonauts",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 18,
+     "round": 3,
+     "name": "Lou Cafazzo",
+     "team": "Calgary Stampeders",
+     "college": "Eastern Michigan"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "Richard McCroy",
+     "team": "Calgary Stampeders",
+     "college": "Concordia (Quebec)"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1989nfldraft.html",
+   "year": 1989,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 335,
+   "not_held": 65,
+   "agree": 269,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 16,
+     "round": 1,
+     "name": "Hart Lee Dykes",
+     "team": "New England Patriots",
+     "college": "Oklahoma State"
+    },
+    {
+     "overall": 51,
+     "round": 2,
+     "name": "Billy Joe Tolliver",
+     "team": "San Diego Chargers",
+     "college": "Texas Tech"
+    },
+    {
+     "overall": 92,
+     "round": 4,
+     "name": "David Holmes",
+     "team": "Miami Dolphins",
+     "college": "Syracuse"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 229,
+     "name": "Chris Dunn",
+     "fields": {
+      "college": [
+       "Cal Poly (San Luis Obispo)",
+       "Cal Poly-San Luis Obispo"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1990cfldraft.html",
+   "year": 1990,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 64,
+   "not_held": 32,
+   "agree": 32,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 16,
+     "round": 2,
+     "name": "Brent Chuhaniuk",
+     "team": "Saskatchewan Roughriders",
+     "college": "Weber State"
+    },
+    {
+     "overall": 17,
+     "round": 3,
+     "name": "Paul Kerr",
+     "team": "Toronto Argonauts",
+     "college": "McGill"
+    },
+    {
+     "overall": 27,
+     "round": 4,
+     "name": "Derek Sang",
+     "team": "Calgary Stampeders",
+     "college": "San Diego State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1990nfldraft.html",
+   "year": 1990,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 331,
+   "not_held": 50,
+   "agree": 279,
+   "disagree": 2,
+   "examples_not_held": [
+    {
+     "overall": 63,
+     "round": 3,
+     "name": "Peter Tom Willis",
+     "team": "Chicago Bears",
+     "college": "Florida State"
+    },
+    {
+     "overall": 90,
+     "round": 4,
+     "name": "Rob Hinckley",
+     "team": "Detroit Lions",
+     "college": "Stanford"
+    },
+    {
+     "overall": 109,
+     "round": 4,
+     "name": "Rico Labbe",
+     "team": "Washington Redskins",
+     "college": "Boston College"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 94,
+     "name": "Bill Schultz",
+     "fields": {
+      "college": [
+       "Southern California",
+       "USC"
+      ]
+     }
+    },
+    {
+     "overall": 107,
+     "name": "David Whitmore",
+     "fields": {
+      "college": [
+       "Stephen F. Austin State",
+       "S.F. Austin"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1991cfldraft.html",
+   "year": 1991,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 63,
+   "not_held": 35,
+   "agree": 28,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Phil Schnepf",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Carleton"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Anthony Hannem",
+     "team": "Saskatchewan Roughriders",
+     "college": "Acadia"
+    },
+    {
+     "overall": 14,
+     "round": 2,
+     "name": "Don Douglas",
+     "team": "Calgary Stampeders",
+     "college": "Western Ontario"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1991nfldraft.html",
+   "year": 1991,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 334,
+   "not_held": 70,
+   "agree": 264,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 110,
+     "round": 4,
+     "name": "Kevin Harris",
+     "team": "Dallas Cowboys",
+     "college": "Texas Southern"
+    },
+    {
+     "overall": 114,
+     "round": 5,
+     "name": "James Goode",
+     "team": "Atlanta Falcons",
+     "college": "Oklahoma"
+    },
+    {
+     "overall": 120,
+     "round": 5,
+     "name": "Terry Bagsby",
+     "team": "Tampa Bay Buccaneers",
+     "college": "Texas A&M-Commerce"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1992cfldraft.html",
+   "year": 1992,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 64,
+   "not_held": 30,
+   "agree": 34,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 17,
+     "round": 3,
+     "name": "Frank Santorelli",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Simon Fraser"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "Konrad Pimiskern",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Washington State"
+    },
+    {
+     "overall": 21,
+     "round": 3,
+     "name": "Tom Stackaruk",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Weber State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1992nfldraft.html",
+   "year": 1992,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 336,
+   "not_held": 83,
+   "agree": 253,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 74,
+     "round": 3,
+     "name": "Paul Siever",
+     "team": "Washington Redskins",
+     "college": "Penn State"
+    },
+    {
+     "overall": 111,
+     "round": 4,
+     "name": "Frank Kmet",
+     "team": "Buffalo Bills",
+     "college": "Purdue"
+    },
+    {
+     "overall": 112,
+     "round": 4,
+     "name": "Chris Hakel",
+     "team": "Washington Redskins",
+     "college": "William & Mary"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1993cfldraft.html",
+   "year": 1993,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 54,
+   "not_held": 29,
+   "agree": 25,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 7,
+     "round": 2,
+     "name": "Tom Europe",
+     "team": "British Columbia Lions",
+     "college": "Bishop's"
+    },
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Brent Stucke",
+     "team": "Edmonton Eskimos",
+     "college": "Wilfrid Laurier"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Dave McLaughlin",
+     "team": "Winnipeg Blue Bombers",
+     "college": "British Columbia"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1993nfldraft.html",
+   "year": 1993,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 224,
+   "not_held": 15,
+   "agree": 209,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 34,
+     "round": 2,
+     "name": "Demetrius DuBose",
+     "team": "Tampa Bay Buccaneers",
+     "college": "Notre Dame"
+    },
+    {
+     "overall": 58,
+     "round": 3,
+     "name": "Billy Joe Hobert",
+     "team": "Los Angeles Raiders",
+     "college": "Washington"
+    },
+    {
+     "overall": 80,
+     "round": 3,
+     "name": "Ed Bunn",
+     "team": "Washington Redskins",
+     "college": "Texas-El Paso"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1994cfldraft.html",
+   "year": 1994,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 49,
+   "not_held": 21,
+   "agree": 28,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Val St. Germain",
+     "team": "Hamilton Tiger-Cats",
+     "college": "McGill"
+    },
+    {
+     "overall": 2,
+     "round": null,
+     "name": "Chris Burns",
+     "team": "Saskatchewan Roughriders",
+     "college": "Portland State"
+    },
+    {
+     "overall": 3,
+     "round": null,
+     "name": "Vince Danielsen",
+     "team": "Calgary Stampeders",
+     "college": "British Columbia"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1994nfldraft.html",
+   "year": 1994,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 222,
+   "not_held": 26,
+   "agree": 196,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 78,
+     "round": 3,
+     "name": "Ervin Collier",
+     "team": "New England Patriots",
+     "college": "Florida A&M"
+    },
+    {
+     "overall": 86,
+     "round": 3,
+     "name": "Steve Shine",
+     "team": "Cincinnati Bengals",
+     "college": "Northwestern"
+    },
+    {
+     "overall": 99,
+     "round": 3,
+     "name": "Alai Kalaniuvalu",
+     "team": "Atlanta Falcons",
+     "college": "Oregon State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1995cfldispersaldraft.html",
+   "year": 1995,
+   "league": "CFL",
+   "kind": "dispersaldraft",
+   "picks_on_the_page": 49,
+   "not_held": 5,
+   "agree": 43,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 26,
+     "round": 2,
+     "name": "Mike Clark",
+     "team": "British Columbia Lions",
+     "college": "Oklahoma State"
+    },
+    {
+     "overall": 38,
+     "round": 3,
+     "name": "John Leach",
+     "team": "British Columbia Lions",
+     "college": "Wake Forest"
+    },
+    {
+     "overall": 42,
+     "round": 4,
+     "name": "Norman Steele",
+     "team": "Ottawa Rough Riders",
+     "college": "New Mexico State"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 24,
+     "name": "Jason Medlock",
+     "fields": {
+      "name": [
+       "Jason Medlock",
+       "James Bullock"
+      ],
+      "college": [
+       "Navarro JC; Nevada-Las Vegas",
+       "Odessa JC; Arizona"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_1995cfldraft.html",
+   "year": 1995,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 55,
+   "not_held": 34,
+   "agree": 21,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": null,
+     "name": "Tom Nutten",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Western Michigan"
+    },
+    {
+     "overall": 2,
+     "round": null,
+     "name": "Stefen Reid",
+     "team": "Ottawa Rough Riders",
+     "college": "Boise State"
+    },
+    {
+     "overall": 3,
+     "round": null,
+     "name": "Mark Montreuil",
+     "team": "Toronto Argonauts",
+     "college": "Concordia (Quebec)"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1995nfldraft.html",
+   "year": 1995,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 249,
+   "not_held": 33,
+   "agree": 216,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 63,
+     "round": 2,
+     "name": "Shane Hannah",
+     "team": "Dallas Cowboys",
+     "college": "Michigan State"
+    },
+    {
+     "overall": 78,
+     "round": 3,
+     "name": "Chris T. Jones",
+     "team": "Philadelphia Eagles",
+     "college": "Miami (Florida)"
+    },
+    {
+     "overall": 98,
+     "round": 3,
+     "name": "Preston Harrison",
+     "team": "San Diego Chargers",
+     "college": "Ohio State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1995nflexpansiondraft.html",
+   "year": 1995,
+   "league": "NFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 66,
+   "not_held": 1,
+   "agree": 65,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 50,
+     "round": 25,
+     "name": "Baron Rollins",
+     "team": "Carolina Panthers",
+     "college": ""
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1996cfldispersaldraft.html",
+   "year": 1996,
+   "league": "CFL",
+   "kind": "dispersaldraft",
+   "picks_on_the_page": 121,
+   "not_held": 4,
+   "agree": 117,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 34,
+     "round": 4,
+     "name": "Tom Rayam",
+     "team": "Edmonton Eskimos",
+     "college": "Alabama"
+    },
+    {
+     "overall": 89,
+     "round": 10,
+     "name": "Kenyon Ragsdale",
+     "team": "Calgary Stampeders",
+     "college": ""
+    },
+    {
+     "overall": 106,
+     "round": 13,
+     "name": "Todd Paige",
+     "team": "Toronto Argonauts",
+     "college": ""
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1996cfldraft.html",
+   "year": 1996,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 61,
+   "not_held": 28,
+   "agree": 33,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "L.J. Eiben",
+     "team": "Toronto Argonauts",
+     "college": "Humboldt State"
+    },
+    {
+     "overall": 22,
+     "round": 3,
+     "name": "Shane Speena",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Henderson State"
+    },
+    {
+     "overall": 23,
+     "round": 3,
+     "name": "Alton Francis",
+     "team": "Saskatchewan Roughriders",
+     "college": "Northern Illinois"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1996nfldraft.html",
+   "year": 1996,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 254,
+   "not_held": 36,
+   "agree": 218,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 45,
+     "round": 2,
+     "name": "James Manley",
+     "team": "Minnesota Vikings",
+     "college": "Vanderbilt"
+    },
+    {
+     "overall": 77,
+     "round": 3,
+     "name": "Robert Barr",
+     "team": "Seattle Seahawks",
+     "college": "Rutgers"
+    },
+    {
+     "overall": 84,
+     "round": 3,
+     "name": "Shannon Brown",
+     "team": "Atlanta Falcons",
+     "college": "Alabama"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1997cfldispersaldraft.html",
+   "year": 1997,
+   "league": "CFL",
+   "kind": "dispersaldraft",
+   "picks_on_the_page": 32,
+   "not_held": 1,
+   "agree": 31,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 32,
+     "round": 5,
+     "name": "David Harper",
+     "team": "Montreal Alouettes",
+     "college": "Weber State; Cal Poly (Humboldt)"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1997cfldraft.html",
+   "year": 1997,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 48,
+   "not_held": 17,
+   "agree": 31,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 17,
+     "round": 2,
+     "name": "Steve Salter",
+     "team": "Toronto Argonauts",
+     "college": "Ottawa"
+    },
+    {
+     "overall": 19,
+     "round": 3,
+     "name": "Paul Stoilen",
+     "team": "British Columbia Lions",
+     "college": "Simon Fraser"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "John Partchenko",
+     "team": "British Columbia Lions",
+     "college": "Michigan"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1997nfldraft.html",
+   "year": 1997,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 240,
+   "not_held": 28,
+   "agree": 212,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 36,
+     "round": 2,
+     "name": "Tiki Barber",
+     "team": "New York Giants",
+     "college": "Virginia"
+    },
+    {
+     "overall": 85,
+     "round": 3,
+     "name": "Tim Kohn",
+     "team": "Oakland Raiders",
+     "college": "Iowa State"
+    },
+    {
+     "overall": 139,
+     "round": 5,
+     "name": "Chad Carpenter",
+     "team": "Arizona Cardinals",
+     "college": "Washington State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1998cfldraft.html",
+   "year": 1998,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 43,
+   "not_held": 19,
+   "agree": 24,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 13,
+     "round": 3,
+     "name": "Devin Grant",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Utah"
+    },
+    {
+     "overall": 19,
+     "round": 3,
+     "name": "Kevin Pressburger",
+     "team": "Saskatchewan Roughriders",
+     "college": "Waterloo"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "Jermaine Brown",
+     "team": "Toronto Argonauts",
+     "college": "Winona State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1998nfldraft.html",
+   "year": 1998,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 241,
+   "not_held": 34,
+   "agree": 207,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 31,
+     "round": 2,
+     "name": "Leon Bender",
+     "team": "Oakland Raiders",
+     "college": "Washington State"
+    },
+    {
+     "overall": 42,
+     "round": 2,
+     "name": "Pat Johnson",
+     "team": "Baltimore Ravens",
+     "college": "Oregon"
+    },
+    {
+     "overall": 73,
+     "round": 3,
+     "name": "Mitch Marrow",
+     "team": "Carolina Panthers",
+     "college": "Pennsylvania"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1999cfldraft.html",
+   "year": 1999,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 46,
+   "not_held": 16,
+   "agree": 30,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Mathieu Beaudoin",
+     "team": "British Columbia Lions",
+     "college": "Syracuse"
+    },
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Richard Mercier",
+     "team": "British Columbia Lions",
+     "college": "Miami (Florida)"
+    },
+    {
+     "overall": 21,
+     "round": 3,
+     "name": "J.P. Darche",
+     "team": "Toronto Argonauts",
+     "college": "McGill"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1999nfldraft.html",
+   "year": 1999,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 253,
+   "not_held": 27,
+   "agree": 226,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 44,
+     "round": 2,
+     "name": "Jimmy Kleinsasser",
+     "team": "Minnesota Vikings",
+     "college": "North Dakota"
+    },
+    {
+     "overall": 63,
+     "round": 3,
+     "name": "Brandon Burlsworth",
+     "team": "Indianapolis Colts",
+     "college": "Arkansas"
+    },
+    {
+     "overall": 79,
+     "round": 3,
+     "name": "Dan Campbell",
+     "team": "New York Giants",
+     "college": "Texas A&M"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_1999nflexpansiondraft.html",
+   "year": 1999,
+   "league": "NFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 37,
+   "not_held": 3,
+   "agree": 34,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 22,
+     "round": 22,
+     "name": "Ray Jackson",
+     "team": "Cleveland Browns",
+     "college": ""
+    },
+    {
+     "overall": 31,
+     "round": 31,
+     "name": "Ron Moore",
+     "team": "Cleveland Browns",
+     "college": ""
+    },
+    {
+     "overall": 32,
+     "round": 32,
+     "name": "Clarence Williams",
+     "team": "Cleveland Browns",
+     "college": ""
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2000cfldraft.html",
+   "year": 2000,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 46,
+   "not_held": 18,
+   "agree": 28,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Ryan Ward",
+     "team": "Calgary Stampeders",
+     "college": "New Hampshire"
+    },
+    {
+     "overall": 16,
+     "round": 3,
+     "name": "Morgan Kane",
+     "team": "Montreal Alouettes",
+     "college": "Wake Forest"
+    },
+    {
+     "overall": 18,
+     "round": 3,
+     "name": "Carson Souter",
+     "team": "Toronto Argonauts",
+     "college": "Montana State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2000nfldraft.html",
+   "year": 2000,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 254,
+   "not_held": 32,
+   "agree": 222,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 29,
+     "round": 1,
+     "name": "R. Jay Soward",
+     "team": "Jacksonville Jaguars",
+     "college": "Southern California"
+    },
+    {
+     "overall": 65,
+     "round": 3,
+     "name": "Giovanni Carmazzi",
+     "team": "San Francisco 49ers",
+     "college": "Hofstra"
+    },
+    {
+     "overall": 104,
+     "round": 4,
+     "name": "Kaulana Noa",
+     "team": "St. Louis Rams",
+     "college": "Hawaii"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2001cfldraft.html",
+   "year": 2001,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 48,
+   "not_held": 15,
+   "agree": 33,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 19,
+     "round": 3,
+     "name": "Ben Wearing",
+     "team": "Winnipeg Blue Bombers",
+     "college": "McGill"
+    },
+    {
+     "overall": 27,
+     "round": 4,
+     "name": "Nick Tsatsaronis",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Memphis"
+    },
+    {
+     "overall": 29,
+     "round": 4,
+     "name": "Peter Moore",
+     "team": "Montreal Alouettes",
+     "college": "Syracuse"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2001nfldraft.html",
+   "year": 2001,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 246,
+   "not_held": 25,
+   "agree": 221,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 51,
+     "round": 2,
+     "name": "Paul Toviessi",
+     "team": "Denver Broncos",
+     "college": "Marshall"
+    },
+    {
+     "overall": 132,
+     "round": 5,
+     "name": "Elliot Silvers",
+     "team": "San Diego Chargers",
+     "college": "Washington"
+    },
+    {
+     "overall": 134,
+     "round": 5,
+     "name": "Jeremiah Pharms",
+     "team": "Cleveland Browns",
+     "college": "Washington"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2002cfldraft.html",
+   "year": 2002,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 54,
+   "not_held": 23,
+   "agree": 31,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "D.J. Owchar",
+     "team": "Ottawa Renegades",
+     "college": "Bowling Green State"
+    },
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Francois Bouilanne",
+     "team": "Saskatchewan Roughriders",
+     "college": "Laval"
+    },
+    {
+     "overall": 16,
+     "round": 2,
+     "name": "Jake Robertson",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Simon Fraser"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2002cflexpansiondraft.html",
+   "year": 2002,
+   "league": "CFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 19,
+   "not_held": 2,
+   "agree": 17,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 9,
+     "round": 2,
+     "name": "Carl Coulter",
+     "team": "Ottawa Renegades",
+     "college": null
+    },
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Kelly Lochbaum",
+     "team": "Ottawa Renegades",
+     "college": null
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2002nfldraft.html",
+   "year": 2002,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 261,
+   "not_held": 31,
+   "agree": 230,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 86,
+     "round": 3,
+     "name": "Marquise Walker",
+     "team": "Tampa Bay Buccaneers",
+     "college": "Michigan"
+    },
+    {
+     "overall": 113,
+     "round": 4,
+     "name": "Nate Dwyer",
+     "team": "Arizona Cardinals",
+     "college": "Kansas"
+    },
+    {
+     "overall": 130,
+     "round": 4,
+     "name": "Travis Scott",
+     "team": "St. Louis Rams",
+     "college": "Arizona State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2002nflexpansiondraft.html",
+   "year": 2002,
+   "league": "NFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 19,
+   "not_held": 1,
+   "agree": 18,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 19,
+     "round": 19,
+     "name": "J.J. Huggins",
+     "team": "Houston Texans",
+     "college": ""
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2003cfldraft.html",
+   "year": 2003,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 53,
+   "not_held": 19,
+   "agree": 34,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Trevor Kine",
+     "team": "Ottawa Renegades",
+     "college": "New Mexico State"
+    },
+    {
+     "overall": 16,
+     "round": 2,
+     "name": "Louis Hobson",
+     "team": "Ottawa Renegades",
+     "college": "Stanford"
+    },
+    {
+     "overall": 21,
+     "round": 3,
+     "name": "Kevin Scott",
+     "team": "Hamilton Tiger-Cats",
+     "college": "California (Pennsylvania)"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2003nfldraft.html",
+   "year": 2003,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 262,
+   "not_held": 20,
+   "agree": 242,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 101,
+     "round": 4,
+     "name": "Domanick Williams",
+     "team": "Houston Texans",
+     "college": "Louisiana State"
+    },
+    {
+     "overall": 128,
+     "round": 4,
+     "name": "Bryant McNeal",
+     "team": "Denver Broncos",
+     "college": "Clemson"
+    },
+    {
+     "overall": 130,
+     "round": 4,
+     "name": "Lance Nimmo",
+     "team": "Tampa Bay Buccaneers",
+     "college": "West Virginia"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2004cfldraft.html",
+   "year": 2004,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 53,
+   "not_held": 17,
+   "agree": 36,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Christian Leibl-Cite",
+     "team": "Ottawa Renegades",
+     "college": "New Hampshire"
+    },
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Ryan Jeffrey",
+     "team": "Montreal Alouettes",
+     "college": "Wilfrid Laurier"
+    },
+    {
+     "overall": 18,
+     "round": 3,
+     "name": "Sean Kent",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Regina"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2004nfldraft.html",
+   "year": 2004,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 255,
+   "not_held": 21,
+   "agree": 234,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 72,
+     "round": 3,
+     "name": "Donnell Washington",
+     "team": "Green Bay Packers",
+     "college": "Clemson"
+    },
+    {
+     "overall": 145,
+     "round": 5,
+     "name": "Nathaniel Adibi",
+     "team": "Pittsburgh Steelers",
+     "college": "Virginia Tech"
+    },
+    {
+     "overall": 159,
+     "round": 5,
+     "name": "Sean Bubin",
+     "team": "Jacksonville Jaguars",
+     "college": "Illinois"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2005cfldraft.html",
+   "year": 2005,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 53,
+   "not_held": 18,
+   "agree": 35,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 17,
+     "round": 2,
+     "name": "Pierre Tremblay",
+     "team": "British Columbia Lions",
+     "college": "Laval"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "Les Mullings",
+     "team": "Ottawa Renegades",
+     "college": "St. Mary's (Nova Scotia)"
+    },
+    {
+     "overall": 23,
+     "round": 3,
+     "name": "Francois Brochu",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Boston College"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2005nfldraft.html",
+   "year": 2005,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 255,
+   "not_held": 25,
+   "agree": 230,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 85,
+     "round": 3,
+     "name": "David Greene",
+     "team": "Seattle Seahawks",
+     "college": "Georgia"
+    },
+    {
+     "overall": 91,
+     "round": 3,
+     "name": "Chris Colmer",
+     "team": "Tampa Bay Buccaneers",
+     "college": "North Carolina State"
+    },
+    {
+     "overall": 92,
+     "round": 3,
+     "name": "Vincent Burns",
+     "team": "Indianapolis Colts",
+     "college": "Kentucky"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2006cfldispersaldraft.html",
+   "year": 2006,
+   "league": "CFL",
+   "kind": "dispersaldraft",
+   "picks_on_the_page": 51,
+   "not_held": 11,
+   "agree": 40,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 28,
+     "round": 4,
+     "name": "Jason Thomas",
+     "team": "Calgary Stampeders",
+     "college": "Southern California; Nevada-Las Vegas"
+    },
+    {
+     "overall": 29,
+     "round": 4,
+     "name": "Sean Poole",
+     "team": "Toronto Argonauts",
+     "college": "Michigan State"
+    },
+    {
+     "overall": 33,
+     "round": 5,
+     "name": "Steve Smith",
+     "team": "Hamilton Tiger-Cats",
+     "college": ""
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2006cfldraft.html",
+   "year": 2006,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 50,
+   "not_held": 16,
+   "agree": 34,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Jon Hameister-Ries",
+     "team": "British Columbia Lions",
+     "college": "Tulsa"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "Chris Cowan",
+     "team": "Saskatchewan Roughriders",
+     "college": "St. Mary's (Nova Scotia)"
+    },
+    {
+     "overall": 21,
+     "round": 3,
+     "name": "Dwayne Mundle",
+     "team": "Edmonton Eskimos",
+     "college": "West Virginia"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2006nfldraft.html",
+   "year": 2006,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 255,
+   "not_held": 23,
+   "agree": 232,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 114,
+     "round": 4,
+     "name": "Joe Toledo",
+     "team": "Miami Dolphins",
+     "college": "Washington"
+    },
+    {
+     "overall": 147,
+     "round": 5,
+     "name": "Jeremy Bloom",
+     "team": "Philadelphia Eagles",
+     "college": "Colorado"
+    },
+    {
+     "overall": 152,
+     "round": 5,
+     "name": "DeMario Minter",
+     "team": "Cleveland Browns",
+     "college": "Georgia"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2007cfldraft.html",
+   "year": 2007,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 47,
+   "not_held": 15,
+   "agree": 32,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 16,
+     "round": 2,
+     "name": "Josh Bean",
+     "team": "British Columbia Lions",
+     "college": "Boise State"
+    },
+    {
+     "overall": 19,
+     "round": 3,
+     "name": "Brian Jones",
+     "team": "Montreal Alouettes",
+     "college": "Windsor"
+    },
+    {
+     "overall": 22,
+     "round": 3,
+     "name": "Eugene Boakye",
+     "team": "Winnipeg Blue Bombers",
+     "college": "McMaster"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2007nfldraft.html",
+   "year": 2007,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 255,
+   "not_held": 28,
+   "agree": 226,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 49,
+     "round": 2,
+     "name": "Kenny Irons",
+     "team": "Cincinnati Bengals",
+     "college": "Auburn"
+    },
+    {
+     "overall": 62,
+     "round": 2,
+     "name": "Dan Bazuin",
+     "team": "Chicago Bears",
+     "college": "Central Michigan"
+    },
+    {
+     "overall": 77,
+     "round": 3,
+     "name": "Matt Spaeth",
+     "team": "Pittsburgh Steelers",
+     "college": "Minnesota"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 196,
+     "name": "Herb Taylor",
+     "fields": {
+      "college": [
+       "Texas Christian",
+       "TCU"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_2008cfldraft.html",
+   "year": 2008,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 48,
+   "not_held": 13,
+   "agree": 35,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 9,
+     "round": 2,
+     "name": "Rolly Lumbala",
+     "team": "British Columbia Lions",
+     "college": "Idaho"
+    },
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Jonathan St. Pierre",
+     "team": "Saskatchewan Roughriders",
+     "college": "Illinois State"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "Jason Arakgi",
+     "team": "British Columbia Lions",
+     "college": "McMaster"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2008nfldraft.html",
+   "year": 2008,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 252,
+   "not_held": 19,
+   "agree": 233,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 60,
+     "round": 2,
+     "name": "Pat Lee",
+     "team": "Green Bay Packers",
+     "college": "Auburn"
+    },
+    {
+     "overall": 125,
+     "round": 4,
+     "name": "Arman Shields",
+     "team": "Oakland Raiders",
+     "college": "Richmond"
+    },
+    {
+     "overall": 131,
+     "round": 4,
+     "name": "Jack Ikegwuonu",
+     "team": "Philadelphia Eagles",
+     "college": "Wisconsin"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2009cfldraft.html",
+   "year": 2009,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 48,
+   "not_held": 18,
+   "agree": 30,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Matt Singer",
+     "team": "Montreal Alouettes",
+     "college": "Manitoba"
+    },
+    {
+     "overall": 19,
+     "round": 3,
+     "name": "Mike Morris",
+     "team": "Winnipeg Blue Bombers",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "Andrea Bonaventura",
+     "team": "Edmonton Eskimos",
+     "college": "Calgary"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2009nfldraft.html",
+   "year": 2009,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 256,
+   "not_held": 27,
+   "agree": 229,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 63,
+     "round": 2,
+     "name": "Cody Brown",
+     "team": "Arizona Cardinals",
+     "college": "Connecticut"
+    },
+    {
+     "overall": 90,
+     "round": 3,
+     "name": "Chris Owens",
+     "team": "Atlanta Falcons",
+     "college": "San Jose State"
+    },
+    {
+     "overall": 115,
+     "round": 4,
+     "name": "Sammie Lee Hill",
+     "team": "Detroit Lions",
+     "college": "Stillman"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2010cfldraft.html",
+   "year": 2010,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 47,
+   "not_held": 13,
+   "agree": 34,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Shawn Gore",
+     "team": "British Columbia Lions",
+     "college": "Bishop's"
+    },
+    {
+     "overall": 17,
+     "round": 3,
+     "name": "John Bender",
+     "team": "Calgary Stampeders",
+     "college": "Nevada-Reno"
+    },
+    {
+     "overall": 19,
+     "round": 3,
+     "name": "Sam Fournier",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Laval"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2010nfldraft.html",
+   "year": 2010,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 255,
+   "not_held": 15,
+   "agree": 240,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 40,
+     "round": 2,
+     "name": "Koa Misi",
+     "team": "Miami Dolphins",
+     "college": "Utah"
+    },
+    {
+     "overall": 68,
+     "round": 3,
+     "name": "Jon Asamoah",
+     "team": "Kansas City Chiefs",
+     "college": "Illinois"
+    },
+    {
+     "overall": 76,
+     "round": 3,
+     "name": "Chad Jones",
+     "team": "New York Giants",
+     "college": "Louisiana State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2011cfldraft.html",
+   "year": 2011,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 47,
+   "not_held": 13,
+   "agree": 34,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Moe Petrus",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Connecticut"
+    },
+    {
+     "overall": 17,
+     "round": 3,
+     "name": "Brendan Dunn",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 22,
+     "round": 3,
+     "name": "Zander Robinson",
+     "team": "Toronto Argonauts",
+     "college": "Western Ontario"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2011nfldraft.html",
+   "year": 2011,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 253,
+   "not_held": 18,
+   "agree": 235,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 54,
+     "round": 2,
+     "name": "Jaiquawn Jarrett",
+     "team": "Philadelphia Eagles",
+     "college": "Temple"
+    },
+    {
+     "overall": 160,
+     "round": 5,
+     "name": "Nathan Enderle",
+     "team": "Chicago Bears",
+     "college": "Idaho"
+    },
+    {
+     "overall": 166,
+     "round": 6,
+     "name": "Lawrence Wilson",
+     "team": "Carolina Panthers",
+     "college": "Connecticut"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2012cfldraft.html",
+   "year": 2012,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 45,
+   "not_held": 6,
+   "agree": 39,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 16,
+     "round": 3,
+     "name": "Johnny Aprile",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Queen's"
+    },
+    {
+     "overall": 20,
+     "round": 3,
+     "name": "Mike Atkinson",
+     "team": "Hamilton Tiger-Cats",
+     "college": "Boise State"
+    },
+    {
+     "overall": 22,
+     "round": 3,
+     "name": "Matt Norman",
+     "team": "British Columbia Lions",
+     "college": "Western Ontario"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2012nfldraft.html",
+   "year": 2012,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 253,
+   "not_held": 13,
+   "agree": 240,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 22,
+     "round": 1,
+     "name": "Brandon Weeden",
+     "team": "Cleveland Browns",
+     "college": "Oklahoma State"
+    },
+    {
+     "overall": 79,
+     "round": 3,
+     "name": "Brandon Hardin",
+     "team": "Chicago Bears",
+     "college": "Oregon State"
+    },
+    {
+     "overall": 144,
+     "round": 5,
+     "name": "Zebrie Sanders",
+     "team": "Buffalo Bills",
+     "college": "Florida State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2013cfldraft.html",
+   "year": 2013,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 60,
+   "not_held": 24,
+   "agree": 36,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Kris Robertson",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Concordia (Quebec)"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "S.J. Haidara",
+     "team": "British Columbia Lions",
+     "college": "Laval"
+    },
+    {
+     "overall": 14,
+     "round": 2,
+     "name": "Hosam Shahin",
+     "team": "Montreal Alouettes",
+     "college": "Rice"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2013nfldraft.html",
+   "year": 2013,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 254,
+   "not_held": 10,
+   "agree": 244,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 33,
+     "round": 2,
+     "name": "John Cyprien",
+     "team": "Jacksonville Jaguars",
+     "college": "Florida International"
+    },
+    {
+     "overall": 143,
+     "round": 5,
+     "name": "Jonathan Meeks",
+     "team": "Buffalo Bills",
+     "college": "Clemson"
+    },
+    {
+     "overall": 150,
+     "round": 5,
+     "name": "Terry Hawthorne",
+     "team": "Pittsburgh Steelers",
+     "college": "Illinois"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2014cfldraft.html",
+   "year": 2014,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 65,
+   "not_held": 24,
+   "agree": 41,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "T-Dre Player",
+     "team": "British Columbia Lions",
+     "college": "Northwestern State (Louisiana)"
+    },
+    {
+     "overall": 21,
+     "round": 3,
+     "name": "Jas Dhillon",
+     "team": "Toronto Argonauts",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 28,
+     "round": 4,
+     "name": "Aaron Wheaton",
+     "team": "Ottawa REDBLACKS",
+     "college": "Toronto"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2014cflexpansiondraft.html",
+   "year": 2014,
+   "league": "CFL",
+   "kind": "expansiondraft",
+   "picks_on_the_page": 24,
+   "not_held": 0,
+   "agree": 24,
+   "disagree": 0,
+   "examples_not_held": [],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2014nfldraft.html",
+   "year": 2014,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 256,
+   "not_held": 13,
+   "agree": 243,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 115,
+     "round": 4,
+     "name": "Shaq Evans",
+     "team": "New York Jets",
+     "college": "UCLA"
+    },
+    {
+     "overall": 186,
+     "round": 6,
+     "name": "Lache Seastrunk",
+     "team": "Washington Redskins",
+     "college": "Baylor"
+    },
+    {
+     "overall": 194,
+     "round": 6,
+     "name": "Keith Wenning",
+     "team": "Baltimore Ravens",
+     "college": "Ball State"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2015cfldraft.html",
+   "year": 2015,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 62,
+   "not_held": 15,
+   "agree": 47,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 23,
+     "round": 3,
+     "name": "Shaq Murray-Lawrence",
+     "team": "British Columbia Lions",
+     "college": "Nevada-Las Vegas"
+    },
+    {
+     "overall": 30,
+     "round": 4,
+     "name": "Matt Norzil",
+     "team": "Toronto Argonauts",
+     "college": "Laval"
+    },
+    {
+     "overall": 34,
+     "round": 4,
+     "name": "Andrew Johnson",
+     "team": "Edmonton Eskimos",
+     "college": "Fort Lewis"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2015nfldraft.html",
+   "year": 2015,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 256,
+   "not_held": 12,
+   "agree": 244,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 150,
+     "round": 5,
+     "name": "Cedric Thompson",
+     "team": "Miami Dolphins",
+     "college": "Minnesota"
+    },
+    {
+     "overall": 158,
+     "round": 5,
+     "name": "Shaquille Riddick",
+     "team": "Arizona Cardinals",
+     "college": "West Virginia"
+    },
+    {
+     "overall": 179,
+     "round": 6,
+     "name": "Max Valles",
+     "team": "Oakland Raiders",
+     "college": "Virginia"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2016cfldraft.html",
+   "year": 2016,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 70,
+   "not_held": 27,
+   "agree": 43,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Michael Couture",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Simon Fraser"
+    },
+    {
+     "overall": 11,
+     "round": 2,
+     "name": "Wayne Moore",
+     "team": "Montreal Alouettes",
+     "college": "McMaster"
+    },
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Anthony Thompson",
+     "team": "British Columbia Lions",
+     "college": "Southern Illinois"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2016nfldraft.html",
+   "year": 2016,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 253,
+   "not_held": 5,
+   "agree": 248,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 174,
+     "round": 5,
+     "name": "Fahn Cooper",
+     "team": "San Francisco 49ers",
+     "college": "Mississippi"
+    },
+    {
+     "overall": 180,
+     "round": 6,
+     "name": "Moritz Boehringer",
+     "team": "Minnesota Vikings",
+     "college": "none"
+    },
+    {
+     "overall": 223,
+     "round": 7,
+     "name": "Brandon Doughty",
+     "team": "Miami Dolphins",
+     "college": "Western Kentucky"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2017cfldraft.html",
+   "year": 2017,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 71,
+   "not_held": 21,
+   "agree": 49,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 2,
+     "name": "Mason Woods",
+     "team": "Toronto Argonauts",
+     "college": "Idaho"
+    },
+    {
+     "overall": 16,
+     "round": 2,
+     "name": "Jeremy Zver",
+     "team": "British Columbia Lions",
+     "college": "Regina"
+    },
+    {
+     "overall": 29,
+     "round": 4,
+     "name": "Alex Morrison",
+     "team": "Montreal Alouettes",
+     "college": "British Columbia"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 3,
+     "name": "Danny Vandervoort",
+     "fields": {
+      "college": [
+       "McMaster",
+       "Stanford"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_2017nfldraft.html",
+   "year": 2017,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 253,
+   "not_held": 13,
+   "agree": 240,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 121,
+     "round": 4,
+     "name": "Joe Williams",
+     "team": "San Francisco 49ers",
+     "college": "Utah"
+    },
+    {
+     "overall": 126,
+     "round": 4,
+     "name": "Howard Wilson",
+     "team": "Cleveland Browns",
+     "college": "Houston"
+    },
+    {
+     "overall": 147,
+     "round": 5,
+     "name": "Jordan Morgan",
+     "team": "Chicago Bears",
+     "college": "Kutztown"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2018cfldraft.html",
+   "year": 2018,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 69,
+   "not_held": 26,
+   "agree": 43,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 16,
+     "round": 2,
+     "name": "David Mackie",
+     "team": "British Columbia Lions",
+     "college": "Western Ontario"
+    },
+    {
+     "overall": 27,
+     "round": 4,
+     "name": "K.C. Bakker",
+     "team": "Montreal Alouettes",
+     "college": "Carleton"
+    },
+    {
+     "overall": 30,
+     "round": 4,
+     "name": "Mikael Cote",
+     "team": "Ottawa REDBLACKS",
+     "college": "Concordia (Quebec)"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2018nfldraft.html",
+   "year": 2018,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 256,
+   "not_held": 7,
+   "agree": 249,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 107,
+     "round": 4,
+     "name": "Christopher Herndon IV",
+     "team": "New York Jets",
+     "college": "Miami (Florida)"
+    },
+    {
+     "overall": 138,
+     "round": 5,
+     "name": "Cole Madison",
+     "team": "Green Bay Packers",
+     "college": "Washington State"
+    },
+    {
+     "overall": 191,
+     "round": 6,
+     "name": "Dylan Cantrell",
+     "team": "Los Angeles Chargers",
+     "college": "Texas Tech"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2019cfldraft.html",
+   "year": 2019,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 73,
+   "not_held": 27,
+   "agree": 46,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 9,
+     "round": 2,
+     "name": "Robert Smith",
+     "team": "Toronto Argonauts",
+     "college": "Wilfrid Laurier"
+    },
+    {
+     "overall": 24,
+     "round": 3,
+     "name": "Sheridan Lawley",
+     "team": "Hamilton Tiger-Cats",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 25,
+     "round": 3,
+     "name": "Connor Griffiths",
+     "team": "Winnipeg Blue Bombers",
+     "college": "British Columbia"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2019nfldraft.html",
+   "year": 2019,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 254,
+   "not_held": 13,
+   "agree": 240,
+   "disagree": 1,
+   "examples_not_held": [
+    {
+     "overall": 67,
+     "round": 3,
+     "name": "Jalen Hurd",
+     "team": "San Francisco 49ers",
+     "college": "Baylor"
+    },
+    {
+     "overall": 105,
+     "round": 4,
+     "name": "C.J. Gardner-Johnson",
+     "team": "New Orleans Saints",
+     "college": "Florida"
+    },
+    {
+     "overall": 112,
+     "round": 4,
+     "name": "Bryce Love",
+     "team": "Washington Redskins",
+     "college": "Stanford"
+    }
+   ],
+   "examples_disagree": [
+    {
+     "overall": 158,
+     "name": "Mike Jackson",
+     "fields": {
+      "college": [
+       "Miami (Florida)",
+       "Miami (FL)"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "page": "drafts_2020cfldraft.html",
+   "year": 2020,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 73,
+   "not_held": 31,
+   "agree": 42,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 12,
+     "round": 2,
+     "name": "Trivel Pinto",
+     "team": "Calgary Stampeders",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Alain Pae",
+     "team": "Edmonton Eskimos",
+     "college": "Ottawa"
+    },
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Nathan Rourke",
+     "team": "British Columbia Lions",
+     "college": "Ohio University"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2020nfldraft.html",
+   "year": 2020,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 255,
+   "not_held": 6,
+   "agree": 249,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 129,
+     "round": 4,
+     "name": "Cameron Clark",
+     "team": "New York Jets",
+     "college": "North Carolina-Charlotte"
+    },
+    {
+     "overall": 159,
+     "round": 5,
+     "name": "Justin Rohrwasser",
+     "team": "New England Patriots",
+     "college": "Marshall"
+    },
+    {
+     "overall": 202,
+     "round": 6,
+     "name": "Evan Weaver",
+     "team": "Arizona Cardinals",
+     "college": "California"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2021cfldraft.html",
+   "year": 2021,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 54,
+   "not_held": 16,
+   "agree": 38,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 9,
+     "round": 1,
+     "name": "Nic Cross",
+     "team": "Hamilton Tiger-Cats",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 22,
+     "round": 3,
+     "name": "Ben Hladik",
+     "team": "British Columbia Lions",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 23,
+     "round": 3,
+     "name": "Deonte Glover",
+     "team": "Edmonton Eskimos",
+     "college": "Shepherd"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2021nfldraft.html",
+   "year": 2021,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 259,
+   "not_held": 8,
+   "agree": 251,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 9,
+     "round": 1,
+     "name": "Pat Surtain",
+     "team": "Denver Broncos",
+     "college": "Alabama"
+    },
+    {
+     "overall": 43,
+     "round": 2,
+     "name": "Tre'von Moehrig",
+     "team": "Las Vegas Raiders",
+     "college": "Texas Christian"
+    },
+    {
+     "overall": 171,
+     "round": 5,
+     "name": "Daelin Hayes",
+     "team": "Baltimore Ravens",
+     "college": "Notre Dame"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2022cfldraft.html",
+   "year": 2022,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 74,
+   "not_held": 29,
+   "agree": 45,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Nathan Cherry",
+     "team": "British Columbia Lions",
+     "college": "Saskatchewan"
+    },
+    {
+     "overall": 21,
+     "round": 3,
+     "name": "Marc-David Bien-Aime",
+     "team": "Edmonton Eskimos",
+     "college": "Fresno State"
+    },
+    {
+     "overall": 25,
+     "round": 3,
+     "name": "Demetri Royer",
+     "team": "Calgary Stampeders",
+     "college": "Western Illinois"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2022nfldraft.html",
+   "year": 2022,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 262,
+   "not_held": 14,
+   "agree": 248,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 51,
+     "round": 2,
+     "name": "Cam Jurgens",
+     "team": "Philadelphia Eagles",
+     "college": "Nebraska"
+    },
+    {
+     "overall": 59,
+     "round": 2,
+     "name": "Ed Ingram",
+     "team": "Minnesota Vikings",
+     "college": "Louisiana State"
+    },
+    {
+     "overall": 104,
+     "round": 3,
+     "name": "Logan Bruss",
+     "team": "Los Angeles Rams",
+     "college": "Wisconsin"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2023cfldraft.html",
+   "year": 2023,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 72,
+   "not_held": 27,
+   "agree": 45,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 14,
+     "round": 2,
+     "name": "Siriman Bagayogo",
+     "team": "British Columbia Lions",
+     "college": "Guelph"
+    },
+    {
+     "overall": 25,
+     "round": 3,
+     "name": "Josh White",
+     "team": "Ottawa REDBLACKS <",
+     "college": "Regina"
+    },
+    {
+     "overall": 32,
+     "round": 4,
+     "name": "Theo Grant",
+     "team": "Montreal Alouettes",
+     "college": "Queen's"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2023nfldraft.html",
+   "year": 2023,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 259,
+   "not_held": 20,
+   "agree": 239,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 57,
+     "round": 2,
+     "name": "John Michael Schmitz",
+     "team": "New York Giants",
+     "college": "Minnesota"
+    },
+    {
+     "overall": 97,
+     "round": 3,
+     "name": "Ricky Stromberg",
+     "team": "Washington Commanders",
+     "college": "Arkansas"
+    },
+    {
+     "overall": 101,
+     "round": 3,
+     "name": "Cameron Latu",
+     "team": "San Francisco 49ers",
+     "college": "Alabama"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2024cfldraft.html",
+   "year": 2024,
+   "league": "CFL",
+   "kind": "draft",
+   "picks_on_the_page": 74,
+   "not_held": 23,
+   "agree": 51,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 13,
+     "round": 2,
+     "name": "Kevens Clericus",
+     "team": "Winnipeg Blue Bombers",
+     "college": "Connecticut"
+    },
+    {
+     "overall": 15,
+     "round": 2,
+     "name": "Theo Benedet",
+     "team": "British Columbia Lions",
+     "college": "British Columbia"
+    },
+    {
+     "overall": 26,
+     "round": 3,
+     "name": "Cristophe Beaulieu",
+     "team": "British Columbia Lions",
+     "college": "Laval"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2024nfldraft.html",
+   "year": 2024,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 257,
+   "not_held": 38,
+   "agree": 219,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 10,
+     "round": 1,
+     "name": "J.J. McCarthy",
+     "team": "Minnesota Vikings",
+     "college": "Michigan"
+    },
+    {
+     "overall": 11,
+     "round": 1,
+     "name": "Olu Fashanu",
+     "team": "New York Jets",
+     "college": "Penn State"
+    },
+    {
+     "overall": 20,
+     "round": 1,
+     "name": "Troy Fautanu",
+     "team": "Pittsburgh Steelers",
+     "college": "Washington"
+    }
+   ],
+   "examples_disagree": []
+  },
+  {
+   "page": "drafts_2025nfldraft.html",
+   "year": 2025,
+   "league": "NFL",
+   "kind": "draft",
+   "picks_on_the_page": 257,
+   "not_held": 256,
+   "agree": 1,
+   "disagree": 0,
+   "examples_not_held": [
+    {
+     "overall": 1,
+     "round": 1,
+     "name": "Cam Ward",
+     "team": "Tennessee Titans",
+     "college": "Miami (Florida)"
+    },
+    {
+     "overall": 2,
+     "round": 1,
+     "name": "Travis Hunter",
+     "team": "Jacksonville Jaguars",
+     "college": "Colorado"
+    },
+    {
+     "overall": 3,
+     "round": 1,
+     "name": "Abdul Carter",
+     "team": "New York Giants",
+     "college": "Penn State"
+    }
+   ],
+   "examples_disagree": []
+  }
+ ]
+}
