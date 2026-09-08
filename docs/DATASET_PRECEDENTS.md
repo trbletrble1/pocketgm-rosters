@@ -533,7 +533,7 @@ session meets them as data rather than rediscovering them.*
 
 ## An empty result and a failed one are the same bytes
 
-**Fourth instance, 2026-09-04.** Four times now, in four different mechanisms, an
+**Fifth instance, 2026-09-07.** Five times now, in five different mechanisms, an
 absence has been indistinguishable from a breakage:
 
 1. **archive.org 302** — a redirect to a login page, saved as a document. Recorded
@@ -546,6 +546,16 @@ absence has been indistinguishable from a breakage:
 4. **13 team pages that parse to zero rows** while a league page links them —
    CFL 1945–54 and the two WFL-1974 mid-season relocations. They contributed
    nothing, and contributed it silently.
+5. **A programme extractor reporting 2 men for a page carrying 32**, 2026-09-07.
+   All 27 surnames and all 4 staff names are present in all three OCR texts, so
+   nothing was lost in reading the photograph. The page is set in two columns and
+   its entries are bio paragraphs, and every exit that discarded a band —
+   multi-number, no-name-matched, too-few-numbers — was a bare `continue`. Both
+   of the 2 it did report were false: `New`, from "New York Univefsity", and
+   `DEWEY`, a forename whose surname arrived as `LYLE—29 years,`. **The true
+   yield was 0 of 28, reported as 2.** Corpus-wide, 299 men reported against 407
+   multi-number bands and 209 name-failed bands dropped uncounted, and 536 of 667
+   images discarded before banding.
 
 Adjacent, same family: `AFL2 1936` and `NFLE 1997` render a league page and list
 no rosters; `CFL 2020` renders and lists no teams, because the season was
@@ -566,6 +576,15 @@ three obligations:
   `CFL-2020` is declared as a season not played; the ingest exits with that
   reason rather than reporting a match-rate failure that invites a retry. A
   retry would fetch the same empty page forever.
+
+**And the fifth adds an obligation the first four did not need.** Those were
+about a fetch or a parse that produced nothing; this is about one that produced
+*a number*. **A silent zero is the most expensive value an extractor can
+return** — a page that yields nothing and a page that has nothing are the same
+output, and a yield report cannot tell you which it saw. **Every drop must be
+counted where the count is published, not merely `continue`d.** Instrumenting the
+drops changed nothing about what the extractor accepted and changed everything
+about what could be believed of it.
 
 **The tell to watch for is a suspiciously round success**: 100% fill, 0 errors,
 0 rows. Three of the four above announced themselves as clean results. The
@@ -861,10 +880,11 @@ appeared in games for them, not because a league recognised them. The unit that
 carries evidence is the unit that enters.
 
 *Where two rulings appeared to collide — the minor-league exclusion against this
-one, on a page that recorded an NFL club beating an Eastern League club — they
-collided only because the unit was being taken as the league. Keep the unit the
-game and both hold: the exclusion keeps the season out, this admits the one
-club-game.*
+one, on a page that recorded an NFL club beating an Eastern League club —* **they
+only collide if the unit is the league.** *Keep the unit the game and both hold
+intact: the exclusion keeps the league's season out, its standings and its
+championship with it, while this admits the one club-game and nothing else. One
+club-game enters; a ten-club league does not.*
 
 **And where a club is genuinely hard to call professional or not, stop and ask.**
 Do not decide it in passing while doing something else. The ruling admits *a
@@ -1135,6 +1155,12 @@ citation the author never made.** The list describes the site; it describes no
 page in it. A claim whose citation is a guess cannot be checked, cannot be
 corrected, and is indistinguishable from one read off the page.
 
+**Inventing provenance is worse than admitting you have none.** `unstated` is a
+stated absence, and it is the same distinction the archive already draws between
+a value that is absent and one that was never measured — see *an absence is not
+the string "None"*. A guessed citation collapses that distinction at the point
+where it matters most.
+
 **And the gap is useful.** *Which paper did this roster come from* is a specific
 question that can be put to a living author. A fabricated citation would have
 closed it forever.
@@ -1142,6 +1168,43 @@ closed it forever.
 *This is the first source found for the archive that does not descend from Neft's
 1970s reconstruction — which makes what it is cited as, and what it is not,
 matter more than usual.*
+
+---
+
+## The value of a source is at the edges of what other sources cover
+
+2026-09-07, judging a hobbyist website about defunct professional football, and
+the finding that outranked the one everybody was looking at.
+
+The obvious prize on such a site is the defunct league — and it had one, with a
+full standings table. **The actual prize was three club-seasons at the edges of
+clubs the archive already holds:**
+
+| | archive holds | the site has |
+|---|---|---|
+| Frankford Yellow Jackets 1922 | **0 men** | a roster page |
+| Frankford Yellow Jackets 1923 | **0 men** | a roster page |
+| Pottsville Maroons 1929 | **0 men** | a roster page |
+| *Pottsville Maroons 1924* | *0 men* | *a season schedule — games, not men* |
+
+Frankford joined the NFL in 1924 and Pottsville ran 1925–28. **Every source the
+archive holds for those clubs is league-derived, so every one of them starts and
+stops at the same boundary** — and the seasons on either side are invisible to
+all of them at once. No amount of re-reading the sources already held will
+produce them, because none of them is looking there.
+
+**The rule: when judging a source, measure it against the boundaries of the
+sources you already have, not against their volume.** The middle years were
+richly held and this site would have added 36 facts, mostly weight. The edge
+years were held at zero and it takes them from nothing to a team. **The same
+pages, ranked by the wrong question, look like the less interesting half of the
+site.**
+
+*The corollary is a hunting rule. A gap of this kind cannot appear in any list
+built from the club table, because the club-seasons are not in it — a list of
+what is empty can only show you the holes someone has already framed. Finding
+them takes a source that was never organised by the league, which is why one
+researcher working from local newspapers produced three of them in a day.*
 
 ---
 
