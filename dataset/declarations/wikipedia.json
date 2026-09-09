@@ -20,12 +20,59 @@
   "era_cut": 1950
  },
  "PHOTOGRAPHS": {
-  "rule": "GAP-FILL ONLY. Never overwrite a photograph already held.",
+  "rule": "NEVER SHRINK. A photograph may be written for a man who already holds one only if it is LARGER on the shorter side than what he holds. Equal or smaller is refused. Fair use is refused whatever its size.",
   "licence": "PUBLIC DOMAIN or OPEN CC. Fair use is EXCLUDED.",
   "_why_not_PD_alone": "all seven CFL images measured were open CC and none were public domain, so a PD-only filter would silently drop the CFL entirely.",
   "_verified_keys": "lives in the GAME roster files under tools/, not in this store. This ingest writes only dataset/build/wikipedia.json and touches no game file.",
-  "licence_allow_pattern": "public domain|^pd\\b|^pd-|^cc[ -]?(by|0)",
-  "licence_refuse_pattern": "fair use|non-free"
+  "licence_allow_pattern": "public domain|^pd\\b|^pd-|^cc[ -]?(by|0)|^no restrictions$|^gfdl$",
+  "licence_refuse_pattern": "fair use|non-free",
+  "licence_families": {
+   "public-domain": "matches public domain|^pd\\b|^pd-; attribution not required",
+   "open-cc": "CC BY / BY-SA / CC0; attribution required except CC0",
+   "free-other": "'No restrictions' (attribution not required) and 'GFDL' (attribution required). RULED 2026-09-06 by Ryan: both are free licences, neither is fair use. The raw string is recorded AS PRINTED -- 'No restrictions' is not normalised into anything tidier; it is what the source says."
+  },
+  "_RULING_2026_09_06_unrecognised_licences": "INCLUDE. 13 'No restrictions' -- Vancouver Public Library archival scans, almost all CFL 1937-1966, the league the archive is worst at and the case the PD-or-open-CC rule was made for -- and 2 GFDL. Named in build/wikipedia-photos-sweep.json.",
+  "infobox_base_pattern": "Infobox (gridiron football|NFL|College football|CFL)|American football (player|coach)|Canadian football",
+  "infobox_allow_pattern": "Infobox (gridiron football|NFL|College football|CFL|college coach)|American football (player|coach)|Canadian football",
+  "_RULING_2026_09_06_infobox": "EXTEND to 'Infobox college coach': it was dropping Glenn Killinger -- the case that motivated the pass. DO NOT extend to 'Infobox sportsperson': measured, it admitted a wrestling-programme image with no club named.",
+  "_college_coach_requires_club_named": "An article admitted ONLY by the college-coach extension (matches infobox_allow_pattern but not infobox_base_pattern) is taken ONLY on club-named evidence, whatever the era. 'Infobox college coach' is sport-agnostic. MEASURED 2026-09-06 on the 22 such admissions: the 17 club-named ones are football articles (23-109 mentions of 'football'); the 5 name-unique ones were Dan Hurley (0 football, 133 basketball), Pat Foster (0/69), Steve Hawkins (0/97) -- basketball coaches -- and two stubs with no sport words at all. Refused, named in the build under refused.college_coach_not_club_named.",
+  "evidence_tiers": {
+   "club-named": "the image sits on the man's own article AND the article names his club. method article-subject+club-named. The stronger tier; REQUIRED before era_cut.",
+   "name-unique": "the image sits on the man's own article; the article does not name his club; the name is unique in the person universe. method article-subject+name-unique. Post-era_cut only. RULED 2026-09-06: SEPARATE, NOT EXCLUDE -- ingested on its own tier, distinguishable by `evidence_tier` on the claim and the denotation without re-deriving anything."
+  },
+  "_RULING_2026_09_07_gap_fill_dropped": "GAP-FILL ONLY is SUPERSEDED, ruled 2026-09-07 by Ryan. Gap-fill never compared: it kept a 70x90 video-game-mod thumbnail over a clean-licensed photograph every time the man already held anything at all. MEASURED: 2,329 people were skipped on that rule across the two sweeps -- 1,752 holding a PSF file, 432 holding a Wikipedia image, 145 holding the older unlicensed ingest. The comparison it declined to make is now the rule.",
+  "REPLACEMENT": {
+   "compare_on": "shorter_side_px",
+   "_why_shorter_side": "these are portraits; a 70x90 image is 70px wide however tall it is.",
+   "strictly_larger": true,
+   "held_size_unknown": "REFUSE. A replacement that cannot be SHOWN to be larger has not been shown to be a gain. Counted and named under refused.held_size_unknown, never guessed at and never taken on the assumption that anything beats a thumbnail.",
+   "held_claim_is_kept": "The superseded photograph's claim is NEVER deleted or rewritten. The new claim names it in `supersedes`, and the old one stays readable. The archive says what it held and why it stopped preferring it -- consistent with DISAGREEMENTS_ARE_HELD, and it keeps this ingest out of build files it does not own (photos.json is the PSF set's, not this run's)."
+  },
+  "MEASURED_NOT_PROMISED": {
+   "rule": "Record the dimensions that WERE measured, and record that portrait usability was NOT. The store must not carry a usability verdict it did not earn.",
+   "measured_fields": [
+    "width_px",
+    "height_px",
+    "shorter_side_px",
+    "bytes",
+    "format"
+   ],
+   "measured_from": "the downloaded file's own header, never the API's report",
+   "_why_not_the_api": "MEASURED 2026-09-07 on the 432: two files' on-disk dimensions disagree with what the API reported. The API's number is a claim ABOUT the file, not the file.",
+   "portrait_usability": "unassessed",
+   "_why_unassessed": "Dimensions overstate portrait usability for full-body and group shots. Al Bedner at 447px is a sharp full-length 1918 photograph whose FACE is roughly 60px -- worse as a page portrait than a clean 240px headshot. The usable quantity is the face region and the face region is NOT measured here. A >=200px count is a floor, not a promise, and nothing downstream may read it as one. RULED 2026-09-07 by Ryan."
+  },
+  "RIGHTS_SUPERSEDES_RIGHTS_UNKNOWN": {
+   "rule": "A rights-clear photograph supersedes a rights-UNKNOWN one on rights alone, whatever their sizes. RULED 2026-09-07 by Ryan.",
+   "_this_is_not_an_exception_to_never_shrink": "It is a SEPARATE rule with a separate reason, and reading it as an exception would weaken the size rule wrongly. NEVER SHRINK compares two photographs the archive may BOTH publish and asks which is better. This rule compares one the archive may publish with one it may not, and asks which is worth anything on a page. A rights-unknown image cannot be published at all, so its size is not a quality to protect; a smaller rights-clear one is worth something.",
+   "never_shrink_applies_within": "the same rights status. Size decides between two rights-clear images. Rights decides between a rights-clear and a rights-unknown one. The two rules never both apply to the same pair, and neither ever overrides the other.",
+   "rights_clear_means": "the held claim records a licence that licence_allow_pattern recognises.",
+   "rights_unknown_means": "the held claim records NO licence at all -- not a licence we dislike. Fair use never appears here in either position: it is refused as a candidate under licence_refuse_pattern and is never written, so it can neither supersede nor be superseded.",
+   "_measured_2026_09_07": "Of 2,329 people skipped by the old gap-fill rule, 1,897 hold a rights-unknown photograph -- 1,752 the PSF set, which carries no licence at all and no right to redistribute (declarations/psf-photos.json), and 145 the older wikipedia.json ingest, which recorded a filename and no licence. The remaining 432 hold a rights-clear Wikipedia image and are decided on SIZE, by NEVER SHRINK.",
+   "_the_size_rule_still_does_the_work_it_was_made_for": "Applying this rule to the PSF set changes the OUTCOME for very few people -- PSF is 70x90 and almost any candidate beats it on size anyway (measured: 5 of 1,745 did not). What it changes is the REASON, and the reason is the part that has to be right: those photographs are taken because the archive may use them, not because they are bigger.",
+   "held_claim_is_kept": "Never deleted, never rewritten, exactly as under REPLACEMENT. The new claim names what it supersedes and says which of the two rules took it.",
+   "recorded_on_the_claim_as": "superseded_on"
+  }
  },
  "PROSE": {
   "capture_the_citation": "a cited prose claim and an uncited one must be distinguishable in the store. 48.2% of narrative sentences carry an inline citation.",
@@ -44,6 +91,7 @@
   "access": "how it was fetched; the politeness contract, not a code path",
   "RANK": "where this source sits against guides and newspapers. Ranking is applied at resolution, not at ingest, so nothing here reads it yet.",
   "DISAGREEMENTS_ARE_HELD": "a statement of policy; the ENFORCEMENT is that ingest_wikipedia never resolves, and gate_wikipedia proves both values survive",
-  "PROSE": "free prose about why citations travel with claims; the enforcement is the required `cited` field"
+  "PROSE": "free prose about why citations travel with claims; the enforcement is the required `cited` field",
+  "_RULING_2026_09_07_gap_fill_dropped": "the record of why gap-fill was dropped; the ENFORCEMENT is REPLACEMENT plus src/gate_wikipedia_photos.py"
  }
 }

@@ -1278,14 +1278,16 @@
    "UFL": "United Football League, 2009-2012",
    "UFL2": "United Football League (revival), 2024",
    "AAF": "Alliance of American Football, 2019",
-   "CFL": "Canadian Football League"
+   "CFL": "Canadian Football League",
+   "ARENA": "Arena Football League, 1987-2019. VERIFIED 2026-09-07 by enumerating every year 1987-2025: 32 years serve team lists (404 club-seasons, 84 distinct codes) and a roster page parses to a full table -- #, Player, Pos., Birth Date, Height, Weight, College, Hometown, GP. 2009 is EMPTY AND CORRECT (the league cancelled that season); 2020-2025 are empty because this league folded in 2019 and the 2024 revival is a different body. ITS TEAM CODES ARE ALREADY NAMESPACED -- ARENAALB, ARENAARI, ARENABUF -- so they cannot collide with the NFL's ARI/BUF/CLE the way PFA's Arena city codes do."
   },
   "TRAPS": {
    "AFL3": {
     "resolves_to": "the ARENA Football League - a DIFFERENT SPORT",
     "danger": "A build reaching for 'the third AFL' (1940-41) gets arena football. The page renders normally and the rows parse, so nothing objects.",
     "verified": "2026-09-04, AFL3/1940 returns the title '1940 Arena Football League'",
-    "rule": "NEVER use AFL3. There is no StatsCrew code for the 1926, 1936-37 or 1940-41 AFLs."
+    "rule": "NEVER use AFL3. There is no StatsCrew code for the 1926, 1936-37 or 1940-41 AFLs.",
+    "ALSO_NOT_THE_ARENA_CODE_TO_USE": "AFL3 does serve arena football, but it is a STUB: 33,869 bytes IDENTICAL for 1987, 2000 and 2019, zero roster links -- the same renders-but-lists-nothing shape as AFL2 and NFLE. The usable Arena code is ARENA, declared above. AFL3 stays refused: a build reaching for the third AFL (1940-41) must still not get arena football."
    },
    "AFL2": {
     "resolves_to": "1936 American Football League - the page EXISTS but carries NO roster links",
