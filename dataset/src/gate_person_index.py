@@ -153,7 +153,18 @@ def selftest():
 
 
 # ---------------------------------------------------------------- P3 -----------
-def population(idx):
+def population(idx, drop=()):
+    """`drop` -- ids a DECLARED one-time transition is removing. They are excluded from the
+    baseline entirely, not just forgiven for vanishing: an id that is leaving on purpose
+    also takes its counted fields with it, and leaving them in the `before` totals makes
+    every count fall and blocks the very rebuild the transition was declared to allow.
+    The 1,596 promotion shells each held a `coaching_seasons` block, so `coaching_seasons`
+    fell 3,390 -> 1,794 and P3 refused a removal that had been declared and approved."""
+    idx = {k: v for k, v in idx.items() if k not in drop} if drop else idx
+    return _population(idx)
+
+
+def _population(idx):
     """What a rebuild must not lose. Per-person season keys plus counted fields.
 
     A season key is recorded under BOTH its current name and, when apply_club_keys
@@ -169,7 +180,13 @@ def population(idx):
         if pid == "_clubs" or not isinstance(v, dict): continue
         n["entries"] += 1
         sd = v.get("seasons") or {}
-        ks = set(sd.keys())
+        # A SEASON KEY IS A SEASON KEY IN EITHER DICT. Ruled 2026-09-09: a coaching
+        # season is held in `coaching_seasons`, decided by its predicate, so the
+        # rebuild that carried that ruling MOVED 24,268 keys out of `seasons`. A
+        # rebuild that moves a key has lost nothing, and P3 must be able to tell that
+        # from a rebuild that deletes one. Taking the union does exactly that: a key
+        # that leaves BOTH dicts still fails, which is the property P3 exists for.
+        ks = set(sd.keys()) | set((v.get("coaching_seasons") or {}).keys())
         for k, s in sd.items():
             if isinstance(s, dict) and s.get("_club_as_printed"):
                 parts = k.split("|")
@@ -179,9 +196,16 @@ def population(idx):
         # apply_club_keys keeps the printed name and the whole original record in the person's
         # own rewrite note instead. The key is renamed and folded, not lost, and the note is the
         # proof -- only keys the applier itself recorded are forgiven here.
-        for r in (v.get("_club_key_normalisations") or []):
-            if r.get("from") and r.get("to") in ks: ks.add(r["from"])
-        if sd: n["with_season"] += 1
+        # A RENAME IS NOT A LOSS, AND THE NOTE IS THE PROOF. Two steps rename season
+        # keys and each records what it did: apply_club_keys (a club's printed name to
+        # its code) and, since 2026-09-09, build_person_index (a coaching season moved
+        # to `coaching_seasons`, `y1979` to `1979`, `COACHES` to the league another
+        # source names). Only keys the renamer ITSELF recorded are forgiven, so a key
+        # that simply disappeared still fails.
+        for field in ("_club_key_normalisations", "_coaching_key_normalisations"):
+            for r in (v.get(field) or []):
+                if r.get("from") and r.get("to") in ks: ks.add(r["from"])
+        if sd or v.get("coaching_seasons"): n["with_season"] += 1
         seasons[pid] = ks
         if not (ks or v.get("name") or v.get("person") or v.get("coaching_seasons")
                 or v.get("officiating_seasons") or v.get("person_season")): empty.add(pid)

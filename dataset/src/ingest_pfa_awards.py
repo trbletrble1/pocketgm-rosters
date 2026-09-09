@@ -27,6 +27,22 @@ can be read as a season.
 """
 import os, re, sys, json, collections, sqlite3
 
+_SP = {}
+def STAFF_PREDICATE_SQL():
+    # STAFF IS A PREDICATE, NOT A LEAGUE. `league not in ('COACHES',...)` let 41,662
+    # of 54,908 staff claims through as players once the coaching subjects carried real
+    # leagues, so this pool held 30,364 STAFF-ONLY (club, year, person) pairs -- coaches
+    # offered as candidates for a player's award, statistic line or roster gap.
+    # declarations/coaching-seasons.json is the list.
+    if not _SP:
+        import os as _o, json as _j
+        _d = _j.load(open(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), "..",
+                                       "declarations", "coaching-seasons.json")))
+        _p = sorted(_d["staff_predicates"]["predicates"])
+        _SP["sql"] = "predicate not in (" + ",".join("'" + x + "'" for x in _p) + ")"
+    return _SP["sql"]
+
+
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 sys.path.insert(0, os.path.join(BASE, "service"))
@@ -102,8 +118,8 @@ def rosters(conn):
     out = collections.defaultdict(set)
     for cid, y, p in conn.execute(
             "select club_id, year, person from claim where scope='stint' "
-            "and club_id is not null and person is not null and league not in "
-            "('COACHES','ASSISTANTS','SALARIES','COACH') group by club_id, year, person"):
+            "and club_id is not null and person is not null and " + STAFF_PREDICATE_SQL() +
+            " group by club_id, year, person"):
         out[(cid, y)].add(p)
     return out
 

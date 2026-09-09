@@ -1,0 +1,62 @@
+{
+ "_what": "A COACHING SEASON IS HELD IN ONE SHAPE. Ruled by Ryan, 2026-09-09. The person index holds a man's stint seasons in two dicts: `seasons` and `coaching_seasons`. A stint claim belongs to `coaching_seasons` if and only if its PREDICATE is one of the staff predicates below. Nothing decides it by league token, by store name, or by how the man entered the archive.",
+ "_the_defect_this_replaces": {
+  "_measured_2026_09_09": "The index held coaching seasons in THREE non-overlapping shapes: 7,201 keys in `seasons` under a `COACHES` league token (from coaches, coaches-nfl, assistants -- stores whose declared token is COACHES); 17,067 keys in `seasons` under a REAL league token (from pfa-coaches, whose subjects name NFL-1979); and 12,656 in `coaching_seasons` (written by apply_promotions for men promoted from a coaching lead). Zero keys appeared in both dicts.",
+  "_why_it_happened": "The split was by PROVENANCE, not by meaning. A man who entered the archive as a player and later gained PFA coaching claims got them in `seasons`; a man who existed only as a coach and was promoted from a lead got them in `coaching_seasons`. The same fact landed in a different dict depending on how the man arrived.",
+  "_what_it_cost": "Jack Pardee's `seasons` held `CFL|1995|BIR` -- a coaching claim -- in the dict 53 files read as playing seasons, and his `coaching_seasons` was empty. His served bio said he 'played thirty-two seasons' and 'played for seven clubs', four of which he only coached. 1,758 people were affected across 17,067 seasons."
+ },
+ "staff_predicates": {
+  "_what": "The predicates that make a stint a COACHING OR STAFF season rather than a playing one. Read on the predicate, never on the league: `pfa.coaching_season` is a coaching season whatever league it names. This list is the archive's, not the service's: src/build_person_index.py and service/classification.py both read it here, so there is one implementation.",
+  "predicates": [
+   "pfa.coaching_season",
+   "pfa.coaching_playoffs",
+   "role_title",
+   "is_head_coach"
+  ],
+  "stores_that_carry_them": [
+   "coaches-nfl",
+   "coaches",
+   "pfa-coaches",
+   "coach-seasons-promoted",
+   "assistants"
+  ],
+  "not_staff_though_it_appears_in_those_stores": {
+   "shared_or_split_season": "A QUALIFIER on a head-coaching claim, not a staff claim in itself: 469 claims, all in coaches-nfl, all value true. Measured 2026-09-09: 0 (person, club-season) pairs hold it without also holding a declared staff predicate, so it never decides anything alone. It travels with the season it qualifies."
+  },
+  "_officials_are_not_here": "`pfa.officiating_season` is person_season-scoped and carries no club, because PFA assigns an official to a league and a season and never to a team. There is no stint, so there is no season key and nothing to sort."
+ },
+ "_a_player_coach_keeps_both": "330 (person, club-season) pairs hold a playing claim AND a staff claim -- Glenn Dobbs at Saskatchewan, Bill Daddio at Buffalo, and Jack Pardee, who played and coached. The SAME KEY then appears in BOTH dicts, and that is correct and required: the exclusivity is per CLAIM, not per key. A player-coach is never made to choose, and no claim is written twice.",
+ "_salaries_stay_in_seasons": "The `salaries` store's 26 keys carry no staff predicate -- a court record about a man's PAY at a club is not a coaching season. They stay in `seasons`, which the predicate rule gives for free. `seasons` is therefore 'stints that are not staff', not 'playing stints', and the difference is 26 keys.",
+ "_the_league_token_on_a_coaching_key": {
+  "_problem": "coaches, coaches-nfl and assistants name no league anywhere -- their season keys read `y1979` -- so build_person_index writes the store's declared token, `COACHES`, in the league position. pfa-coaches names the league on the subject and writes `NFL`. Measured 2026-09-09: 3,281 (person, year, club) triples on 433 men were written TWICE, once under each, so moving both dicts' worth into one place without a rule would hold the same coaching season twice.",
+  "_rule": "Within one person's coaching seasons, a key whose league token is `COACHES` MERGES into a key with the same (year, club) that carries a real league. That is not inventing a league: it is two sources naming the same club-season, one of which says which competition it was. Where no source names one, the token stays `COACHES` -- the same reason `SALARIES` exists, stated in declarations/person-index-rebuild.json: the key shape has no way to write an empty league.",
+  "_year_format": "The year in a coaching key is written BARE. `coaches` and friends produced `y1979` because their season key is `y1979` and the builder took the last dash-separated part; pfa-coaches produced `1979`. One shape means one year format, and every consumer already carried `y[1:5] if y.startswith('y') else y` to cope. `seasons` keeps its 26 `y`-prefixed SALARIES keys, which this ruling does not touch."
+ },
+ "_gate": "src/gate_coaching_season_shape.py. Two properties, both derived from the index and the stores rather than from this file: (1) every (person, season key, predicate) is reachable from EXACTLY ONE of the two dicts -- never both, never neither; (2) a claim's dict follows its PREDICATE, so no staff predicate sits in `seasons` and no non-staff predicate sits in `coaching_seasons`, whatever league token the key carries.",
+ "roles": {
+  "_what": "WHERE A COACHING ROLE IS READ FROM, and which printed roles are HEAD-COACH roles. Ruled by Ryan, 2026-09-09: a coaching-only bio opens on where he coached, in what roles, across how long. The roles were in the archive all along and nothing read them.",
+  "_the_defect": "src/bio_select.coach_runs took a role only from `role_title` -- the Coaching Tree's predicate -- and took HEAD standing only from `is_head_coach`. PFA's coaching seasons carry neither: they carry `position_as_printed` inside the `pfa.coaching_season` value. Measured 2026-09-09: 1,046 distinct printed positions across 3,356 men, of whom PFA prints 706 as HEAD COACH -- and every one of those 706 was being read as an assistant with no role at all. 997 of the 2,138 coaching-only men then fell into a lead the writer had no branch for and returned 503.",
+  "role_predicates": [
+   "role_title",
+   "pfa.coaching_season",
+   "pfa.coaching_playoffs"
+  ],
+  "_role_predicates_note": "`role_title` carries the role directly. The two PFA predicates carry a dict; the role is its `position_as_printed`, held EXACTLY as printed -- 'Offensive Line', 'Assistant Strength and Conditioning', 'HEAD COACH' in PFA's own capitals. Nothing is rewritten or title-cased.",
+  "head_coach_positions": {
+   "_what": "The printed positions that mean the man WAS THE HEAD COACH that season. The test is on the FIRST slash-separated segment, upper-cased, and only against this list.",
+   "_why_the_first_segment": "PFA writes a compound job as 'HEAD COACH/Offensive Coordinator' (14) and also 'Offensive Line/Assistant Head Coach' (4). The first segment is the job; the rest is what else he did. Testing the whole string, or testing for the substring 'head coach', would make an Assistant Head Coach a head coach -- 758 seasons across 30 printed variants -- which is the opposite of what the source says.",
+   "_deliberately_excluded": {
+    "ASSISTANT HEAD COACH": "758 seasons across 30 variants. An assistant head coach is an assistant.",
+    "ASSOCIATE HEAD COACH": "52 seasons. Same.",
+    "ASSISTANT TO THE HEAD COACH": "and 'ASSISTANT TO HEAD COACH', 'SPECIAL ASSISTANT TO THE HEAD COACH' -- staff to the head coach, not the head coach.",
+    "HEAD STRENGTH AND CONDITIONING": "and 'HEAD OFFENSIVE LINE', 'HEAD QUALITY CONTROL' -- head OF something that is not the team."
+   },
+   "first_segments": [
+    "HEAD COACH",
+    "CO-HEAD COACH",
+    "HEAD OOACH"
+   ],
+   "_HEAD_OOACH": "1 season. PFA's typo for HEAD COACH, and it is DECLARED here rather than folded by a fuzzy match: the store keeps the string exactly as printed, and this list is the reading that recognises it. An edit-distance rule would also catch things that are not typos."
+  }
+ }
+}

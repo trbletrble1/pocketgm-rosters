@@ -9,6 +9,93 @@ sys.path.insert(0, HERE)
 import index_io as IO                # the only way the index is written (atomic)
 import gate_person_index as G        # P1/P2 before a rebuild, P3 around it
 DECL = os.path.join(BASE, "declarations", "person-index-rebuild.json")
+COACHING_DECL = os.path.join(BASE, "declarations", "coaching-seasons.json")
+
+
+def _coaching_decl():
+    return json.load(open(COACHING_DECL))
+
+
+def split_coaching(seasons, staff, qual):
+    """A COACHING SEASON IS HELD IN ONE SHAPE. Ruled by Ryan, 2026-09-09.
+
+    -> (playing_seasons, coaching_seasons), both keyed (league, year, club).
+
+    The dict a stint claim lands in is decided by its PREDICATE and by nothing else.
+    Before this, it was decided by how the man ENTERED THE ARCHIVE: a man already
+    held as a player got his PFA coaching seasons in `seasons` (17,067 of them, under
+    a real league token), a man promoted from a coaching lead got his in
+    `coaching_seasons` (12,656), and the stores that name no league got theirs in
+    `seasons` under a `COACHES` token (7,201). Three shapes, no overlap. Jack Pardee's
+    `CFL|1995|BIR` was a coaching claim sitting in the dict 53 files read as playing,
+    and his served bio said he played for seven clubs, four of which he only coached.
+
+    Three things happen here and each is declared:
+
+    A PLAYER-COACH KEEPS BOTH. The split is per CLAIM, not per key: a key holding a
+    jersey and a role_title appears in both dicts, carrying its own half in each. 330
+    (person, club-season) pairs are like that and none of them is made to choose.
+
+    A QUALIFIER TRAVELS. `shared_or_split_season` is not a staff claim -- it never
+    stands alone -- so it follows the staff claims on its own key, and stays put where
+    there are none.
+
+    ONE LEAGUE TOKEN AND ONE YEAR FORMAT. A coaching key from a store that names no
+    league carries the token `COACHES` and a `y1979` year; one from PFA carries `NFL`
+    and `1979`. 3,281 (person, year, club) triples on 433 men were written both ways.
+    The year is normalised bare, and a `COACHES` key MERGES into a real-league key for
+    the same (year, club) where one exists -- two sources naming one club-season, one
+    of which says which competition it was. Where none does, `COACHES` stays, for the
+    reason person-index-rebuild.json gives for `SALARIES`: the key shape cannot write
+    an empty league."""
+    playing, coaching, renames = {}, {}, []
+    for k, sd in seasons.items():
+        stint = sd.get("stint") or {}
+        staff_part = {pr: v for pr, v in stint.items() if pr in staff}
+        rest = {pr: v for pr, v in stint.items() if pr not in staff}
+        if staff_part:
+            for q in list(rest):
+                if q in qual: staff_part[q] = rest.pop(q)
+        if staff_part:
+            lg, y, club = k
+            ck = (lg, y[1:5] if y.startswith("y") and y[1:5].isdigit() else y, club)
+            tgt = coaching.setdefault(ck, {"stats": {}, "stint": {}})
+            tgt["stint"].update(staff_part)
+        if rest or sd.get("stats"):
+            playing[k] = {"stats": sd.get("stats") or {}, "stint": rest}
+    # THE LEAGUE TOKEN IS LEFT ALONE, and here is why, because it was tried the other way.
+    # 3,281 (person, year, club) triples on 433 men are written twice: once by a source
+    # that names the league (`NFL|1986|BUF`) and once by one that does not
+    # (`COACHES|1986|BUF`). Folding the second into the first looked like "one shape" --
+    # and it broke the club table. build_clubs corroborates a printed name against a code
+    # by finding ONE MAN who holds both FOR THE SAME LEAGUE-YEAR: that is how the Coaching
+    # Tree's "Buffalo Bisons" is known to be the Bills, from 21 person-seasons holding
+    # both that string and BUF under COACHES. Folding `COACHES|1986|BUF` into
+    # `NFL|1986|BUF` moved one half of every such pair into a different group, and every
+    # wrong-for-season string the Coaching Tree corroborates vanished. gate_clubs K2
+    # caught it.
+    #
+    # So a source that names no league keeps its own key. Two keys for one season is not
+    # two shapes -- it is two ATTESTATIONS, which is what the index has always held when
+    # two sources print a club differently, and the claims remain the record.
+    merged = {}
+    for (lg, y, c), sd in coaching.items():
+        tgt = merged.setdefault((lg, y, c), {"stats": {}, "stint": {}})
+        tgt["stint"].update(sd["stint"]); tgt["stats"].update(sd["stats"])
+    # EVERY RENAME IS RECORDED, because P3 must be able to tell a key that MOVED from a
+    # key that was DELETED. `y1979` -> `1979` and `COACHES` -> a real league are both
+    # renames; the proof is the note, exactly as apply_club_keys writes one for a club
+    # rename. Without it a rebuild that lost nothing reads as 24,268 losses.
+    for k, sd in seasons.items():
+        if not ({pr for pr in (sd.get("stint") or {})} & staff): continue
+        lg, y, c = k
+        yy = y[1:5] if y.startswith("y") and y[1:5].isdigit() else y
+        to = (lg, yy, c)
+        if to != k and to in merged:
+            renames.append({"from": "|".join(k), "to": "|".join(to),
+                            "why": "coaching season moved to `coaching_seasons` and normalised "
+                                   "(declarations/coaching-seasons.json)"})
+    return playing, merged, renames
 
 
 def resolve_person(store, pid, loc2g):
@@ -54,7 +141,9 @@ if _UNDECLARED:
                      f"any of them carrying a 'claims' key back in as a source. Declare them in "
                      f"report_stores_not_claim_sources (with a reason) first: {{k: _DERIVED[k] for k in sorted(_UNDECLARED)}}")
 REPORT_STORES = _DECLARED | set(_DERIVED)
-LEAGUE_TOKENS = {k: v.split(" ")[0] for k, v in (json.load(open(DECL)).get("store_league_tokens", {}) if os.path.exists(DECL) else {}).items() if not k.startswith("_")}
+sys.path.insert(0, os.path.join(BASE, "service"))
+import league_tokens as LT           # ONE implementation of the token rule, shared with the read model
+LEAGUE_TOKENS = LT.tokens(DECL)
 
 
 def read_claims(files, loc2g, held=None):
@@ -92,7 +181,12 @@ def read_claims(files, loc2g, held=None):
             no_claims.append({"store": st, "bytes": os.path.getsize(f), "top_level_keys": sorted(d)[:6] if isinstance(d, dict) else type(d).__name__}); continue
         is_stats = st.startswith("stats-")
         base = st[6:] if is_stats else st
-        league = LEAGUE_TOKENS.get(st) or base.split("-")[0].upper()     # declarations/person-index-rebuild.json store_league_tokens
+        # store_league_tokens, via service/league_tokens.py. None means the store has
+        # DECLARED it has no league; the league then comes from the season key on the
+        # subject, which is where that declaration says it lives. This line and the read
+        # model's used to be two copies of `v.split(" ")[0]` -- and they did not even
+        # agree, this one keying on `st` where the other keyed on `base`.
+        league = LT.store_league(st, LEAGUE_TOKENS)
         for c in d["claims"]:
             s = c.get("subject")
             if not isinstance(s, list) or len(s) < 2: continue
@@ -112,7 +206,8 @@ def read_claims(files, loc2g, held=None):
             if s[0] == "stint" and len(s) == 4:
                 club, season = s[2], str(s[3])
                 yr = season.split("-")[-1]
-                k = (league, yr, club)
+                # Where the store declares no league, the season key carries it.
+                k = (league or LT.from_season_key(season) or "", yr, club)
                 sd = P[g]["seasons"].setdefault(k, {"stats": {}, "stint": {}})
                 (sd["stats"] if is_stats else sd["stint"])[pred] = val
             elif s[0] == "person_season" and len(s) >= 3:
@@ -185,13 +280,23 @@ def main():
             for k2, sd in v["seasons"].items():
                 if k2[1] == yr: sd["stint"].setdefault(pred, val)
 
+    _cd = _coaching_decl()
+    STAFF = set(_cd["staff_predicates"]["predicates"])
+    QUAL = set(_cd["staff_predicates"]["not_staff_though_it_appears_in_those_stores"])
+    n_coach_keys = n_both = 0
     out = {}
     for g, v in P.items():
+        play, coach, renames = split_coaching(v["seasons"], STAFF, QUAL)
+        n_coach_keys += len(coach); n_both += len(set(play) & set(coach))
         rec = {"name": (v["name"].most_common(1)[0][0] if v["name"] else None),
                "slugs": v["slugs"],
                "person": {k: sorted(set(map(str, vs))) for k, vs in v["person"].items() if vs},
                "person_season": v["person_season"],
-               "seasons": {"|".join(k): d for k, d in sorted(v["seasons"].items())}}
+               "seasons": {"|".join(k): d for k, d in sorted(play.items())}}
+        if coach:
+            rec["coaching_seasons"] = {"|".join(k): d for k, d in sorted(coach.items())}
+        if renames:
+            rec["_coaching_key_normalisations"] = renames
         if v["person_absent"]:
             rec["person_absent"] = dict(sorted(v["person_absent"].items()))
         out[g] = rec
@@ -199,6 +304,8 @@ def main():
     print(f"absence claims kept apart from values: {sum(sum(v['person_absent'].values()) for v in P.values()):,} "
           f"across {n_abs:,} (person, field) pairs and {sum(1 for v in P.values() if v['person_absent']):,} people "
           f"-- these used to arrive as the string \"None\" in `person`")
+    print(f"coaching seasons sorted out of `seasons` by predicate: {n_coach_keys:,} keys; "
+          f"{n_both:,} keys are in BOTH dicts because the man played and coached that season")
     withseasons = sum(1 for v in out.values() if v["seasons"])
     out["_clubs"] = {f"{k[0]}|{k[1]}": v for k, v in clubs.items()}
     # The MERGE LAYER is applied last. build/person-merges.json records, with its
@@ -235,7 +342,9 @@ def rebuild():
     prev = p + ".prev"
     before = None
     if os.path.exists(p):
-        before = G.population(json.load(open(p)))
+        # The declared transition's ids are excluded from the BASELINE, not merely
+        # forgiven for vanishing -- see gate_person_index.population().
+        before = G.population(json.load(open(p)), drop=G._one_time_transition())
         shutil.copy2(p, prev)                          # the rollback point
     try:
         main()

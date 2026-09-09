@@ -297,13 +297,23 @@ def main():
     pages, bynorm = load_cache()
     idx = IO.load_index(); idx.pop("_clubs", None)
     byname, keys = people(idx)
+    # THE ARCHIVE'S HEAD COACHES BY (year, club), from `coaching_seasons` -- the one
+    # place a coaching season is held since 2026-09-09. This used to read `seasons` for
+    # a `COACHES` league token and a literal `is_head_coach`: it found 4,038 head-coach
+    # seasons and could not see 3,956 more, because PFA writes `pfa.coaching_season`
+    # with HEAD COACH in `position_as_printed` under a real league. Comparing the
+    # archive with Wikipedia over half the archive is worse than not comparing.
     arch_hc = collections.defaultdict(set)
-    for pid, ks in keys.items():
-        for k in ks:
+    for pid, rec in idx.items():
+        if not isinstance(rec, dict): continue
+        for k, sd in (rec.get("coaching_seasons") or {}).items():
             p = k.split("|")
-            if p[0] == "COACHES" and len(p) == 3:
-                st = (idx[pid]["seasons"][k].get("stint") or {})
-                if st.get("is_head_coach"): arch_hc[(p[1].lstrip("y"), p[2])].add(pid)
+            if len(p) != 3: continue
+            st = (sd.get("stint") or {}) if isinstance(sd, dict) else {}
+            head = bool(st.get("is_head_coach")) or any(
+                isinstance(v, dict) and "HEAD COACH" in str(v.get("position_as_printed", "")).upper()
+                for v in st.values())
+            if head: arch_hc[(p[1].lstrip("y"), p[2])].add(pid)
     C = ClubResolver(Clubs())
     summary = {}
     # AN ARTICLE BELONGS TO ONE LEAGUE BUILD. The 2024-present UFL category tree includes

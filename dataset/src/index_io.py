@@ -47,3 +47,4 @@ def load_index():
 
 def save_index(idx):
     dump_atomic(idx, INDEX_PATH)
+

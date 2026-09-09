@@ -1,7 +1,7 @@
 {
  "_note": "MEASUREMENT ONLY. No store written. Same cohort instrument as the 1934-46 check, pointed at the eras that are not finished.",
  "_scope": "every club-season before 1934, plus every season of AAF, AAFC, AFL, UFL, UFL2, USFL, USFL2, WFL, XFL",
- "club_seasons_in_scope": 603,
+ "club_seasons_in_scope": 496,
  "empty_club_seasons": [
   {
    "league": "EFL",
@@ -76,782 +76,6 @@
    "coach_or_staff": false
   },
   {
-   "league": "EFL",
-   "year": "1932",
-   "code": "PFA:MTV",
-   "name": "Mount Vernon Indians",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "EFL",
-   "year": "1932",
-   "code": "PFA:NEW",
-   "name": "Newark Fighting Irish",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "EFL",
-   "year": "1932",
-   "code": "PFA:NR",
-   "name": "New Rochelle Bulldogs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "EFL",
-   "year": "1932",
-   "code": "PFA:PAS",
-   "name": "Passaic Red Devils",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "EFL",
-   "year": "1932",
-   "code": "PFA:PAT",
-   "name": "Paterson Night Hawks",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "EFL",
-   "year": "1932",
-   "code": "PFA:WNY",
-   "name": "West New York Skeeters",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "IFL",
-   "year": "1933",
-   "code": "PFA:BAY",
-   "name": "Bayonne Vikings",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "IFL",
-   "year": "1933",
-   "code": "PFA:CLI",
-   "name": "Clifton Wessingtons",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "IFL",
-   "year": "1933",
-   "code": "PFA:FRA",
-   "name": "Frankford Legion",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "IFL",
-   "year": "1933",
-   "code": "PFA:PAS",
-   "name": "Passaic Red Devils",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "IFL",
-   "year": "1933",
-   "code": "PFA:PAT",
-   "name": "Paterson Giants",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "IFL",
-   "year": "1933",
-   "code": "PFA:REA",
-   "name": "Reading Keys",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1934",
-   "code": "PFA:CHA",
-   "name": "Charlotte Bantams",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1934",
-   "code": "PFA:DAL",
-   "name": "Dallas Rams",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1934",
-   "code": "PFA:LOU",
-   "name": "Lousville Bourbons",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1934",
-   "code": "PFA:MEM",
-   "name": "Memphis Tigers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1934",
-   "code": "PFA:S/K",
-   "name": "St. Louis/Kansas City Blues",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1934",
-   "code": "PFA:TUL",
-   "name": "Tulsa Oilers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1936",
-   "code": "PFA:AFL:NY",
-   "name": "New York Yankees",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1936",
-   "code": "PFA:B/R",
-   "name": "Brooklyn/Rochester Tigers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1936",
-   "code": "PFA:BOS",
-   "name": "Boston Shamrocks",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1936",
-   "code": "PFA:CLE",
-   "name": "Cleveland Rams",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1936",
-   "code": "PFA:PIT",
-   "name": "Pittsburgh Americans",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1936",
-   "code": "PFA:S/R",
-   "name": "Syracuse/Rochester Braves",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1937",
-   "code": "PFA:AFL:NY",
-   "name": "New York Yankees",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1937",
-   "code": "PFA:BOS",
-   "name": "Boston Shamrocks",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1937",
-   "code": "PFA:CIN",
-   "name": "Cincinnati Bengals",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1937",
-   "code": "PFA:LA",
-   "name": "Los Angeles Bulldogs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1937",
-   "code": "PFA:PIT",
-   "name": "Pittsburgh Americans",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1937",
-   "code": "PFA:ROC",
-   "name": "Rochester Tigers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1938",
-   "code": "PFA:CIN",
-   "name": "Cincinnati Blades",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1938",
-   "code": "PFA:DAY",
-   "name": "Dayton Rosies",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1938",
-   "code": "PFA:EC",
-   "name": "East Chicago Indians",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1938",
-   "code": "PFA:LOU",
-   "name": "Louisville Tanks",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1938",
-   "code": "PFA:NAS",
-   "name": "Nashville Rebels",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1938",
-   "code": "PFA:STL",
-   "name": "St. Louis Gunners",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1939",
-   "code": "PFA:CIN",
-   "name": "Cincinnati Bengals",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1939",
-   "code": "PFA:COL",
-   "name": "Columbus Bullies",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1939",
-   "code": "PFA:DAY",
-   "name": "Dayton Bombers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1939",
-   "code": "PFA:EC",
-   "name": "East Chicago Indians",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1939",
-   "code": "PFA:KEN",
-   "name": "Kenosha Cardinals",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1939",
-   "code": "PFA:LA",
-   "name": "Los Angeles Bulldogs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1939",
-   "code": "PFA:LOU",
-   "name": "Louisville Tanks",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1939",
-   "code": "PFA:STL",
-   "name": "St. Louis Gunners",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1940",
-   "code": "PFA:AFL:NY",
-   "name": "New York Yankees",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1940",
-   "code": "PFA:BOS",
-   "name": "Boston Bears",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1940",
-   "code": "PFA:BUF",
-   "name": "Buffalo Indians",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1940",
-   "code": "PFA:CIN",
-   "name": "Cincinnati Bengals",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1940",
-   "code": "PFA:COL",
-   "name": "Columbus Bullies",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1940",
-   "code": "PFA:MIL",
-   "name": "Milwaukee Chiuefs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1941",
-   "code": "PFA:BUF",
-   "name": "Buffalo Tigers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1941",
-   "code": "PFA:CIN",
-   "name": "Cincinnati Benagls",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1941",
-   "code": "PFA:COL",
-   "name": "Columbus Bulls",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1941",
-   "code": "PFA:MIL",
-   "name": "Milwaukee Chiefs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1941",
-   "code": "PFA:NY",
-   "name": "New York Americans",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1944",
-   "code": "PFA:AFL:SD",
-   "name": "San Diego Gunners",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1944",
-   "code": "PFA:HOL",
-   "name": "Hollywood Rangers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1944",
-   "code": "PFA:LAM",
-   "name": "Los Angeles Mustangs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1944",
-   "code": "PFA:LAW",
-   "name": "Los Angeles Wildcats",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1944",
-   "code": "PFA:OAK",
-   "name": "Oakland Hornets",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1944",
-   "code": "PFA:POR",
-   "name": "Portland Rockets",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1944",
-   "code": "PFA:SEA",
-   "name": "Seattle Bombers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1944",
-   "code": "PFA:SF",
-   "name": "San Francisco Clippers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1946",
-   "code": "PFA:AKR",
-   "name": "Akron Bears",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1946",
-   "code": "PFA:BET",
-   "name": "Bethlehem Bulldogs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1946",
-   "code": "PFA:JC",
-   "name": "Jersey City Giants",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1946",
-   "code": "PFA:LI",
-   "name": "Long Island Indians",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1946",
-   "code": "PFA:NEW",
-   "name": "Newark Bombers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1946",
-   "code": "PFA:PAT",
-   "name": "Paterson Panthers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1946",
-   "code": "PFA:SCR",
-   "name": "Scranton Miners",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1946",
-   "code": "PFA:WIL",
-   "name": "Wilmington Clippers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1947",
-   "code": "PFA:BET",
-   "name": "Bethlehem Bulldogs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1947",
-   "code": "PFA:BLO",
-   "name": "Bloomfield Cardinals",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1947",
-   "code": "PFA:JC",
-   "name": "Jersey City Giants",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1947",
-   "code": "PFA:LI",
-   "name": "Long Island Indians",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1947",
-   "code": "PFA:PAT",
-   "name": "Paterson Panthers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1947",
-   "code": "PFA:RIC",
-   "name": "Richmond Rebels",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1947",
-   "code": "PFA:W-B",
-   "name": "Wilkes-Barre Barons",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1947",
-   "code": "PFA:WIL",
-   "name": "Wilmington Clippers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1948",
-   "code": "PFA:BET",
-   "name": "Bethlehem Bulldogs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1948",
-   "code": "PFA:JC",
-   "name": "Jersey City Giants",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1948",
-   "code": "PFA:PAT",
-   "name": "Paterson Panthers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1948",
-   "code": "PFA:RIC",
-   "name": "Richmond Rebels",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1948",
-   "code": "PFA:W-B",
-   "name": "Wilkes-Barre Bullets",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1948",
-   "code": "PFA:WIL",
-   "name": "Wilmington Clippers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1949",
-   "code": "PFA:BET",
-   "name": "Bethlehem Bulldogs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1949",
-   "code": "PFA:JC",
-   "name": "Jersey City Giants",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1949",
-   "code": "PFA:PAT",
-   "name": "Paterson Panthers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1949",
-   "code": "PFA:RIC",
-   "name": "Richmond Rebels",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1949",
-   "code": "PFA:W-B",
-   "name": "Wilkes-Barre Bullets",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1949",
-   "code": "PFA:WIL",
-   "name": "Wilmington Clippers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1950",
-   "code": "PFA:BET",
-   "name": "Bethlehem Bulldogs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1950",
-   "code": "PFA:BKN",
-   "name": "Brooklyn Brooks",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1950",
-   "code": "PFA:ERIE",
-   "name": "Erie Vets",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1950",
-   "code": "PFA:JC",
-   "name": "Jersey City Giants",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1950",
-   "code": "PFA:PAT",
-   "name": "Paterson Panthers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "AFL",
-   "year": "1950",
-   "code": "PFA:RIC",
-   "name": "Richmond Rebels",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
    "league": "UFL",
    "year": "1961",
    "code": "PFA:AKR",
@@ -864,110 +88,6 @@
    "year": "1961",
    "code": "PFA:GR",
    "name": "Grand Rapids Shamrocks",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1962",
-   "code": "PFA:IND",
-   "name": "Indianapolis Warriors",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1962",
-   "code": "PFA:TOL",
-   "name": "Toledo Tornadoes",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1963",
-   "code": "PFA:GR",
-   "name": "Grand Rapids Blazers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1963",
-   "code": "PFA:IND",
-   "name": "Indianapolis Warriors",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1963",
-   "code": "PFA:SYR",
-   "name": "Syracuse Stormers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1963",
-   "code": "PFA:TOL",
-   "name": "Toledo Tornadoes",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1964",
-   "code": "PFA:CAN",
-   "name": "Canton Bulldogs",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1964",
-   "code": "PFA:CHA",
-   "name": "Charleston Rockets",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1964",
-   "code": "PFA:GR",
-   "name": "Grand Rapids Blazers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1964",
-   "code": "PFA:IND",
-   "name": "Indianapolis Warriors",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1964",
-   "code": "PFA:JOL",
-   "name": "Joliet Chargers",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1964",
-   "code": "PFA:QUE",
-   "name": "Quebec Rifles",
-   "men": 0,
-   "coach_or_staff": false
-  },
-  {
-   "league": "UFL",
-   "year": "1964",
-   "code": "PFA:TOL",
-   "name": "Toledo Tornadoes",
    "men": 0,
    "coach_or_staff": false
   },
@@ -1125,7 +245,7 @@
    "year": "1926",
    "code": "AFLPC",
    "name": "Wilson's Wildcats",
-   "men": 10,
+   "men": 22,
    "coach_or_staff": false
   },
   {
@@ -1142,6 +262,30 @@
    "code": "AFLRI",
    "name": "Rock Island Independents",
    "men": 13,
+   "coach_or_staff": false
+  },
+  {
+   "league": "",
+   "year": "1931",
+   "code": "DOC:SLG-IND",
+   "name": "St. Louis Gunners",
+   "men": 1,
+   "coach_or_staff": false
+  },
+  {
+   "league": "",
+   "year": "1932",
+   "code": "DOC:SLG-IND",
+   "name": "St. Louis Gunners",
+   "men": 6,
+   "coach_or_staff": false
+  },
+  {
+   "league": "",
+   "year": "1933",
+   "code": "DOC:SLG-IND",
+   "name": "St. Louis Gunners",
+   "men": 17,
    "coach_or_staff": false
   },
   {
@@ -1177,6 +321,23 @@
     "weight": 16,
     "age": 14,
     "college": 5
+   }
+  },
+  {
+   "league": "AFL",
+   "year": "1926",
+   "code": "AFLPC",
+   "name": "Wilson's Wildcats",
+   "men": 22,
+   "coach_or_staff": false,
+   "missing_facts": 52,
+   "of_possible": 88,
+   "share": 0.591,
+   "by_field": {
+    "position": 16,
+    "age": 12,
+    "weight": 12,
+    "college": 12
    }
   },
   {
@@ -1549,21 +710,6 @@
   {
    "league": "NFL",
    "year": "1926",
-   "code": "DUL",
-   "name": "Duluth Eskimos",
-   "men": 26,
-   "coach_or_staff": true,
-   "missing_facts": 18,
-   "of_possible": 104,
-   "share": 0.173,
-   "by_field": {
-    "college": 11,
-    "weight": 7
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1926",
    "code": "HAM",
    "name": "Hammond Pros",
    "men": 26,
@@ -1698,6 +844,21 @@
    }
   },
   {
+   "league": "NFL",
+   "year": "1926",
+   "code": "DUL",
+   "name": "Duluth Eskimos",
+   "men": 26,
+   "coach_or_staff": true,
+   "missing_facts": 17,
+   "of_possible": 104,
+   "share": 0.163,
+   "by_field": {
+    "college": 11,
+    "weight": 6
+   }
+  },
+  {
    "league": "APFA",
    "year": "1920",
    "code": "DEC",
@@ -1780,11 +941,11 @@
    "year": "2023",
    "code": "XFLVVI",
    "name": "Vegas Vipers",
-   "men": 69,
+   "men": 70,
    "coach_or_staff": true,
    "missing_facts": 16,
-   "of_possible": 276,
-   "share": 0.058,
+   "of_possible": 280,
+   "share": 0.057,
    "by_field": {
     "age": 7,
     "weight": 9
@@ -2116,6 +1277,22 @@
   },
   {
    "league": "NFL",
+   "year": "1922",
+   "code": "TOL",
+   "name": "Toledo Maroons",
+   "men": 29,
+   "coach_or_staff": true,
+   "missing_facts": 13,
+   "of_possible": 116,
+   "share": 0.112,
+   "by_field": {
+    "college": 5,
+    "weight": 7,
+    "position": 1
+   }
+  },
+  {
+   "league": "NFL",
    "year": "1925",
    "code": "HAM",
    "name": "Hammond Pros",
@@ -2179,29 +1356,14 @@
    "year": "2023",
    "code": "XFLSAB",
    "name": "San Antonio Brahmas",
-   "men": 79,
+   "men": 80,
    "coach_or_staff": true,
    "missing_facts": 13,
-   "of_possible": 316,
+   "of_possible": 320,
    "share": 0.041,
    "by_field": {
     "weight": 9,
     "age": 4
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1922",
-   "code": "TOL",
-   "name": "Toledo Maroons",
-   "men": 28,
-   "coach_or_staff": true,
-   "missing_facts": 12,
-   "of_possible": 112,
-   "share": 0.107,
-   "by_field": {
-    "college": 5,
-    "weight": 7
    }
   },
   {
@@ -2223,22 +1385,6 @@
   {
    "league": "NFL",
    "year": "1927",
-   "code": "DUL",
-   "name": "Duluth Eskimos",
-   "men": 19,
-   "coach_or_staff": true,
-   "missing_facts": 12,
-   "of_possible": 76,
-   "share": 0.158,
-   "by_field": {
-    "weight": 3,
-    "college": 7,
-    "age": 2
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1927",
    "code": "POT",
    "name": "Pottsville Maroons",
    "men": 30,
@@ -2251,21 +1397,6 @@
     "weight": 3,
     "age": 3,
     "position": 2
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1930",
-   "code": "POR",
-   "name": "Portsmouth Spartans",
-   "men": 37,
-   "coach_or_staff": true,
-   "missing_facts": 12,
-   "of_possible": 148,
-   "share": 0.081,
-   "by_field": {
-    "weight": 9,
-    "college": 3
    }
   },
   {
@@ -2319,11 +1450,11 @@
    "year": "1921",
    "code": "HAM",
    "name": "Hammond Pros",
-   "men": 25,
+   "men": 26,
    "coach_or_staff": true,
    "missing_facts": 11,
-   "of_possible": 100,
-   "share": 0.11,
+   "of_possible": 104,
+   "share": 0.106,
    "by_field": {
     "weight": 5,
     "college": 5,
@@ -2427,22 +1558,6 @@
   {
    "league": "NFL",
    "year": "1925",
-   "code": "MIL",
-   "name": "Milwaukee Badgers",
-   "men": 23,
-   "coach_or_staff": true,
-   "missing_facts": 11,
-   "of_possible": 92,
-   "share": 0.12,
-   "by_field": {
-    "weight": 5,
-    "age": 1,
-    "college": 5
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1925",
    "code": "PRO",
    "name": "Providence Steam Roller",
    "men": 30,
@@ -2503,6 +1618,22 @@
   },
   {
    "league": "NFL",
+   "year": "1927",
+   "code": "DUL",
+   "name": "Duluth Eskimos",
+   "men": 19,
+   "coach_or_staff": true,
+   "missing_facts": 11,
+   "of_possible": 76,
+   "share": 0.145,
+   "by_field": {
+    "college": 7,
+    "weight": 2,
+    "age": 2
+   }
+  },
+  {
+   "league": "NFL",
    "year": "1929",
    "code": "BU1",
    "name": "Buffalo Bisons",
@@ -2530,6 +1661,21 @@
    "by_field": {
     "weight": 10,
     "college": 1
+   }
+  },
+  {
+   "league": "NFL",
+   "year": "1930",
+   "code": "POR",
+   "name": "Portsmouth Spartans",
+   "men": 37,
+   "coach_or_staff": true,
+   "missing_facts": 11,
+   "of_possible": 148,
+   "share": 0.074,
+   "by_field": {
+    "weight": 8,
+    "college": 3
    }
   },
   {
@@ -2567,10 +1713,10 @@
    "year": "2023",
    "code": "XFLDCD",
    "name": "D.C. Defenders",
-   "men": 74,
+   "men": 75,
    "coach_or_staff": true,
    "missing_facts": 11,
-   "of_possible": 296,
+   "of_possible": 300,
    "share": 0.037,
    "by_field": {
     "weight": 8,
@@ -2657,6 +1803,22 @@
   {
    "league": "NFL",
    "year": "1925",
+   "code": "MIL",
+   "name": "Milwaukee Badgers",
+   "men": 23,
+   "coach_or_staff": true,
+   "missing_facts": 10,
+   "of_possible": 92,
+   "share": 0.109,
+   "by_field": {
+    "weight": 4,
+    "age": 1,
+    "college": 5
+   }
+  },
+  {
+   "league": "NFL",
+   "year": "1925",
    "code": "RI",
    "name": "Rock Island Independents",
    "men": 25,
@@ -2682,22 +1844,6 @@
    "by_field": {
     "weight": 5,
     "college": 5
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1931",
-   "code": "CL4",
-   "name": "Cleveland Indians",
-   "men": 34,
-   "coach_or_staff": true,
-   "missing_facts": 10,
-   "of_possible": 136,
-   "share": 0.074,
-   "by_field": {
-    "college": 2,
-    "weight": 7,
-    "age": 1
    }
   },
   {
@@ -2948,30 +2094,17 @@
   },
   {
    "league": "NFL",
-   "year": "1930",
-   "code": "GB",
-   "name": "Green Bay Packers",
-   "men": 30,
+   "year": "1931",
+   "code": "CL4",
+   "name": "Cleveland Indians",
+   "men": 34,
    "coach_or_staff": true,
    "missing_facts": 9,
-   "of_possible": 120,
-   "share": 0.075,
+   "of_possible": 136,
+   "share": 0.066,
    "by_field": {
-    "weight": 9
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1930",
-   "code": "MI1",
-   "name": "Minneapolis Red Jackets",
-   "men": 33,
-   "coach_or_staff": true,
-   "missing_facts": 9,
-   "of_possible": 132,
-   "share": 0.068,
-   "by_field": {
-    "weight": 8,
+    "college": 2,
+    "weight": 6,
     "age": 1
    }
   },
@@ -3271,48 +2404,31 @@
   },
   {
    "league": "NFL",
-   "year": "1929",
-   "code": "FYJ",
-   "name": "Frankford Yellow Jackets",
-   "men": 24,
-   "coach_or_staff": true,
-   "missing_facts": 8,
-   "of_possible": 96,
-   "share": 0.083,
-   "by_field": {
-    "weight": 5,
-    "age": 1,
-    "college": 1,
-    "position": 1
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1931",
+   "year": "1930",
    "code": "GB",
    "name": "Green Bay Packers",
-   "men": 33,
+   "men": 30,
    "coach_or_staff": true,
    "missing_facts": 8,
-   "of_possible": 132,
-   "share": 0.061,
+   "of_possible": 120,
+   "share": 0.067,
    "by_field": {
     "weight": 8
    }
   },
   {
    "league": "NFL",
-   "year": "1932",
-   "code": "BRO",
-   "name": "Brooklyn Dodgers",
+   "year": "1930",
+   "code": "MI1",
+   "name": "Minneapolis Red Jackets",
    "men": 33,
    "coach_or_staff": true,
    "missing_facts": 8,
    "of_possible": 132,
    "share": 0.061,
    "by_field": {
-    "college": 2,
-    "weight": 6
+    "weight": 7,
+    "age": 1
    }
   },
   {
@@ -3320,11 +2436,11 @@
    "year": "1984",
    "code": "USFLHOU",
    "name": "Houston Gamblers",
-   "men": 71,
+   "men": 73,
    "coach_or_staff": true,
    "missing_facts": 8,
-   "of_possible": 284,
-   "share": 0.028,
+   "of_possible": 292,
+   "share": 0.027,
    "by_field": {
     "weight": 7,
     "college": 1
@@ -3376,6 +2492,22 @@
   },
   {
    "league": "XFL",
+   "year": "2020",
+   "code": "XFLTBV",
+   "name": "Tampa Bay Vipers",
+   "men": 70,
+   "coach_or_staff": true,
+   "missing_facts": 8,
+   "of_possible": 280,
+   "share": 0.029,
+   "by_field": {
+    "weight": 6,
+    "position": 1,
+    "age": 1
+   }
+  },
+  {
+   "league": "XFL",
    "year": "2023",
    "code": "XFLSLB",
    "name": "St. Louis BattleHawks",
@@ -3418,6 +2550,22 @@
     "college": 3,
     "weight": 3,
     "age": 1
+   }
+  },
+  {
+   "league": "NFL",
+   "year": "1923",
+   "code": "BU1",
+   "name": "Buffalo All-Americans",
+   "men": 28,
+   "coach_or_staff": true,
+   "missing_facts": 7,
+   "of_possible": 112,
+   "share": 0.062,
+   "by_field": {
+    "college": 2,
+    "position": 1,
+    "weight": 4
    }
   },
   {
@@ -3531,6 +2679,23 @@
   {
    "league": "NFL",
    "year": "1929",
+   "code": "FYJ",
+   "name": "Frankford Yellow Jackets",
+   "men": 24,
+   "coach_or_staff": true,
+   "missing_facts": 7,
+   "of_possible": 96,
+   "share": 0.073,
+   "by_field": {
+    "weight": 4,
+    "age": 1,
+    "college": 1,
+    "position": 1
+   }
+  },
+  {
+   "league": "NFL",
+   "year": "1929",
    "code": "ORA",
    "name": "Orange Tornadoes",
    "men": 27,
@@ -3546,21 +2711,6 @@
   {
    "league": "NFL",
    "year": "1930",
-   "code": "FYJ",
-   "name": "Frankford Yellow Jackets",
-   "men": 41,
-   "coach_or_staff": true,
-   "missing_facts": 7,
-   "of_possible": 164,
-   "share": 0.043,
-   "by_field": {
-    "weight": 6,
-    "age": 1
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1930",
    "code": "SI",
    "name": "Staten Island Stapletons",
    "men": 27,
@@ -3568,6 +2718,35 @@
    "missing_facts": 7,
    "of_possible": 108,
    "share": 0.065,
+   "by_field": {
+    "college": 2,
+    "weight": 5
+   }
+  },
+  {
+   "league": "NFL",
+   "year": "1931",
+   "code": "GB",
+   "name": "Green Bay Packers",
+   "men": 33,
+   "coach_or_staff": true,
+   "missing_facts": 7,
+   "of_possible": 132,
+   "share": 0.053,
+   "by_field": {
+    "weight": 7
+   }
+  },
+  {
+   "league": "NFL",
+   "year": "1932",
+   "code": "BRO",
+   "name": "Brooklyn Dodgers",
+   "men": 33,
+   "coach_or_staff": true,
+   "missing_facts": 7,
+   "of_possible": 132,
+   "share": 0.053,
    "by_field": {
     "college": 2,
     "weight": 5
@@ -3625,10 +2804,10 @@
    "year": "1983",
    "code": "USFLNJG",
    "name": "New Jersey Generals",
-   "men": 76,
+   "men": 77,
    "coach_or_staff": true,
    "missing_facts": 7,
-   "of_possible": 304,
+   "of_possible": 308,
    "share": 0.023,
    "by_field": {
     "weight": 6,
@@ -3832,6 +3011,21 @@
   },
   {
    "league": "NFL",
+   "year": "1924",
+   "code": "KC1",
+   "name": "Kansas City Blues",
+   "men": 26,
+   "coach_or_staff": true,
+   "missing_facts": 6,
+   "of_possible": 104,
+   "share": 0.058,
+   "by_field": {
+    "weight": 5,
+    "position": 1
+   }
+  },
+  {
+   "league": "NFL",
    "year": "1926",
    "code": "BRL",
    "name": "Brooklyn Lions",
@@ -3907,16 +3101,17 @@
   },
   {
    "league": "NFL",
-   "year": "1929",
-   "code": "GB",
-   "name": "Green Bay Packers",
-   "men": 28,
+   "year": "1930",
+   "code": "FYJ",
+   "name": "Frankford Yellow Jackets",
+   "men": 41,
    "coach_or_staff": true,
    "missing_facts": 6,
-   "of_possible": 112,
-   "share": 0.054,
+   "of_possible": 164,
+   "share": 0.037,
    "by_field": {
-    "weight": 6
+    "weight": 5,
+    "age": 1
    }
   },
   {
@@ -3950,34 +3145,32 @@
    }
   },
   {
-   "league": "AAFC",
-   "year": "1947",
-   "code": "BRD",
-   "name": "Brooklyn Dodgers",
-   "men": 42,
-   "coach_or_staff": true,
+   "league": "",
+   "year": "1932",
+   "code": "DOC:SLG-IND",
+   "name": "St. Louis Gunners",
+   "men": 6,
+   "coach_or_staff": false,
    "missing_facts": 6,
-   "of_possible": 168,
-   "share": 0.036,
+   "of_possible": 24,
+   "share": 0.25,
    "by_field": {
-    "college": 1,
-    "weight": 4,
-    "age": 1
+    "position": 5,
+    "college": 1
    }
   },
   {
-   "league": "AAFC",
-   "year": "1948",
-   "code": "SF",
-   "name": "San Francisco 49ers",
-   "men": 40,
-   "coach_or_staff": true,
+   "league": "",
+   "year": "1933",
+   "code": "DOC:SLG-IND",
+   "name": "St. Louis Gunners",
+   "men": 17,
+   "coach_or_staff": false,
    "missing_facts": 6,
-   "of_possible": 160,
-   "share": 0.037,
+   "of_possible": 68,
+   "share": 0.088,
    "by_field": {
-    "college": 2,
-    "weight": 4
+    "position": 6
    }
   },
   {
@@ -4188,6 +3381,21 @@
   {
    "league": "XFL",
    "year": "2020",
+   "code": "XFLLAW",
+   "name": "Los Angeles Wildcats",
+   "men": 67,
+   "coach_or_staff": true,
+   "missing_facts": 6,
+   "of_possible": 268,
+   "share": 0.022,
+   "by_field": {
+    "weight": 5,
+    "age": 1
+   }
+  },
+  {
+   "league": "XFL",
+   "year": "2020",
    "code": "XFLNYG",
    "name": "New York Guardians",
    "men": 65,
@@ -4198,21 +3406,6 @@
    "by_field": {
     "age": 1,
     "weight": 5
-   }
-  },
-  {
-   "league": "XFL",
-   "year": "2020",
-   "code": "XFLTBV",
-   "name": "Tampa Bay Vipers",
-   "men": 67,
-   "coach_or_staff": true,
-   "missing_facts": 6,
-   "of_possible": 268,
-   "share": 0.022,
-   "by_field": {
-    "weight": 5,
-    "age": 1
    }
   },
   {
@@ -4241,21 +3434,6 @@
    "share": 0.026,
    "by_field": {
     "weight": 6
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1923",
-   "code": "BU1",
-   "name": "Buffalo All-Americans",
-   "men": 27,
-   "coach_or_staff": true,
-   "missing_facts": 5,
-   "of_possible": 108,
-   "share": 0.046,
-   "by_field": {
-    "weight": 4,
-    "college": 1
    }
   },
   {
@@ -4302,20 +3480,6 @@
    "by_field": {
     "weight": 4,
     "college": 1
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1924",
-   "code": "KC1",
-   "name": "Kansas City Blues",
-   "men": 25,
-   "coach_or_staff": true,
-   "missing_facts": 5,
-   "of_possible": 100,
-   "share": 0.05,
-   "by_field": {
-    "weight": 5
    }
   },
   {
@@ -4427,13 +3591,13 @@
   {
    "league": "NFL",
    "year": "1929",
-   "code": "NYG",
-   "name": "New York Giants",
-   "men": 22,
+   "code": "GB",
+   "name": "Green Bay Packers",
+   "men": 28,
    "coach_or_staff": true,
    "missing_facts": 5,
-   "of_possible": 88,
-   "share": 0.057,
+   "of_possible": 112,
+   "share": 0.045,
    "by_field": {
     "weight": 5
    }
@@ -4502,50 +3666,8 @@
   {
    "league": "NFL",
    "year": "1932",
-   "code": "GB",
-   "name": "Green Bay Packers",
-   "men": 29,
-   "coach_or_staff": true,
-   "missing_facts": 5,
-   "of_possible": 116,
-   "share": 0.043,
-   "by_field": {
-    "weight": 5
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1932",
    "code": "NYG",
    "name": "New York Giants",
-   "men": 27,
-   "coach_or_staff": true,
-   "missing_facts": 5,
-   "of_possible": 108,
-   "share": 0.046,
-   "by_field": {
-    "weight": 5
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1933",
-   "code": "BO3",
-   "name": "Boston Redskins",
-   "men": 28,
-   "coach_or_staff": true,
-   "missing_facts": 5,
-   "of_possible": 112,
-   "share": 0.045,
-   "by_field": {
-    "weight": 5
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1933",
-   "code": "GB",
-   "name": "Green Bay Packers",
    "men": 27,
    "coach_or_staff": true,
    "missing_facts": 5,
@@ -4568,52 +3690,6 @@
    "by_field": {
     "weight": 4,
     "college": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1948",
-   "code": "BRD",
-   "name": "Brooklyn Dodgers",
-   "men": 44,
-   "coach_or_staff": true,
-   "missing_facts": 5,
-   "of_possible": 176,
-   "share": 0.028,
-   "by_field": {
-    "college": 1,
-    "weight": 3,
-    "age": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1948",
-   "code": "NYA",
-   "name": "New York Yankees",
-   "men": 47,
-   "coach_or_staff": true,
-   "missing_facts": 5,
-   "of_possible": 188,
-   "share": 0.027,
-   "by_field": {
-    "weight": 4,
-    "college": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1949",
-   "code": "BUA",
-   "name": "Buffalo Bills",
-   "men": 37,
-   "coach_or_staff": true,
-   "missing_facts": 5,
-   "of_possible": 148,
-   "share": 0.034,
-   "by_field": {
-    "weight": 3,
-    "college": 2
    }
   },
   {
@@ -4953,21 +4029,6 @@
    }
   },
   {
-   "league": "XFL",
-   "year": "2020",
-   "code": "XFLLAW",
-   "name": "Los Angeles Wildcats",
-   "men": 66,
-   "coach_or_staff": true,
-   "missing_facts": 5,
-   "of_possible": 264,
-   "share": 0.019,
-   "by_field": {
-    "age": 1,
-    "weight": 4
-   }
-  },
-  {
    "league": "UFL2",
    "year": "2024",
    "code": "US2MSB",
@@ -5069,20 +4130,6 @@
    }
   },
   {
-   "league": "AFL",
-   "year": "1926",
-   "code": "AFLPC",
-   "name": "Wilson's Wildcats",
-   "men": 10,
-   "coach_or_staff": false,
-   "missing_facts": 4,
-   "of_possible": 40,
-   "share": 0.1,
-   "by_field": {
-    "position": 4
-   }
-  },
-  {
    "league": "NFL",
    "year": "1926",
    "code": "GB",
@@ -5135,6 +4182,20 @@
    "missing_facts": 4,
    "of_possible": 96,
    "share": 0.042,
+   "by_field": {
+    "weight": 4
+   }
+  },
+  {
+   "league": "NFL",
+   "year": "1929",
+   "code": "NYG",
+   "name": "New York Giants",
+   "men": 22,
+   "coach_or_staff": true,
+   "missing_facts": 4,
+   "of_possible": 88,
+   "share": 0.045,
    "by_field": {
     "weight": 4
    }
@@ -5200,6 +4261,20 @@
   {
    "league": "NFL",
    "year": "1932",
+   "code": "GB",
+   "name": "Green Bay Packers",
+   "men": 29,
+   "coach_or_staff": true,
+   "missing_facts": 4,
+   "of_possible": 116,
+   "share": 0.034,
+   "by_field": {
+    "weight": 4
+   }
+  },
+  {
+   "league": "NFL",
+   "year": "1932",
    "code": "SI",
    "name": "Staten Island Stapletons",
    "men": 34,
@@ -5207,6 +4282,20 @@
    "missing_facts": 4,
    "of_possible": 136,
    "share": 0.029,
+   "by_field": {
+    "weight": 4
+   }
+  },
+  {
+   "league": "NFL",
+   "year": "1933",
+   "code": "BO3",
+   "name": "Boston Redskins",
+   "men": 28,
+   "coach_or_staff": true,
+   "missing_facts": 4,
+   "of_possible": 112,
+   "share": 0.036,
    "by_field": {
     "weight": 4
    }
@@ -5242,64 +4331,17 @@
    }
   },
   {
-   "league": "AAFC",
-   "year": "1946",
-   "code": "SF",
-   "name": "San Francisco 49ers",
-   "men": 34,
+   "league": "NFL",
+   "year": "1933",
+   "code": "GB",
+   "name": "Green Bay Packers",
+   "men": 27,
    "coach_or_staff": true,
    "missing_facts": 4,
-   "of_possible": 136,
-   "share": 0.029,
+   "of_possible": 108,
+   "share": 0.037,
    "by_field": {
-    "college": 2,
-    "weight": 2
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1947",
-   "code": "CHR",
-   "name": "Chicago Rockets",
-   "men": 46,
-   "coach_or_staff": true,
-   "missing_facts": 4,
-   "of_possible": 184,
-   "share": 0.022,
-   "by_field": {
-    "weight": 2,
-    "college": 1,
-    "age": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1947",
-   "code": "SF",
-   "name": "San Francisco 49ers",
-   "men": 36,
-   "coach_or_staff": true,
-   "missing_facts": 4,
-   "of_possible": 144,
-   "share": 0.028,
-   "by_field": {
-    "college": 3,
-    "weight": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1949",
-   "code": "SF",
-   "name": "San Francisco 49ers",
-   "men": 34,
-   "coach_or_staff": true,
-   "missing_facts": 4,
-   "of_possible": 136,
-   "share": 0.029,
-   "by_field": {
-    "college": 1,
-    "weight": 3
+    "weight": 4
    }
   },
   {
@@ -5624,10 +4666,10 @@
    "year": "1983",
    "code": "USFLWAS",
    "name": "Washington Federals",
-   "men": 85,
+   "men": 86,
    "coach_or_staff": true,
    "missing_facts": 4,
-   "of_possible": 340,
+   "of_possible": 344,
    "share": 0.012,
    "by_field": {
     "weight": 4
@@ -5698,11 +4740,11 @@
    "year": "1985",
    "code": "USFLNJG",
    "name": "New Jersey Generals",
-   "men": 60,
+   "men": 61,
    "coach_or_staff": true,
    "missing_facts": 4,
-   "of_possible": 240,
-   "share": 0.017,
+   "of_possible": 244,
+   "share": 0.016,
    "by_field": {
     "weight": 3,
     "age": 1
@@ -5728,10 +4770,10 @@
    "year": "1985",
    "code": "USFLTBB",
    "name": "Tampa Bay Bandits",
-   "men": 62,
+   "men": 63,
    "coach_or_staff": true,
    "missing_facts": 4,
-   "of_possible": 248,
+   "of_possible": 252,
    "share": 0.016,
    "by_field": {
     "weight": 3,
@@ -6032,21 +5074,6 @@
   {
    "league": "NFL",
    "year": "1928",
-   "code": "POT",
-   "name": "Pottsville Maroons",
-   "men": 17,
-   "coach_or_staff": true,
-   "missing_facts": 3,
-   "of_possible": 68,
-   "share": 0.044,
-   "by_field": {
-    "weight": 1,
-    "college": 2
-   }
-  },
-  {
-   "league": "NFL",
-   "year": "1928",
    "code": "PRO",
    "name": "Providence Steam Roller",
    "men": 19,
@@ -6102,61 +5129,17 @@
   },
   {
    "league": "AAFC",
-   "year": "1946",
-   "code": "MIS",
-   "name": "Miami Seahawks",
-   "men": 47,
-   "coach_or_staff": true,
-   "missing_facts": 3,
-   "of_possible": 188,
-   "share": 0.016,
-   "by_field": {
-    "weight": 2,
-    "college": 1
-   }
-  },
-  {
-   "league": "AAFC",
    "year": "1947",
-   "code": "BA1",
-   "name": "Baltimore Colts",
+   "code": "BRD",
+   "name": "Brooklyn Dodgers",
    "men": 42,
    "coach_or_staff": true,
    "missing_facts": 3,
    "of_possible": 168,
    "share": 0.018,
    "by_field": {
-    "college": 2,
-    "weight": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1948",
-   "code": "BUA",
-   "name": "Buffalo Bills",
-   "men": 41,
-   "coach_or_staff": true,
-   "missing_facts": 3,
-   "of_possible": 164,
-   "share": 0.018,
-   "by_field": {
-    "college": 2,
-    "weight": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1949",
-   "code": "BA1",
-   "name": "Baltimore Colts",
-   "men": 35,
-   "coach_or_staff": true,
-   "missing_facts": 3,
-   "of_possible": 140,
-   "share": 0.021,
-   "by_field": {
-    "weight": 3
+    "age": 1,
+    "weight": 2
    }
   },
   {
@@ -6164,11 +5147,11 @@
    "year": "1960",
    "code": "DAT",
    "name": "Dallas Texans",
-   "men": 42,
+   "men": 43,
    "coach_or_staff": true,
    "missing_facts": 3,
-   "of_possible": 168,
-   "share": 0.018,
+   "of_possible": 172,
+   "share": 0.017,
    "by_field": {
     "weight": 3
    }
@@ -6538,10 +5521,10 @@
    "year": "1983",
    "code": "USFLBOS",
    "name": "Boston Breakers",
-   "men": 66,
+   "men": 67,
    "coach_or_staff": true,
    "missing_facts": 3,
-   "of_possible": 264,
+   "of_possible": 268,
    "share": 0.011,
    "by_field": {
     "weight": 3
@@ -6610,10 +5593,10 @@
    "year": "1985",
    "code": "USFLMEM",
    "name": "Memphis Showboats",
-   "men": 69,
+   "men": 70,
    "coach_or_staff": true,
    "missing_facts": 3,
-   "of_possible": 276,
+   "of_possible": 280,
    "share": 0.011,
    "by_field": {
     "weight": 3
@@ -6878,6 +5861,20 @@
   },
   {
    "league": "NFL",
+   "year": "1928",
+   "code": "POT",
+   "name": "Pottsville Maroons",
+   "men": 17,
+   "coach_or_staff": true,
+   "missing_facts": 2,
+   "of_possible": 68,
+   "share": 0.029,
+   "by_field": {
+    "college": 2
+   }
+  },
+  {
+   "league": "NFL",
    "year": "1929",
    "code": "BO2",
    "name": "Boston Bulldogs",
@@ -6908,20 +5905,6 @@
   },
   {
    "league": "NFL",
-   "year": "1931",
-   "code": "CHI",
-   "name": "Chicago Bears",
-   "men": 32,
-   "coach_or_staff": true,
-   "missing_facts": 2,
-   "of_possible": 128,
-   "share": 0.016,
-   "by_field": {
-    "weight": 2
-   }
-  },
-  {
-   "league": "NFL",
    "year": "1933",
    "code": "NYG",
    "name": "New York Giants",
@@ -6936,149 +5919,45 @@
   },
   {
    "league": "AAFC",
-   "year": "1946",
-   "code": "BRD",
-   "name": "Brooklyn Dodgers",
-   "men": 38,
-   "coach_or_staff": true,
-   "missing_facts": 2,
-   "of_possible": 152,
-   "share": 0.013,
-   "by_field": {
-    "weight": 1,
-    "college": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1946",
-   "code": "BUA",
-   "name": "Buffalo Bisons",
-   "men": 45,
-   "coach_or_staff": true,
-   "missing_facts": 2,
-   "of_possible": 180,
-   "share": 0.011,
-   "by_field": {
-    "weight": 1,
-    "college": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1946",
-   "code": "LAD",
-   "name": "Los Angeles Dons",
-   "men": 35,
-   "coach_or_staff": true,
-   "missing_facts": 2,
-   "of_possible": 140,
-   "share": 0.014,
-   "by_field": {
-    "weight": 1,
-    "college": 1
-   }
-  },
-  {
-   "league": "AAFC",
    "year": "1947",
-   "code": "BUA",
-   "name": "Buffalo Bills",
+   "code": "SF",
+   "name": "San Francisco 49ers",
    "men": 36,
    "coach_or_staff": true,
    "missing_facts": 2,
    "of_possible": 144,
    "share": 0.014,
    "by_field": {
-    "weight": 1,
-    "college": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1947",
-   "code": "LAD",
-   "name": "Los Angeles Dons",
-   "men": 37,
-   "coach_or_staff": true,
-   "missing_facts": 2,
-   "of_possible": 148,
-   "share": 0.014,
-   "by_field": {
-    "weight": 1,
-    "college": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1947",
-   "code": "NYA",
-   "name": "New York Yankees",
-   "men": 39,
-   "coach_or_staff": true,
-   "missing_facts": 2,
-   "of_possible": 156,
-   "share": 0.013,
-   "by_field": {
-    "weight": 2
+    "college": 2
    }
   },
   {
    "league": "AAFC",
    "year": "1948",
-   "code": "BA1",
-   "name": "Baltimore Colts",
-   "men": 37,
+   "code": "BRD",
+   "name": "Brooklyn Dodgers",
+   "men": 44,
    "coach_or_staff": true,
    "missing_facts": 2,
-   "of_possible": 148,
-   "share": 0.014,
+   "of_possible": 176,
+   "share": 0.011,
    "by_field": {
-    "college": 1,
+    "age": 1,
     "weight": 1
    }
   },
   {
    "league": "AAFC",
    "year": "1948",
-   "code": "CHR",
-   "name": "Chicago Rockets",
-   "men": 43,
+   "code": "SF",
+   "name": "San Francisco 49ers",
+   "men": 40,
    "coach_or_staff": true,
    "missing_facts": 2,
-   "of_possible": 172,
-   "share": 0.012,
+   "of_possible": 160,
+   "share": 0.013,
    "by_field": {
-    "weight": 2
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1948",
-   "code": "CLE",
-   "name": "Cleveland Browns",
-   "men": 35,
-   "coach_or_staff": true,
-   "missing_facts": 2,
-   "of_possible": 140,
-   "share": 0.014,
-   "by_field": {
-    "weight": 1,
-    "college": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1949",
-   "code": "LAD",
-   "name": "Los Angeles Dons",
-   "men": 36,
-   "coach_or_staff": true,
-   "missing_facts": 2,
-   "of_possible": 144,
-   "share": 0.014,
-   "by_field": {
-    "weight": 2
+    "college": 2
    }
   },
   {
@@ -7411,10 +6290,10 @@
    "year": "1984",
    "code": "USFLAZW",
    "name": "Arizona Wranglers",
-   "men": 62,
+   "men": 63,
    "coach_or_staff": true,
    "missing_facts": 2,
-   "of_possible": 248,
+   "of_possible": 252,
    "share": 0.008,
    "by_field": {
     "weight": 2
@@ -7454,10 +6333,10 @@
    "year": "1984",
    "code": "USFLLAX",
    "name": "Los Angeles Express",
-   "men": 70,
+   "men": 71,
    "coach_or_staff": true,
    "missing_facts": 2,
-   "of_possible": 280,
+   "of_possible": 284,
    "share": 0.007,
    "by_field": {
     "weight": 2
@@ -7468,10 +6347,10 @@
    "year": "1984",
    "code": "USFLNOB",
    "name": "New Orleans Breakers",
-   "men": 62,
+   "men": 63,
    "coach_or_staff": true,
    "missing_facts": 2,
-   "of_possible": 248,
+   "of_possible": 252,
    "share": 0.008,
    "by_field": {
     "weight": 2
@@ -7497,10 +6376,10 @@
    "year": "1984",
    "code": "USFLTBB",
    "name": "Tampa Bay Bandits",
-   "men": 64,
+   "men": 65,
    "coach_or_staff": true,
    "missing_facts": 2,
-   "of_possible": 256,
+   "of_possible": 260,
    "share": 0.008,
    "by_field": {
     "weight": 2
@@ -7664,6 +6543,34 @@
    }
   },
   {
+   "league": "",
+   "year": "1931",
+   "code": "DOC:SLG-IND",
+   "name": "St. Louis Gunners",
+   "men": 1,
+   "coach_or_staff": false,
+   "missing_facts": 1,
+   "of_possible": 4,
+   "share": 0.25,
+   "by_field": {
+    "position": 1
+   }
+  },
+  {
+   "league": "NFL",
+   "year": "1931",
+   "code": "CHI",
+   "name": "Chicago Bears",
+   "men": 32,
+   "coach_or_staff": true,
+   "missing_facts": 1,
+   "of_possible": 128,
+   "share": 0.008,
+   "by_field": {
+    "weight": 1
+   }
+  },
+  {
    "league": "NFL",
    "year": "1932",
    "code": "CHI",
@@ -7722,71 +6629,99 @@
   {
    "league": "AAFC",
    "year": "1946",
-   "code": "CHR",
-   "name": "Chicago Rockets",
-   "men": 33,
+   "code": "SF",
+   "name": "San Francisco 49ers",
+   "men": 34,
    "coach_or_staff": true,
    "missing_facts": 1,
-   "of_possible": 132,
-   "share": 0.008,
-   "by_field": {
-    "weight": 1
-   }
-  },
-  {
-   "league": "AAFC",
-   "year": "1946",
-   "code": "NYA",
-   "name": "New York Yankees",
-   "men": 35,
-   "coach_or_staff": true,
-   "missing_facts": 1,
-   "of_possible": 140,
+   "of_possible": 136,
    "share": 0.007,
    "by_field": {
-    "weight": 1
+    "college": 1
    }
   },
   {
    "league": "AAFC",
-   "year": "1949",
-   "code": "CHH",
-   "name": "Chicago Hornets",
+   "year": "1947",
+   "code": "CHR",
+   "name": "Chicago Rockets",
+   "men": 46,
+   "coach_or_staff": true,
+   "missing_facts": 1,
+   "of_possible": 184,
+   "share": 0.005,
+   "by_field": {
+    "age": 1
+   }
+  },
+  {
+   "league": "AAFC",
+   "year": "1947",
+   "code": "LAD",
+   "name": "Los Angeles Dons",
    "men": 37,
    "coach_or_staff": true,
    "missing_facts": 1,
    "of_possible": 148,
    "share": 0.007,
    "by_field": {
-    "weight": 1
+    "college": 1
    }
   },
   {
    "league": "AAFC",
-   "year": "1949",
-   "code": "CLE",
-   "name": "Cleveland Browns",
-   "men": 32,
+   "year": "1948",
+   "code": "BUA",
+   "name": "Buffalo Bills",
+   "men": 41,
    "coach_or_staff": true,
    "missing_facts": 1,
-   "of_possible": 128,
-   "share": 0.008,
+   "of_possible": 164,
+   "share": 0.006,
+   "by_field": {
+    "college": 1
+   }
+  },
+  {
+   "league": "AAFC",
+   "year": "1948",
+   "code": "CHR",
+   "name": "Chicago Rockets",
+   "men": 44,
+   "coach_or_staff": true,
+   "missing_facts": 1,
+   "of_possible": 176,
+   "share": 0.006,
    "by_field": {
     "weight": 1
    }
   },
   {
    "league": "AAFC",
-   "year": "1949",
+   "year": "1948",
    "code": "NYA",
    "name": "New York Yankees",
-   "men": 35,
+   "men": 47,
    "coach_or_staff": true,
    "missing_facts": 1,
-   "of_possible": 140,
+   "of_possible": 188,
+   "share": 0.005,
+   "by_field": {
+    "college": 1
+   }
+  },
+  {
+   "league": "AAFC",
+   "year": "1949",
+   "code": "SF",
+   "name": "San Francisco 49ers",
+   "men": 34,
+   "coach_or_staff": true,
+   "missing_facts": 1,
+   "of_possible": 136,
    "share": 0.007,
    "by_field": {
-    "weight": 1
+    "college": 1
    }
   },
   {
@@ -7920,10 +6855,10 @@
    "year": "1984",
    "code": "USFLOKL",
    "name": "Oklahoma Outlaws",
-   "men": 73,
+   "men": 74,
    "coach_or_staff": true,
    "missing_facts": 1,
-   "of_possible": 292,
+   "of_possible": 296,
    "share": 0.003,
    "by_field": {
     "weight": 1
@@ -8080,7 +7015,16 @@
    "year": "1926",
    "code": "AFLPC",
    "name": "Wilson's Wildcats",
-   "men": 10,
+   "men": 22,
+   "coach_or_staff": false,
+   "why": "no man on this club-season carries a jersey, a games figure or a position, so no source ever gave a roster row"
+  },
+  {
+   "league": "",
+   "year": "1931",
+   "code": "DOC:SLG-IND",
+   "name": "St. Louis Gunners",
+   "men": 1,
    "coach_or_staff": false,
    "why": "no man on this club-season carries a jersey, a games figure or a position, so no source ever gave a roster row"
   }
@@ -8129,16 +7073,6 @@
   {
    "person": "P_002775",
    "name": "Mathewson",
-   "club_seasons": [
-    "APFA|1920|HAM"
-   ],
-   "predicates_held_but_none_valued": [
-    "college"
-   ]
-  },
-  {
-   "person": "P_002786",
-   "name": "Warren",
    "club_seasons": [
     "APFA|1920|HAM"
    ],
@@ -8271,15 +7205,15 @@
    3
   ],
   [
-   "APFA|1920|HAM",
-   2
-  ],
-  [
    "APFA|1921|CL1",
    2
   ],
   [
    "APFA|1920|CHC",
+   1
+  ],
+  [
+   "APFA|1920|HAM",
    1
   ],
   [
@@ -8312,19 +7246,19 @@
   ]
  ],
  "counts": {
-  "scoped": 603,
-  "empty": 128,
+  "scoped": 496,
+  "empty": 18,
   "empty_by_ruling": 1,
-  "no_coach": 15,
-  "thin": 465,
-  "no_roster_source": 3,
-  "nameless": 19,
-  "missing_facts_total": 3207,
+  "no_coach": 18,
+  "thin": 451,
+  "no_roster_source": 4,
+  "nameless": 18,
+  "missing_facts_total": 3193,
   "by_field": {
-   "age": 326,
-   "weight": 1929,
-   "college": 847,
-   "position": 105
+   "age": 338,
+   "weight": 1878,
+   "college": 844,
+   "position": 133
   }
  }
 }

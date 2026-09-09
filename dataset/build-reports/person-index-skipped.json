@@ -33,7 +33,7 @@
   },
   {
    "store": "coach-promotions",
-   "bytes": 11632628,
+   "bytes": 11708440,
    "top_level_keys": [
     "checked_against",
     "counts",
@@ -2293,7 +2293,7 @@
   },
   {
    "store": "player-promotions",
-   "bytes": 4687994,
+   "bytes": 4716065,
    "top_level_keys": [
     "_ambiguous_and_refused_go_to_ryan",
     "_rule",
@@ -2492,5 +2492,11 @@
    ]
   }
  ],
- "held": []
+ "held": [
+  {
+   "store": "pfa-wlaf-1995",
+   "stints": 45,
+   "why": "Ingested 2026-09-08, the 45-man 1995 Scottish Claymores roster. Store-local ids for the same reason: the club-season is new to the archive and none of these men is joined on a name."
+  }
+ ]
 }

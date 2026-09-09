@@ -14,7 +14,7 @@ import os, sys, subprocess, collections
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 BASELINE = os.path.join(BASE, "build-reports", "bios-baseline-2026-09-06")
-from bio_select import Tables, career, coach_runs, club_id, _club_table
+from bio_select import Tables, career, coach_runs, club_id, _club_table, head_standing
 from clubs import report
 
 fails = []
@@ -29,7 +29,14 @@ def main():
         c = career(p)
         if not c["coached"]: continue
         n_men += 1
-        want = collections.Counter((s["year"], bool(s["stint"].get("is_head_coach")), club_id(s["club"], s["year"])) for s in c["coached"])
+        # HEAD STANDING IS ASKED OF bio_select, NOT RE-TYPED HERE. This line carried its
+        # own copy -- `bool(stint.get("is_head_coach"))` -- and on 2026-09-09 coach_runs
+        # started also reading PFA's printed position, where 706 men are HEAD COACH. The
+        # gate then compared the builder against a rule the builder no longer follows and
+        # reported 727 men losing a year. Not one had. A gate with its own copy of the
+        # rule tests the copy.
+        want = collections.Counter((s["year"], head_standing(s["stint"]), club_id(s["club"], s["year"]))
+                                   for s in c["coached"])
         runs = coach_runs(c)
         got = collections.Counter((y, r["head"], r["club_id"]) for r in runs for y in r["years"])
         if set(want) != set(got) or any(v != 1 for v in got.values()): lost.append((g, p["name"]))

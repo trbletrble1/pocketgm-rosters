@@ -112,7 +112,12 @@ def main():
     seen = 0
     for j in D["joins"]:
         p = IDX.get(j["person"]) or {}
-        roles = {(s.get("stint") or {}).get("role_title") for s in (p.get("seasons") or {}).values() if isinstance(s, dict)}
+        # BOTH DICTS. `role_title` is a staff predicate, so since 2026-09-09 it lives in
+        # `coaching_seasons` -- reading `seasons` alone found 0 of 176 role strings and
+        # said so, which is the gate doing its job on a shape change rather than a defect.
+        roles = {(s.get("stint") or {}).get("role_title")
+                 for d in ("seasons", "coaching_seasons")
+                 for s in (p.get(d) or {}).values() if isinstance(s, dict)}
         seen += sum(1 for m in j["club_years_matched"] if m["role_as_printed"] in roles)
     check(seen > 0, f"{seen} of {sum(want.values())} corroborating role strings are on the person's seasons in the index, unrewritten"
           + ("" if seen else "  (run the rebuild: the joins are in identity.json but the index has not been rebuilt since)"))

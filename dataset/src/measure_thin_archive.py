@@ -46,11 +46,18 @@ def main():
     coached = set()
     for pid, p in IDX.items():
         if not isinstance(p, dict): continue
+        # WHICH CLUB-SEASONS HAVE A COACH comes from `coaching_seasons`, the one place
+        # a coaching season is held since 2026-09-09. This used to read `seasons` for a
+        # `COACHES` league token: it saw 7,201 coaching seasons and missed 17,067 that
+        # PFA writes under a real league, and those 17,067 were also counted as ROSTER
+        # MEMBERS -- 260 of the 393 "players missing a position" were coaches, who have
+        # none.
+        for k in (p.get("coaching_seasons") or {}):
+            pt = k.split("|")
+            if len(pt) == 3: coached.add((pt[2], pt[1].lstrip("y")))
         for k, v in (p.get("seasons") or {}).items():
             pt = k.split("|")
             if len(pt) < 3: continue
-            if pt[0] == "COACHES":
-                coached.add((pt[2], pt[1].lstrip("y"))); continue
             st = v.get("stint") or {}
             cs[k]["men"].append((pid, p))
             if any(st.get(x) is not None for x in ("jersey", "games_played",
@@ -133,7 +140,7 @@ def main():
         facts = [k for k, v in per.items() if not k.startswith("roster_membership")
                  and k not in ("has_photograph", "pfa.transaction") and _real(v)]
         if facts: continue
-        keys = [k for k in (p.get("seasons") or {}) if not k.startswith("COACHES")]
+        keys = list(p.get("seasons") or {})   # playing seasons only, by shape, since 2026-09-09
         if not keys: continue
         nameless.append({"person": pid, "name": nm, "club_seasons": keys,
                          "predicates_held_but_none_valued":

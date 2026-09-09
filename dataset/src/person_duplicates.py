@@ -139,7 +139,13 @@ class Population:
         for pid, v in self.IDX.items():
             per = v.get("person") or {}
             cs, yrs, coach_cs = set(), set(), set()
-            for k in v.get("seasons") or {}:
+            # WHICH CLUB-SEASONS ARE COACHING comes from the dict, not a league token.
+            # Ruled 2026-09-09. This used to read `if lg == "COACHES"` over `seasons`:
+            # it saw 7,201 coaching seasons and missed 17,067 more, so a coach and a
+            # player sharing a club-year looked like one man's playing career and the
+            # merge decision was made on that.
+            for k in list(v.get("seasons") or {}) + list(v.get("coaching_seasons") or {}):
+                is_coaching = k in (v.get("coaching_seasons") or {})
                 lg, y, club = k.split("|", 2)
                 yr = y[1:5] if y.startswith("y") else y
                 if not yr.isdigit(): continue
@@ -151,7 +157,7 @@ class Population:
                 res = self.club_norm.get((club, yr))
                 for c in {club} | ({res} if res else set()) | self.name_to_code.get((nclub(club), yr), set()):
                     cs.add((int(yr), c))
-                    if lg == "COACHES": coach_cs.add((int(yr), c))
+                    if is_coaching: coach_cs.add((int(yr), c))
             nm, nsrc = v.get("name"), "index"
             if not nm and pid in self.recovered:
                 nsrc, nm = "recovered: " + self.recovered[pid][0], self.recovered[pid][1]

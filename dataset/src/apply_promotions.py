@@ -84,9 +84,20 @@ def collect(prom):
         pid = p["person_id"]
         if pid in per:
             raise ApplyError(f"{pid} is promoted twice in the store")
+        # ONE SHAPE. Ruled 2026-09-09: a coaching season's value is
+        # {"stats": {}, "stint": {predicate: value}}, the shape `seasons` uses and the
+        # shape build_person_index now writes for every non-promoted coach. This used
+        # to be a LIST of raw PFA rows, so the index held the same kind of thing two
+        # ways depending on how the man entered the archive -- the very split this
+        # ruling removes. The predicate follows the SECTION, by exactly the rule
+        # ingest_pfa_coaches.py:181 uses, so the index agrees with the claims that
+        # already exist rather than being cleverer than them. (That rule files the 438
+        # `MEDIA GUIDE STAFF LIST` rows under pfa.coaching_playoffs, which is wrong and
+        # is the ingest's to fix; copying it here keeps ONE answer instead of two.)
         cs = {}
         for s in p["coaching_seasons"]:
-            cs.setdefault(season_key(s), []).append(s)
+            pred = "pfa.coaching_season" if s.get("section") == "REGULAR SEASON" else "pfa.coaching_playoffs"
+            cs.setdefault(season_key(s), {"stats": {}, "stint": {}})["stint"][pred] = s
         per[pid] = {"name": p["name"], "coaching_seasons": cs,
                     "entered_by": p["entered_by"],
                     "promotion_ref": p["reversible"]["lead_ref"],
@@ -96,7 +107,17 @@ def collect(prom):
                 "source_record": p["source_record"], "source_id": SRC_ID,
                 "stated_by": "Pro Football Archives",
                 "attribution": ["Pro Football Archives"],
-                "subject": ["person", pid], "predicate": "pfa.coaching_season",
+                # A STINT, NOT A PERSON -- the same repair ingest_pfa_coaches.py took on
+                # 2026-09-09. These are the identical PFA coaching seasons, written for men
+                # who entered by promotion, and leaving them person-scoped kept 17,621 of
+                # them invisible to every "who coached this club-season" question while
+                # their un-promoted colleagues had just become visible. The club code and
+                # the league are already in `s`; a row printing neither stays person-scoped
+                # and is counted rather than guessed.
+                "subject": (["stint", pid, str(s["club"]), f"{s['league']}-{s['year']}"]
+                            if s.get("club") and s.get("league") and s.get("year")
+                            else ["person", pid]),
+                "predicate": "pfa.coaching_season",
                 "value": s, "kind": "observed", "observed_at": "fetched-2026-09",
                 "_from_promotion": p["reversible"]["lead_ref"]})
     return per, claims
@@ -121,9 +142,20 @@ def apply(idx, per):
                 # the archive's name stands; the promotion's spelling is held beside it
                 rec.setdefault("_name_as_printed_by", {})["promotion"] = e["name"]
                 n["name_kept_from_archive"] += 1
-        if rec.get("coaching_seasons") != e["coaching_seasons"]:
+        # MERGE, NEVER OVERWRITE. Since 2026-09-09 build_person_index writes
+        # `coaching_seasons` itself, sorted out of `seasons` by predicate, so this step
+        # is no longer the only producer. Today the two sets are disjoint -- 0 people
+        # hold both a pfa-coaches claim and a coach-seasons-promoted one, because a
+        # promoted man is a new id and PFA's coaching claims join to men already held --
+        # but an assignment here would silently drop the builder's half the day that
+        # stops being true, and nothing downstream would notice.
+        prior = rec.get("coaching_seasons") or {}
+        if prior != e["coaching_seasons"]:
             n["coaching_seasons_set"] += 1
-        rec["coaching_seasons"] = e["coaching_seasons"]
+        clash = {k for k in prior if k in e["coaching_seasons"] and prior[k] != e["coaching_seasons"][k]}
+        if clash:
+            n["coaching_seasons_merged_over_the_builders"] += len(clash)
+        rec["coaching_seasons"] = {**prior, **e["coaching_seasons"]}
         rec["entered_by"] = rec.get("entered_by") or e["entered_by"]
         rec["promotion_ref"] = e["promotion_ref"]
         # A man with no playing season has no playing career to be missing. Never
@@ -170,8 +202,12 @@ def main(write=True, idx=None):
     return out, idx, delta
 
 
+
+# WRITING IS OPT-IN. Ruled 2026-09-09 after two incidents in one afternoon: this file
+# used to write on a bare run, so the safe action was the one you had to know to ask
+# for. `--write` is now required; without it the script computes and reports.
 if __name__ == "__main__":
-    out, _, delta = main(write="--dry" not in sys.argv)
+    out, _, delta = main(write="--write" in sys.argv)
     print("this run (stdout only, not persisted):")
     for k in ("created", "already_present", "coaching_seasons_set", "name_filled", "name_kept_from_archive"):
         print(f"  {k:26s} {delta.get(k, 0):,}")
