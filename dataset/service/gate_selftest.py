@@ -194,6 +194,78 @@ def main():
     else:
         allok &= skip("RS-G6 false-disagreement cases",
                       f"the contested table is {cols} here, not the shape the fixture writes")
+    # ---- G8: what a thing IS, declared. Four injuries, mirroring the four ways the
+    # declaration can be wrong. The fixture is two stores: one all-statistics, one all
+    # roster, plus one staff store and one name predicate.
+    import classification as C
+    def g8_model():
+        # TWO statistics stores sharing a vocabulary and TWO roster stores sharing
+        # one, because that is what the archive looks like -- `stats-nfl-2024` and
+        # `stats-nfl-2025` carry the same columns. A fixture of one store each would
+        # have nothing to straddle and would let the gate pass on an empty declaration,
+        # which is exactly the false pass the first version of this gate gave.
+        cl = []
+        for j, st in enumerate(["stats-fix-1999", "stats-fix-2000"]):
+            for i, pr in enumerate(["passing.Att", "rushing.Yds"], 1):
+                cl.append({"store": st, "scope": "stint", "predicate": pr, "family": pr, "cid": f"s{j}{i}"})
+        for j, st in enumerate(["fix-1999", "fix-2000"]):
+            for i, pr in enumerate(["jersey", "games_played"], 1):
+                cl.append({"store": st, "scope": "stint", "predicate": pr, "family": pr, "cid": f"r{j}{i}"})
+        for i, pr in enumerate(["is_head_coach", "shared_or_split_season"], 1):
+            cl.append({"store": "coaches-fix", "scope": "stint", "predicate": pr, "family": pr, "cid": f"c{i}"})
+        cl.append({"store": "fix", "scope": "person", "predicate": "statscrew.formal_name", "family": "name", "cid": "n1"})
+        return mini_model(cl)
+    base = {"name_forms": {"generational_suffixes": ["jr", "jr.", "sr", "sr.", "ii", "iii", "iv", "v"], "worked_examples": {}},
+            "statistic_stores": {"stores": ["stats-fix-1999", "stats-fix-2000"]},
+            "staff_predicates": {"predicates": ["is_head_coach"], "stores_that_carry_them": ["coaches-fix"],
+                                 "not_staff_though_it_appears_in_those_stores": {"shared_or_split_season": "a qualifier"}},
+            "name_predicates": {"predicates": ["statscrew.formal_name"]}}
+    with tempfile.TemporaryDirectory() as td:
+        # BOTH DECLARATIONS. `staff_predicates` moved to dataset/declarations/
+        # coaching-seasons.json on 2026-09-09 -- the archive's ruling, shared with
+        # build_person_index -- so a fixture that overrode only the service's file left
+        # the staff cases reading the REAL list and passing when they should fail. The
+        # self-test caught that, which is what it is for.
+        real_path, real_d = C._PATH, C._D
+        real_apath, real_a = C._ARCHIVE_PATH, C._A
+        def decl8(d):
+            f = os.path.join(td, "classification.json"); json.dump(d, open(f, "w"))
+            a = os.path.join(td, "coaching-seasons.json")
+            json.dump({"staff_predicates": d.get("staff_predicates", {"predicates": [], "stores_that_carry_them": [],
+                                                                     "not_staff_though_it_appears_in_those_stores": {}})},
+                      open(a, "w"))
+            C._PATH, C._D = f, None
+            C._ARCHIVE_PATH, C._A = a, None
+        try:
+            decl8(base)
+            allok &= expect("RS-G8 declaration matches the model", gates.g8(g8_model(), {}), "PASS")
+            d = json.loads(json.dumps(base)); d["statistic_stores"]["stores"].remove("stats-fix-2000")
+            decl8(d); allok &= expect("RS-G8 statistics store left undeclared", gates.g8(g8_model(), {}), "FAIL")
+            d = json.loads(json.dumps(base)); d["statistic_stores"]["stores"] = []
+            decl8(d); allok &= expect("RS-G8 EVERY statistics store undeclared -- the limit, stated: nothing straddles",
+                                      gates.g8(g8_model(), {}), "PASS")
+            d = json.loads(json.dumps(base)); d["statistic_stores"]["stores"].append("fix-1999")
+            decl8(d); allok &= expect("RS-G8 roster store wrongly declared a statistics store", gates.g8(g8_model(), {}), "FAIL")
+            d = json.loads(json.dumps(base)); d["staff_predicates"]["predicates"] = []
+            decl8(d); allok &= expect("RS-G8 staff predicate dropped", gates.g8(g8_model(), {}), "FAIL")
+            d = json.loads(json.dumps(base)); d["staff_predicates"]["not_staff_though_it_appears_in_those_stores"] = {}
+            decl8(d); allok &= expect("RS-G8 a staff store's other predicate neither declared nor excluded", gates.g8(g8_model(), {}), "FAIL")
+            d = json.loads(json.dumps(base)); d["name_predicates"]["predicates"] = []
+            decl8(d); allok &= expect("RS-G8 name predicate dropped", gates.g8(g8_model(), {}), "FAIL")
+            # the name-form reading, against its own declared examples
+            d = json.loads(json.dumps(base))
+            d["name_forms"] = {"generational_suffixes": ["jr", "jr."],
+                               "worked_examples": {"surname_first": ["Pollard, Frederick Douglass"],
+                                                   "forename_first": ["Robert D. Bean, Jr."]}}
+            decl8(d); allok &= expect("RS-G8 name-form reading matches its worked examples", gates.g8(g8_model(), {}), "PASS")
+            d2 = json.loads(json.dumps(d)); d2["name_forms"]["generational_suffixes"] = []
+            decl8(d2); allok &= expect("RS-G8 suffix list emptied -- 'Robert D. Bean, Jr.' misreads", gates.g8(g8_model(), {}), "FAIL")
+            d2 = json.loads(json.dumps(d)); d2["name_forms"]["worked_examples"]["forename_first"] = ["Pollard, Frederick Douglass"]
+            decl8(d2); allok &= expect("RS-G8 an example declared the wrong way round", gates.g8(g8_model(), {}), "FAIL")
+        finally:
+            C._PATH, C._D = real_path, real_d
+            C._ARCHIVE_PATH, C._A = real_apath, real_a
+
     # the same-day grouping must keep two different days apart and join two spellings of one day
     g = dates.same_day_groups([("May 12, 1925", dates.read("May 12, 1925")), ("1925-05-12", dates.read("1925-05-12")), ("May 13, 1925", dates.read("May 13, 1925"))])
     ok = g == [["May 12, 1925", "1925-05-12"], ["May 13, 1925"]]; allok &= ok

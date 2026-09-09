@@ -16,12 +16,18 @@ number, it was how many properties needed checking at the time.
                                        that declarations/build-files.json does not explain
   G6  a FALSE disagreement fails       -- a contested fact whose values all read to the same
                                        thing under dataset/declarations/readings.json
+  G7  a FABRICATED league fails        -- a league token on a stint that the club table does not
+                                       hold and the rebuild declaration does not name on purpose
+  G8  a GUESSED classification fails   -- a statistics store, a staff predicate or a name
+                                       predicate that declarations/classification.json does not
+                                       name, re-derived from the claims in both directions
 
 NOT a gate: whether any value is correct. The archive holds disagreements on purpose.
 
     python3 gates.py     # run G1-G3 against the published read model, G4 against the index now
 """
 import os, sys, json, glob, sqlite3
+import collections
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import paths
 
@@ -322,7 +328,178 @@ def g6(conn, ctx):
                                                       "declared_in": RV.DECL}]}}
 
 
-GATES = [g1, g2, g3, g4, g5, g6]
+
+def g7(conn, ctx):
+    """RS-G7: a league token that is not a league fails.
+
+    REAL_LEAGUES has been computed in build_read_model.py since the club table was
+    built, three functions above the code that assigned a league. Nothing compared
+    the two, so twelve stores declared "NOT A LEAGUE -- ..." in prose were parsed as
+    `v.split(" ")[0]` and got a league literally called NOT. By 2026-09-08 it was the
+    LARGEST league in the archive -- 132,038 stint keys against the NFL's 114,369 --
+    and it also handed 32,791 men the role "not". Nothing was wrong with the
+    declaration; it read correctly to a person and wrongly to a parser.
+
+    Ryan ruled the splitting rule changes, not the prose. This gate is the comparison
+    that was never made: every league on a stint or person_season claim must be a
+    league the CLUB TABLE holds, or one of the single-word tokens the rebuild
+    declaration names deliberately (COACHES, IND, DRAFT -- each with its reason).
+    The exemption set is DERIVED from the declaration and never typed here.
+
+    NULL is not a failure. A store that declares it has no league, whose season key
+    names no league the club table holds, leaves the league unknown -- and unknown is
+    a fact the archive is allowed to hold. A FABRICATED league is not."""
+    sys.path.insert(0, os.path.join(paths.DATASET, "src"))
+    import clubs as ac, league_tokens as LT
+    real = {lg["league"] for c in ac.Clubs().T["clubs"] for s in c["segments"] for lg in s["leagues"]}
+    allowed = real | LT.declared_non_leagues(paths.INDEX_REBUILD_DECL)
+    found = {r[0]: r[1] for r in conn.execute(
+        "SELECT league, COUNT(*) FROM claim WHERE scope IN ('stint','person_season') "
+        "AND league IS NOT NULL AND league != '' GROUP BY league")}
+    bad = {l: n for l, n in found.items() if l not in allowed}
+    return {"name": "RS-G7 every league token is a league", "status": "FAIL" if bad else "PASS",
+            "counts": {"distinct_tokens": len(found),
+                       "in_the_club_table": len([l for l in found if l in real]),
+                       "declared_non_competitions": len([l for l in found if l in allowed and l not in real]),
+                       "fabricated": len(bad), "claims_on_fabricated_tokens": sum(bad.values())},
+            "report": [{"token": l, "claims": n,
+                        "remedy": "either the club table holds this league, or declare it in "
+                                  "store_league_tokens with its reason, or the store's league is wrong"}
+                       for l, n in sorted(bad.items(), key=lambda x: -x[1])]}
+
+
+def g8(conn, ctx):
+    """RS-G8: what a thing IS, re-derived from the model and compared with the
+    declaration -- in both directions.
+
+    Three classifications were string tests inside queries.py until 2026-09-09, and
+    all three had already gone wrong: `store.startswith("stats-")` served 2,688,935
+    PFA statistics as ordinary facts because those stores are named `pfa-stats-*`;
+    `league NOT IN ('COACHES',...)` counted 41,662 staff claims as players once the
+    coaching subjects were given real leagues; `predicate not in ("name",)` served
+    one name predicate twice and left two unsearchable.
+
+    THIS GATE DOES NOT TRUST declarations/classification.json. It re-derives each
+    classification from the claims and lists every difference, so a store or a
+    predicate that arrives tomorrow fails loudly instead of being read by its name.
+
+    HOW EACH IS DERIVED, with the property it rests on:
+
+    1. STATISTIC STORES, as a PARTITION. Measured 2026-09-09: the predicate sets are
+       disjoint -- 171 predicates appear only in the 228 declared statistics stores,
+       184 only outside, and none in both. The gate checks that partition directly:
+       a predicate carried by BOTH a declared statistics store and an undeclared one
+       fails and names both sides. It does not derive the statistic vocabulary from
+       the declaration and then test the declaration against it -- that first version
+       passed on an EMPTY declaration and cascaded 227 innocent stores on a wrong one.
+       Its limit is written into the code: a statistics store sharing its vocabulary
+       with nothing is invisible here.
+    2. STAFF PREDICATES. Every stint predicate appearing in a declared staff store
+       must be declared -- either as staff, or by name in
+       `not_staff_though_it_appears_in_those_stores` with its reason. "Considered and
+       excluded" and "never noticed" look identical without this.
+    3. NAME PREDICATES. Every person-scoped predicate whose name contains "name"
+       must be declared or explicitly not a name. A name served as a fact is a name
+       search cannot find.
+    4. NAME FORM. The surname-first reading against declared worked examples, both
+       answers. Ruled 2026-09-09: a display name is read, so `Fritz Pollard` beats
+       `Pollard, Frederick Douglass` -- but nothing is standardised and both stay
+       claims. The gate protects the RULE, not the recipe."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import classification as C
+    decl_stat = C.statistic_stores(); decl_staff = C.staff_predicates()
+    decl_names = C.name_predicates(); staff_stores = C.staff_stores()
+    excluded = C.considered_and_not_staff()
+    findings = []
+
+    # 1. STATISTIC STORES, as a PARTITION CHECK, not a bootstrapped one.
+    # The first version derived the statistic-predicate set from the declared stores
+    # and then asked whether an undeclared store fell inside it -- a decider reading
+    # its own output. Empty the declaration and it had nothing to compare against and
+    # passed; add one wrong store and 227 innocent ones cascaded into the report.
+    # What is checked instead is a property of the CLAIMS: every predicate must be
+    # carried either wholly by declared statistics stores or wholly by other stores.
+    # A predicate that straddles the boundary names both sides and cannot cascade.
+    by_store = collections.defaultdict(set); by_pred = collections.defaultdict(set)
+    for st, pr in conn.execute("SELECT DISTINCT store, predicate FROM claim"):
+        by_store[st].add(pr); by_pred[pr].add(st)
+    straddling = 0
+    for pr, stores in sorted(by_pred.items()):
+        inside = sorted(s for s in stores if s in decl_stat)
+        outside = sorted(s for s in stores if s not in decl_stat)
+        if inside and outside:
+            straddling += 1
+            findings.append({"what": "a predicate carried both by a declared statistics store and by an undeclared one",
+                             "predicate": pr, "declared_statistics_stores": inside[:5], "other_stores": outside[:5],
+                             "remedy": "one side is misfiled: either those other stores are statistics stores and belong in "
+                                       "declarations/classification.json, or this predicate does not belong in a statistics store"})
+    # WHAT THIS CANNOT SEE, stated rather than left as a silent pass: a statistics store
+    # whose predicates appear in NO other store is invisible to a partition check --
+    # there is nothing to straddle. In practice a new statistics store shares its
+    # vocabulary with the 228 already declared (`stats-nfl-2025` carries the same
+    # columns as `stats-nfl-2024`), which is the case this catches. A store with a
+    # wholly novel statistical vocabulary must be declared by the person who ingests it.
+    stale = sorted(s for s in decl_stat if s not in by_store)
+
+    # 2. staff predicates, derived from the stores that carry them
+    if staff_stores:
+        q = ",".join("?" * len(staff_stores))
+        for pr, n in conn.execute(f"SELECT predicate, COUNT(*) FROM claim WHERE scope='stint' AND store IN ({q}) GROUP BY predicate", sorted(staff_stores)):
+            if pr not in decl_staff and pr not in excluded:
+                findings.append({"what": "a stint predicate in a staff store that is neither declared staff nor declared not-staff",
+                                 "predicate": pr, "claims": n,
+                                 "remedy": "add it to staff_predicates, or to not_staff_though_it_appears_in_those_stores with its reason"})
+
+    # 3. name predicates, derived from the predicate names themselves
+    declared_not_names = set(C.raw()["name_predicates"].get("_not_names", []))
+    for pr, n in conn.execute("SELECT predicate, COUNT(*) FROM claim WHERE scope='person' AND lower(predicate) LIKE '%name%' GROUP BY predicate"):
+        if pr not in decl_names and pr not in declared_not_names:
+            findings.append({"what": "a person-scoped predicate that names a man and is not declared a name",
+                             "predicate": pr, "claims": n,
+                             "remedy": "add it to name_predicates, or to _not_names with its reason; a name served as a fact is one search cannot find"})
+
+    # ORDER MATTERS. Both statistics checks rest on the SAME disjointness property, so
+    # one wrong entry cascades: drop `pfa-stats-1920s` and all 227 survivors report a
+    # predicate now seen "outside". The cause is always a declared store carrying a
+    # predicate seen elsewhere, so that finding is listed first and the cascade after.
+    ORDER = {"a predicate carried both by a declared statistics store and by an undeclared one": 0}
+    findings.sort(key=lambda f: ORDER.get(f["what"], 1))
+    # 4. NAME FORM. The reading that decides surname-first from forename-first is
+    # checked against DECLARED WORKED EXAMPLES, both answers, every one a real string
+    # in the index. This is not a tautology check on the recipe -- display_name filters
+    # its own candidates and would always agree with itself. It is a check that the
+    # RULE still gives the answers it was ruled to give, so editing the suffix list or
+    # the split fails here instead of quietly re-sorting 2,472 names.
+    ex = C.raw().get("name_forms", {}).get("worked_examples", {})
+    for want, key in ((True, "surname_first"), (False, "forename_first")):
+        for n in ex.get(key, []):
+            got = C.is_surname_first(n)
+            if got != want:
+                findings.append({"what": "the name-form reading disagrees with a declared worked example",
+                                 "name": n, "declared": key, "reading_says": "surname_first" if got else "forename_first",
+                                 "remedy": "either the rule changed and this example must be re-ruled, or the rule is wrong"})
+    commas = conn.execute("SELECT COUNT(*) FROM person_name WHERE name LIKE '%,%'").fetchone()[0]
+    filed = sum(1 for r in conn.execute("SELECT name FROM person_name WHERE name LIKE '%,%'") if C.is_surname_first(r[0]))
+
+    return {"name": "RS-G8 classification is declared, not read off a name",
+            "status": "FAIL" if findings else "PASS",
+            "counts": {"statistic_stores_declared": len(decl_stat),
+                       "predicates_seen": len(by_pred),
+                       "predicates_wholly_inside_a_statistics_store": len([p for p, st in by_pred.items() if st <= decl_stat]),
+                       "predicates_straddling_the_boundary": straddling,
+                       "staff_predicates_declared": len(decl_staff),
+                       "name_predicates_declared": len(decl_names),
+                       "worked_examples_checked": sum(len(v) for k, v in ex.items() if not k.startswith("_")),
+                       "index_names_with_a_comma": commas,
+                       "of_those_read_as_surname_first": filed,
+                       "differences": len(findings),
+                       "declared_stores_no_longer_in_the_model": len(stale)},
+            "report": findings + ([{"what": "declared statistics stores the model no longer holds",
+                                    "stores": stale[:20],
+                                    "remedy": "informational: a store may be renamed or retired. Remove it when that is deliberate."}] if stale else [])}
+
+
+GATES = [g1, g2, g3, g4, g5, g6, g7, g8]
 
 
 def run(conn, ctx):

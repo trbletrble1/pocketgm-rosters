@@ -5,7 +5,26 @@ under the §9.3 recipe and says so.
 """
 import os, sys, json, re, sqlite3, collections, unicodedata
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
-import paths, dates, families
+import paths, dates, families, classification
+
+# WHAT A THING IS -- from declarations/classification.json, never from a name.
+# See service/classification.py for why, and for the two files that keep their own
+# `stats-` test because they ask a different question.
+STAFF_PREDICATES = classification.staff_predicates()
+NAME_PREDICATES = classification.name_predicates()
+STATISTIC_STORES = classification.statistic_stores()
+
+
+def _is_statistic(row):
+    return row["store"] in STATISTIC_STORES
+
+
+def _in_sql(col, values, negate=False):
+    """(sql fragment, args) for `col IN (...)`. The values are DECLARED, so the
+    list is long on purpose: a prefix is what broke this."""
+    v = sorted(values)
+    return f"{col} {'NOT ' if negate else ''}IN ({','.join('?' * len(v))})", v
+
 
 DISPLAY_NAME_RECIPE = "display-name/design-9.3@v1"
 DATE_RECIPE = dates.RECIPE
@@ -107,8 +126,19 @@ def display_name(name_rows, hints=None):
     """§9.3: the name claim covering the largest span of the person's own attested career,
     tie-broken earliest. Undated name claims (a modern reference's 'fetch-2026') do not
     count toward a span; if no name claim is dated, the most-attested string. DERIVED."""
+    # A FORENAME-FIRST FORM WINS WHERE THE PERSON HOLDS ONE. Ruled 2026-09-09 by Ryan:
+    # `Fritz Pollard`, not `Pollard, Frederick Douglass`. A display name is READ, and
+    # surname-first is a filing convention, not a name. This filters the CANDIDATES and
+    # changes nothing else: the §9.3 span rule below runs exactly as before on what is
+    # left, both forms stay in the store as printed, and both stay searchable. A man who
+    # holds ONLY a surname-first form keeps it -- 12 people in the archive.
+    rows = list(name_rows)
+    filed = [r for r in rows if classification.is_surname_first(r["name"])]
+    read_as_written = [r for r in rows if not classification.is_surname_first(r["name"])]
+    dropped_filing_forms = sorted({r["name"] for r in filed}) if (filed and read_as_written) else []
+    if dropped_filing_forms: rows = read_as_written
     spans = collections.defaultdict(set); count = collections.Counter(); claims = collections.defaultdict(list)
-    for r in name_rows:
+    for r in rows:
         count[r["name"]] += 1; claims[r["name"]].append(r["claim"])
         if r["year"]: spans[r["name"]].add(r["year"])
     if not count:
@@ -120,8 +150,12 @@ def display_name(name_rows, hints=None):
         why = f"largest career span ({min(spans[best])}-{max(spans[best])}), ties to the earliest"
     else:
         best = count.most_common(1)[0][0]; why = "no dated name claim; the most-attested string"
-    return {"value": best, "basis": "derived", "derived": True, "recipe": DISPLAY_NAME_RECIPE, "why": why,
-            "inputs": [f"{c}" for c in claims[best]][:20]}
+    out = {"value": best, "basis": "derived", "derived": True, "recipe": DISPLAY_NAME_RECIPE, "why": why,
+           "inputs": [f"{c}" for c in claims[best]][:20]}
+    if dropped_filing_forms:
+        out["surname_first_forms_not_chosen"] = dropped_filing_forms
+        out["why"] += "; surname-first forms were set aside as a filing convention (they remain claims and remain searchable)"
+    return out
 
 
 # ---------------------------------------------------------------- person
@@ -144,7 +178,7 @@ def person(conn, pid, one=False):
     out["names"] = [dict(v, years=sorted(v["years"])) for v in nm.values()]
     by_scope = collections.defaultdict(list)
     for r in rows: by_scope[r["scope"]].append(r)
-    out["facts"] = facts_from_rows([r for r in by_scope["person"] if r["predicate"] not in ("name",)])
+    out["facts"] = facts_from_rows([r for r in by_scope["person"] if r["predicate"] not in NAME_PREDICATES])
     ps = collections.OrderedDict()
     for r in by_scope["person_season"]: ps.setdefault((r["league"], r["year"]), []).append(r)
     out["seasons"] = [{"league": lg, "year": y, "facts": facts_from_rows(rs)} for (lg, y), rs in ps.items()]
@@ -152,8 +186,8 @@ def person(conn, pid, one=False):
     for r in by_scope["stint"]: st.setdefault((r["year"], r["league"], r["club_str"]), []).append(r)
     stints = []
     for (y, lg, club), rs in st.items():
-        stats = [r for r in rs if r["store"].startswith("stats-")]
-        other = [r for r in rs if not r["store"].startswith("stats-")]
+        stats = [r for r in rs if _is_statistic(r)]
+        other = [r for r in rs if not _is_statistic(r)]
         cid = next((r["club_id"] for r in rs if r["club_id"]), None); via = next((r["club_via"] for r in rs if r["club_via"]), None)
         s = {"year": y, "league": lg, "club": {"as_written": club, "club_id": cid, "resolved_via": via, "name_that_year": club_name_for(conn, cid, y) if cid else None},
              "facts": facts_from_rows(other), "games": four_state(other)}
@@ -226,8 +260,9 @@ def candidate(conn, p, exact=False):
     bd = [{"value": json.loads(r["value"]), "predicate": r["predicate"], "source_id": r["source_id"]} for r in conn.execute(
         "SELECT DISTINCT value, predicate, source_id FROM claim INDEXED BY claim_person WHERE person=? AND family='birth_date' AND kind!='absent'", (pid,))]
     col = sorted({json.loads(r["value"]) for r in conn.execute("SELECT DISTINCT value FROM claim INDEXED BY claim_person WHERE person=? AND predicate IN ('college','pfa.college') AND kind!='absent'", (pid,)) if isinstance(json.loads(r["value"]), str)})
+    nostat, nsargs = _in_sql("store", STATISTIC_STORES, negate=True)
     clubs = [f"{r['league']}|{r['year']}|{r['club_str']}" for r in conn.execute(
-        "SELECT DISTINCT league, year, club_str FROM claim INDEXED BY claim_person WHERE person=? AND scope='stint' AND store NOT LIKE 'stats-%' ORDER BY year LIMIT 40", (pid,))]
+        f"SELECT DISTINCT league, year, club_str FROM claim INDEXED BY claim_person WHERE person=? AND scope='stint' AND {nostat} ORDER BY year LIMIT 40", [pid] + nsargs)]
     contested = [r["family"] for r in conn.execute("SELECT family FROM contested WHERE person=?", (pid,))]
     return {"person": pid, "exact_match": exact, "index_name": p["index_name"], "names_held": names, "birth_dates_held": bd, "colleges_held": col,
             "first_year": p["first_year"], "last_year": p["last_year"], "roles_from_claims": json.loads(p["roles"]), "club_seasons": clubs,
@@ -281,16 +316,42 @@ def club_season(conn, league, year, club):
             hints = [] if nm else [r[0] for r in conn.execute("SELECT DISTINCT source_record FROM denotation WHERE person=? LIMIT 8", (pid,))]
             entry = {"person": pid, "display_name": display_name(nm, hints), "index_name": p["index_name"] if p else None,
                      "club_as_written": sorted({r["club_str"] for r in rs}), "leagues_as_written": sorted(leagues)}
-        main = [r for r in rs if r["league"] == league]; rest = [r for r in rs if r["league"] != league]
+        # STAFF IS DECIDED BY THE PREDICATE, NOT BY THE LEAGUE. This used to read
+        # `leagues & {"COACHES","ASSISTANTS","COACH"}`, which worked only while the
+        # coaching claims carried no real league. On 2026-09-09 they were given one --
+        # `NFL-1979` -- and every one of them started matching the REQUESTED league, so
+        # 26,105 of 31,986 coaching pairs sorted onto the roster: Jack Pardee became a
+        # player on the 1979 Redskins and the 2024 Bears returned no staff at all.
+        # A pfa.coaching_season claim is a coaching season whatever league it names.
+        staff_rows = [r for r in rs if r["predicate"] in STAFF_PREDICATES]
+        main = [r for r in rs if r["league"] == league and r["predicate"] not in STAFF_PREDICATES]
+        rest = [r for r in rs if r["league"] != league]
+        placed = False
+        if staff_rows:
+            e = dict(entry); e["facts"] = facts_from_rows(staff_rows)
+            e["_role"] = "staff: this club-season holds a coaching or staff claim for him"
+            staff.append(e); placed = True
         if main:
-            entry["facts"] = facts_from_rows([r for r in main if not r["store"].startswith("stats-")]); entry["games"] = four_state(main)
-            stats = [r for r in main if r["store"].startswith("stats-")]
-            if stats: entry["statistics"] = facts_from_rows(stats)
-            roster.append(entry)
-        elif leagues & {"COACHES", "ASSISTANTS", "COACH"}:
-            entry["facts"] = facts_from_rows(rest); staff.append(entry)
-        else:
-            entry["facts"] = facts_from_rows(rest); other.append(entry)
+            e = dict(entry)
+            e["facts"] = facts_from_rows([r for r in main if not _is_statistic(r)])
+            e["games"] = four_state(main)
+            stats = [r for r in main if _is_statistic(r)]
+            if stats: e["statistics"] = facts_from_rows(stats)
+            # A PLAYER-COACH IS BOTH, AND IS LISTED TWICE ON PURPOSE. 782 (person,
+            # club-season) pairs hold a playing claim and a staff claim -- Glenn Dobbs at
+            # Saskatchewan, Bill Daddio at Buffalo. Choosing one list for them would
+            # delete a fact the archive holds; n_members and n_staff each count him once.
+            if placed: e["_also_staff_this_season"] = True
+            roster.append(e); placed = True
+        if not placed:
+            # THE LAST LEAGUE-STRING TEST IN THIS FUNCTION, REMOVED 2026-09-09. It read
+            # `staff if leagues & {"COACHES","ASSISTANTS","COACH"} else other`. Reaching
+            # here means the man holds NO staff predicate on this club-season, so the
+            # branch could only ever have sorted a coaching-keyed claim that carries no
+            # coaching predicate. Measured: 0 (person, club-season) pairs in the archive.
+            # It was dead, and a dead string test is one that comes back to life quietly.
+            entry["facts"] = facts_from_rows(rest or rs)
+            other.append(entry)
     names = [{"value": json.loads(r["value"]), **claim_view(r)} for r in conn.execute(
         "SELECT * FROM claim WHERE scope='club_season' AND predicate='club_name' AND subject LIKE ? ", (f'%"{y}"%',)) if json.loads(r["subject"])[-1] in {club} | {r2["code"] for r2 in conn.execute("SELECT code FROM club_code WHERE club_id=?", (cid,))}]
     out = {"league": league, "year": y, "club": {"requested": club, "club_id": cid, "resolved_via": via, "name_that_year": club_name_for(conn, cid, y),
@@ -310,7 +371,16 @@ def club(conn, cid):
     c = json.loads(r["json"])
     unresolved = [{"section": u["section"], "item": json.loads(u["json"])} for u in conn.execute("SELECT section, json, mentions FROM club_unresolved") if cid in json.loads(u["mentions"])
                   or any(f"code:{s['code']}" in json.loads(u["mentions"]) for s in c["segments"])]
-    seasons = [{"year": y, "n": n} for y, n in conn.execute("SELECT year, COUNT(DISTINCT person) FROM claim WHERE scope='stint' AND club_id=? AND league NOT IN ('COACHES','ASSISTANTS','SALARIES','COACH') GROUP BY year ORDER BY year", (cid,))]
+    # MEMBERS ARE DECIDED BY THE PREDICATE, NOT BY THE LEAGUE -- the same fix
+    # club_season() took on 2026-09-09, which did not reach this line. It read
+    # `league NOT IN ('COACHES','ASSISTANTS','SALARIES','COACH')`, and once the
+    # coaching claims carried real leagues it counted 22 coaches among the 2024
+    # Bears' 83 "members". Staff are counted separately and the two are not added.
+    nostaff, sargs = _in_sql("predicate", STAFF_PREDICATES, negate=True)
+    isstaff, sargs2 = _in_sql("predicate", STAFF_PREDICATES)
+    mem = dict(conn.execute(f"SELECT year, COUNT(DISTINCT person) FROM claim WHERE scope='stint' AND club_id=? AND {nostaff} GROUP BY year", [cid] + sargs))
+    stf = dict(conn.execute(f"SELECT year, COUNT(DISTINCT person) FROM claim WHERE scope='stint' AND club_id=? AND {isstaff} GROUP BY year", [cid] + sargs2))
+    seasons = [{"year": y, "n": mem.get(y, 0), "n_staff": stf.get(y, 0)} for y in sorted(set(mem) | set(stf))]
     return {"club": c, "seasons_held_with_members": seasons, "unresolved_touching_this_club": unresolved,
             "note": "lineage links are the table's, with their evidence; candidates and splits are listed, not joined"}
 
@@ -364,17 +434,30 @@ def census(conn, family, population="people"):
 
 
 def census_club_seasons(conn, year):
+    """§ Every number here reads a PREDICATE and a DECLARED STORE, never a league
+    string or a store-name prefix. Both were wrong on 2026-09-09: the league test
+    let 41,662 of 54,908 staff claims through as players (answer 1 too high) while
+    answer 3 counted only the claims still carrying a COACHES season key (too low),
+    so the two answers overlapped in a census whose note says they are not added."""
     y = int(year)
-    real = [r[0] for r in conn.execute("SELECT DISTINCT league FROM claim WHERE scope='stint' AND year=? AND store NOT LIKE 'stats-%' AND league NOT IN ('COACHES','ASSISTANTS','SALARIES','COACH') ", (y,))]
-    roster = conn.execute("SELECT COUNT(*) FROM (SELECT DISTINCT league, club_str FROM claim WHERE scope='stint' AND year=? AND store NOT LIKE 'stats-%' AND league NOT IN ('COACHES','ASSISTANTS','SALARIES','COACH'))", (y,)).fetchone()[0]
-    roster_ids = conn.execute("SELECT COUNT(DISTINCT club_id) FROM claim WHERE scope='stint' AND year=? AND club_id IS NOT NULL AND store NOT LIKE 'stats-%' AND league NOT IN ('COACHES','ASSISTANTS','SALARIES','COACH')", (y,)).fetchone()[0]
-    coaching = conn.execute("SELECT COUNT(*) FROM (SELECT DISTINCT club_str FROM claim WHERE scope='stint' AND year=? AND league IN ('COACHES','ASSISTANTS','COACH'))", (y,)).fetchone()[0]
+    nostat, na = _in_sql("store", STATISTIC_STORES, negate=True)
+    nostaff, sa = _in_sql("predicate", STAFF_PREDICATES, negate=True)
+    isstaff, sb = _in_sql("predicate", STAFF_PREDICATES)
+    roster_where = f"scope='stint' AND year=? AND {nostat} AND {nostaff}"
+    ra = [y] + na + sa
+    real = [r[0] for r in conn.execute(f"SELECT DISTINCT league FROM claim WHERE {roster_where}", ra)]
+    roster = conn.execute(f"SELECT COUNT(*) FROM (SELECT DISTINCT league, club_str FROM claim WHERE {roster_where})", ra).fetchone()[0]
+    roster_ids = conn.execute(f"SELECT COUNT(DISTINCT club_id) FROM claim WHERE {roster_where} AND club_id IS NOT NULL", ra).fetchone()[0]
+    coaching = conn.execute(f"SELECT COUNT(*) FROM (SELECT DISTINCT club_str FROM claim WHERE scope='stint' AND year=? AND {isstaff})", [y] + sb).fetchone()[0]
+    coaching_ids = conn.execute(f"SELECT COUNT(DISTINCT club_id) FROM claim WHERE scope='stint' AND year=? AND club_id IS NOT NULL AND {isstaff}", [y] + sb).fetchone()[0]
     table = conn.execute("SELECT COUNT(DISTINCT club_id) FROM club_code WHERE first<=? AND last>=?", (y, y)).fetchone()[0]
-    by_league = [{"league": r[0], "club_seasons": r[1]} for r in conn.execute("SELECT league, COUNT(DISTINCT club_str) FROM claim WHERE scope='stint' AND year=? AND store NOT LIKE 'stats-%' AND league NOT IN ('COACHES','ASSISTANTS','SALARIES','COACH') GROUP BY league", (y,))]
+    by_league = [{"league": r[0], "club_seasons": r[1]} for r in conn.execute(f"SELECT league, COUNT(DISTINCT club_str) FROM claim WHERE {roster_where} GROUP BY league", ra)]
     return {"year": y, "answers": [
         {"definition": "club strings that roster stores place at least one player on", "n": roster, "by_league": by_league},
         {"definition": "of those, distinct clubs after resolving through the club table", "n": roster_ids},
-        {"definition": "club strings the coaching stores place a coach on (COACHES/ASSISTANTS keys)", "n": coaching},
+        {"definition": "club strings a coaching or staff claim places a man on", "n": coaching,
+         "distinct_clubs_after_resolving": coaching_ids,
+         "_definition_changed_2026_09_09": "was 'club strings the coaching stores place a coach on (COACHES/ASSISTANTS keys)'. That named the MECHANISM -- the season-key prefix -- and once the coaching subjects carried real leagues it answered a question nobody asks: how many coaching claims still happen to be keyed COACHES. The question is how many club-seasons the archive holds a coaching claim for."},
         {"definition": "clubs the club table holds a code-segment for in that year", "n": table}],
         "note": "three or four honest numbers; they are not added"}
 

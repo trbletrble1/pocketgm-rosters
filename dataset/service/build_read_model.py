@@ -15,8 +15,13 @@ is kept and counted (gate G1); the people here are reconciled against the index
     python3 build_read_model.py --force    # publish even if a gate fails (development only; the snapshot says so loudly)
 """
 import os, sys, json, glob, sqlite3, time, collections, re, datetime, unicodedata
+import shutil
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import paths, families, identity, snapshot, dates, gates
+import classification
+
+NAME_PREDICATES = classification.name_predicates()
+import league_tokens as LT
 
 
 def archive_clubs():
@@ -117,13 +122,17 @@ def is_claim_store(d):
 def store_league(st):
     """A stint's league comes from the store filename (stats-nfl-1987 -> NFL) unless the
     archive's rebuild declaration says the store's name is not its league
-    (store_league_tokens: assistants -> COACHES, ruled 2026-09-07). Read, not mirrored."""
+    (store_league_tokens: assistants -> COACHES, ruled 2026-09-07). Read, not mirrored.
+
+    Returns None where the declaration says the store has NO league of its own; the
+    caller then takes it from the season key on the subject. The rule that reads the
+    declaration lives in service/league_tokens.py and has exactly one implementation --
+    it used to have two, and both took the first word of an English sentence, so the
+    twelve stores declared "NOT A LEAGUE -- ..." got a league called NOT."""
     global _LEAGUE_TOKENS
     if _LEAGUE_TOKENS is None:
-        d = json.load(open(paths.INDEX_REBUILD_DECL)) if os.path.exists(paths.INDEX_REBUILD_DECL) else {}
-        _LEAGUE_TOKENS = {k: v.split(" ")[0] for k, v in (d.get("store_league_tokens") or {}).items() if not k.startswith("_")}
-    base = st[6:] if st.startswith("stats-") else st
-    return _LEAGUE_TOKENS.get(base) or base.split("-")[0].upper()
+        _LEAGUE_TOKENS = LT.tokens(paths.INDEX_REBUILD_DECL)
+    return LT.store_league(st, _LEAGUE_TOKENS)
 
 
 def season_year(s):
@@ -216,7 +225,11 @@ def build(dst, force=False):
             person = ident.resolve(st, s1) if scope in PERSON_SCOPES else None
             yr = club_str = club_id = via = None; lg = None
             if scope == "stint" and isinstance(s, list) and len(s) >= 4:
-                club_str = str(s[2]); yr = season_year(s[3]); lg = league
+                club_str = str(s[2]); yr = season_year(s[3])
+                # A store that declares it has no league carries it on the subject:
+                # ["stint", person, code, "APFA-1920"]. Reading it from the filename
+                # instead is what put 132,038 stint keys in a league called NOT.
+                lg = league if league else LT.from_season_key(s[3], REAL_LEAGUES)
                 if yr is not None:
                     k = (club_str, yr, lg)
                     if k not in club_cache:
@@ -227,7 +240,8 @@ def build(dst, force=False):
                             club_cache[k] = res if res else (None, None)
                     club_id, via = club_cache[k]
             elif scope == "person_season" and isinstance(s, list) and len(s) >= 3:
-                yr = season_year(s[2]); lg = league
+                yr = season_year(s[2])
+                lg = league if league else LT.from_season_key(s[2], REAL_LEAGUES)
             pred = c.get("predicate"); famname = fam["of"].get(pred, pred)
             val = c.get("value"); kind = c.get("kind")
             sr = c.get("source_record")
@@ -252,12 +266,28 @@ def build(dst, force=False):
                 if yr and scope == "stint":
                     p["first"] = yr if p["first"] is None else min(p["first"], yr)
                     p["last"] = yr if p["last"] is None else max(p["last"], yr)
-                    p["roles"].add("player" if lg in REAL_LEAGUES else lg.lower())
+                    # A store that declares no league establishes no ROLE either. This
+                    # line used to read `lg.lower()` for anything not a real league,
+                    # which is how 32,791 men acquired the role "not" from a league
+                    # called NOT. Where the league is unknown the role is unknown, and
+                    # the man's other claims say what he was.
+                    if lg in REAL_LEAGUES:
+                        p["roles"].add("player")
+                    elif lg:
+                        p["roles"].add(lg.lower())
                 if pred in ("pfa.coaching_season", "pfa.coaching_playoffs"): p["roles"].add("coaches")
                 if pred == "pfa.officiating_season": p["roles"].add("official")
-                if pred == "name" and val: names.append((person, str(val), norm_name(val), pred, st, rowid, observed_year(c.get("observed_at"))))
-                if pred == "pfa.name_as_printed" and isinstance(val, dict):
-                    for v in {val.get("name"), val.get("full")} - {None}: names.append((person, v, norm_name(v), pred, st, rowid, None))
+                # WHICH PREDICATES ARE NAMES is declared, not spelt here. This was the
+                # SECOND implementation of that question -- queries.py excluded the single
+                # literal "name" from facts -- and the two did not agree: pfa.name_as_printed
+                # was indexed AND served as a fact, statscrew.formal_name and full_name were
+                # served as facts and never indexed, so search could not find 1,607 names.
+                if pred in NAME_PREDICATES and val is not None:
+                    if isinstance(val, dict):   # pfa.name_as_printed carries two forms
+                        for v in {val.get("name"), val.get("full")} - {None}:
+                            names.append((person, v, norm_name(v), pred, st, rowid, None))
+                    else:
+                        names.append((person, str(val), norm_name(val), pred, st, rowid, observed_year(c.get("observed_at"))))
         conn.executemany("INSERT INTO claim VALUES(" + ",".join("?" * 26) + ")", rows)
         if drows: conn.executemany("INSERT INTO date_reading VALUES(?,?,?,?,?,?,?,?,?,?)", drows)
         for i, dn in enumerate(d.get("denotations") or []):
@@ -402,9 +432,103 @@ def build_contested(conn, fam):
     return out
 
 
-def publish(tmp, dst):
+# HOW MANY PUBLISHED MODELS ARE KEPT, and what removes them.
+#
+# TWO, besides the one being served. Ruled 2026-09-09 by Ryan, after the question
+# "what did the service return before this weekend?" could not be answered at all:
+# publish() was a bare os.replace, which retains nothing, and the stores that would
+# rebuild the old model are under build/, which is gitignored. The model of
+# 2026-09-08 18:57:44 did not exist in any form fourteen hours later.
+#
+# Two and not one, because the useful diff is often not against the last publish
+# but against the one before it -- a fix and its rebuild are usually two publishes
+# on the same morning. Two and not more, because the model is ~6 GB: three on disk
+# is ~18 GB, which is a number a person can hold in their head.
+#
+# WHAT REMOVES THEM. Nothing else, ever: only this function, only at publish time,
+# oldest first by the built_at each one carries in its own meta table (never by the
+# file's mtime, which a copy or a backup can rewrite). A model whose meta cannot be
+# read is treated as the oldest and goes first -- it cannot be used for a diff.
+# There is also a floor: if keeping two would leave less than three models' worth of
+# free space, fewer are kept and the publish SAYS SO rather than filling the disk.
+KEEP_PREVIOUS = 2
+
+
+def model_identity(path):
+    """(snapshot_id, built_at) from a published model's own meta table, or Nones.
+
+    THE COLUMNS ARE `key` AND `value`. The first version of this function asked for
+    `k` and `v`, and its `except Exception` turned the resulting OperationalError
+    into "unreadable": the first retained model was filed as
+    `archive-unknown-unreadable.sqlite` and the publish said so in one line nobody
+    would have read twice. A guard around a required read makes the failure
+    invisible, not the code robust -- so a file that IS a database but whose meta
+    cannot be queried now RAISES, and only a file that is not a database at all
+    returns Nones."""
+    try:
+        c = sqlite3.connect(f"file:{path}?mode=ro", uri=True)
+    except sqlite3.Error:
+        return None, None
+    try:
+        if not c.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='meta'").fetchone():
+            return None, None                      # not one of our models
+        m = dict(c.execute("SELECT key, value FROM meta WHERE key IN ('snapshot_id','built_at')"))
+    except sqlite3.DatabaseError as e:
+        if "not a database" in str(e) or "malformed" in str(e):
+            return None, None                      # corrupt: it cannot serve a diff
+        raise                                      # a schema we do not understand is LOUD
+    finally:
+        c.close()
+    return m.get("snapshot_id"), m.get("built_at")
+
+
+def previous_models():
+    """The retained models, NEWEST FIRST, each with the identity it carries itself."""
+    out = []
+    for f in glob.glob(os.path.join(paths.PREVIOUS_MODELS, "archive-*.sqlite")):
+        sid, built = model_identity(f)
+        out.append({"path": f, "snapshot_id": sid, "built_at": built,
+                    "bytes": os.path.getsize(f), "readable": sid is not None})
+    out.sort(key=lambda r: (r["built_at"] or ""), reverse=True)
+    return out
+
+
+def retain(dst, log=print):
+    """Move the model currently being served into previous/, then prune to
+    KEEP_PREVIOUS. Returns what was kept and what was removed, and says why."""
+    if not os.path.exists(dst): return {"retained": None, "removed": [], "kept": 0}
+    os.makedirs(paths.PREVIOUS_MODELS, exist_ok=True)
+    sid, built = model_identity(dst)
+    stamp = (built or "unknown").replace(":", "").replace("-", "")
+    keep_path = os.path.join(paths.PREVIOUS_MODELS, f"archive-{stamp}-{sid or 'unreadable'}.sqlite")
+    os.replace(dst, keep_path)          # same filesystem: atomic, and costs no copy
+    size = os.path.getsize(keep_path)
+    # the floor: three models' worth of headroom, or keep fewer and say so
+    free = shutil.disk_usage(paths.CACHE_DIR).free
+    keep = KEEP_PREVIOUS
+    if free < 3 * size:
+        keep = max(0, min(KEEP_PREVIOUS, int(free // max(size, 1)) - 1))
+        log(f"  retention: only {free/1e9:.0f} GB free against a {size/1e9:.0f} GB model -- keeping {keep}, not {KEEP_PREVIOUS}")
+    removed = []
+    for r in previous_models()[keep:]:
+        os.remove(r["path"])
+        removed.append({"path": os.path.basename(r["path"]), "snapshot_id": r["snapshot_id"],
+                        "built_at": r["built_at"],
+                        "why": "oldest beyond KEEP_PREVIOUS" if r["readable"] else "its meta table could not be read, so it cannot serve a diff"})
+    return {"retained": {"path": os.path.basename(keep_path), "snapshot_id": sid, "built_at": built},
+            "removed": removed, "kept": len(previous_models())}
+
+
+def publish(tmp, dst, log=print):
     os.makedirs(os.path.dirname(dst), exist_ok=True)
+    r = retain(dst, log=log)
     os.replace(tmp, dst)
+    if r["retained"]:
+        log(f"  kept the outgoing model as previous/{r['retained']['path']} "
+            f"({r['retained']['snapshot_id']}, built {r['retained']['built_at']}); {r['kept']} retained")
+    for x in r["removed"]:
+        log(f"  removed previous/{x['path']}: {x['why']}")
+    return r
 
 
 def main(argv):

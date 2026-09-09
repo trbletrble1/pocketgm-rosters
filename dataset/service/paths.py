@@ -17,4 +17,9 @@ INDEX_REBUILD_DECL = os.path.join(DECLARATIONS, "person-index-rebuild.json")
 CACHE_DIR = os.environ.get("FOOTBALL_ARCHIVE_CACHE",
                            os.path.expanduser("~/Library/Caches/football-archive-service"))
 READ_MODEL = os.path.join(CACHE_DIR, "archive.sqlite")
+# THE PREVIOUS PUBLISHED MODELS. Added 2026-09-09 after a question could not be
+# answered: "what did the service return before this weekend?". `os.replace`
+# retained nothing and build/ is gitignored, so the model of 2026-09-08 18:57 did
+# not exist in any form, and neither did the stores that would rebuild it.
+PREVIOUS_MODELS = os.path.join(CACHE_DIR, "previous")
 BUILD_LOG = os.path.join(CACHE_DIR, "build.log")
