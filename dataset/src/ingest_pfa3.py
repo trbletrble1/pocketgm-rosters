@@ -387,8 +387,12 @@ def main(write=True):
     return out
 
 
+
+# WRITING IS OPT-IN. Ruled 2026-09-09 after two incidents in one afternoon: this file
+# used to write on a bare run, so the safe action was the one you had to know to ask
+# for. `--write` is now required; without it the script computes and reports.
 if __name__ == "__main__":
-    o = main(); c = o["counts"]
+    o = main(write="--write" in sys.argv); c = o["counts"]
     for k in ("claims", "leads", "disagreements", "source_self_contradictions"):
         print(f"  {k:28s} {c[k]:,}")
     print("  by predicate:")

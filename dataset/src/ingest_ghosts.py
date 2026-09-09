@@ -432,8 +432,12 @@ def main(write=True):
     return out, aflout, indout
 
 
+
+# WRITING IS OPT-IN. Ruled 2026-09-09 after two incidents in one afternoon: this file
+# used to write on a bare run, so the safe action was the one you had to know to ask
+# for. `--write` is now required; without it the script computes and reports.
 if __name__ == "__main__":
-    o, a, i = main(write="--dry" not in sys.argv)
+    o, a, i = main(write="--write" in sys.argv)
     c = o["counts"]
     print(f"AFL store: {a['counts']['claims']} claims, {a['counts']['held_people_touched']} people")
     print(f"IND store: {i['counts']['claims']} claims, {i['counts']['held_people_touched']} people "

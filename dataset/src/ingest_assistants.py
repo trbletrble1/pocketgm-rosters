@@ -11,6 +11,7 @@ must be REFUSED rather than resolved.
 import os, re, csv, sys, json, collections
 
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
+from clubs import Clubs
 BASE = os.path.join(HERE, "..")
 ROOT = os.path.expanduser("~/Documents/pgm3-sources/nfl-books")
 TEXT = os.path.join(ROOT, "text_all")
@@ -52,9 +53,84 @@ PAT = re.compile(r"(?:^|[;.\n\|]|\s{2,})\s*"
                  r"([A-Z][A-Za-z'\.\-]+(?:\s+[A-Z][A-Za-z'\.\-]+){1,2})"
                  r"\s*[,\-—:]{1,2}\s*((?i:" + TITLES + r"))", re.M)
 # A word that is a job, not a name. These sit where a name sits in a header.
-NOT_A_NAME = re.compile(r"\b(coach|staff|coaching|football|club|team|"
-                        r"phone|city|biographies|biography|vice|jr|sr|inc|"
-                        r"director|manager|trainer|scout|president|owner|coordinator|quarterbacks|linebackers|secondary|receivers|assistant)\b", re.I)
+#
+# THE JOB VOCABULARY IS DERIVED FROM `TITLES`, NOT TYPED TWICE. This list used to be
+# typed by hand and had drifted: it carried `quarterbacks`, `linebackers`, `secondary`
+# and `receivers` but NOT `defense`, `offense`, `line`, `backs`, `teams` or `special`
+# -- so the name half of PAT, which takes two or three capitalised words, swallowed the
+# ones that were missing. `Defense Ed Beard` became a man called "defense ed beard",
+# `Line Brett Maxie` a man called "line brett maxie", and `Special Teams` a man with no
+# name at all. Deriving the words from TITLES is what stops the two drifting again.
+_JOB_WORDS = sorted({w.lower() for w in re.findall(r"[A-Za-z]+", TITLES)
+                     if len(w) > 2 and w.lower() not in ("and", "asst")} |
+                    {"coach", "staff", "coaching", "football", "club", "team", "teams",
+                     "phone", "city", "biographies", "biography", "vice", "jr", "sr",
+                     "inc", "director", "manager", "trainer", "scout", "president",
+                     "owner", "defense", "offense", "line", "backs", "ends", "special"},
+                    key=len, reverse=True)
+NOT_A_NAME = re.compile(r"\b(" + "|".join(_JOB_WORDS) + r")\b", re.I)
+
+# A job word CUT OFF at a column edge. The guides are OCR'd in columns and a title can
+# be truncated mid-word: `Defensive Line Co` for "Coach", `Defensive Assistan` for
+# "Assistant". These land in the name half looking like a surname.
+_TRUNCATED = re.compile(r"^(?:" + "|".join(
+    w[:n] for w in ("coach", "coordinator", "assistant", "defensive", "offensive",
+                    "quarterbacks", "linebackers", "receivers", "conditioning")
+    for n in range(2, len(w))) + r")$", re.I)
+
+
+def strip_job_words(nm):
+    """-> (name, why-refused or None). A leading or trailing job word is STRIPPED, not
+    a reason to throw the man away: `Defense Ed Beard` is Ed Beard, and the guide still
+    names him. What is left must look like a person -- two words, neither of them a job
+    and neither a truncated one -- or it is refused and counted."""
+    # A job word can arrive with punctuation stuck to it -- the guides print
+    # `Backs. Zeke Bratkowski` where a column ended -- so the test is on the word,
+    # not on the token as the text happens to punctuate it.
+    def _job(t):
+        w = t.strip(".,;:-—|")
+        return bool(w) and (NOT_A_NAME.fullmatch(w) or _TRUNCATED.fullmatch(w))
+    toks = nm.split()
+    while toks and _job(toks[0]):
+        toks.pop(0)
+    while toks and _job(toks[-1]):
+        toks.pop()
+    if len(toks) < 2:
+        return None, "nothing left but job words -- the name was never there"
+    if any(_job(t) for t in toks):
+        return None, "a job word inside the name, not at either end"
+    return " ".join(toks), None
+
+
+PUBLICATION = (r"(?:Media\s+Guide|Press\s+(?:Book|Guide)|Yearbook|Season\s+Review|"
+               r"Draft\s+Guide|Guide|Annual|Program|Magazine|Review|Handbook|"
+               r"Fact\s+Book|Record\s+(?:Manual|Book))")
+
+
+def derive_club(title, year, C):
+    """-> (club string, None) or (None, why). THE CLUB IS THE GUIDE'S SUBJECT.
+
+    index.csv carries no club column, so the club has to come out of the title --
+    but a title is a publication, not a club, and it is only a club name with
+    things appended. Strip them in order: everything from the first year, a
+    trailing league suffix '(USFL)', then the publication noun.
+
+    Then VALIDATE. Deriving better is not enough on its own: the previous rule
+    was a single re.sub with no check, so any title it failed to recognise became
+    a club silently. What closes the class is that the result must resolve through
+    the club table for that year.
+    """
+    if not str(year).isdigit():
+        return None, "no parseable year"
+    s = re.sub(r"\s+\d{4}\b.*", "", title or "").strip()
+    s = re.sub(r"\s*\([A-Z]{2,6}\)\s*$", "", s).strip()
+    s = re.sub(rf"\s+{PUBLICATION}\b.*$", "", s, flags=re.I).strip()
+    s = re.sub(r"[\s|,;:!-]+$", "", s).strip()
+    if not s:
+        return None, "nothing left after stripping the publication words"
+    if not C.resolve(s, int(year), None, source="media_guide"):
+        return None, f"{s!r} is not a club in {year}"
+    return s, None
 
 
 def club_stoplist(rows):
@@ -118,6 +194,7 @@ def main():
     rows = list(csv.DictReader(open(os.path.join(ROOT, "index.csv"))))
     byid = {r["identifier"]: r for r in rows}
     stop = club_stoplist(rows)
+    C = Clubs()                       # the club table decides what is a club
 
     stints = collections.defaultdict(set)      # name -> {(club, year, title)}
     rej = collections.Counter()
@@ -134,7 +211,18 @@ def main():
         if str(r.get("league_wide", "")).strip().lower() == "true":
             rej["league-wide book: asserts no club"] += 1
             continue
-        club = re.sub(r"\s+\d{4}\s+Media Guide.*", "", r["title"]).strip()
+        club, why = derive_club(r["title"], r["year"], C)
+        if not club:
+            # A TITLE IS NOT A CLUB, and the old rule invented one whenever its
+            # shape was unexpected. It stripped only "<year> Media Guide", so
+            # "Miami Dolphins 1985 Super Bowl XIX Media Guide" survived whole and
+            # became a club: Don Shula ended up holding COACHES|1985|MIA *and*
+            # COACHES|1985|Miami Dolphins 1985 Super Bowl XIX Media Guide -- one
+            # season under two tokens, which gate_club_keys G7 forbids.
+            # Now the derived name must RESOLVE THROUGH build/clubs.json. One that
+            # does not is refused and counted, never turned into a club by default.
+            rej[f"club not derivable from the title: {why}"] += 1
+            continue
         year = r["year"]
         files += 1
         full = open(os.path.join(TEXT, fn), encoding="utf-8", errors="replace").read()
@@ -147,9 +235,11 @@ def main():
         found = []
         for m in PAT.finditer(t):
             nm = " ".join(m.group(1).split())
+            nm, why = strip_job_words(nm)
+            if nm is None:
+                rej[f"job word, not a name: {why}"] += 1; continue
             low = nm.lower()
             if low in stop:            rej["club name"] += 1; continue
-            if NOT_A_NAME.search(nm):  rej["job word, not a name"] += 1; continue
             if len(nm) < 6:            rej["too short"] += 1; continue
             if nm.isupper() and len(nm.split()) < 2: rej["header"] += 1; continue
             if low in ("most seasons", "high school", "head coach"): rej["phrase"] += 1; continue

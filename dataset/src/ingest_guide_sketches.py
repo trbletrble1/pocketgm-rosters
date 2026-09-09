@@ -20,6 +20,7 @@ import os, re, sys, json, collections
 
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
+import index_io as IO                       # atomic build-store write
 from parse_guide_sketches import parse
 
 SOURCE = {
@@ -196,12 +197,21 @@ def main(write=True):
                "men_inside_ambiguous": sum(int(w.split()[0]) for _, w in P["ambiguous"]),
            }}
     if write:
-        json.dump(out, open(os.path.join(BASE, "build", "guide-lad-1948.json"), "w"), indent=1)
+        # ATOMIC. json.dump(open(path,"w")) streams into the REAL file, so a rebuild
+        # reading it mid-write gets a truncated store. That cost Parsing a rebuild whose
+        # P3 reported "person P_040746 vanished" and 300+ others: build_person_index
+        # caught the parse error with `except Exception: continue` and skipped the whole
+        # store in silence. dump_atomic writes a temp file, fsyncs, os.replaces.
+        IO.dump_atomic(out, os.path.join(BASE, "build", "guide-lad-1948.json"), indent=1)
     return out
 
 
+
+# WRITING IS OPT-IN. Ruled 2026-09-09 after two incidents in one afternoon: this file
+# used to write on a bare run, so the safe action was the one you had to know to ask
+# for. `--write` is now required; without it the script computes and reports.
 if __name__ == "__main__":
-    o = main()
+    o = main(write="--write" in sys.argv)
     r = o["reconciliation"]
     print(f"BORN lines {r['born_lines']} | clean {r['clean_sketches']} | "
           f"ambiguous {r['ambiguous_sketches']} holding {r['men_inside_ambiguous']} men")

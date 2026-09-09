@@ -94,8 +94,12 @@ def main(write=True):
     return out
 
 
+
+# WRITING IS OPT-IN. Ruled 2026-09-09 after two incidents in one afternoon: this file
+# used to write on a bare run, so the safe action was the one you had to know to ask
+# for. `--write` is now required; without it the script computes and reports.
 if __name__ == "__main__":
-    o = main(); c = o["counts"]
+    o = main(write="--write" in sys.argv); c = o["counts"]
     print(f"  files {c['files']}   rows read {c['rows_read']:,}")
     for k, v in sorted(c["by_resolution"].items(), key=lambda x: -x[1]):
         print(f"     {v:6,}  {k}")
