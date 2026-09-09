@@ -84,7 +84,10 @@ def bio(g, p):
     if not ss: return None
     yrs = sorted({s["year"] for s in ss})
     clubs = list(dict.fromkeys(s["club"] for s in ss))
-    lgs = [l for l in dict.fromkeys(s["league"] for s in ss) if l != "COACHES"]
+    # PLAYING leagues. `s["coaching"]` is the shape's answer since 2026-09-09; the
+    # old `l != "COACHES"` filtered a league TOKEN and let every PFA coaching season
+    # through as a league the man played in.
+    lgs = [l for l in dict.fromkeys(s["league"] for s in ss if not s["coaching"])]
     span = (yrs[0], yrs[-1])
     n_seasons = len(yrs)
     per = p["person"]
@@ -164,8 +167,7 @@ def bio(g, p):
     if len(lgs) > 1:
         bits = []
         for lg in lgs:
-            if lg == "COACHES": continue
-            ys = sorted({s["year"] for s in ss if s["league"] == lg})
+            ys = sorted({s["year"] for s in ss if s["league"] == lg and not s["coaching"]})
             bits.append(f"{LEAGUE_NAME.get(lg, lg)} ({ys[0]}"
                         + (f"–{ys[-1]}" if ys[-1] != ys[0] else "") + ")")
         S.append("His career crosses leagues: " + "; ".join(bits) + ".")

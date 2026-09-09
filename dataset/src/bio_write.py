@@ -21,7 +21,7 @@ Identity (birth, college, hometown, high school, height, weight, draft,
 position) is NOT written here. It is data in F["vitals"], for a panel.
 """
 import re, hashlib
-from bio_select import club_name, LEAGUE_NAME, DEFUNCT_LEAGUES, LEAGUE_FAMILY, _club_table
+from bio_select import club_name, club_name_or_none, LEAGUE_NAME, DEFUNCT_LEAGUES, LEAGUE_FAMILY, _club_table, is_head_position
 
 VERB = {  # measure -> (singular, plural) past-tense phrase with {n}
     "tackles": ("made one tackle", "made {n} tackles"),
@@ -155,7 +155,11 @@ class Namer:
 
     def __init__(self, played):
         self.years = {}
-        for y, c, l in played: self.years.setdefault(c, set()).add(y)
+        # (year, code) pairs. A third element used to be accepted and discarded; the
+        # only caller passing one passed the literal "COACHES", which is why it looked
+        # as though the league mattered here. It never did: a club is named from the
+        # club table by year, and the competition is not part of that.
+        for y, c, *_ in played: self.years.setdefault(c, set()).add(y)
         self.fixed = {}; self.fixed_cid = {}; self.runs_said = set()
 
     @staticmethod
@@ -176,13 +180,16 @@ class Namer:
         if held: return f"the {held}"
         nm = club_name(code, year)
         self._fix(code, nm, year)
+        # A YEAR THE ARCHIVE CANNOT NAME IS NOT A RENAME. `club_name` falls back to the
+        # token, so a 2025 season -- past the club table's last held names -- read as
+        # "the Carolina Panthers, later the CAR". `club_name_or_none` says unknown.
         others = {}
         for y in sorted(self.years.get(code, set())):
-            o = club_name(code, y)
-            if o != nm: others.setdefault(o, []).append(y)
+            o = club_name_or_none(code, y)
+            if o and o != nm: others.setdefault(o, []).append(y)
         if not others and last_year and last_year != year:
-            o = club_name(code, last_year)
-            if o != nm: others[o] = [last_year]
+            o = club_name_or_none(code, last_year)
+            if o and o != nm: others[o] = [last_year]
         if not others: return f"the {nm}"
         o, ys = next(iter(others.items()))
         word = "earlier" if max(ys) < year else "later"
@@ -201,7 +208,16 @@ class Namer:
         T = _club_table(); years = co.get("run_years") or list(range(co["first"], co["last"] + 1))
         parts = []                                                   # (code, name) in order across the run
         for y in years:
-            code = T.code_for(cid, y) or co["club"]; nm = T.name_for(cid, y) or club_name(code, y)
+            code = T.code_for(cid, y) or co["club"]
+            # A YEAR THE TABLE CANNOT NAME DOES NOT START A NEW NAME. It used to fall
+            # back to the season-key token, so a run reaching into 2025 -- past the
+            # club table's last held names -- became "the Carolina Panthers, later the
+            # CAR". Where the archive holds no name for a year the run simply continues
+            # under the name it already had.
+            nm = T.name_for(cid, y) or club_name_or_none(code, y)
+            if nm is None:
+                if parts: continue
+                nm = code                                # nothing known at all: the token stands
             if "/" in nm and any("/" not in p[1] for p in parts): continue
             if not parts or parts[-1][1] != nm: parts.append((code, nm))
         if cid in self.runs_said:
@@ -216,8 +232,8 @@ class Namer:
                 if i == 0:                                           # the first mention of the club says what else he knew it as -- the same club only
                     others = {}
                     for yy in sorted(self.years.get(code, set())):
-                        o = club_name(code, yy)
-                        if o not in {p[1] for p in parts} and self.cid(code, yy) == cid: others.setdefault(o, []).append(yy)
+                        o = club_name_or_none(code, yy)          # unknown is not a rename
+                        if o and o not in {p[1] for p in parts} and self.cid(code, yy) == cid: others.setdefault(o, []).append(yy)
                     if others:
                         o, ys = next(iter(others.items()))
                         note = f" ({'earlier' if max(ys) < co['first'] else 'later'} the {o.split()[-1]})"
@@ -237,7 +253,12 @@ class Writer:
         span = next((f for f in F["facts"] if f["kind"] == "career_span"), None)
         if span is None:
             cs = next(f for f in F["facts"] if f["kind"] == "coaching_span")
-            self.N = Namer([(y, c, "COACHES") for y, c in cs["coached"]])
+            # THE DEAD `"COACHES"` WAS REMOVED 2026-09-09. Namer.__init__ is
+            # `for y, c, l in played` and never reads `l` again, so the literal decided
+            # nothing -- but it read as though a coaching span were a league called
+            # COACHES, which is the belief this week was spent removing. Namer now takes
+            # pairs; a dead string test is one that comes back to life quietly.
+            self.N = Namer(cs["coached"])
         else:
             self.N = Namer(span["played"])
 
@@ -251,7 +272,22 @@ class Writer:
         R = [r for r in runs(played, by_club_only=True) if not (exclude and r[0] == exclude[0])]
         if not R: return None
         if len(R) <= 3:
-            parts = [f"{self.the(c, f, l)} {years_phrase(ys)}" for c, lg, f, l, ys in R]
+            # ONE CLUB IS NAMED ONCE. Two season-key tokens can be one club -- `STL` and
+            # `St. Louis All-Stars` are both club-st-louis-all-stars-1923 -- and once the
+            # bio started naming clubs from the club table (2026-09-09) both rendered the
+            # same, so Ollie Kraehe "went to the St. Louis All-Stars in 1923 and the
+            # St. Louis All-Stars in 1923". The runs are kept; the PHRASE is deduplicated
+            # on what it actually says, which is the only place the repetition exists.
+            parts = list(dict.fromkeys(
+                f"{self.the(c, f, l)} {years_phrase(ys)}" for c, lg, f, l, ys in R))
+            # NOT ALSO DROPPING A CLUB THE LEAD ALREADY NAMED, and the reason is kept.
+            # Ollie Kraehe's lead names the St. Louis All-Stars as his head-coaching club
+            # and the next sentence sends him there again -- a real repetition, visible
+            # since both his tokens started rendering as one name. Dropping what the lead
+            # had said was tried and REVERTED: it also removed Jack Pardee's Rams YEARS
+            # ("the Los Angeles Rams in 1957-64 and 1966-70"), which the lead does not
+            # give. Losing a fact to save a repetition is the worse trade. The repetition
+            # stands, reported rather than papered over.
             if len(parts) == 1: return parts[0]
             return ", ".join(parts[:-1]) + " and " + parts[-1]
         names = list(dict.fromkeys(self.the(c, f, l) for c, lg, f, l, ys in R))
@@ -268,7 +304,14 @@ class Writer:
         Where the sentence has ALREADY named this club -- a player-coach, who took
         over the club he played for -- it becomes 'their', so the Muncie Flyers are
         not named twice in one breath."""
+        # PFA PRINTS THE HEAD JOB IN CAPITALS -- 'HEAD COACH', 'HEAD COACH/Offensive
+        # Coordinator'. The claim keeps that string exactly; the BIO is derived prose and
+        # reads it, the same way the display name reads a surname-first form. Without
+        # this the sentence shouted: "blanton collier ... was HEAD COACH of the Cleveland
+        # Browns". Only a DECLARED head position is read this way; every other printed
+        # role goes through verbatim.
         role = co["role_as_printed"] or "head coach"
+        if is_head_position(role): role = "Head Coach"
         club = "their" if its_club_already_named else self.N.run(co)
         if its_club_already_named:
             when = f"from {co['first']} to {co['last']}" if co["first"] != co["last"] else f"in {co['first']}"
@@ -317,11 +360,117 @@ class Writer:
             return f"{N} {verb} {job}" + (f", of {L}." if L else ".")
         return self.v(1, [f"{N} {verb} {job}.", f"{N} spent {seasons_word(co['seasons'])} as {job}."])
 
+    def role_phrase(self, co, with_club=True):
+        """The job as the SOURCE PRINTS IT, with its club and years -- and no verb, so a
+        caller can put it where the sentence needs it. `head_job` returns a phrase that
+        already carries "as", which reads as "was as Defensive Coordinator" the moment a
+        sentence puts a verb in front of it. Head coaches never hit that because their
+        phrase is "Head Coach of X"; the 967 men who never held a head job did.
+
+        The role is PFA's or the Coaching Tree's string, verbatim -- 'Offensive Line',
+        'Assistant Strength and Conditioning' -- never title-cased and never expanded
+        into a sentence the source did not write."""
+        role = co.get("role_as_printed")
+        club = self.N.run(co) if with_club else None
+        when = (f"from {co['first']} to {co['last']}" if co["first"] != co["last"]
+                else f"in {co['first']}")
+        if role and club: return f"{role} of {club} {when}"
+        if role: return f"{role}, {when}"
+        if club: return f"{club} {when}"
+        return when
+
+    def assistant_lead(self, f):
+        """A man who coached and never held a head job. Ryan's ruling, 2026-09-09: the
+        bio opens on what he DID -- where he coached, in what roles, across how long.
+
+        It keeps every discipline the playing bios have. It stops rather than pads: a
+        one-season assistant gets one sentence, and that is the whole bio where the
+        archive holds nothing else. It never states a number the next sentence will
+        state again -- the lead names WHERE he mostly was and the span carries the
+        totals. It says what it does not know rather than filling: where no source
+        names the role, it says so once and does not guess.
+
+        THE ROLE IS "LISTED AS", not "as". PFA lists 1,046 distinct printed positions
+        and most are units, not job titles -- 'Safeties', 'Offensive Line', 'Assistant
+        Strength and Conditioning'. "was as Safeties" is not English and "was the
+        safeties coach" is a sentence the source did not write. "listed as Safeties" is
+        exactly what the source does, and it holds the string verbatim."""
+        N = self.name; co = f["coaching"]; shape = f.get("shape"); sf = f.get("shape_fact") or {}
+        role = co.get("role_as_printed")
+        listed = ("most often listed as " if co.get("roles_varied") else "listed as ") + role if role else None
+        # Namer.run can end in a clause of its own ("the Vikings, later the MIN"), and a
+        # template that appends ", listed as ..." to it produced a double comma.
+        def where_club(): return self.N.run(co).rstrip(" ,")
+
+        if shape == "coached_one_season":
+            club = self.the(sf.get("club", co["club"]), sf.get("year", co["first"]))
+            yr = sf.get("year", co["first"])
+            if listed:
+                return f"{N} coached one season, {yr}, with {club}, {listed}."
+            return (f"{N} coached one season, {yr}, with {club}. "
+                    f"No source the archive holds names the job he did there.")
+
+        if shape == "coached_one_club":
+            club = self.the(co["club"], co["first"], co["last"])
+            k = seasons_word(sf.get("seasons", co["seasons"]))
+            a, b = sf.get("first", co["first"]), sf.get("last", co["last"])
+            base = f"{N} spent his whole coaching career with {club}: {k}, {a} to {b}"
+            return base + (f", {listed}." if listed else ".")
+
+        if shape == "coached_long":
+            # NO CLUB COUNT HERE. `coaching_span` says how many clubs, and a lead that
+            # says it too both repeats and disagrees -- it counted the runs where the
+            # span counts the clubs.
+            k = seasons_word(sf.get("seasons", len(co["runs"])))
+            a, b = sf.get("first", co["first_year"]), sf.get("last", co["last_year"])
+            if listed:
+                return f"Over {k}, {a} to {b}, {N} coached, most of it with {where_club()}, {listed}."
+            return f"Over {k}, {a} to {b}, {N} coached, most of it with {where_club()}."
+
+        if shape == "coached_across_leagues":
+            lgs = [league(x) for x in sf.get("leagues", [])]
+            where = " and ".join(lgs) if len(lgs) == 2 else ", ".join(lgs[:-1]) + " and " + lgs[-1]
+            tail = (f"most of it with {where_club()}, {listed}" if listed
+                    else f"most of it with {where_club()}")
+            return f"{N}'s coaching crossed leagues — {where} — {tail}."
+
+        if shape == "coached_war_gap":
+            return (f"{N} coached {self.role_phrase(co, with_club=True)}, with the war years "
+                    f"between: he did not coach from {sf['before'] + 1} to {sf['after'] - 1}.")
+
+        if shape == "coached_defunct_club":
+            L = league(sf.get("league")) if sf.get("league") else None
+            when = (f"from {co['first']} to {co['last']}" if co["first"] != co["last"]
+                    else f"in {co['first']}")
+            head = f"{N} coached {where_club()}" + (f" of {L}" if L else "") + f" {when}"
+            return head + (f", {listed}." if listed else ".")
+
+        when = (f"from {co['first']} to {co['last']}" if co["first"] != co["last"]
+                else f"in {co['first']}")
+        return f"{N} coached {where_club()} {when}" + (f", {listed}." if listed else ".")
+
     def coaching_career_lead(self, f):
-        """He never held a head job. The lead is the career itself."""
+        """A coaching career with no shape to lead on: not long, not one club, not
+        across leagues, no war gap. The lead is where he coached and in what role, and
+        the span sentence carries the totals.
+
+        IT USED TO SAY THE SPAN AND CALL IT SEASONS. `last_year - first_year + 1` is the
+        distance between his first and last years, not how many he coached: Gord Ackerman
+        was away in 1964, so the lead said "coached ten seasons" and the very next
+        sentence said "in all he coached nine". A bio does not invent a season. The count
+        is left to `coaching_span`, which counts them, and this sentence stops instead."""
         N = self.name; co = f["coaching"]
-        _, job = self.head_job(co)
-        return f"{N} coached {seasons_word(co['last_year'] - co['first_year'] + 1)}, {job}."
+        role = co.get("role_as_printed")
+        if role and is_head_position(role): role = "Head Coach"
+        listed = (("most often listed as " if co.get("roles_varied") else "listed as ") + role) if role else None
+        when = (f"from {co['first']} to {co['last']}" if co["first"] != co["last"]
+                else f"in {co['first']}")
+        # THE YEARS COME BEFORE THE CLUB. Namer.run can end in a clause of its own --
+        # "the Kansas City Chiefs, later the KC" -- and a date phrase appended to that
+        # reads as a comma splice. Put the years first and the club's own clause closes
+        # the sentence cleanly however long it is.
+        club = self.N.run(co).rstrip(" ,")
+        return f"{N} coached {when} with {club}" + (f", {listed}." if listed else ".")
 
     def coaching_span(self, f):
         """The coaching career: how long, across how many clubs, and its gaps."""
@@ -679,7 +828,13 @@ class Writer:
 
     def render_coaching_only(self):
         facts = self.F["facts"]; lead = facts[0]
-        S = [self.coach_lead(lead) if lead["kind"] != "coaching_career" else self.coaching_career_lead(lead)]
+        # THREE LEADS, ONE FOR EACH SHAPE A COACHING-ONLY CAREER TAKES: a head coach, a
+        # man who never held a head job, and a man whose career has no shape at all
+        # beyond its length. The middle one did not exist until 2026-09-09 and its 967
+        # men returned 503.
+        if lead["kind"] == "coaching_career": S = [self.coaching_career_lead(lead)]
+        elif lead["coaching"]["was_head_coach"]: S = [self.coach_lead(lead)]
+        else: S = [self.assistant_lead(lead)]
         for f in facts[1:]:
             if f["kind"] == "coaching_span":
                 t = self.coaching_span(f)

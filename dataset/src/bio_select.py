@@ -118,7 +118,58 @@ def clean(v):
 
 
 def club_name(code, year):
-    return CLUBS.get(f"{code}|{year}") or code
+    """The archive's name for the club a season-key token names that year.
+
+    FROM THE CLUB TABLE, ruled by Ryan 2026-09-09 after Les Dodson's bio read "two
+    games with the PFA:WIL in 1941" -- a club the table names perfectly well.
+
+    WHY THE TABLE AND NOT THE MAP. `CLUBS` is the index's `_clubs`, and it is built
+    from ONE STORE: build/club-names.json, StatsCrew's roster-page titles. 3,666
+    claims, 321 tokens, and NOT ONE PFA code. It is short because its population is
+    narrow, not because anything went wrong. It also answers a different question --
+    its own note says "from the roster page title; a name for THIS season, not a
+    franchise identity" -- where a bio wants the archive's name for the club that
+    year. Measured 2026-09-09: the club table names all 3,666 of the map's entries
+    and agrees with every one, and names 11,002 more season keys the map cannot.
+
+    WHY NOT WIDEN THE MAP. build_person_index writes `_clubs`, and build_clubs is a
+    step in the chain that build_person_index triggers -- so a map widened from the
+    club table would be built from the table of the PREVIOUS run, one generation
+    stale, which is the failure this archive has already had twice this week. And
+    bio_select ALREADY loads the club table: `club_id()` resolves tokens through it.
+    A second, staler answer to one question is the duplicate-implementation defect.
+
+    WHAT MAKES THIS STABLE, given that a derived club id moved twice this week: this
+    DERIVES NOTHING. It looks a token up in the table and reads the name the table
+    holds for that year. No id is minted, no name is composed. If the table changes,
+    the name changes with it, which is correct -- the table is the record.
+
+    A TOKEN THE TABLE CANNOT NAME KEEPS ITS OWN TEXT, and that is deliberate. 2,018
+    season keys are on club-seasons the table does not cover: 660 where it holds the
+    club but no name for that year (almost all 2025, past the table's last held
+    season), 809 where the token places at another year but not this one (PFA:AMS in
+    1996, before its 1998 code span), 549 it never places. Naming those would assert
+    a name the archive does not hold. gate_bio_club_names.py counts them.
+
+    `_clubs` STILL EXISTS and is still written: normalise_club_keys.py reads it to
+    ask whether a token is already a code that year, which is a different question
+    from what a club was called."""
+    return club_name_or_none(code, year) or code
+
+
+def club_name_or_none(code, year):
+    """As `club_name`, but None where the archive holds NO name for that club-season.
+
+    The difference matters to the Namer, which decides a club was RENAMED by finding
+    two different names across a man's years. With the token as a fallback, a year the
+    table cannot name looked like a new name: "the Carolina Panthers, later the CAR",
+    because the table's names stop at 2024 and he coached into 2025. Unknown is not a
+    different name, and only this function can say so."""
+    r = _club_table().resolve(code, year, None, source="season_key")
+    if r:
+        nm = _club_table().name_for(r[0], year)
+        if nm: return nm
+    return CLUBS.get(f"{code}|{year}")
 
 
 def pfield(p, k):
@@ -128,20 +179,30 @@ def pfield(p, k):
 
 
 def seasons(p):
+    """Every season a man holds, playing and coaching, each saying which it is.
+
+    WHICH DICT IT CAME FROM IS THE ANSWER. Ruled 2026-09-09: a coaching season lives
+    in `coaching_seasons` and a playing one in `seasons`, decided by the claim's
+    PREDICATE when the index is built. This used to read `seasons` alone and guess
+    with `bool(st.get("role_title")) and not codes` -- which saw only the stores that
+    write `role_title`, missed every PFA coaching season, and so told Jack Pardee's
+    bio that he played thirty-two seasons for seven clubs. Four of the seven he only
+    coached; he played fifteen, for two."""
     out = []
-    for k, d in (p.get("seasons") or {}).items():
-        lg, yr, club = k.split("|")
-        m = re.search(r"(\d{4})", yr)
-        if not m: continue
-        st = d.get("stint") or {}
-        pos = st.get("position")
-        codes = []
-        for one in (pos if isinstance(pos, list) else [pos]):
-            if isinstance(one, dict): one = one.get("code")
-            if one: codes.append(str(one))
-        out.append({"league": lg, "year": int(m.group(1)), "club": club, "stint": st,
-                    "stats": d.get("stats") or {}, "codes": codes,
-                    "coaching": bool(st.get("role_title")) and not codes})
+    for coaching, src in ((False, p.get("seasons") or {}), (True, p.get("coaching_seasons") or {})):
+        for k, d in src.items():
+            lg, yr, club = k.split("|")
+            m = re.search(r"(\d{4})", yr)
+            if not m: continue
+            st = (d.get("stint") or {}) if isinstance(d, dict) else {}
+            pos = st.get("position")
+            codes = []
+            for one in (pos if isinstance(pos, list) else [pos]):
+                if isinstance(one, dict): one = one.get("code")
+                if one: codes.append(str(one))
+            out.append({"league": lg, "year": int(m.group(1)), "club": club, "stint": st,
+                        "stats": (d.get("stats") or {}) if isinstance(d, dict) else {},
+                        "codes": codes, "coaching": coaching})
     return sorted(out, key=lambda s: (s["year"], s["club"]))
 
 
@@ -152,7 +213,13 @@ class Tables:
     auxiliary sources (PFA, nflverse, guides)."""
 
     def __init__(self):
-        self.people = {g: p for g, p in IDX.items() if p.get("seasons") and p.get("name")}
+        # A COACHING-ONLY MAN IS A MAN. Since 2026-09-09 his seasons are in
+        # `coaching_seasons`, so `p.get("seasons")` alone dropped every one of them out
+        # of the corpus -- the comparator pools, the salience map, and the coaching-only
+        # bios, which printed nothing at all. The gate that caught it was a baseline
+        # going from 37 lines to 0.
+        self.people = {g: p for g, p in IDX.items()
+                       if (p.get("seasons") or p.get("coaching_seasons")) and p.get("name")}
         self._salience()
         self._club_leagues()
         self._length_percentiles()
@@ -222,7 +289,10 @@ class Tables:
         self._len_sorted = lengths
         cl = []
         for p in self.people.values():
-            ys = {k.split("|")[1][1:5] for k in (p.get("seasons") or {}) if k.startswith("COACHES|")}
+            # the coaching dict, not a league token. Before 2026-09-09 this counted only
+            # the COACHES-keyed stores, so the median coaching career was measured over
+            # a third of the coaching seasons the archive holds.
+            ys = {k.split("|")[1] for k in (p.get("coaching_seasons") or {})}
             if ys: cl.append(len(ys))
         cl.sort()
         self._coach_len_sorted = cl
@@ -450,6 +520,47 @@ def club_id(tok, year):
     return r[0] if r else f"?{tok}"
 
 
+_CD = {}
+def coaching_decl():
+    """declarations/coaching-seasons.json -- where a role is read from, and which
+    printed positions mean HEAD COACH. Read, never typed here."""
+    if not _CD:
+        _CD["d"] = json.load(open(os.path.join(BASE, "declarations", "coaching-seasons.json")))
+    return _CD["d"]
+
+
+def roles_on(stint):
+    """Every role this stint states, EXACTLY as printed, in declaration order.
+
+    `role_title` carries it directly; PFA's coaching predicates carry a dict whose
+    `position_as_printed` is the role. Reading only the first left PFA's 1,046
+    distinct printed positions -- 'Defensive Coordinator', 'Assistant Strength and
+    Conditioning', 'HEAD COACH' -- entirely unread, on 3,356 men."""
+    out = []
+    for pred in coaching_decl()["roles"]["role_predicates"]:
+        v = stint.get(pred)
+        if isinstance(v, dict): v = v.get("position_as_printed")
+        if isinstance(v, str) and v.strip(): out.append(v.strip())
+    return out
+
+
+def is_head_position(role):
+    """Does this printed position say he WAS THE HEAD COACH? The first slash-separated
+    segment, upper-cased, against the declared list and nothing else -- so
+    'HEAD COACH/Offensive Coordinator' is one and 'Assistant Head Coach' is not."""
+    if not isinstance(role, str): return False
+    return role.split("/")[0].strip().upper() in set(
+        coaching_decl()["roles"]["head_coach_positions"]["first_segments"])
+
+
+def head_standing(stint):
+    """Was he THE HEAD COACH that season? The ONE implementation, shared with
+    src/gate_coach_runs.py, which used to carry its own copy and reported 727 men
+    losing a year the moment this one changed. `is_head_coach` is the Coaching Tree's
+    predicate; PFA says it in `position_as_printed`."""
+    return bool(stint.get("is_head_coach")) or any(is_head_position(r) for r in roles_on(stint))
+
+
 def coach_runs(c):
     """Coaching seasons as RUNS: contiguous years at one CLUB with the same
     standing, head or assistant. The club is the table's club id, not the token.
@@ -467,12 +578,15 @@ def coach_runs(c):
     offers one, else the printed token of the run's first year."""
     by_year = collections.defaultdict(lambda: collections.defaultdict(list))
     for s in c["coached"]:
-        by_year[(s["year"], bool(s["stint"].get("is_head_coach")))][club_id(s["club"], s["year"])].append(s)
+        # HEAD STANDING IS READ FROM WHAT THE SOURCE PRINTS, not from one predicate.
+        # `is_head_coach` is the Coaching Tree's; PFA says it in `position_as_printed`,
+        # and 706 men PFA prints as HEAD COACH were read as assistants with no role.
+        by_year[(s["year"], head_standing(s["stint"]))][club_id(s["club"], s["year"])].append(s)
     rows = []
     for (year, head), clubs in sorted(by_year.items()):
         for cid, ss in sorted(clubs.items()):
             toks = sorted({x["club"] for x in ss}, key=lambda t: (not _is_code(t, year), t))
-            roles = [x["stint"].get("role_title") for x in ss if x["stint"].get("role_title")]
+            roles = [r for x in ss for r in roles_on(x["stint"])]
             rows.append({"year": year, "club_id": cid, "club": toks[0], "head": head, "roles": roles})
     out = []
     for r in sorted(rows, key=lambda r: (r["year"], r["club_id"])):
@@ -826,7 +940,15 @@ def coaching_only_bio(T, g, p, c):
         lead = fact("head_coach_career", "lead", 0.95, coaching=co,
                     shape=(best["kind"] if best else None), shape_fact=best)
     elif best:
-        lead = best
+        # A MAN WHO NEVER HELD A HEAD JOB STILL HAS A CAREER, and it is its own shape.
+        # Ruled by Ryan, 2026-09-09. This used to hand `best` -- a bare shape fact
+        # carrying `year`/`club`/`seasons` and no `coaching` -- straight to the writer,
+        # which has only ever rendered a fact carrying `coaching`. 967 men, every one a
+        # career assistant or coordinator, returned 503 from get_bio. The shapes were
+        # right; nothing had ever matched them. The fact now carries the career the same
+        # way the head-coach lead does, and the writer has a branch for it.
+        lead = fact("assistant_career", "lead", best["score"], coaching=co,
+                    shape=best["kind"], shape_fact=best)
     else:
         lead = fact("coaching_career", "lead", 0, coaching=co)
     facts = [lead, fact("coaching_span", "body", 0, years=cc["years"], clubs=cc["clubs"],
