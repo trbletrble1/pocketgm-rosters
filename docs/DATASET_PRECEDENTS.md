@@ -1806,3 +1806,154 @@ register **→ 489**.
 *Related: `a join must use every field on the row` — the same lesson, one step
 earlier: the club and season settled 1,206 ambiguous names before this rule was
 reached at all.*
+
+---
+
+## A man named in a team photograph caption is a person
+
+**Ruling, 8 September 2026.** Stated as a property, not as an instance: a man named
+in the caption to a **team photograph**, where the **caption names the club**, on a
+**club-season the archive holds**, qualifies for promotion under the standing rule.
+All three conditions or nothing.
+
+**Why the narrowness is the ruling.** The twelve Pacific Coast Wildcats men failed the
+old rule not because they did not play but because PFA's box scores only see men who
+**started**, and no source ever gave that club a roster. `AFL|1926|AFLPC` is one of
+three club-seasons in the whole archive whose men were derived from box-score
+appearances. A squad man who never started was not merely unrecorded — he was
+**invisible by construction**. They were excluded by a gap in the evidence, not by
+evidence of absence. A man in uniform, in the team picture, named by his club's own
+opponent's programme, has a stronger claim to membership than most of what places men
+on 1920s clubs.
+
+**A caption alone is not enough.** A name in a photograph of something else is not
+covered, and neither is a club-season the archive does not hold. The conditions are
+checked in `promote_players.qualify()` and again as properties in
+`src/gate_team_photograph_promotions.py` (T1, T2), which names no man.
+
+**The predicate does not move.** `programme.team_photograph` is not roster membership
+and does not become it. The man becomes a person; the claim keeps saying exactly what
+it said — that he was photographed with this club, not that he played. **T3 is the
+gate for it**, and it is the property most likely to erode, because it would erode
+silently: a later ingest writing one of these men onto a roster would look like
+ordinary coverage. Zero of the twelve carry a `roster_membership` claim.
+
+**Promoted: twelve.** D. Carey, H. Shipkey, C. Johnston, E. Clark, L. de Wolf,
+D. Morrison, R. Reed, N. Busch, **G. Wilson**, R. Morrison, E. McRea, C. Walters.
+`P_045355`–`P_045366`. Each carries the per-man no-match evidence the route already
+records, and all twelve carry `forename_unknown`, because a caption that sets
+`D. Carey` gives no forename any more than a bare surname does — the flag was extended
+from "no space in the name" to "an initial where the forename should be".
+
+**G. Wilson is George "Wildcat" Wilson**, the University of Washington back the club
+was named after and the reason the enterprise existed at all. That the archive did not
+hold him on his own club-season is the clearest possible illustration of why the
+ruling is needed.
+
+### The alternative, stated
+
+**Refusing them is the conservative option, and it was the standing rule until today.**
+It has a real argument: being photographed with a club is not playing for it, and the
+archive's own predicate definition says so in as many words. A team photograph can
+include men who never took the field — trainers, late signings, a squad member cut the
+following week. Promoting on a photograph means the archive holds as people some men
+who may never have played a down.
+
+**What that costs is twelve men who demonstrably existed remaining invisible**, on a
+club-season the archive already holds, because the only source that saw them was not a
+box score. The archive would be recording not what is known about 1926 but what one
+kind of document happens to preserve. The ruling accepts a weaker class of membership
+evidence in exchange for not letting the shape of the surviving record decide who
+counts as a person — and it keeps the two apart in the claim, so a reader can always
+see which kind of evidence a man rests on.
+
+*Related: `a join must use every field on the row` and `a looser name match is safe
+only when a club-season holds it` — the club-season is doing the same work here, as
+the condition that makes a weaker signal safe.*
+
+---
+
+## A disambiguator is evidence about which club is meant
+
+*Ruled by Ryan, 2026-09-09, on two instances of one defect a day apart in the same
+survey. `declarations/clubs.json` → `WITHDRAWN_STRINGS`; gated by
+`src/gate_fandom_bindings.py`.*
+
+**A source that disambiguates a reused club name in its own page title is telling the
+archive which club it means. Stripping that parenthesis before matching discards the
+only thing that distinguishes two clubs of the same name.**
+
+The 2026-09-06 fandom club-name survey binds each entry to one club in the table and
+hangs that entry's variant names on it — 141 strings. Fandom titles a reused name with a
+qualifier: `Cincinnati Bengals (1937–41)`, `Chicago Bulls (AFL)`, `Brooklyn Dodgers
+(NFL)`, `Philadelphia Stars (football)`. `build_clubs.py` stripped it with
+`re.sub(r"\s*\([^)]*\)\s*$", "", canon)` before looking the name up, on the reasonable
+assumption that it was noise. For six of the eight it is. For two it was the whole
+message.
+
+### The two instances
+
+**`Rochester Tigers` → `club-brooklyn-dodgers-1930`.** The NFL Brooklyn Dodgers became
+the Brooklyn **Tigers** in 1944; the survey entry for the 1937 AFL Rochester Tigers
+carried that name among its variants, and the loose fallback route — *bind on a variant
+that is an archive name, when the canonical is not* — matched it. **The archive
+corroborates against it from its own holdings:** the season-key token `B/R` is printed
+*"1936 Brooklyn/Rochester Tigers (AFL)"*, the second AFL's club, which moved from
+Brooklyn to Rochester and is the same club as the 1937 Rochester Tigers. Two clubs, two
+leagues, seven years apart.
+
+**`Cincinnati Bengals (1937–41)` → `club-cincinnati-bengals-1968`.** Found by the gate
+written for the first instance, which is why the gate exists. The years in the title say
+1937–41 and the club it landed on lived 1968–2024. Its sibling `Cincinnati Bengals
+(AFL)` came from the same survey entry and is wrong for the same reason — **and no gate
+can see that one**, because the 1968 club really did play in an AFL: the 1968–69 one,
+not the 1937 one. *A league abbreviation is not a league*, and here the abbreviation is
+all the printed title offers.
+
+### What the ruling does and does not do
+
+**It withdraws the binding, not the source.** `WITHDRAWN_STRINGS` refuses a string at the
+one place strings enter `build/clubs.json`, and records the refusal. Nothing is deleted
+from the survey and the survey is not corrected: the archive simply declines to record
+that name on that club. `build/clubs.json` is rebuilt from its sources every run, so an
+edit would be gone by morning — a withdrawal has to be a declaration or it is nothing.
+
+**It withdraws the NAME, not one spelling of it.** The match is on the bare form. The
+first rebuild withdrew `Rochester Tigers` and left `Rochester Tigers (AFL)` sitting on
+the same club, because the survey adds each name twice — the canonical as a
+`printed_name` and the disambiguated variant as an `alias`. The Bengals entry had put the
+same name on the club **four** ways: `(1937-41)` with a hyphen, `(1937–1941)` with an en
+dash, `(1937–41)` again as a printed name, and `(AFL)`. One ruling, one name, every
+spelling.
+
+**It is scoped to the source.** The bare form `Cincinnati Bengals` is the 1968 club's own
+official name. The withdrawal names `fandom_redirect` and takes only what the survey put
+there; the official name and the `pfa_cell`, `coaching_tree`, `season_key` and
+`media_guide` strings are untouched. `resolve("Cincinnati Bengals", 1970)` still returns
+the club by its own name; `resolve(..., 1937)` returns nothing, which is true — the
+archive does not hold the AFL Bengals.
+
+**Neither withdrawal moved a claim.** `Rochester Tigers` was used by 0 claims;
+`Cincinnati Bengals` by 118, every one resolving at 1968+ through the official name. What
+was wrong was **provenance** — a club recording names that belonged to a different club —
+and provenance is worth correcting even when nothing resolves through it, because the
+next thing that asks will get a wrong answer silently.
+
+### The alternative, stated
+
+**Matching on the bare name is simpler, and it is what the code did.** A disambiguator is
+a wiki's editorial convention, not a fact about football; it is inconsistently applied,
+it is sometimes a league abbreviation that means two competitions, and parsing it invites
+the archive to read meaning into someone else's punctuation. Stripping it lets a survey
+of several hundred entries attach cleanly with one rule.
+
+**What that costs is that a reused name binds to whichever club the survey happened to
+reach first.** There is no tie-break and no error — the second club is simply never
+considered, and the first one silently acquires a name it never bore. That is not a
+matching problem the archive can detect after the fact: by the time the string is on the
+club, the evidence that it belonged elsewhere has been thrown away. Reading the
+disambiguator costs a comparison; not reading it costs the distinction between two clubs,
+and the archive has now found that twice in the same survey.
+
+*Related: `a league abbreviation is not a league` — the limit on how far this can be
+taken, and the reason `Cincinnati Bengals (AFL)` needed a ruling rather than a gate.*

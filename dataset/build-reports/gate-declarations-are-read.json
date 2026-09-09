@@ -1,1 +1,494 @@
-[]
+[
+ {
+  "file": "club-key-normalisation.json",
+  "key": "THE_DEFECT"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "THE_MAP_IS_SEASON_AWARE"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "TWO_CASES_KEPT_APART"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "TWO_CASES_KEPT_APART.why_this_matters"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "A_SOURCE_DEFECT_NEEDS_CORROBORATION"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "WHAT_IS_NEVER_TOUCHED"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "WHAT_IS_NEVER_TOUCHED.absorbed_records"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "WHAT_IS_NEVER_TOUCHED.refused_mappings"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "REVERSIBILITY"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "REVERSIBILITY.the_printed_form_is_kept"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "REVERSIBILITY.how_to_reverse"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "ORDER_OF_OPERATIONS"
+ },
+ {
+  "file": "club-key-normalisation.json",
+  "key": "DECIDED_THROUGH_THE_CLUB_TABLE"
+ },
+ {
+  "file": "clubs.json",
+  "key": "WHY"
+ },
+ {
+  "file": "clubs.json",
+  "key": "THE_ATOM_IS_THE_CLUB_NOT_THE_CODE"
+ },
+ {
+  "file": "clubs.json",
+  "key": "LINEAGE_IS_DERIVED_ONLY_WHERE_THE_EVIDENCE_IS_MECHANICAL"
+ },
+ {
+  "file": "clubs.json",
+  "key": "LINEAGE_IS_DERIVED_ONLY_WHERE_THE_EVIDENCE_IS_MECHANICAL.same_code_consecutive_years"
+ },
+ {
+  "file": "clubs.json",
+  "key": "LINEAGE_IS_DERIVED_ONLY_WHERE_THE_EVIDENCE_IS_MECHANICAL.code_change_nickname_carried_into_the_next_year_AND_men_carried"
+ },
+ {
+  "file": "clubs.json",
+  "key": "LINEAGE_IS_DERIVED_ONLY_WHERE_THE_EVIDENCE_IS_MECHANICAL.code_change_men_carried_nickname_NOT_carried"
+ },
+ {
+  "file": "clubs.json",
+  "key": "LINEAGE_IS_DERIVED_ONLY_WHERE_THE_EVIDENCE_IS_MECHANICAL.same_code_same_nickname_after_a_gap"
+ },
+ {
+  "file": "clubs.json",
+  "key": "LINEAGE_IS_DERIVED_ONLY_WHERE_THE_EVIDENCE_IS_MECHANICAL.same_code_after_a_gap_under_a_different_nickname"
+ },
+ {
+  "file": "clubs.json",
+  "key": "YEAR_SCOPING_IS_NOT_OPTIONAL"
+ },
+ {
+  "file": "clubs.json",
+  "key": "A_NAME_WRONG_FOR_ITS_SEASON_IS_RECORDED_AS_WRONG"
+ },
+ {
+  "file": "clubs.json",
+  "key": "A_NAME_WRONG_FOR_ITS_SEASON_IS_RECORDED_AS_WRONG.what_never_resolves"
+ },
+ {
+  "file": "clubs.json",
+  "key": "A_NAME_WRONG_FOR_ITS_SEASON_IS_RECORDED_AS_WRONG.spelling_variants"
+ },
+ {
+  "file": "clubs.json",
+  "key": "A_NAME_WRONG_FOR_ITS_SEASON_IS_RECORDED_AS_WRONG.compound_strings"
+ },
+ {
+  "file": "clubs.json",
+  "key": "A_NAME_WRONG_FOR_ITS_SEASON_IS_RECORDED_AS_WRONG.beyond_the_archive"
+ },
+ {
+  "file": "clubs.json",
+  "key": "A_NAME_WRONG_FOR_ITS_SEASON_IS_RECORDED_AS_WRONG.corroboration"
+ },
+ {
+  "file": "clubs.json",
+  "key": "A_NAME_WRONG_FOR_ITS_SEASON_IS_RECORDED_AS_WRONG.city_only"
+ },
+ {
+  "file": "clubs.json",
+  "key": "STRINGS_KEEP_THEIR_SOURCE_AND_THEIR_PRINTED_FORM"
+ },
+ {
+  "file": "clubs.json",
+  "key": "STRINGS_KEEP_THEIR_SOURCE_AND_THEIR_PRINTED_FORM.season_keys_are_read_from_the_base"
+ },
+ {
+  "file": "clubs.json",
+  "key": "THE_FAILURE_IS_LOUD"
+ },
+ {
+  "file": "clubs.json",
+  "key": "THE_FAILURE_IS_LOUD.what_is_reported"
+ },
+ {
+  "file": "clubs.json",
+  "key": "THE_FAILURE_IS_LOUD.index_census"
+ },
+ {
+  "file": "clubs.json",
+  "key": "STABLE_ID"
+ },
+ {
+  "file": "clubs.json",
+  "key": "NOT_AN_INDEX_WRITER"
+ },
+ {
+  "file": "clubs.json",
+  "key": "GATE"
+ },
+ {
+  "file": "clubs.json",
+  "key": "BUILDS"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "EVERYTHING_HERE_IS_A_CANDIDATE"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "EVERYTHING_HERE_IS_A_CANDIDATE.how_matched"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "EVERYTHING_HERE_IS_A_CANDIDATE.what_is_NOT_used"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "EVERYTHING_HERE_IS_A_CANDIDATE.storage"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "COLUMN_BINDING"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "COLUMN_BINDING.what_is_allowed"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "COLUMN_BINDING.what_is_refused"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "COLUMN_BINDING.DOCUMENTS_DROPPED_FOR_THIS"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "PROSE"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "PROSE.proof"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "EXCLUDED"
+ },
+ {
+  "file": "college-guides.json",
+  "key": "EXCLUDED.unidentified_institution"
+ },
+ {
+  "file": "hearing-1957.json",
+  "key": "ACQUISITION_STATES"
+ },
+ {
+  "file": "hearing-1957.json",
+  "key": "THE_ROSTER_SIZE_CHECK"
+ },
+ {
+  "file": "hearing-1957.json",
+  "key": "NOT_WRITTEN"
+ },
+ {
+  "file": "hearing-1957.json",
+  "key": "NOT_WRITTEN.conference_standing"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "WHY_PROSE_AND_NOT_FIELDS"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "SCOPE"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "THE_BOUNDARY_IS_PROVED_NEVER_INFERRED"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "THE_BOUNDARY_IS_PROVED_NEVER_INFERRED.the_proof"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "THE_BOUNDARY_IS_PROVED_NEVER_INFERRED.header_shape_is_generic"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "THE_BOUNDARY_IS_PROVED_NEVER_INFERRED.a_split_header_is_one_header"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "THE_BOUNDARY_IS_PROVED_NEVER_INFERRED.unbounded_entries_are_DROPPED_and_counted"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "THE_PROSE_IS_WHOLE_AND_VERBATIM"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "THE_PROSE_IS_WHOLE_AND_VERBATIM.no_normalisation"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "THE_PROSE_IS_WHOLE_AND_VERBATIM.not_broken_into_fields"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "THE_PROSE_IS_WHOLE_AND_VERBATIM.the_guide_s_own_label_is_kept"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "THE_PROSE_IS_WHOLE_AND_VERBATIM.round_trips"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "PER_SEASON_VITALS"
+ },
+ {
+  "file": "media-guide-prose.json",
+  "key": "PER_SEASON_VITALS.cannot_overwrite"
+ },
+ {
+  "file": "media-guides.json",
+  "key": "THE_CLUBS_OWN_GUIDE_DOCUMENTS_A_SEASON"
+ },
+ {
+  "file": "media-guides.json",
+  "key": "THE_CLUBS_OWN_GUIDE_DOCUMENTS_A_SEASON.consequences"
+ },
+ {
+  "file": "media-guides.json",
+  "key": "THE_CLUBS_OWN_GUIDE_DOCUMENTS_A_SEASON.what_stays_a_lead"
+ },
+ {
+  "file": "media-guides.json",
+  "key": "THE_CLAIMS_STORE_HAS_NO_WRITER"
+ },
+ {
+  "file": "nflverse-rosters.json",
+  "key": "retrieval"
+ },
+ {
+  "file": "nflverse-rosters.json",
+  "key": "retrieval.measured_2026_09_06"
+ },
+ {
+  "file": "nflverse-rosters.json",
+  "key": "WHAT_IS_INGESTED"
+ },
+ {
+  "file": "nflverse-rosters.json",
+  "key": "DISAGREEMENTS"
+ },
+ {
+  "file": "nflverse-rosters.json",
+  "key": "DISAGREEMENTS.measured_2026_09_06"
+ },
+ {
+  "file": "nflverse.json",
+  "key": "SCOPE"
+ },
+ {
+  "file": "nflverse.json",
+  "key": "SCOPE.draft_years"
+ },
+ {
+  "file": "nflverse.json",
+  "key": "DISAGREEMENTS"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "order_is_required"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "exempt.index_io.py"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "how_a_new_patcher_is_picked_up"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "identity_is_edited_in_place"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "p3_transitions_completed"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "WHY_THIS_LAYER_EXISTS"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "WHY_THIS_LAYER_EXISTS.the_defect"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "WHY_THIS_LAYER_EXISTS.measured_2026_09_06"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "WHY_THIS_LAYER_EXISTS.why_not_fix_unify_identity"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "WHAT_MAY_BE_MERGED"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "WHAT_MAY_BE_MERGED.evidence_required"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "WHAT_MAY_BE_MERGED.the_name_is_recovered_for_MATCHING_ONLY"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "WHAT_MAY_BE_MERGED.a_nameless_half_must_still_agree_on_a_surname"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "REVERSIBILITY_IS_THE_CONDITION"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "REVERSIBILITY_IS_THE_CONDITION.nothing_is_deleted"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "REVERSIBILITY_IS_THE_CONDITION.every_contribution_is_recorded"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "REVERSIBILITY_IS_THE_CONDITION.how_to_un_merge"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "THE_CLUB_SEASON_KEY"
+ },
+ {
+  "file": "person-merges.json",
+  "key": "DISAGREEMENTS_ARE_NOT_RESOLVED_BY_A_MERGE"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "WHY"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "THE_ROLE_STRING"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "THE_ROLE_STRING.kept_exactly_as_printed"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "THE_ROLE_STRING.three_separators_none_interchangeable"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "THE_ROLE_STRING.COMPOUND_ROLES_ARE_NOT_SPLIT"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "THE_CLUB_CELL"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "WHAT_IS_WRITTEN"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "WHAT_IS_NOT_WRITTEN"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "DISAGREEMENTS_WITH_THE_COACHING_STORES"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "DISAGREEMENTS_WITH_THE_COACHING_STORES.held_never_resolved"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "DISAGREEMENTS_WITH_THE_COACHING_STORES.role_string_differs_is_not_a_conflict_about_a_fact"
+ },
+ {
+  "file": "pfa-coaches.json",
+  "key": "DISAGREEMENTS_WITH_THE_COACHING_STORES.kinds"
+ },
+ {
+  "file": "pfa.json",
+  "key": "TRANSACTION_LOG"
+ },
+ {
+  "file": "pfa.json",
+  "key": "TRANSACTION_LOG.ONLY_44_9_PERCENT_CARRY_A_DATE"
+ },
+ {
+  "file": "pfa.json",
+  "key": "TRANSACTION_LOG.printed_row_IS_NOT_A_CHRONOLOGY"
+ },
+ {
+  "file": "pfa.json",
+  "key": "TRANSACTION_LOG.raw_types_not_normalised"
+ },
+ {
+  "file": "pfa.json",
+  "key": "LEADS"
+ },
+ {
+  "file": "pfa.json",
+  "key": "LEADS.but"
+ },
+ {
+  "file": "pfa.json",
+  "key": "LEADS.structure"
+ },
+ {
+  "file": "wikipedia-seasons.json",
+  "key": "ATTRIBUTION"
+ },
+ {
+  "file": "wikipedia-seasons.json",
+  "key": "CLUBS"
+ },
+ {
+  "file": "wikipedia-seasons.json",
+  "key": "DISAGREEMENTS_ARE_HELD"
+ },
+ {
+  "file": "wikipedia-seasons.json",
+  "key": "OUTPUT"
+ },
+ {
+  "file": "wikipedia-seasons.json",
+  "key": "OUTPUT.written_by"
+ }
+]

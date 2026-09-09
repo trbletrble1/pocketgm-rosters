@@ -1,2 +1,10 @@
 build/
 __pycache__/
+
+# transient working files of build_person_index.rebuild() -- exist only during a rebuild
+build-reports/.person-index.json.tmp
+build-reports/person-index.json.prev
+
+# a derived working database, rebuilt by src/census_table.py from the document corpus.
+# The repo tracks no sqlite: the census REPORTS beside it are the record.
+build-reports/corpus-census.sqlite
