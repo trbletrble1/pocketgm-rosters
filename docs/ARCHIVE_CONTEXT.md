@@ -1,12 +1,17 @@
 # The archive — project context
 
-*Written 7 September 2026. **Revised 8 September 2026**, after a day that added 2.7
-million claims and six precedents. Everything a new master session needs. Read it
-once, then work from it rather than asking Ryan to repeat himself.*
+*Written 7 September 2026. Revised 8 September. **Revised 9 September 2026**, after a
+day that fixed more than it added: the archive gained 3,000 claims and lost a great
+many wrong answers. Everything a new master session needs. Read it once, then work
+from it rather than asking Ryan to repeat himself.*
 
-**What was regenerated from measurement on 8 September is marked; what is Ryan's
-ruling was left alone.** Where a figure in this file has not been re-measured since
-7 September it says so rather than being restated as current — §8 in particular.
+**What was regenerated from measurement on 9 September is marked; what is Ryan's
+ruling was left alone.** Where a figure has not been re-measured since 7 or 8
+September it says so rather than being restated as current — §8 in particular.
+
+**A fixed defect is struck through, never deleted**, so the change is visible and a
+returning reader can see what moved. Everything in §11 and §15 was measured against
+the served model on 9 September unless it says otherwise.
 
 ---
 
@@ -14,8 +19,10 @@ ruling was left alone.** Where a figure in this file has not been re-measured si
 
 A historical archive of professional football held as data. Every player and coach from 1920 to the present, across the NFL, APFA, AAFC, all four AFLs, the CFL and its predecessor unions, the WFL, both USFLs, the XFL, the UFL, the AAF, Arena and NFL Europe.
 
-**43,550 people. 7.9 million claims. 497 stores.** *(Measured 8 September 2026
-against the served model; was 5.1 million and 474 stores on 7 September.)*
+**43,562 people. 7,897,681 claims. 501 stores.** *(Measured 9 September 2026 against
+the served model `81c7b27a294ebb47`, built 12:09. Was 43,550 / 7.9M / 497 on
+8 September and 5.1M / 474 stores on 7 September. The population barely moved today
+because the day's work was correction, not acquisition.)*
 
 The differentiator is not the data. It is that **every value traces to the document it came from**, that **where sources disagree the archive holds both and says so**, and that **every one of those 43,500 men gets a written biography** — most of whom have never had a paragraph written about them anywhere.
 
@@ -120,6 +127,28 @@ Over one weekend these sessions repeatedly caught their own errors before shippi
 Known instances: **51 guide heights** (`61"` against `6-1`), and **roughly 3,200 drafts** where a parsed object and a raw string never compare equal.
 
 **Fifth, and newest: a store that documents a discipline it did not follow.** `nflverse-rosters.json` records 1,079 people with `"ruling": "UNRESOLVED - both held"`. **For 1,021 of them the second value is held nowhere** — it exists only inside that report. PFA does the same thing correctly on identical ground, all 628 of its disagreeing people carrying a claim. A field named `ruling` asserting a discipline the store didn't follow is worse than silence, because it answers the question a reviewer would have asked.
+
+**Sixth: a decider that classifies by reading a string.** *(9 September.)* A rule that
+reads a VALUE where it should read a predicate, a scope or a declaration is right until
+someone names the next thing differently, and then it is wrong silently. Four in one
+file: a statistic decided by `store.startswith("stats-")` served **2,688,935 PFA
+statistics as ordinary facts**; a coach decided by `league NOT IN ('COACHES',...)`
+counted **41,662 of 54,908 staff claims as players** the day the coaching claims gained
+real leagues; a name decided by the literal `"name"` made 1,607 names unsearchable. The
+same two rules appear in 23 more files in `src/`. All four now read declarations, and
+RS-G8 re-derives every one from the claims.
+
+**Seventh: a derived id that moves when the data moves.** *(Twice in three days.)* A
+club id derived from a name is only as stable as the name. `build_clubs` failed in the
+chain and passed standalone for exactly this reason; then, the same day, the two
+producers of a coaching row named the printed club differently and **46 clubs were
+minted as `club--2000`**, taking a code off the Amsterdam Admirals and stranding 3,833
+statistics claims. 45 places in `src/` name a club by a derived id.
+
+**And the shape they share with the fifth: a second copy of one rule.** Three times in
+one week. A gate that re-derived head standing while the builder had started reading
+PFA's printed position reported **727 men losing a season**; not one had. A gate with
+its own copy of the rule tests the copy.
 
 The fix is always the same shape: **make the failure loud, and gate the property rather than the instance.**
 
@@ -321,9 +350,40 @@ Six more, each with its evidence and its rejected alternative in
 
 ---
 
+### Added 9 September
+
+Two more written into `docs/DATASET_PRECEDENTS.md` with their evidence and their
+rejected alternative; the rest are rulings recorded in declarations. Summarised, not
+restated:
+
+- **A man named in a team photograph caption is a person.** Twelve promoted from the
+  1926 Pacific Coast Wildcats caption, including George "Wildcat" Wilson, the man the
+  club was named for, whom the archive did not hold on his own club-season because its
+  roster there came from box scores. **The predicate does not move**: he was
+  photographed with the club, not placed on its roster.
+- **A disambiguator is evidence about which club is meant.** Stripping a source's
+  `(1937–41)` before matching discards the only thing distinguishing two clubs of one
+  name. Two bindings withdrawn.
+- **Staff is decided by the predicate, never by the league.**
+- **A coaching season is held in one shape** — `coaching_seasons`, decided by the
+  predicate. The exclusivity is per CLAIM: a player-coach keeps both halves.
+- **A display name prefers a forename-first form.** Surname-first is a filing
+  convention. Nothing is standardised; both forms stay claims and stay searchable.
+- **A coaching-only bio is its own shape.** A man who only ever coached is not a player
+  with the playing part missing.
+- **A club is named from the club table**, not from a map built by one source.
+- **A script must not write unless it is asked.** `--write`, everywhere.
+- **The previous published model is kept.** Two of them.
+- **Minor leagues stay out** — reaffirmed 9 September after naming what is being
+  excluded: the Norfolk Neptunes, Hartford Knights, Wheeling Ironmen, Toronto Rifles
+  and 100 more, 375 men. The exclusion now covers named clubs rather than codes.
+
+---
+
 ## 10. Open questions Ryan has not ruled on
 
-**The three-way birth-date split.** Measured across all 40,523 people:
+**The three-way birth-date split.** Measured 7 September across all 40,523 people
+*(the population is 43,562 today; this split has NOT been re-measured since)*:
 
 | | |
 |---|---|
@@ -369,12 +429,17 @@ Also open:
 | **nflverse disagreement report** | 1,079 people marked `"ruling": "UNRESOLVED - both held"`; **1,021 hold no second claim.** The value exists only in the report. PFA does it correctly on identical ground. Needs a ruling, and a gate comparing every store's disagreement report against its own claims. |
 | ~~Draft representations~~ | **FIXED 8 September.** The reading is a dict carrying league, kind and numbering, and the fabricated disagreements are gone: RS-G6 reports 0 false disagreements across seven families. The 2,068 draft contests that remain are real. |
 | ~~51 guide heights~~ | **FIXED.** The height reading folds them; 3 height contests remain and RS-G6 confirms none is false. |
-| **G3** | 414 `club-names` claims name source records that were never registered. Published with `--force`, WARNING on every response. **No exception list — it should stay uncomfortable.** |
+| **RS-G3** | 414 `club-names` claims name source records that were never registered. Published with `--force`, WARNING on every response. **No exception list — it should stay uncomfortable.** |
 | **RS-G5** | `guide-pre1950-delimited.json` nests its 1,653 claims under `runs.<club>.guides.<year>.claims` and has no top-level `claims` key, so the read model cannot see it. Correctly red, correctly not declared away — the corpus yields 38 pre-1950 claims against its 1,653. Fetching swept all 1,146 build files: **it is the only instance.** |
 | **Sampling gates** | `gate_guide_prose_corpus` samples 25 of 1,838 guides by default then prints "every property holds". `gate_pfa2` and `gate_anachronism` can exit 0 having checked nothing. Four more silently no-op a check. |
 | `gate_merged_clubs` M4 | Fails on `PIT\|1943`, held. |
 | `gate_club_keys` G7 = 1 | `assistants.json` holds a stint whose club is a guide *title*. |
+| ~~**187 impossible ages**~~ | **MOSTLY FIXED 9 September, and re-measured: 187 → 15.** On 8 September 118 men were too young for a season they held and 69 too old, and **142 of the 187 came from the PFA statistics ingest**, which had matched on a name without holding to the club-season. With the ruled join and the ±3 span guard in place: **2 too young, 13 too old.** The 15 that remain are older and are not the statistics ingest's. *(Counted with coaching club-seasons excluded BY PREDICATE, which is the shape the archive now holds them in; the first re-measurement got 218 by letting `coaches-nfl` rows through, and that was my method, not the archive.)* |
 | **631 statistics claims** | Across the `stats-*` stores, naming nobody — the ingest minted an id for a row it couldn't match and wrote no name. *(Re-measured 8 September; was reported as 649.)* |
+| **2,018 club-table reach keys** | Season keys placing a man on a club-season the club table cannot name: 660 where it holds the club but no name for that year (almost all 2025), 809 where the token places at another year, 549 where the token is never placed. **Every one of the 466 triples rests on exactly ONE source**, so `SPAN_EXTENSIONS` can move none of them — the blocker is evidence, not policy. `gate_club_table_reach` is a RATCHET on this number. |
+| **107 of 108 unnamed club tokens, named** | *(9 September.)* Formerly "274 tokens the bios print raw". They are named from `club_as_printed` on their own claims and from the PFA pages the claims cite — the Norfolk Shamrocks, the Wheeling Ironmen. **One cannot ever be named**: a `salaries` season key that is a literal `?`. All but two fall under the minor-league exclusion. |
+| **build_dashboard.py:133** | Skips 217 `stats-*.json` from the store census and shows 11 `pfa-stats-*.json` beside them. **The census is inconsistent with itself**, in the one artefact meant to say what the archive holds. The last surviving instance of the store-name test. |
+| **997 coaching-only bios → 0** | ~~503 from `get_bio`~~ **FIXED 9 September.** All 2,138 render. A pre-existing writer bug it exposed is fixed with it. |
 | **34 of 35 not-file-shaped declarations** | Declare no `enumerable_parts`. `gate_source_coverage` is red on them by design: an absent list cannot be told from nobody having looked. **Reported, not rewritten** — generating 34 declarations from a script would be 34 sentences nobody had thought about. Ryan's call. |
 | **PFA's `TKL`** | Demoted to its own predicate on 8 September: StatsCrew's `Tackle` is its own `Def + ST` and PFA's `TKL` is its own `DT + STT`. Whether either can be reconciled to the other is unruled. |
 | **28,202 → 65 misaligned statistic rows** | PFA renders rows under a fuller layout than the header it prints. 28,137 are now read by the row-length rule; **65 match no layout PFA uses anywhere** and are unread. |
@@ -398,22 +463,90 @@ Read-only, on the mini, under launchd, surviving reboot and power failure.
 
 **When a tool is added, the connector must be removed and re-added.** A new chat is not enough — the tool list is cached from when the connector was created. This caused one false alarm where a session appeared to have invented a tool it had in fact built.
 
-**Six gates:** RS-G1 unreadable dates, RS-G2 unresolved persons, RS-G3 source records, RS-G4 population reconciliation, RS-G5 claim stores absent from the model, RS-G6 false contests. **RS-G3 and RS-G5 are red for stated reasons; the other four pass** *(8 September)*.
+### The gates — what each holds, and which are ratchets
 
-**RS-G6 now checks seven families, not two** — birth_date, birth_place, college,
-death_place, draft, height, weight — over 5,507 contested facts, 0 false. It was
-effectively inert while only two families were declared; it has since gone red twice
-on real findings and been cleared by a rebuild each time.
+*Regenerated 9 September. **A gate that passes at 2,018 is not broken.** Two of these
+are ratchets: they hold a number that should fall, and fail when it RISES. A gate that
+demanded zero would either be a lie today or would be satisfied by looking away.*
 
-**The club table has its own gate**, `gate_clubs`, now K1–K8: K7 covers a string a
-source misprinted, K8 a club's span extended by one adjacent year on outside
-corroboration.
+**In the read model** — every one runs on each build, and a FAIL refuses publication
+unless `--force` is given, in which case every response says so.
+
+| | holds |
+|---|---|
+| RS-G1 | an unreadable date fails, unless `dates-as-printed.json` carries it |
+| RS-G2 | an unresolved person fails, unless its store is declared known-unresolvable |
+| RS-G3 | a claim naming a source record its store does not hold. **RED: 414**, `club-names`. No exception list — it should stay uncomfortable |
+| RS-G4 | the people here reconcile with the people in the index. 43,562 both sides |
+| RS-G5 | every file in `build/` is a store in the model or is explained. **RED: 1**, `guide-pre1950-delimited.json`, which nests its 1,653 claims where the reader cannot see them. Correctly red and correctly not declared away |
+| RS-G6 | no FALSE disagreement — seven families, 0 false |
+| RS-G7 | *(new, 8 Sept)* every league token is a league the club table holds, or one declared a non-competition. Caught a `PFA` token I fabricated myself, on 32,406 claims |
+| RS-G8 | *(new, 9 Sept)* **classification is declared, not read off a name.** Statistics stores, staff predicates, name predicates and the surname-first reading, each re-derived from the claims and failing in BOTH directions. The statistics half checks a PARTITION rather than deriving the vocabulary from the declaration it is checking — the first version passed on an empty declaration |
+
+**Outside the model.** These run on demand and are the property record for work that has
+no place in the read model.
+
+| | holds |
+|---|---|
+| `gate_clubs` K1–K11 | the club table. K10 *(new)*: the pseudo-league tokens are DERIVED from the declaration, not typed — `("COACHES","SALARIES")` was written out in four files and none gained `IND`. K11 *(new)*: no club is minted from an empty name |
+| `gate_club_table_reach` | **A RATCHET.** Season keys placing a man on a club-season the table cannot name: **2,018 today**, in four counted classes. Fails if it RISES; when it falls it says so and names the new ceiling to write down. Zero would be a lie today and unreachable tomorrow |
+| `gate_writes_are_opt_in` | **every `__main__` that can write takes `--write`. 33 opt-in, 0 by default.** Written first and allowed to fail, so the list it produced was the work list |
+| `gate_coaching_season_shape` | a coaching season is in exactly one of the two dicts, decided by predicate; **and a player-coach keeps BOTH** — the half that stops "delete the coaching seasons" passing |
+| `gate_coaching_only_bios` | all 2,138 coaching-only men render; each bio is a finished sentence; the lead matches the career; it does not call a span a season count; it does not give a role to a man no source gives one to |
+| `gate_bio_club_names` | **a bio must not print a club token the archive can name. 1,047 → 0**, both figures from the same gate on real data. Three unjudgeable classes are counted, never passed silently |
+| `gate_fandom_bindings` | a redirect must not fold one club into another on a shared word. Checks the disambiguator the matcher throws away. Its limit is in its docstring: it cannot see a reused name with no disambiguator |
+| `gate_source_coverage` | a declaration that is not file-shaped must enumerate its parts. **RED on 34 of 35 by design** — an absent list cannot be told from nobody having looked. Reported, not rewritten |
+| `service/gate_retention.py` | the previous published model is kept. Six properties proved on **real publishes**, not asserted. Property 0 reads the model actually being served, which is the only one a fixture cannot fake — and it caught this code's own bug |
+| `service/gate_selftest.py` | **every read-model gate must FAIL when its invariant is broken.** Not ceremony: a gate that has only ever passed has not been tested. It caught its own fixture the day `staff_predicates` moved to the archive's declarations |
+
+**Two standing reds, and they are not neglect.** RS-G3 (414) and RS-G5 (1) are each a
+real thing the archive has chosen to hold rather than declare away, and the service says
+so on every response.
+
+## 12b. What is still open, plainly
+
+*The things a new session would otherwise rediscover. Every figure measured 9 September
+against `81c7b27a294ebb47`.*
+
+**Waiting on evidence, not on a ruling:**
+
+- **2,018 club-table reach keys.** 660 want a second source for 2025 — only PFA reaches
+  past 2024 for the NFL and UFL, and `SPAN_EXTENSIONS` rightly refuses one source's
+  say-so. 809 want a second source AND then 223 declarations, one year at a time. 549
+  are clubs the table does not hold at all.
+
+**Waiting on Ryan:**
+
+- **The 549 never-placed tokens**, now named (§11). Which of these minor-league clubs,
+  if any, the archive admits. The list is in
+  `reports/2026-09-09-clubs-the-table-never-places.md`.
+- **The two WFL 1974 relocations' other halves.** The combined printed forms are on the
+  origin clubs; three of the six men are placed by a second source and three are placed
+  by nothing but PFA's combined form.
+- **nflverse-rosters**, 1,021 second values that exist only in a report.
+- **34 of 35 not-file-shaped declarations.**
+
+**Waiting on someone to do them:**
+
+- **15 impossible ages**, down from 187. Not the statistics ingest's.
+- **`build_dashboard.py:133`** — the last store-name test, and its census contradicts
+  itself.
+- **631 statistics claims naming nobody**, and **65 misaligned rows** matching no PFA
+  layout.
+- **The sampling gates.** `gate_guide_prose_corpus` samples 25 of 1,838 and prints
+  "every property holds"; three more can exit 0 having checked nothing.
+- **45 places that name a club by a derived id.** Two of them have already moved.
 
 ---
 
 ## 13. What to do next
 
-**The immediate case for a sweep.** Every defect above was found by accident — a sentence missing from a bio, a count that looked suspiciously round, a number that couldn't be right for that league. None came from a source; all came from the plumbing. A deliberate sweep looking for those same shapes on purpose converts an unknown number of latent faults into a list.
+**The sweep was done, on 7 and 8 September, and the four questions below are its
+questions.** It is left here because it earned its place: every defect it found was one
+nobody was looking for, and the same four questions asked again on 9 September found the
+sixth and seventh disguises in §5. Ask them again.
+
+**The original case for it.** Every defect above was found by accident — a sentence missing from a bio, a count that looked suspiciously round, a number that couldn't be right for that league. None came from a source; all came from the plumbing. A deliberate sweep looking for those same shapes on purpose converts an unknown number of latent faults into a list.
 
 Four questions worth asking systematically:
 1. Which gates can pass without checking anything?
@@ -423,14 +556,19 @@ Four questions worth asking systematically:
 
 **Then, in rough order of value.** *Reordered 8 September on measured gain, not
 impression:*
-1. **PFA's awards and leaderboards** were empty and awards is now read; **leaderboards
-   is still unfetched** and is five minutes of work.
-2. Wikimedia Commons by club and season.
-2. Media guide headshot extraction, tagged by rights.
-3. The corpus inventory — 2,406 documents nobody has read.
-4. Crippen's AAFC register.
-5. Media guides as the fourth roster-membership source.
-6. The eBay programme lineup pages — 48 of 55 carry one.
+*Revised 9 September: PFA's 33,750 game and playoff logs are FETCHED and unread, which
+moves them to the top — the fetch was the slow part and it is done. Crippen's AAFC
+register is ingested.*
+
+1. **PFA's game and playoff logs** — 33,750 pages on disk, nothing ingested. The largest
+   body of unread material the archive has ever held in hand.
+2. **PFA's leaderboards** were empty and are still unfetched — five minutes of work.
+3. Wikimedia Commons by club and season.
+4. Media guide headshot extraction, tagged by rights.
+5. The corpus inventory — 2,406 documents nobody has read.
+6. Media guides as the fourth roster-membership source.
+7. The eBay programme lineup pages — 48 of 55 carry one.
+8. ~~Crippen's AAFC register~~ — **ingested 8 September**, 5,974 claims and 446 leads.
 
 **And the thing the whole archive is for:** the website. One search box, a page assembled from claims at read time. The service and the bio endpoint are its spine and already exist. The design question — what a page shows, and what it does with a disagreement — is Ryan's and unmade.
 
@@ -447,4 +585,17 @@ impression:*
 - **Titles are wrong.** A baseball Giants yearbook filed as football. Eight Vietnam War novels matched on "Eagles". A 1945 photograph sold as 1943. Open the file.
 - **Name a refusal rather than forcing it.** Every unresolvable string is counted and reported. The bank of leads, refusals and held disagreements is not lost work — it is work waiting for evidence.
 - **Report what you could not establish**, not only what you found. The most useful sentences of the weekend were a session saying its own verification was worthless, or that its test was cruder than a peer's.
+- **A rule that reads a value where it should read a declaration is a latent defect.**
+  It agrees with the data today and disagrees the day someone names the next thing
+  differently. *(Added 9 September, after four of them in one file.)*
+- **Fix the root, then re-check downstream before changing anything.** Eleven of the
+  twenty sites downstream of the coaching-season shape became correct without being
+  touched. A file that becomes correct on its own is the sign the root was the root —
+  and the ones that do not are then a short, honest list.
+- **Correct your own numbers, in public, with both figures.** The day's most useful
+  sentences were "43 tokens cannot be named" being wrong twice over, and "218 impossible
+  ages" being my method rather than the archive.
+- **Losing a fact to save a repetition is the worse trade.** A fix that tidied a repeated
+  club name also deleted Jack Pardee's Rams years. Reverted, with the reason left in the
+  code.
 - **Nothing systematically revisits a refusal when new evidence arrives.** A real gap and a good future job.
