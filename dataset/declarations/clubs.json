@@ -168,6 +168,66 @@
     "_club_id_note": "stated, not derived from the year, because this club has TWO declared seasons and deriving the id per entry would make two clubs out of one.",
     "_anchor_year": 1922,
     "roster_is_keyed_to_the_game": false
+   },
+   {
+    "code": "DOC:SLG-IND",
+    "name": "St. Louis Gunners",
+    "year": 1931,
+    "league": "",
+    "source_id": "pfra-annual-4-1983",
+    "source_record": "pfra-annual-4-1983#page 10",
+    "name_as_printed": "St. Louis Gunners",
+    "evidence": "Fourth PFRA Annual (1983), page 10: the club's roster table, its coach and its full 9-game schedule with scores and attendance, printed under the heading `1931 St. Louis Gunners`.",
+    "opponent_in_scope": "NFL|1931|CRD -- the Chicago Cardinals, played 6-26 at home before 10,000; and a New York Giants game printed as cancelled",
+    "lineage": "UNKNOWN. Not linked to anything. The archive holds club-st-louis-gunners-1934, the NFL club that took over the Cincinnati Reds' franchise for the last three games of 1934. Whether these independent seasons are the same club is a LINEAGE QUESTION and is not assumed here, exactly as Frankford's 1922-23 independent seasons are not linked to the NFL Frankford club. What is true and not sufficient: same name, same city, contiguous years, and men who carry over -- Chuck Delmege, Scott Hornsby, Bill Carroll, Mack Gladden, Swede Johnston, Len McGirl, Al Pezolt, Joel Moore, Bill Senn, Sandy Sandberg, Homer Reynolds, George Rogge, Joe Spudich and Blake Workman appear across these pages. What is missing is the archive's own mechanical test: a source STATING the continuation, or a code the sources carry across the boundary. Ryan's call, not this ingest's.",
+    "lineage_candidate": {
+     "other": "club-st-louis-gunners-1934",
+     "why_not_a_link": "the 1934 NFL club is held under StatsCrew's code SLG and enters the archive only as the franchise that finished the 1934 season. These three seasons are pre-NFL independent football and no source the archive holds states that they are one club."
+    },
+    "roster_is_keyed_to_the_game": false,
+    "_boundary_season": "Ryan's ruling, 2026-09-08: a boundary season -- professional football played before the club entered a league the archive holds. Created under the boundary ruling in the same shape as Frankford 1922-23. NO LEAGUE IS CREATED and none is asserted; the league is the empty string.",
+    "club_id": "club-st-louis-gunners-1931",
+    "_anchor_year": 1931
+   },
+   {
+    "code": "DOC:SLG-IND",
+    "name": "St. Louis Gunners",
+    "year": 1932,
+    "league": "",
+    "source_id": "pfra-annual-4-1983",
+    "source_record": "pfra-annual-4-1983#page 12",
+    "name_as_printed": "St. Louis Gunners",
+    "evidence": "Fourth PFRA Annual (1983), page 12: the club's roster table, its coach and its full 13-game schedule with scores and attendance, printed under the heading `1932 St. Louis Gunners`.",
+    "opponent_in_scope": "NFL|1932|CRD -- the Chicago Cardinals, played 7-20; and NFL|1932|POR, the Portsmouth Spartans, played 0-12",
+    "lineage": "UNKNOWN. Not linked to anything. The archive holds club-st-louis-gunners-1934, the NFL club that took over the Cincinnati Reds' franchise for the last three games of 1934. Whether these independent seasons are the same club is a LINEAGE QUESTION and is not assumed here, exactly as Frankford's 1922-23 independent seasons are not linked to the NFL Frankford club. What is true and not sufficient: same name, same city, contiguous years, and men who carry over -- Chuck Delmege, Scott Hornsby, Bill Carroll, Mack Gladden, Swede Johnston, Len McGirl, Al Pezolt, Joel Moore, Bill Senn, Sandy Sandberg, Homer Reynolds, George Rogge, Joe Spudich and Blake Workman appear across these pages. What is missing is the archive's own mechanical test: a source STATING the continuation, or a code the sources carry across the boundary. Ryan's call, not this ingest's.",
+    "lineage_candidate": {
+     "other": "club-st-louis-gunners-1934",
+     "why_not_a_link": "the 1934 NFL club is held under StatsCrew's code SLG and enters the archive only as the franchise that finished the 1934 season. These three seasons are pre-NFL independent football and no source the archive holds states that they are one club."
+    },
+    "roster_is_keyed_to_the_game": false,
+    "_boundary_season": "Ryan's ruling, 2026-09-08: a boundary season -- professional football played before the club entered a league the archive holds. Created under the boundary ruling in the same shape as Frankford 1922-23. NO LEAGUE IS CREATED and none is asserted; the league is the empty string.",
+    "club_id": "club-st-louis-gunners-1931",
+    "_anchor_year": 1931
+   },
+   {
+    "code": "DOC:SLG-IND",
+    "name": "St. Louis Gunners",
+    "year": 1933,
+    "league": "",
+    "source_id": "pfra-annual-4-1983",
+    "source_record": "pfra-annual-4-1983#page 13",
+    "name_as_printed": "St. Louis Gunners",
+    "evidence": "Fourth PFRA Annual (1983), page 13: the club's roster table, its coach and its full 16-game schedule with scores and attendance, printed under the heading `1933 St. Louis Gunners`.",
+    "opponent_in_scope": "NFL|1933|CRD, NFL|1933|GB, NFL|1933|BKN and NFL|1933|CIN -- the Gunners beat the Cardinals 28-7, lost to Green Bay 0-21, beat Brooklyn 21-2 and lost to the Cincinnati Reds 0-7",
+    "lineage": "UNKNOWN. Not linked to anything. The archive holds club-st-louis-gunners-1934, the NFL club that took over the Cincinnati Reds' franchise for the last three games of 1934. Whether these independent seasons are the same club is a LINEAGE QUESTION and is not assumed here, exactly as Frankford's 1922-23 independent seasons are not linked to the NFL Frankford club. What is true and not sufficient: same name, same city, contiguous years, and men who carry over -- Chuck Delmege, Scott Hornsby, Bill Carroll, Mack Gladden, Swede Johnston, Len McGirl, Al Pezolt, Joel Moore, Bill Senn, Sandy Sandberg, Homer Reynolds, George Rogge, Joe Spudich and Blake Workman appear across these pages. What is missing is the archive's own mechanical test: a source STATING the continuation, or a code the sources carry across the boundary. Ryan's call, not this ingest's.",
+    "lineage_candidate": {
+     "other": "club-st-louis-gunners-1934",
+     "why_not_a_link": "the 1934 NFL club is held under StatsCrew's code SLG and enters the archive only as the franchise that finished the 1934 season. These three seasons are pre-NFL independent football and no source the archive holds states that they are one club."
+    },
+    "roster_is_keyed_to_the_game": false,
+    "_boundary_season": "Ryan's ruling, 2026-09-08: a boundary season -- professional football played before the club entered a league the archive holds. Created under the boundary ruling in the same shape as Frankford 1922-23. NO LEAGUE IS CREATED and none is asserted; the league is the empty string.",
+    "club_id": "club-st-louis-gunners-1931",
+    "_anchor_year": 1931
    }
   ],
   "_roster_is_keyed_to_the_game": "TRUE only where the club enters for a documented GAME and has no club-season -- the 1926 Los Angeles Tigers. It is what makes a club EMPTY BY RULING rather than a gap. Frankford's 1922-23 independent seasons are real club-seasons with real men on them and must NOT carry it: they were briefly reported as 'empty by ruling' while holding 45 men, because the flag was written for one club and inherited by every club that used the same declaration route."
@@ -212,8 +272,29 @@
     "kind": "alias",
     "source": "pfa_team_season_page",
     "evidence": "Pro Football Archives prints the club as `Birmingham Bolts` in the H1 of its 2001 XFL team-season page, 55 men on the roster table. The archive holds the same club-season as `Birmingham Thunderbolts` with 57 men. One club, two printed names -- the Newark Bears and Demons shape. Ruled by Ryan, 2026-09-08. An ALIAS and not an official name: PFA is a reference work, not a document the club played under, which is what made the Pacific Coast Wildcats' cover name official and this one not."
+   },
+   {
+    "club_id": "club-houston-texans-1974",
+    "name": "Houston Texans-Shreveport Steamer",
+    "first": 1974,
+    "last": 1974,
+    "kind": "alias",
+    "source": "pro-football-archives",
+    "evidence": "PFA prints the 1974 season under the combined form (/1974wflh-s.html). It goes on the club the archive's OTHER sources place the men on: coaches-nfl has Jim Garrett as Head Coach at WFLHOU in 1974, and stats-wfl-1974 and wfl-1974 have Garland Boyette at WFLHOU in 1974 with 16 games as a player. Two independent placements, both Houston. Nothing places any of these men at Shreveport in 1974.",
+    "_what_it_does_not_say": "It does not say which city the other men worked in. Of the six men holding this season key, three are placed by a second source and three are placed by nothing but PFA's combined form. The name resolves; the men are not moved."
+   },
+   {
+    "club_id": "club-new-york-stars-1974",
+    "name": "New York Stars/Charlotte Hornets",
+    "first": 1974,
+    "last": 1974,
+    "kind": "alias",
+    "source": "pro-football-archives",
+    "evidence": "PFA prints the 1974 season under the combined form (/1974wflny-c.html). coaches-nfl places Babe Parilli as Head Coach at WFLNYS in 1974. Nothing places any of these men at Charlotte in 1974.",
+    "_what_it_does_not_say": "As above: of the three men on this season key, one is placed by a second source and two are not."
    }
-  ]
+  ],
+  "_a_relocation_is_not_a_merger": "Ryan's ruling, 2026-09-09. PFA prints a club that moved MID-SEASON under a combined name -- '1974 Houston Texans-Shreveport Steamer', '1974 New York Stars/Charlotte Hornets'. That is ONE CLUB under two printed names and it takes this route. It is NOT the compound_printed_name case: Phil-Pitt 1943, Card-Pitt 1944 and the Brooklyn-New York Yankees of 1949 were TWO CLUBS PLAYING AS ONE, and the table's own test says so mechanically -- a compound is recorded only where 'the other half does not name a second club that year'. Here BOTH halves are clubs the table holds in 1974, which is exactly what makes it a move and not a merger. Do not file them together."
  },
  "LEAGUE_TOKENS_THAT_ARE_NOT_LEAGUES": {
   "_what": "Tokens that appear in the LEAGUE position of an index season key but are not competitions. They hold no club in this table because their clubs are held with an EMPTY league, which is how the table records an independent.",
@@ -255,7 +336,8 @@
   "_the_evidence_required": "CORROBORATION FROM A SOURCE OTHER THAN THE ONE PROPOSING THE EXTENSION. A span extension on one source's say-so is a way to invent seasons: the source asserts the club played, nothing contradicts it because nothing else has looked, and the archive gains a club-season whose only evidence is the document that asked for it. At least one corroboration must name a different source_id, and each carries its locator so a reader can go and disagree.",
   "_one_year_at_a_time": "The year must be adjacent to the club's current span -- first-1 or last+1. A club held 1996-2004 cannot gain 1970 in one step. Reaching further means declaring each year with its own evidence, which is the point: an extent inferred from an incomplete set is the error this archive has already made once.",
   "_what_it_does_NOT_do": "It does not create the roster. Extending the span makes the club-season expressible; the men come from an ingest, separately, with their own claims and their own source records.",
-  "extensions": [
+  "extensions": [],
+  "_retired": [
    {
     "club_id": "club-scottish-claymores-1996",
     "year": 1995,
@@ -271,7 +353,465 @@
       "note": "A source other than PFA, on disk since the StatsCrew sweep. It places a named man on this club in 1995. The archive does not hold Hesham Ismail as a person -- the page is acquired and this part of it unread -- so the corroboration is a DOCUMENT, cited by locator, not a claim."
      }
     ],
-    "league_continuity": "The archive holds WLAF player rosters for Barcelona Dragons and Frankfurt Galaxy in 1991 and 1992 and COACHES claims for the same clubs from 1995 onwards, so it already follows this league across the hiatus. That is context, not the corroboration: it attests the LEAGUE ran in 1995, not that this club did."
+    "league_continuity": "The archive holds WLAF player rosters for Barcelona Dragons and Frankfurt Galaxy in 1991 and 1992 and COACHES claims for the same clubs from 1995 onwards, so it already follows this league across the hiatus. That is context, not the corroboration: it attests the LEAGUE ran in 1995, not that this club did.",
+    "_retired_on": "2026-09-09",
+    "_why": "OBSOLETE, and then actively wrong. This route names a club by its ID, and a club id ends in the club's FIRST YEAR -- a value derived from the data, not declared. When this was written the person index held no PFA:SCO season at all, so the club was built from PFA's cells and began in 1996: `club-scottish-claymores-1996`. A full index rebuild reads the pfa-wlaf-1995 store and gives PFA:SCO 228 season keys including WLAF|1995 for 13 men, so the club's first year moves and the id moves with it. The declaration then names a club that does not exist and the rebuild fails at build_clubs.py. The 1995 season this route existed to assert is now asserted by CLAIMS, which is where it belongs, so the extension is retired rather than renamed.",
+    "_what_this_does_not_fix": "45 places still name a club by a derived id -- 43 in declarations/clubs.json and nickname-register.json, 2 in src/. Every one will break the same way if that club's first year moves. This retirement clears the instance; the class is open."
+   }
+  ]
+ },
+ "LEAGUE_SPANS_A_SOURCE_ATTESTS": {
+  "_what": "A league a source attests for a club-season, added to a club the table ALREADY HOLDS. This route never creates a club, never moves a club's span, and never removes a league another source attests.",
+  "_why": "Ryan's ruling, 2026-09-08: WIFU and IRFU are not minor leagues, they are what the CFL was. The CFL formed out of the Western Interprovincial Football Union and the Interprovincial Rugby Football Union, and the archive already holds the CFL. Holding one and not the others is like holding the NFL and refusing the APFA. 49,417 claims carried no league at all because neither token was a league the club table held.",
+  "_where_the_evidence_is": "PFA's team-season pages state the league on the page itself, per club per season. That per-season attestation is NOT in build/club-names.json, which carries one league per code and says CFL for every Canadian club -- so this could not come from the existing input and is declared here with the page that attests each run.",
+  "_the_clubs_already_exist": "All nine clubs and their lineage into the CFL are already in the table, as one code with a contiguous run of years and names by year. Nothing here adds a club, a season or a name. Only the league is added.",
+  "_what_this_does_NOT_resolve": "The table also holds a CFL league entry on these same segments, from StatsCrew's player season keys, reaching back to 1945 -- thirteen years before the CFL existed. That is a DISAGREEMENT between two sources about the same club-season, and this route does not settle it: both spans stand and both name their source. Correcting StatsCrew's league would be choosing, which the archive does not do.",
+  "_pfa_says_1961_not_1958": "PFA attests WIFU and IRFU through 1960 and CFL from 1961. The CFL is usually dated to 1958, when the two unions formed the Canadian Football Council. The spans below are what the SOURCE says, held as printed and not adjusted to the usual date.",
+  "_lineage_not_established": {
+   "club-hamilton-tigers-1945": "The table holds Hamilton Tigers (1945-47), Hamilton Wildcats (1948-49) and Hamilton Tiger-Cats (1950-) as ONE club, on the evidence of one StatsCrew code (CFLHAM) and nothing else. PFA's pages show the Tigers and the Wildcats as SEPARATE clubs playing in the same seasons -- Tigers IRFU and Wildcats ORFU in 1946-47, and the two swapped leagues in 1948 -- so the code is following whichever Hamilton club held the senior place each year, not one continuous club. The Tiger-Cats were formed by a merger of the two in 1950. THE MERGER IS NOT DECLARED AND THE LINEAGE IS NOT ESTABLISHED; it is recorded here so it is not mistaken for a finding. The IRFU span below is still correct for whichever club occupied CFLHAM in each of those years, which is what the claims are keyed to.",
+   "club-montreal-hornets-1945": "The table holds Montreal Hornets (1945) and Montreal Alouettes (1946-) as one club under CFLMTL. The Alouettes were founded in 1946. Whether they continue the Hornets is NOT established here, and the span below starts at 1946, so this route asserts nothing about 1945."
+  },
+  "spans": [
+   {
+    "club_id": "club-bc-lions-1954",
+    "league": "WIFU",
+    "first": 1954,
+    "last": 1960,
+    "seasons_attested": 7,
+    "contiguous": true,
+    "names_the_table_holds_across_this_span": [
+     "BC Lions"
+    ],
+    "attested_by": "pro-football-archives",
+    "evidence": [
+     {
+      "year": 1954,
+      "locator": "1954wifubc.html"
+     },
+     {
+      "year": 1957,
+      "locator": "1957wifubc.html"
+     },
+     {
+      "year": 1960,
+      "locator": "1960wifubc.html"
+     }
+    ],
+    "all_pages": [
+     "1954wifubc.html",
+     "1955wifubc.html",
+     "1956wifubc.html",
+     "1957wifubc.html",
+     "1958wifubc.html",
+     "1959wifubc.html",
+     "1960wifubc.html"
+    ]
+   },
+   {
+    "club_id": "club-calgary-stampeders-1945",
+    "league": "WIFU",
+    "first": 1946,
+    "last": 1960,
+    "seasons_attested": 15,
+    "contiguous": true,
+    "names_the_table_holds_across_this_span": [
+     "Calgary Stampeders"
+    ],
+    "attested_by": "pro-football-archives",
+    "evidence": [
+     {
+      "year": 1946,
+      "locator": "1946wifucal.html"
+     },
+     {
+      "year": 1953,
+      "locator": "1953wifucal.html"
+     },
+     {
+      "year": 1960,
+      "locator": "1960wifucal.html"
+     }
+    ],
+    "all_pages": [
+     "1946wifucal.html",
+     "1947wifucal.html",
+     "1948wifucal.html",
+     "1949wifucal.html",
+     "1950wifucal.html",
+     "1951wifucal.html",
+     "1952wifucal.html",
+     "1953wifucal.html",
+     "1954wifucal.html",
+     "1955wifucal.html",
+     "1956wifucal.html",
+     "1957wifucal.html",
+     "1958wifucal.html",
+     "1959wifucal.html",
+     "1960wifucal.html"
+    ]
+   },
+   {
+    "club_id": "club-edmonton-eskimos-1949",
+    "league": "WIFU",
+    "first": 1949,
+    "last": 1960,
+    "seasons_attested": 12,
+    "contiguous": true,
+    "names_the_table_holds_across_this_span": [
+     "Edmonton Eskimos"
+    ],
+    "attested_by": "pro-football-archives",
+    "evidence": [
+     {
+      "year": 1949,
+      "locator": "1949wifuedm.html"
+     },
+     {
+      "year": 1955,
+      "locator": "1955wifuedm.html"
+     },
+     {
+      "year": 1960,
+      "locator": "1960wifuedm.html"
+     }
+    ],
+    "all_pages": [
+     "1949wifuedm.html",
+     "1950wifuedm.html",
+     "1951wifuedm.html",
+     "1952wifuedm.html",
+     "1953wifuedm.html",
+     "1954wifuedm.html",
+     "1955wifuedm.html",
+     "1956wifuedm.html",
+     "1957wifuedm.html",
+     "1958wifuedm.html",
+     "1959wifuedm.html",
+     "1960wifuedm.html"
+    ]
+   },
+   {
+    "club_id": "club-hamilton-tigers-1945",
+    "league": "IRFU",
+    "first": 1946,
+    "last": 1960,
+    "seasons_attested": 15,
+    "contiguous": true,
+    "names_the_table_holds_across_this_span": [
+     "Hamilton Tigers",
+     "Hamilton Wildcats",
+     "Hamilton Tiger-Cats"
+    ],
+    "attested_by": "pro-football-archives",
+    "evidence": [
+     {
+      "year": 1946,
+      "locator": "1946irfuham.html"
+     },
+     {
+      "year": 1953,
+      "locator": "1953irfuham.html"
+     },
+     {
+      "year": 1960,
+      "locator": "1960irfuham.html"
+     }
+    ],
+    "all_pages": [
+     "1946irfuham.html",
+     "1947irfuham.html",
+     "1948irfuham.html",
+     "1949irfuham.html",
+     "1950irfuham.html",
+     "1951irfuham.html",
+     "1952irfuham.html",
+     "1953irfuham.html",
+     "1954irfuham.html",
+     "1955irfuham.html",
+     "1956irfuham.html",
+     "1957irfuham.html",
+     "1958irfuham.html",
+     "1959irfuham.html",
+     "1960irfuham.html"
+    ]
+   },
+   {
+    "club_id": "club-montreal-hornets-1945",
+    "league": "IRFU",
+    "first": 1946,
+    "last": 1960,
+    "seasons_attested": 15,
+    "contiguous": true,
+    "names_the_table_holds_across_this_span": [
+     "Montreal Alouettes"
+    ],
+    "attested_by": "pro-football-archives",
+    "evidence": [
+     {
+      "year": 1946,
+      "locator": "1946irfumtl.html"
+     },
+     {
+      "year": 1953,
+      "locator": "1953irfumtl.html"
+     },
+     {
+      "year": 1960,
+      "locator": "1960irfumtl.html"
+     }
+    ],
+    "all_pages": [
+     "1946irfumtl.html",
+     "1947irfumtl.html",
+     "1948irfumtl.html",
+     "1949irfumtl.html",
+     "1950irfumtl.html",
+     "1951irfumtl.html",
+     "1952irfumtl.html",
+     "1953irfumtl.html",
+     "1954irfumtl.html",
+     "1955irfumtl.html",
+     "1956irfumtl.html",
+     "1957irfumtl.html",
+     "1958irfumtl.html",
+     "1959irfumtl.html",
+     "1960irfumtl.html"
+    ]
+   },
+   {
+    "club_id": "club-ottawa-rough-riders-1945",
+    "league": "IRFU",
+    "first": 1946,
+    "last": 1960,
+    "seasons_attested": 15,
+    "contiguous": true,
+    "names_the_table_holds_across_this_span": [
+     "Ottawa Rough Riders"
+    ],
+    "attested_by": "pro-football-archives",
+    "evidence": [
+     {
+      "year": 1946,
+      "locator": "1946irfuott.html"
+     },
+     {
+      "year": 1953,
+      "locator": "1953irfuott.html"
+     },
+     {
+      "year": 1960,
+      "locator": "1960irfuott.html"
+     }
+    ],
+    "all_pages": [
+     "1946irfuott.html",
+     "1947irfuott.html",
+     "1948irfuott.html",
+     "1949irfuott.html",
+     "1950irfuott.html",
+     "1951irfuott.html",
+     "1952irfuott.html",
+     "1953irfuott.html",
+     "1954irfuott.html",
+     "1955irfuott.html",
+     "1956irfuott.html",
+     "1957irfuott.html",
+     "1958irfuott.html",
+     "1959irfuott.html",
+     "1960irfuott.html"
+    ]
+   },
+   {
+    "club_id": "club-regina-roughriders-1945",
+    "league": "WIFU",
+    "first": 1946,
+    "last": 1960,
+    "seasons_attested": 15,
+    "contiguous": true,
+    "names_the_table_holds_across_this_span": [
+     "Regina Roughriders",
+     "Saskatchewan Roughriders",
+     "Regina Roughriders",
+     "Saskatchewan Roughriders"
+    ],
+    "attested_by": "pro-football-archives",
+    "evidence": [
+     {
+      "year": 1946,
+      "locator": "1946wifusas.html"
+     },
+     {
+      "year": 1953,
+      "locator": "1953wifusas.html"
+     },
+     {
+      "year": 1960,
+      "locator": "1960wifusas.html"
+     }
+    ],
+    "all_pages": [
+     "1946wifusas.html",
+     "1947wifusas.html",
+     "1948wifusas.html",
+     "1949wifusas.html",
+     "1950wifusas.html",
+     "1951wifusas.html",
+     "1952wifusas.html",
+     "1953wifusas.html",
+     "1954wifusas.html",
+     "1955wifusas.html",
+     "1956wifusas.html",
+     "1957wifusas.html",
+     "1958wifusas.html",
+     "1959wifusas.html",
+     "1960wifusas.html"
+    ]
+   },
+   {
+    "club_id": "club-toronto-argonauts-1945",
+    "league": "IRFU",
+    "first": 1946,
+    "last": 1960,
+    "seasons_attested": 15,
+    "contiguous": true,
+    "names_the_table_holds_across_this_span": [
+     "Toronto Argonauts"
+    ],
+    "attested_by": "pro-football-archives",
+    "evidence": [
+     {
+      "year": 1946,
+      "locator": "1946irfutor.html"
+     },
+     {
+      "year": 1953,
+      "locator": "1953irfutor.html"
+     },
+     {
+      "year": 1960,
+      "locator": "1960irfutor.html"
+     }
+    ],
+    "all_pages": [
+     "1946irfutor.html",
+     "1947irfutor.html",
+     "1948irfutor.html",
+     "1949irfutor.html",
+     "1950irfutor.html",
+     "1951irfutor.html",
+     "1952irfutor.html",
+     "1953irfutor.html",
+     "1954irfutor.html",
+     "1955irfutor.html",
+     "1956irfutor.html",
+     "1957irfutor.html",
+     "1958irfutor.html",
+     "1959irfutor.html",
+     "1960irfutor.html"
+    ]
+   },
+   {
+    "club_id": "club-winnipeg-blue-bombers-1945",
+    "league": "WIFU",
+    "first": 1946,
+    "last": 1960,
+    "seasons_attested": 15,
+    "contiguous": true,
+    "names_the_table_holds_across_this_span": [
+     "Winnipeg Blue Bombers"
+    ],
+    "attested_by": "pro-football-archives",
+    "evidence": [
+     {
+      "year": 1946,
+      "locator": "1946wifuwpg.html"
+     },
+     {
+      "year": 1953,
+      "locator": "1953wifuwpg.html"
+     },
+     {
+      "year": 1960,
+      "locator": "1960wifuwpg.html"
+     }
+    ],
+    "all_pages": [
+     "1946wifuwpg.html",
+     "1947wifuwpg.html",
+     "1948wifuwpg.html",
+     "1949wifuwpg.html",
+     "1950wifuwpg.html",
+     "1951wifuwpg.html",
+     "1952wifuwpg.html",
+     "1953wifuwpg.html",
+     "1954wifuwpg.html",
+     "1955wifuwpg.html",
+     "1956wifuwpg.html",
+     "1957wifuwpg.html",
+     "1958wifuwpg.html",
+     "1959wifuwpg.html",
+     "1960wifuwpg.html"
+    ]
+   }
+  ]
+ },
+ "LEAGUES_ATTESTED_BUT_OUT_OF_SCOPE": {
+  "_what": "A league PFA's pages attest, whose club-seasons the archive deliberately does not hold. Their claims carry NO league rather than a wrong one, and this says so rather than leaving the absence unexplained.",
+  "_why": "An unlabelled claim and a claim nobody has looked at are the same bytes. RS-G7 allows a NULL league because unknown is a fact the archive may hold -- but unknown for a DECLARED reason is different from unknown by accident, and only this block can tell them apart.",
+  "ORFU": {
+   "name": "Ontario Rugby Football Union",
+   "ruling": "STAYS OUT. Ryan, 2026-09-08: already on the minor-league exclusion and nothing today changes that.",
+   "claims_carrying_no_league": 246,
+   "clubs_the_strings_resolve_to": [
+    "club-toronto-balmy-beach-1945",
+    "club-hamilton-tigers-1948",
+    "club-ottawa-trojans-1947",
+    "club-sarnia-imperials-1951"
+   ],
+   "_note": "The clubs themselves ARE in the table, carrying a CFL league entry from StatsCrew's code prefix with the evidence string 'code prefix; no player season held'. Toronto Balmy Beach is recorded as CFL 1945-1953 and never played in the CFL. That is the same StatsCrew-league disagreement described above, and it is not resolved here.",
+   "_effect": "these 246 claims keep their figures, their man, their club and their year. Only the league is absent, and it is absent because the league is out of scope."
+  },
+  "AA": {
+   "name": "American Association",
+   "ruling": "NOT ESTABLISHED. Ryan, 2026-09-08: establish what it is before doing anything with it. Nothing is done with it.",
+   "claims_carrying_no_league": 666,
+   "what_was_established": "PFA files these under `afa` page names (1936afabkn.html ... 1941afawil.html), 1936-1941, with clubs in Brooklyn, Paterson, Jersey City, Wilmington, Newark, Union City, Long Island, Danbury, Providence and New Rochelle. 45 team-season pages. Eleven club strings, all of which the table already resolves to clubs it holds. It is a north-eastern professional league of that period and it is NOT the 1920-21 APFA.",
+   "what_was_NOT_established": "whether it falls inside or outside the minor-league exclusion. declarations/salary_conventions.json already warns that a 1938 contract naming 'The American Professional Football Association' is a 1930s MINOR league distinct from the 1920-21 APFA, which points the same way but is about a different body and is not a ruling on this one. No decision is recorded and no league is added.",
+   "_effect": "the 666 claims keep everything but their league, pending a ruling."
+  }
+ },
+ "CLUB_TABLE_REACH": {
+  "_what": "HOW FAR THE CLUB TABLE REACHES, as a number that may only go down. A season key placing a man on a club-season the table cannot name is not an error and is not silent: it is the archive holding a man on a club it has not yet described. src/gate_club_table_reach.py counts them every run and FAILS IF THE NUMBER RISES.",
+  "_why_a_ceiling_and_not_zero": "Zero would be a lie today and unreachable tomorrow: PFA reaches seasons no other source covers, and naming a club-season on one source's say-so is what SPAN_EXTENSIONS refuses. The honest gate is a ratchet. Ruled by Ryan, 2026-09-09.",
+  "_measured_2026_09_09": {
+   "season_keys_the_table_cannot_name": 2018,
+   "club_held_but_no_name_for_that_year": 660,
+   "span_too_narrow_for_this_year": 809,
+   "token_never_placed": 549,
+   "_all_2018_rest_on_ONE_source": "466 (league, token, year) triples, and every single one is attested by exactly one source_id -- 41 of 41, 223 of 223, 202 of 202. Not one is corroborated, which is why SPAN_EXTENSIONS can move none of them today. The blocker is EVIDENCE, not policy."
+  },
+  "ceiling": 2018
+ },
+ "WITHDRAWN_STRINGS": {
+  "_what": "Strings a source put on a club that the archive has RULED do not belong there. The string is not deleted from the source and the source is not corrected: it is refused entry to THIS club's string list, with the evidence, and build_clubs records the refusal so the withdrawal is visible rather than silent.",
+  "_why_a_route_and_not_an_edit": "build/clubs.json is rebuilt from its sources every run. An edit would be gone by morning. And a withdrawal is a RULING about a club, which is what this file is for.",
+  "strings": [
+   {
+    "club_id": "club-brooklyn-dodgers-1930",
+    "string": "Rochester Tigers",
+    "source": "fandom_redirect",
+    "ruled": "Ryan, 2026-09-09",
+    "evidence": "The alias bound the 1937 AFL Rochester Tigers to the NFL Brooklyn Dodgers on the shared word 'Tigers': the Dodgers became the Brooklyn TIGERS in 1944, and the fandom entry's variant list carried that name, so the loose `a variant that is an archive name` route matched it. THE ARCHIVE CORROBORATES AGAINST IT FROM ITS OWN HOLDINGS: the season-key token `B/R` is printed '1936 Brooklyn/Rochester Tigers (AFL)' -- the second AFL's club, which moved from Brooklyn to Rochester and is the same club as PFA:ROC's 1937 Rochester Tigers. Two clubs, two leagues, seven years apart.",
+    "_what_it_did": "0 claims used the string, so nothing moves today. `resolve('Rochester Tigers', 1937)` returned club-brooklyn-dodgers-1930 and now returns nothing, which is the honest answer: the archive does not hold that club."
+   },
+   {
+    "club_id": "club-cincinnati-bengals-1968",
+    "string": "Cincinnati Bengals",
+    "source": "fandom_redirect",
+    "ruled": "Ryan, 2026-09-09",
+    "evidence": "The 1937-41 AFL Cincinnati Bengals are not the 1968 NFL club. The fandom survey's page for the AFL club is titled 'Cincinnati Bengals (1937-41)', and build_clubs strips the parenthesis before matching -- so the only thing distinguishing the two clubs was discarded and the entry landed on the 1968 club, which lived 1968-2024. Its sibling 'Cincinnati Bengals (AFL)' is wrong for the same reason and comes with it: gate_fandom_bindings cannot see that one, because the 1968 club really did play in an AFL -- the 1968-69 one, not the 1937 one.",
+    "_scoped_to_the_source": "The bare form is this club's OWN official name, so the withdrawal is scoped to `fandom_redirect` and takes only what the survey put here. Measured before withdrawing: the survey put FOUR strings on this club and every one carries a 1937-41 or AFL disambiguator -- 'Cincinnati Bengals (1937-41)' twice (alias and printed_name), 'Cincinnati Bengals (1937\u20131941)', and 'Cincinnati Bengals (AFL)'. No fandom string here is the bare name. The official name and the pfa_cell, coaching_tree, season_key and media_guide strings are untouched.",
+    "_what_it_did": "118 claims carry the club_str 'Cincinnati Bengals' and every one resolves at 1968+ through the club's own official name, so nothing moves. What was wrong was provenance: the 1968 Bengals recorded four variant names that belonged to a different club."
    }
   ]
  }

@@ -7,6 +7,8 @@
   K7  a misprinted string is a SPELLING of a club that was there: it names a club the table
       holds, in a year that club was active, is not one of that club's own names, and is not
       any OTHER club's real name that year -- which would make it a false join, not a misprint
+  K9  an attested league span names a club the table HOLDS, sits inside that club's years,
+      cites the page that attests it, and every league on every club carries its evidence
   K8  a span extension is corroborated OUTSIDE the source that proposed it, is adjacent to
       the span it extends, and every corroboration carries a locator
   K5  internal: unique ids, stable anchors, one club per code-year, every segment year named, merged clubs never chained,
@@ -15,6 +17,8 @@
   python3 src/gate_clubs.py
 """
 import os, sys, json, hashlib, collections, io
+import coaching_season as CS
+import clubs as CLUBSMOD    # PSEUDO_LEAGUES(): the declaration, read not typed
 
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
@@ -50,7 +54,7 @@ def main():
             lg, y, c = k.split("|", 2); seen.add(("season_key", c, year_of(y), lg))
         for k, rows in (p.get("coaching_seasons") or {}).items():
             lg, y, c = k.split("|", 2)
-            for r in rows: seen.add(("coaching_season", c, year_of(y), lg, r.get("printed_long")))
+            for r in CS.rows(rows): seen.add(("coaching_season", c, year_of(y), lg, CS.printed_club(r)))
     for row in sorted(seen, key=str):
         src, tok, yr, lg = row[:4]
         if src == "coaching_season":
@@ -58,8 +62,8 @@ def main():
             hit = C.resolve(pn, yr, lg, source="pfa_cell") or C.resolve(tok, yr, lg, source="pfa_cell")
             key = ("coaching_season_key", f"{pn} [{tok}]")
         else:
-            hit = C.resolve(tok, yr, None if lg in ("COACHES", "SALARIES") else lg, source=None if src == "_clubs" else "season_key")
-            key = (f"season_key:{lg}" if lg in ("COACHES", "SALARIES") else "season_key", tok)
+            hit = C.resolve(tok, yr, None if lg in CLUBSMOD.PSEUDO_LEAGUES() else lg, source=None if src == "_clubs" else "season_key")
+            key = (f"season_key:{lg}" if lg in CLUBSMOD.PSEUDO_LEAGUES() else "season_key", tok)
         if hit: continue
         unres[key] += 1
         if yr not in listed.get(key, set()) and not any(yr in ys and k2[1] == key[1] for k2, ys in listed.items()): unlisted.append((src, tok, yr, lg))
@@ -195,6 +199,71 @@ def main():
     if exts:
         check(True, f"{len(exts)} span extension(s) declared: "
                     + ", ".join(f"{c['id']} {e['year']}" for c, e in exts[:4]))
+    # ---- K9  attested league spans
+    print("K9  an attested league span sits inside its club, cites pages, and adds nothing else")
+    DECLS = json.load(open(os.path.join(BASE, "declarations", "clubs.json")))
+    declared = DECLS.get("LEAGUE_SPANS_A_SOURCE_ATTESTS", {}).get("spans", [])
+    byid = {c["id"]: c for c in T["clubs"]}
+    outside, nopage, missing, uncited = [], [], [], []
+    for spec in declared:
+        c = byid.get(spec["club_id"])
+        if c is None:
+            missing.append(spec["club_id"]); continue
+        a, b = int(spec["first"]), int(spec["last"])
+        if not (c["first"] <= a <= b <= c["last"]):
+            outside.append(f"{spec['club_id']} {spec['league']} {a}-{b} vs club {c['first']}-{c['last']}")
+        if not [e for e in (spec.get("evidence") or []) if e.get("locator")]:
+            nopage.append(f"{spec['club_id']} {spec['league']}")
+        got = [L for seg in c["segments"] for L in seg.get("leagues", [])
+               if L.get("league") == spec["league"]]
+        if not got:
+            uncited.append(f"{spec['club_id']} {spec['league']} declared but not in the table")
+        elif any(not L.get("pages") for L in got):
+            nopage.append(f"{spec['club_id']} {spec['league']} in the table with no pages")
+    # THE PROPERTY, not the list: every league on any club must be a league SOME source
+    # attested -- either a declared span with pages, or one the builder derived. A league
+    # that appears on a club and is cited by nothing is how `NOT` got into the model.
+    uncited_leagues = sorted({L["league"] for c in T["clubs"] for seg in c["segments"]
+                              for L in seg.get("leagues", [])
+                              if L.get("league") and not L.get("evidence")})
+    check(not missing, f"every declared span names a club the table holds ({len(missing)}: {missing[:3]})")
+    check(not outside, f"every declared span sits inside its club's years ({len(outside)}: {outside[:3]})")
+    check(not nopage, f"every declared span cites a page ({len(nopage)}: {nopage[:3]})")
+    check(not uncited, f"every declared span reached the table ({len(uncited)}: {uncited[:3]})")
+    check(not uncited_leagues, f"every league on a club carries its evidence ({uncited_leagues[:5]})")
+    if declared:
+        check(True, f"{len(declared)} attested league span(s): "
+                    + ", ".join(f"{s['club_id'].split('-1')[0][5:]} {s['league']}" for s in declared[:4]))
+    print()
+    print("K10 the pseudo-league tokens are DERIVED, not typed")
+    # The four files that hand a season key's league to the club resolver used to type
+    # ("COACHES", "SALARIES"). None gained IND when IND was declared a non-competition,
+    # so 69 season keys handed the resolver a token the club table does not hold. They
+    # now read declarations/person-index-rebuild.json; this recomputes what that list
+    # MUST be -- the declared single-word tokens minus the leagues the club table holds
+    # -- so the summary cannot drift from the declaration it summarises.
+    import league_tokens as LT
+    _decl = os.path.join(BASE, "declarations", "person-index-rebuild.json")
+    _real = {L["league"] for c in T["clubs"] for seg in c["segments"] for L in seg.get("leagues", []) if L.get("league")}
+    _derived = {t for t in LT.tokens(_decl).values() if t} - _real
+    _declared = set(LT.pseudo_leagues(_decl))
+    check(_derived == _declared,
+          f"pseudo_league_tokens == single-word declared tokens minus the club table's leagues "
+          f"({sorted(_declared)})" if _derived == _declared
+          else f"declared {sorted(_declared)} but the table derives {sorted(_derived)}; "
+               f"missing {sorted(_derived - _declared)}, extra {sorted(_declared - _derived)}")
+    check(CLUBSMOD.PSEUDO_LEAGUES() == _declared,
+          f"clubs.PSEUDO_LEAGUES() is the declaration and nothing else")
+    print("K11 no club is minted from an empty name")
+    # A DERIVED ID MOVING BECAUSE THE DATA MOVED, twice in three days. On 2026-09-09 the
+    # coaching seasons were re-shaped and build_clubs read the printed club from a field
+    # only ONE of the two producers writes; every PFA coaching row arrived with no name
+    # and 46 clubs were minted as `club--2000`, `club--2001`, taking PFA:AMS off the
+    # Amsterdam Admirals and stranding 3,833 statistics claims with no club at all. An
+    # id built from a name is only as stable as the name, so the empty one fails here.
+    nameless = sorted(c["id"] for c in T["clubs"]
+                      if not any((n.get("name") or "").strip() for n in (c.get("names") or [])))
+    check(not nameless, f"every club in the table has a name ({len(nameless)}: {nameless[:5]})")
     print()
     if fails:
         print(f"CLUB TABLE GATE: {len(fails)} FAILURE(S)"); [print("   -", f) for f in fails]; return 1

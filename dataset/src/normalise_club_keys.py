@@ -6,6 +6,7 @@ src/apply_club_keys.py. See declarations/club-key-normalisation.json.
   python3 src/normalise_club_keys.py [--write]
 """
 import os, sys, json, collections
+import clubs as CL
 
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
@@ -34,7 +35,7 @@ def build():
     def decide(club, yr, lg):
         """-> (code, kind, archive name, evidence) or (None, why, None, None), through the table."""
         C.refused.clear()
-        r = C.resolve(club, int(yr), None if lg in ("COACHES", "SALARIES") else lg, source="season_key")
+        r = C.resolve(club, int(yr), None if lg in CL.PSEUDO_LEAGUES() else lg, source="season_key")
         if not r:
             why = next((k[4] for k in C.refused), "no club under that name that year")
             return None, why, None, None

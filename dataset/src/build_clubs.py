@@ -13,13 +13,19 @@ made FROM this table by normalise_club_keys.py.
   python3 src/build_clubs.py [--write]
 """
 import os, re, sys, json, collections
+import coaching_season as CS   # ONE reading of a coaching season's value
 
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 from clubs import norm, nickname, city, TABLE
 DECL = json.load(open(os.path.join(BASE, "declarations", "clubs.json")))
 
-PSEUDO = {"SALARIES": "court store", "COACHES": "Coaching Tree stints"}   # season-key tokens that are not leagues
+# PSEUDO-LEAGUE TOKENS ARE DECLARED, NOT TYPED. `("COACHES", "SALARIES")` was
+# written out in four files; none of them gained IND when IND was declared, so 69
+# season keys have been handing the club resolver a token the club table does not
+# hold. declarations/person-index-rebuild.json pseudo_league_tokens is the record.
+from clubs import PSEUDO_LEAGUES
+PSEUDO = PSEUDO_LEAGUES()
 FAMILY = {"WIFU": "CFL", "IRFU": "CFL", "ORFU": "CFL", "NFLE": "WLAF", "ARENA": "ARFL"}    # PFA's pre-1958 Canadian leagues live under the archive's CFL codes; NFL Europe is the WLAF renamed
 
 
@@ -287,13 +293,21 @@ def main():
         for d in json.load(open(AP.MP))["merges"]:
             c_, a_ = d["canonical_person"], d["absorbed_person"]
             ss = dict((base.get(c_) or {}).get("seasons") or {}); ss.update((base.get(a_) or {}).get("seasons") or {})
-            view[c_] = {"seasons": ss}
+            cc = dict((base.get(c_) or {}).get("coaching_seasons") or {}); cc.update((base.get(a_) or {}).get("coaching_seasons") or {})
+            view[c_] = {"seasons": ss, "coaching_seasons": cc}
     for pid, p in base.items():
         if pid not in view and isinstance(p, dict): view[pid] = p
     corroborated = collections.Counter()                                 # (norm(name), code) -> person-seasons holding both, any year
     for pid, p in view.items():
         by = collections.defaultdict(set)
-        for k in p.get("seasons") or {}:
+        # BOTH DICTS. Corroboration pairs a NAME and a CODE that ONE MAN holds for one
+        # league-year -- that is how the Coaching Tree's "Buffalo Bisons" is known to be
+        # the Bills: 21 person-seasons hold both that string and BUF under COACHES.
+        # When the coaching seasons moved to their own dict on 2026-09-09 this read
+        # `seasons` alone, both halves of every such pair left together, and the club
+        # table lost every wrong-for-season string the Coaching Tree corroborates --
+        # gate_clubs K2 caught it. A man's keys are a man's keys, whichever dict holds them.
+        for k in list(p.get("seasons") or {}) + list(p.get("coaching_seasons") or {}):
             lg, y, club = k.split("|", 2); by[(lg, year_of(y))].add(club)
         for (lg, yr), cs in by.items():
             names = [x for x in cs if (x, yr) not in by_code_year]; codes = [x for x in cs if (x, yr) in by_code_year]
@@ -368,10 +382,27 @@ def main():
             return cid, ("alias" if norm(off) == norm(nm) else "wrong_for_season"), {"correct_name_then": off, "matched_on": f"corroboration: {d[1]} person-seasons hold both this name and {d[0]}", "person_seasons": d[1]}
         return None, "no club under that name that year", {}
 
+    # STRINGS THE ARCHIVE HAS RULED OFF A CLUB. Refused at the one place strings enter,
+    # so no route can put one back, and every refusal is recorded rather than silent.
+    # THE BARE FORM IS WHAT IS WITHDRAWN. The survey adds the same name twice -- the
+    # canonical as a printed_name and the disambiguated variant as an alias -- so a
+    # withdrawal keyed on the exact string took out `Rochester Tigers` and left
+    # `Rochester Tigers (AFL)` sitting on the same club. One ruling, one name, both
+    # spellings: the trailing parenthesis is fandom's disambiguator, not part of it.
+    WITHDRAWN = {(w["club_id"], norm(clean_printed(w["string"])), w.get("source"))
+                 for w in DECL.get("WITHDRAWN_STRINGS", {}).get("strings", [])}
+    withdrawn_hits = collections.Counter()
+
     def add(cid, string, source, kind, league, y, y1=None, **extra):
         """Record a string on a club for the years [y, y1]. A range grows only where the
         new years TOUCH it: a string seen in 1942 and 1944 is two strings, not one that
         silently covers 1943 -- the year the Eagles' name belonged to the merged club."""
+        _bare = norm(clean_printed(string))
+        if (cid, _bare, source) in WITHDRAWN or (cid, _bare, None) in WITHDRAWN:
+            withdrawn_hits[(cid, string, source)] += 1
+            refuse(source, string, league, y, "WITHDRAWN by declarations/clubs.json WITHDRAWN_STRINGS",
+                   club_id=cid, route="withdrawn")
+            return
         c = by_id[cid]; y1 = y1 or y
         if kind not in ("beyond_archive", "club_without_a_season_that_year") and not (c["first"] <= y and y1 <= c["last"]):
             extra = {"role": kind, **extra}; kind = "beyond_archive"
@@ -392,7 +423,16 @@ def main():
     for pid, p in IDX.items():
         for k, rows in (p.get("coaching_seasons") or {}).items():
             lg, y, c = k.split("|", 2)
-            for r in rows: cells[(lg, c, clean_printed(r.get("printed_long") or ""))].add(year_of(y))
+            # A SOURCE THAT NAMES NO LEAGUE IS NOT EVIDENCE FOR A CLUB'S LEAGUE SPAN.
+            # These keys were skipped here until 2026-09-09 -- not by intent, but
+            # because they sat in `seasons` under a pseudo-league token and line 72
+            # skipped those. Re-shaping the coaching seasons brought 21,146 of them into
+            # this path for the first time, and the club table immediately grew a 1986
+            # "Buffalo Bisons" from a Coaching Tree row that means the Bills. A ruling
+            # about WHERE a coaching season is held must not quietly change WHAT builds
+            # the club table, so the same evidence set is kept.
+            if lg in PSEUDO: continue
+            for r in CS.rows(rows): cells[(lg, c, clean_printed(CS.printed_club(r)))].add(year_of(y))
     pf = json.load(open(os.path.join(BASE, "build", "pfa-pre1950.json")))
     txs = collections.defaultdict(set)
     for cl in pf["claims"]:
@@ -658,6 +698,8 @@ def main():
             for sg in c["segments"]: add(cid, canon, "fandom_redirect", "printed_name", None, sg["first"], sg["last"], route="canonical", matched_on=matched_on)
     for e in FD.get("unverified_leads", []):
         unresolved["leads"].append({**e, "source": "fandom_redirect"})
+    unresolved["withdrawn_strings"] = [{"club_id": cid, "string": st, "source": src, "refusals": n}
+                                      for (cid, st, src), n in sorted(withdrawn_hits.items())]
     unresolved["fandom_survey"] = {"file": FANDOM, "entries": len(FD["variants"]) + len(FD.get("prose_variants", [])), **fd_counts}
     index_names()
 
@@ -702,7 +744,13 @@ def main():
     # Season keys are read from the plain base (rewrites undone, merges undone, then the merge pairing): the
     # index on disk holds the NORMALISED keys, and the table must record what the sources printed.
     for pid, p in list(view.items()) + [(pid, p) for pid, p in IDX.items()]:
-        for k in p.get("seasons") or {}:
+        # BOTH DICTS. A coaching season moved to `coaching_seasons` on 2026-09-09; the
+        # string evidence it carries did not change and must not. This loop is where the
+        # 1986 Coaching Tree row calling the Bills "Buffalo Bisons" reaches the table as
+        # a wrong-for-season string -- gate_clubs K2 asserts exactly that -- and reading
+        # `seasons` alone silently dropped it. A ruling about WHERE a season is held must
+        # leave WHAT the sources said untouched.
+        for k in list(p.get("seasons") or {}) + list(p.get("coaching_seasons") or {}):
             lg, y, c = k.split("|", 2); yr = year_of(y)
             if (c, yr) in by_code_year: continue
             src = "season_key:" + lg if lg in PSEUDO else "season_key"
@@ -711,8 +759,9 @@ def main():
             else: refuse(src, c, lg, yr, kind)
         for k, rows in (p.get("coaching_seasons") or {}).items():
             lg, y, c = k.split("|", 2); yr = year_of(y)
-            for r in rows:
-                pn = clean_printed(r.get("printed_long") or "")
+            if lg in PSEUDO: continue          # as above: no league named, no evidence
+            for r in CS.rows(rows):
+                pn = clean_printed(CS.printed_club(r))
                 if (lg, c, pn, yr) not in cell_resolved: refuse("coaching_season_key", f"{pn} [{c}]", lg, yr, "the PFA cell behind this coaching season did not resolve", printed=pn, pfa_code=c)
 
     # ---------------------------------------------------------------- 12. conflicts and archive gaps the table makes visible
@@ -856,6 +905,67 @@ def main():
              "proposed_by": spec.get("proposed_by"),
              "proposed_by_locator": spec.get("proposed_by_locator"),
              "evidence": spec.get("evidence"), "corroboration": corr})
+
+    # A LEAGUE A SOURCE ATTESTS FOR A CLUB THE TABLE ALREADY HOLDS. Ryan's ruling of
+    # 2026-09-08: WIFU and IRFU are not minor leagues, they are what the CFL was, and
+    # holding the CFL without them is like holding the NFL and refusing the APFA.
+    # 49,417 claims carried NO league because neither token was a league any club held.
+    #
+    # This route ADDS a league to an existing club and does nothing else. It cannot
+    # create a club, cannot move a span, and cannot remove or narrow a league another
+    # source attests -- the CFL entries StatsCrew's season keys put on these same
+    # segments stay exactly as they are, because two sources disagreeing about a
+    # club-season's league is a disagreement, not an error to correct here.
+    for spec in DECL.get("LEAGUE_SPANS_A_SOURCE_ATTESTS", {}).get("spans", []):
+        tgt = next((c for c in clubs if c["id"] == spec["club_id"]), None)
+        if tgt is None:
+            raise SystemExit(f"LEAGUE_SPANS_A_SOURCE_ATTESTS: no club {spec['club_id']} in "
+                             "the table. This route adds a league TO a club that exists; "
+                             "it never creates one.")
+        a, b = int(spec["first"]), int(spec["last"])
+        if not (tgt["first"] <= a <= b <= tgt["last"]):
+            raise SystemExit(f"LEAGUE_SPANS_A_SOURCE_ATTESTS: {spec['club_id']} {a}-{b} is "
+                             f"not inside the club's span {tgt['first']}-{tgt['last']}. A "
+                             "league span may not reach a season the club does not have; "
+                             "extending the club is SPAN_EXTENSIONS, one year at a time.")
+        if not spec.get("contiguous"):
+            raise SystemExit(f"LEAGUE_SPANS_A_SOURCE_ATTESTS: {spec['club_id']} {a}-{b} is "
+                             "declared as a run but the attested seasons have a gap. Declare "
+                             "each run separately so the gap is visible.")
+        ev = [e for e in (spec.get("evidence") or []) if e.get("locator")]
+        if not ev:
+            raise SystemExit(f"LEAGUE_SPANS_A_SOURCE_ATTESTS: {spec['club_id']} {spec['league']} "
+                             "cites no page. Evidence a reader cannot go and check is an "
+                             "assertion, not evidence.")
+        if any(not (a <= int(e["year"]) <= b) for e in ev):
+            raise SystemExit(f"LEAGUE_SPANS_A_SOURCE_ATTESTS: {spec['club_id']} cites a page "
+                             f"for a year outside {a}-{b}.")
+        lg = spec["league"]
+        for seg in tgt["segments"]:
+            lo, hi = max(seg["first"], a), min(seg["last"], b)
+            if lo > hi:
+                continue
+            if any(L.get("league") == lg for L in seg.setdefault("leagues", [])):
+                raise SystemExit(f"LEAGUE_SPANS_A_SOURCE_ATTESTS: {spec['club_id']} already "
+                                 f"holds league {lg} on segment {seg['code']}; this route adds "
+                                 "a league that is missing, it does not edit one that is there.")
+            seg["leagues"].append({"league": lg, "first": lo, "last": hi,
+                                   "evidence": f"{spec['attested_by']} team-season page",
+                                   "attested_by": spec["attested_by"],
+                                   "pages": [e["locator"] for e in ev],
+                                   "seasons_attested": spec.get("seasons_attested")})
+        for L in list(tgt.get("leagues", [])):
+            pass
+        tgt.setdefault("leagues", [])
+        if not any(L.get("league") == lg for L in tgt["leagues"]):
+            tgt["leagues"].append({"league": lg, "first": a, "last": b,
+                                   "evidence": f"{spec['attested_by']} team-season page",
+                                   "attested_by": spec["attested_by"],
+                                   "pages": [e["locator"] for e in ev]})
+        tgt.setdefault("_league_spans_attested", []).append(
+            {"league": lg, "first": a, "last": b, "attested_by": spec["attested_by"],
+             "seasons_attested": spec.get("seasons_attested"),
+             "pages": [e["locator"] for e in ev]})
 
     # A STRING A SOURCE MISPRINTED. Ryan's ruling of 2026-09-08. `San Antonio Brahamas`
     # is not a name the club bore -- it is a typing error on one website for a club the

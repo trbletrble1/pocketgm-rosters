@@ -14,6 +14,21 @@ club_keys.census() already prints through build_dashboard.
 """
 import os, re, json, collections, unicodedata
 
+_PL = {}
+def PSEUDO_LEAGUES():
+    # PSEUDO-LEAGUE TOKENS ARE DECLARED, NOT TYPED. `("COACHES", "SALARIES")` was
+    # written out in four files; none of them gained IND when IND was declared, so 69
+    # season keys have been handing the club resolver a token the club table does not
+    # hold. declarations/person-index-rebuild.json pseudo_league_tokens is the record.
+    if not _PL:
+        import sys as _s, os as _o
+        _s.path.insert(0, _o.path.join(_o.path.dirname(_o.path.abspath(__file__)), "..", "service"))
+        import league_tokens as _LT
+        _PL["v"] = _LT.pseudo_leagues(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), "..",
+                                                   "declarations", "person-index-rebuild.json"))
+    return _PL["v"]
+
+
 BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 TABLE = os.path.join(BASE, "build", "clubs.json")
 
@@ -125,7 +140,7 @@ def census_of_index(C, index):
             if not yr.isdigit():
                 cost[(lg, y, club, "season key carries no parseable year")] += 1; who.setdefault((lg, y, club), pid); continue
             if C.by_code_year(club, int(yr)): continue
-            r = C.resolve(club, int(yr), None if lg in ("COACHES", "SALARIES") else lg, source="season_key")
+            r = C.resolve(club, int(yr), None if lg in PSEUDO_LEAGUES() else lg, source="season_key")
             if r: continue
             why = next((k_[4] for k_ in C.refused if k_[2] == yr and k_[3] == club), "unplaced")
             cost[(lg, yr, club, why)] += 1; who.setdefault((lg, yr, club), pid)
