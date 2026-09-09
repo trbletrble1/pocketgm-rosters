@@ -27,6 +27,22 @@ Both are counted and reported.
 """
 import os, re, sys, json, sqlite3, collections
 
+_SP = {}
+def STAFF_PREDICATE_SQL():
+    # STAFF IS A PREDICATE, NOT A LEAGUE. `league not in ('COACHES',...)` let 41,662
+    # of 54,908 staff claims through as players once the coaching subjects carried real
+    # leagues, so this pool held 30,364 STAFF-ONLY (club, year, person) pairs -- coaches
+    # offered as candidates for a player's award, statistic line or roster gap.
+    # declarations/coaching-seasons.json is the list.
+    if not _SP:
+        import os as _o, json as _j
+        _d = _j.load(open(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), "..",
+                                       "declarations", "coaching-seasons.json")))
+        _p = sorted(_d["staff_predicates"]["predicates"])
+        _SP["sql"] = "predicate not in (" + ",".join("'" + x + "'" for x in _p) + ")"
+    return _SP["sql"]
+
+
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 sys.path.insert(0, os.path.join(BASE, "service"))
@@ -158,11 +174,29 @@ def main():
     for p, nm in conn.execute("select person, name from person_name"):
         k = norm(nm)
         if k: byname[k].add(p); names_of[p].add(k)
+    # THE ROSTER MUST EXCLUDE THIS INGEST'S OWN OUTPUT. A previous run's claims are in
+    # the model, and reading them back makes every man this ingest placed on a
+    # club-season already a member of it -- so the second run's "exact name, on that
+    # club-season" is deciding on its own first run. It is not a hypothetical: run one
+    # joined six men to Buffalo 1920 under tier 2 (unique name, NOT on the club-season),
+    # and run two relabelled all six as tier 1. The label said the club-season had been
+    # checked when what had been checked was this file's previous output.
+    # Tier 2's guard, declared in declarations/pfa-stats-join.json with its evidence.
+    # The span is built from the SAME excluded set as the roster, for the same reason.
+    SPAN = json.load(open(os.path.join(BASE, "declarations", "pfa-stats-join.json"))
+                     )["tier_2_span_guard"]["years"]
+    held_span = {}
+    for p, mn, mx in conn.execute(
+            "select person, min(year), max(year) from claim where scope='stint' "
+            "and store not like 'pfa-stats-%' and person is not null and year is not null "
+            "group by person"):
+        held_span[p] = (mn, mx)
+
     roster = collections.defaultdict(set)
     for cid, y, p in conn.execute(
             "select club_id, year, person from claim where scope='stint' and "
-            "club_id is not null and person is not null and league not in "
-            "('COACHES','ASSISTANTS','SALARIES','COACH') group by club_id, year, person"):
+            "club_id is not null and person is not null and " + STAFF_PREDICATE_SQL() +
+            " and store not like 'pfa-stats-%' group by club_id, year, person"):
         roster[(cid, y)].add(p)
     # THE COMPARISON KEYS ON THE CLUB-SEASON. Keying on person+year alone compared a
     # two-club man's figures as a set and manufactured disagreements; 5% of a sample
@@ -237,25 +271,41 @@ def main():
                         continue
                     n["rows re-read under the layout their LENGTH names"] += 1
                 name = norm(row[0])
+                # THE RULED JOIN DISCIPLINE, in order, nothing looser:
+                #   1. exact name, on that club-season
+                #   2. exact name, unique in the archive
+                #   3. surname and forename initial, held to the club-season
+                # Tier 2 is the only one not held to the club-season, so it is the only
+                # one that can place a man in a season he has no other business in. It
+                # is counted separately and labelled on every claim it makes, because a
+                # tier that reaches across the archive must be visible in what it wrote.
                 hits = byname.get(name, set())
                 on_it = hits & here
+                pid = how = None
                 if len(on_it) == 1:
                     pid, how = next(iter(on_it)), "exact name, on that club-season"
-                elif len(hits) == 1 and not on_it:
-                    pid, how = next(iter(hits)), "exact name, unique in the archive"
                 elif len(on_it) > 1:
-                    pid = None
+                    n["ROWS WHOSE NAME IS ON THE CLUB-SEASON TWICE -- ambiguous"] += 1
+                elif len(hits) == 1:
+                    cand = next(iter(hits))
+                    sp = held_span.get(cand)
+                    if sp and sp[0] - SPAN <= year <= sp[1] + SPAN:
+                        pid, how = cand, "exact name, unique in the archive"
+                    else:
+                        n["TIER 2 REFUSED -- the one namesake is not held in this era, "
+                          "so the name is unique only because the man PFA names is absent"] += 1
                 else:
                     w = name.split()
                     loose = [p for p in here
                              if any(x.split() and x.split()[-1] == w[-1]
                                     and x.split()[0][:1] == w[0][:1]
                                     for x in names_of.get(p, ()))] if len(w) >= 2 else []
-                    pid = loose[0] if len(loose) == 1 else None
-                    how = "surname and forename initial, on that club-season"
+                    if len(loose) == 1:
+                        pid, how = loose[0], "surname and forename initial, on that club-season"
                 if not pid:
                     n["ROWS HELD BY NOBODY -- left out, a coverage finding"] += 1
                     continue
+                n[f"  tier: {how}"] += 1
                 n["rows joined"] += 1
                 rec = f"{sr}#{cat}#{row[0]}"
                 srs_by_decade[dec][rec] = {"source_id": "pro-football-archives",

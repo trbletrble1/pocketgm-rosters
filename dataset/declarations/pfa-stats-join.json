@@ -1,0 +1,36 @@
+{
+  "_what": "How src/ingest_pfa_stats.py joins a PFA statistic row to a person, and the one guard that is not in the ruled discipline. Read by the ingest and by src/gate_stats_join.py; neither hard-codes it.",
+
+  "ruled_discipline": [
+    "1. exact name, on that club-season",
+    "2. exact name, unique in the archive",
+    "3. surname and forename initial, held to the club-season",
+    "nothing looser"
+  ],
+
+  "tier_2_span_guard": {
+    "years": 3,
+    "_rule": "Tier 2 may fire only where the season falls within the career span the archive ALREADY holds for that man from stores OTHER than this ingest, widened by this many years at each end. A man held on no season at all outside this ingest is never joined by tier 2.",
+
+    "_why": "Tier 2 is the only tier not held to the club-season, and it reads 'unique in the archive' as 'unique among the names the archive happens to hold'. PFA's statistic pages name men the archive does not hold at all, and for those rows the uniqueness test is satisfied by the absence of the real man rather than by the presence of the right one -- an absent input reading as nothing. The result was a 1978-born Andy King carrying Akron Pros figures for 1920.",
+
+    "_measured": {
+      "when": "2026-09-08, against the read model of 2026-09-08",
+      "how": "For each tier-2 placement (person, season, club) the archive's own birth dates were read through service/dates.read and the age at that season computed. A placement is IMPOSSIBLE where no held birth date puts the man between 16 and 45. 99% of kept placements hold a birth date, so the zero below is a measured zero and not an absence of evidence.",
+      "tier_1_exact_name_on_the_club_season": {"placements": 129564, "impossible": 20},
+      "tier_3_surname_and_initial": {"placements": 3278, "impossible": 0},
+      "tier_2_ungarded": {"placements": 2869, "impossible": 283, "persons": 141},
+      "sweep": {
+        "_read": "band -> [placements kept, impossible kept]",
+        "1": [1589, 0], "2": [1963, 0], "3": [2194, 0], "4": [2305, 0],
+        "5": [2393, 0], "6": [2455, 0], "8": [2516, 7], "10": [2554, 21],
+        "15": [2626, 64], "20": [2678, 100]
+      },
+      "_choice": "The first impossible placement appears at a band of 8. 6 is the widest band with none. 3 is declared instead, to sit at half the distance to the observed failure rather than at its edge; it costs 261 placements against 6. Widening is one number here, and the sweep says what it buys and what it costs."
+    }
+  },
+
+  "tier_2_refusals_are_leads_not_claims": "A row tier 2 declines is counted as a lead in build-reports/pfa-stats-ingest.json, not written as a claim. The figures exist and the man PFA names exists; what is not established is that he is the man the archive holds under that name.",
+
+  "self_read": "The roster this ingest joins against EXCLUDES stores matching pfa-stats-%. Run one joined six men to Buffalo 1920 under tier 2; run two read those claims back and relabelled all six 'exact name, on that club-season'. The label then asserted a check that had been made against this ingest's own previous output. Gate property P2 fails on any recurrence."
+}
