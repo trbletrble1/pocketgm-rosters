@@ -180,6 +180,17 @@ def season_claim(sr, pid, row):
         if row.get(fl): v[fl] = row[fl]
     c = claim(sr, pid, "pfa.coaching_season" if row["section"] == "REGULAR SEASON" else "pfa.coaching_playoffs", v)
     c["_position_as_printed_is_verbatim_and_unsplit"] = True
+    # THE SUBJECT IS A STINT, NOT A PERSON. Ruled 2026-09-09, and it is the repair the
+    # statistics ingest already had. A person subject leaves club_id and year NULL in the
+    # read model -- the club and the year sit inside the value, where the model never
+    # looks -- so 41,316 of 48,582 coaching claims could not be found by any "who coached
+    # this club-season" question. The 2024 Chicago Bears showed one man. The club code and
+    # the league are already in every row; nothing is inferred here.
+    if row.get("club") and row.get("league") and row.get("year"):
+        c["subject"] = ["stint", pid, str(row["club"]), f"{row['league']}-{row['year']}"]
+    else:
+        # A row PFA prints with no club stays person-scoped and is counted, never guessed.
+        c["_no_club_on_the_row_so_the_subject_stays_person_scoped"] = True
     return c
 
 
@@ -328,5 +339,7 @@ def main(write=True):
     return out
 
 
+
+# WRITING IS OPT-IN. Ruled 2026-09-09.
 if __name__ == "__main__":
-    main("--dry" not in sys.argv)
+    main(write="--write" in sys.argv)

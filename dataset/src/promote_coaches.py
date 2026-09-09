@@ -226,8 +226,22 @@ def main(write=True):
         if c["predicate"] in ("pfa.coaching_season", "pfa.coaching_playoffs"):
             code = c["source_record"].rsplit("/", 1)[-1].replace(".html", "")
             seasons_by_code[code].append(c["value"])
+    # WHICH CATEGORIES QUALIFY. Ryan's ruling of 2026-09-09: a source stating that a man
+    # coached a club in a season is a source stating he coached a season -- the standing
+    # rule met, not stretched. `namesake_only_not_evidence` was refused because a person
+    # of that name already exists, and the ingest is right that a shared name is not
+    # evidence; but that is a reason not to JOIN him, never a reason to deny he coached.
+    #
+    # `ambiguous_candidates` stays refused. There the archive holds SEVERAL people the man
+    # might be, and choosing is the judgement the rule cannot make -- the same refusal that
+    # stopped Cam Heyward being merged with Connor. `route_conflict` stays refused too.
+    #
+    # The failure mode of promoting a namesake is DUPLICATION -- two records for one man,
+    # visible and reversible. The failure mode of joining him would be ABSORPTION, which is
+    # what the Andy King and Talbot errors were and is not visible at all.
+    QUALIFY = {"unmatched_no_candidate", "namesake_only_not_evidence"}
     for l in C["leads"]:
-        if l["category"] != "unmatched_no_candidate":
+        if l["category"] not in QUALIFY:
             continue
         consider(l["name_as_printed"], "pfa-coach-lead",
                  {"pfa_code": l["pfa_code"], "printed_full_name": l.get("printed_full_name"),
@@ -294,8 +308,12 @@ def main(write=True):
     return out
 
 
+
+# WRITING IS OPT-IN. Ruled 2026-09-09 after two incidents in one afternoon: this file
+# used to write on a bare run, so the safe action was the one you had to know to ask
+# for. `--write` is now required; without it the script computes and reports.
 if __name__ == "__main__":
-    o = main()
+    o = main(write="--write" in sys.argv)
     print(f"  people before {o['people_before']:,}  after {o['people_after']:,}")
     print(f"  promotions {len(o['promotions']):,}   refusals {len(o['refusals']):,}")
     for k, v in sorted(o["counts"].items()):

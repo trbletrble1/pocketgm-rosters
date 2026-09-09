@@ -198,8 +198,12 @@ def main(write=True, idx=None):
                       "roles_updated": n["roles_updated"]}
 
 
+
+# WRITING IS OPT-IN. Ruled 2026-09-09 after two incidents in one afternoon: this file
+# used to write on a bare run, so the safe action was the one you had to know to ask
+# for. `--write` is now required; without it the script computes and reports.
 if __name__ == "__main__":
-    o, _, delta = main(write="--dry" not in sys.argv)
+    o, _, delta = main(write="--write" in sys.argv)
     for k, v in o["counts"].items():
         print(f"  {k:32s} {v:,}")
     print(f"  {'dual_role men in the store':32s} {o['dual_role_men']:,}")

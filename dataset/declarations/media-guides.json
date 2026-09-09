@@ -189,5 +189,32 @@
   "BLOCK_CERTIFICATION": "if a staff list names the head coach StatsCrew records for that season, the list is that season's real staff and its assistants stand with it. If it names a different man, the block is a retrospective or a directory and EVERY name in it is dropped. 198 names dropped this way; 5,154 more dropped as unverifiable because their block named no head coach at all.",
   "_the_trade": "recall 1,003 names -> 447, stints 3,600 -> 1,086. Correct for a claims store: an unverifiable stint has no discriminator that could clean it later.",
   "residual_error": "~7% on the checkable dimension. Recorded here rather than implied, and the remaining failures are name bleeds ('ry jim mora', 'by tom landry')."
+ },
+ "THE_CLUBS_OWN_GUIDE_DOCUMENTS_A_SEASON": {
+  "_ruling": "Ryan, 2026-09-07: a club's own media guide naming a man as its coach documents that he worked that season. A club printing its own staff list in its own publication is exactly the kind of document this archive is built on, and absence from a different source (PFA's coach cells) is not evidence against.",
+  "consequences": [
+   "build/assistants-identity.json: a guide record joins a person the archive already holds only where EXACTLY ONE namesake holds a coaching season at a club-year the guide names him at -- identity on club and season, never on a name. Applied to build-reports/identity.json in place by src/apply_assistants_identity.py, reversibly, with the evidence recorded per local under local_evidence. Gated by src/gate_assistants_identity.py A1-A5.",
+   "src/promote_coaches.py: a media-guide promotion now carries the guide's own stints as its coaching seasons, so demote_stintless no longer removes them. It also screens against the index WITHOUT its own previously promoted people, and keeps a lead's person id stable across runs.",
+   "declarations/person-index-rebuild.json store_league_tokens: the assistants store's league token is COACHES, so a guide's role string lands on the season it corroborates instead of opening a parallel ASSISTANTS league.",
+   "role strings are carried verbatim, 29 distinct, and are never rewritten."
+  ],
+  "what_stays_a_lead": "159 men whose namesakes hold no coaching season at any club-year the guide names, 17 with no namesake in the archive, 12 possible variant-name duplicates and 5 whose name the parse mangled ('defense ed beard'). Nothing is forced."
+ },
+ "OPEN_ITEMS": {
+  "nothing_revisits_a_refusal_when_new_evidence_arrives": {
+   "_what": "Every refusal in this archive is decided against the evidence held on the day it was made and is never looked at again. A man refused today because only his name matched may be corroborable next month once his club-seasons land -- 159 media-guide men sit in exactly that state, and so do the club table's 82 unresolved strings, the person merges' unclassifiable pairs and the promotion's 350 refusals.",
+   "_why_it_matters": "the archive's own history says the evidence does arrive: the 1926 AFL, the 1934 Reds and LVR 2020 all landed after the decisions that refused them.",
+   "_what_it_would_take": "a pass that re-runs each decider's refusal set against the current index and reports only what CHANGED -- the deciders are already pure functions of held material (corroborate_assistants, normalise_club_keys, promote_coaches, person_duplicates), so it is a scheduler and a diff, not new judgement.",
+   "raised_by": "Ryan, 2026-09-07",
+   "status": "recorded, not built",
+   "_do_not_build_now": true
+  }
+ },
+ "THE_CLAIMS_STORE_HAS_NO_WRITER": {
+  "_what": "build/assistants.json -- 1,533 claims, 447 people, 1,086 role stints -- is read by seven scripts (build_clubs, corroborate_assistants, ingest_pfa_coaches, merge_people, promote_coaches, apply_assistants_identity, build_dashboard) and written by NONE of them. src/ingest_assistants.py writes a different file, build-reports/assistants.json, in a different shape.",
+  "_why_it_matters": "the repo cannot rebuild it. Its 447 local ids (p_000001...) are load-bearing: identity.json now carries 73 of them, joined on club-season corroboration. Same class as the officials store: it exists by a path that is not in the repo.",
+  "_the_73_joins_are_safe_either_way": "verified 2026-09-07: corroborate_assistants re-derives every join from the store fresh, apply_assistants_identity.undo removes its own pairs by the marker they carry rather than by looking them up, and each join records source_record ('media-guides#staff/ken meyer'), 73 of 73 distinct, which survives re-minting. Recovery from a regeneration is corroborate --write then apply --write, proven by gate_assistants_identity.",
+  "_open": "whether to build a writer for a store whose provenance cannot be reconstructed from the repo. Ryan's call; raised 2026-09-07.",
+  "_consequence_today": "gate_club_keys G7 = 1: a stint whose club is a guide TITLE ('Miami Dolphins 1985 Super Bowl XIX Media Guide') puts Don Shula's 1985 under two tokens. The parse is fixed in src/ingest_assistants.py (it now validates a derived club through build/clubs.json and refuses 133 guides / 75 tokens that are not clubs -- 'GameDay', 'NFL Official Record Manual'), but the claims store cannot be regenerated to pick it up."
  }
 }

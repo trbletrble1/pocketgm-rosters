@@ -1,10 +1,55 @@
 {
  "stints": {
-  "defense ed beard": [
+  "billy atkins": [
+   [
+    "San Francisco 49ers",
+    "1976",
+    "Secondary"
+   ]
+  ],
+  "ed beard": [
+   [
+    "San Francisco 49ers",
+    "1976",
+    "Linebackers"
+   ],
    [
     "San Francisco 49ers",
     "1977",
     "Linebackers"
+   ]
+  ],
+  "jim spavital": [
+   [
+    "San Francisco 49ers",
+    "1976",
+    "Running Backs"
+   ]
+  ],
+  "monte clark": [
+   [
+    "San Francisco 49ers",
+    "1976",
+    "Head Coach"
+   ]
+  ],
+  "dick enright": [
+   [
+    "San Francisco 49ers",
+    "1976",
+    "Offensive Line"
+   ]
+  ],
+  "floyd peters": [
+   [
+    "Minnesota Vikings",
+    "1989",
+    "Defensive Coordinator"
+   ],
+   [
+    "San Francisco 49ers",
+    "1976",
+    "Defensive Line"
    ]
   ],
   "ken meyer": [
@@ -12,6 +57,482 @@
     "San Francisco 49ers",
     "1977",
     "Head Coach"
+   ]
+  ],
+  "george h. allen": [
+   [
+    "Arizona Wranglers",
+    "1984",
+    "Head Coach"
+   ]
+  ],
+  "roman gabriel": [
+   [
+    "Arizona Wranglers",
+    "1984",
+    "Quarterbacks"
+   ]
+  ],
+  "pete ketella": [
+   [
+    "Arizona Wranglers",
+    "1984",
+    "Wide Receivers"
+   ]
+  ],
+  "robert lord": [
+   [
+    "Arizona Wranglers",
+    "1984",
+    "Special Teams"
+   ]
+  ],
+  "john payne": [
+   [
+    "Arizona Wranglers",
+    "1984",
+    "Offensive Line"
+   ],
+   [
+    "Detroit Lions",
+    "1977",
+    "Offensive Line"
+   ]
+  ],
+  "john teerlinck": [
+   [
+    "Arizona Wranglers",
+    "1984",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2002",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2004",
+    "Defensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2005",
+    "Defensive Line"
+   ]
+  ],
+  "john harbaugh": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Head Coach"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Head Coach"
+   ],
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Head Coach"
+   ],
+   [
+    "Baltimore Ravens",
+    "2022",
+    "Head Coach"
+   ]
+  ],
+  "cam cameron": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Offensive Coordinator"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Offensive Coordinator"
+   ]
+  ],
+  "greg mattison": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Defensive Coordinator"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Defensive Coordinator"
+   ]
+  ],
+  "roy anderson": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Defensive Assistant"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Defensive Assistant"
+   ]
+  ],
+  "clarence brooks": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Defensive Line"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Defensive Line"
+   ]
+  ],
+  "jason brooks": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Offensive Assistant"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Offensive Assistant"
+   ]
+  ],
+  "mark carrier": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Defensive Backs"
+   ]
+  ],
+  "vic fangio": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Linebackers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2001",
+    "Defensive Coordinator"
+   ]
+  ],
+  "jim hostler": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Wide Receivers"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Wide Receivers"
+   ],
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Tight Ends"
+   ]
+  ],
+  "hue jackson": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Quarterbacks"
+   ],
+   [
+    "Washington Redskins",
+    "2002",
+    "Running Backs"
+   ],
+   [
+    "Washington Redskins",
+    "2003",
+    "Offensive Coordinator"
+   ]
+  ],
+  "john matsko": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Offensive Line"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Offensive Line"
+   ]
+  ],
+  "wilbert montgomery": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Running Backs"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Running Backs"
+   ]
+  ],
+  "chuck pagano": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Secondary"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Secondary"
+   ],
+   [
+    "Cleveland Browns",
+    "2001",
+    "Defensive Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2012",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2013",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2014",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2016",
+    "Head Coach"
+   ],
+   [
+    "Indianapolis Colts",
+    "2017",
+    "Head Coach"
+   ]
+  ],
+  "craig ver steeg": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Offensive Assistant"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Offensive Assistant"
+   ],
+   [
+    "Baltimore Ravens",
+    "2022",
+    "Running Backs Coach"
+   ]
+  ],
+  "matt weiss": [
+   [
+    "Baltimore Ravens",
+    "2010",
+    "Head Coach"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Head Coach"
+   ],
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Running Backs Coach"
+   ]
+  ],
+  "wade harman": [
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Tight Ends"
+   ],
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Tight Ends"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Tight Ends"
+   ]
+  ],
+  "dean pees": [
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Linebackers"
+   ]
+  ],
+  "bob rogucki": [
+   [
+    "Arizona Cardinals",
+    "1995",
+    "Strength And Conditioning"
+   ],
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Strength And Conditioning"
+   ]
+  ],
+  "jim zorn": [
+   [
+    "Baltimore Ravens",
+    "2011",
+    "Quarterbacks"
+   ]
+  ],
+  "chris horton": [
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Special Teams"
+   ],
+   [
+    "Baltimore Ravens",
+    "2022",
+    "Special Teams"
+   ]
+  ],
+  "don martindale": [
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Defensive Coordinator"
+   ],
+   [
+    "Baltimore Ravens",
+    "2022",
+    "Defensive Coordinator"
+   ]
+  ],
+  "greg roman": [
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Offensive Coordinator"
+   ],
+   [
+    "Baltimore Ravens",
+    "2022",
+    "Offensive Coordinator"
+   ]
+  ],
+  "david culley": [
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Asst. Head Coach"
+   ]
+  ],
+  "randy brown": [
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Special Teams Coach"
+   ],
+   [
+    "Baltimore Ravens",
+    "2022",
+    "Special Teams Coach"
+   ]
+  ],
+  "joe cullen": [
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Defensive Line"
+   ]
+  ],
+  "bobby engram": [
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Tight Ends"
+   ],
+   [
+    "Baltimore Ravens",
+    "2022",
+    "Tight Ends"
+   ]
+  ],
+  "mike macdonald": [
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Linebackers Coach"
+   ]
+  ],
+  "jesse minter": [
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Defensive Backs"
+   ]
+  ],
+  "james urban": [
+   [
+    "Baltimore Ravens",
+    "2021",
+    "Quarterbacks Coach"
+   ],
+   [
+    "Baltimore Ravens",
+    "2022",
+    "Quarterbacks Coach"
+   ]
+  ],
+  "d'anton lynn": [
+   [
+    "Baltimore Ravens",
+    "2022",
+    "Defensive Backs"
+   ]
+  ],
+  "tee martin": [
+   [
+    "Baltimore Ravens",
+    "2022",
+    "Wide Receivers"
+   ]
+  ],
+  "t.j. weist": [
+   [
+    "Baltimore Ravens",
+    "2022",
+    "Special Teams Coach"
    ]
   ],
   "george s. halas": [
@@ -123,6 +644,34 @@
     "Offensive Line"
    ]
   ],
+  "carl m. voyles": [
+   [
+    "Brooklyn Dodgers",
+    "1948",
+    "Head Coach"
+   ]
+  ],
+  "horace hendrickson": [
+   [
+    "Brooklyn Dodgers",
+    "1948",
+    "Backfield Coach"
+   ]
+  ],
+  "steve hokuf": [
+   [
+    "Brooklyn Dodgers",
+    "1948",
+    "End Coach"
+   ]
+  ],
+  "a. h. werner": [
+   [
+    "Brooklyn Dodgers",
+    "1948",
+    "Line Coach"
+   ]
+  ],
   "blanton collier": [
    [
     "Cleveland Browns",
@@ -130,11 +679,183 @@
     "Head Coach"
    ]
   ],
+  "fritz heisler": [
+   [
+    "Cleveland Browns",
+    "1970",
+    "Offensive Line"
+   ]
+  ],
+  "dick modzelewski": [
+   [
+    "Cleveland Browns",
+    "1970",
+    "Defensive Line"
+   ],
+   [
+    "Cleveland Browns",
+    "1971",
+    "Defensive Line"
+   ]
+  ],
   "nick skorich": [
    [
     "Cleveland Browns",
     "1971",
     "Head Coach"
+   ]
+  ],
+  "bill belichick": [
+   [
+    "Cleveland Browns",
+    "1991",
+    "Head Coach"
+   ],
+   [
+    "Cleveland Browns",
+    "1993",
+    "Head Coach"
+   ],
+   [
+    "New England Patriots",
+    "1996",
+    "Asst. Head Coach"
+   ]
+  ],
+  "steve crosby": [
+   [
+    "Cleveland Browns",
+    "1991",
+    "Running Backs"
+   ],
+   [
+    "Cleveland Browns",
+    "1993",
+    "Running Backs"
+   ]
+  ],
+  "hal hunter": [
+   [
+    "Cleveland Browns",
+    "1991",
+    "Offensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2015",
+    "Offensive Line"
+   ]
+  ],
+  "john mitchell": [
+   [
+    "Cleveland Browns",
+    "1991",
+    "Defensive Line"
+   ],
+   [
+    "Cleveland Browns",
+    "1993",
+    "Defensive Line"
+   ]
+  ],
+  "scott o'brien": [
+   [
+    "Cleveland Browns",
+    "1991",
+    "Special Teams"
+   ],
+   [
+    "Cleveland Browns",
+    "1993",
+    "Special Teams"
+   ]
+  ],
+  "gary tranquill": [
+   [
+    "Cleveland Browns",
+    "1991",
+    "Quarterbacks"
+   ],
+   [
+    "Cleveland Browns",
+    "1993",
+    "Quarterbacks"
+   ]
+  ],
+  "linda leoni": [
+   [
+    "Cleveland Browns",
+    "1991",
+    "Head Coach"
+   ]
+  ],
+  "jim bates": [
+   [
+    "Cleveland Browns",
+    "1993",
+    "Defensive Line"
+   ],
+   [
+    "Dallas Cowboys",
+    "1996",
+    "Linebackers"
+   ]
+  ],
+  "kirk ferentz": [
+   [
+    "Cleveland Browns",
+    "1993",
+    "Offensive Line"
+   ]
+  ],
+  "nick sabin": [
+   [
+    "Cleveland Browns",
+    "1993",
+    "Defensive Coordinator"
+   ]
+  ],
+  "phil savage": [
+   [
+    "Cleveland Browns",
+    "1993",
+    "Defensive Assistant"
+   ]
+  ],
+  "mike sheppard": [
+   [
+    "Cleveland Browns",
+    "1993",
+    "Offensive Assistant"
+   ]
+  ],
+  "kevin spencer": [
+   [
+    "Cleveland Browns",
+    "1993",
+    "Offensive Assistant"
+   ],
+   [
+    "Indianapolis Colts",
+    "1999",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2000",
+    "Special Teams"
+   ],
+   [
+    "Indianapolis Colts",
+    "2001",
+    "Special Teams"
+   ]
+  ],
+  "woody widenhofer": [
+   [
+    "Cleveland Browns",
+    "1993",
+    "Linebackers"
    ]
   ],
   "chris palmer": [
@@ -238,6 +959,11 @@
    ],
    [
     "Pittsburgh Steelers",
+    "2013",
+    "Linebackers Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
     "2014",
     "Linebackers Coach"
    ]
@@ -307,6 +1033,16 @@
     "Dallas Cowboys",
     "2003",
     "Tight Ends"
+   ],
+   [
+    "Indianapolis Colts",
+    "2023",
+    "Offensive Line"
+   ],
+   [
+    "Indianapolis Colts",
+    "2024",
+    "Offensive Line"
    ]
   ],
   "butch davis": [
@@ -425,43 +1161,6 @@
     "Cleveland Browns",
     "2001",
     "Running Backs Coach"
-   ]
-  ],
-  "chuck pagano": [
-   [
-    "Cleveland Browns",
-    "2001",
-    "Defensive Backs"
-   ],
-   [
-    "Indianapolis Colts",
-    "2012",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "2013",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "2014",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "2015",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "2016",
-    "Head Coach"
-   ],
-   [
-    "Indianapolis Colts",
-    "2017",
-    "Head Coach"
    ]
   ],
   "terry robiskie": [
@@ -728,6 +1427,16 @@
     "Arizona Cardinals",
     "1995",
     "Quarterbacks"
+   ],
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Offensive Coordinator"
+   ],
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Offensive Coordinator"
    ]
   ],
   "dan neal": [
@@ -749,6 +1458,16 @@
     "Arizona Cardinals",
     "1995",
     "Linebackers"
+   ],
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Defensive Line"
+   ],
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Defensive Line"
    ]
   ],
   "rob ryan": [
@@ -768,13 +1487,6 @@
     "Arizona Cardinals",
     "1995",
     "Defensive Line"
-   ]
-  ],
-  "bob rogucki": [
-   [
-    "Arizona Cardinals",
-    "1995",
-    "Strength And Conditioning"
    ]
   ],
   "buddy ryan": [
@@ -851,6 +1563,11 @@
    [
     "Dallas Cowboys",
     "2009",
+    "Tight Ends"
+   ],
+   [
+    "Dallas Cowboys",
+    "2010",
     "Tight Ends"
    ]
   ],
@@ -1088,7 +1805,7 @@
     "Head Coach"
    ],
    [
-    "Miami Dolphins 1985 Super Bowl XIX Media Guide",
+    "Miami Dolphins",
     "1985",
     "Head Coach"
    ]
@@ -1113,6 +1830,11 @@
     "Baltimore Colts",
     "1972",
     "Defensive Line"
+   ],
+   [
+    "Miami Dolphins",
+    "1985",
+    "Offensive Line"
    ]
   ],
   "bill arnsparger": [
@@ -1193,6 +1915,16 @@
   ],
   "lindy infante": [
    [
+    "Green Bay Packers",
+    "1989",
+    "Head Coach"
+   ],
+   [
+    "Green Bay Packers",
+    "1991",
+    "Head Coach"
+   ],
+   [
     "Indianapolis Colts",
     "1997",
     "Head Coach"
@@ -1249,6 +1981,43 @@
     "Indianapolis Colts",
     "1997",
     "Linebackers"
+   ]
+  ],
+  "gene huey": [
+   [
+    "Indianapolis Colts",
+    "1997",
+    "Running Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "1999",
+    "Running Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2000",
+    "Running Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2001",
+    "Running Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2002",
+    "Running Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2004",
+    "Running Backs"
+   ],
+   [
+    "Indianapolis Colts",
+    "2005",
+    "Running Backs"
    ]
   ],
   "jim johnson": [
@@ -1504,6 +2273,16 @@
     "Indianapolis Colts",
     "2000",
     "Asst. Head Coach"
+   ],
+   [
+    "Washington Redskins",
+    "2002",
+    "Defensive Backs"
+   ],
+   [
+    "Washington Redskins",
+    "2003",
+    "Defensive Backs"
    ]
   ],
   "vie fangio": [
@@ -1540,55 +2319,6 @@
     "Defensive Line"
    ]
   ],
-  "gene huey": [
-   [
-    "Indianapolis Colts",
-    "1999",
-    "Running Backs"
-   ],
-   [
-    "Indianapolis Colts",
-    "2000",
-    "Running Backs"
-   ],
-   [
-    "Indianapolis Colts",
-    "2001",
-    "Running Backs"
-   ],
-   [
-    "Indianapolis Colts",
-    "2002",
-    "Running Backs"
-   ],
-   [
-    "Indianapolis Colts",
-    "2004",
-    "Running Backs"
-   ],
-   [
-    "Indianapolis Colts",
-    "2005",
-    "Running Backs"
-   ]
-  ],
-  "kevin spencer": [
-   [
-    "Indianapolis Colts",
-    "1999",
-    "Special Teams"
-   ],
-   [
-    "Indianapolis Colts",
-    "2000",
-    "Special Teams"
-   ],
-   [
-    "Indianapolis Colts",
-    "2001",
-    "Special Teams"
-   ]
-  ],
   "jon torine": [
    [
     "Indianapolis Colts",
@@ -1604,13 +2334,6 @@
     "Indianapolis Colts",
     "2001",
     "Strength And Conditioning"
-   ]
-  ],
-  "vic fangio": [
-   [
-    "Indianapolis Colts",
-    "2001",
-    "Defensive Coordinator"
    ]
   ],
   "tony dungy": [
@@ -1710,6 +2433,16 @@
   ],
   "russ purnell": [
    [
+    "Baltimore Ravens",
+    "1999",
+    "Special Teams"
+   ],
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Special Teams"
+   ],
+   [
     "Indianapolis Colts",
     "2002",
     "Special Teams"
@@ -1723,23 +2456,6 @@
     "Indianapolis Colts",
     "2005",
     "Special Teams"
-   ]
-  ],
-  "john teerlinck": [
-   [
-    "Indianapolis Colts",
-    "2002",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "2004",
-    "Defensive Line"
-   ],
-   [
-    "Indianapolis Colts",
-    "2005",
-    "Defensive Line"
    ]
   ],
   "alan williams": [
@@ -2060,42 +2776,6 @@
     "2014",
     "Offensive Line"
    ],
-   [
-    "Indianapolis Colts",
-    "2015",
-    "Offensive Line"
-   ]
-  ],
-  "defensive line co": [
-   [
-    "Indianapolis Colts",
-    "2013",
-    "Defensive Coordinator"
-   ],
-   [
-    "Indianapolis Colts",
-    "2017",
-    "Defensive Coordinator"
-   ]
-  ],
-  "jim hostler": [
-   [
-    "Indianapolis Colts",
-    "2015",
-    "Wide Receivers"
-   ],
-   [
-    "Indianapolis Colts",
-    "2016",
-    "Tight Ends"
-   ],
-   [
-    "Indianapolis Colts",
-    "2017",
-    "Tight Ends"
-   ]
-  ],
-  "hal hunter": [
    [
     "Indianapolis Colts",
     "2015",
@@ -2946,6 +3626,13 @@
     "Offensive Coordinator"
    ]
   ],
+  "dave wannstedt": [
+   [
+    "Dallas Cowboys",
+    "1991",
+    "Defensive Coordinator"
+   ]
+  ],
   "joe avezzano": [
    [
     "Dallas Cowboys",
@@ -3237,6 +3924,18 @@
     "Offensive Coordinator"
    ]
   ],
+  "hubbard alexander": [
+   [
+    "Dallas Cowboys",
+    "1994",
+    "Wide Receivers"
+   ],
+   [
+    "Dallas Cowboys",
+    "1996",
+    "Wide Receivers"
+   ]
+  ],
   "mike woicik": [
    [
     "Dallas Cowboys",
@@ -3336,20 +4035,6 @@
     "Defensive Coordinator"
    ]
   ],
-  "hubbard alexander": [
-   [
-    "Dallas Cowboys",
-    "1996",
-    "Wide Receivers"
-   ]
-  ],
-  "jim bates": [
-   [
-    "Dallas Cowboys",
-    "1996",
-    "Linebackers"
-   ]
-  ],
   "chan gailey": [
    [
     "Dallas Cowboys",
@@ -3415,6 +4100,11 @@
    [
     "Dallas Cowboys",
     "2003",
+    "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2006",
     "Strength And Conditioning"
    ],
    [
@@ -3550,6 +4240,11 @@
     "Dallas Cowboys",
     "2001",
     "Linebackers"
+   ],
+   [
+    "Washington Redskins",
+    "2003",
+    "Defensive Coordinator"
    ]
   ],
   "wes chandler": [
@@ -3818,6 +4513,11 @@
    ],
    [
     "Dallas Cowboys",
+    "2007",
+    "Linebackers"
+   ],
+   [
+    "Dallas Cowboys",
     "2010",
     "Defensive Line"
    ]
@@ -3990,7 +4690,7 @@
     "Wide Receivers"
    ]
   ],
-  "line brain stewart": [
+  "brain stewart": [
    [
     "Dallas Cowboys",
     "2007",
@@ -4059,6 +4759,16 @@
     "Dallas Cowboys",
     "2009",
     "Secondary"
+   ],
+   [
+    "Dallas Cowboys",
+    "2010",
+    "Secondary"
+   ],
+   [
+    "Dallas Cowboys",
+    "2011",
+    "Secondary"
    ]
   ],
   "reggie herring": [
@@ -4066,13 +4776,6 @@
     "Dallas Cowboys",
     "2010",
     "Linebackers"
-   ]
-  ],
-  "line brett maxie": [
-   [
-    "Dallas Cowboys",
-    "2011",
-    "Secondary"
    ]
   ],
   "bill callahan": [
@@ -4322,13 +5025,6 @@
     "Dallas Cowboys",
     "2017",
     "Defensive Assistant"
-   ]
-  ],
-  "defensive assistan": [
-   [
-    "Dallas Cowboys",
-    "2014",
-    "Defensive Backs"
    ]
   ],
   "marc colombo": [
@@ -4725,6 +5421,11 @@
    ],
    [
     "Dallas Cowboys",
+    "2023",
+    "Quarterbacks"
+   ],
+   [
+    "Dallas Cowboys",
     "2024",
     "Quarterbacks"
    ]
@@ -4802,6 +5503,11 @@
     "Dallas Cowboys",
     "2023",
     "Strength And Conditioning"
+   ],
+   [
+    "Dallas Cowboys",
+    "2024",
+    "Strength And Conditioning"
    ]
   ],
   "dan quinn": [
@@ -4819,6 +5525,23 @@
     "Dallas Cowboys",
     "2023",
     "Defensive Coordinator"
+   ]
+  ],
+  "joe whitt": [
+   [
+    "Dallas Cowboys",
+    "2021",
+    "Secondary"
+   ],
+   [
+    "Dallas Cowboys",
+    "2022",
+    "Secondary"
+   ],
+   [
+    "Dallas Cowboys",
+    "2023",
+    "Secondary"
    ]
   ],
   "robert prince": [
@@ -4981,20 +5704,6 @@
     "Linebacker Coach"
    ]
   ],
-  "special teams": [
-   [
-    "Miami Dolphins 1985 Super Bowl XIX Media Guide",
-    "1985",
-    "Linebackers"
-   ]
-  ],
-  "john sandusky offense": [
-   [
-    "Miami Dolphins 1985 Super Bowl XIX Media Guide",
-    "1985",
-    "Offensive Line"
-   ]
-  ],
   "norb hecker": [
    [
     "Atlanta Falcons",
@@ -5112,6 +5821,175 @@
     "Head Coach"
    ]
   ],
+  "bart starr": [
+   [
+    "Green Bay Packers",
+    "1975",
+    "Head Coach"
+   ],
+   [
+    "Green Bay Packers",
+    "1977",
+    "Head Coach"
+   ],
+   [
+    "Green Bay Packers",
+    "1978",
+    "Head Coach"
+   ]
+  ],
+  "paul roach": [
+   [
+    "Green Bay Packers",
+    "1975",
+    "Offensive Coordinator"
+   ]
+  ],
+  "leon mclaughlin": [
+   [
+    "Detroit Lions",
+    "1973",
+    "Offensive Line"
+   ],
+   [
+    "Green Bay Packers",
+    "1975",
+    "Offensive Line"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "1966",
+    "Offensive Line"
+   ]
+  ],
+  "john meyer": [
+   [
+    "Detroit Lions",
+    "1973",
+    "Linebacker Coach"
+   ],
+   [
+    "Green Bay Packers",
+    "1975",
+    "Linebacker Coach"
+   ],
+   [
+    "Green Bay Packers",
+    "1977",
+    "Linebacker Coach"
+   ]
+  ],
+  "bob lord": [
+   [
+    "Green Bay Packers",
+    "1975",
+    "Special Teams"
+   ]
+  ],
+  "zeke bratkowski": [
+   [
+    "Green Bay Packers",
+    "1977",
+    "Quarterback Coach"
+   ],
+   [
+    "Green Bay Packers",
+    "1978",
+    "Quarterback Coach"
+   ]
+  ],
+  "bill curry": [
+   [
+    "Green Bay Packers",
+    "1977",
+    "Offensive Line"
+   ],
+   [
+    "Green Bay Packers",
+    "1978",
+    "Offensive Line"
+   ]
+  ],
+  "burt gustafson": [
+   [
+    "Green Bay Packers",
+    "1977",
+    "Special Teams Coach"
+   ]
+  ],
+  "emie mcmillan": [
+   [
+    "Green Bay Packers",
+    "1978",
+    "Offensive Line"
+   ]
+  ],
+  "forrest gregg": [
+   [
+    "Green Bay Packers",
+    "1987",
+    "Head Coach"
+   ]
+  ],
+  "dick madzelewski": [
+   [
+    "Green Bay Packers",
+    "1987",
+    "Defensive Coordinator"
+   ]
+  ],
+  "dale lindsey": [
+   [
+    "Green Bay Packers",
+    "1987",
+    "Linebackers"
+   ],
+   [
+    "Washington Redskins",
+    "2005",
+    "Linebackers"
+   ]
+  ],
+  "jerry wamptler": [
+   [
+    "Green Bay Packers",
+    "1987",
+    "Offensive Line"
+   ]
+  ],
+  "george sefcik": [
+   [
+    "Green Bay Packers",
+    "1987",
+    "Quarterbacks"
+   ]
+  ],
+  "charlie davis": [
+   [
+    "Green Bay Packers",
+    "1989",
+    "Offensive Line"
+   ],
+   [
+    "Green Bay Packers",
+    "1991",
+    "Offensive Line"
+   ]
+  ],
+  "virgil knight": [
+   [
+    "Green Bay Packers",
+    "1991",
+    "Tight Ends"
+   ]
+  ],
+  "howard tippett": [
+   [
+    "Green Bay Packers",
+    "1991",
+    "Special Teams"
+   ]
+  ],
   "aldo forte": [
    [
     "Detroit Lions",
@@ -5136,20 +6014,6 @@
     "Detroit Lions",
     "1973",
     "Defensive Line"
-   ]
-  ],
-  "leon mclaughlin": [
-   [
-    "Detroit Lions",
-    "1973",
-    "Offensive Line"
-   ]
-  ],
-  "john meyer": [
-   [
-    "Detroit Lions",
-    "1973",
-    "Linebacker Coach"
    ]
   ],
   "rick forzano": [
@@ -5260,13 +6124,6 @@
     "Linebacker Coach"
    ]
   ],
-  "john payne": [
-   [
-    "Detroit Lions",
-    "1977",
-    "Offensive Line"
-   ]
-  ],
   "hugh campbell": [
    [
     "Houston Oilers",
@@ -5329,30 +6186,11 @@
     "Strength And Conditioning"
    ]
   ],
-  "forrest gregg": [
-   [
-    "Green Bay Packers",
-    "1987",
-    "Head Coach"
-   ]
-  ],
   "mgr. dick modzelewski": [
    [
     "Green Bay Packers",
     "1987",
     "Defensive Coordinator"
-   ]
-  ],
-  "dale lindsey": [
-   [
-    "Green Bay Packers",
-    "1987",
-    "Linebackers"
-   ],
-   [
-    "Washington Redskins",
-    "2005",
-    "Linebackers"
    ]
   ],
   "mike holovak": [
@@ -5398,6 +6236,23 @@
     "Defensive Coordinator"
    ]
   ],
+  "fred hoaglin": [
+   [
+    "New England Patriots",
+    "1994",
+    "Offensive Line"
+   ],
+   [
+    "New England Patriots",
+    "1995",
+    "Offensive Line"
+   ],
+   [
+    "New England Patriots",
+    "1996",
+    "Offensive Line"
+   ]
+  ],
   "johnny parker": [
    [
     "New England Patriots",
@@ -5429,6 +6284,16 @@
    [
     "New England Patriots",
     "1994",
+    "Special Teams"
+   ],
+   [
+    "New England Patriots",
+    "1995",
+    "Special Teams"
+   ],
+   [
+    "New England Patriots",
+    "1996",
     "Special Teams"
    ]
   ],
@@ -5493,20 +6358,6 @@
     "New England Patriots",
     "1998",
     "Special Teams"
-   ]
-  ],
-  "bill belichick": [
-   [
-    "New England Patriots",
-    "1996",
-    "Asst. Head Coach"
-   ]
-  ],
-  "fred hoaglin": [
-   [
-    "New England Patriots",
-    "1996",
-    "Offensive Line"
    ]
   ],
   "pete carroll": [
@@ -5636,6 +6487,21 @@
     "New England Patriots",
     "1998",
     "Running Backs"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Running Backs Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Running Backs Coach"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Running Backs Coach"
    ],
    [
     "Pittsburgh Steelers",
@@ -5811,6 +6677,111 @@
     "Defensive Coordinator"
    ]
   ],
+  "brian billick": [
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Head Coach"
+   ],
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Head Coach"
+   ]
+  ],
+  "marvin lewis": [
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Defensive Coordinator"
+   ],
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Defensive Coordinator"
+   ]
+  ],
+  "jim colletto": [
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Offensive Line"
+   ],
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Offensive Line"
+   ]
+  ],
+  "jack del rio": [
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Linebackers"
+   ],
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Linebackers"
+   ]
+  ],
+  "jeff friday": [
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Strength And Conditioning"
+   ],
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Strength And Conditioning"
+   ]
+  ],
+  "milt jackson": [
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Wide Receivers"
+   ],
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Wide Receivers"
+   ]
+  ],
+  "steve shafer": [
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Defensive Backs"
+   ]
+  ],
+  "matt simon": [
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Running Backs"
+   ],
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Running Backs"
+   ]
+  ],
+  "mike smith": [
+   [
+    "Baltimore Ravens",
+    "1999",
+    "Defensive Assistant"
+   ]
+  ],
+  "donnie henderson": [
+   [
+    "Baltimore Ravens",
+    "2000",
+    "Secondary"
+   ]
+  ],
   "bill mcpeak": [
    [
     "Washington Redskins",
@@ -5837,19 +6808,22 @@
     "Washington Redskins",
     "2002",
     "Head Coach"
-   ]
-  ],
-  "hue jackson": [
+   ],
    [
     "Washington Redskins",
-    "2002",
-    "Running Backs"
+    "2003",
+    "Head Coach"
    ]
   ],
   "lawson holland": [
    [
     "Washington Redskins",
     "2002",
+    "Tight Ends"
+   ],
+   [
+    "Washington Redskins",
+    "2003",
     "Tight Ends"
    ]
   ],
@@ -5872,6 +6846,32 @@
     "Washington Redskins",
     "2002",
     "Special Teams"
+   ],
+   [
+    "Washington Redskins",
+    "2003",
+    "Special Teams"
+   ]
+  ],
+  "kim helton": [
+   [
+    "Washington Redskins",
+    "2003",
+    "Offensive Line"
+   ]
+  ],
+  "noah brindise": [
+   [
+    "Washington Redskins",
+    "2003",
+    "Quarterbacks"
+   ]
+  ],
+  "robert nunn": [
+   [
+    "Washington Redskins",
+    "2003",
+    "Defensive Line"
    ]
   ],
   "joe gibbs": [
@@ -6010,6 +7010,13 @@
     "Washington Redskins",
     "2007",
     "Secondary"
+   ]
+  ],
+  "bill austin": [
+   [
+    "Pittsburgh Steelers",
+    "1966",
+    "Head Coach"
    ]
   ],
   "mike tomlin": [
@@ -6152,6 +7159,23 @@
     "Quarterbacks Coach"
    ]
   ],
+  "ray horton": [
+   [
+    "Pittsburgh Steelers",
+    "2007",
+    "Defensive Backs"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2009",
+    "Defensive Backs"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2010",
+    "Defensive Backs"
+   ]
+  ],
   "bob ligashesky": [
    [
     "Pittsburgh Steelers",
@@ -6176,11 +7200,16 @@
     "Defensive Assistant"
    ]
   ],
-  "ray horton": [
+  "sean kugler": [
    [
     "Pittsburgh Steelers",
     "2010",
-    "Defensive Backs"
+    "Offensive Line"
+   ],
+   [
+    "Pittsburgh Steelers",
+    "2012",
+    "Offensive Line"
    ]
   ],
   "jerry olsavsky": [
@@ -6222,13 +7251,6 @@
     "Defensive Backs"
    ]
   ],
-  "sean kugler": [
-   [
-    "Pittsburgh Steelers",
-    "2012",
-    "Offensive Line"
-   ]
-  ],
   "shaun sarrett": [
    [
     "Pittsburgh Steelers",
@@ -6258,6 +7280,13 @@
     "Wide Receivers"
    ]
   ],
+  "mike munchak": [
+   [
+    "Pittsburgh Steelers",
+    "2014",
+    "Offensive Line"
+   ]
+  ],
   "james saxon": [
    [
     "Pittsburgh Steelers",
@@ -6282,13 +7311,6 @@
     "Minnesota Vikings",
     "1991",
     "Head Coach"
-   ]
-  ],
-  "floyd peters": [
-   [
-    "Minnesota Vikings",
-    "1989",
-    "Defensive Coordinator"
    ]
   ],
   "bob schnelker": [
@@ -6327,14 +7349,105 @@
  },
  "refused": [],
  "rejected": {
-  "block unverifiable: no head coach named": 5154,
-  "no staff section - guide skipped": 209,
-  "job word, not a name": 512,
-  "block REJECTED: head coach does not match StatsCrew": 198,
+  "club not derivable from the title: 'NFL Illustrated | Dallas Cowboys at San Francisco 49ers Game' is not a club in 1963": 1,
+  "club not derivable from the title: 'NFL Illustrated | Los Angeles Rams at San Francisco 49ers Game' is not a club in 1965": 1,
+  "club not derivable from the title: 'The Sporting News' is not a club in 1984": 1,
+  "club not derivable from the title: 'GameDay' is not a club in 2020": 8,
+  "club not derivable from the title: 'GameDay' is not a club in 2023": 5,
+  "club not derivable from the title: 'GameDay' is not a club in 2025": 32,
+  "club not derivable from the title: 'GameDay' is not a club in 2005": 1,
+  "club not derivable from the title: 'GameDay' is not a club in 2026": 2,
+  "block unverifiable: no head coach named": 5463,
+  "no staff section - guide skipped": 255,
+  "job word, not a name: nothing left but job words -- the name was never there": 517,
+  "club not derivable from the title: '49ers Report V10.03: November 7' is not a club in 1994": 1,
+  "club not derivable from the title: '49ers Report V10.06: November 29' is not a club in 1994": 1,
+  "club not derivable from the title: '49ers Report V10.07: December 5' is not a club in 1994": 1,
+  "club not derivable from the title: '49ers Report V10.10: December 27' is not a club in 1994": 1,
+  "club not derivable from the title: '49ers Report V10.12: January 9' is not a club in 1995": 1,
+  "club not derivable from the title: '49ers Report V10.25: October 2' is not a club in 1995": 1,
+  "club not derivable from the title: '49ers Report V11.08: December 4' is not a club in 1995": 1,
+  "club not derivable from the title: '49ers Report V11.09: December 11' is not a club in 1995": 1,
+  "club not derivable from the title: '49ers Report V11.23: September 9' is not a club in 1996": 1,
+  "club not derivable from the title: '49ers Report V11.25: September 23' is not a club in 1996": 1,
+  "club not derivable from the title: 'Great Quarterbacks Of Pro Football, Revised Edition' is not a club in 1978": 1,
+  "league-wide book: asserts no club": 449,
+  "club not derivable from the title: 'False Start: How the New Browns Were Set-up to Fail' is not a club in 2004": 1,
+  "club not derivable from the title: 'The Chicago Tribune Book of the Chicago Bears: A Decade by Decade History' is not a club in 2015": 1,
+  "no index row": 92,
+  "club not derivable from the title: 'Athlon Sports' is not a club in 2018": 1,
+  "club not derivable from the title: 'Baltimore Ravens' is not a club in 2026": 1,
+  "block REJECTED: head coach does not match StatsCrew": 261,
   "too short": 2,
-  "club name": 144,
-  "phrase": 2,
-  "league-wide book: asserts no club": 40
+  "club name": 189,
+  "phrase": 6,
+  "job word, not a name: a job word inside the name, not at either end": 15,
+  "club not derivable from the title: 'Buffalo Bills' is not a club in 2026": 1,
+  "club not derivable from the title: 'Chicago Bears' is not a club in 2026": 1,
+  "club not derivable from the title: 'Cincinnati Bengals' is not a club in 2026": 1,
+  "club not derivable from the title: 'Cleveland Browns' is not a club in 2026": 1,
+  "club not derivable from the title: 'Dallas Cowboys' is not a club in 2026": 1,
+  "club not derivable from the title: 'GameDay' is not a club in 2022": 1,
+  "club not derivable from the title: 'The Giants Newsweekly' is not a club in 1988": 1,
+  "club not derivable from the title: 'The Giants Newsweekly' is not a club in 1991": 1,
+  "club not derivable from the title: 'The Giants Newsweekly' is not a club in 1984": 1,
+  "club not derivable from the title: 'Green Bay Packers' is not a club in 2026": 1,
+  "club not derivable from the title: 'Houston Texans' is not a club in 2026": 1,
+  "club not derivable from the title: 'Indianapolis Colts' is not a club in 2026": 1,
+  "club not derivable from the title: 'Jaguars' is not a club in 2006": 1,
+  "club not derivable from the title: 'Kansas CIty Chiefs' is not a club in 2026": 1,
+  "club not derivable from the title: \"Lew Atchison's\" is not a club in 1968": 1,
+  "club not derivable from the title: \"Lindy's Pro Football Draft\" is not a club in 2019": 1,
+  "club not derivable from the title: 'New England Patriots' is not a club in 2026": 1,
+  "club not derivable from the title: 'New Orleans Saints' is not a club in 2026": 1,
+  "club not derivable from the title: 'New York Jets' is not a club in 2026": 1,
+  "club not derivable from the title: 'NFL' is not a club in 2011": 1,
+  "club not derivable from the title: 'NFL Hall Of Fame' is not a club in 2022": 1,
+  "club not derivable from the title: 'NFL Hall Of Fame' is not a club in 2023": 1,
+  "club not derivable from the title: 'NFL Hall Of Fame' is not a club in 2024": 1,
+  "club not derivable from the title: 'NFL Hall Of Fame' is not a club in 2025": 1,
+  "club not derivable from the title: 'NFL Record &' is not a club in 2024": 1,
+  "club not derivable from the title: 'NFL Official' is not a club in 1970": 1,
+  "club not derivable from the title: 'NFL Official' is not a club in 1971": 1,
+  "club not derivable from the title: 'NFL Official' is not a club in 1973": 1,
+  "club not derivable from the title: 'NFL Official' is not a club in 1976": 1,
+  "club not derivable from the title: 'Houston Oilers' is not a club in 1998": 1,
+  "club not derivable from the title: 'Patriots' is not a club in 1990": 1,
+  "club not derivable from the title: 'Philadelphia Eagles' is not a club in 2026": 1,
+  "club not derivable from the title: 'Pittsburgh Steelers Weekly V05.24 | April' is not a club in 1984": 1,
+  "club not derivable from the title: 'Pittsburgh Steelers Weekly V05.25 | May' is not a club in 1984": 1,
+  "club not derivable from the title: 'Pro Football Illustrated' is not a club in 1963": 1,
+  "club not derivable from the title: 'Pro Football Weekly' is not a club in 2013": 1,
+  "club not derivable from the title: \"Pro Football's Hall Of Fame--The Official Book\" is not a club in 1969": 1,
+  "club not derivable from the title: 'Los Angeles Rams' is not a club in 1995": 1,
+  "club not derivable from the title: 'Return to Glory: The Story of the' is not a club in 1986": 1,
+  "club not derivable from the title: 'San Francisco 49ers' is not a club in 2026": 1,
+  "club not derivable from the title: 'Sports Illustrated' is not a club in 1985": 1,
+  "club not derivable from the title: 'Sports Illustrated' is not a club in 1986": 1,
+  "club not derivable from the title: 'Sports Illustrated Peyton Manning Retirement Issue | Broncos' is not a club in 2016": 1,
+  "club not derivable from the title: 'Sports Illustrated Presents Super Bowl 50 Champions | Broncos' is not a club in 2016": 1,
+  "club not derivable from the title: 'Sports Illustrated Presents Super Bowl 40 Champions | Steelers' is not a club in 2006": 1,
+  "club not derivable from the title: 'Sports' is not a club in 1969": 1,
+  "club not derivable from the title: 'Super Bowl LII Game' is not a club in 2018": 1,
+  "club not derivable from the title: 'Super Bowl LIII Game' is not a club in 2019": 1,
+  "club not derivable from the title: 'Super Bowl LIV Game' is not a club in 2020": 1,
+  "club not derivable from the title: 'Super Bowl XII Game' is not a club in 1978": 1,
+  "club not derivable from the title: 'Super Bowl XIX Game' is not a club in 1985": 1,
+  "club not derivable from the title: 'Super Bowl XL Game' is not a club in 2006": 1,
+  "club not derivable from the title: 'Super Bowl XLVI Game' is not a club in 2012": 1,
+  "club not derivable from the title: 'Super Bowl XVIII Game' is not a club in 1984": 1,
+  "club not derivable from the title: 'Super Bowl XXIII Game' is not a club in 1989": 1,
+  "club not derivable from the title: 'Super Bowl XXVI Game' is not a club in 1992": 1,
+  "club not derivable from the title: 'Super Bowl XXVII Game' is not a club in 1993": 1,
+  "club not derivable from the title: 'Super Bowl XXXI Game' is not a club in 1997": 1,
+  "club not derivable from the title: 'Super Bowl XXXIII Game' is not a club in 1999": 1,
+  "club not derivable from the title: 'Tampa Bay Buccaneers' is not a club in 2026": 1,
+  "club not derivable from the title: 'Tennessee Titans' is not a club in 2026": 1,
+  "club not derivable from the title: 'TSN Pro Football' is not a club in 2000": 1,
+  "club not derivable from the title: 'The Super Men of the Super Bowl' is not a club in 1978": 1,
+  "club not derivable from the title: 'The SUPER Season: The Year To Remember--1985-86 Chicago Bears' is not a club in 1986": 1,
+  "club not derivable from the title: 'Washington Commanders' is not a club in 2026": 2,
+  "club not derivable from the title: 'Washington Redskins Postseason' is not a club in 2016": 1
  },
- "guides_read": 1756
+ "guides_read": 1939
 }
