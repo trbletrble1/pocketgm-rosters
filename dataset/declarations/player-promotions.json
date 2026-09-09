@@ -1,8 +1,20 @@
 {
  "_what": "How a player lead becomes a person.",
  "_ruled": "Ryan, 2026-09-08: if a man qualifies under the standing rule he IS promoted. No batch approval. The rule has already answered, and making him approve each batch turns a rule into a queue -- and the queue only grows as documents come in.",
- "_the_rule": "A person is someone who PLAYED, COACHED OR OFFICIATED at least one season. A player named on a ROSTER for a club-season the archive HOLDS qualifies.",
- "_what_still_comes_to_ryan": "What the rule REFUSES or flags as AMBIGUOUS. A man named only in a team photograph, a transaction or a camp list; a lead whose evidence kind the route does not know; and a name more than one held person carries. Those are judgements the rule cannot make and they are reported, never promoted.",
+ "_the_rule": "A person is someone who PLAYED, COACHED OR OFFICIATED at least one season. A player named on a ROSTER for a club-season the archive HOLDS qualifies. So does a man named in the caption to a TEAM PHOTOGRAPH, under the conditions in `_team_photograph_ruling` -- and under those conditions only.",
+ "_what_still_comes_to_ryan": "What the rule REFUSES or flags as AMBIGUOUS. A man named only in a transaction or a camp list; a lead whose evidence kind the route does not know; and a name more than one held person carries. Those are judgements the rule cannot make and they are reported, never promoted. A team photograph WAS on this list until 2026-09-08 and is now ruled -- see `_team_photograph_ruling`.",
  "_no_scope_key": "There was an in_scope_stores / in_scope_club_seasons pair here and it is deliberately gone. A scope key is how a standing rule quietly becomes a queue again.",
- "_refuse_by_default": "An evidence kind this route does not know is refused, not promoted. A new lead shape is not a roster until somebody says it is."
+ "_refuse_by_default": "An evidence kind this route does not know is refused, not promoted. A new lead shape is not a roster until somebody says it is.",
+ "_team_photograph_ruling": {
+  "_ruled": "Ryan, 2026-09-08.",
+  "_the_property": [
+   "the evidence is the caption to a TEAM PHOTOGRAPH, not a photograph of something else",
+   "the caption NAMES THE CLUB",
+   "the club-season is one the archive HOLDS"
+  ],
+  "_all_three_or_nothing": "A caption alone is not enough. A man named in a photograph of something other than his club's team picture is not covered, and neither is a club-season the archive does not hold. The three conditions are checked as a property in promote_players.qualify() and again in src/gate_team_photograph_promotions.py; neither names a man.",
+  "_why": "The twelve Pacific Coast Wildcats men failed not because they did not play but because PFA's box scores only see men who STARTED, and no source ever gave that club a roster. They were excluded by a gap in the evidence, not by evidence of absence. A man in uniform, in the team picture, named by the club's own opponent's programme, has a stronger claim to membership than most of what places men on 1920s clubs.",
+  "_the_predicate_does_not_move": "`programme.team_photograph` is NOT roster membership and does not become it. The distinction survives the promotion: the man becomes a person, and the claim keeps saying exactly what it said -- that he was photographed with this club, not that he played. A promotion under this ruling must never write a roster_membership claim, and the gate checks that as its own property.",
+  "_what_is_still_refused": "`boxscore_lineup`, `transaction` and `training_camp` are unchanged and still refused. Signed is not rostered; a camp list is who was invited; and a boxscore lead means the man did not resolve, which is an identity question, not a promotion."
+ }
 }

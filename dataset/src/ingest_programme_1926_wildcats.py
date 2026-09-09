@@ -20,6 +20,7 @@ import os, sys, json, collections
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 import index_io as IO
+from readings import person_name
 
 SOURCE = {
     "source_id": "programme-1926-nyy-pcw",
@@ -127,9 +128,25 @@ REFUSALS = [
 ]
 
 
+def _promoted():
+    """Men this caption's leads were promoted into people by, from the decision store.
+    The id is the DECISION's -- never minted here, never minted twice. Names are read
+    through readings.person_name, the archive's one name reading, rather than a local
+    copy: there were four copies of that rule and they disagreed."""
+    p = os.path.join(BASE, "build", "player-promotions.json")
+    if not os.path.exists(p):
+        return {}
+    out = {}
+    for q in json.load(open(p))["promotions"]:
+        if q.get("source", "").startswith(SOURCE["source_id"]):
+            out[person_name(q["name"])] = q
+    return out
+
+
 def main(write=True):
     claims, leads = [], []
     n = collections.Counter()
+    promoted = _promoted()
 
     def claim(sr, subj, pred, val, **kw):
         c = {"source_record": sr, "source_id": SOURCE["source_id"],
@@ -166,15 +183,45 @@ def main(write=True):
                    "club-season has from a source that is not Pro Football Archives."},
               person=pid)
 
-    # ---- the twelve: leads, under the afl-1926 precedent
+    # ---- the twelve. Held as leads until 2026-09-08; a man PROMOTED under the
+    # team-photograph ruling now gets a claim instead, and it is the SAME claim the ten
+    # held men get. The predicate does not move: he was photographed with this club.
+    # Nothing here says he played, and no roster_membership claim is written.
     for row, name in CAPTION:
         if name in JOIN: continue
+        q = promoted.get(person_name(name))
+        if q:
+            claim(SR_PHOTO, ["stint", q["person_id"], CLUB, SEASON], "programme.team_photograph",
+                  {"name_as_printed": name, "held_as": None,
+                   "caption_row": ROW_LABELS[row],
+                   "club_as_printed": "PACIFIC COAST WILDCATS",
+                   "club_code": CLUB, "league": LEAGUE, "year": int(SEASON), "game": GAME,
+                   "_join_evidence": "NOT a join. This man matched nobody in the archive; he "
+                       "was PROMOTED from this caption into a person of his own under Ryan's "
+                       "ruling of 2026-09-08, and his id is that decision's. "
+                       "See build/player-promotions.json.",
+                   "_no_archive_match_evidence": q.get("no_archive_match_evidence"),
+                   "_forename_unknown": q.get("forename_unknown"),
+                   "_definition": PREDICATE_DEFINITIONS["programme.team_photograph"]["definition"],
+                   "_is_not_a_roster": PREDICATE_DEFINITIONS["programme.team_photograph"]["is_not_a_roster"],
+                   "_promoted_not_rostered": "He is a person because the caption places him in "
+                       "the team picture of a club-season the archive holds. This claim says "
+                       "that and only that -- it is not roster membership and does not become "
+                       "it. AFL|1926|AFLPC has no roster from any source; its ten other men "
+                       "were derived from box scores, which see only who STARTED."},
+                  person=q["person_id"])
+            n["promoted_into_a_person"] += 1
+            continue
         leads.append({
             "lead_id": f"lead-pcw-1926-{len(leads)+1:03d}",
             "category": "player_lead_unpromoted", "IS_NOT_A_PERSON": True,
             "name_as_printed": name, "caption_row": ROW_LABELS[row],
             "places_on": {"club_as_printed": "Pacific Coast Wildcats", "club_code": CLUB,
-                          "league": LEAGUE, "year": int(SEASON), "game": GAME},
+                          "league": LEAGUE, "year": int(SEASON), "game": GAME,
+                          # THE KEY THE ARCHIVE USES. promote_players decides against the
+                          # club-seasons the index holds, so the lead has to name one in
+                          # that shape rather than leave the route to reconstruct it.
+                          "club_season": f"{LEAGUE}|{SEASON}|{CLUB}"},
             "evidence_kind": "team_photograph",
             "source_id": SOURCE["source_id"], "source_record": SR_PHOTO,
             "why": "named in the team-photograph caption and NOT held on AFL|1926|AFLPC. "
@@ -214,8 +261,12 @@ def main(write=True):
     return out
 
 
+
+# WRITING IS OPT-IN. Ruled 2026-09-09 after two incidents in one afternoon: this file
+# used to write on a bare run, so the safe action was the one you had to know to ask
+# for. `--write` is now required; without it the script computes and reports.
 if __name__ == "__main__":
-    o = main(write="--dry" not in sys.argv)
+    o = main(write="--write" in sys.argv)
     c = o["counts"]
     print(f"claims {c['claims']}  leads {c['leads']}  refusals {c['refusals']}")
     print(f"  caption names {c['men_in_caption']}: {c['corroborated_held_men']} corroborate held men, "
