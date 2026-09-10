@@ -381,8 +381,32 @@ def ranked_rows():
                 f'{x["status"]}; not in the club table, so no league source will ever carry it',
                 year=str(y), club=x["club"], league=None, gap=f'{y} {x["club"]}')
 
+    def name_the_club_seasons(x):
+        """`1937 Brooklyn Eagles (AFA) [AFA|1937|PFA:BKNE]`.
+
+        Ruled by Ryan, 2026-09-10: a raw club-season token tells a man browsing listings
+        nothing to search for. The KEY IS KEPT ALONGSIDE, not replaced -- it is what makes
+        the row traceable back to the measurement that produced it.
+
+        WHERE THE TABLE CANNOT NAME THE CLUB THE ROW SAYS SO. Falling back to the token in
+        silence would hide a real fact about that row behind something that looks like an
+        answer, which is the proxy defect this archive has already removed once. Measured
+        2026-09-10: all 205 club-seasons on these rows resolve, so this branch is empty
+        today and stays for the day it is not."""
+        out = []
+        for c in x.get("club_seasons_named") or [{"key": k, "named": False,
+                                                  "why": "not resolved by the measurement"}
+                                                 for k in x["club_seasons"]]:
+            if c.get("named"):
+                lg = f' ({c["league"]})' if c.get("league") else ""
+                out.append(f'{c["year"]} {c["name"]}{lg} [{c["key"]}]')
+            else:
+                out.append(f'{c["key"]} — **the club table cannot name this club**: {c["why"]}')
+        return "; ".join(out)
+
     for x in T["people_with_a_surname_and_nothing_else"]:
         keys = x["club_seasons"]
+        club_text = name_the_club_seasons(x)
         parts = [k.split("|", 2) for k in keys]
         yrs = {p[1].lstrip("y") for p in parts if len(p) == 3}
         lgs = {p[0] for p in parts if len(p) == 3}
@@ -394,13 +418,13 @@ def ranked_rows():
             # carries them, so this is reading, not inference.
             year=(yrs.pop() if len(yrs) == 1 else None),
             league=(lgs.pop() if len(lgs) == 1 else None),
-            club=", ".join(keys),
+            club=club_text,
             # THE NAME IS THE ONE FIELD THESE ROWS EXIST FOR. The first CSV carried only
             # the club-season key and dropped it: `P_002717` became a row about
             # APFA|1920|DE1 rather than about Gates. `name` is empty on every other kind,
             # because a club-season is not a person.
             name=x["name"],
-            gap=f'**{x["name"]}** — {", ".join(keys)}')
+            gap=f'**{x["name"]}** — {club_text}')
 
     return sorted(rows.values(), key=lambda r: (r["band"], r["tie"], r["gap"]))
 

@@ -10871,6 +10871,16 @@
    "club_seasons": [
     "APFA|1920|DE1"
    ],
+   "club_seasons_named": [
+    {
+     "key": "APFA|1920|DE1",
+     "named": true,
+     "club_id": "club-detroit-heralds-1920",
+     "name": "Detroit Heralds",
+     "year": "1920",
+     "league": "APFA"
+    }
+   ],
    "predicates_held_but_none_valued": [
     "college"
    ]
@@ -10880,6 +10890,16 @@
    "name": "King",
    "club_seasons": [
     "APFA|1920|DE1"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "APFA|1920|DE1",
+     "named": true,
+     "club_id": "club-detroit-heralds-1920",
+     "name": "Detroit Heralds",
+     "year": "1920",
+     "league": "APFA"
+    }
    ],
    "predicates_held_but_none_valued": [
     "college"
@@ -10891,6 +10911,16 @@
    "club_seasons": [
     "APFA|1920|DE1"
    ],
+   "club_seasons_named": [
+    {
+     "key": "APFA|1920|DE1",
+     "named": true,
+     "club_id": "club-detroit-heralds-1920",
+     "name": "Detroit Heralds",
+     "year": "1920",
+     "league": "APFA"
+    }
+   ],
    "predicates_held_but_none_valued": [
     "college"
    ]
@@ -10900,6 +10930,16 @@
    "name": "Mathewson",
    "club_seasons": [
     "APFA|1920|HAM"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "APFA|1920|HAM",
+     "named": true,
+     "club_id": "club-hammond-pros-1920",
+     "name": "Hammond Pros",
+     "year": "1920",
+     "league": "APFA"
+    }
    ],
    "predicates_held_but_none_valued": [
     "college"
@@ -10911,6 +10951,16 @@
    "club_seasons": [
     "APFA|1920|RI"
    ],
+   "club_seasons_named": [
+    {
+     "key": "APFA|1920|RI",
+     "named": true,
+     "club_id": "club-rock-island-independents-1920",
+     "name": "Rock Island Independents",
+     "year": "1920",
+     "league": "APFA"
+    }
+   ],
    "predicates_held_but_none_valued": [
     "college"
    ]
@@ -10920,6 +10970,16 @@
    "name": "Pepper",
    "club_seasons": [
     "APFA|1920|ROC"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "APFA|1920|ROC",
+     "named": true,
+     "club_id": "club-rochester-jeffersons-1920",
+     "name": "Rochester Jeffersons",
+     "year": "1920",
+     "league": "APFA"
+    }
    ],
    "predicates_held_but_none_valued": [
     "college"
@@ -10931,6 +10991,16 @@
    "club_seasons": [
     "APFA|1921|CL1"
    ],
+   "club_seasons_named": [
+    {
+     "key": "APFA|1921|CL1",
+     "named": true,
+     "club_id": "club-cleveland-tigers-1920",
+     "name": "Cleveland Indians",
+     "year": "1921",
+     "league": "APFA"
+    }
+   ],
    "predicates_held_but_none_valued": [
     "college"
    ]
@@ -10940,6 +11010,16 @@
    "name": "Patterson",
    "club_seasons": [
     "APFA|1921|CL1"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "APFA|1921|CL1",
+     "named": true,
+     "club_id": "club-cleveland-tigers-1920",
+     "name": "Cleveland Indians",
+     "year": "1921",
+     "league": "APFA"
+    }
    ],
    "predicates_held_but_none_valued": [
     "college"
@@ -10951,6 +11031,16 @@
    "club_seasons": [
     "CFL|1945|CFLMTL"
    ],
+   "club_seasons_named": [
+    {
+     "key": "CFL|1945|CFLMTL",
+     "named": true,
+     "club_id": "club-montreal-hornets-1945",
+     "name": "Montreal Hornets",
+     "year": "1945",
+     "league": "CFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -10958,6 +11048,16 @@
    "name": "Wood",
    "club_seasons": [
     "CFL|1953|CFLWPG"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "CFL|1953|CFLWPG",
+     "named": true,
+     "club_id": "club-winnipeg-blue-bombers-1945",
+     "name": "Winnipeg Blue Bombers",
+     "year": "1953",
+     "league": "CFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -10967,6 +11067,16 @@
    "club_seasons": [
     "IND|1903|DOC:FYJ-EARLY"
    ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1903|DOC:FYJ-EARLY",
+     "named": true,
+     "club_id": "club-frankford-yellow-jackets-1899",
+     "name": "Frankford Yellow Jackets",
+     "year": "1903",
+     "league": "IND"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -10974,6 +11084,16 @@
    "name": "Gorman",
    "club_seasons": [
     "IND|1922|DOC:FYJ-IND"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1922|DOC:FYJ-IND",
+     "named": true,
+     "club_id": "club-frankford-yellow-jackets-1922",
+     "name": "Frankford Yellow Jackets",
+     "year": "1922",
+     "league": "IND"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -10983,6 +11103,16 @@
    "club_seasons": [
     "IND|1922|DOC:FYJ-IND"
    ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1922|DOC:FYJ-IND",
+     "named": true,
+     "club_id": "club-frankford-yellow-jackets-1922",
+     "name": "Frankford Yellow Jackets",
+     "year": "1922",
+     "league": "IND"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -10990,6 +11120,16 @@
    "name": "Swinton",
    "club_seasons": [
     "IND|1922|DOC:FYJ-IND"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1922|DOC:FYJ-IND",
+     "named": true,
+     "club_id": "club-frankford-yellow-jackets-1922",
+     "name": "Frankford Yellow Jackets",
+     "year": "1922",
+     "league": "IND"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -10999,6 +11139,16 @@
    "club_seasons": [
     "EFL|1926|PFA:GIL"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:GIL",
+     "named": true,
+     "club_id": "club-gilberton-catamounts-1926",
+     "name": "Gilberton Catamounts",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11006,6 +11156,16 @@
    "name": "Boslego",
    "club_seasons": [
     "EFL|1926|PFA:GIL"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:GIL",
+     "named": true,
+     "club_id": "club-gilberton-catamounts-1926",
+     "name": "Gilberton Catamounts",
+     "year": "1926",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11015,6 +11175,16 @@
    "club_seasons": [
     "EFL|1926|PFA:GIL"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:GIL",
+     "named": true,
+     "club_id": "club-gilberton-catamounts-1926",
+     "name": "Gilberton Catamounts",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11022,6 +11192,16 @@
    "name": "Sheely",
    "club_seasons": [
     "EFL|1926|PFA:GIL"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:GIL",
+     "named": true,
+     "club_id": "club-gilberton-catamounts-1926",
+     "name": "Gilberton Catamounts",
+     "year": "1926",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11031,6 +11211,16 @@
    "club_seasons": [
     "EFL|1926|PFA:GIL"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:GIL",
+     "named": true,
+     "club_id": "club-gilberton-catamounts-1926",
+     "name": "Gilberton Catamounts",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11038,6 +11228,16 @@
    "name": "Chapman",
    "club_seasons": [
     "EFL|1926|PFA:GIL"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:GIL",
+     "named": true,
+     "club_id": "club-gilberton-catamounts-1926",
+     "name": "Gilberton Catamounts",
+     "year": "1926",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11047,6 +11247,16 @@
    "club_seasons": [
     "EFL|1926|PFA:GIL"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:GIL",
+     "named": true,
+     "club_id": "club-gilberton-catamounts-1926",
+     "name": "Gilberton Catamounts",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11054,6 +11264,16 @@
    "name": "Joseph",
    "club_seasons": [
     "EFL|1926|PFA:GIL"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:GIL",
+     "named": true,
+     "club_id": "club-gilberton-catamounts-1926",
+     "name": "Gilberton Catamounts",
+     "year": "1926",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11063,6 +11283,16 @@
    "club_seasons": [
     "EFL|1926|PFA:BET"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11070,6 +11300,16 @@
    "name": "Youkonis",
    "club_seasons": [
     "EFL|1926|PFA:BET"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11079,6 +11319,16 @@
    "club_seasons": [
     "EFL|1926|PFA:BET"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11086,6 +11336,16 @@
    "name": "Goldman",
    "club_seasons": [
     "EFL|1926|PFA:BET"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11095,6 +11355,16 @@
    "club_seasons": [
     "EFL|1926|PFA:BET"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11102,6 +11372,16 @@
    "name": "Eastman",
    "club_seasons": [
     "EFL|1926|PFA:BET"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11111,6 +11391,16 @@
    "club_seasons": [
     "EFL|1926|PFA:BET"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11118,6 +11408,16 @@
    "name": "Downey",
    "club_seasons": [
     "EFL|1926|PFA:BET"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11127,6 +11427,16 @@
    "club_seasons": [
     "EFL|1926|PFA:BET"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11134,6 +11444,16 @@
    "name": "Gooch",
    "club_seasons": [
     "EFL|1926|PFA:BET"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11143,6 +11463,16 @@
    "club_seasons": [
     "EFL|1926|PFA:BET"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11150,6 +11480,16 @@
    "name": "Kozlek",
    "club_seasons": [
     "EFL|1926|PFA:BET"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11159,6 +11499,16 @@
    "club_seasons": [
     "EFL|1926|PFA:BET"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11166,6 +11516,16 @@
    "name": "Lehecka",
    "club_seasons": [
     "EFL|1926|PFA:BET"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11175,6 +11535,16 @@
    "club_seasons": [
     "EFL|1926|PFA:BET"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1926|PFA:BET",
+     "named": true,
+     "club_id": "club-bethlehem-bears-1926",
+     "name": "Bethlehem Bears",
+     "year": "1926",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11183,6 +11553,16 @@
    "club_seasons": [
     "NFL|1925|FYJ"
    ],
+   "club_seasons_named": [
+    {
+     "key": "NFL|1925|FYJ",
+     "named": true,
+     "club_id": "club-frankford-yellow-jackets-1924",
+     "name": "Frankford Yellow Jackets",
+     "year": "1925",
+     "league": "NFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11190,6 +11570,16 @@
    "name": "Riley",
    "club_seasons": [
     "NFL|1924|RAC"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "NFL|1924|RAC",
+     "named": true,
+     "club_id": "club-racine-legion-1922",
+     "name": "Racine Legion",
+     "year": "1924",
+     "league": "NFL"
+    }
    ],
    "predicates_held_but_none_valued": [
     "college"
@@ -11200,6 +11590,16 @@
    "name": "McCauley",
    "club_seasons": [
     "EFL|1932|PFA:MTV"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1932|PFA:MTV",
+     "named": true,
+     "club_id": "club-mount-vernon-indians-1932",
+     "name": "Mount Vernon Indians",
+     "year": "1932",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11213,6 +11613,48 @@
     "DFL|1936|PFA:POR",
     "EFL|1932|PFA:MTV"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1937|PFA:WP",
+     "named": true,
+     "club_id": "club-white-plains-bears-1937",
+     "name": "White Plains Bears",
+     "year": "1937",
+     "league": "AFA"
+    },
+    {
+     "key": "AFL|1944|PFA:SF",
+     "named": true,
+     "club_id": "club-san-francisco-clippers-1944",
+     "name": "San Francisco Clippers",
+     "year": "1944",
+     "league": "AFL"
+    },
+    {
+     "key": "COFL|1966|PFA:BKN",
+     "named": true,
+     "club_id": "club-brooklyn-dodgers-1966",
+     "name": "Brooklyn Dodgers",
+     "year": "1966",
+     "league": "COFL"
+    },
+    {
+     "key": "DFL|1936|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1936",
+     "league": "DFL"
+    },
+    {
+     "key": "EFL|1932|PFA:MTV",
+     "named": true,
+     "club_id": "club-mount-vernon-indians-1932",
+     "name": "Mount Vernon Indians",
+     "year": "1932",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11220,6 +11662,16 @@
    "name": "Borchers",
    "club_seasons": [
     "EFL|1932|PFA:NEW"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1932|PFA:NEW",
+     "named": true,
+     "club_id": "club-newark-fighting-irish-1932",
+     "name": "Newark Fighting Irish",
+     "year": "1932",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11229,6 +11681,16 @@
    "club_seasons": [
     "EFL|1932|PFA:NEW"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1932|PFA:NEW",
+     "named": true,
+     "club_id": "club-newark-fighting-irish-1932",
+     "name": "Newark Fighting Irish",
+     "year": "1932",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11236,6 +11698,16 @@
    "name": "Slater",
    "club_seasons": [
     "EFL|1932|PFA:NEW"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1932|PFA:NEW",
+     "named": true,
+     "club_id": "club-newark-fighting-irish-1932",
+     "name": "Newark Fighting Irish",
+     "year": "1932",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11245,6 +11717,16 @@
    "club_seasons": [
     "EFL|1932|PFA:NEW"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1932|PFA:NEW",
+     "named": true,
+     "club_id": "club-newark-fighting-irish-1932",
+     "name": "Newark Fighting Irish",
+     "year": "1932",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11252,6 +11734,16 @@
    "name": "Nally",
    "club_seasons": [
     "IFL|1933|PFA:PAS"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "IFL|1933|PFA:PAS",
+     "named": true,
+     "club_id": "club-passaic-red-devils-1932",
+     "name": "Passaic Red Devils",
+     "year": "1933",
+     "league": "IFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11261,6 +11753,16 @@
    "club_seasons": [
     "EFL|1932|PFA:PAT"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1932|PFA:PAT",
+     "named": true,
+     "club_id": "club-paterson-night-hawks-1932",
+     "name": "Paterson Night Hawks",
+     "year": "1932",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11268,6 +11770,16 @@
    "name": "Broadberg",
    "club_seasons": [
     "IFL|1933|PFA:BAY"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "IFL|1933|PFA:BAY",
+     "named": true,
+     "club_id": "club-bayonne-vikings-1933",
+     "name": "Bayonne Vikings",
+     "year": "1933",
+     "league": "IFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11277,6 +11789,16 @@
    "club_seasons": [
     "IFL|1933|PFA:CLI"
    ],
+   "club_seasons_named": [
+    {
+     "key": "IFL|1933|PFA:CLI",
+     "named": true,
+     "club_id": "club-clifton-wessingtons-1933",
+     "name": "Clifton Wessingtons",
+     "year": "1933",
+     "league": "IFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11284,6 +11806,16 @@
    "name": "Wenzel",
    "club_seasons": [
     "IFL|1933|PFA:CLI"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "IFL|1933|PFA:CLI",
+     "named": true,
+     "club_id": "club-clifton-wessingtons-1933",
+     "name": "Clifton Wessingtons",
+     "year": "1933",
+     "league": "IFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11293,6 +11825,16 @@
    "club_seasons": [
     "IFL|1933|PFA:FRA"
    ],
+   "club_seasons_named": [
+    {
+     "key": "IFL|1933|PFA:FRA",
+     "named": true,
+     "club_id": "club-frankford-legion-1933",
+     "name": "Frankford Legion",
+     "year": "1933",
+     "league": "IFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11300,6 +11842,16 @@
    "name": "Hufford",
    "club_seasons": [
     "PCFL|1934|PFA:SC"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1934|PFA:SC",
+     "named": true,
+     "club_id": "club-southern-california-maroons-1934",
+     "name": "Southern California Maroons",
+     "year": "1934",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11309,6 +11861,16 @@
    "club_seasons": [
     "ALFL|1935|PFA:WES"
    ],
+   "club_seasons_named": [
+    {
+     "key": "ALFL|1935|PFA:WES",
+     "named": true,
+     "club_id": "club-westwood-cubs-1934",
+     "name": "Westwood Cubs",
+     "year": "1935",
+     "league": "ALFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11316,6 +11878,16 @@
    "name": "Gass",
    "club_seasons": [
     "DFL|1936|PFA:ALE"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1936|PFA:ALE",
+     "named": true,
+     "club_id": "club-alexandria-celtics-1936",
+     "name": "Alexandria Celtics",
+     "year": "1936",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11325,6 +11897,16 @@
    "club_seasons": [
     "DFL|1936|PFA:ALE"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1936|PFA:ALE",
+     "named": true,
+     "club_id": "club-alexandria-celtics-1936",
+     "name": "Alexandria Celtics",
+     "year": "1936",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11332,6 +11914,16 @@
    "name": "Gerby",
    "club_seasons": [
     "DFL|1937|PFA:ALE"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1937|PFA:ALE",
+     "named": true,
+     "club_id": "club-alexandria-celtics-1936",
+     "name": "Alexandria Celtics",
+     "year": "1937",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11341,6 +11933,16 @@
    "club_seasons": [
     "DFL|1936|PFA:BAL"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1936|PFA:BAL",
+     "named": true,
+     "club_id": "club-baltimore-orioles-1936",
+     "name": "Baltimore Orioles",
+     "year": "1936",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11348,6 +11950,16 @@
    "name": "Porter",
    "club_seasons": [
     "DFL|1936|PFA:BAL"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1936|PFA:BAL",
+     "named": true,
+     "club_id": "club-baltimore-orioles-1936",
+     "name": "Baltimore Orioles",
+     "year": "1936",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11357,6 +11969,16 @@
    "club_seasons": [
     "MWFL|1936|PFA:COL"
    ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:COL",
+     "named": true,
+     "club_id": "club-columbus-bobbs-1936",
+     "name": "Columbus Bobbs",
+     "year": "1936",
+     "league": "MWFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11364,6 +11986,16 @@
    "name": "Long",
    "club_seasons": [
     "MWFL|1936|PFA:COL"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:COL",
+     "named": true,
+     "club_id": "club-columbus-bobbs-1936",
+     "name": "Columbus Bobbs",
+     "year": "1936",
+     "league": "MWFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11373,6 +12005,16 @@
    "club_seasons": [
     "MWFL|1936|PFA:COL"
    ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:COL",
+     "named": true,
+     "club_id": "club-columbus-bobbs-1936",
+     "name": "Columbus Bobbs",
+     "year": "1936",
+     "league": "MWFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11380,6 +12022,16 @@
    "name": "Thompson",
    "club_seasons": [
     "MWFL|1936|PFA:COL"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:COL",
+     "named": true,
+     "club_id": "club-columbus-bobbs-1936",
+     "name": "Columbus Bobbs",
+     "year": "1936",
+     "league": "MWFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11389,6 +12041,16 @@
    "club_seasons": [
     "AFL|1939|PFA:LOU"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1939|PFA:LOU",
+     "named": true,
+     "club_id": "club-louisville-tanks-1936",
+     "name": "Louisville Tanks",
+     "year": "1939",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11396,6 +12058,16 @@
    "name": "Bottles",
    "club_seasons": [
     "AFA|1936|PFA:MTV"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1936|PFA:MTV",
+     "named": true,
+     "club_id": "club-mount-vernon-cardinals-1936",
+     "name": "Mount Vernon Cardinals",
+     "year": "1936",
+     "league": "AFA"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11406,6 +12078,24 @@
     "AFA|1937|PFA:BKNB",
     "AFA|1937|PFA:MTV"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1937|PFA:BKNB",
+     "named": true,
+     "club_id": "club-brooklyn-bushwicks-1937",
+     "name": "Brooklyn Bushwicks",
+     "year": "1937",
+     "league": "AFA"
+    },
+    {
+     "key": "AFA|1937|PFA:MTV",
+     "named": true,
+     "club_id": "club-mount-vernon-cardinals-1936",
+     "name": "Mount Vernon Cardinals",
+     "year": "1937",
+     "league": "AFA"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11413,6 +12103,16 @@
    "name": "Smithers",
    "club_seasons": [
     "DFL|1937|PFA:POR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1937|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1937",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11422,6 +12122,16 @@
    "club_seasons": [
     "DFL|1938|PFA:POR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1938|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1938",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11429,6 +12139,16 @@
    "name": "Smallson",
    "club_seasons": [
     "DFL|1938|PFA:POR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1938|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1938",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11438,6 +12158,16 @@
    "club_seasons": [
     "DFL|1938|PFA:POR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1938|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1938",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11445,6 +12175,16 @@
    "name": "Culley",
    "club_seasons": [
     "DFL|1939|PFA:POR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1939|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1939",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11455,6 +12195,24 @@
     "DFL|1940|PFA:POR",
     "DFL|1941|PFA:POR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1940|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1940",
+     "league": "DFL"
+    },
+    {
+     "key": "DFL|1941|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1941",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11462,6 +12220,16 @@
    "name": "Williams",
    "club_seasons": [
     "DFL|1940|PFA:POR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1940|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1940",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11471,6 +12239,16 @@
    "club_seasons": [
     "DFL|1941|PFA:POR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1941|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1941",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11478,6 +12256,16 @@
    "name": "Corbin",
    "club_seasons": [
     "DFL|1941|PFA:POR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1941|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1941",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11487,6 +12275,16 @@
    "club_seasons": [
     "DFL|1941|PFA:POR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1941|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1941",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11494,6 +12292,16 @@
    "name": "Hickey",
    "club_seasons": [
     "DFL|1941|PFA:POR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1941|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1941",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11503,6 +12311,16 @@
    "club_seasons": [
     "DFL|1941|PFA:POR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1941|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-cubs-1936",
+     "name": "Portsmouth Cubs",
+     "year": "1941",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11510,6 +12328,16 @@
    "name": "Moran",
    "club_seasons": [
     "DFL|1936|PFA:RIC"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1936|PFA:RIC",
+     "named": true,
+     "club_id": "club-richmond-arrows-1936",
+     "name": "Richmond Arrows",
+     "year": "1936",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11519,6 +12347,16 @@
    "club_seasons": [
     "MWFL|1936|PFA:SPR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:SPR",
+     "named": true,
+     "club_id": "club-springfield-bicos-1936",
+     "name": "Springfield Bicos",
+     "year": "1936",
+     "league": "MWFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11526,6 +12364,16 @@
    "name": "Donalds",
    "club_seasons": [
     "MWFL|1936|PFA:SPR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:SPR",
+     "named": true,
+     "club_id": "club-springfield-bicos-1936",
+     "name": "Springfield Bicos",
+     "year": "1936",
+     "league": "MWFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11535,6 +12383,16 @@
    "club_seasons": [
     "MWFL|1936|PFA:SPR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:SPR",
+     "named": true,
+     "club_id": "club-springfield-bicos-1936",
+     "name": "Springfield Bicos",
+     "year": "1936",
+     "league": "MWFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11542,6 +12400,16 @@
    "name": "Hendricks",
    "club_seasons": [
     "MWFL|1936|PFA:SPR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:SPR",
+     "named": true,
+     "club_id": "club-springfield-bicos-1936",
+     "name": "Springfield Bicos",
+     "year": "1936",
+     "league": "MWFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11552,6 +12420,24 @@
     "AFL|1944|PFA:SF",
     "MWFL|1936|PFA:SPR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:SF",
+     "named": true,
+     "club_id": "club-san-francisco-clippers-1944",
+     "name": "San Francisco Clippers",
+     "year": "1944",
+     "league": "AFL"
+    },
+    {
+     "key": "MWFL|1936|PFA:SPR",
+     "named": true,
+     "club_id": "club-springfield-bicos-1936",
+     "name": "Springfield Bicos",
+     "year": "1936",
+     "league": "MWFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11559,6 +12445,16 @@
    "name": "Malahey",
    "club_seasons": [
     "MWFL|1936|PFA:SPR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:SPR",
+     "named": true,
+     "club_id": "club-springfield-bicos-1936",
+     "name": "Springfield Bicos",
+     "year": "1936",
+     "league": "MWFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11568,6 +12464,16 @@
    "club_seasons": [
     "MWFL|1936|PFA:SPR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:SPR",
+     "named": true,
+     "club_id": "club-springfield-bicos-1936",
+     "name": "Springfield Bicos",
+     "year": "1936",
+     "league": "MWFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11575,6 +12481,16 @@
    "name": "Schlicher",
    "club_seasons": [
     "MWFL|1936|PFA:SPR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:SPR",
+     "named": true,
+     "club_id": "club-springfield-bicos-1936",
+     "name": "Springfield Bicos",
+     "year": "1936",
+     "league": "MWFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11584,6 +12500,16 @@
    "club_seasons": [
     "MWFL|1936|PFA:SPR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "MWFL|1936|PFA:SPR",
+     "named": true,
+     "club_id": "club-springfield-bicos-1936",
+     "name": "Springfield Bicos",
+     "year": "1936",
+     "league": "MWFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11591,6 +12517,16 @@
    "name": "Henry",
    "club_seasons": [
     "AFA|1936|PFA:STA"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1936|PFA:STA",
+     "named": true,
+     "club_id": "club-stapeton-buffaloes-1936",
+     "name": "Stapeton Buffaloes",
+     "year": "1936",
+     "league": "AFA"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11600,6 +12536,16 @@
    "club_seasons": [
     "DFL|1936|PFA:WAS"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1936|PFA:WAS",
+     "named": true,
+     "club_id": "club-washington-pros-1936",
+     "name": "Washington Pros",
+     "year": "1936",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11607,6 +12553,16 @@
    "name": "Hall",
    "club_seasons": [
     "DFL|1936|PFA:WAS"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1936|PFA:WAS",
+     "named": true,
+     "club_id": "club-washington-pros-1936",
+     "name": "Washington Pros",
+     "year": "1936",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11616,6 +12572,16 @@
    "club_seasons": [
     "AFA|1937|PFA:BKNB"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1937|PFA:BKNB",
+     "named": true,
+     "club_id": "club-brooklyn-bushwicks-1937",
+     "name": "Brooklyn Bushwicks",
+     "year": "1937",
+     "league": "AFA"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11624,6 +12590,16 @@
    "club_seasons": [
     "AFA|1937|PFA:BKNE"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1937|PFA:BKNE",
+     "named": true,
+     "club_id": "club-brooklyn-eagles-1937",
+     "name": "Brooklyn Eagles",
+     "year": "1937",
+     "league": "AFA"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11631,6 +12607,16 @@
    "name": "DeMayo",
    "club_seasons": [
     "AFA|1937|PFA:NEW"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1937|PFA:NEW",
+     "named": true,
+     "club_id": "club-newark-tornadoes-1937",
+     "name": "Newark Tornadoes",
+     "year": "1937",
+     "league": "AFA"
+    }
    ],
    "predicates_held_but_none_valued": [
     "college"
@@ -11642,6 +12628,16 @@
    "club_seasons": [
     "AFL|1938|PFA:STL"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1938|PFA:STL",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1937",
+     "name": "St. Louis Gunners",
+     "year": "1938",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11649,6 +12645,16 @@
    "name": "Merkle",
    "club_seasons": [
     "DFL|1939|PFA:WAS"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1939|PFA:WAS",
+     "named": true,
+     "club_id": "club-washington-presidents-1937",
+     "name": "Washington Presidents",
+     "year": "1939",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11658,6 +12664,16 @@
    "club_seasons": [
     "DFL|1940|PFA:WAS"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1940|PFA:WAS",
+     "named": true,
+     "club_id": "club-washington-presidents-1937",
+     "name": "Washington Presidents",
+     "year": "1940",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11666,6 +12682,16 @@
    "club_seasons": [
     "AFA|1937|PFA:WP"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1937|PFA:WP",
+     "named": true,
+     "club_id": "club-white-plains-bears-1937",
+     "name": "White Plains Bears",
+     "year": "1937",
+     "league": "AFA"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11673,6 +12699,16 @@
    "name": "Schwartz",
    "club_seasons": [
     "AFA|1937|PFA:WP"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1937|PFA:WP",
+     "named": true,
+     "club_id": "club-white-plains-bears-1937",
+     "name": "White Plains Bears",
+     "year": "1937",
+     "league": "AFA"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11683,6 +12719,24 @@
     "AFA|1937|PFA:WP",
     "DFL|1941|PFA:NN"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1937|PFA:WP",
+     "named": true,
+     "club_id": "club-white-plains-bears-1937",
+     "name": "White Plains Bears",
+     "year": "1937",
+     "league": "AFA"
+    },
+    {
+     "key": "DFL|1941|PFA:NN",
+     "named": true,
+     "club_id": "club-newport-news-builders-1941",
+     "name": "Newport News Builders",
+     "year": "1941",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11690,6 +12744,16 @@
    "name": "Barachie",
    "club_seasons": [
     "EFL|1938|PFA:HAZ"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1938|PFA:HAZ",
+     "named": true,
+     "club_id": "club-hazelton-redskins-1938",
+     "name": "Hazelton Redskins",
+     "year": "1938",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": [
     "college"
@@ -11701,6 +12765,16 @@
    "club_seasons": [
     "AFL|1938|PFA:NAS"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1938|PFA:NAS",
+     "named": true,
+     "club_id": "club-nashville-rebels-1938",
+     "name": "Nashville Rebels",
+     "year": "1938",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11708,6 +12782,16 @@
    "name": "Bernard",
    "club_seasons": [
     "EFL|1938|PFA:SCR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1938|PFA:SCR",
+     "named": true,
+     "club_id": "club-scarnton-miners-1938",
+     "name": "Scarnton Miners",
+     "year": "1938",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11717,6 +12801,16 @@
    "club_seasons": [
     "EFL|1938|PFA:SCR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1938|PFA:SCR",
+     "named": true,
+     "club_id": "club-scarnton-miners-1938",
+     "name": "Scarnton Miners",
+     "year": "1938",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11724,6 +12818,16 @@
    "name": "Kehrli",
    "club_seasons": [
     "EFL|1938|PFA:SCR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1938|PFA:SCR",
+     "named": true,
+     "club_id": "club-scarnton-miners-1938",
+     "name": "Scarnton Miners",
+     "year": "1938",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11733,6 +12837,16 @@
    "club_seasons": [
     "EFL|1938|PFA:SCR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1938|PFA:SCR",
+     "named": true,
+     "club_id": "club-scarnton-miners-1938",
+     "name": "Scarnton Miners",
+     "year": "1938",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11740,6 +12854,16 @@
    "name": "McDonough",
    "club_seasons": [
     "EFL|1938|PFA:SCR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1938|PFA:SCR",
+     "named": true,
+     "club_id": "club-scarnton-miners-1938",
+     "name": "Scarnton Miners",
+     "year": "1938",
+     "league": "EFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11749,6 +12873,16 @@
    "club_seasons": [
     "EFL|1938|PFA:SCR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "EFL|1938|PFA:SCR",
+     "named": true,
+     "club_id": "club-scarnton-miners-1938",
+     "name": "Scarnton Miners",
+     "year": "1938",
+     "league": "EFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11756,6 +12890,16 @@
    "name": "Ceppi",
    "club_seasons": [
     "AFA|1939|PFA:BKNE"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1939|PFA:BKNE",
+     "named": true,
+     "club_id": "club-brooklyn-eagles-1939",
+     "name": "Brooklyn Eagles",
+     "year": "1939",
+     "league": "AFA"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11765,6 +12909,16 @@
    "club_seasons": [
     "AFA|1939|PFA:BKNE"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1939|PFA:BKNE",
+     "named": true,
+     "club_id": "club-brooklyn-eagles-1939",
+     "name": "Brooklyn Eagles",
+     "year": "1939",
+     "league": "AFA"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11772,6 +12926,16 @@
    "name": "Mooney",
    "club_seasons": [
     "AFA|1939|PFA:BKNE"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1939|PFA:BKNE",
+     "named": true,
+     "club_id": "club-brooklyn-eagles-1939",
+     "name": "Brooklyn Eagles",
+     "year": "1939",
+     "league": "AFA"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11781,6 +12945,16 @@
    "club_seasons": [
     "AFA|1939|PFA:BKNE"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFA|1939|PFA:BKNE",
+     "named": true,
+     "club_id": "club-brooklyn-eagles-1939",
+     "name": "Brooklyn Eagles",
+     "year": "1939",
+     "league": "AFA"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11788,6 +12962,16 @@
    "name": "Olgis",
    "club_seasons": [
     "AFL|1940|PFA:CIN"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1940|PFA:CIN",
+     "named": true,
+     "club_id": "club-cincinnati-bengals-1939",
+     "name": "Cincinnati Bengals",
+     "year": "1940",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11797,6 +12981,16 @@
    "club_seasons": [
     "AFL|1939|PFA:DAY"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1939|PFA:DAY",
+     "named": true,
+     "club_id": "club-dayton-bombers-1939",
+     "name": "Dayton Bombers",
+     "year": "1939",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11804,6 +12998,16 @@
    "name": "Tarzenski",
    "club_seasons": [
     "AFL|1939|PFA:DAY"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1939|PFA:DAY",
+     "named": true,
+     "club_id": "club-dayton-bombers-1939",
+     "name": "Dayton Bombers",
+     "year": "1939",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11813,6 +13017,16 @@
    "club_seasons": [
     "PCFL|1943|PFA:LAB"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:LAB",
+     "named": true,
+     "club_id": "club-los-angeles-bulldogs-1940",
+     "name": "Los Angeles Bulldogs",
+     "year": "1943",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11821,6 +13035,16 @@
    "club_seasons": [
     "PCFL|1943|PFA:LAB"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:LAB",
+     "named": true,
+     "club_id": "club-los-angeles-bulldogs-1940",
+     "name": "Los Angeles Bulldogs",
+     "year": "1943",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11828,6 +13052,16 @@
    "name": "Hawkins",
    "club_seasons": [
     "PCFL|1943|PFA:LAB"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:LAB",
+     "named": true,
+     "club_id": "club-los-angeles-bulldogs-1940",
+     "name": "Los Angeles Bulldogs",
+     "year": "1943",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11838,6 +13072,24 @@
     "AFL|1944|PFA:LAM",
     "PCFL|1943|PFA:LAB"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:LAM",
+     "named": true,
+     "club_id": "club-los-angeles-mustangs-1943",
+     "name": "Los Angeles Mustangs",
+     "year": "1944",
+     "league": "AFL"
+    },
+    {
+     "key": "PCFL|1943|PFA:LAB",
+     "named": true,
+     "club_id": "club-los-angeles-bulldogs-1940",
+     "name": "Los Angeles Bulldogs",
+     "year": "1943",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11845,6 +13097,16 @@
    "name": "Mills",
    "club_seasons": [
     "PCFL|1943|PFA:LAB"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:LAB",
+     "named": true,
+     "club_id": "club-los-angeles-bulldogs-1940",
+     "name": "Los Angeles Bulldogs",
+     "year": "1943",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11854,6 +13116,16 @@
    "club_seasons": [
     "PCFL|1943|PFA:LAB"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:LAB",
+     "named": true,
+     "club_id": "club-los-angeles-bulldogs-1940",
+     "name": "Los Angeles Bulldogs",
+     "year": "1943",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11861,6 +13133,16 @@
    "name": "Tuttle",
    "club_seasons": [
     "PCFL|1943|PFA:LAB"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:LAB",
+     "named": true,
+     "club_id": "club-los-angeles-bulldogs-1940",
+     "name": "Los Angeles Bulldogs",
+     "year": "1943",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11870,6 +13152,16 @@
    "club_seasons": [
     "PCFL|1944|PFA:LAB"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1944|PFA:LAB",
+     "named": true,
+     "club_id": "club-los-angeles-bulldogs-1940",
+     "name": "Los Angeles Bulldogs",
+     "year": "1944",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11877,6 +13169,16 @@
    "name": "Burn",
    "club_seasons": [
     "PCFL|1945|PFA:LAB"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1945|PFA:LAB",
+     "named": true,
+     "club_id": "club-los-angeles-bulldogs-1940",
+     "name": "Los Angeles Bulldogs",
+     "year": "1945",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11886,6 +13188,16 @@
    "club_seasons": [
     "PCFL|1945|PFA:LAB"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1945|PFA:LAB",
+     "named": true,
+     "club_id": "club-los-angeles-bulldogs-1940",
+     "name": "Los Angeles Bulldogs",
+     "year": "1945",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11893,6 +13205,16 @@
    "name": "Ruh",
    "club_seasons": [
     "PCFL|1945|PFA:LAB"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1945|PFA:LAB",
+     "named": true,
+     "club_id": "club-los-angeles-bulldogs-1940",
+     "name": "Los Angeles Bulldogs",
+     "year": "1945",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11902,6 +13224,16 @@
    "club_seasons": [
     "DFL|1940|PFA:NOR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1940|PFA:NOR",
+     "named": true,
+     "club_id": "club-norfolk-shamrocks-1940",
+     "name": "Norfolk Shamrocks",
+     "year": "1940",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11909,6 +13241,16 @@
    "name": "Booth",
    "club_seasons": [
     "DFL|1941|PFA:NOR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1941|PFA:NOR",
+     "named": true,
+     "club_id": "club-norfolk-shamrocks-1940",
+     "name": "Norfolk Shamrocks",
+     "year": "1941",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11918,6 +13260,16 @@
    "club_seasons": [
     "DFL|1941|PFA:NOR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1941|PFA:NOR",
+     "named": true,
+     "club_id": "club-norfolk-shamrocks-1940",
+     "name": "Norfolk Shamrocks",
+     "year": "1941",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11925,6 +13277,16 @@
    "name": "Hesselman",
    "club_seasons": [
     "DFL|1941|PFA:NOR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1941|PFA:NOR",
+     "named": true,
+     "club_id": "club-norfolk-shamrocks-1940",
+     "name": "Norfolk Shamrocks",
+     "year": "1941",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11934,6 +13296,16 @@
    "club_seasons": [
     "PCFL|1941|PFA:SD"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1941|PFA:SD",
+     "named": true,
+     "club_id": "club-san-diego-bombers-1940",
+     "name": "San Diego Bombers",
+     "year": "1941",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11941,6 +13313,16 @@
    "name": "Hare",
    "club_seasons": [
     "PCFL|1942|PFA:SD"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1942|PFA:SD",
+     "named": true,
+     "club_id": "club-san-diego-bombers-1940",
+     "name": "San Diego Bombers",
+     "year": "1942",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11950,6 +13332,16 @@
    "club_seasons": [
     "PCFL|1943|PFA:SD"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:SD",
+     "named": true,
+     "club_id": "club-san-diego-bombers-1940",
+     "name": "San Diego Bombers",
+     "year": "1943",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11957,6 +13349,16 @@
    "name": "Douglas",
    "club_seasons": [
     "PCFL|1943|PFA:SD"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:SD",
+     "named": true,
+     "club_id": "club-san-diego-bombers-1940",
+     "name": "San Diego Bombers",
+     "year": "1943",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11967,6 +13369,24 @@
     "PCFL|1943|PFA:SD",
     "PCFL|1944|PFA:PCFL:SF"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:SD",
+     "named": true,
+     "club_id": "club-san-diego-bombers-1940",
+     "name": "San Diego Bombers",
+     "year": "1943",
+     "league": "PCFL"
+    },
+    {
+     "key": "PCFL|1944|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1944",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11974,6 +13394,16 @@
    "name": "Sloan",
    "club_seasons": [
     "PCFL|1943|PFA:SD"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:SD",
+     "named": true,
+     "club_id": "club-san-diego-bombers-1940",
+     "name": "San Diego Bombers",
+     "year": "1943",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11983,6 +13413,16 @@
    "club_seasons": [
     "PCFL|1945|PFA:SD"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1945|PFA:SD",
+     "named": true,
+     "club_id": "club-san-diego-bombers-1940",
+     "name": "San Diego Bombers",
+     "year": "1945",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -11990,6 +13430,16 @@
    "name": "Hackney",
    "club_seasons": [
     "PCFL|1945|PFA:SD"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1945|PFA:SD",
+     "named": true,
+     "club_id": "club-san-diego-bombers-1940",
+     "name": "San Diego Bombers",
+     "year": "1945",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -11999,6 +13449,16 @@
    "club_seasons": [
     "PCFL|1945|PFA:SD"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1945|PFA:SD",
+     "named": true,
+     "club_id": "club-san-diego-bombers-1940",
+     "name": "San Diego Bombers",
+     "year": "1945",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12006,6 +13466,16 @@
    "name": "Baker",
    "club_seasons": [
     "DFL|1941|PFA:NN"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1941|PFA:NN",
+     "named": true,
+     "club_id": "club-newport-news-builders-1941",
+     "name": "Newport News Builders",
+     "year": "1941",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12015,6 +13485,16 @@
    "club_seasons": [
     "DFL|1941|PFA:ROA"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1941|PFA:ROA",
+     "named": true,
+     "club_id": "club-roanoke-travelers-1941",
+     "name": "Roanoke Travelers",
+     "year": "1941",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12022,6 +13502,16 @@
    "name": "Trezise",
    "club_seasons": [
     "PCFL|1941|PFA:PCFL:SF"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1941|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1941",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12031,6 +13521,16 @@
    "club_seasons": [
     "PCFL|1942|PFA:PCFL:SF"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1942|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1942",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12038,6 +13538,16 @@
    "name": "Welch",
    "club_seasons": [
     "PCFL|1942|PFA:PCFL:SF"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1942|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1942",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12047,6 +13557,16 @@
    "club_seasons": [
     "PCFL|1943|PFA:PCFL:SF"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1943",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12054,6 +13574,16 @@
    "name": "Leiss",
    "club_seasons": [
     "PCFL|1943|PFA:PCFL:SF"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1943",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12063,6 +13593,16 @@
    "club_seasons": [
     "PCFL|1943|PFA:PCFL:SF"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1943",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12070,6 +13610,16 @@
    "name": "Stewart",
    "club_seasons": [
     "PCFL|1943|PFA:PCFL:SF"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1943",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12079,6 +13629,16 @@
    "club_seasons": [
     "PCFL|1943|PFA:PCFL:SF"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1943",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12086,6 +13646,16 @@
    "name": "Cavelli",
    "club_seasons": [
     "PCFL|1944|PFA:PCFL:SF"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1944|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1944",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12095,6 +13665,16 @@
    "club_seasons": [
     "PCFL|1944|PFA:PCFL:SF"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1944|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1944",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12102,6 +13682,16 @@
    "name": "Manus",
    "club_seasons": [
     "PCFL|1944|PFA:PCFL:SF"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1944|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1944",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12111,6 +13701,16 @@
    "club_seasons": [
     "PCFL|1944|PFA:PCFL:SF"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1944|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1944",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12118,6 +13718,16 @@
    "name": "Robertson",
    "club_seasons": [
     "PCFL|1944|PFA:PCFL:SF"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1944|PFA:PCFL:SF",
+     "named": true,
+     "club_id": "club-san-francisco-packers-1941",
+     "name": "San Francisco Packers",
+     "year": "1944",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12127,6 +13737,16 @@
    "club_seasons": [
     "PCFL|1943|PFA:ALA"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:ALA",
+     "named": true,
+     "club_id": "club-alameda-mustangs-1943",
+     "name": "Alameda Mustangs",
+     "year": "1943",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12134,6 +13754,16 @@
    "name": "O'Brien",
    "club_seasons": [
     "PCFL|1943|PFA:LAM"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:LAM",
+     "named": true,
+     "club_id": "club-los-angeles-mustangs-1943",
+     "name": "Los Angeles Mustangs",
+     "year": "1943",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12143,6 +13773,16 @@
    "club_seasons": [
     "AFL|1944|PFA:LAM"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:LAM",
+     "named": true,
+     "club_id": "club-los-angeles-mustangs-1943",
+     "name": "Los Angeles Mustangs",
+     "year": "1944",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12150,6 +13790,16 @@
    "name": "Baum",
    "club_seasons": [
     "PCFL|1943|PFA:RIC"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1943|PFA:RIC",
+     "named": true,
+     "club_id": "club-richmond-boilermakers-1943",
+     "name": "Richmond Boilermakers",
+     "year": "1943",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12159,6 +13809,16 @@
    "club_seasons": [
     "AFL|1944|PFA:LAW"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:LAW",
+     "named": true,
+     "club_id": "club-los-angeles-wildcats-1944",
+     "name": "Los Angeles Wildcats",
+     "year": "1944",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12166,6 +13826,16 @@
    "name": "Bailey",
    "club_seasons": [
     "AFL|1944|PFA:OAK"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-hornets-1944",
+     "name": "Oakland Hornets",
+     "year": "1944",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12175,6 +13845,16 @@
    "club_seasons": [
     "AFL|1944|PFA:OAK"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-hornets-1944",
+     "name": "Oakland Hornets",
+     "year": "1944",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12182,6 +13862,16 @@
    "name": "Cook",
    "club_seasons": [
     "AFL|1944|PFA:OAK"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-hornets-1944",
+     "name": "Oakland Hornets",
+     "year": "1944",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12191,6 +13881,16 @@
    "club_seasons": [
     "AFL|1944|PFA:OAK"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-hornets-1944",
+     "name": "Oakland Hornets",
+     "year": "1944",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12198,6 +13898,16 @@
    "name": "Fuller",
    "club_seasons": [
     "AFL|1944|PFA:OAK"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-hornets-1944",
+     "name": "Oakland Hornets",
+     "year": "1944",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12208,6 +13918,24 @@
     "AFL|1944|PFA:OAK",
     "AFL|1944|PFA:SF"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-hornets-1944",
+     "name": "Oakland Hornets",
+     "year": "1944",
+     "league": "AFL"
+    },
+    {
+     "key": "AFL|1944|PFA:SF",
+     "named": true,
+     "club_id": "club-san-francisco-clippers-1944",
+     "name": "San Francisco Clippers",
+     "year": "1944",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12215,6 +13943,16 @@
    "name": "Paulson",
    "club_seasons": [
     "AFL|1944|PFA:OAK"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-hornets-1944",
+     "name": "Oakland Hornets",
+     "year": "1944",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12224,6 +13962,16 @@
    "club_seasons": [
     "AFL|1944|PFA:OAK"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-hornets-1944",
+     "name": "Oakland Hornets",
+     "year": "1944",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12231,6 +13979,16 @@
    "name": "Small",
    "club_seasons": [
     "AFL|1944|PFA:OAK"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-hornets-1944",
+     "name": "Oakland Hornets",
+     "year": "1944",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12240,6 +13998,16 @@
    "club_seasons": [
     "AFL|1944|PFA:OAK"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-hornets-1944",
+     "name": "Oakland Hornets",
+     "year": "1944",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12247,6 +14015,16 @@
    "name": "Vincent",
    "club_seasons": [
     "AFL|1944|PFA:OAK"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-hornets-1944",
+     "name": "Oakland Hornets",
+     "year": "1944",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12256,6 +14034,16 @@
    "club_seasons": [
     "AFL|1944|PFA:AFL:SD"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:AFL:SD",
+     "named": true,
+     "club_id": "club-san-diego-gunners-1944",
+     "name": "San Diego Gunners",
+     "year": "1944",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12263,6 +14051,16 @@
    "name": "Brown",
    "club_seasons": [
     "AFL|1944|PFA:AFL:SD"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:AFL:SD",
+     "named": true,
+     "club_id": "club-san-diego-gunners-1944",
+     "name": "San Diego Gunners",
+     "year": "1944",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12272,6 +14070,16 @@
    "club_seasons": [
     "AFL|1944|PFA:AFL:SD"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:AFL:SD",
+     "named": true,
+     "club_id": "club-san-diego-gunners-1944",
+     "name": "San Diego Gunners",
+     "year": "1944",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12279,6 +14087,16 @@
    "name": "Handley",
    "club_seasons": [
     "AFL|1944|PFA:AFL:SD"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:AFL:SD",
+     "named": true,
+     "club_id": "club-san-diego-gunners-1944",
+     "name": "San Diego Gunners",
+     "year": "1944",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12288,6 +14106,16 @@
    "club_seasons": [
     "AFL|1944|PFA:AFL:SD"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:AFL:SD",
+     "named": true,
+     "club_id": "club-san-diego-gunners-1944",
+     "name": "San Diego Gunners",
+     "year": "1944",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12295,6 +14123,16 @@
    "name": "Michaels",
    "club_seasons": [
     "AFL|1944|PFA:AFL:SD"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:AFL:SD",
+     "named": true,
+     "club_id": "club-san-diego-gunners-1944",
+     "name": "San Diego Gunners",
+     "year": "1944",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12304,6 +14142,16 @@
    "club_seasons": [
     "AFL|1944|PFA:AFL:SD"
    ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:AFL:SD",
+     "named": true,
+     "club_id": "club-san-diego-gunners-1944",
+     "name": "San Diego Gunners",
+     "year": "1944",
+     "league": "AFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12311,6 +14159,16 @@
    "name": "Middlekauf",
    "club_seasons": [
     "AFL|1944|PFA:SF"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "AFL|1944|PFA:SF",
+     "named": true,
+     "club_id": "club-san-francisco-clippers-1944",
+     "name": "San Francisco Clippers",
+     "year": "1944",
+     "league": "AFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12320,6 +14178,16 @@
    "club_seasons": [
     "PCFL|1945|PFA:HOL"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1945|PFA:HOL",
+     "named": true,
+     "club_id": "club-hollywood-bears-1945",
+     "name": "Hollywood Bears",
+     "year": "1945",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12327,6 +14195,16 @@
    "name": "Kinsella",
    "club_seasons": [
     "PCFL|1945|PFA:HOL"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1945|PFA:HOL",
+     "named": true,
+     "club_id": "club-hollywood-bears-1945",
+     "name": "Hollywood Bears",
+     "year": "1945",
+     "league": "PCFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12336,6 +14214,16 @@
    "club_seasons": [
     "PCFL|1945|PFA:OAK"
    ],
+   "club_seasons_named": [
+    {
+     "key": "PCFL|1945|PFA:OAK",
+     "named": true,
+     "club_id": "club-oakland-giants-1945",
+     "name": "Oakland Giants",
+     "year": "1945",
+     "league": "PCFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12343,6 +14231,16 @@
    "name": "Hoover",
    "club_seasons": [
     "DFL|1946|PFA:NOR"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1946|PFA:NOR",
+     "named": true,
+     "club_id": "club-norfolk-shamrocks-1946",
+     "name": "Norfolk Shamrocks",
+     "year": "1946",
+     "league": "DFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12352,6 +14250,16 @@
    "club_seasons": [
     "DFL|1946|PFA:POR"
    ],
+   "club_seasons_named": [
+    {
+     "key": "DFL|1946|PFA:POR",
+     "named": true,
+     "club_id": "club-portsmouth-pirates-1946",
+     "name": "Portsmouth Pirates",
+     "year": "1946",
+     "league": "DFL"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12359,6 +14267,16 @@
    "name": "Barnes",
    "club_seasons": [
     "UFL|1962|PFA:IND"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "UFL|1962|PFA:IND",
+     "named": true,
+     "club_id": "club-indianapolis-warriors-1962",
+     "name": "Indianapolis Warriors",
+     "year": "1962",
+     "league": "UFL"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12368,6 +14286,16 @@
    "club_seasons": [
     "IND|1931|DOC:SLG-IND"
    ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1931|DOC:SLG-IND",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1931",
+     "name": "St. Louis Gunners",
+     "year": "1931",
+     "league": "IND"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12375,6 +14303,16 @@
    "name": "Carver",
    "club_seasons": [
     "IND|1931|DOC:SLG-IND"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1931|DOC:SLG-IND",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1931",
+     "name": "St. Louis Gunners",
+     "year": "1931",
+     "league": "IND"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12384,6 +14322,16 @@
    "club_seasons": [
     "IND|1931|DOC:SLG-IND"
    ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1931|DOC:SLG-IND",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1931",
+     "name": "St. Louis Gunners",
+     "year": "1931",
+     "league": "IND"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12391,6 +14339,16 @@
    "name": "Green",
    "club_seasons": [
     "IND|1931|DOC:SLG-IND"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1931|DOC:SLG-IND",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1931",
+     "name": "St. Louis Gunners",
+     "year": "1931",
+     "league": "IND"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12400,6 +14358,16 @@
    "club_seasons": [
     "IND|1931|DOC:SLG-IND"
    ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1931|DOC:SLG-IND",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1931",
+     "name": "St. Louis Gunners",
+     "year": "1931",
+     "league": "IND"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12407,6 +14375,16 @@
    "name": "Pascover",
    "club_seasons": [
     "IND|1931|DOC:SLG-IND"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1931|DOC:SLG-IND",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1931",
+     "name": "St. Louis Gunners",
+     "year": "1931",
+     "league": "IND"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12416,6 +14394,16 @@
    "club_seasons": [
     "IND|1931|DOC:SLG-IND"
    ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1931|DOC:SLG-IND",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1931",
+     "name": "St. Louis Gunners",
+     "year": "1931",
+     "league": "IND"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12423,6 +14411,16 @@
    "name": "Schneider",
    "club_seasons": [
     "IND|1931|DOC:SLG-IND"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1931|DOC:SLG-IND",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1931",
+     "name": "St. Louis Gunners",
+     "year": "1931",
+     "league": "IND"
+    }
    ],
    "predicates_held_but_none_valued": []
   },
@@ -12432,6 +14430,16 @@
    "club_seasons": [
     "IND|1931|DOC:SLG-IND"
    ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1931|DOC:SLG-IND",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1931",
+     "name": "St. Louis Gunners",
+     "year": "1931",
+     "league": "IND"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12440,6 +14448,16 @@
    "club_seasons": [
     "IND|1931|DOC:SLG-IND"
    ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1931|DOC:SLG-IND",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1931",
+     "name": "St. Louis Gunners",
+     "year": "1931",
+     "league": "IND"
+    }
+   ],
    "predicates_held_but_none_valued": []
   },
   {
@@ -12447,6 +14465,16 @@
    "name": "Wilson",
    "club_seasons": [
     "IND|1931|DOC:SLG-IND"
+   ],
+   "club_seasons_named": [
+    {
+     "key": "IND|1931|DOC:SLG-IND",
+     "named": true,
+     "club_id": "club-st-louis-gunners-1931",
+     "name": "St. Louis Gunners",
+     "year": "1931",
+     "league": "IND"
+    }
    ],
    "predicates_held_but_none_valued": []
   }

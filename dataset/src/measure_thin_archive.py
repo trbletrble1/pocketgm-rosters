@@ -31,6 +31,36 @@ SEASON_SCOPED = {"age": ("pfa.age_in_season",),
                  "weight": ("pfa.roster.weight", "guide.WEIGHT")}
 
 
+def _name_a_key(C, k):
+    """`AFA|1937|PFA:BKNE` -> what the club table calls it, WITH the key kept.
+
+    Ruled by Ryan, 2026-09-10: a raw token tells a man browsing listings nothing to
+    search for. The key stays alongside because it is what makes the row traceable back
+    to the measurement.
+
+    AND WHERE THE TABLE CANNOT NAME THE CLUB IT SAYS SO, rather than falling back to the
+    token in silence. A club-season the table cannot name is a real fact about that row --
+    it is why the row reads as it does -- and hiding it behind the token would be the
+    proxy defect this archive has already removed once."""
+    parts = k.split("|", 2)
+    if len(parts) != 3:
+        return {"key": k, "named": False, "why": "not a club-season key"}
+    lg, yr, code = parts[0], parts[1].lstrip("y"), parts[2]
+    if not yr.isdigit():
+        return {"key": k, "named": False, "why": "no year in the key"}
+    hit = C.resolve(code, int(yr), lg or None, source="nameless")
+    if not hit:
+        return {"key": k, "named": False,
+                "why": f"the club table cannot place `{code}` in {yr}"
+                       + (f" for league `{lg}`" if lg else " with no league named")}
+    nm = C.name_for(hit[0], int(yr))
+    if not nm:
+        return {"key": k, "named": False, "club_id": hit[0],
+                "why": f"the table holds {hit[0]} but no name for it in {yr}"}
+    return {"key": k, "named": True, "club_id": hit[0], "name": nm,
+            "year": yr, "league": lg or None}
+
+
 def _season_scoped(p, field):
     """Does the archive hold this fact for this man as a SEASON figure?"""
     want = SEASON_SCOPED.get(field) or ()
@@ -239,6 +269,11 @@ def main():
                                              "ever gave a roster row"})
 
     # ---- people holding a surname and nothing else
+    # ONE Clubs() FOR THE NAMING. off_the_table() builds its own inside itself; this loop
+    # is in main() and had none, so the first version of the naming raised NameError
+    # rather than silently naming nothing -- which is the better of the two failures.
+    from clubs import Clubs as _Clubs
+    CT = _Clubs()
     nameless = []
     for pid, p in IDX.items():
         if not isinstance(p, dict): continue
@@ -253,6 +288,7 @@ def main():
         keys = list(p.get("seasons") or {})   # playing seasons only, by shape, since 2026-09-09
         if not keys: continue
         nameless.append({"person": pid, "name": nm, "club_seasons": keys,
+                         "club_seasons_named": [_name_a_key(CT, k) for k in keys],
                          "predicates_held_but_none_valued":
                              sorted(k for k, v in per.items()
                                     if not k.startswith("roster_membership") and not _real(v))})
