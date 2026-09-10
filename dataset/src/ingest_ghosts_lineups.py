@@ -198,6 +198,38 @@ def main(write=True):
                                            "started; a man named in a programme was "
                                            "expected to."}})
                     n["started_a_game"] += 1
+                    # AND THE CLAIM THAT ACTUALLY PLACES HIM. The one above says he
+                    # STARTED; it does not say he was on the club-season, and nothing
+                    # downstream reads it as though it did.
+                    #
+                    # build_person_index writes a season into a man's record ONLY from a
+                    # ["stint", person, club, season_key] subject. A person-subject claim
+                    # carrying the season key in its VALUE produces no season at all, so
+                    # the 25 men promoted here held `seasons: []` and Bethlehem Bears 1926
+                    # stayed at rank 2 of the hunting list marked EMPTY -- after being
+                    # filled. apply_player_promotions said `promoted_but_holding_none: 25`
+                    # and re-running this ingest was not the fix, because what it re-wrote
+                    # placed nobody.
+                    #
+                    # It matched existing practice and that is why it was easy to miss:
+                    # pfa-boxscore-membership writes 11,776 started_a_game claims with no
+                    # stint subject either. It works there because those men are ALREADY
+                    # placed by other stores. It cannot work for a new person on an empty
+                    # club-season, which is the only case this ingest has.
+                    claims.append({**cite(page, v, base),
+                                   "subject": ["stint", pid, code, f"{key.split('|')[0]}-{year}"],
+                                   "predicate": "ghosts.lineup_membership",
+                                   "value": {"club_as_printed": printed,
+                                             "name_as_printed": man,
+                                             "position_as_printed": pos,
+                                             "printed_in": paper,
+                                             "_what_this_asserts":
+                                                 "that this man was on this club-season, "
+                                                 "because a newspaper printed him in its "
+                                                 "starting eleven. The companion "
+                                                 "roster_membership.started_a_game claim "
+                                                 "says he STARTED; this one places him."}})
+                    n["lineup_membership"] += 1
                     continue
                 leads.append({
                     "lead_id": f"lead-ghostslu-{len(leads)+1:05d}",

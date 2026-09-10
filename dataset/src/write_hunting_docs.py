@@ -29,6 +29,29 @@ def load(name, required=True):
         return None
 
 
+def _refuse_a_stale_measurement():
+    """THE WRITER RENDERS A REPORT; IT DOES NOT MEASURE. That is fine and it is fast --
+    and on 10 September it rendered a measurement from the night before three times in a
+    row, so a full day's ingests appeared to have moved nothing. The conclusion drawn was
+    "the list did not move, and that is the finding". The finding was a stale file.
+
+    A report older than the index it was measured from is not a measurement of today, and
+    an input that is silently out of date is the same defect class as an input that is
+    silently absent. So it is REFUSED, with the command that fixes it."""
+    m = os.path.join(BASE, "build-reports", "thin-archive.json")
+    idx = os.path.join(BASE, "build-reports", "person-index.json")
+    if not (os.path.exists(m) and os.path.exists(idx)):
+        return
+    if os.path.getmtime(m) < os.path.getmtime(idx):
+        import datetime as _d
+        f = lambda q: _d.datetime.fromtimestamp(os.path.getmtime(q)).strftime("%d %b %H:%M")
+        raise SystemExit(
+            f"REFUSING: thin-archive.json ({f(m)}) is older than person-index.json "
+            f"({f(idx)}).\nThe hunting documents would be rendered from a measurement "
+            f"taken before the archive last changed.\n  python3 src/measure_thin_archive.py")
+
+
+_refuse_a_stale_measurement()
 T = load("thin-archive.json")
 O = load("outside-span.json")
 H = load("gaps-already-in-hand.json", required=False)
@@ -505,29 +528,29 @@ def what_moved():
     return f"""
 ## What moved, and why
 
-### 10 September: the list did not move, and that is the finding
+### 10 September: two club-seasons were filled, and 23 more men need a forename
 
-**Not one row. 757 before, 757 after, the same kinds in the same order, and
-`missing_facts_total` unchanged to the digit at 9,649 — position 334, college 1,262,
-age 3,282, weight 4,771.** A full day of ingesting moved nothing here, and each reason
-is worth knowing:
+**757 rows → 780. Six rows came off. Twenty-nine went on.**
 
-* **The box scores and the game logs are now complete** — 17,935 box score pages and all
-  1,139,727 log rows. They added 1.9 million claims and **not one held fact this page
-  counts**. What they carry is who played and what he did; what this page counts is
-  whether the archive knows a man's age, weight, college and position. Those are
-  different questions and a game log answers neither.
-* **The 25 men on Bethlehem Bears and Gilberton Catamounts** filled two club-seasons that
-  held nobody — and **both are Eastern League, which is excluded by ruling**, so neither
-  was ever on this page to come off it.
-* **Contested fell 26,335 → 9,120.** That is a change in how a disagreement is
-  *recorded*, not in what is *held*. A fact the archive holds twice is still held.
-* **The club table's 162 new clubs** were counted on 9 September; nothing further was
-  minted.
+* **Bethlehem Bears 1926 was rank 2 and is now rank 49.** It held nobody; it holds
+  **16 men**, from three newspaper game accounts on a preserved website. **Gilberton
+  Catamounts 1926 was rank 3 and is now rank 120**, holding 9. Neither is a hunt any
+  more — they are a club-season with men on it and facts still missing about them.
+  Empty club-seasons: **11 → 9**.
+* **23 more forename rows.** The 25 men arrived from printed line-ups, which print
+  surnames. They are held as `forename_unknown`, which is an honest state: the archive
+  knows a man played and does not know his first name. **The surname-only list is 171 →
+  194 and that is a gain, not a regression.**
+* **Four AFL club-seasons came off** — Jets 1968, Chiefs 1966 and 1969, Raiders 1967 —
+  because the box scores and game logs completed the last few facts about men already
+  held. **That is an ingest doing what a hunt would have done, for nothing.**
 
-**So nothing came off this list by being ingested today.** The 336 rows already marked
-*Not a hunt* are still 336 — those pages are on the disk and still want reading. **That
-is where the next gain is, and it is not a gain that costs money.**
+**And a correction, because the first version of this section was wrong.** It said the
+list had not moved at all and offered reasons why. The list had not moved because the
+writer was rendering `thin-archive.json` **from the night before**: it reads a report and
+does not measure, and nothing checked the report's age. It does now — the writer refuses
+to run on a measurement older than the index. The reasons given were sound and the
+premise was false, which is the worse of the two failures.
 
 ---
 

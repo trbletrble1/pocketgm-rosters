@@ -18,6 +18,15 @@
       from a page nobody read.
   G4  EVERY CLAIM CITES A SNAPSHOT with a sha256, and names Fenton as the FINDING AID
       rather than as the source of the fact.
+  G5  EVERY MAN NAMED AS A STARTER IS ALSO PLACED ON THAT CLUB-SEASON, by a claim whose
+      subject is a STINT. This is the property that was missing, and its absence cost a
+      whole ingest: G2 checked that the season key RESOLVES through the club table, which
+      it did, and nothing checked that the man ends up ON the club-season. He did not --
+      build_person_index writes a season only from a ["stint", person, club, season]
+      subject, so 25 men were promoted holding `seasons: []` and Bethlehem Bears 1926 sat
+      at rank 2 of the hunting list marked EMPTY after being filled.
+
+      A GATE THAT CHECKS A KEY IS WELL-FORMED IS NOT A GATE THAT CHECKS THE MAN ARRIVED.
 
     python3 src/gate_ghosts_lineups.py [--selftest]
 """
@@ -75,6 +84,22 @@ def run(d):
           f"G3 no image is taken, and the photograph is refused WITH its credit"
           + ("" if not img else f" -- {len(img)} claims reference an image"))
 
+    # G5 -- placement, not resolvability
+    started, placed = {}, {}
+    for c in claims:
+        s = c.get("subject") or []
+        if c["predicate"] == "roster_membership.started_a_game" and s and s[0] == "person":
+            lg, y, code = str(c["value"]).split("|")
+            started.setdefault((s[1], lg, y, code), 0)
+            started[(s[1], lg, y, code)] += 1
+        elif c["predicate"] == "ghosts.lineup_membership" and s and s[0] == "stint":
+            lg, _, y = str(s[3]).rpartition("-")
+            placed[(s[1], lg, y, s[2])] = True
+    unplaced = sorted(k for k in started if k not in placed)
+    check(not unplaced, f"G5 all {len(started)} men named as starters are PLACED on that "
+                        f"club-season by a stint subject"
+          + ("" if not unplaced else f" -- {len(unplaced)} are not: {unplaced[:3]}"))
+
     nosnap = [c for c in claims if not c.get("snapshot")
               or not (c.get("finding_aid") or {}).get("_is_not_the_source_of_the_fact")]
     srs = d["source_records"]
@@ -87,8 +112,11 @@ def run(d):
 def selftest():
     # a starter who is in NO eleven -- the thing G1 must refuse
     io_meas = os.path.join(BASE, "build-reports", "ghosts-lineups.json")
+    # THE SELFTEST IS THIS MORNING'S STORE: a starter with no stint claim placing him,
+    # which is exactly what was published and exactly what no gate refused.
     d = {"claims": [
         {"source_record": "x#p", "predicate": "roster_membership.started_a_game",
+         "subject": ["person", "P_1"],
          "value": "EFL|1926|PFA:BET", "extra": {"name_as_printed": "Beck"},
          "snapshot": "u", "finding_aid": {"_is_not_the_source_of_the_fact": "y"}},
         {"source_record": "x#p", "predicate": "ghosts.substitution",
@@ -98,9 +126,12 @@ def selftest():
         "refusals": [{"what": "photograph", "credit_as_printed": "c"}]}
     global FAILS; FAILS = []
     run(d)
-    ok = any("G1" in f for f in FAILS)
-    print("SELFTEST OK" if ok else "SELFTEST FAILED -- G1 did not catch a starter who is in no eleven")
-    return 0 if ok else 1
+    ok1 = any("G1" in f for f in FAILS)
+    ok5 = any("G5" in f for f in FAILS)
+    print(f"  {'ok  ' if ok5 else 'FAIL'} G5 catches a starter placed by no stint subject: "
+          f"expected a failure, got {'one' if ok5 else 'none'}")
+    print("SELFTEST OK" if (ok1 and ok5) else "SELFTEST FAILED")
+    return 0 if (ok1 and ok5) else 1
 
 
 def main(argv):
