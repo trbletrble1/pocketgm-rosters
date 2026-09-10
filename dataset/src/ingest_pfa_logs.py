@@ -186,6 +186,49 @@ def run(part, write):
             if pid is None:
                 refused.append({"page": r["code"], "year": r["year"], "why": club}); n["refused_playoff"] += 1; continue
             printed, blank = split_stats(r["stats"], list(r["stats"]))
+            if r["section"] == "SNAP COUNTS":
+                # HOW MUCH A MAN ACTUALLY PLAYED, as against whether he started. Ryan's
+                # ruling, 2026-09-10: its own predicate, because this is PARTICIPATION and
+                # not performance -- nothing was gained, attempted or conceded -- and under
+                # an existing statistic predicate a consumer summing "defensive statistics"
+                # would be adding plays to tackles. ONE CLAIM, not four: the four figures
+                # describe one thing and splitting them makes a reader reassemble what the
+                # source printed together.
+                def _i(x):
+                    try: return int(str(x).strip())
+                    except (TypeError, ValueError): return None
+                o, d_, s_ = (_i(printed.get(k)) for k in ("OFF", "DEF", "ST"))
+                tot = _i(printed.get("TOTAL"))
+                v = {"offense": o, "defense": d_, "special_teams": s_,
+                     "club_as_printed": r["club_printed"],
+                     "columns_printed_blank": blank,
+                     "club_page": (r["boxscore"] or "").lstrip("/") or None,
+                     "_the_printed_total_is_NOT_stored":
+                         "PFA prints TOTAL and it equals OFF+DEF+ST, so it is arithmetic "
+                         "and not evidence. It was seen and deliberately not kept -- the "
+                         "source did not lack it. Same reasoning as the age-to-birth-year "
+                         "refusal.",
+                     "_postseason_only":
+                         "PFA publishes snap counts for the POSTSEASON and not for the "
+                         "regular season: the section appears on playoff-log pages and on "
+                         "no gamelog page, checked across 3,000 of them. This is not a "
+                         "season total and there is no regular-season figure to compare.",
+                     "_the_grain_is_a_PLAYOFF_YEAR_not_a_game":
+                         "one row per man per club per postseason, unlike the per-game "
+                         "rows everywhere else in this store."}
+                if None in (o, d_, s_) or tot is None or o + d_ + s_ != tot:
+                    # THE ARITHMETIC IS CHECKED, NOT ASSUMED. Where it does not hold the
+                    # printed total is EVIDENCE again and is kept, because dropping it
+                    # would be discarding the very case that makes it worth having.
+                    v["total_as_printed"] = printed.get("TOTAL")
+                    v["_kept_because_it_does_not_add_up"] = True
+                    n["snap_total_does_not_add_up"] += 1
+                claims.append({**base_claim(sr_for("playoffs", r["code"])),
+                               "id": f"snaps:{r['code']}:{r['year']}",
+                               "subject": ["stint", pid, club, f"{r['league']}-{r['year']}"],
+                               "predicate": "pfa.playoff_snap_counts", "value": v})
+                n["playoff_snap_counts"] += 1
+                continue
             v = {"table": r["section"] or "PLAYOFF SEASONS", "club_as_printed": r["club_printed"],
                  "columns": printed, "columns_printed_blank": blank,
                  "club_page": (r["boxscore"] or "").lstrip("/") or None}

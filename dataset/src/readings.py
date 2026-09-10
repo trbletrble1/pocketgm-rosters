@@ -455,7 +455,40 @@ def game(v):
     return out or None
 
 
-READERS = {"game": game, "height": height, "weight": weight, "birth_date": birth_date, "draft": draft,
+def snap_counts(v):
+    """A postseason snap count -- how much of the game was a man's.
+
+    Ruled by Ryan, 2026-09-10. Three integers, and the printed TOTAL is deliberately
+    absent: OFF + DEF + ST equals it on every row measured, so it is arithmetic and
+    not evidence. Where a row does NOT add up the ingest keeps the printed total and
+    says so, and this reader carries it through rather than pretending it agreed.
+
+    THE READING IS A COERCION, NOT A JUDGEMENT. There is one source today; the family
+    exists so a second one can contest rather than sit beside it. A value whose three
+    figures are not whole numbers is refused, because a snap is counted and not
+    measured."""
+    if not isinstance(v, dict):
+        return None
+    out = {}
+    for k in ("offense", "defense", "special_teams"):
+        if v.get(k) is None:
+            continue
+        try:
+            out[k] = int(str(v[k]).strip())
+        except (TypeError, ValueError):
+            return None
+    if not out:
+        return None
+    if v.get("total_as_printed") is not None:
+        try: out["total_as_printed"] = int(str(v["total_as_printed"]).strip())
+        except (TypeError, ValueError): return None
+    return out
+
+
+# REGISTERED UNDER THE FAMILY NAME, because reading_view looks a reader up BY FAMILY.
+# Declaring the family `playoff_snap_counts` and the reader `snap_counts` made A3 fail
+# on its own worked example -- the gate catching a two-name mismatch a second time.
+READERS = {"game": game, "playoff_snap_counts": snap_counts, "height": height, "weight": weight, "birth_date": birth_date, "draft": draft,
            "college": college, "birth_place": place, "death_place": place,
            "position": position}
 

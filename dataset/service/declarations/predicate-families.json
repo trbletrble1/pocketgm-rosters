@@ -3,7 +3,8 @@
  "_why": "The ingests namespaced predicates by source (birth_date / pfa.birth_date / nflverse.birth_date / wikipedia.birth_date) to avoid pooling at ingest. The cost is that a man whose sources give two different birth days holds two single-valued predicates and nothing sees a disagreement: measured 2026-09-07, 2,417 men differ on the calendar day of birth and 105 on the day of death, invisible until the four predicates are read as one question.",
  "_not_folded": {
   "hometown vs birth_place": "where a man was FROM and where he was BORN are different facts. hometown, birthplace, pfa.birth_place and wikipedia.birth_place stay separate. Ruled 2026-09-07.",
-  "high_school": "STAYS OUT, ruled 2026-09-07 by Ryan, with the reason recorded so nobody reopens it quietly: 'Central' and 'Central (Detroit, MI)' cannot be settled by a fold, and that shape is most of the 1,350 literal disagreements. Adding it would either invent agreement or record disagreements the archive cannot judge. It comes back when there is a real rule, not before."
+  "high_school": "STAYS OUT, ruled 2026-09-07 by Ryan, with the reason recorded so nobody reopens it quietly: 'Central' and 'Central (Detroit, MI)' cannot be settled by a fold, and that shape is most of the 1,350 literal disagreements. Adding it would either invent agreement or record disagreements the archive cannot judge. It comes back when there is a real rule, not before.",
+  "playoff_snap_counts": "NOT A FAMILY, 2026-09-10, and the reason is measured rather than argued. Declaring it produced 2,086 contested rows and every one was false: a man's snap counts in different postseasons are not competing claims about one fact. The contested table is keyed on (person, family) and this predicate is per season and per club. See declarations/readings.json DELIBERATELY_UNREAD."
  },
  "families": {
   "birth_date": {
