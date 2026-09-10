@@ -222,6 +222,25 @@ gets one answer.** (The 226 is the survey's own page class; it was not re-derive
 from disk, where a crude line-up grep over the mirror answers 48. The definition is
 what differs, and the next session should take the survey's, not the grep's.)
 
+### Parked, not finished — the Ghosts narrative prose
+
+**2,444 name-shaped strings across 229 pages, measured at 1.3% carrying enough context
+to be usable.**
+
+The line-up ingest of 10 September took the seventeen pages with a printed line-up, the
+two honours tables, the officials, the substitutions and one roster limit. **It did not
+touch the prose**, and the prose is where most of the names on this site are — inside
+sentences like *"Beck with a great effort made a beautiful tackle"*, which names a man
+and a club-season and a game, in a form nothing here can read.
+
+**It is parked because prose extraction is an undesigned capability, not because there
+is nothing there.** Designing it would touch the media guides (28,264 prose blocks) and
+the reference books too, and doing it badly on one site first would set the shape for
+all three. That is a ruling nobody has made.
+
+**Do not read the line-up ingest as having finished this site.** It finished one
+question about it.
+
 ### Found and not assessed — the running list
 
 Named as they were noticed, none assessed, none fetched. Kept here so they are not

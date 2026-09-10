@@ -3,6 +3,19 @@
   {
    "page": "Bethlehem_Gilberton_1926.htm",
    "positions_found": 11,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "QB",
+    "LHB",
+    "RHB",
+    "FB"
+   ],
    "away_men": [
     "Franks",
     "Boslego",
@@ -46,13 +59,26 @@
      "Newell, Penn"
     ]
    ],
-   "_year": 1926,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Bethlehem",
+   "home_club": "Franks"
   },
   {
    "page": "Bethlehem_Lancaster_1926_2.htm",
    "positions_found": 11,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "QB",
+    "LHB",
+    "RHB",
+    "FB"
+   ],
    "away_men": [
     "Gaffney",
     "Youkonis",
@@ -102,13 +128,26 @@
      "Keady"
     ]
    ],
-   "_year": 1926,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "All-Lancaster",
+   "home_club": "Gaffney"
   },
   {
    "page": "Bethlehem_Shenandoah_1926.htm",
    "positions_found": 11,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "QB",
+    "LHB",
+    "RHB",
+    "FB"
+   ],
    "away_men": [
     "Breslin",
     "Connors",
@@ -152,13 +191,24 @@
      "Ambrose"
     ]
    ],
-   "_year": 1926,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Bethlehem",
+   "home_club": "Breslin"
   },
   {
    "page": "Conshohocken_Bethlehem_1920.htm",
    "positions_found": 9,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "LHB",
+    "RHB"
+   ],
    "away_men": [
     "Riggs",
     "Bechtel",
@@ -204,13 +254,24 @@
      "Krieble"
     ]
    ],
-   "_year": 1920,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Blue Stars",
+   "home_club": "Riggs"
   },
   {
    "page": "Conshohocken_Kaywood_1919.htm",
    "positions_found": 9,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "LHB",
+    "RHB"
+   ],
    "away_men": [
     "Riggs",
     "Bechtel",
@@ -240,13 +301,26 @@
      "Hopkins"
     ]
    ],
-   "_year": 1919,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Kaywood C. C",
+   "home_club": "Riggs"
   },
   {
    "page": "Corley_Reliance_1910.htm",
    "positions_found": 11,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "QB",
+    "LHB",
+    "RHB",
+    "FB"
+   ],
    "away_men": [
     "Thomas",
     "Jackson",
@@ -288,13 +362,23 @@
      "Murphy"
     ]
    ],
-   "_year": 1910,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Reliance",
+   "home_club": "Thomas"
   },
   {
    "page": "Frankford_Mutes_1902.htm",
    "positions_found": 8,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "LHB"
+   ],
    "away_men": [
     "Elliss",
     "Mason",
@@ -326,13 +410,24 @@
      "Davies"
     ]
    ],
-   "_year": 1902,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Mutes",
+   "home_club": "Elliss"
   },
   {
    "page": "Holmesburg_Bridesburg_1920.htm",
    "positions_found": 9,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "LHB",
+    "RHB"
+   ],
    "away_men": [
     "Hayes",
     "Day",
@@ -366,13 +461,24 @@
      "Lewis, Harvard"
     ]
    ],
-   "_year": 1920,
-   "_club_hits": 1,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Bridesburg",
+   "home_club": "Hayes"
   },
   {
    "page": "Holmesburg_Chesbrook_1920.htm",
    "positions_found": 9,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "LHB",
+    "RHB"
+   ],
    "away_men": [
     "Squires",
     "Kurtz",
@@ -406,13 +512,24 @@
      "Abrams, Delaware College"
     ]
    ],
-   "_year": 1920,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Chesbrook",
+   "home_club": "Squires"
   },
   {
    "page": "Holmesburg_Conshohocken_1920.htm",
    "positions_found": 9,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "LHB",
+    "RHB"
+   ],
    "away_men": [
     "Gaston",
     "Kelley",
@@ -446,13 +563,24 @@
      "Lewis, Harvard"
     ]
    ],
-   "_year": 1920,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Conshohocken",
+   "home_club": "Gaston"
   },
   {
    "page": "Holmesburg_Parkside_1919.htm",
    "positions_found": 9,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "LHB",
+    "RHB"
+   ],
    "away_men": [
     "Kelly",
     "Lally",
@@ -490,13 +618,24 @@
      "Lentz"
     ]
    ],
-   "_year": 1919,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": null,
+   "home_club": null
   },
   {
    "page": "Holmesburg_USSMichigan_1919.htm",
    "positions_found": 9,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "LHB",
+    "RHB"
+   ],
    "away_men": [
     "Diamond",
     "Douthart",
@@ -536,13 +675,24 @@
      "Campbell"
     ]
    ],
-   "_year": 1919,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Michigan",
+   "home_club": "Diamond"
   },
   {
    "page": "Holmesburg_Washington_1921.htm",
    "positions_found": 9,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "QB",
+    "FB"
+   ],
    "away_men": [
     "Hayes",
     "Potts",
@@ -597,13 +747,24 @@
      "Sutton (George Washington university)"
     ]
    ],
-   "_year": 1921,
-   "_club_hits": 1,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Washington",
+   "home_club": "Hayes"
   },
   {
    "page": "Maritime_Hog-Island_NYS_1919.htm",
    "positions_found": 9,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "LHB",
+    "RHB"
+   ],
    "away_men": [
     "Holland",
     "Greenman",
@@ -641,13 +802,24 @@
      "Chupein"
     ]
    ],
-   "_year": 1919,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "New York Ship",
+   "home_club": "Holland"
   },
   {
    "page": "Maritime_NYS_Merchant_1919.htm",
    "positions_found": 9,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "LHB",
+    "RHB"
+   ],
    "away_men": [
     "Higgins",
     "Riley",
@@ -684,13 +856,26 @@
      "Petron"
     ]
    ],
-   "_year": 1919,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Merchants",
+   "home_club": "Higgins"
   },
   {
    "page": "Yellowjackets_Holmesburg_1922.htm",
    "positions_found": 11,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "QB",
+    "LHB",
+    "RHB",
+    "FB"
+   ],
    "away_men": [
     "Thomas",
     "Williams",
@@ -724,13 +909,24 @@
     "Nemzick for Caskey"
    ],
    "officials": [],
-   "_year": 1922,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Holmesburg",
+   "home_club": "Thomas"
   },
   {
    "page": "Yellowjackets_Thanksgiving_1924.htm",
    "positions_found": 9,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "LHB",
+    "RHB"
+   ],
    "away_men": [
     "Fennel",
     "Muirhead",
@@ -762,15 +958,28 @@
     "Dayhoff for Hamer"
    ],
    "officials": [],
-   "_year": 1924,
-   "_club_hits": 0,
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Yellowjackets",
+   "home_club": "Fennel"
   }
  ],
  "honours": [
   {
    "page": "Bethlehem.htm",
    "positions_found": 11,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "QB",
+    "LHB",
+    "RHB",
+    "FB"
+   ],
    "away_men": [
     "Coaldale",
     "Atlantic City",
@@ -799,13 +1008,24 @@
    ],
    "substitutions": [],
    "officials": [],
-   "_year": 1925,
-   "_club_hits": 0,
    "_repeats_in_the_left_column": 4
   },
   {
    "page": "Yellowjackets_all-pros_1928.htm",
    "positions_found": 11,
+   "positions": [
+    "LE",
+    "LT",
+    "LG",
+    "C",
+    "RG",
+    "RT",
+    "RE",
+    "QB",
+    "LHB",
+    "RHB",
+    "FB"
+   ],
    "away_men": [
     "Green Bay",
     "Detroit",
@@ -834,8 +1054,6 @@
    ],
    "substitutions": [],
    "officials": [],
-   "_year": 1928,
-   "_club_hits": 1,
    "_repeats_in_the_left_column": 4
   }
  ]
