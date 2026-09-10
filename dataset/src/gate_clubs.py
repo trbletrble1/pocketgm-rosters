@@ -33,6 +33,15 @@ def check(ok, msg):
 def year_of(y): return int(y[1:5]) if str(y).startswith("y") else int(y)
 
 
+import json as _j, os as _o
+
+
+def _decl_labels():
+    """The gate's own explanations, read from declarations/clubs.json rather than typed."""
+    d = _j.load(open(_o.path.join(BASE, "declarations", "clubs.json")))
+    return d.get("LEAGUE_LABELS_THAT_ARE_NOT_ARCHIVE_TOKENS") or {}
+
+
 def main():
     if not os.path.exists(TABLE):
         print("  FAIL  build/clubs.json is missing: run src/build_clubs.py --write"); return 1
@@ -140,8 +149,15 @@ def main():
     check(not missing, f"every _clubs code-year is in the table ({len(missing)} missing: {missing[:5]})")
 
     print("K6  no league in scope has sources naming it and no club")
-    P = T["per_league"]; art = {"Ohio", "AFL-1926", "AFL-1940", "Arena"}   # the fandom survey's own league labels, not archive tokens
-    fam = {"IRFU", "WIFU", "ORFU"}                                        # PFA's pre-1958 Canadian unions: their clubs are held under the archive's CFL codes
+    # EVERY EXPLANATION IS DECLARED, since 2026-09-09. Two of these three sets were typed
+    # into this gate and one was read from the declaration, so a league could be RULED out
+    # of scope and still fail here -- AA was, with its ruling written down three blocks
+    # away in LEAGUES_ATTESTED_BUT_OUT_OF_SCOPE, which nothing read. Same class as the
+    # statistics-store prefix and the staff-by-league test.
+    P = T["per_league"]
+    _lab = _decl_labels()
+    art = set(_lab.get("fandom_survey_labels") or ())
+    fam = set(_lab.get("family_mapped_to_the_archives_own_league") or ())
     # NOT LEAGUES AT ALL, declared rather than hardcoded: a token the index needs in the
     # league position for a club that asserts no league. Its clubs ARE in this table,
     # under league ''. Read from declarations/clubs.json so the ruling and the gate cannot
@@ -149,11 +165,26 @@ def main():
     _decl = json.load(open(os.path.join(BASE, "declarations", "clubs.json")))
     nol = {k for k in (_decl.get("LEAGUE_TOKENS_THAT_ARE_NOT_LEAGUES") or {})
            if not k.startswith("_")}
+    # A LEAGUE RULED OUT OF SCOPE IS AN EXPLANATION. The block's own text says a declared
+    # unknown differs from an accidental one and that only it can tell them apart -- and
+    # then no gate read it.
+    oos = {k for k in (_decl.get("LEAGUES_ATTESTED_BUT_OUT_OF_SCOPE") or {})
+           if not k.startswith("_")}
     zero = [lg for lg, v in P.items() if v["ZERO_CLUBS"]]
-    unexplained = [lg for lg in zero if lg not in art | fam | nol]
+    unexplained = [lg for lg in zero if lg not in art | fam | nol | oos]
     check(not unexplained, f"{len(P)} leagues; {len(zero)} hold no club and every one is explained "
-          f"({sorted(art & set(zero))} are the fandom survey's labels, {sorted(fam & set(zero))} are family-mapped to CFL with 0 refusals, {sorted(nol & set(zero))} are not leagues)"
+          f"({sorted(art & set(zero))} are the fandom survey's labels, {sorted(fam & set(zero))} are family-mapped to CFL with 0 refusals, {sorted(nol & set(zero))} are not leagues, {sorted(oos & set(zero))} are ruled out of scope)"
           if not unexplained else f"leagues with sources but no club: {unexplained}")
+    # THE OTHER GATE'S NUMBER, NAMED HERE. This counts the CAUSE; gate_club_table_reach
+    # counts the EFFECT -- the season keys those refusals leave unnameable. On 2026-09-09
+    # both were found naming the same tokens with neither mentioning the other.
+    try:
+        _d = _j.load(open(_o.path.join(BASE, "declarations", "clubs.json")))
+        print(f"    the EFFECT, counted by gate_club_table_reach: a ceiling of "
+              f"{(_d.get('CLUB_TABLE_REACH') or {}).get('ceiling', '?')} season keys the table "
+              f"cannot name. Every refusal counted here is one of them.")
+    except Exception:
+        pass
     silent = [lg for lg in fam & set(zero) if P[lg]["strings_refused"]]
     check(not silent or all(lg == "ORFU" for lg in silent), f"a family-mapped league refusing strings is reported, not silent: {[(lg, P[lg]['strings_refused']) for lg in silent]}")
     arfl = P.get("ARFL", {})

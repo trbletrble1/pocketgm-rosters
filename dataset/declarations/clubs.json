@@ -228,6 +228,94 @@
     "_boundary_season": "Ryan's ruling, 2026-09-08: a boundary season -- professional football played before the club entered a league the archive holds. Created under the boundary ruling in the same shape as Frankford 1922-23. NO LEAGUE IS CREATED and none is asserted; the league is the empty string.",
     "club_id": "club-st-louis-gunners-1931",
     "_anchor_year": 1931
+   },
+   {
+    "code": "DOC:FYJ-EARLY",
+    "name": "Frankford Yellow Jackets",
+    "year": 1899,
+    "league": "",
+    "source_id": "frankford-yellow-jackets-book",
+    "source_record": "frankford-yellow-jackets-book#1899-roster",
+    "name_as_printed": "Frankford Yellow Jackets",
+    "evidence": "the site's 1899 roster page: 17 entries, of which two are Managers (Clarence E. Swope, Edward S. Gilmore). Name and position only; no college and no jersey number.",
+    "opponent_in_scope": null,
+    "lineage": "UNKNOWN. NOT linked to club-frankford-yellow-jackets-1922 or to the NFL club.",
+    "lineage_candidate": {
+     "other": "club-frankford-yellow-jackets-1922",
+     "why_not_a_link": "The archive holds the Frankford independent club from 1922 (club-frankford-yellow-jackets-1922) and the NFL club from 1924. Whether these turn-of-the-century seasons are the same club is a LINEAGE QUESTION and is not assumed here, exactly as 1922-23 is not linked to 1924. What is true and not sufficient: same name, same city, and the site presents 1899-1931 as one club's seasons. What is MISSING is the archive's own mechanical test -- NOT ONE of the 60 men on these four rosters appears on the 1922 or 1923 roster, the surname overlap is the token `jr`, and sixteen years separate 1906 from 1922 with 1901, 1902, 1904, 1905 and 1907-1921 unrepresented by a roster page. Measured 2026-09-09."
+    },
+    "club_id": "club-frankford-yellow-jackets-1899",
+    "_club_id_note": "The four seasons are ONE club and one club_id, because the men carry across them: 1899-1900 share four (Charles Heard, George C. Gilmore, Harry McCormick, William Mason), 1900-1903 share six (Heard, Harry Aspen, Jesse Purnell, Lewis Hornberger, Robert Latimer), 1899-1903 share two. 1906 shares NOBODY with the other three and is held on this club by name and city alone -- recorded, not hidden.",
+    "_anchor_year": 1899,
+    "_boundary_season": "Ryan's ruling, 2026-09-09: a boundary season -- professional football played before the club entered any league the archive holds, and twenty years before a league source would have looked at it. Created under the boundary ruling in the same shape as Frankford 1922-23 and the Gunners 1931-33. NO LEAGUE IS CREATED and none is asserted; the league is the empty string.",
+    "_nothing_can_corroborate_these": "No other source in the archive or its caches names this club before 1922. Every man on these four club-seasons rests on one page of one site, and the claims say so on themselves.",
+    "roster_is_keyed_to_the_game": false
+   },
+   {
+    "code": "DOC:FYJ-EARLY",
+    "name": "Frankford Yellow Jackets",
+    "year": 1900,
+    "league": "",
+    "source_id": "frankford-yellow-jackets-book",
+    "source_record": "frankford-yellow-jackets-book#1900-roster",
+    "name_as_printed": "Frankford Yellow Jackets",
+    "evidence": "the site's 1900 roster page: 19 entries, name and position only.",
+    "opponent_in_scope": null,
+    "lineage": "UNKNOWN. NOT linked to club-frankford-yellow-jackets-1922 or to the NFL club.",
+    "lineage_candidate": {
+     "other": "club-frankford-yellow-jackets-1922",
+     "why_not_a_link": "The archive holds the Frankford independent club from 1922 (club-frankford-yellow-jackets-1922) and the NFL club from 1924. Whether these turn-of-the-century seasons are the same club is a LINEAGE QUESTION and is not assumed here, exactly as 1922-23 is not linked to 1924. What is true and not sufficient: same name, same city, and the site presents 1899-1931 as one club's seasons. What is MISSING is the archive's own mechanical test -- NOT ONE of the 60 men on these four rosters appears on the 1922 or 1923 roster, the surname overlap is the token `jr`, and sixteen years separate 1906 from 1922 with 1901, 1902, 1904, 1905 and 1907-1921 unrepresented by a roster page. Measured 2026-09-09."
+    },
+    "club_id": "club-frankford-yellow-jackets-1899",
+    "_club_id_note": "The four seasons are ONE club and one club_id, because the men carry across them: 1899-1900 share four (Charles Heard, George C. Gilmore, Harry McCormick, William Mason), 1900-1903 share six (Heard, Harry Aspen, Jesse Purnell, Lewis Hornberger, Robert Latimer), 1899-1903 share two. 1906 shares NOBODY with the other three and is held on this club by name and city alone -- recorded, not hidden.",
+    "_anchor_year": 1899,
+    "_boundary_season": "Ryan's ruling, 2026-09-09: a boundary season -- professional football played before the club entered any league the archive holds, and twenty years before a league source would have looked at it. Created under the boundary ruling in the same shape as Frankford 1922-23 and the Gunners 1931-33. NO LEAGUE IS CREATED and none is asserted; the league is the empty string.",
+    "_nothing_can_corroborate_these": "No other source in the archive or its caches names this club before 1922. Every man on these four club-seasons rests on one page of one site, and the claims say so on themselves.",
+    "roster_is_keyed_to_the_game": false
+   },
+   {
+    "code": "DOC:FYJ-EARLY",
+    "name": "Frankford Yellow Jackets",
+    "year": 1903,
+    "league": "",
+    "source_id": "frankford-yellow-jackets-book",
+    "source_record": "frankford-yellow-jackets-book#1903-roster",
+    "name_as_printed": "Frankford Yellow Jackets",
+    "evidence": "the site's 1903 roster page: 17 entries, name and position only.",
+    "opponent_in_scope": null,
+    "lineage": "UNKNOWN. NOT linked to club-frankford-yellow-jackets-1922 or to the NFL club.",
+    "lineage_candidate": {
+     "other": "club-frankford-yellow-jackets-1922",
+     "why_not_a_link": "The archive holds the Frankford independent club from 1922 (club-frankford-yellow-jackets-1922) and the NFL club from 1924. Whether these turn-of-the-century seasons are the same club is a LINEAGE QUESTION and is not assumed here, exactly as 1922-23 is not linked to 1924. What is true and not sufficient: same name, same city, and the site presents 1899-1931 as one club's seasons. What is MISSING is the archive's own mechanical test -- NOT ONE of the 60 men on these four rosters appears on the 1922 or 1923 roster, the surname overlap is the token `jr`, and sixteen years separate 1906 from 1922 with 1901, 1902, 1904, 1905 and 1907-1921 unrepresented by a roster page. Measured 2026-09-09."
+    },
+    "club_id": "club-frankford-yellow-jackets-1899",
+    "_club_id_note": "The four seasons are ONE club and one club_id, because the men carry across them: 1899-1900 share four (Charles Heard, George C. Gilmore, Harry McCormick, William Mason), 1900-1903 share six (Heard, Harry Aspen, Jesse Purnell, Lewis Hornberger, Robert Latimer), 1899-1903 share two. 1906 shares NOBODY with the other three and is held on this club by name and city alone -- recorded, not hidden.",
+    "_anchor_year": 1899,
+    "_boundary_season": "Ryan's ruling, 2026-09-09: a boundary season -- professional football played before the club entered any league the archive holds, and twenty years before a league source would have looked at it. Created under the boundary ruling in the same shape as Frankford 1922-23 and the Gunners 1931-33. NO LEAGUE IS CREATED and none is asserted; the league is the empty string.",
+    "_nothing_can_corroborate_these": "No other source in the archive or its caches names this club before 1922. Every man on these four club-seasons rests on one page of one site, and the claims say so on themselves.",
+    "roster_is_keyed_to_the_game": false
+   },
+   {
+    "code": "DOC:FYJ-EARLY",
+    "name": "Frankford Yellow Jackets",
+    "year": 1906,
+    "league": "",
+    "source_id": "frankford-yellow-jackets-book",
+    "source_record": "frankford-yellow-jackets-book#1906-roster",
+    "name_as_printed": "Frankford Yellow Jackets",
+    "evidence": "the site's 1906 roster page: 17 entries, name and position only.",
+    "opponent_in_scope": null,
+    "lineage": "UNKNOWN. NOT linked to club-frankford-yellow-jackets-1922 or to the NFL club.",
+    "lineage_candidate": {
+     "other": "club-frankford-yellow-jackets-1922",
+     "why_not_a_link": "The archive holds the Frankford independent club from 1922 (club-frankford-yellow-jackets-1922) and the NFL club from 1924. Whether these turn-of-the-century seasons are the same club is a LINEAGE QUESTION and is not assumed here, exactly as 1922-23 is not linked to 1924. What is true and not sufficient: same name, same city, and the site presents 1899-1931 as one club's seasons. What is MISSING is the archive's own mechanical test -- NOT ONE of the 60 men on these four rosters appears on the 1922 or 1923 roster, the surname overlap is the token `jr`, and sixteen years separate 1906 from 1922 with 1901, 1902, 1904, 1905 and 1907-1921 unrepresented by a roster page. Measured 2026-09-09."
+    },
+    "club_id": "club-frankford-yellow-jackets-1899",
+    "_club_id_note": "The four seasons are ONE club and one club_id, because the men carry across them: 1899-1900 share four (Charles Heard, George C. Gilmore, Harry McCormick, William Mason), 1900-1903 share six (Heard, Harry Aspen, Jesse Purnell, Lewis Hornberger, Robert Latimer), 1899-1903 share two. 1906 shares NOBODY with the other three and is held on this club by name and city alone -- recorded, not hidden.",
+    "_anchor_year": 1899,
+    "_boundary_season": "Ryan's ruling, 2026-09-09: a boundary season -- professional football played before the club entered any league the archive holds, and twenty years before a league source would have looked at it. Created under the boundary ruling in the same shape as Frankford 1922-23 and the Gunners 1931-33. NO LEAGUE IS CREATED and none is asserted; the league is the empty string.",
+    "_nothing_can_corroborate_these": "No other source in the archive or its caches names this club before 1922. Every man on these four club-seasons rests on one page of one site, and the claims say so on themselves.",
+    "roster_is_keyed_to_the_game": false
    }
   ],
   "_roster_is_keyed_to_the_game": "TRUE only where the club enters for a documented GAME and has no club-season -- the 1926 Los Angeles Tigers. It is what makes a club EMPTY BY RULING rather than a gap. Frankford's 1922-23 independent seasons are real club-seasons with real men on them and must NOT carry it: they were briefly reported as 'empty by ruling' while holding 45 men, because the flag was written for one club and inherited by every club that used the same declaration route."
@@ -778,6 +866,31 @@
    "what_was_established": "PFA files these under `afa` page names (1936afabkn.html ... 1941afawil.html), 1936-1941, with clubs in Brooklyn, Paterson, Jersey City, Wilmington, Newark, Union City, Long Island, Danbury, Providence and New Rochelle. 45 team-season pages. Eleven club strings, all of which the table already resolves to clubs it holds. It is a north-eastern professional league of that period and it is NOT the 1920-21 APFA.",
    "what_was_NOT_established": "whether it falls inside or outside the minor-league exclusion. declarations/salary_conventions.json already warns that a 1938 contract naming 'The American Professional Football Association' is a 1930s MINOR league distinct from the 1920-21 APFA, which points the same way but is about a different body and is not a ruling on this one. No decision is recorded and no league is added.",
    "_effect": "the 666 claims keep everything but their league, pending a ruling."
+  },
+  "IFL": {
+   "name": "Interstate Football League",
+   "ruling": "OUT OF SCOPE, clubs named. Ryan, 2026-09-09.",
+   "_why": "Interstate Football League, 1933. On the minor-league exclusion (MINOR_LEAGUE_EXCLUSION). Its six clubs are NAMED from 2026-09-09 so the nine men the archive holds can be read; the league stays out of scope."
+  },
+  "ACFL": {
+   "name": "Atlantic Coast Football League",
+   "ruling": "OUT OF SCOPE, clubs named. Ryan, 2026-09-09.",
+   "_why": "Atlantic Coast Football League, 1963-1973. On the minor-league exclusion. 28 clubs named 2026-09-09; 147 men were reading as PFA codes."
+  },
+  "COFL": {
+   "name": "Continental Football League",
+   "ruling": "OUT OF SCOPE, clubs named. Ryan, 2026-09-09.",
+   "_why": "Continental Football League, 1965-1969. On the minor-league exclusion. 24 clubs named 2026-09-09; 197 men were reading as PFA codes."
+  },
+  "DFL": {
+   "name": "Dixie Football League",
+   "ruling": "OUT OF SCOPE, clubs named. Ryan, 2026-09-09.",
+   "_why": "Dixie Football League, 1936-1946. On the minor-league exclusion. 17 clubs named 2026-09-09."
+  },
+  "MWFL": {
+   "name": "Midwest Football League",
+   "ruling": "OUT OF SCOPE, clubs named. Ryan, 2026-09-09.",
+   "_why": "Midwest Football League, 1936-1937. On the minor-league exclusion. 7 clubs named 2026-09-09."
   }
  },
  "CLUB_TABLE_REACH": {
@@ -790,7 +903,8 @@
    "token_never_placed": 549,
    "_all_2018_rest_on_ONE_source": "466 (league, token, year) triples, and every single one is attested by exactly one source_id -- 41 of 41, 223 of 223, 202 of 202. Not one is corroborated, which is why SPAN_EXTENSIONS can move none of them today. The blocker is EVIDENCE, not policy."
   },
-  "ceiling": 2018
+  "ceiling": 851,
+  "_lowered_2026_09_09": "2,018 -> 851, a fall of 1,167, when archive_covers stopped using the index-season proxy and 162 clubs were minted. The ratchet holds the ground gained: 851 is the new ceiling and a rise above it fails. THE CAUSE AND THE EFFECT ARE NOW LINKED IN BOTH GATES -- gate_clubs K6 counts the CAUSE (a league whose strings the table refuses) and this counts the EFFECT (season keys the table cannot name). They are NOT the same population and must not be merged: this gate also counts `no_name` (a club held whose name spans stop short of 2025) and `span_narrow`, neither of which is a refusal. Each now names the other's number so a reader of one cannot miss the other."
  },
  "WITHDRAWN_STRINGS": {
   "_what": "Strings a source put on a club that the archive has RULED do not belong there. The string is not deleted from the source and the source is not corrected: it is refused entry to THIS club's string list, with the evidence, and build_clubs records the refusal so the withdrawal is visible rather than silent.",
@@ -814,5 +928,56 @@
     "_what_it_did": "118 claims carry the club_str 'Cincinnati Bengals' and every one resolves at 1968+ through the club's own official name, so nothing moves. What was wrong was provenance: the 1968 Bengals recorded four variant names that belonged to a different club."
    }
   ]
+ },
+ "MINOR_LEAGUE_EXCLUSION": {
+  "_what": "The leagues the archive deliberately does not take into SCOPE: they are off the hunting list, out of the census cohort, and no gap in them is a gap the archive is trying to fill.",
+  "_why_it_is_written_down_now": "Ryan, 2026-09-09. It was named twice in prose -- inside the ORFU and AA entries of LEAGUES_ATTESTED_BUT_OUT_OF_SCOPE -- and enumerated NOWHERE, so a gate had to guess at it and `measure_thin_archive` had to type its own scope. A rule that exists only in prose is a rule every reader reconstructs differently.",
+  "_a_named_club_is_not_an_admitted_league": "Ryan's ruling, 2026-09-09, and the whole point of the day's change: the exclusion does NOT mean the clubs stay unnamed. 333 men hold 6,631 claims from these leagues and Warren Heller's bio read 'he played four seasons: for the PFA:REA in 1933'. The exclusion was not keeping the leagues out, it was making them UNREADABLE. The clubs are named so the men can be read; the leagues stay out of scope.",
+  "leagues": [
+   "IFL",
+   "ACFL",
+   "COFL",
+   "DFL",
+   "MWFL",
+   "AA",
+   "ORFU",
+   "PFLA",
+   "NWIFL",
+   "CAFL",
+   "SFL",
+   "ALFL",
+   "AFA"
+  ],
+  "_per_league": {
+   "IFL": "Interstate Football League, 1933. Six clubs, nine men held.",
+   "ACFL": "Atlantic Coast Football League, 1963-1973.",
+   "COFL": "Continental Football League, 1965-1969.",
+   "DFL": "Dixie Football League, 1936-1946.",
+   "MWFL": "Midwest Football League, 1936-1937.",
+   "AA": "American Association, 1936-1941. NOT ESTABLISHED as in or out -- see LEAGUES_ATTESTED_BUT_OUT_OF_SCOPE, where Ryan's 2026-09-08 ruling is 'establish what it is before doing anything with it'. It is listed here so the gate has an answer; the RULING is still open and the entry says so.",
+   "ORFU": "Ontario Rugby Football Union. Ryan, 2026-09-08: stays out.",
+   "PFLA": "Professional Football League of America, 1965.",
+   "NWIFL": "North-West / interstate minor circuits.",
+   "CAFL": "Canadian-American Football League.",
+   "SFL": "Southern Football League.",
+   "ALFL": "American League of Football / minor circuit.",
+   "AFA": "American Football Association -- the 1936-50 minor AFL under its declared name."
+  },
+  "_what_this_does_NOT_do": "It does not delete a claim, refuse a string, or unname a club. Scope is about which gaps the archive goes looking to fill, and nothing else."
+ },
+ "LEAGUE_LABELS_THAT_ARE_NOT_ARCHIVE_TOKENS": {
+  "_what": "Labels a SOURCE uses for a competition that the archive does not hold as a league token. They carry no clubs of their own and that is correct, not a gap.",
+  "_why_declared": "gate_clubs K6 typed these into itself -- `art = {\"Ohio\", \"AFL-1926\", \"AFL-1940\", \"Arena\"}` and `fam = {\"IRFU\", \"WIFU\", \"ORFU\"}` -- while a third set was read from this file. Two typed and one declared is how a ruling and a gate drift apart, and it is why AA sat on the failure list with its ruling already written down three blocks away.",
+  "fandom_survey_labels": [
+   "Ohio",
+   "AFL-1926",
+   "AFL-1940",
+   "Arena"
+  ],
+  "family_mapped_to_the_archives_own_league": {
+   "IRFU": "CFL",
+   "WIFU": "CFL",
+   "ORFU": "CFL"
+  }
  }
 }

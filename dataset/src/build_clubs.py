@@ -278,9 +278,36 @@ def main():
     def official_name(cid, y):
         return next((n["name"] for n in by_id[cid]["names"] if n["first"] <= y <= n["last"]), None)
     def archive_covers(league, y):
+        """Does the archive hold a NAMED CLUB in this league-year?
+
+        THE PROXY IS GONE, ruled by Ryan 2026-09-09. This used to be true if EITHER an
+        archive-origin club carried the league across that year, OR the person index held
+        any season in that league-year at all:
+
+            any(fam(l, y) == f and y in ys for l, ys in league_years.items()) or ...
+
+        The second clause was the purpose; the first was a proxy for it. It worked while
+        `league_years` was fed by roster and membership stores, whose subjects travel with
+        clubs the table already names -- there, "the index holds a season here" and "the
+        archive holds a club here" were the same statement. THE PFA STATISTICS STORES
+        BROKE THAT: their subjects are PFA's own tokens, so they populate a league-year in
+        which the archive holds no club at all, and the proxy went on answering yes.
+
+        The Reading Keys are the case. PFA's 1933iflrea.html gives three men fourteen
+        statistics claims; those three men are the whole of `league_years["IFL"] == {1933}`;
+        and because of them the club table refused to mint the club they played for. THE
+        CLUB-SEASON WAS REFUSED BECAUSE THE ARCHIVE HELD MEN ON IT. Meanwhile the same PFA
+        code and the same printed name minted fine for 1936, where nobody had a statistics
+        line. Warren Heller's bio read "he played four seasons: for the PFA:REA in 1933".
+
+        What the rule is FOR is unchanged and is clause two: where the archive already
+        holds named clubs in a league-year, an unresolved PFA string is far likelier to be
+        a name variant of one of them than a new club, and minting would duplicate. That
+        test now asks exactly that and nothing else.
+        """
         f = fam(league, y)
-        return any(fam(l, y) == f and y in ys for l, ys in league_years.items()) or any(
-            c["origin"] == "archive" and fam(l["league"], y) == f and l["first"] <= y <= l["last"] for c in clubs for l in c["leagues"])
+        return any(c["origin"] == "archive" and fam(l["league"], y) == f and l["first"] <= y <= l["last"]
+                   for c in clubs for l in c["leagues"])
     # CORROBORATION: a name and a code one man holds for one league-year are one club. Read from the
     # plain base (rewrites and merges undone in memory) plus the merge pairing, exactly as
     # normalise_club_keys.py read it: after the rewrite nobody holds the printed name, and after the
@@ -1003,6 +1030,7 @@ def main():
     # had NO WAY INTO THE TABLE -- the 1926 Los Angeles Tigers were written, served and
     # invisible to search_clubs. The league is the empty string because none is asserted;
     # the table already holds six independents that way.
+    doc_years = collections.defaultdict(set)          # club id -> the years a document names
     for spec in DECL.get("CLUBS_NAMED_BY_A_DOCUMENT", {}).get("clubs", []):
         y = int(spec["year"]); lg = spec.get("league", "")
         # ANCHOR IT LIKE ANY OTHER CLUB. gate_clubs K5 requires
@@ -1024,6 +1052,7 @@ def main():
             for st_ in prev_doc["strings"]: st_["last"] = max(st_["last"], y)
             prev_doc["_document"].setdefault("further_seasons", []).append(
                 {"year": y, "source_record": spec["source_record"], "evidence": spec["evidence"]})
+            doc_years[cid].add(y)
             continue
         if any(c["id"] == cid for c in clubs):
             raise SystemExit(f"CLUBS_NAMED_BY_A_DOCUMENT: {cid} is already in the table and "
@@ -1055,6 +1084,7 @@ def main():
                                "club-season, so it holds no men here by ruling and not "
                                "by omission"}
                               if spec.get("roster_is_keyed_to_the_game") else {})}})
+        doc_years[cid].add(y)
         lc = spec.get("lineage_candidate")
         if lc:
             unresolved["lineage_candidates"].append({
@@ -1064,6 +1094,21 @@ def main():
                 "men_carried": [0, 0],
                 "why": lc["why_not_a_link"]})
 
+    # A YEAR INSIDE A DOCUMENT CLUB'S SPAN THAT NO DOCUMENT NAMES IS DARK. Frankford's
+    # early club is declared for 1899, 1900, 1903 and 1906, and extending the segment to
+    # 1899-1906 asserted 1901, 1902, 1904 and 1905 as club-seasons no source names --
+    # four phantom club-seasons, which measure_thin_archive would then have published as
+    # four empty club-seasons to go hunting for. A gap in the evidence is not a season.
+    for c in clubs:
+        ys = doc_years.get(c["id"])
+        if not ys or len(ys) < 2: continue
+        seg = c["segments"][0]
+        dark = sorted(y for y in range(seg["first"], seg["last"] + 1) if y not in ys)
+        if not dark: continue
+        seg["dark_years"] = dark
+        seg["_dark_note"] = ("no document names this club in these years. The span is stretched "
+                             "between the years that ARE named; these are a gap in the evidence, "
+                             "not seasons, and nothing may be hung on them.")
     for c in clubs: c["strings"].sort(key=lambda s: (s["source"], s["first"], s["string"]))
     clubs.sort(key=lambda c: (c["first"], c["id"]))
     ids = collections.Counter(c["id"] for c in clubs)

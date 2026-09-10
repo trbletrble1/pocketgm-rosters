@@ -87,6 +87,19 @@ def main(argv):
              f" -- it ROSE by {unnamed - ceiling:,}. Either the club table lost reach, or new "
              f"season keys arrived on club-seasons it does not describe. Both want looking at "
              f"before the ceiling is raised."))
+    # THE OTHER GATE'S NUMBER, NAMED HERE. This counts the EFFECT -- season keys the table
+    # cannot name. gate_clubs K6 counts the CAUSE -- a league whose strings the table
+    # refuses. On 2026-09-09 they were found to be naming the same tokens with neither
+    # mentioning the other, and fixing the cause took this number from 2,018 to 851. They
+    # are not the same population (no_name and span_narrow are not refusals) so they stay
+    # apart; what they do not stay is silent about each other.
+    try:
+        _T = json.load(open(os.path.join(BASE, "build", "clubs.json")))
+        print(f"  the CAUSE, counted by gate_clubs K6: {_T['counts']['unresolved_strings']:,} "
+              f"unresolved club strings, {_T['counts']['pfa_only_clubs']:,} clubs minted from PFA "
+              f"alone. A refusal there is an unnameable season key here.")
+    except Exception as e:
+        print(f"  (could not read build/clubs.json for the cause count: {e})")
     if unnamed < ceiling:
         print(f"  NOTE: it FELL by {ceiling - unnamed:,}. Lower `ceiling` in declarations/clubs.json "
               f"to {unnamed:,} so the ground gained is held.")
