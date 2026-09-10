@@ -32,6 +32,20 @@ proved for THIS caller in this run rather than carried forward.
   python3 src/fetch_pfa_boxscores.py               fetch, resuming from the manifest
   python3 src/fetch_pfa_boxscores.py --status      what is done, what is left
   python3 src/fetch_pfa_boxscores.py --verify      re-hash everything, count both ways
+  python3 src/fetch_pfa_boxscores.py --repair-misfiled   the 35 the index files wrongly
+
+THE ONE PLACE A URL IS CONSTRUCTED RATHER THAN READ, and it took a ruling. PFA's
+season indexes for 1990-1994 link seven games a year -- the postseason, games
+229-235 -- into /nflboxscores1/, where they 404. The pages are served from
+/nflboxscores2/. Taking them means building a URL the index does not give, which
+is the rule against inventing a locator; Ryan ruled on 10 September that they go.
+
+SO THE REPAIR IS CHECKED, NOT ASSUMED. The index row carries the date and both
+clubs; the box score page's <title> carries the date, the round and both clubs as
+"away at home". A repaired page is accepted ONLY if its title names the same two
+clubs in the same order AND the same date. Anything else is refused and reported.
+The original 404 stays in the manifest -- the index link really is dead, and that
+fact should outlive the repair.
 """
 import os, re, sys, json, time, shutil, datetime, collections
 
@@ -164,8 +178,91 @@ def enumerate_targets():
     return targets
 
 
+ROW = re.compile(r"<tr>(.*?)</tr>", re.S)
+CELL = re.compile(r"<td[^>]*>(.*?)</td>", re.S)
+MONTHS = ("January February March April May June July August September October "
+          "November December").split()
+
+
+def _text(s):
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", s)).strip()
+
+
+def index_row_for(season_index, name):
+    """The index's own row for one box score: its date and its two clubs.
+
+    This is the evidence the repair is checked against. If the index does not
+    describe the game, there is nothing to check against and it is refused."""
+    b = open(os.path.join(DEST, "indexes", season_index.lstrip("/")), "rb").read()
+    for blk in ROW.findall(b.decode("utf-8", "replace")):
+        if name not in blk: continue
+        cells = [_text(c) for c in CELL.findall(blk)]
+        if len(cells) < 5: continue
+        try:
+            m, d, y = (int(x) for x in cells[0].split("/"))
+        except ValueError:
+            continue
+        return {"date": f"{MONTHS[m-1]} {d}, {y}", "away": cells[1], "home": cells[3],
+                "away_score": cells[2], "home_score": cells[4], "printed_date": cells[0]}
+    return None
+
+
+def repair_misfiled():
+    """The 35 the index files into the wrong directory. Ruled 10 September."""
+    man = PF.load(MANIFEST, HEADER)
+    man.setdefault("repairs", {})
+    T = json.load(open(TARGETS))
+    by_file = {t["file"]: t for t in T["targets"]}
+    dead = sorted(k for k, v in man["absences"].items()
+                  if v.get("http_status") == 404 and k.startswith("nflboxscores1/"))
+    print(f"{len(dead)} dead index links to try in the other directory\n", flush=True)
+    took = refused = still = 0
+    for f in dead:
+        name = f.split("/")[-1]
+        tgt = by_file.get(f)
+        want = index_row_for(tgt["from_index"], name) if tgt else None
+        if not want:
+            print(f"  REFUSED {name}: the index does not describe the game, so there is "
+                  f"nothing to check a repair against"); refused += 1; continue
+        alt = "nflboxscores2/" + name
+        url = SITE + "/" + alt
+        body, status, err = PF.fetch(url, DELAY, UA)
+        if body is None:
+            print(f"  still absent {name}: HTTP {status}"); still += 1; time.sleep(DELAY); continue
+        title = re.search(r"<title>([^<]*)", body.decode("utf-8", "replace"))
+        title = title.group(1) if title else ""
+        pair = f"{want['away']} at {want['home']}"
+        if pair not in title or want["date"] not in title:
+            print(f"  REFUSED {name}: title {title!r} does not carry {pair!r} and "
+                  f"{want['date']!r}"); refused += 1; time.sleep(DELAY); continue
+        PF.write_file(DEST, alt, body)
+        man["files"][alt] = {
+            "sha256": PF.sha(body), "bytes": len(body),
+            "fetched_at": datetime.datetime.now().isoformat(timespec="seconds"),
+            "url": url, "kind": "boxscore", "http_status": status,
+            "_repair": "THE URL WAS CONSTRUCTED, NOT READ FROM THE INDEX. Ruled by Ryan "
+                       "10 September 2026.",
+            "_index_linked": SITE + "/" + f + " (404)",
+            "_checked_against_the_index_row": want,
+            "_title": title}
+        man["repairs"][f] = {"served_from": alt, "index_said": want, "title": title}
+        man["absences"][f]["resolved_by"] = alt
+        man["absences"][f]["why"] = ("the site answered 404 for a link its own index "
+                                     "carries; the page is served from the OTHER box "
+                                     "score directory and was taken from there")
+        PF.save(man, MANIFEST)
+        took += 1
+        print(f"  ok {name}  {title[:78]}")
+        time.sleep(DELAY)
+    print(f"\ntaken {took}   refused {refused}   still absent {still}")
+    PF.verify(man, DEST)
+    return took
+
+
 def main():
     argv = sys.argv[1:]
+    if "--repair-misfiled" in argv:
+        repair_misfiled(); return
     if "--enumerate" in argv:
         enumerate_targets(); return
     if not os.path.exists(TARGETS):
