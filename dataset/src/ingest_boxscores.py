@@ -443,24 +443,17 @@ def main(write=True):
     for dn, fn, m in sorted(pages, key=lambda x: (x[2].group(1), x[2].group(2),
                                                   int(x[2].group(3) or 0))):
         year, league, num = int(m.group(1)), m.group(2).upper(), m.group(3)
-        if year > 1959:
-            continue
         sr = f"{SRC_ID}#{dn}/{fn}"
         if not num:
-            # THE FOUR INTER-LEAGUE CHAMPIONSHIPS. They used to vanish because the
-            # pattern did not match them. They are REFUSED HERE, WITH A REASON AND A
-            # COUNT: PFA's id names two leagues (aflnfl) and the subject shape carries
-            # exactly one, so filing them needs a ruling about the league token, not a
-            # parse decision. A refusal that is counted is a different thing from one
-            # that vanishes.
-            unparsed.append({"game": fn, "what": "no game number in PFA's id",
-                             "raw": fn, "source_record": sr,
-                             "_was_silently_skipped_before": True,
-                             "why": "PFA's identifier names two leagues and no game "
-                                    "number; the subject shape carries one league and "
-                                    "a number. Needs a ruling, not a guess."})
-            n["refused_no_game_number"] += 1
-            continue
+            # THE FOUR INTER-LEAGUE CHAMPIONSHIPS -- Super Bowls I to IV. PFA gives
+            # them no game number, and the old pattern therefore dropped all four IN
+            # SILENCE. Ryan ruled 2026-09-10 that they go in under a DECLARED token:
+            # AFLNFL is a competition between two leagues and not a league, declared in
+            # clubs.json LEAGUE_TOKENS_THAT_ARE_NOT_LEAGUES with what it asserts and
+            # what it refuses. THE NUMBER IS 1 BECAUSE THERE WAS ONE SUCH GAME A SEASON
+            # -- it is the source's own arithmetic, not an invented ordinal.
+            num = 1
+            n["inter_league_championship"] += 1
         num = int(num)
         h = open(os.path.join(CACHE, dn, fn), encoding="utf-8", errors="replace").read()
         tabs = find_tables(h)

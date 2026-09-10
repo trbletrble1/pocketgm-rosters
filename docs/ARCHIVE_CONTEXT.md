@@ -529,6 +529,41 @@ Also open:
 
 ---
 
+## 11a. Known LIMITS — not defects, and not fixable by declaring anything
+
+A defect is something behaving other than as designed. A limit is the design. These
+are recorded because they are **invisible from every gate line**, so a session that
+does not know will rediscover them the expensive way.
+
+### The contested table holds only claims whose subject carries a person
+
+`build_contested` selects `WHERE person IS NOT NULL` on **both** its date path and its
+value path. A claim whose subject is a game, a club-season, a league-season or a
+document has no person in that column.
+
+**So games, clubs and documents cannot hold a disagreement at all.** Not "do not
+currently" — *cannot*. Declaring a predicate family over them changes nothing, and
+this is not visible from RS-G6, which reports only on what the contested table
+already holds.
+
+**Measured 10 September 2026, and this is how it was found.** Ryan ruled that a box
+score and a game log describe the same game and must be comparable, so the `game`
+family was declared over `pfa.game` and `pfa.game_as_logged` with a reading. The model
+was rebuilt: **contested pairs 26,335 before, 26,335 after**. The family is correct,
+the reading is correct, and nothing happened.
+
+**Ryan ruled 10 September 2026 that it stays.** Keying the contest builder on the
+subject is a read-model change touching every non-person subject in the archive, and
+the case that raised it had nothing to compare anyway — the two sources agreed 1,932
+of 1,932 on every field both carried, because they carry almost nothing in common.
+
+**What this means in practice.** For any subject that is not a person, two sources
+that disagree will sit side by side under different predicates and nothing will say
+so. If that matters for a future source, the fix is the contest builder, not a
+declaration — and it is a real piece of work, not a one-line change.
+
+---
+
 ## 11. Known defects, unfixed
 
 | | |
