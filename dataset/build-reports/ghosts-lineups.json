@@ -1,0 +1,842 @@
+{
+ "games": [
+  {
+   "page": "Bethlehem_Gilberton_1926.htm",
+   "positions_found": 11,
+   "away_men": [
+    "Franks",
+    "Boslego",
+    "Copley",
+    "Sheely",
+    "Gallagher",
+    "Chapman",
+    "McDonald",
+    "Pollard",
+    "Adams",
+    "J. Chapmam",
+    "Joseph"
+   ],
+   "home_men": [
+    "Gaffney",
+    "Youkonis",
+    "Rogan",
+    "Goldman",
+    "Heath",
+    "Eastman",
+    "Cannon",
+    "Downey",
+    "Lewin",
+    "Gooch",
+    "Beck"
+   ],
+   "substitutions": [
+    "Levitz for Gaffney"
+   ],
+   "officials": [
+    [
+     "Referee",
+     "Wheeler, Haverford"
+    ],
+    [
+     "Umpire",
+     "Kinney, Trinity"
+    ],
+    [
+     "Head Linesman",
+     "Newell, Penn"
+    ]
+   ],
+   "_year": 1926,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Bethlehem_Lancaster_1926_2.htm",
+   "positions_found": 11,
+   "away_men": [
+    "Gaffney",
+    "Youkonis",
+    "Kozlek",
+    "Goldman",
+    "Wilson",
+    "Eastman",
+    "Cannon",
+    "Downey",
+    "Gooch",
+    "Douglas",
+    "Beck"
+   ],
+   "home_men": [
+    "Heilman",
+    "Storsky",
+    "Arnold",
+    "Payne",
+    "Bihl",
+    "Krise",
+    "Emanuel",
+    "Sawyer",
+    "Kingsley",
+    "Dekas",
+    "McGraw"
+   ],
+   "substitutions": [
+    "Lewin for Beck",
+    "Levitz foe Eastman",
+    "Eastman for Cannon",
+    "Heath for Gaffney",
+    "Gaffney for Heath",
+    "Lehecka for Gaffney",
+    "Slimmer for Kozlek"
+   ],
+   "officials": [
+    [
+     "Referee",
+     "Newell"
+    ],
+    [
+     "Umpire",
+     "Williams"
+    ],
+    [
+     "Head Linesman",
+     "Keady"
+    ]
+   ],
+   "_year": 1926,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Bethlehem_Shenandoah_1926.htm",
+   "positions_found": 11,
+   "away_men": [
+    "Breslin",
+    "Connors",
+    "Stemmy",
+    "Duke",
+    "Norris",
+    "Barron",
+    "August",
+    "Sikorsky",
+    "Stasrr",
+    "Tomcavage",
+    "Yancullis"
+   ],
+   "home_men": [
+    "Cannon",
+    "Kozlek",
+    "McDonald",
+    "Goldman",
+    "De Rocco",
+    "Youkonis",
+    "Lynch",
+    "Downey",
+    "Lehecka",
+    "Levitz",
+    "Beck"
+   ],
+   "substitutions": [
+    "Heath for Goldman. Touchdowns -- Starr 2"
+   ],
+   "officials": [
+    [
+     "Referee",
+     "Evans"
+    ],
+    [
+     "Umpire",
+     "Tracey"
+    ],
+    [
+     "Head Linesman",
+     "Ambrose"
+    ]
+   ],
+   "_year": 1926,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Conshohocken_Bethlehem_1920.htm",
+   "positions_found": 9,
+   "away_men": [
+    "Riggs",
+    "Bechtel",
+    "Mitchell",
+    "Lynch",
+    "Fisher",
+    "Bergey",
+    "Barry",
+    "Yebsley",
+    "McGuckin"
+   ],
+   "home_men": [
+    "Hollets",
+    "Kelly",
+    "Galdas",
+    "Lehr",
+    "Mitman",
+    "Gaffney",
+    "Howard",
+    null,
+    null
+   ],
+   "substitutions": [
+    "Wilson for Mitchell",
+    "Ballon for Yebsley",
+    "Jones for Riggs",
+    "Beennick for Hollets",
+    "Cometz for Howard",
+    "Dixon for Gaffney",
+    "Reynolds for Howard. Time -- 12-minute periods."
+   ],
+   "officials": [
+    [
+     "Referee",
+     "Hopkins"
+    ],
+    [
+     "Umpire",
+     "Morgan"
+    ],
+    [
+     "Linesman",
+     "Krieble"
+    ]
+   ],
+   "_year": 1920,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Conshohocken_Kaywood_1919.htm",
+   "positions_found": 9,
+   "away_men": [
+    "Riggs",
+    "Bechtel",
+    "Lynch",
+    "Walcoyle",
+    "Kearns",
+    "Bergey",
+    "Hartig",
+    "Williams",
+    "Weber"
+   ],
+   "home_men": [
+    "Jamison",
+    "Roberts",
+    "Heist",
+    "Lally",
+    "Butts",
+    "Lukens",
+    "Tompkins",
+    null,
+    null
+   ],
+   "substitutions": [],
+   "officials": [
+    [
+     "Referee",
+     "Hopkins"
+    ]
+   ],
+   "_year": 1919,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Corley_Reliance_1910.htm",
+   "positions_found": 11,
+   "away_men": [
+    "Thomas",
+    "Jackson",
+    "O'Hara",
+    "Ryan",
+    "Orr",
+    "J. Robbins",
+    "Sheehan",
+    "R. Robbins",
+    "L. Watson",
+    "R. Watson",
+    "Meagher"
+   ],
+   "home_men": [
+    "Quinn",
+    "France",
+    "Duane",
+    "Nefsky",
+    "Simmons",
+    "Naulty",
+    "Fogarty",
+    "Keouh",
+    "Smith",
+    "Alexander",
+    "Connell"
+   ],
+   "substitutions": [],
+   "officials": [
+    [
+     "Referee",
+     "McArdle"
+    ],
+    [
+     "Umpire",
+     "McGowan"
+    ],
+    [
+     "Field Judge",
+     "Murphy"
+    ]
+   ],
+   "_year": 1910,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Frankford_Mutes_1902.htm",
+   "positions_found": 8,
+   "away_men": [
+    "Elliss",
+    "Mason",
+    "Laycon",
+    "Carson",
+    "Hogan",
+    "Whitaker",
+    "Shock",
+    "Aspen"
+   ],
+   "home_men": [
+    "Lewis",
+    "Soles",
+    "Windt",
+    "Newcombe",
+    "Goss",
+    "Cosmistke",
+    "Kurath",
+    null
+   ],
+   "substitutions": [],
+   "officials": [
+    [
+     "Referee",
+     "- Meyer"
+    ],
+    [
+     "Umpire",
+     "Davies"
+    ]
+   ],
+   "_year": 1902,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Holmesburg_Bridesburg_1920.htm",
+   "positions_found": 9,
+   "away_men": [
+    "Hayes",
+    "Day",
+    "Kurtz",
+    "Lynch",
+    "Gaffney",
+    "Newcomb",
+    "Curan",
+    "Caskey",
+    "W. Downey"
+   ],
+   "home_men": [
+    "Jamison",
+    "Roberts",
+    "Heist",
+    "Lally",
+    "Butts",
+    "Lukens",
+    "Tompkins",
+    null,
+    null
+   ],
+   "substitutions": [],
+   "officials": [
+    [
+     "Referee",
+     "Raby, Gettysburg"
+    ],
+    [
+     "Umpire",
+     "Lewis, Harvard"
+    ]
+   ],
+   "_year": 1920,
+   "_club_hits": 1,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Holmesburg_Chesbrook_1920.htm",
+   "positions_found": 9,
+   "away_men": [
+    "Squires",
+    "Kurtz",
+    "McVeigh",
+    "Hayes",
+    "Murtz",
+    "Bourne",
+    "Gaston",
+    "Morrison",
+    "Walsh"
+   ],
+   "home_men": [
+    "Kidd",
+    "Alexander",
+    "Ludwig",
+    "Feinburg",
+    "Elliot",
+    "Moore",
+    "F. Kerrigan",
+    null,
+    null
+   ],
+   "substitutions": [],
+   "officials": [
+    [
+     "Referee",
+     "Meyers, A"
+    ],
+    [
+     "Umpire",
+     "Abrams, Delaware College"
+    ]
+   ],
+   "_year": 1920,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Holmesburg_Conshohocken_1920.htm",
+   "positions_found": 9,
+   "away_men": [
+    "Gaston",
+    "Kelley",
+    "Gaffney",
+    "Lynch",
+    "Kurtz",
+    "Newcomb",
+    "Hayes",
+    "Wolfe",
+    "Caskey"
+   ],
+   "home_men": [
+    "Garrett",
+    "Brown",
+    "Lotka",
+    "Mitchell",
+    "Fisher",
+    "Day",
+    "Eble",
+    null,
+    null
+   ],
+   "substitutions": [],
+   "officials": [
+    [
+     "Referee",
+     "Raby, Gettysburg"
+    ],
+    [
+     "Umpire",
+     "Lewis, Harvard"
+    ]
+   ],
+   "_year": 1920,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Holmesburg_Parkside_1919.htm",
+   "positions_found": 9,
+   "away_men": [
+    "Kelly",
+    "Lally",
+    "Kront",
+    "Morrison",
+    "McVeigh",
+    "Donthart",
+    "Diamond",
+    "Yeadsley",
+    "Caskey"
+   ],
+   "home_men": [
+    "for Holmesburg",
+    "Morrisson",
+    "A. Fornick",
+    "Moore",
+    "J. Fornick",
+    "W. Weber",
+    "Keenan",
+    null,
+    null
+   ],
+   "substitutions": [],
+   "officials": [
+    [
+     "Referee",
+     "Myers"
+    ],
+    [
+     "Umpire",
+     "Campbell"
+    ],
+    [
+     "Head Linesman",
+     "Lentz"
+    ]
+   ],
+   "_year": 1919,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Holmesburg_USSMichigan_1919.htm",
+   "positions_found": 9,
+   "away_men": [
+    "Diamond",
+    "Douthart",
+    "Kurtz",
+    "Morrison",
+    "McVeigh",
+    "Lally",
+    "Kelly",
+    "Caskey",
+    "Lake"
+   ],
+   "home_men": [
+    "Lukasavage",
+    "Healy",
+    "Peters",
+    "Loy",
+    "Barth",
+    "Waters",
+    "Christie",
+    null,
+    null
+   ],
+   "substitutions": [
+    "Yeagsley [sic] for Lake",
+    "Eavis for Lally",
+    "Larkin for McVeigh",
+    "Gaston for Kelly",
+    "Griffith for Kurtz. Touchdowns -- Holmesburg"
+   ],
+   "officials": [
+    [
+     "Referee",
+     "Myers"
+    ],
+    [
+     "Umpire",
+     "Campbell"
+    ]
+   ],
+   "_year": 1919,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Holmesburg_Washington_1921.htm",
+   "positions_found": 9,
+   "away_men": [
+    "Hayes",
+    "Potts",
+    "Kurtz",
+    "Lynch",
+    "Morrison",
+    "Day",
+    "Emanuel",
+    "Seigle",
+    "Fritz"
+   ],
+   "home_men": [
+    "Patterson",
+    "Smeach",
+    "McCarthy",
+    "Crouch",
+    "Litkus",
+    "Gormley",
+    "Eppley",
+    "Walson",
+    "Mackert"
+   ],
+   "substitutions": [
+    "Holmesburg -- Miller for Hayes",
+    "Henzelman for Caskey. Washington -- MacDonald-for McCarthy",
+    "Hudson for Mackert",
+    "Harris for Lukens",
+    "Kaplan for Eppley",
+    "Eppley for Kaplan",
+    "Anderson for Kaplan",
+    "Coster for Crouch",
+    "Crouch for Coster",
+    "Leightv for Lukens",
+    "Boyers for Leighty",
+    "Harris for Boyers",
+    "Turner for McCarthy",
+    "McCarthy for Hudson",
+    "Boetler for B. Turner",
+    "B. Turner for MacDonald. Scoring"
+   ],
+   "officials": [
+    [
+     "Umpire",
+     "Apple (Michigan)"
+    ],
+    [
+     "Field Judge",
+     "Guyon (Carlisle)"
+    ],
+    [
+     "Head Linesman",
+     "Sutton (George Washington university)"
+    ]
+   ],
+   "_year": 1921,
+   "_club_hits": 1,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Maritime_Hog-Island_NYS_1919.htm",
+   "positions_found": 9,
+   "away_men": [
+    "Holland",
+    "Greenman",
+    "Little",
+    "Moore",
+    "Dally",
+    "Schwartz",
+    "Byers",
+    "Keefer",
+    "Beebe"
+   ],
+   "home_men": [
+    "McHenry",
+    "Riley",
+    "Brewer",
+    "Marshall",
+    "O'Hara",
+    "Gardner",
+    "Griffith",
+    null,
+    null
+   ],
+   "substitutions": [],
+   "officials": [
+    [
+     "Referee",
+     "Boice, Atlantic City High School"
+    ],
+    [
+     "Umpire",
+     "M"
+    ],
+    [
+     "Linesman",
+     "Chupein"
+    ]
+   ],
+   "_year": 1919,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Maritime_NYS_Merchant_1919.htm",
+   "positions_found": 9,
+   "away_men": [
+    "Higgins",
+    "Riley",
+    "Romig",
+    "Marshall",
+    "O'Hara",
+    "Gardner",
+    "Griffith",
+    "Russell",
+    "Hugo"
+   ],
+   "home_men": [
+    "Davis",
+    "McManiman",
+    "F. Hagarty",
+    "Mauer",
+    "Wabo",
+    "Walker",
+    "Logan",
+    null,
+    null
+   ],
+   "substitutions": [
+    "McHenry for Higgins",
+    "Praissman for O'Hara",
+    "Bell for Bowbly",
+    "Brewer for Romig",
+    "McCoach for Russell",
+    "Russell for McHenry"
+   ],
+   "officials": [
+    [
+     "Referee",
+     "Petron"
+    ]
+   ],
+   "_year": 1919,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Yellowjackets_Holmesburg_1922.htm",
+   "positions_found": 11,
+   "away_men": [
+    "Thomas",
+    "Williams",
+    "Spagna",
+    "Wray",
+    "Swinton",
+    "Little",
+    "Miller",
+    "Scott",
+    "Bowser",
+    "Lightner",
+    "Elliot"
+   ],
+   "home_men": [
+    "T. Lynch",
+    "Gorman",
+    "Morrison",
+    "L. Lynch",
+    "Mackenzie",
+    "Newcomb",
+    "Dooley",
+    "Bowers",
+    "Cofall",
+    "Caskey",
+    "Berry"
+   ],
+   "substitutions": [
+    "Mellow for Swinton",
+    "Seasholz for Elliot. Holmesburg",
+    "Kurtz for Mackenzie",
+    "Nemzick for Caskey"
+   ],
+   "officials": [],
+   "_year": 1922,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  },
+  {
+   "page": "Yellowjackets_Thanksgiving_1924.htm",
+   "positions_found": 9,
+   "away_men": [
+    "Fennel",
+    "Muirhead",
+    "Hathaway",
+    "Bonowitz",
+    "H. Kenderdine",
+    "Sauer",
+    "Bacon",
+    "Mahrt",
+    "Huffine"
+   ],
+   "home_men": [
+    "Thomas",
+    "R. Stein",
+    "Spagna",
+    "H. Stein",
+    "Welsh",
+    "Behman",
+    "Doyle",
+    null,
+    null
+   ],
+   "substitutions": [
+    "Way for Sullivan",
+    "Tidd for H. Kenderdine",
+    "Gulian for Behman",
+    "Kellog for Storer",
+    "Sullivan for Way",
+    "Dayhoff for Hamer"
+   ],
+   "officials": [],
+   "_year": 1924,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 0
+  }
+ ],
+ "honours": [
+  {
+   "page": "Bethlehem.htm",
+   "positions_found": 11,
+   "away_men": [
+    "Coaldale",
+    "Atlantic City",
+    "Shenandoah",
+    "Coaldale",
+    "Atlantic City",
+    "Newark",
+    "Lancaster",
+    "Shenandoah",
+    "Gilberton",
+    "Bethlehem",
+    "Lancaster"
+   ],
+   "home_men": [
+    "Mike Gaffney",
+    "Butch Boslego",
+    "Charlie Eastman",
+    "Duke",
+    "Gold",
+    "Joe Garland",
+    "George Poole",
+    "Rae McGraw",
+    "Johnny Chapman",
+    "Joe Zaleha",
+    "Marv Wood"
+   ],
+   "substitutions": [],
+   "officials": [],
+   "_year": 1925,
+   "_club_hits": 0,
+   "_repeats_in_the_left_column": 4
+  },
+  {
+   "page": "Yellowjackets_all-pros_1928.htm",
+   "positions_found": 11,
+   "away_men": [
+    "Green Bay",
+    "Detroit",
+    "Yankees",
+    "Providence",
+    "Chicago Bears",
+    "Frankford",
+    "Giants",
+    "Detroit",
+    "Providence",
+    "Green Bay",
+    "Frankford"
+   ],
+   "home_men": [
+    "Flaherty",
+    "Lyman",
+    "Graham",
+    "Wostounal",
+    "Rhenquist",
+    "Sonnenberg",
+    "Munn",
+    "Oden",
+    "Driscoll",
+    "Kotal",
+    "Latone"
+   ],
+   "substitutions": [],
+   "officials": [],
+   "_year": 1928,
+   "_club_hits": 1,
+   "_repeats_in_the_left_column": 4
+  }
+ ]
+}
