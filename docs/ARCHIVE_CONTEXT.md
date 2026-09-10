@@ -562,6 +562,29 @@ that disagree will sit side by side under different predicates and nothing will 
 so. If that matters for a future source, the fix is the contest builder, not a
 declaration — and it is a real piece of work, not a one-line change.
 
+### The 10 September rekeying did NOT close this
+
+`build_contested` was rekeyed that afternoon onto `(person, family, year)` where the
+family holds season-scoped members. **That fixed a different half of the same defect
+and left this half exactly as it was.**
+
+- What it fixed: some *person* subjects were contesting **wrongly**. A guard who later
+  played tackle was recorded as a disagreement with himself, 17,372 times. Adding the
+  year asks "what was his position *that season*", which is one question.
+- What it did **not** fix: a subject with **no person at all** still cannot contest.
+  The key still begins at the resolved `person`, and it begins there deliberately —
+  keying on the raw `subject` column was measured and would have **undone person
+  merging**, because `subject` holds the pre-merge id and only 28.2% of birth_date
+  claims have the two agree.
+
+So games, clubs and documents are exactly where they were. The `game` family is still
+declared, still correct, and still holds no contested row — 35,194 claims that cannot
+disagree. **A later reader should not read the rekeying as having closed this.**
+
+The two halves want different fixes: this one wants the contest builder to key on the
+subject *for subjects that have no person*, which is safe precisely because those
+claims have no merge layer to undo.
+
 ---
 
 ## 11. Known defects, unfixed

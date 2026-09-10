@@ -83,7 +83,7 @@ CREATE TABLE club_code(code TEXT, first INTEGER, last INTEGER, club_id TEXT);
 CREATE TABLE club_name(norm TEXT, name TEXT, first INTEGER, last INTEGER, club_id TEXT, kind TEXT);
 CREATE TABLE club_unresolved(section TEXT, json TEXT, mentions TEXT);
 CREATE TABLE club_refusal(string TEXT, year INTEGER, league TEXT, why TEXT, n INTEGER);
-CREATE TABLE contested(person TEXT, family TEXT, n_groups INTEGER, groups TEXT, literals TEXT, PRIMARY KEY(person, family));
+CREATE TABLE contested(person TEXT, family TEXT, year TEXT, n_groups INTEGER, groups TEXT, literals TEXT, PRIMARY KEY(person, family, year));
 CREATE TABLE gate(name TEXT PRIMARY KEY, status TEXT, counts TEXT, report TEXT);
 CREATE TABLE source_summary(source_id TEXT, store TEXT, predicate TEXT, n INTEGER, records INTEGER);
 CREATE TABLE person_family(person TEXT, family TEXT, pos INTEGER, ab INTEGER, PRIMARY KEY(person, family));
@@ -557,16 +557,39 @@ def build(dst, force=False, fast=False, prev=None):
     return failed
 
 
+# THE KEY CARRIES THE YEAR WHERE THE CLAIM IS ABOUT A SEASON. Ruled by Ryan,
+# 2026-09-10, after both keys were built and compared.
+#
+# A contest is two answers to ONE question. `(person, family)` alone asks "what is this
+# man's position?", which is not one question -- a guard who later played tackle got
+# recorded as a disagreement, 17,372 times. Adding the year asks "what was his position
+# THAT SEASON", which is.
+#
+# IT IS THE RESOLVED `person`, NEVER THE RAW `subject`. Keying on the subject column was
+# the obvious reading of the defect and it would have UNDONE PERSON MERGING: subject
+# holds the pre-merge id, only 28.2% of birth_date claims have the two agree, and 17,315
+# people carry five or more distinct subject strings. A man merged from five records
+# would have lost the disagreement BETWEEN them -- the most valuable thing the merge
+# produces -- and the total would have gone UP, so it would have looked like a gain.
+#
+# AND THE PRIMARY KEY MOVED WITH IT. The table was PRIMARY KEY(person, family) written
+# with INSERT OR REPLACE, so a finer grouping without a wider key would have kept one
+# season per man and dropped the rest IN SILENCE.
+SEASON_SCOPES = ("person_season", "stint", "club_season", "league_season")
+_YKEY = ("CASE WHEN c.scope IN " + str(SEASON_SCOPES) +
+         " THEN COALESCE(CAST(c.year AS TEXT), '') ELSE '' END")
+
+
 def build_contested(conn, fam):
     out = []
     date_fams = {f for f, s in fam["families"].items() if s.get("kind") == "date"}
     # date families: group by same day
-    cur = conn.execute("""SELECT c.person, c.family, d.literal, d.y, d.m, d.d, d.readable FROM claim c JOIN date_reading d ON d.claim=c.id
-                          WHERE c.person IS NOT NULL ORDER BY c.person, c.family""")
+    cur = conn.execute(f"""SELECT c.person, c.family, {_YKEY} yk, d.literal, d.y, d.m, d.d, d.readable FROM claim c JOIN date_reading d ON d.claim=c.id
+                          WHERE c.person IS NOT NULL ORDER BY c.person, c.family, yk""")
     last = None; items = []
     def flush():
         if last is None: return
-        person, family = last
+        person, family, yk = last
         seen = {}
         for lit, y, m, dd, r in items: seen.setdefault(lit, (lit, ({"year": y, "month": m, "day": dd} if r else None)))
         groups = dates.same_day_groups(list(seen.values()))
@@ -574,10 +597,10 @@ def build_contested(conn, fam):
         for u in unread: groups.append([u])
         lits = sorted({lit for lit, *_ in items})
         if len(groups) > 1:
-            out.append((person, family, len(groups), json.dumps(groups), json.dumps(lits)))
-    for person, family, lit, y, m, dd, r in cur:
-        if (person, family) != last:
-            flush(); last = (person, family); items = []
+            out.append((person, family, yk, len(groups), json.dumps(groups), json.dumps(lits)))
+    for person, family, yk, lit, y, m, dd, r in cur:
+        if (person, family, yk) != last:
+            flush(); last = (person, family, yk); items = []
         items.append((lit, y, m, dd, r))
     flush()
     # ---- non-date families: group by the DECLARED READING, not by the literal ----
@@ -596,9 +619,9 @@ def build_contested(conn, fam):
     has_reading = set(RV.families())
     n_false = 0
     for f in multi:
-        for person, lits in conn.execute("""SELECT person, json_group_array(DISTINCT value) FROM claim
+        for person, yk, lits in conn.execute(f"""SELECT person, {_YKEY.replace("c.","")} yk, json_group_array(DISTINCT value) FROM claim c
                                             WHERE family=? AND person IS NOT NULL AND kind!='absent' AND value IS NOT NULL
-                                            GROUP BY person HAVING COUNT(DISTINCT value)>1""", (f,)):
+                                            GROUP BY person, yk HAVING COUNT(DISTINCT value)>1""", (f,)):
             vals = []
             for raw in json.loads(lits):
                 try: vals.append(json.loads(raw))
@@ -620,10 +643,10 @@ def build_contested(conn, fam):
             else:
                 groups = [[v] for v in vals]
             if len(groups) > 1:
-                out.append((person, f, len(groups), json.dumps(groups), json.dumps(vals)))
+                out.append((person, f, yk, len(groups), json.dumps(groups), json.dumps(vals)))
     if n_false:
         log(f"  values folded by a declared reading rather than recorded as disagreeing: {n_false:,}")
-    conn.executemany("INSERT OR REPLACE INTO contested VALUES(?,?,?,?,?)", out)
+    conn.executemany("INSERT OR REPLACE INTO contested VALUES(?,?,?,?,?,?)", out)
     return out
 
 

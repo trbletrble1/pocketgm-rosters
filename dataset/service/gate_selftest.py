@@ -172,12 +172,18 @@ def main():
     def contested_model(rows):
         c = mini_model([])
         for pid, fam, groups in rows:
-            c.execute("INSERT INTO contested VALUES(?,?,?,?,?)",
-                      (pid, fam, len(groups), json.dumps(groups),
+            c.execute("INSERT INTO contested VALUES(?,?,?,?,?,?)",
+                      (pid, fam, "", len(groups), json.dumps(groups),
                        json.dumps([v for g in groups for v in g])))
         return c
     cols = [r[1] for r in mini_model([]).execute("PRAGMA table_info(contested)")]
-    if cols == ["person", "family", "n_groups", "groups", "literals"]:
+    # THE SHAPE IS ASSERTED, NOT USED AS A CONDITION. This was an `if` on the column
+    # list, so widening the table to carry the year would have SKIPPED every check below
+    # and reported a clean sheet -- a guard turning a real failure into a confident pass,
+    # which is a defect this archive has found four separate ways.
+    assert cols == ["person", "family", "year", "n_groups", "groups", "literals"], \
+        f"contested schema changed to {cols}; these checks must be updated, not skipped"
+    if True:
         same_day = [["May 12, 1925"], ["1925-05-12"]]          # one day, recorded as two groups
         two_days = [["May 12, 1925"], ["May 13, 1925"]]        # genuinely two days
         allok &= expect("RS-G6 two groups that read to one day",

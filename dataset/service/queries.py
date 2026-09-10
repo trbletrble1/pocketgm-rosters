@@ -211,7 +211,13 @@ def person(conn, pid, one=False):
     if others: out["other_subjects"] = [{"subject": json.loads(r["subject"]), "family": r["family"], "value": json.loads(r["value"]), **claim_view(r)} for r in others]
     out["denotations"] = [dict(r) for r in conn.execute("SELECT store, did, source_record, local, discriminator, method, matched_against, status, note FROM denotation WHERE person=? ORDER BY store, did", (pid,))]
     for d in out["denotations"]: d["discriminator"] = json.loads(d["discriminator"] or "null")
-    out["contested"] = [{"family": r["family"], "groups": json.loads(r["groups"])} for r in conn.execute("SELECT family, groups FROM contested WHERE person=?", (pid,))]
+    # THE YEAR RIDES ALONG. Since 2026-09-10 a contest is keyed on (person, family, year)
+    # where the family is about a season, so one man can hold several rows in one family
+    # -- one per season that disagrees. `season` is empty for a fact about the man rather
+    # than about a season of his.
+    out["contested"] = [{"family": r["family"], "season": r["year"] or None,
+                         "groups": json.loads(r["groups"])}
+                        for r in conn.execute("SELECT family, year, groups FROM contested WHERE person=?", (pid,))]
     if one:
         if out["contested"]:
             return 409, {"error": "one value was asked for and this person holds more than one on " + ", ".join(c["family"] for c in out["contested"]),
@@ -276,7 +282,8 @@ def candidate(conn, p, exact=False):
     nostat, nsargs = _in_sql("store", STATISTIC_STORES, negate=True)
     clubs = [f"{r['league']}|{r['year']}|{r['club_str']}" for r in conn.execute(
         f"SELECT DISTINCT league, year, club_str FROM claim INDEXED BY claim_person WHERE person=? AND scope='stint' AND {nostat} ORDER BY year LIMIT 40", [pid] + nsargs)]
-    contested = [r["family"] for r in conn.execute("SELECT family FROM contested WHERE person=?", (pid,))]
+    # DISTINCT, because one man can now hold several rows in one family, one per season.
+    contested = [r["family"] for r in conn.execute("SELECT DISTINCT family FROM contested WHERE person=?", (pid,))]
     return {"person": pid, "exact_match": exact, "index_name": p["index_name"], "names_held": names, "birth_dates_held": bd, "colleges_held": col,
             "first_year": p["first_year"], "last_year": p["last_year"], "roles_from_claims": json.loads(p["roles"]), "club_seasons": clubs,
             "contested": contested, **({"merged_into": p["merged_into"]} if p["merged_into"] else {})}
