@@ -25,6 +25,21 @@ from measure_programme_gain import holds, _real
 
 OUT = os.path.join(BASE, "build-reports", "thin-archive.json")
 FIELDS = ("age", "weight", "college", "position")
+# The season-scoped counterparts of the two person-level facts. NOT a fallback for
+# holds() -- a separate question, asked separately, so the answer to each stays its own.
+SEASON_SCOPED = {"age": ("pfa.age_in_season",),
+                 "weight": ("pfa.roster.weight", "guide.WEIGHT")}
+
+
+def _season_scoped(p, field):
+    """Does the archive hold this fact for this man as a SEASON figure?"""
+    want = SEASON_SCOPED.get(field) or ()
+    for k, sd in (p.get("seasons") or {}).items():
+        for bucket in (sd.get("stint") or {}, sd.get("stats") or {}):
+            if any(w in bucket and _real(bucket[w]) for w in want): return True
+    for row in (p.get("person_season") or []):
+        if len(row) >= 3 and row[1] in want and _real(row[2]): return True
+    return False
 # every season of these; plus everything before 1934 in any league
 WHOLE_LEAGUE = {"AAFC", "AFL", "AAF", "WFL", "USFL", "USFL2", "XFL", "UFL", "UFL2"}
 CUTOFF = 1934
@@ -199,14 +214,25 @@ def main():
         if not has_coach:
             no_coach.append(base)
         miss = collections.Counter()
+        # SEASON-SCOPED IS NOT HELD, AND IT IS NOT NOTHING EITHER. holds() asks a
+        # PERSON-level question and that stands, ruled 2026-09-09: a man's weight in 1932
+        # is not his weight in 1935. But a club-season whose missing weights are all
+        # sitting in the archive as season figures is a DIFFERENT ROW from one where the
+        # page never printed them -- the first wants a document with a career weight, the
+        # second wants the page. Counted here so the writer can say which.
+        recoverable = collections.Counter()
         for pid, p in rec["men"]:
             h = holds(p, yr)
             for f in FIELDS:
-                if not h[f]: miss[f] += 1
+                if h[f]: continue
+                miss[f] += 1
+                if f in ("age", "weight") and _season_scoped(p, f):
+                    recoverable[f] += 1
         tot = sum(miss.values())
         if tot:
             thin.append({**base, "missing_facts": tot, "of_possible": 4 * n,
-                         "share": round(tot / (4 * n), 3), "by_field": dict(miss)})
+                         "share": round(tot / (4 * n), 3), "by_field": dict(miss),
+                         "held_season_scoped": dict(recoverable)})
         if rec["with_stint"] == 0:
             no_roster.append({**base, "why": "no man on this club-season carries a jersey, "
                                              "a games figure or a position, so no source "

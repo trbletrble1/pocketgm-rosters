@@ -33,7 +33,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 DOCS = os.path.expanduser("~/Dropbox/Football Archive/docs")
 MD = os.path.join(DOCS, "what-to-look-for.md")
 CSVP = os.path.join(DOCS, "what-to-look-for.csv")
-HEADER = ["rank", "adds", "kind", "year", "name", "club", "league", "men_held",
+HEADER = ["rank", "hunt", "adds", "kind", "year", "name", "club", "league", "men_held",
           "facts_missing", "missing_breakdown", "what_would_fix_it"]
 NEVER = {"n/a", "N/A", "na", "None", "null", "-", "—"}
 

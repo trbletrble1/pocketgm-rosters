@@ -124,6 +124,41 @@ BOXSCORES = {"exists": 17499, "on_disk": 2934, "cited": 2890}
 
 
 # --------------------------------------------------------------------------- rows
+def _thin_label(x):
+    """-> (what would fix it, a note for the prose line, IS IT A HUNT). THE THREE CASES.
+
+    Ruled by Ryan, 2026-09-10. A row is not a hunt merely because a page exists, and it
+    is not an ingest merely because a fact is missing. Which of the three it is depends
+    on TWO things the archive already knows: whether the page was READ, and whether the
+    missing fact is HELD SEASON-SCOPED."""
+    key = (x["league"], x["year"], x["code"])
+    read = PFA_ROSTER.get(key)                      # None = no PFA page with a table
+    held = x.get("held_season_scoped") or {}
+    n_held = sum(held.values())
+    if read is False:
+        return NOT_READ, NOT_READ_NOTE, "no — already held"
+    if read is True and n_held:
+        # the page was read and part of what is missing is in the archive as a season
+        # figure. Say how much, and say what a document would have to give instead.
+        rest = x["missing_facts"] - n_held
+        fix = READ_HELD.format(n=n_held)
+        if rest:
+            fix += f" The other {rest} {'fact is' if rest == 1 else 'facts are'} not on the page."
+        return fix, READ_HELD_NOTE.format(n=n_held), "no — page read"
+    if read is True:
+        # MEASURED EMPTY, 10 September: there is no club-season whose PFA page was read
+        # and none of whose missing facts are held season-scoped. The branch stays because
+        # the day a page is read and gives nothing, this must say so rather than fall
+        # through to a generic hunt sentence.
+        what = " and ".join(k for k in ("age", "weight", "college", "position") if b_get(x, k))
+        return READ_ABSENT.format(what=what or "these facts") + _fix_for_thin(x), "", "yes"
+    return _fix_for_thin(x), "", "yes"
+
+
+def b_get(x, k):
+    return (x.get("by_field") or {}).get(k)
+
+
 def _fix_for_thin(x):
     b = x["by_field"]; y = int(x["year"]) if x["year"].isdigit() else 0
     if y >= 1990:
@@ -138,24 +173,63 @@ def _fix_for_thin(x):
 
 NOBODY_FIX = ("Anything naming the club and some of its men: a roster, a lineup, a "
               "captioned team photograph.")
-INGEST_FIX = ("**Not a hunt.** PFA's own club-season page is on this disk with a roster "
-              "table; this is an ingest the archive has not done.")
-INGEST_NOTE = (" **Not a hunt: PFA's page for this club-season is on the disk with a roster "
-               "table on it, and the archive has not read it.**")
+
+# THREE CASES, THREE SENTENCES. Ruled by Ryan, 2026-09-10, after the old single label sent
+# him to rows that were neither a hunt nor an ingest. It said "PFA's page is on this disk
+# with a roster table" and read as unread work; the page had been read, and 155 claims came
+# off New Rochelle alone. holds() is UNCHANGED -- a season weight is not a person's weight,
+# and the list still says so.
+READ_HELD = ("**Not a hunt, and not an ingest.** PFA's page was read, and {n} of these "
+             "missing facts are already held as SEASON figures — the archive knows what "
+             "PFA printed for that year and does not hold the person-level fact. **A "
+             "document giving a birth date or a career weight is what would fix this** — "
+             "a bio page, an obituary, a register.")
+READ_ABSENT = ("PFA's page was read and does not carry {what}. **This one is a hunt.** ")
+NOT_READ = ("**Not a hunt, and not work worth doing.** PFA's page carries a roster table "
+            "and was deliberately not read: the archive already holds these men from "
+            "nflverse or StatsCrew, and reading it would restate what it has.")
+
+READ_HELD_NOTE = (" **Not a hunt and not an ingest: the page was read, and {n} of these "
+                  "facts are held as SEASON figures. The person-level fact is what is "
+                  "missing.**")
+NOT_READ_NOTE = (" **Not a hunt: the page carries a roster table and was deliberately not "
+                 "read — these men are already held from nflverse or StatsCrew.**")
+
+
+def _pfa_pages_read():
+    """Which PFA club-season pages the roster ingest actually READ.
+
+    THE PAGE BEING ON DISK IS NOT THE PAGE HAVING BEEN READ, and the old label conflated
+    them. ingest_pfa_club_rosters reads a page only where the club-season is PFA-only or
+    the archive holds no men on it -- deliberately, so it does not restate rosters already
+    held from nflverse and StatsCrew. 2,414 pages carry a roster table; it read 428 and
+    left 1,986, of which 1,848 are NFL."""
+    p = os.path.join(BASE, "build", "pfa-club-rosters.json")
+    if not os.path.exists(p): return set()
+    return {k.split("#", 1)[-1] for k in (json.load(open(p)).get("source_records") or {})}
+
+
+PAGES_READ = _pfa_pages_read()
 
 
 def _pfa_roster_on_disk():
     """Which club-seasons already have a PFA roster on the disk.
 
     Ryan's ruling, 2026-09-09: a reader must see at a glance which rows are documents to
-    FIND and which are work the archive has not DONE. 16,422 men came off pages already
-    held; a list that sends him to eBay for one of them is worse than no list. Read from
-    the enumeration, which carries the three numbers per page."""
+    FIND and which are work the archive has not DONE. A list that sends him to eBay for a
+    page already on his disk is worse than no list. Read from the enumeration, which
+    carries the three numbers per page.
+
+    THE STORE'S OWN NUMBERS, not the report's: 16,842 roster rows read, 13,263 men PLACED
+    and 3,579 raised as leads. 16,422 was men on the pages, and it was quoted here as
+    though it were men gained."""
     p = os.path.join(BR, "pfa-club-season-targets.json")
     if not os.path.exists(p): return set()
-    return {(t["league"], str(t["year"]), t["code"])
-            for t in json.load(open(p))["targets"]
-            if t.get("on_disk") and t.get("has_roster_table")}
+    out = {}
+    for t in json.load(open(p))["targets"]:
+        if not (t.get("on_disk") and t.get("has_roster_table")): continue
+        out[(t["league"], str(t["year"]), t["code"])] = t.get("locator") in PAGES_READ
+    return out
 
 
 PFA_ROSTER = _pfa_roster_on_disk()
@@ -212,8 +286,12 @@ def ranked_rows():
     rows = {}
 
     def put(key, band, tie, adds, kind, fix, note="", year=None, club=None, league=None,
-            men_held=None, facts_missing=None, missing_breakdown=None, gap=None, name=None):
-        rows[key] = {"band": band, "tie": tie, "adds": adds, "kind": kind,
+            men_held=None, facts_missing=None, missing_breakdown=None, gap=None, name=None,
+            hunt="yes"):
+        # `hunt` IS A VALUE, NOT SOMETHING TO INFER FROM THE SENTENCE. Ruled 2026-09-10:
+        # Ryan filters to the rows that are actually a hunt and ignores the rest, and
+        # reading prose to work that out is not filtering.
+        rows[key] = {"hunt": hunt, "band": band, "tie": tie, "adds": adds, "kind": kind,
                      "fix": fix, "note": note, "year": year, "club": club, "name": name,
                      "league": league, "men_held": men_held,
                      "facts_missing": facts_missing,
@@ -260,11 +338,11 @@ def ranked_rows():
 
     for x in T["thin_club_seasons"]:
         b = x["by_field"]
-        onhand = (x["league"], x["year"], x["code"]) in PFA_ROSTER
+        fix, note, hunt = _thin_label(x)
         put(("cs", x["league"], x["year"], x["code"]), 2, (-x["missing_facts"], x["year"]),
-            f'{x["missing_facts"]} facts', "thin",
-            (INGEST_FIX if onhand else _fix_for_thin(x)),
-            f'{_men(x["men"])}, {x["missing_facts"]} facts missing — ' + breakdown(b),
+            f'{x["missing_facts"]} facts', "thin", fix,
+            f'{_men(x["men"])}, {x["missing_facts"]} facts missing — ' + breakdown(b) + note,
+            hunt=hunt,
             year=x["year"], club=x["name"], league=x["league"], men_held=x["men"],
             facts_missing=x["missing_facts"], missing_breakdown=breakdown(b))
 
@@ -346,10 +424,10 @@ TYPOS = [
 def csv_rows(rows):
     """The same rows, same order, as the ten declared columns. `None` becomes an EMPTY
     cell and never `0` or `n/a`."""
-    out = [["rank", "adds", "kind", "year", "name", "club", "league", "men_held",
+    out = [["rank", "hunt", "adds", "kind", "year", "name", "club", "league", "men_held",
             "facts_missing", "missing_breakdown", "what_would_fix_it"]]
     for i, r in enumerate(rows, 1):
-        out.append([i, r["adds"], r["kind"],
+        out.append([i, r.get("hunt", "yes"), r["adds"], r["kind"],
                     _cell(r["year"]), _cell(r.get("name")), _cell(r["club"]),
                     _cell(r["league"]), _cell(r["men_held"]), _cell(r["facts_missing"]),
                     _cell(r["missing_breakdown"]), r["fix"]])
@@ -403,6 +481,15 @@ START_HERE = [
           "a listing are these."),
     ("", ""),
     ("h", "How to read the list"),
+    ("r", "FILTER THE `hunt` COLUMN TO `yes`. 447 of the 780 rows are a hunt. The rest "
+          "are not, and the column says which without your having to read the sentence:"),
+    ("b", "        yes                  — find a document. 447 rows."),
+    ("b", "        no — already held    — PFA's page was deliberately not read, because "
+          "these men are already in the archive from nflverse or StatsCrew. 219 rows."),
+    ("b", "        no — page read       — PFA's page WAS read; what is missing is the "
+          "person-level fact, held only as a season figure. A bio page, an obituary or a "
+          "register would fix it, not a roster. 114 rows."),
+    ("", ""),
     ("b", "It is ranked. Row 1 is worth more than row 700; the ranking is by how much a "
           "single find adds."),
     ("b", "THE COLOURS SAY WHAT A FIND ADDS, so you can scan without reading the kind "
@@ -568,7 +655,8 @@ movements, and only the second is a gain.
   filled. *The Reading Keys were refused because the archive held three men on them.*
 * *The second is.* That proxy is gone — `archive_covers` now asks only whether an
   archive-origin club carries that league — and **PFA's own club-season pages were read
-  for their rosters**. 16,422 men were on pages already sitting on this disk.
+  for their rosters** — 16,842 roster rows read, **13,263 men placed** and 3,579 raised
+  as leads, off pages already sitting on this disk.
 
 **The club table: 402 → 564 clubs.** 162 minted by dropping the proxy. **Off the table:
 123 → {off}** — club-seasons a source names that the table could not place. Men whose bios
@@ -641,7 +729,8 @@ def short(rows=None):
     ing = sum(1 for r in rows if "Not a hunt" in r["fix"])
     w(f"**And skip anything marked \u201cNot a hunt\u201d.** {ing} rows below are club-seasons "
       "whose PFA page is already on this disk with a roster table on it — work the archive "
-      "has not done, not a document to find. 16,422 men came off such pages on 9 September.\n")
+      "has not done, not a document to find. 13,263 men were PLACED from such pages on 9\n"
+      "September, from 16,842 roster rows read, with 3,579 more raised as leads.\n")
     w("---\n")
     w(f"## The list — {len(rows):,} gaps, best first\n")
     w("`a whole team` means the archive holds nobody: one document turns nothing into a\n"
