@@ -1957,3 +1957,48 @@ and the archive has now found that twice in the same survey.
 
 *Related: `a league abbreviation is not a league` — the limit on how far this can be
 taken, and the reason `Cincinnati Bengals (AFL)` needed a ruling rather than a gate.*
+
+---
+
+## A printed roster is a roster — and the refusal is what made the declaration mean anything
+
+**Ryan, 2026-09-09.** A squad list printed in a **named published work** and attributed to
+a **named archive** is roster evidence. It is the same object as page seven of the 1926
+Bears–Tigers programme and the PFRA Annual's St. Louis Gunners rosters: a document naming
+who was on a club. That it was set in 2025 from a 1905 scrapbook rather than in 1905
+changes who set the type, not what the source asserts.
+
+`printed_roster` is now a declared roster evidence kind. It reaches the PFRA Annual's 101
+leads and frankfordyellowjacketsbook.com's 103, and 133 men became people under it.
+
+**The half worth writing down is what happened first.** `promote_players.py` met the kind
+and **refused it**, by name:
+
+> `evidence kind 'printed_roster' is not declared as a roster. A lead shape this route
+> does not know is refused, not promoted.`
+
+That refusal was correct and it is the point. **The alternative is that any ingest can
+widen what counts as roster evidence by naming its own lead shape something new** — write
+`evidence_kind: "printed_roster"` into a lead and the route promotes on it, and the
+declared vocabulary means nothing because anything can join it. The route stopped and
+asked, and a person answered. A rule that cannot be widened without a ruling is the only
+kind that survives the next ingest.
+
+**Two things the ruling forced, both recorded where they happened.**
+
+*The vocabulary moved into the declaration.* `ROSTER_EVIDENCE = {"roster_page", "roster",
+None}` was **typed into the script**, so there was nowhere for the ruling to live — the
+classification-by-string pattern again. `declarations/player-promotions.json`
+`_roster_evidence_kinds` is the list now, and `promote_players.py` reads it and refuses to
+fall back to a typed set if it is missing.
+
+*"A club-season the archive holds" means the club table, not the index.* The test counted
+men in the index, so a club-season with none was "not a club-season yet" — which made an
+**empty club-season unfillable forever**: the first man onto it could never be promoted,
+because he would be the first. Frankford 1899, 1900, 1903 and 1906 are held by the club
+table and by nothing else, and not one of their 70 men could have been promoted under the
+old test. Same reasoning as the team-photograph ruling of 2026-09-08: a club-season with
+no roster excludes its squad by a gap in the evidence, not by evidence of absence.
+
+*Related: `an ingest must not invent a club code`, and the team-photograph ruling — the
+other place a qualifying kind was widened, and widened by a person.*
