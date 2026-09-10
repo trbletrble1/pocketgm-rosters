@@ -1,0 +1,200 @@
+{
+ "current_pairs": 26335,
+ "subject_pairs": 44077,
+ "subject_pairs_with_a_person": 27041,
+ "survive": 7208,
+ "vanish": 19127,
+ "appear_person": 19833,
+ "subject_pairs_with_NO_person": 306,
+ "vanished_by_family": {
+  "position": 17824,
+  "birth_date": 907,
+  "college": 367,
+  "death_date": 29
+ },
+ "survive_by_family": {
+  "draft": 2068,
+  "birth_date": 1688,
+  "birth_place": 652,
+  "death_place": 245,
+  "position": 1918,
+  "death_date": 124,
+  "weight": 121,
+  "college": 335,
+  "height": 57
+ },
+ "new_by_family": {
+  "college": 18654,
+  "birth_date": 19839,
+  "draft": 2068,
+  "position": 2011,
+  "birth_place": 652,
+  "game": 306,
+  "death_place": 245,
+  "height": 57,
+  "death_date": 124,
+  "weight": 121
+ },
+ "vanished_sample": [
+  [
+   "P_014902",
+   "position"
+  ],
+  [
+   "P_018878",
+   "position"
+  ],
+  [
+   "P_035269",
+   "position"
+  ],
+  [
+   "P_053579",
+   "position"
+  ],
+  [
+   "P_002349",
+   "position"
+  ],
+  [
+   "P_025942",
+   "position"
+  ],
+  [
+   "P_029313",
+   "position"
+  ],
+  [
+   "P_019090",
+   "position"
+  ],
+  [
+   "P_036018",
+   "position"
+  ],
+  [
+   "P_015156",
+   "position"
+  ],
+  [
+   "P_005370",
+   "position"
+  ],
+  [
+   "P_015867",
+   "position"
+  ],
+  [
+   "P_018785",
+   "position"
+  ],
+  [
+   "P_035245",
+   "position"
+  ],
+  [
+   "P_017163",
+   "position"
+  ],
+  [
+   "P_032114",
+   "position"
+  ],
+  [
+   "P_010876",
+   "birth_date"
+  ],
+  [
+   "P_040235",
+   "position"
+  ],
+  [
+   "P_009374",
+   "position"
+  ],
+  [
+   "P_028432",
+   "position"
+  ],
+  [
+   "P_007514",
+   "position"
+  ],
+  [
+   "P_011210",
+   "birth_date"
+  ],
+  [
+   "P_013202",
+   "position"
+  ],
+  [
+   "P_010423",
+   "position"
+  ],
+  [
+   "P_017799",
+   "position"
+  ],
+  [
+   "P_031063",
+   "position"
+  ],
+  [
+   "P_047959",
+   "position"
+  ],
+  [
+   "P_030673",
+   "birth_date"
+  ],
+  [
+   "P_004523",
+   "position"
+  ],
+  [
+   "P_020471",
+   "position"
+  ],
+  [
+   "P_030265",
+   "position"
+  ],
+  [
+   "P_006772",
+   "position"
+  ],
+  [
+   "P_021189",
+   "position"
+  ],
+  [
+   "P_048745",
+   "position"
+  ],
+  [
+   "P_025537",
+   "position"
+  ],
+  [
+   "P_006244",
+   "position"
+  ],
+  [
+   "P_016743",
+   "position"
+  ],
+  [
+   "P_018079",
+   "position"
+  ],
+  [
+   "P_016902",
+   "position"
+  ],
+  [
+   "P_017324",
+   "position"
+  ]
+ ]
+}

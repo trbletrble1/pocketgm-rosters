@@ -1,0 +1,45 @@
+{
+ "current": 26335,
+ "person_year": {
+  "pairs": 9120,
+  "distinct_person_family": 8963,
+  "person_family_that_VANISH": 17372,
+  "person_family_that_SURVIVE": 8963,
+  "person_family_that_APPEAR": 0,
+  "by_family": {
+   "birth_date": 2595,
+   "weight": 121,
+   "height": 57,
+   "position": 2527,
+   "draft": 2068,
+   "college": 702,
+   "birth_place": 652,
+   "death_place": 245,
+   "death_date": 153
+  },
+  "vanished_by_family": {
+   "position": 17372
+  }
+ },
+ "person_year_club": {
+  "pairs": 9085,
+  "distinct_person_family": 8935,
+  "person_family_that_VANISH": 17400,
+  "person_family_that_SURVIVE": 8935,
+  "person_family_that_APPEAR": 0,
+  "by_family": {
+   "birth_date": 2595,
+   "weight": 121,
+   "position": 2492,
+   "height": 57,
+   "draft": 2068,
+   "college": 702,
+   "birth_place": 652,
+   "death_place": 245,
+   "death_date": 153
+  },
+  "vanished_by_family": {
+   "position": 17400
+  }
+ }
+}
