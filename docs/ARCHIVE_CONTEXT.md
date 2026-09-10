@@ -415,7 +415,7 @@ Six more, each with its evidence and its rejected alternative in
 
 ### Added 9 September
 
-Two more written into `docs/DATASET_PRECEDENTS.md` with their evidence and their
+Three written into `docs/DATASET_PRECEDENTS.md` with their evidence and their
 rejected alternative; the rest are rulings recorded in declarations. Summarised, not
 restated:
 
@@ -440,6 +440,36 @@ restated:
 - **Minor leagues stay out** — reaffirmed 9 September after naming what is being
   excluded: the Norfolk Neptunes, Hartford Knights, Wheeling Ironmen, Toronto Rifles
   and 100 more, 375 men. The exclusion now covers named clubs rather than codes.
+- **A printed roster is a roster.** `printed_roster` declared as a roster evidence
+  kind, and 70 pre-1922 Frankford men promoted on it. **The refusal is what made the
+  declaration mean anything** — the archive had already declined to treat a printed
+  roster as roster evidence, so ruling that it is decides something. A declaration
+  that costs nothing to make decides nothing.
+- **`position` is a family, and it has a reading.** 79 codes and 77 long forms, **each
+  spelt out whole** — stripping a leading `L` would turn a Long Snapper into a
+  Left-something. Read into `{role, spot?, alignment?}`, the optional fields **omitted
+  when unstated, so an unstated side is silence and not a difference**. The silence is
+  `same()`'s own behaviour; there is no second implementation. Multi-position strings
+  are **refused, not split** — whether a list of two contests a list of one is not
+  ruled, and the 11,321 facts holding one are counted rather than guessed at.
+- **A group name is silence about which member.** `DEFENSIVE_BACK` declared, so `DB`
+  no longer contests `CB` — while the members still contest each other. **Declared
+  from the data, not from football knowledge**: co-occurrence over 51,108 people, `DB`
+  sharing a man-season with `CB` 113 times, `S` 44, `LCB` 29, `RCB` 20, `FS` 17, `SS`
+  16, `DH` 3, `NB` 2. `LINEBACKER` was **not** declared and needed not to be — every
+  linebacker code already reads to role *Linebacker* with the spot in its own field.
+  **Four were stopped on rather than decided**, reasons in `declarations/positions.json`:
+  `OL` (`OT`/`OG`/`LT`/`RT`/`LG`/`RG` co-occur **zero** times, and a 1920s `T` states
+  no side of the ball), `DL` and `E` (`DE` co-occurs with both, so it would sit in two
+  groups), and `B` (`QB` and `RB` co-occur with it **not once**).
+- **Every declared family must have a reading, or be declared deliberately unread with
+  a reason.** `src/gate_family_readings.py` — A1 a reading or a declared exemption, A2
+  every reading names a declared family **both ways**, A3 every declared reading can
+  actually be run. It exists because I declared a family *without* a reading and
+  published it: 32,000 fabricated disagreements and **RS-G6 said PASS**, because a
+  family with no reading was never in its population. RS-G6 now carries the numbers
+  but **not** the property — two gates checking one rule is how a rule and its check
+  drift apart.
 
 ---
 
