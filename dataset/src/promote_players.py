@@ -40,7 +40,18 @@ DECL = os.path.join(BASE, "declarations", "player-promotions.json")
 
 # Evidence kinds that are a ROSTER. Anything else is refused, by name, so a new
 # lead shape is refused by default rather than promoted by accident.
-ROSTER_EVIDENCE = {"roster_page", "roster", None}
+# DECLARED, NOT TYPED, since 2026-09-09. The set was written out here, which is the
+# classification-by-string pattern this archive keeps meeting: a vocabulary in code
+# cannot be ruled on, only edited, and Ryan's ruling that a printed roster IS a roster
+# had nowhere to live. declarations/player-promotions.json _roster_evidence_kinds is
+# the list, and the refusal by default is unchanged and is the point.
+def _roster_kinds():
+    d = json.load(open(DECL)).get("_roster_evidence_kinds")
+    if not d or "kinds" not in d:
+        raise PromoteError("declarations/player-promotions.json declares no roster evidence "
+                           "kinds. Refusing to fall back to a typed set: the declaration is "
+                           "the rule.")
+    return set(d["kinds"])
 # A team photograph is not a roster and never becomes one. It is a SEPARATE qualifying
 # kind with its own conditions, so that widening it later means changing this rule
 # rather than quietly reclassifying a photograph as a roster.
@@ -107,11 +118,30 @@ def load_leads():
 
 
 def held_club_seasons(IDX):
-    held = collections.Counter()
+    """-> a predicate: does the archive hold this club-season?
+
+    THE CLUB TABLE IS ASKED FIRST, ruled 2026-09-09. This counted men in the index and
+    called a club-season with none "not a club-season yet", which made an EMPTY
+    club-season unfillable forever -- the first man onto it could never be promoted,
+    because he would be the first. Frankford 1899, 1900, 1903 and 1906 are held by the
+    club table and by nothing else."""
+    from clubs import Clubs
+    C = Clubs()
+    n = collections.Counter()
     for p in IDX.values():
         if not isinstance(p, dict): continue
-        for k in (p.get("seasons") or {}): held[k] += 1
-    return held
+        for k in (p.get("seasons") or {}): n[k] += 1
+
+    def holds(cs):
+        if n.get(cs): return True
+        parts = str(cs).split("|", 2)
+        if len(parts) != 3: return False
+        lg, y, tok = parts
+        y = str(y).lstrip("y")
+        if not y.isdigit(): return False
+        r = C.resolve(tok, int(y), None, source="season_key")
+        return bool(r and C.name_for(r[0], int(y)))
+    return holds
 
 
 def qualify(lead, held):
@@ -121,7 +151,7 @@ def qualify(lead, held):
     if ev in NOT_A_ROSTER:
         return False, f"not a roster -- {NOT_A_ROSTER[ev]}"
     photo = ev == TEAM_PHOTOGRAPH
-    if not photo and ev not in ROSTER_EVIDENCE:
+    if not photo and ev not in _roster_kinds():
         return False, (f"evidence kind {ev!r} is not declared as a roster. A lead shape "
                        "this route does not know is refused, not promoted.")
     on = lead.get("places_on") or {}
@@ -129,8 +159,9 @@ def qualify(lead, held):
     if not cs:
         return False, ("the document places him on no club-season the archive holds -- "
                        "a club held for one game only has no club-season, by ruling")
-    if not held.get(cs):
-        return False, f"the archive holds no man on {cs}, so it is not a club-season yet"
+    if not held(cs):
+        return False, (f"neither the club table nor the index knows {cs}, so it is not a "
+                       "club-season at all")
     if photo:
         # THE CAPTION MUST NAME THE CLUB. Without it this is a man in a photograph of
         # something, and the ruling does not reach that. Checked as a property: the

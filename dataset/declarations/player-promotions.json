@@ -16,5 +16,18 @@
   "_why": "The twelve Pacific Coast Wildcats men failed not because they did not play but because PFA's box scores only see men who STARTED, and no source ever gave that club a roster. They were excluded by a gap in the evidence, not by evidence of absence. A man in uniform, in the team picture, named by the club's own opponent's programme, has a stronger claim to membership than most of what places men on 1920s clubs.",
   "_the_predicate_does_not_move": "`programme.team_photograph` is NOT roster membership and does not become it. The distinction survives the promotion: the man becomes a person, and the claim keeps saying exactly what it said -- that he was photographed with this club, not that he played. A promotion under this ruling must never write a roster_membership claim, and the gate checks that as its own property.",
   "_what_is_still_refused": "`boxscore_lineup`, `transaction` and `training_camp` are unchanged and still refused. Signed is not rostered; a camp list is who was invited; and a boxscore lead means the man did not resolve, which is an identity question, not a promotion."
- }
+ },
+ "_roster_evidence_kinds": {
+  "_what": "The evidence kinds that ARE a roster. promote_players.py reads this list; it used to type it, which is the classification-by-string pattern this archive keeps meeting -- a vocabulary in code cannot be ruled on, only edited.",
+  "_refuse_by_default": "Anything not on this list is refused BY NAME. The refusal is what makes the declaration mean anything: the alternative is that any ingest can widen what counts as roster evidence by naming its own lead shape something new.",
+  "kinds": [
+   "roster_page",
+   "roster",
+   "printed_roster",
+   null
+  ],
+  "printed_roster": "RULED BY RYAN, 2026-09-09: a printed roster is a roster. A squad list printed in a NAMED PUBLISHED WORK and attributed to a NAMED ARCHIVE is roster evidence. It is the same object as page seven of the 1926 Bears-Tigers programme and the PFRA Annual's St. Louis Gunners rosters -- a document naming who was on a club. That it was set in 2025 from a 1905 scrapbook rather than in 1905 changes who set the type, not what the source asserts. The kind reaches the PFRA Annual's 101 leads and frankfordyellowjacketsbook.com's 103.",
+  "_and_the_route_was_right_to_ask": "promote_players REFUSED this kind until it was declared, and that was correct. A new lead shape must not become a roster silently. Recorded in docs/DATASET_PRECEDENTS.md."
+ },
+ "_a_club_season_the_archive_holds": "RULED 2026-09-09, with the printed_roster ruling and forced by it: the test is whether the CLUB TABLE names the club-season, not whether the index already holds a man on it. The old test counted men in the index, which made an EMPTY club-season unfillable forever -- the first man could never be promoted onto it, because he would be the first. That is the same reasoning as the team-photograph ruling: a club-season with no roster excludes its squad by a gap in the evidence, not by evidence of absence. Frankford 1899, 1900, 1903 and 1906 are held by the club table and by nothing else, and they could not have gained a single man under the old test."
 }

@@ -141,6 +141,26 @@ def parse_game(line, club):
     return g
 
 
+
+_PROM = {}
+
+
+def _promoted():
+    """(normalised printed name, year, club code) -> the id promote_players minted for a
+    lead THIS ingest raised. Read once."""
+    if _PROM: return _PROM["m"]
+    m = {}
+    fp = os.path.join(BASE, "build", "player-promotions.json")
+    if os.path.exists(fp):
+        for pr in json.load(open(fp)).get("promotions", []):
+            if not str(pr.get("source", "")).startswith("pfra-annual"): continue
+            nm = person_name((pr.get("identified_by") or {}).get("name_as_printed") or pr.get("name") or "")
+            for ps in pr.get("playing_seasons") or []:
+                m[(nm, int(ps["year"]), ps["club"])] = pr["person_id"]
+    _PROM["m"] = m
+    return m
+
+
 def main(write=False):
     rosters = json.load(open(os.path.join(SRC, "rosters.json")))
     scheds = json.load(open(os.path.join(SRC, "schedules.json")))
@@ -226,6 +246,19 @@ def main(write=False):
                                 for x in names_of.get(p, ()))] if len(w) >= 2 else []
                 if len(loose) == 1:
                     pid, how = loose[0], "surname and forename initial, on that club-season"
+            if not pid:
+                # A MAN THIS INGEST RAISED AND promote_players PROMOTED. A promoted
+                # player's seasons come from the ingest's CLAIMS, so without this the
+                # Annual's 58 promoted men became people holding NO SEASON -- counted by
+                # apply_player_promotions as `promoted_but_holding_none`, and visible
+                # rather than silent, but still a person the archive cannot place. The
+                # match is the lead's own identity: the exact printed name on the exact
+                # club-season, not a name join against the archive.
+                pid = _promoted().get((k, year, code))
+                if pid:
+                    how = ("this ingest's own lead, promoted by promote_players.py under the "
+                           "printed-roster ruling of 2026-09-09")
+                    n["  tier: promoted from this ingest's own lead"] += 1
             if not pid:
                 leads.append({"lead_id": f"lead-pfra-{year}-{len(leads)+1:03d}",
                               "category": "player_lead_unpromoted", "IS_NOT_A_PERSON": True,

@@ -1,14 +1,16 @@
 {
  "counts": {
-  "men who matched nobody -- leads": 73,
+  "  tier: promoted from this ingest's own lead": 67,
+  "  tier: this ingest's own lead, promoted by promote_players.py under the printed-roster ruling of 2026-09-09": 67,
+  "pfra.roster_listing": 117,
+  "pfra.position_as_printed": 117,
+  "weight": 97,
+  "college": 103,
   "TIER 2 REFUSED -- the one namesake is not held in this era": 3,
-  "  tier: exact name, unique in the archive": 25,
-  "pfra.roster_listing": 50,
-  "pfra.position_as_printed": 50,
-  "pfra.age_in_season": 46,
-  "height": 44,
-  "weight": 50,
-  "college": 50,
+  "men who matched nobody -- leads": 6,
+  "  tier: exact name, on that club-season": 48,
+  "pfra.age_in_season": 55,
+  "height": 55,
   "pfra.coach_as_printed": 4,
   "pfra.game_result": 47,
   "pfra.attendance": 43,
@@ -17,66 +19,14 @@
   "cancelled games": 2,
   "pfra.season_line": 4,
   "veterans leads": 28,
-  "  tier: exact name, on that club-season": 23,
   "  tier: surname and forename initial, on that club-season": 2,
-  "claims": 390,
-  "leads": 101,
+  "claims": 644,
+  "leads": 34,
   "refusals": 7
  },
  "leads": [
   {
    "lead_id": "lead-pfra-1931-001",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Bill Behringer",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Bill Behringer",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-002",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Brodhage",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Brodhage",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-003",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Gus Butz",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Gus Butz",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-004",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Bill Carroll",
@@ -93,279 +43,7 @@
    "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
   },
   {
-   "lead_id": "lead-pfra-1931-005",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Carver",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Carver",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-006",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "George Coover",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster George Coover",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-007",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Chuck Delmege",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Chuck Delmege",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-008",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Friedman",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Friedman",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-009",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Frohauf",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Frohauf",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-010",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "John Fuhrman",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster John Fuhrman",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-011",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Green",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Green",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-012",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Bud Harnett",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Bud Harnett",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-013",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Scott Hornsby",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Scott Hornsby",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-014",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Steve Kalmer",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Steve Kalmer",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-015",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Tony Kimmel",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Tony Kimmel",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-016",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Ollie Kjar",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Ollie Kjar",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-017",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "John Kyler",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster John Kyler",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-018",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Jack Lally",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Jack Lally",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-019",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Lamb",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Lamb",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-020",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Syl McIntosh",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Syl McIntosh",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-021",
+   "lead_id": "lead-pfra-1931-002",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Bob Miller",
@@ -382,24 +60,7 @@
    "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
   },
   {
-   "lead_id": "lead-pfra-1931-022",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Russell Moffatt",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Russell Moffatt",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-023",
+   "lead_id": "lead-pfra-1931-003",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Bill O'Connor",
@@ -416,211 +77,7 @@
    "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
   },
   {
-   "lead_id": "lead-pfra-1931-024",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Dick Parina",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Dick Parina",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-025",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Paul Paris",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Paul Paris",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-026",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Pascover",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Pascover",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-027",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Pellesco",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Pellesco",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-028",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Rowland",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Rowland",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-029",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Ted Saussele",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Ted Saussele",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-030",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Schneider",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Schneider",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-031",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Senn",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Senn",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-032",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Snell",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Snell",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-033",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Sorenson",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Sorenson",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-034",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Wilson",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Wilson",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1931-035",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Bob Wright",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1931,
-    "club_season": "IND|1931|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 10#roster Bob Wright",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-vet-036",
+   "lead_id": "lead-pfra-1932-vet-004",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Larry Bettencourt",
@@ -636,7 +93,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-037",
+   "lead_id": "lead-pfra-1932-vet-005",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Chuck Bradiwood",
@@ -652,7 +109,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-038",
+   "lead_id": "lead-pfra-1932-vet-006",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Gus Butz",
@@ -668,7 +125,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-039",
+   "lead_id": "lead-pfra-1932-vet-007",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Bill Carroll",
@@ -684,7 +141,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-040",
+   "lead_id": "lead-pfra-1932-vet-008",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Crowley",
@@ -700,7 +157,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-041",
+   "lead_id": "lead-pfra-1932-vet-009",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Whitey Decker",
@@ -716,7 +173,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-042",
+   "lead_id": "lead-pfra-1932-vet-010",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Lee Derry",
@@ -732,7 +189,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-043",
+   "lead_id": "lead-pfra-1932-vet-011",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Bud Edwards",
@@ -748,7 +205,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-044",
+   "lead_id": "lead-pfra-1932-vet-012",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Shorty Ellness",
@@ -764,7 +221,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-045",
+   "lead_id": "lead-pfra-1932-vet-013",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Harold Falter",
@@ -780,7 +237,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-046",
+   "lead_id": "lead-pfra-1932-vet-014",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Fisher",
@@ -796,7 +253,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-047",
+   "lead_id": "lead-pfra-1932-vet-015",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Garland Grange",
@@ -812,7 +269,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-048",
+   "lead_id": "lead-pfra-1932-vet-016",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Joe Green",
@@ -828,7 +285,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-049",
+   "lead_id": "lead-pfra-1932-vet-017",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Firpo Joseph",
@@ -844,7 +301,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-050",
+   "lead_id": "lead-pfra-1932-vet-018",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Steve Kalmer",
@@ -860,7 +317,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-051",
+   "lead_id": "lead-pfra-1932-vet-019",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Ollie Kjar",
@@ -876,7 +333,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-052",
+   "lead_id": "lead-pfra-1932-vet-020",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Jack Lally",
@@ -892,7 +349,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-053",
+   "lead_id": "lead-pfra-1932-vet-021",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Bernie Leahy",
@@ -908,7 +365,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-054",
+   "lead_id": "lead-pfra-1932-vet-022",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Syl McIntosh",
@@ -924,7 +381,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-055",
+   "lead_id": "lead-pfra-1932-vet-023",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Carl Neidig",
@@ -940,7 +397,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-056",
+   "lead_id": "lead-pfra-1932-vet-024",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Jack Norris",
@@ -956,7 +413,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-057",
+   "lead_id": "lead-pfra-1932-vet-025",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Paul Paris",
@@ -972,7 +429,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-058",
+   "lead_id": "lead-pfra-1932-vet-026",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Jim Pederson",
@@ -988,7 +445,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-059",
+   "lead_id": "lead-pfra-1932-vet-027",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Pence",
@@ -1004,7 +461,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-060",
+   "lead_id": "lead-pfra-1932-vet-028",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Richardson",
@@ -1020,7 +477,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-061",
+   "lead_id": "lead-pfra-1932-vet-029",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Rioth",
@@ -1036,7 +493,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-062",
+   "lead_id": "lead-pfra-1932-vet-030",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Whitey Shelton",
@@ -1052,7 +509,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-vet-063",
+   "lead_id": "lead-pfra-1932-vet-031",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Soellman",
@@ -1068,41 +525,7 @@
    "why": "the club is NOT in the archive's club table and no in-scope club appears on its five-game schedule, so the non-league ruling's trigger is not met. Ryan's call."
   },
   {
-   "lead_id": "lead-pfra-1932-064",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Al Bookout",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Al Bookout",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-065",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Harry Brubaker",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Harry Brubaker",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-066",
+   "lead_id": "lead-pfra-1932-032",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Bill Carroll",
@@ -1119,143 +542,7 @@
    "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
   },
   {
-   "lead_id": "lead-pfra-1932-067",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Tom Coffman",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Tom Coffman",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-068",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Chris Cowley",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Chris Cowley",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-069",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Chuck Delmege",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Chuck Delmege",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-070",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "George Dye",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster George Dye",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-071",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Scott Hornsby",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Scott Hornsby",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-072",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Toby Hunt",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Toby Hunt",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-073",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Cowboy Kyle",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Cowboy Kyle",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-074",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "John Kyler",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster John Kyler",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-075",
+   "lead_id": "lead-pfra-1932-033",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Bob Miller",
@@ -1272,313 +559,7 @@
    "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
   },
   {
-   "lead_id": "lead-pfra-1932-076",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Joel Moore",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Joel Moore",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-077",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Cecil Muellerleile",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Cecil Muellerleile",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-078",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Al Pezolt",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Al Pezolt",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1932-079",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Chris Poppelreiter",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1932,
-    "club_season": "IND|1932|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 12#roster Chris Poppelreiter",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-080",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "John Breidenstein",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster John Breidenstein",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-081",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Chuck Delmege",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Chuck Delmege",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-082",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Lee Derry",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Lee Derry",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-083",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Ray Jennison",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Ray Jennison",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-084",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Ed Kawal",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Ed Kawal",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-085",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Winton Kyle",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Winton Kyle",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-086",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Charles Malone",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Charles Malone",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-087",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Joel Moore",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Joel Moore",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-088",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Cecil Muellerleile",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Cecil Muellerleile",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-089",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Al Pezolt",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Al Pezolt",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-090",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Carl Pike",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Carl Pike",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-091",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Ted Sauselle",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Ted Sauselle",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-092",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Joe Spudich",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Joe Spudich",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-093",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Joe Stephan",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "DOC:SLG-IND",
-    "league": "IND",
-    "year": 1933,
-    "club_season": "IND|1933|DOC:SLG-IND"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 13#roster Joe Stephan",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1933-094",
+   "lead_id": "lead-pfra-1933-034",
    "category": "player_lead_unpromoted",
    "IS_NOT_A_PERSON": true,
    "name_as_printed": "Dick Thornton",
@@ -1592,125 +573,6 @@
    },
    "source_id": "pfra-annual-4-1983",
    "source_record": "pfra-annual-4-1983#page 13#roster Dick Thornton",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1934-095",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Ray Beeman",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "SLG",
-    "league": "NFL",
-    "year": 1934,
-    "club_season": "NFL|1934|SLG"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 14#roster Ray Beeman",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1934-096",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Stumpy Cronin",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "SLG",
-    "league": "NFL",
-    "year": 1934,
-    "club_season": "NFL|1934|SLG"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 14#roster Stumpy Cronin",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1934-097",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Jess Flowers",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "SLG",
-    "league": "NFL",
-    "year": 1934,
-    "club_season": "NFL|1934|SLG"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 14#roster Jess Flowers",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1934-098",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Ray Jennison",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "SLG",
-    "league": "NFL",
-    "year": 1934,
-    "club_season": "NFL|1934|SLG"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 14#roster Ray Jennison",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1934-099",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "George Lyon",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "SLG",
-    "league": "NFL",
-    "year": 1934,
-    "club_season": "NFL|1934|SLG"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 14#roster George Lyon",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1934-100",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Joe Spudich",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "SLG",
-    "league": "NFL",
-    "year": 1934,
-    "club_season": "NFL|1934|SLG"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 14#roster Joe Spudich",
-   "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
-  },
-  {
-   "lead_id": "lead-pfra-1934-101",
-   "category": "player_lead_unpromoted",
-   "IS_NOT_A_PERSON": true,
-   "name_as_printed": "Al Wunsch",
-   "evidence_kind": "printed_roster",
-   "places_on": {
-    "club_as_printed": "St. Louis Gunners",
-    "club_code": "SLG",
-    "league": "NFL",
-    "year": 1934,
-    "club_season": "NFL|1934|SLG"
-   },
-   "source_id": "pfra-annual-4-1983",
-   "source_record": "pfra-annual-4-1983#page 14#roster Al Wunsch",
    "why": "named in the Annual's printed roster and matched nobody the archive holds under the ruled join discipline"
   }
  ],

@@ -228,9 +228,26 @@ def _one_time_transition():
     return set(t.get("ids") or ()) if t.get("_enabled") else set()
 
 
+def _one_time_key_transition():
+    """EXACT (person, season key) pairs a declared, enabled transition may drop.
+
+    Ids are not the only thing a rebuild can lose. A SEASON KEY carries the store's
+    declared league token, so declaring a token changes the key -- and P3, rightly,
+    reads that as loss. On 2026-09-09 three new stores were ingested before their
+    tokens were declared, so `pfr-pages` fabricated `PFR|1934|CIN` and
+    `troan-experience` fabricated `TROAN|1926|POT`; RS-G7 refuses both. Withdrawing a
+    fabrication is not losing a season, but P3 cannot tell the difference and must not
+    be taught to guess. So the pairs are named, one at a time, with the reason -- the
+    same discipline as the id list beside it, and disabled the moment it is spent."""
+    if not os.path.exists(DECL): return set()
+    t = json.load(open(DECL)).get("p3_one_time_key_transition") or {}
+    if not t.get("_enabled"): return set()
+    return {(x["person"], x["key"]) for x in (t.get("pairs") or [])}
+
+
 def compare(before, after):
     """Violations of P3. Empty list == the rebuild lost nothing."""
-    v = []; dropped_empty = []
+    v = []; dropped_empty = []; emptied_by_transition = []
     for pid, ks in before["seasons"].items():
         aks = after["seasons"].get(pid)
         if aks is None:
@@ -241,12 +258,27 @@ def compare(before, after):
             forgiven = pid in before.get("empty", ()) or pid in _one_time_transition()
             (dropped_empty if forgiven else v).append(pid if forgiven else f"person {pid} vanished from the index")
         elif not ks <= aks:
-            v.append(f"person {pid} lost season keys: {sorted(ks - aks)}")
+            excused = {k for p2, k in _one_time_key_transition() if p2 == pid}
+            lost = ks - aks - excused
+            if lost:
+                v.append(f"person {pid} lost season keys: {sorted(lost)}")
+            elif ks and not aks:
+                # HE HELD ONLY EXCUSED KEYS AND NOW HOLDS NONE. Naming the pair excused the
+                # key and then the COUNT failed on the same movement -- with_season fell by
+                # one for a man every one of whose seasons was named in the transition. A
+                # transition that cannot pass its own aggregate is not a mechanism, it is a
+                # trap; excusing the pair has to excuse the count it causes, and no more.
+                emptied_by_transition.append(pid)
     for k, b in before["counts"].items():
         a = after["counts"].get(k, 0)
-        if k == "entries": b -= len(dropped_empty)
+        if k == "entries": b -= len(dropped_empty) + len(emptied_by_transition)
+        if k == "with_season": b -= len(emptied_by_transition)
         if a < b:
             v.append(f"count {k} fell {b} -> {a}" + (f" (after allowing {len(dropped_empty)} empty entries dropped)" if k == "entries" and dropped_empty else ""))
+    if emptied_by_transition:
+        print(f"\nP3: {len(emptied_by_transition)} person(s) hold no season after the declared "
+              f"one-time key transition, and every key they lost was named in it: "
+              f"{sorted(emptied_by_transition)}. Excused for the count as well as for the key.")
     if dropped_empty:
         print(f"\nP3: {len(dropped_empty):,} EMPTY entries dropped -- no name, no season, no claim, no counted field. "
               f"Not a loss; listed so it is never silent. e.g. {sorted(dropped_empty)[:5]}")

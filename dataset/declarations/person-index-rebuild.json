@@ -123,7 +123,15 @@
   "pfra-annual-4-1983": "NOT A LEAGUE -- the store is one PUBLICATION, the Fourth PFRA Annual of 1983, and `pfra` is a research association, not a competition. Its claims carry their own league inside the season key on the subject: NFL-1934 for the club-season the archive already holds, and IND-1931/32/33 for the three pre-NFL independent seasons, IND being the declared token meaning `independent, no league asserted` that Frankford 1922-23 already uses. Declared 2026-09-08 with the boundary ruling.",
   "pfa-coaches": "NOT A LEAGUE -- `pfa` is a source, not a competition. Since 2026-09-09 these claims carry a STINT subject whose season key names the league itself (`NFL-1928`, `AAFC-1947`), which is where the league must be read from. Before that they were person-scoped and took no league at all; the filename token would now make one up.",
   "coach-seasons-promoted": "NOT A LEAGUE -- the same PFA coaching seasons, written for men promoted from a lead. `coach` is a role, not a competition, and the league is on the subject's season key.",
-  "pfa-officials": "NOT A LEAGUE -- `pfa` is a source. These are PERSON_SEASON subjects whose key names the league PFA printed (`NFL-1939`); an official has no club, so there is no stint and no club-season to read a league from."
+  "pfa-officials": "NOT A LEAGUE -- `pfa` is a source. These are PERSON_SEASON subjects whose key names the league PFA printed (`NFL-1939`); an official has no club, so there is no stint and no club-season to read a league from.",
+  "pfr-pages": "NOT A LEAGUE -- `pfr` is a SOURCE, not a competition. These claims carry a stint subject whose season key names the league itself (`NFL-1934`), which is where the league must be read from. The filename token would invent one.",
+  "troan-experience": "NOT A LEAGUE -- `troan` is a man's name. Same shape: the league is on the subject's season key (`NFL-1926`).",
+  "wikipedia-plunkett": "NOT A LEAGUE -- these are PERSON-scoped claims about one man and carry no stint at all, so there is no league to read.",
+  "pfa-postseason-1970s": "NOT A LEAGUE -- `pfa` is a source, not a competition. Every claim here carries a STINT subject whose season key names the league itself (`NFL-1974`), so the league is read from the subject and not from the filename. Declared 2026-09-09 with the log ingest: without it RS-G7 went red on 8,352 claims filed under a fabricated league called PFA, which is the same failure `pfa-stats-*` is declared against.",
+  "pfa-gamelogs-1970s": "NOT A LEAGUE -- `pfa` is a source, not a competition. Every claim here carries a STINT subject whose season key names the league itself (`NFL-1974`), so the league is read from the subject and not from the filename. Declared 2026-09-09 with the log ingest: without it RS-G7 went red on 8,352 claims filed under a fabricated league called PFA, which is the same failure `pfa-stats-*` is declared against.",
+  "frankford-book": "NOT A LEAGUE -- `frankford` is a club and the store is named for its SOURCE. Every claim carries a stint subject whose season key names the league (`NFL-1926`), so the league is read from the subject. Declared 2026-09-09 with the ingest, from the lesson RS-G7 taught on pfa-postseason-1970s the same afternoon.",
+  "frankford-book-ind": "IND -- the independent Frankford seasons, 1899 to 1923, which were played in no league the archive holds. Same token and same shape as ghostsofthegridiron-ind, so Fenton's 1922-23 rows and this site's land on the SAME club-season key rather than opening a parallel one.",
+  "pfa-club-rosters": "NOT A LEAGUE -- `pfa` is a source. Every stint subject's season key names the league (`AFL-1939`), so it is read from the subject. Declared with the ingest, from the lesson RS-G7 taught twice on 2026-09-09."
  },
  "identity_is_edited_in_place": "unify_identity.py assigns global ids by ENUMERATION ORDER, so re-running it against a changed store set renumbers every person in the archive. build-reports/identity.json is the authority and is edited in place by appliers (src/apply_assistants_identity.py), exactly as the person merges are. Do not re-run unify_identity.py --write.",
  "report_stores_not_claim_sources": {
@@ -146,6 +154,25 @@
    "verified_no_loss": "checked 2026-09-07 on all 1,598: none carries a name, a season, a coaching_seasons or an officiating_seasons field, and for every one of them EVERY coaching season it restates is also carried by a promoted person in build/coach-promotions.json. 0 uncovered.",
    "ruling": "Ryan, 2026-09-07: yes, the rebuild may drop the 1,598. Enable, rebuild, then delete this block.",
    "_the_block_is_deleted": "P3 forgives nothing by default again. This records that it once forgave exactly these ids, on this evidence, on this ruling."
+  },
+  "2026-09-09-ghosts-rejoin": {
+   "count": 3,
+   "pairs": [
+    {
+     "person": "P_043060",
+     "key": "IND|1922|DOC:FYJ-IND"
+    },
+    {
+     "person": "P_043060",
+     "key": "IND|1923|DOC:FYJ-IND"
+    },
+    {
+     "person": "P_042729",
+     "key": "IND|1922|DOC:FYJ-IND"
+    }
+   ],
+   "why": "Re-running ingest_ghosts.py after promote_players minted 179 people moved two of Fenton's Frankford rows off P_043060 and P_042729 -- OFFICIALS with no name anywhere in the archive, holding officiating seasons in 1934, 1945, 1947 and 1948, who had each acquired a Frankford PLAYING season in 1922/23 because the name join had nobody better to reach. With the men Fenton printed now promoted, the rows sit on them. A correction, which P3 cannot tell from a loss and must not be taught to guess at.",
+   "applied_and_disarmed": "2026-09-09"
   }
  },
  "derived_tables_after_the_chain": {
@@ -1792,5 +1819,27 @@
    "IND",
    "SALARIES"
   ]
+ },
+ "p3_one_time_key_transition": {
+  "_what": "EXACT (person, season key) pairs P3 may see disappear on the next rebuild, and only while _enabled is true.",
+  "_why": "2026-09-09, SECOND USE. Re-running ingest_ghosts.py after promote_players minted 179 people moved two of Fenton's Frankford rows off men who should never have held them. P_043060 and P_042729 are OFFICIALS: no name anywhere in the archive, entered by the officials ingest, holding officiating seasons in 1934, 1945, 1947 and 1948 -- and each had acquired a Frankford PLAYING season in 1922/23 because the ghosts name join had nobody better to reach. With the men Fenton named now promoted, those rows resolve to them instead. P3 CANNOT TELL A CORRECTION FROM A LOSS and must not be taught to guess, so each pair is named. (The earlier entry, for the fabricated PFR and TROAN league tokens, is completed and recorded in p3_transitions_completed.)",
+  "_reversal": "Every claim behind these keys is untouched in its store. The rows now sit on the men Fenton printed; nothing is deleted and re-running the ingest against an index without the promotions would restore the old join exactly.",
+  "_turn_this_off_afterwards": "Set _enabled false once the rebuild has run. A standing exemption is not a transition.",
+  "_enabled": false,
+  "pairs": [
+   {
+    "person": "P_043060",
+    "key": "IND|1922|DOC:FYJ-IND"
+   },
+   {
+    "person": "P_043060",
+    "key": "IND|1923|DOC:FYJ-IND"
+   },
+   {
+    "person": "P_042729",
+    "key": "IND|1922|DOC:FYJ-IND"
+   }
+  ],
+  "_spent": "Applied and disarmed 2026-09-09. The 27 pairs are gone and the keys read NFL-1934 and NFL-1926."
  }
 }
