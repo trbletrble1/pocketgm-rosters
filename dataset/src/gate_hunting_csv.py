@@ -72,6 +72,54 @@ def recompose(r):
     return f"{year} {club} ({league})"
 
 
+def x_rows(path):
+    """The spreadsheet's list sheet, as the CSV would render it."""
+    from openpyxl import load_workbook
+    wb = load_workbook(path, data_only=False)
+    ws = wb["The list"]
+    rows = [[("" if c.value is None else str(c.value)) for c in r] for r in ws.iter_rows()]
+    head = rows[0]
+    body = []
+    for r in rows[1:]:
+        if not r[0] or r[0] == "TOTAL" or str(r[0]).startswith("Empty cells"): break
+        body.append(r)
+    return head, body, wb
+
+
+def c8_the_spreadsheet_is_the_same_list(csv_path, x_path):
+    """C8 -- THE FOURTH RENDERING MATCHES THE THIRD, row for row.
+
+    The spreadsheet is written from csv_rows() in the same run, so it CANNOT diverge --
+    and that is exactly the kind of claim that stops being true the moment someone adds
+    a sort or a filter to the writer. Held on the FILES, like every other property here."""
+    import csv as _csv
+    with open(csv_path, newline="") as fh:
+        crows = list(_csv.reader(fh))
+    chead, cbody = crows[0], crows[1:]
+    xhead, xbody, wb = x_rows(x_path)
+    bad = []
+    if xhead != chead: bad.append(f"header differs: {xhead} vs {chead}")
+    if len(xbody) != len(cbody):
+        bad.append(f"row count differs: xlsx {len(xbody)}, csv {len(cbody)}")
+    for i, (a, b) in enumerate(zip(xbody, cbody), 1):
+        if a[0] != b[0]:
+            bad.append(f"row {i}: rank {a[0]!r} vs {b[0]!r}"); break
+        if a != b:
+            diff = [(chead[j], a[j], b[j]) for j in range(min(len(a), len(b))) if a[j] != b[j]]
+            bad.append(f"row {i} differs: {diff[:2]}"); break
+    sheets = wb.sheetnames
+    if sheets[:3] != ["Start here", "The list", "Typos"]:
+        bad.append(f"sheets are {sheets}, expected Start here / The list / Typos")
+    ws = wb["The list"]
+    if ws.freeze_panes != "A2": bad.append("the header is not frozen")
+    if not ws.auto_filter.ref: bad.append("there is no autofilter")
+    # the totals must be FORMULAS, not numbers this run happened to produce
+    tot = [c for r in ws.iter_rows() for c in r
+           if isinstance(c.value, str) and c.value.startswith("=SUM(")]
+    if len(tot) != 2: bad.append(f"expected 2 =SUM() totals, found {len(tot)}")
+    return bad
+
+
 def main(argv):
     if "--selftest" in argv: return selftest()
     for p in (MD, CSVP):
@@ -151,6 +199,15 @@ def main(argv):
     check(not off, f"C6 the parts recompose the markdown's string on "
                    f"{done['club-season']:,} club-season rows and {done['a name']} "
                    f"forename rows" + ("" if not off else f" -- {len(off)} do not, first {off[0]}"))
+
+    # C8 -- the spreadsheet is the same list, held on the FILE like everything else here
+    xp = os.path.join(os.path.dirname(CSVP), "what-to-look-for.xlsx")
+    if not os.path.exists(xp):
+        check(False, "C8 what-to-look-for.xlsx does not exist")
+    else:
+        bad = c8_the_spreadsheet_is_the_same_list(CSVP, xp)
+        check(not bad, f"C8 the spreadsheet is the same {len(rows):,} rows, same order, "
+                       f"same rank" + ("" if not bad else f" -- {bad[:2]}"))
 
     if FAILS:
         print(f"\nHUNTING CSV GATE: {len(FAILS)} FAILURE(S)"); return 1

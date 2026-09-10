@@ -304,6 +304,22 @@ def ranked_rows():
     return sorted(rows.values(), key=lambda r: (r["band"], r["tie"], r["gap"]))
 
 
+# ONE SOURCE FOR THE TYPOS. They were a paragraph inside the markdown writer; the
+# spreadsheet needs the same list, and a second copy would drift the first time one was
+# added. Rendered by both writers from here.
+TYPOS = [
+    ("Bufallo", "Buffalo"), ("Neraska", "Nebraska"), ("Univefsity", "University"),
+    ("Southen", "Southern"), ("Pittsburg", "Pittsburgh — no h"),
+    ("Franklin & Marshal", "Franklin & Marshall — one l"), ("Postion", "Position"),
+    ("Phythain", "Phythian — the archive holds both"),
+    ("Ericson", "Erickson — the archive holds both"),
+    ("Briton", "Britton — the archive holds both"), ("Harolde", "Harold — Grange"),
+    ("PROABLE", "Probable"), ("Cincinnati Benagls", "Cincinnati Bengals — PFA's spelling"),
+    ("Milwaukee Chiuefs", "Milwaukee Chiefs — PFA's spelling"),
+    ("Lousville Bourbons", "Louisville Bourbons — PFA's spelling"),
+]
+
+
 def csv_rows(rows):
     """The same rows, same order, as the ten declared columns. `None` becomes an EMPTY
     cell and never `0` or `n/a`."""
@@ -321,6 +337,162 @@ def _cell(v):
     return "" if v is None else str(v)
 
 
+# ------------------------------------------------------------------------ spreadsheet
+# A FOURTH RENDERING OF ONE ROW LIST, NEVER A SECOND MEASUREMENT. This takes the output
+# of csv_rows() -- the very list the CSV is written from -- so the spreadsheet cannot
+# disagree with the CSV about what is on it, in what order, or under what rank. Building
+# it from a second call to ranked_rows() would be cheap and would also be a second
+# answer to the same question.
+
+BANDS = {                      # by what a find ADDS, not by the kind string
+    "whole":   "FFD9D2",       # a whole team -- nobody is held at all
+    "partial": "FFE9C6",       # a team less the few held
+    "name":    "DDE8F5",       # a forename, or a coach
+}
+NOT_A_HUNT = "9C4200"          # the marker colour: already on the disk
+
+
+def _band_of(adds):
+    a = str(adds or "")
+    if a == "a whole team": return "whole"
+    if a.startswith("a team, less"): return "partial"
+    if a in ("a forename", "a coach"): return "name"
+    return None                                     # thin: white, and deliberately so
+
+
+START_HERE = [
+    ("h", "How to use this list"),
+    ("", ""),
+    ("r", "THE ONE-LINE RULE. Buy a programme, a yearbook or a team photograph that "
+          "names men on a club-season this list gives a rank to. Everything else is a "
+          "nice thing to own."),
+    ("", ""),
+    ("h", "What a good page looks like in a listing photograph"),
+    ("b", "A ROSTER OR LINE-UP PAGE: two columns of surnames with positions, or a table "
+          "headed with a number column. If you can count eleven names, it is worth the "
+          "money."),
+    ("b", "A BIO PAGE: paragraphs, each starting with a name in capitals followed by an "
+          "age -- \"JACK NOLAN-25 years, height 5 ft. 10 in.\" That is the richest page "
+          "in the whole class: it carries height, weight, college and prior clubs."),
+    ("b", "A CAPTIONED TEAM PHOTOGRAPH: the caption names the men. A caption naming "
+          "enough of them is a roster, and the archive rules it as one."),
+    ("b", "WHAT TO SKIP: covers, advertisements, articles, scoring grids. Most images in "
+          "a listing are these."),
+    ("", ""),
+    ("h", "How to read the list"),
+    ("b", "It is ranked. Row 1 is worth more than row 700; the ranking is by how much a "
+          "single find adds."),
+    ("b", "THE COLOURS SAY WHAT A FIND ADDS, so you can scan without reading the kind "
+          "column:"),
+    ("w", "        a whole team -- the archive holds nobody at all"),
+    ("p", "        a team less the one or two men already held"),
+    ("n", "        a forename for a surname-only man, or a missing coach"),
+    ("b", "        white -- a club-season already held, missing facts about the men"),
+    ("b", "ROWS IN BROWN BOLD ARE NOT A HUNT. The page is already on this disk and "
+          "wants reading, not buying. Do not spend money on these."),
+    ("b", "EMPTY CELLS ARE EMPTY ON PURPOSE. An absent number is not a zero: it means "
+          "the archive holds no figure, which is a different thing from holding none."),
+    ("", ""),
+    ("h", "What this list does not cover"),
+    ("b", "Minor leagues, by ruling. They are excluded from the archive's scope and so "
+          "from this list."),
+    ("b", "Anything the archive cannot name. Some club-seasons are so thin the club "
+          "table cannot name the club, and those cannot be given a row."),
+    ("b", "Anything after 1959 for box scores, and the whole 2010s and 2020s for game "
+          "logs -- those arrive by ingest, not by hunting."),
+]
+
+
+def write_xlsx(rows, path):
+    """The same rows again, as three sheets. Returns the row count written."""
+    from openpyxl import Workbook
+    from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+    from openpyxl.utils import get_column_letter
+
+    table = csv_rows(rows)                       # THE CSV'S OWN PROJECTION
+    header, body = table[0], table[1:]
+    wb = Workbook()
+
+    # ---------------- Start here
+    ws = wb.active; ws.title = "Start here"
+    ws.column_dimensions["A"].width = 104
+    styles = {"h": Font(bold=True, size=13), "r": Font(bold=True, size=11),
+              "b": Font(size=11), "": Font(size=11)}
+    fills = {"w": PatternFill("solid", fgColor=BANDS["whole"]),
+             "p": PatternFill("solid", fgColor=BANDS["partial"]),
+             "n": PatternFill("solid", fgColor=BANDS["name"])}
+    for i, (k, text) in enumerate(START_HERE, 1):
+        c = ws.cell(row=i, column=1, value=text)
+        c.font = styles.get(k, styles["b"])
+        c.alignment = Alignment(wrap_text=True, vertical="top")
+        if k in fills: c.fill = fills[k]
+        ws.row_dimensions[i].height = None if len(text) < 90 else 30
+
+    # ---------------- The list
+    ws = wb.create_sheet("The list")
+    ws.append(header)
+    for c in ws[1]:
+        c.font = Font(bold=True, color="FFFFFF")
+        c.fill = PatternFill("solid", fgColor="333333")
+        c.alignment = Alignment(vertical="center")
+    ws.freeze_panes = "A2"                       # the header stays put
+    ws.auto_filter.ref = f"A1:{get_column_letter(len(header))}{len(body)+1}"
+
+    i_adds = header.index("adds"); i_fix = header.index("what_would_fix_it")
+    edge = Side(style="thick", color=NOT_A_HUNT)
+    for r in body:
+        ws.append(["" if v == "" else v for v in r])
+        row = ws[ws.max_row]
+        band = _band_of(r[i_adds])
+        if band:
+            f = PatternFill("solid", fgColor=BANDS[band])
+            for c in row: c.fill = f
+        # NOT A HUNT IS A SECOND CHANNEL, NOT A REPLACEMENT for the band. The band says
+        # what a find adds; this says the find has already been made and is on the disk.
+        # Overwriting the fill would trade one fact for the other.
+        if "Not a hunt" in str(r[i_fix]):
+            for c in row[:3]:
+                c.font = Font(bold=True, color=NOT_A_HUNT)
+            row[0].border = Border(left=edge)
+
+    # THE TOTALS ARE FORMULAS, so a filtered or edited sheet recomputes rather than
+    # carrying a number this run happened to produce. SUM ignores the empty cells, which
+    # is exactly right: absent is not zero.
+    last = len(body) + 1; tot = last + 2
+    ws.cell(row=tot, column=1, value="TOTAL").font = Font(bold=True)
+    for name in ("men_held", "facts_missing"):
+        col = get_column_letter(header.index(name) + 1)
+        c = ws.cell(row=tot, column=header.index(name) + 1,
+                    value=f"=SUM({col}2:{col}{last})")
+        c.font = Font(bold=True)
+    ws.cell(row=tot + 1, column=1,
+            value="Empty cells are empty on purpose: SUM ignores them, and an absent "
+                  "figure is not a zero.").font = Font(italic=True, size=9)
+    widths = {"rank": 6, "adds": 16, "kind": 15, "year": 6, "name": 20, "club": 30,
+              "league": 8, "men_held": 10, "facts_missing": 13,
+              "missing_breakdown": 40, "what_would_fix_it": 90}
+    for j, h in enumerate(header, 1):
+        ws.column_dimensions[get_column_letter(j)].width = widths.get(h, 14)
+
+    # ---------------- Typos
+    ws = wb.create_sheet("Typos")
+    ws.append(["as printed", "what it is"])
+    for c in ws[1]:
+        c.font = Font(bold=True, color="FFFFFF")
+        c.fill = PatternFill("solid", fgColor="333333")
+    ws.freeze_panes = "A2"
+    for a, b in TYPOS: ws.append([a, b])
+    ws.column_dimensions["A"].width = 24; ws.column_dimensions["B"].width = 46
+    ws.cell(row=len(TYPOS) + 3, column=1,
+            value="Every one of these is held as printed somewhere in the archive or on "
+                  "a document it holds. A listing is titled by whoever typed it, so "
+                  "search the misspelling too.").font = Font(italic=True, size=9)
+    ws.cell(row=len(TYPOS) + 3, column=1).alignment = Alignment(wrap_text=True)
+
+    wb.save(path)
+    return len(body)
+
+
 # --------------------------------------------------------------------------- moved
 def what_moved():
     """What changed, and why. Rewritten 2026-09-09: the version that diffed only against
@@ -333,7 +505,33 @@ def what_moved():
     return f"""
 ## What moved, and why
 
-**Almost everything on this page has moved since 8 September, and not all of it for the
+### 10 September: the list did not move, and that is the finding
+
+**Not one row. 757 before, 757 after, the same kinds in the same order, and
+`missing_facts_total` unchanged to the digit at 9,649 — position 334, college 1,262,
+age 3,282, weight 4,771.** A full day of ingesting moved nothing here, and each reason
+is worth knowing:
+
+* **The box scores and the game logs are now complete** — 17,935 box score pages and all
+  1,139,727 log rows. They added 1.9 million claims and **not one held fact this page
+  counts**. What they carry is who played and what he did; what this page counts is
+  whether the archive knows a man's age, weight, college and position. Those are
+  different questions and a game log answers neither.
+* **The 25 men on Bethlehem Bears and Gilberton Catamounts** filled two club-seasons that
+  held nobody — and **both are Eastern League, which is excluded by ruling**, so neither
+  was ever on this page to come off it.
+* **Contested fell 26,335 → 9,120.** That is a change in how a disagreement is
+  *recorded*, not in what is *held*. A fact the archive holds twice is still held.
+* **The club table's 162 new clubs** were counted on 9 September; nothing further was
+  minted.
+
+**So nothing came off this list by being ingested today.** The 336 rows already marked
+*Not a hunt* are still 336 — those pages are on the disk and still want reading. **That
+is where the next gain is, and it is not a gain that costs money.**
+
+---
+
+**Almost everything on this page moved on 9 September, and not all of it for the
 same reason. Read this before the list.**
 
 **The empty club-seasons: {b.get('empty', '128')} → 44 → {C['empty']}.** Two different
@@ -443,11 +641,7 @@ def short(rows=None):
     w("---\n")
     w("## The source typos, because that is what a listing will be titled\n")
     w("Listings are titled by whoever typed them. Search on the misspellings too:\n")
-    w("`Bufallo` (Buffalo) · `Neraska` (Nebraska) · `Univefsity` (University) · `Southen`\n"
-      "(Southern) · `Pittsburg` (no h) · `Franklin & Marshal` (one l) · `Postion`\n"
-      "(Position) · `Phythain` / `Phythian` · `Ericson` / `Erickson` · `Briton` /\n"
-      "`Britton` · `Harolde` (Harold Grange) · `PROABLE` (Probable) · `Cincinnati Benagls`\n"
-      "· `Milwaukee Chiuefs` · `Lousville Bourbons`\n")
+    w(" · ".join(f"`{a}` ({b})" for a, b in TYPOS) + "\n")
     w("*Every one of these is a typo held as printed somewhere in the archive or on a\n"
       "document it holds — they are what the material actually says. The last three are\n"
       "club names, and they are the names PFA prints.*\n")
@@ -735,3 +929,7 @@ if __name__ == "__main__":
         csv.writer(fh, lineterminator="\n").writerows(csv_rows(ROWS))
     print(f"  {'what-to-look-for.csv':32s} {os.path.getsize(p):>7,} bytes  "
           f"{len(ROWS):>4} rows + a header")
+    x = os.path.join(DOCS, "what-to-look-for.xlsx")
+    n = write_xlsx(ROWS, x)
+    print(f"  {'what-to-look-for.xlsx':32s} {os.path.getsize(x):>7,} bytes  "
+          f"{n:>4} rows, 3 sheets")
