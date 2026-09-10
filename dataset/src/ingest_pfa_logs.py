@@ -51,7 +51,23 @@ SRC_ID = "pfa-gamelogs"
 STATED = "Pro Football Archives"
 ATTRIB = [STATED]
 OBSERVED = "fetched-2026-09-08"
-DECADE = 1970
+DECADE = 1970                                 # overridden by --decade; see main()
+
+# WHY THE DECADE IS AN ARGUMENT AND NOT A CONSTANT ANY MORE. Ryan's standing
+# instruction is one decade, measured, then stop -- never ten decades on one decade's
+# evidence. Measured 2026-09-10 across all 33,747 pages, and THE 1970s DO NOT HOLD:
+#
+#   KICKOFF RETURNS.FC is blank on all 8,080 rows of the 1970s and carries a value on
+#     7,297 of 8,403 in the 1980s. A rule that read the 1970s as "this column is the
+#     era" would silently drop a real 1980s statistic.
+#   SCORING.X2 is blank on all but 4 rows of the 1970s -- and carries 4,173 values in
+#     the 1960s, because the AFL had the two-point conversion and the NFL did not. The
+#     era facts are NOT monotonic: blank, then data, then blank again, then data.
+#   SCORING.X2A is blank on every 1980s row and not on every 1970s one.
+#   RECEIVING.TAR is blank in every decade to 1989 and starts in the 1990s.
+#
+# Which is the whole argument for the empty-column rule: a blank is never a zero and
+# the blank columns are RECORDED PER ROW rather than inferred from the decade.
 
 SCHEDULE_NOTE = (
     "ASSEMBLED FROM COVERAGE, NOT A SCHEDULE PFA PUBLISHED. This game record is derived "
@@ -104,9 +120,15 @@ def run(part, write):
         if len(pids) != 1:
             return None, ("no person holds this PFA player page" if not pids
                           else "the PFA code joins to more than one person")
-        hit = C.resolve(r["club_code"], r["year"], None, source="season_key")
+        # THE LEAGUE IS ON THE ROW AND MUST BE USED. This passed None and refused 682
+        # 1980s rows saying the table "cannot place HOU in 1984" -- it can: the Houston
+        # Oilers are NFL 1970-1996. What it cannot do is choose between them and the
+        # USFL's Houston club without being told the league, which the row has carried
+        # all along. A join must use every field on the row; this is the third time.
+        hit = C.resolve(r["club_code"], r["year"], r.get("league"), source="season_key")
         if not hit:
-            return None, f"the club table cannot place `{r['club_code']}` in {r['year']}"
+            return None, (f"the club table cannot place `{r['club_code']}` in "
+                          f"{r['year']} for league `{r.get('league')}`")
         return pids[0], r["club_code"]
 
     def record(locator):
@@ -175,8 +197,8 @@ def run(part, write):
         meta = {"gamelogs": glmeta, "playoffs": plmeta,
                 "postseason_rows_in_the_decade": len(post), "playoff_rows_in_the_decade": len(pl),
                 "phase_vocabulary": list(PHASES), "rows_outside_it": dict(off_vocab)}
-        out_name = "pfa-postseason-1970s"
-        what = ("The 1970s POSTSEASON: the POSTSEASON blocks of PFA's player game logs, one "
+        out_name = f"pfa-postseason-{DECADE}s"
+        what = (f"The {DECADE}s POSTSEASON: the POSTSEASON blocks of PFA's player game logs, one "
                 "claim per row, and PFA's playoff-log pages, one claim per playoff year. The "
                 "archive holds no other player postseason statistic of any kind.")
 
@@ -270,8 +292,8 @@ def run(part, write):
         meta = {"gamelogs": glmeta, "regular_season_rows_in_the_decade": len(reg),
                 "phase_vocabulary": list(PHASES), "rows_outside_it": dict(off_vocab),
                 "short_sums": short[:40], "short_sums_total": len(short)}
-        out_name = "pfa-gamelogs-1970s"
-        what = ("The 1970s REGULAR SEASON game logs, one claim per row; the games derived "
+        out_name = f"pfa-gamelogs-{DECADE}s"
+        what = (f"The {DECADE}s REGULAR SEASON game logs, one claim per row; the games derived "
                 "from them, each carrying the coverage limit on the claim; and the places "
                 "where PFA's game logs exceed PFA's own season page.")
 
@@ -302,6 +324,11 @@ def run(part, write):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--part", required=True, choices=("postseason", "regular"))
+    ap.add_argument("--decade", type=int, default=1970,
+                    help="the decade to read; one at a time, by ruling")
     ap.add_argument("--write", action="store_true")
     a = ap.parse_args()
+    if a.decade % 10 or not (1920 <= a.decade <= 2020):
+        ap.error("--decade is a decade: 1920, 1930 ... 2020")
+    DECADE = a.decade
     run(a.part, a.write)

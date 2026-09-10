@@ -5,10 +5,17 @@ hand-edited store fails too.
 
   L1  A BLANK IS NOT A ZERO. No statistic value is the empty string, and no column
       appears both in `statistics` and in `columns_printed_blank`. TAR is blank in
-      100% of 1970s receiving rows and X2/X2A in 100% of scoring rows; reading those
-      as zeros would put 16,187 invented figures into one decade.
+      every receiving row to 1989 and X2/X2A in every 1980s scoring row; reading those
+      as zeros would put 16,187 invented figures into the 1970s alone. AND THE ERA
+      FACTS ARE NOT MONOTONIC, measured 2026-09-10 across all 33,747 pages: KICKOFF
+      RETURNS.FC is blank on every 1970s row and carries 7,297 values in the 1980s;
+      SCORING.X2 is blank in the 1970s and carries 4,173 values in the 1960s, because
+      the AFL had the two-point conversion and the NFL did not. So the blank columns
+      are recorded PER ROW and never inferred from the decade -- which is what makes
+      this property hold on any decade rather than on the one it was written for.
   L2  THE CLUB CODE COMES FROM THE TABLE. Every stint subject's code resolves through
-      Clubs() for that year. An invented code resolves to nothing and no other gate
+      Clubs() for that year AND THAT LEAGUE -- the season key carries both, and asking
+      without the league cannot separate two clubs that share a code. An invented code resolves to nothing and no other gate
       catches it (docs/DATASET_PRECEDENTS.md).
   L3  THE COVERAGE LIMIT REACHES THE READER. Every derived game claim carries the
       note saying the set is assembled from coverage and is not a schedule PFA
@@ -32,7 +39,20 @@ import os, re, sys, json, sqlite3, collections
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 sys.path.insert(0, os.path.join(BASE, "service"))
-STORES = ("pfa-postseason-1970s", "pfa-gamelogs-1970s")
+# THE STORES ARE DISCOVERED, NOT LISTED. They were a hand-written tuple naming the
+# 1970s, so the first store of any other decade would have been SILENTLY UNGATED --
+# the gate would have passed by not looking. Ruled by the archive's own habit: a gate
+# derives its population, it does not carry a copy of it.
+def _stores():
+    import glob
+    out = []
+    for pat in ("pfa-postseason-*.json", "pfa-gamelogs-*.json"):
+        for f in sorted(glob.glob(os.path.join(BASE, "build", pat))):
+            out.append(os.path.basename(f)[:-5])
+    return tuple(out)
+
+
+STORES = _stores()
 SCHEDULE_PHRASE = "ASSEMBLED FROM COVERAGE"
 
 FAILS = []
@@ -58,12 +78,22 @@ def blanks(claims):
 
 
 def codes(claims):
+    """(code, year, LEAGUE) off every stint subject.
+
+    THE LEAGUE WAS BEING THROWN AWAY. A stint's season key is `NFL-1984` and this read
+    the year out of it and dropped the rest, then asked the club table to place `HOU`
+    in 1984 with no league -- which it cannot, because the Houston Oilers and a USFL
+    club of the same code both existed. The gate then failed the ingest for writing
+    exactly the rows it should have written. Two implementations of one rule, and the
+    fix went into one of them; this is the other."""
     out = collections.Counter()
     for c in claims:
         s = c.get("subject")
         if isinstance(s, list) and s and s[0] == "stint" and len(s) >= 4:
-            y = re.search(r"(\d{4})", str(s[3]))
-            if y: out[(str(s[2]), int(y.group(1)))] += 1
+            key = str(s[3])
+            y = re.search(r"(\d{4})", key)
+            lg = key.split("-")[0] if "-" in key else None
+            if y: out[(str(s[2]), int(y.group(1)), lg)] += 1
     return out
 
 
@@ -84,7 +114,7 @@ def main(argv):
         check(empty == 0 and both == 0,
               f"L1 a blank is not a zero ({empty} empty-string values, {both} columns in both lists)")
 
-        bad = [k for k in codes(cl) if not C.resolve(k[0], k[1], None, source="season_key")]
+        bad = [k for k in codes(cl) if not C.resolve(k[0], k[1], k[2], source="season_key")]
         check(not bad, f"L2 every club code resolves through the club table"
               + ("" if not bad else f" -- {len(bad)} do not: {bad[:5]}"))
 
