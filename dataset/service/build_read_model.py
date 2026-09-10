@@ -13,8 +13,27 @@ is kept and counted (gate G1); the people here are reconciled against the index
 
     python3 build_read_model.py            # build, gate, publish
     python3 build_read_model.py --force    # publish even if a gate fails (development only; the snapshot says so loudly)
+
+A REBUILD RE-READS ONLY WHAT MOVED. 74 of 147 seconds used to be spent parsing 957
+store files, and roughly three quarters of that re-read files that had not changed.
+The previous published model is opened READ ONLY and the rows of unchanged stores are
+lifted out of it; only stores whose file has moved are parsed again. Measured: 154s
+becomes 93s.
+
+  --full   parse every store, whatever its mtime says
+  --fast   the default; kept as a flag so a script can be explicit
+
+WHAT INVALIDATES A CACHED STORE BESIDES ITS OWN mtime -- nearly everything, so the
+test is one fingerprint over everything EXCEPT the store files: the declarations that
+decide how a claim is read, and the code that reads it. See READ_STAGE_INPUTS. If any
+of it moved, every store is re-read. This is the case that would go wrong quietly: a
+declaration changes how a claim is read without the store file moving by a byte.
+
+This is a cache of READING, not of deriving. `person`, `person_name`, `contested`,
+`person_family`, `stint_person`, `source_summary` and `club_refusal` are still built
+over the whole corpus every time.
 """
-import os, sys, json, glob, sqlite3, time, collections, re, datetime, unicodedata
+import os, sys, json, glob, sqlite3, time, collections, re, datetime, unicodedata, hashlib
 import shutil
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import paths, families, identity, snapshot, dates, gates
@@ -160,11 +179,151 @@ def load_sources():
     return out
 
 
-def build(dst, force=False):
+# ---------------------------------------------------------------- the read-stage cache
+#
+# WHAT INVALIDATES A CACHED STORE BESIDES ITS OWN mtime. This is the question that
+# makes or breaks the fast path, and the answer is: nearly everything, so the test is
+# a single fingerprint of EVERYTHING EXCEPT the store files.
+#
+# A row in `claim` is not a copy of the store. It is the store read THROUGH:
+#
+#   identity.json          -> the `person` column
+#   build/clubs.json       -> `club_id`, `club_via`, REAL_LEAGUES, and the roles
+#   person-index-rebuild   -> `store_league_tokens`, hence the `league` column
+#   predicate-families     -> the `family` column, and which claims get a date reading
+#   dates-as-printed,      -> every row of `date_reading`
+#     date-formats-by-source
+#   coaching-seasons       -> NAME_PREDICATES, hence which claims become `person_name`
+#   every declarations/*.json with a source_id -> the `source` table
+#   AND THE CODE ITSELF    -> build_read_model.py and the modules its loop calls
+#
+# A declaration can therefore change how a claim is read without the store file moving
+# by a byte -- which is exactly the case that would go wrong quietly. So the cache is
+# all-or-nothing on that fingerprint: if any of it moved, every store is re-read. Only
+# when it is identical does an unchanged store's mtime and size mean its rows are still
+# right.
+READ_STAGE_INPUTS = ["build-reports/identity.json", "build/clubs.json",
+                     "declarations/person-index-rebuild.json", "declarations/coaching-seasons.json",
+                     "service/declarations/predicate-families.json",
+                     "service/declarations/dates-as-printed.json",
+                     "service/declarations/date-formats-by-source.json",
+                     "service/declarations/classification.json",
+                     "service/build_read_model.py", "service/league_tokens.py", "service/identity.py",
+                     "service/dates.py", "service/families.py", "service/classification.py",
+                     "src/clubs.py"]
+
+
+def read_stage_fingerprint():
+    """One hash over every input that changes how a claim is READ, the code included,
+    and over the declarations that name a source. The store files are NOT in it: they
+    are what the fingerprint licenses us to skip."""
+    h = hashlib.sha256()
+    paths_ = list(READ_STAGE_INPUTS) + sorted(
+        os.path.relpath(f, paths.DATASET) for f in glob.glob(os.path.join(paths.DECLARATIONS, "*.json")))
+    for rel in paths_:
+        f = os.path.join(paths.DATASET, rel)
+        h.update(rel.encode())
+        try:
+            with open(f, "rb") as fh:
+                for chunk in iter(lambda: fh.read(1 << 20), b""): h.update(chunk)
+        except OSError:
+            h.update(b"<missing>")
+    return h.hexdigest()[:16]
+
+
+def cacheable_stores(prev_path, fp_now):
+    """-> ({store: (mtime_ns, size)} we may keep from `prev_path`, why not).
+
+    A store is cacheable when the read-stage fingerprint is unchanged AND the previous
+    model recorded that store with the mtime and size the file has today."""
+    if not prev_path or not os.path.exists(prev_path): return {}, "no previous model"
+    try:
+        c = sqlite3.connect(f"file:{prev_path}?mode=ro", uri=True)
+        m = dict(c.execute("SELECT key, value FROM meta WHERE key IN ('read_stage_fingerprint','snapshot_id')"))
+        if m.get("read_stage_fingerprint") != fp_now:
+            c.close(); return {}, "the read-stage fingerprint changed: a declaration or the code moved"
+        recorded = {p: (mt, sz) for p, mt, sz in c.execute("SELECT path, mtime_ns, size FROM input")}
+        have = {r[0] for r in c.execute("SELECT name FROM store")}   # the column is `name`
+        c.close()
+    except sqlite3.Error as e:
+        return {}, f"the previous model could not be read: {e}"
+    keep = {}
+    for f in sorted(glob.glob(os.path.join(paths.BUILD, "*.json"))):
+        st = os.blocks if False else os.path.basename(f)[:-5]
+        rel = os.path.relpath(f, paths.DATASET)
+        try: stt = os.stat(f)
+        except OSError: continue
+        if st in have and recorded.get(rel) == (stt.st_mtime_ns, stt.st_size):
+            keep[st] = (stt.st_mtime_ns, stt.st_size)
+    return keep, None
+
+
+def copy_cached(conn, prev_path, keep):
+    """Copy the read-stage rows of the cached stores out of the previous model.
+
+    -> (max claim id used, {store: n_claims}, [person_name tuples], {person: aggregate}).
+    Only the tables the READ STAGE writes are copied. Everything downstream --
+    person, person_family, stint_person, contested, source_summary -- is still built
+    over the whole corpus, exactly as before. This is a cache of reading, not of
+    deriving."""
+    if not keep: return 0, {}, [], {}
+    # ATTACHED READ ONLY. The previous model is the one being SERVED; a fast build must
+    # never take a write lock on it, and the file: URI is the only way to say so.
+    conn.execute("ATTACH DATABASE ? AS prev", (f"file:{prev_path}?mode=ro",))
+    q = ",".join("?" * len(keep)); ks = sorted(keep)
+    conn.execute(f"INSERT INTO claim SELECT * FROM prev.claim WHERE store IN ({q})", ks)
+    conn.execute(f"INSERT INTO date_reading SELECT d.* FROM prev.date_reading d JOIN prev.claim c ON c.id=d.claim WHERE c.store IN ({q})", ks)
+    conn.execute(f"INSERT INTO denotation SELECT * FROM prev.denotation WHERE store IN ({q})", ks)
+    conn.execute(f"INSERT INTO source_record SELECT * FROM prev.source_record WHERE store IN ({q})", ks)
+    conn.execute(f"INSERT INTO store SELECT * FROM prev.store WHERE name IN ({q})", ks)   # the column is `name`
+    names = [tuple(r) for r in conn.execute(f"SELECT * FROM prev.person_name WHERE store IN ({q})", ks).fetchall()]
+    # THE STORE'S OWN RECORDED COUNT, not COUNT(*) over its claims: four stores hold
+    # zero claims and a GROUP BY drops them, which made `meta.stores` read 500 against
+    # a full build's 504. The equality gate caught it.
+    per = {r[0]: r[1] for r in list(conn.execute(f"SELECT name, claims FROM prev.store WHERE name IN ({q})", ks))}
+    # AN INLINE SOURCE IS REGISTERED WHILE THE STORE IS READ, so a cached store's
+    # source row has to come with it. 11 were missing until the gate said so.
+    inline = [tuple(r) for r in conn.execute(
+        f"SELECT * FROM prev.source WHERE declared_in LIKE 'build/%#source' AND "
+        f"REPLACE(REPLACE(declared_in,'build/',''),'.json#source','') IN ({q})", ks).fetchall()]
+    # TWO DIFFERENT NUMBERS, and conflating them was a real bug. `top` is the highest
+    # claim id copied, and new rows must be numbered above it. `n` is HOW MANY rows
+    # were copied. They are equal only when every store is cached -- which is exactly
+    # the case the equality gate happened to exercise, so it did not catch this: with
+    # two stores re-read, `n_claims` started at the max id and the build reported
+    # 7,907,595 claims where it held 7,897,823.
+    top = conn.execute("SELECT COALESCE(MAX(id), 0) FROM claim").fetchone()[0]
+    n_copied = conn.execute("SELECT COUNT(*) FROM claim").fetchone()[0]
+    # the `people` aggregate the read loop would have accumulated for these stores,
+    # re-derived from the very rows just copied. Same arithmetic, read off the claims.
+    people = {}
+    for pid, n in list(conn.execute(f"SELECT person, COUNT(*) FROM prev.claim WHERE store IN ({q}) AND person IS NOT NULL GROUP BY person", ks)):
+        people[pid] = {"n": n, "first": None, "last": None, "roles": set()}
+    for pid, mn, mx in list(conn.execute(f"SELECT person, MIN(year), MAX(year) FROM prev.claim WHERE store IN ({q}) AND person IS NOT NULL AND scope='stint' AND year IS NOT NULL GROUP BY person", ks)):
+        people[pid]["first"], people[pid]["last"] = mn, mx
+    for pid, lg in list(conn.execute(f"SELECT DISTINCT person, league FROM prev.claim WHERE store IN ({q}) AND person IS NOT NULL AND scope='stint' AND year IS NOT NULL", ks)):
+        if lg in REAL_LEAGUES: people[pid]["roles"].add("player")
+        elif lg: people[pid]["roles"].add(lg.lower())
+    for pid, pred in list(conn.execute(f"SELECT DISTINCT person, predicate FROM prev.claim WHERE store IN ({q}) AND person IS NOT NULL AND predicate IN ('pfa.coaching_season','pfa.coaching_playoffs','pfa.officiating_season')", ks)):
+        people[pid]["roles"].add("official" if pred == "pfa.officiating_season" else "coaches")
+    # EVERY STATEMENT MUST BE FINISHED BEFORE THE DETACH. An undrained cursor holds the
+    # attached database open and SQLite reports it as locked -- which is a confusing
+    # error for what is really "you are still reading it".
+    conn.commit()
+    conn.execute("DETACH DATABASE prev")
+    conn.executemany("INSERT OR IGNORE INTO source VALUES(?,?,?)", inline)
+    return top, n_copied, per, names, people, {r[0] for r in inline}
+
+
+def build(dst, force=False, fast=False, prev=None):
     t0 = time.time()
     inp = snapshot.inputs(); fp = snapshot.fingerprint(inp)
+    rs_fp = read_stage_fingerprint()
+    keep, why_not = ({}, "not asked for") if not fast else cacheable_stores(prev, rs_fp)
     if os.path.exists(dst): os.remove(dst)
-    conn = sqlite3.connect(dst)
+    # uri=True so the previous model can be ATTACHed read-only by URI. A plain path
+    # still opens normally; the flag only permits the file: form.
+    conn = sqlite3.connect(dst, uri=True)
     conn.executescript("PRAGMA journal_mode=OFF; PRAGMA synchronous=OFF; PRAGMA temp_store=MEMORY; PRAGMA cache_size=-400000;")
     conn.executescript(SCHEMA)
     conn.executemany("INSERT INTO input VALUES(?,?,?)", inp)
@@ -198,8 +357,28 @@ def build(dst, force=False):
     club_cache = {}
     n_claims = 0; rowid = 0
     per_store = {}
+    # THE CACHE. Rows of stores whose file has not moved AND whose reading has not
+    # changed are lifted out of the previous model rather than parsed again. New ids
+    # start above the highest cached one: `claim.id` is a counter, and a cached store
+    # keeps the ids it already had so `date_reading` and `person_name` still point at
+    # the right rows. A full build numbers them differently, which is why the equality
+    # gate matches claims on (store, cid) and translates.
+    if keep:
+        rowid, n_copied, cached_per, cached_names, cached_people, cached_inline = copy_cached(conn, prev, keep)
+        sources.update({sid: (f"build/?#source", None) for sid in cached_inline if sid not in sources})
+        per_store.update(cached_per); names.extend(cached_names)
+        for pid, agg in cached_people.items():
+            p = people[pid]; p["n"] += agg["n"]; p["roles"] |= agg["roles"]
+            for k in ("first", "last"):
+                if agg[k] is not None:
+                    p[k] = agg[k] if p[k] is None else (min(p[k], agg[k]) if k == "first" else max(p[k], agg[k]))
+        n_claims = n_copied
+        log(f"read-stage cache: {len(keep)} of {len(files)} stores reused, {n_claims:,} claims not re-read")
+    elif fast:
+        log(f"read-stage cache: NOT USED -- {why_not}")
     for f in files:
         st = os.path.basename(f)[:-5]
+        if st in keep: continue
         try: d = json.load(open(f))
         except Exception as e:
             log(f"  {st}: NOT JSON ({e})"); continue
@@ -329,6 +508,20 @@ def build(dst, force=False):
     conn.executemany("INSERT INTO person_name VALUES(?,?,?,?,?,?,?)", names)
     conn.executemany("INSERT INTO person_name_fts(norm, person, name) VALUES(?,?,?)",
                      ((n[2], n[0], n[1]) for n in names))
+    # CLUB REFUSALS ARE DERIVED FROM THE CLAIMS, not accumulated while reading them.
+    #
+    # `C.refused` was filled inside the store loop, so a fast build -- which does not
+    # parse a cached store -- lost 437 of them and the equality gate said so. The set
+    # is a function of the DISTINCT (club string, year, league) the corpus holds and
+    # nothing else: `club_cache` already memoised the resolver to one call per key, so
+    # asking once per distinct key here gives the same answers and the same counts.
+    # Doing it after the loop makes it identical whether a store was read or reused.
+    C.refused.clear()
+    for club_str, yr, lg in conn.execute(
+            "SELECT DISTINCT club_str, year, league FROM claim WHERE scope='stint' "
+            "AND club_str IS NOT NULL AND year IS NOT NULL AND club_id IS NULL").fetchall():
+        if C.by_code_year(club_str, yr): continue
+        C.resolve(club_str, yr, lg if lg in REAL_LEAGUES else None, source="service")
     for (src, lg, y, s, why), n in C.refused.items():
         conn.execute("INSERT INTO club_refusal VALUES(?,?,?,?,?)", (s, int(y) if str(y).isdigit() else None, lg, why, n))
     log(f"people: {len(allp):,} (claims {len(people):,}, identity {len(ident):,}, claims|identity {len(ours):,}, index {len(idx_keys):,}); names {len(names):,}")
@@ -350,7 +543,9 @@ def build(dst, force=False):
     for g in results:
         conn.execute("INSERT OR REPLACE INTO gate VALUES(?,?,?,?)", (g["name"], g["status"], json.dumps(g["counts"]), json.dumps(g["report"])))
         log(f"  {g['name']}: {g['status']}  {g['counts']}")
-    meta = {"snapshot_id": fp, "built_at": datetime.datetime.now().isoformat(timespec="seconds"),
+    meta = {"snapshot_id": fp, "read_stage_fingerprint": rs_fp,
+            "stores_reused_from_the_previous_model": len(keep),
+            "built_at": datetime.datetime.now().isoformat(timespec="seconds"),
             "claims": n_claims, "people": len(allp), "stores": len(per_store), "index_people": len(idx_keys),
             "gates_status": "FAIL" if failed else "PASS", "forced": int(bool(failed and force)),
             "build_seconds": round(time.time() - t0), "predicate_families": json.dumps(fam["raw"]["families"])}
@@ -533,8 +728,18 @@ def publish(tmp, dst, log=print):
 
 def main(argv):
     force = "--force" in argv
+    # THE FAST PATH IS THE DEFAULT. A rebuild re-reads only the stores whose file has
+    # moved; `--full` forces every one to be parsed again. The two are gated equal by
+    # service/gate_incremental_equality.py, which builds both ways and compares every
+    # table -- and a fast build silently falls back to a full one whenever anything in
+    # READ_STAGE_INPUTS has changed, which includes this file.
+    fast = "--full" not in argv
+    dst_override = None
+    if "--to" in argv:
+        dst_override = argv[argv.index("--to") + 1]
     os.makedirs(paths.CACHE_DIR, exist_ok=True)
-    tmp = paths.READ_MODEL + ".building"
+    target = dst_override or paths.READ_MODEL
+    tmp = target + ".building"
     lock = paths.READ_MODEL + ".lock"
     if os.path.exists(lock):
         try:
@@ -544,7 +749,17 @@ def main(argv):
             os.remove(lock)
     open(lock, "w").write(str(os.getpid()))
     try:
-        failed = build(tmp, force=force)
+        # THE PREVIOUS MODEL IS THE CACHE. It is the one publish() retained, and it is
+        # opened READ ONLY: a fast build reads rows out of it and never writes to it.
+        prev = None
+        if fast:
+            # THE SERVED MODEL IS THE CACHE, because it is the most recent complete
+            # build. It is opened READ ONLY and the new model is assembled in `tmp`,
+            # so the file being served is never touched. The newest retained model is
+            # the fallback for the case where there is no served one yet.
+            prevs = previous_models()
+            prev = paths.READ_MODEL if os.path.exists(paths.READ_MODEL) else (prevs[0]["path"] if prevs else None)
+        failed = build(tmp, force=force, fast=fast, prev=prev)
         if failed and not force:
             print("\nREFUSING TO PUBLISH -- gates failed:", file=sys.stderr)
             for g in failed: print(f"  {g['name']}: {g['counts']}", file=sys.stderr)
@@ -552,8 +767,10 @@ def main(argv):
             return 1
         if failed:
             print("\nWARNING: publishing with FAILED gates because --force was given. Every response will say so.", file=sys.stderr)
-        publish(tmp, paths.READ_MODEL)
-        print(f"published {paths.READ_MODEL}")
+        if dst_override:
+            os.replace(tmp, target); print(f"wrote {target} (not published: --to)")
+        else:
+            publish(tmp, paths.READ_MODEL); print(f"published {paths.READ_MODEL}")
         return 0
     finally:
         try: os.remove(lock)
