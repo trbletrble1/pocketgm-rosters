@@ -1,0 +1,59 @@
+{
+ "TKL": {
+  "restates": 10837,
+  "differs": 2857,
+  "no_season_figure": 148
+ },
+ "DT": {
+  "restates": 11735,
+  "differs": 1959,
+  "no_season_figure": 148
+ },
+ "DA": {
+  "restates": 12304,
+  "differs": 1389,
+  "no_season_figure": 149
+ },
+ "STT": {
+  "restates": 12764,
+  "differs": 929,
+  "no_season_figure": 149
+ },
+ "STA": {
+  "restates": 13396,
+  "differs": 297,
+  "no_season_figure": 149
+ },
+ "MT": {
+  "restates": 13491,
+  "no_season_figure": 148,
+  "differs": 202,
+  "unreadable": 1
+ },
+ "MA": {
+  "restates": 13690,
+  "no_season_figure": 149,
+  "differs": 3
+ },
+ "TFL": {
+  "restates": 12954,
+  "differs": 738,
+  "no_season_figure": 150
+ },
+ "QH": {
+  "no_season_figure": 13773
+ },
+ "PD": {
+  "restates": 12897,
+  "differs": 797,
+  "no_season_figure": 148
+ },
+ "BL": {
+  "no_season_figure": 13842
+ },
+ "FF": {
+  "restates": 13094,
+  "differs": 656,
+  "no_season_figure": 92
+ }
+}
