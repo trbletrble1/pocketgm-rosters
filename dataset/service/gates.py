@@ -401,10 +401,13 @@ def g8(conn, ctx):
     3. NAME PREDICATES. Every person-scoped predicate whose name contains "name"
        must be declared or explicitly not a name. A name served as a fact is a name
        search cannot find.
-    4. NAME FORM. The surname-first reading against declared worked examples, both
-       answers. Ruled 2026-09-09: a display name is read, so `Fritz Pollard` beats
-       `Pollard, Frederick Douglass` -- but nothing is standardised and both stay
-       claims. The gate protects the RULE, not the recipe."""
+    4. NAME FORM. Two display-name readings against declared worked examples, both
+       answers each. Ruled 2026-09-09: a display name is READ, so `Fritz Pollard`
+       beats `Pollard, Frederick Douglass`, and a FULLER name beats a bare surname,
+       so `Joseph T. Plunkett` beats `Plunkett`. Nothing is standardised and every
+       form stays a claim. The gate protects the RULES, not the recipe -- and the
+       bare-surname rule is checked on its keeps as well as its sets-aside, because a
+       rule tested only where it should fire is tested on half of itself."""
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import classification as C
     decl_stat = C.statistic_stores(); decl_staff = C.staff_predicates()
@@ -478,6 +481,23 @@ def g8(conn, ctx):
                 findings.append({"what": "the name-form reading disagrees with a declared worked example",
                                  "name": n, "declared": key, "reading_says": "surname_first" if got else "forename_first",
                                  "remedy": "either the rule changed and this example must be re-ruled, or the rule is wrong"})
+    # the bare-surname rule, on its own declared examples and then on the model
+    for n, others in ex.get("bare_surname_set_aside", []):
+        if not C.is_bare_surname(n, others):
+            findings.append({"what": "a name the ruling sets aside is not set aside", "name": n,
+                             "held_beside_it": others,
+                             "remedy": "the rule changed and this example must be re-ruled, or the rule is wrong"})
+    for n, others in ex.get("bare_surname_kept", []):
+        if C.is_bare_surname(n, others):
+            findings.append({"what": "a name the ruling KEEPS is being set aside", "name": n,
+                             "held_beside_it": others, "remedy": "as above"})
+    # THE PROPERTY, over the whole model: no man whose names include a one-word surname
+    # AND a longer name ending in it may still be shown the surname. Checked on
+    # person_name, which is where the served display name is derived from.
+    held = collections.defaultdict(set)
+    for pid, nm in conn.execute("SELECT person, name FROM person_name"): held[pid].add(nm)
+    bare_pairs = sum(1 for pid, ns in held.items() if any(C.is_bare_surname(n, ns) for n in ns))
+
     commas = conn.execute("SELECT COUNT(*) FROM person_name WHERE name LIKE '%,%'").fetchone()[0]
     filed = sum(1 for r in conn.execute("SELECT name FROM person_name WHERE name LIKE '%,%'") if C.is_surname_first(r[0]))
 
@@ -491,6 +511,7 @@ def g8(conn, ctx):
                        "name_predicates_declared": len(decl_names),
                        "worked_examples_checked": sum(len(v) for k, v in ex.items() if not k.startswith("_")),
                        "index_names_with_a_comma": commas,
+                       "people_holding_a_bare_surname_beside_a_fuller_name": bare_pairs,
                        "of_those_read_as_surname_first": filed,
                        "differences": len(findings),
                        "declared_stores_no_longer_in_the_model": len(stale)},

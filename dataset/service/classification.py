@@ -102,3 +102,26 @@ def is_surname_first(name):
     rest = [t for t in (x.strip(" .") for x in re.split(r"[,\s]+", tail)) if t and t.lower() not in suff
             and (t.lower() + ".") not in suff]
     return bool(rest)
+
+
+def is_bare_surname(name, others):
+    """Is `name` a one-word name that another of `others` merely lengthens?
+
+    Ruled by Ryan, 2026-09-09: a display name exists to be read, and a bare surname is
+    what survives when nothing else does -- not a name to prefer over a fuller one for
+    the same man. The archive knew Plunkett's forename and showed a surname, because
+    9.3 prefers a DATED claim and the fuller name was undated.
+
+    THE TEST IS DELIBERATELY NARROW and its reach was measured before it was written:
+    2 people in the archive hold both shapes and 1 display name changes. It does not
+    decide between two multi-word names, and the containment rule that would -- every
+    word of A appearing in a longer B -- reaches 1,616 people, prefers middle names
+    nobody uses, and fights the surname-first ruling. See the declaration."""
+    if not isinstance(name, str): return False
+    w = name.split()
+    if len(w) != 1: return False
+    bare = w[0].lower().strip(".,")
+    for o in others:
+        ow = (o or "").split()
+        if len(ow) > 1 and ow[-1].lower().strip(".,") == bare: return True
+    return False

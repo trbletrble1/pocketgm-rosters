@@ -262,6 +262,18 @@ def main():
             decl8(d2); allok &= expect("RS-G8 suffix list emptied -- 'Robert D. Bean, Jr.' misreads", gates.g8(g8_model(), {}), "FAIL")
             d2 = json.loads(json.dumps(d)); d2["name_forms"]["worked_examples"]["forename_first"] = ["Pollard, Frederick Douglass"]
             decl8(d2); allok &= expect("RS-G8 an example declared the wrong way round", gates.g8(g8_model(), {}), "FAIL")
+            # the bare-surname rule, both answers
+            d3 = json.loads(json.dumps(d))
+            d3["name_forms"]["worked_examples"]["bare_surname_set_aside"] = [["Plunkett", ["Joseph T. Plunkett"]]]
+            d3["name_forms"]["worked_examples"]["bare_surname_kept"] = [["Plunkett", ["Plunkett"]], ["Joe Plunkett", ["Joseph T. Plunkett"]]]
+            decl8(d3); allok &= expect("RS-G8 the bare-surname rule matches its examples", gates.g8(g8_model(), {}), "PASS")
+            d4 = json.loads(json.dumps(d3))
+            d4["name_forms"]["worked_examples"]["bare_surname_kept"] = [["Plunkett", ["Joseph T. Plunkett"]]]
+            decl8(d4); allok &= expect("RS-G8 a bare surname the ruling KEEPS is being set aside", gates.g8(g8_model(), {}), "FAIL")
+            d5 = json.loads(json.dumps(d3))
+            d5["name_forms"]["worked_examples"]["bare_surname_set_aside"] = [["Joe Plunkett", ["Joseph T. Plunkett"]]]
+            decl8(d5); allok &= expect("RS-G8 a multi-word name declared a bare surname -- the case this ruling does NOT decide",
+                                       gates.g8(g8_model(), {}), "FAIL")
         finally:
             C._PATH, C._D = real_path, real_d
             C._ARCHIVE_PATH, C._A = real_apath, real_a

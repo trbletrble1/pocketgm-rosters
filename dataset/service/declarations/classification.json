@@ -246,17 +246,23 @@
   "_history": "queries.py excluded the single literal \"name\", so pfa.name_as_printed was served twice (it IS read into person_name by the builder) and statscrew.formal_name and full_name were served as facts only -- 1,607 name claims that search_people could not find.",
   "_club_name_is_not_here": "`club_name` is club_season-scoped and names a CLUB. Scope is part of the test.",
   "predicates": [
+   "full_name",
    "name",
    "pfa.name_as_printed",
+   "pfr.full_name",
    "statscrew.formal_name",
-   "full_name"
+   "wikipedia.full_name",
+   "fyjbook.name_as_printed"
   ],
   "_shapes": {
    "name": "a plain string.",
    "pfa.name_as_printed": "a dict, not a string -- the builder already reads it into person_name and takes the printed form out of it. Kept here so the two readers agree on what a name is.",
    "statscrew.formal_name": "a plain string; the full formal name where StatsCrew prints one.",
-   "full_name": "a plain string; 21 claims."
-  }
+   "full_name": "a plain string; 21 claims.",
+   "pfr.full_name": "Pro-Football-Reference's full name from a player page -- 'Clarence Edward Horning' where the archive holds 'Steamer Horning'. A NAME, added 2026-09-09 when RS-G8 caught it sitting in `facts` where search could not find it.",
+   "wikipedia.full_name": "the same, from a Wikipedia article. It is the whole point of the Plunkett ingest: the archive held him as `Plunkett` and this is his forename."
+  },
+  "_added_2026_09_09": "fyjbook.name_as_printed -- the Frankford book site prints the full formal name with the nickname inside where the archive holds the short form (`Doc Elliott` against `Wallace \"Doc\" Elliott`). Ryan's ruling: these go in BESIDE what is held, not over it, and both stay searchable. A name that is not a declared name predicate is served as a fact and never indexed, which is how 1,607 names became unsearchable once before."
  },
  "name_forms": {
   "_what": "WHICH FORM A NAME IS WRITTEN IN. Surname-first (`Pollard, Frederick Douglass`) is a FILING CONVENTION, not a name as anyone reads it. Ruled 2026-09-09 by Ryan: where a person holds both forms, the derived display name takes the forename-first one. NOTHING IS STANDARDISED -- both stay as printed in the store, both stay name claims, both stay searchable. This decides only which one the \u00a79.3 recipe is allowed to choose from.",
@@ -296,7 +302,58 @@
     "Anthony Tyrone Amos, II",
     "Grantis D. Bell, Jr., Jr., Jr.",
     "Frank McNulty Beede, III"
+   ],
+   "_bare_surname": "Pairs the bare-surname rule must decide, checked by RS-G8. Each is (the one-word name, the names held beside it, whether it is set aside).",
+   "bare_surname_set_aside": [
+    [
+     "Plunkett",
+     [
+      "Joseph T. Plunkett"
+     ]
+    ],
+    [
+     "Breaux",
+     [
+      "Delvin Breaux"
+     ]
+    ]
+   ],
+   "bare_surname_kept": [
+    [
+     "Gates",
+     [
+      "Gates"
+     ]
+    ],
+    [
+     "Plunkett",
+     [
+      "Plunkett"
+     ]
+    ],
+    [
+     "Joe Plunkett",
+     [
+      "Joseph T. Plunkett"
+     ]
+    ]
    ]
+  },
+  "a_bare_surname_is_not_preferred": {
+   "_what": "Ruled by Ryan, 2026-09-09. Where a person holds a name of ONE WORD and also a longer name ENDING IN THAT WORD, the one-word name is set aside as a display-name candidate. A display name exists to be read; a bare surname is what survives when nothing else does, not a name to prefer over a fuller one for the same man.",
+   "_the_defect": "P_002634 held `Plunkett` from a dated 1920 roster and `Joseph T. Plunkett` from an undated Wikipedia article. The 9.3 recipe prefers the name covering the largest attested span and an undated claim counts toward none, so the archive knew his forename and showed a surname.",
+   "_the_rule_exactly": "A candidate is set aside when (a) it is a single word after splitting on whitespace, and (b) another candidate has two or more words whose LAST word equals it, compared case-insensitively and ignoring a trailing full stop or comma. Nothing else.",
+   "_how_far_it_reaches_MEASURED_2026_09_09": {
+    "people holding a name at all": 42402,
+    "holding a single-word name": 38,
+    "AND a longer name ending in it -- the population the rule touches": 2,
+    "holding a single-word name and nothing longer -- untouched": 36,
+    "display names it actually changes": 1,
+    "_the_other_one": "P_011767 Breaux already displays `Delvin Breaux`: his fuller name is DATED, so the span rule reaches it without help. The rule confirms him rather than moving him."
+   },
+   "_what_this_ruling_does_NOT_decide": "Which of two MULTI-WORD names is fuller. `Joseph T. Plunkett` against `Joe Plunkett` is a different question and is left open, exactly as ruled.",
+   "_the_wider_rule_that_was_rejected": "A containment rule -- every word of A appears in B and B is longer -- reaches 1,616 people and is WRONG twice over. It would prefer a middle name nobody uses (`Anthony Amos` -> `Anthony Tyrone Amos, II`), and it would fight the surname-first ruling by preferring `Moore, Sterling Patrick` over `Sterling Moore`. Measured before choosing, not assumed.",
+   "_it_is_a_filter_not_a_new_recipe": "Like the surname-first rule beside it, this removes candidates and then the 9.3 span rule runs unchanged. A man who holds NOTHING but a bare surname keeps it: the filters never empty the set."
   }
  }
 }

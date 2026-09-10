@@ -137,6 +137,16 @@ def display_name(name_rows, hints=None):
     read_as_written = [r for r in rows if not classification.is_surname_first(r["name"])]
     dropped_filing_forms = sorted({r["name"] for r in filed}) if (filed and read_as_written) else []
     if dropped_filing_forms: rows = read_as_written
+    # A FULLER NAME OUTRANKS A DATED ONE. Ruled 2026-09-09 by Ryan, after the archive
+    # held `Joseph T. Plunkett` and showed `Plunkett`: the span rule below prefers a
+    # DATED claim, and a one-word surname off a 1920 roster is dated where a full name
+    # off an article is not. A bare surname is what survives when nothing else does.
+    # Second filter, same shape as the first, and the span rule then runs unchanged.
+    all_names = {r["name"] for r in rows}
+    bare = [r for r in rows if classification.is_bare_surname(r["name"], all_names)]
+    keep = [r for r in rows if not classification.is_bare_surname(r["name"], all_names)]
+    dropped_bare_surnames = sorted({r["name"] for r in bare}) if (bare and keep) else []
+    if dropped_bare_surnames: rows = keep
     spans = collections.defaultdict(set); count = collections.Counter(); claims = collections.defaultdict(list)
     for r in rows:
         count[r["name"]] += 1; claims[r["name"]].append(r["claim"])
@@ -155,6 +165,9 @@ def display_name(name_rows, hints=None):
     if dropped_filing_forms:
         out["surname_first_forms_not_chosen"] = dropped_filing_forms
         out["why"] += "; surname-first forms were set aside as a filing convention (they remain claims and remain searchable)"
+    if dropped_bare_surnames:
+        out["bare_surnames_not_chosen"] = dropped_bare_surnames
+        out["why"] += "; a bare surname was set aside because a fuller name for the same man is held (it remains a claim and remains searchable)"
     return out
 
 
