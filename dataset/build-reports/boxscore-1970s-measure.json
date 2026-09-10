@@ -1,0 +1,30 @@
+{
+ "1920-59": {
+  "pages": 2888,
+  "men": 89911,
+  "coded": 89911,
+  "lu_games": 2885,
+  "cells": 95812,
+  "c": {
+   "meta_ok": 2888,
+   "quarters_ok": 2886,
+   "scoring_plays": 14608,
+   "scoring_ok": 2820,
+   "stats_ok": 2888
+  }
+ },
+ "1970s": {
+  "pages": 2006,
+  "men": 88265,
+  "coded": 88265,
+  "lu_games": 2006,
+  "cells": 70206,
+  "c": {
+   "meta_ok": 2006,
+   "quarters_ok": 2006,
+   "scoring_plays": 13719,
+   "scoring_ok": 2005,
+   "stats_ok": 2006
+  }
+ }
+}

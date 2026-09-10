@@ -1,0 +1,140 @@
+{
+ "by_decade": {
+  "1920": {
+   "pages": 803,
+   "meta_ok": 803,
+   "quarters": 801,
+   "scoring_plays": 2426,
+   "lineup_entries": 17600,
+   "lineup_games": 800,
+   "stat_cells": 24893,
+   "attendance_stated": 654
+  },
+  "1930": {
+   "pages": 574,
+   "meta_ok": 574,
+   "attendance_stated": 561,
+   "quarters": 574,
+   "scoring_plays": 2162,
+   "lineup_entries": 12629,
+   "lineup_games": 574,
+   "stat_cells": 18034,
+   "has_SACKS": 6,
+   "weather_cell": 57
+  },
+  "1940": {
+   "pages": 770,
+   "meta_ok": 770,
+   "attendance_stated": 770,
+   "quarters": 770,
+   "scoring_plays": 4737,
+   "lineup_entries": 27074,
+   "lineup_games": 770,
+   "stat_cells": 26950,
+   "weather_cell": 528,
+   "has_SACKS": 20
+  },
+  "1950": {
+   "pages": 741,
+   "meta_ok": 741,
+   "attendance_stated": 740,
+   "quarters": 741,
+   "scoring_plays": 5283,
+   "lineup_entries": 32608,
+   "lineup_games": 741,
+   "stat_cells": 25935,
+   "weather_cell": 741,
+   "has_SACKS": 15
+  },
+  "1960": {
+   "pages": 1642,
+   "meta_ok": 1642,
+   "attendance_stated": 1641,
+   "quarters": 1639,
+   "scoring_plays": 12459,
+   "lineup_entries": 72116,
+   "lineup_games": 1639,
+   "stat_cells": 57470,
+   "weather_cell": 1642,
+   "has_SACKS": 31
+  },
+  "1970": {
+   "pages": 2006,
+   "meta_ok": 2006,
+   "attendance_stated": 2006,
+   "quarters": 2006,
+   "scoring_plays": 13719,
+   "lineup_entries": 88265,
+   "lineup_games": 2006,
+   "stat_cells": 70206,
+   "has_SACKS": 2006,
+   "weather_cell": 2006
+  },
+  "1980": {
+   "pages": 2224,
+   "meta_ok": 2224,
+   "attendance_stated": 2224,
+   "quarters": 2224,
+   "scoring_plays": 16682,
+   "lineup_entries": 97858,
+   "lineup_games": 2224,
+   "stat_cells": 77840,
+   "has_SACKS": 2224,
+   "weather_cell": 2224
+  },
+  "1990": {
+   "pages": 2438,
+   "meta_ok": 2438,
+   "attendance_stated": 2438,
+   "quarters": 2438,
+   "scoring_plays": 18302,
+   "lineup_entries": 107277,
+   "lineup_games": 2438,
+   "stat_cells": 85330,
+   "has_SACKS": 2438,
+   "weather_cell": 2438
+  },
+  "2000": {
+   "pages": 2654,
+   "meta_ok": 2654,
+   "attendance_stated": 2654,
+   "quarters": 2646,
+   "scoring_plays": 20730,
+   "lineup_entries": 116290,
+   "lineup_games": 2643,
+   "stat_cells": 92890,
+   "has_SACKS": 2654,
+   "weather_cell": 2654
+  },
+  "2010": {
+   "pages": 2670,
+   "meta_ok": 2670,
+   "attendance_stated": 2670,
+   "quarters": 2669,
+   "scoring_plays": 22463,
+   "lineup_entries": 117093,
+   "lineup_games": 2656,
+   "stat_cells": 93142,
+   "has_SACKS": 2659,
+   "weather_cell": 2670
+  },
+  "2020": {
+   "pages": 1409,
+   "meta_ok": 1409,
+   "attendance_stated": 1408,
+   "quarters": 1409,
+   "scoring_plays": 12004,
+   "lineup_entries": 61992,
+   "lineup_games": 1409,
+   "stat_cells": 49315,
+   "has_SACKS": 1409,
+   "weather_cell": 554
+  }
+ },
+ "pages_with_no_game_number": [
+  "nflboxscores1/1966aflnfl.html",
+  "nflboxscores1/1967aflnfl.html",
+  "nflboxscores1/1968aflnfl.html",
+  "nflboxscores1/1969aflnfl.html"
+ ]
+}
