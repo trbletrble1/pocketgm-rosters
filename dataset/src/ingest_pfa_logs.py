@@ -258,17 +258,19 @@ def run(part, write):
             for col, raw in r["stats"].items():
                 if col not in mp: continue
                 v = M.number(raw)
-                s = agg[(pids[0], r["year"], r["club_code"], r["section"], col)]
+                s = agg[(pids[0], r["year"], r["club_code"], r["league"], r["section"], col)]
                 s["n"] += 1
                 if v is None: s["blank"] += 1; continue
                 s["sum"] += v
                 s["max"] = v if s["max"] is None else max(s["max"], v)
         held = M.held_season(conn, DECADE)
         short = []
-        for (pid, y, code, sec, col), s in agg.items():
+        for (pid, y, code, league, sec, col), s in agg.items():
             pred, how = M.MAP[sec][col]
             if pred is None or how == M.DERIVED or s["blank"]: continue
-            hit = C.resolve(code, y, None, source="season_key")
+            # THE LEAGUE, AGAIN, AND THIS WAS THE THIRD COPY IN THIS FILE. place() had it,
+            # the gate's codes() had it, and so did this.
+            hit = C.resolve(code, y, league, source="season_key")
             got = held.get((pid, y, hit[0] if hit else code, pred))
             if got is None: continue
             hv = M.number(got)
@@ -283,7 +285,13 @@ def run(part, write):
             claims.append({**base_claim(record("gamelogs/against-the-season-page"),
                                         note=DISAGREE_NOTE),
                            "id": f"conflict:{pid}:{y}:{code}:{pred}",
-                           "subject": ["stint", pid, code, f"NFL-{y}"],
+                           # THE LEAGUE WAS HARDCODED `NFL` ON EVERY DISAGREEMENT CLAIM.
+                           # Every AAFC, AFL, WFL and USFL disagreement was filed under a
+                           # competition it was not played in -- 1,654 claims across every
+                           # decade asserted NFL whatever the row said. The gate caught only
+                           # the ones where the code does not ALSO name an NFL club that
+                           # year; the rest would have passed and still been wrong.
+                           "subject": ["stint", pid, code, f"{league}-{y}"],
                            "predicate": "pfa.game_logs_exceed_the_season_page",
                            "value": {"statistic": pred, "the_season_page_prints": got,
                                      "the_game_logs_sum_to": want, "games_logged": s["n"],
