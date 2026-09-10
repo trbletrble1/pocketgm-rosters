@@ -72,6 +72,22 @@ def men_of(image, drops=None):
             drops.append({"image": image.get("image"), "why": why,
                           "orientation": image.get("orientation"),
                           "lines": len(image.get("lines") or []), **kw})
+    # ROUTE THE PAGE TO THE READER FOR ITS SHAPE. A bio page -- one where each man is a
+    # PARAGRAPH beginning `NAME-NN years` -- is not a table, and banding it can only fail:
+    # the drops for the 1926 Bears-Tigers page were full of
+    # `JACK NOLAN-25 years, height 5 ft. 10 in.` with no name matched, because the name
+    # patterns here are ANCHORED and match only a line that is nothing but a name.
+    # Un-anchoring them would be the wrong fix -- on a real line-up page each cell IS its
+    # own token and the anchor is correct there. The fault is one reader being asked to
+    # read two document shapes.
+    import programme_bio_page as BIO
+    bios = BIO.entries_of(image.get("lines") or [], image.get("orientation") or "up")
+    if len(bios) >= 6:
+        return [{"name": b["name_as_printed"], "number": None,
+                 "full_name": len(b["name_as_printed"].split()) > 1,
+                 "height": b.get("height_as_printed"), "weight": b.get("weight_as_printed"),
+                 "college": b.get("college_or_prior_as_printed"),
+                 "position": None, "_read_as": "bio_page"} for b in bios]
     bs = bands(image)
     if not bs:
         n = len(image.get("lines") or [])

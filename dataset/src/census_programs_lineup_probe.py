@@ -62,16 +62,46 @@ def bands(image):
     lines = image.get("lines") or []
     if len(lines) < 12: return None
     f = AXES.get(image.get("orientation", "up"), AXES["up"])
-    pts = sorted(((f(l)[0], f(l)[1], l["text"]) for l in lines))
-    ds = [p[0] for p in pts]
-    gaps = sorted(b - a for a, b in zip(ds, ds[1:]) if b - a > 1e-6)
-    if not gaps: return None
-    th = 3.0 * statistics.median(gaps)
-    out, cur = [], [pts[0]]
-    for p in pts[1:]:
-        if p[0] - cur[-1][0] > th: out.append(cur); cur = []
-        cur.append(p)
-    out.append(cur)
+    # BAND WITHIN EACH COLUMN, NEVER ACROSS THE PAGE. This banded the whole page on the
+    # down coordinate, so on a two-column page a single band held one man from the LEFT
+    # column and one from the RIGHT. The band then carried two numbers, was discarded as
+    # `band_multi_number`, and BOTH men were lost -- 866 drops across the class. A column
+    # is a geometric fact and is found from the page's own widest gaps, not assumed to be
+    # two. ONE IMPLEMENTATION: the split is programme_bio_page.columns().
+    # AND THE SPLIT IS TRIGGERED BY THE SYMPTOM, NOT APPLIED BLINDLY. Splitting every
+    # page into columns first made the class WORSE -- 255 men to 219 -- because on a
+    # single-column line-up page the row is `NUM NAME POSITION` and the gaps BETWEEN
+    # FIELDS look exactly like a column break, so every row shattered. The thing that
+    # distinguishes a two-column PAGE from a multi-field ROW is that a two-column page
+    # puts TWO NUMBERS at the same height. So: band the page whole, and only re-band by
+    # column when that banding actually shows the symptom.
+    def _band(pts_in):
+        pts = sorted(pts_in)
+        if len(pts) < 2: return []
+        ds = [q[0] for q in pts]
+        gaps = sorted(b - a for a, b in zip(ds, ds[1:]) if b - a > 1e-6)
+        if not gaps: return []
+        th = 3.0 * statistics.median(gaps)
+        res, cur = [], [pts[0]]
+        for q in pts[1:]:
+            if q[0] - cur[-1][0] > th: res.append(cur); cur = []
+            cur.append(q)
+        res.append(cur)
+        return res
+
+    whole = _band([(f(l)[0], f(l)[1], l["text"]) for l in lines])
+    numbered = [b for b in whole if any(RE_NUM.match(x[2].strip()) for x in b)]
+    multi = sum(1 for b in numbered
+                if sum(1 for x in b if RE_NUM.match(x[2].strip())) > 1)
+    if not numbered or multi / len(numbered) < 0.30:
+        return [sorted(b, key=lambda x: x[1]) for b in whole]
+
+    import programme_bio_page as _B
+    cols = _B.columns(lines, image.get("orientation", "up")) or [lines]
+    out = []
+    for col in cols:
+        out += _band([(f(l)[0], f(l)[1], l["text"]) for l in col])
+    if not out: return None
     return [sorted(b, key=lambda x: x[1]) for b in out]
 
 
