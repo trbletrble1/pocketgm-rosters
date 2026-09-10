@@ -59,20 +59,6 @@
    "why_it_refused": "no club under that name that year"
   },
   {
-   "club": "club-wheeling-ironmen-1965",
-   "club_name": "Wheeling Ironmen",
-   "held": [
-    1965,
-    1967
-   ],
-   "year_attested": 1962,
-   "side": "before",
-   "gap_years": 3,
-   "string": "Wheeling Ironmen",
-   "source": "coaching_tree",
-   "why_it_refused": "no club under that name that year"
-  },
-  {
    "club": "club-birmingham-americans-1974",
    "club_name": "Birmingham Americans",
    "held": [
@@ -84,20 +70,6 @@
    "gap_years": 2,
    "string": "Birmingham Americans",
    "source": "season_key:SALARIES",
-   "why_it_refused": "no club under that name that year"
-  },
-  {
-   "club": "club-wheeling-ironmen-1965",
-   "club_name": "Wheeling Ironmen",
-   "held": [
-    1965,
-    1967
-   ],
-   "year_attested": 1963,
-   "side": "before",
-   "gap_years": 2,
-   "string": "Wheeling Ironmen",
-   "source": "coaching_tree",
    "why_it_refused": "no club under that name that year"
   },
   {
@@ -125,20 +97,6 @@
    "side": "before",
    "gap_years": 1,
    "string": "Chicago Winds",
-   "source": "coaching_tree",
-   "why_it_refused": "no club under that name that year"
-  },
-  {
-   "club": "club-wheeling-ironmen-1965",
-   "club_name": "Wheeling Ironmen",
-   "held": [
-    1965,
-    1967
-   ],
-   "year_attested": 1964,
-   "side": "before",
-   "gap_years": 1,
-   "string": "Wheeling Ironmen",
    "source": "coaching_tree",
    "why_it_refused": "no club under that name that year"
   }
@@ -559,8 +517,8 @@
   }
  ],
  "counts": {
-  "A": 10,
-  "A_clubs": 6,
+  "A": 7,
+  "A_clubs": 5,
   "B": 29,
   "C": 5,
   "D": 3,

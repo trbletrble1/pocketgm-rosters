@@ -1,41 +1,96 @@
 {
  "counts": {
-  "fillable from a PFA page already on disk": 345,
-  "not fillable from anything already held": 2780
+  "fillable from a PFA page already on disk": 5041,
+  "not fillable from anything already held": 4032
  },
  "by_field": {
-  "position": {
-   "fillable": 50,
-   "not": 24
-  },
   "age": {
-   "not": 216,
-   "fillable": 89
+   "fillable": 2352,
+   "not": 767
   },
   "weight": {
-   "not": 1723,
-   "fillable": 181
+   "fillable": 2616,
+   "not": 2030
   },
   "college": {
-   "not": 817,
-   "fillable": 25
+   "not": 1139,
+   "fillable": 20
+  },
+  "position": {
+   "not": 96,
+   "fillable": 53
   }
  },
  "why_not_fillable": {
-  "not on the page": 1997,
-  "PFA's cell is empty or `none`": 758,
-  "no PFA page": 25
+  "PFA's cell is empty or `none`": 1614,
+  "no PFA page": 472,
+  "not on the page": 1946
  },
  "still_missing_by_club_season": [
+  {
+   "club_season": "UFL|1961|PFA:AKR",
+   "name": "Akron Pros",
+   "left": 71
+  },
+  {
+   "club_season": "AFL|1944|PFA:OAK",
+   "name": "Oakland Hornets",
+   "left": 69
+  },
+  {
+   "club_season": "UFL|1961|PFA:GR",
+   "name": "Grand Rapids Shamrocks",
+   "left": 67
+  },
+  {
+   "club_season": "AFL|1944|PFA:AFL:SD",
+   "name": "San Diego Gunners",
+   "left": 66
+  },
+  {
+   "club_season": "AFL|1941|PFA:CIN",
+   "name": "Cincinnati Benagls",
+   "left": 60
+  },
+  {
+   "club_season": "EFL|1932|PFA:NEW",
+   "name": "Newark Fighting Irish",
+   "left": 57
+  },
+  {
+   "club_season": "AFL|1926|AFLPC",
+   "name": "Wilson's Wildcats",
+   "left": 52
+  },
+  {
+   "club_season": "AFL|1936|PFA:S/R",
+   "name": "Syracuse/Rochester Braves",
+   "left": 48
+  },
+  {
+   "club_season": "AFL|1934|PFA:CHA",
+   "name": "Charlotte Bantams",
+   "left": 47
+  },
+  {
+   "club_season": "AFL|1944|PFA:SF",
+   "name": "San Francisco Clippers",
+   "left": 45
+  },
   {
    "club_season": "APFA|1920|ROC",
    "name": "Rochester Jeffersons",
    "left": 39
   },
   {
-   "club_season": "APFA|1920|DE1",
-   "name": "Detroit Heralds",
-   "left": 34
+   "club_season": "AFL|1940|PFA:MIL",
+   "name": "Milwaukee Chiuefs",
+   "left": 36
+  },
+  {
+   "club_season": "EFL|1932|PFA:MTV",
+   "name": "Mount Vernon Indians",
+   "left": 33
   },
   {
    "club_season": "APFA|1920|HAM",
@@ -43,9 +98,54 @@
    "left": 33
   },
   {
+   "club_season": "AFL|1944|PFA:LAM",
+   "name": "Los Angeles Mustangs",
+   "left": 30
+  },
+  {
+   "club_season": "AFL|1934|PFA:LOU",
+   "name": "Lousville Bourbons",
+   "left": 29
+  },
+  {
+   "club_season": "APFA|1920|DE1",
+   "name": "Detroit Heralds",
+   "left": 28
+  },
+  {
+   "club_season": "NFL|1924|FYJ",
+   "name": "Frankford Yellow Jackets",
+   "left": 28
+  },
+  {
+   "club_season": "EFL|1932|PFA:WNY",
+   "name": "West New York Skeeters",
+   "left": 27
+  },
+  {
    "club_season": "APFA|1921|LOU",
    "name": "Louisville Brecks",
    "left": 27
+  },
+  {
+   "club_season": "EFL|1932|PFA:NR",
+   "name": "New Rochelle Bulldogs",
+   "left": 26
+  },
+  {
+   "club_season": "AFL|1936|PFA:B/R",
+   "name": "Brooklyn/Rochester Tigers",
+   "left": 25
+  },
+  {
+   "club_season": "UFL|1963|PFA:SYR",
+   "name": "Syracuse Stormers",
+   "left": 24
+  },
+  {
+   "club_season": "EFL|1932|PFA:PAT",
+   "name": "Paterson Night Hawks",
+   "left": 23
   },
   {
    "club_season": "APFA|1921|MI1",
@@ -53,9 +153,9 @@
    "left": 21
   },
   {
-   "club_season": "NFL|1925|FYJ",
-   "name": "Frankford Yellow Jackets",
-   "left": 21
+   "club_season": "AFL|1939|PFA:DAY",
+   "name": "Dayton Bombers",
+   "left": 20
   },
   {
    "club_season": "APFA|1920|RI",
@@ -68,9 +168,9 @@
    "left": 20
   },
   {
-   "club_season": "NFL|1924|FYJ",
-   "name": "Frankford Yellow Jackets",
-   "left": 20
+   "club_season": "EFL|1932|PFA:PAS",
+   "name": "Passaic Red Devils",
+   "left": 19
   },
   {
    "club_season": "NFL|1922|COL",
@@ -93,8 +193,13 @@
    "left": 19
   },
   {
-   "club_season": "APFA|1920|CHC",
-   "name": "Chicago Cardinals",
+   "club_season": "NFL|1925|FYJ",
+   "name": "Frankford Yellow Jackets",
+   "left": 19
+  },
+  {
+   "club_season": "AFL|1944|PFA:LAW",
+   "name": "Los Angeles Wildcats",
    "left": 18
   },
   {
@@ -113,13 +218,18 @@
    "left": 18
   },
   {
-   "club_season": "NFL|1926|DUL",
-   "name": "Duluth Eskimos",
+   "club_season": "NFL|1927|FYJ",
+   "name": "Frankford Yellow Jackets",
    "left": 18
   },
   {
-   "club_season": "AFL|1926|AFLPHI",
-   "name": "Philadelphia Quakers",
+   "club_season": "AFL|1946|PFA:PAT",
+   "name": "Paterson Panthers",
+   "left": 17
+  },
+  {
+   "club_season": "AFL|1938|PFA:NAS",
+   "name": "Nashville Rebels",
    "left": 17
   },
   {
@@ -148,6 +258,21 @@
    "left": 17
   },
   {
+   "club_season": "NFL|1926|DUL",
+   "name": "Duluth Eskimos",
+   "left": 17
+  },
+  {
+   "club_season": "AFL|1946|PFA:WIL",
+   "name": "Wilmington Clippers",
+   "left": 16
+  },
+  {
+   "club_season": "APFA|1920|CHC",
+   "name": "Chicago Cardinals",
+   "left": 16
+  },
+  {
    "club_season": "APFA|1920|COL",
    "name": "Columbus Panhandles",
    "left": 16
@@ -163,9 +288,24 @@
    "left": 16
   },
   {
+   "club_season": "AFL|1934|PFA:S/K",
+   "name": "St. Louis/Kansas City Blues",
+   "left": 16
+  },
+  {
    "club_season": "WFL|1974|WFLNYS",
    "name": "New York Stars",
    "left": 16
+  },
+  {
+   "club_season": "AFL|1939|PFA:KEN",
+   "name": "Kenosha Cardinals",
+   "left": 15
+  },
+  {
+   "club_season": "AFL|1944|PFA:SEA",
+   "name": "Seattle Bombers",
+   "left": 15
   },
   {
    "club_season": "APFA|1921|WA1",
@@ -228,9 +368,24 @@
    "left": 14
   },
   {
+   "club_season": "NFL|1929|FYJ",
+   "name": "Frankford Yellow Jackets",
+   "left": 14
+  },
+  {
    "club_season": "USFL2|2023|US2PHS",
    "name": "Philadelphia Stars",
    "left": 14
+  },
+  {
+   "club_season": "AFL|1938|PFA:DAY",
+   "name": "Dayton Rosies",
+   "left": 13
+  },
+  {
+   "club_season": "AFL|1926|AFLPHI",
+   "name": "Philadelphia Quakers",
+   "left": 13
   },
   {
    "club_season": "NFL|1929|DAY",
@@ -283,14 +438,39 @@
    "left": 13
   },
   {
-   "club_season": "NFL|1922|TOL",
-   "name": "Toledo Maroons",
+   "club_season": "AFL|1948|PFA:BET",
+   "name": "Bethlehem Bulldogs",
    "left": 12
   },
   {
-   "club_season": "NFL|1930|POR",
-   "name": "Portsmouth Spartans",
+   "club_season": "AFL|1939|PFA:EC",
+   "name": "East Chicago Indians",
    "left": 12
+  },
+  {
+   "club_season": "AFL|1938|PFA:EC",
+   "name": "East Chicago Indians",
+   "left": 12
+  },
+  {
+   "club_season": "AFL|1946|PFA:NEW",
+   "name": "Newark Bombers",
+   "left": 11
+  },
+  {
+   "club_season": "AFL|1938|PFA:LOU",
+   "name": "Louisville Tanks",
+   "left": 11
+  },
+  {
+   "club_season": "AFL|1938|PFA:STL",
+   "name": "St. Louis Gunners",
+   "left": 11
+  },
+  {
+   "club_season": "AFL|1939|PFA:LOU",
+   "name": "Louisville Tanks",
+   "left": 11
   },
   {
    "club_season": "XFL|2023|XFLVVI",
@@ -298,18 +478,13 @@
    "left": 11
   },
   {
+   "club_season": "NFL|1922|TOL",
+   "name": "Toledo Maroons",
+   "left": 11
+  },
+  {
    "club_season": "NFL|1924|CHC",
    "name": "Chicago Cardinals",
-   "left": 11
-  },
-  {
-   "club_season": "NFL|1927|DUL",
-   "name": "Duluth Eskimos",
-   "left": 11
-  },
-  {
-   "club_season": "NFL|1927|POT",
-   "name": "Pottsville Maroons",
    "left": 11
   },
   {
@@ -320,11 +495,6 @@
   {
    "club_season": "USFL2|2023|US2MSB",
    "name": "Memphis Showboats",
-   "left": 11
-  },
-  {
-   "club_season": "APFA|1921|DE1",
-   "name": "Detroit Tigers",
    "left": 11
   },
   {
@@ -368,6 +538,11 @@
    "left": 11
   },
   {
+   "club_season": "NFL|1930|POR",
+   "name": "Portsmouth Spartans",
+   "left": 11
+  },
+  {
    "club_season": "XFL|2020|XFLDCD",
    "name": "DC Defenders",
    "left": 11
@@ -376,6 +551,16 @@
    "club_season": "XFL|2023|XFLDCD",
    "name": "D.C. Defenders",
    "left": 11
+  },
+  {
+   "club_season": "AFL|1946|PFA:BET",
+   "name": "Bethlehem Bulldogs",
+   "left": 10
+  },
+  {
+   "club_season": "AFL|1946|PFA:LI",
+   "name": "Long Island Indians",
+   "left": 10
   },
   {
    "club_season": "UFL2|2024|XFLDCD",
@@ -403,8 +588,13 @@
    "left": 10
   },
   {
-   "club_season": "NFL|1925|MIL",
-   "name": "Milwaukee Badgers",
+   "club_season": "NFL|1927|DUL",
+   "name": "Duluth Eskimos",
+   "left": 10
+  },
+  {
+   "club_season": "NFL|1927|POT",
+   "name": "Pottsville Maroons",
    "left": 10
   },
   {
@@ -438,6 +628,11 @@
    "left": 10
   },
   {
+   "club_season": "NFL|1930|FYJ",
+   "name": "Frankford Yellow Jackets",
+   "left": 10
+  },
+  {
    "club_season": "NFL|1932|CHC",
    "name": "Chicago Cardinals",
    "left": 10
@@ -446,6 +641,36 @@
    "club_season": "XFL|2020|XFLHOR",
    "name": "Houston Roughnecks",
    "left": 10
+  },
+  {
+   "club_season": "UFL|1964|PFA:TOL",
+   "name": "Toledo Tornadoes",
+   "left": 9
+  },
+  {
+   "club_season": "UFL|1962|PFA:TOL",
+   "name": "Toledo Tornadoes",
+   "left": 9
+  },
+  {
+   "club_season": "UFL|1964|PFA:QUE",
+   "name": "Quebec Rifles",
+   "left": 9
+  },
+  {
+   "club_season": "AFL|1947|PFA:LI",
+   "name": "Long Island Indians",
+   "left": 9
+  },
+  {
+   "club_season": "AFL|1949|PFA:BET",
+   "name": "Bethlehem Bulldogs",
+   "left": 9
+  },
+  {
+   "club_season": "AFL|1938|PFA:CIN",
+   "name": "Cincinnati Blades",
+   "left": 9
   },
   {
    "club_season": "NFL|1929|MI1",
@@ -463,8 +688,18 @@
    "left": 9
   },
   {
+   "club_season": "NFL|1925|MIL",
+   "name": "Milwaukee Badgers",
+   "left": 9
+  },
+  {
    "club_season": "APFA|1920|MUN",
    "name": "Muncie Flyers",
+   "left": 9
+  },
+  {
+   "club_season": "APFA|1921|DE1",
+   "name": "Detroit Tigers",
    "left": 9
   },
   {
@@ -498,11 +733,6 @@
    "left": 9
   },
   {
-   "club_season": "NFL|1923|TOL",
-   "name": "Toledo Maroons",
-   "left": 9
-  },
-  {
    "club_season": "NFL|1924|COL",
    "name": "Columbus Tigers",
    "left": 9
@@ -523,11 +753,6 @@
    "left": 9
   },
   {
-   "club_season": "NFL|1930|GB",
-   "name": "Green Bay Packers",
-   "left": 9
-  },
-  {
    "club_season": "USFL|1983|USFLDEN",
    "name": "Denver Gold",
    "left": 9
@@ -540,11 +765,6 @@
   {
    "club_season": "XFL|2023|XFLHOR",
    "name": "Houston Roughnecks",
-   "left": 8
-  },
-  {
-   "club_season": "NFL|1931|CL4",
-   "name": "Cleveland Indians",
    "left": 8
   },
   {
@@ -568,11 +788,6 @@
    "left": 8
   },
   {
-   "club_season": "APFA|1921|BU1",
-   "name": "Buffalo All-Americans",
-   "left": 8
-  },
-  {
    "club_season": "NFL|1923|CHC",
    "name": "Chicago Cardinals",
    "left": 8
@@ -580,6 +795,11 @@
   {
    "club_season": "NFL|1923|DUL",
    "name": "Duluth Kelleys",
+   "left": 8
+  },
+  {
+   "club_season": "NFL|1923|TOL",
+   "name": "Toledo Maroons",
    "left": 8
   },
   {
@@ -618,18 +838,8 @@
    "left": 8
   },
   {
-   "club_season": "NFL|1929|FYJ",
-   "name": "Frankford Yellow Jackets",
-   "left": 8
-  },
-  {
-   "club_season": "NFL|1931|GB",
+   "club_season": "NFL|1930|GB",
    "name": "Green Bay Packers",
-   "left": 8
-  },
-  {
-   "club_season": "NFL|1932|BRO",
-   "name": "Brooklyn Dodgers",
    "left": 8
   },
   {
@@ -643,8 +853,23 @@
    "left": 8
   },
   {
+   "club_season": "AFL|1947|PFA:BET",
+   "name": "Bethlehem Bulldogs",
+   "left": 7
+  },
+  {
+   "club_season": "AFL|1950|PFA:BKN",
+   "name": "Brooklyn Brooks",
+   "left": 7
+  },
+  {
    "club_season": "XFL|2023|XFLOGU",
    "name": "Orlando Guardians",
+   "left": 7
+  },
+  {
+   "club_season": "NFL|1931|CL4",
+   "name": "Cleveland Indians",
    "left": 7
   },
   {
@@ -678,6 +903,11 @@
    "left": 7
   },
   {
+   "club_season": "APFA|1921|BU1",
+   "name": "Buffalo All-Americans",
+   "left": 7
+  },
+  {
    "club_season": "NFL|1923|AKR",
    "name": "Akron Pros",
    "left": 7
@@ -703,11 +933,6 @@
    "left": 7
   },
   {
-   "club_season": "NFL|1927|FYJ",
-   "name": "Frankford Yellow Jackets",
-   "left": 7
-  },
-  {
    "club_season": "NFL|1928|CHC",
    "name": "Chicago Cardinals",
    "left": 7
@@ -718,13 +943,18 @@
    "left": 7
   },
   {
-   "club_season": "NFL|1930|FYJ",
-   "name": "Frankford Yellow Jackets",
+   "club_season": "NFL|1930|SI",
+   "name": "Staten Island Stapletons",
    "left": 7
   },
   {
-   "club_season": "NFL|1930|SI",
-   "name": "Staten Island Stapletons",
+   "club_season": "NFL|1931|GB",
+   "name": "Green Bay Packers",
+   "left": 7
+  },
+  {
+   "club_season": "NFL|1932|BRO",
+   "name": "Brooklyn Dodgers",
    "left": 7
   },
   {
@@ -756,6 +986,21 @@
    "club_season": "USFL2|2023|US2PIM",
    "name": "Pittsburgh Maulers",
    "left": 7
+  },
+  {
+   "club_season": "AFL|1948|PFA:WIL",
+   "name": "Wilmington Clippers",
+   "left": 6
+  },
+  {
+   "club_season": "AFL|1934|PFA:MEM",
+   "name": "Memphis Tigers",
+   "left": 6
+  },
+  {
+   "club_season": "XFL|2020|XFLTBV",
+   "name": "Tampa Bay Vipers",
+   "left": 6
   },
   {
    "club_season": "XFL|2023|XFLSSD",
@@ -828,28 +1073,18 @@
    "left": 6
   },
   {
+   "club_season": "NFL|1928|FYJ",
+   "name": "Frankford Yellow Jackets",
+   "left": 6
+  },
+  {
    "club_season": "NFL|1929|CHI",
    "name": "Chicago Bears",
    "left": 6
   },
   {
-   "club_season": "NFL|1929|GB",
-   "name": "Green Bay Packers",
-   "left": 6
-  },
-  {
    "club_season": "NFL|1931|POR",
    "name": "Portsmouth Spartans",
-   "left": 6
-  },
-  {
-   "club_season": "AAFC|1947|BRD",
-   "name": "Brooklyn Dodgers",
-   "left": 6
-  },
-  {
-   "club_season": "AAFC|1948|SF",
-   "name": "San Francisco 49ers",
    "left": 6
   },
   {
@@ -908,14 +1143,54 @@
    "left": 6
   },
   {
-   "club_season": "XFL|2020|XFLTBV",
-   "name": "Tampa Bay Vipers",
-   "left": 6
-  },
-  {
    "club_season": "USFL2|2023|US2MIP",
    "name": "Michigan Panthers",
    "left": 6
+  },
+  {
+   "club_season": "UFL|1964|PFA:JOL",
+   "name": "Joliet Chargers",
+   "left": 5
+  },
+  {
+   "club_season": "UFL|1964|PFA:CAN",
+   "name": "Canton Bulldogs",
+   "left": 5
+  },
+  {
+   "club_season": "AFL|1947|PFA:W-B",
+   "name": "Wilkes-Barre Barons",
+   "left": 5
+  },
+  {
+   "club_season": "AFL|1949|PFA:JC",
+   "name": "Jersey City Giants",
+   "left": 5
+  },
+  {
+   "club_season": "AFL|1947|PFA:RIC",
+   "name": "Richmond Rebels",
+   "left": 5
+  },
+  {
+   "club_season": "AFL|1946|PFA:SCR",
+   "name": "Scranton Miners",
+   "left": 5
+  },
+  {
+   "club_season": "AFL|1934|PFA:DAL",
+   "name": "Dallas Rams",
+   "left": 5
+  },
+  {
+   "club_season": "AFL|1944|PFA:HOL",
+   "name": "Hollywood Rangers",
+   "left": 5
+  },
+  {
+   "club_season": "AFL|1948|PFA:JC",
+   "name": "Jersey City Giants",
+   "left": 5
   },
   {
    "club_season": "XFL|2001|XFLBIR",
@@ -928,6 +1203,16 @@
    "left": 5
   },
   {
+   "club_season": "AFL|1926|AFLRI",
+   "name": "Rock Island Independents",
+   "left": 5
+  },
+  {
+   "club_season": "NFL|1923|BU1",
+   "name": "Buffalo All-Americans",
+   "left": 5
+  },
+  {
    "club_season": "APFA|1921|CHI",
    "name": "Chicago Staleys",
    "left": 5
@@ -935,6 +1220,11 @@
   {
    "club_season": "NFL|1924|BU1",
    "name": "Buffalo Bisons",
+   "left": 5
+  },
+  {
+   "club_season": "NFL|1924|KC1",
+   "name": "Kansas City Blues",
    "left": 5
   },
   {
@@ -963,8 +1253,8 @@
    "left": 5
   },
   {
-   "club_season": "NFL|1923|BU1",
-   "name": "Buffalo All-Americans",
+   "club_season": "XFL|2020|XFLLAW",
+   "name": "Los Angeles Wildcats",
    "left": 5
   },
   {
@@ -975,11 +1265,6 @@
   {
    "club_season": "NFL|1924|GB",
    "name": "Green Bay Packers",
-   "left": 5
-  },
-  {
-   "club_season": "NFL|1924|KC1",
-   "name": "Kansas City Blues",
    "left": 5
   },
   {
@@ -1008,8 +1293,8 @@
    "left": 5
   },
   {
-   "club_season": "NFL|1929|NYG",
-   "name": "New York Giants",
+   "club_season": "NFL|1929|GB",
+   "name": "Green Bay Packers",
    "left": 5
   },
   {
@@ -1028,43 +1313,13 @@
    "left": 5
   },
   {
-   "club_season": "NFL|1932|GB",
-   "name": "Green Bay Packers",
-   "left": 5
-  },
-  {
    "club_season": "NFL|1932|NYG",
    "name": "New York Giants",
    "left": 5
   },
   {
-   "club_season": "NFL|1933|BO3",
-   "name": "Boston Redskins",
-   "left": 5
-  },
-  {
-   "club_season": "NFL|1933|GB",
-   "name": "Green Bay Packers",
-   "left": 5
-  },
-  {
    "club_season": "NFL|1933|PHI",
    "name": "Philadelphia Eagles",
-   "left": 5
-  },
-  {
-   "club_season": "AAFC|1948|BRD",
-   "name": "Brooklyn Dodgers",
-   "left": 5
-  },
-  {
-   "club_season": "AAFC|1948|NYA",
-   "name": "New York Yankees",
-   "left": 5
-  },
-  {
-   "club_season": "AAFC|1949|BUA",
-   "name": "Buffalo Bills",
    "left": 5
   },
   {
@@ -1158,9 +1413,44 @@
    "left": 5
   },
   {
-   "club_season": "XFL|2020|XFLLAW",
-   "name": "Los Angeles Wildcats",
-   "left": 5
+   "club_season": "AFL|1941|PFA:BUF",
+   "name": "Buffalo Tigers",
+   "left": 4
+  },
+  {
+   "club_season": "AFL|1947|PFA:BLO",
+   "name": "Bloomfield Cardinals",
+   "left": 4
+  },
+  {
+   "club_season": "AFL|1940|PFA:CIN",
+   "name": "Cincinnati Bengals",
+   "left": 4
+  },
+  {
+   "club_season": "AFL|1937|PFA:CIN",
+   "name": "Cincinnati Bengals",
+   "left": 4
+  },
+  {
+   "club_season": "AFL|1946|PFA:JC",
+   "name": "Jersey City Giants",
+   "left": 4
+  },
+  {
+   "club_season": "AFL|1937|PFA:PIT",
+   "name": "Pittsburgh Americans",
+   "left": 4
+  },
+  {
+   "club_season": "AFL|1936|PFA:CLE",
+   "name": "Cleveland Rams",
+   "left": 4
+  },
+  {
+   "club_season": "AFL|1948|PFA:PAT",
+   "name": "Paterson Panthers",
+   "left": 4
   },
   {
    "club_season": "UFL2|2024|XFLSAB",
@@ -1238,11 +1528,6 @@
    "left": 4
   },
   {
-   "club_season": "AFL|1926|AFLPC",
-   "name": "Wilson's Wildcats",
-   "left": 4
-  },
-  {
    "club_season": "NFL|1926|GB",
    "name": "Green Bay Packers",
    "left": 4
@@ -1260,6 +1545,11 @@
   {
    "club_season": "NFL|1928|GB",
    "name": "Green Bay Packers",
+   "left": 4
+  },
+  {
+   "club_season": "NFL|1929|NYG",
+   "name": "New York Giants",
    "left": 4
   },
   {
@@ -1283,8 +1573,18 @@
    "left": 4
   },
   {
+   "club_season": "NFL|1932|GB",
+   "name": "Green Bay Packers",
+   "left": 4
+  },
+  {
    "club_season": "NFL|1932|SI",
    "name": "Staten Island Stapletons",
+   "left": 4
+  },
+  {
+   "club_season": "NFL|1933|BO3",
+   "name": "Boston Redskins",
    "left": 4
   },
   {
@@ -1298,23 +1598,8 @@
    "left": 4
   },
   {
-   "club_season": "AAFC|1946|SF",
-   "name": "San Francisco 49ers",
-   "left": 4
-  },
-  {
-   "club_season": "AAFC|1947|CHR",
-   "name": "Chicago Rockets",
-   "left": 4
-  },
-  {
-   "club_season": "AAFC|1947|SF",
-   "name": "San Francisco 49ers",
-   "left": 4
-  },
-  {
-   "club_season": "AAFC|1949|SF",
-   "name": "San Francisco 49ers",
+   "club_season": "NFL|1933|GB",
+   "name": "Green Bay Packers",
    "left": 4
   },
   {
@@ -1478,13 +1763,53 @@
    "left": 4
   },
   {
-   "club_season": "UFL2|2024|US2MIP",
-   "name": "Michigan Panthers",
+   "club_season": "UFL|1963|PFA:GR",
+   "name": "Grand Rapids Blazers",
    "left": 3
   },
   {
-   "club_season": "NFL|1930|MI1",
-   "name": "Minneapolis Red Jackets",
+   "club_season": "UFL|1964|PFA:CHA",
+   "name": "Charleston Rockets",
+   "left": 3
+  },
+  {
+   "club_season": "UFL|1963|PFA:TOL",
+   "name": "Toledo Tornadoes",
+   "left": 3
+  },
+  {
+   "club_season": "UFL|1962|PFA:IND",
+   "name": "Indianapolis Warriors",
+   "left": 3
+  },
+  {
+   "club_season": "AFL|1949|PFA:WIL",
+   "name": "Wilmington Clippers",
+   "left": 3
+  },
+  {
+   "club_season": "AFL|1947|PFA:JC",
+   "name": "Jersey City Giants",
+   "left": 3
+  },
+  {
+   "club_season": "UFL|1964|PFA:WHE",
+   "name": "Wheeling Ironmen",
+   "left": 3
+  },
+  {
+   "club_season": "AFL|1936|PFA:AFL:NY",
+   "name": "New York Yankees",
+   "left": 3
+  },
+  {
+   "club_season": "AFL|1950|PFA:ERIE",
+   "name": "Erie Vets",
+   "left": 3
+  },
+  {
+   "club_season": "UFL2|2024|US2MIP",
+   "name": "Michigan Panthers",
    "left": 3
   },
   {
@@ -1563,11 +1888,6 @@
    "left": 3
   },
   {
-   "club_season": "NFL|1928|POT",
-   "name": "Pottsville Maroons",
-   "left": 3
-  },
-  {
    "club_season": "NFL|1928|PRO",
    "name": "Providence Steam Roller",
    "left": 3
@@ -1588,23 +1908,8 @@
    "left": 3
   },
   {
-   "club_season": "AAFC|1946|MIS",
-   "name": "Miami Seahawks",
-   "left": 3
-  },
-  {
-   "club_season": "AAFC|1947|BA1",
-   "name": "Baltimore Colts",
-   "left": 3
-  },
-  {
-   "club_season": "AAFC|1948|BUA",
-   "name": "Buffalo Bills",
-   "left": 3
-  },
-  {
-   "club_season": "AAFC|1949|BA1",
-   "name": "Baltimore Colts",
+   "club_season": "AAFC|1947|BRD",
+   "name": "Brooklyn Dodgers",
    "left": 3
   },
   {
@@ -1788,6 +2093,56 @@
    "left": 3
   },
   {
+   "club_season": "UFL|1964|PFA:GR",
+   "name": "Grand Rapids Blazers",
+   "left": 2
+  },
+  {
+   "club_season": "AFL|1944|PFA:POR",
+   "name": "Portland Rockets",
+   "left": 2
+  },
+  {
+   "club_season": "AFL|1948|PFA:W-B",
+   "name": "Wilkes-Barre Bullets",
+   "left": 2
+  },
+  {
+   "club_season": "AFL|1934|PFA:TUL",
+   "name": "Tulsa Oilers",
+   "left": 2
+  },
+  {
+   "club_season": "AFL|1950|PFA:PAT",
+   "name": "Paterson Panthers",
+   "left": 2
+  },
+  {
+   "club_season": "AFL|1947|PFA:WIL",
+   "name": "Wilmington Clippers",
+   "left": 2
+  },
+  {
+   "club_season": "AFL|1939|PFA:CIN",
+   "name": "Cincinnati Bengals",
+   "left": 2
+  },
+  {
+   "club_season": "AFL|1950|PFA:BET",
+   "name": "Bethlehem Bulldogs",
+   "left": 2
+  },
+  {
+   "club_season": "AFL|1946|PFA:AKR",
+   "name": "Akron Bears",
+   "left": 2
+  },
+  {
+   "club_season": "AFL|1949|PFA:RIC",
+   "name": "Richmond Rebels",
+   "left": 2
+  },
+  {
    "club_season": "UFL2|2024|XFLAAR",
    "name": "Arlington Renegades",
    "left": 2
@@ -1795,6 +2150,11 @@
   {
    "club_season": "UFL2|2024|XFLSLB",
    "name": "St. Louis BattleHawks",
+   "left": 2
+  },
+  {
+   "club_season": "NFL|1930|MI1",
+   "name": "Minneapolis Red Jackets",
    "left": 2
   },
   {
@@ -1873,13 +2233,13 @@
    "left": 2
   },
   {
-   "club_season": "NFL|1928|FYJ",
-   "name": "Frankford Yellow Jackets",
+   "club_season": "NFL|1928|NY1",
+   "name": "New York Yankees",
    "left": 2
   },
   {
-   "club_season": "NFL|1928|NY1",
-   "name": "New York Yankees",
+   "club_season": "NFL|1928|POT",
+   "name": "Pottsville Maroons",
    "left": 2
   },
   {
@@ -1888,63 +2248,23 @@
    "left": 2
   },
   {
-   "club_season": "NFL|1931|CHI",
-   "name": "Chicago Bears",
-   "left": 2
-  },
-  {
    "club_season": "NFL|1933|NYG",
    "name": "New York Giants",
    "left": 2
   },
   {
-   "club_season": "AAFC|1946|BRD",
+   "club_season": "AAFC|1947|SF",
+   "name": "San Francisco 49ers",
+   "left": 2
+  },
+  {
+   "club_season": "AAFC|1948|BRD",
    "name": "Brooklyn Dodgers",
    "left": 2
   },
   {
-   "club_season": "AAFC|1946|BUA",
-   "name": "Buffalo Bisons",
-   "left": 2
-  },
-  {
-   "club_season": "AAFC|1946|LAD",
-   "name": "Los Angeles Dons",
-   "left": 2
-  },
-  {
-   "club_season": "AAFC|1947|BUA",
-   "name": "Buffalo Bills",
-   "left": 2
-  },
-  {
-   "club_season": "AAFC|1947|LAD",
-   "name": "Los Angeles Dons",
-   "left": 2
-  },
-  {
-   "club_season": "AAFC|1947|NYA",
-   "name": "New York Yankees",
-   "left": 2
-  },
-  {
-   "club_season": "AAFC|1948|BA1",
-   "name": "Baltimore Colts",
-   "left": 2
-  },
-  {
-   "club_season": "AAFC|1948|CHR",
-   "name": "Chicago Rockets",
-   "left": 2
-  },
-  {
-   "club_season": "AAFC|1948|CLE",
-   "name": "Cleveland Browns",
-   "left": 2
-  },
-  {
-   "club_season": "AAFC|1949|LAD",
-   "name": "Los Angeles Dons",
+   "club_season": "AAFC|1948|SF",
+   "name": "San Francisco 49ers",
    "left": 2
   },
   {
@@ -2138,8 +2458,73 @@
    "left": 2
   },
   {
-   "club_season": "AFL|1926|AFLRI",
-   "name": "Rock Island Independents",
+   "club_season": "UFL|1964|PFA:IND",
+   "name": "Indianapolis Warriors",
+   "left": 1
+  },
+  {
+   "club_season": "UFL|1962|PFA:WHE",
+   "name": "Wheeling Ironmen",
+   "left": 1
+  },
+  {
+   "club_season": "AFL|1947|PFA:PAT",
+   "name": "Paterson Panthers",
+   "left": 1
+  },
+  {
+   "club_season": "UFL|1963|PFA:WHE",
+   "name": "Wheeling Ironmen",
+   "left": 1
+  },
+  {
+   "club_season": "AFL|1949|PFA:W-B",
+   "name": "Wilkes-Barre Bullets",
+   "left": 1
+  },
+  {
+   "club_season": "UFL|2026|PFA:COL",
+   "name": "Columbus Aviators",
+   "left": 1
+  },
+  {
+   "club_season": "AFL|1940|PFA:BUF",
+   "name": "Buffalo Indians",
+   "left": 1
+  },
+  {
+   "club_season": "AFL|1948|PFA:RIC",
+   "name": "Richmond Rebels",
+   "left": 1
+  },
+  {
+   "club_season": "AFL|1950|PFA:JC",
+   "name": "Jersey City Giants",
+   "left": 1
+  },
+  {
+   "club_season": "AFL|1939|PFA:STL",
+   "name": "St. Louis Gunners",
+   "left": 1
+  },
+  {
+   "club_season": "AFL|1941|PFA:COL",
+   "name": "Columbus Bulls",
+   "left": 1
+  },
+  {
+   "club_season": "AFL|1949|PFA:PAT",
+   "name": "Paterson Panthers",
+   "left": 1
+  },
+  {
+   "club_season": "AFL|1950|PFA:RIC",
+   "name": "Richmond Rebels",
+   "left": 1
+  },
+  {
+   "club_season": "AFL|1936|PFA:PIT",
+   "name": "Pittsburgh Americans",
    "left": 1
   },
   {
@@ -2188,6 +2573,11 @@
    "left": 1
   },
   {
+   "club_season": "NFL|1931|CHI",
+   "name": "Chicago Bears",
+   "left": 1
+  },
+  {
    "club_season": "NFL|1932|CHI",
    "name": "Chicago Bears",
    "left": 1
@@ -2208,23 +2598,38 @@
    "left": 1
   },
   {
-   "club_season": "AAFC|1946|CHR",
+   "club_season": "AAFC|1946|SF",
+   "name": "San Francisco 49ers",
+   "left": 1
+  },
+  {
+   "club_season": "AAFC|1947|CHR",
    "name": "Chicago Rockets",
    "left": 1
   },
   {
-   "club_season": "AAFC|1946|NYA",
+   "club_season": "AAFC|1947|LAD",
+   "name": "Los Angeles Dons",
+   "left": 1
+  },
+  {
+   "club_season": "AAFC|1948|BUA",
+   "name": "Buffalo Bills",
+   "left": 1
+  },
+  {
+   "club_season": "AAFC|1948|CHR",
+   "name": "Chicago Rockets",
+   "left": 1
+  },
+  {
+   "club_season": "AAFC|1948|NYA",
    "name": "New York Yankees",
    "left": 1
   },
   {
-   "club_season": "AAFC|1949|CHH",
-   "name": "Chicago Hornets",
-   "left": 1
-  },
-  {
-   "club_season": "AAFC|1949|CLE",
-   "name": "Cleveland Browns",
+   "club_season": "AAFC|1949|SF",
+   "name": "San Francisco 49ers",
    "left": 1
   },
   {

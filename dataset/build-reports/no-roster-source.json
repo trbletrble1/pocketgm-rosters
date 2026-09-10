@@ -1,10 +1,10 @@
 {
  "_note": "club-seasons no source gave a roster for, read from the evidence the ingests declare, not from the shape of the index's stint record.",
- "club_seasons_with_any_membership_evidence": 4097,
+ "club_seasons_with_any_membership_evidence": 4098,
  "no_roster_source": [],
  "counts": {
   "boxscore_only": 0,
   "roster_page_somewhere": 8,
-  "evidence_undeclared_only": 3574
+  "evidence_undeclared_only": 3575
  }
 }

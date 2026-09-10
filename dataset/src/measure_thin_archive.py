@@ -30,10 +30,94 @@ WHOLE_LEAGUE = {"AAFC", "AFL", "AAF", "WFL", "USFL", "USFL2", "XFL", "UFL", "UFL
 CUTOFF = 1934
 
 
+def _excluded():
+    """The minor-league exclusion, READ. Ryan enumerated it 2026-09-09 after it had been
+    named twice in prose and listed nowhere, which is why this function used to decide
+    scope from a typed set of nine tokens and a year. Naming a league's clubs does NOT
+    bring it into scope: the IFL's six clubs were minted the same day so that nine men
+    could be read, and the league stays off this list."""
+    d = json.load(open(os.path.join(BASE, "declarations", "clubs.json")))
+    return set((d.get("MINOR_LEAGUE_EXCLUSION") or {}).get("leagues") or ())
+
+
+EXCLUDED = _excluded()
+
+
 def in_scope(league, year):
+    if league in EXCLUDED: return False
     if league in WHOLE_LEAGUE: return True
     if not year.isdigit(): return False
     return int(year) < CUTOFF
+
+
+def off_the_table(IDX, in_scope):
+    """Club-seasons a source names that the CLUB TABLE CANNOT PLACE.
+
+    THE CATEGORY THE TABLE-DRIVEN LISTS CANNOT SEE, and it is not small. Between 8
+    and 9 September 109 club-seasons left the club table -- the AFL of 1934-50, the
+    1932 EFL, the 1933 IFL, the 1962-64 UFL -- and NOT ONE of them was filled. The
+    archive gained statistics-derived stints in those league-years; build_clubs mints
+    a PFA-only club only where the archive covers NOTHING in that league-year, so once
+    those years were covered the PFA cell behind each club was refused instead of
+    minted, and the club-season stopped existing in the table. `empty` fell 128 -> 18
+    and read like progress.
+
+    So this is measured from the two places the evidence actually lives, and NOT from
+    yesterday's report:
+      men held    -- the index puts men on a token the table cannot name for that year.
+                     Same test as gate_club_table_reach, through the same Clubs().
+      nobody held -- build_clubs recorded the club's printed name among its REFUSED
+                     strings, and no man is on it.
+
+    These are hunting targets of the first rank: a squad of twenty against three men
+    held from a scoring line, and a document that names the club would also give the
+    club table the second source it needs.
+    """
+    from clubs import Clubs
+    C = Clubs()
+    TAB = json.load(open(os.path.join(BASE, "build", "clubs.json")))
+    nm, srcs = collections.defaultdict(set), collections.defaultdict(set)
+    for x in TAB["unresolved"]["strings"]:
+        printed = (x.get("printed") or "").strip()
+        code = (x.get("pfa_code") or "").strip()
+        first, lg = x.get("first"), x.get("league") or ""
+        if not printed or first is None: continue
+        for y in range(first, (x.get("last") or first) + 1):
+            if not in_scope(lg, str(y)): continue
+            for tok in ({code, "PFA:" + code} if code else {printed}):
+                nm[(lg, y, tok)].add(printed); srcs[(lg, y, tok)].add(x.get("source") or "")
+    men = collections.defaultdict(set)
+    for pid, p in IDX.items():
+        if not isinstance(p, dict): continue
+        for k in (p.get("seasons") or {}):
+            pt = k.split("|", 2)
+            if len(pt) == 3 and pt[1].lstrip("y").isdigit():
+                men[(pt[0], int(pt[1].lstrip("y")), pt[2])].add(pid)
+
+    def unplaced(tok, y):
+        r = C.resolve(tok, y, None, source="season_key")
+        return not (r and C.name_for(r[0], y))
+
+    rows = {}
+    for (lg, y, tok), pids in men.items():
+        if not in_scope(lg, str(y)) or not unplaced(tok, y): continue
+        rows[(lg, y, tok)] = {"league": lg, "year": y, "code": tok, "men": len(pids),
+                              "names": sorted(nm.get((lg, y, tok)) or []),
+                              "sources": sorted(x for x in (srcs.get((lg, y, tok)) or ()) if x)}
+    for (lg, y, tok), names in nm.items():
+        if (lg, y, tok) in rows or men.get((lg, y, tok)) or not unplaced(tok, y): continue
+        rows[(lg, y, tok)] = {"league": lg, "year": y, "code": tok, "men": 0,
+                              "names": sorted(names),
+                              "sources": sorted(x for x in srcs[(lg, y, tok)] if x)}
+    # ONE ROW PER CLUB-SEASON. A PFA code appears as both `AKR` and `PFA:AKR`, because the
+    # refusal records the source's own code and the index writes the prefixed token. Keyed
+    # on the printed name, keeping whichever form holds the men.
+    best = {}
+    for r in rows.values():
+        k = (r["league"], r["year"], tuple(r["names"]))
+        if k in best and best[k]["men"] >= r["men"]: continue
+        best[k] = r
+    return sorted(best.values(), key=lambda r: (r["men"], r["year"], r["names"]))
 
 
 def main():
@@ -147,6 +231,7 @@ def main():
                              sorted(k for k, v in per.items()
                                     if not k.startswith("roster_membership") and not _real(v))})
     clust = collections.Counter(k for x in nameless for k in x["club_seasons"])
+    off = off_the_table(IDX, in_scope)
 
     res = {"_note": "MEASUREMENT ONLY. No store written. Same cohort instrument as the "
                     "1934-46 check, pointed at the eras that are not finished.",
@@ -158,12 +243,16 @@ def main():
            "club_seasons_without_a_coach": no_coach,
            "thin_club_seasons": sorted(thin, key=lambda x: -x["missing_facts"]),
            "club_seasons_with_no_roster_source": no_roster,
+           "club_seasons_off_the_table": off,
            "people_with_a_surname_and_nothing_else": nameless,
            "nameless_clusters": clust.most_common(40),
            "counts": {"scoped": len(scoped), "empty": len(empty),
                       "empty_by_ruling": len(empty_by_ruling),
                       "no_coach": len(no_coach), "thin": len(thin),
                       "no_roster_source": len(no_roster),
+                      "off_the_table": len(off),
+                      "off_the_table_with_men": sum(1 for r in off if r["men"]),
+                      "off_the_table_men": sum(r["men"] for r in off),
                       "nameless": len(nameless),
                       "missing_facts_total": sum(x["missing_facts"] for x in thin),
                       "by_field": dict(collections.Counter(
@@ -176,6 +265,7 @@ def main():
     print(f"  THIN (men held, facts not)     {c['thin']:>6}   missing facts {c['missing_facts_total']:,}")
     print(f"     by field: {c['by_field']}")
     print(f"  NO ROSTER SOURCE               {c['no_roster_source']:>6}")
+    print(f"  OFF THE TABLE (no club-season) {c['off_the_table']:>6}   of which hold men {c['off_the_table_with_men']} ({c['off_the_table_men']} men)")
     print(f"  people with a surname only     {c['nameless']:>6}")
     print("\ntop 12 thin club-seasons by COUNT of missing facts:")
     for x in res["thin_club_seasons"][:12]:
