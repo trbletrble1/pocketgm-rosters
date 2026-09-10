@@ -1,0 +1,14 @@
+{
+ "source_id": "jt-sw",
+ "name": "John Troan, jt-sw.com/football",
+ "acquisition": "two pages saved by Ryan, 2026-09-08",
+ "stated_by": "John Troan",
+ "attribution": [
+  "John Troan"
+ ],
+ "derived_from": null,
+ "rights": "ONE MAN'S COPYRIGHTED COMPILATION, used as a reference and cited. Not parsed wholesale, not republished, not mirrored. Two pages were read and only one column was taken from them.",
+ "_assessed_2026_09_08": "An ECHO. 30 of 34 birth dates agree exactly with StatsCrew, PFA and nflverse together, and it fills no gaps. His rosters and his dates are NOT ingested.",
+ "_what_is_taken": "the `Exp` column -- years of professional experience going into that season -- which nothing else in the archive carries.",
+ "_what_is_refused": "Exp from the 1920 Hammond Pros page: it is 1 for all 28 men. In the league's first season that is a fact about the YEAR and not about a player, and it would distinguish nobody. Recorded as a refusal rather than written."
+}

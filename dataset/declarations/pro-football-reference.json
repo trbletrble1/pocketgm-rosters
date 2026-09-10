@@ -1,0 +1,28 @@
+{
+ "source_id": "pro-football-reference",
+ "name": "Pro-Football-Reference.com",
+ "acquisition": "pages saved by Ryan, 2026-09-08, and read from ~/Dropbox/Football Archive/docs/hunting/",
+ "stated_by": "Pro-Football-Reference",
+ "attribution": [
+  "Pro-Football-Reference.com"
+ ],
+ "derived_from": null,
+ "rights": "CITED AS A SOURCE, not republished. Every claim names the page it came from. PFR is a compilation; what is taken is the fact it states, with PFR named as the one stating it.",
+ "_what_is_read": {
+  "player pages": "the meta block: full name, position, height, weight, birth and death date and place, college, high school.",
+  "club-season pages": "the per-player statistical tables -- age, position, games played, games started. THE ROSTER TABLE IS NOT IN THE SAVED PAGES; what is read is every man who appears in the passing, rushing-and-receiving or scoring table."
+ },
+ "_corroboration_not_a_new_kind": "PFR's 1934 Cincinnati Reds page is PFR's own compilation FROM THE SAME BOX SCORES the archive already read. It corroborates what the archive holds; it is not an independent roster. Every claim from that page carries `_same_evidence_as` saying so, because a reader counting sources would otherwise count this twice.",
+ "documents": [
+  {
+   "locator": "1920-detroit-heralds-players",
+   "what": "11 player pages for men of the 1920 Detroit Heralds",
+   "saved": "2026-09-08"
+  },
+  {
+   "locator": "1934-cincinnati-reds",
+   "what": "the 1934 Cincinnati Reds club-season page",
+   "saved": "2026-09-08"
+  }
+ ]
+}
