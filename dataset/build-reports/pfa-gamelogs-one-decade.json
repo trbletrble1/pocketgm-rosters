@@ -1,0 +1,476 @@
+{
+ "_note": "MEASUREMENT ONLY. Nothing ingested, no store written.",
+ "postseason": {
+  "person_year_club_lines": 1884,
+  "person_games": 2080
+ },
+ "rows_by_league": {
+  "NFL": 82838
+ },
+ "playoff_position_by_decade": {
+  "1920": [
+   0,
+   0
+  ],
+  "1930": [
+   291,
+   1
+  ],
+  "1940": [
+   885,
+   1
+  ],
+  "1950": [
+   780,
+   3
+  ],
+  "1960": [
+   1825,
+   5
+  ],
+  "1970": [
+   3336,
+   4
+  ],
+  "1980": [
+   4645,
+   13
+  ],
+  "1990": [
+   5272,
+   26
+  ],
+  "2000": [
+   5290,
+   19
+  ],
+  "2010": [
+   5378,
+   40
+  ],
+  "2020": [
+   3864,
+   610
+  ]
+ },
+ "decade": 1970,
+ "gamelogs": {
+  "pages": 21552,
+  "row_header_mismatches": 0,
+  "summary_rows_skipped": 0
+ },
+ "playoffs": {
+  "pages": 12195,
+  "row_header_mismatches": 6365,
+  "summary_rows_skipped": 30049
+ },
+ "men_on_pages": 2636,
+ "men_joined": 2532,
+ "men_unjoined": 104,
+ "men_ambiguous": 0,
+ "rows_in_decade": 84694,
+ "rows_joined": 82838,
+ "rows_without_a_club": 0,
+ "cells": 120587,
+ "kinds": {
+  "restatement: the games sum to the season figure already held": 75262,
+  "neither: the log prints this column blank in every game": 16187,
+  "finer: a derived column, not summable": 16052,
+  "finer: some games blank, so the figure is a floor": 2842,
+  "finer: the log lists fewer games than the season figure covers": 436,
+  "new: a postseason game, non-zero, which the season pages do not carry": 6183,
+  "new: the archive holds no predicate for this column": 218,
+  "new: a postseason game, all zero, which the season pages do not carry": 3132,
+  "DISAGREES: the games sum to MORE than the season figure held": 102,
+  "new: no season figure held for this person, year, club and statistic": 156,
+  "disagrees: the season figure is not a number": 17
+ },
+ "per_section": {
+  "SCORING": {
+   "restate": 23452,
+   "blank": 7398,
+   "postseason": 2338,
+   "disagree": 27,
+   "new": 76,
+   "short": 24,
+   "floor": 3
+  },
+  "RUSHING": {
+   "restate": 10739,
+   "derived": 2866,
+   "floor": 491,
+   "blank": 246,
+   "disagree": 7,
+   "short": 7,
+   "new": 4
+  },
+  "PASSING": {
+   "restate": 7251,
+   "derived": 3304,
+   "short": 14,
+   "blank": 452,
+   "floor": 303,
+   "postseason": 997,
+   "disagree": 11,
+   "new": 10
+  },
+  "RECEIVING": {
+   "blank": 3933,
+   "restate": 10734,
+   "derived": 3826,
+   "floor": 1359,
+   "postseason": 3096,
+   "disagree": 13,
+   "short": 7,
+   "new": 12
+  },
+  "PUNT RETURNS": {
+   "restate": 4535,
+   "derived": 1097,
+   "floor": 428,
+   "blank": 216,
+   "postseason": 713,
+   "disagree": 5,
+   "short": 20
+  },
+  "INTERCEPTIONS": {
+   "restate": 8254,
+   "derived": 2232,
+   "postseason": 656,
+   "floor": 31,
+   "disagree": 4,
+   "odd": 11,
+   "short": 5,
+   "blank": 22
+  },
+  "KICKOFF RETURNS": {
+   "restate": 7923,
+   "blank": 2282,
+   "derived": 2219,
+   "floor": 158,
+   "postseason": 806,
+   "short": 18,
+   "odd": 6,
+   "disagree": 10,
+   "new": 12
+  },
+  "SACKS": {
+   "restate": 671,
+   "blank": 1078,
+   "short": 334,
+   "postseason": 222,
+   "new": 260,
+   "disagree": 16,
+   "floor": 9
+  },
+  "PUNTING": {
+   "restate": 1703,
+   "derived": 508,
+   "blank": 560,
+   "floor": 60,
+   "postseason": 487,
+   "disagree": 9,
+   "short": 7
+  }
+ },
+ "unmapped": {},
+ "schedule": {
+  "person_game_rows": 55116,
+  "distinct_sides": 4160,
+  "distinct_games": 2154,
+  "pfa_game_claims_held_in_total": 2888
+ },
+ "boxscore_index": {
+  "linked": 2006,
+  "already_held": 0,
+  "on_disk": 0
+ },
+ "playoff_positions": {
+  "pairs_with_a_position": 3336,
+  "archive_lacks": 4
+ },
+ "examples": {
+  "short": [
+   [
+    "P_020315",
+    1975,
+    "club-decatur-staleys-1920",
+    "passing.Sacked",
+    0.0,
+    1.0,
+    2
+   ],
+   [
+    "P_020315",
+    1975,
+    "club-decatur-staleys-1920",
+    "passing.Yds Lost",
+    0.0,
+    5.0,
+    2
+   ],
+   [
+    "P_020339",
+    1976,
+    "club-boston-patriots-1960",
+    "sacks.No.",
+    1.0,
+    5.0,
+    1
+   ],
+   [
+    "P_020339",
+    1977,
+    "club-boston-patriots-1960",
+    "sacks.No.",
+    5.5,
+    9.5,
+    2
+   ],
+   [
+    "P_020280",
+    1975,
+    "club-denver-broncos-1960",
+    "sacks.No.",
+    2.0,
+    7.0,
+    1
+   ],
+   [
+    "P_020280",
+    1977,
+    "club-denver-broncos-1960",
+    "sacks.No.",
+    4.0,
+    8.0,
+    4
+   ],
+   [
+    "P_001471",
+    1970,
+    "club-boston-patriots-1960",
+    "sacks.No.",
+    2.0,
+    6.0,
+    1
+   ],
+   [
+    "P_021478",
+    1976,
+    "club-new-york-giants-1925",
+    "sacks.No.",
+    3.0,
+    4.0,
+    4
+   ]
+  ],
+  "unheld_column": [
+   [
+    "P_020339",
+    1976,
+    "SACKS",
+    "YDS",
+    24.0,
+    1
+   ],
+   [
+    "P_020280",
+    1977,
+    "SACKS",
+    "YDS",
+    16.0,
+    1
+   ],
+   [
+    "P_019129",
+    1970,
+    "SACKS",
+    "YDS",
+    9.0,
+    2
+   ],
+   [
+    "P_020005",
+    1971,
+    "SACKS",
+    "YDS",
+    5.5,
+    2
+   ],
+   [
+    "P_020546",
+    1974,
+    "SACKS",
+    "YDS",
+    10.0,
+    1
+   ],
+   [
+    "P_021296",
+    1978,
+    "SACKS",
+    "YDS",
+    8.0,
+    1
+   ]
+  ],
+  "disagrees": [
+   [
+    "P_020363",
+    1971,
+    "club-new-york-giants-1925",
+    "punt_returns.FC",
+    2.0,
+    1.0,
+    4
+   ],
+   [
+    "P_019179",
+    1972,
+    "club-chicago-cardinals-1920",
+    "pfa.total_scoring.X1A",
+    22.0,
+    21.0,
+    14
+   ],
+   [
+    "P_006973",
+    1977,
+    "club-green-bay-packers-1921",
+    "sacks.No.",
+    6.0,
+    5.5,
+    6
+   ],
+   [
+    "P_006973",
+    1979,
+    "club-green-bay-packers-1921",
+    "sacks.No.",
+    5.5,
+    5.0,
+    5
+   ],
+   [
+    "P_020513",
+    1972,
+    "club-detroit-lions-1934",
+    "receiving.No.",
+    6.0,
+    4.0,
+    4
+   ],
+   [
+    "P_020513",
+    1972,
+    "club-detroit-lions-1934",
+    "receiving.Yds",
+    82.0,
+    58.0,
+    4
+   ],
+   [
+    "P_020513",
+    1973,
+    "club-detroit-lions-1934",
+    "receiving.Long",
+    33.0,
+    23.0,
+    1
+   ],
+   [
+    "P_019961",
+    1972,
+    "club-pittsburgh-pirates-1933",
+    "interceptions.Long",
+    18.0,
+    16.0,
+    1
+   ],
+   [
+    "P_020223",
+    1974,
+    "club-chicago-cardinals-1920",
+    "rushing.Long",
+    20.0,
+    10.0,
+    2
+   ],
+   [
+    "P_001950",
+    1973,
+    "club-oakland-raiders-1960",
+    "total_scoring.Points",
+    30.0,
+    24.0,
+    4
+   ]
+  ],
+  "no_season_figure": [
+   [
+    "P_021360",
+    1978,
+    "club-decatur-staleys-1920",
+    "pfa.total_scoring.TD",
+    0.0,
+    1
+   ],
+   [
+    "P_021360",
+    1978,
+    "club-decatur-staleys-1920",
+    "total_scoring.X/C",
+    0.0,
+    1
+   ],
+   [
+    "P_021360",
+    1978,
+    "club-decatur-staleys-1920",
+    "pfa.total_scoring.X1A",
+    1.0,
+    1
+   ],
+   [
+    "P_021360",
+    1978,
+    "club-decatur-staleys-1920",
+    "total_scoring.FG",
+    0.0,
+    1
+   ],
+   [
+    "P_021360",
+    1978,
+    "club-decatur-staleys-1920",
+    "pfa.total_scoring.FGA",
+    0.0,
+    1
+   ],
+   [
+    "P_021360",
+    1978,
+    "club-decatur-staleys-1920",
+    "total_scoring.Saf",
+    0.0,
+    1
+   ],
+   [
+    "P_021360",
+    1978,
+    "club-decatur-staleys-1920",
+    "total_scoring.Points",
+    0.0,
+    1
+   ],
+   [
+    "P_002094",
+    1972,
+    "club-los-angeles-chargers-1960",
+    "total_scoring.2Pt",
+    0.0,
+    1
+   ]
+  ]
+ }
+}

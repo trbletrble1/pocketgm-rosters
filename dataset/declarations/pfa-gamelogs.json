@@ -1,0 +1,18 @@
+{
+ "source_id": "pfa-gamelogs",
+ "name": "Pro Football Archives — player game logs and playoff logs",
+ "stated_by": "Pro Football Archives",
+ "attribution": ["Pro Football Archives"],
+ "acquisition": "fetched 2026-09-08 at one request per second with no concurrency, from an enumerated target list built offline before the fetch: 21,552 game logs and 12,195 playoff logs, 3 absences. Held at ~/Documents/pgm3-sources/pfa-logs with a manifest carrying a sha256 per page.",
+ "derived_from": null,
+ "rights": "profootballarchives.com. Held for consultation and citation, not republished. Every claim names the page it came from.",
+ "_why_a_separate_source_id": "The archive already holds PFA's SEASON statistic pages under `pro-football-archives`. The game logs are a different part of the same site and THE TWO DISAGREE WITH EACH OTHER -- 102 times in the 1970s alone, where the game rows add to more than the season page prints. Filing both under one source_id would make a source's disagreement with itself invisible: a reader would see two values and no way to tell which part of PFA said which. `pfa-boxscores` and `pfa-transactions` are split from `pro-football-archives` for the same reason.",
+ "_what_is_read": {
+  "game logs": "one row per game in which the man recorded something in that section (RUSHING, RECEIVING, PASSING, SCORING, INTERCEPTIONS, PUNTING, PUNT RETURNS, KICKOFF RETURNS, SACKS). Each row prints a date, home/away/neutral, the opponent, the score from the subject club's side, the result, and the section's statistic columns. The date cell links to the boxscore page for that game.",
+  "playoff logs": "NOT a game log. One row per playoff YEAR, with jersey number, position, games played and games started; later years add SNAP COUNTS and PENALTIES tables."
+ },
+ "_the_row_is_the_claim": "Ryan's ruling, 2026-09-09: row-shaped, not one claim per statistic cell. A cell-shaped ingest of the whole corpus is 8,294,120 claims against an archive of 7,897,823 -- it would double the archive to restate it, since 62.4% of the cells sum to exactly the season figure already held, and every whole-corpus derive pass would pay for it on every future rebuild. Row-shaped is 1,139,717 claims, +14%.",
+ "_a_blank_is_not_a_zero": "A column PFA prints blank is recorded in `columns_printed_blank`, never as 0. TAR is blank in 100% of 1970s receiving rows and X2/X2A in 100% of 1970s scoring rows; reading those as zeros would put 16,187 invented figures into one decade.",
+ "_the_schedule_is_assembled_from_coverage": "A game record derived from these rows is NOT a schedule PFA published. A row exists only where a man recorded something in some section, so a game in which nobody the archive joins figured in ANY section is absent, and no count of games here is a count of games played. Every derived game claim carries this on the claim itself, in `note`, so it reaches a reader rather than sitting in a declaration.",
+ "_disagreements_are_held": "Where the game rows sum to MORE than PFA's own season page prints, both are held and neither is resolved: `pfa.game_logs_exceed_the_season_page`, subject the stint. Sums that fall SHORT are NOT disagreements and are not written as claims -- PFA's per-game sack rows are partial because sacks were not an official statistic until 1982, and its LG column is printed only where the game long is the whole of that game's yardage. Those are floors, counted in the store's report and nowhere else."
+}
