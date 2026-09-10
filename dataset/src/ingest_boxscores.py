@@ -20,13 +20,22 @@ import os, re, sys, json, collections
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 import index_io as IO                       # atomic build-store write
-CACHE = "/Users/ryannecci/Documents/pgm3-sources/pfa2"
-SP = ("/private/tmp/claude-501/-Users-ryannecci-Documents/"
-      "8d717785-5b8e-4adb-8f0e-48e0899794bb/scratchpad/")
+# THE WHOLE CORPUS NOW LIVES IN ONE TREE, fetched 9-10 September: 17,935 pages under
+# nflboxscores1/ and nflboxscores2/ with a manifest. pfa2 holds only the 2,888 older
+# flattened copies, which is what this ingest used to read and why it could only ever
+# see 1920-59.
+CACHE = os.path.expanduser("~/Documents/pgm3-sources/pfa-boxscores")
 DECL = json.load(open(os.path.join(BASE, "declarations", "pfa.json"), encoding="utf-8"))
 SRC_ID = DECL["source_id"]
+STORE = "pfa-boxscores"                       # this ingest's own store, excluded below
+sys.path.insert(0, os.path.join(BASE, "service"))
+import paths
 
-GAMEID = re.compile(r"^nflboxscores1_(\d{4})([a-z]+)(\d+)\.html$")
+# THE TRAILING DIGITS ARE OPTIONAL, and that is not a cosmetic change. The old pattern
+# required them, so 1966aflnfl.html .. 1969aflnfl.html -- SUPER BOWLS I TO IV -- did not
+# match and were skipped IN SILENCE. Measured over all 17,935 pages: those four are the
+# ONLY names that do not carry a number, so the fix is complete rather than partial.
+GAMEID = re.compile(r"^(\d{4})([a-z]+)(\d*)\.html$")
 TD = re.compile(r"<t[dh][^>]*>(.*?)</t[dh]>", re.S)
 TABLE = re.compile(r"<table.*?</table>", re.S)
 PLAYER = re.compile(r'href="(/players/[^"]+)"')
@@ -37,8 +46,10 @@ CLUBCELL = re.compile(r"^(.*?)([A-Z]{2,4})$")
 # IN MEMORIAM is site furniture on every page. Naming it here is what keeps it out.
 FURNITURE = ("In Memoriam", "Data Coverage", "NFL Boxscores", "NFL Game Logs",
              "Roster Key", "Stat Key", "NFL Game Officials", "NFL Training Camps")
+# SACKS WAS MISSING AND NOBODY NOTICED, because it is on 1.4% of 1920-59 pages and this
+# ingest never read a page after 1959. It is on 100% of pages from 1970 on.
 STAT_TABLES = ("RUSHING", "PASSING", "RECEIVING", "INTERCEPTIONS",
-               "PUNT RETURNS", "KICKOFF RETURNS", "PUNTING")
+               "PUNT RETURNS", "KICKOFF RETURNS", "PUNTING", "SACKS")
 
 
 class BoxError(Exception):
@@ -308,6 +319,29 @@ def parse_lineups(tabs):
     return out
 
 
+WEATHER = re.compile(r"Weather:\s*(?P<w>.*?)(?:Temp:\s*(?P<t>.*?))?"
+                     r"(?:Humidty:\s*(?P<h>.*?))?(?:Wind:\s*(?P<wind>.*))?$")
+
+
+def parse_weather(html):
+    """The weather cell, which NOTHING has ever read -- in either era.
+
+    It is not a modern field: 1,326 of the 2,888 pages already ingested carry one,
+    45.9% of 1920-59, 100% from the 1950s. `Humidty` is PFA's own spelling and is
+    read as printed rather than corrected, because the label is the source's."""
+    for tb in TABLE.findall(html):
+        for c in cells(tb):
+            if c.startswith("Weather:"):
+                m = WEATHER.match(c)
+                if not m:
+                    return {"_unparsed_weather_cell": c}
+                g = {k: (v or "").strip() or None for k, v in m.groupdict().items()}
+                return {"weather_as_printed": g["w"], "temperature_as_printed": g["t"],
+                        "humidity_as_printed": g["h"], "wind_as_printed": g["wind"],
+                        "_label_as_printed": "Humidty", "_cell": c}
+    return None
+
+
 def parse_stats(tabs):
     """An EMPTY statistic table and an ABSENT one are different facts. Pre-1950
     pages print the table with no rows, which is the era; PUNTING is simply not
@@ -337,22 +371,48 @@ def parse_stats(tabs):
 
 
 def person_map():
-    """Code -> archive person, from every PFA stage plus the promoted coaches."""
-    cmap = {}
-    for pid, v in json.load(open(SP + "pfa_match.json"))["matched"].items():
-        m = CODE.search(v[0])
+    """PFA code -> archive person, READ FROM THE PUBLISHED MODEL.
+
+    WHY THIS EXISTS. The old map was two JSON files in a session scratchpad under
+    /tmp, and the session is gone. This ingest could not run at all, which means the
+    106,744 claims it had already written could not be reproduced -- the archive's own
+    rule about literal /tmp paths, broken inside a committed file, exactly as it was in
+    ingest_officials.py.
+
+    WHY THIS IS NOT A DECIDER READING ITS OWN OUTPUT. The question here is "which
+    archive person is this PFA page?", answered on a SOURCE-NATIVE key -- the same
+    question promote_players.py answers when it gives a promoted man his own id back.
+    It is not "is this man already in the archive?", which is the question that must
+    never see this ingest's own people. The guard is structural and it is asserted
+    below: this ingest's store is excluded, and it carries no player-page source record
+    to contribute in any case.
+
+    AN AMBIGUOUS CODE IS REFUSED, NEVER PICKED. Two codes -- stan03000 and cham00800 --
+    reach two archive persons apiece, each pair sharing a name and almost certainly an
+    unmerged duplicate. Choosing one silently is the tier-2 guess this archive has
+    already been bitten by. They are refused and counted."""
+    import sqlite3
+    conn = sqlite3.connect(f"file:{paths.READ_MODEL}?mode=ro", uri=True)
+    seen = collections.defaultdict(set)
+    for pid, sr in conn.execute(
+            "select person, source_record from claim where person is not null "
+            "and store != ? and source_record like '%players/%.html%'", (STORE,)):
+        m = CODE.search(str(sr))
         if m:
-            cmap[m.group(1)] = pid
-    for u, pid in json.load(open(SP + "pfa2_match.json"))["matched"].items():
-        m = CODE.search(u)
-        if m:
-            cmap.setdefault(m.group(1), pid)
-    p = os.path.join(BASE, "build", "coach-promotions.json")
-    if os.path.exists(p):
-        for x in json.load(open(p))["promotions"]:
-            if x.get("pfa_code"):
-                cmap.setdefault(x["pfa_code"], x["person_id"])
+            seen[m.group(1)].add(pid)
+    # the guard, checked rather than asserted in a comment
+    self_ref = conn.execute("select count(*) from claim where store = ? "
+                            "and source_record like '%players/%.html%'", (STORE,)).fetchone()[0]
+    if self_ref:
+        raise BoxError(f"{self_ref} claims in this ingest's own store carry a player-page "
+                       f"source record; the map would be reading its own output")
+    cmap = {c: next(iter(v)) for c, v in seen.items() if len(v) == 1}
+    global _AMBIGUOUS
+    _AMBIGUOUS = {c: sorted(v) for c, v in seen.items() if len(v) > 1}
     return cmap
+
+
+_AMBIGUOUS = {}
 
 
 def claim(sr, subject, pred, value, **extra):
@@ -371,17 +431,40 @@ def main(write=True):
     links_by_decade = collections.Counter()
     posvocab = collections.Counter()
     games = 0
-    for fn in sorted(os.listdir(CACHE)):
-        m = GAMEID.match(fn)
-        if not m:
+    pages = []
+    for dn in ("nflboxscores1", "nflboxscores2"):
+        d = os.path.join(CACHE, dn)
+        if not os.path.isdir(d):
             continue
-        year, league, num = int(m.group(1)), m.group(2).upper(), int(m.group(3))
+        for fn in sorted(os.listdir(d)):
+            m = GAMEID.match(fn)
+            if m:
+                pages.append((dn, fn, m))
+    for dn, fn, m in sorted(pages, key=lambda x: (x[2].group(1), x[2].group(2),
+                                                  int(x[2].group(3) or 0))):
+        year, league, num = int(m.group(1)), m.group(2).upper(), m.group(3)
         if year > 1959:
             continue
-        h = open(os.path.join(CACHE, fn), encoding="utf-8", errors="replace").read()
+        sr = f"{SRC_ID}#{dn}/{fn}"
+        if not num:
+            # THE FOUR INTER-LEAGUE CHAMPIONSHIPS. They used to vanish because the
+            # pattern did not match them. They are REFUSED HERE, WITH A REASON AND A
+            # COUNT: PFA's id names two leagues (aflnfl) and the subject shape carries
+            # exactly one, so filing them needs a ruling about the league token, not a
+            # parse decision. A refusal that is counted is a different thing from one
+            # that vanishes.
+            unparsed.append({"game": fn, "what": "no game number in PFA's id",
+                             "raw": fn, "source_record": sr,
+                             "_was_silently_skipped_before": True,
+                             "why": "PFA's identifier names two leagues and no game "
+                                    "number; the subject shape carries one league and "
+                                    "a number. Needs a ruling, not a guess."})
+            n["refused_no_game_number"] += 1
+            continue
+        num = int(num)
+        h = open(os.path.join(CACHE, dn, fn), encoding="utf-8", errors="replace").read()
         tabs = find_tables(h)
         subj = ["game", league, year, num]
-        sr = f"{SRC_ID}#nflboxscores1/{fn.split('_',1)[1]}"
         games += 1
         meta = parse_meta(h)
         if not meta or "_unparsed_meta_cell" in (meta or {}):
@@ -389,9 +472,12 @@ def main(write=True):
                 "_unparsed_meta_cell", "no Date: cell found")})
         else:
             claims.append(claim(sr, subj, "pfa.game", {
-                "pfa_game_id": fn.split("_", 1)[1].replace(".html", ""),
+                "pfa_game_id": fn.replace(".html", ""),
                 "league": league, "year": year, "number": num, **meta}))
             n["game"] += 1
+        w = parse_weather(h)
+        if w:
+            claims.append(claim(sr, subj, "pfa.game_weather", w)); n["weather"] += 1
         q = parse_quarters(tabs)
         if q:
             claims.append(claim(sr, subj, "pfa.game_score_by_quarter", q)); n["score"] += 1

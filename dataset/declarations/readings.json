@@ -686,6 +686,45 @@
    "_what_does_not": "LH/RH, MLB/SLB, FS/SS, OLB/ILB -- both state the slot and they differ. And DB/CB, E/T, KR/WR -- different roles, which is a real disagreement.",
    "_a_group_is_a_role": "`DB` reads to Defensive Back and `CB` to Cornerback and they DO contest. Folding a group into one of its members is a rule Ryan has not made; it is the largest surviving category and it is reported rather than assumed away.",
    "_multi_position_is_refused": "`HB-QB` states a LIST. Whether a list of two contests a list of one is not ruled; the value is unreadable, takes no part in the disagreement test, and is counted."
+  },
+  "game": {
+   "reader": "game",
+   "what": "a game as two sources describe it: PFA's own identifier, the league, year and number, and the calendar day of the date",
+   "ruled": "Ryan, 2026-09-10",
+   "_silence_is_the_point": "venue, location and attendance come only from the box score; the clubs and their scores only from the game log. A field one side does not carry is silence, not a difference.",
+   "reads_to": "PFA's own game identifier, league, year and number, plus the date read to a calendar day; venue/location/attendance and the clubs are carried through so that a source holding both would compare, and are silence otherwise",
+   "accepted_forms_by_example": [
+    {
+     "pfa_game_id": "1970nfl001",
+     "league": "NFL",
+     "year": 1970,
+     "number": 1,
+     "date": "September 18, 1970",
+     "venue": "Busch Stadium",
+     "attendance": 49470
+    },
+    {
+     "pfa_game_id": "1970nfl001",
+     "league": "NFL",
+     "year": 1970,
+     "number": 1,
+     "date_as_printed": "1970-09-18",
+     "clubs": {
+      "STL": {},
+      "LARM": {}
+     }
+    }
+   ],
+   "these_two_read_the_same": "the first is a box score, the second the game log for the SAME game. They agree on identifier, league, year, number and calendar day; venue and attendance are on one side only and the clubs on the other, and a field one side does not carry is silence, not a difference.",
+   "refused_by_example": [
+    "",
+    "not a dict",
+    {
+     "pfa_game_id": "1970nfl001",
+     "date": "the third Sunday"
+    }
+   ],
+   "why_refused": "a value that is not a dict is not a game, and a date the reader cannot read makes the whole value its own group -- unreadable is an answer, not a licence to merge."
   }
  },
  "_documentation_only": {

@@ -106,6 +106,18 @@
    "ruled": "Ryan, 2026-09-09. THREE PARTS: expand the abbreviation (notation, safe); a SIDE is part of the position and Left Halfback contests Right Halfback; an UNSTATED side is SILENCE, so `Halfback` does not contest `Left Halfback` -- it is less specific, and recording that as a conflict is the same fabrication as `61\"` against `6-1`. The silence is reading_view.same()'s, which compares two dict readings on the fields BOTH carry; there is one implementation and this uses it.",
    "_why_it_was_needed": "`position`, `statscrew.position` and `pfa.position_career` were three families and build_contested walks only DECLARED ones, so the archive could not record a disagreement about a position AT ALL and 348 real ones were invisible.",
    "_measured_2026_09_09": "declared WITHOUT a reading first, deliberately: contested pairs went 6,593 -> 38,965 and RS-G6 REPORTED PASS, because a family with no reading is not in its population. A family without a reading manufactures disagreements and no gate says so. With the reading the number is what a real disagreement about a position looks like."
+  },
+  "game": {
+   "kind": "value",
+   "predicates": [
+    "pfa.game",
+    "pfa.game_as_logged"
+   ],
+   "reading": "src/readings.py game",
+   "ruled": "Ryan, 2026-09-10. A box score and a game log describe the SAME GAME and must be comparable. They already share a subject built from PFA's own identifier and have avoided collision only because their year ranges do not overlap; two claims on one subject in two families would sit side by side with nothing connecting them, which is a silent NON-comparison and worse than a merge because nothing looks wrong.",
+   "_the_reading_is_a_renaming_and_a_date": "`date` and `date_as_printed` are one field under two names in two formats. Everything else -- venue, location, attendance and weather on one side, the clubs and their scores on the other -- is carried by only one side and is therefore SILENCE under same(), which is the existing mechanism and not a new one.",
+   "_declaring_this_does_NOT_yet_make_them_contest": "MEASURED 2026-09-10 AND REPORTED RATHER THAN WORKED AROUND: build_contested selects `WHERE person IS NOT NULL` on both its date and its value paths, and a game claim's subject is ['game', league, year, number] with no person. So the contested table cannot hold these rows however they are declared. The family is right and is declared; making it bite needs the contest builder to key on the subject as well as the person, which is a change to the read model and not a declaration.",
+   "_measured_2026_09_10": "Over the 1970s, offline: 1,932 games hold both a box score and a game log. Under this reading they agree on every field both carry, 1,932 of 1,932. Two sources agreeing completely is itself worth knowing."
   }
  },
  "_why_a_family_needs_a_reading": "A family is what lets the model RECORD a disagreement; the reading is what stops it recording a false one. build_read_model.build_contested groups a value family by its declared reading where one exists, so RS-G6 has something to check and finds nothing -- rather than passing because the population is empty. Before 2026-09-07 only the two date families existed, and RS-G6 could not fire on any data the model could hold."

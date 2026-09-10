@@ -396,7 +396,66 @@ def place(v):
 # 'August 28, 1919 (28) in Santa Ana, Calif.' -- so pulling a date out of one is
 # a parse, not a reading, and would be a separate ruling. The field keeps what
 # was printed and its values compare as written.
-READERS = {"height": height, "weight": weight, "birth_date": birth_date, "draft": draft,
+_MONTHS = {m.lower(): i for i, m in enumerate(
+    "January February March April May June July August September October November "
+    "December".split(), 1)}
+
+
+def _calendar_day(s):
+    """A printed game date -> (y, m, d), or None. Two formats and no third:
+    `November 9, 1975` from a box score, `1970-09-18` from a game log."""
+    s = str(s or "").strip()
+    m = re.match(r"^(\d{4})-(\d{1,2})-(\d{1,2})$", s)
+    if m:
+        return tuple(int(x) for x in m.groups())
+    m = re.match(r"^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$", s)
+    if m and m.group(1).lower() in _MONTHS:
+        return (int(m.group(3)), _MONTHS[m.group(1).lower()], int(m.group(2)))
+    return None
+
+
+def game(v):
+    """A game, as two sources describe it. Ruled by Ryan, 2026-09-10.
+
+    A BOX SCORE AND A GAME LOG DESCRIBE THE SAME GAME. They already share a subject
+    built from PFA's own identifier and have avoided collision only because their year
+    ranges do not overlap. Two claims on one subject in two families would sit side by
+    side with nothing connecting them -- a silent NON-comparison, which is worse than a
+    merge because nothing looks wrong.
+
+    THE READING IS A RENAMING AND A DATE, AND NOTHING ELSE. `date` and
+    `date_as_printed` are the same field under two names in two formats, so both are
+    read to a calendar day -- the same treatment dates already get everywhere, and the
+    printed strings are never rewritten.
+
+    EVERYTHING ELSE IS SILENCE AND IS MEANT TO BE. A box score carries venue, location,
+    attendance and weather; a game log carries the clubs, their scores and the result.
+    Neither carries the other's, so `same()` compares them on the fields BOTH hold and
+    ignores the rest. That is the existing mechanism, not a new one. If a later source
+    ever carries both, they will compare then without this being touched.
+
+    AN UNREADABLE DATE IS ITS OWN GROUP, as everywhere: unreadable is an answer, not a
+    licence to merge."""
+    if not isinstance(v, dict):
+        return None
+    out = {}
+    for k in ("pfa_game_id", "league", "year", "number"):
+        if v.get(k) is not None:
+            out[k] = str(v[k]).lower() if k in ("pfa_game_id", "league") else v[k]
+    d = _calendar_day(v.get("date") or v.get("date_as_printed"))
+    if d:
+        out["calendar_day"] = list(d)
+    elif v.get("date") or v.get("date_as_printed"):
+        return None
+    for k in ("venue", "location", "attendance"):
+        if v.get(k) is not None:
+            out[k] = v[k]
+    if isinstance(v.get("clubs"), dict) and v["clubs"]:
+        out["clubs"] = sorted(str(x).upper() for x in v["clubs"])
+    return out or None
+
+
+READERS = {"game": game, "height": height, "weight": weight, "birth_date": birth_date, "draft": draft,
            "college": college, "birth_place": place, "death_place": place,
            "position": position}
 
