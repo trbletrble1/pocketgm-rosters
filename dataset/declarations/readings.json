@@ -655,6 +655,37 @@
     "Springfield, IL  !=  Chicago, IL",
     "FL  !=  Florida, U.S  (a lone token is not expanded)"
    ]
+  },
+  "position": {
+   "reads_to": "{role, spot?, alignment?} -- a dict, like the draft reading, so that a field only one side carries is SILENCE under reading_view.same() rather than a difference.",
+   "ruled": "Ryan, 2026-09-09. Expand the abbreviation; a SIDE is part of the position; an UNSTATED side is silence. `Halfback` does not contest `Left Halfback` -- it is less specific, and calling that a conflict is the same fabrication as `61\"` against `6-1`.",
+   "vocabulary": "declarations/positions.json -- 79 codes and 77 long forms, each spelt out WHOLE. `LS` is a Long Snapper and `LB` a Linebacker; stripping a leading `L` would make both of them Left-something.",
+   "accepted_forms_by_example": [
+    "HB",
+    "LH",
+    "Left Halfback",
+    "Left halfback",
+    "MLB",
+    "LCB",
+    "OT",
+    "LOT",
+    "FS",
+    "SS",
+    "OLB",
+    "ILB"
+   ],
+   "refused_by_example": [
+    "HB-QB",
+    "RDT-RDE-LDE-LDT",
+    "End/Tackle/Guard",
+    "D",
+    "FW",
+    "Manager"
+   ],
+   "_what_folds": "HB/LH, LB/MLB, CB/LCB, S/FS, OT/LOT, OLB/LB -- one of them states a spot and the other is silent about it.",
+   "_what_does_not": "LH/RH, MLB/SLB, FS/SS, OLB/ILB -- both state the slot and they differ. And DB/CB, E/T, KR/WR -- different roles, which is a real disagreement.",
+   "_a_group_is_a_role": "`DB` reads to Defensive Back and `CB` to Cornerback and they DO contest. Folding a group into one of its members is a rule Ryan has not made; it is the largest surviving category and it is reported rather than assumed away.",
+   "_multi_position_is_refused": "`HB-QB` states a LIST. Whether a list of two contests a list of one is not ruled; the value is unreadable, takes no part in the disagreement test, and is counted."
   }
  },
  "_documentation_only": {

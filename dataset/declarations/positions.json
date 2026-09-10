@@ -1,0 +1,613 @@
+{
+ "_what": "A printed position -> {role, spot?, alignment?}. The reading behind the `position` family.",
+ "_ruled": "Ryan, 2026-09-09. THREE PARTS. (1) EXPAND THE ABBREVIATION -- `LH` is a Left Halfback and `Left Halfback` is the same fact; that is notation and it is safe. (2) A SIDE IS PART OF THE POSITION, NOT NOISE -- Left Halfback and Right Halfback are a real disagreement, and 1920s formations distinguished them. (3) AN UNSTATED SIDE IS SILENCE, NOT A DIFFERENCE -- `Halfback` does not contest `Left Halfback`, it is less specific. A source printing `HB` is not asserting he was not a left halfback; it is not saying. Recording that as a conflict is the same fabrication as `61\\\"` against `6-1`.",
+ "_how_the_silence_works": "reading_view.same() compares two dict readings on the fields BOTH carry and treats a field only one of them holds as silence. That mechanism is the draft reading's and there is ONE implementation of it. `spot` and `alignment` are therefore OMITTED when the source does not state them, never filled with a placeholder, because a placeholder turns silence into a claim.",
+ "_two_slots_not_one": "`spot` holds Left, Right, Middle, Strong, Free and Weak -- one slot, because a middle linebacker and a strong-side linebacker are two different jobs and must contest. `alignment` holds Inside and Outside, which is a separate axis: OLB against LB is silence, OLB against ILB is a difference.",
+ "_a_group_is_its_own_role": "`DB` reads to Defensive Back and `CB` to Cornerback, and they DO contest. A group name is a different word, not an unstated side, and folding one into a member would be a rule Ryan has not made. It is the largest surviving category and it is reported.",
+ "_codes_are_listed_whole": "Every code is spelt out rather than parsed by prefix. `LS` is a Long Snapper and `LB` a Linebacker; stripping an `L` would make both of them Left-something.",
+ "_refused_is_counted": "A token not in this table is UNREADABLE and takes no part in the disagreement test -- it stays as printed and is counted, exactly as an unreadable date is. That covers every multi-position string (`HB-QB`, `RDT-RDE-LDE-LDT`), which state a LIST and are not ruled on here, and codes whose meaning is not settled (`D`, `FW`, `Manager`).",
+ "codes": {
+  "B": {
+   "role": "Back"
+  },
+  "BB": {
+   "role": "Blocking Back"
+  },
+  "C": {
+   "role": "Center"
+  },
+  "CB": {
+   "unit": "Defensive Back",
+   "role": "Cornerback"
+  },
+  "DB": {
+   "unit": "Defensive Back"
+  },
+  "DE": {
+   "role": "Defensive End"
+  },
+  "DH": {
+   "unit": "Defensive Back",
+   "role": "Defensive Halfback"
+  },
+  "DL": {
+   "role": "Defensive Line"
+  },
+  "DS": {
+   "role": "Long Snapper"
+  },
+  "DT": {
+   "role": "Defensive Tackle"
+  },
+  "E": {
+   "role": "End"
+  },
+  "FB": {
+   "role": "Fullback"
+  },
+  "FL": {
+   "role": "Flanker"
+  },
+  "FS": {
+   "unit": "Defensive Back",
+   "role": "Safety",
+   "spot": "Free"
+  },
+  "G": {
+   "role": "Guard"
+  },
+  "HB": {
+   "role": "Halfback"
+  },
+  "ILB": {
+   "role": "Linebacker",
+   "alignment": "Inside"
+  },
+  "K": {
+   "role": "Kicker"
+  },
+  "KR": {
+   "role": "Kick Returner"
+  },
+  "LB": {
+   "role": "Linebacker"
+  },
+  "LCB": {
+   "unit": "Defensive Back",
+   "role": "Cornerback",
+   "spot": "Left"
+  },
+  "LDE": {
+   "role": "Defensive End",
+   "spot": "Left"
+  },
+  "LDH": {
+   "unit": "Defensive Back",
+   "role": "Defensive Halfback",
+   "spot": "Left"
+  },
+  "LDT": {
+   "role": "Defensive Tackle",
+   "spot": "Left"
+  },
+  "LE": {
+   "role": "End",
+   "spot": "Left"
+  },
+  "LG": {
+   "role": "Guard",
+   "spot": "Left"
+  },
+  "LH": {
+   "role": "Halfback",
+   "spot": "Left"
+  },
+  "LILB": {
+   "role": "Linebacker",
+   "alignment": "Inside",
+   "spot": "Left"
+  },
+  "LLB": {
+   "role": "Linebacker",
+   "spot": "Left"
+  },
+  "LOE": {
+   "role": "Offensive End",
+   "spot": "Left"
+  },
+  "LOG": {
+   "role": "Offensive Guard",
+   "spot": "Left"
+  },
+  "LOH": {
+   "role": "Offensive Halfback",
+   "spot": "Left"
+  },
+  "LOLB": {
+   "role": "Linebacker",
+   "alignment": "Outside",
+   "spot": "Left"
+  },
+  "LONG": {
+   "role": "Long Snapper"
+  },
+  "LOT": {
+   "role": "Offensive Tackle",
+   "spot": "Left"
+  },
+  "LS": {
+   "role": "Long Snapper"
+  },
+  "LT": {
+   "role": "Tackle",
+   "spot": "Left"
+  },
+  "MG": {
+   "role": "Middle Guard"
+  },
+  "MLB": {
+   "role": "Linebacker",
+   "spot": "Middle"
+  },
+  "NB": {
+   "unit": "Defensive Back",
+   "role": "Nickel Back"
+  },
+  "NT": {
+   "role": "Nose Tackle"
+  },
+  "OC": {
+   "role": "Center"
+  },
+  "OE": {
+   "role": "Offensive End"
+  },
+  "OG": {
+   "role": "Offensive Guard"
+  },
+  "OH": {
+   "role": "Offensive Halfback"
+  },
+  "OL": {
+   "role": "Offensive Line"
+  },
+  "OLB": {
+   "role": "Linebacker",
+   "alignment": "Outside"
+  },
+  "OT": {
+   "role": "Offensive Tackle"
+  },
+  "P": {
+   "role": "Punter"
+  },
+  "PR": {
+   "role": "Punt Returner"
+  },
+  "QB": {
+   "role": "Quarterback"
+  },
+  "RB": {
+   "role": "Running Back"
+  },
+  "RCB": {
+   "unit": "Defensive Back",
+   "role": "Cornerback",
+   "spot": "Right"
+  },
+  "RDE": {
+   "role": "Defensive End",
+   "spot": "Right"
+  },
+  "RDH": {
+   "unit": "Defensive Back",
+   "role": "Defensive Halfback",
+   "spot": "Right"
+  },
+  "RDT": {
+   "role": "Defensive Tackle",
+   "spot": "Right"
+  },
+  "RE": {
+   "role": "End",
+   "spot": "Right"
+  },
+  "RG": {
+   "role": "Guard",
+   "spot": "Right"
+  },
+  "RH": {
+   "role": "Halfback",
+   "spot": "Right"
+  },
+  "RILB": {
+   "role": "Linebacker",
+   "alignment": "Inside",
+   "spot": "Right"
+  },
+  "RLB": {
+   "role": "Linebacker",
+   "spot": "Right"
+  },
+  "ROE": {
+   "role": "Offensive End",
+   "spot": "Right"
+  },
+  "ROG": {
+   "role": "Offensive Guard",
+   "spot": "Right"
+  },
+  "ROH": {
+   "role": "Offensive Halfback",
+   "spot": "Right"
+  },
+  "ROLB": {
+   "role": "Linebacker",
+   "alignment": "Outside",
+   "spot": "Right"
+  },
+  "ROT": {
+   "role": "Offensive Tackle",
+   "spot": "Right"
+  },
+  "RS": {
+   "role": "Return Specialist"
+  },
+  "RT": {
+   "role": "Tackle",
+   "spot": "Right"
+  },
+  "S": {
+   "unit": "Defensive Back",
+   "role": "Safety"
+  },
+  "SB": {
+   "role": "Slotback"
+  },
+  "SE": {
+   "role": "Split End"
+  },
+  "SLB": {
+   "role": "Linebacker",
+   "spot": "Strong"
+  },
+  "SS": {
+   "unit": "Defensive Back",
+   "role": "Safety",
+   "spot": "Strong"
+  },
+  "T": {
+   "role": "Tackle"
+  },
+  "TB": {
+   "role": "Tailback"
+  },
+  "TE": {
+   "role": "Tight End"
+  },
+  "WB": {
+   "role": "Wingback"
+  },
+  "WLB": {
+   "role": "Linebacker",
+   "spot": "Weak"
+  },
+  "WR": {
+   "role": "Wide Receiver"
+  }
+ },
+ "names": {
+  "back": {
+   "role": "Back"
+  },
+  "blockingback": {
+   "role": "Blocking Back"
+  },
+  "center": {
+   "role": "Center"
+  },
+  "centre": {
+   "role": "Center"
+  },
+  "cornerback": {
+   "role": "Cornerback"
+  },
+  "defensiveback": {
+   "role": "Defensive Back"
+  },
+  "defensiveend": {
+   "role": "Defensive End"
+  },
+  "defensivehalfback": {
+   "role": "Defensive Halfback"
+  },
+  "defensiveline": {
+   "role": "Defensive Line"
+  },
+  "defensivetackle": {
+   "role": "Defensive Tackle"
+  },
+  "end": {
+   "role": "End"
+  },
+  "flanker": {
+   "role": "Flanker"
+  },
+  "freesafety": {
+   "role": "Safety",
+   "spot": "Free"
+  },
+  "fullback": {
+   "role": "Fullback"
+  },
+  "guard": {
+   "role": "Guard"
+  },
+  "halfback": {
+   "role": "Halfback"
+  },
+  "insidelinebacker": {
+   "role": "Linebacker",
+   "alignment": "Inside"
+  },
+  "kicker": {
+   "role": "Kicker"
+  },
+  "kickreturner": {
+   "role": "Kick Returner"
+  },
+  "leftcornerback": {
+   "role": "Cornerback",
+   "spot": "Left"
+  },
+  "leftdefensiveend": {
+   "role": "Defensive End",
+   "spot": "Left"
+  },
+  "leftdefensivehalfback": {
+   "role": "Defensive Halfback",
+   "spot": "Left"
+  },
+  "leftdefensivetackle": {
+   "role": "Defensive Tackle",
+   "spot": "Left"
+  },
+  "leftend": {
+   "role": "End",
+   "spot": "Left"
+  },
+  "leftguard": {
+   "role": "Guard",
+   "spot": "Left"
+  },
+  "lefthalfback": {
+   "role": "Halfback",
+   "spot": "Left"
+  },
+  "leftinsidelinebacker": {
+   "role": "Linebacker",
+   "alignment": "Inside",
+   "spot": "Left"
+  },
+  "leftlinebacker": {
+   "role": "Linebacker",
+   "spot": "Left"
+  },
+  "leftoffensiveend": {
+   "role": "Offensive End",
+   "spot": "Left"
+  },
+  "leftoffensiveguard": {
+   "role": "Offensive Guard",
+   "spot": "Left"
+  },
+  "leftoffensivehalfback": {
+   "role": "Offensive Halfback",
+   "spot": "Left"
+  },
+  "leftoffensivetackle": {
+   "role": "Offensive Tackle",
+   "spot": "Left"
+  },
+  "leftoutsidelinebacker": {
+   "role": "Linebacker",
+   "alignment": "Outside",
+   "spot": "Left"
+  },
+  "lefttackle": {
+   "role": "Tackle",
+   "spot": "Left"
+  },
+  "linebacker": {
+   "role": "Linebacker"
+  },
+  "longsnapper": {
+   "role": "Long Snapper"
+  },
+  "middleguard": {
+   "role": "Middle Guard"
+  },
+  "middlelinebacker": {
+   "role": "Linebacker",
+   "spot": "Middle"
+  },
+  "nickelback": {
+   "role": "Nickel Back"
+  },
+  "nosetackle": {
+   "role": "Nose Tackle"
+  },
+  "offensiveend": {
+   "role": "Offensive End"
+  },
+  "offensiveguard": {
+   "role": "Offensive Guard"
+  },
+  "offensivehalfback": {
+   "role": "Offensive Halfback"
+  },
+  "offensiveline": {
+   "role": "Offensive Line"
+  },
+  "offensivetackle": {
+   "role": "Offensive Tackle"
+  },
+  "outsidelinebacker": {
+   "role": "Linebacker",
+   "alignment": "Outside"
+  },
+  "punter": {
+   "role": "Punter"
+  },
+  "puntreturner": {
+   "role": "Punt Returner"
+  },
+  "quarterback": {
+   "role": "Quarterback"
+  },
+  "returnspecialist": {
+   "role": "Return Specialist"
+  },
+  "rightcornerback": {
+   "role": "Cornerback",
+   "spot": "Right"
+  },
+  "rightdefensiveend": {
+   "role": "Defensive End",
+   "spot": "Right"
+  },
+  "rightdefensivehalfback": {
+   "role": "Defensive Halfback",
+   "spot": "Right"
+  },
+  "rightdefensivetackle": {
+   "role": "Defensive Tackle",
+   "spot": "Right"
+  },
+  "rightend": {
+   "role": "End",
+   "spot": "Right"
+  },
+  "rightguard": {
+   "role": "Guard",
+   "spot": "Right"
+  },
+  "righthalfback": {
+   "role": "Halfback",
+   "spot": "Right"
+  },
+  "rightinsidelinebacker": {
+   "role": "Linebacker",
+   "alignment": "Inside",
+   "spot": "Right"
+  },
+  "rightlinebacker": {
+   "role": "Linebacker",
+   "spot": "Right"
+  },
+  "rightoffensiveend": {
+   "role": "Offensive End",
+   "spot": "Right"
+  },
+  "rightoffensiveguard": {
+   "role": "Offensive Guard",
+   "spot": "Right"
+  },
+  "rightoffensivehalfback": {
+   "role": "Offensive Halfback",
+   "spot": "Right"
+  },
+  "rightoffensivetackle": {
+   "role": "Offensive Tackle",
+   "spot": "Right"
+  },
+  "rightoutsidelinebacker": {
+   "role": "Linebacker",
+   "alignment": "Outside",
+   "spot": "Right"
+  },
+  "righttackle": {
+   "role": "Tackle",
+   "spot": "Right"
+  },
+  "runningback": {
+   "role": "Running Back"
+  },
+  "safety": {
+   "role": "Safety"
+  },
+  "slotback": {
+   "role": "Slotback"
+  },
+  "splitend": {
+   "role": "Split End"
+  },
+  "stronglinebacker": {
+   "role": "Linebacker",
+   "spot": "Strong"
+  },
+  "strongsafety": {
+   "role": "Safety",
+   "spot": "Strong"
+  },
+  "tackle": {
+   "role": "Tackle"
+  },
+  "tailback": {
+   "role": "Tailback"
+  },
+  "tightend": {
+   "role": "Tight End"
+  },
+  "weaklinebacker": {
+   "role": "Linebacker",
+   "spot": "Weak"
+  },
+  "widereceiver": {
+   "role": "Wide Receiver"
+  },
+  "wingback": {
+   "role": "Wingback"
+  }
+ },
+ "_groups_are_declared_from_the_data": {
+  "_ruled": "Ryan, 2026-09-09: a GROUP NAME IS SILENCE ABOUT WHICH MEMBER. `DB` does not contest `CB`. A source saying 'defensive back' is not asserting he was not a cornerback; it is being less specific, exactly as Halfback is less specific than Left Halfback.",
+  "_how_it_works": "the group code reads to {unit} ALONE and states no role. A member reads to {unit, role, spot?}. same() compares the fields both carry, so DB matches CB and CB does not match S.",
+  "_evidence": "co-occurrence on one man-season across every position predicate, measured 2026-09-09 over 51,108 people. NOT football knowledge: the test is whether the archive's own sources put the group code and the member code on the same man in the same year.",
+  "DEFENSIVE_BACK": {
+   "declared": true,
+   "members_and_their_evidence": {
+    "CB": 113,
+    "S": 44,
+    "LCB": 29,
+    "RCB": 20,
+    "FS": 17,
+    "SS": 16,
+    "DH": 3,
+    "NB": 2
+   },
+   "_why": "every defensive-back code in the archive co-occurs with DB, and DB carries 9,853 claims of its own. No member of this group co-occurs with any other group's code."
+  },
+  "LINEBACKER": {
+   "declared": "ALREADY, without a unit",
+   "members_and_their_evidence": {
+    "MLB": 34,
+    "SLB": 19,
+    "WLB": 19,
+    "LLB": 14,
+    "OLB": 13,
+    "ROLB": 11,
+    "ILB": 11,
+    "LOLB": 10,
+    "RLB": 9
+   },
+   "_why": "every linebacker code already reads to role `Linebacker` with the spot or alignment in its own field, so `LB` is already silent about which. No change was needed and none was made."
+  },
+  "NOT_DECLARED_AND_WHY": {
+   "OL": "THE EVIDENCE IS THIN AND THE RELATIONSHIP IS ARGUABLE. T co-occurs with OL 5 times, G 11, C 4, OT 3, and OG, LT, RT, LG and RG NOT AT ALL. More importantly a 1920s source printing `T` is not stating a side of the ball: two-way players played tackle on both. Putting `T` under Offensive Line would assert something the source does not say. STOPPED, not decided.",
+   "DL": "DE 24, DT 17, NT 2 -- reasonable but not asked for, and DE ALSO co-occurs with E three times. A code that could belong to two groups is exactly the case ruled to stop on.",
+   "E": "LE 16 and RE 14 already fold under `spot`. TE, SE, FL and DE are modern roles and a 1920s `E`; whether one group covers them is arguable. DE would then sit in both E and DL.",
+   "B": "HB 9, FB 17, TB 11, BB 7, WB 6 -- but QB and RB co-occur with `B` NOT ONCE in 51,108 people. A group that excludes the quarterback and the running back is not `Back`, and the data says so rather than my saying so."
+  }
+ }
+}

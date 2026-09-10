@@ -278,6 +278,31 @@ def g6(conn, ctx):
     """
     import reading_view as RV
     fams = set(RV.families())
+    # WHAT WAS NOT CHECKED, IN THE GATE LINE. Green meaning "nothing to check" and green
+    # meaning "everything checked" have been the same answer three times: this gate when
+    # only two families were declared, RS-G8 when its check was derived from the
+    # declaration it was checking, and `position` -- declared a family with NO reading, so
+    # the builder grouped by the literal, published 32,372 fabricated disagreements, and
+    # every one of them was skipped here because a family with no reading is not in
+    # `fams`. The property that a declared family MUST have a reading is
+    # src/gate_family_readings.py's and is not duplicated here -- two gates checking one
+    # rule is how a rule and its check drift apart. What belongs here is the NUMBER, so a
+    # reader of this line can see the size of what it did not look at.
+    _declared, _unread = set(), []
+    try:
+        import json as _j, os as _o
+        _d = _j.load(open(_o.path.join(_o.path.dirname(_o.path.dirname(_o.path.abspath(__file__))),
+                                       "service", "declarations", "predicate-families.json")))
+        # A DATE FAMILY IS READ BY service/dates.py, NOT BY readings.py, so it needs no
+        # VALUE_READINGS entry and is not counted as unread. Same test as
+        # src/gate_family_readings.py A1, which owns the property; if the two ever
+        # disagree the gate that owns it is the one to change.
+        _declared = {k: v for k, v in (_d.get("families") or {}).items()
+                     if not k.startswith("_") and (v or {}).get("kind") != "date"}
+        _declared = set(_declared)
+        _unread = sorted(_declared - fams)
+    except Exception:
+        pass
     if not fams:
         return {"name": "RS-G6 no false disagreement", "status": "FAIL",
                 "counts": {"families_with_a_reading": 0, "checked": 0, "false": 0},
@@ -290,9 +315,15 @@ def g6(conn, ctx):
                 "report": {"reader_unavailable": [{"why": "dataset/src/readings.py could not be loaded",
                                                    "remedy": "a gate that cannot run is not a pass; it never reports a clean sheet it did not check"}]}}
     false, checked, unread_families = [], 0, []
+    skipped_no_reading = 0
     for r in conn.execute("SELECT person, family, groups FROM contested"):
         fam = r[1]
-        if fam not in fams: continue
+        if fam not in fams:
+            # COUNTED, not silent. A contested row whose family has no reading is a row
+            # this gate cannot judge, and its size is the difference between a clean
+            # sheet and an empty one.
+            if fam in _declared or _unread: skipped_no_reading += 1
+            continue
         try: groups = json.loads(r[2])
         except (TypeError, ValueError): continue
         if len(groups) < 2: continue
@@ -319,10 +350,21 @@ def g6(conn, ctx):
                                     "SAME implementation of it -- before recording a disagreement"})
     return {"name": "RS-G6 no false disagreement",
             "status": "FAIL" if false else "PASS",
-            "counts": {"families_with_a_reading": len(fams), "contested_facts_checked": checked,
+            "counts": {"families_needing_a_reading": len(_declared),
+                       "of_those_with_one": len(_declared & fams) if _declared else len(fams),
+                       "families_WITHOUT_a_reading": len(_unread),
+                       "readers_available": len(fams),
+                       "contested_rows_skipped_because_their_family_has_no_reading": skipped_no_reading,
+                       "contested_facts_checked": checked,
                        "false_disagreements": len(false),
                        "facts_with_an_unreadable_value": len(unread_families)},
             "report": {"false_disagreements": false[:50],
+                       "families_declared_with_NO_reading": [
+                           {"families": _unread,
+                            "why_it_matters": "the builder groups such a family by the LITERAL, so "
+                                              "every notational difference becomes a disagreement, "
+                                              "and this gate cannot see one of them",
+                            "held_by": "src/gate_family_readings.py A1"}] if _unread else [],
                        "families_read_INFORMATION": [{"families": sorted(fams),
                                                       "read_by": "dataset/src/readings.py, loaded by path",
                                                       "declared_in": RV.DECL}]}}

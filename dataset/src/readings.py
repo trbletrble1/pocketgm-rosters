@@ -255,6 +255,57 @@ _STATES = {
 # cannot drift. Six fold; `georgetown`, `cornell`, `nebraska` and `lebanon` are
 # refused because a second real school competes for the same short form, and a
 # refused pair stays a disagreement.
+_POSDECL = None
+
+
+def _positions():
+    global _POSDECL
+    if _POSDECL is None:
+        _POSDECL = json.load(open(os.path.join(BASE, "declarations", "positions.json"),
+                                  encoding="utf-8"))
+    return _POSDECL
+
+
+_MULTI = re.compile(r"[-/,;]|\s+or\s+", re.I)
+
+
+def position(v):
+    """A printed position -> {role, spot?, alignment?}, or None.
+
+    RULED BY RYAN, 2026-09-09, in three parts, and the third is the one that matters.
+
+      EXPAND THE ABBREVIATION. `LH`, `Left Halfback` and `Left halfback` are one fact.
+        Notation, and safe.
+      A SIDE IS PART OF THE POSITION. Left Halfback and Right Halfback are a real
+        disagreement; 1920s formations distinguished them and the sources are recording
+        something. Sides are NOT folded away.
+      AN UNSTATED SIDE IS SILENCE. `Halfback` does not contest `Left Halfback`. A source
+        printing `HB` is not asserting he was not a left halfback -- it is not saying.
+
+    THE SILENCE IS reading_view.same()'s, NOT A SECOND IMPLEMENTATION. It compares two
+    dict readings on the fields BOTH carry, so a reading that omits `spot` matches one
+    that states it. `spot` and `alignment` are omitted when unknown rather than filled
+    with a placeholder, exactly as `league` and `kind` are in the draft reading, because a
+    placeholder turns silence into a claim.
+
+    WHY THIS EXISTS AT ALL. `position`, `statscrew.position` and `pfa.position_career`
+    were three families and build_contested walks only DECLARED ones, so the archive could
+    not record a disagreement about a position at all -- 348 real ones were invisible.
+
+    A MULTI-POSITION STRING IS REFUSED, not split. `HB-QB` and `RDT-RDE-LDE-LDT` state a
+    LIST, and whether a list of two contests a list of one is a rule Ryan has not made.
+    Refusals are counted and take no part in the disagreement test.
+    """
+    if isinstance(v, dict):
+        v = v.get("code") or v.get("position") or v.get("value")
+    if v is None: return None
+    t = str(v).strip()
+    if not t or _MULTI.search(t): return None
+    d = _positions()
+    hit = d["codes"].get(t.upper()) or d["names"].get(re.sub(r"[^a-z]", "", t.lower()))
+    return dict(hit) if hit else None
+
+
 def _load_college_synonyms():
     d = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..",
                      "declarations", "readings.json")
@@ -346,7 +397,8 @@ def place(v):
 # a parse, not a reading, and would be a separate ruling. The field keeps what
 # was printed and its values compare as written.
 READERS = {"height": height, "weight": weight, "birth_date": birth_date, "draft": draft,
-           "college": college, "birth_place": place, "death_place": place}
+           "college": college, "birth_place": place, "death_place": place,
+           "position": position}
 
 
 def read(field, value):
