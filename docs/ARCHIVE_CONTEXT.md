@@ -192,6 +192,69 @@ The fix is always the same shape: **make the failure loud, and gate the property
   fetched on 8 September; **25 more are named and answer 404**, including Frankford
   1923 and the 1926 Pacific Coast Wildcats. Those pages do not exist.
 
+### Found 9 September — a source class nobody was looking for
+
+**A CAPTIONED TEAM PHOTOGRAPH IS A ROSTER.** It was not on the hunting list, and the
+reason is worth keeping: nobody knew to look. The list is derived from what the
+archive knows it lacks, and it cannot name a *kind* of document nobody has thought
+of. Six found on eBay, all of them club-seasons where the archive is thin or empty:
+
+| club-season | why it matters |
+|---|---|
+| **Racine 1922** | |
+| **Dayton 1919** | pre-league, and the archive holds almost nothing before 1920 |
+| **Portsmouth 1929** and **1932** | |
+| **Canton 1922** and **1923** | |
+
+The precedent already exists — *a man named in a team photograph caption is a
+person*, ruled on the 1926 Pacific Coast Wildcats. What is new is that the caption
+names ENOUGH men to be roster evidence rather than a single placement. The rights
+route is the photograph route: **the caption's facts are read and cited, the image
+is not reproduced.**
+
+**THE GHOSTS GAME PAGES CARRY LINE-UPS.** 226 game pages hold a line-up for
+club-seasons where the roster survey found no roster at all. All 243 Ghosts pages
+were read for facts in an earlier pass — this is not a re-fetch and not a page
+anyone missed. It is the same page class read for a *different* thing: the survey
+asked each page whether it was a roster, the game pages said no, and the line-up
+inside them was never asked about. **A survey that asks one question of a document
+gets one answer.** (The 226 is the survey's own page class; it was not re-derived
+from disk, where a crude line-up grep over the mirror answers 48. The definition is
+what differs, and the next session should take the survey's, not the grep's.)
+
+### Found and not assessed — the running list
+
+Named as they were noticed, none assessed, none fetched. Kept here so they are not
+re-discovered a fourth time.
+
+- **Wikipedia season articles** — the club-season shape, as against the player
+  articles already ingested.
+- **cflapedia** — Canadian, and the archive's CFL coverage is among its thinnest.
+- **Chronicling America** — Library of Congress newspapers, public domain, and the
+  only *contemporary* route to the 1920s that is not Neft's reconstruction. See §6's
+  provenance finding: this is the one class that could break the echo.
+- **The Racine Heritage Museum** — a physical local collection for a club the archive
+  is thin on, and one of the six captioned photographs is Racine 1922.
+
+### On disk and unread — measured 9 September
+
+It has grown, and it is now the largest thing about the archive that no document
+records.
+
+| | |
+|---|---|
+| **21,552 PFA gamelog pages** and **12,195 playoff-log pages** | Only the 1970s ROWS have been read. A gamelog page is per-player-CAREER, not per-season, so **no page is finished** — the decade was taken out of pages that remain open. |
+| **1,079 Coffin Corner articles** | PFRA's journal. 1,081 files on disk. |
+| **226 Ghosts game pages** | See above — read for facts, never read for line-ups. |
+| **69 programmes** | 1920s–1946, 162 files. The only per-game document class before 1940, and it carries BOTH clubs' lineups. |
+| **151 college documents** | Pre-1950. |
+| **1,517 media guides** | Of 2,824 on disk. |
+| **3 reference books** | Crippen's AAFC, *Old Leather*, *The League That Didn't Exist*. |
+
+**None of this is a hunt.** It is an ingest queue: the material is already on Ryan's
+own disk and needs reading, not finding. The hunting documents mark such rows "Not a
+hunt" for exactly this reason.
+
 ### Closed — do not re-tread
 
 | | why |
@@ -419,6 +482,20 @@ Also open:
   minor-league exclusion and not a table defect. 478 more sit in leagues it *does*
   hold, in years it does not; **but AFL, UFL and WLAF each name several unrelated
   competitions, and only WLAF 1995 turned out to be the same league.**
+
+### Added 9 September
+
+- **Is an adjacent season of the same club enough to match a surname?** The ruled
+  join has tier 3 as a surname on THE club-season. A surname on the club-season
+  either side is not that, and it is not nothing either — clubs of this era carried
+  the same men year to year, and a roster missing one season is the normal case, not
+  the odd one. Loosening it would resolve a large part of the 745 ambiguous leads.
+  **THE CAVEAT THAT MAKES IT A RULING AND NOT A TWEAK: brothers.** Early professional
+  rosters are full of them, they share a surname, they play for the same club, and
+  they frequently play in ADJACENT seasons rather than the same one — which is
+  precisely the pattern the loosened rule would read as one man. The archive has
+  already been bitten by a name-only lookup merging a father and a son. Not decided,
+  and not to be decided by whoever next finds it convenient.
 
 ---
 
