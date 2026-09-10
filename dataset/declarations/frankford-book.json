@@ -1,0 +1,31 @@
+{
+ "source_id": "frankford-yellow-jackets-book",
+ "name": "frankfordyellowjacketsbook.com — the companion site to the Frankford Yellow Jackets photo history",
+ "stated_by": "Brian Michael and Andrew Weicker",
+ "attribution": ["Brian Michael and Andrew Weicker, frankfordyellowjacketsbook.com, 2026"],
+ "acquisition": "39 pages fetched 2026-09-09 at one request per second with no concurrency, enumerated from the site's own wp-sitemap before any page was requested. robots.txt disallows only /wp-admin/. Held at ~/Documents/pgm3-sources/frankford-book with a sha256 per page.",
+ "derived_from": null,
+ "rights": "A published book's companion site, copyright the authors, who are named and reachable through a contact page. The site's own Terms and Conditions page is an UNFILLED WordPress placeholder -- its entire body reads 'This is a terms and conditions page' -- so the site states no terms beyond default copyright. FACTS ARE USED AND CITED TO THE PAGE THEY CAME FROM; nothing is reproduced. The same position the archive takes on Fenton's Ghosts of the Gridiron and the PFRA Annual.",
+
+ "_provenance": "Ryan's ruling, 2026-09-09: a contemporary club collection, NOT the Neft lineage. The authors researched at the Historical Society of Frankford, working from Howard Barnes's 1985 scrapbook of newspaper articles and game results and from Frankford Athletic Association documents and photographs in the HSF archive. The Society's own page names the people involved and its president describes the authors finding enough in the archives to warrant a separate book.",
+ "_but_it_is_a_reconstruction_and_the_authors_say_so": "The site's rosters index opens: 'This is our attempt to piece together the players who appeared in at least one game for each of the Frankford Yellow Jackets seasons 1899-1931.' So a roster page is the AUTHORS' COMPILATION from that collection, not a transcription of one club document, and the membership test is `appeared in at least one game` -- the same construction as a box-score-derived roster. No roster page names a source of its own. Claims are therefore filed as the authors' compilation, citing them, with HSF named as the collection worked from.",
+ "_it_behaves_like_an_independent_source": "Measured before the ruling: across the eight NFL seasons 1924-31 it names 178 men and only TWO the archive does not hold (Emil Dobrey 1928, Clyde Van Sickel 1930), with per-season counts tracking the archive's within a man or two. For 1922-23 it names TWELVE men Fenton never gave, four of which corroborate leads Fenton raised and could not place.",
+
+ "_what_is_read": {
+  "roster pages 1922-1931": "full name including the nickname, jersey number (1924 on), position and college, exactly as printed.",
+  "roster pages 1899, 1900, 1903, 1906": "name and position only; no college and no jersey number. 1899 prints two Managers among its entries and they are filed as staff, not players.",
+  "roster pages 1912-1921": "one to three names each. Read and recorded; they place almost nobody.",
+  "schedule pages": "date, opponent as printed, and result. An ASTERISK on the opponent marks a league game; its absence marks a non-league one, and that is the site's own convention, not a reading of ours."
+ },
+ "_what_is_NOT_read": {
+  "the photographs": "Ryan's ruling, 2026-09-09: they stay out. The 46 images are self-hosted and 10 carry an explicit Historical Society of Frankford credit, but the filenames give them away -- `Screenshot-2025-05-23-7.22.14-PM-1024x756.png` and the like are SCREEN CAPTURES resized to 1024 pixels for the web, not the HSF originals. HSF holds negatives labelled by game date; what is online is a screenshot of a view of them. The 1919 roster page does carry a '1919 Frankford Yellow Jackets team photo' and it has NO CAPTION NAMING ANYONE, so it cannot place a single man -- unlike the 1926 programme's team photograph, which is the only corroboration Wilson's Wildcats has. RECORDED HERE SO NOBODY REVISITS THIS EXPECTING THE DIGITISED COLLECTION: the site is evidence that one exists and who holds it. It is not the collection.",
+  "the season narrative pages": "prose. Not read in this pass.",
+  "the player biography pages": "29 of them. Not read in this pass."
+ },
+
+ "_the_join_is_exact_name_only": "Ryan's ruling, 2026-09-09. A club-season placement is made on an EXACT name on that club-season and on nothing looser. Surname matching is inadmissible for a club-season placement -- the Andy King, Jim Talbot and 1934 Cincinnati Reds error, three times now. The measurement found 65 rows matching exactly and 179 matching on surname alone; the 179 are recorded as CANDIDATES and place nobody. Filling a fact through a surname match would have reported 27 positions filled where the defensible figure is 7.",
+ "_names_are_added_beside_what_is_held": "The site prints the full formal name with the nickname inside where the archive holds the short form -- `Doc Elliott` against `Wallace \"Doc\" Elliott`, `Bull Lowe` against `George \"Bull\" Lowe`. These become `fyjbook.name_as_printed` claims BESIDE what is held, never replacements. The archive does not choose between two things a source printed and both stay searchable, which is why the predicate is declared a name predicate in service/declarations/classification.json.",
+ "_a_typo_the_site_carries": "`George“Bull” Lowe` is printed with no space before the opening quote, the same class of defect as `BillColeman` on Fenton's 1926 Quakers page. It is held as printed and not repaired.",
+ "_opponent_strings_are_not_consistent": "`Holmesburg A.C.` and `Holmesburg`, `Conshohocken A.C.` and `Conshohocken`, `Thomas A.C. (Bethlehem)` and `Thomas A.C. of Bethlehem`, and several cells carry a venue inside the opponent -- `Union Club of Phoenixville (at Philadelphia Ball Park)`. They are held AS PRINTED. NO CLUB IS CREATED from any of them in this pass and every one is listed as a candidate for CLUBS_NAMED_BY_A_DOCUMENT.",
+ "_nobody_is_promoted": "A man the archive does not hold is written as a LEAD with its evidence. Admitting a person is its own act with its own route, and it is Ryan's."
+}
