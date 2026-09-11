@@ -27,6 +27,18 @@
       at rank 2 of the hunting list marked EMPTY after being filled.
 
       A GATE THAT CHECKS A KEY IS WELL-FORMED IS NOT A GATE THAT CHECKS THE MAN ARRIVED.
+  G6  THE READER FIX MOVED NOTHING THAT WAS ALREADY CORRECT. Every page declared before
+      2026-09-11 (`pages_declared_before_the_reader_fix`) reads today exactly as it read
+      in the baseline -- positions, both elevens, substitutions, officials. Refuses an
+      empty list and a page missing from either side, so it cannot pass on nothing.
+  G7  NO PAGE SIDE IS COUNTED BY FILENAME. `clubs_not_in_the_table` is keyed by the club
+      a refused side printed; a key that is a PAGE means a side nobody mapped, whose men
+      were set aside without anyone saying which club they played for. That is how
+      Frankford and Dayton, both held, sat for a day in a list headed "clubs the table
+      does not hold", and how the report beside it came to say ten when it was seventeen.
+      G2 could not see it: an unmapped page writes no claim for G2 to check. A page
+      nobody mapped passed by not being looked at. The key must also be PRESENT -- an
+      absent key would pass this the same way.
 
     python3 src/gate_ghosts_lineups.py [--selftest]
 """
@@ -35,7 +47,40 @@ import os, re, sys, json
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 STORE = os.path.join(BASE, "build", "ghosts-lineups.json")
+MEASURE = os.path.join(BASE, "build-reports", "ghosts-lineups.json")
+BASELINE = os.path.join(BASE, "build-reports", "ghosts-lineups.before-reader-fix-2026-09-11.json")
+DECL = os.path.join(BASE, "declarations", "ghosts-lineups.json")
+G6_FIELDS = ("positions", "away_men", "home_men", "substitutions", "officials")
 FAILS = []
+
+
+def g6(baseline, current, pages):
+    if not pages:
+        check(False, "G6 the reader fix moved nothing already declared -- the list of pages "
+                     "to hold still is EMPTY, so there is nothing to check")
+        return
+    b = {x["page"]: x for x in baseline["games"] + baseline["honours"]}
+    c = {x["page"]: x for x in current["games"] + current["honours"]}
+    bad = {}
+    for p in pages:
+        if p not in b or p not in c:
+            bad[p] = "missing from " + ("the baseline" if p not in b else "today's read"); continue
+        moved = [f for f in G6_FIELDS if b[p].get(f) != c[p].get(f)]
+        if moved: bad[p] = moved
+    check(not bad, f"G6 the {len(pages)} pages declared before the reader fix read exactly as "
+                   f"they did" + ("" if not bad else f" -- {bad}"))
+
+
+def g7(d):
+    if "clubs_not_in_the_table" not in d:
+        check(False, "G7 no side counted by filename -- `clubs_not_in_the_table` is ABSENT, "
+                     "and an absent count cannot be told from a clean one")
+        return
+    by_page = {k: v for k, v in d["clubs_not_in_the_table"].items()
+               if re.search(r"\.html?$", k, re.I)}
+    check(not by_page, f"G7 no page side is counted by filename rather than by a named club"
+          + ("" if not by_page else f" -- {len(by_page)} pages, {sum(by_page.values())} men: "
+                                   f"{sorted(by_page)}"))
 
 
 def check(ok, msg):
@@ -130,13 +175,41 @@ def selftest():
     ok5 = any("G5" in f for f in FAILS)
     print(f"  {'ok  ' if ok5 else 'FAIL'} G5 catches a starter placed by no stint subject: "
           f"expected a failure, got {'one' if ok5 else 'none'}")
-    print("SELFTEST OK" if (ok1 and ok5) else "SELFTEST FAILED")
-    return 0 if (ok1 and ok5) else 1
+
+    # G7: THE STORE OF 10 SEPTEMBER, IN SMALL -- a side counted under its page.
+    FAILS = []
+    g7({"clubs_not_in_the_table": {"Shenandoah": 11, "Yellowjackets_Thanksgiving_1924.htm": 16}})
+    ok7 = any("G7" in f and "Yellowjackets_Thanksgiving_1924.htm" in f for f in FAILS)
+    FAILS = []
+    g7({})
+    ok7b = any("G7" in f and "ABSENT" in f for f in FAILS)
+    print(f"  {'ok  ' if ok7 and ok7b else 'FAIL'} G7 catches a side counted by filename, "
+          f"and an absent count: got {ok7}, {ok7b}")
+
+    # G6: a fix that moves one man on a page that was already right -- and an empty list.
+    FAILS = []
+    page = {"page": "P.htm", "positions": ["LE"], "away_men": ["Beck"], "home_men": ["Z"],
+            "substitutions": [], "officials": []}
+    g6({"games": [page], "honours": []},
+       {"games": [{**page, "away_men": ["Hogan"]}], "honours": []}, ["P.htm"])
+    ok6 = any("G6" in f and "away_men" in f for f in FAILS)
+    FAILS = []
+    g6({"games": [page], "honours": []}, {"games": [page], "honours": []}, [])
+    ok6b = any("G6" in f and "EMPTY" in f for f in FAILS)
+    print(f"  {'ok  ' if ok6 and ok6b else 'FAIL'} G6 catches a moved man, and an empty "
+          f"list: got {ok6}, {ok6b}")
+    good = ok1 and ok5 and ok7 and ok7b and ok6 and ok6b
+    print("SELFTEST OK" if good else "SELFTEST FAILED")
+    return 0 if good else 1
 
 
 def main(argv):
     if "--selftest" in argv: return selftest()
-    run(json.load(open(STORE)))
+    d = json.load(open(STORE))
+    run(d)
+    g6(json.load(open(BASELINE)), json.load(open(MEASURE)),
+       json.load(open(DECL)).get("pages_declared_before_the_reader_fix") or [])
+    g7(d)
     if FAILS:
         print(f"\nGHOSTS LINE-UP GATE: {len(FAILS)} FAILURE(S)"); return 1
     print("\nGHOSTS LINE-UP GATE: pass"); return 0

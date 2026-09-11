@@ -109,10 +109,6 @@
  },
  {
   "file": "clubs.json",
-  "key": "A_NAME_WRONG_FOR_ITS_SEASON_IS_RECORDED_AS_WRONG.corroboration"
- },
- {
-  "file": "clubs.json",
   "key": "A_NAME_WRONG_FOR_ITS_SEASON_IS_RECORDED_AS_WRONG.city_only"
  },
  {
@@ -198,6 +194,18 @@
  {
   "file": "college-guides.json",
   "key": "EXCLUDED.unidentified_institution"
+ },
+ {
+  "file": "ghosts-lineups.json",
+  "key": "side_to_club.Bethlehem_Gilberton_1926.htm"
+ },
+ {
+  "file": "ghosts-lineups.json",
+  "key": "side_to_club.Bethlehem_Lancaster_1926_2.htm"
+ },
+ {
+  "file": "ghosts-lineups.json",
+  "key": "side_to_club.Yellowjackets_Holmesburg_1922.htm"
  },
  {
   "file": "hearing-1957.json",
@@ -333,11 +341,151 @@
  },
  {
   "file": "person-index-rebuild.json",
+  "key": "store_league_tokens"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.ghostsofthegridiron-afl"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.ghostsofthegridiron-ind"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-wlaf-1995"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-drafts"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.nickname-register"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.crippen-book"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-coaches"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.coach-seasons-promoted"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.troan-experience"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.wikipedia-plunkett"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-postseason-1970s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-gamelogs-1970s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-postseason-1980s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-gamelogs-1980s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-postseason-1990s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-gamelogs-1990s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-postseason-1920s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-gamelogs-1920s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-postseason-1930s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-gamelogs-1930s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-postseason-1940s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-gamelogs-1940s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-postseason-1950s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-gamelogs-1950s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-postseason-1960s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-gamelogs-1960s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-postseason-2000s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-gamelogs-2000s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-postseason-2010s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-gamelogs-2010s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-postseason-2020s"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "store_league_tokens.pfa-gamelogs-2020s"
+ },
+ {
+  "file": "person-index-rebuild.json",
   "key": "identity_is_edited_in_place"
  },
  {
   "file": "person-index-rebuild.json",
   "key": "p3_transitions_completed"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "p3_transitions_completed.2026-09-09-ghosts-rejoin"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "pseudo_league_tokens"
  },
  {
   "file": "person-merges.json",
@@ -440,8 +588,16 @@
   "key": "DISAGREEMENTS_WITH_THE_COACHING_STORES.role_string_differs_is_not_a_conflict_about_a_fact"
  },
  {
-  "file": "pfa-coaches.json",
-  "key": "DISAGREEMENTS_WITH_THE_COACHING_STORES.kinds"
+  "file": "pfa-stats-join.json",
+  "key": "ruled_discipline"
+ },
+ {
+  "file": "pfa-stats-join.json",
+  "key": "tier_2_refusals_are_leads_not_claims"
+ },
+ {
+  "file": "pfa-stats-join.json",
+  "key": "self_read"
  },
  {
   "file": "pfa.json",

@@ -42,32 +42,6 @@
     "Gooch",
     "Beck"
    ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
    "substitutions": [
     "Levitz for Gaffney"
    ],
@@ -85,7 +59,9 @@
      "Newell, Penn"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Bethlehem",
+   "home_club": "Franks"
   },
   {
    "page": "Bethlehem_Lancaster_1926_2.htm",
@@ -129,32 +105,6 @@
     "Dekas",
     "McGraw"
    ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
    "substitutions": [
     "Lewin for Beck",
     "Levitz foe Eastman",
@@ -178,7 +128,9 @@
      "Keady"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "All-Lancaster",
+   "home_club": "Gaffney"
   },
   {
    "page": "Bethlehem_Shenandoah_1926.htm",
@@ -222,32 +174,6 @@
     "Levitz",
     "Beck"
    ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
    "substitutions": [
     "Heath for Goldman. Touchdowns -- Starr 2"
    ],
@@ -265,11 +191,13 @@
      "Ambrose"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Bethlehem",
+   "home_club": "Breslin"
   },
   {
    "page": "Conshohocken_Bethlehem_1920.htm",
-   "positions_found": 11,
+   "positions_found": 9,
    "positions": [
     "LE",
     "LT",
@@ -278,10 +206,8 @@
     "RG",
     "RT",
     "RE",
-    "QB",
     "LHB",
-    "RHB",
-    "FB"
+    "RHB"
    ],
    "away_men": [
     "Riggs",
@@ -291,10 +217,8 @@
     "Fisher",
     "Bergey",
     "Barry",
-    "Pownall",
     "Yebsley",
-    "McGuckin",
-    "Eble"
+    "McGuckin"
    ],
    "home_men": [
     "Hollets",
@@ -304,34 +228,6 @@
     "Mitman",
     "Gaffney",
     "Howard",
-    "Finn",
-    "Smith",
-    "Williams",
-    "Downey"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null,
     null
    ],
@@ -358,11 +254,13 @@
      "Krieble"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Blue Stars",
+   "home_club": "Riggs"
   },
   {
    "page": "Conshohocken_Kaywood_1919.htm",
-   "positions_found": 11,
+   "positions_found": 9,
    "positions": [
     "LE",
     "LT",
@@ -371,23 +269,19 @@
     "RG",
     "RT",
     "RE",
-    "QB",
     "LHB",
-    "RHB",
-    "FB"
+    "RHB"
    ],
    "away_men": [
     "Riggs",
     "Bechtel",
-    "Fisher",
-    "Mitchell",
+    "Lynch",
+    "Walcoyle",
     "Kearns",
     "Bergey",
-    "Thomas",
-    "Cable",
-    "Jones",
-    "McGuckin",
-    "Ebie"
+    "Hartig",
+    "Williams",
+    "Weber"
    ],
    "home_men": [
     "Jamison",
@@ -397,34 +291,6 @@
     "Butts",
     "Lukens",
     "Tompkins",
-    "Leuts",
-    "J. Downey",
-    "Johnson",
-    "Schlader"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    "Lynch",
-    "Walcoyle",
-    null,
-    null,
-    "Hartig",
-    null,
-    "Williams",
-    "Weber",
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null,
     null
    ],
@@ -435,7 +301,9 @@
      "Hopkins"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Kaywood C. C",
+   "home_club": "Riggs"
   },
   {
    "page": "Corley_Reliance_1910.htm",
@@ -479,32 +347,6 @@
     "Alexander",
     "Connell"
    ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
    "substitutions": [],
    "officials": [
     [
@@ -520,11 +362,13 @@
      "Murphy"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Reliance",
+   "home_club": "Thomas"
   },
   {
    "page": "Frankford_Mutes_1902.htm",
-   "positions_found": 11,
+   "positions_found": 8,
    "positions": [
     "LE",
     "LT",
@@ -533,23 +377,17 @@
     "RG",
     "RT",
     "RE",
-    "QB",
-    "RHB",
-    "LHB",
-    "FB"
+    "LHB"
    ],
    "away_men": [
     "Elliss",
     "Mason",
     "Laycon",
     "Carson",
-    "Anderson",
+    "Hogan",
     "Whitaker",
-    "Hornberger",
-    "Purnell",
-    "Wolf",
-    "Aspen",
-    "Baetzel"
+    "Shock",
+    "Aspen"
    ],
    "home_men": [
     "Lewis",
@@ -559,35 +397,6 @@
     "Goss",
     "Cosmistke",
     "Kurath",
-    "Bush",
-    "Ladd",
-    "Coffield",
-    "McDonald"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    "Hogan",
-    null,
-    "Shock",
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    "Keresky",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null
    ],
    "substitutions": [],
@@ -601,11 +410,13 @@
      "Davies"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Mutes",
+   "home_club": "Elliss"
   },
   {
    "page": "Holmesburg_Bridesburg_1920.htm",
-   "positions_found": 11,
+   "positions_found": 9,
    "positions": [
     "LE",
     "LT",
@@ -614,10 +425,8 @@
     "RG",
     "RT",
     "RE",
-    "QB",
     "LHB",
-    "RHB",
-    "FB"
+    "RHB"
    ],
    "away_men": [
     "Hayes",
@@ -627,10 +436,8 @@
     "Gaffney",
     "Newcomb",
     "Curan",
-    "Seigel",
     "Caskey",
-    "W. Downey",
-    "Wolfe"
+    "W. Downey"
    ],
    "home_men": [
     "Jamison",
@@ -640,34 +447,6 @@
     "Butts",
     "Lukens",
     "Tompkins",
-    "Leuts",
-    "J. Downey",
-    "Johnson",
-    "Schlader"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null,
     null
    ],
@@ -682,11 +461,13 @@
      "Lewis, Harvard"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Bridesburg",
+   "home_club": "Hayes"
   },
   {
    "page": "Holmesburg_Chesbrook_1920.htm",
-   "positions_found": 11,
+   "positions_found": 9,
    "positions": [
     "LE",
     "LT",
@@ -695,10 +476,8 @@
     "RG",
     "RT",
     "RE",
-    "QB",
     "LHB",
-    "RHB",
-    "FB"
+    "RHB"
    ],
    "away_men": [
     "Squires",
@@ -708,10 +487,8 @@
     "Murtz",
     "Bourne",
     "Gaston",
-    "Seigel",
     "Morrison",
-    "Walsh",
-    "Caskey"
+    "Walsh"
    ],
    "home_men": [
     "Kidd",
@@ -721,34 +498,6 @@
     "Elliot",
     "Moore",
     "F. Kerrigan",
-    "Gabriel",
-    "Kemske",
-    "Numbers",
-    "Ferguson"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null,
     null
    ],
@@ -763,11 +512,13 @@
      "Abrams, Delaware College"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Chesbrook",
+   "home_club": "Squires"
   },
   {
    "page": "Holmesburg_Conshohocken_1920.htm",
-   "positions_found": 11,
+   "positions_found": 9,
    "positions": [
     "LE",
     "LT",
@@ -776,10 +527,8 @@
     "RG",
     "RT",
     "RE",
-    "QB",
     "LHB",
-    "RHB",
-    "FB"
+    "RHB"
    ],
    "away_men": [
     "Gaston",
@@ -789,10 +538,8 @@
     "Kurtz",
     "Newcomb",
     "Hayes",
-    "Whoeler",
     "Wolfe",
-    "Caskey",
-    "Downey"
+    "Caskey"
    ],
    "home_men": [
     "Garrett",
@@ -802,34 +549,6 @@
     "Fisher",
     "Day",
     "Eble",
-    "Pownall",
-    "Jones",
-    "Yeabsley",
-    "Ryerley"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null,
     null
    ],
@@ -844,11 +563,13 @@
      "Lewis, Harvard"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Conshohocken",
+   "home_club": "Gaston"
   },
   {
    "page": "Holmesburg_Parkside_1919.htm",
-   "positions_found": 11,
+   "positions_found": 9,
    "positions": [
     "LE",
     "LT",
@@ -857,10 +578,8 @@
     "RG",
     "RT",
     "RE",
-    "QB",
     "LHB",
-    "RHB",
-    "FB"
+    "RHB"
    ],
    "away_men": [
     "Kelly",
@@ -870,47 +589,17 @@
     "McVeigh",
     "Donthart",
     "Diamond",
-    "Knauer",
     "Yeadsley",
-    "Caskey",
-    "Scott"
+    "Caskey"
    ],
    "home_men": [
-    "Steelman",
+    "for Holmesburg",
     "Morrisson",
     "A. Fornick",
     "Moore",
     "J. Fornick",
     "W. Weber",
     "Keenan",
-    "F. Weber",
-    "Bush",
-    "Nicholas",
-    "Leibknecht"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null,
     null
    ],
@@ -929,11 +618,13 @@
      "Lentz"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": null,
+   "home_club": null
   },
   {
    "page": "Holmesburg_USSMichigan_1919.htm",
-   "positions_found": 11,
+   "positions_found": 9,
    "positions": [
     "LE",
     "LT",
@@ -942,10 +633,8 @@
     "RG",
     "RT",
     "RE",
-    "QB",
     "LHB",
-    "RHB",
-    "FB"
+    "RHB"
    ],
    "away_men": [
     "Diamond",
@@ -955,10 +644,8 @@
     "McVeigh",
     "Lally",
     "Kelly",
-    "MacKissick",
     "Caskey",
-    "Lake",
-    "Scott"
+    "Lake"
    ],
    "home_men": [
     "Lukasavage",
@@ -968,34 +655,6 @@
     "Barth",
     "Waters",
     "Christie",
-    "Gardner",
-    "Kerrigan",
-    "Gardella",
-    "Pace"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null,
     null
    ],
@@ -1016,11 +675,13 @@
      "Campbell"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Michigan",
+   "home_club": "Diamond"
   },
   {
    "page": "Holmesburg_Washington_1921.htm",
-   "positions_found": 11,
+   "positions_found": 9,
    "positions": [
     "LE",
     "LT",
@@ -1030,8 +691,6 @@
     "RT",
     "RE",
     "QB",
-    "LHB",
-    "RHB",
     "FB"
    ],
    "away_men": [
@@ -1043,8 +702,6 @@
     "Day",
     "Emanuel",
     "Seigle",
-    "McGuckin",
-    "Caskey",
     "Fritz"
    ],
    "home_men": [
@@ -1056,35 +713,7 @@
     "Gormley",
     "Eppley",
     "Walson",
-    "Sullivan",
-    "Lukens",
     "Mackert"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
    ],
    "substitutions": [
     "Holmesburg -- Miller for Hayes",
@@ -1118,11 +747,13 @@
      "Sutton (George Washington university)"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Washington",
+   "home_club": "Hayes"
   },
   {
    "page": "Maritime_Hog-Island_NYS_1919.htm",
-   "positions_found": 11,
+   "positions_found": 9,
    "positions": [
     "LE",
     "LT",
@@ -1131,10 +762,8 @@
     "RG",
     "RT",
     "RE",
-    "QB",
     "LHB",
-    "RHB",
-    "FB"
+    "RHB"
    ],
    "away_men": [
     "Holland",
@@ -1144,10 +773,8 @@
     "Dally",
     "Schwartz",
     "Byers",
-    "Vedder",
     "Keefer",
-    "Beebe",
-    "Lally"
+    "Beebe"
    ],
    "home_men": [
     "McHenry",
@@ -1157,34 +784,6 @@
     "O'Hara",
     "Gardner",
     "Griffith",
-    "Lawes",
-    "Hugo",
-    "Beil",
-    "Martin"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null,
     null
    ],
@@ -1203,11 +802,13 @@
      "Chupein"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "New York Ship",
+   "home_club": "Holland"
   },
   {
    "page": "Maritime_NYS_Merchant_1919.htm",
-   "positions_found": 11,
+   "positions_found": 9,
    "positions": [
     "LE",
     "LT",
@@ -1216,10 +817,8 @@
     "RG",
     "RT",
     "RE",
-    "QB",
     "LHB",
-    "RHB",
-    "FB"
+    "RHB"
    ],
    "away_men": [
     "Higgins",
@@ -1229,10 +828,8 @@
     "O'Hara",
     "Gardner",
     "Griffith",
-    "Bowbly",
     "Russell",
-    "Hugo",
-    "Martin"
+    "Hugo"
    ],
    "home_men": [
     "Davis",
@@ -1242,34 +839,6 @@
     "Wabo",
     "Walker",
     "Logan",
-    "Warwick",
-    "Tosch",
-    "Bodenweiser",
-    "Hart"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null,
     null
    ],
@@ -1287,7 +856,9 @@
      "Petron"
     ]
    ],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Merchants",
+   "home_club": "Higgins"
   },
   {
    "page": "Yellowjackets_Holmesburg_1922.htm",
@@ -1331,32 +902,6 @@
     "Caskey",
     "Berry"
    ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
    "substitutions": [
     "Mellow for Swinton",
     "Seasholz for Elliot. Holmesburg",
@@ -1364,11 +909,13 @@
     "Nemzick for Caskey"
    ],
    "officials": [],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Holmesburg",
+   "home_club": "Thomas"
   },
   {
    "page": "Yellowjackets_Thanksgiving_1924.htm",
-   "positions_found": 11,
+   "positions_found": 9,
    "positions": [
     "LE",
     "LT",
@@ -1377,10 +924,8 @@
     "RG",
     "RT",
     "RE",
-    "QB",
     "LHB",
-    "RHB",
-    "FB"
+    "RHB"
    ],
    "away_men": [
     "Fennel",
@@ -1390,10 +935,8 @@
     "H. Kenderdine",
     "Sauer",
     "Bacon",
-    "Redman",
     "Mahrt",
-    "Huffine",
-    "Partlow"
+    "Huffine"
    ],
    "home_men": [
     "Thomas",
@@ -1403,34 +946,6 @@
     "Welsh",
     "Behman",
     "Doyle",
-    "Haws",
-    "Storer",
-    "Sullivan",
-    "Hamer"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null,
     null
    ],
@@ -1443,7 +958,9 @@
     "Dayhoff for Hamer"
    ],
    "officials": [],
-   "_repeats_in_the_left_column": 0
+   "_repeats_in_the_left_column": 0,
+   "away_club": "Yellowjackets",
+   "home_club": "Fennel"
   }
  ],
  "honours": [
@@ -1488,32 +1005,6 @@
     "Johnny Chapman",
     "Joe Zaleha",
     "Marv Wood"
-   ],
-   "away_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
    ],
    "substitutions": [],
    "officials": [],
@@ -1560,32 +1051,6 @@
     "Driscoll",
     "Kotal",
     "Latone"
-   ],
-   "away_bracketed_as_printed": [
-    "Green Bay",
-    "Detroit",
-    "Yankees",
-    "Providence",
-    "Chicago Bears",
-    "Frankford",
-    null,
-    "Detroit",
-    "Providence",
-    "Green Bay",
-    "Frankford"
-   ],
-   "home_bracketed_as_printed": [
-    null,
-    "Chicago Bears",
-    "Dayton",
-    "Detroit",
-    "Providence",
-    "Providence",
-    "Detroit",
-    "Providence",
-    "Chicago Bears",
-    "Green Bay",
-    "Pottsville"
    ],
    "substitutions": [],
    "officials": [],

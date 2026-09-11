@@ -115,24 +115,31 @@ def season_key(C, club_id, year):
     return None
 
 
-def club_of(page, side, C):
+def club_of(page, side, C, year):
     """-> (club_id, printed) for a club the TABLE holds, else (None, printed).
 
     THE MAP IS DECLARED, NOT DERIVED, and declarations/ghosts-lineups.json says why: a
     reader that took the two capitalised strings before the first position picked up the
     first PLAYER as the second club on sixteen of seventeen pages. The club id is still
     resolved through Clubs() rather than typed, so a club that leaves the table takes
-    this ingest with it."""
+    this ingest with it.
+
+    RESOLVED BY NAME AND YEAR, 2026-09-11. The table holds THREE clubs named `Frankford
+    Yellow Jackets` -- 1899-1906, 1922-23 and the NFL club from 1924 -- and the first
+    version returned whichever came first by name, so every Frankford side would have
+    landed on the 1899 club and then found no season key for 1922 or 1924. A name is
+    one club only once the year is on it; two clubs of one name in one year is refused."""
     spec = (DECL.get("side_to_club") or {}).get(page)
     if not spec: return None, page
     full = spec.get(side)
     if not full:
         return None, spec.get(f"{side}_as_printed") or page
-    for c in C.T["clubs"]:
-        for nm in c.get("names", []):
-            if (nm.get("name") or "").lower() == full.lower():
-                return c["id"], full
-    raise SystemExit(f"{full}: declared for {page} but the club table does not hold it")
+    hits = [c["id"] for c in C.T["clubs"]
+            if any((nm.get("name") or "").lower() == full.lower() for nm in c.get("names", []))
+            and season_key(C, c["id"], year)]
+    if len(hits) == 1: return hits[0], full
+    raise SystemExit(f"{full}: declared for {page} but the club table holds "
+                     f"{len(hits)} clubs of that name in {year}: {hits}")
 
 
 def main(write=True):
@@ -167,7 +174,7 @@ def main(write=True):
         base = dict(printed_in=paper, _the_account_is_after_the_game=True)
 
         for side, men in (("away", g["away_men"]), ("home", g["home_men"])):
-            cid, printed = club_of(page, side, C)
+            cid, printed = club_of(page, side, C, year)
             for pos, man in zip(g["positions"], men):
                 if not man: continue
                 if cid is None:
