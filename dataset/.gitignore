@@ -5,6 +5,13 @@ __pycache__/
 build-reports/.person-index.json.tmp
 build-reports/person-index.json.prev
 
+# STORE BACKUPS -- a copy of a build/ file taken before a run overwrites it. Ryan, 2026-09-11:
+# not committed. They are session-scoped rollback aids, not backups: see docs/DATASET_PRECEDENTS.md,
+# "A store backup is a rollback aid, not a backup". Name every one `<store>-store.before-<date>.json`.
+# NOT this pattern: a file a gate or the service READS (a baseline, a reversal record) is a record,
+# and a record is tracked -- src/gate_store_backups.py B3 refuses a backup anything reads.
+build-reports/*-store.before-*.json
+
 # a derived working database, rebuilt by src/census_table.py from the document corpus.
 # The repo tracks no sqlite: the census REPORTS beside it are the record.
 build-reports/corpus-census.sqlite

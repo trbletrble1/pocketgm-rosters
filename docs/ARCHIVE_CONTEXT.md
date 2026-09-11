@@ -76,6 +76,13 @@ These are not preferences. They are what makes the archive worth more than a scr
 
 **`dataset/build/` is gitignored and has no version history.** It is the only copy of five million claims. That fact drives most of the caution in this project.
 
+**Measured 11 September: `build/` is 8.6 GB, and the mini has NO machine-level backup** —
+`tmutil destinationinfo`: *"No destinations configured."* The laptop copy is from 7 September
+and the external drive is not mounted here. **Store backups** (`build-reports/*-store.before-*.json`,
+taken before a run overwrites a store) are **not committed and are not backups** — they are a
+rollback aid that matters until that run's rebuild is verified and published, then may go.
+Ryan's ruling; both halves in `DATASET_PRECEDENTS.md`, *A store backup is a rollback aid*.
+
 **`/tmp` does not survive a restart.** Four working files were lost that way during the machine move, and two sessions put things back in `/tmp` the same day after writing themselves notes not to. Anything that matters goes in `build-reports/`.
 
 ---

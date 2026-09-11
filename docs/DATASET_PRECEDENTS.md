@@ -2064,3 +2064,54 @@ would have made 36 men twice.
 *Related: `uniqueness satisfied by absence`, `a join must use every field on the row` —
 and the measurement of this very queue, which on 9 September joined on the name instead
 of the lead's id and reported 362/225/158 for what is 395/116/236.*
+
+---
+
+## A store backup is a rollback aid, not a backup
+
+**Ryan, 2026-09-11.** Store backups are not committed. A 56.5 MB copy of the PFA club-roster
+store was pushed that day and GitHub warned; **it stays in history**, because rewriting a
+published branch is worse than a large blob — the roster project's own precedent.
+
+### What a store backup is
+
+A copy of a `build/` file taken immediately before a run overwrites it:
+`build-reports/<store>-store.before-<date>.json`. It exists for **one** thing: undoing or
+diffing that run, within the session that made it.
+
+### How long it matters
+
+**From the overwrite until the rebuild that consumes it is verified** — its gates pass, P3
+holds, the model is published, the code is committed. Hours, not days. After that, the
+previous state is reproducible from the committed code and declarations at the prior commit
+plus the sources on disk, and its claims sit in the two previous models the service keeps.
+**A store backup may be deleted after that; nothing deletes it automatically.**
+
+### Where it is safe — the other half, and the reason for writing this down
+
+**Nowhere durable.** `build-reports/` is on this one machine and outside git. A backup kept
+only there protects against a bad run, not against losing the machine. That is fine for what
+a store backup is for, and it would be a mistake to let anyone read it as more.
+
+**None of the three taken on 2026-09-11 is the only copy of anything**: all three were committed
+before this ruling and are in git history. A backup taken under the rule will not be.
+
+### What this does NOT cover, and is Ryan's
+
+**The only copy is `build/` itself** — 8.6 GB on 2026-09-11 (ARCHIVE_CONTEXT still says 3.2),
+gitignored, no history — **and the mini has no machine-level backup at all**: `tmutil
+destinationinfo` answers *"No destinations configured."* The sources, the served model and the
+two kept models are on the same disk. The laptop's copy is from 7 September and is due to go
+after 21 September; the external drive is not mounted here. A store backup cannot fix that and
+must not be mistaken for something that does.
+
+### A record is not a backup
+
+A file a gate or the service **reads** — the Ghosts reader's G6 baseline, the index-orphans
+reversal lists — outlives the session by design and **is tracked**. `src/gate_store_backups.py`
+holds the line: B1 no store backup tracked, B2 every one on disk ignored, B3 **nothing in code
+reads a store backup**, because the moment something depends on one it has become a record.
+
+*Alternative rejected:* **keep committing them**, as the session did that morning. It makes the
+repository a slow, public, size-limited backup for 8.6 GB it was never meant to hold, and it
+gives the feeling of a backup without the fact of one.
