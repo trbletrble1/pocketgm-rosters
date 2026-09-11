@@ -1,0 +1,58 @@
+  population: 207,110 keys in seasons and the coaching_seasons below are what the regenerated decisions were derived from
+D1  the decisions reproduce
+  ok    rewrites: 677 declared; the decider still makes 677 of them; proposes WITHDRAWING 0; proposes ADDING 849 e.g. [('P_000919', 'WIFU|1958|BC', 'WIFU|1958|CFLBC', 'mapping_gap'), ('P_001004', 'WIFU|1954|BC', 'WIFU|1954|CFLBC', 'mapping_gap')]
+  ok    rewrites: every source defect carries the same corroboration count
+  ok    applied_when_merging: 1,929 declared; the decider still makes 1,929 of them; proposes WITHDRAWING 0; proposes ADDING 0
+  ok    applied_when_merging: every source defect carries the same corroboration count
+D2  the refused set, against the old decider computed here
+  D2 walked 242,953 keys (207,110 seasons, 35,843 coaching_seasons)
+  FAIL  undeclared divergence(s): [('H-S', '1974'), ('NY-C', '1974'), ('New York Stars/Charlotte Hornets', '1974'), ('NEW', '1939'), ('NEW', '1940'), ('NEW', '1941')] -- name each in declarations/club-key-normalisation.json WHERE_THE_TABLE_AND_THE_OLD_DECIDER_DIVERGE with its reason
+D3  the table stands on its own
+  ok    build_clubs.py does not read the decisions file
+  ok    Buffalo Bisons 1986 -> BUF as wrong_for_season, corroborated by 21 person-seasons
+  ok    Cleveland Bulldogs 1990 -> CLE as wrong_for_season, corroborated by 20 person-seasons
+  ok    Montreal Alouettes 1982 -> CFLMTL as wrong_for_season, corroborated by 9 person-seasons
+  ok    Oakland Hornets 1965 -> OAK as wrong_for_season, corroborated by 1 person-seasons
+  ok    no string is sourced from the decisions file
+D4  the regenerated decisions reproduce the index on a copy
+  D4 regenerated rewrites applied to the copy: 677 of 677 (19 in seasons, 658 in coaching_seasons)
+  ok    undo + apply(regenerated) + merges reproduces the index exactly, in memory
+  ok    the index file was not written
+D5  the other gates
+  FAIL  IL G1 absorbed record P_014161 lost its printed key COACHES|y1974|Washington Redskins
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1975|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1976|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1977|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1978|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1979|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1981|Chicago Bears
+
+  FAIL  nd the Green Bay Packers in 1947. In all he caught 18 passes over two seasons. He was a United States Marine Corps veteran.
+        + 15. John Ohanis played for the San Diego Bombers in 1941 and did not play again until 1944, when he joined the San Francisco Clippers. His four seasons were with the San Diego Bombers in 1941 and the San Francisco Clippers in 1944 and 1947–48.
+  FAIL  print_bios.py: DIFFERS from baseline
+
+COACH RUNS GATE: 3 FAILURE(S)
+   - print_coach_bios.py: DIFFERS from baseline
+   - print_coaching_only_bios.py: DIFFERS from baseline
+   - print_bios.py: DIFFERS from baseline
+
+
+CLUB KEY DECISIONS GATE: 3 FAILURE(S)
+   - undeclared divergence(s): [('H-S', '1974'), ('NY-C', '1974'), ('New York Stars/Charlotte Hornets', '1974'), ('NEW', '1939'), ('NEW', '1940'), ('NEW', '1941')] -- name each in declarations/club-key-normalisation.json WHERE_THE_TABLE_AND_THE_OLD_DECIDER_DIVERGE with its reason
+   - IL G1 absorbed record P_014161 lost its printed key COACHES|y1974|Washington Redskins
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1975|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1976|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1977|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1978|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1979|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1981|Chicago Bears
+
+   - nd the Green Bay Packers in 1947. In all he caught 18 passes over two seasons. He was a United States Marine Corps veteran.
+        + 15. John Ohanis played for the San Diego Bombers in 1941 and did not play again until 1944, when he joined the San Francisco Clippers. His four seasons were with the San Diego Bombers in 1941 and the San Francisco Clippers in 1944 and 1947–48.
+  FAIL  print_bios.py: DIFFERS from baseline
+
+COACH RUNS GATE: 3 FAILURE(S)
+   - print_coach_bios.py: DIFFERS from baseline
+   - print_coaching_only_bios.py: DIFFERS from baseline
+   - print_bios.py: DIFFERS from baseline
+

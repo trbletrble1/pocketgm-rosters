@@ -51,10 +51,17 @@ def collect(prom):
     return per
 
 
-def apply(idx, per):
+def apply(idx, per, account=None):
+    """`account`, if a list, receives one outcome per promotion (index_io.write_account)."""
     n = collections.Counter()
     for pid, e in per.items():
         rec = idx.get(pid)
+        if account is not None:
+            account.append(
+                {"decision": pid, "outcome": "applied", "expected": 1, "moved": 1, "reason": None, "legitimate": True}
+                if rec is not None else
+                {"decision": pid, "outcome": "partly_applied", "expected": 1, "moved": 0, "legitimate": False,
+                 "reason": "the promoted player's claims did not land: an empty record was created in their place"})
         if rec is None:
             # He should already exist, built from the ingest's claims. If he does not,
             # the claims did not land -- say so rather than papering over it with an
@@ -92,7 +99,9 @@ def main(write=True, idx=None):
     per = collect(prom)
     if idx is None:
         idx = IO.load_index()
-    delta = apply(idx, per)
+    acct = []
+    delta = apply(idx, per, account=acct)
+    IO.write_account("apply_player_promotions", acct, run="write" if write else "dry")
     holds = sum(1 for pid in per if (idx.get(pid) or {}).get("seasons"))
     out = {"source": {"source_id": "player-promotions", "acquisition": "derived",
                       "stated_by": "this project, from document rosters"},

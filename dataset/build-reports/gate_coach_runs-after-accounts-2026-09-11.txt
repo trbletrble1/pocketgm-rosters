@@ -1,0 +1,54 @@
+R1  every coaching year is in exactly one run
+  ok    3,597 coached men; every (year, standing, club) is in exactly one run
+R2  runs are maximal
+  ok    no two runs of one club and standing touch
+R3  unplaced tokens are loud
+  CLUB TABLE, unmappable strings: 308 lookup(s) across 29 string(s)
+         54  ?|2025|HOU   [ambiguous: that string names 2 clubs that year [season_key]]
+         32  ?|1984|HOU   [ambiguous: that string names 2 clubs that year [season_key]]
+         28  ?|2009|CAL   [ambiguous: that string names 2 clubs that year [season_key]]
+         28  ?|1985|HOU   [ambiguous: that string names 2 clubs that year [season_key]]
+         26  ?|2006|HAM   [ambiguous: that string names 2 clubs that year [season_key]]
+         24  ?|2005|HAM   [ambiguous: that string names 2 clubs that year [season_key]]
+         20  ?|2007|HAM   [ambiguous: that string names 2 clubs that year [season_key]]
+         12  ?|1966|MTL   [ambiguous: that string names 2 clubs that year [season_key]]
+         12  ?|1967|MTL   [ambiguous: that string names 2 clubs that year [season_key]]
+         12  ?|1967|TOR   [ambiguous: that string names 2 clubs that year [season_key]]
+          8  ?|1965|TOR   [ambiguous: that string names 2 clubs that year [season_key]]
+          8  ?|1966|TOR   [ambiguous: that string names 2 clubs that year [season_key]]
+          6  ?|1936|BOS   [ambiguous: that string names 2 clubs that year [season_key]]
+          4  ?|1936|BKN   [ambiguous: that string names 2 clubs that year [season_key]]
+          4  ?|1926|BKN   [ambiguous: that string names 2 clubs that year [season_key]]
+          4  ?|1926|LA   [ambiguous: that string names 2 clubs that year [season_key]]
+          2  ?|1974|Chicago Winds   [no club under that string that year [season_key]]
+          2  ?|1948|HAM   [ambiguous: that string names 2 clubs that year [season_key]]
+          2  ?|1949|HAM   [ambiguous: that string names 2 clubs that year [season_key]]
+          2  ?|1963|Harrisburg Capitol Colts   [no club under that string that year [season_key]]
+          2  ?|1985|Miami Dolphins 1985 Super Bowl XIX Media Guide   [no club under that string that year [season_key]]
+          2  ?|1926|NEW   [ambiguous: that string names 2 clubs that year [season_key]]
+          2  ?|1941|NY   [ambiguous: that string names 3 clubs that year [season_key]]
+          2  ?|1937|NY   [ambiguous: that string names 3 clubs that year [season_key]]
+          2  ?|1940|NY   [ambiguous: that string names 2 clubs that year [season_key]]
+          2  ?|2020|New York/New Jersey Hitmen   [no club under that string that year [season_key]]
+          2  ?|1947|OTT   [ambiguous: that string names 2 clubs that year [season_key]]
+          2  ?|2004|PHi   [ambiguous: that string names 2 clubs that year [season_key]]
+          2  ?|1934|STL   [ambiguous: that string names 2 clubs that year [season_key]]
+  ok    29 token(s) the table could not place, 308 lookups, all printed above
+R4  the bios reprint identical to the baseline
+        first difference at line 4:
+        - 1. In 1964, playing for the Chicago Bears, Mike Ditka caught 75 passes for 897 yards — only two men in the NFL caught more that season. He played twelve seasons: for the Chicago Bears from 1961 to 1966, the Philadelphia Eagles from 1967 to 1968 and the Dallas Cowboys from 1969 to 1972. He was later Head Coach of the Chicago Bears from 1982 to 1992.
+        + 1. In 1964, playing for the Chicago Bears, Mike Ditka caught 75 passes for 897 yards — only two men in the NFL caught more that season. Over twelve seasons he played for three clubs: the Chicago Bears, the Philadelphia Eagles and the Dallas Cowboys. He was later Head Coach of the Chicago Bears from 1982 to 1992.
+  FAIL  print_coach_bios.py: DIFFERS from baseline
+        first difference at line 17:
+        - 8. jerry burns coached twenty-six seasons, 1966 to 1991, and was Head Coach of the Minnesota Vikings from 1986 to 1991. He coached for three clubs in all. He had been an assistant for twenty seasons before that.
+        + 8. Over twenty-seven seasons, 1969 to 1997, Marv Levy was Head Coach of the Buffalo Bills from 1986 to 1997. He coached for ten clubs in all. He was a head coach at four other clubs, among them the Montreal Alouettes, the Kansas City Chiefs and the Chicago Blitz. He was in and out of the game, missing 1983 and 1985. He had been an assistant for four seasons before that.
+  FAIL  print_coaching_only_bios.py: DIFFERS from baseline
+        first difference at line 29:
+        - 15. John Kovatch's last game before the war came in 1942 with the Washington Redskins; his next, in 1946, was with the same club. He played three seasons: for the Washington Redskins in 1942 and 1946 and the Green Bay Packers in 1947. In all he caught 18 passes over two seasons. He was a United States Marine Corps veteran.
+        + 15. John Ohanis played for the San Diego Bombers in 1941 and did not play again until 1944, when he joined the San Francisco Clippers. His four seasons were with the San Diego Bombers in 1941 and the San Francisco Clippers in 1944 and 1947–48.
+  FAIL  print_bios.py: DIFFERS from baseline
+
+COACH RUNS GATE: 3 FAILURE(S)
+   - print_coach_bios.py: DIFFERS from baseline
+   - print_coaching_only_bios.py: DIFFERS from baseline
+   - print_bios.py: DIFFERS from baseline

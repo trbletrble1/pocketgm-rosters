@@ -1,0 +1,8429 @@
+{
+ "applier": "apply_officials",
+ "decided": 1052,
+ "tally": {
+  "applied": 1052
+ },
+ "reasons": {},
+ "expected": 8209,
+ "moved": 8209,
+ "run": "write",
+ "outcomes": [
+  {
+   "decision": "P_002934",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042545",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042546",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042547",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042548",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042549",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042550",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042551",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042552",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042553",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042554",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042555",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002537",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042556",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042557",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042558",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042559",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042560",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042561",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042562",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042563",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042564",
+   "outcome": "applied",
+   "expected": 26,
+   "moved": 26,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042565",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042566",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042567",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002683",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042568",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042569",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042570",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042571",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042572",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042573",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042574",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042575",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042576",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042577",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002640",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042578",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042579",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042580",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042581",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042582",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042583",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042584",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042585",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042586",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042587",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042588",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042589",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042590",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042591",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042592",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042593",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_038003",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042594",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042595",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042596",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042597",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042598",
+   "outcome": "applied",
+   "expected": 31,
+   "moved": 31,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042599",
+   "outcome": "applied",
+   "expected": 30,
+   "moved": 30,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042600",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042601",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_015443",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042602",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042603",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042604",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042605",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042606",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042607",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042608",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042609",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042610",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042611",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042612",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042613",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042614",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042615",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042616",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042617",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042618",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042619",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042620",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042621",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042622",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042623",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042624",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_001344",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042625",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042626",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042627",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042628",
+   "outcome": "applied",
+   "expected": 33,
+   "moved": 33,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042629",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042630",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042631",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042632",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042633",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042634",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_038124",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_031082",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042635",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042636",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042637",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042638",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042639",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042640",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042641",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042642",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042643",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_018160",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042644",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042645",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042646",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042647",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042648",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042649",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042650",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042651",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042652",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042653",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042654",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_015176",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042655",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042656",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042657",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042658",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042659",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042660",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042661",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042662",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042663",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042664",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042665",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_016391",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042666",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042667",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042668",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042669",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_018238",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042670",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042671",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042672",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042673",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042674",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042675",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042676",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042677",
+   "outcome": "applied",
+   "expected": 30,
+   "moved": 30,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042678",
+   "outcome": "applied",
+   "expected": 26,
+   "moved": 26,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042679",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042680",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042681",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042682",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042683",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042684",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042685",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042686",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042687",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042688",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042689",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042690",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042691",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042692",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042693",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042694",
+   "outcome": "applied",
+   "expected": 30,
+   "moved": 30,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042695",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042696",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042697",
+   "outcome": "applied",
+   "expected": 28,
+   "moved": 28,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042698",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002878",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042699",
+   "outcome": "applied",
+   "expected": 27,
+   "moved": 27,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042700",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042701",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042702",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042703",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042704",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042705",
+   "outcome": "applied",
+   "expected": 27,
+   "moved": 27,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042706",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042707",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042708",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042709",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042710",
+   "outcome": "applied",
+   "expected": 34,
+   "moved": 34,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042711",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042712",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042713",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042714",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042715",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042716",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042717",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042718",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042719",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042720",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042721",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042722",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002686",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042723",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042724",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042725",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042726",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042727",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042728",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042729",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_016884",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_015235",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042730",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042731",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042732",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042733",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042734",
+   "outcome": "applied",
+   "expected": 29,
+   "moved": 29,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042735",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042736",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042737",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042738",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042739",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042740",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042741",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042742",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042743",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042744",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042745",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042746",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042747",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042748",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042749",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_018844",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042750",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042751",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042752",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042753",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042754",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042755",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042756",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042757",
+   "outcome": "applied",
+   "expected": 31,
+   "moved": 31,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042758",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042759",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042760",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042761",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042762",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042763",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042764",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042765",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042766",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042767",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042768",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042769",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042770",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042771",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042772",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_016221",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042773",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042774",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042775",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042776",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042777",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042778",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042779",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042780",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042781",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042782",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042783",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042784",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042785",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042786",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042787",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042788",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042789",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042790",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042791",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_016369",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042792",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042793",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042794",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042795",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042796",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042797",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042798",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042799",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042800",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042801",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042802",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042803",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042804",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042805",
+   "outcome": "applied",
+   "expected": 26,
+   "moved": 26,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042806",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042807",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042808",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042809",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042810",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042811",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042812",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042813",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042814",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042815",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002665",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042816",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042817",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042818",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042819",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042820",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042821",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042822",
+   "outcome": "applied",
+   "expected": 29,
+   "moved": 29,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042823",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042824",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042825",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042826",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042827",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_021135",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_014985",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042828",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042829",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042830",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042831",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042832",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042833",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042834",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042835",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042836",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042837",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042838",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042839",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042840",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042841",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042842",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042843",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042844",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042845",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042846",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042847",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042848",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042849",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042850",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042851",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042852",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042853",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042854",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042855",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042856",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042857",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042858",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042859",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042860",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042861",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042862",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042863",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042864",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042865",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042866",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042867",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_016038",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042868",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042869",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042870",
+   "outcome": "applied",
+   "expected": 27,
+   "moved": 27,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042871",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042872",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042873",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042874",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042875",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042876",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042877",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042878",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042879",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042880",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042881",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042882",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042883",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002574",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042884",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042885",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042886",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042887",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042888",
+   "outcome": "applied",
+   "expected": 28,
+   "moved": 28,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042889",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042890",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042891",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042892",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042893",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042894",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042895",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042896",
+   "outcome": "applied",
+   "expected": 30,
+   "moved": 30,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042897",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042898",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042899",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042900",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042901",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042902",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042903",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042904",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042905",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042906",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042907",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042908",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_017790",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042909",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042910",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042911",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042912",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_015075",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042913",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042914",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042915",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042916",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042917",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042918",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042919",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042920",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042921",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042922",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042923",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042924",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042925",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042926",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042927",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042928",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042929",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042930",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042931",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042932",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042933",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042934",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042935",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042936",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042937",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042938",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_019728",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042939",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042940",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042941",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042942",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042943",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042944",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042945",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042946",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042947",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042948",
+   "outcome": "applied",
+   "expected": 26,
+   "moved": 26,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042949",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042950",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042951",
+   "outcome": "applied",
+   "expected": 28,
+   "moved": 28,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042952",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042953",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042954",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042955",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042956",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042957",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042958",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042959",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042960",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042961",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042962",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042963",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042964",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042965",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042966",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042967",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042968",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042969",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042970",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042971",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042972",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042973",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042974",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042975",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042976",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_017029",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042977",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042978",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042979",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042980",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042981",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042982",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042983",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042984",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042985",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042986",
+   "outcome": "applied",
+   "expected": 30,
+   "moved": 30,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042987",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042988",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042989",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042990",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042991",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042992",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042993",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_030076",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042994",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042995",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042996",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042997",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042998",
+   "outcome": "applied",
+   "expected": 29,
+   "moved": 29,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_042999",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043000",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043001",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043002",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_014868",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043003",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043004",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043005",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043006",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043007",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043008",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043009",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043010",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043011",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043012",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043013",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043014",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043015",
+   "outcome": "applied",
+   "expected": 31,
+   "moved": 31,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043016",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043017",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043018",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043019",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043020",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_018402",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043021",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043022",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043023",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_027599",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043024",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043025",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043026",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043027",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043028",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043029",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043030",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043031",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_018403",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043032",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043033",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043034",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043035",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043036",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043037",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043038",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043039",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043040",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_016634",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043041",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043042",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043043",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043044",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043045",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043046",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043047",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043048",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_005862",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043049",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043050",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043051",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043052",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043053",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043054",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043055",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043056",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043057",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043058",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043059",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043060",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043061",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043062",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_015249",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_016121",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043063",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043064",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043065",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043066",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043067",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_001855",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043068",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043069",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_001669",
+   "outcome": "applied",
+   "expected": 29,
+   "moved": 29,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_017172",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043070",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043071",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043072",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043073",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043074",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043075",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043076",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043077",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043078",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043079",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043080",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043081",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043082",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043083",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043084",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043085",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043086",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043087",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043088",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043089",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043090",
+   "outcome": "applied",
+   "expected": 26,
+   "moved": 26,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043091",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043092",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043093",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043094",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043095",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043096",
+   "outcome": "applied",
+   "expected": 28,
+   "moved": 28,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043097",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043098",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043099",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043100",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043101",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043102",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043103",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043104",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043105",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043106",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043107",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043108",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043109",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_017124",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043110",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043111",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043112",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043113",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043114",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043115",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043116",
+   "outcome": "applied",
+   "expected": 29,
+   "moved": 29,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043117",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043118",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043119",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043120",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043121",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043122",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043123",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043124",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043125",
+   "outcome": "applied",
+   "expected": 27,
+   "moved": 27,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043126",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043127",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043128",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043129",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043130",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043131",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043132",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043133",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043134",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043135",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043136",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_021334",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043137",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043138",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043139",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043140",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043141",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043142",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043143",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043144",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043145",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043146",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043147",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043148",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043149",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043150",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_003050",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043151",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043152",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043153",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_018489",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043154",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043155",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043156",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043157",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043158",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043159",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043160",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043161",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043162",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043163",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043164",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043165",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043166",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043167",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043168",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043169",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043170",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043171",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_027412",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043172",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043173",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043174",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_001079",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043175",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043176",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043177",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043178",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043179",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043180",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043181",
+   "outcome": "applied",
+   "expected": 30,
+   "moved": 30,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043182",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043183",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043184",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043185",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043186",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043187",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_003955",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043188",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043189",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043190",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043191",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043192",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043193",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043194",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_017063",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043195",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043196",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043197",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043198",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043199",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043200",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043201",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043202",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043203",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043204",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043205",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043206",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043207",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043208",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043209",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043210",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043211",
+   "outcome": "applied",
+   "expected": 26,
+   "moved": 26,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043212",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043213",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_017842",
+   "outcome": "applied",
+   "expected": 30,
+   "moved": 30,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043214",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043215",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043216",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043217",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043218",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043219",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043220",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043221",
+   "outcome": "applied",
+   "expected": 30,
+   "moved": 30,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002674",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043222",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043223",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043224",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043225",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043226",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043227",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043228",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043229",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043230",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043231",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043232",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043233",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043234",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043235",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043236",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043237",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043238",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043239",
+   "outcome": "applied",
+   "expected": 27,
+   "moved": 27,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043240",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043241",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043242",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043243",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043244",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043245",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043246",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043247",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043248",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043249",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043250",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043251",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_015829",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_017507",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043252",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043253",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043254",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043255",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043256",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043257",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043258",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043259",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043260",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043261",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043262",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043263",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043264",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043265",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043266",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043267",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043268",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043269",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043270",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043271",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002698",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_003033",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043272",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043273",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043274",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043275",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043276",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043277",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043278",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043279",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043280",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043281",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043282",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043283",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043284",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043285",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043286",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043287",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043288",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043289",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043290",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043291",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043292",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043293",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043294",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_017252",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043295",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043296",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043297",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043298",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043299",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043300",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043301",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002699",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043302",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002733",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043303",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043304",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043305",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043306",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043307",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043308",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043309",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043310",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043311",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043312",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043313",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043314",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043315",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002701",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043316",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043317",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043318",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043319",
+   "outcome": "applied",
+   "expected": 31,
+   "moved": 31,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043320",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043321",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043322",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043323",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043324",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043325",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043326",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043327",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043328",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043329",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043330",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043331",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043332",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043333",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043334",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043335",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043336",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043337",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_004905",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043338",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043339",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043340",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043341",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043342",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043343",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043344",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043345",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043346",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043347",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043348",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043349",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043350",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043351",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043352",
+   "outcome": "applied",
+   "expected": 33,
+   "moved": 33,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043353",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043354",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043355",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043356",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043357",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043358",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_017973",
+   "outcome": "applied",
+   "expected": 26,
+   "moved": 26,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_016297",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043359",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043360",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043361",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043362",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043363",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043364",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043365",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043366",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043367",
+   "outcome": "applied",
+   "expected": 29,
+   "moved": 29,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043368",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043369",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_000896",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043370",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002797",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043371",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043372",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043373",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043374",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043375",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043376",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043377",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043378",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043379",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043380",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043381",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043382",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043383",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043384",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043385",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043386",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043387",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043388",
+   "outcome": "applied",
+   "expected": 28,
+   "moved": 28,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043389",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043390",
+   "outcome": "applied",
+   "expected": 27,
+   "moved": 27,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043391",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043392",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043393",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043394",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043395",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043396",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043397",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043398",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043399",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043400",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043401",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_040322",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043402",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043403",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043404",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043405",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043406",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043407",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043408",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043409",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043410",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043411",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043412",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043413",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043414",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043415",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043416",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043417",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043418",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043419",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043420",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043421",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043422",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043423",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043424",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043425",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043426",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043427",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043428",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043429",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043430",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043431",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043432",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043433",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043434",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043435",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043436",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043437",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043438",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043439",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043440",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043441",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_015818",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043442",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043443",
+   "outcome": "applied",
+   "expected": 31,
+   "moved": 31,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043444",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043445",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043446",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043447",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043448",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043449",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043450",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043451",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043452",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043453",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043454",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043455",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_015404",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043456",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043457",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043458",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043459",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043460",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_015056",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043461",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043462",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043463",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043464",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043465",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043466",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043467",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043468",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_002923",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_010136",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043469",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043470",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043471",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043472",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043473",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043474",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043475",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043476",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043477",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043478",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043479",
+   "outcome": "applied",
+   "expected": 34,
+   "moved": 34,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043480",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_016568",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043481",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043482",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043483",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043484",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043485",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_016430",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043486",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043487",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043488",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043489",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043490",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043491",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043492",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043493",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043494",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043495",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043496",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043497",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043498",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043499",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043500",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043501",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043502",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043503",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043504",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043505",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043506",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043507",
+   "outcome": "applied",
+   "expected": 27,
+   "moved": 27,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043508",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043509",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043510",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043511",
+   "outcome": "applied",
+   "expected": 23,
+   "moved": 23,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_004691",
+   "outcome": "applied",
+   "expected": 27,
+   "moved": 27,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043512",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043513",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043514",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043515",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043516",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043517",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_000634",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043518",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043519",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043520",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043521",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_043522",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  }
+ ]
+}

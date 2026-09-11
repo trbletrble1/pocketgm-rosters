@@ -456,6 +456,49 @@ opens with a date — was shown failing on the model (760) before it passed, and
 deliberately looser than the reader's, so a shape the reader does not know still fails. Its first
 version passed the six garbled days, and the gate's own day pattern was widened when they surfaced.
 
+### Four ways a field goes quiet
+
+All four surfaced on 11 September 2026, from one ruling. *A coaching season is held in one shape*
+(9 September) moved every coaching key out of a person's `seasons` into `coaching_seasons`. Each shape
+is the same event — data moved or grew, and nothing that depended on it was told — and each hid for
+days because nothing failed.
+
+**1. A reader looking in the old place.** Code that reads the field the data left. The coach ingest
+looked for coaching keys in `seasons` and refused 18 coaches as conflicts with their own merge shells.
+A sweep of about 140 readers found 30 still wrong. **Guard:** when a ruling moves data, sweep the
+readers by hand, and classify each as *meant this*, *updated*, or *not the field*. A grep census is a
+reminder; only reading the code is a proof.
+
+**2. An applier skipping in silence.** An applier that does not find its target moves on without a
+word. `apply_club_keys` skipped 658 of 677 decided rewrites (`if r["from"] not in ss: continue`).
+`apply_person_merges` "applied" 93 merges that moved 0 of the 1,352 club-seasons they recorded.
+**Guard:** every applier accounts for every decision — decided, applied, skipped, and a *legitimate*
+reason for anything it did not do (`index_io.write_account`, `gate_appliers_account`). A skip because
+the key sits in a dict the applier does not read is a symptom, not a reason, and fails. *"Decided 677,
+applied 19, skipped 658"* would have been loud on day one.
+
+**3. A gate passing on a shrunken population.** A check whose population silently lost what it
+exists to check still passes on what is left. `gate_club_mapping` C1 compared two routes that both
+read `seasons` and agreed. `gate_claim_league` L2 checked 194,518 keys; reading both dicts it checks
+217,289, and the coaching keys it had never seen include real mis-leagued seasons (490 failures in 62
+club-seasons, against 234 in 15). `gate_club_keys` G7's failure was hidden
+behind another check's failures in a capped list. **Guard:** a gate says what it checked, every run,
+whether it passes or fails. A count of zero and a count of nothing to count are different answers, and
+*nothing to check* fails.
+
+**4. A decision set going stale because the data grew.** Decisions made on 7 September covered the keys
+that existed on 7 September. Two days later the PFA coach store and the promoted coaches added
+coaching keys the decider would also decide — 849 of them, 398 of them PFA's `BC` for the BC Lions.
+Nothing is wrong with the old decisions; they are simply no longer the whole answer. A decider re-run
+to fill the gap would have overwritten them instead, which is how Joe Spencer's merge was lost to a
+re-run of `merge_people`. **Guard:** decisions are a declaration, in git; the decider is a *proposer*
+that reports what it would add and withdraw against them, and a new proposal is a question for Ryan,
+not a change. The merge decisions (93) and the club-key decisions (2,606) are both held that way now.
+
+**Underneath all four:** a ruling that moves or grows data must say what depends on it. Two parts of
+that can be gated — the applier accounts and the gate populations. The reader sweep cannot be gated,
+and pretending otherwise would be worse than saying so.
+
 ### A rewritten store is compared with its predecessor at the fact's own level
 
 **Before anything is built on a rewritten store, compare it with the store it replaces — claim by

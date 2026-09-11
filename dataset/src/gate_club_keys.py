@@ -103,7 +103,19 @@ def main():
     # BOTH DICTS, AND SAY WHAT WAS CHECKED (Ryan, 2026-09-11): a count of zero and a count of nothing
     # to count are different answers. Reading `seasons` only, G7 stopped seeing the coaching keys --
     # 97% of what the club-key decisions exist for -- and passed on what was left.
-    both = 0; checked = collections.Counter()
+    # WHAT G7 COUNTS (Ryan, 2026-09-11). It used to fail every league-season a person held under a code
+    # AND a name -- 12,292 of them, almost all a source's own label beside the table's code (`CHIB`
+    # beside `CHI`, `LARM` beside `LAN`). Two attestations of one club-season is the archive working as
+    # ruled (build_person_index.split_coaching: "two keys for one season is not two shapes -- it is two
+    # ATTESTATIONS"), and G7 was measuring that honesty and calling it a fault.
+    # G7 now fails ONE thing: a printed name that a DECLARED club-key decision rewrites to a code, still
+    # sitting beside that code -- a decision not applied. A second attestation is COUNTED AND REPORTED,
+    # never failed.
+    def _b(k):
+        lg, y, c = k.split("|", 2)
+        return f"{lg}|{y[1:5] if y.startswith('y') and y[1:5].isdigit() else y}|{c}"
+    decided_from = {(r["person"], _b(r["from"])) for r in D["rewrites"]}
+    unapplied = 0; attest = 0; checked = collections.Counter(); ex = []
     for pid, p in index.items():
         if pid == "_clubs" or not isinstance(p, dict) or p.get("merged_into"): continue
         for dn in ("seasons", "coaching_seasons"):
@@ -112,10 +124,20 @@ def main():
                 lg, y, club = k.split("|", 2); by[(lg, y[1:5] if y.startswith("y") else y)].add(club)
             checked[dn] += len(by)
             for (lg, yr), cs in by.items():
-                if len(cs) > 1 and any(is_code(t, yr) for t in cs) and any(not is_code(t, yr) for t in cs): both += 1
-    check(sum(checked.values()) > 0 and both == 0,
-          f"G7 {both} renderable league-seasons held under both a code and a name, of {sum(checked.values()):,} "
-          f"checked ({checked['seasons']:,} in seasons, {checked['coaching_seasons']:,} in coaching_seasons)")
+                codes = [t for t in cs if is_code(t, yr)]; names = [t for t in cs if not is_code(t, yr)]
+                if not (codes and names): continue
+                stale = [t for t in names if (pid, f"{lg}|{yr}|{t}") in decided_from]
+                if stale:
+                    unapplied += 1
+                    if len(ex) < 3: ex.append((pid, lg, yr, stale, codes))
+                else:
+                    attest += 1
+    both = unapplied
+    check(sum(checked.values()) > 0 and unapplied == 0,
+          f"G7 {unapplied} league-seasons hold a printed name a declared decision rewrites, beside its code "
+          f"(a decision not applied){'' if not ex else ', e.g. ' + str(ex)}; of {sum(checked.values()):,} checked "
+          f"({checked['seasons']:,} in seasons, {checked['coaching_seasons']:,} in coaching_seasons). "
+          f"{attest:,} hold a second attestation -- a source's own label beside the table's code -- reported, not a fault")
 
     # G8
     import bio_select, bio_write

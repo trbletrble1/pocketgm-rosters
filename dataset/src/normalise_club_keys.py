@@ -101,13 +101,47 @@ def build():
     return out
 
 
+DECLARED = os.path.join(BASE, "declarations", "club-key-decisions.json")
+
+
+def _bare(k):
+    lg, y, c = k.split("|", 2)
+    return f"{lg}|{y[1:5] if y.startswith('y') and y[1:5].isdigit() else y}|{c}"
+
+
+def propose(o, declared):
+    """What the decider, run on today's index, would ADD and WITHDRAW against the declared decisions.
+    Compared in the bare-year form: `COACHES|y1969|X` and `COACHES|1969|X` are one key."""
+    out = {}
+    for name in ("rewrites", "applied_when_merging"):
+        k = lambda r: (r["person"], _bare(r["from"]), _bare(r["to"]), r["kind"])
+        now = {k(r): r for r in o[name]}; have = {k(r): r for r in declared[name]}
+        out[name] = {"declared": len(have), "decided_now": len(now), "unchanged": len(set(now) & set(have)),
+                     "would_add": [now[x] for x in sorted(set(now) - set(have))],
+                     "would_withdraw": [have[x] for x in sorted(set(have) - set(now))]}
+    return out
+
+
 def main():
+    """A PROPOSER (Ryan, 2026-09-11). The club-key decisions are declarations/club-key-decisions.json,
+    in git; this never writes them. It runs the decider on today's index and reports what it would
+    add or withdraw; with --write it records that in build/club-key-proposals.json. It used to write
+    the decisions themselves, and a re-run would have dropped every decision on a key the data had
+    moved away from -- or, as on 11 September, found 849 new ones the decisions predate and folded
+    them in without a word."""
     o = build()
+    declared = json.load(open(DECLARED))
+    P = {"_what": ("PROPOSALS, not decisions: the club-key decider on today's index against the declared "
+                   "decisions. A decision set goes stale when the data grows; a proposal to add is a question "
+                   "for Ryan, not a change."), **propose(o, declared), "refused_now": o["REFUSED"]["counts"]}
+    for name in ("rewrites", "applied_when_merging"):
+        v = P[name]
+        print(f"{name}: declared {v['declared']:,}; decided now {v['decided_now']:,}; unchanged {v['unchanged']:,}; "
+              f"would ADD {len(v['would_add']):,}; would WITHDRAW {len(v['would_withdraw']):,}")
     if "--write" in sys.argv:
-        fp = os.path.join(BASE, "build", "club-key-normalisation.json")
-        json.dump(o, open(fp, "w"), indent=1, ensure_ascii=False); print("wrote", fp)
-    print(json.dumps(o["counts"], indent=1))
-    print("refused:", json.dumps(o["REFUSED"]["counts"], indent=1))
+        fp = os.path.join(BASE, "build", "club-key-proposals.json")
+        json.dump(P, open(fp, "w"), indent=1, ensure_ascii=False)
+        print("wrote", fp, "(proposals only; the decisions are untouched)")
 
 
 if __name__ == "__main__":

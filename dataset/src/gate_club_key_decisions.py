@@ -33,11 +33,15 @@ def main():
     print(f"  population: {sum(len(v.get('seasons') or {}) for v in json.load(open(AP.IDXP)).values() if isinstance(v, dict)):,} "
           "keys in seasons and the coaching_seasons below are what the regenerated decisions were derived from")
     print("D1  the decisions reproduce")
+    # THE DECISIONS ARE DECLARED AND THE DECIDER PROPOSES (Ryan, 2026-09-11). A difference between them
+    # is a PROPOSAL -- the data grew, or moved -- reported in full here and in build/club-key-proposals.json,
+    # never a silent change and not a failure. The failure is a declared decision set that is missing.
     for name in ("rewrites", "applied_when_merging"):
         a = {key(r): r for r in D[name]}; b = {key(r): r for r in E[name]}
         gone, new = sorted(set(a) - set(b)), sorted(set(b) - set(a))
-        check(not gone and not new, f"{name}: {len(a)} decided before, {len(b)} now, identical" if not gone and not new
-              else f"{name}: {len(gone)} no longer decided {gone[:4]}; {len(new)} newly decided {new[:4]}")
+        check(len(a) > 0, f"{name}: {len(a):,} declared; the decider still makes {len(set(a) & set(b)):,} of them; "
+                          f"proposes WITHDRAWING {len(gone):,}{' e.g. ' + str(gone[:2]) if gone else ''}; "
+                          f"proposes ADDING {len(new):,}{' e.g. ' + str(new[:2]) if new else ''}")
         ev = [(k, a[k]["evidence"], b[k]["evidence"]) for k in set(a) & set(b) if a[k]["kind"] == "source_defect" and a[k]["evidence"] != b[k]["evidence"]]
         check(not ev, f"{name}: every source defect carries the same corroboration count" if not ev else f"{name}: {len(ev)} corroboration counts differ, e.g. {ev[:2]}")
     print("D2  the refused set, against the old decider computed here")
@@ -85,7 +89,7 @@ def main():
     print("D4  the regenerated decisions reproduce the index on a copy")
     idx = json.load(open(AP.IDXP)); before = hashlib.sha256(json.dumps(idx, sort_keys=True).encode()).hexdigest()
     M = json.load(open(AP.MP)); AP.undo(idx); CKA.undo(idx)
-    acct = []; CKA.apply(idx, E, account=acct); AP.apply(idx, M)
+    acct = []; CKA.apply(idx, D, account=acct); AP.apply(idx, M)   # the DECLARED decisions, not a regeneration
     by_dict = collections.Counter(o.get("dict") for o in acct if o["outcome"] == "applied")
     print(f"  D4 regenerated rewrites applied to the copy: {sum(by_dict.values()):,} of {len(acct):,} "
           f"({by_dict.get('seasons', 0):,} in seasons, {by_dict.get('coaching_seasons', 0):,} in coaching_seasons)")

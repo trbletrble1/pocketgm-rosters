@@ -1,0 +1,53 @@
+{
+ "applier": "demote_stintless",
+ "decided": 5,
+ "tally": {
+  "applied": 5
+ },
+ "reasons": {},
+ "expected": 5,
+ "moved": 5,
+ "run": "write",
+ "outcomes": [
+  {
+   "decision": "P_044038",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_044185",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_045367",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_045311",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_045312",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  }
+ ]
+}

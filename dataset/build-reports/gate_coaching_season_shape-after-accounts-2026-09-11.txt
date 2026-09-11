@@ -1,0 +1,9 @@
+COACHING SEASON SHAPE  (51,239 people)
+  `seasons` 207,110   `coaching_seasons` 37,020   people holding a key in both 224
+  ok   P1 the same claim in both dicts: 0
+  ok   P2 staff predicate in `seasons`: 0
+  ok   P2 non-staff predicate in `coaching_seasons`: 0
+  ok   P5 a `y`-prefixed year in `coaching_seasons`: 0
+  ok   P3 a player-coach keeps both: 224 people hold a key in BOTH dicts (0 would mean the fix deleted them instead of moving them)
+
+COACHING SEASON SHAPE GATE: pass

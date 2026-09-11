@@ -1,0 +1,6 @@
+model before f5cd7d6c697cd91a -> after c78e772e945f2465
+bios changed: 0 of 93
+  AFL/1960/DAL: members 0 -> 0 (+[] -[]); staff 5 -> 5 (+[] -[])
+  AFL/1961/DAL: members 0 -> 0 (+[] -[]); staff 6 -> 6 (+[] -[])
+  AFL/1962/DAL: members 0 -> 0 (+[] -[]); staff 9 -> 9 (+[] -[])
+  NFL/1975/BAL: members 44 -> 44 (+[] -[]); staff 9 -> 9 (+[] -[])

@@ -46,23 +46,28 @@ def main(write=True):
         for s in (v.get("slugs") or []):
             by_slug[s] = pid
     restored, unmatched, noclub = [], [], []
+    acct = []                                    # every decision accounted for (Ryan, 2026-09-11)
+    def skip(d, why): acct.append({"decision": d, "outcome": "skipped", "expected": 1, "moved": 0,
+                                   "reason": why, "legitimate": True})
     for p in sorted(need):
         i = info.get(p)
         if not i:
-            noclub.append(p); continue
+            noclub.append(p); skip(p, "no club is readable in the man's roster record"); continue
         pid = by_slug.get(i["slug"])
         if not pid:
-            unmatched.append((p, i["slug"])); continue
+            unmatched.append((p, i["slug"])); skip(p, "the man's slug is not in the index"); continue
         key = f"CFL|{i['year']}|{i['club']}"
         rec = idx[pid].setdefault("seasons", {})
         if key in rec:
-            continue
+            skip(p, "the season is already held"); continue
+        acct.append({"decision": p, "outcome": "applied", "expected": 1, "moved": 1, "reason": None, "legitimate": True})
         rec[key] = {"stats": {}, "stint": {},
                     "_restored_from": "person_season + the denotation's roster "
                                       "source_record; the club was READ, not inferred",
                     "_no_stint_in_source": "StatsCrew has a roster line for this man "
                                            "and no statistics, so no stint exists"}
         restored.append({"person_id": pid, "legacy": p, "slug": i["slug"], "key": key})
+    IO.write_account("restore_cfl1945_seasons", acct, run="write" if write else "dry")
     out = {"restored": restored, "unmatched_slug": unmatched, "no_club_in_record": noclub,
            "counts": {"person_season_without_stint": len(need),
                       "restored": len(restored),

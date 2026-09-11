@@ -55,8 +55,8 @@ def build():
     # name-to-code lookup can resolve, and whose corroboration is only visible in the
     # MERGED index, so re-deriving them here from the unmerged base would find nothing.
     NORM = {}
-    fp = os.path.join(BASE, "build", "club-key-normalisation.json")
-    if os.path.exists(fp):
+    fp = os.path.join(BASE, "declarations", "club-key-decisions.json")   # in git since 2026-09-11; read loudly
+    if True:
         D = json.load(open(fp))
         for r in D.get("rewrites", []) + D.get("applied_when_merging", []):
             NORM[(r["person"], r["from"])] = r["to"]

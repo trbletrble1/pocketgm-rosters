@@ -36,11 +36,20 @@ LEGITIMATE = {
         "every recorded club-season is already held by the canonical person",
         "a constituent is not in the index",
     },
+    # The other five chain appliers account too (Ryan, 2026-09-11: two of the chain's appliers were
+    # skipping in silence, which makes accounting the rule rather than the exception). Their named
+    # skips are states of the DATA -- a record already gone, a slug the index never held -- stated
+    # and counted. A promoted player whose claims did not land is NOT among them: it fails.
+    "apply_promotions": set(),
+    "apply_player_promotions": set(),
+    "demote_stintless": {"the promoted record is already absent from the index"},
+    "restore_cfl1945_seasons": {"no club is readable in the man's roster record",
+                                "the man's slug is not in the index", "the season is already held"},
+    "apply_officials": set(),
 }
-# The chain appliers that account today. The other five chain steps (apply_promotions,
-# apply_player_promotions, demote_stintless, restore_cfl1945_seasons, apply_officials) SET fields
-# rather than skip decisions, and count what they do not place; they do not yet write an account.
-ACCOUNTING = ("apply_club_keys", "apply_person_merges")
+# EVERY applier in the chain (declarations/person-index-rebuild.json), in chain order.
+ACCOUNTING = ("apply_club_keys", "apply_person_merges", "apply_promotions", "apply_player_promotions",
+              "demote_stintless", "restore_cfl1945_seasons", "apply_officials")
 FAILS = []
 
 

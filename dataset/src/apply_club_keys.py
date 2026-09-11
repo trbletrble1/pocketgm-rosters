@@ -20,7 +20,9 @@ BASE = os.path.join(HERE, "..")
 import apply_person_merges as AP
 import index_io as IO                  # atomic index write
 
-NP = os.path.join(BASE, "build", "club-key-normalisation.json")
+# THE DECISIONS ARE A DECLARATION (Ryan, 2026-09-11): 2,606 judgements lived only in the untracked
+# build/club-key-normalisation.json. They are in git now, and read from there.
+NP = os.path.join(BASE, "declarations", "club-key-decisions.json")
 
 
 def undo(index):

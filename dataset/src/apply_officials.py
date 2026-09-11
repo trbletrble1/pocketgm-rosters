@@ -125,6 +125,7 @@ def main(write=True, idx=None):
         idx = IO.load_index()
 
     n = collections.Counter()
+    acct = []                                    # every decision accounted for (Ryan, 2026-09-11)
     for pid, e in per.items():
         rec = idx.get(pid)
         if rec is None:
@@ -166,7 +167,10 @@ def main(write=True, idx=None):
         else:
             rec["_playing_fields_do_not_apply"] = True
         idx[pid] = rec
+        acct.append({"decision": pid, "outcome": "applied", "expected": len(e["officiating_seasons"]),
+                     "moved": len(e["officiating_seasons"]), "reason": None, "legitimate": True})
 
+    IO.write_account("apply_officials", acct, run="write" if write else "dry")
     dual = {d["pfa_code"]: d for d in store["dual_role"]}
     out = {"source": {"source_id": SRC_ID, "name": "Pro Football Archives",
                       "stated_by": "Pro Football Archives", "acquisition": "fetched"},

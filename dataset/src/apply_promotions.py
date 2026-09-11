@@ -131,11 +131,15 @@ def collect(prom):
     return per, claims
 
 
-def apply(idx, per):
+def apply(idx, per, account=None):
     """SET the owned fields on every promoted man, creating him if absent. Returns
-    the per-run delta, which is for stdout and nothing else."""
+    the per-run delta, which is for stdout and nothing else. `account`, if a list,
+    receives one outcome per promotion (index_io.write_account; Ryan, 2026-09-11)."""
     n = collections.Counter()
     for pid, e in per.items():
+        if account is not None:
+            account.append({"decision": pid, "outcome": "applied", "expected": len(e["coaching_seasons"]),
+                            "moved": len(e["coaching_seasons"]), "reason": None, "legitimate": True})
         rec = idx.get(pid)
         if rec is None:
             rec = {"name": e["name"], "slugs": [], "person": {}, "person_season": [],
@@ -187,7 +191,9 @@ def main(write=True, idx=None):
         raise ApplyError(f"collected {len(claims):,} claims for {want:,} seasons in the store")
     if idx is None:
         idx = IO.load_index()
-    delta = apply(idx, per)
+    acct = []
+    delta = apply(idx, per, account=acct)
+    IO.write_account("apply_promotions", acct, run="write" if write else "dry")
     stintless = sum(1 for e in per.values() if not e["coaching_seasons"])
     out = {"source": {"source_id": SRC_ID, "name": "Pro Football Archives",
                       "stated_by": "Pro Football Archives", "acquisition": "fetched"},

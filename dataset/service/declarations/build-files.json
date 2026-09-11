@@ -35,7 +35,11 @@
     "read_as": "decision record"
    },
    "club-key-normalisation": {
-    "why": "a decision record: which club keys were normalised, what was REFUSED, and when it was decided.",
+    "why": "SUPERSEDED 2026-09-11: the pre-declaration copy of the 2,606 club-key decisions, identical to declarations/club-key-decisions.json, which the appliers now read. Nothing reads this file as decisions.",
+    "read_as": "decision record"
+   },
+   "club-key-proposals": {
+    "why": "normalise_club_keys.py's PROPOSALS (2026-09-11): what the club-key decider would now add or withdraw against declarations/club-key-decisions.json. Never applied; a question for Ryan, not a decision.",
     "read_as": "decision record"
    },
    "assistants-identity": {

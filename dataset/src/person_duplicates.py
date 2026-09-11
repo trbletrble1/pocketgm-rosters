@@ -121,8 +121,8 @@ class Population:
         # printed names away, find no corroboration, and make detection depend on
         # whether a rewrite happened to have been applied yet -- which oscillates.
         self.club_norm = {}
-        _np = os.path.join(BASE, "build", "club-key-normalisation.json")
-        if os.path.exists(_np):
+        _np = os.path.join(BASE, "declarations", "club-key-decisions.json")   # in git since 2026-09-11; read loudly
+        if True:
             _d = json.load(open(_np))
             for r in _d.get("rewrites", []) + _d.get("applied_when_merging", []):
                 lg, y, _ = r["from"].split("|", 2)

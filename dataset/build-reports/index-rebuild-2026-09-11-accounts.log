@@ -1,0 +1,257 @@
+stores with no claims block (reports, not claim stores): 451
+CHAIN-STEP REPORT NOT READ AS A SOURCE: cfl1945-season-restore (0 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+CHAIN-STEP REPORT NOT READ AS A SOURCE: clubs (0 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+CHAIN-STEP REPORT NOT READ AS A SOURCE: coach-demotions (0 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+CHAIN-STEP REPORT NOT READ AS A SOURCE: coach-seasons-promoted (17,621 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+CHAIN-STEP REPORT NOT READ AS A SOURCE: officials-applied (0 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+CHAIN-STEP REPORT NOT READ AS A SOURCE: player-seasons-promoted (0 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+STINT CLAIMS NOT INDEXED: 1,590 unresolved across 14 store(s); 45 in 1 HELD store(s)
+       883  assistants                       s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000001', 'San Francisco 49ers', 'y1977']
+       211  stats-usfl-1984                  s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000157', 'USFLAZW', 'USFL-1984']
+       117  stats-cfl-2021                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000807', 'CFLBC', 'CFL-2021']
+        97  stats-usfl-1985                  s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000297', 'USFLAZO', 'USFL-1985']
+        76  salaries                         s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000134', 'Dallas', 'y1984']
+        68  stats-usfl-1983                  s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000854', 'USFLBIR', 'USFL-1983']
+        36  stats-xfl-2001                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_001850', 'XFLLAX', 'XFL-2001']
+        31  stats-wfl-1974                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_003660', 'WFLHAW', 'WFL-1974']
+        27  stats-ufl-2012                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000652', 'UFLOMA', 'UFL-2012']
+        14  stats-ufl-2010                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_002396', 'UFLLVL', 'UFL-2010']
+        12  stats-ufl-2011                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000935', 'UFLOMA', 'UFL-2011']
+        10  stats-nfl-1987                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000167', 'ATL', 'NFL-1987']
+         4  stats-nfl-2014                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_026481', 'TEN', 'NFL-2014']
+         4  stats-wlaf-1992                  s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_001831', 'WLAFMON', 'WLAF-1992']
+        45  pfa-wlaf-1995                    HELD: Ingested 2026-09-08, the 45-man 1995 Scottish Claymores roster. Store-local ids for the sa
+absence claims kept apart from values: 14,064 across 9,348 (person, field) pairs and 7,686 people -- these used to arrive as the string "None" in `person`
+coaching seasons sorted out of `seasons` by predicate: 23,187 keys; 354 keys are in BOTH dicts because the man played and coached that season
+person merges applied: 93
+people indexed: 51,240   with at least one season: 47,898
+wrote /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build-reports/person-index.json (786 MB)
+post-processing: apply_club_keys.py --write
+ACCOUNT apply_club_keys: decided 677; {'applied': 677}; moved 677 of 677 recorded; reasons {}
+{
+ "rewrites_reversed_first": 0,
+ "rewrites_applied": 677,
+ "people_touched": 123,
+ "absorbed_people_touched": 0,
+ "people_missing": [],
+ "club_seasons": {
+  "unmerged_before": 207050,
+  "unnormalised_base": 207050,
+  "after": 207050
+ },
+ "index_left": "unmerged - run merge_people.py then apply_person_merges.py"
+}
+wrote /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build-reports/person-index.json
+post-processing: apply_person_merges.py --write
+ACCOUNT apply_person_merges: decided 93; {'applied': 72, 'partly_applied (legitimate)': 21}; moved 1,311 of 1,352 recorded; reasons {'every recorded club-season is already held by the canonical person': 21}
+{
+ "contributions_reversed_first": 0,
+ "merges_applied": 93,
+ "merges_whose_people_are_missing": [],
+ "people": {
+  "before": 51239,
+  "after": 51239
+ },
+ "club_seasons": {
+  "before_this_run": 207050,
+  "unmerged_base": 207050,
+  "after": 207050
+ },
+ "person_values": {
+  "unmerged_base": 2498621,
+  "after": 2498775
+ },
+ "people_carrying_merged_from": 93,
+ "people_carrying_merged_into": 93
+}
+wrote /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build-reports/person-index.json
+post-processing: apply_promotions.py --write
+ACCOUNT apply_promotions: decided 1,799; {'applied': 1799}; moved 12,656 of 12,656 recorded; reasons {}
+this run (stdout only, not persisted):
+  created                    5
+  already_present            1,794
+  coaching_seasons_set       1,794
+  name_filled                0
+  name_kept_from_archive     0
+the store, as persisted to the report:
+  claims                                     17,621
+  promotions_in_store                        1,799
+  coaching_seasons                           17,621
+  people_with_coaching_seasons               1,794
+  stintless_promotions_demoted_by_next_step  5
+post-processing: apply_player_promotions.py --write
+ACCOUNT apply_player_promotions: decided 7,722; {'applied': 7722}; moved 7,722 of 7,722 recorded; reasons {}
+this run (stdout only, not persisted):
+  already_present                  7,722
+  forename_unknown                 234
+  name_filled                      138
+the store, as persisted:
+  promotions_in_store                    7,722
+  people_holding_at_least_one_season     7,722
+  promoted_but_holding_none              0
+  forename_unknown                       234
+  playing_seasons_decided                11,735
+post-processing: demote_stintless.py --write
+ACCOUNT demote_stintless: decided 5; {'applied': 5}; moved 5 of 5 recorded; reasons {}
+  stintless_promotions     5
+  demoted                  5
+  already_absent           0
+  people_before            51244
+  people_after             51239
+  by_source                {'pfa-coach-lead': 3, 'media-guide-assistant': 2}
+post-processing: restore_cfl1945_seasons.py --write
+ACCOUNT restore_cfl1945_seasons: decided 60; {'applied': 60}; moved 60 of 60 recorded; reasons {}
+  person_season_without_stint  60
+  restored                     60
+  slug_not_in_index            0
+  club_not_readable            0
+  clubs                        {'CFL|1945|CFLCGY': 30, 'CFL|1945|CFLWPG': 30}
+post-processing: apply_officials.py --write
+ACCOUNT apply_officials: decided 1,052; {'applied': 1052}; moved 8,209 of 8,209 recorded; reasons {}
+  men                              1,052
+  created_by_officials_ingest      0
+  already_a_person                 1,052
+  officiating_season_keys          8,209
+  dual_role men in the store       132
+  -- this run only (not persisted; zero on a re-run is correct) --
+  names_filled                     0
+  names_kept_from_archive          0
+  roles_updated                    1,052
+
+P3 before -> after (nothing may fall):
+  entries                    51239 ->     51239
+  with_season                50185 ->     50185
+  coaching_seasons            3728 ->      3728
+  officiating_seasons         1052 ->      1052
+  club_as_printed               19 ->        19
+  restored_cfl1945              60 ->        60
+  merged_into                   93 ->        93
+  guide_prose                 9351 ->      9351
+derived table: build_clubs.py --write
+wrote /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/clubs.json
+{
+ "mergers_declared": 3,
+ "clubs": 602,
+ "archive_clubs": 305,
+ "pfa_only_clubs": 269,
+ "pfa_only_beyond_frontier": 4,
+ "segments": 655,
+ "chains": 40,
+ "links": 53,
+ "mergers": 2,
+ "names": 679,
+ "strings": 3361,
+ "strings_by_source": {
+  "frankford-yellow-jackets-book": 2,
+  "boxscore": 352,
+  "coaching_tree": 163,
+  "fandom_redirect": 99,
+  "nflverse": 453,
+  "pfa_cell": 1272,
+  "pfa_transaction": 383,
+  "season_key:COACHES": 251,
+  "media_guide": 53,
+  "season_key": 63,
+  "ghostsofthegridiron": 2,
+  "programme-1926-chi-lat": 2,
+  "programme-1926-nyy-pcw": 1,
+  "pfra-annual-4-1983": 2,
+  "season_key:SALARIES": 12,
+  "merger_ruling": 3,
+  "pro-football-archives": 2,
+  "relocation_ruling": 5,
+  "pfa_team_season_page": 4,
+  "wikipedia": 237
+ },
+ "strings_by_kind": {
+  "code": 1482,
+  "printed_name": 1267,
+  "alias": 550,
+  "wrong_for_season": 40,
+  "code_misprinted": 3,
+  "club_without_a_season_that_year": 3,
+  "compound_printed_name": 8,
+  "relocation_combined": 5,
+  "name_misprinted": 3
+ },
+ "wrong_for_season": 40,
+ "unresolved_strings": 590,
+ "unresolved_lookups": 43644,
+ "unresolved_by_source": {
+  "boxscore": 31,
+  "coaching_tree": 4,
+  "fandom_redirect": 22,
+  "media_guide": 1,
+  "nflverse": 232,
+  "pfa_transaction": 22,
+  "season_key": 266,
+  "season_key:COACHES": 5,
+  "season_key:IND": 3,
+  "season_key:SALARIES": 4
+ },
+ "lineage_splits": 6,
+ "lineage_candidates": 26,
+ "code_conflicts": 3,
+ "archive_code_years_without_players": 25,
+ "same_name_same_year": 1,
+ "attested_matched_to_an_archive_club": 67,
+ "index_code_seasons_with_no_name": 112,
+ "attested_clubs": 24,
+ "attested_same_name_across_a_long_hole": 5,
+ "lineups_with_no_club": 777,
+ "club_names_not_yet_in_the_index": 0,
+ "fandom_survey": {
+  "file": "/Users/ryannecci/Dropbox/Football Archive/reports/2026-09-06-fandom-club-name-variants.json",
+  "entries": 59,
+  "variant scoped to the club span": 38,
+  "variant = an official name": 14,
+  "canonical ambiguous": 17,
+  "canonical not in the archive": 5
+ },
+ "pfa_only_gaps": 30,
+ "silenced_code_years": 3,
+ "leagues": [
+  "AAF",
+  "AAFC",
+  "ACFL",
+  "AFA",
+  "AFL",
+  "ALFL",
+  "APFA",
+  "ARENA",
+  "ARFL",
+  "CAFL",
+  "CFL",
+  "COFL",
+  "DFL",
+  "EFL",
+  "IFL",
+  "IRFU",
+  "MWFL",
+  "NFL",
+  "NFLE",
+  "NWIFL",
+  "ORFU",
+  "PCFL",
+  "PFLA",
+  "SFL",
+  "TSFL",
+  "UFL",
+  "UFL2",
+  "USFL",
+  "USFL2",
+  "WFL",
+  "WIFU",
+  "WLAF",
+  "XFL"
+ ],
+ "code_years": 4233,
+ "leagues_with_zero_clubs": [
+  "AFL-1926",
+  "AFL-1940",
+  "Arena",
+  "Ohio"
+ ]
+}
+REBUILD OK
+exit 0

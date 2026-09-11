@@ -1,0 +1,16 @@
+  ok   A1 apply_club_keys: the account covers every decision (677 decided, 677 accounted)
+  ok   A2 apply_club_keys: every decision that did less than it recorded has a legitimate reason -- {'applied': 677}, moved 677 of 677 recorded
+  ok   A1 apply_person_merges: the account covers every decision (93 decided, 93 accounted)
+  ok   A2 apply_person_merges: every decision that did less than it recorded has a legitimate reason -- {'applied': 72, 'partly_applied (legitimate)': 21}, moved 1,311 of 1,352 recorded
+  ok   A1 apply_promotions: the account covers every decision (1799 decided, 1799 accounted)
+  ok   A2 apply_promotions: every decision that did less than it recorded has a legitimate reason -- {'applied': 1799}, moved 12,656 of 12,656 recorded
+  ok   A1 apply_player_promotions: the account covers every decision (7722 decided, 7722 accounted)
+  ok   A2 apply_player_promotions: every decision that did less than it recorded has a legitimate reason -- {'applied': 7722}, moved 7,722 of 7,722 recorded
+  ok   A1 demote_stintless: the account covers every decision (5 decided, 5 accounted)
+  ok   A2 demote_stintless: every decision that did less than it recorded has a legitimate reason -- {'applied': 5}, moved 5 of 5 recorded
+  ok   A1 restore_cfl1945_seasons: the account covers every decision (60 decided, 60 accounted)
+  ok   A2 restore_cfl1945_seasons: every decision that did less than it recorded has a legitimate reason -- {'applied': 60}, moved 60 of 60 recorded
+  ok   A1 apply_officials: the account covers every decision (1052 decided, 1052 accounted)
+  ok   A2 apply_officials: every decision that did less than it recorded has a legitimate reason -- {'applied': 1052}, moved 8,209 of 8,209 recorded
+
+APPLIER ACCOUNT GATE: pass

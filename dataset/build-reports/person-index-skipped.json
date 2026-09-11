@@ -32,6 +32,16 @@
    ]
   },
   {
+   "store": "club-key-proposals",
+   "bytes": 272848,
+   "top_level_keys": [
+    "_what",
+    "applied_when_merging",
+    "refused_now",
+    "rewrites"
+   ]
+  },
+  {
    "store": "coach-promotions",
    "bytes": 11708440,
    "top_level_keys": [

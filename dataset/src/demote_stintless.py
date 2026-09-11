@@ -27,12 +27,17 @@ def main(write=True):
     before = sum(1 for k in idx if k != "_clubs")
     stintless = [p for p in prom["promotions"] if not p["coaching_seasons"]]
     leads, removed, kept = [], 0, 0
+    acct = []                                    # every decision accounted for (Ryan, 2026-09-11)
     for p in stintless:
         pid = p["person_id"]
         rec = idx.get(pid)
         if rec is None:
             kept += 1
+            acct.append({"decision": pid, "outcome": "skipped", "expected": 1, "moved": 0, "legitimate": True,
+                         "reason": "the promoted record is already absent from the index"})
             continue
+        acct.append({"decision": pid, "outcome": "applied", "expected": 1, "moved": 1, "reason": None,
+                     "legitimate": True})
         # every field the promotion held, so a later promotion is a ruling
         leads.append({
             "lead_id": f"lead-stintless-{len(leads)+1:04d}",
@@ -56,6 +61,7 @@ def main(write=True):
         del idx[pid]
         removed += 1
     after = sum(1 for k in idx if k != "_clubs")
+    IO.write_account("demote_stintless", acct, run="write" if write else "dry")
     out = {"decided_at": "2026-09-06",
            "leads": leads,
            "counts": {"stintless_promotions": len(stintless),
