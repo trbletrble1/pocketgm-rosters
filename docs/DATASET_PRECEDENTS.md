@@ -2002,3 +2002,65 @@ no roster excludes its squad by a gap in the evidence, not by evidence of absenc
 
 *Related: `an ingest must not invent a club code`, and the team-photograph ruling — the
 other place a qualifying kind was widened, and widened by a person.*
+
+---
+
+## Era is not identity — and a source's own id outranks a name
+
+**Ryan, 2026-09-11**, on the 747 player leads refused because more than one held man
+carries the printed name.
+
+### The evidence is a measured error rate, not an instinct
+
+Split by era, 395 of the 747 had exactly one candidate playing within three years of the
+lead. That looks like an answer. It was about to be recommended against on principle —
+tier 2, *uniqueness satisfied by absence*, is inadmissible — and Ryan asked the better
+question first: **is era really the only evidence they carry?**
+
+It was not. PFA's team pages link every roster name to PFA's own player page,
+`/players/m/murp03750.html`, and the ingest had kept the text and thrown the link away.
+383 of the 395 carry a code. Read against the codes the archive already holds:
+
+| the lead's own PFA code | leads |
+|---|---:|
+| is the era candidate's | 260 |
+| is a **different** candidate's | **9** |
+| is held by nobody, while the era candidate holds a different one | **96** |
+| undecided by code | 18 |
+
+**Era put 105 of 383 checkable leads on the wrong man — 27%.** Lamar Jackson, UFL 2026,
+went to the Ravens' quarterback; the code is the other Lamar Jackson's. Jon Baker, WLAF
+1995–97, went to the Jon Baker of 1995–2001; the code is the 1991 man's.
+
+### The rule
+
+1. **A lead whose code is held by exactly one of the held men of its name is placed on
+   him.** A source-native identifier, not a judgement — the same thing that made the
+   gamelog join clean. It is not tier 2: tier 2 is a *name* that happens to be unique.
+2. **A lead is a new person only where nobody holds its code** — and either every
+   namesake played more than three years away, or every namesake holds a different code.
+3. **Without a code, an ambiguous lead stays ambiguous.** Era is never enough.
+
+### What the rule caught before it was applied
+
+The first form of rule 2 was *every namesake more than three years away*. Measured
+against the codes, **36 of those 236 leads are one of the namesakes** — Jack Roberts,
+Louisville 1938–39, is the Jack Roberts held for 1932–34. A four-year gap is a career, not
+a stranger. The code condition was added before anything was promoted, and
+`src/gate_code_identity.py` holds both halves: a placement by code must match exactly one
+candidate, a new person must match none, and each was shown failing first.
+
+### And the cause, which is the older lesson
+
+**The leads never recorded a code the source printed.** A fact held where nothing can
+read it — the same shape as a disagreement written only into a report. The code now rides
+on every lead and every roster claim, so nobody has to re-derive it from disk.
+
+*Alternative rejected:* **decide the 395 by eye, as era judgements.** It reads as
+diligence and it is tier 2 done by hand, at a measured 27% error rate. *And the one
+nobody proposed but the data nearly forced:* promote all 236 as new on era alone, which
+would have made 36 men twice.
+
+*Related: `uniqueness satisfied by absence`, `a join must use every field on the row` —
+and the measurement of this very queue, which on 9 September joined on the name instead
+of the lead's id and reported 362/225/158 for what is 395/116/236.*

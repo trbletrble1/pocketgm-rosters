@@ -43,6 +43,7 @@ BASE = os.path.join(HERE, "..")
 sys.path.insert(0, os.path.join(BASE, "service"))
 import paths
 from readings import person_name as pname
+import pfa_codes
 
 SRC = os.path.expanduser("~/Documents/pgm3-sources")
 TREES = ("pfa-team-seasons", "pfa2", "pfa", "pfa-awards")
@@ -54,6 +55,24 @@ COLS = ("Player", "No", "Pos", "Ht", "Wt", "Age", "College", "GP", "GS")
 TYPO_PAIRS = {("lousville bourbons", "louisville bourbons"),
               ("milwaukee chiuefs", "milwaukee chiefs"),
               ("cincinnati benagls", "cincinnati bengals")}
+
+# THE CODE TIER, Ryan's ruling of 2026-09-11. PFA links every roster name to its own
+# player page, /players/<x>/<code>.html, and this ingest used to throw the link away: the
+# leads never recorded a code the source printed. Where more than one held man carries the
+# printed name and EXACTLY ONE of them holds this row's code, the code places him. It is a
+# source-native identifier, not a judgement -- the same thing that made the gamelog join
+# clean -- and it is not tier 2: tier 2 is a NAME that happens to be unique; this is PFA's
+# own id for the man. Measured before it was ruled: of 395 leads whose only other evidence
+# was era, era put 105 of 383 checkable ones on the WRONG man.
+CODE_TIER = "PFA's own player code, held by exactly one man of that name"
+
+# THE CODE TIER DOES NOT REACH AN EXCLUDED LEAGUE. Ryan, 2026-09-11: 126 of the 391 men
+# the code would place sit on club-seasons in leagues declarations/clubs.json excludes, and
+# the promotion route never read that exclusion -- 3,536 people were made on those leagues on
+# 9 September. That leak is a separate ruling. This pass does not extend it: the rule is
+# applied in scope and the rest is COUNTED, not placed. Read from the declaration, never typed.
+EXCLUDED = set(json.load(open(os.path.join(BASE, "declarations", "clubs.json")))
+               ["MINOR_LEAGUE_EXCLUSION"]["leagues"])
 
 
 def _lev(a, b):
@@ -127,18 +146,30 @@ def read_page(path):
     fl = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "|", body)))
     hc = re.search(r"Head Coach:\s*\|*\s*([^|]{2,60})", fl)
     coach = hc.group(1).strip() if hc else None
-    cols, rows = None, []
+    cols, rows, codes = None, [], []
     for tab in re.findall(r"(?is)<table.*?</table>", body):
         trs = re.findall(r"(?is)<tr.*?</tr>", tab)
-        cells = [[flat(x) for x in re.findall(r"(?is)<t[hd][^>]*>(.*?)</t[hd]>", tr)] for tr in trs]
-        cells = [c for c in cells if any(c)]
-        if cells and cells[0] and cells[0][0].strip().upper() == "ROSTER":
-            cols = cells[1] if len(cells) > 1 else []
-            for r in cells[2:]:
+        pairs = [(tr, [flat(x) for x in re.findall(r"(?is)<t[hd][^>]*>(.*?)</t[hd]>", tr)]) for tr in trs]
+        pairs = [(tr, c) for tr, c in pairs if any(c)]
+        if pairs and pairs[0][1] and pairs[0][1][0].strip().upper() == "ROSTER":
+            cols = pairs[1][1] if len(pairs) > 1 else []
+            for tr, r in pairs[2:]:
                 if not r or not r[0] or r[0].startswith(("Team", "Opponents")): continue
-                rows.append(r)
+                # THE ROW'S OWN LINK, kept. `flat` reads the cell's text and drops the
+                # href, and the code in it was the one identifier the source gave.
+                rows.append(r); codes.append(pfa_codes.code_in_row(tr))
             break
-    return title, printed, coach, cols, rows
+    return title, printed, coach, cols, rows, codes
+
+
+def names_elsewhere(conn):
+    """{normalised name: {person}} for every name the archive holds OUTSIDE this store.
+    One implementation: the ingest's candidates and gate_code_identity's are the same set."""
+    everywhere = collections.defaultdict(set)
+    for pid, nm in conn.execute("select person, name from person_name where store not like 'pfa-club-rosters%'"):
+        n = norm(nm)
+        if n: everywhere[n].add(pid)
+    return everywhere
 
 
 _PROM = {}
@@ -183,10 +214,9 @@ def main(write=False):
             on_cs[(cid, y)].setdefault(n, pid)
             w = n.split()
             if len(w) > 1: sur_cs[(cid, y)][(w[-1], w[0][:1])].add(pid)
-    everywhere = collections.defaultdict(set)
-    for pid, nm in conn.execute("select person, name from person_name where store not like 'pfa-club-rosters%'"):
-        n = norm(nm)
-        if n: everywhere[n].add(pid)
+    everywhere = names_elsewhere(conn)
+    # WHO HOLDS EACH PFA CODE, from every store but this one.
+    code_to = pfa_codes.holders(conn, exclude_stores={SRC_ID})
 
     claims, leads, names, srs = [], [], [], {}
     n = collections.Counter(); tiers = collections.Counter()
@@ -219,7 +249,7 @@ def main(write=False):
         if (t["club_id"], t["year"]) not in in_scope:
             n["out_of_scope_pages_not_read"] += 1
             continue
-        title, printed, coach, cols, rows = read_page(have[loc])
+        title, printed, coach, cols, rows, pcodes = read_page(have[loc])
         if not rows: continue
         seen_pages.add(loc)
         n["pages"] += 1
@@ -250,7 +280,7 @@ def main(write=False):
             n["head_coach"] += 1
 
         idx = {c: i for i, c in enumerate(cols or [])}
-        for r in rows:
+        for r, pcode in zip(rows, pcodes):
             def cell(c):
                 i = idx.get(c)
                 return r[i].strip() if i is not None and len(r) > i and r[i].strip() else None
@@ -259,6 +289,9 @@ def main(write=False):
             n["roster_rows"] += 1
             line = {c: cell(c) for c in COLS if cell(c)}
             line.update({"club_as_printed": printed, "year": y, "league": lg, "page": loc})
+            # ON THE LINE, so it rides on the lead AND on the placed man's claim, and nobody
+            # has to re-derive it from disk again.
+            if pcode: line["pfa_code"] = pcode
             nm = norm(who)
             pid = on_cs[(cid, y)].get(nm)
             tier = "exact name on the club-season"
@@ -272,6 +305,18 @@ def main(write=False):
                 if pid: tier = ("this ingest's own lead, promoted by promote_players.py under the "
                                 "printed-roster ruling -- the exact printed name on the exact "
                                 "club-season")
+            if not pid and pcode:
+                named = everywhere.get(nm, set())
+                on = [p for p in named if p in code_to.get(pcode, ())]
+                if len(named) >= 2 and len(on) == 1:
+                    if lg in EXCLUDED:
+                        n["code_would_place_on_an_excluded_league__held_back"] += 1
+                    else:
+                        pid = on[0]; tier = CODE_TIER
+                elif len(named) == 1 and len(on) == 1:
+                    # THE SAME EVIDENCE WOULD SETTLE A SINGLE NAMESAKE, and that is NOT
+                    # ruled -- the ruling is about the ambiguous leads. Counted, not done.
+                    n["code_would_settle_a_single_namesake__not_ruled"] += 1
             if not pid:
                 # TIER 2 IS INADMISSIBLE FOR A CLUB-SEASON PLACEMENT and is not tried here.
                 cand = sorted(everywhere.get(nm, ()))
@@ -286,6 +331,7 @@ def main(write=False):
                               "category": "player_lead_unpromoted", "IS_NOT_A_PERSON": True,
                               "evidence_kind": "printed_roster",
                               "name_as_printed": who, "roster_line": line,
+                              "pfa_code": pcode,
                               "places_on": {"club_as_printed": printed, "year": y,
                                             "club_season": f"{lg}|{y}|{code}"},
                               "no_archive_match_evidence": {

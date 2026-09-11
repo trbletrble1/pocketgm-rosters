@@ -35,6 +35,8 @@ HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 import index_io as IO
 from readings import person_name as _person_name
+sys.path.insert(0, os.path.join(BASE, "service"))
+import sqlite3, paths, pfa_codes
 OUT = os.path.join(BASE, "build", "player-promotions.json")
 DECL = os.path.join(BASE, "declarations", "player-promotions.json")
 
@@ -178,6 +180,39 @@ def qualify(lead, held):
     return True, f"named on a roster for {cs}, which the archive holds"
 
 
+def _code_rule():
+    d = json.load(open(DECL)).get("new_person_by_source_id")
+    if not d or "era_window_years" not in d:
+        raise PromoteError("declarations/player-promotions.json declares no "
+                           "new_person_by_source_id rule. Refusing to promote an ambiguous "
+                           "name on a typed default: the declaration is the rule.")
+    return d
+
+
+def new_by_code(code, cands, year, hold, held_codes, years, window):
+    """-> the rule that makes an AMBIGUOUS lead a new person, or None.
+
+    Ryan's rulings of 2026-09-11. A name more than one held man carries is refused -- unless
+    PFA's own player code says he is none of them:
+      * NOBODY in the archive holds his code. Stricter than "no candidate holds it": one
+        lead's code is held by a man of ANOTHER name, and promoting him would make that man
+        twice. Refused, and reported.
+      * and EITHER every candidate holds a DIFFERENT PFA code (the code says he is not any
+        of them), OR every candidate played more than `window` years away (the 236).
+    Without a code this returns None and the lead stays ambiguous: era alone is not
+    identity. Measured before the ruling -- era put 105 of 383 checkable leads on the wrong
+    man, Lamar Jackson among them."""
+    if not code or year is None: return None
+    if hold.get(code): return None
+    if all(held_codes.get(p) for p in cands):
+        return ("every held man of this name holds a DIFFERENT PFA code, and nobody in the "
+                "archive holds this lead's code (Ryan, 2026-09-11)")
+    if all(not any(abs(v - int(year)) <= window for v in years(p)) for p in cands):
+        return (f"every held man of this name played more than {window} years away, and nobody "
+                "in the archive holds this lead's PFA code (Ryan, 2026-09-11)")
+    return None
+
+
 def main(write=False):
     IDX = IO.load_index(); IDX.pop("_clubs", None)
     held = held_club_seasons(IDX)
@@ -186,6 +221,46 @@ def main(write=False):
         if isinstance(p, dict) and p.get("name"):
             byname[norm(p["name"])].append(pid)
             bysur[norm(p["name"]).split()[-1]].append(pid)
+    # PFA'S OWN PLAYER CODE, for the ambiguous names. From the read model, every store:
+    # a man this route promoted in an earlier run carries his code on his roster line, so
+    # a second lead with that code finds him rather than minting him twice.
+    W = int(_code_rule()["era_window_years"])
+    # NOT ON AN EXCLUDED LEAGUE. Ryan, 2026-09-11: this route never read the minor-league
+    # exclusion and made 3,536 people on those leagues on 9 September. That is its own
+    # ruling; the code rules are applied IN SCOPE and do not extend it.
+    EXCLUDED = set(json.load(open(os.path.join(BASE, "declarations", "clubs.json")))
+                   ["MINOR_LEAGUE_EXCLUSION"]["leagues"])
+    HOLD = pfa_codes.holders(sqlite3.connect(f"file:{paths.READ_MODEL}?mode=ro", uri=True))
+    HELD_CODES = pfa_codes.codes_of(HOLD)
+
+    def years(p):
+        return {int(str(k).split("|")[1]) for k in ((IDX.get(p) or {}).get("seasons") or {})
+                if len(str(k).split("|")) >= 3 and str(k).split("|")[1].isdigit()}
+    by_code = {}
+
+    # WHO THE INDEX HOLDS ON EACH CLUB-SEASON, keyed on (year, club code) with the league
+    # LEFT OUT. Ryan, 2026-09-11: a lead with no forename is NOT promoted onto a club-season
+    # that already holds a roster. 27 men from the Ghosts line-ups were minted beside the
+    # men they are -- `Behman` beside Bull Behman on Frankford 1924 -- because this route
+    # checks only an exact full name. A same-surname test is not enough: Bowser is Brainy
+    # Bowers, Fennel is Harold Fenner. And the league is left out because one club-season
+    # was reaching this under two keys, `|1922|DOC:FYJ-IND` and `IND|1922|DOC:FYJ-IND`.
+    REFUSE_SURNAME_ONLY = bool(json.load(open(DECL)).get("refuse_forename_unknown_on_a_held_roster"))
+    ROSTER = collections.defaultdict(set)
+    for pid, r in IDX.items():
+        if not isinstance(r, dict): continue
+        for key in (r.get("seasons") or {}):
+            parts = str(key).split("|")
+            if len(parts) == 3: ROSTER[(parts[1], parts[2])].add(pid)
+
+    def roster_held(st, L):
+        """Men held on the lead's club-season, NOT counting a man this route already promoted
+        from this very lead -- a lead must not be refused for colliding with itself."""
+        parts = str((L.get("places_on") or {}).get("club_season") or "").split("|")
+        if len(parts) != 3: return 0
+        own = prior.get((f"{st}-player-lead", L.get("lead_id")))
+        return len(ROSTER.get((parts[1], parts[2]), set()) - {own})
+    refused_surname_only = set()
     # THE DECISION STORE IS CUMULATIVE. Once a man is promoted the ingest writes claims
     # for him and he stops being a lead -- so re-deciding from the leads alone would drop
     # him, and the next rebuild would strip his entered_by and forename_unknown. A
@@ -213,6 +288,13 @@ def main(write=False):
         row = {"store": st, "lead_ref": L.get("lead_id"), "name_as_printed": nm, "why": why}
         if not ok:
             refused.append(row); continue
+        held_n = roster_held(st, L)
+        if REFUSE_SURNAME_ONLY and forename_unknown(nm) and held_n:
+            refused_surname_only.add((st, L.get("lead_id")))
+            refused.append({**row, "why": (
+                f"a lead with no forename, on a club-season that already holds a roster of "
+                f"{held_n} -- he may be one of them under a fuller or differently spelt name, "
+                "and a surname is not a man (Ryan, 2026-09-11). He stays a lead.")}); continue
         # NO BATCH APPROVAL. Ryan's ruling of 2026-09-08: a qualifying man is promoted.
         # The scope keys that used to sit here are gone on purpose -- a scope key is how a
         # standing rule quietly becomes a queue again, and the queue only grows.
@@ -220,10 +302,48 @@ def main(write=False):
         if len(byname.get(k, [])) == 1:
             refused.append({**row, "why": "already held: one person carries this exact name"}); continue
         if len(byname.get(k, [])) > 1:
-            ambiguous.append({**row, "held_candidates": byname[k],
-                              "why": "REFUSED: more than one held person carries this exact "
-                                     "name. Choosing between them is a per-man judgement "
-                                     "this document cannot make."}); continue
+            code = L.get("pfa_code") or (L.get("roster_line") or {}).get("pfa_code")
+            on = L.get("places_on") or {}
+            verdict = new_by_code(code, byname[k], on.get("year"), HOLD, HELD_CODES, years, W)
+            held_back = bool(verdict) and (on.get("club_season") or "||").split("|")[0] in EXCLUDED
+            if not verdict or held_back:
+                ambiguous.append({**row, "held_candidates": byname[k], "pfa_code": code,
+                                  **({"_held_back_excluded_league": verdict} if held_back else {}),
+                                  "why": "REFUSED: more than one held person carries this exact "
+                                         "name. Choosing between them is a per-man judgement "
+                                         "this document cannot make."}); continue
+            # A NEW PERSON, KEYED ON HIS CODE AND NEVER ON HIS NAME. The ordinary route
+            # below merges two leads of one name into one man (`seen[k]`); two Joe Johnsons
+            # with two PFA codes are two men, and the code is what says so.
+            pid = by_code.get(code) or prior.get((st, L.get("lead_id"))) or new_person_id(IDX, assigned)
+            assigned.add(pid); by_code[code] = pid
+            season = {"league": (on.get("club_season") or "||").split("|")[0], "year": on.get("year"),
+                      "club": (on.get("club_season") or "||").split("|")[-1],
+                      "club_as_printed": on.get("club_as_printed")}
+            existing = next((p for p in prom if p["person_id"] == pid), None)
+            if existing:
+                existing["playing_seasons"].append(season); continue
+            prom.append({
+                "person_id": pid, "name": nm, "source": f"{st}-player-lead",
+                "entered_by": "promotion_from_lead",
+                "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+                "playing_seasons": [season],
+                "identified_by": {"name_as_printed": nm, "club_as_printed": on.get("club_as_printed"),
+                                  "pfa_code": code, "lists": [L.get("source_record")]},
+                "_new_by_code": {"pfa_code": code, "rule": verdict, "era_window_years": W,
+                                 "candidates": [{"person": p, "pfa_codes": sorted(HELD_CODES.get(p, ())),
+                                                 "years": sorted(years(p))[:1] + sorted(years(p))[-1:]}
+                                                for p in byname[k]]},
+                "no_archive_match_evidence": {"checked": [
+                    {"test": "PFA's own player code, across the whole archive",
+                     "pfa_code": code, "holders": 0}]},
+                "forename_unknown": forename_unknown(nm),
+                "reversible": {"undo": "delete this person_id and restore the lead",
+                               "lead_ref": L.get("lead_id"),
+                               "source_record": L.get("source_record")},
+                "source_record": L.get("source_record"),
+                "why": verdict})
+            continue
         if k in seen:                                   # same man on two seasons
             pid = seen[k]
         else:
@@ -258,6 +378,7 @@ def main(write=False):
             # defects. A later source completing one must be able to find him rather
             # than mint a second record beside him.
             "forename_unknown": surname_only,
+            "_club_season_roster_at_decision": held_n,
             "reversible": {"undo": "delete this person_id and restore the lead",
                            "lead_ref": L.get("lead_id"),
                            "source_record": L.get("source_record")},
@@ -266,7 +387,23 @@ def main(write=False):
 
     # carry forward every decision whose man is no longer a lead, because he was promoted
     have = {p["person_id"] for p in prom}
-    carried = [p for p in prior_rows if p["person_id"] not in have]
+    # A DECISION THAT NEVER TOOK EFFECT IS NOT CARRIED FORWARD, 2026-09-11. Carrying is right
+    # for a man the ingest now places -- "he is no longer a lead" -- but it also carried the
+    # 27 minted from the Ghosts line-ups, whose leads still stand, so a refusal could never
+    # take effect: the man came back from the decision store. The first fix, "carry only if
+    # the lead is gone", was measured before it was written and would have dropped 48 real
+    # men as well: a promoted man re-decided finds HIMSELF as the one holder of his name, so
+    # his lead is refused and still listed while he is fully placed. So the test is all
+    # three, and each is the reason, not a proxy: his lead is still standing, THIS run
+    # refused it under the surname-only rule, and he holds NO season -- he was never placed.
+    def _src(p):
+        s = str(p.get("source") or "")
+        return s[:-len("-player-lead")] if s.endswith("-player-lead") else s
+    def never_took_effect(p):
+        return ((_src(p), (p.get("reversible") or {}).get("lead_ref")) in refused_surname_only
+                and not ((IDX.get(p["person_id"]) or {}).get("seasons")))
+    carried = [p for p in prior_rows if p["person_id"] not in have and not never_took_effect(p)]
+    dropped = [p for p in prior_rows if p["person_id"] not in have and never_took_effect(p)]
     for p in carried: p.setdefault("_carried_forward",
         "promoted in an earlier run; he is no longer a lead because the ingest now writes "
         "claims for him. The decision stands.")

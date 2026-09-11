@@ -1,0 +1,1720 @@
+{
+ "_what": "The 27 people minted from the Ghosts line-ups on 2026-09-11 and removed by Ryan's ruling the same day. Every index entry whole, with its promotion decision, so the removal can be undone.",
+ "_why": "Each is a lead with no forename promoted onto a club-season that already held a roster -- 22 share a surname with a held man there (Behman / Bull Behman), 5 are a spelling or an initial away (Bowser / Brainy Bowers). None ever held a season: the Ghosts line-up ingest was not re-run.",
+ "entries": {
+  "P_054537": {
+   "index_entry": {
+    "name": "Thomas",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00006",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054537",
+    "name": "Thomas",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "",
+      "year": 1922,
+      "club": "DOC:FYJ-IND",
+      "club_as_printed": "Frankford Yellow Jackets"
+     },
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "FYJ",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Thomas",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "thomas",
+       "same_surname": 236,
+       "ids": [
+        "P_000119",
+        "P_000245",
+        "P_000359",
+        "P_000360",
+        "P_015246",
+        "P_001379"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00006",
+     "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530",
+    "why": "named on a roster for |1922|DOC:FYJ-IND, which the archive holds"
+   }
+  },
+  "P_054538": {
+   "index_entry": {
+    "name": "Spagna",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00008",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054538",
+    "name": "Spagna",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "",
+      "year": 1922,
+      "club": "DOC:FYJ-IND",
+      "club_as_printed": "Frankford Yellow Jackets"
+     },
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "FYJ",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Spagna",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "spagna",
+       "same_surname": 2,
+       "ids": [
+        "P_002555",
+        "P_045330"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00008",
+     "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530",
+    "why": "named on a roster for |1922|DOC:FYJ-IND, which the archive holds"
+   }
+  },
+  "P_054539": {
+   "index_entry": {
+    "name": "Wray",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00009",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054539",
+    "name": "Wray",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "",
+      "year": 1922,
+      "club": "DOC:FYJ-IND",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Wray",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "wray",
+       "same_surname": 2,
+       "ids": [
+        "P_002561",
+        "P_005717"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00009",
+     "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530",
+    "why": "named on a roster for |1922|DOC:FYJ-IND, which the archive holds"
+   }
+  },
+  "P_054540": {
+   "index_entry": {
+    "name": "Little",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00011",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054540",
+    "name": "Little",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "",
+      "year": 1922,
+      "club": "DOC:FYJ-IND",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Little",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "little",
+       "same_surname": 23,
+       "ids": [
+        "P_002146",
+        "P_002220",
+        "P_002547",
+        "P_007286",
+        "P_007577",
+        "P_028254"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00011",
+     "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530",
+    "why": "named on a roster for |1922|DOC:FYJ-IND, which the archive holds"
+   }
+  },
+  "P_054541": {
+   "index_entry": {
+    "name": "Scott",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00013",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054541",
+    "name": "Scott",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "",
+      "year": 1922,
+      "club": "DOC:FYJ-IND",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Scott",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "scott",
+       "same_surname": 127,
+       "ids": [
+        "P_000695",
+        "P_000832",
+        "P_002901",
+        "P_002552",
+        "P_001204",
+        "P_002011"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00013",
+     "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530",
+    "why": "named on a roster for |1922|DOC:FYJ-IND, which the archive holds"
+   }
+  },
+  "P_054542": {
+   "index_entry": {
+    "name": "Bowser",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00014",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054542",
+    "name": "Bowser",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "",
+      "year": 1922,
+      "club": "DOC:FYJ-IND",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Bowser",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "bowser",
+       "same_surname": 5,
+       "ids": [
+        "P_013886",
+        "P_022993",
+        "P_014848",
+        "P_034633",
+        "P_045522"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00014",
+     "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530",
+    "why": "named on a roster for |1922|DOC:FYJ-IND, which the archive holds"
+   }
+  },
+  "P_054543": {
+   "index_entry": {
+    "name": "Lightner",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00015",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054543",
+    "name": "Lightner",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "",
+      "year": 1922,
+      "club": "DOC:FYJ-IND",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Lightner",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "lightner",
+       "same_surname": 3,
+       "ids": [
+        "P_045324",
+        "P_047659",
+        "P_039370"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00015",
+     "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530",
+    "why": "named on a roster for |1922|DOC:FYJ-IND, which the archive holds"
+   }
+  },
+  "P_054544": {
+   "index_entry": {
+    "name": "Elliot",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00016",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054544",
+    "name": "Elliot",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "",
+      "year": 1922,
+      "club": "DOC:FYJ-IND",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Elliot",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "elliot",
+       "same_surname": 1,
+       "ids": [
+        "P_051259"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00016",
+     "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Holmesburg_1922.htm@20091214052530",
+    "why": "named on a roster for |1922|DOC:FYJ-IND, which the archive holds"
+   }
+  },
+  "P_054545": {
+   "index_entry": {
+    "name": "Fennel",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00017",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054545",
+    "name": "Fennel",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "DAY",
+      "club_as_printed": "Dayton Triangles"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Fennel",
+     "club_as_printed": "Dayton Triangles",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "fennel",
+       "same_surname": 0,
+       "ids": [],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00017",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|DAY, which the archive holds"
+   }
+  },
+  "P_054546": {
+   "index_entry": {
+    "name": "Muirhead",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00018",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054546",
+    "name": "Muirhead",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "DAY",
+      "club_as_printed": "Dayton Triangles"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Muirhead",
+     "club_as_printed": "Dayton Triangles",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "muirhead",
+       "same_surname": 1,
+       "ids": [
+        "P_015206"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00018",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|DAY, which the archive holds"
+   }
+  },
+  "P_054547": {
+   "index_entry": {
+    "name": "Hathaway",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00019",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054547",
+    "name": "Hathaway",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "DAY",
+      "club_as_printed": "Dayton Triangles"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Hathaway",
+     "club_as_printed": "Dayton Triangles",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "hathaway",
+       "same_surname": 4,
+       "ids": [
+        "P_002691",
+        "P_010562",
+        "P_023542",
+        "P_052533"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00019",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|DAY, which the archive holds"
+   }
+  },
+  "P_054548": {
+   "index_entry": {
+    "name": "Bonowitz",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00020",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054548",
+    "name": "Bonowitz",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "DAY",
+      "club_as_printed": "Dayton Triangles"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Bonowitz",
+     "club_as_printed": "Dayton Triangles",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "bonowitz",
+       "same_surname": 1,
+       "ids": [
+        "P_015060"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00020",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|DAY, which the archive holds"
+   }
+  },
+  "P_054549": {
+   "index_entry": {
+    "name": "H. Kenderdine",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00021",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054549",
+    "name": "H. Kenderdine",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "DAY",
+      "club_as_printed": "Dayton Triangles"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "H. Kenderdine",
+     "club_as_printed": "Dayton Triangles",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "kenderdine",
+       "same_surname": 0,
+       "ids": [],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00021",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|DAY, which the archive holds"
+   }
+  },
+  "P_054550": {
+   "index_entry": {
+    "name": "Sauer",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00022",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054550",
+    "name": "Sauer",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "DAY",
+      "club_as_printed": "Dayton Triangles"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Sauer",
+     "club_as_printed": "Dayton Triangles",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "sauer",
+       "same_surname": 6,
+       "ids": [
+        "P_001946",
+        "P_002701",
+        "P_027505",
+        "P_016617",
+        "P_050756",
+        "P_046602"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00022",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|DAY, which the archive holds"
+   }
+  },
+  "P_054551": {
+   "index_entry": {
+    "name": "Bacon",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00023",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054551",
+    "name": "Bacon",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "DAY",
+      "club_as_printed": "Dayton Triangles"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Bacon",
+     "club_as_printed": "Dayton Triangles",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "bacon",
+       "same_surname": 5,
+       "ids": [
+        "P_002683",
+        "P_030121",
+        "P_009029",
+        "P_019809",
+        "P_054012"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00023",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|DAY, which the archive holds"
+   }
+  },
+  "P_054552": {
+   "index_entry": {
+    "name": "Redman",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00024",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054552",
+    "name": "Redman",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "DAY",
+      "club_as_printed": "Dayton Triangles"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Redman",
+     "club_as_printed": "Dayton Triangles",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "redman",
+       "same_surname": 4,
+       "ids": [
+        "P_001970",
+        "P_002936",
+        "P_028696",
+        "P_031857"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00024",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|DAY, which the archive holds"
+   }
+  },
+  "P_054553": {
+   "index_entry": {
+    "name": "Mahrt",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00025",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054553",
+    "name": "Mahrt",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "DAY",
+      "club_as_printed": "Dayton Triangles"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Mahrt",
+     "club_as_printed": "Dayton Triangles",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "mahrt",
+       "same_surname": 4,
+       "ids": [
+        "P_002696",
+        "P_014579",
+        "P_015221",
+        "P_015371"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00025",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|DAY, which the archive holds"
+   }
+  },
+  "P_054554": {
+   "index_entry": {
+    "name": "Huffine",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00026",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054554",
+    "name": "Huffine",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "DAY",
+      "club_as_printed": "Dayton Triangles"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Huffine",
+     "club_as_printed": "Dayton Triangles",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "huffine",
+       "same_surname": 1,
+       "ids": [
+        "P_002794"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00026",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|DAY, which the archive holds"
+   }
+  },
+  "P_054555": {
+   "index_entry": {
+    "name": "Partlow",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00027",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054555",
+    "name": "Partlow",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "DAY",
+      "club_as_printed": "Dayton Triangles"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Partlow",
+     "club_as_printed": "Dayton Triangles",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "partlow",
+       "same_surname": 1,
+       "ids": [
+        "P_002697"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00027",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|DAY, which the archive holds"
+   }
+  },
+  "P_054556": {
+   "index_entry": {
+    "name": "R. Stein",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00029",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054556",
+    "name": "R. Stein",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "FYJ",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "R. Stein",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "stein",
+       "same_surname": 10,
+       "ids": [
+        "P_016010",
+        "P_002469",
+        "P_002871",
+        "P_047031",
+        "P_047032",
+        "P_015007"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00029",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|FYJ, which the archive holds"
+   }
+  },
+  "P_054557": {
+   "index_entry": {
+    "name": "H. Stein",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00031",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054557",
+    "name": "H. Stein",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "FYJ",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "H. Stein",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "stein",
+       "same_surname": 10,
+       "ids": [
+        "P_016010",
+        "P_002469",
+        "P_002871",
+        "P_047031",
+        "P_047032",
+        "P_015007"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00031",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|FYJ, which the archive holds"
+   }
+  },
+  "P_054558": {
+   "index_entry": {
+    "name": "Welsh",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00032",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054558",
+    "name": "Welsh",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "FYJ",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Welsh",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "welsh",
+       "same_surname": 2,
+       "ids": [
+        "P_015155",
+        "P_030490"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00032",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|FYJ, which the archive holds"
+   }
+  },
+  "P_054559": {
+   "index_entry": {
+    "name": "Behman",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00033",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054559",
+    "name": "Behman",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "FYJ",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Behman",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "behman",
+       "same_surname": 1,
+       "ids": [
+        "P_014324"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00033",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|FYJ, which the archive holds"
+   }
+  },
+  "P_054560": {
+   "index_entry": {
+    "name": "Doyle",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00034",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054560",
+    "name": "Doyle",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "FYJ",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Doyle",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "doyle",
+       "same_surname": 14,
+       "ids": [
+        "P_001267",
+        "P_005874",
+        "P_007277",
+        "P_015236",
+        "P_033210",
+        "P_015736"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00034",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|FYJ, which the archive holds"
+   }
+  },
+  "P_054561": {
+   "index_entry": {
+    "name": "Haws",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00035",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054561",
+    "name": "Haws",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "FYJ",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Haws",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "haws",
+       "same_surname": 2,
+       "ids": [
+        "P_015239",
+        "P_027179"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00035",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|FYJ, which the archive holds"
+   }
+  },
+  "P_054562": {
+   "index_entry": {
+    "name": "Storer",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00036",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054562",
+    "name": "Storer",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "FYJ",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Storer",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "storer",
+       "same_surname": 2,
+       "ids": [
+        "P_015244",
+        "P_031300"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00036",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|FYJ, which the archive holds"
+   }
+  },
+  "P_054563": {
+   "index_entry": {
+    "name": "Hamer",
+    "slugs": [],
+    "person": {},
+    "person_season": [],
+    "seasons": {},
+    "entered_by": "promotion_from_lead",
+    "promotion_ref": "lead-ghostslu-00038",
+    "_entered_as_a_player": true,
+    "forename_unknown": true
+   },
+   "promotion": {
+    "person_id": "P_054563",
+    "name": "Hamer",
+    "source": "ghosts-lineups-player-lead",
+    "entered_by": "promotion_from_lead",
+    "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
+    "playing_seasons": [
+     {
+      "league": "NFL",
+      "year": 1924,
+      "club": "FYJ",
+      "club_as_printed": "Frankford Yellow Jackets"
+     }
+    ],
+    "identified_by": {
+     "name_as_printed": "Hamer",
+     "club_as_printed": "Frankford Yellow Jackets",
+     "lists": [
+      "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+     ]
+    },
+    "no_archive_match_evidence": {
+     "checked": [
+      {
+       "test": "exact normalised name across the whole archive",
+       "matches": 0,
+       "ids": []
+      },
+      {
+       "test": "same surname held anywhere",
+       "surname": "hamer",
+       "same_surname": 1,
+       "ids": [
+        "P_015238"
+       ],
+       "note": "a shared surname is not this man; recorded so the refusal can be re-checked, not as a match"
+      }
+     ]
+    },
+    "forename_unknown": true,
+    "reversible": {
+     "undo": "delete this person_id and restore the lead",
+     "lead_ref": "lead-ghostslu-00038",
+     "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149"
+    },
+    "source_record": "ghosts-lineups#Yellowjackets_Thanksgiving_1924.htm@20091214051149",
+    "why": "named on a roster for NFL|1924|FYJ, which the archive holds"
+   }
+  }
+ }
+}

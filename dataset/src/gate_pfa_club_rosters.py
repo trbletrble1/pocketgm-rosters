@@ -27,7 +27,10 @@ STORE = os.path.join(BASE, "build", "pfa-club-rosters.json")
 # promote_players promoted: matched on the EXACT printed name on the EXACT club-season
 # through the promotion store, which is the lead's own identity and not a name join.
 TIERS = ("exact name on the club-season", "surname and forename initial, on the club-season",
-         "this ingest's own lead, promoted by promote_players.py")
+         "this ingest's own lead, promoted by promote_players.py",
+         # Ryan, 2026-09-11. Not tier 2: a source-native id, and gate_code_identity C1
+         # re-derives every one of these from the base state.
+         "PFA's own player code, held by exactly one man of that name")
 KINDS = ("declared typo", "typo by shape", "set differently", "a second name")
 FAILS = []
 
