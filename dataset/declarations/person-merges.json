@@ -25,7 +25,7 @@
  "REVERSIBILITY_IS_THE_CONDITION": {
   "nothing_is_deleted": "both constituent person records survive in the index. The absorbed record stays whole and gains `merged_into`; the canonical gains `merged_from`.",
   "every_contribution_is_recorded": "each decision names the season keys the canonical gained from the absorbed half, the keys both held, the stint fields taken, and the person values added. Un-merging subtracts exactly that and needs nothing re-derived.",
-  "how_to_un_merge": "delete the decision from build/person-merges.json and re-run src/apply_person_merges.py."
+  "how_to_un_merge": "delete the decision from declarations/person-merge-decisions.json (in git since 2026-09-11; it was build/person-merges.json) and re-run src/apply_person_merges.py."
  },
  "THE_CLUB_SEASON_KEY": "Coaching Tree writes club NAMES and StatsCrew writes CODES, so one club-season appears as COACHES|y1969|Pittsburgh Steelers and COACHES|y1969|PIT. The merged person's club-seasons are the UNION with the name form rewritten to the code through the archive's own club-name map, so a season held by both is counted once. Every rewrite is recorded on the decision.",
  "DISAGREEMENTS_ARE_NOT_RESOLVED_BY_A_MERGE": "where both halves state the same stint field with different values, or the same person field with different values, both are kept and the pair is recorded on the decision. A merge joins two records; it does not adjudicate between them.",

@@ -27,7 +27,7 @@
     "read_as": "table"
    },
    "person-merges": {
-    "why": "the merge DECLARATION. Read through paths.PERSON_MERGES and applied to identity, not ingested as claims.",
+    "why": "SUPERSEDED 2026-09-11: the pre-declaration copy of the 93 merge decisions, identical to declarations/person-merge-decisions.json, which paths.PERSON_MERGES now reads. Nothing reads this file as decisions; it is not ingested as claims.",
     "read_as": "declaration"
    },
    "club-key-normalisation": {

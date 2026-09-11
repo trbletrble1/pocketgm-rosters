@@ -34,7 +34,7 @@ def check(ok, msg):
 
 
 def main():
-    M = json.load(open(os.path.join(BASE, "build", "person-merges.json")))
+    M = json.load(open(AP.MP))                     # declarations/person-merge-decisions.json, in git
     index = json.load(open(AP.IDXP))
     ident = json.load(open(os.path.join(BASE, "build-reports", "identity.json")))
     merges = M["merges"]

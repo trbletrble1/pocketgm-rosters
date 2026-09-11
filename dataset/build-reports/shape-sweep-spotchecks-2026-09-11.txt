@@ -1,0 +1,4 @@
+(a) rewrites: {'in coaching_seasons, bare year (UNREACHABLE)': 658, 'already applied in seasons': 19}
+    applied_when_merging: {'in coaching_seasons, bare year (UNREACHABLE)': 1929}
+(c) people holding one coaching club-season under 2+ keys: 653; club-seasons doubled: 3,589; e.g. [('P_000494', ['COACHES|1952|CFLSSK', 'WIFU|1952|SAS']), ('P_000559', ['COACHES|1958|CFLSSK', 'WIFU|1958|SAS']), ('P_000609', ['COACHES|1966|WAS', 'NFL|1966|WAS']), ('P_000623', ['AFL|1960|HOU', 'COACHES|1960|HOO'])]
+(d) G4 as (year, club) over both dicts against the recorded union: 93 equal, 0 differ; e.g. []

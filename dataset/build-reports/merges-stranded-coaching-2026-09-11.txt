@@ -1,0 +1,11 @@
+93 merges: shell club-seasons 1,956; NOT held by the canonical person, compared as (year, club id): 15 (3 of those the club table cannot resolve at all)
+merges with at least one stranded club-season: 9
+   ('PM_0012', 'Ed Hughes', 29, 3, [(1960, 'club-dallas-texans-1960'), (1961, 'club-dallas-texans-1960'), (1962, 'club-dallas-texans-1960')])
+   ('PM_0022', 'Tom Catlin', 36, 3, [(1960, 'club-dallas-texans-1960'), (1961, 'club-dallas-texans-1960'), (1962, 'club-dallas-texans-1960')])
+   ('PM_0053', 'Jerry Glanville', 22, 2, [(1984, 'club-houston-oilers-1960'), (2020, 'club-tampa-bay-vipers-2020')])
+   ('PM_0059', 'Sam Rutigliano', 25, 2, [(2005, 'club-hamburg-sea-devils-2005'), (2006, 'club-hamburg-sea-devils-2005')])
+   ('PM_0002', 'Joe Spencer', 21, 1, [(1974, '?Chicago Winds')])
+   ('PM_0006', 'Carl Taseff', 29, 1, [(1963, '?Harrisburg Capitol Colts')])
+   ('PM_0017', 'Dick Bielski', 20, 1, [(1983, 'club-washington-federals-1983')])
+   ('PM_0042', 'Rusty Tillman', 24, 1, [(2020, '?New York/New Jersey Hitmen')])
+   ('PM_0069', 'Rod Rust', 30, 1, [(2007, 'club-hamilton-tigers-1945')])

@@ -1,4 +1,8 @@
-"""Apply build/person-merges.json to build-reports/person-index.json.
+"""Apply declarations/person-merge-decisions.json to build-reports/person-index.json.
+
+THE DECISIONS ARE A DECLARATION (Ryan, 2026-09-11). They used to live only in the untracked
+build/person-merges.json, which merge_people.py regenerated -- and could no longer regenerate
+faithfully. A decision is a record, not a derivation: it is in git now, and read from there.
 
 REVERSIBLE BY CONSTRUCTION. Each merged person carries, in the index itself, the
 exact contribution it took from the record it absorbed: the season keys it
@@ -20,7 +24,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = os.path.join(HERE, "..")
 IDXP = os.path.join(BASE, "build-reports", "person-index.json")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); import index_io as IO  # atomic index write
-MP = os.path.join(BASE, "build", "person-merges.json")
+MP = os.path.join(BASE, "declarations", "person-merge-decisions.json")
 
 
 def undo(index):

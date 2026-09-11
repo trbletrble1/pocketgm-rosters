@@ -16,7 +16,7 @@
    "args": [
     "--write"
    ],
-   "adds": "build/person-merges.json, RE-applied: the builder applies merges at build time, but club-key normalisation runs after that and may change keys, so merges are applied again (undo-then-apply, idempotent)",
+   "adds": "declarations/person-merge-decisions.json (the decisions, in git since 2026-09-11), RE-applied: the builder applies merges at build time, but club-key normalisation runs after that and may change keys, so merges are applied again (undo-then-apply, idempotent)",
    "must_precede": "apply_promotions.py -- the promotion decisions were made against the MERGED index (promote_coaches.py: 'checked_against ... AFTER the 92 merges'); applying them before merges could attach a season to an absorbed record"
   },
   {

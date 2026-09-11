@@ -45,8 +45,8 @@ def origins():
         if os.path.exists(q):
             for r in (json.load(open(q)).get(key) or []):
                 if r.get("person_id"): o[r["person_id"]].append(how)
-    q = os.path.join(BASE, "build", "person-merges.json")
-    if os.path.exists(q):
+    q = os.path.join(BASE, "declarations", "person-merge-decisions.json")   # the decisions, in git; read loudly
+    if True:
         for m in (json.load(open(q)).get("merges") or []):
             # BOTH SIDES. An absorbed record still answers, so its id is a person.
             for k in ("canonical_person", "absorbed_person"):

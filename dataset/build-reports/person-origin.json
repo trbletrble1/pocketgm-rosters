@@ -7,15 +7,15 @@
   "build/person-merges.json (both sides)",
   "build/officials-applied.json"
  ],
- "origins": 43555,
+ "origins": 51244,
  "origins_by_kind": {
   "identity": 40745,
   "officials": 1052,
   "merge": 186,
   "coach_promotion": 1799,
-  "player_promotion": 33
+  "player_promotion": 7722
  },
- "ids_in_claims": 42402,
+ "ids_in_claims": 50195,
  "with_no_origin": 0,
  "orphans_by_store": {},
  "orphans": {},

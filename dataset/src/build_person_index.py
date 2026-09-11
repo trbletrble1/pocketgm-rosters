@@ -313,13 +313,14 @@ def main():
     # not join because they arrived with no source-native id. Applying it here means
     # a rebuild does not silently un-merge them. Nothing is deleted: see
     # declarations/person-merges.json and src/apply_person_merges.py.
-    mp = os.path.join(BASE, "build", "person-merges.json")
-    if os.path.exists(mp):
-        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        import apply_person_merges as AP
-        AP.undo(out)
-        applied, missing = AP.apply(out, json.load(open(mp)))
-        print(f"person merges applied: {len(applied)}" + (f"   MISSING: {missing}" if missing else ""))
+    # THE DECISIONS ARE A DECLARATION NOW (Ryan, 2026-09-11), and they are READ, NOT GUARDED: this
+    # used to be `if os.path.exists(build/person-merges.json)`, so a missing decisions file would
+    # have un-merged 93 men in silence. A missing declaration is an error.
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import apply_person_merges as AP
+    AP.undo(out)
+    applied, missing = AP.apply(out, json.load(open(AP.MP)))
+    print(f"person merges applied: {len(applied)}" + (f"   MISSING: {missing}" if missing else ""))
     p = IO.INDEX_PATH
     IO.save_index(out)                      # atomic: temp file, fsync, os.replace
     print(f"people indexed: {len(out):,}   with at least one season: {withseasons:,}")

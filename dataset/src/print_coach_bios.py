@@ -16,7 +16,7 @@ NAMED = ["Mike Ditka", "Tom Landry", "Tom Flores", "Marty Schottenheimer"]
 def main():
     seed = int(sys.argv[sys.argv.index("--seed") + 1]) if "--seed" in sys.argv else 7
     T = Tables()
-    M = json.load(open(os.path.join(BASE, "build", "person-merges.json")))
+    M = json.load(open(os.path.join(BASE, "declarations", "person-merge-decisions.json")))   # the decisions, in git
     merged = {d["canonical_person"] for d in M["merges"]}
     def coached_and_played(g):
         c = career(T.people[g]); return bool(c["played"] and c["coached"])

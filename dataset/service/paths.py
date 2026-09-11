@@ -10,7 +10,7 @@ SERVICE_DECLARATIONS = os.path.join(HERE, "declarations")    # the service's own
 IDENTITY = os.path.join(BUILD_REPORTS, "identity.json")
 PERSON_INDEX = os.path.join(BUILD_REPORTS, "person-index.json")
 CLUBS = os.path.join(BUILD, "clubs.json")
-PERSON_MERGES = os.path.join(BUILD, "person-merges.json")
+PERSON_MERGES = os.path.join(DECLARATIONS, "person-merge-decisions.json")   # the 93 decisions, in git (2026-09-11)
 INDEX_REBUILD_DECL = os.path.join(DECLARATIONS, "person-index-rebuild.json")
 
 # The read model lives OUTSIDE the repo (ruled 2026-09-07) so no .gitignore is touched.

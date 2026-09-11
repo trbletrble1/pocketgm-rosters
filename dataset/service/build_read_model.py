@@ -492,7 +492,7 @@ def build(dst, force=False, fast=False, prev=None):
         idx_keys.add(k); idx_names[k] = (v.get("name"), (v.get("merged_into") or {}).get("person"), v.get("merged_from"))
     del idx
     merges = {}
-    if os.path.exists(paths.PERSON_MERGES):
+    if True:                                # read loudly: the decisions are a declaration now (2026-09-11)
         for m in json.load(open(paths.PERSON_MERGES)).get("merges", []):
             merges[m["absorbed_person"]] = (m["canonical_person"], m["merge_id"])
     ours = set(people) | set(ident.raw)          # what the CLAIMS and the identity map know: the thing G4 compares with the index
