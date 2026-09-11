@@ -1,0 +1,17 @@
+PFA LOGS -> pfa-gamelogs-1930s   (WRITE)
+  club_string_from_the_table_code               66
+  declared_exception_rows_held                  66
+  declared_exception_rows_not_found              0
+  disagreement                                 161
+  game_as_logged                               562
+  game_log                                  11,728
+  game_with_one_side_only                       78
+  refused                                    1,026
+  rows_team_link_unusable_club_from_the_full_name         0
+  rows_with_a_phase_outside_the_vocabulary         0
+  short_sum_not_written_as_a_claim             358
+  claims                                    12,451
+  refused (counted, never invented)          1,026
+       1,026  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-1930s.json  (11,957,488 bytes)
+exit 0

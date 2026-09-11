@@ -1,0 +1,6 @@
+P_015552 NFL|1934|CIN: held in the predecessor by 5 claims, all declared rows=True; in the rewritten store by 0; before this pass by 0 -> traced
+P_016169 NFL|1934|CIN: held in the predecessor by 1 claims, all declared rows=True; in the rewritten store by 0; before this pass by 0 -> traced
+P_016209 NFL|1934|CIN: held in the predecessor by 5 claims, all declared rows=True; in the rewritten store by 0; before this pass by 0 -> traced
+P_016421 NFL|1934|CIN: held in the predecessor by 3 claims, all declared rows=True; in the rewritten store by 0; before this pass by 0 -> traced
+P_016492 NFL|1934|CIN: held in the predecessor by 6 claims, all declared rows=True; in the rewritten store by 0; before this pass by 0 -> traced
+P_016505 NFL|1934|CIN: held in the predecessor by 2 claims, all declared rows=True; in the rewritten store by 0; before this pass by 0 -> traced

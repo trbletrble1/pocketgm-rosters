@@ -1,0 +1,15 @@
+predecessor 12,451 -> 12,451; lost 0, gained 0, subject changed 66
+every moved claim is a declared row: True
+each sits on its declared string: True
+moves: Counter({('CIN', 'SLG'): 35, ('SLG', 'CIN'): 31})
+value changes beyond the exception mark: {'pfa.game_as_logged': 10}
+   game:1934nfl001 ['PIT', 'SLG'] -> ['CIN', 'PIT']
+   game:1934nfl009 ['CHIB', 'SLG'] -> ['CHIB', 'CIN']
+   game:1934nfl015 ['CHIC', 'SLG'] -> ['CHIC', 'CIN']
+   game:1934nfl021 ['GB', 'SLG'] -> ['CIN', 'GB']
+   game:1934nfl026 ['CHIB', 'SLG'] -> ['CHIB', 'CIN']
+   game:1934nfl033 ['DET', 'SLG'] -> ['CIN', 'DET']
+   game:1934nfl039 ['PHI', 'SLG'] -> ['CIN', 'PHI']
+   game:1934nfl044 ['CIN', 'PIT'] -> ['PIT', 'SLG']
+   game:1934nfl045 ['CIN', 'DET'] -> ['DET', 'SLG']
+   game:1934nfl060 ['CIN', 'GB'] -> ['GB', 'SLG']

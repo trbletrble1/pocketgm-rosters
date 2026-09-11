@@ -43024,6 +43024,39 @@
    "verified_no_loss": "Every PFA log store re-ingested was compared claim by claim with its backup (build-reports/*-store.before-2026-09-11.json): 0 claims lost across 1,132,607; every one of the 8,795 moved claims sits on the club its own row prints in full (build-reports/reingest-diff-2026-09-11-*.txt). The rebuild's P3 passed with exactly these pairs excused.",
    "ruling": "Ryan, 2026-09-11: read a playoff row's club from its link and full name; AA 1936-41 is the AFA.",
    "_the_block_is_deleted": "P3 forgives nothing by default again. This records that it once forgave exactly these pairs, on this evidence, on this ruling."
+  },
+  "2026-09-11-1934-exception": {
+   "count": 6,
+   "pairs": [
+    {
+     "person": "P_015552",
+     "key": "NFL|1934|CIN"
+    },
+    {
+     "person": "P_016169",
+     "key": "NFL|1934|CIN"
+    },
+    {
+     "person": "P_016209",
+     "key": "NFL|1934|CIN"
+    },
+    {
+     "person": "P_016421",
+     "key": "NFL|1934|CIN"
+    },
+    {
+     "person": "P_016492",
+     "key": "NFL|1934|CIN"
+    },
+    {
+     "person": "P_016505",
+     "key": "NFL|1934|CIN"
+    }
+   ],
+   "why": "Ryan's ruling 2026-09-11: the 1934 Reds/Gunners rows are held by a declared exception (declarations/pfa-log-club-exceptions.json). 35 rows that print 'Cincinnati Reds' on the Gunners' games now sit on the Gunners, so these six men's NFL|1934|CIN keys -- which existed only because of those rows, held by no other claim anywhere -- leave the index. Each pair traced in build-reports/p3-exception-keys-2026-09-11.txt: every claim behind it is a declared exception row, and the rewritten store holds none.",
+   "verified_no_loss": "Each pair traced before it was declared (build-reports/p3-exception-keys-2026-09-11.txt): every claim behind each key is a declared exception row, the rewritten store holds none, and no store held the key before 2026-09-11 -- these keys were made by the postseason-keys pass itself. The rebuild's P3 passed with exactly these six excused.",
+   "ruling": "Ryan, 2026-09-11: declare the 1934 Reds and Gunners as an exception.",
+   "_the_block_is_deleted": "P3 forgives nothing by default again."
   }
  },
  "derived_tables_after_the_chain": {
@@ -43066,6 +43099,6 @@
   "_enabled": false,
   "_what": "EXACT (person, season key) pairs P3 may see disappear on the next rebuild, and only while _enabled is true.",
   "pairs": [],
-  "_last_used": "2026-09-11-postseason-and-aa -- see p3_transitions_completed."
+  "_last_used": "2026-09-11-1934-exception -- see p3_transitions_completed."
  }
 }

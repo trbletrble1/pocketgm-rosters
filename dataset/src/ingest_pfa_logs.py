@@ -113,6 +113,11 @@ def run(part, write):
     code2p = joiner(conn)
     n = collections.Counter()
     claims, refused, srs = [], [], {}
+    # claim id -> (declared row, exception id). Read, never assumed: a missing file is an error.
+    decl = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..",
+                                       "declarations", "pfa-log-club-exceptions.json")))
+    EXC = {row["claim_id"]: (row, ex["id"]) for ex in decl["exceptions"] for row in ex["rows"]}
+    seen_exc = set()
 
     _res = {}
 
@@ -323,6 +328,18 @@ def run(part, write):
             pid, club = place(r)
             if pid is None:
                 refused.append({"page": r["code"], "year": r["year"], "why": club}); n["refused"] += 1; continue
+            # A DECLARED EXCEPTION, held only while the row still prints exactly what was
+            # declared (declarations/pfa-log-club-exceptions.json). If PFA corrects the page the
+            # rule applies again, the row is counted, and gate_game_club G4 says so.
+            exc = EXC.get(f"gl:{r['code']}:{r['date']}:{r['section']}")
+            if exc:
+                row, ex_id = exc; seen_exc.add(row["claim_id"])
+                if (r["club_printed"], r.get("club_short_label"), r["opp"]) == (
+                        row["full_name_as_printed"], row["short_label_as_printed"], row["opponent_as_printed"]):
+                    club = row["held_on_club_string"]; n["declared_exception_rows_held"] += 1
+                else:
+                    exc = None; n["declared_exception_rows_no_longer_as_declared"] += 1
+                    print(f"  WARNING: {row['claim_id']} no longer prints what {ex_id} declared -- the rule applies")
             # THE PLACED CLUB IS WHAT EVERYTHING DOWNSTREAM KEYS ON -- the game's sides and the
             # season sums below -- never `club_code`, which is now PFA's link code. Keying
             # the sides on it labelled 51 Raiders games `OAK` and dropped 4 held conflicts.
@@ -335,6 +352,7 @@ def run(part, write):
                  "club_as_printed": r["club_printed"], "statistics": printed,
                  "columns_printed_blank": blank, "boxscore": box,
                  "club_short_label_as_printed": r.get("club_short_label")}
+            if exc: v["club_held_by_declared_exception"] = exc[1]
             claims.append({**base_claim(sr_for("gamelogs", r["code"])),
                            "id": f"gl:{r['code']}:{r['date']}:{r['section']}",
                            "subject": ["stint", pid, club, f"{r['league']}-{r['year']}"],
@@ -354,6 +372,8 @@ def run(part, write):
                                                        "score_as_printed": r["score"],
                                                        "result_as_printed": r["result"]})
                 g["pages"].add(r["code"])
+        mine = {k for k, (row, _) in EXC.items() if int(row["date"][:4]) // 10 * 10 == DECADE}
+        n["declared_exception_rows_not_found"] = len(mine - seen_exc)
         for gid, g in sorted(games.items()):
             pages = sorted(g.pop("pages"))
             g["_sides_held"] = len(g["clubs"])

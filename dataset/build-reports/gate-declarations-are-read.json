@@ -53,6 +53,10 @@
  },
  {
   "file": "clubs.json",
+  "key": "LEAGUE_LABELS_BY_YEAR"
+ },
+ {
+  "file": "clubs.json",
   "key": "WHY"
  },
  {
@@ -369,10 +373,6 @@
  },
  {
   "file": "person-index-rebuild.json",
-  "key": "store_league_tokens.pfa-coaches"
- },
- {
-  "file": "person-index-rebuild.json",
   "key": "store_league_tokens.coach-seasons-promoted"
  },
  {
@@ -482,6 +482,30 @@
  {
   "file": "person-index-rebuild.json",
   "key": "p3_transitions_completed.2026-09-09-ghosts-rejoin"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "p3_transitions_completed.2026-09-09-promotion-shells"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "p3_transitions_completed.2026-09-11-ghosts-lineup-shells"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "p3_transitions_completed.key-transition-archived-2026-09-11"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "p3_transitions_completed.2026-09-11-league-labels-by-year"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "p3_transitions_completed.2026-09-11-league-labels-by-year-coaching"
+ },
+ {
+  "file": "person-index-rebuild.json",
+  "key": "p3_transitions_completed.2026-09-11-postseason-and-aa"
  },
  {
   "file": "person-index-rebuild.json",

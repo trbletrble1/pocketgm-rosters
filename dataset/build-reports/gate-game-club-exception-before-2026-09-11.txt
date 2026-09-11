@@ -1,0 +1,9 @@
+  ok   G1 all 1,042,042 game claims sit on the club their own row prints in full
+  ok   G1 every game claim's printed club resolves, so every one was checked
+  FAIL G4 all 66 declared exception rows are held and still show their evidence -- 66 do not: {'not held by the exception (the page no longer prints what was declared?)': 66}, e.g. [('gl:alfo00800:1934-09-09:RUSHING', 'not held by the exception (the page no longer prints what was declared?)'), ('gl:corz00200:1934-09-09:RECEIVING', 'not held by the exception (the page no longer prints what was declared?)'), ('gl:corz00200:1934-09-09:RUSHING', 'not held by the exception (the page no longer prints what was declared?)')]
+  ok   G4 no undeclared claim is held by an exception
+  ok   G5 the rows of the declared shape are exactly the 66 declared
+  ok   G2 every rewritten club string among 1,042,042 game claims is one PFA prints rightly for the club
+  ok   G3 no man's club-season sits on two strings PFA did not both print
+
+GAME CLUB GATE: 1 FAILURE(S)

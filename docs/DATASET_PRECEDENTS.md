@@ -410,7 +410,43 @@ the wrong way round: on the Reds' games (9 September – 6 November) the full na
 Gunners* while the short label and every opponent's rows say `CIN`; on the Gunners' games (11
 November – 2 December) it reads *Cincinnati Reds* while the label and the opponents say `STL`.
 66 regular-season rows. Under the rule as ruled — the club is the one the row prints in full —
-they go to the wrong club. Held as a question for Ryan, not decided here. A gate that cannot fail reports success; a gate
+they go to the wrong club.
+
+**Ruled (Ryan, 2026-09-11): declared as an exception, narrowly.** The rule takes the full name
+because the full name is normally the reliable one; here it demonstrably is not, and following the
+rule into a known-wrong answer is the letter beating the purpose. So the 66 rows are **named one by
+one** in `declarations/pfa-log-club-exceptions.json` — with what PFA prints, what the label says,
+what the opponents print (153 rows across the ten games, unanimous), the 15 men and the two
+club-seasons — and held on the club the label and both sides agree on. There is no general rule
+about full names. Measured over every game claim in the archive, **no other row has this shape**.
+
+**An exception is gated, not exempted.** `gate_game_club` G4 checks every declared row is held, on
+its declared club, and *still* prints the declared evidence, with the opposing side still printing
+what was declared; G5 checks the rows of this shape are exactly the declared ones. If PFA corrects
+these pages, the ingest stops holding them and G4 fails, saying the exception has become wrong —
+it never silently overrides a source that has come to agree with itself. G4 was shown failing on
+the model before the exception was applied (66 not held) and passing after.
+
+### A rewritten store is compared with its predecessor at the fact's own level
+
+**Before anything is built on a rewritten store, compare it with the store it replaces — claim by
+claim, at the level the fact lives: its id, its subject, its club, the string it is keyed on.**
+Ryan, 2026-09-11. This pass rewrote 21 stores three times, and that comparison is what caught each
+defect; a total would have shown none of them:
+
+- **2,570 right claims lost** by the first reader — beside a million claims, a loss no total
+  would have flagged; the comparison named every one.
+- **652 man-club-seasons split across two strings** (`CHIB` and `CHI` for one Bear's one season) —
+  every total and every club-level count was unchanged; only comparing the *strings* each man's
+  season sat on, old against new (12 before, 652 after), showed it.
+- **51 derived games labelled `OAK`** — the same games, the same count; only comparing each
+  game's value with its predecessor's showed the sides had changed.
+
+**How to apply:** back the store up (`*-store.before-*.json`, ignored), re-ingest, then diff by id:
+lost, gained, subject changed — and for each change, check it moved where the ruling says it
+should; then compare values, and the keys each subject sits on. Account for every difference by
+name before rebuilding the index. The rebuild's own P3 is the second net, not the first: it caught
+32 keys the declared transition missed, but only because a rebuild was refused. A gate that cannot fail reports success; a gate
 that fails for the wrong reason reports a successful selftest.
 
 ---

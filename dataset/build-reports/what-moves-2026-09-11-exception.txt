@@ -1,0 +1,11 @@
+1934 club-seasons, model a07168fb425f7339 -> cd4af4a6739db476:
+  CIN: members 19 -> 14; of the 15 men: 14 -> 9
+     P_015552 leaves CIN 1934  (his declared rows are held on ['SLG'])
+     P_016169 leaves CIN 1934  (his declared rows are held on ['SLG'])
+     P_016195 joins CIN 1934  (his declared rows are held on ['CIN'])
+     P_016209 leaves CIN 1934  (his declared rows are held on ['SLG'])
+     P_016421 leaves CIN 1934  (his declared rows are held on ['SLG'])
+     P_016492 leaves CIN 1934  (his declared rows are held on ['SLG'])
+     P_016505 leaves CIN 1934  (his declared rows are held on ['SLG'])
+  SLG: members 63 -> 63; of the 15 men: 15 -> 15
+bios that changed:
