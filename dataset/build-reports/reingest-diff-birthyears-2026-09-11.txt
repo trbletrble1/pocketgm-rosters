@@ -1,0 +1,21 @@
+== pfa-pre1950: claims 75,008 -> 75,072 | lost {'pfa.birth_place': 193, 'pfa.death_place': 15} | gained {'pfa.birth_place': 62, 'pfa.birth_date': 193, 'pfa.death_date': 15, 'pfa.death_place': 2}
+   Frank Moran gained: ['1890']
+== pfa-1950on: claims 739,486 -> 739,486 | lost {} | gained {}
+== pfa-coaches: claims 28,823 -> 28,823 | lost {} | gained {}
+== pfa-officials: claims 10,316 -> 10,316 | lost {} | gained {}
+== afl-1926: claims 204 -> 204 | lost {} | gained {}
+== pfa-boxscore-leads: claims 0 -> 0 | lost {} | gained {}
+TOTAL {'lost': 208, 'gained': 272, 'odd_lost': 0, 'odd_gain': 0, 'other': 0}
+---- second run: the five stores after ingest_pfa2 was repointed
+== pfa-1950on: claims 739,486 -> 739,596 | lost {'pfa.birth_place': 528, 'pfa.death_place': 30} | gained {'pfa.birth_date': 528, 'pfa.birth_place': 102, 'pfa.death_date': 30, 'pfa.death_place': 8}
+== pfa-coaches: claims 28,823 -> 28,226 | lost {'pfa.coaching_season': 411, 'pfa.coaching_playoffs': 163, 'pfa.name_as_printed': 18, 'pfa.birth_date': 4, 'pfa.birth_place': 1} | gained {}
+   LOST, NOT A DATE-SHAPED PLACE: pfa.coaching_season {"club": "BAL", "club_as_printed": "1975 Baltimore Colts (NFL)", "club_page": "/1975nflbal.html", "club_record_as_printed": {"G": "14", "L": pro-football-archives#coaches/baug00600.html
+   LOST, NOT A DATE-SHAPED PLACE: pfa.coaching_season {"club": "BAL", "club_as_printed": "1976 Baltimore Colts (NFL)", "club_page": "/1976nflbal.html", "club_record_as_printed": {"G": "14", "L": pro-football-archives#coaches/baug00600.html
+   LOST, NOT A DATE-SHAPED PLACE: pfa.coaching_season {"club": "BAL", "club_as_printed": "1977 Baltimore Colts (NFL)", "club_page": "/1977nflbal.html", "club_record_as_printed": {"G": "14", "L": pro-football-archives#coaches/baug00600.html
+   LOST, NOT A DATE-SHAPED PLACE: pfa.coaching_season {"club": "BAL", "club_as_printed": "1978 Baltimore Colts (NFL)", "club_page": "/1978nflbal.html", "club_record_as_printed": {"G": "16", "L": pro-football-archives#coaches/baug00600.html
+   LOST, NOT A DATE-SHAPED PLACE: pfa.coaching_season {"club": "BAL", "club_as_printed": "1979 Baltimore Colts (NFL)", "club_page": "/1979nflbal.html", "club_record_as_printed": {"G": "16", "L": pro-football-archives#coaches/baug00600.html
+   LOST, NOT A DATE-SHAPED PLACE: pfa.coaching_season {"club": "DET", "club_as_printed": "1980 Detroit Lions (NFL)", "club_page": "/1980nfldet.html", "club_record_as_printed": {"G": "16", "L": " pro-football-archives#coaches/baug00600.html
+== pfa-officials: claims 10,316 -> 10,316 | lost {} | gained {}
+== afl-1926: claims 204 -> 204 | lost {} | gained {}
+== pfa-boxscore-leads: claims 0 -> 0 | lost {} | gained {}
+TOTAL {'lost': 1155, 'gained': 668, 'odd_lost': 597, 'odd_gain': 0, 'other': 0}

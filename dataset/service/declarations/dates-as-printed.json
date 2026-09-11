@@ -51,6 +51,76 @@
    "source_record": "wikipedia-en#Mark Ingle",
    "n": 1,
    "looked_at": "As above."
+  },
+  {
+   "string": ", 1999",
+   "predicate": "death_date",
+   "source_record": "pro-football-archives#players/l/lore00040.html",
+   "n": 2,
+   "looked_at": "PFA prints the Died cell with its month empty -- ', YYYY' -- read from the page 2026-09-11. Until then the whole cell sat in the death PLACE (Ryan's ruling that day: a date in the Born/Died position is read as the date). Kept as printed; the year is the only part PFA gives."
+  },
+  {
+   "string": ", 2000",
+   "predicate": "death_date",
+   "source_record": "pro-football-archives#players/s/scul00100.html",
+   "n": 1,
+   "looked_at": "PFA prints the Died cell with its month empty -- ', YYYY' -- read from the page 2026-09-11. Until then the whole cell sat in the death PLACE (Ryan's ruling that day: a date in the Born/Died position is read as the date). Kept as printed; the year is the only part PFA gives."
+  },
+  {
+   "string": ", 1994",
+   "predicate": "death_date",
+   "source_record": "pro-football-archives#players/m/mazu00080.html",
+   "n": 1,
+   "looked_at": "PFA prints the Died cell with its month empty -- ', YYYY' -- read from the page 2026-09-11. Until then the whole cell sat in the death PLACE (Ryan's ruling that day: a date in the Born/Died position is read as the date). Kept as printed; the year is the only part PFA gives."
+  },
+  {
+   "string": ", 1993",
+   "predicate": "death_date",
+   "source_record": "pro-football-archives#players/r/ross01320.html",
+   "n": 1,
+   "looked_at": "PFA prints the Died cell with its month empty -- ', YYYY' -- read from the page 2026-09-11. Until then the whole cell sat in the death PLACE (Ryan's ruling that day: a date in the Born/Died position is read as the date). Kept as printed; the year is the only part PFA gives."
+  },
+  {
+   "string": "January 125, 1994",
+   "predicate": "birth_date",
+   "source_record": "pro-football-archives#players/l/list00140.html",
+   "n": 1,
+   "looked_at": "PFA prints a full date whose DAY is garbled -- read from the page 2026-09-11. Until then the whole cell sat in the birth PLACE. The day is not repaired: the source's own error, kept as printed, as StatsCrew's day of 0 is."
+  },
+  {
+   "string": "September 12w, 1997",
+   "predicate": "birth_date",
+   "source_record": "pro-football-archives#players/a/arch00655.html",
+   "n": 1,
+   "looked_at": "PFA prints a full date whose DAY is garbled -- read from the page 2026-09-11. Until then the whole cell sat in the birth PLACE. The day is not repaired: the source's own error, kept as printed, as StatsCrew's day of 0 is."
+  },
+  {
+   "string": "September 256, 2001",
+   "predicate": "birth_date",
+   "source_record": "pro-football-archives#players/h/hyat00300.html",
+   "n": 1,
+   "looked_at": "PFA prints a full date whose DAY is garbled -- read from the page 2026-09-11. Until then the whole cell sat in the birth PLACE. The day is not repaired: the source's own error, kept as printed, as StatsCrew's day of 0 is."
+  },
+  {
+   "string": "August 187, 2000",
+   "predicate": "birth_date",
+   "source_record": "pro-football-archives#players/g/glov01300.html",
+   "n": 1,
+   "looked_at": "PFA prints a full date whose DAY is garbled -- read from the page 2026-09-11. Until then the whole cell sat in the birth PLACE. The day is not repaired: the source's own error, kept as printed, as StatsCrew's day of 0 is."
+  },
+  {
+   "string": "September 1\\0, 1995",
+   "predicate": "birth_date",
+   "source_record": "pro-football-archives#players/h/hear00210.html",
+   "n": 1,
+   "looked_at": "PFA prints a full date whose DAY is garbled -- read from the page 2026-09-11. Until then the whole cell sat in the birth PLACE. The day is not repaired: the source's own error, kept as printed, as StatsCrew's day of 0 is."
+  },
+  {
+   "string": "September 221, 1997",
+   "predicate": "birth_date",
+   "source_record": "pro-football-archives#players/j/jack00435.html",
+   "n": 1,
+   "looked_at": "PFA prints a full date whose DAY is garbled -- read from the page 2026-09-11. Until then the whole cell sat in the birth PLACE. The day is not repaired: the source's own error, kept as printed, as StatsCrew's day of 0 is."
   }
  ],
  "_crippen_aafc_register": "SUPERSEDED 2026-09-08. These 591 strings were declared as unreadable-and-held-as-printed. Ryan then ruled that a source may declare its own date format with the evidence behind it, so `crippen-aafc-register` declares MDY in date-formats-by-source.json and the reading now reads them. The declaration was REMOVED rather than left standing: a declared string a source now reads must stop being declared, which is RS-G1's own rule -- `declared_but_no_longer_seen` fails. Nothing was reordered in the store; the values are the strings Crippen sent."

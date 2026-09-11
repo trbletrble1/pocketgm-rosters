@@ -113,15 +113,34 @@ def parse_relatives(html):
     return out
 
 
+# A BORN OR DIED CELL IS A DATE, THEN A PLACE -- AND THE DATE IS NOT ALWAYS A FULL ONE.
+# Ryan's ruling, 2026-09-11. The splitter used to know one date shape, `March 5, 1905`;
+# anything else fell through WHOLE into the place, so Frank Moran's page -- `Born: 1890` --
+# filed a birth year as his birthplace, and the archive showed his 1905 as uncontested.
+# 721 birth places and 45 death places held a date that way. PFA prints five shapes:
+#   March 5, 1905   June, 1984   June 1984   , 1999 (month printed empty)   1890
+# each optionally followed by the place -- and a sixth, a full date whose DAY is garbled
+# (`January 125, 1994`, `September 12w, 1997`, `September 1\0, 1995`): six pages. The day
+# is taken as printed, not repaired; the date reader cannot read it and says so, and the
+# string is declared as printed, as StatsCrew's `April 0, 1996` is. The date is kept
+# exactly as printed; the date reader (service/dates.py) reads it, at year or month
+# precision. ONE splitter for every reader of a PFA page: pfa_coach_pages had patched its
+# own copy for the same defect and the player readers never got it.
+DATE_LEAD = re.compile(r"^((?:[A-Z][a-z]+\.? \d[^\s,]{0,3}, \d{4})|(?:[A-Z][a-z]+\.?,? \d{4})"
+                       r"|(?:, ?\d{4})|(?:\d{4}))(?=\s|$)\s*(.*)$")
+
+
+def split_date_place(s):
+    """'1890' -> ('1890', ''); 'August, 1991 Winnipeg, MB' -> ('August, 1991', 'Winnipeg, MB');
+    'Canton, OH' -> ('', 'Canton, OH')."""
+    m = DATE_LEAD.match((s or "").strip())
+    return (m.group(1), m.group(2).strip()) if m else ("", (s or "").strip())
+
+
 def parse_player(html):
     L = labelled(html)
-
-    def split_dp(s):
-        m = re.match(r"([A-Z][a-z]+ \d{1,2}, \d{4})\s*(.*)$", s)
-        return (m.group(1), m.group(2).strip()) if m else ("", s.strip())
-
-    bd, bp = split_dp(L.get("Born", ""))
-    dd, dp = split_dp(L.get("Died", ""))
+    bd, bp = split_date_place(L.get("Born", ""))
+    dd, dp = split_date_place(L.get("Died", ""))
     out = {"birth_date": bd, "birth_place": bp, "death_date": dd, "death_place": dp,
            "high_school": L.get("High School", ""), "height": L.get("Height", ""),
            "weight": L.get("Weight", ""), "draft": L.get("Draft", ""),

@@ -509,6 +509,10 @@
  },
  {
   "file": "person-index-rebuild.json",
+  "key": "p3_transitions_completed.2026-09-11-1934-exception"
+ },
+ {
+  "file": "person-index-rebuild.json",
   "key": "pseudo_league_tokens"
  },
  {

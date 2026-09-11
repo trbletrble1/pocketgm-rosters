@@ -1,0 +1,39 @@
+{
+ "source_id": "neft-early-years-1978",
+ "name": "Pro Football: The Early Years (An Encyclopedic History, 1895-1959)",
+ "stated_by": "David S. Neft, Richard M. Cohen, Jordan A. Deutsch",
+ "publisher": "Sports Products Inc., Ridgefield, Connecticut, 1978. ISBN 0-932070-01-9",
+ "acquisition": "held",
+ "_this_is_not_a_source_ingest": "A REFERENCE WORK, CONSULTED AND CITED, NEVER PARSED WHOLESALE (Ryan's standing ruling). The copy is the Internet Archive scan in Football Archive/docs; its text layer is not read by anything here. Every claim below was READ BY EYE from the page image, one line at a time, and names its printed page. PDF page = printed page + 2. Nothing is added to this file except by the same means, one cited fact at a time.",
+ "_documentation_only": {
+  "_this_is_not_a_source_ingest": "prose for a reader",
+  "_the_archive_files_it_otherwise": "prose for a reader"
+ },
+ "citations": [
+  {
+   "id": "neft:1934-cin-stl-one-club",
+   "pages": "9, 84-85",
+   "subject": ["document", "neft-early-years-1978"],
+   "predicate": "neft.season_filed_as_one_club",
+   "acquisition_state": "read by eye from the page images (PDF 11, 86, 87)",
+   "value": {
+    "season_as_printed": "1934 N.F.L. -- WEST",
+    "code_as_printed": "C-S",
+    "code_defined_as_printed": "C-S -- Cincinnati Reds and St. Louis Gunners",
+    "team_line_as_printed": "CINCINNATI REDS 0-8-0 Algy Clark -- ST. LOUIS GUNNERS 1-2-0 Mike Palm",
+    "team_totals_line_as_printed": "CIN-ST. LOUIS",
+    "roster": "ONE roster block for both, linemen on p. 84 and Backs & Ends on p. 85; no man is assigned to either city. The register files each man's season as 34C-S (Algy Clark as PC34C-S, player-coach).",
+    "records_as_printed": {"CINCINNATI": "0-8-0", "ST. LOUIS": "1-2-0"},
+    "head_coaches_as_printed": {"CINCINNATI REDS": "Algy Clark", "ST. LOUIS GUNNERS": "Mike Palm"},
+    "schedules_as_printed": {
+     "CINCINNATI": ["0 Pittsburgh 13", "0 CHIC. CARDS 9 (at Dayton)", "3 CHIC. BEARS 21", "0 CHIC. CARDS 16",
+                    "0 Green Bay 41", "7 Chic. Bears 41", "0 DETROIT 38 (At Portsmouth)", "0 Philadelphia 64"],
+     "ST. LOUIS": ["6 PITTSBURGH 0", "7 Detroit 40", "14 GREEN BAY 21"]
+    },
+    "home_games": "Per the Codes page, an opponent in upper case played at the team's home park; the case is kept as printed.",
+    "narrative_as_printed": "Six Cincinnati players -- Gene Alford, Red Corzine, Earl Elser, Russ Lay, Lee Mulleneaux, and George Munday -- joined the new Gunners."
+   },
+   "_the_archive_files_it_otherwise": "The archive's club table holds two clubs, club-cincinnati-reds-1933 and club-st-louis-gunners-1934. Ryan, 2026-09-11: two sources disagreeing about how a season is organised, which the archive HOLDS and does not resolve -- this is a claim about the document, not a change to the club table. Where Neft is specific he agrees with the 1934 exception (declarations/pfa-log-club-exceptions.json): his two schedules split on the same dates, and two of the six men he names as joining the Gunners, Alford and Corzine, are exactly the two whose declared rows run both ways."
+  }
+ ]
+}

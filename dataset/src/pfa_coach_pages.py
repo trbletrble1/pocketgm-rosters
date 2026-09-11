@@ -116,17 +116,13 @@ def parse_coach(html, code):
     name = text(h1.group(1)) if h1 else ""
     printed_full = text(h1.group(2)) if h1 else ""
     bio = parse_player(html)
-    # Born / Died on a coach page may be a bare year or a month and year; the
-    # player-page splitter expects a full date and would file '1940' as a place.
+    # Born / Died may be a bare year or a month and year. This file used to patch its own
+    # copy of the splitter for that; the player readers never got the fix and filed 766
+    # dates as places. There is now ONE splitter, ingest_pfa.split_date_place, and
+    # parse_player already applied it. The raw cell is still kept beside it.
     L = labelled(html)
-    for lab, d, pl in (("Born", "birth_date", "birth_place"), ("Died", "death_date", "death_place")):
-        raw = L.get(lab, "")
-        dm = re.match(r"^((?:[A-Z][a-z]+ )?(?:\d{1,2}, )?\d{4})\s*(.*)$", raw)
-        if dm and not (dm.group(1)[0].isdigit() and " " in dm.group(1)):
-            bio[d], bio[pl] = dm.group(1), dm.group(2).strip()
-        else:
-            bio[d], bio[pl] = "", raw.strip()
-        bio[d + "_as_printed"] = raw
+    for lab, d in (("Born", "birth_date"), ("Died", "death_date")):
+        bio[d + "_as_printed"] = L.get(lab, "")
     links = {"players": [], "officials": []}
     for sec, c, _ in LINK.findall(html):
         if c not in links[sec]: links[sec].append(c)

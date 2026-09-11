@@ -427,6 +427,35 @@ these pages, the ingest stops holding them and G4 fails, saying the exception ha
 it never silently overrides a source that has come to agree with itself. G4 was shown failing on
 the model before the exception was applied (66 not held) and passing after.
 
+### A date in a place field is a reading that fell through
+
+Found through one man. Frank Moran is 28 on Neft's 1920 Hammond roster; StatsCrew's birth date
+(1905) makes him 15. The archive showed that 1905 as **uncontested** — because PFA's page, which
+prints `Born: 1890`, had been read with the year filed as his **birthplace**. The player-page
+splitter knew one date shape, `March 5, 1905`; anything else fell through whole into the place.
+**721 birth places and 45 death places** held a date that way — a bare year, a year then a town, a
+month and year, a year with its month printed empty (`, 1999`), and six full dates whose day PFA
+garbled (`September 256, 2001`).
+
+**Three things were true at once, and each is the lesson:**
+
+- **A value in the wrong family is invisible to everything that reads the right one.** No
+  birth-date check, no family grouping, no `contested` flag looks in a place field. The archive
+  held both readings and presented one as settled.
+- **The reader was still doing it.** Fixing the 766 values alone would have left the next ingest
+  re-filing them. The fix is in the one splitter every PFA reader shares.
+- **The defect had been fixed once already, locally.** `pfa_coach_pages` carried its own patched
+  copy — *"the player-page splitter … would file '1940' as a place"* — so coach pages were right and
+  seven other readers stayed wrong. A fix made in a copy is not a fix: it makes the defect
+  invisible where you are looking.
+
+**Fixed as a reading, not a rule** (Ryan, 2026-09-11): where PFA prints a date in the Born/Died
+position, it is read as the date, exactly as printed, and only what follows is the place. No age
+band was needed to contest Moran; the two documents do it. `gate_place_fields` F1 — no place value
+opens with a date — was shown failing on the model (760) before it passed, and its test is
+deliberately looser than the reader's, so a shape the reader does not know still fails. Its first
+version passed the six garbled days, and the gate's own day pattern was widened when they surfaced.
+
 ### A rewritten store is compared with its predecessor at the fact's own level
 
 **Before anything is built on a rewritten store, compare it with the store it replaces — claim by

@@ -1,0 +1,32 @@
+  603  birth_date: first reading of this fact
+   77  birth_date: joins another source's reading
+  635  birth_date: not contested
+   45  birth_date: now contested
+  680  birth_date: people
+   39  death_date: first reading of this fact
+    1  death_date: joins another source's reading
+   40  death_date: not contested
+   40  death_date: people
+
+birth dates now contested, e.g.:
+   ('P_003782', [('October 2, 1922', ['statscrew']), ('1920', ['pro-football-archives'])])
+   ('P_002528', [('March 5, 1905', ['statscrew']), ('1890', ['pro-football-archives'])])
+   ('P_014938', [('April 15, 1898', ['statscrew']), ('1898-04-15', ['nflverse-rosters']), ('1899', ['pro-football-archives']), ('1899', ['wikipedia-en'])])
+   ('P_002692', [('February 22, 1897', ['statscrew']), ('1896', ['pro-football-archives'])])
+   ('P_002964', [('March 25, 1898', ['statscrew']), ('1898-03-25', ['nflverse-rosters']), ('1900', ['pro-football-archives'])])
+   ('P_015006', [('October 6, 1897', ['statscrew']), ('1900', ['pro-football-archives'])])
+   ('P_015889', [('August 31, 1903', ['statscrew']), ('1903-08-31', ['nflverse-rosters']), ('1906', ['pro-football-archives'])])
+   ('P_015232', [('August 28, 1897', ['statscrew']), ('1895', ['pro-football-archives'])])
+   ('P_015615', [('March 23, 1896', ['statscrew']), ('1896-03-23', ['nflverse-rosters']), ('1901', ['pro-football-archives'])])
+   ('P_015834', [('June 5, 1901', ['statscrew']), ('1901-06-05', ['nflverse-rosters']), ('June, 1902', ['pro-football-archives'])])
+   ('P_015668', [('July 6, 1902', ['statscrew']), ('1902-07-06', ['nflverse-rosters']), ('1903', ['pro-football-archives'])])
+   ('P_002678', [('January 27, 1887', ['statscrew']), ('1891', ['pro-football-archives'])])
+
+NOT plainly a birth year (7):
+   ('P_005022', '1037', "year 1037 cannot be a player's birth year", 'players/r/robb00100.html')
+   ('P_034215', 'January 125, 1994', 'unreadable as printed (declared)', 'players/l/list00140.html')
+   ('P_036547', 'September 12w, 1997', 'unreadable as printed (declared)', 'players/a/arch00655.html')
+   ('P_037267', 'September 256, 2001', 'unreadable as printed (declared)', 'players/h/hyat00300.html')
+   ('P_037511', 'August 187, 2000', 'unreadable as printed (declared)', 'players/g/glov01300.html')
+   ('P_038925', 'September 1\\0, 1995', 'unreadable as printed (declared)', 'players/h/hear00210.html')
+   ('P_039058', 'September 221, 1997', 'unreadable as printed (declared)', 'players/j/jack00435.html')

@@ -1,0 +1,3 @@
+  FAIL F1 none of 218,700 place values opens with a date -- 760 do: pfa.birth_place [pro-football-archives] 715 e.g. ['1037', '1881 OK', '1890']; pfa.death_place [pro-football-archives] 45 e.g. [', 1993', ', 1994', ', 1999']
+
+PLACE FIELD GATE: 1 FAILURE(S)

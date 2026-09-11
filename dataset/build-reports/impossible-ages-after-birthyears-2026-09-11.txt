@@ -1,0 +1,13 @@
+coaching predicates, from the declaration: ['is_head_coach', 'pfa.coaching_playoffs', 'pfa.coaching_season', 'role_title']; qualifiers: ['shared_or_split_season']
+
+PLAYING seasons, band 16-45 (not ruled)
+   too young  A    20   B    0
+   too old    A    30   B    2
+        B  P_004959 Lionel Conacher            born [(1900, 'May 24, 1900', 'statscrew')] seasons [1960]
+        B  P_038514 Alan Duncan                born [(1938, 'November 13, 1938', 'pro-football-archives'), (1938, 'November 13, 1938', 'statscrew')] seasons [1984, 1985]
+
+COACHING seasons, band 20-85 (not ruled)
+   too young  A     2   B    1
+        B  P_014626 Craig Morton               born [(1967, 'May 4, 1967', 'pro-football-archives'), (1967, 'May 4, 1967', 'statscrew')] seasons [1983, 1984]
+   too old    A     0   B    0
+

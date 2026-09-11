@@ -21,8 +21,14 @@ from ingest_pfa import (parse_player, parse_drafts, draft_claims, kin_claim,
                         canonical_url, page, GAP_FILL, FIELD_PREDICATE,
                         SRC_ID, DECL, PFAError)
 
-SP = ("/private/tmp/claude-501/-Users-ryannecci-Documents/"
-      "8d717785-5b8e-4adb-8f0e-48e0899794bb/scratchpad/")
+# THE INPUTS WERE IN A SESSION SCRATCHPAD UNDER /tmp AND THE SESSION IS GONE; this ingest
+# could not run at all after the move to bghq-mac, and was found when the 2026-09-11 birth-year
+# ruling needed it re-run. The files were preserved by hand in
+# session-scratch-from-laptop-2026-09-07 and that copy is read now, exactly as
+# ingest_officials.py does. Repointed, not closed: an input outside build/ is still a hazard
+# and the entry stays OUTSTANDING in declarations/session-scratchpad-inputs.json.
+SP = os.path.expanduser("~/Documents/session-scratch-from-laptop-2026-09-07/"
+                        "8d717785-5b8e-4adb-8f0e-48e0899794bb/scratchpad/")
 BANDS = [(1950, 1959), (1960, 1969), (1970, 1979), (1980, 1989),
          (1990, 1999), (2000, 2009), (2010, 2019), (2020, 2025)]
 
@@ -43,9 +49,10 @@ def main(write=True):
     # lose the only fact there is. Read from the fetch report, where the status was
     # recorded at request time -- not inferred later from an absent file, which
     # cannot tell a 404 from a page never asked for.
+    # READ LOUDLY (declarations/session-scratchpad-inputs.json: "read": "loud"). This was
+    # guarded by os.path.exists, which would turn a missing report into "no man is a 404".
     fr = SP + "pfa2_fetch_report.json"
-    DEAD = {canonical_url(u) for u, _ in
-            (json.load(open(fr))["dead_404"] if os.path.exists(fr) else [])}
+    DEAD = {canonical_url(u) for u, _ in json.load(open(fr))["dead_404"]}
     codes = R["codes"]
     claims, disagreements, dead, missing = [], [], [], []
     n = collections.Counter()

@@ -1,0 +1,34 @@
+=== ingest_pfa
+  matched_people             4,561
+  claims                     75,072
+  lead_entries               3,330
+  lead_pages                 2,514
+  roster_disagreements       392
+  birth_date_disagreements   629
+  pages_missing_from_cache   0
+  source_dead_links          1
+  claims by predicate:
+     transaction            24,965
+     college_season         13,042
+     weight                 4,381
+     death_date             4,247
+     height                 4,212
+     death_place            4,153
+     birth_place            4,151
+     high_school            3,776
+     military_service       2,249
+     position_career        1,918
+     draft_selection        1,500
+     draft                  1,232
+     college_stated_none    473
+     kin                    367
+     draft_segments_unparsed 1
+=== ingest_pfa2
+Traceback (most recent call last):
+  File "/Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/ingest_pfa2.py", line 152, in <module>
+    o = main(write="--write" in sys.argv); c = o["counts"]
+  File "/Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/ingest_pfa2.py", line 39, in main
+    M = json.load(open(SP + "pfa2_match.json"))
+                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/claude-501/-Users-ryannecci-Documents/8d717785-5b8e-4adb-8f0e-48e0899794bb/scratchpad/pfa2_match.json'
+FAILED ingest_pfa2

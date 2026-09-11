@@ -81,8 +81,9 @@ if __name__ == "__main__":
     for l in demonstrate():
         print(l)
     bp = os.path.join(BASE, "build", "pfa-1950on.json")
-    SP = ("/private/tmp/claude-501/-Users-ryannecci-Documents/"
-          "8d717785-5b8e-4adb-8f0e-48e0899794bb/scratchpad/pfa2_match.json")
+    # The preserved copy, as ingest_pfa2.py reads it; the /tmp session is gone (2026-09-11).
+    SP = os.path.expanduser("~/Documents/session-scratch-from-laptop-2026-09-07/"
+                            "8d717785-5b8e-4adb-8f0e-48e0899794bb/scratchpad/pfa2_match.json")
     if not os.path.exists(bp):
         print("\n(build not written yet -- gates run after the ingest)"); sys.exit(0)
     build = json.load(open(bp)); match = json.load(open(SP))

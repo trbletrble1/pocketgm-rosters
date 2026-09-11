@@ -1,0 +1,115 @@
+=== ingest_pfa2
+  people_with_claims               32,819
+  claims                           739,596
+  birth_date_disagreements         1,697
+  roster_disagreements             8,444
+  leads_enumerated_not_fetched     11,082
+  pages_missing_from_cache         0
+  source_dead_links                7
+  by predicate:
+     transaction            377,921
+     college_season         130,708
+     weight                 32,788
+     height                 32,785
+     birth_date             32,729
+     high_school            30,313
+     birth_place            27,921
+     position_career        21,136
+     draft_selection        19,970
+     draft                  19,169
+     death_date             4,754
+     death_place            4,075
+     kin                    3,276
+     military_service       1,484
+     college_stated_none    567
+=== ingest_pfa_coaches
+wrote /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-coaches.json
+{
+ "pages": 3903,
+ "resolved": 1741,
+ "leads": 2162,
+ "routes": {
+  "playing_record": 90,
+  "name+birth_date+playing_record": 1024,
+  "name+coaching_club_season": 64,
+  "name+birth_date+name+coaching_club_season": 243,
+  "name+birth_date+name+coaching_club_season+playing_record": 247,
+  "name+coaching_club_season+playing_record": 25,
+  "name+birth_date": 48
+ },
+ "rows_without_club": 1,
+ "coaching_season": 16805,
+ "bio_already_on_player_page": 11212,
+ "name_as_printed": 1741,
+ "lead:namesake_only_not_evidence": 1738,
+ "coaching_playoffs": 6822,
+ "draft_present_not_written": 845,
+ "lead:ambiguous_candidates": 319,
+ "birth_date": 354,
+ "birth_place": 344,
+ "high_school": 330,
+ "college_season": 1306,
+ "death_date": 175,
+ "death_place": 163,
+ "lead:unmatched_no_candidate": 85,
+ "kin": 106,
+ "military_service": 77,
+ "lead:route_conflict": 20,
+ "college_stated_none": 3,
+ "club_cell_flags": {
+  "href_disagrees_with_printed_cell": 105
+ },
+ "claims": 28226,
+ "store_stints": {
+  "coaching-tree": {
+   "stints": 2791,
+   "unmapped_local_ids": 0
+  },
+  "statscrew": {
+   "stints": 3402,
+   "unmapped_local_ids": 0
+  },
+  "media-guides": {
+   "stints": 1086,
+   "unmapped_local_ids": 0
+  }
+ }
+}
+{
+ "coaching-tree": {
+  "season_in_pfa_not_in_store": 15074,
+  "role_string_identical": 619,
+  "season_in_store_not_in_pfa": 371,
+  "role_string_differs": 556,
+  "role_string_differs_in_case_only": 556
+ },
+ "statscrew": {
+  "role_string_differs_in_case_only": 2935,
+  "season_in_pfa_not_in_store": 13699,
+  "role_string_differs": 171,
+  "season_in_store_not_in_pfa": 146
+ },
+ "media-guides": {
+  "season_in_pfa_not_in_store": 16283,
+  "role_string_identical": 298,
+  "role_string_differs": 94,
+  "season_in_store_not_in_pfa": 26,
+  "role_string_differs_in_case_only": 130
+ }
+}
+listings {'rows': 4553, 'distinct_codes': 3903, 'by_list': Counter({'nfl-assistant-coaches': 3123, 'cfl-assistant-coaches': 715, 'nfl-head-coaches': 535, 'cfl-head-coaches': 180}), 'codes_in_more_than_one_list': 591}
+officials shared 22
+=== ingest_officials
+  pages                    1,328
+  resolved_to_existing     1,052
+  created                  0
+  refused                  276
+  dual_role_men            132
+  claims: {'officiating_season': '8,212', 'officiating_career': '1,052', 'role': '1,052', 'refused': '276'}
+  assignment vocabulary: 59 distinct
+=== ingest_afl1926
+Traceback (most recent call last):
+  File "/Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/ingest_afl1926.py", line 33, in <module>
+    from pfa2fetch import get, canonical
+ModuleNotFoundError: No module named 'pfa2fetch'
+FAILED ingest_afl1926

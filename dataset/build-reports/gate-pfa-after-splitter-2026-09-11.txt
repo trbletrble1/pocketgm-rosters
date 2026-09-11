@@ -1,0 +1,22 @@
+=== each gate, shown failing for its stated reason ===
+  G1 value is a label                    failed: values that are labels: [(('high_school', 'year'), 1)]
+  G2 empty became a claim                failed: an empty value is not a claim: the label was printed, the fact w
+  G3 undated given a date                failed: an undated transaction was given a date
+  G4 claim with no person                failed: a claim requires a matched person; a lead is not a person
+  G5 lead missing a field                failed: lead L1 is missing ['birth_place', 'death_place', 'draft', 'high
+  G9 split with no raw parent            failed: 1 people hold a draft split with no raw parent
+  G8 page in both sets                   failed: 1 pages are in both sets, e.g. ['players/u/umon00200.html']
+  G7 inverse that was not printed        failed: edge Brother of akin00400 is not printed on this page
+  G6 disagreement resolved               failed: disagreement on birth_date was resolved or lost a side
+
+=== against 39368 cached pages + 75008 built claims ===
+  PASS  G1 no value is a label           39368 pages, 15 forbidden tokens
+  PASS  G2 empty is not a claim          empty values rejected at the claim boundary
+  PASS  G3 undated stays undated         405584 transactions, 113093 undated (27.9%)
+  PASS  G4 no claim without a person     None/''/0 all rejected
+  PASS  G5 lead field set                3330 leads, all carrying 8 fields
+  PASS  G6 disagreements held            1020 disagreements, both sides held
+  PASS  G7 no synthesised inverse        3660 edges, every one printed on its own page
+  PASS  G8 matched and leads disjoint    4560 people with claims, 2514 lead pages, disjoint
+  PASS  G9 draft splits re-derive        1500 splits, all with a raw parent and all re-deriving exactly
+exit 0
