@@ -197,14 +197,21 @@ The fix is always the same shape: **make the failure loud, and gate the property
 **A CAPTIONED TEAM PHOTOGRAPH IS A ROSTER.** It was not on the hunting list, and the
 reason is worth keeping: nobody knew to look. The list is derived from what the
 archive knows it lacks, and it cannot name a *kind* of document nobody has thought
-of. Six found on eBay, all of them club-seasons where the archive is thin or empty:
+of. Eleven found on eBay, all of them club-seasons where the archive is thin or empty:
 
 | club-season | why it matters |
 |---|---|
-| **Racine 1922** | |
+| **Akron 1920** | the first APFA champions |
 | **Dayton 1919** | pre-league, and the archive holds almost nothing before 1920 |
-| **Portsmouth 1929** and **1932** | |
 | **Canton 1922** and **1923** | |
+| **Racine 1922** | |
+| **New York Giants 1927** | |
+| **Portsmouth 1929** and **1932** | |
+| **Pittsburgh 1933** | the Pirates' first season |
+
+**And two barnstorming programmes, 1934 and 1935** — the Giants against Ernie Nevers'
+touring side. A barnstorming game is a club-season the league record does not hold at
+all, which makes a programme for one worth more than its date suggests.
 
 The precedent already exists — *a man named in a team photograph caption is a
 person*, ruled on the 1926 Pacific Coast Wildcats. What is new is that the caption
@@ -241,6 +248,66 @@ all three. That is a ruling nobody has made.
 **Do not read the line-up ingest as having finished this site.** It finished one
 question about it.
 
+### The eBay programme reader is not trusted as a measurement
+
+**Ryan's ruling, 10 September 2026.** The reader was fixed that day and the fix was
+real: routed by document shape, the 1926 Bears–Tigers bio page went from 2 entries
+(neither a person) to 27 found and **24 recovered against the hand transcription**.
+
+**It is still not a measurement.** Across the class it moved 255 men to 292 — 15%, not
+a transformation — and the reasons matter more than the number:
+
+- **Only one listing in 55 has a bio page.** Page Seven is nearly unique.
+- **Three of the four public-domain listings that yield zero are blocked by a document
+  shape the reader has no route for** — two clubs side by side with the right-hand
+  table MIRRORED, so a reader that does not know reads the college as the name on every
+  row of it.
+- **Two are blocked by OCR damage no reader can fix.** The Pacific Coast Wildcats front
+  spread reads at 0.416: three name-shaped strings survive out of 22 known.
+- **The classification of what each listing IS was done by sampling and got the Tigers
+  page wrong.** It has not been replaced.
+
+**So the corpus wants reading by eye.** A yield figure from this reader is a floor and
+should never be quoted as what the class holds. The hand transcriptions — the Tigers
+page, the Wildcats spread, the Gunners — are what the archive actually knows about
+these documents, and they are what proved the reader wrong both times.
+
+### 1927 EFL: one source relayed three ways
+
+**Established 10 September 2026, and it is the shape of a question to ask of any
+single-source season.**
+
+`club-bethlehem-bears-1926` spans 1926–1927 and the archive holds **no man** on 1927.
+What asserts the season:
+
+| | |
+|---|---|
+| Wikipedia's 1927 standings table | cites `profootballarchives.com/1927efl.html` |
+| the archive's 11 transaction cells, 6 player pages | **PFA** player pages, every one UNDATED |
+| a dated 12-game schedule on PFA's club page | **PFA** |
+
+**All three are Pro Football Archives. Wikipedia is not a second source here, it is PFA
+relayed** — and for a season the archive holds no man on, that is the whole point.
+
+**The season was played.** PFA's `1927eflbet.html` carries a dated schedule, 18
+September to 27 November 1927, with venues and five attendances up to 5,000. Counting
+only the EFL opponents gives exactly Wikipedia's 1-3-1. So the span is **attested, not
+stretched**, and the dark-years check correctly finds nothing: `_emit_pfa_only` builds
+from attested years only and never bridges a hole.
+
+**But no page names a man.** Five 1927 EFL club pages are on disk — Bethlehem, Newark,
+Coaldale, Atlantic City, Shenandoah — and **the title test says none carries a roster**:
+every title reads `1927 <Club> (EFL) - Pro Football Archives` with no *"Scores, Roster,
+Stats, Coaches"*. Confirmed by reading them: SCORES and, on two, Schedule Notes. The
+league page Wikipedia cites, `1927efl.html`, **is not on disk at all**.
+
+**And no Ghosts page reaches 1927.** Eleven of the 243 mention it and every one is
+Frankford or Pottsville, both NFL. The seventeen game line-ups run 1902–1926.
+
+**What the season lacks is a roster or a line-up from a second source.** Reading the
+five club pages would give the archive its first dated 1927 EFL games and would still
+name nobody.
+
 ### Found and not assessed — the running list
 
 Named as they were noticed, none assessed, none fetched. Kept here so they are not
@@ -253,7 +320,14 @@ re-discovered a fourth time.
   only *contemporary* route to the 1920s that is not Neft's reconstruction. See §6's
   provenance finding: this is the one class that could break the echo.
 - **The Racine Heritage Museum** — a physical local collection for a club the archive
-  is thin on, and one of the six captioned photographs is Racine 1922.
+  is thin on, and one of the captioned photographs is Racine 1922.
+- **Pro Football Journal** — the PFRA's other publication, distinct from the Coffin
+  Corner.
+- **footballarchaeology.com** — a working researcher's site on exactly the era the
+  archive is thinnest in.
+- **Ohio Memory** — already named in §8 among the untried photograph routes; repeated
+  here because it is a document route too, for the 1920s Ohio League clubs the archive
+  holds almost nothing on.
 
 ### On disk and unread — measured 9 September
 
@@ -489,6 +563,23 @@ restated:
   family with no reading was never in its population. RS-G6 now carries the numbers
   but **not** the property — two gates checking one rule is how a rule and its check
   drift apart.
+
+### Added 10 September
+
+- **A printed line-up from a named contemporary newspaper is roster evidence.**
+  `printed_lineup` declared. It is NOT `programme.probable_lineup`: that exists because
+  the Tigers programme printed its line-up BEFORE kickoff, and these are game accounts
+  printed after. The distinction is the printing order.
+- **A substitution is a different assertion.** A man who came on did not start. And a
+  man may do both — Gaffney at Lancaster started, was replaced, and came back on.
+- **`AFLNFL` is a competition between two leagues, not a league.** Super Bowls I–IV,
+  declared like `IND`: it mints no league and holds no club.
+- **Box scores and game logs are ingested row-shaped, per-game, never per-cell.**
+- **`build_contested` keys on `(person, family, year)` where the family is about a
+  season** — never on the raw `subject` column, which would undo person merging.
+- **`holds()` stays person-level.** A season weight is not a man's weight. What changed
+  was the hunting list's LABEL, not the test.
+- **The eBay programme reader is not trusted as a measurement** — see §6.
 
 ---
 
