@@ -83,6 +83,46 @@ taken before a run overwrites a store) are **not committed and are not backups**
 rollback aid that matters until that run's rebuild is verified and published, then may go.
 Ryan's ruling; both halves in `DATASET_PRECEDENTS.md`, *A store backup is a rollback aid*.
 
+### The one-time off-machine snapshot — a copy of a moment, NOT a backup
+
+**Ryan's ruling, 11 September 2026**, as an interim measure until he is home to back the
+machine up properly. **The mini still has no backup.** This is one copy of one moment, and it
+ages from the day it was made.
+
+| | |
+|---|---|
+| where | Dropbox, `/Football Archive/snapshots/build-2026-09-11-6975666d.tar.zst` — one file, copied once, **not a sync** (a sync of JSON the rebuilds rewrite would fight them, and would sync a corruption too) |
+| what | **`build/` only** — every store, 3,302 files, 9.27 GB → **2.73 GB** zstd. Plus `MANIFEST.sha256` (every file's SHA-256) and `README.txt`, inside the archive and beside it |
+| the moment | served model `6975666d5e80ba71`, git `315950c`, 11 September 10:44 |
+| archive SHA-256 | `4891c10de74609d1c46432bc91c2b337fcd80b5bb54f297dd54b95b8edd9fbbb` (Dropbox content hash `4808819c92bef1d04d3e64cc735e1899f0f1568566dc068f3729f6bdf6473500`) |
+| verified | full test decompression passed; the listing holds exactly 3,304 entries (3,302 + 2); three files extracted — the 891 MB `pfa-boxscores.json`, `clubs.json` and a random one — each match the manifest. **The server copy was opened, not assumed:** Dropbox's own content hash matches the one computed here; the file was downloaded back from Dropbox (2,725,854,475 bytes, about a minute), its SHA-256 matches the archive made on this machine, and it decompresses in full to the same 3,304 entries. The downloaded copy was then deleted |
+| staged copy | `~/Documents/archive-snapshots/2026-09-11/` — on the same machine, so it is not a second copy |
+
+**What it does not hold, and where that is:**
+- **Code, declarations and `build-reports/` records** — in git, off-machine. `identity.json`, the
+  person-id authority, is tracked.
+- **The person index, the served model, the two kept models** — derived; rebuilt from `build/`
+  plus committed code.
+- **`~/Documents/pgm3-sources`, 9.8 GB — NOT in the snapshot and NOT in git.** Most of it can be
+  fetched again. **Some cannot:** Crippen's AAFC register (sent by the author), the eBay programme
+  photographs (listings close), the hand-saved PFR pages, the newspaper PDFs, `nfl-books`. Those
+  exist only on the mini and on the 7 September laptop clone. The ruling excluded the sources as
+  re-fetchable; that is true of most of them and not of these.
+
+**Recovery path** (written down, **not rehearsed**): clone the repo at `315950c` or later; extract
+the archive into `dataset/`; `shasum -a 256 -c MANIFEST.sha256`; `python3 src/build_person_index.py`;
+`python3 service/build_read_model.py --force`. The sources are needed only to re-ingest or extend —
+the stores already hold every claim. The same steps are in the README inside the archive.
+
+**To repeat it weekly — measured, not set running; Ryan's decision.** On this machine the manifest
+takes 18 seconds and the compression 7; each copy is about 2.7 GB and grows with the stores. It
+would want: a repo script doing exactly these steps with `--write` (build locally, verify, then
+copy into Dropbox under a dated name), refusing to run while `build/` is being written; a launchd
+job, weekly; and a retention rule — four weekly copies is about 11 GB of Dropbox. **Upload time for
+one copy: about a minute** (placed 15:44:27 UTC, on the server 15:45:30 — roughly 43 MB/s), so the
+whole run is under two minutes of machine time. **It would still be a series of moments, not a
+backup of the machine.**
+
 **`/tmp` does not survive a restart.** Four working files were lost that way during the machine move, and two sessions put things back in `/tmp` the same day after writing themselves notes not to. Anything that matters goes in `build-reports/`.
 
 ---
