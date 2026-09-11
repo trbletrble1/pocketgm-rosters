@@ -1,0 +1,6 @@
+  ok   A1 apply_club_keys: the account covers every decision (677 decided, 677 accounted)
+  ok   A2 apply_club_keys: every decision that did less than it recorded has a legitimate reason -- {'applied': 677}, moved 677 of 677 recorded
+  ok   A1 apply_person_merges: the account covers every decision (93 decided, 93 accounted)
+  ok   A2 apply_person_merges: every decision that did less than it recorded has a legitimate reason -- {'applied': 72, 'partly_applied (legitimate)': 21}, moved 1,311 of 1,352 recorded
+
+APPLIER ACCOUNT GATE: pass

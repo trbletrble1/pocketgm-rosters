@@ -1,6 +1,8 @@
 """Decide which person records are one man, and record each decision.
 
-Writes dataset/build/person-merges.json. Decides only; applying the decisions to
+A PROPOSER since 2026-09-11: the decisions are declarations/person-merge-decisions.json, in git,
+and this writes only build/person-merge-proposals.json (what the rule would add or withdraw).
+It used to write dataset/build/person-merges.json. Decides only; applying the decisions to
 the index is apply_person_merges.py, and un-merging is deleting a decision and
 running that again. See declarations/person-merges.json.
 
@@ -75,12 +77,16 @@ def build():
             skipped.append({"a": a, "b": b, "not_merged_because": "no half carries a name in the index"}); continue
         A, C = IDX[absorbed], IDX[canonical]
         rewrites, gained, shared_keys, stint_taken, stint_conflicts = [], [], [], {}, []
-        for k, sd in (A.get("seasons") or {}).items():
+        # BOTH DICTS (Ryan, 2026-09-11). The absorbed halves are Coaching Tree records whose keys the
+        # 9 September shape change moved into `coaching_seasons`; reading `seasons` only, every
+        # proposed contribution came out empty (rewrites 1,929 -> 0, club-seasons gained 1,352 -> 0).
+        items = [(dn, k, sd) for dn in ("seasons", "coaching_seasons") for k, sd in (A.get(dn) or {}).items()]
+        for dn, k, sd in items:
             ck = canonical_season_key(k, pop.name_to_code, NORM.get((absorbed, k)))
             if ck != k: rewrites.append([k, ck])
-            if ck in (C.get("seasons") or {}):
+            if ck in (C.get(dn) or {}):
                 shared_keys.append(ck)
-                cs = C["seasons"][ck]
+                cs = C[dn][ck]
                 took = []
                 for scope in ("stint", "stats"):
                     for f, v in (sd.get(scope) or {}).items():
@@ -214,13 +220,55 @@ def build():
     return out
 
 
+def propose(out, declared):
+    """-> what the rule, run on today's base, would ADD and WITHDRAW against the declared decisions."""
+    pair = lambda a, b: tuple(sorted((a, b)))
+    now = {pair(m["canonical_person"], m["absorbed_person"]): m for m in out["merges"]}
+    have = {pair(m["canonical_person"], m["absorbed_person"]): m for m in declared["merges"]}
+    verdict_now = {}
+    for grp, v in out["REFUSED"].items():
+        for p in (v.get("pairs") if isinstance(v, dict) else None) or []:
+            if isinstance(p, dict) and p.get("a") and p.get("b"):
+                verdict_now[pair(p["a"], p["b"])] = {"refused_as": grp, "verdict": p.get("verdict"),
+                                                     "why": p.get("why") or p.get("not_merged_because"),
+                                                     "evidence": p.get("evidence")}
+    add = [{"canonical_person": m["canonical_person"], "absorbed_person": m["absorbed_person"], "name": m["name"],
+            "why": m["why"], "tests_passed": m["tests_passed"]} for k, m in sorted(now.items()) if k not in have]
+    withdraw = []
+    for k, m in sorted(have.items()):
+        if k in now: continue
+        vn = verdict_now.get(k) or {"verdict": "no longer a candidate pair", "why": "the rule's tests no longer pair them"}
+        withdraw.append({"merge_id": m["merge_id"], "name": m["name"], "canonical_person": m["canonical_person"],
+                         "absorbed_person": m["absorbed_person"], "decided": m["why"],
+                         "the_rule_now_says": vn.get("verdict"), "because": vn.get("why"),
+                         "evidence_then": m.get("evidence"), "evidence_now": vn.get("evidence")})
+    return {"_what": ("PROPOSALS, not decisions (Ryan, 2026-09-11). The merge rule re-run on today's base, compared with "
+                      "the declared decisions in declarations/person-merge-decisions.json. A proposal to withdraw is a "
+                      "FINDING -- the evidence moved since the decision -- and a question for Ryan. Nothing here is applied."),
+            "declared": len(have), "the_rule_now_decides": len(now), "unchanged": len(set(now) & set(have)),
+            "would_add": add, "would_withdraw": withdraw}
+
+
 def main():
+    """A PROPOSER. It never writes the decisions (declarations/person-merge-decisions.json, in git since
+    2026-09-11) and never overwrites anything they rest on. It runs the rule on today's base and reports
+    what the rule would add or withdraw; with --write it records that in build/person-merge-proposals.json.
+    It used to write build/person-merges.json -- the decisions themselves -- and a re-run silently
+    dropped Joe Spencer's merge."""
     out = build()
+    declared = json.load(open(os.path.join(BASE, "declarations", "person-merge-decisions.json")))
+    P = propose(out, declared)
+    P["counts_of_this_run"] = out["counts"]
+    print(f"declared {P['declared']}; the rule now decides {P['the_rule_now_decides']}; unchanged {P['unchanged']}; "
+          f"would ADD {len(P['would_add'])}; would WITHDRAW {len(P['would_withdraw'])}")
+    for w in P["would_withdraw"]:
+        print(f"  withdraw? {w['merge_id']} {w['name']}: the rule now says {w['the_rule_now_says']} -- {w['because']}")
+    for a in P["would_add"][:10]:
+        print(f"  add? {a['name']}: {a['canonical_person']} + {a['absorbed_person']} -- {a['why']}")
     if "--write" in sys.argv:
-        fp = os.path.join(BASE, "build", "person-merges.json")
-        json.dump(out, open(fp, "w"), indent=1, ensure_ascii=False)
-        print("wrote", fp)
-    print(json.dumps(out["counts"], indent=1))
+        fp = os.path.join(BASE, "build", "person-merge-proposals.json")
+        json.dump(P, open(fp, "w"), indent=1, ensure_ascii=False)
+        print("wrote", fp, "(proposals only; the decisions are untouched)")
 
 
 if __name__ == "__main__":

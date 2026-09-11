@@ -1,0 +1,3 @@
+declared 93; the rule now decides 92; unchanged 92; would ADD 0; would WITHDRAW 1
+  withdraw? PM_0002 Joe Spencer: the rule now says unclassifiable -- same name and exact birth date, but a half already holds more than one value for a field
+wrote /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/person-merge-proposals.json (proposals only; the decisions are untouched)

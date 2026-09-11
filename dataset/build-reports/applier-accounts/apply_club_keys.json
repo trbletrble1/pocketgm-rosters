@@ -1,0 +1,6106 @@
+{
+ "applier": "apply_club_keys",
+ "decided": 677,
+ "tally": {
+  "applied": 677
+ },
+ "reasons": {},
+ "expected": 677,
+ "moved": 677,
+ "run": "write",
+ "outcomes": [
+  {
+   "decision": "P_001098:COACHES|y1960|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001098:COACHES|y1961|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001098:COACHES|y1962|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001098:COACHES|y1963|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001098:COACHES|y1964|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001098:COACHES|y1965|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001098:COACHES|y1966|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001098:COACHES|y1967|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001098:COACHES|y1968|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001098:COACHES|y1969|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001098:COACHES|y1970|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001098:COACHES|y1971|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_001291:COACHES|y1979|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_002290:COACHES|y1991|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_004301:COACHES|y1963|Green Bay Packers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_004301:COACHES|y1968|Atlanta Falcons",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_004522:COACHES|y1973|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_005192:COACHES|y1997|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_005220:COACHES|y1984|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_005220:COACHES|y1985|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_008404:COACHES|y2007|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_008404:COACHES|y2011|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_008404:COACHES|y2012|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_008404:COACHES|y2013|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_008404:COACHES|y2014|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_008404:COACHES|y2015|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_008404:COACHES|y2016|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_008404:COACHES|y2017|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_008404:COACHES|y2018|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_008404:COACHES|y2019|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1957|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1959|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1960|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1961|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1962|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1963|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1964|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1965|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1966|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1967|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1968|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1969|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1970|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1971|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1972|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1973|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1974|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1975|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1976|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1977|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1983|Chicago Blitz",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014160:COACHES|y1984|Arizona Wranglers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014168:COACHES|y1975|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014168:COACHES|y1976|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014168:COACHES|y1977|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014168:COACHES|y1978|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014168:COACHES|y1979|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014168:COACHES|y1980|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014168:COACHES|y1981|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014168:COACHES|y1982|Montreal Alouettes",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1972|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1973|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1974|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1975|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1976|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1977|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1978|Oakland Raiders",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1979|Oakland Raiders",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1983|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1984|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1985|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1986|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1987|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1988|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1991|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014169:COACHES|y1992|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1967|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1968|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1969|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1970|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1971|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1972|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1973|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1974|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1975|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1976|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1977|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1978|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1979|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1980|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1983|Denver Gold",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014173:COACHES|y1984|Chicago Blitz",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1972|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1973|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1974|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1975|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1976|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1977|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1978|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1979|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1980|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1981|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1982|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1983|Chicago Blitz",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1985|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1986|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1989|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014177:COACHES|y1990|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014178:COACHES|y1972|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014178:COACHES|y1973|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014178:COACHES|y1974|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014178:COACHES|y1975|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014178:COACHES|y1976|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014178:COACHES|y1977|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014178:COACHES|y1978|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014178:COACHES|y1979|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014178:COACHES|y1980|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014178:COACHES|y1981|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014180:COACHES|y1976|New Orleans Saints",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014180:COACHES|y1977|New Orleans Saints",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014180:COACHES|y1978|New Orleans Saints",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014180:COACHES|y1979|New Orleans Saints",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014180:COACHES|y1980|New Orleans Saints",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014185:COACHES|y1979|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014185:COACHES|y1980|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014185:COACHES|y1981|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014185:COACHES|y1987|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014185:COACHES|y1988|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014185:COACHES|y1989|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014185:COACHES|y1990|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014185:COACHES|y1991|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014185:COACHES|y1998|St. Louis Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014185:COACHES|y1999|St. Louis Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014191:COACHES|y1976|Tampa Bay Buccaneers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014191:COACHES|y1977|Tampa Bay Buccaneers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014191:COACHES|y1978|Tampa Bay Buccaneers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014191:COACHES|y1979|Tampa Bay Buccaneers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014191:COACHES|y1980|Tampa Bay Buccaneers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1974|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1975|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1976|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1979|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1980|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1981|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1982|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1983|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1984|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1985|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1986|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1987|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1988|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1989|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1990|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1991|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1992|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1993|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1994|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1995|St. Louis Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014196:COACHES|y1998|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014202:COACHES|y1979|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014202:COACHES|y1980|Hamilton Tiger-Cats",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014202:COACHES|y1983|Chicago Blitz",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014202:COACHES|y1984|Pittsburgh Maulers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014202:COACHES|y1985|Denver Gold",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014202:COACHES|y1991|New York/New Jersey Knights",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014202:COACHES|y1992|New York/New Jersey Knights",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014202:COACHES|y1994|Atlanta Falcons",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014202:COACHES|y1995|Atlanta Falcons",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014202:COACHES|y1996|Atlanta Falcons",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1967|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1968|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1969|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1970|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1971|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1972|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1973|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1974|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1975|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1976|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1977|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1978|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1979|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1980|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1981|Seattle Seahawks",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014205:COACHES|y1982|Seattle Seahawks",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1955|Ottawa Rough Riders",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1966|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1967|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1968|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1969|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1970|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1971|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1972|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1973|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1974|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1975|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1976|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1977|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1978|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1979|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1980|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014212:COACHES|y1981|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014213:COACHES|y1977|Saskatchewan Roughriders",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014213:COACHES|y1978|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014213:COACHES|y1979|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1962|Buffalo Bills",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1963|Buffalo Bills",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1964|Buffalo Bills",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1965|Buffalo Bills",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1966|Buffalo Bills",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1967|Buffalo Bills",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1968|Buffalo Bills",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1969|Boston Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1971|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1972|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1973|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1974|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1975|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1976|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1977|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1978|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1979|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014216:COACHES|y1980|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1964|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1965|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1966|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1967|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1968|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1969|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1970|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1971|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1972|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1973|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1974|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1975|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1976|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1977|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1978|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1979|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1980|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1981|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1982|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1983|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1992|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1993|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y1994|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y2001|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014217:COACHES|y2002|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014218:COACHES|y1972|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014218:COACHES|y1973|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014218:COACHES|y1974|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014218:COACHES|y1975|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014218:COACHES|y1976|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014218:COACHES|y1977|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014218:COACHES|y1981|Toronto Argonauts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1973|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1974|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1975|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1976|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1977|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1978|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1979|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1980|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1981|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1982|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1983|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1984|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1985|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1986|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1987|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1988|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1989|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1990|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1991|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1992|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1993|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1994|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1995|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1996|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014220:COACHES|y1997|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1969|Buffalo Bills",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1970|Buffalo Bisons",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1971|Buffalo Bisons",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1972|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1973|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1974|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1975|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1976|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1977|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1978|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1979|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1980|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1981|Buffalo Bisons",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1982|Buffalo Bisons",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1983|Seattle Seahawks",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1984|Seattle Seahawks",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1985|Seattle Seahawks",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1986|Seattle Seahawks",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1987|Seattle Seahawks",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1988|Seattle Seahawks",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014224:COACHES|y1989|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014230:COACHES|y1979|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014230:COACHES|y1980|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014230:COACHES|y1981|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1977|Montreal Alouettes",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1978|Montreal Alouettes",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1979|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1980|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1981|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1982|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1983|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1984|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1985|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1986|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1987|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1988|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1989|New York Jets",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1990|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1991|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1992|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1993|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1994|Philadelphia Eagles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1995|Jacksonville Jaguars",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1996|Jacksonville Jaguars",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1997|Jacksonville Jaguars",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1998|Jacksonville Jaguars",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y1999|Jacksonville Jaguars",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014242:COACHES|y2000|St. Louis Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014243:COACHES|y1974|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014243:COACHES|y1975|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014243:COACHES|y1976|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1971|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1972|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1974|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1975|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1976|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1977|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1978|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1979|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1980|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1981|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1982|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1983|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1984|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1985|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1986|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1987|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1988|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1989|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1990|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1991|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1992|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1993|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1994|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1995|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1996|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1997|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1998|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014246:COACHES|y1999|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1964|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1965|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1966|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1967|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1968|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1969|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1977|Tampa Bay Buccaneers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1978|Tampa Bay Buccaneers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1979|Tampa Bay Buccaneers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1980|Tampa Bay Buccaneers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1981|Tampa Bay Buccaneers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1982|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1983|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1984|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1985|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014251:COACHES|y1993|Sacramento Gold Miners",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1952|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1953|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1954|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1955|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1956|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1957|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1958|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1959|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1960|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1961|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1962|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1963|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1964|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1965|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1966|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1967|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1968|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1969|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1970|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1971|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1972|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1973|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1974|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1975|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1976|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1977|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1978|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014259:COACHES|y1979|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1977|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1978|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1979|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1980|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1981|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1982|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1983|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1984|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1985|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1986|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1987|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1988|Phoenix Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1989|Phoenix Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1990|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1991|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1992|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1993|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014263:COACHES|y1994|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014266:COACHES|y1979|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014266:COACHES|y1980|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014266:COACHES|y1981|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014266:COACHES|y1991|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014266:COACHES|y1992|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014266:COACHES|y1993|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014266:COACHES|y1994|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014266:COACHES|y1995|Cleveland Bulldogs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1978|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1979|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1980|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1981|New Orleans Saints",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1982|New Orleans Saints",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1983|New Orleans Saints",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1984|New Orleans Saints",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1985|New Orleans Saints",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1986|Kansas City Chiefs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1987|Kansas City Chiefs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1993|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014267:COACHES|y1994|Denver Broncos",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1978|Kansas City Chiefs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1979|Kansas City Chiefs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1980|Kansas City Chiefs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1981|Kansas City Chiefs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1992|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1993|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1994|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1995|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1996|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1997|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1998|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y1999|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014268:COACHES|y2000|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1979|Green Bay Packers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1980|Green Bay Packers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1981|Green Bay Packers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1982|Green Bay Packers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1983|Green Bay Packers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1984|Los Angeles Express",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1985|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1986|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1987|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1988|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1989|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1990|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1991|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1992|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1993|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1994|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1995|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1996|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1997|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1998|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y1999|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014273:COACHES|y2000|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014278:COACHES|y1924|Kenosha Maroons",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014279:COACHES|y1925|Dayton Triangles",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014281:COACHES|y1931|Chicago Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014282:COACHES|y1933|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014282:COACHES|y1934|Chicago Bears",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014284:COACHES|y1933|Chicago Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014285:COACHES|y1933|Cincinnati Reds",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014286:COACHES|y1934|Pittsburgh Pirates",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014286:COACHES|y1935|Pittsburgh Pirates",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014287:COACHES|y1934|Pittsburgh Pirates",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014287:COACHES|y1935|Pittsburgh Pirates",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014294:COACHES|y1952|Green Bay Packers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014325:COACHES|y1996|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014359:COACHES|y1970|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014362:COACHES|y1989|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014362:COACHES|y1991|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014369:COACHES|y1963|Boston Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y1991|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y1992|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y1993|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y1994|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y1996|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y1998|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y1999|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y2000|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y2001|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y2002|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y2009|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y2010|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014371:COACHES|y2011|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014373:COACHES|y1989|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014373:COACHES|y1997|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014373:COACHES|y1998|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014374:COACHES|y1979|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014374:COACHES|y1980|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014387:COACHES|y1970|Cleveland Browns",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014392:COACHES|y1973|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014392:COACHES|y1974|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014392:COACHES|y1975|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014392:COACHES|y1976|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014407:COACHES|y1991|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014407:COACHES|y1992|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014407:COACHES|y1993|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014407:COACHES|y1994|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014407:COACHES|y2001|Cleveland Browns",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014427:COACHES|y1977|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014433:COACHES|y2002|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014433:COACHES|y2004|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014433:COACHES|y2005|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014467:COACHES|y1975|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014467:COACHES|y1976|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014473:COACHES|y1998|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014473:COACHES|y1999|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014480:COACHES|y2004|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014480:COACHES|y2005|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014480:COACHES|y2007|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014485:COACHES|y1968|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014485:COACHES|y1974|Atlanta Falcons",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014485:COACHES|y1975|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014485:COACHES|y1976|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014487:COACHES|y1975|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014487:COACHES|y1976|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014487:COACHES|y1985|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014491:COACHES|y1987|Green Bay Packers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014518:COACHES|y1972|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014520:COACHES|y1963|Boston Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014525:COACHES|y1977|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014529:COACHES|y1947|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014536:COACHES|y1991|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014536:COACHES|y1992|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014536:COACHES|y1993|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014550:COACHES|y1973|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014550:COACHES|y1975|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014550:COACHES|y1976|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014550:COACHES|y1977|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014559:COACHES|y2000|Arizona Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014559:COACHES|y2002|Arizona Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014564:COACHES|y1962|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014571:COACHES|y1961|Green Bay Packers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014571:COACHES|y1962|Green Bay Packers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014571:COACHES|y1963|Green Bay Packers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014580:COACHES|y1979|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014580:COACHES|y1980|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014582:COACHES|y1965|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014591:COACHES|y1970|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014591:COACHES|y1971|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014591:COACHES|y1972|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014591:COACHES|y1973|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014592:COACHES|y2020|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014592:COACHES|y2021|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014592:COACHES|y2022|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014592:COACHES|y2023|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014592:COACHES|y2024|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014600:COACHES|y1999|Arizona Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014600:COACHES|y2002|Arizona Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014606:COACHES|y1965|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014611:COACHES|y1977|San Francisco 49ers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014621:COACHES|y1998|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014621:COACHES|y1999|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014621:COACHES|y2000|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014621:COACHES|y2001|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014644:COACHES|y2001|Cleveland Browns",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014644:COACHES|y2012|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014644:COACHES|y2013|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014644:COACHES|y2014|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014644:COACHES|y2015|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014644:COACHES|y2016|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014644:COACHES|y2017|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014645:COACHES|y1994|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014645:COACHES|y1995|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014645:COACHES|y1996|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014645:COACHES|y1998|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014645:COACHES|y2000|Cleveland Browns",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014645:COACHES|y2006|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014647:COACHES|y1994|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014647:COACHES|y1995|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014647:COACHES|y1996|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014647:COACHES|y2003|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014647:COACHES|y2006|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014656:COACHES|y1994|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014656:COACHES|y1995|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014656:COACHES|y1996|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014656:COACHES|y2000|Cleveland Browns",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014664:COACHES|y2007|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014664:COACHES|y2009|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014664:COACHES|y2010|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014668:COACHES|y1962|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014678:COACHES|y2018|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014678:COACHES|y2019|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014678:COACHES|y2020|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014678:COACHES|y2021|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014678:COACHES|y2022|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014707:COACHES|y1995|Arizona Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014713:COACHES|y1969|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014713:COACHES|y1970|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014713:COACHES|y1971|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014713:COACHES|y1972|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014729:COACHES|y1966|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014729:COACHES|y1967|New York Giants",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014736:COACHES|y1969|Baltimore Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014742:COACHES|y1971|Cleveland Browns",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014752:COACHES|y2002|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014760:COACHES|y2023|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014760:COACHES|y2024|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014766:COACHES|y1971|Kansas City Chiefs",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014775:COACHES|y1994|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014775:COACHES|y1996|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014783:COACHES|y1998|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014785:COACHES|y1999|Arizona Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014785:COACHES|y2000|Arizona Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014788:COACHES|y2007|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014788:COACHES|y2009|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014788:COACHES|y2010|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014788:COACHES|y2012|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014788:COACHES|y2013|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014788:COACHES|y2014|Pittsburgh Steelers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014795:COACHES|y1974|Atlanta Falcons",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014824:COACHES|y1957|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014824:COACHES|y1960|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014824:COACHES|y1963|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014824:COACHES|y1964|Detroit Lions",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014824:COACHES|y1965|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014824:COACHES|y1966|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014826:COACHES|y1968|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_014826:COACHES|y1970|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_018235:COACHES|y1965|Washington Redskins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_018235:COACHES|y1966|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_018235:COACHES|y1968|Dallas Cowboys",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_018464:COACHES|y1973|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_018464:COACHES|y1976|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_018464:COACHES|y1977|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_018468:COACHES|y1972|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_018497:COACHES|y1989|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_018629:COACHES|y1976|St. Louis Cardinals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_018629:COACHES|y1998|New England Patriots",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_018985:COACHES|y1991|Minnesota Vikings",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_019365:COACHES|y1998|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_019365:COACHES|y1999|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_019365:COACHES|y2000|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_019365:COACHES|y2001|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_019365:COACHES|y2002|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_019365:COACHES|y2004|Indianapolis Colts",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "coaching_seasons"
+  },
+  {
+   "decision": "P_037753:SALARIES|y1974|Birmingham Americans",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037754:SALARIES|y1975|Chicago Winds",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037755:SALARIES|y1975|Chicago Winds",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037756:SALARIES|y1974|Cincinnati Bengals",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037757:SALARIES|y1983|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037757:SALARIES|y1986|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037759:SALARIES|y1974|Los Angeles Rams",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037761:SALARIES|y1967|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037761:SALARIES|y1968|Houston Oilers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037762:SALARIES|y1974|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037762:SALARIES|y1975|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037762:SALARIES|y1976|San Diego Chargers",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037765:SALARIES|y1980|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037766:SALARIES|y1977|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037766:SALARIES|y1978|Miami Dolphins",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037767:SALARIES|y1968|Washington",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037767:SALARIES|y1969|Washington",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037768:SALARIES|y1968|Washington",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  },
+  {
+   "decision": "P_037768:SALARIES|y1969|Washington",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true,
+   "dict": "seasons"
+  }
+ ]
+}

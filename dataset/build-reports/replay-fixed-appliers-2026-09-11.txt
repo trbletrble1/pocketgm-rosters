@@ -1,0 +1,4 @@
+CLUB KEYS: {'applied': 677} | applied in: {'coaching_seasons': 658, 'seasons': 19}
+MERGES: {'applied': 72, 'partly_applied / every recorded club-season is already held by the canonical person': 21} | keys moved 1,311 of 1,352 recorded
+STRANDED (year, club) after the fixed merges: 0 (was 15 on 9 men) []
+DOUBLES (one coaching club-season under 2+ keys): 669 people, 4,880 club-seasons (was 653 / 3,589)

@@ -1,0 +1,4 @@
+  ok   L1 all 6,333,445 claims with a league and a club sit on a club that plays in that league that year
+  FAIL L2 all 194,518 placed season keys name a league their club plays that year -- 234 keys in 15 club-seasons do not: [('AFL', 1962, 'DAL', 'NFL'), ('AAFC', 1948, 'CHI', 'NFL'), ('AAFC', 1947, 'CHI', 'NFL'), ('AFL', 1961, 'DAL', 'NFL'), ('AFL', 1960, 'DAL', 'NFL'), ('NFL', 1936, 'BOS', 'AFL')]
+
+CLAIM LEAGUE GATE: 1 FAILURE(S)

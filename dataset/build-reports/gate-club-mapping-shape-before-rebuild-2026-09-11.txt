@@ -1,0 +1,7 @@
+  C1 pass  the census counts every refusal there is -- 35,559 refused person-seasons, of 242,953 keys walked (207,110 seasons, 35,843 coaching_seasons)
+  C2 pass  every refused string is printed, never a top-N
+  C3 pass  the census is derived from the data, not a fixed list
+  C4 FAIL  build_dashboard calls the reporter, so it is heard unasked
+        build_dashboard.py never calls club_keys.report -- the census exists but nothing surfaces it
+
+3 pass, 1 FAIL

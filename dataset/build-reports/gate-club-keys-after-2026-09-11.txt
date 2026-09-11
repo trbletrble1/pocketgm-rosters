@@ -1,0 +1,27 @@
+rewrites decided: 677; recorded for merge time: 1929
+  the genuine 1946 Bisons and 1925 Bulldogs survive, on 182 people
+  applied: 677 ({'mapping_gap': 637, 'source_defect': 40}); left as printed: 4441
+  absorbed records untouched: 93
+  G7 league-seasons held under both a code and a name on a renderable record: 12292, of 223,545 checked (188,498 in seasons, 35,047 in coaching_seasons)
+
+GATE FAILED (3246)
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1961|Washington Redskins
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1962|Washington Redskins
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1963|Washington Redskins
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1964|Washington Redskins
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1965|Washington Redskins
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1966|Los Angeles Rams
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1967|Los Angeles Rams
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1968|Los Angeles Rams
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1969|Los Angeles Rams
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1970|Los Angeles Rams
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1971|Washington Redskins
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1972|Washington Redskins
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1973|Washington Redskins
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1974|Washington Redskins
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1975|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1976|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1977|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1978|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1979|Baltimore Colts
+  FAIL G1 absorbed record P_014161 lost its printed key COACHES|y1981|Chicago Bears

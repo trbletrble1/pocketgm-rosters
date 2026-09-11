@@ -30,6 +30,10 @@
     "why": "SUPERSEDED 2026-09-11: the pre-declaration copy of the 93 merge decisions, identical to declarations/person-merge-decisions.json, which paths.PERSON_MERGES now reads. Nothing reads this file as decisions; it is not ingested as claims.",
     "read_as": "declaration"
    },
+   "person-merge-proposals": {
+    "why": "merge_people.py's PROPOSALS (2026-09-11): what the merge rule would now add or withdraw against the declared decisions in declarations/person-merge-decisions.json. Never applied, never ingested as claims; a question for Ryan, not a decision.",
+    "read_as": "decision record"
+   },
    "club-key-normalisation": {
     "why": "a decision record: which club keys were normalised, what was REFUSED, and when it was decided.",
     "read_as": "decision record"

@@ -100,15 +100,22 @@ def main():
 
     # G7
     def is_code(t, y): return f"{t}|{y}" in clubs
-    both = 0
+    # BOTH DICTS, AND SAY WHAT WAS CHECKED (Ryan, 2026-09-11): a count of zero and a count of nothing
+    # to count are different answers. Reading `seasons` only, G7 stopped seeing the coaching keys --
+    # 97% of what the club-key decisions exist for -- and passed on what was left.
+    both = 0; checked = collections.Counter()
     for pid, p in index.items():
         if pid == "_clubs" or not isinstance(p, dict) or p.get("merged_into"): continue
-        by = collections.defaultdict(set)
-        for k in p.get("seasons") or {}:
-            lg, y, club = k.split("|", 2); by[(lg, y[1:5] if y.startswith("y") else y)].add(club)
-        for (lg, yr), cs in by.items():
-            if len(cs) > 1 and any(is_code(t, yr) for t in cs) and any(not is_code(t, yr) for t in cs): both += 1
-    check(both == 0, f"G7 {both} renderable league-seasons still held under both a code and a name")
+        for dn in ("seasons", "coaching_seasons"):
+            by = collections.defaultdict(set)
+            for k in p.get(dn) or {}:
+                lg, y, club = k.split("|", 2); by[(lg, y[1:5] if y.startswith("y") else y)].add(club)
+            checked[dn] += len(by)
+            for (lg, yr), cs in by.items():
+                if len(cs) > 1 and any(is_code(t, yr) for t in cs) and any(not is_code(t, yr) for t in cs): both += 1
+    check(sum(checked.values()) > 0 and both == 0,
+          f"G7 {both} renderable league-seasons held under both a code and a name, of {sum(checked.values()):,} "
+          f"checked ({checked['seasons']:,} in seasons, {checked['coaching_seasons']:,} in coaching_seasons)")
 
     # G8
     import bio_select, bio_write
@@ -120,7 +127,10 @@ def main():
     print(f"  applied: {len(D['rewrites'])} ({D['counts']['by_kind']}); "
           f"left as printed: {D['counts']['refused']}")
     print(f"  absorbed records untouched: {len(absorbed)}")
-    print(f"  league-seasons held under two forms on a renderable record: {both}")
+    # G7 SAYS WHAT IT CHECKED even when it passes, and even when G1's failures fill the capped list below
+    print(f"  G7 league-seasons held under both a code and a name on a renderable record: {both}, of "
+          f"{sum(checked.values()):,} checked ({checked['seasons']:,} in seasons, "
+          f"{checked['coaching_seasons']:,} in coaching_seasons)")
     if FAILS:
         print(f"\nGATE FAILED ({len(FAILS)})")
         for m in FAILS[:20]: print("  FAIL", m)

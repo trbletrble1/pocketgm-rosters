@@ -1,0 +1,761 @@
+{
+ "applier": "apply_person_merges",
+ "decided": 93,
+ "tally": {
+  "applied": 72,
+  "partly_applied (legitimate)": 21
+ },
+ "reasons": {
+  "every recorded club-season is already held by the canonical person": 21
+ },
+ "expected": 1352,
+ "moved": 1311,
+ "run": "write",
+ "rewrites_recorded": 1929,
+ "outcomes": [
+  {
+   "decision": "PM_0001",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0002",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0003",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0004",
+   "outcome": "partly_applied",
+   "expected": 18,
+   "moved": 17,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0005",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0006",
+   "outcome": "applied",
+   "expected": 29,
+   "moved": 29,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0007",
+   "outcome": "applied",
+   "expected": 15,
+   "moved": 15,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0008",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0009",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0010",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0011",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0012",
+   "outcome": "applied",
+   "expected": 28,
+   "moved": 28,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0013",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0014",
+   "outcome": "applied",
+   "expected": 0,
+   "moved": 0,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0015",
+   "outcome": "partly_applied",
+   "expected": 24,
+   "moved": 23,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0016",
+   "outcome": "partly_applied",
+   "expected": 17,
+   "moved": 16,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0017",
+   "outcome": "applied",
+   "expected": 19,
+   "moved": 19,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0018",
+   "outcome": "applied",
+   "expected": 16,
+   "moved": 16,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0019",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0020",
+   "outcome": "partly_applied",
+   "expected": 19,
+   "moved": 18,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0021",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0022",
+   "outcome": "partly_applied",
+   "expected": 36,
+   "moved": 33,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0023",
+   "outcome": "applied",
+   "expected": 2,
+   "moved": 2,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0024",
+   "outcome": "applied",
+   "expected": 5,
+   "moved": 5,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0025",
+   "outcome": "applied",
+   "expected": 20,
+   "moved": 20,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0026",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0027",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0028",
+   "outcome": "applied",
+   "expected": 6,
+   "moved": 6,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0029",
+   "outcome": "applied",
+   "expected": 0,
+   "moved": 0,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0030",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0031",
+   "outcome": "partly_applied",
+   "expected": 12,
+   "moved": 8,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0032",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0033",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0034",
+   "outcome": "partly_applied",
+   "expected": 30,
+   "moved": 29,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0035",
+   "outcome": "applied",
+   "expected": 0,
+   "moved": 0,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0036",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0037",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0038",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0039",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0040",
+   "outcome": "partly_applied",
+   "expected": 39,
+   "moved": 33,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0041",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0042",
+   "outcome": "partly_applied",
+   "expected": 24,
+   "moved": 23,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0043",
+   "outcome": "applied",
+   "expected": 13,
+   "moved": 13,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0044",
+   "outcome": "applied",
+   "expected": 21,
+   "moved": 21,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0045",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0046",
+   "outcome": "partly_applied",
+   "expected": 25,
+   "moved": 23,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0047",
+   "outcome": "partly_applied",
+   "expected": 32,
+   "moved": 29,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0048",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0049",
+   "outcome": "partly_applied",
+   "expected": 12,
+   "moved": 11,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0050",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0051",
+   "outcome": "partly_applied",
+   "expected": 30,
+   "moved": 29,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0052",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0053",
+   "outcome": "partly_applied",
+   "expected": 13,
+   "moved": 11,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0054",
+   "outcome": "applied",
+   "expected": 26,
+   "moved": 26,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0055",
+   "outcome": "applied",
+   "expected": 14,
+   "moved": 14,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0056",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0057",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0058",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0059",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0060",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0061",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0062",
+   "outcome": "applied",
+   "expected": 12,
+   "moved": 12,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0063",
+   "outcome": "applied",
+   "expected": 0,
+   "moved": 0,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0064",
+   "outcome": "partly_applied",
+   "expected": 35,
+   "moved": 32,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0065",
+   "outcome": "applied",
+   "expected": 0,
+   "moved": 0,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0066",
+   "outcome": "partly_applied",
+   "expected": 28,
+   "moved": 27,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0067",
+   "outcome": "applied",
+   "expected": 18,
+   "moved": 18,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0068",
+   "outcome": "applied",
+   "expected": 28,
+   "moved": 28,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0069",
+   "outcome": "applied",
+   "expected": 28,
+   "moved": 28,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0070",
+   "outcome": "applied",
+   "expected": 8,
+   "moved": 8,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0071",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0072",
+   "outcome": "partly_applied",
+   "expected": 22,
+   "moved": 20,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0073",
+   "outcome": "partly_applied",
+   "expected": 24,
+   "moved": 20,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0074",
+   "outcome": "partly_applied",
+   "expected": 17,
+   "moved": 16,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0075",
+   "outcome": "partly_applied",
+   "expected": 22,
+   "moved": 21,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0076",
+   "outcome": "applied",
+   "expected": 25,
+   "moved": 25,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0077",
+   "outcome": "partly_applied",
+   "expected": 18,
+   "moved": 17,
+   "reason": "every recorded club-season is already held by the canonical person",
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0078",
+   "outcome": "applied",
+   "expected": 10,
+   "moved": 10,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0079",
+   "outcome": "applied",
+   "expected": 27,
+   "moved": 27,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0080",
+   "outcome": "applied",
+   "expected": 22,
+   "moved": 22,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0081",
+   "outcome": "applied",
+   "expected": 4,
+   "moved": 4,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0082",
+   "outcome": "applied",
+   "expected": 7,
+   "moved": 7,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0083",
+   "outcome": "applied",
+   "expected": 0,
+   "moved": 0,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0084",
+   "outcome": "applied",
+   "expected": 0,
+   "moved": 0,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0085",
+   "outcome": "applied",
+   "expected": 9,
+   "moved": 9,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0086",
+   "outcome": "applied",
+   "expected": 11,
+   "moved": 11,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0087",
+   "outcome": "applied",
+   "expected": 24,
+   "moved": 24,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0088",
+   "outcome": "applied",
+   "expected": 17,
+   "moved": 17,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0089",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0090",
+   "outcome": "applied",
+   "expected": 3,
+   "moved": 3,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0091",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0092",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "PM_0093",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  }
+ ]
+}

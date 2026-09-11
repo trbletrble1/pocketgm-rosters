@@ -1,0 +1,31 @@
+decisions: 93
+  claims addressed to a person: 7,462,096; addressees after the merge map: 50,089; claims sitting on an absorbed id: 0
+  people in a merge who are also in a refused pair: 5 (a man may duplicate one person and be a namesake of another)
+  merged people: 93; club-seasons gained 1352, held by both 604
+
+GATE FAILED (102)
+  FAIL G5 PM_0002 the merged person does not hold 1 of the absorbed club-seasons, e.g. [(1974, '?Chicago Winds')]
+  FAIL G5 PM_0006 the merged person does not hold 1 of the absorbed club-seasons, e.g. [(1963, '?Harrisburg Capitol Colts')]
+  FAIL G5 PM_0012 the merged person does not hold 3 of the absorbed club-seasons, e.g. [(1960, 'club-dallas-texans-1960'), (1961, 'club-dallas-texans-1960')]
+  FAIL G5 PM_0017 the merged person does not hold 1 of the absorbed club-seasons, e.g. [(1983, 'club-washington-federals-1983')]
+  FAIL G5 PM_0022 the merged person does not hold 3 of the absorbed club-seasons, e.g. [(1960, 'club-dallas-texans-1960'), (1961, 'club-dallas-texans-1960')]
+  FAIL G5 PM_0042 the merged person does not hold 1 of the absorbed club-seasons, e.g. [(2020, '?New York/New Jersey Hitmen')]
+  FAIL G5 PM_0053 the merged person does not hold 2 of the absorbed club-seasons, e.g. [(1984, 'club-houston-oilers-1960'), (2020, 'club-tampa-bay-vipers-2020')]
+  FAIL G5 PM_0059 the merged person does not hold 2 of the absorbed club-seasons, e.g. [(2005, 'club-hamburg-sea-devils-2005'), (2006, 'club-hamburg-sea-devils-2005')]
+  FAIL G5 PM_0069 the merged person does not hold 1 of the absorbed club-seasons, e.g. [(2007, 'club-hamilton-tigers-1945')]
+  FAIL G3 PM_0001 P_000905 did not round-trip identically
+  FAIL G3 PM_0002 P_000928 did not round-trip identically
+  FAIL G3 PM_0003 P_001098 did not round-trip identically
+  FAIL G3 PM_0004 P_001291 did not round-trip identically
+  FAIL G3 PM_0005 P_001444 did not round-trip identically
+  FAIL G3 PM_0006 P_001613 did not round-trip identically
+  FAIL G3 PM_0007 P_001772 did not round-trip identically
+  FAIL G3 PM_0008 P_001793 did not round-trip identically
+  FAIL G3 PM_0009 P_001901 did not round-trip identically
+  FAIL G3 PM_0010 P_002579 did not round-trip identically
+  FAIL G3 PM_0011 P_002760 did not round-trip identically
+  FAIL G3 PM_0012 P_003733 did not round-trip identically
+  FAIL G3 PM_0013 P_003968 did not round-trip identically
+  FAIL G3 PM_0014 P_004200 did not round-trip identically
+  FAIL G3 PM_0015 P_014582 did not round-trip identically
+  FAIL G3 PM_0016 P_018985 did not round-trip identically

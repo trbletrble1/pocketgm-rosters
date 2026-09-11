@@ -157,7 +157,14 @@ def main(argv):
     l1(rows, lby)
     import league_tokens as LT
     idx = json.load(open(os.path.join(BASE, "build-reports", "person-index.json"))); idx.pop("_clubs", None)
-    l2((k for r in idx.values() if isinstance(r, dict) for k in (r.get("seasons") or {})),
+    # BOTH DICTS, AND SAY WHAT WAS CHECKED (Ryan, 2026-09-11). The 9 September shape change moved
+    # coaching keys into `coaching_seasons` -- and rewrote many `COACHES` tokens to a real league,
+    # exactly the keys L2 exists to check. Reading `seasons` only, L2 never saw them.
+    per = {dn: sum(len(r.get(dn) or {}) for r in idx.values() if isinstance(r, dict))
+           for dn in ("seasons", "coaching_seasons")}
+    print(f"  L2 population: {per['seasons']:,} keys in seasons, {per['coaching_seasons']:,} in coaching_seasons")
+    l2((k for r in idx.values() if isinstance(r, dict)
+        for dn in ("seasons", "coaching_seasons") for k in (r.get(dn) or {})),
        LT.pseudo_leagues(os.path.join(BASE, "declarations", "person-index-rebuild.json")), codes_by_year(table))
     if FAILS:
         print(f"\nCLAIM LEAGUE GATE: {len(FAILS)} FAILURE(S)"); return 1

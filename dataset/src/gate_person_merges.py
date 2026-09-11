@@ -58,39 +58,59 @@ def main():
         check(bool(ident.get(c, {}).get("slugs")) and bool(index[c].get("name")),
               f"G2 {d['merge_id']} canonical lacks a name or a slug")
 
+    # "UNALTERED" IS WHAT A RECORD HOLDS, NOT WHERE IT IS STORED OR HOW IT IS SPELLED (Ryan,
+    # 2026-09-11). G3, G4 and G5 used to count and compare `seasons` only, against counts recorded on
+    # 6 September. The 9 September shape change moved every shell's keys into `coaching_seasons` and
+    # re-spelled their years, so G4 failed on all 93 while nothing had changed -- and G5, which should
+    # have caught that merges were moving nothing, compared an empty set with an empty set. Club-seasons
+    # are compared as (year, club) through the club table, across both stint dicts.
+    from clubs import Clubs
+    CL = Clubs(); _yc = {}
+    def yc(k):
+        p = k.split("|", 2)
+        if len(p) != 3: return None
+        y = p[1].lstrip("y")[:4]
+        if not y.isdigit(): return None
+        kk = (p[2], int(y))
+        if kk not in _yc:
+            r = CL.resolve(p[2], int(y)); _yc[kk] = r[0] if r else "?" + p[2]
+        return (int(y), _yc[kk])
+    def cs_of(rec): return {yc(k) for dn in ("seasons", "coaching_seasons") for k in (rec.get(dn) or {})} - {None}
+
     # G4
     for d in merges:
         a, c = d["absorbed_person"], d["canonical_person"]
         check(a in index and c in index, f"G4 {d['merge_id']} lost a constituent")
         check(index[a].get("merged_into", {}).get("person") == c, f"G4 {d['merge_id']} absorbed record not marked")
-        check(len(index[a].get("seasons") or {}) == d["counts_before"]["absorbed_seasons"],
-              f"G4 {d['merge_id']} the absorbed record was altered")
+        recorded = {yc(k) for k in d["contribution"]["seasons_gained_from_absorbed"]
+                    + d["contribution"]["seasons_held_by_both"]} - {None}
+        check(cs_of(index[a]) == recorded,
+              f"G4 {d['merge_id']} the absorbed record was altered: it holds {len(cs_of(index[a]))} club-seasons "
+              f"(year, club, both dicts), its decision recorded {len(recorded)}")
         check(any(x["person"] == a for x in index[c].get("merged_from", [])),
               f"G4 {d['merge_id']} canonical does not name what it absorbed")
 
     # G5
     for d in merges:
         a, c = d["absorbed_person"], d["canonical_person"]
-        rw = dict(d["contribution"]["season_key_rewrites"])
-        want = set(d["contribution"]["seasons_gained_from_absorbed"]) | set(d["contribution"]["seasons_held_by_both"])
-        absorbed_keys = {rw.get(k, k) for k in (index[a].get("seasons") or {})}
-        check(absorbed_keys == want, f"G5 {d['merge_id']} the absorbed keys are not the recorded union")
-        merged = set(index[c].get("seasons") or {})
-        check(absorbed_keys <= merged, f"G5 {d['merge_id']} the merged person lost a club-season")
-        check(len(merged) == len(index[c]["seasons"]), f"G5 {d['merge_id']} duplicate keys")
-        check(len(merged) == d["counts_before"]["canonical_seasons"] + len(d["contribution"]["seasons_gained_from_absorbed"]),
-              f"G5 {d['merge_id']} the merged count is not before + gained")
+        lost = cs_of(index[a]) - cs_of(index[c])
+        check(not lost, f"G5 {d['merge_id']} the merged person does not hold {len(lost)} of the absorbed "
+                        f"club-seasons, e.g. {sorted(lost)[:2]}")
+        for dn in ("seasons", "coaching_seasons"):
+            ks = list(index[c].get(dn) or {})
+            check(len(ks) == len(set(ks)), f"G5 {d['merge_id']} duplicate keys in {dn}")
 
-    # G3 round trip
+    # G3 round trip: undo removes exactly what the merge added, and re-applying reproduces the index
     base = json.loads(json.dumps(index))
     n = AP.undo(base)
     check(n == len(merges), f"G3 reversed {n} contributions, expected {len(merges)}")
+    added = {x["person"]: x for rec in index.values() if isinstance(rec, dict) for x in rec.get("merged_from", [])}
     for d in merges:
-        check(len(base[d["canonical_person"]].get("seasons") or {}) == d["counts_before"]["canonical_seasons"],
-              f"G3 {d['merge_id']} canonical did not return to its pre-merge season count")
-        check(len(base[d["absorbed_person"]].get("seasons") or {}) == d["counts_before"]["absorbed_seasons"],
-              f"G3 {d['merge_id']} absorbed did not return to its pre-merge season count")
-        check("merged_from" not in base[d["canonical_person"]] and "merged_into" not in base[d["absorbed_person"]],
+        a, c = d["absorbed_person"], d["canonical_person"]
+        left = [k for k in (added.get(a) or {}).get("seasons_added", [])
+                if (k[1] if isinstance(k, list) else k) in (base[c].get(k[0] if isinstance(k, list) else "seasons") or {})]
+        check(not left, f"G3 {d['merge_id']} undo left {len(left)} added club-season(s) on the canonical")
+        check("merged_from" not in base[c] and "merged_into" not in base[a],
               f"G3 {d['merge_id']} a marker survived the undo")
     AP.apply(base, M)
     for d in merges:

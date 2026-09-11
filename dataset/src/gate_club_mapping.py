@@ -37,7 +37,9 @@ def recount(idx, clubs):
     CK = ClubKeys(dict(idx), clubs); n = 0
     for pid, p in idx.items():
         if not isinstance(p, dict): continue
-        for k in p.get("seasons") or {}:
+        # both dicts (2026-09-11): the census and this walk agreed on `seasons` only, while every
+        # coaching refusal went uncounted by both
+        for k in list(p.get("seasons") or {}) + list(p.get("coaching_seasons") or {}):
             lg, y, club = k.split("|", 2)
             yr = y[1:5] if y.startswith("y") else y
             if not yr.isdigit(): n += 1; continue
@@ -51,9 +53,13 @@ def checks(idx, clubs):
     CK = ClubKeys(dict(idx), clubs)
     rows = CK.census(idx)
     seen, want = sum(r[4] for r in rows), recount(idx, clubs)
-    out.append(("C1", "the census counts every refusal there is",
-                [] if seen == want else
-                [f"census reports {seen} person-seasons, an independent walk finds {want}"]))
+    walked = {dn: sum(len(p.get(dn) or {}) for p in idx.values() if isinstance(p, dict))
+              for dn in ("seasons", "coaching_seasons")}
+    out.append(("C1", f"the census counts every refusal there is -- {seen:,} refused person-seasons, of "
+                      f"{sum(walked.values()):,} keys walked ({walked['seasons']:,} seasons, "
+                      f"{walked['coaching_seasons']:,} coaching_seasons)",
+                (["nothing was walked"] if not sum(walked.values()) else []) + ([] if seen == want else
+                [f"census reports {seen} person-seasons, an independent walk finds {want}"])))
 
     lines = []
     club_keys.report(dict(idx), clubs, log=lines.append)

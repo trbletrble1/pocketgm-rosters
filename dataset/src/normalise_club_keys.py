@@ -56,7 +56,13 @@ def build():
     at_merge = []
     for pid, p in sorted(index.items()):
         if not isinstance(p, dict): continue
-        for key in sorted(p.get("seasons") or {}):
+        # BOTH DICTS (Ryan, 2026-09-11). Since the 9 September shape change the coaching keys this
+        # decider exists for live in `coaching_seasons`, written with a bare year; reading `seasons`
+        # only, a regeneration dropped 658 rewrites and all 1,929 merge-time records -- the decider
+        # undoing its own decisions. Coaching keys are decided in the form the index now writes;
+        # gate_club_key_decisions compares decisions in the bare-year form.
+        for key in sorted(p.get("seasons") or {}) + sorted(p.get("coaching_seasons") or {}):
+            dn = "seasons" if key in (p.get("seasons") or {}) else "coaching_seasons"
             lg, y, club = key.split("|", 2)
             yr = y[1:5] if y.startswith("y") else y
             if not yr.isdigit() or is_code(club, yr): continue
@@ -73,7 +79,7 @@ def build():
                 rec["applied_by"] = "the merge, when this record is folded into its canonical"
                 at_merge.append(rec)
             else:
-                rec["collides"] = new in (p.get("seasons") or {})
+                rec["collides"] = new in (p.get(dn) or {})
                 rewrites.append(rec)
     by_kind = collections.Counter(r["kind"] for r in rewrites)
     at_kind = collections.Counter(r["kind"] for r in at_merge)

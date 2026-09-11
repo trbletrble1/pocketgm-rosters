@@ -66,8 +66,10 @@ class ClubKeys:
         for pid, p in index.items():
             if not isinstance(p, dict): continue
             by = collections.defaultdict(set)
-            for k in p.get("seasons") or {}:
-                lg, y, club = k.split("|", 2); by[(lg, y)].add(club)
+            # both dicts (2026-09-11): the corroborating pairs -- "Buffalo Bisons" beside BUF -- are
+            # coaching keys, in `coaching_seasons` since 9 September; build_clubs.py:393 already reads both
+            for k in list(p.get("seasons") or {}) + list(p.get("coaching_seasons") or {}):
+                lg, y, club = k.split("|", 2); by[(lg, y[1:5] if y.startswith("y") else y)].add(club)
             for (lg, y), cs in by.items():
                 yr = y[1:5] if y.startswith("y") else y
                 names = [x for x in cs if not self.is_code(x, yr)]
@@ -124,7 +126,8 @@ class ClubKeys:
         cost = collections.Counter(); who = {}
         for pid, p in index.items():
             if not isinstance(p, dict): continue
-            for k in p.get("seasons") or {}:
+            # both dicts (2026-09-11): coaching strings the table cannot map were not counted at all
+            for k in list(p.get("seasons") or {}) + list(p.get("coaching_seasons") or {}):
                 lg, y, club = k.split("|", 2)
                 yr = y[1:5] if y.startswith("y") else y
                 if not yr.isdigit():

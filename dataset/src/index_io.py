@@ -95,6 +95,42 @@ def write_store(out, path, reasons=None, **kw):
     return lost
 
 
+ACCOUNTS = os.path.join(BASE, "build-reports", "applier-accounts")
+
+
+def write_account(name, outcomes, **extra):
+    """AN APPLIER ACCOUNTS FOR EVERY DECISION IT WAS GIVEN. Ryan's ruling, 2026-09-11.
+
+    `apply_club_keys` skipped 658 of its 677 decided rewrites without a word, and 93 person
+    merges were "applied" while moving nothing, for two days after the 9 September shape change.
+    Each applier now hands its outcomes here -- one per decision:
+        {"decision", "outcome": applied|partly_applied|skipped, "expected", "moved",
+         "reason", "legitimate": bool}
+    -- and this writes build-reports/applier-accounts/<name>.json and prints the tally, so
+    "decided 677, applied 19, skipped 658" is on the page every run.
+    src/gate_appliers_account.py fails any decision that did less than it recorded without a
+    LEGITIMATE reason. A skip because the key sits in a dict the applier does not read is a
+    symptom, not a reason, and fails.
+    """
+    os.makedirs(ACCOUNTS, exist_ok=True)
+    tally = {}
+    for o in outcomes:
+        k = o["outcome"] + ("" if o["outcome"] == "applied" else
+                            (" (legitimate)" if o.get("legitimate") else " (NOT legitimate)"))
+        tally[k] = tally.get(k, 0) + 1
+    reasons = {}
+    for o in outcomes:
+        if o["outcome"] != "applied":
+            reasons[o.get("reason") or "NO REASON GIVEN"] = reasons.get(o.get("reason") or "NO REASON GIVEN", 0) + 1
+    acc = {"applier": name, "decided": len(outcomes), "tally": tally, "reasons": reasons,
+           "expected": sum(o.get("expected", 0) for o in outcomes),
+           "moved": sum(o.get("moved", 0) for o in outcomes), **extra, "outcomes": outcomes}
+    dump_atomic(acc, os.path.join(ACCOUNTS, f"{name}.json"), indent=1)
+    print(f"ACCOUNT {name}: decided {acc['decided']:,}; {tally}; moved {acc['moved']:,} of {acc['expected']:,} "
+          f"recorded; reasons {reasons}")
+    return acc
+
+
 def load_index():
     return json.load(open(INDEX_PATH))
 

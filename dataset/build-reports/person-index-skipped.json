@@ -2271,6 +2271,18 @@
    ]
   },
   {
+   "store": "person-merge-proposals",
+   "bytes": 3205,
+   "top_level_keys": [
+    "_what",
+    "counts_of_this_run",
+    "declared",
+    "the_rule_now_decides",
+    "unchanged",
+    "would_add"
+   ]
+  },
+  {
    "store": "person-merges",
    "bytes": 510924,
    "top_level_keys": [

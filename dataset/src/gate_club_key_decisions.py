@@ -27,7 +27,11 @@ def check(ok, msg):
 
 def main():
     D = json.load(open(CKA.NP)); E = N.build()
-    key = lambda r: (r["person"], r["from"], r["to"], r["kind"])
+    # Compared in the BARE-YEAR form (2026-09-11): the decisions were recorded as `COACHES|y1969|X`,
+    # and since the 9 September shape change the index writes `COACHES|1969|X`. One key, two spellings.
+    key = lambda r: (r["person"], CKA._bare(r["from"]), CKA._bare(r["to"]), r["kind"])
+    print(f"  population: {sum(len(v.get('seasons') or {}) for v in json.load(open(AP.IDXP)).values() if isinstance(v, dict)):,} "
+          "keys in seasons and the coaching_seasons below are what the regenerated decisions were derived from")
     print("D1  the decisions reproduce")
     for name in ("rewrites", "applied_when_merging"):
         a = {key(r): r for r in D[name]}; b = {key(r): r for r in E[name]}
@@ -41,17 +45,24 @@ def main():
     idx0 = json.load(open(AP.IDXP)); cl0 = idx0.pop("_clubs", {}); CKA.undo(idx0); AP.undo(idx0)
     view = {}
     for d in json.load(open(AP.MP))["merges"]:
-        ss = dict((idx0.get(d["canonical_person"]) or {}).get("seasons") or {}); ss.update((idx0.get(d["absorbed_person"]) or {}).get("seasons") or {})
-        view[d["canonical_person"]] = {"seasons": ss}
+        view[d["canonical_person"]] = {dn: {**((idx0.get(d["canonical_person"]) or {}).get(dn) or {}),
+                                            **((idx0.get(d["absorbed_person"]) or {}).get(dn) or {})}
+                                       for dn in ("seasons", "coaching_seasons")}
     for pid, p in idx0.items():
         if pid not in view and isinstance(p, dict): view[pid] = p
     old_ref = {(r[2], r[1]) for r in ClubKeys(view, cl0).census(idx0)}
-    new_ref = set()
+    new_ref = set(); walked = collections.Counter()
+    decided = {(r["person"], CKA._bare(r["from"])) for r in E["rewrites"] + E["applied_when_merging"]}
     for pid, p in idx0.items():
         if not isinstance(p, dict): continue
-        for k in p.get("seasons") or {}:
-            lg, y, club = k.split("|", 2); yr = y[1:5] if y.startswith("y") else y
-            if yr.isdigit() and f"{club}|{yr}" not in cl0 and not any(r["from"] == k and r["person"] == pid for r in E["rewrites"] + E["applied_when_merging"]): new_ref.add((club, yr))
+        # both dicts (2026-09-11): walking `seasons` only, both sides of D2 lost every coaching refusal
+        # together and agreed on what was left
+        for dn in ("seasons", "coaching_seasons"):
+            for k in p.get(dn) or {}:
+                walked[dn] += 1
+                lg, y, club = k.split("|", 2); yr = y[1:5] if y.startswith("y") else y
+                if yr.isdigit() and f"{club}|{yr}" not in cl0 and (pid, CKA._bare(k)) not in decided: new_ref.add((club, yr))
+    print(f"  D2 walked {sum(walked.values()):,} keys ({walked['seasons']:,} seasons, {walked['coaching_seasons']:,} coaching_seasons)")
     only_old, only_new = sorted(old_ref - new_ref), sorted(new_ref - old_ref)
     named = json.load(open(os.path.join(BASE, "declarations", "club-key-normalisation.json"))).get("WHERE_THE_TABLE_AND_THE_OLD_DECIDER_DIVERGE", {})
     def declared(club, yr): return any(club in k and (yr in k or " " + yr not in k and yr in k.split()) for k in named if not k.startswith("_")) or any(club in k and yr in k for k in named)
@@ -73,9 +84,14 @@ def main():
     check(not C.T["counts"]["strings_by_source"].get("normalisation"), "no string is sourced from the decisions file")
     print("D4  the regenerated decisions reproduce the index on a copy")
     idx = json.load(open(AP.IDXP)); before = hashlib.sha256(json.dumps(idx, sort_keys=True).encode()).hexdigest()
-    M = json.load(open(AP.MP)); AP.undo(idx); CKA.undo(idx); CKA.apply(idx, E); AP.apply(idx, M)
+    M = json.load(open(AP.MP)); AP.undo(idx); CKA.undo(idx)
+    acct = []; CKA.apply(idx, E, account=acct); AP.apply(idx, M)
+    by_dict = collections.Counter(o.get("dict") for o in acct if o["outcome"] == "applied")
+    print(f"  D4 regenerated rewrites applied to the copy: {sum(by_dict.values()):,} of {len(acct):,} "
+          f"({by_dict.get('seasons', 0):,} in seasons, {by_dict.get('coaching_seasons', 0):,} in coaching_seasons)")
     for p in idx.values():
-        if isinstance(p, dict) and isinstance(p.get("seasons"), dict): p["seasons"] = {k: p["seasons"][k] for k in sorted(p["seasons"])}
+        for dn in ("seasons", "coaching_seasons"):
+            if isinstance(p, dict) and isinstance(p.get(dn), dict): p[dn] = {k: p[dn][k] for k in sorted(p[dn])}
     after = hashlib.sha256(json.dumps(idx, sort_keys=True).encode()).hexdigest()
     live = hashlib.sha256(open(AP.IDXP, "rb").read()).hexdigest()
     check(before == after, "undo + apply(regenerated) + merges reproduces the index exactly, in memory" if before == after else "the index would change under the regenerated decisions")

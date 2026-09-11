@@ -1,0 +1,2 @@
+undo returns the index to the unapplied base, byte for byte: True
+re-applying reproduces the first application exactly: True

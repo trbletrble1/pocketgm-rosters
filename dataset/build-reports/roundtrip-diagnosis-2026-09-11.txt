@@ -1,0 +1,2 @@
+doubles: unapplied base 3589 -> applied 4880 | growth by where: {'the 93 canonicals': 1293, 'everyone else': -2}
+records that do not come back identical, by what differs: {'coaching_seasons: absent in base, EMPTY after undo': 1}
