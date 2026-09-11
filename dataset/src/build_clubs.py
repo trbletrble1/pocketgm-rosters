@@ -63,6 +63,12 @@ def clean_printed(s):
 
 def main():
     write = "--write" in sys.argv
+    # A LEAGUE LABEL IS READ WITH ITS YEAR -- service/league_tokens.read_label, the one
+    # implementation the index and the read model use. This file took PFA's labels as
+    # printed, so once the claims read the 2025-26 UFL as UFL2 the PFA-only clubs it built
+    # still said UFL: 206 claims were refused and 26 club-seasons read as EMPTY.
+    sys.path.insert(0, os.path.join(BASE, "service"))
+    import league_tokens as LT
     IDX = json.load(open(os.path.join(BASE, "build-reports", "person-index.json")))
     CL = IDX.pop("_clubs")
     prev = json.load(open(TABLE)) if os.path.exists(TABLE) else {}
@@ -101,15 +107,37 @@ def main():
         if len(with_men) != 1: raise SystemExit(f"build_clubs: merger {r['merged']} {y}: code-years carrying the name {carriers}, with men {with_men}; need exactly one")
         MERGED[(r["league"], str(y), with_men[0])] = {"name": r["merged"], "of": r["of"], "kind": r["kind"], "phantoms": [c for c in carriers if c != with_men[0]]}
     silent = {(c, int(y)) for (_, y, _), m in MERGED.items() for c in m["phantoms"]}
+    # RELOCATIONS WITHIN A SEASON, by name, as the mergers are. Ryan's ruling 2026-09-11: the
+    # New York Stars became the Charlotte Hornets in September 1974 and the Houston Texans the
+    # Shreveport Steamer -- ONE club under two printed names, as the Newark Bears and Demons,
+    # not a merger and not two clubs. Every 1974 man is keyed to the origin code; the
+    # destination's 1974 code-year holds nobody and never could, so it sat on the hunting list
+    # as an EMPTY club-season. It is silenced, its name goes on the one club, and the two
+    # segments are linked. NO MAN MOVES: nothing in the archive says which city a man played in.
+    RELOC, reloc_why = [], {}
+    for r in DECL.get("RELOCATIONS_WITHIN_A_SEASON", {}).get("rulings", []):
+        y = int(r["year"])
+        frm = [k.split("|")[0] for k, v in CL.items() if k.endswith(f"|{y}") and v == r["from"] and men_at.get((y, k.split("|")[0]))]
+        to = [k.split("|")[0] for k, v in CL.items() if k.endswith(f"|{y}") and v == r["to"]]
+        if len(frm) != 1 or len(to) != 1:
+            raise SystemExit(f"build_clubs: relocation {r['from']} -> {r['to']} {y}: origin code-years {frm}, destination {to}; need exactly one of each")
+        if men_at.get((y, to[0])):
+            raise SystemExit(f"build_clubs: relocation {r['from']} -> {r['to']} {y}: {to[0]}|{y} HOLDS {len(men_at[(y, to[0])])} men. "
+                             "Silencing it would move them, and the ruling moves no man.")
+        RELOC.append({**r, "year": y, "from_code": frm[0], "to_code": to[0]})
+        silent.add((to[0], y))
+        reloc_why[(to[0], y)] = (f"the {y} season of {r['to']} is the {r['from']} club-season under its second printed name "
+                                 f"(declarations/clubs.json RELOCATIONS_WITHIN_A_SEASON); it holds no men and never could")
     hist = collections.defaultdict(dict)
     for k, v in CL.items():
         c, y = k.split("|")
         if (c, int(y)) in silent:
-            unresolved["silenced_code_years"].append({"code": c, "year": int(y), "name": v, "why": "carries a merged club's name in the merger year but holds no men; the season belongs to the code that does (declarations/clubs.json MERGERS)"}); continue
+            unresolved["silenced_code_years"].append({"code": c, "year": int(y), "name": v, "why": reloc_why.get((c, int(y))) or "carries a merged club's name in the merger year but holds no men; the season belongs to the code that does (declarations/clubs.json MERGERS)"}); continue
         hist[c][int(y)] = v
     pfa_league = {}
     for c in json.load(open(os.path.join(BASE, "build", "club-names.json")))["claims"]:
-        if c["subject"][1] not in ("?", None): pfa_league[c["subject"][3]] = c["subject"][1]
+        if c["subject"][1] not in ("?", None):
+            pfa_league[c["subject"][3]] = LT.read_label(c["subject"][1], int(c["subject"][2]) if str(c["subject"][2]).isdigit() else None)
         k = f"{c['subject'][3]}|{c['subject'][2]}"
         if k not in CL: unresolved["club_names_not_yet_in_the_index"].append({"code_year": k, "name": c["value"], "league": c["subject"][1], "why": "build/club-names.json holds it; the person index's _clubs will after the next rebuild"})
 
@@ -148,6 +176,17 @@ def main():
                      "dark_years": dk, "_dark_note": "league-wide seasons not played; the club is carried across them under its last name" if dk else ""})
     segs.sort(key=lambda s: (s["first"], s["code"]))
     merged_codes = {code for (_, _, code), m in MERGED.items() if m["kind"] == "merger"}
+    # the relocation's second name goes on the origin segment for the season it was printed
+    reloc_pairs = []
+    for r in RELOC:
+        i = next((k for k, s in enumerate(segs) if s["code"] == r["from_code"] and s["first"] <= r["year"] <= s["last"]), None)
+        j = next((k for k, s in enumerate(segs) if s["code"] == r["to_code"] and s["first"] == r["year"] + 1), None)
+        if i is None or j is None:
+            raise SystemExit(f"build_clubs: relocation {r['from']} -> {r['to']}: no {r['from_code']} segment covering {r['year']} "
+                             f"or no {r['to_code']} segment starting {r['year'] + 1}")
+        segs[i]["names"].append({"name": r["to"], "first": r["year"], "last": r["year"], "kind": "official",
+                                 "source": "pro-football-archives", "_ruled": r["_ruled"]})
+        reloc_pairs.append((i, j, f"relocated within the {r['year']} season, {r['from']} -> {r['to']}: one club under two printed names ({r['_ruled']})"))
 
     # ---------------------------------------------------------------- 3. lineage, mechanical only
     def nick_last(s): return nickname(s["names"][-1]["name"])
@@ -159,8 +198,10 @@ def main():
         A, B = men_at.get((a["last"], a["code"]), set()), men_at.get((b["first"], b["code"]), set())
         return len(A & B), min(len(A), len(B))
     succ, pred = {}, {}
+    for i, j, why in reloc_pairs:                                        # RULED, so never re-derived below
+        succ[i] = (j, why); pred[j] = (i, why)
     for i, a in enumerate(segs):
-        if a["code"] in merged_codes: continue
+        if a["code"] in merged_codes or i in succ: continue
         best = None
         for j, b in enumerate(segs):
             if j == i or j in pred or b["code"] in merged_codes or b["first"] <= a["last"]: continue
@@ -256,6 +297,21 @@ def main():
                 for h in n["name"].split("/"):
                     for y in range(n["first"], n["last"] + 1): parent_name_in_merger_year.setdefault((norm(h.strip()), y), c["id"])
 
+    # THE RELOCATED CLUB'S COMBINED FORMS, attached BEFORE the name cascade is indexed. PFA prints
+    # the relocated season as one combined name and one combined code -- `New York Stars/Charlotte
+    # Hornets`, `NY-C` -- and every source reaching this table is matched through the cascade
+    # below. The first version attached them at the END of the build, after every cell and season
+    # key had already been matched, so the compound was still refused as "needs a ruling" by the
+    # very build carrying the ruling. They are STRINGS, not names: `NY-C` is PFA's abbreviation.
+    for r in RELOC:
+        tgt = next((c for c in clubs if any(s["code"] == r["from_code"] for s in c["segments"])), None)
+        if tgt is None:
+            raise SystemExit(f"build_clubs: relocation {r['from']}: no club carries {r['from_code']} after the chain")
+        for form in list(r.get("combined_printed", [])) + list(r.get("pfa_combined_codes", [])):
+            if not any(x["string"] == form and x["source"] == "relocation_ruling" for x in tgt["strings"]):
+                tgt["strings"].append({"string": form, "source": "relocation_ruling", "kind": "relocation_combined",
+                                       "league": r["league"], "first": r["year"], "last": r["year"]})
+
     # ---------------------------------------------------------------- 6. the name cascade every source goes through
     name_year = collections.defaultdict(set); nick_year = collections.defaultdict(set)
     def index_names():
@@ -265,7 +321,7 @@ def main():
                 for y in range(n["first"], n["last"] + 1):
                     name_year[(norm(n["name"]), y)].add(c["id"]); nick_year[(nickname(n["name"]), y)].add(c["id"])
             for s in c["strings"]:
-                if s["kind"] == "beyond_archive" and s["source"] == "pfa_cell":
+                if (s["kind"] == "beyond_archive" and s["source"] == "pfa_cell") or s["kind"] == "relocation_combined":
                     for y in range(s["first"], s["last"] + 1): name_year[(norm(s["string"]), y)].add(c["id"])
     index_names()
     def club_league(cid, y):
@@ -446,7 +502,7 @@ def main():
     cells = collections.defaultdict(set)                                # (league, code, printed) -> years
     for cl in pc["claims"]:
         if cl["predicate"] != "pfa.coaching_season": continue
-        v = cl["value"]; cells[(v["league"], v["club"], clean_printed(v["club_as_printed"]))].add(int(v["year"]))
+        v = cl["value"]; cells[(LT.read_label(v["league"], int(v["year"])), v["club"], clean_printed(v["club_as_printed"]))].add(int(v["year"]))
     for pid, p in IDX.items():
         for k, rows in (p.get("coaching_seasons") or {}).items():
             lg, y, c = k.split("|", 2)
@@ -459,13 +515,13 @@ def main():
             # about WHERE a coaching season is held must not quietly change WHAT builds
             # the club table, so the same evidence set is kept.
             if lg in PSEUDO: continue
-            for r in CS.rows(rows): cells[(lg, c, clean_printed(CS.printed_club(r)))].add(year_of(y))
+            for r in CS.rows(rows): cells[(LT.read_label(lg, year_of(y)), c, clean_printed(CS.printed_club(r)))].add(year_of(y))
     pf = json.load(open(os.path.join(BASE, "build", "pfa-pre1950.json")))
     txs = collections.defaultdict(set)
     for cl in pf["claims"]:
         if cl["predicate"] != "pfa.transaction": continue
         m = re.match(r"^(\d{4}) (\S+) (\S+)$", cl["value"].get("team", ""))
-        if m: txs[(m.group(3), m.group(2), clean_printed(cl["value"].get("season_context", "")))].add(int(m.group(1)))
+        if m: txs[(LT.read_label(m.group(3), int(m.group(1))), m.group(2), clean_printed(cl["value"].get("season_context", "")))].add(int(m.group(1)))
     bx = json.load(open(os.path.join(BASE, "build", "pfa-boxscores.json")))
     bxs = collections.defaultdict(set)
     for cl in bx["claims"]:

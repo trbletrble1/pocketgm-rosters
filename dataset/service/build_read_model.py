@@ -412,11 +412,12 @@ def build(dst, force=False, fast=False, prev=None):
                 if yr is not None:
                     k = (club_str, yr, lg)
                     if k not in club_cache:
-                        r = C.by_code_year(club_str, yr)
-                        if r: club_cache[k] = (r, "code")
-                        else:
-                            res = C.resolve(club_str, yr, lg if lg in REAL_LEAGUES else None, source="service")
-                            club_cache[k] = res if res else (None, None)
+                        # THE LEAGUE GOES INTO THE LOOKUP, including the code lookup. This
+                        # tried by_code_year first -- which knows no league -- so `CHI` in a
+                        # 1974 WFL coaching cell became the Decatur Staleys before the
+                        # league-aware resolver was ever asked. Ryan, 2026-09-11.
+                        res = C.resolve(club_str, yr, lg if lg in REAL_LEAGUES else None, source="service")
+                        club_cache[k] = res if res else (None, None)
                     club_id, via = club_cache[k]
             elif scope == "person_season" and isinstance(s, list) and len(s) >= 3:
                 yr = season_year(s[2])
@@ -520,7 +521,8 @@ def build(dst, force=False, fast=False, prev=None):
     for club_str, yr, lg in conn.execute(
             "SELECT DISTINCT club_str, year, league FROM claim WHERE scope='stint' "
             "AND club_str IS NOT NULL AND year IS NOT NULL AND club_id IS NULL").fetchall():
-        if C.by_code_year(club_str, yr): continue
+        # NO SHORT-CIRCUIT ON A LEAGUE-BLIND LOOKUP: a claim refused because its code names a
+        # club of ANOTHER league would be skipped here, and its refusal never recorded.
         C.resolve(club_str, yr, lg if lg in REAL_LEAGUES else None, source="service")
     for (src, lg, y, s, why), n in C.refused.items():
         conn.execute("INSERT INTO club_refusal VALUES(?,?,?,?,?)", (s, int(y) if str(y).isdigit() else None, lg, why, n))

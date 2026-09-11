@@ -90,16 +90,37 @@ class Clubs:
         lgs = {s["league"] for s in self.by_id[cid]["strings"] if s["kind"] == "beyond_archive" and s.get("league") and s["first"] <= int(year) <= s["last"]}
         return next(iter(lgs)) if len(lgs) == 1 else None
 
+    def plays(self, cid, year, league):
+        """Does the club play in `league` in `year` -- in ANY of its leagues that year? The
+        table lawfully gives a club two (Regina: CFL 1945-2025 and WIFU 1946-60), and
+        league_for() returns only the first."""
+        return any(lg["league"] == league and lg["first"] <= int(year) <= lg["last"]
+                   for s in self.by_id[cid]["segments"] for lg in s["leagues"])
+
+    def by_code_year_in(self, code, year, league):
+        """A code is a club only IN ITS LEAGUE. `CHI` is the Bears' code; in a 1974 WFL cell
+        it is the Chicago Fire's, and the table holds it there as a league-scoped string."""
+        for f, l, cid in self.by_code.get(code, []):
+            if f <= int(year) <= l and self.plays(cid, year, league): return cid
+        return None
+
     def resolve(self, string, year, league=None, source=None):
         """-> (club_id, kind) where kind is how it resolved: code, official, alias,
-        wrong_for_season, source_string. Records every refusal."""
+        wrong_for_season, source_string. Records every refusal.
+
+        WITH A LEAGUE, EVERY STEP RESPECTS IT. Ryan's ruling, 2026-09-11, after the fourth
+        join to throw the league away: the code was looked up without it (a WFL coach on the
+        1920 Decatur Staleys, the AFL Dallas Texans on the Cowboys), and a name matched in
+        no club of the league fell back to any club of that name (`... or hits`). A claim's
+        club must play in the claim's league that year. A refusal is better than a wrong
+        club. Without a league, nothing changes."""
         yr = int(str(year)[-4:]) if str(year)[-4:].isdigit() else None
         if yr is None:
             self._refuse(string, year, league, source, "no parseable year"); return None
-        cid = self.by_code_year(string, yr)
+        cid = self.by_code_year_in(string, yr, league) if league else self.by_code_year(string, yr)
         if cid: return cid, "code"
         hits = [(f, l, c, k) for f, l, c, k in self.by_name.get(norm(string), []) if f <= yr <= l]
-        if league: hits = [h for h in hits if self.league_for(h[2], yr) == league] or hits
+        if league: hits = [h for h in hits if self.plays(h[2], yr, league)]
         if len({h[2] for h in hits}) == 1:
             return hits[0][2], ("official" if any(h[3] == "official" for h in hits) else hits[0][3])
         if len(hits) > 1:
@@ -108,7 +129,8 @@ class Clubs:
         for src, ns in ([(source, norm(string))] if source else []) + [(s, norm(string)) for s in self.T["sources"]]:
             for f, l, c, k, lg in self.by_string.get((src, ns), []):
                 if k == "code_misprinted": continue                   # kept as printed on the club it was printed for; never a lookup key
-                if f <= yr <= l and (not league or not lg or lg == league):
+                # a string with no league of its own must still name a club OF this league
+                if f <= yr <= l and (not league or lg == league or (not lg and self.plays(c, yr, league))):
                     hits.setdefault(c, (k, self.code_for(c, yr) is not None))
         if hits:
             played = {c: v for c, v in hits.items() if v[1]} or hits   # a club that fielded a team that year outranks one that did not

@@ -50,6 +50,11 @@ def main():
     before = hashlib.sha256(open(idx_path, "rb").read()).hexdigest()
     IDX = json.load(open(idx_path)); CL = IDX.pop("_clubs")
     unresolved = T["unresolved"]
+    # A SILENCED CODE-YEAR IS EXPLAINED, not missing: a merger's phantom parent, or the second
+    # printed name of a club that relocated within a season (RELOCATIONS_WITHIN_A_SEASON,
+    # 2026-09-11). The table records each with its reason; the check below used to know only
+    # PIT 1943, typed in, and failed the day a second kind of silence was ruled.
+    silenced = {(r["code"], int(r["year"])) for r in unresolved.get("silenced_code_years", [])}
     listed = collections.defaultdict(set)                  # (source, string) -> years, from the table's own list
     for r in unresolved["strings"]:
         for y in range(r["first"] or 0, (r["last"] or 0) + 1): listed[(r["source"], r["string"])].add(y)
@@ -66,6 +71,7 @@ def main():
             for r in CS.rows(rows): seen.add(("coaching_season", c, year_of(y), lg, CS.printed_club(r)))
     for row in sorted(seen, key=str):
         src, tok, yr, lg = row[:4]
+        if src == "_clubs" and (tok, yr) in silenced: continue
         if src == "coaching_season":
             pn = __import__("build_clubs").clean_printed(row[4] or "")
             hit = C.resolve(pn, yr, lg, source="pfa_cell") or C.resolve(tok, yr, lg, source="pfa_cell")
@@ -78,7 +84,9 @@ def main():
         if yr not in listed.get(key, set()) and not any(yr in ys and k2[1] == key[1] for k2, ys in listed.items()): unlisted.append((src, tok, yr, lg))
     total = len(seen)
     check(not unlisted, f"{total:,} club-seasons enumerated; {sum(unres.values()):,} did not resolve and every one is in the table's unresolved list" if not unlisted
-          else f"{len(unlisted)} club-seasons neither resolve nor appear in the unresolved list, e.g. {unlisted[:5]}")
+          else f"{len(unlisted)} club-seasons neither resolve nor appear in the unresolved list: "
+               + "; ".join(f"{n} x {k}" for k, n in collections.Counter((u[0], u[3]) for u in unlisted).most_common())
+               + f" -- all: {sorted(unlisted, key=str)}")
 
     # ---- K2 year scoping
     print("K2  a name is looked up with its year")
@@ -145,7 +153,7 @@ def main():
     silent = [(k, v) for k, v in CL.items() if (k.split("|")[0], int(k.split("|")[1])) in {("PIT", 1943), ("PHI", 1943), ("CHC", 1944), ("PIT", 1944), ("BRO", 1945)} and not C.by_code_year(k.split("|")[0], int(k.split("|")[1]))]
     check(all(C.by_code_year(p, y) is None for p, y in (("PIT", 1943), ("PHI", 1943), ("CHC", 1944), ("PIT", 1944), ("BRO", 1945))), "the parents are silent in their merger years")
     all_codes = {k.split("|")[0] for k in CL}
-    missing = [k for k in CL if not C.by_code_year(k.split("|")[0], int(k.split("|")[1])) and (k.split("|")[0], int(k.split("|")[1])) not in {("PIT", 1943)}]
+    missing = [k for k in CL if not C.by_code_year(k.split("|")[0], int(k.split("|")[1])) and (k.split("|")[0], int(k.split("|")[1])) not in silenced]
     check(not missing, f"every _clubs code-year is in the table ({len(missing)} missing: {missing[:5]})")
 
     print("K6  no league in scope has sources naming it and no club")

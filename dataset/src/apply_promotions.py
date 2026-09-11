@@ -57,6 +57,8 @@ import os, sys, json, collections
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 import index_io as IO                       # atomic index write; also how P1 finds us
+sys.path.insert(0, os.path.join(BASE, "service"))
+import league_tokens as LT                  # a league label is read WITH ITS YEAR -- one implementation
 PROM = os.path.join(BASE, "build", "coach-promotions.json")
 REPORT = os.path.join(BASE, "build", "coach-seasons-promoted.json")
 SRC_ID = "pro-football-archives"
@@ -68,8 +70,14 @@ class ApplyError(Exception):
 
 
 def season_key(s):
-    """LEAGUE|YEAR|CLUB, the shape the dashboard splits on for its decade bucket."""
-    return f"{s.get('league', '')}|{s.get('year', '')}|{s.get('club', '')}"
+    """LEAGUE|YEAR|CLUB, the shape the dashboard splits on for its decade bucket.
+
+    The league is PFA's LABEL, read with its year (Ryan, 2026-09-11). Written raw, this was
+    the last place the index held a 2022 coaching season under 1983's `USFL`, beside the
+    same club-season under `USFL2`. The row itself -- `s` -- keeps the label as printed."""
+    y = str(s.get("year", ""))
+    lg = LT.read_label(s.get("league", ""), int(y)) if y.isdigit() else s.get("league", "")
+    return f"{lg}|{y}|{s.get('club', '')}"
 
 
 def collect(prom):

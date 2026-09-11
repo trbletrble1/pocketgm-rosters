@@ -66,15 +66,53 @@ def declared_non_leagues(decl_path):
     return {t for t in tokens(decl_path).values() if t}
 
 
+_LABELS = None
+
+
+def _labels_by_year():
+    """declarations/clubs.json LEAGUE_LABELS_BY_YEAR -- REQUIRED. An absent declaration
+    must not read as "no labels to map": that is how a missing input becomes a confident
+    wrong answer, and here it would put the 2022 USFL back in 1983's league."""
+    global _LABELS
+    if _LABELS is None:
+        p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "declarations", "clubs.json")
+        d = json.load(open(p))
+        if "LEAGUE_LABELS_BY_YEAR" not in d:
+            raise SystemExit("declarations/clubs.json declares no LEAGUE_LABELS_BY_YEAR. Refusing to "
+                             "read season keys without it: a label and a league are not the same thing.")
+        _LABELS = [(x["label"], int(x["first"]), int(x.get("last") or 9999), x["token"])
+                   for x in d["LEAGUE_LABELS_BY_YEAR"]["labels"]]
+    return _LABELS
+
+
+def read_label(label, year):
+    """The archive's token for a league LABEL a source prints in a given YEAR.
+
+    A LEAGUE ABBREVIATION IS NOT A LEAGUE, BUT AN ABBREVIATION AND A YEAR CAN BE. `USFL`
+    names the 1983-85 league and the 2022-23 one; `UFL` the 2009-12 league and the 2024 one.
+    PFA prints the bare label for both, so its 2022 claims were keyed to 1983's competition
+    and every 2022-24 club-season was held twice -- `USFL|2022|US2BIS` beside
+    `USFL2|2022|US2BIS`. Ryan's ruling, 2026-09-11: read the label with its year, at read
+    time, and never rewrite the store. Declared, one entry per label and span."""
+    for lab, first, last, tok in _labels_by_year():
+        if label == lab and year is not None and first <= year <= last:
+            return tok
+    return label
+
+
 def from_season_key(key, real_leagues=None):
     """A stint subject's season key carries its own league: `APFA-1920` -> `APFA`.
     Used where the store has declared it has no league. Returns None rather than a
-    guess when the leading token is not a league the club table holds."""
+    guess when the leading token is not a league the club table holds.
+
+    The label is read WITH ITS YEAR (read_label): `USFL-2022` -> `USFL2`."""
     if not isinstance(key, str) or "-" not in key:
         return None
     t = key.split("-")[0].strip().upper()
     if not t:
         return None
+    y = key.rsplit("-", 1)[-1].strip().lstrip("y")[:4]
+    t = read_label(t, int(y) if y.isdigit() else None)
     if real_leagues is not None and t not in real_leagues:
         return None
     return t

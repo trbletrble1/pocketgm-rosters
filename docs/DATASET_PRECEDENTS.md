@@ -309,7 +309,29 @@ two things at once, and the exit code cannot distinguish them.
 
 **Both halves of the discipline are now needed.** `gate_selftest.py` proves a gate
 *can* fail; this precedent says the proof is only good if the failure is the one
-the gate was written to detect. A gate that cannot fail reports success; a gate
+the gate was written to detect.
+
+### A check's design is not evidence until it has run on the real data
+
+**Ryan, 2026-09-11, on two of my own checks in one pass.** Both were designed carefully, both
+passed their selftests, and both were wrong in a way only the live run could show:
+
+- **A league gate flagged 195 club-seasons as split in two.** It keyed a club-season on year and
+  club code. But a code is not a club across leagues: in 1926 `BKN` is the NFL Lions and the AFL
+  Horsemen, two real club-seasons. The selftest had no shared code in it, so it could not see this.
+- **A strict-resolver dry run would have refused 49,417 WIFU and IRFU claims.** It read a club's
+  league with `league_for()`, which returns only the first league a club plays that year, and
+  Regina is lawfully CFL 1945–2025 and WIFU 1946–60 at once.
+
+**The rule: run a new check against the real data before trusting it — and before trusting a
+number it produces — and read what it flags.** A selftest proves the check can fail; it cannot
+prove the check's picture of the data is right, because the selftest is built from the same
+picture. Only the real corpus holds the case the designer did not imagine. Both errors were in
+the direction of reporting a defect that was not there, so neither would have been caught by the
+check itself; both were caught by looking at the first examples it printed.
+
+*Same family as `implausibility is a signal about your method` — 195 splits and 49,417 refusals
+were both too many to be true of a table that had been gated for a week.* A gate that cannot fail reports success; a gate
 that fails for the wrong reason reports a successful selftest.
 
 ---
@@ -2112,6 +2134,38 @@ reversal lists — outlives the session by design and **is tracked**. `src/gate_
 holds the line: B1 no store backup tracked, B2 every one on disk ignored, B3 **nothing in code
 reads a store backup**, because the moment something depends on one it has become a record.
 
-*Alternative rejected:* **keep committing them**, as the session did that morning. It makes the
+*Alternative rejected:* **keep committing them**, as the session did that morning.
+
+---
+
+## A join keeps its league — the fourth time, and three rulings with it
+
+**Ryan, 2026-09-11.** HOU 1984; the disagreement claims hardcoding `NFL-{year}`; the gate's own
+copy of the resolver; and then the coaching join, where `CHI` in a 1974 WFL cell became the 1920
+Decatur Staleys because the code was looked up with no league. **A claim's club must play in the
+claim's league that year. A refusal is better than a wrong club.** Gated as the property —
+`src/gate_claim_league.py`, L1 on claims and L2 on index keys — never as the instances.
+
+**The fix found two more places that read a league without its year**, which is the shape to
+expect: the club table building PFA-only clubs, and the coaching keys. A rule fixed in the
+resolver alone is fixed in one of its four readers.
+
+**A league abbreviation and a year can be a league.** `USFL` names 1983 and 2022; `UFL` 2009 and
+2024. PFA prints the bare label, so its 2022–24 claims sat in the older competitions and every
+one of those club-seasons was held twice. Read at read time with its year
+(`LEAGUE_LABELS_BY_YEAR`, `league_tokens.read_label`), store unchanged. *Alternative rejected:*
+apply the strict resolver first — 19,883 claims whose club was right would have been refused for
+a label.
+
+**A club that moved within a season is one club under two printed names** — New York Stars/
+Charlotte Hornets and Houston Texans/Shreveport Steamer, 1974 (`RELOCATIONS_WITHIN_A_SEASON`).
+The destination's code-year is silenced only if it holds no man; **no man moves**, because nothing
+the archive holds says which city a man played in, and guessing which half of a season is not a
+placement. *Alternative rejected:* split the men by the relocation date — there is no dated
+evidence placing any of the 147.
+
+*Two of my own instruments were wrong on the way and the live runs said so:* a code shared by two
+leagues' clubs is not a split club-season (1926 `BKN`), and a club lawfully plays two leagues in
+one year (Regina, CFL and WIFU). It makes the
 repository a slow, public, size-limited backup for 8.6 GB it was never meant to hold, and it
 gives the feeling of a backup without the fact of one.

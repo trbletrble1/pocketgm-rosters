@@ -3,6 +3,31 @@
  "name": "The club table",
  "acquisition": "derived",
  "stated_by": "this project, assembled from held sources",
+ "LEAGUE_LABELS_BY_YEAR": {
+  "_what": "A league LABEL a source prints, read WITH ITS YEAR into the archive's token. Read by service/league_tokens.read_label -- one implementation, used by the read model and the person index alike. Applied at read time; no store is rewritten.",
+  "_ruled": "Ryan, 2026-09-11.",
+  "_why": "A league abbreviation is not a league -- but an abbreviation and a year can be. PFA's 2020s stores print `USFL` for the 2022-23 league and `UFL` for the 2024 one, which are the tokens of the 1983-85 USFL and the 2009-12 UFL. Its 19,891 claims were keyed to the older competitions, the club table refused nothing because every one landed on the right club by code, and every 2022-24 club-season was held twice in the index: USFL|2022|US2BIS beside USFL2|2022|US2BIS.",
+  "_measured_before_declaring": "Every claim carrying USFL in 2022-23 sits on a club the table places in USFL2 that year (13,300 of 13,300); every claim carrying UFL in 2024 on a club in UFL2 (6,591 of 6,591). The split index keys use the same club codes on both sides, so the two halves rejoin once the label is read.",
+  "labels": [
+   {"label": "USFL", "first": 2022, "last": 2023, "token": "USFL2", "why": "the 2022-23 USFL; the 1983-85 league keeps USFL"},
+   {"label": "UFL", "first": 2024, "last": 9999, "token": "UFL2", "why": "the UFL from 2024; the 2009-12 league keeps UFL"}
+  ]
+ },
+ "RELOCATIONS_WITHIN_A_SEASON": {
+  "_what": "A club that moved city DURING a season: ONE club under two printed names -- the Newark Bears and Demons shape -- not a merger and not two clubs. Read by build_clubs.py: the destination's code-year for that season is silenced (it must hold no men, or the build refuses), its name goes on the one club for that season, the two segments are linked, and PFA's combined abbreviation becomes a string of the club.",
+  "_ruled": "Ryan, 2026-09-11.",
+  "_no_man_moves": "Nothing in the archive says which city a man played in: PFA's combined pages print one roster for the season, its schedules date games and not men, its game logs hold no WFL row, and no transaction on any of the 147 men is dated. A man on a club-season for half a season is real; which half is not known, and guessing it is not a placement.",
+  "rulings": [
+   {"league": "WFL", "year": 1974, "from": "New York Stars", "to": "Charlotte Hornets", "pfa_combined_codes": ["NY-C"],
+    "combined_printed": ["New York Stars/Charlotte Hornets"],
+    "_ruled": "Ryan, 2026-09-11",
+    "evidence": "PFA 1974wflny-c.html, `1974 New York Stars/Charlotte Hornets (WFL)`: last New York home game 24 Sep 1974 (Downing Stadium), first Charlotte home game 9 Oct 1974 (American Legion Memorial Stadium). One roster of 66 men for the season."},
+   {"league": "WFL", "year": 1974, "from": "Houston Texans", "to": "Shreveport Steamer", "pfa_combined_codes": ["H-S"],
+    "combined_printed": ["Houston Texans-Shreveport Steamer", "Houston Texans/Shreveport Steamer"],
+    "_ruled": "Ryan, 2026-09-11",
+    "evidence": "PFA 1974wflh-s.html, `1974 Houston Texans/Shreveport Steamer (WFL)`: last Houston home game 11 Sep 1974 (Astrodome), first Shreveport home game 25 Sep 1974 (Louisiana State Fair Stadium). One roster of 80 men; Marshall Taylor coached either side."}
+  ]
+ },
  "_this_is_not_a_source": "Nothing here is fetched. Every entry is assembled from material already held -- StatsCrew roster titles, PFA club cells, Coaching Tree and media-guide stint clubs, nflverse abbreviations, the boxscore strings, the club-key normalisation decisions, the merged-club table -- and every string keeps the source it came from.",
  "WHY": "Club identity was patched four times by three sessions for one missing thing: clubs existed only as strings inside season keys, every source spelt them differently, and there was nothing to resolve against. (1) Coaching Tree calls Buffalo the Bisons in 1986; bio run-building preferred the code to survive it. (2) The merged clubs needed a hardcoded table in gate_merged_clubs.py, and the next merged club fails the same way. (3) The prose extractor derived 2,415 club-season keys from person_season because no club table existed, and left 41 unmapped. (4) club-key-normalisation.json rewrote 476 keys holding a name where a code belongs. This table is the thing they were all standing in for.",
  "THE_ATOM_IS_THE_CLUB_NOT_THE_CODE": "StatsCrew codes are not franchise-stable. The Colts are BAC to 1983 and IND from 1984; the Rams LAN, then STL, then LAN; the Cardinals CHC, SLC, PHO, ARI. And one code can hide two clubs: NY1 is the 1921 Brickley Giants and the 1927 Yankees. So a club is a CHAIN of code-segments, each segment one code over a run of years.",
@@ -904,7 +929,7 @@
    "token_never_placed": 549,
    "_all_2018_rest_on_ONE_source": "466 (league, token, year) triples, and every single one is attested by exactly one source_id -- 41 of 41, 223 of 223, 202 of 202. Not one is corroborated, which is why SPAN_EXTENSIONS can move none of them today. The blocker is EVIDENCE, not policy."
   },
-  "ceiling": 851,
+  "ceiling": 373,
   "_lowered_2026_09_09": "2,018 -> 851, a fall of 1,167, when archive_covers stopped using the index-season proxy and 162 clubs were minted. The ratchet holds the ground gained: 851 is the new ceiling and a rise above it fails. THE CAUSE AND THE EFFECT ARE NOW LINKED IN BOTH GATES -- gate_clubs K6 counts the CAUSE (a league whose strings the table refuses) and this counts the EFFECT (season keys the table cannot name). They are NOT the same population and must not be merged: this gate also counts `no_name` (a club held whose name spans stop short of 2025) and `span_narrow`, neither of which is a refusal. Each now names the other's number so a reader of one cannot miss the other."
  },
  "WITHDRAWN_STRINGS": {
