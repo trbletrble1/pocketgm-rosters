@@ -1,0 +1,77 @@
+LOST SINCE THE PREDECESSOR: 5 claims on 4 records -- by reason: {'already stated on the PFA player page': 5}
+wrote /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-coaches.json
+{
+ "pages": 3903,
+ "resolved": 1763,
+ "leads": 2140,
+ "routes": {
+  "playing_record": 90,
+  "name+birth_date+playing_record": 990,
+  "name+coaching_club_season": 68,
+  "name+birth_date+name+coaching_club_season": 273,
+  "name+birth_date+name+coaching_club_season+playing_record": 299,
+  "name+coaching_club_season+playing_record": 25,
+  "name+birth_date": 18
+ },
+ "rows_without_club": 1,
+ "coaching_season": 17312,
+ "bio_already_on_player_page": 11378,
+ "name_as_printed": 1763,
+ "lead:namesake_only_not_evidence": 1738,
+ "coaching_playoffs": 7021,
+ "draft_present_not_written": 861,
+ "lead:ambiguous_candidates": 315,
+ "birth_date": 358,
+ "birth_place": 348,
+ "high_school": 334,
+ "college_season": 1321,
+ "death_date": 178,
+ "death_place": 166,
+ "lead:unmatched_no_candidate": 85,
+ "kin": 108,
+ "military_service": 79,
+ "lead:route_conflict": 2,
+ "college_stated_none": 3,
+ "club_cell_flags": {
+  "href_disagrees_with_printed_cell": 105
+ },
+ "claims": 28991,
+ "store_stints": {
+  "coaching-tree": {
+   "stints": 2791,
+   "unmapped_local_ids": 0
+  },
+  "statscrew": {
+   "stints": 3402,
+   "unmapped_local_ids": 0
+  },
+  "media-guides": {
+   "stints": 1086,
+   "unmapped_local_ids": 0
+  }
+ }
+}
+{
+ "coaching-tree": {
+  "season_in_pfa_not_in_store": 15130,
+  "role_string_identical": 853,
+  "season_in_store_not_in_pfa": 541,
+  "role_string_differs": 757,
+  "role_string_differs_in_case_only": 572
+ },
+ "statscrew": {
+  "role_string_differs_in_case_only": 2952,
+  "season_in_pfa_not_in_store": 14189,
+  "role_string_differs": 171,
+  "season_in_store_not_in_pfa": 146
+ },
+ "media-guides": {
+  "season_in_pfa_not_in_store": 16769,
+  "role_string_identical": 309,
+  "role_string_differs": 102,
+  "season_in_store_not_in_pfa": 27,
+  "role_string_differs_in_case_only": 132
+ }
+}
+listings {'rows': 4553, 'distinct_codes': 3903, 'by_list': Counter({'nfl-assistant-coaches': 3123, 'cfl-assistant-coaches': 715, 'nfl-head-coaches': 535, 'cfl-head-coaches': 180}), 'codes_in_more_than_one_list': 591}
+officials shared 22

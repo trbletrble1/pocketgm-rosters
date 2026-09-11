@@ -1,0 +1,5 @@
+  FAIL R1 every one of the 597 claims lost against the predecessor is stated by the store itself, with its count and a reason -- 597 claims on 22 records are NOT stated, e.g. [('pro-football-archives#coaches/baug00600.html', 22), ('pro-football-archives#coaches/carp01200.html', 35), ('pro-football-archives#coaches/catl00200.html', 51)]
+  ok   R2 no loss is explained by a conflict with a merge shell
+         losses by stated reason: {}
+
+RE-INGEST LOSS GATE: 1 FAILURE(S)

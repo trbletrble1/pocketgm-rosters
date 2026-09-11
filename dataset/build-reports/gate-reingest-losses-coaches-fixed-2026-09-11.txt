@@ -1,0 +1,5 @@
+  ok   R1 every one of the 5 claims lost against the predecessor is stated by the store itself, with its count and a reason
+  ok   R2 no loss is explained by a conflict with a merge shell
+         losses by stated reason: {'already stated on the PFA player page': 4}
+
+RE-INGEST LOSS GATE: pass

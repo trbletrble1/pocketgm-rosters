@@ -1,0 +1,30 @@
+wrote /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/person-merges.json
+{
+ "candidate_pairs": 1339,
+ "verdicts": {
+  "coincidence": 1046,
+  "duplicate": 99,
+  "unclassifiable": 175,
+  "mis-attached source record": 5,
+  "namesake": 14
+ },
+ "tests": {
+  "T1_shared_source_record": 5,
+  "T2_birth_date_and_club_season": 1154,
+  "T3_name_and_birth_date": 110,
+  "T4_name_and_club_season": 251,
+  "T7_name_match_with_a_nameless_half": 110,
+  "T5_name_and_years_no_birth_date": 137
+ },
+ "merges": 92,
+ "refused_statscrew_against_itself": 7,
+ "refused_unclassifiable": 175,
+ "refused_namesakes": 14,
+ "refused_mis_attached": 5,
+ "club_seasons_gained": 0,
+ "club_seasons_held_by_both": 0,
+ "season_key_rewrites": 0,
+ "disagreements_held": 36,
+ "dates_not_re_added_in_another_notation": 91,
+ "person_values_added": 153
+}

@@ -164,6 +164,20 @@ def build():
                                             "records": {k: v for k, v in shared.items()},
                                             "pairs": verdicts.get("mis-attached source record", [])}},
         "OPEN_ITEMS": {
+            "two_person_records_for_one_name_found_by_the_coach_ingest": {
+                "_what": ("Ryan, 2026-09-11: to the merge queue, as questions. The PFA coach ingest's routes "
+                          "name two DIFFERENT person records for one coach page, and neither is a merge shell "
+                          "(unlike the 18 refused the same day, whose second id was their own shell). Whether "
+                          "each pair is one man is a merge decision, not a route conflict, and nothing here "
+                          "decides it."),
+                "pairs": [
+                    {"name": "Gino Cappelletti", "pfa_coach_page": "coaches/capp00600.html",
+                     "by_playing_record": "P_001119", "by_name_and_coaching_club_season": "P_014230"},
+                    {"name": "Dennis Meyer", "pfa_coach_page": "coaches/meye00200.html",
+                     "by_playing_record_and_by_name_and_birth_date": "P_006344",
+                     "by_name_and_coaching_club_season": "P_014610"}],
+                "seen_since": "the 2026-09-09 coach store, where both were already route conflicts",
+                "resolved": None},
             "media_guide_assistants_are_not_in_the_person_index": {
                 "store": "build/assistants.json",
                 "people": 447, "role_stints": 1086,

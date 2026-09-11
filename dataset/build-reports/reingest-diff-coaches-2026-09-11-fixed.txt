@@ -1,0 +1,11 @@
+claims 28,823 -> 28,991; lost 5, gained 173
+lost by predicate: {'pfa.birth_date': 4, 'pfa.birth_place': 1}
+gained by predicate: {'pfa.coaching_season': 96, 'pfa.coaching_playoffs': 36, 'pfa.birth_date': 4, 'pfa.birth_place': 4, 'pfa.death_date': 3, 'pfa.death_place': 3, 'pfa.high_school': 4, 'pfa.military_service': 2, 'pfa.college_season': 15, 'pfa.name_as_printed': 4, 'pfa.kin': 2}
+  stated: coaches/ford00150.html 2 already stated on the PFA player page
+  stated: coaches/lawr01050.html 1 already stated on the PFA player page
+  stated: coaches/payn00570.html 1 already stated on the PFA player page
+  stated: coaches/smit14940.html 1 already stated on the PFA player page
+the 18 back: True
+people resolved: 1759 -> 1763 | same person for every coach resolved before: True
+coaches whose routes changed: 87 e.g. [('arms03000', ['name+birth_date', 'playing_record'], ['name+birth_date', 'name+coaching_club_season', 'playing_record']), ('baug00600', ['name+birth_date', 'playing_record'], ['name+birth_date', 'name+coaching_club_season', 'playing_record']), ('beli00100', ['name+birth_date'], ['name+birth_date', 'name+coaching_club_season'])]
+route conflicts now: ['capp00600', 'meye00200']

@@ -1,0 +1,1010 @@
+[14:58:06] clubs: 602 ids, 506 codes, leagues ['', 'AAF', 'AAFC', 'ACFL', 'AFA', 'AFL', 'ALFL', 'APFA', 'ARENA', 'ARFL', 'CAFL', 'CFL', 'COFL', 'DFL', 'EFL', 'IFL', 'IRFU', 'MWFL', 'NFL', 'NFLE', 'NWIFL', 'ORFU', 'PCFL', 'PFLA', 'SFL', 'TSFL', 'UFL', 'UFL2', 'USFL', 'USFL2', 'WFL', 'WIFU', 'WLAF', 'XFL']
+[14:58:06] read-stage cache: NOT USED -- the read-stage fingerprint changed: a declaration or the code moved
+[14:58:06]   PGMRoster_1950: not a claim store, skipped (array)
+[14:58:06]   aaf-2019                                 3,880 claims   total       3,880       1s
+[14:58:06]   aafc-1946                                2,424 claims   total       6,304       1s
+[14:58:06]   aafc-1947                                2,512 claims   total       8,816       1s
+[14:58:06]   aafc-1948                                2,624 claims   total      11,440       1s
+[14:58:06]   aafc-1949                                1,968 claims   total      13,408       1s
+[14:58:06]   afl-1926                                   204 claims   total      13,612       1s
+[14:58:06]   afl-1960                                 2,992 claims   total      16,604       1s
+[14:58:06]   afl-1961                                 2,744 claims   total      19,348       1s
+[14:58:06]   afl-1962                                 2,664 claims   total      22,012       1s
+[14:58:06]   afl-1963                                 2,600 claims   total      24,612       1s
+[14:58:06]   afl-1964                                 2,712 claims   total      27,324       1s
+[14:58:06]   afl-1965                                 2,848 claims   total      30,172       1s
+[14:58:06]   afl-1966                                 3,424 claims   total      33,596       1s
+[14:58:06]   afl-1967                                 3,528 claims   total      37,124       1s
+[14:58:06]   afl-1968                                 4,024 claims   total      41,148       1s
+[14:58:06]   afl-1969                                 3,784 claims   total      44,932       1s
+[14:58:06]   apfa-1920                                2,778 claims   total      47,710       1s
+[14:58:06]   apfa-1921                                3,558 claims   total      51,268       1s
+[14:58:06]   arena-1987-2019                          8,798 claims   total      60,066       1s
+[14:58:06]   arena-player-pages                       9,433 claims   total      69,499       1s
+[14:58:06]   assistants-identity: not a claim store, skipped (object with no top-level claims list)
+[14:58:06]   assistants                               1,533 claims   total      71,032       1s
+[14:58:06]   cfl-1945                                 1,197 claims   total      72,229       1s
+[14:58:07]   cfl-1946                                 2,182 claims   total      74,411       2s
+[14:58:07]   cfl-1947                                 1,910 claims   total      76,321       2s
+[14:58:07]   cfl-1948                                 1,953 claims   total      78,274       2s
+[14:58:07]   cfl-1949                                 2,342 claims   total      80,616       2s
+[14:58:07]   cfl-1950                                 2,238 claims   total      82,854       2s
+[14:58:07]   cfl-1951                                 2,417 claims   total      85,271       2s
+[14:58:07]   cfl-1952                                 2,619 claims   total      87,890       2s
+[14:58:07]   cfl-1953                                 2,610 claims   total      90,500       2s
+[14:58:07]   cfl-1954                                 2,809 claims   total      93,309       2s
+[14:58:07]   cfl-1955                                 2,791 claims   total      96,100       2s
+[14:58:07]   cfl-1956                                 2,862 claims   total      98,962       2s
+[14:58:07]   cfl-1957                                 2,951 claims   total     101,913       2s
+[14:58:07]   cfl-1958                                 2,711 claims   total     104,624       2s
+[14:58:07]   cfl-1959                                 2,940 claims   total     107,564       2s
+[14:58:07]   cfl-1960                                 3,012 claims   total     110,576       2s
+[14:58:07]   cfl-1961                                 2,800 claims   total     113,376       2s
+[14:58:07]   cfl-1962                                 2,727 claims   total     116,103       2s
+[14:58:07]   cfl-1963                                 2,795 claims   total     118,898       2s
+[14:58:07]   cfl-1964                                 2,864 claims   total     121,762       2s
+[14:58:07]   cfl-1965                                 2,896 claims   total     124,658       2s
+[14:58:07]   cfl-1966                                 2,592 claims   total     127,250       2s
+[14:58:07]   cfl-1967                                 2,798 claims   total     130,048       2s
+[14:58:07]   cfl-1968                                 2,711 claims   total     132,759       2s
+[14:58:07]   cfl-1969                                 2,762 claims   total     135,521       2s
+[14:58:07]   cfl-1970                                 2,805 claims   total     138,326       2s
+[14:58:07]   cfl-1971                                 2,799 claims   total     141,125       2s
+[14:58:07]   cfl-1972                                 2,855 claims   total     143,980       2s
+[14:58:07]   cfl-1973                                 2,950 claims   total     146,930       2s
+[14:58:07]   cfl-1974                                 3,044 claims   total     149,974       2s
+[14:58:07]   cfl-1975                                 3,153 claims   total     153,127       2s
+[14:58:07]   cfl-1976                                 3,180 claims   total     156,307       2s
+[14:58:07]   cfl-1977                                 3,269 claims   total     159,576       2s
+[14:58:07]   cfl-1978                                 3,386 claims   total     162,962       2s
+[14:58:07]   cfl-1979                                 3,551 claims   total     166,513       2s
+[14:58:07]   cfl-1980                                 3,437 claims   total     169,950       2s
+[14:58:07]   cfl-1981                                 3,478 claims   total     173,428       2s
+[14:58:07]   cfl-1982                                 3,500 claims   total     176,928       2s
+[14:58:07]   cfl-1983                                 3,536 claims   total     180,464       2s
+[14:58:07]   cfl-1984                                 3,456 claims   total     183,920       2s
+[14:58:07]   cfl-1985                                 3,650 claims   total     187,570       2s
+[14:58:07]   cfl-1986                                 3,972 claims   total     191,542       2s
+[14:58:07]   cfl-1987                                 3,520 claims   total     195,062       2s
+[14:58:07]   cfl-1988                                 3,584 claims   total     198,646       2s
+[14:58:07]   cfl-1989                                 3,648 claims   total     202,294       2s
+[14:58:07]   cfl-1990                                 3,592 claims   total     205,886       2s
+[14:58:07]   cfl-1991                                 3,632 claims   total     209,518       2s
+[14:58:07]   cfl-1992                                 3,464 claims   total     212,982       2s
+[14:58:07]   cfl-1993                                 4,232 claims   total     217,214       2s
+[14:58:08]   cfl-1994                                 5,816 claims   total     223,030       3s
+[14:58:08]   cfl-1995                                 6,360 claims   total     229,390       3s
+[14:58:08]   cfl-1996                                 4,288 claims   total     233,678       3s
+[14:58:08]   cfl-1997                                 3,408 claims   total     237,086       3s
+[14:58:08]   cfl-1998                                 3,552 claims   total     240,638       3s
+[14:58:08]   cfl-1999                                 3,672 claims   total     244,310       3s
+[14:58:08]   cfl-2000                                 3,696 claims   total     248,006       3s
+[14:58:08]   cfl-2001                                 3,832 claims   total     251,838       3s
+[14:58:08]   cfl-2002                                 4,336 claims   total     256,174       3s
+[14:58:08]   cfl-2003                                 4,248 claims   total     260,422       3s
+[14:58:08]   cfl-2004                                 4,376 claims   total     264,798       3s
+[14:58:08]   cfl-2005                                 4,448 claims   total     269,246       3s
+[14:58:08]   cfl-2006                                 4,160 claims   total     273,406       3s
+[14:58:08]   cfl-2007                                 4,568 claims   total     277,974       3s
+[14:58:08]   cfl-2008                                 4,392 claims   total     282,366       3s
+[14:58:08]   cfl-2009                                 4,432 claims   total     286,798       3s
+[14:58:08]   cfl-2010                                 4,296 claims   total     291,094       3s
+[14:58:08]   cfl-2011                                 4,336 claims   total     295,430       3s
+[14:58:08]   cfl-2012                                 4,400 claims   total     299,830       3s
+[14:58:08]   cfl-2013                                 4,824 claims   total     304,654       3s
+[14:58:08]   cfl-2014                                 5,312 claims   total     309,966       3s
+[14:58:08]   cfl-2015                                 5,336 claims   total     315,302       3s
+[14:58:08]   cfl-2016                                 5,415 claims   total     320,717       3s
+[14:58:08]   cfl-2017                                 5,400 claims   total     326,117       3s
+[14:58:08]   cfl-2018                                 5,160 claims   total     331,277       3s
+[14:58:08]   cfl-2019                                 5,280 claims   total     336,557       3s
+[14:58:08]   cfl-2021                                 5,480 claims   total     342,037       3s
+[14:58:08]   cfl-2022                                 5,264 claims   total     347,301       3s
+[14:58:08]   cfl-2023                                 5,648 claims   total     352,949       3s
+[14:58:08]   cfl-2024                                 5,920 claims   total     358,869       3s
+[14:58:08]   cfl-2025                                 5,928 claims   total     364,797       3s
+[14:58:08]   cfl1945-season-restore: not a claim store, skipped (object with no top-level claims list)
+[14:58:08]   club-key-normalisation: not a claim store, skipped (object with no top-level claims list)
+[14:58:08]   club-names                               3,666 claims   total     368,463       3s
+[14:58:08]   clubs: not a claim store, skipped (object with no top-level claims list)
+[14:58:08]   coach-demotions: not a claim store, skipped (object with no top-level claims list)
+[14:58:09]   coach-promotions: not a claim store, skipped (object with no top-level claims list)
+[14:58:09]   coach-seasons-promoted                  17,621 claims   total     386,084       4s
+[14:58:09]   coaches-nfl                             10,484 claims   total     396,568       4s
+[14:58:09]   coaches                                  5,720 claims   total     402,288       4s
+[14:58:09]   college-guides-candidates: not a claim store, skipped (object with no top-level claims list)
+[14:58:09]   contested-1950: not a claim store, skipped (array)
+[14:58:09]   contested-coaches: not a claim store, skipped (array)
+[14:58:09]   contested-nfl-1950: not a claim store, skipped (array)
+[14:58:09]   contested-salaries: not a claim store, skipped (array)
+[14:58:09]   contested-wfl-1974: not a claim store, skipped (array)
+[14:58:09]   crippen-aafc                             1,208 claims   total     403,496       4s
+[14:58:09]   crippen-book                             5,974 claims   total     409,470       4s
+[14:58:09]   dev-aaf-2019: not a claim store, skipped (array)
+[14:58:09]   dev-aafc-1946: not a claim store, skipped (array)
+[14:58:09]   dev-aafc-1947: not a claim store, skipped (array)
+[14:58:09]   dev-aafc-1948: not a claim store, skipped (array)
+[14:58:09]   dev-aafc-1949: not a claim store, skipped (array)
+[14:58:09]   dev-afl-1960: not a claim store, skipped (array)
+[14:58:09]   dev-afl-1961: not a claim store, skipped (array)
+[14:58:09]   dev-afl-1962: not a claim store, skipped (array)
+[14:58:09]   dev-afl-1963: not a claim store, skipped (array)
+[14:58:09]   dev-afl-1964: not a claim store, skipped (array)
+[14:58:09]   dev-afl-1965: not a claim store, skipped (array)
+[14:58:09]   dev-afl-1966: not a claim store, skipped (array)
+[14:58:09]   dev-afl-1967: not a claim store, skipped (array)
+[14:58:09]   dev-afl-1968: not a claim store, skipped (array)
+[14:58:09]   dev-afl-1969: not a claim store, skipped (array)
+[14:58:09]   dev-apfa-1920: not a claim store, skipped (array)
+[14:58:09]   dev-apfa-1921: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1945: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1946: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1947: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1948: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1949: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1950: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1951: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1952: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1953: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1954: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1955: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1956: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1957: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1958: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1959: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1960: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1961: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1962: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1963: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1964: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1965: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1966: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1967: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1968: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1969: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1970: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1971: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1972: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1973: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1974: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1975: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1976: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1977: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1978: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1979: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1980: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1981: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1982: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1983: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1984: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1985: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1986: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1987: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1988: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1989: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1990: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1991: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1992: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1993: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1994: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1995: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1996: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1997: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1998: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-1999: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2000: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2001: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2002: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2003: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2004: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2005: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2006: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2007: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2008: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2009: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2010: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2011: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2012: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2013: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2014: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2015: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2016: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2017: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2018: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2019: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2021: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2022: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2023: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2024: not a claim store, skipped (array)
+[14:58:09]   dev-cfl-2025: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1922: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1923: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1924: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1925: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1926: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1927: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1928: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1929: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1930: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1931: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1932: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1933: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1934: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1935: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1936: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1937: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1938: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1939: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1940: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1941: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1942: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1943: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1944: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1945: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1946: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1947: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1948: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1949: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1950: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1951: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1952: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1953: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1954: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1955: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1956: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1957: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1958: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1959: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1960: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1961: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1962: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1963: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1964: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1965: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1966: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1967: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1968: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1969: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1970: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1971: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1972: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1973: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1974: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1975: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1976: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1977: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1978: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1979: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1980: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1981: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1982: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1983: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1984: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1985: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1986: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1987: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1988: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1989: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1990: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1991: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1992: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1993: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1994: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1995: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1996: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1997: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1998: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-1999: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2000: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2001: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2002: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2003: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2004: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2005: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2006: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2007: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2008: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2009: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2010: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2011: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2012: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2013: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2014: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2015: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2016: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2017: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2018: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2019: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2020: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2021: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2022: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2023: not a claim store, skipped (array)
+[14:58:09]   dev-nfl-2024: not a claim store, skipped (array)
+[14:58:09]   dev-ufl-2009: not a claim store, skipped (array)
+[14:58:09]   dev-ufl-2010: not a claim store, skipped (array)
+[14:58:09]   dev-ufl-2011: not a claim store, skipped (array)
+[14:58:09]   dev-ufl-2012: not a claim store, skipped (array)
+[14:58:09]   dev-ufl2-2024: not a claim store, skipped (array)
+[14:58:09]   dev-usfl-1983: not a claim store, skipped (array)
+[14:58:09]   dev-usfl-1984: not a claim store, skipped (array)
+[14:58:09]   dev-usfl-1985: not a claim store, skipped (array)
+[14:58:09]   dev-usfl2-2022: not a claim store, skipped (array)
+[14:58:09]   dev-usfl2-2023: not a claim store, skipped (array)
+[14:58:09]   dev-wfl-1974: not a claim store, skipped (array)
+[14:58:09]   dev-wfl-1975: not a claim store, skipped (array)
+[14:58:09]   dev-wlaf-1991: not a claim store, skipped (array)
+[14:58:09]   dev-wlaf-1992: not a claim store, skipped (array)
+[14:58:09]   dev-xfl-2001: not a claim store, skipped (array)
+[14:58:09]   dev-xfl-2020: not a claim store, skipped (array)
+[14:58:09]   dev-xfl-2023: not a claim store, skipped (array)
+[14:58:09]   devstats-aaf-2019: not a claim store, skipped (array)
+[14:58:09]   devstats-aafc-1946: not a claim store, skipped (array)
+[14:58:09]   devstats-aafc-1947: not a claim store, skipped (array)
+[14:58:09]   devstats-aafc-1948: not a claim store, skipped (array)
+[14:58:09]   devstats-aafc-1949: not a claim store, skipped (array)
+[14:58:09]   devstats-afl-1960: not a claim store, skipped (array)
+[14:58:09]   devstats-afl-1961: not a claim store, skipped (array)
+[14:58:09]   devstats-afl-1962: not a claim store, skipped (array)
+[14:58:09]   devstats-afl-1963: not a claim store, skipped (array)
+[14:58:09]   devstats-afl-1964: not a claim store, skipped (array)
+[14:58:09]   devstats-afl-1965: not a claim store, skipped (array)
+[14:58:09]   devstats-afl-1966: not a claim store, skipped (array)
+[14:58:09]   devstats-afl-1967: not a claim store, skipped (array)
+[14:58:09]   devstats-afl-1968: not a claim store, skipped (array)
+[14:58:09]   devstats-afl-1969: not a claim store, skipped (array)
+[14:58:09]   devstats-apfa-1920: not a claim store, skipped (array)
+[14:58:09]   devstats-apfa-1921: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1945: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1946: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1947: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1948: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1949: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1950: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1951: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1952: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1953: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1954: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1955: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1956: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1957: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1958: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1959: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1960: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1961: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1962: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1963: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1964: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1965: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1966: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1967: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1968: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1969: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1970: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1971: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1972: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1973: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1974: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1975: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1976: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1977: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1978: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1979: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1980: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1981: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1982: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1983: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1984: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1985: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1986: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1987: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1988: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1989: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1990: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1991: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1992: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1993: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1994: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1995: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1996: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1997: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1998: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-1999: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2000: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2001: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2002: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2003: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2004: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2005: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2006: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2007: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2008: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2009: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2010: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2011: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2012: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2013: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2014: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2015: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2016: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2017: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2018: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2019: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2021: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2022: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2023: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2024: not a claim store, skipped (array)
+[14:58:09]   devstats-cfl-2025: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1922: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1923: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1924: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1925: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1926: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1927: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1928: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1929: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1930: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1931: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1932: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1933: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1934: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1935: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1936: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1937: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1938: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1939: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1940: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1941: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1942: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1943: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1944: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1945: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1946: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1947: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1948: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1949: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1950: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1951: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1952: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1953: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1954: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1955: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1956: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1957: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1958: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1959: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1960: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1961: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1962: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1963: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1964: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1965: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1966: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1967: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1968: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1969: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1970: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1971: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1972: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1973: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1974: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1975: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1976: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1977: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1978: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1979: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1980: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1981: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1982: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1983: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1984: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1985: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1986: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1987: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1988: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1989: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1990: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1991: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1992: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1993: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1994: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1995: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1996: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1997: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1998: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-1999: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2000: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2001: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2002: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2003: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2004: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2005: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2006: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2007: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2008: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2009: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2010: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2011: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2012: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2013: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2014: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2015: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2016: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2017: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2018: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2019: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2020: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2021: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2022: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2023: not a claim store, skipped (array)
+[14:58:09]   devstats-nfl-2024: not a claim store, skipped (array)
+[14:58:09]   devstats-ufl-2009: not a claim store, skipped (array)
+[14:58:09]   devstats-ufl-2010: not a claim store, skipped (array)
+[14:58:09]   devstats-ufl-2011: not a claim store, skipped (array)
+[14:58:09]   devstats-ufl-2012: not a claim store, skipped (array)
+[14:58:09]   devstats-ufl2-2024: not a claim store, skipped (array)
+[14:58:09]   devstats-usfl-1983: not a claim store, skipped (array)
+[14:58:09]   devstats-usfl-1984: not a claim store, skipped (array)
+[14:58:09]   devstats-usfl-1985: not a claim store, skipped (array)
+[14:58:09]   devstats-usfl2-2022: not a claim store, skipped (array)
+[14:58:09]   devstats-usfl2-2023: not a claim store, skipped (array)
+[14:58:09]   devstats-wfl-1974: not a claim store, skipped (array)
+[14:58:09]   devstats-wfl-1975: not a claim store, skipped (array)
+[14:58:09]   devstats-wlaf-1991: not a claim store, skipped (array)
+[14:58:09]   devstats-wlaf-1992: not a claim store, skipped (array)
+[14:58:09]   devstats-xfl-2001: not a claim store, skipped (array)
+[14:58:09]   devstats-xfl-2020: not a claim store, skipped (array)
+[14:58:09]   devstats-xfl-2023: not a claim store, skipped (array)
+[14:58:09]   frankford-book-ind                         243 claims   total     409,713       4s
+[14:58:09]   frankford-book                             378 claims   total     410,091       4s
+[14:58:09]   ghosts-lineups                             168 claims   total     410,259       4s
+[14:58:09]   ghosts-structured                           49 claims   total     410,308       4s
+[14:58:09]   ghostsofthegridiron-afl                     23 claims   total     410,331       4s
+[14:58:09]   ghostsofthegridiron-ind                     45 claims   total     410,376       4s
+[14:58:09]   ghostsofthegridiron                        615 claims   total     410,991       4s
+[14:58:09]   guide-lad-1948                             290 claims   total     411,281       4s
+[14:58:09]   guide-pre1950-delimited: not a claim store, skipped (object with no top-level claims list)
+[14:58:10]   guide-prose-corpus-leads: not a claim store, skipped (object with no top-level claims list)
+[14:58:10]   guide-prose-corpus                      57,276 claims   total     468,557       5s
+[14:58:11]   guide-prose                              1,404 claims   total     469,961       6s
+[14:58:11]   hearing-1957                                76 claims   total     470,037       6s
+[14:58:11]   neft-early-years-1978                        1 claims   total     470,038       6s
+[14:58:11]   nfl-1922                                 3,228 claims   total     473,266       6s
+[14:58:11]   nfl-1923                                 3,239 claims   total     476,505       6s
+[14:58:11]   nfl-1924                                 3,027 claims   total     479,532       6s
+[14:58:11]   nfl-1925                                 3,738 claims   total     483,270       6s
+[14:58:11]   nfl-1926                                 4,280 claims   total     487,550       6s
+[14:58:11]   nfl-1927                                 2,400 claims   total     489,950       6s
+[14:58:11]   nfl-1928                                 1,784 claims   total     491,734       6s
+[14:58:11]   nfl-1929                                 2,245 claims   total     493,979       6s
+[14:58:11]   nfl-1930                                 2,760 claims   total     496,739       6s
+[14:58:11]   nfl-1931                                 2,298 claims   total     499,037       6s
+[14:58:11]   nfl-1932                                 1,904 claims   total     500,941       6s
+[14:58:11]   nfl-1933                                 2,360 claims   total     503,301       6s
+[14:58:11]   nfl-1934-cincinnati                         36 claims   total     503,337       6s
+[14:58:11]   nfl-1934                                 2,456 claims   total     505,793       6s
+[14:58:11]   nfl-1935                                 2,232 claims   total     508,025       6s
+[14:58:11]   nfl-1936                                 2,080 claims   total     510,105       6s
+[14:58:11]   nfl-1937                                 2,440 claims   total     512,545       6s
+[14:58:11]   nfl-1938                                 2,648 claims   total     515,193       6s
+[14:58:11]   nfl-1939                                 2,832 claims   total     518,025       6s
+[14:58:11]   nfl-1940                                 2,808 claims   total     520,833       6s
+[14:58:11]   nfl-1941                                 2,856 claims   total     523,689       6s
+[14:58:11]   nfl-1942                                 2,792 claims   total     526,481       6s
+[14:58:11]   nfl-1943                                 1,968 claims   total     528,449       6s
+[14:58:11]   nfl-1944                                 2,528 claims   total     530,977       6s
+[14:58:11]   nfl-1945                                 3,440 claims   total     534,417       6s
+[14:58:11]   nfl-1946                                 2,824 claims   total     537,241       6s
+[14:58:11]   nfl-1947                                 2,992 claims   total     540,233       6s
+[14:58:11]   nfl-1948                                 3,032 claims   total     543,265       6s
+[14:58:11]   nfl-1949                                 2,808 claims   total     546,073       6s
+[14:58:11]   nfl-1950                                 3,680 claims   total     549,753       6s
+[14:58:11]   nfl-1951                                 3,432 claims   total     553,185       6s
+[14:58:11]   nfl-1952                                 3,608 claims   total     556,793       6s
+[14:58:11]   nfl-1953                                 3,520 claims   total     560,313       6s
+[14:58:11]   nfl-1954                                 3,552 claims   total     563,865       6s
+[14:58:11]   nfl-1955                                 3,624 claims   total     567,489       6s
+[14:58:11]   nfl-1956                                 3,736 claims   total     571,225       6s
+[14:58:11]   nfl-1957                                 3,568 claims   total     574,793       6s
+[14:58:11]   nfl-1958                                 3,640 claims   total     578,433       6s
+[14:58:11]   nfl-1959                                 3,672 claims   total     582,105       6s
+[14:58:11]   nfl-1960                                 4,120 claims   total     586,225       6s
+[14:58:11]   nfl-1961                                 4,504 claims   total     590,729       6s
+[14:58:11]   nfl-1962                                 4,424 claims   total     595,153       6s
+[14:58:11]   nfl-1963                                 4,624 claims   total     599,777       6s
+[14:58:11]   nfl-1964                                 4,680 claims   total     604,457       6s
+[14:58:12]   nfl-1965                                 4,936 claims   total     609,393       7s
+[14:58:12]   nfl-1966                                 5,472 claims   total     614,865       7s
+[14:58:12]   nfl-1967                                 6,008 claims   total     620,873       7s
+[14:58:12]   nfl-1968                                 5,920 claims   total     626,793       7s
+[14:58:12]   nfl-1969                                 6,000 claims   total     632,793       7s
+[14:58:12]   nfl-1970                                 9,776 claims   total     642,569       7s
+[14:58:12]   nfl-1971                                 9,824 claims   total     652,393       7s
+[14:58:12]   nfl-1972                                10,016 claims   total     662,409       7s
+[14:58:12]   nfl-1973                                10,152 claims   total     672,561       7s
+[14:58:12]   nfl-1974                                10,680 claims   total     683,241       7s
+[14:58:12]   nfl-1975                                 9,936 claims   total     693,177       7s
+[14:58:12]   nfl-1976                                11,048 claims   total     704,225       7s
+[14:58:12]   nfl-1977                                11,000 claims   total     715,225       7s
+[14:58:12]   nfl-1978                                11,512 claims   total     726,737       7s
+[14:58:12]   nfl-1979                                11,504 claims   total     738,241       7s
+[14:58:13]   nfl-1980                                11,880 claims   total     750,121       8s
+[14:58:13]   nfl-1981                                11,616 claims   total     761,737       8s
+[14:58:13]   nfl-1982                                11,720 claims   total     773,457       8s
+[14:58:13]   nfl-1983                                12,424 claims   total     785,881       8s
+[14:58:13]   nfl-1984                                12,824 claims   total     798,705       8s
+[14:58:13]   nfl-1985                                12,064 claims   total     810,769       8s
+[14:58:13]   nfl-1986                                12,328 claims   total     823,097       8s
+[14:58:13]   nfl-1987                                22,720 claims   total     845,817       8s
+[14:58:13]   nfl-1988                                12,632 claims   total     858,449       8s
+[14:58:14]   nfl-1989                                12,608 claims   total     871,057       8s
+[14:58:14]   nfl-1990                                12,368 claims   total     883,425       9s
+[14:58:14]   nfl-1991                                12,512 claims   total     895,937       9s
+[14:58:14]   nfl-1992                                12,720 claims   total     908,657       9s
+[14:58:14]   nfl-1993                                12,960 claims   total     921,617       9s
+[14:58:14]   nfl-1994                                12,488 claims   total     934,105       9s
+[14:58:14]   nfl-1995                                13,688 claims   total     947,793       9s
+[14:58:14]   nfl-1996                                13,776 claims   total     961,569       9s
+[14:58:14]   nfl-1997                                13,864 claims   total     975,433       9s
+[14:58:14]   nfl-1998                                13,928 claims   total     989,361       9s
+[14:58:15]   nfl-1999                                14,448 claims   total   1,003,809      10s
+[14:58:15]   nfl-2000                                14,240 claims   total   1,018,049      10s
+[14:58:15]   nfl-2001                                14,240 claims   total   1,032,289      10s
+[14:58:15]   nfl-2002                                15,016 claims   total   1,047,305      10s
+[14:58:15]   nfl-2003                                14,968 claims   total   1,062,273      10s
+[14:58:15]   nfl-2004                                15,432 claims   total   1,077,705      10s
+[14:58:15]   nfl-2005                                15,336 claims   total   1,093,041      10s
+[14:58:15]   nfl-2006                                15,288 claims   total   1,108,329      10s
+[14:58:16]   nfl-2007                                15,568 claims   total   1,123,897      11s
+[14:58:16]   nfl-2008                                15,376 claims   total   1,139,273      11s
+[14:58:16]   nfl-2009                                15,640 claims   total   1,154,913      11s
+[14:58:16]   nfl-2010                                16,104 claims   total   1,171,017      11s
+[14:58:16]   nfl-2011                                15,768 claims   total   1,186,785      11s
+[14:58:16]   nfl-2012                                15,840 claims   total   1,202,625      11s
+[14:58:16]   nfl-2013                                17,200 claims   total   1,219,825      11s
+[14:58:17]   nfl-2014                                17,144 claims   total   1,236,969      12s
+[14:58:17]   nfl-2015                                15,896 claims   total   1,252,865      12s
+[14:58:17]   nfl-2016                                17,664 claims   total   1,270,529      12s
+[14:58:17]   nfl-2017                                16,696 claims   total   1,287,225      12s
+[14:58:17]   nfl-2018                                16,880 claims   total   1,304,105      12s
+[14:58:17]   nfl-2019                                17,032 claims   total   1,321,137      12s
+[14:58:17]   nfl-2020-lvr                                86 claims   total   1,321,223      12s
+[14:58:17]   nfl-2020                                17,528 claims   total   1,338,751      12s
+[14:58:17]   nfl-2021                                18,767 claims   total   1,357,518      12s
+[14:58:18]   nfl-2022                                17,192 claims   total   1,374,710      13s
+[14:58:18]   nfl-2023                                16,736 claims   total   1,391,446      13s
+[14:58:18]   nfl-2024                                17,272 claims   total   1,408,718      13s
+[14:58:18]   nflverse-draft                          11,682 claims   total   1,420,400      13s
+[14:58:20]   nflverse-membership                    128,359 claims   total   1,548,759      15s
+[14:58:21]   nflverse-rosters                       158,835 claims   total   1,707,594      16s
+[14:58:22]   nickname-register                            9 claims   total   1,707,603      17s
+[14:58:22]   officials-applied: not a claim store, skipped (object with no top-level claims list)
+[14:58:22]   person-merges: not a claim store, skipped (object with no top-level claims list)
+[14:58:28]   pfa-1950on                             739,596 claims   total   2,447,199      23s
+[14:58:29]   pfa-awards                              11,114 claims   total   2,458,313      24s
+[14:58:29]   pfa-boxscore-leads                           0 claims   total   2,458,313      24s
+[14:58:29]   pfa-boxscore-membership                 11,776 claims   total   2,470,089      24s
+[14:58:42]   pfa-boxscores                          930,928 claims   total   3,401,017      37s
+[14:58:44]   pfa-club-rosters                       102,872 claims   total   3,503,889      39s
+[14:58:44]   pfa-coaches                             28,991 claims   total   3,532,880      39s
+[14:58:45]   pfa-drafts                              70,192 claims   total   3,603,072      40s
+[14:58:45]   pfa-gamelogs-1920s                       4,790 claims   total   3,607,862      40s
+[14:58:45]   pfa-gamelogs-1930s                      12,451 claims   total   3,620,313      40s
+[14:58:45]   pfa-gamelogs-1940s                      33,287 claims   total   3,653,600      40s
+[14:58:46]   pfa-gamelogs-1950s                      30,526 claims   total   3,684,126      41s
+[14:58:46]   pfa-gamelogs-1960s                      66,328 claims   total   3,750,454      41s
+[14:58:48]   pfa-gamelogs-1970s                      82,336 claims   total   3,832,790      43s
+[14:58:49]   pfa-gamelogs-1980s                      98,606 claims   total   3,931,396      44s
+[14:58:51]   pfa-gamelogs-1990s                     118,048 claims   total   4,049,444      46s
+[14:58:53]   pfa-gamelogs-2000s                     221,409 claims   total   4,270,853      48s
+[14:58:56]   pfa-gamelogs-2010s                     221,821 claims   total   4,492,674      51s
+[14:58:58]   pfa-gamelogs-2020s                     135,581 claims   total   4,628,255      53s
+[14:58:58]   pfa-match: not a claim store, skipped (object with no top-level claims list)
+[14:58:58]   pfa-officials                           10,316 claims   total   4,638,571      53s
+[14:58:58]   pfa-postseason-1930s                       913 claims   total   4,639,484      53s
+[14:58:58]   pfa-postseason-1940s                     2,432 claims   total   4,641,916      53s
+[14:58:58]   pfa-postseason-1950s                     1,913 claims   total   4,643,829      53s
+[14:58:59]   pfa-postseason-1960s                     4,295 claims   total   4,648,124      53s
+[14:58:59]   pfa-postseason-1970s                     8,352 claims   total   4,656,476      54s
+[14:58:59]   pfa-postseason-1980s                    11,443 claims   total   4,667,919      54s
+[14:58:59]   pfa-postseason-1990s                    13,939 claims   total   4,681,858      54s
+[14:58:59]   pfa-postseason-2000s                    21,685 claims   total   4,703,543      54s
+[14:58:59]   pfa-postseason-2010s                    25,506 claims   total   4,729,049      54s
+[14:59:00]   pfa-postseason-2020s                    18,209 claims   total   4,747,258      55s
+[14:59:00]   pfa-pre1950                             75,072 claims   total   4,822,330      55s
+[14:59:01]   pfa-stage3                              32,683 claims   total   4,855,013      56s
+[14:59:01]   pfa-stats-1920s                          9,568 claims   total   4,864,581      56s
+[14:59:01]   pfa-stats-1930s                         23,039 claims   total   4,887,620      56s
+[14:59:02]   pfa-stats-1940s                         71,060 claims   total   4,958,680      57s
+[14:59:03]   pfa-stats-1950s                        104,890 claims   total   5,063,570      58s
+[14:59:04]   pfa-stats-1960s                        175,863 claims   total   5,239,433      59s
+[14:59:07]   pfa-stats-1970s                        210,493 claims   total   5,449,926      62s
+[14:59:10]   pfa-stats-1980s                        261,316 claims   total   5,711,242      65s
+[14:59:13]   pfa-stats-1990s                        338,516 claims   total   6,049,758      68s
+[14:59:20]   pfa-stats-2000s                        577,042 claims   total   6,626,800      75s
+[14:59:26]   pfa-stats-2010s                        602,699 claims   total   7,229,499      81s
+[14:59:30]   pfa-stats-2020s                        314,449 claims   total   7,543,948      85s
+[14:59:34]   pfa-transaction-membership             346,795 claims   total   7,890,743      89s
+[14:59:35]   pfa-wlaf-1995                              363 claims   total   7,891,106      90s
+[14:59:35]   pfr-drafts                              10,351 claims   total   7,901,457      90s
+[14:59:35]   pfr-pages                                  116 claims   total   7,901,573      90s
+[14:59:35]   pfra-annual-4-1983                         644 claims   total   7,902,217      90s
+[14:59:35]   photos                                  28,060 claims   total   7,930,277      90s
+[14:59:35]   player-promotions: not a claim store, skipped (object with no top-level claims list)
+[14:59:35]   player-seasons-promoted                      0 claims   total   7,930,277      90s
+[14:59:35]   programme-1926-chi-lat                      49 claims   total   7,930,326      90s
+[14:59:35]   programme-1926-nyy-pcw                      29 claims   total   7,930,355      90s
+[14:59:35]   promotion-names                          9,378 claims   total   7,939,733      90s
+[14:59:35]   salaries                                   209 claims   total   7,939,942      90s
+[14:59:35]   stats-aaf-2019                           4,520 claims   total   7,944,462      90s
+[14:59:35]   stats-aafc-1946                          5,069 claims   total   7,949,531      90s
+[14:59:35]   stats-aafc-1947                          4,292 claims   total   7,953,823      90s
+[14:59:35]   stats-aafc-1948                          4,212 claims   total   7,958,035      90s
+[14:59:35]   stats-aafc-1949                          3,331 claims   total   7,961,366      90s
+[14:59:35]   stats-afl-1960                           4,099 claims   total   7,965,465      90s
+[14:59:35]   stats-afl-1961                           4,053 claims   total   7,969,518      90s
+[14:59:35]   stats-afl-1962                           3,756 claims   total   7,973,274      90s
+[14:59:35]   stats-afl-1963                           3,657 claims   total   7,976,931      90s
+[14:59:35]   stats-afl-1964                           3,715 claims   total   7,980,646      90s
+[14:59:35]   stats-afl-1965                           3,543 claims   total   7,984,189      90s
+[14:59:35]   stats-afl-1966                           4,216 claims   total   7,988,405      90s
+[14:59:36]   stats-afl-1967                           4,847 claims   total   7,993,252      91s
+[14:59:36]   stats-afl-1968                           5,653 claims   total   7,998,905      91s
+[14:59:36]   stats-afl-1969                           5,168 claims   total   8,004,073      91s
+[14:59:36]   stats-apfa-1920                             13 claims   total   8,004,086      91s
+[14:59:36]   stats-apfa-1921                          1,489 claims   total   8,005,575      91s
+[14:59:36]   stats-cfl-1945                             457 claims   total   8,006,032      91s
+[14:59:36]   stats-cfl-1946                             841 claims   total   8,006,873      91s
+[14:59:36]   stats-cfl-1947                             974 claims   total   8,007,847      91s
+[14:59:36]   stats-cfl-1948                             986 claims   total   8,008,833      91s
+[14:59:36]   stats-cfl-1949                           1,020 claims   total   8,009,853      91s
+[14:59:36]   stats-cfl-1950                           2,200 claims   total   8,012,053      91s
+[14:59:36]   stats-cfl-1951                           2,536 claims   total   8,014,589      91s
+[14:59:36]   stats-cfl-1952                           3,234 claims   total   8,017,823      91s
+[14:59:36]   stats-cfl-1953                           3,185 claims   total   8,021,008      91s
+[14:59:36]   stats-cfl-1954                           4,867 claims   total   8,025,875      91s
+[14:59:36]   stats-cfl-1955                           5,177 claims   total   8,031,052      91s
+[14:59:36]   stats-cfl-1956                           5,229 claims   total   8,036,281      91s
+[14:59:36]   stats-cfl-1957                           5,381 claims   total   8,041,662      91s
+[14:59:36]   stats-cfl-1958                           5,022 claims   total   8,046,684      91s
+[14:59:36]   stats-cfl-1959                           5,113 claims   total   8,051,797      91s
+[14:59:36]   stats-cfl-1960                           4,919 claims   total   8,056,716      91s
+[14:59:36]   stats-cfl-1961                           4,900 claims   total   8,061,616      91s
+[14:59:36]   stats-cfl-1962                           4,430 claims   total   8,066,046      91s
+[14:59:36]   stats-cfl-1963                           4,741 claims   total   8,070,787      91s
+[14:59:36]   stats-cfl-1964                           4,537 claims   total   8,075,324      91s
+[14:59:36]   stats-cfl-1965                           4,451 claims   total   8,079,775      91s
+[14:59:36]   stats-cfl-1966                           4,034 claims   total   8,083,809      91s
+[14:59:36]   stats-cfl-1967                           4,318 claims   total   8,088,127      91s
+[14:59:36]   stats-cfl-1968                           4,098 claims   total   8,092,225      91s
+[14:59:36]   stats-cfl-1969                           4,333 claims   total   8,096,558      91s
+[14:59:36]   stats-cfl-1970                           4,526 claims   total   8,101,084      91s
+[14:59:36]   stats-cfl-1971                           4,769 claims   total   8,105,853      91s
+[14:59:36]   stats-cfl-1972                           4,364 claims   total   8,110,217      91s
+[14:59:36]   stats-cfl-1973                           4,352 claims   total   8,114,569      91s
+[14:59:36]   stats-cfl-1974                           4,128 claims   total   8,118,697      91s
+[14:59:36]   stats-cfl-1975                           4,615 claims   total   8,123,312      91s
+[14:59:36]   stats-cfl-1976                           4,474 claims   total   8,127,786      91s
+[14:59:36]   stats-cfl-1977                           4,743 claims   total   8,132,529      91s
+[14:59:36]   stats-cfl-1978                           4,688 claims   total   8,137,217      91s
+[14:59:36]   stats-cfl-1979                           4,601 claims   total   8,141,818      91s
+[14:59:36]   stats-cfl-1980                           4,748 claims   total   8,146,566      91s
+[14:59:37]   stats-cfl-1981                           4,733 claims   total   8,151,299      91s
+[14:59:37]   stats-cfl-1982                           5,113 claims   total   8,156,412      92s
+[14:59:37]   stats-cfl-1983                           5,136 claims   total   8,161,548      92s
+[14:59:37]   stats-cfl-1984                           5,363 claims   total   8,166,911      92s
+[14:59:37]   stats-cfl-1985                           5,209 claims   total   8,172,120      92s
+[14:59:37]   stats-cfl-1986                           6,053 claims   total   8,178,173      92s
+[14:59:37]   stats-cfl-1987                           5,676 claims   total   8,183,849      92s
+[14:59:37]   stats-cfl-1988                           5,634 claims   total   8,189,483      92s
+[14:59:37]   stats-cfl-1989                           5,679 claims   total   8,195,162      92s
+[14:59:37]   stats-cfl-1990                           5,993 claims   total   8,201,155      92s
+[14:59:37]   stats-cfl-1991                           6,905 claims   total   8,208,060      92s
+[14:59:37]   stats-cfl-1992                           6,588 claims   total   8,214,648      92s
+[14:59:37]   stats-cfl-1993                           7,184 claims   total   8,221,832      92s
+[14:59:37]   stats-cfl-1994                           9,681 claims   total   8,231,513      92s
+[14:59:37]   stats-cfl-1995                          10,798 claims   total   8,242,311      92s
+[14:59:37]   stats-cfl-1996                           6,926 claims   total   8,249,237      92s
+[14:59:37]   stats-cfl-1997                           5,934 claims   total   8,255,171      92s
+[14:59:37]   stats-cfl-1998                           5,970 claims   total   8,261,141      92s
+[14:59:37]   stats-cfl-1999                           5,882 claims   total   8,267,023      92s
+[14:59:37]   stats-cfl-2000                           5,983 claims   total   8,273,006      92s
+[14:59:37]   stats-cfl-2001                           6,132 claims   total   8,279,138      92s
+[14:59:37]   stats-cfl-2002                           7,051 claims   total   8,286,189      92s
+[14:59:37]   stats-cfl-2003                           6,971 claims   total   8,293,160      92s
+[14:59:37]   stats-cfl-2004                           6,870 claims   total   8,300,030      92s
+[14:59:38]   stats-cfl-2005                           7,161 claims   total   8,307,191      93s
+[14:59:38]   stats-cfl-2006                           6,151 claims   total   8,313,342      93s
+[14:59:38]   stats-cfl-2007                           6,384 claims   total   8,319,726      93s
+[14:59:38]   stats-cfl-2008                           6,525 claims   total   8,326,251      93s
+[14:59:38]   stats-cfl-2009                           6,487 claims   total   8,332,738      93s
+[14:59:38]   stats-cfl-2010                           6,712 claims   total   8,339,450      93s
+[14:59:38]   stats-cfl-2011                           6,155 claims   total   8,345,605      93s
+[14:59:38]   stats-cfl-2012                           6,272 claims   total   8,351,877      93s
+[14:59:38]   stats-cfl-2013                           6,981 claims   total   8,358,858      93s
+[14:59:38]   stats-cfl-2014                           7,447 claims   total   8,366,305      93s
+[14:59:38]   stats-cfl-2015                          10,514 claims   total   8,376,819      93s
+[14:59:38]   stats-cfl-2016                          10,988 claims   total   8,387,807      93s
+[14:59:38]   stats-cfl-2017                           9,436 claims   total   8,397,243      93s
+[14:59:38]   stats-cfl-2018                           9,101 claims   total   8,406,344      93s
+[14:59:38]   stats-cfl-2019                           8,335 claims   total   8,414,679      93s
+[14:59:38]   stats-cfl-2021                           6,810 claims   total   8,421,489      93s
+[14:59:38]   stats-cfl-2022                           8,297 claims   total   8,429,786      93s
+[14:59:38]   stats-cfl-2023                           7,391 claims   total   8,437,177      93s
+[14:59:39]   stats-cfl-2024                           7,142 claims   total   8,444,319      94s
+[14:59:39]   stats-cfl-2025                           7,305 claims   total   8,451,624      94s
+[14:59:39]   stats-nfl-1922                           1,402 claims   total   8,453,026      94s
+[14:59:39]   stats-nfl-1923                           1,520 claims   total   8,454,546      94s
+[14:59:39]   stats-nfl-1924                           1,526 claims   total   8,456,072      94s
+[14:59:39]   stats-nfl-1925                           1,732 claims   total   8,457,804      94s
+[14:59:39]   stats-nfl-1926                           1,788 claims   total   8,459,592      94s
+[14:59:39]   stats-nfl-1927                           1,228 claims   total   8,460,820      94s
+[14:59:39]   stats-nfl-1928                           1,055 claims   total   8,461,875      94s
+[14:59:39]   stats-nfl-1929                           1,153 claims   total   8,463,028      94s
+[14:59:39]   stats-nfl-1930                           1,329 claims   total   8,464,357      94s
+[14:59:39]   stats-nfl-1931                           1,165 claims   total   8,465,522      94s
+[14:59:39]   stats-nfl-1932                           2,307 claims   total   8,467,829      94s
+[14:59:39]   stats-nfl-1933                           3,058 claims   total   8,470,887      94s
+[14:59:39]   stats-nfl-1934                           3,216 claims   total   8,474,103      94s
+[14:59:39]   stats-nfl-1935                           3,053 claims   total   8,477,156      94s
+[14:59:39]   stats-nfl-1936                           3,002 claims   total   8,480,158      94s
+[14:59:39]   stats-nfl-1937                           3,379 claims   total   8,483,537      94s
+[14:59:39]   stats-nfl-1938                           3,670 claims   total   8,487,207      94s
+[14:59:39]   stats-nfl-1939                           3,900 claims   total   8,491,107      94s
+[14:59:39]   stats-nfl-1940                           4,235 claims   total   8,495,342      94s
+[14:59:39]   stats-nfl-1941                           5,549 claims   total   8,500,891      94s
+[14:59:39]   stats-nfl-1942                           4,989 claims   total   8,505,880      94s
+[14:59:39]   stats-nfl-1943                           3,683 claims   total   8,509,563      94s
+[14:59:39]   stats-nfl-1944                           4,613 claims   total   8,514,176      94s
+[14:59:39]   stats-nfl-1945                           5,920 claims   total   8,520,096      94s
+[14:59:39]   stats-nfl-1946                           6,066 claims   total   8,526,162      94s
+[14:59:39]   stats-nfl-1947                           6,374 claims   total   8,532,536      94s
+[14:59:39]   stats-nfl-1948                           6,368 claims   total   8,538,904      94s
+[14:59:39]   stats-nfl-1949                           5,689 claims   total   8,544,593      94s
+[14:59:39]   stats-nfl-1950                           7,484 claims   total   8,552,077      94s
+[14:59:39]   stats-nfl-1951                           6,340 claims   total   8,558,417      94s
+[14:59:39]   stats-nfl-1952                           7,069 claims   total   8,565,486      94s
+[14:59:39]   stats-nfl-1953                           6,477 claims   total   8,571,963      94s
+[14:59:39]   stats-nfl-1954                           6,377 claims   total   8,578,340      94s
+[14:59:40]   stats-nfl-1955                           6,074 claims   total   8,584,414      95s
+[14:59:40]   stats-nfl-1956                           5,965 claims   total   8,590,379      95s
+[14:59:40]   stats-nfl-1957                           6,097 claims   total   8,596,476      95s
+[14:59:40]   stats-nfl-1958                           6,062 claims   total   8,602,538      95s
+[14:59:40]   stats-nfl-1959                           5,884 claims   total   8,608,422      95s
+[14:59:40]   stats-nfl-1960                           6,154 claims   total   8,614,576      95s
+[14:59:40]   stats-nfl-1961                           7,010 claims   total   8,621,586      95s
+[14:59:40]   stats-nfl-1962                           7,015 claims   total   8,628,601      95s
+[14:59:40]   stats-nfl-1963                           7,205 claims   total   8,635,806      95s
+[14:59:40]   stats-nfl-1964                           7,391 claims   total   8,643,197      95s
+[14:59:40]   stats-nfl-1965                           7,547 claims   total   8,650,744      95s
+[14:59:40]   stats-nfl-1966                           8,040 claims   total   8,658,784      95s
+[14:59:40]   stats-nfl-1967                           8,504 claims   total   8,667,288      95s
+[14:59:40]   stats-nfl-1968                           8,271 claims   total   8,675,559      95s
+[14:59:40]   stats-nfl-1969                           8,336 claims   total   8,683,895      95s
+[14:59:40]   stats-nfl-1970                          13,581 claims   total   8,697,476      95s
+[14:59:40]   stats-nfl-1971                          13,706 claims   total   8,711,182      95s
+[14:59:40]   stats-nfl-1972                          13,545 claims   total   8,724,727      95s
+[14:59:41]   stats-nfl-1973                          13,669 claims   total   8,738,396      96s
+[14:59:41]   stats-nfl-1974                          14,278 claims   total   8,752,674      96s
+[14:59:41]   stats-nfl-1975                          14,118 claims   total   8,766,792      96s
+[14:59:41]   stats-nfl-1976                          15,270 claims   total   8,782,062      96s
+[14:59:41]   stats-nfl-1977                          14,870 claims   total   8,796,932      96s
+[14:59:41]   stats-nfl-1978                          15,839 claims   total   8,812,771      96s
+[14:59:41]   stats-nfl-1979                          16,014 claims   total   8,828,785      96s
+[14:59:41]   stats-nfl-1980                          15,553 claims   total   8,844,338      96s
+[14:59:42]   stats-nfl-1981                          16,111 claims   total   8,860,449      97s
+[14:59:42]   stats-nfl-1982                          13,120 claims   total   8,873,569      97s
+[14:59:42]   stats-nfl-1983                          17,037 claims   total   8,890,606      97s
+[14:59:42]   stats-nfl-1984                          16,658 claims   total   8,907,264      97s
+[14:59:42]   stats-nfl-1985                          16,059 claims   total   8,923,323      97s
+[14:59:43]   stats-nfl-1986                          16,707 claims   total   8,940,030      98s
+[14:59:43]   stats-nfl-1987                          22,924 claims   total   8,962,954      98s
+[14:59:43]   stats-nfl-1988                          16,677 claims   total   8,979,631      98s
+[14:59:43]   stats-nfl-1989                          17,470 claims   total   8,997,101      98s
+[14:59:43]   stats-nfl-1990                          16,563 claims   total   9,013,664      98s
+[14:59:43]   stats-nfl-1991                          16,955 claims   total   9,030,619      98s
+[14:59:43]   stats-nfl-1992                          17,133 claims   total   9,047,752      98s
+[14:59:44]   stats-nfl-1993                          17,631 claims   total   9,065,383      99s
+[14:59:44]   stats-nfl-1994                          17,780 claims   total   9,083,163      99s
+[14:59:44]   stats-nfl-1995                          19,490 claims   total   9,102,653      99s
+[14:59:44]   stats-nfl-1996                          19,183 claims   total   9,121,836      99s
+[14:59:44]   stats-nfl-1997                          19,612 claims   total   9,141,448      99s
+[14:59:44]   stats-nfl-1998                          19,607 claims   total   9,161,055      99s
+[14:59:44]   stats-nfl-1999                          20,688 claims   total   9,181,743      99s
+[14:59:44]   stats-nfl-2000                          20,325 claims   total   9,202,068      99s
+[14:59:45]   stats-nfl-2001                          20,848 claims   total   9,222,916     100s
+[14:59:45]   stats-nfl-2002                          20,811 claims   total   9,243,727     100s
+[14:59:45]   stats-nfl-2003                          21,873 claims   total   9,265,600     100s
+[14:59:45]   stats-nfl-2004                          22,341 claims   total   9,287,941     100s
+[14:59:45]   stats-nfl-2005                          21,666 claims   total   9,309,607     100s
+[14:59:46]   stats-nfl-2006                          21,211 claims   total   9,330,818     101s
+[14:59:46]   stats-nfl-2007                          21,939 claims   total   9,352,757     101s
+[14:59:46]   stats-nfl-2008                          23,130 claims   total   9,375,887     101s
+[14:59:46]   stats-nfl-2009                          23,440 claims   total   9,399,327     101s
+[14:59:46]   stats-nfl-2010                          23,879 claims   total   9,423,206     101s
+[14:59:46]   stats-nfl-2011                          23,095 claims   total   9,446,301     101s
+[14:59:46]   stats-nfl-2012                          21,438 claims   total   9,467,739     101s
+[14:59:47]   stats-nfl-2013                          22,733 claims   total   9,490,472     102s
+[14:59:47]   stats-nfl-2014                          23,734 claims   total   9,514,206     102s
+[14:59:47]   stats-nfl-2015                          21,973 claims   total   9,536,179     102s
+[14:59:47]   stats-nfl-2016                          21,433 claims   total   9,557,612     102s
+[14:59:47]   stats-nfl-2017                          21,524 claims   total   9,579,136     102s
+[14:59:48]   stats-nfl-2018                          26,162 claims   total   9,605,298     103s
+[14:59:48]   stats-nfl-2019                          25,740 claims   total   9,631,038     103s
+[14:59:48]   stats-nfl-2020                          25,810 claims   total   9,656,848     103s
+[14:59:48]   stats-nfl-2021                          28,884 claims   total   9,685,732     103s
+[14:59:48]   stats-nfl-2022                          25,433 claims   total   9,711,165     103s
+[14:59:49]   stats-nfl-2023                          24,730 claims   total   9,735,895     104s
+[14:59:49]   stats-nfl-2024                          24,692 claims   total   9,760,587     104s
+[14:59:49]   stats-ufl-2009                           2,683 claims   total   9,763,270     104s
+[14:59:49]   stats-ufl-2010                           3,701 claims   total   9,766,971     104s
+[14:59:49]   stats-ufl-2011                           1,860 claims   total   9,768,831     104s
+[14:59:49]   stats-ufl-2012                           1,869 claims   total   9,770,700     104s
+[14:59:49]   stats-ufl2-2024                          4,257 claims   total   9,774,957     104s
+[14:59:49]   stats-usfl-1983                          6,873 claims   total   9,781,830     104s
+[14:59:49]   stats-usfl-1984                          9,935 claims   total   9,791,765     104s
+[14:59:49]   stats-usfl-1985                          7,364 claims   total   9,799,129     104s
+[14:59:49]   stats-usfl2-2022                         4,732 claims   total   9,803,861     104s
+[14:59:49]   stats-usfl2-2023                         4,021 claims   total   9,807,882     104s
+[14:59:49]   stats-wfl-1974                           7,835 claims   total   9,815,717     104s
+[14:59:49]   stats-wfl-1975                           5,071 claims   total   9,820,788     104s
+[14:59:49]   stats-wlaf-1991                          3,691 claims   total   9,824,479     104s
+[14:59:49]   stats-wlaf-1992                          3,500 claims   total   9,827,979     104s
+[14:59:49]   stats-xfl-2001                           4,469 claims   total   9,832,448     104s
+[14:59:49]   stats-xfl-2020                           3,273 claims   total   9,835,721     104s
+[14:59:49]   stats-xfl-2023                           4,724 claims   total   9,840,445     104s
+[14:59:49]   troan-experience                            20 claims   total   9,840,465     104s
+[14:59:49]   ufl-2009                                 2,048 claims   total   9,842,513     104s
+[14:59:49]   ufl-2010                                 2,840 claims   total   9,845,353     104s
+[14:59:49]   ufl-2011                                 2,200 claims   total   9,847,553     104s
+[14:59:49]   ufl-2012                                 1,796 claims   total   9,849,349     104s
+[14:59:49]   ufl2-2024                                4,024 claims   total   9,853,373     104s
+[14:59:49]   usfl-1983                                6,720 claims   total   9,860,093     104s
+[14:59:50]   usfl-1984                                9,832 claims   total   9,869,925     105s
+[14:59:50]   usfl-1985                                6,927 claims   total   9,876,852     105s
+[14:59:50]   usfl2-2022                               3,592 claims   total   9,880,444     105s
+[14:59:50]   usfl2-2023                               4,464 claims   total   9,884,908     105s
+[14:59:50]   wfl-1974                                 7,127 claims   total   9,892,035     105s
+[14:59:50]   wfl-1975                                 4,740 claims   total   9,896,775     105s
+[14:59:50]   wikipedia-photos-backfill                  432 claims   total   9,897,207     105s
+[14:59:50]   wikipedia-photos-replacements            1,667 claims   total   9,898,874     105s
+[14:59:50]   wikipedia-photos-sweep                   1,622 claims   total   9,900,496     105s
+[14:59:50]   wikipedia-plunkett                           6 claims   total   9,900,502     105s
+[14:59:50]   wikipedia-seasons-aaf                        0 claims   total   9,900,502     105s
+[14:59:50]   wikipedia-seasons-arena                     31 claims   total   9,900,533     105s
+[14:59:50]   wikipedia-seasons-cfl                      533 claims   total   9,901,066     105s
+[14:59:50]   wikipedia-seasons-ufl                       34 claims   total   9,901,100     105s
+[14:59:50]   wikipedia-seasons-usfl2                     16 claims   total   9,901,116     105s
+[14:59:50]   wikipedia-seasons-wfl                        0 claims   total   9,901,116     105s
+[14:59:50]   wikipedia-seasons-xfl                       16 claims   total   9,901,132     105s
+[14:59:50]   wikipedia                               40,794 claims   total   9,941,926     105s
+[14:59:50]   wip-drafts                               5,574 claims   total   9,947,500     105s
+[14:59:50]   wlaf-1991                                3,896 claims   total   9,951,396     105s
+[14:59:50]   wlaf-1992                                3,640 claims   total   9,955,036     105s
+[14:59:50]   xfl-2001                                 3,928 claims   total   9,958,964     105s
+[14:59:50]   xfl-2020                                 4,184 claims   total   9,963,148     105s
+[14:59:50]   xfl-2023                                 4,544 claims   total   9,967,692     105s
+[14:59:50] people: reading the index once, then releasing it
+[14:59:55] people: 51,239 (claims 51,164, identity 40,745, claims|identity 51,239, index 51,239); names 187,165
+[14:59:55] indexes
+[15:00:27] source summary
+[15:00:36] per-person family and stint summaries
+[15:00:47] contested
+[15:00:50]   values folded by a declared reading rather than recorded as disagreeing: 67,214
+[15:00:50]   9,245 (person, family) pairs contested
+[15:00:50] gates
+[15:01:04]   RS-G1 unreadable dates: PASS  {'date_strings_read': 258944, 'unreadable_undeclared': 0, 'unreadable_declared_as_printed': 20, 'declared_but_no_longer_seen': 0}
+[15:01:04]   RS-G2 unresolved persons: PASS  {'unresolved_undeclared_claims': 0, 'undeclared_stores': 0, 'unresolved_declared_claims': 72519, 'declared_stores': 16}
+[15:01:04]   RS-G3 source records: FAIL  {'claims_naming_a_record_not_in_their_store': 414, 'claims_naming_no_record': 0, 'stores_without_a_record_table': 30, 'claims_in_stores_without_a_table': 2579729, 'records_prefixed_by_another_source_id': 356611, 'claims_from_undeclared_sources': 16134}
+[15:01:04]   RS-G4 population reconciles with the index: PASS  {'ours': 51239, 'index': 51239, 'in_index_not_here': 0, 'here_not_in_index': 0}
+[15:01:04]   RS-G5 every build file accounted for: FAIL  {'files_in_build': 983, 'stores_in_the_model': 530, 'unexplained': 1, 'declaration_stale': 0, 'declared_but_gone': 0, 'explained': 452, 'pending_a_rebuild': 0, 'reader_no_longer_refuses': 0}
+[15:01:04]   RS-G6 no false disagreement: PASS  {'families_needing_a_reading': 8, 'of_those_with_one': 8, 'families_WITHOUT_a_reading': 0, 'readers_available': 9, 'contested_rows_skipped_because_their_family_has_no_reading': 0, 'contested_facts_checked': 9092, 'false_disagreements': 0, 'facts_with_an_unreadable_value': 1513}
+[15:01:04]   RS-G7 every league token is a league: PASS  {'distinct_tokens': 34, 'in_the_club_table': 31, 'declared_non_competitions': 3, 'fabricated': 0, 'claims_on_fabricated_tokens': 0}
+[15:01:04]   RS-G8 classification is declared, not read off a name: PASS  {'statistic_stores_declared': 228, 'predicates_seen': 398, 'predicates_wholly_inside_a_statistics_store': 171, 'predicates_straddling_the_boundary': 0, 'staff_predicates_declared': 4, 'name_predicates_declared': 7, 'worked_examples_checked': 19, 'index_names_with_a_comma': 2476, 'people_holding_a_bare_surname_beside_a_fuller_name': 2, 'of_those_read_as_surname_first': 2364, 'differences': 0, 'declared_stores_no_longer_in_the_model': 0}
+[15:01:04] analyze
+[15:01:20] built in 195s: 9,967,692 claims, 51,239 people, 530 stores
+
+WARNING: publishing with FAILED gates because --force was given. Every response will say so.
+  kept the outgoing model as previous/archive-20260911T143410-c0789eba0b170cf3.sqlite (c0789eba0b170cf3, built 2026-09-11T14:34:10); 2 retained
+  removed previous/archive-20260911T133957-cd4af4a6739db476.sqlite: oldest beyond KEEP_PREVIOUS
+published /Users/ryannecci/Library/Caches/football-archive-service/archive.sqlite
+exit 0

@@ -16,6 +16,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 from ingest_pfa import claim, kin_claim, disagreement, date_key, SRC_ID, DECL as SRC_DECL, PFAError
 from pfa_coach_pages import parse_coach, load, CACHE, CoachPageError
+import index_io as IO                       # the shared writer: atomic, and it states every loss
 
 DECL = json.load(open(os.path.join(BASE, "declarations", "pfa-coaches.json"), encoding="utf-8"))
 LISTS = ("nfl-head-coaches", "nfl-assistant-coaches", "cfl-head-coaches", "cfl-assistant-coaches")
@@ -71,9 +72,15 @@ class Archive:
             nm = norm(p.get("name")); self.by_name[nm].append(pid)
             bd = (p.get("person") or {}).get("birth_date"); bd = bd[0] if isinstance(bd, list) and bd else bd
             if date_key(bd): self.by_name_bd[(nm, date_key(bd))].append(pid)
-            for k in p.get("seasons") or {}:
+            # WHERE THE INDEX KEEPS A COACHING SEASON NOW. Ruled 2026-09-09 ("a coaching season
+            # is held in one shape"): every COACHES| key moved out of `seasons` into
+            # `coaching_seasons`. This read only `seasons`, so after the move the index half of
+            # the coaching route was empty and 18 coaches were refused (Ryan, 2026-09-11: read
+            # the right place -- a reader looking where a fix moved something away will bite
+            # again). `seasons` is still read, so an index from before the move reads the same.
+            for k in list(p.get("coaching_seasons") or {}) + list(p.get("seasons") or {}):
                 if k.startswith("COACHES|"):
-                    _, y, club = k.split("|", 2); y = int(y[1:5])
+                    _, y, club = k.split("|", 2); y = int(y.lstrip("y")[:4])
                     self.coach_stints[(nm, y, nclub(self.club_name(club, y)))].add(pid)
                     self.coach_stints[(nm, y, nclub(club))].add(pid)
         # PFA player codes -> person, and every (person, predicate, value) PFA already states
@@ -136,12 +143,27 @@ class Archive:
 
 
 # ------------------------------------------------------------------ identity
+def canonical(A, pid):
+    """A MERGE SHELL IS NOT A SECOND PERSON. A record carrying `merged_into` is the same man as
+    the record it names; every id a route returns is followed there before ids are compared.
+    Ruled 2026-09-11: 18 coaches -- Maxie Baughan's P_014163 is `merged_into` P_018985 -- were
+    refused as route conflicts between a man and his own retired id."""
+    seen = set()
+    while pid and pid not in seen:
+        seen.add(pid)
+        nxt = ((A.people.get(pid) or {}).get("merged_into") or {}).get("person")
+        if not nxt: return pid
+        pid = nxt
+    return pid
+
+
 def resolve(A, d):
-    """Three routes, every one of them structural or exact. Returns (pid, routes, why)."""
+    """Three routes, every one of them structural or exact. Returns (pid, routes, why).
+    Every candidate id is canonical (followed through `merged_into`) before any comparison."""
     nm = norm(d["name"]); cands = {}; notes = []; amb = {}
     if d["links"]["players"]:
         pc = d["links"]["players"][0]; url = f"players/{pc[0]}/{pc}.html"
-        pids = A.player_code.get(url, set())
+        pids = {canonical(A, p) for p in A.player_code.get(url, set())}
         if len(pids) == 1: cands["playing_record"] = next(iter(pids))
         elif len(pids) > 1: notes.append(f"playing record {url} resolves to {len(pids)} people")
         else: notes.append(f"playing record {url} is not resolved by stages one or two")
@@ -150,13 +172,14 @@ def resolve(A, d):
         if s["section"] != "REGULAR SEASON": continue
         for key in ((nm, s["year"], nclub(club_printed(s))), (nm, s["year"], nclub(s["club"]))):
             hits |= A.coach_stints.get(key, set())
+    hits = {canonical(A, p) for p in hits}          # a man and his merge shell are one hit
     if len(hits) == 1: cands["name+coaching_club_season"] = next(iter(hits))
     elif len(hits) > 1:
         notes.append(f"{len(hits)} archive people of this name share his coaching club-seasons")
         amb["name+coaching_club_season"] = sorted(hits)
     bd = date_key(d["bio"].get("birth_date"))
     if bd:
-        pids = A.by_name_bd.get((nm, bd), [])
+        pids = sorted({canonical(A, p) for p in A.by_name_bd.get((nm, bd), [])})
         if len(pids) == 1: cands["name+birth_date"] = pids[0]
         elif len(pids) > 1:
             notes.append(f"{len(pids)} archive people share this name and birth date")
@@ -258,6 +281,7 @@ def main(write=True):
         raise PFACoachError(f"pages on disk ({len(codes)}) != codes in the four lists ({len(by_code)})")
     officials = official_codes(); shared = sorted(set(codes) & officials)
     claims, leads, cmp, n = [], [], [], collections.Counter()
+    page_reason, fact_reason = {}, {}         # the ingest's own account of anything it drops
     bd_dis, intra, pairs = [], [], collections.Counter()
     vocab = collections.Counter(); people = {}; routes = collections.Counter(); flags = collections.Counter()
     for code in codes:
@@ -270,7 +294,14 @@ def main(write=True):
         n["rows_without_club"] += len(d["rows_without_club"])
         if not pid:
             leads.append(lead_record(len(leads) + 1, d, code, why, cands, by_code[code], code in officials))
-            n["lead:" + why.split(":")[0]] += 1; continue
+            n["lead:" + why.split(":")[0]] += 1
+            # WHY A COACH'S CLAIMS ARE NOT WRITTEN, for the writer's loss list: the page became a
+            # lead, and the ids each route named ride along so a conflict with a merge shell is
+            # visible to gate_reingest_losses R2.
+            ids = sorted({v for v in cands.values() if isinstance(v, str)}) if isinstance(cands, dict) else []
+            page_reason[f"{SRC_ID}#coaches/{code}.html"] = (f"the coach page became a lead: {why.split(':')[0]}",
+                                                            {"candidates": ids} if ids else {})
+            continue
         routes["+".join(cands)] += 1
         sr = f"{SRC_ID}#coaches/{code}.html"
         people[code] = {"person": pid, "routes": cands, "lists": sorted(by_code[code]),
@@ -282,7 +313,10 @@ def main(write=True):
             v = b.get(f, "")
             if not v: continue
             same = (pid, pred, json.dumps(v, sort_keys=True)) in A.held
-            if same: n["bio_already_on_player_page"] += 1; continue
+            if same:
+                n["bio_already_on_player_page"] += 1
+                fact_reason[(sr, pred, json.dumps(v, sort_keys=True))] = "already stated on the PFA player page"
+                continue
             other = A.held_vals.get((pid, pred), [])
             claims.append(claim(sr, pid, pred, v)); n[f] += 1
             if other:
@@ -331,7 +365,16 @@ def main(write=True):
                       "store_stints": {s: {"stints": v["stints"], "unmapped_local_ids": v["unmapped_local_ids"]} for s, v in A.stores.items()}}}
     if write:
         fp = os.path.join(BASE, "build", "pfa-coaches.json")
-        json.dump(out, open(fp, "w"), indent=1, ensure_ascii=False)
+
+        def reasons(c):
+            sr = c.get("source_record")
+            if sr in page_reason: return page_reason[sr]
+            r = fact_reason.get((sr, c.get("predicate"), json.dumps(c.get("value"), sort_keys=True)))
+            return (r, {}) if r else None
+        # THROUGH THE SHARED WRITER (Ryan, 2026-09-11): atomic, and every claim this run no longer
+        # writes is listed in the store with its reason. This used to be a bare json.dump that
+        # overwrote the predecessor and said nothing when 18 coaches went.
+        IO.write_store(out, fp, reasons=reasons, indent=1, ensure_ascii=False)
         print("wrote", fp)
     print(json.dumps({k: out["counts"][k] for k in out["counts"]}, indent=1, default=str))
     print(json.dumps(out["disagreements"]["coaching_stores_by_kind"], indent=1))
