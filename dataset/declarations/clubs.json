@@ -10,7 +10,8 @@
   "_measured_before_declaring": "Every claim carrying USFL in 2022-23 sits on a club the table places in USFL2 that year (13,300 of 13,300); every claim carrying UFL in 2024 on a club in UFL2 (6,591 of 6,591). The split index keys use the same club codes on both sides, so the two halves rejoin once the label is read.",
   "labels": [
    {"label": "USFL", "first": 2022, "last": 2023, "token": "USFL2", "why": "the 2022-23 USFL; the 1983-85 league keeps USFL"},
-   {"label": "UFL", "first": 2024, "last": 9999, "token": "UFL2", "why": "the UFL from 2024; the 2009-12 league keeps UFL"}
+   {"label": "UFL", "first": 2024, "last": 9999, "token": "UFL2", "why": "the UFL from 2024; the 2009-12 league keeps UFL"},
+   {"label": "AA", "first": 1936, "last": 1941, "token": "AFA", "why": "Ryan, 2026-09-11: ONE league. PFA prints the same page two ways -- `1936 Brooklyn Bay Parkways (AFA)` in its title, `1936 Brooklyn Bay Parkways (AA)` in its header -- and the archive read both: the club-roster reader took the title (7,230 claims, AFA), the statistics reader took the header (666 claims, AA, which no club held, so they carried no league at all). PFA's season pages head the section `American Football Association (AFA)`. No source says these are two competitions. The claims keep `AA` as printed in their season keys; the league is read as AFA."}
   ]
  },
  "RELOCATIONS_WITHIN_A_SEASON": {
@@ -887,7 +888,7 @@
   },
   "AA": {
    "name": "American Association",
-   "ruling": "NOT ESTABLISHED. Ryan, 2026-09-08: establish what it is before doing anything with it. Nothing is done with it.",
+   "ruling": "ESTABLISHED, Ryan 2026-09-11: ONE league with the AFA. PFA prints `(AFA)` in the title and `(AA)` in the header of the same 45 team-season pages, its season pages head the section `American Football Association (AFA)`, and no source says these were two competitions. The 666 AA claims are read as AFA through LEAGUE_LABELS_BY_YEAR; the printed AA stays on them. Whether the league is IN SCOPE is unchanged: AFA is under MINOR_LEAGUE_EXCLUSION. (Earlier, 2026-09-08: establish what it is before doing anything with it.)",
    "claims_carrying_no_league": 666,
    "what_was_established": "PFA files these under `afa` page names (1936afabkn.html ... 1941afawil.html), 1936-1941, with clubs in Brooklyn, Paterson, Jersey City, Wilmington, Newark, Union City, Long Island, Danbury, Providence and New Rochelle. 45 team-season pages. Eleven club strings, all of which the table already resolves to clubs it holds. It is a north-eastern professional league of that period and it is NOT the 1920-21 APFA.",
    "what_was_NOT_established": "whether it falls inside or outside the minor-league exclusion. declarations/salary_conventions.json already warns that a 1938 contract naming 'The American Professional Football Association' is a 1930s MINOR league distinct from the 1920-21 APFA, which points the same way but is about a different body and is not a ruling on this one. No decision is recorded and no league is added.",

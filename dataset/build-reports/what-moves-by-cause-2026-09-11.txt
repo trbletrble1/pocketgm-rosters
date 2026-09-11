@@ -1,0 +1,6 @@
+declared pair: 8,565 season keys, 2,531 men [('P_000047', 'NFL|2015|GB'), ('P_000161', 'NFL|2013|CAR'), ('P_000161', 'NFL|2013|SEA'), ('P_000281', 'NFL|2016|NE'), ('P_000314', 'NFL|2016|KC'), ('P_000314', 'NFL|2016|MIA'), ('P_000379', 'NFL|2014|DET'), ('P_000404', 'NFL|2020|LARM')]
+declared pair (AA->AFA rename): 90 season keys, 68 men [('P_000502', 'AA|1940|PFA:NEW'), ('P_000683', 'AA|1941|PFA:PAT'), ('P_014830', 'AA|1936|PFA:PAT'), ('P_014294', 'AA|1939|PFA:NEW'), ('P_014294', 'AA|1940|PFA:NEW'), ('P_003529', 'AA|1939|PFA:NEW'), ('P_003529', 'AA|1940|PFA:NEW'), ('P_003656', 'AA|1940|PFA:WIL')]
+club-seasons in shrunk: 754
+lost man-clubs: real clubs 7,015 (2,491 men); pseudo-clubs that were only a wrong key 51
+club-seasons losing men: real 744, phantom 10; man-seasons removed from real ones 8,511
+real club-seasons 1934/1949/pre-1933 (game-log keys): [('club-new-york-giants-1925|NFL|1949', 24), ('club-new-york-yankees-1946|AAFC|1949', 7), ('club-san-francisco-49ers-1946|AAFC|1949', 9), ('club-philadelphia-eagles-1933|NFL|1949', 6), ('club-cleveland-rams-1937|NFL|1949', 4), ('club-decatur-staleys-1920|NFL|1934', 4), ('club-new-york-giants-1925|NFL|1934', 5), ('club-cleveland-browns-1946|AAFC|1949', 10), ('club-buffalo-bisons-1946|AAFC|1949', 5), ('club-cincinnati-reds-1933|NFL|1934', 1)]

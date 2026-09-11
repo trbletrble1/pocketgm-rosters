@@ -1,0 +1,4 @@
+  ok   G2 every rewritten club string among 68,313 game claims is one PFA prints rightly for the club
+  ok   G3 no man's club-season sits on two strings PFA did not both print
+
+GAME CLUB GATE: pass

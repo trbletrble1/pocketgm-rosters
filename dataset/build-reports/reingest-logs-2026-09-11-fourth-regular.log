@@ -1,0 +1,159 @@
+=== regular 1920
+PFA LOGS -> pfa-gamelogs-1920s   (WRITE)
+  disagreement                                  38
+  game_as_logged                               738
+  game_log                                   4,014
+  game_with_one_side_only                      458
+  refused                                      594
+  rows_refused_no_usable_team_link               0
+  rows_with_a_phase_outside_the_vocabulary         0
+  short_sum_not_written_as_a_claim              43
+  claims                                     4,790
+  refused (counted, never invented)            594
+         594  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-1920s.json  (4,861,004 bytes)
+=== regular 1930
+PFA LOGS -> pfa-gamelogs-1930s   (WRITE)
+  club_string_from_the_table_code               66
+  disagreement                                 161
+  game_as_logged                               562
+  game_log                                  11,728
+  game_with_one_side_only                       78
+  refused                                    1,026
+  rows_refused_no_usable_team_link               0
+  rows_with_a_phase_outside_the_vocabulary         0
+  short_sum_not_written_as_a_claim             358
+  claims                                    12,451
+  refused (counted, never invented)          1,026
+       1,026  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-1930s.json  (11,951,834 bytes)
+=== regular 1940
+PFA LOGS -> pfa-gamelogs-1940s   (WRITE)
+  club_string_from_the_table_code              221
+  disagreement                                 556
+  game_as_logged                               753
+  game_log                                  31,978
+  game_with_one_side_only                        3
+  refused                                      690
+  rows_refused_no_usable_team_link               0
+  rows_with_a_phase_outside_the_vocabulary         1
+  short_sum_not_written_as_a_claim           1,080
+  claims                                    33,287
+  refused (counted, never invented)            690
+         690  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-1940s.json  (31,438,672 bytes)
+=== regular 1950
+PFA LOGS -> pfa-gamelogs-1950s   (WRITE)
+  disagreement                                 188
+  game_as_logged                               727
+  game_log                                  29,611
+  game_with_one_side_only                        1
+  refused                                    1,928
+  rows_refused_no_usable_team_link               0
+  rows_with_a_phase_outside_the_vocabulary         0
+  short_sum_not_written_as_a_claim           1,053
+  claims                                    30,526
+  refused (counted, never invented)          1,928
+       1,928  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-1950s.json  (28,958,325 bytes)
+=== regular 1960
+PFA LOGS -> pfa-gamelogs-1960s   (WRITE)
+  disagreement                                 215
+  game_as_logged                             1,612
+  game_log                                  64,501
+  game_with_one_side_only                        1
+  refused                                    3,524
+  rows_refused_no_usable_team_link               0
+  rows_with_a_phase_outside_the_vocabulary         0
+  short_sum_not_written_as_a_claim             156
+  claims                                    66,328
+  refused (counted, never invented)          3,524
+       3,524  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-1960s.json  (62,912,753 bytes)
+=== regular 1970
+PFA LOGS -> pfa-gamelogs-1970s   (WRITE)
+  disagreement                                 102
+  game_as_logged                             1,932
+  game_log                                  80,302
+  game_with_one_side_only                        0
+  refused                                    1,802
+  rows_refused_no_usable_team_link               0
+  rows_with_a_phase_outside_the_vocabulary         0
+  short_sum_not_written_as_a_claim             436
+  claims                                    82,336
+  refused (counted, never invented)          1,802
+       1,802  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-1970s.json  (77,666,119 bytes)
+=== regular 1980
+PFA LOGS -> pfa-gamelogs-1980s   (WRITE)
+  disagreement                                 117
+  game_as_logged                             2,134
+  game_log                                  96,355
+  game_with_one_side_only                        7
+  refused                                    1,364
+  rows_refused_no_usable_team_link               0
+  rows_with_a_phase_outside_the_vocabulary         0
+  short_sum_not_written_as_a_claim             133
+  claims                                    98,606
+  refused (counted, never invented)          1,364
+       1,364  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-1980s.json  (92,580,130 bytes)
+=== regular 1990
+PFA LOGS -> pfa-gamelogs-1990s   (WRITE)
+  disagreement                                 320
+  game_as_logged                             2,329
+  game_log                                 115,399
+  game_with_one_side_only                        1
+  refused                                    1,551
+  rows_refused_no_usable_team_link               0
+  rows_with_a_phase_outside_the_vocabulary         0
+  short_sum_not_written_as_a_claim             146
+  claims                                   118,048
+  refused (counted, never invented)          1,551
+       1,551  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-1990s.json  (111,380,708 bytes)
+=== regular 2000
+PFA LOGS -> pfa-gamelogs-2000s   (WRITE)
+  disagreement                                 116
+  game_as_logged                             2,552
+  game_log                                 218,741
+  game_with_one_side_only                        8
+  refused                                    2,596
+  rows_refused_no_usable_team_link               0
+  rows_with_a_phase_outside_the_vocabulary         0
+  short_sum_not_written_as_a_claim             154
+  claims                                   221,409
+  refused (counted, never invented)          2,596
+       2,596  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-2000s.json  (215,051,557 bytes)
+=== regular 2010
+PFA LOGS -> pfa-gamelogs-2010s   (WRITE)
+  disagreement                                 297
+  game_as_logged                             2,568
+  game_log                                 218,956
+  game_with_one_side_only                        8
+  refused                                    3,438
+  rows_team_link_unusable_club_from_the_full_name         0
+  rows_with_a_phase_outside_the_vocabulary         4
+  short_sum_not_written_as_a_claim             360
+  claims                                   221,821
+  refused (counted, never invented)          3,438
+       3,438  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-2010s.json  (215,349,863 bytes)
+=== regular 2020
+PFA LOGS -> pfa-gamelogs-2020s   (WRITE)
+  boxscore_locator_unparsed                 20,184
+  club_string_from_the_label_pfa_prints_for_it         1
+  disagreement                                 107
+  game_as_logged                             1,352
+  game_log                                 134,122
+  game_with_one_side_only                        9
+  refused                                    5,970
+  rows_team_link_unusable_club_from_the_full_name         0
+  rows_with_a_phase_outside_the_vocabulary         0
+  short_sum_not_written_as_a_claim             281
+  claims                                   135,581
+  refused (counted, never invented)          5,970
+       5,970  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-gamelogs-2020s.json  (131,304,028 bytes)
+REGULAR DONE

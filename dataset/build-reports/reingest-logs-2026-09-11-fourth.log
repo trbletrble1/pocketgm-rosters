@@ -1,0 +1,128 @@
+=== postseason 1930
+PFA LOGS -> pfa-postseason-1930s   (WRITE)
+  club_string_from_the_label_pfa_prints_for_it        65
+  playoff_season                               644
+  postseason_game                              268
+  refused_game                                  13
+  refused_playoff                               41
+  rows_refused_no_usable_team_link               1
+  rows_with_a_phase_outside_the_vocabulary         0
+  claims                                       912
+  refused (counted, never invented)             54
+          54  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-postseason-1930s.json  (755,572 bytes)
+=== postseason 1940
+PFA LOGS -> pfa-postseason-1940s   (WRITE)
+  club_string_from_the_label_pfa_prints_for_it       202
+  playoff_season                             1,743
+  postseason_game                              689
+  refused_game                                  12
+  refused_playoff                               49
+  rows_refused_no_usable_team_link               1
+  rows_with_a_phase_outside_the_vocabulary         1
+  claims                                     2,432
+  refused (counted, never invented)             61
+          60  no person holds this PFA player page
+           1  the PFA code joins to more than one person
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-postseason-1940s.json  (2,005,059 bytes)
+=== postseason 1950
+PFA LOGS -> pfa-postseason-1950s   (WRITE)
+  club_string_from_the_label_pfa_prints_for_it       149
+  playoff_season                             1,405
+  postseason_game                              508
+  refused_game                                  30
+  refused_playoff                               23
+  rows_refused_no_usable_team_link               1
+  rows_with_a_phase_outside_the_vocabulary         0
+  claims                                     1,913
+  refused (counted, never invented)             53
+          53  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-postseason-1950s.json  (1,557,608 bytes)
+=== postseason 1960
+PFA LOGS -> pfa-postseason-1960s   (WRITE)
+  club_string_from_the_label_pfa_prints_for_it       364
+  playoff_season                             3,103
+  postseason_game                            1,192
+  refused_game                                  31
+  refused_playoff                                1
+  rows_refused_no_usable_team_link               1
+  rows_with_a_phase_outside_the_vocabulary         0
+  claims                                     4,295
+  refused (counted, never invented)             32
+          32  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-postseason-1960s.json  (3,482,106 bytes)
+=== postseason 1970
+PFA LOGS -> pfa-postseason-1970s   (WRITE)
+  club_string_from_the_label_pfa_prints_for_it       774
+  playoff_season                             5,816
+  postseason_game                            2,536
+  refused_game                                  54
+  rows_refused_no_usable_team_link               1
+  rows_with_a_phase_outside_the_vocabulary         0
+  claims                                     8,352
+  refused (counted, never invented)             54
+          54  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-postseason-1970s.json  (6,781,598 bytes)
+=== postseason 1980
+PFA LOGS -> pfa-postseason-1980s   (WRITE)
+  club_string_from_the_label_pfa_prints_for_it     1,214
+  playoff_season                             7,961
+  postseason_game                            3,482
+  refused_game                                  51
+  rows_refused_no_usable_team_link               1
+  rows_with_a_phase_outside_the_vocabulary         0
+  claims                                    11,443
+  refused (counted, never invented)             51
+          51  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-postseason-1980s.json  (9,324,322 bytes)
+=== postseason 1990
+PFA LOGS -> pfa-postseason-1990s   (WRITE)
+  club_string_from_the_label_pfa_prints_for_it     1,422
+  playoff_season                             9,380
+  postseason_game                            4,559
+  refused_game                                  42
+  rows_refused_no_usable_team_link               1
+  rows_with_a_phase_outside_the_vocabulary         0
+  claims                                    13,939
+  refused (counted, never invented)             42
+          42  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-postseason-1990s.json  (11,451,622 bytes)
+=== postseason 2000
+PFA LOGS -> pfa-postseason-2000s   (WRITE)
+  club_string_from_the_label_pfa_prints_for_it     1,675
+  playoff_season                            12,891
+  postseason_game                            8,794
+  refused_game                                  97
+  rows_refused_no_usable_team_link               1
+  rows_with_a_phase_outside_the_vocabulary         0
+  claims                                    21,685
+  refused (counted, never invented)             97
+          97  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-postseason-2000s.json  (18,658,700 bytes)
+=== postseason 2010
+PFA LOGS -> pfa-postseason-2010s   (WRITE)
+  club_string_from_the_label_pfa_prints_for_it     1,684
+  playoff_season                            12,734
+  playoff_snap_counts                        4,308
+  postseason_game                            8,464
+  refused_game                                 145
+  rows_refused_no_usable_team_link               1
+  rows_with_a_phase_outside_the_vocabulary         4
+  claims                                    25,506
+  refused (counted, never invented)            145
+         145  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-postseason-2010s.json  (23,750,745 bytes)
+=== postseason 2020
+PFA LOGS -> pfa-postseason-2020s   (WRITE)
+  club_string_from_the_label_pfa_prints_for_it       995
+  playoff_season                             8,648
+  playoff_snap_counts                        3,718
+  postseason_game                            5,843
+  refused_game                                 256
+  rows_refused_no_usable_team_link               1
+  rows_with_a_phase_outside_the_vocabulary         0
+  claims                                    18,209
+  refused (counted, never invented)            256
+         256  no person holds this PFA player page
+  -> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build/pfa-postseason-2020s.json  (17,267,220 bytes)
+POSTSEASON DONE

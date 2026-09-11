@@ -1,0 +1,4 @@
+  FAIL G2 every rewritten club string among 23,101 game claims is one PFA prints rightly for the club -- 168 are not, e.g. [(2021, 'NFL', 'LAN', ('LARM',)), (2006, 'NFL', 'CHI', ('CHIB',)), (2018, 'NFL', 'LAN', ('LARM',)), (2024, 'NFL', 'LAN', ('LARM',))]
+  FAIL G3 no man's club-season sits on two strings PFA did not both print -- 50 do, e.g. [(('NFL', ('CHI', 'CHIB')), 26), (('NFL', ('LAN', 'LARM')), 21), (('NFL', ('LV', 'LVR')), 3)]
+
+GAME CLUB GATE: 2 FAILURE(S)

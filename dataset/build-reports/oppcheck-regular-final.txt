@@ -1,0 +1,15 @@
+== new pfa-gamelogs-1920s: {'attested': 1944, 'no other side held': 2070}
+== new pfa-gamelogs-1930s: {'attested': 11168, 'contradicted': 66, 'no other side held': 494}
+        35 ('pfa.game_log', 1934, 'CIN', 'Cincinnati Reds', 'STL', 'None')
+        31 ('pfa.game_log', 1934, 'SLG', 'St. Louis Gunners', 'CIN', 'club-cincinnati-reds-1933')
+== new pfa-gamelogs-1940s: {'attested': 31975, 'no other side held': 3}
+== new pfa-gamelogs-1950s: {'attested': 29610, 'no other side held': 1}
+== new pfa-gamelogs-1960s: {'attested': 64500, 'no other side held': 1}
+== new pfa-gamelogs-1970s: {'attested': 80302}
+== new pfa-gamelogs-1980s: {'attested': 96302, 'no other side held': 7}
+== new pfa-gamelogs-1990s: {'attested': 115398, 'no other side held': 1}
+== new pfa-gamelogs-2000s: {'attested': 218733, 'no other side held': 8}
+== new pfa-gamelogs-2010s: {'attested': 218909, 'contradicted': 38, 'no other side held': 9}
+        38 ('pfa.game_log', 2011, 'SF', 'San Francisco 49ers', 'SF', 'club-seattle-seahawks-1976')
+== new pfa-gamelogs-2020s: {'attested': 131849, 'no other side held': 31}
+TOTAL new {'attested': 1000690, 'no other side held': 2625, 'contradicted': 104}

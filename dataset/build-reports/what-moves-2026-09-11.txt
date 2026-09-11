@@ -1,0 +1,19 @@
+people: before 51,146 after 51,146 (gone 0, new 0)
+men whose career LOSES a club: 2,497, clubs lost 7,066
+men whose career GAINS a club: 5, clubs gained 5
+   gains eg P_016421 ['club-cincinnati-reds-1933'] lost None
+   gains eg P_016492 ['club-cincinnati-reds-1933'] lost None
+   gains eg P_016505 ['club-cincinnati-reds-1933'] lost None
+   gains eg P_016169 ['club-cincinnati-reds-1933'] lost None
+   gains eg P_016209 ['club-cincinnati-reds-1933'] lost None
+club-seasons losing men: 754, man-seasons removed 8,565
+club-seasons gaining men: 1, man-seasons added 6
+   share of the old roster removed: median 15%, max 100%
+   grown eg ('club-cincinnati-reds-1933', 'NFL', 1934) 6
+   shrunk eg ('club-tampa-bay-buccaneers-1976', 'NFL', 2020) 35 of 100
+   shrunk eg ('club-new-york-giants-1925', 'NFL', 2007) 34 of 93
+   shrunk eg ('club-kansas-city-chiefs-1963', 'NFL', 2023) 34 of 96
+   shrunk eg ('club-philadelphia-eagles-1933', 'NFL', 2024) 34 of 102
+   shrunk eg ('club-carolina-panthers-1995', 'NFL', 2003) 33 of 88
+Patton before [('club-birmingham-iron-2019', 'AAF'), ('club-carolina-panthers-1995', 'NFL'), ('club-san-francisco-49ers-1946', 'NFL'), ('club-seattle-seahawks-1976', 'NFL')]
+Patton after  [('club-birmingham-iron-2019', 'AAF'), ('club-san-francisco-49ers-1946', 'NFL')]

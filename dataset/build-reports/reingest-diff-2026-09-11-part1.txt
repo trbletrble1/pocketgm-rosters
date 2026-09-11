@@ -1,0 +1,43 @@
+== pfa-postseason-1930s: old 913 new 912 | lost 1 gained 0 | moved 65 (to full name's club 65, other 0) {'pfa.postseason_game': 65} | value changed 0
+   lost by predicate/id-prefix: {('pfa.playoff_season', 'play'): 1}
+     eg play:owen00400:1933:SEASONS ['stint', 'P_015642', 'NYG', 'NFL-1933'] New York Giants
+   counts changed: {'playoff_season': (645, 644), 'rows_refused_no_usable_team_link': (0, 1)}  refused_total 54 -> 54
+== pfa-postseason-1940s: old 2,429 new 2,429 | lost 0 gained 0 | moved 201 (to full name's club 201, other 0) {'pfa.postseason_game': 201} | value changed 0
+   counts changed: {'rows_refused_no_usable_team_link': (0, 1)}  refused_total 61 -> 61
+== pfa-postseason-1950s: old 1,913 new 1,913 | lost 0 gained 0 | moved 149 (to full name's club 149, other 0) {'pfa.postseason_game': 149} | value changed 0
+   counts changed: {'rows_refused_no_usable_team_link': (0, 1)}  refused_total 53 -> 53
+== pfa-postseason-1960s: old 4,294 new 4,294 | lost 0 gained 0 | moved 364 (to full name's club 319, other 45) {'pfa.postseason_game': 364} | value changed 0
+   NOT-TO-FULL-NAME eg ('post:koco00200:1967-12-31:RECEIVING', ['stint', 'P_001362', 'HOU', 'AFL-1967'], ['stint', 'P_001362', 'OAK', 'AFL-1967'], 'Oakland Raiders')
+   NOT-TO-FULL-NAME eg ('post:arba00200:1967-01-15:RECEIVING', ['stint', 'P_001619', 'GB', 'AFL-1966'], ['stint', 'P_001619', 'KC', 'AFL-1966'], 'Kansas City Chiefs')
+   NOT-TO-FULL-NAME eg ('post:tayl09550:1967-01-15:RECEIVING', ['stint', 'P_001934', 'GB', 'AFL-1966'], ['stint', 'P_001934', 'KC', 'AFL-1966'], 'Kansas City Chiefs')
+   NOT-TO-FULL-NAME eg ('post:haye04600:1970-01-11:RECEIVING', ['stint', 'P_001908', 'MIN', 'AFL-1969'], ['stint', 'P_001908', 'KC', 'AFL-1969'], 'Kansas City Chiefs')
+   NOT-TO-FULL-NAME eg ('post:bile00200:1967-12-31:RECEIVING', ['stint', 'P_001950', 'HOU', 'AFL-1967'], ['stint', 'P_001950', 'OAK', 'AFL-1967'], 'Oakland Raiders')
+   counts changed: {'rows_refused_no_usable_team_link': (0, 1)}  refused_total 32 -> 32
+== pfa-postseason-1970s: old 8,350 new 8,350 | lost 0 gained 0 | moved 774 (to full name's club 774, other 0) {'pfa.postseason_game': 774} | value changed 0
+   counts changed: {'rows_refused_no_usable_team_link': (0, 1)}  refused_total 54 -> 54
+== pfa-postseason-1980s: old 11,443 new 11,443 | lost 0 gained 0 | moved 1,214 (to full name's club 1,214, other 0) {'pfa.postseason_game': 1214} | value changed 0
+   counts changed: {'rows_refused_no_usable_team_link': (0, 1)}  refused_total 51 -> 51
+== pfa-postseason-2010s: old 25,479 new 25,479 | lost 0 gained 0 | moved 1,684 (to full name's club 1,684, other 0) {'pfa.postseason_game': 1684} | value changed 0
+   counts changed: {'rows_refused_no_usable_team_link': (0, 1)}  refused_total 145 -> 145
+== pfa-gamelogs-1930s: old 12,416 new 12,451 | lost 0 gained 35 | moved 31 (to full name's club 31, other 0) {'pfa.game_log': 31} | value changed 10
+   gained by predicate/id-prefix: {('pfa.game_log', 'gl'): 35}
+     eg gl:alfo00800:1934-11-18:RUSHING ['stint', 'P_016216', 'CIN', 'NFL-1934'] Cincinnati Reds
+     eg gl:john34230:1934-12-02:RECEIVING ['stint', 'P_016209', 'CIN', 'NFL-1934'] Cincinnati Reds
+     eg gl:moss01200:1934-11-18:RECEIVING ['stint', 'P_016421', 'CIN', 'NFL-1934'] Cincinnati Reds
+   counts changed: {'game_log': (11693, 11728), 'game_with_one_side_only': (81, 78), 'refused': (1061, 1026)}  refused_total 1061 -> 1026
+== pfa-gamelogs-1940s: old 33,254 new 33,285 | lost 0 gained 31 | moved 221 (to full name's club 221, other 0) {'pfa.game_log': 221} | value changed 12
+   gained by predicate/id-prefix: {('pfa.game_logs_exceed_the_season_page', 'conflict'): 31}
+     eg conflict:P_000835:1947:CHI:punt_returns.Yds ['stint', 'P_000835', 'CHI', 'AAFC-1947'] None
+     eg conflict:P_000845:1947:CHI:punt_returns.Yds ['stint', 'P_000845', 'CHI', 'AAFC-1947'] None
+     eg conflict:P_000575:1946:CHI:total_scoring.Points ['stint', 'P_000575', 'CHI', 'AAFC-1946'] None
+   counts changed: {'game_with_one_side_only': (5, 3), 'disagreement': (525, 556), 'short_sum_not_written_as_a_claim': (979, 1080)}  refused_total 690 -> 690
+== pfa-gamelogs-2020s: old 134,435 new 134,433 | lost 4 gained 2 | moved 1 (to full name's club 1, other 0) {'pfa.game_log': 1} | value changed 51
+   lost by predicate/id-prefix: {('pfa.game_logs_exceed_the_season_page', 'conflict'): 4}
+     eg conflict:P_034150:2020:LV:rushing.TDs ['stint', 'P_034150', 'LV', 'NFL-2020'] None
+     eg conflict:P_033744:2021:LV:pfa.total_scoring.X2A ['stint', 'P_033744', 'LV', 'NFL-2021'] None
+     eg conflict:P_035694:2021:LV:pfa.total_scoring.X2A ['stint', 'P_035694', 'LV', 'NFL-2021'] None
+   gained by predicate/id-prefix: {('pfa.game_logs_exceed_the_season_page', 'conflict'): 2}
+     eg conflict:P_036420:2022:LAC:receiving.Yds ['stint', 'P_036420', 'LAC', 'NFL-2022'] None
+     eg conflict:P_036420:2022:LAC:receiving.No. ['stint', 'P_036420', 'LAC', 'NFL-2022'] None
+   counts changed: {'disagreement': (105, 103), 'short_sum_not_written_as_a_claim': (281, 271)}  refused_total 5970 -> 5970
+TOTAL {'old': 234926, 'new': 234989, 'lost': 5, 'gained': 68, 'moved': 4704, 'moved_ok': 4659, 'moved_other': 45, 'valchg': 73}

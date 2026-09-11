@@ -1,0 +1,23 @@
+== pfa-postseason-1930s: old 913 new 913 | lost 0 gained 0 | moved 65 (to full name's club 65, other 0) {'pfa.postseason_game': 65} | value changed 0
+   counts changed: {'rows_team_link_unusable_club_from_the_full_name': (0, 1), 'club_string_from_the_label_pfa_prints_for_it': (0, 65)}  refused_total 54 -> 54
+== pfa-postseason-1940s: old 2,429 new 2,429 | lost 0 gained 0 | moved 201 (to full name's club 201, other 0) {'pfa.postseason_game': 201} | value changed 0
+   counts changed: {'club_string_from_the_label_pfa_prints_for_it': (0, 202)}  refused_total 61 -> 61
+== pfa-postseason-1950s: old 1,913 new 1,913 | lost 0 gained 0 | moved 149 (to full name's club 149, other 0) {'pfa.postseason_game': 149} | value changed 0
+   counts changed: {'club_string_from_the_label_pfa_prints_for_it': (0, 149)}  refused_total 53 -> 53
+== pfa-postseason-1960s: old 4,294 new 4,294 | lost 0 gained 0 | moved 364 (to full name's club 364, other 0) {'pfa.postseason_game': 364} | value changed 0
+   counts changed: {'club_string_from_the_label_pfa_prints_for_it': (0, 364)}  refused_total 32 -> 32
+== pfa-postseason-1970s: old 8,350 new 8,350 | lost 0 gained 0 | moved 774 (to full name's club 774, other 0) {'pfa.postseason_game': 774} | value changed 0
+   counts changed: {'club_string_from_the_label_pfa_prints_for_it': (0, 774)}  refused_total 54 -> 54
+== pfa-postseason-1980s: old 11,443 new 11,443 | lost 0 gained 0 | moved 1,214 (to full name's club 1,214, other 0) {'pfa.postseason_game': 1214} | value changed 0
+   counts changed: {'club_string_from_the_label_pfa_prints_for_it': (0, 1214)}  refused_total 51 -> 51
+== pfa-postseason-1990s: old 13,939 new 13,939 | lost 0 gained 0 | moved 1,422 (to full name's club 1,422, other 0) {'pfa.postseason_game': 1422} | value changed 0
+   counts changed: {'club_string_from_the_label_pfa_prints_for_it': (0, 1422)}  refused_total 42 -> 42
+== pfa-postseason-2000s: old 21,685 new 21,685 | lost 0 gained 0 | moved 1,675 (to full name's club 1,675, other 0) {'pfa.postseason_game': 1675} | value changed 0
+   counts changed: {'club_string_from_the_label_pfa_prints_for_it': (0, 1675)}  refused_total 97 -> 97
+== pfa-postseason-2010s: old 25,479 new 25,479 | lost 0 gained 0 | moved 1,684 (to full name's club 1,684, other 0) {'pfa.postseason_game': 1684} | value changed 0
+   counts changed: {'club_string_from_the_label_pfa_prints_for_it': (0, 1684)}  refused_total 145 -> 145
+== pfa-postseason-2020s: old 18,202 new 18,203 | lost 0 gained 1 | moved 994 (to full name's club 994, other 0) {'pfa.postseason_game': 994} | value changed 0
+   gained by predicate/id-prefix: {('pfa.postseason_game', 'post'): 1}
+     eg post:barr02515:2022-01-16:INTERCEPTIONS ['stint', 'P_033930', 'TB', 'NFL-2021'] Tampa Bay Buccaneers
+   counts changed: {'refused_game': (257, 256), 'club_string_from_the_label_pfa_prints_for_it': (0, 995), 'postseason_game': (5842, 5843)}  refused_total 257 -> 256
+TOTAL {'old': 108647, 'new': 108648, 'lost': 0, 'gained': 1, 'moved': 8542, 'moved_ok': 8542, 'moved_other': 0, 'valchg': 0}

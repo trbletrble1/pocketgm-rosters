@@ -1,0 +1,7 @@
+  FAIL G1 all 1,042,006 game claims sit on the club their own row prints in full -- 8,796 do not, e.g. [('pfa.game_log', 1949, 'New York Bulldogs', 'club-new-york-giants-1925'), ('pfa.game_log', 1934, 'St. Louis Gunners', 'club-cincinnati-reds-1933'), ('pfa.postseason_game', 2014, 'Arizona Cardinals', 'club-carolina-panthers-1995'), ('pfa.postseason_game', 2000, 'Oakland Raiders', 'club-baltimore-ravens-1996')]
+  ok   G1 every game claim's printed club resolves, so every one was checked
+         by predicate: {'pfa.game_log': 253, 'pfa.postseason_game': 8543}
+  ok   G2 every rewritten club string among 1,041,974 game claims is one PFA prints rightly for the club
+  FAIL G3 no man's club-season sits on two strings PFA did not both print -- 10 do, e.g. [(('AAFC', ('B-NY', 'BNY')), 10)]
+
+GAME CLUB GATE: 2 FAILURE(S)

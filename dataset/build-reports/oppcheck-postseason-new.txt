@@ -1,0 +1,20 @@
+== new pfa-postseason-1930s: {'attested': 268}
+== new pfa-postseason-1940s: {'attested': 628, 'no other side held': 32, 'contradicted': 29}
+        11 ('pfa.postseason_game', 1946, 'NY', 'New York Yankees', 'NY', 'None')
+         8 ('pfa.postseason_game', 1947, 'NY', 'New York Yankees', 'NY', 'None')
+         5 ('pfa.postseason_game', 1947, 'NYA', 'New York Yankees', 'CLE', 'None')
+         4 ('pfa.postseason_game', 1946, 'NYA', 'New York Yankees', 'CLE', 'None')
+         1 ('pfa.postseason_game', 1947, 'NYA', 'New York Yankees', 'NYY', 'None')
+== new pfa-postseason-1950s: {'attested': 508}
+== new pfa-postseason-1960s: {'attested': 1049, 'no other side held': 143}
+== new pfa-postseason-1970s: {'attested': 2536}
+== new pfa-postseason-1980s: {'attested': 3482}
+== new pfa-postseason-1990s: {'attested': 4559}
+== new pfa-postseason-2000s: {'attested': 8752, 'contradicted': 41, 'no other side held': 1}
+        32 ('pfa.postseason_game', 2006, 'PHI', 'Philadelphia Eagles', 'PHI', 'club-new-orleans-saints-1967')
+         9 ('pfa.postseason_game', 2006, 'PHI', 'Philadelphia Eagles', 'NO', 'club-new-orleans-saints-1967')
+== new pfa-postseason-2010s: {'attested': 8464}
+== new pfa-postseason-2020s: {'attested': 5759, 'contradicted': 46, 'no other side held': 38}
+        45 ('pfa.postseason_game', 2025, 'GB', 'Green Bay Packers', 'GB', 'club--2025-det')
+         1 ('pfa.postseason_game', 2021, 'KC', 'Kansas City Chiefs', 'KC', 'club-cincinnati-bengals-1968')
+TOTAL new {'attested': 36005, 'no other side held': 214, 'contradicted': 116}

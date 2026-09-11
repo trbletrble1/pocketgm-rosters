@@ -331,7 +331,86 @@ the direction of reporting a defect that was not there, so neither would have be
 check itself; both were caught by looking at the first examples it printed.
 
 *Same family as `implausibility is a signal about your method` — 195 splits and 49,417 refusals
-were both too many to be true of a table that had been gated for a week.* A gate that cannot fail reports success; a gate
+were both too many to be true of a table that had been gated for a week.*
+
+---
+
+## A page can contradict itself
+
+**Ryan, 2026-09-11, on two PFA cases found the same afternoon.** A source that prints one fact
+twice on one page may print it two ways, and the archive's answer then depends on which field a
+reader happens to take — silently, because each reader is right about the field it read.
+
+**The evidence.**
+
+- **A team page's title and its header.** `1936afabkn.html` is titled `1936 Brooklyn Bay Parkways
+  (AFA)` and headed `1936 Brooklyn Bay Parkways (AA)`. The club-roster reader took the title and
+  filed 7,230 claims under AFA; the statistics reader took the header and filed 666 under AA — a
+  token no club held, so those claims carried no league at all. It looked like a question about
+  two 1930s leagues. It was two readers and one page. **Ruled: one league**, read as AFA
+  (`LEAGUE_LABELS_BY_YEAR`), both strings kept as printed.
+- **A game-log row's link and its short label.** Each row names the man's club as a link, a full
+  name and a short label for phones. On about 22% of PLAYOFF rows — and on no regular-season row
+  — the short label prints the opponent: `2013 CAR NFL` on a 49er's row whose link and full name
+  both say San Francisco. The ingest took the short label: 8,511 claims on the opponent, 742
+  rosters carrying their opponents, 2,465 biographies naming clubs the man never played for.
+  **Ruled: read the club from the link and the full name, which always agree; keep the short label
+  as printed.**
+
+**The rule: where a page gives a fact more than once, a reader reads every form and compares
+them.** Take the form that a second form on the same page agrees with, and hold the one that
+disagrees as printed — it is what the source published, and holding it costs nothing. A reader
+that takes one field because it was the convenient one has made a choice it never recorded.
+
+*Related: `the row length names the layout` — the same source, the same shape: what a page prints
+is not one thing, and the reader has to find out which thing it is holding.*
+
+### The first fix was wrong too, and the diff against the old store said so
+
+The first reader took the club from the row's link and **refused any row whose two links
+disagreed**. Re-ingested and compared claim by claim with the stores it replaced, it had **lost
+2,570 claims that were right**: PFA links the 2020 Raiders as `oak` beside the name "Las Vegas
+Raiders"; the Phil-Pitt link `1943nflp-p` has a hyphen the pattern did not allow; the punting
+blocks shift their header by one, so looking the team cell up by its label found the date. The
+corrected reader compares **at the level the fact lives — the club, not the code** — reads the
+link that sits with the full name, and finds the cell by position as it always had been.
+
+**Two practical rules came out of it.** When a fix rewrites a store, compare it with the store it
+replaces, claim by claim, before anything is built on it: a total that is close is not a total
+that is right. And a row a reader refuses is counted **in the store**, not only in the reader's
+own metadata, which nothing kept — that is how 2,570 rows came within one step of vanishing in
+silence.
+
+**And the second pass was wrong in a third way.** Where a row's short label named the opponent,
+the ingest needed a string for the man's real club and took **the table's code**. PFA labels the
+Bears `CHIB`, the Rams `LARM`, the AAFC Yankees `NY`; the table holds `CHI`, `LAN`, `NYA`. So a
+Bear whose playoff rows were labelled rightly on some days and wrongly on others sat on `CHIB` and
+`CHI` in the same season — **652 man-club-seasons split across two strings, 388 men**, where the
+stores before the fix held 12 (all `B-NY`/`BNY`, which PFA itself prints both ways). Every check
+that compared clubs passed, because both strings resolve to the one club; only a check on the
+string itself saw it. The rewritten row now takes the string PFA prints for that club that year,
+learned from its rightly labelled rows; the table's code is used only where PFA never prints one,
+and counted. `gate_game_club` G2/G3 hold it, and were shown failing on the stores the second pass
+wrote (168 rewritten strings, 50 split seasons, in three decades) before they passed.
+
+**The rule underneath: a key is a string, and resolving to the right club does not make two
+strings one key.** Where a fix must *write* a club string, it writes the one the source already
+uses for that club — not a better one from elsewhere.
+
+### A game's two sides are a third reading, and in 1934 they outvote the full name
+
+A game-log row prints the man's club; the rows of the men **on the other side of the same game**
+print it too, as their opponent. That is an independent reading inside PFA, and it was used to
+check the fix: postseason claims contradicted by the other side fell **8,738 → 116**, and every one
+of the 116 left is PFA's opponent column being wrong on the other side (the 2006 Saints' rows
+printing `NO` as their own opponent; the 2025 Bears' printing `DET` in a game against Green Bay).
+
+**It also found the one place the full name is wrong.** Fifteen 1934 men's rows print the club
+the wrong way round: on the Reds' games (9 September – 6 November) the full name reads *St. Louis
+Gunners* while the short label and every opponent's rows say `CIN`; on the Gunners' games (11
+November – 2 December) it reads *Cincinnati Reds* while the label and the opponents say `STL`.
+66 regular-season rows. Under the rule as ruled — the club is the one the row prints in full —
+they go to the wrong club. Held as a question for Ryan, not decided here. A gate that cannot fail reports success; a gate
 that fails for the wrong reason reports a successful selftest.
 
 ---

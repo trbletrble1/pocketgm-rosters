@@ -1,0 +1,8 @@
+32 pairs
+5 ('AAFC|1946|NYY', (('pfa.postseason_game', 'Cleveland Browns', 'CLE'),), False)
+6 ('AAFC|1947|NYY', (('pfa.postseason_game', 'Cleveland Browns', 'CLE'),), False)
+1 ('AAFC|1947|NYY', (('pfa.postseason_game', 'New York Yankees', 'NY'),), False)
+6 ('AFL|1966|GB', (('pfa.postseason_game', 'Kansas City Chiefs', 'KC'),), False)
+6 ('AFL|1967|GB', (('pfa.postseason_game', 'Oakland Raiders', 'OAK'),), False)
+4 ('AFL|1968|BAL', (('pfa.postseason_game', 'New York Jets', 'NYJ'),), False)
+4 ('AFL|1969|MIN', (('pfa.postseason_game', 'Kansas City Chiefs', 'KC'),), False)

@@ -1,0 +1,21 @@
+== new pfa-gamelogs-1920s: {'attested': 1944, 'no other side held': 2070}
+== new pfa-gamelogs-1930s: {'attested': 11168, 'contradicted': 66, 'no other side held': 494}
+        35 ('pfa.game_log', 1934, 'CIN', 'Cincinnati Reds', 'STL', 'None')
+        31 ('pfa.game_log', 1934, 'SLG', 'St. Louis Gunners', 'CIN', 'club-cincinnati-reds-1933')
+== new pfa-gamelogs-1940s: {'attested': 31975, 'no other side held': 3}
+== new pfa-gamelogs-1950s: {'attested': 29610, 'no other side held': 1}
+== new pfa-gamelogs-1960s: {'attested': 64500, 'no other side held': 1}
+== new pfa-gamelogs-1970s: {'attested': 80302}
+== new pfa-gamelogs-1980s: {'attested': 96348, 'no other side held': 7}
+== new pfa-gamelogs-1990s: {'attested': 115398, 'no other side held': 1}
+== new pfa-gamelogs-2000s: {'attested': 218733, 'no other side held': 8}
+== new pfa-gamelogs-2020s: {'attested': 132649, 'contradicted': 1442, 'no other side held': 31}
+        46 ('pfa.game_log', 2023, 'DEN', 'Denver Broncos', 'DEN', 'club-buffalo-bills-1960')
+        45 ('pfa.game_log', 2023, 'LAC', 'Los Angeles Chargers', 'LAC', 'club-oakland-raiders-1960')
+        32 ('pfa.game_log', 2023, 'CLE', 'Cleveland Browns', 'CLE', 'club-houston-oilers-1960')
+        30 ('pfa.game_log', 2023, 'HOU', 'Houston Texans', 'HOU', 'club-seattle-seahawks-1976')
+        29 ('pfa.game_log', 2023, 'CIN', 'Cincinnati Bengals', 'CIN', 'club-houston-texans-2002')
+        29 ('pfa.game_log', 2023, 'NO', 'New Orleans Saints', 'NO', 'club-baltimore-colts-1953')
+        28 ('pfa.game_log', 2023, 'NO', 'New Orleans Saints', 'NO', 'club-jacksonville-jaguars-1995')
+        28 ('pfa.game_log', 2023, 'DAL', 'Dallas Cowboys', 'DAL', 'club-baltimore-ravens-1996')
+TOTAL new {'attested': 782627, 'no other side held': 2616, 'contradicted': 1508}

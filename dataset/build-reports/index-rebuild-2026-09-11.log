@@ -1,0 +1,143 @@
+stores with no claims block (reports, not claim stores): 449
+CHAIN-STEP REPORT NOT READ AS A SOURCE: cfl1945-season-restore (0 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+CHAIN-STEP REPORT NOT READ AS A SOURCE: clubs (0 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+CHAIN-STEP REPORT NOT READ AS A SOURCE: coach-demotions (0 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+CHAIN-STEP REPORT NOT READ AS A SOURCE: coach-seasons-promoted (17,621 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+CHAIN-STEP REPORT NOT READ AS A SOURCE: officials-applied (0 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+CHAIN-STEP REPORT NOT READ AS A SOURCE: player-seasons-promoted (0 claims) -- a chain step's report, declared in report_stores_not_claim_sources
+STINT CLAIMS NOT INDEXED: 1,590 unresolved across 14 store(s); 45 in 1 HELD store(s)
+       883  assistants                       s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000001', 'San Francisco 49ers', 'y1977']
+       211  stats-usfl-1984                  s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000157', 'USFLAZW', 'USFL-1984']
+       117  stats-cfl-2021                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000807', 'CFLBC', 'CFL-2021']
+        97  stats-usfl-1985                  s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000297', 'USFLAZO', 'USFL-1985']
+        76  salaries                         s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000134', 'Dallas', 'y1984']
+        68  stats-usfl-1983                  s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000854', 'USFLBIR', 'USFL-1983']
+        36  stats-xfl-2001                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_001850', 'XFLLAX', 'XFL-2001']
+        31  stats-wfl-1974                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_003660', 'WFLHAW', 'WFL-1974']
+        27  stats-ufl-2012                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000652', 'UFLOMA', 'UFL-2012']
+        14  stats-ufl-2010                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_002396', 'UFLLVL', 'UFL-2010']
+        12  stats-ufl-2011                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000935', 'UFLOMA', 'UFL-2011']
+        10  stats-nfl-1987                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_000167', 'ATL', 'NFL-1987']
+         4  stats-nfl-2014                   s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_026481', 'TEN', 'NFL-2014']
+         4  stats-wlaf-1992                  s[1] is a local id identity.json does not hold for this store   e.g. ['stint', 'p_001831', 'WLAFMON', 'WLAF-1992']
+        45  pfa-wlaf-1995                    HELD: Ingested 2026-09-08, the 45-man 1995 Scottish Claymores roster. Store-local ids for the sa
+absence claims kept apart from values: 14,064 across 9,348 (person, field) pairs and 7,686 people -- these used to arrive as the string "None" in `person`
+coaching seasons sorted out of `seasons` by predicate: 23,091 keys; 354 keys are in BOTH dicts because the man played and coached that season
+person merges applied: 93
+people indexed: 51,240   with at least one season: 47,898
+wrote /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build-reports/person-index.json (786 MB)
+post-processing: apply_club_keys.py --write
+{
+ "rewrites_reversed_first": 0,
+ "rewrites_applied": 19,
+ "people_touched": 123,
+ "absorbed_people_touched": 0,
+ "people_missing": [],
+ "club_seasons": {
+  "unmerged_before": 207055,
+  "unnormalised_base": 207055,
+  "after": 207055
+ },
+ "index_left": "unmerged - run merge_people.py then apply_person_merges.py"
+}
+wrote /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build-reports/person-index.json
+post-processing: apply_person_merges.py --write
+{
+ "contributions_reversed_first": 0,
+ "merges_applied": 93,
+ "merges_whose_people_are_missing": [],
+ "people": {
+  "before": 51239,
+  "after": 51239
+ },
+ "club_seasons": {
+  "before_this_run": 207055,
+  "unmerged_base": 207055,
+  "after": 207055
+ },
+ "person_values": {
+  "unmerged_base": 2498424,
+  "after": 2498578
+ },
+ "people_carrying_merged_from": 93,
+ "people_carrying_merged_into": 93
+}
+wrote /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build-reports/person-index.json
+post-processing: apply_promotions.py --write
+this run (stdout only, not persisted):
+  created                    5
+  already_present            1,794
+  coaching_seasons_set       1,794
+  name_filled                0
+  name_kept_from_archive     0
+the store, as persisted to the report:
+  claims                                     17,621
+  promotions_in_store                        1,799
+  coaching_seasons                           17,621
+  people_with_coaching_seasons               1,794
+  stintless_promotions_demoted_by_next_step  5
+post-processing: apply_player_promotions.py --write
+this run (stdout only, not persisted):
+  already_present                  7,722
+  forename_unknown                 234
+  name_filled                      138
+the store, as persisted:
+  promotions_in_store                    7,722
+  people_holding_at_least_one_season     7,722
+  promoted_but_holding_none              0
+  forename_unknown                       234
+  playing_seasons_decided                11,735
+post-processing: demote_stintless.py --write
+  stintless_promotions     5
+  demoted                  5
+  already_absent           0
+  people_before            51244
+  people_after             51239
+  by_source                {'pfa-coach-lead': 3, 'media-guide-assistant': 2}
+post-processing: restore_cfl1945_seasons.py --write
+  person_season_without_stint  60
+  restored                     60
+  slug_not_in_index            0
+  club_not_readable            0
+  clubs                        {'CFL|1945|CFLCGY': 30, 'CFL|1945|CFLWPG': 30}
+post-processing: apply_officials.py --write
+  men                              1,052
+  created_by_officials_ingest      0
+  already_a_person                 1,052
+  officiating_season_keys          8,209
+  dual_role men in the store       132
+  -- this run only (not persisted; zero on a re-run is correct) --
+  names_filled                     0
+  names_kept_from_archive          0
+  roles_updated                    1,052
+
+REBUILD FAILED: P3 -- the rebuild LOST work:
+    person P_000503 lost season keys: ['AAFC|1947|NYY']
+    person P_000603 lost season keys: ['AAFC|1947|NYY']
+    person P_000610 lost season keys: ['AAFC|1946|NYY']
+    person P_000614 lost season keys: ['AAFC|1946|NYY', 'AAFC|1947|NYY']
+    person P_000617 lost season keys: ['AAFC|1946|NYY', 'AAFC|1947|NYY']
+    person P_000618 lost season keys: ['AAFC|1947|NYY']
+    person P_000628 lost season keys: ['AAFC|1946|NYY', 'AAFC|1947|NYY']
+    person P_000633 lost season keys: ['AAFC|1946|NYY']
+    person P_000716 lost season keys: ['AAFC|1947|NYY']
+    person P_001218 lost season keys: ['AFL|1966|GB']
+    person P_001300 lost season keys: ['AFL|1967|GB']
+    person P_001413 lost season keys: ['AFL|1968|BAL']
+    person P_001619 lost season keys: ['AFL|1966|GB']
+    person P_001626 lost season keys: ['AFL|1966|GB']
+    person P_001628 lost season keys: ['AFL|1967|GB']
+    person P_001698 lost season keys: ['AFL|1966|GB']
+    person P_001729 lost season keys: ['AFL|1967|GB']
+    person P_001862 lost season keys: ['AFL|1968|BAL']
+    person P_001908 lost season keys: ['AFL|1969|MIN']
+    person P_001933 lost season keys: ['AFL|1969|MIN']
+    person P_001934 lost season keys: ['AFL|1966|GB', 'AFL|1969|MIN']
+    person P_001946 lost season keys: ['AFL|1968|BAL']
+    person P_001950 lost season keys: ['AFL|1967|GB']
+    person P_002038 lost season keys: ['AFL|1966|GB', 'AFL|1969|MIN']
+    person P_002074 lost season keys: ['AFL|1968|BAL']
+    person P_002081 lost season keys: ['AFL|1967|GB']
+    person P_002213 lost season keys: ['AFL|1967|GB']
+rolled back: pre-rebuild index restored to /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build-reports/person-index.json
+exit 1

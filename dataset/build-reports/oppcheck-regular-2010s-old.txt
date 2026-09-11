@@ -1,0 +1,3 @@
+== old pfa-gamelogs-2010s: {'attested': 218909, 'contradicted': 38, 'no other side held': 9}
+        38 ('pfa.game_log', 2011, 'SF', 'San Francisco 49ers', None, 'club-seattle-seahawks-1976')
+TOTAL old {'attested': 218909, 'contradicted': 38, 'no other side held': 9}

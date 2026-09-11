@@ -1,0 +1,38 @@
+== pfa-gamelogs-1920s: old 4,790 new 4,790 | lost 0 gained 0 | moved 0 (to full name's club 0, other 0) {} | value changed 0
+   counts changed: {'short_sum_not_written_as_a_claim': (41, 43)}  refused_total 594 -> 594
+== pfa-gamelogs-1930s: old 12,416 new 12,451 | lost 0 gained 35 | moved 31 (to full name's club 31, other 0) {'pfa.game_log': 31} | value changed 10
+   gained by predicate/id-prefix: {('pfa.game_log', 'gl'): 35}
+     eg gl:alfo00800:1934-11-18:SCORING ['stint', 'P_016216', 'CIN', 'NFL-1934'] Cincinnati Reds
+     eg gl:casp00200:1934-11-18:RUSHING ['stint', 'P_016492', 'CIN', 'NFL-1934'] Cincinnati Reds
+     eg gl:senn00200:1934-11-11:RUSHING ['stint', 'P_015552', 'CIN', 'NFL-1934'] Cincinnati Reds
+   counts changed: {'refused': (1061, 1026), 'game_log': (11693, 11728), 'club_string_from_the_table_code': (0, 66), 'game_with_one_side_only': (81, 78)}  refused_total 1061 -> 1026
+== pfa-gamelogs-1940s: old 33,254 new 33,285 | lost 0 gained 31 | moved 221 (to full name's club 221, other 0) {'pfa.game_log': 221} | value changed 12
+   gained by predicate/id-prefix: {('pfa.game_logs_exceed_the_season_page', 'conflict'): 31}
+     eg conflict:P_000592:1946:CHI:rushing.Yds ['stint', 'P_000592', 'CHI', 'AAFC-1946'] None
+     eg conflict:P_000845:1947:CHI:punt_returns.Yds ['stint', 'P_000845', 'CHI', 'AAFC-1947'] None
+     eg conflict:P_000538:1948:CHI:receiving.TDs ['stint', 'P_000538', 'CHI', 'AAFC-1948'] None
+   counts changed: {'club_string_from_the_table_code': (0, 221), 'game_with_one_side_only': (5, 3), 'short_sum_not_written_as_a_claim': (979, 1080), 'disagreement': (525, 556)}  refused_total 690 -> 690
+== pfa-gamelogs-1950s: old 30,526 new 30,526 | lost 0 gained 0 | moved 0 (to full name's club 0, other 0) {} | value changed 0
+   counts changed: {}  refused_total 1928 -> 1928
+== pfa-gamelogs-1960s: old 66,321 new 66,328 | lost 0 gained 7 | moved 0 (to full name's club 0, other 0) {} | value changed 0
+   gained by predicate/id-prefix: {('pfa.game_logs_exceed_the_season_page', 'conflict'): 7}
+     eg conflict:P_001223:1961:DAL:punting.No. ['stint', 'P_001223', 'DAL', 'AFL-1961'] None
+     eg conflict:P_001246:1960:DAL:total_scoring.X/C ['stint', 'P_001246', 'DAL', 'AFL-1960'] None
+     eg conflict:P_001632:1962:DAL:punting.Long ['stint', 'P_001632', 'DAL', 'AFL-1962'] None
+   counts changed: {'short_sum_not_written_as_a_claim': (147, 156), 'disagreement': (208, 215)}  refused_total 3524 -> 3524
+== pfa-gamelogs-1970s: old 82,336 new 82,336 | lost 0 gained 0 | moved 0 (to full name's club 0, other 0) {} | value changed 0
+   counts changed: {}  refused_total 1802 -> 1802
+== pfa-gamelogs-1980s: old 98,603 new 98,603 | lost 0 gained 0 | moved 0 (to full name's club 0, other 0) {} | value changed 0
+   counts changed: {}  refused_total 1364 -> 1364
+== pfa-gamelogs-1990s: old 118,048 new 118,048 | lost 0 gained 0 | moved 0 (to full name's club 0, other 0) {} | value changed 0
+   counts changed: {}  refused_total 1551 -> 1551
+== pfa-gamelogs-2000s: old 221,409 new 221,409 | lost 0 gained 0 | moved 0 (to full name's club 0, other 0) {} | value changed 0
+   counts changed: {}  refused_total 2596 -> 2596
+== pfa-gamelogs-2010s: old 221,821 new 221,821 | lost 0 gained 0 | moved 0 (to full name's club 0, other 0) {} | value changed 0
+   counts changed: {}  refused_total 3438 -> 3438
+== pfa-gamelogs-2020s: old 134,435 new 134,437 | lost 0 gained 2 | moved 1 (to full name's club 1, other 0) {'pfa.game_log': 1} | value changed 1
+   gained by predicate/id-prefix: {('pfa.game_logs_exceed_the_season_page', 'conflict'): 2}
+     eg conflict:P_036420:2022:LAC:receiving.No. ['stint', 'P_036420', 'LAC', 'NFL-2022'] None
+     eg conflict:P_036420:2022:LAC:receiving.Yds ['stint', 'P_036420', 'LAC', 'NFL-2022'] None
+   counts changed: {'club_string_from_the_label_pfa_prints_for_it': (0, 1), 'disagreement': (105, 107)}  refused_total 5970 -> 5970
+TOTAL {'old': 1023959, 'new': 1024034, 'lost': 0, 'gained': 75, 'moved': 253, 'moved_ok': 253, 'moved_other': 0, 'valchg': 23}

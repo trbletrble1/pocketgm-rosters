@@ -88,28 +88,35 @@ def number(s):
 def rows_for(decade, kind="gamelogs"):
     """Every log row whose YEAR TEAM parses into the decade. Summary rows ('2 Years')
     do not parse and are dropped by that, not by a name test."""
-    out, pages, mism, unparsed = [], 0, 0, 0
+    out, pages, mism, unparsed, no_link = [], 0, 0, 0, 0
     for path in sorted(glob.glob(os.path.join(LOGS, kind, "*", "*.html"))):
         d = G.read(path); pages += 1; mism += d["mismatches"]
         for b in d["blocks"]:
             cols = b["columns"]
             stat_cols = [c for i, c in enumerate(cols) if i >= (6 if kind == "gamelogs" else 1)]
             for r in b["rows"]:
-                tm = G.team_of(r.get(cols[1] if kind == "gamelogs" else cols[0], ""))
-                if not tm:
+                if not G.team_of(r.get("_team_cell", "")):
                     unparsed += 1; continue
-                y, long_name, league, code = tm
+                # THE CLUB FROM THE FULL NAME AND ITS LINK, never the short label (Ryan,
+                # 2026-09-11). A row whose link cannot be read for its year goes on with the
+                # full name alone, and is counted -- in ITS decade only: counted before the
+                # decade filter, the archive's one such row was reported by all ten stores.
+                tm = G.team_of_row(r)
+                y, long_name, league, code, short, other = tm
                 if y // 10 * 10 != decade: continue
+                if code is None: no_link += 1
                 rec = {"code": d["code"], "section": b["section"], "phase": b["phase"],
                        "year": y, "club_printed": long_name, "league": league,
-                       "club_code": code, "boxscore": r.get("_boxscore"),
+                       "club_code": code, "club_short_label": short, "club_other_link_code": other,
+                       "boxscore": r.get("_boxscore"),
                        "stats": {c: r.get(c, "") for c in stat_cols}}
                 if kind == "gamelogs":
                     rec.update(date=G.date_of(r.get(cols[0], "")), ha=r.get(cols[2], ""),
                                opp=r.get(cols[3], ""), score=r.get(cols[4], ""),
                                result=r.get(cols[5], ""))
                 out.append(rec)
-    return out, {"pages": pages, "row_header_mismatches": mism, "summary_rows_skipped": unparsed}
+    return out, {"pages": pages, "row_header_mismatches": mism, "summary_rows_skipped": unparsed,
+                 "rows_team_link_unusable_club_from_the_full_name": no_link}
 
 
 def person_of_code(conn):

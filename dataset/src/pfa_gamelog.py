@@ -109,6 +109,18 @@ def read(path):
             row = dict(zip(cols, cs))
             m = _HREF.search(raw[0])
             row["_boxscore"] = m.group(1) if m else None
+            # THE TEAM CELL'S LINKS, kept as the date cell's is. The cell prints the club
+            # three ways -- a link, a full name, a short label for phones -- and the short
+            # label is the one that is wrong: on ~22% of PLAYOFF rows it prints the opponent
+            # (`2013 CAR NFL` on a 49er's row whose link and full name both say San
+            # Francisco). team_of_row() reads the club from the link. Ryan, 2026-09-11.
+            # BY POSITION, as the team cell always was read: the second cell on a game log,
+            # the first on a playoff log. Looking it up by the label "YEAR TEAM" lost every
+            # PUNTING row, whose block header shifts the labels by one.
+            ti = 0 if kind == "playoff" else 1
+            if len(raw) > ti:
+                row["_team_cell"] = cs[ti]
+                row["_team_links"] = _HREF.findall(raw[ti])
             cur["rows"].append(row)
     return {"kind": kind, "code": code, "letter": letter, "blocks": blocks,
             "mismatches": mism, "rows": sum(len(b["rows"]) for b in blocks),
@@ -121,6 +133,42 @@ def team_of(cell):
     m = _TEAM.match(cell.strip())
     if not m: return None
     return int(m.group(1)), m.group(2), m.group(3), m.group(4)
+
+
+_STEM = re.compile(r'(?:^|/)(\d{4})([a-z0-9/-]+)\.html$')
+
+
+def _link_code(link, y, league):
+    m = _STEM.search(link or "")
+    if not m: return None
+    yy, rest = m.groups(); lg = league.lower()
+    if int(yy) != y or not rest.startswith(lg) or len(rest) == len(lg): return None
+    return rest[len(lg):].upper()
+
+
+def team_of_row(row):
+    """-> (year, full name, league, the FULL NAME'S LINK code or None, short label as
+    printed, the other link's code) -- None only when the team cell does not parse.
+
+    THE CLUB IS READ FROM THE FULL NAME AND ITS LINK, never from the short label. Ryan's
+    ruling, 2026-09-11: PFA's short label names the OPPONENT on about 22% of playoff rows.
+    The cell carries two links: the first sits with the full name, the second with the
+    short label -- and the second can point wherever the label does (a 1934 Gunners row
+    links `1934nflstl` with its name and `1934nflcin` with its label). So the FIRST link is
+    read and the other is returned as printed. The first link's code need not be the
+    code a club holds (PFA files the 2020 Raiders under `oak`), which is why the caller
+    resolves it to a CLUB and holds it against the full name there. The short label is
+    returned so it can be kept: it is what PFA published."""
+    t = team_of(row.get("_team_cell", ""))
+    if not t: return None
+    y, full, league, short = t
+    links = row.get("_team_links") or []
+    # A LINK THAT CANNOT BE READ FOR THE ROW'S YEAR IS RETURNED AS None, NOT A REFUSAL: the
+    # full name still names the club. The one such row in the archive reads "1933 New York
+    # Giants ... NYG" beside a link to the 1934 Giants page; refusing it lost a right claim.
+    first = _link_code(links[0], y, league) if links else None
+    other = _link_code(links[1], y, league) if len(links) > 1 else None
+    return y, full, league, first, short, other
 
 
 def date_of(cell):

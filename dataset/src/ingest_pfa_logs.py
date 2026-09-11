@@ -114,22 +114,81 @@ def run(part, write):
     n = collections.Counter()
     claims, refused, srs = [], [], {}
 
+    _res = {}
+
+    def res(s, y, lg):
+        # Cached: one answer per (string, year, league). The refusal census the resolver
+        # keeps is never read by this ingest, so caching changes no output.
+        if not s: return None
+        k = (s, y, lg)
+        if k not in _res: _res[k] = C.resolve(s, y, lg, source="season_key")
+        return _res[k]
+
+    def club_of(r):
+        """-> (club hit, None) or (None, why). THE FULL NAME AND ITS LINK, HELD AGAINST EACH
+        OTHER AT THE CLUB (Ryan, 2026-09-11). Codes are not compared: PFA links the 2020
+        Raiders as `oak` beside the name "Las Vegas Raiders", and both are the one Raiders
+        club. Both resolve to one club -> that club. Only one resolves -> that one. They
+        name DIFFERENT clubs -> refused, counted.
+        THE LEAGUE IS ON THE ROW AND MUST BE USED. This passed None and refused 682 1980s
+        rows saying the table "cannot place HOU in 1984" -- it can: the Houston Oilers are
+        NFL 1970-1996. A join must use every field on the row; this is the third time."""
+        by_link = res(r["club_code"], r["year"], r.get("league"))
+        by_name = res(r.get("club_printed"), r["year"], r.get("league"))
+        if by_link and by_name and by_link[0] != by_name[0]:
+            return None, (f"the full name `{r['club_printed']}` and its link `{r['club_code']}` name two "
+                          f"different clubs in {r['year']}")
+        hit = by_link or by_name
+        if not hit:
+            return None, (f"the club table cannot place `{r['club_printed']}` [{r['club_code']}] in "
+                          f"{r['year']} for league `{r.get('league')}`")
+        return hit, None
+
+    # THE STRING PFA PRINTS FOR A CLUB, learned from the rows where its short label is RIGHT.
+    # A row whose label named the opponent needs its own club's string, and the table's code
+    # is the wrong one to reach for: PFA labels the Bears CHIB and the table holds CHI, so a
+    # Bear's right-labelled rows sat on CHIB and his wrong-labelled rows on CHI -- one man,
+    # one club-season, two season keys. Measured on the first pass: 652 of them, 388 men,
+    # where the stores before the fix held 12. (club, year, league) -> Counter(label).
+    labels = collections.defaultdict(collections.Counter)
+
+    def learn(rows):
+        for r in rows:
+            short = r.get("club_short_label")
+            if not short: continue
+            hit, _ = club_of(r)
+            if hit and (res(short, r["year"], r.get("league")) or (None,))[0] == hit[0]:
+                labels[(hit[0], r["year"], r.get("league"))][short] += 1
+
     def place(r):
-        """(person, club_code) or (None, why). The club code is the table's, or nothing."""
+        """(person, club string) or (None, why)."""
         pids = code2p.get(r["code"]) or []
         if len(pids) != 1:
             return None, ("no person holds this PFA player page" if not pids
                           else "the PFA code joins to more than one person")
-        # THE LEAGUE IS ON THE ROW AND MUST BE USED. This passed None and refused 682
-        # 1980s rows saying the table "cannot place HOU in 1984" -- it can: the Houston
-        # Oilers are NFL 1970-1996. What it cannot do is choose between them and the
-        # USFL's Houston club without being told the league, which the row has carried
-        # all along. A join must use every field on the row; this is the third time.
-        hit = C.resolve(r["club_code"], r["year"], r.get("league"), source="season_key")
-        if not hit:
-            return None, (f"the club table cannot place `{r['club_code']}` in "
-                          f"{r['year']} for league `{r.get('league')}`")
-        return pids[0], r["club_code"]
+        hit, why = club_of(r)
+        if not hit: return None, why
+        # THE SUBJECT'S CLUB STRING MOVES ONLY WHERE IT WAS WRONG. Where the short label names
+        # the same club, it stays the token it always was, so no correct season key is
+        # renamed; where it named another club, the string PFA prints for the right club
+        # that year takes its place.
+        short = r.get("club_short_label")
+        by_short = res(short, r["year"], r.get("league"))
+        if by_short and by_short[0] == hit[0]:
+            return pids[0], short
+        seen = labels.get((hit[0], r["year"], r.get("league")))
+        if seen:
+            n["club_string_from_the_label_pfa_prints_for_it"] += 1
+            return pids[0], sorted(seen.items(), key=lambda kv: (-kv[1], kv[0]))[0][0]
+        # NEVER THE LINK'S CODE. PFA's link code is not a club's code (`oak` for the 2020
+        # Raiders, `stl` for the 1934 Gunners, who hold SLG); written as a key it names
+        # nothing. Only where PFA never prints the club's label rightly that decade is the
+        # table's code used, counted; a club with no code that year is refused, counted.
+        code = C.code_for(hit[0], r["year"])
+        if not code:
+            return None, f"the club table holds `{hit[0]}` with no code in {r['year']}"
+        n["club_string_from_the_table_code"] += 1
+        return pids[0], code
 
     def record(locator):
         """EVERY source_record this ingest writes goes through here, so the store's own
@@ -161,6 +220,11 @@ def run(part, write):
 
     if part == "postseason":
         gl, glmeta = load_rows("gamelogs")
+        pl, plmeta = load_rows("playoffs")
+        learn(gl); learn(pl)                 # every row, both page kinds, before any is placed
+        # A ROW REFUSED BY THE READER IS COUNTED IN THE STORE, not only in the reader's
+        # metadata, which nothing kept: that is how 2,570 rows nearly vanished in silence.
+        n["rows_team_link_unusable_club_from_the_full_name"] += glmeta.get("rows_team_link_unusable_club_from_the_full_name", 0)
         post, off_vocab = of_phase(gl, "PLAYOFFS")
         n["rows_with_a_phase_outside_the_vocabulary"] = sum(off_vocab.values())
         for r in post:
@@ -173,6 +237,9 @@ def run(part, write):
                  "score_as_printed": r["score"], "result_as_printed": r["result"],
                  "club_as_printed": r["club_printed"], "statistics": printed,
                  "columns_printed_blank": blank,
+                 # WHAT PFA'S SHORT LABEL PRINTED, held as printed. On ~22% of playoff
+                 # rows it names the opponent; the club above comes from the row's link.
+                 "club_short_label_as_printed": r.get("club_short_label"),
                  "boxscore": (r["boxscore"] or "").lstrip("/") or None}
             claims.append({**base_claim(sr_for("gamelogs", r["code"])),
                            "id": f"post:{r['code']}:{r['date']}:{r['section']}",
@@ -180,7 +247,7 @@ def run(part, write):
                            "predicate": "pfa.postseason_game", "value": v})
             n["postseason_game"] += 1
 
-        pl, plmeta = load_rows("playoffs")
+        n["rows_team_link_unusable_club_from_the_full_name"] += plmeta.get("rows_team_link_unusable_club_from_the_full_name", 0)
         for r in pl:
             pid, club = place(r)
             if pid is None:
@@ -247,6 +314,8 @@ def run(part, write):
 
     else:
         gl, glmeta = load_rows("gamelogs")
+        learn(gl)                            # every row, before any is placed
+        n["rows_team_link_unusable_club_from_the_full_name"] += glmeta.get("rows_team_link_unusable_club_from_the_full_name", 0)
         reg, off_vocab = of_phase(gl, "REGULAR SEASON")
         n["rows_with_a_phase_outside_the_vocabulary"] = sum(off_vocab.values())
         games = {}
@@ -254,13 +323,18 @@ def run(part, write):
             pid, club = place(r)
             if pid is None:
                 refused.append({"page": r["code"], "year": r["year"], "why": club}); n["refused"] += 1; continue
+            # THE PLACED CLUB IS WHAT EVERYTHING DOWNSTREAM KEYS ON -- the game's sides and the
+            # season sums below -- never `club_code`, which is now PFA's link code. Keying
+            # the sides on it labelled 51 Raiders games `OAK` and dropped 4 held conflicts.
+            r["_club"] = club
             printed, blank = split_stats(r["stats"], list(r["stats"]))
             box = (r["boxscore"] or "").lstrip("/") or None
             v = {"date_as_printed": r["date"], "section": r["section"],
                  "home_away_neutral": r["ha"], "opponent_as_printed": r["opp"],
                  "score_as_printed": r["score"], "result_as_printed": r["result"],
                  "club_as_printed": r["club_printed"], "statistics": printed,
-                 "columns_printed_blank": blank, "boxscore": box}
+                 "columns_printed_blank": blank, "boxscore": box,
+                 "club_short_label_as_printed": r.get("club_short_label")}
             claims.append({**base_claim(sr_for("gamelogs", r["code"])),
                            "id": f"gl:{r['code']}:{r['date']}:{r['section']}",
                            "subject": ["stint", pid, club, f"{r['league']}-{r['year']}"],
@@ -275,7 +349,7 @@ def run(part, write):
                                            "year": int(m.group(1)), "number": int(m.group(3)),
                                            "date_as_printed": r["date"], "clubs": {},
                                            "boxscore": box, "pages": set()})
-                g["clubs"].setdefault(r["club_code"], {"home_away_neutral": r["ha"],
+                g["clubs"].setdefault(club, {"home_away_neutral": r["ha"],
                                                        "opponent_as_printed": r["opp"],
                                                        "score_as_printed": r["score"],
                                                        "result_as_printed": r["result"]})
@@ -297,11 +371,15 @@ def run(part, write):
         for r in reg:
             pids = code2p.get(r["code"]) or []
             if len(pids) != 1: continue
+            if not r.get("_club"):
+                # A row the ingest refused to place is not summed under a code it could not
+                # place; before this it was summed under whatever the cell printed.
+                n["season_sum_rows_skipped_unplaced"] += 1; continue
             mp = M.MAP.get(r["section"]) or {}
             for col, raw in r["stats"].items():
                 if col not in mp: continue
                 v = M.number(raw)
-                s = agg[(pids[0], r["year"], r["club_code"], r["league"], r["section"], col)]
+                s = agg[(pids[0], r["year"], r["_club"], r["league"], r["section"], col)]
                 s["n"] += 1
                 if v is None: s["blank"] += 1; continue
                 s["sum"] += v
