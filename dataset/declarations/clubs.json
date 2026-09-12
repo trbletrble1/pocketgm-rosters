@@ -342,6 +342,60 @@
     "_boundary_season": "Ryan's ruling, 2026-09-09: a boundary season -- professional football played before the club entered any league the archive holds, and twenty years before a league source would have looked at it. Created under the boundary ruling in the same shape as Frankford 1922-23 and the Gunners 1931-33. NO LEAGUE IS CREATED and none is asserted; the league is the empty string.",
     "_nothing_can_corroborate_these": "No other source in the archive or its caches names this club before 1922. Every man on these four club-seasons rests on one page of one site, and the claims say so on themselves.",
     "roster_is_keyed_to_the_game": false
+   },
+   {
+    "code": "DOC:DAY-IND",
+    "name": "Dayton Triangles",
+    "year": 1919,
+    "league": "",
+    "source_id": "football-hunting-ind",
+    "source_record": "football-hunting-ind#dayton-1919",
+    "name_as_printed": "TRIANGLES 1919",
+    "evidence": "a captioned team photograph, 'TRIANGLES 1919', naming 18 players, Storck as manager and Talbott as coach, with the season's eight results printed beneath (Nordyke-Marmon, Pitcairn Quakers, Cleveland Panthers, Cin'ti Celts, Panhandles twice, Pine Village, Massillon).",
+    "opponent_in_scope": null,
+    "lineage": "UNKNOWN. NOT linked to club-dayton-triangles-1920.",
+    "lineage_candidate": {
+     "other": "club-dayton-triangles-1920",
+     "why_not_a_link": "Same name and city, and the APFA club the archive holds from 1920. Whether the 1919 Ohio League club is the same club is a LINEAGE QUESTION, not assumed -- exactly as Frankford 1922-23 is not linked to 1924. The ingest uses the 1920 roster only as the NEIGHBOURING SEASON against which each 1919 name is checked, never as a link."
+    },
+    "_boundary_season": "Ryan's ruling, 2026-09-11 (Two): a document naming a squad on a club-season nothing else covers opens it -- the Bethlehem and Gilberton shape, extended here to club-seasons the archive held nothing for. The Ohio League is not a league the archive holds; NO LEAGUE IS CREATED and none is asserted.",
+    "roster_is_keyed_to_the_game": false
+   },
+   {
+    "code": "DOC:POT-IND",
+    "name": "Pottsville Maroons",
+    "year": 1924,
+    "league": "",
+    "source_id": "football-hunting-ind",
+    "source_record": "football-hunting-ind#pottsville-1924-morning-call",
+    "name_as_printed": "Pottsville",
+    "evidence": "Allentown Morning Call, September 22, 1924, p. 14: an account of the Maroons' opening game against Darby at Minersville Park, with both elevens and the scoring, printed after the game.",
+    "opponent_in_scope": null,
+    "lineage": "UNKNOWN. NOT linked to club-pottsville-maroons-1925.",
+    "lineage_candidate": {
+     "other": "club-pottsville-maroons-1925",
+     "why_not_a_link": "The Anthracite League club of 1924 and the NFL club of 1925 share a name and a city; the archive's mechanical test for a relocation or continuation is whether the men carry over, and on this clipping it cannot be run fairly -- of the eleven, only a Beck (Clarence) is held on the 1925 roster. The 1925 roster is used as the NEIGHBOURING SEASON only."
+    },
+    "_boundary_season": "Ryan's ruling, 2026-09-11 (Two). The Anthracite League is not a league the archive holds; none is asserted.",
+    "roster_is_keyed_to_the_game": false
+   },
+   {
+    "code": "DOC:POR-IND",
+    "name": "Portsmouth Spartans",
+    "year": 1929,
+    "league": "",
+    "source_id": "football-hunting-ind",
+    "source_record": "football-hunting-ind#portsmouth-1929",
+    "name_as_printed": "The SPARTANS 1929 PORTSMOUTH-OHIO",
+    "evidence": "a team photograph with each man's name typed above him: 21 players and 'CCAH [coach] HAROLD GRIFFEN'.",
+    "opponent_in_scope": null,
+    "lineage": "UNKNOWN. NOT linked to club-portsmouth-spartans-1930.",
+    "lineage_candidate": {
+     "other": "club-portsmouth-spartans-1930",
+     "why_not_a_link": "The independent 1929 Spartans and the NFL club of 1930 share a name and a city; lineage is not assumed. The 1930 roster is used as the NEIGHBOURING SEASON against which each 1929 name is checked, never as a link."
+    },
+    "_boundary_season": "Ryan's ruling, 2026-09-11 (Two). The club played as an independent before entering the NFL; no league is asserted.",
+    "roster_is_keyed_to_the_game": false
    }
   ],
   "_roster_is_keyed_to_the_game": "TRUE only where the club enters for a documented GAME and has no club-season -- the 1926 Los Angeles Tigers. It is what makes a club EMPTY BY RULING rather than a gap. Frankford's 1922-23 independent seasons are real club-seasons with real men on them and must NOT carry it: they were briefly reported as 'empty by ruling' while holding 45 men, because the flag was written for one club and inherited by every club that used the same declaration route."

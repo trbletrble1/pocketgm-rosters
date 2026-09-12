@@ -1,0 +1,12 @@
+index writers found in src/: 9
+   apply_club_keys.py                 line 141
+   apply_officials.py                 line 198
+   apply_person_merges.py             line 168
+   apply_player_promotions.py         line 121
+   apply_promotions.py                line 214
+   build_person_index.py              line 325
+   demote_stintless.py                line 72
+   index_io.py                        line 139
+   restore_cfl1945_seasons.py         line 78
+
+GATE PASSED (P1 every writer declared; P2 no in-place writes; P4 every unresolvable stint store declared)

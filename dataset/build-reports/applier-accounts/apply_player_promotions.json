@@ -1,12 +1,12 @@
 {
  "applier": "apply_player_promotions",
- "decided": 7722,
+ "decided": 7740,
  "tally": {
-  "applied": 7722
+  "applied": 7740
  },
  "reasons": {},
- "expected": 7722,
- "moved": 7722,
+ "expected": 7740,
+ "moved": 7740,
  "run": "write",
  "outcomes": [
   {
@@ -61779,6 +61779,150 @@
   },
   {
    "decision": "P_054669",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054670",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054671",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054672",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054673",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054674",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054675",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054676",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054677",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054678",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054679",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054680",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054681",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054682",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054683",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054684",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054685",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054686",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054687",
    "outcome": "applied",
    "expected": 1,
    "moved": 1,

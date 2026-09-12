@@ -2018,6 +2018,102 @@ reached at all.*
 
 ---
 
+## A surname unique on the club-season is enough — and only that
+
+**Ruling, 11 September 2026 (Ryan), from the Football Hunting folder.** A caption
+printing `Speck`, where exactly one Speck is held **on that club-season**, joins to
+that man. A second man of the surname on the same roster refuses both, and a
+document printing the surname twice in one list cannot join both to one man.
+
+**This is narrower than the existing tiers, not looser.** "Unique in the archive" is
+the trap that has bitten four times — Andy King, Talbot, the 1934 Reds, the era
+join — because uniqueness among the names the archive happens to hold is satisfied
+by the *absence* of the right man. Unique among twenty men already on one roster is
+a different proposition. Without it a team photograph is worth almost nothing,
+because captions print surnames.
+
+**Measured on the folder: 45 exact, 175 on the surname, 41 not joined** (38 not on
+the club-season, 3 refused because two men of the surname are on it — Crowther on
+Frankford 1925, Owen on the 1934 Giants, Higgins on Canton 1921).
+
+**What I got wrong first, and why it matters.** I added a forename test the ruling
+did not contain: refuse when the printed forename meets none of the held forms. It
+refused ten men the ruling joins, and the reason was never the forename — it was
+reading. `Hendrian, Oscar George` is surname-first; `Norman Speck` is Dutch Speck;
+`"Potsy" Clark` and `"Dutch" Clark` became two bare Clarks and refused each other.
+A disagreeing forename is now written on the claim, not refused on (eight, all
+nicknames but one: `Dick Jappe` against a held Paul Jappe).
+
+**A spelling variant is not this** (ruling Three). `Cocoran` against Bunny Corcoran
+is a spelling question; folding it would be the misprint rule in reverse. Variants
+are reported as candidates and joined to nobody.
+
+Gate: `src/gate_surname_on_club_season.py` S1/S2, counted from the read model with
+the claim's own store left out.
+
+**And a join has to say where it was made, or nobody can check the man is there.**
+The first write put Pro Football Archives' ten facts about Bill Coleman — his full
+name, birth and death — onto **P_002554, a Buffalo 1921 Smith**. The Coleman block
+read a person id it never set, and inherited the one the Courier section had just
+joined. No surname check could see it: Coleman's is a ruled attachment, not the
+surname tier. I found it by asking which person the claims were on. Now every joined
+claim carries `_joined_on` — the club-season its join was made on — and the gate's
+S3 fails any joined man who is not on it. Run against the defective store first, it
+failed on exactly those ten. The move to P_045339 is stated in the store's own loss
+record as the correction it is.
+
+---
+
+## An empty club-season is opened by the document that names its squad
+
+**Ruling, 11 September 2026 (Ryan).** Dayton 1919, Pottsville 1924 and Portsmouth
+1929 held nobody; the document naming the squad opens each, as Bethlehem and
+Gilberton were. They enter the club table under `CLUBS_NAMED_BY_A_DOCUMENT`, unlinked
+to the NFL clubs that followed.
+
+**Opening a season is not permission to mint.** Most of the 1919 Triangles are
+surely the 1920 Triangles. So each man is placed by evidence written on his claim,
+against the same city's *next* season, which the archive holds — a neighbour, never
+a lineage:
+- exact full name, one person in the archive, and he is on the neighbouring season →
+  joined (3: Chuck Bennett, Buck Weaver, Chuck Braidwood);
+- any namesake on the neighbouring season, an exact name held elsewhere, or a bare
+  surname with a namesake playing within two years → **candidate**, neither joined
+  nor promoted (31 — Mahrt beside Al Mahrt, Robb beside Harry Robb);
+- nobody → a lead, promoted (18).
+
+A score line is a third assertion: Scott and Boyd scored for Pottsville and are in
+neither the eleven nor a substitution. The route refuses the evidence kind by default.
+
+**Then the 31 were ruled (Ryan, same day): a surname unique on the club's adjacent
+season places a man, as a surname unique on the club-season does.** The club does the
+work, not the calendar. **It was measured before it ran.** Across every club and pair of
+consecutive seasons the archive holds, a surname unique on both rosters belongs to two
+different men 1.30% of the time with birth dates to prove it, plus 0.14% undated — and
+for 1915–1935, 16 of 1,779 (0.90%) plus 2 undated. Rare, so the rule stands. **And the
+refusal is built in:** two men of the surname on either roster — the season joined to, or
+the document printing it twice — refuses. That is the single-club-season test across the
+boundary, and it refuses the Nessers at Columbus, the Horweens at the Cardinals and the
+Robbs at Canton without anyone naming them. What it cannot see is brothers one per season
+— Steve and Bill Owen at Kansas City, 1925 and 1926 — which is the residual 1%.
+
+---
+
+## A trainer is a fact about the club-season
+
+**Ruling, 11 September 2026 (Ryan).** `club_staff_role` holds trainer, manager,
+business manager and president exactly as printed, on a **club-season subject**,
+naming no person. It is kept apart from `role_title`, which the bios read. Twelve
+claims: seven managers, Herman Smith (Canton 1923 trainer), John V. Mara (Giants
+president) and three possible Racine trainers under a heading that may not label them.
+
+**The archive holds a namesake for three of them and none is the man.** Herman Smith
+is also P_008811, who played 1994–2003; Storck and Talbott resolve to Dayton's own
+later men. A staff role that joined on a name would have been the unique-in-the-archive
+tier again. Gate C1/C2.
+
+---
+
 ## A man named in a team photograph caption is a person
 
 **Ruling, 8 September 2026.** Stated as a property, not as an instance: a man named

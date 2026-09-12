@@ -7,6 +7,10 @@ a document is read and the shape does not.
 
   T1  Every team-photograph promotion sits on a club-season the archive HOLDS.
       Without this the ruling would mint people onto club-seasons that do not exist.
+      Since Ryan's ruling of 2026-09-11 (Two), a club-season that held nobody can be OPENED by
+      the document naming its squad (declarations/clubs.json CLUBS_NAMED_BY_A_DOCUMENT). It is
+      then held by the club table, and after the rebuild by the men placed on it -- which is
+      what this checks. The property is unchanged; its reach is wider, and on purpose.
 
   T2  Every team-photograph promotion carries the club the CAPTION PRINTED. A name
       in a photograph of something else is not covered, and the printed club name is

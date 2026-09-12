@@ -1,0 +1,6 @@
+decisions: 93
+  claims addressed to a person: 7,462,096; addressees after the merge map: 50,089; claims sitting on an absorbed id: 0
+  people in a merge who are also in a refused pair: 5 (a man may duplicate one person and be a namesake of another)
+  merged people: 93; club-seasons gained 1352, held by both 604
+
+gate_person_merges: every property holds

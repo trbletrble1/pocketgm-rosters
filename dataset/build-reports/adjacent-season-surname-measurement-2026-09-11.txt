@@ -1,0 +1,10 @@
+pairs (club, season, season+1, surname) where the surname is on both rosters: 113808
+  104022 same_person  (98.56% of unique-on-both)
+    8262 refused_two_on_a_roster
+    1368 different_person_different_birth_date  (1.30% of unique-on-both)
+     150 different_id_no_dates_to_tell  (0.14% of unique-on-both)
+       6 different_id_same_birth_date (unmerged duplicate?)  (0.01% of unique-on-both)
+e.g. refused [('club--2025-dc', 2025, 'williams', 2, 1), ('club-akron-pros-1920', 1920, 'tobin', 1, 2), ('club-akron-pros-1920', 1923, 'mills', 1, 2), ('club-akron-pros-1920', 1924, 'mills', 2, 1), ('club-alabama-hawks-1967', 1967, 'bryan', 2, 1), ('club-albany-firebirds-1990', 1998, 'johnson', 2, 1)]
+e.g. different_person_different_birth_date [('club-akron-pros-1920', 1924, 'newman', 'P_015179', 'P_015307'), ('club-albany-firebirds-1990', 1995, 'smith', 'P_008347', 'P_008969'), ('club-arizona-rattlers-1992', 1996, 'burch', 'P_009822', 'P_038178'), ('club-arizona-rattlers-1992', 1997, 'burch', 'P_038178', 'P_009822'), ('club-arizona-rattlers-1992', 2007, 'mckenzie', 'P_028532', 'P_011193'), ('club-arizona-wranglers-1983', 1983, 'thomas', 'P_040405', 'P_022703')]
+e.g. different_id_no_dates_to_tell [('club-amsterdam-admirals-1995', 1998, 'anderson', 'P_053038', 'P_053048'), ('club-amsterdam-admirals-1995', 2000, 'sanders', 'P_053061', 'P_027986'), ('club-amsterdam-admirals-1995', 2001, 'allen', 'P_053078', 'P_053106'), ('club-amsterdam-admirals-1995', 2002, 'crowell', 'P_053109', 'P_053138'), ('club-amsterdam-admirals-1995', 2005, 'king', 'P_029617', 'P_053234'), ('club-atlanta-falcons-1966', 2017, 'carter', 'P_045607', 'P_032396')]
+e.g. different_id_same_birth_date (unmerged duplicate?) [('club-dallas-cowboys-1960', 2010, 'geathers', 'P_032020', 'P_032398'), ('club-hamilton-tigers-1945', 2022, 'wilson', 'P_013130', 'P_013564'), ('club-ottawa-rough-riders-1945', 1952, 'stanton', 'P_003863', 'P_001045'), ('club-toronto-argonauts-1945', 2017, 'white', 'P_012005', 'P_012813'), ('club-winnipeg-blue-bombers-1945', 2015, 'morgan', 'P_012299', 'P_012482'), ('club-winnipeg-blue-bombers-1945', 2022, 'cadwallader', 'P_013257', 'P_013664')]

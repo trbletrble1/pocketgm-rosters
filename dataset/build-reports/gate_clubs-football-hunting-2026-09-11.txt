@@ -1,0 +1,59 @@
+K1  every club-season resolves or is reported unresolvable
+  FAIL  1 club-seasons neither resolve nor appear in the unresolved list: 1 x ('season_key', 'AFL') -- all: [('season_key', 'PFA:SD', 1944, 'AFL')]
+K2  a name is looked up with its year
+  ok    1946 Buffalo Bisons -> ('club-buffalo-bisons-1946', 'official'): the AAFC club, by its own name
+  ok    1986 Buffalo Bisons -> ('club-buffalo-bills-1960', 'wrong_for_season'): the Bills, recorded as a name wrong for its season
+  ok    the two resolve to different clubs
+  ok    every wrong-for-season string names the correct name for that season (0 do not)
+  ok    the merged clubs are their own clubs, never chained into a parent: ['club-philadelphia-eagles-pittsburgh-steelers-1943', 'club-chi-pit-cards-steelers-1944']
+  ok    1943 'Philadelphia Eagles/Pittsburgh Steelers' is its own club and its parents' names that year resolve to it, never to a parent: ('club-philadelphia-eagles-pittsburgh-steelers-1943', 'official')
+  ok    1944 'Chi/Pit Cards/Steelers' is its own club and its parents' names that year resolve to it, never to a parent: ('club-chi-pit-cards-steelers-1944', 'official')
+K3  the table is not an index writer
+  ok    build_clubs.py and clubs.py never import the index writer
+  ok    person index unchanged while the gate ran
+  ok    build_clubs is not among the 9 declared index writers (builder, chain, exempt helper)
+  ok    207,110 player seasons in the index, none touched
+K4  an unmappable string fails loudly
+  ok    an invented string is refused, counted by census() and printed by report()
+  ok    a year outside every span is refused, not guessed
+  ok    the unresolved list is complete (590 strings, 43644 lookups) and every row carries a reason
+K5  internal consistency
+  ok    605 club ids, all unique
+  ok    every club's id is anchored to its first code and year
+  ok    4,250 code-years, each on exactly one club
+  ok    every segment year carries an official name (0 do not: [])
+  ok    every archive club-season carries a league (0 do not: [])
+  ok    every string is year-scoped (0 are not)
+  ok    every string lies inside its club's span unless marked beyond the archive or a year without a season (0 do not: [])
+  ok    the parents are silent in their merger years
+  ok    every _clubs code-year is in the table (0 missing: [])
+K6  no league in scope has sources naming it and no club
+  ok    32 leagues; 4 hold no club and every one is explained (['AFL-1926', 'AFL-1940', 'Arena', 'Ohio'] are the fandom survey's labels, [] are family-mapped to CFL with 0 refusals, [] are not leagues, [] are ruled out of scope)
+    the EFFECT, counted by gate_club_table_reach: a ceiling of 373 season keys the table cannot name. Every refusal counted here is one of them.
+  ok    a family-mapped league refusing strings is reported, not silent: []
+  ok    ARFL: 108 clubs, 62 club-seasons, 12 strings still refusing
+K7  a misprinted string is a spelling of a club that was there
+  ok    every misprint falls inside its club's span (0 do not: [])
+  ok    no misprint is also one of the club's own names (0: [])
+  ok    no misprint is another club's real name that year (0: [])
+  ok    every misprint carries its evidence (3 declared)
+K8  a span extension is corroborated outside the source that proposed it
+  ok    every extension has corroboration from another source (0: [])
+  ok    every corroboration carries a locator (0: [])
+  ok    every extension is adjacent to the span it extends (0: [])
+K9  an attested league span sits inside its club, cites pages, and adds nothing else
+  ok    every declared span names a club the table holds (0: [])
+  ok    every declared span sits inside its club's years (0: [])
+  ok    every declared span cites a page (0: [])
+  ok    every declared span reached the table (0: [])
+  ok    every league on a club carries its evidence ([])
+  ok    9 attested league span(s): bc-lions WIFU, calgary-stampeders WIFU, edmonton-eskimos WIFU, hamilton-tigers IRFU
+
+K10 the pseudo-league tokens are DERIVED, not typed
+  ok    pseudo_league_tokens == single-word declared tokens minus the club table's leagues (['COACHES', 'DRAFT', 'IND', 'SALARIES'])
+  ok    clubs.PSEUDO_LEAGUES() is the declaration and nothing else
+K11 no club is minted from an empty name
+  ok    every club in the table has a name (0: [])
+
+CLUB TABLE GATE: 1 FAILURE(S)
+   - 1 club-seasons neither resolve nor appear in the unresolved list: 1 x ('season_key', 'AFL') -- all: [('season_key', 'PFA:SD', 1944, 'AFL')]
