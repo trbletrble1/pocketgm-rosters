@@ -1,0 +1,13 @@
+TOTAL ROWS: 112 {'nobody held': 19, 'almost nobody held': 4, 'boundary season': 11, 'surname only': 78}
+
+rows that absorbed surname-only men:
+   almost nobody held   1924 Pottsville Maroons             men   7 | the rest of the squad; and forenames for Brunner, Emmanuel, Hudnek, Julian, Nemzek, Potter, Tribit
+   almost nobody held   1926 Gilberton Catamounts           men   9 | the rest of the squad; and forenames for Boslego, Chapman, Copley, Franks, Gallagher, Joseph, Pollard, Sheely
+   boundary season      1903 Frankford Yellow Jackets       men  17 | the rest of the squad, in a season outside any league the archive holds; and a forename for Craig
+   boundary season      1919 Dayton Triangles               men  17 | the rest of the squad, in a season outside any league the archive holds; and forenames for Albers, Houser
+   boundary season      1922 Frankford Yellow Jackets       men  34 | the rest of the squad, in a season outside any league the archive holds; and forenames for Gorman, Lykes, Swin
+   boundary season      1931 St. Louis Gunners              men  33 | the rest of the squad, in a season outside any league the archive holds; and forenames for Brodhage, Carver, F
+
+surname-only rows: 78 | showing men held: 22 | with a citation: 6
+rows still showing a raw key: []
+rows with a citation, whole list: 7

@@ -19,6 +19,7 @@ import os, re, sys, subprocess, tempfile
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 COLUMNS = ["what it is", "year", "club", "men held", "what a find would add", "newspaper", "date", "link"]
 KINDS = ("nobody held", "almost nobody held", "boundary season", "surname only: ")
+# L6 (2026-09-12): the surname-only men are grouped, one row per club-season -- one document to find.
 FAILS = []
 
 
@@ -64,6 +65,21 @@ def main():
     no_click = [r[ix["club"]].value for r in body if re.search(r"https?://", str(r[ix["link"]].value or "")) and not r[ix["link"]].hyperlink]
     check(not no_link and not no_click, f"L5 every cited row carries its link in the row ({len(no_link)} do not: {no_link[:3]}), "
                                         f"first link clickable ({len(no_click)} not: {no_click[:3]})")
+    sur = [r for r in body if str(r[ix["what it is"]].value or "").startswith("surname only")]
+    seen = {}
+    for r in sur: seen.setdefault((str(r[ix["year"]].value), str(r[ix["club"]].value)), []).append(r[0].row)
+    dup = {k: v for k, v in seen.items() if len(v) > 1}
+    nameless = [r[0].row for r in sur if not str(r[ix["what a find would add"]].value or "").startswith(("a forename for ", "forenames for "))]
+    check(not dup and not nameless, f"L6 one row per club-season for the surname-only men ({len(sur)} rows; "
+                                    f"{len(dup)} club-seasons listed twice: {list(dup)[:3]}; {len(nameless)} rows naming no man)")
+    # L7 -- ONE CLUB-SEASON, ONE ROW, across the whole list: a roster that fixes a thin club-season also names its
+    # surname-only men, so the two are one document. And no row shows a raw measurement key for its club.
+    allseen = {}
+    for r in body: allseen.setdefault((str(r[ix["year"]].value), str(r[ix["club"]].value)), []).append(r[0].row)
+    twice = {k: v for k, v in allseen.items() if len(v) > 1}
+    raw = [r[ix["club"]].value for r in body if re.search(r"\|\d{4}\|", str(r[ix["club"]].value or ""))]
+    check(not twice and not raw, f"L7 no club-season on two rows ({len(twice)}: {list(twice)[:3]}); "
+                                 f"no raw measurement key shown as a club ({len(raw)}: {raw[:3]})")
     print("\nGATE PASSED" if not FAILS else f"\nGATE FAILED ({len(FAILS)})")
     return 1 if FAILS else 0
 

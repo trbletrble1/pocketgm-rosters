@@ -287,7 +287,7 @@ def ranked_rows():
 
     def put(key, band, tie, adds, kind, fix, note="", year=None, club=None, league=None,
             men_held=None, facts_missing=None, missing_breakdown=None, gap=None, name=None,
-            hunt="yes", pairs=None, keys=None):
+            hunt="yes", pairs=None, keys=None, named=None):
         # `hunt` IS A VALUE, NOT SOMETHING TO INFER FROM THE SENTENCE. Ruled 2026-09-10:
         # Ryan filters to the rows that are actually a hunt and ignores the rest, and
         # reading prose to work that out is not filtering.
@@ -297,7 +297,7 @@ def ranked_rows():
                      "facts_missing": facts_missing,
                      "missing_breakdown": missing_breakdown,
                      "gap": gap if gap is not None else club_season_gap(year, club, league),
-                     "pairs": pairs, "keys": keys}
+                     "pairs": pairs, "keys": keys, "named": named}
 
     def club_season_gap(year, club, league):
         """AN EMPTY LEAGUE PRINTS NOTHING, not `()`. measure_thin_archive writes `""` for
@@ -430,6 +430,7 @@ def ranked_rows():
             # measurement itself uses, printed in brackets in the club text. Not the printed names, which move,
             # and not a pairing of ids with years, which the report lists in an order of its own (2026-09-12).
             keys=list(keys),
+            named=x.get("club_seasons_named"),
             # EACH CLUB-SEASON AS THE MEASUREMENT NAMES IT -- its own club with its own year. Never every
             # club paired with every year (2026-09-12: that was right only by accident).
             pairs=[(c["club_id"], int(c["year"])) for c in (x.get("club_seasons_named") or [])
@@ -829,7 +830,55 @@ def hunting_list(rows):
     """The rows of the one-sheet hunting list, in the order to read them."""
     doc_only = _document_only_clubs(); cites = _citations_by_club_season()
     out = []
+    # MEN ON THE SAME CLUB-SEASON ARE ONE HUNT (Ryan, 2026-09-12): one roster with forenames names them all, so
+    # one row is one document to find. A man on two club-seasons is in both rows -- two documents.
+    men_by_pair = {}
     for r in rows:
+        if r["kind"] != "a name" and len(r.get("pairs") or []) == 1:
+            men_by_pair.setdefault(r["pairs"][0], r["men_held"])
+    groups = collections.OrderedDict()
+    for r in rows:
+        if r.get("hunt") != "yes" or r["kind"] != "a name": continue
+        named = {c["key"]: c for c in (r.get("named") or [])}
+        for k in (r.get("keys") or []):
+            g = groups.setdefault(k, {"men": [], "named": named.get(k)})
+            if r.get("name") not in g["men"]: g["men"].append(str(r.get("name")))
+    from clubs import Clubs
+    C_ = Clubs()
+    for k, g in groups.items():
+        c = g["named"] or {}
+        lg, yr, code = (k.split("|") + ["", "", ""])[:3]
+        yr = yr.lstrip("y")
+        pair = (c["club_id"], int(yr)) if c.get("club_id") and yr.isdigit() else None
+        club = (f'{c["name"]}' + (f' ({c["league"]})' if c.get("league") else "")) if c.get("named") else None
+        if club is None and yr.isdigit():
+            # THE MEASUREMENT CANNOT NAME A CLUB A DOCUMENT OPENED -- `IND|1931|DOC:SLG-IND` -- but the club table
+            # can. A raw key means nothing to a man browsing listings, and without the club id the row lost its
+            # men-held count and its citations too.
+            try:
+                hit = C_.resolve(code, int(yr), (lg if lg and lg != "IND" else None), source="season_key")
+                nm = C_.name_for(hit[0], int(yr)) if hit else None
+            except Exception:
+                hit, nm = None, None
+            if hit and nm:
+                pair, club = (hit[0], int(yr)), nm
+        club = club or k
+        best, more = _best(cites.get(pair, []) if pair else [])
+        n = len(g["men"]); held = men_by_pair.get(pair) if pair else None
+        out.append({
+            "order": 3, "sort": (3, (yr, club)),
+            "what it is": f"surname only: {n} {'man' if n == 1 else 'men'}",
+            "year": yr, "club": club,
+            "men held": "" if held in (None, "") else int(held),
+            "what a find would add": ("forenames for " if n > 1 else "a forename for ") + ", ".join(sorted(g["men"])),
+            "newspaper": "\n".join(f"{c_['paper'] or '(paper not named)'}" + (f", p. {c_['page']}" if c_["page"] else "")
+                                   for c_ in best) + (f"\n+{more} more" if more else ""),
+            "date": "\n".join(c_["date"] or "no date" for c_ in best),
+            "link": "\n".join(c_["url"] or "(no link)" for c_ in best),
+            "first_url": next((c_["url"] for c_ in best if c_["url"]), None),
+            "pair": pair, "men_names": sorted(g["men"])})
+    for r in rows:
+        if r["kind"] == "a name": continue          # grouped above, one row per club-season
         if r.get("hunt") != "yes":
             continue
         try: m = int(r["men_held"])
@@ -841,8 +890,6 @@ def hunting_list(rows):
             what, add, order = "almost nobody held", "the rest of the squad", 1
         elif r["kind"] in ("thin", "no coach") and ids & doc_only:
             what, add, order = "boundary season", "the rest of the squad, in a season outside any league the archive holds", 2
-        elif r["kind"] == "a name":
-            what, add, order = f"surname only: {r.get('name')}", "his forename", 3
         else:
             continue                       # a weight, an age, a college, a position, a coach: not a hunt
         best, more = _best([c for p in (r.get("pairs") or []) for c in cites.get(p, [])])
@@ -859,7 +906,20 @@ def hunting_list(rows):
                                    for c in best) + (f"\n+{more} more" if more else ""),
             "date": "\n".join(c["date"] or "no date" for c in best),
             "link": "\n".join(c["url"] or "(no link)" for c in best),
-            "first_url": next((c["url"] for c in best if c["url"]), None)})
+            "first_url": next((c["url"] for c in best if c["url"]), None),
+            "pair": (r["pairs"][0] if len(r.get("pairs") or []) == 1 else None)})
+    # ONE CLUB-SEASON, ONE ROW. Where the club-season already has a row -- 1924 Pottsville holding 7 men, whose
+    # 7 are also known only by surname -- the same roster fixes both, so the men fold into that row.
+    by_pair = {it["pair"]: it for it in out if it["order"] != 3 and it.get("pair")}
+    kept = []
+    for it in out:
+        t = by_pair.get(it.get("pair")) if it["order"] == 3 else None
+        if t is None:
+            kept.append(it); continue
+        n = len(it["men_names"])
+        t["what a find would add"] += (f"; and {'forenames' if n > 1 else 'a forename'} for "
+                                        + ", ".join(it["men_names"]))
+    out = kept
     out.sort(key=lambda x: x["sort"])
     return out
 
