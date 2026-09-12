@@ -1,0 +1,67 @@
+rendered: head 50056 work 50056 | errors in work: 0
+changed: 4758
+   45298 unchanged
+    4442 fix2 gains a close
+     203 UNEXPLAINED
+      63 fix1 token gone
+      33 fix1 token gone + fix1 'a new' gone
+      14 fix1 'a new' gone
+       3 'in near' corrected
+work bios still printing a token: 0 | 'a new': 0 | 'in near': 0
+
+[UNEXPLAINED] P_001090
+  BEFORE: George Brown was a player first — four seasons from 1949 — and coached after, as Assistant Head Coach of the BC Lions in 1954. He played for four clubs: the New York Yankees, the New York Yanks, the Edmonton Eskimos and the BC Lions. He was out of the game from 1952 to 1953. He died on 1/21/2013.
+  AFTER:  George Brown was a player first — four seasons from 1949 — and coached after, as Assistant Head Coach of the BC Lions in 1954. He played for four clubs: the New York Yankees, the New York Yanks, the Edmonton Eskimos and the BC Lions. He was out of the game from 1952 to 1953. He was a United States Army veteran.
+
+[UNEXPLAINED] P_001092
+  BEFORE: Brad Ecklund played five seasons, beginning with the New York Yankees in 1949, and then coached, most often as Offensive Line, with the Dallas Cowboys from 1960 to 1963. He coached for fifteen seasons in all. He went on to four more clubs: the New York Yankees, the New York Yanks, the Dallas Texans and the Baltimore Colts. He died on 2/6/2010.
+  AFTER:  Brad Ecklund played five seasons, beginning with the New York Yankees in 1949, and then coached, most often as Offensive Line, with the Dallas Cowboys from 1960 to 1963. He coached for fifteen seasons in all. He went on to four more clubs: the New York Yankees, the New York Yanks, the Dallas Texans and the Baltimore Colts. He served in the United States Navy; United States Marine Corps.
+
+[UNEXPLAINED] P_001094
+  BEFORE: Dan Garza moved between leagues: the AAFC with the New York Yankees (1949), the Yankees (1949) and the Yankees (1949); the NFL with the New York Yanks (1951). He did not play in 1950. Over two seasons he caught 40 passes. He died on 3/6/2002.
+  AFTER:  Dan Garza moved between leagues: the AAFC with the New York Yankees (1949), the Yankees (1949) and the Yankees (1949); the NFL with the New York Yanks (1951). He did not play in 1950. Over two seasons he caught 40 passes. He served in the United States Navy.
+
+[fix2 gains a close] P_000379
+  BEFORE: Gavin Escobar played in the NFL with the Dallas Cowboys (2013–16) and the Baltimore Ravens (2017) and in the AAF with the San Diego Fleet (2019). He did not play in 2018. Over five seasons he caught 46 passes.
+  AFTER:  Gavin Escobar played in the NFL with the Dallas Cowboys (2013–16) and the Baltimore Ravens (2017) and in the AAF with the San Diego Fleet (2019). He did not play in 2018. Over five seasons he caught 46 passes. He died on September 29, 2022, near Idyllwild, CA.
+
+[fix2 gains a close] P_001111
+  BEFORE: Tom Addison spent his whole career with the Boston Patriots: eight seasons, 1960 to 1967. Over five seasons he intercepted 16 passes.
+  AFTER:  Tom Addison spent his whole career with the Boston Patriots: eight seasons, 1960 to 1967. Over five seasons he intercepted 16 passes. He died on June 14, 2011, in Bluffton, SC.
+
+[fix2 gains a close] P_001112
+  BEFORE: Jack Atchason played one season of professional football, 1960, for the Boston Patriots in the AFL.
+  AFTER:  Jack Atchason played one season of professional football, 1960, for the Boston Patriots in the AFL. He was a United States Army veteran.
+
+['in near' corrected] P_015510
+  BEFORE: Rex Thomas's career, five seasons in the NFL from 1926, began with the BKN (later the Dodgers). He played for five clubs: the BKN, the Brooklyn Lions, the Cleveland Bulldogs, the Detroit Wolverines and the Brooklyn Dodgers. He did not play in 1929. In all he scored 92 points over five seasons. He died on March 28, 1955, in near Sterling, CO.
+  AFTER:  Rex Thomas's career, five seasons in the NFL from 1926, began with the BKN (later the Dodgers). He played for five clubs: the BKN, the Brooklyn Lions, the Cleveland Bulldogs, the Detroit Wolverines and the Brooklyn Dodgers. He did not play in 1929. In all he scored 92 points over five seasons. He died on March 28, 1955, near Sterling, CO.
+
+['in near' corrected] P_015526
+  BEFORE: Ted Schwarzer spent a single season, 1926, with the Buffalo Rangers. He died on May 5, 1939, in near Highlands, TX.
+  AFTER:  Ted Schwarzer spent a single season, 1926, with the Buffalo Rangers. He died on May 5, 1939, near Highlands, TX.
+
+['in near' corrected] P_015572
+  BEFORE: Bruce Gregory's career was the 1926 season with the Detroit Panthers. He died on December 26, 1960, in near Frederick, MD.
+  AFTER:  Bruce Gregory's career was the 1926 season with the Detroit Panthers. He died on December 26, 1960, near Frederick, MD.
+
+THE 203: {'close swapped: death -> death': 104, 'close swapped: death -> military': 87} | still unexplained after the close test: 12
+  P_004220
+    BEFORE: Lorne Reid's career crossed leagues: the CFL with the BC Lions (1954–57) and the Calgary Stampeders (1958–61); WIFU with the Lions (1954–57) and the Stampeders (1958–60).
+    AFTER:  Lorne Reid's career crossed leagues: the CFL with the BC Lions (1954–57) and the Calgary Stampeders (1958–61); WIFU with the Lions (1954–57) and the Stampeders (1958–60). He was a Royal Canadian Navy veteran.
+  P_005377
+    BEFORE: Pete Walker spent a single season, 1965, with the Montreal Alouettes.
+    AFTER:  Pete Walker spent a single season, 1965, with the Montreal Alouettes. He was a Royal Canadian Air Force veteran.
+  P_013784
+    BEFORE: Nathaniel Dumoulin Duguay played two seasons for the Hamilton Tiger-Cats, 2024 to 2025.
+    AFTER:  Nathaniel Dumoulin Duguay played two seasons for the Hamilton Tiger-Cats, 2024 to 2025. He was a Royal Canadian Army veteran.
+  P_005625
+    BEFORE: Doug Dersch's career ran from 1968 to 1972, five seasons, beginning with the Edmonton Eskimos. He played for four clubs: the Edmonton Eskimos, the Montreal Alouettes, the Hamilton Tiger-Cats and the Toronto Argonauts.
+    AFTER:  Doug Dersch's career ran from 1968 to 1972, five seasons, beginning with the Edmonton Eskimos. He played for four clubs: the Edmonton Eskimos, the Montreal Alouettes, the Hamilton Tiger-Cats and the Toronto Argonauts. He was a Royal Canadian Navy veteran.
+
+THE 104 death -> death: {'place added': 1, 'place changed': 106}
+  P_001100: 'He died on 02/9/2012.'  ->  'He died on 02/9/2012, in Westerly, RI.'
+  P_001169: 'He died on February 11, 1996.'  ->  'He died on February 11, 1996, in Baton Rouge, LA.'
+  P_001381: 'He died on December 16, 2018.'  ->  'He died on December 16, 2018, in Sussex County, DE.'
+  P_001772: 'He died on July 10, 2019.'  ->  'He died on July 10, 2019, in PA.'
+  P_001901: 'He died on February 8, 2021.'  ->  'He died on February 8, 2021, in Charlotte, NC.'

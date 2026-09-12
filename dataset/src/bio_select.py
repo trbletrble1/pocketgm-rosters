@@ -83,6 +83,14 @@ LEAGUE_NAME = {"NFL": "the NFL", "APFA": "the APFA", "AAFC": "the AAFC", "AFL": 
                "CFL": "the CFL", "WFL": "the WFL", "USFL": "the USFL", "USFL2": "the USFL",
                "XFL": "the XFL", "WLAF": "the World League", "UFL": "the UFL", "UFL2": "the UFL",
                "AAF": "the AAF"}
+# THE TOKENS THAT ARE NOT COMPETITIONS, READ FROM THE DECLARATION THAT RULES THEM (Ryan, 2026-09-11).
+# `league()` used to print any token its name table lacked, so 96 bios said "IND with the Dayton
+# Triangles" -- naming a league that is not one. A season under one of these is said as what the archive
+# knows: the club played it OUTSIDE ANY LEAGUE, and nothing is said either way about whether it is the
+# same club as a league entry of the same name. Gate: src/gate_bio_no_pseudo_league.py.
+PSEUDO = frozenset(json.load(open(required("declarations", "person-index-rebuild.json")))
+                   ["pseudo_league_tokens"]["tokens"])
+PSEUDO_PHRASE = {"IND": "outside any league"}      # any other non-competition gets no league phrase at all
 
 # candidate salient columns, in the project's precedence order, keyed table.column
 SALIENT_CANDIDATES = ["defense_and_fumbles.Tackle", "receiving.No.", "passing.Comp",
@@ -344,6 +352,18 @@ class Tables:
             if pred in ("military_service", "death_date", "death_place", "birth_place",
                         "high_school", "height", "weight", "college", "draft_selection", "draft"):
                 self.pfa[pid].setdefault(pred, c.get("value"))
+        # AND EVERY OTHER STORE'S PFA FACT (Ryan, 2026-09-11). Reading one fixed file left 32,662 people's PFA
+        # facts invisible to the bio -- 4,436 death dates, 1,218 military records, Bill Coleman's among them --
+        # though every one was already on the index record this module loads, under the PREFIXED key
+        # `pfa.<field>` that `pfield` never asked for. pfa-pre1950 is read first, so no fact it gave changes.
+        for pid, rec in IDX.items():
+            pb = (rec.get("person") or {}) if isinstance(rec, dict) else {}
+            for fld in ("military_service", "death_date", "death_place", "birth_place", "high_school",
+                        "height", "weight", "college", "draft_selection", "draft"):
+                if fld in self.pfa.get(pid, {}): continue
+                v = pb.get("pfa." + fld)
+                if isinstance(v, list): v = v[0] if v else None
+                if v not in (None, ""): self.pfa[pid][fld] = v
         for x in d.get("disagreements") or []:
             if x.get("field") == "birth_date":
                 s = x.get("subject"); pid = s[1] if isinstance(s, list) else None

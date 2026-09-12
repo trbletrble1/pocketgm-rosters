@@ -21,7 +21,7 @@ Identity (birth, college, hometown, high school, height, weight, draft,
 position) is NOT written here. It is data in F["vitals"], for a panel.
 """
 import re, hashlib
-from bio_select import club_name, club_name_or_none, LEAGUE_NAME, DEFUNCT_LEAGUES, LEAGUE_FAMILY, _club_table, is_head_position
+from bio_select import club_name, club_name_or_none, LEAGUE_NAME, DEFUNCT_LEAGUES, LEAGUE_FAMILY, _club_table, is_head_position, PSEUDO, PSEUDO_PHRASE
 
 VERB = {  # measure -> (singular, plural) past-tense phrase with {n}
     "tackles": ("made one tackle", "made {n} tackles"),
@@ -76,7 +76,19 @@ def rng(a, b):
 
 
 def league(l):
+    """A league's name -- and NEVER a token declared not to be a competition (Ryan, 2026-09-11). `IND` used
+    to fall through this lookup and print as though it were a league: "IND with the Dayton Triangles"."""
+    if l in PSEUDO: return PSEUDO_PHRASE.get(l, "")
     return LEAGUE_NAME.get(l, l)
+
+
+def in_league(l):
+    """' in the NFL' -- or ', outside any league' for an independent season -- or '' where a non-competition
+    has no phrase. Written so the sentence stays grammatical either way."""
+    if l in PSEUDO:
+        p = PSEUDO_PHRASE.get(l)
+        return f", {p}" if p else ""
+    return f" in {league(l)}"
 
 
 def did(measure, n):
@@ -337,8 +349,8 @@ class Writer:
         n_total = co["last_year"] - co["first_year"] + 1
         sf = f.get("shape_fact") or {}
         if shape == "coached_across_leagues":
-            lgs = [league(x) for x in sf.get("leagues", [])]
-            where = " and ".join(lgs) if len(lgs) == 2 else ", ".join(lgs[:-1]) + " and " + lgs[-1]
+            lgs = [league(x) for x in sf.get("leagues", []) if league(x)]
+            where = lgs[0] if len(lgs) == 1 else " and ".join(lgs) if len(lgs) == 2 else ", ".join(lgs[:-1]) + " and " + lgs[-1]
             return self.v(1, [f"{N} coached in {where}, most of it as {job}.",
                               f"{N}'s coaching crossed leagues — {where} — and its longest stretch was as {job}."])
         if shape == "coached_one_club":
@@ -353,7 +365,7 @@ class Writer:
         if shape == "coached_war_gap":
             return f"{N} {verb} {job}, with the war years between: he did not coach from {sf['before'] + 1} to {sf['after'] - 1}."
         if shape == "coached_defunct_club":
-            L = league(sf.get("league")) if sf.get("league") else None
+            L = league(sf.get("league")) if sf.get("league") and sf.get("league") not in PSEUDO else None
             club = self.the(sf["club"], sf["year"]) if sf.get("club") else None
             if L and club and sf["club"] != co["club"]:
                 return f"{N} {verb} {job}, and had coached {club} of {L} before that."
@@ -428,8 +440,8 @@ class Writer:
             return f"Over {k}, {a} to {b}, {N} coached, most of it with {where_club()}."
 
         if shape == "coached_across_leagues":
-            lgs = [league(x) for x in sf.get("leagues", [])]
-            where = " and ".join(lgs) if len(lgs) == 2 else ", ".join(lgs[:-1]) + " and " + lgs[-1]
+            lgs = [league(x) for x in sf.get("leagues", []) if league(x)]
+            where = lgs[0] if len(lgs) == 1 else " and ".join(lgs) if len(lgs) == 2 else ", ".join(lgs[:-1]) + " and " + lgs[-1]
             tail = (f"most of it with {where_club()}, {listed}" if listed
                     else f"most of it with {where_club()}")
             return f"{N}'s coaching crossed leagues — {where} — {tail}."
@@ -439,7 +451,7 @@ class Writer:
                     f"between: he did not coach from {sf['before'] + 1} to {sf['after'] - 1}.")
 
         if shape == "coached_defunct_club":
-            L = league(sf.get("league")) if sf.get("league") else None
+            L = league(sf.get("league")) if sf.get("league") and sf.get("league") not in PSEUDO else None
             when = (f"from {co['first']} to {co['last']}" if co["first"] != co["last"]
                     else f"in {co['first']}")
             head = f"{N} coached {where_club()}" + (f" of {L}" if L else "") + f" {when}"
@@ -553,11 +565,12 @@ class Writer:
                                   f"{N}'s career was two games with {c} in {s['year']}."])
             return self.v(1, [f"{N} played one professional game, for {c} in {s['year']}.",
                               f"{N}'s professional career was a single game, with {c} in {s['year']}.",
-                              f"One game was the whole of {N}'s career: {c}, {s['year']}, in {L}."])
+                              f"One game was the whole of {N}'s career: {c}, {s['year']}"
+                              + (in_league(s["league"]) if s["league"] in PSEUDO else f", in {L}") + "."])
         if k == "single_season":
             s = f["season"]; c = the(s["club"], s["year"]); L = league(s["league"])
             self.said_clubs = self.said_years = True
-            return self.v(1, [f"{N} played one season of professional football, {s['year']}, for {c} in {L}.",
+            return self.v(1, [f"{N} played one season of professional football, {s['year']}, for {c}{in_league(s['league'])}.",
                               f"{N}'s career was the {s['year']} season with {c}.",
                               f"{N} spent a single season, {s['year']}, with {c}."])
         if k == "one_club":
@@ -566,7 +579,7 @@ class Writer:
                               f"{N} played {words(f['seasons'])} seasons, every one of them for {c}, from {f['first']} to {f['last']}.",
                               f"From {f['first']} to {f['last']}, {words(f['seasons'])} seasons, {N} played for nobody but {c}."])
         if k == "long_career":
-            lgs = span["leagues"]; L = league(lgs[0]) if len(lgs) == 1 else "professional football"
+            lgs = span["leagues"]; L = league(lgs[0]) if len(lgs) == 1 and lgs[0] not in PSEUDO else "professional football"
             self.said_years = True
             R = runs(played)
             first_club = the(R[0][0], R[0][2], R[0][3])
@@ -592,6 +605,7 @@ class Writer:
                 else:
                     legs.append({"fams": [(fam, rs[0][1], rs[-1][2])], "rs": rs})
             bits = []; named = {}                      # plain name -> (code, year) first named under it
+            kinds = []                                 # per bit: league | pseudo | multi | multi_pseudo
             def nm_for(c, a, b):
                 plain = club_name(c, a)
                 if plain in named:
@@ -599,7 +613,10 @@ class Writer:
                     # the same club under another code (the Rock Island Independents of the 1925 NFL and the 1926 AFL
                     # are one club in the table) is named already; a different club with the same name is new
                     if c0 == c or (self.N.cid(c0, a0) and self.N.cid(c0, a0) == self.N.cid(c, a)): return f"the {plain.split()[-1]}"
-                    return f"a new {plain}"
+                    # NOT "a new". Two club ids sharing a name is a lineage the archive holds as UNKNOWN
+                    # (Ryan, 2026-09-11): "a new" denies it. The club is named in full again, with its own
+                    # league beside it, which asserts neither that it is the same club nor that it is not.
+                    return the(c, a, b)
                 named[plain] = (c, a); return the(c, a, b)
             def with_years(nm, ys):
                 ys = sorted(ys)
@@ -608,8 +625,15 @@ class Writer:
             for leg in legs:
                 if len(leg["fams"]) > 1:
                     c, a, _, _ = leg["rs"][0]
-                    bits.append(f"{nm_for(c, a, leg['fams'][-1][2])} in " +
-                                " and ".join(f"{league(l)} ({rng(x, y)})" for l, x, y in leg["fams"]))
+                    if any(l in PSEUDO for l, _, _ in leg["fams"]):
+                        bits.append(f"{nm_for(c, a, leg['fams'][-1][2])} " +
+                                    " and ".join((league(l) if l in PSEUDO else f"in {league(l)}") + f" ({rng(x, y)})"
+                                                 for l, x, y in leg["fams"]))
+                        kinds.append("multi_pseudo")
+                    else:
+                        bits.append(f"{nm_for(c, a, leg['fams'][-1][2])} in " +
+                                    " and ".join(f"{league(l)} ({rng(x, y)})" for l, x, y in leg["fams"]))
+                        kinds.append("multi")
                     continue
                 fam = leg["fams"][0][0]; rs = leg["rs"]
                 if len(rs) <= 3:
@@ -618,7 +642,14 @@ class Writer:
                 else:
                     c, a, b, ys = rs[0]
                     lst = f"{with_years(nm_for(c, a, b), ys)} and {words(len(rs) - 1)} other clubs through {rs[-1][2]}"
-                bits.append(f"{league(fam)} with {lst}")
+                bits.append(f"{league(fam)} with {lst}"); kinds.append("pseudo" if fam in PSEUDO else "league")
+            if any(k_ in ("pseudo", "multi_pseudo") for k_ in kinds):
+                # AN INDEPENDENT SEASON IS NOT A LEAGUE CROSSED (Ryan, 2026-09-11). Say what the archive knows:
+                # the club played that season outside any league. The seasons are told in order, each club
+                # named in full with its own league, so nothing says the two clubs are one or are two.
+                seq = [b if k_ == "pseudo" else (f"in {b}" if k_ == "league" else f"with {b}") for b, k_ in zip(bits, kinds)]
+                return self.v(1, [f"{N} played " + ", then ".join(seq) + ".",
+                                  f"{N} played " + "; then ".join(seq) + "."])
             if len(bits) == 1:
                 return self.v(1, [f"{N} played for {bits[0]}.", f"{N} was with {bits[0]}."])
             simple = all(b.startswith("the ") and " with " in b for b in bits)
@@ -639,7 +670,8 @@ class Writer:
                                   f"{N} was with {cb} in {b}, then out of football until {a}, when he came back to them."])
             ca = the(code_a, a)
             if ca == cb:      # a different club with the same name (the AAFC Dodgers): say which league
-                ca = f"the {ca.split()[-1]} of {league(next(l for y, c, l in played if y == a))}"
+                la = next(l for y, c, l in played if y == a)
+                ca = f"the {ca.split()[-1]}" + ("" if la in PSEUDO else f" of {league(la)}")
             return self.v(1, [f"{N} played for {cb} in {b} and did not play again until {a}, when he joined {ca}.",
                               f"{N}'s last game before the war came in {b} with {cb}; his next was in {a}, with {ca}.",
                               f"{N} was with {cb} in {b}, then out of football until {a} and {ca}."])
@@ -786,7 +818,10 @@ class Writer:
     def close(self, f):
         k = f["kind"]
         if k == "death":
-            where = f", in {strip_usa(f['place'])}" if f.get("place") else ""
+            # A PLACE GIVEN AS "near X" IS NOT "in near X". Three bios read that way before 2026-09-11, and
+            # reading every store's PFA facts would have made it fourteen.
+            pl = strip_usa(f["place"]) if f.get("place") else ""
+            where = (f", {pl}" if pl.lower().startswith("near ") else f", in {pl}") if pl else ""
             return f"He died on {date_text(f['date'])}{where}."
         if k == "military":
             if f["source"] == "pfa":

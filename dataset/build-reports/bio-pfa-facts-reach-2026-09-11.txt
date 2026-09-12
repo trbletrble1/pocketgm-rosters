@@ -1,0 +1,14 @@
+the bio reads these PFA fields: ('military_service', 'death_date', 'death_place', 'birth_place', 'high_school', 'height', 'weight', 'college', 'draft_selection', 'draft')
+(person, field) pairs held under pfa.* predicates: 200156 | of which NOT in pfa-pre1950, so invisible to the bio: 170050
+people holding at least one invisible field: 32665
+by store: [('pfa-1950on', 168440), ('pfa-stage3', 22456), ('pfa-coaches', 1108), ('football-hunting', 6)]
+by field: [('weight', 32270), ('height', 32267), ('high_school', 30210), ('birth_place', 27804), ('draft', 18886), ('draft_selection', 18692), ('death_date', 4436), ('death_place', 3796), ('military_service', 1218), ('college', 471)]
+people whose death date the bio cannot see: 4436
+keys the index's person block carries (sample of 20,000 records): [('college', 19527), ('birth_date', 18701), ('pfa.birth_date', 17631), ('pfa.transaction', 17462), ('roster_membership.signed', 17383), ('hometown', 17366), ('pfa.weight', 17308), ('pfa.height', 17226), ('roster_membership.departed', 17140), ('pfa.college_season', 16670), ('pfa.high_school', 15176), ('pfa.birth_place', 14739), ('roster_membership.drafted_by', 10028), ('nflverse.birth_date', 10006), ('roster_membership.on_a_roster_at_any_point', 9958), ('nflverse.roster_membership', 9943), ('pfa.position_career', 9824), ('pfa.draft', 9001), ('pfa.draft_selection', 8963), ('has_photograph', 7523), ('pfa.game_lineup', 7001), ('guide.prose_block', 5100), ('roster_membership.on_reserve', 5035), ('guide.vitals_as_printed', 4600), ('pfa.death_date', 4551)]
+
+of the invisible pairs, ALREADY on the index record (pfield can reach them): {'birth_place': 7, 'college': 468, 'death_date': 196, 'death_place': 8, 'height': 9, 'high_school': 191, 'weight': 9}
+TRULY invisible to the bio (neither pfa-pre1950 nor the index record): {'birth_place': 27797, 'college': 3, 'death_date': 4240, 'death_place': 3788, 'draft': 18886, 'draft_selection': 18692, 'height': 32258, 'high_school': 30019, 'military_service': 1218, 'weight': 32261} | people: 32662
+
+of the truly invisible pairs, present on the index record under the PREFIXED key pfa.<field>: {'birth_place': 27804, 'death_date': 4436, 'death_place': 3796, 'draft': 18886, 'draft_selection': 18692, 'height': 32267, 'high_school': 30210, 'military_service': 1218, 'weight': 32270}
+absent even there: {'college': 471}
+value shape on the index record, e.g.: {'birth_place': "['NY']", 'death_date': "['August 20, 1969']", 'death_place': "['Rochester, NY']", 'draft': "['7th round (235th overall) 2013 New England Patriots']"}

@@ -1,0 +1,4 @@
+  FAIL  B0 every bio in the population renders (3 rendered; 1 raised: ['P_C'])
+  FAIL  B1 no bio prints a declared non-competition token ['COACHES', 'DRAFT', 'IND', 'SALARIES'] (1 do: [('P_A', ['IND'], "Dick Abrell's career crossed leagues: IND with the Dayton Triangles (1919).")])
+  FAIL  B2 no bio says 'a new <club>' (1 do: [('P_B', 'He played for the NFL with a new Dayton Triangles (1920).')])
+self-test: the gate fails when it should

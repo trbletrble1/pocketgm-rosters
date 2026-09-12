@@ -164,6 +164,29 @@ def main(extra=()):
     check(not nonclub, f"C1 every club_staff_role claim is about a club-season and names no person ({len(nonclub)}: {nonclub[:3]})")
     both = sorted(staff_stores & role_title_stores)
     check(not both, f"C2 no store writing club_staff_role also writes role_title ({both})")
+
+    # C3 -- HELD IS NOT SERVED. Every club_staff_role claim must appear in the club-season view it is about,
+    # under `non_coaching_staff` and NOT under `staff` (Ryan, 2026-09-11: a trainer is not a coach). The
+    # view used to read `scope='stint'` only, so all twelve were held and invisible.
+    import queries as Q
+    qc = sqlite3.connect(f"file:{paths.READ_MODEL}?mode=ro", uri=True); qc.row_factory = sqlite3.Row
+    unserved, in_coaching = [], []
+    for st, c in staff:
+        s = c.get("subject") or []
+        if s[:1] != ["club_season"] or len(s) < 4 or st == "selftest": continue
+        v = c.get("value") or {}
+        try:
+            view = Q.club_season(qc, s[1], int(s[2]), s[3])
+        except Exception as e:
+            unserved.append(f"{s}: {type(e).__name__}"); continue
+        names = [(x.get("name_as_printed"), x.get("role_as_printed")) for x in view.get("non_coaching_staff", [])]
+        if (v.get("name_as_printed"), v.get("role_as_printed")) not in names:
+            unserved.append(f"{s} {v.get('name_as_printed')}")
+        if any(v.get("name_as_printed") == (x.get("index_name") or "") for x in view.get("staff", [])):
+            in_coaching.append(f"{s} {v.get('name_as_printed')}")
+    check(not unserved, f"C3 every club_staff_role claim is served in its club-season view's non_coaching_staff "
+                        f"({len([x for x in staff if x[0] != 'selftest'])} checked; {len(unserved)} not served: {unserved[:3]})")
+    check(not in_coaching, f"C3b no club_staff_role name is listed among the coaching staff ({in_coaching[:3]})")
     print("\nGATE PASSED" if not FAILS else f"\nGATE FAILED ({len(FAILS)})")
     return 1 if FAILS else 0
 

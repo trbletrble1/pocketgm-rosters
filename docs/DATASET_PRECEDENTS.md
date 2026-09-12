@@ -2111,6 +2111,35 @@ caught that before any rebuild, with 11 claims lost for no stated reason.
 
 ---
 
+## Three readers in the old place — measured before they were fixed
+
+**2026-09-11, Ryan's three reader fixes.** None was a defect in the claims; each was the
+layer that presents them, and each was measured on the *served output* before a line
+changed.
+
+1. **The bios read `IND` as a league.** `league()` printed any token its name table
+   lacked, and the crossed-leagues lead said "a new" whenever two club ids shared a name.
+   **96 served bios** printed `IND` — 18 from the three seasons opened that day, **78 that
+   already read so before it** — and 33 said "a new", 14 of them with no `IND` at all
+   (the Brooklyn Dodgers of the AAFC, the Hamilton Tigers of ORFU). Ruled: say what the
+   archive knows. An independent season reads "outside any league"; the clubs are named
+   in full, each with its own league, so nothing asserts or denies a lineage. Gate:
+   `src/gate_bio_no_pseudo_league.py`, tokens read from the declaration, 11,446 bios.
+2. **The bio read PFA facts from one file by name.** 32,662 people held PFA facts it could
+   not see — and every one was already on the index record it loads, under the *prefixed*
+   key `pfa.<field>` that its reader never asked for. **4,442 bios gained a close; 203
+   swapped one**: the close order puts military service before death, so a man whose
+   service record lived in another store now closes on his service, not his death.
+3. **`club_staff_role` was held and not served.** The club-season view read `scope='stint'`
+   only. Gate C3 now fails any staff claim its view does not list, and any listed among
+   the coaches.
+
+**And the comparison caught my own regression**: rendering all 50,056 bios with the old
+and new code and diffing the *text*, 792 changed that no fix explained — a comma I dropped
+from the one-game sentence. Measuring only the bios I meant to change would have shipped it.
+
+---
+
 ## A trainer is a fact about the club-season
 
 **Ruling, 11 September 2026 (Ryan).** `club_staff_role` holds trainer, manager,

@@ -374,9 +374,24 @@ def club_season(conn, league, year, club):
             other.append(entry)
     names = [{"value": json.loads(r["value"]), **claim_view(r)} for r in conn.execute(
         "SELECT * FROM claim WHERE scope='club_season' AND predicate='club_name' AND subject LIKE ? ", (f'%"{y}"%',)) if json.loads(r["subject"])[-1] in {club} | {r2["code"] for r2 in conn.execute("SELECT code FROM club_code WHERE club_id=?", (cid,))}]
+    # NON-COACHING STAFF, KEPT APART FROM `staff` (Ryan, 2026-09-11). `club_staff_role` is a fact about the
+    # CLUB-SEASON -- a trainer, a manager, a president -- on a club_season subject, naming no person. It was
+    # held and never served: this function read `scope='stint'` only. It is listed on its own, never merged
+    # into `staff`, because a trainer is not a coach and that distinction is why the predicate is separate.
+    codes = {r2["code"] for r2 in conn.execute("SELECT code FROM club_code WHERE club_id=?", (cid,))} | {club}
+    non_coaching = []
+    for r in conn.execute("SELECT * FROM claim WHERE scope='club_season' AND predicate='club_staff_role' AND subject LIKE ?",
+                          (f'%"{y}"%',)):
+        s = json.loads(r["subject"])
+        if str(s[-2]) == str(y) and s[-1] in codes:
+            v = json.loads(r["value"])
+            non_coaching.append({"name_as_printed": v.get("name_as_printed"), "role_as_printed": v.get("role_as_printed"),
+                                 "person": None, "_not_a_person": v.get("_not_a_person"),
+                                 **({"note": v["_note"]} if v.get("_note") else {}), **claim_view(r)})
     out = {"league": league, "year": y, "club": {"requested": club, "club_id": cid, "resolved_via": via, "name_that_year": club_name_for(conn, cid, y),
                                                   "code_that_year": (archive_clubs().code_for(cid, y) if cid in archive_clubs().by_id else None)},
-           "names_that_season": names, "members": roster, "staff": staff, "n_members": len(roster), "n_staff": len(staff)}
+           "names_that_season": names, "members": roster, "staff": staff, "n_members": len(roster), "n_staff": len(staff),
+           "non_coaching_staff": non_coaching, "n_non_coaching_staff": len(non_coaching)}
     if other: out["other_leagues_at_this_club_that_year"] = other
     if not roster:
         out["basis"] = "unknown"

@@ -1,0 +1,6 @@
+population: 11592 men who could print a non-competition token or 'a new'; 11446 hold a bio
+  ok    B0 every bio in the population renders (11446 rendered; 0 raised: [])
+  ok    B1 no bio prints a declared non-competition token ['COACHES', 'DRAFT', 'IND', 'SALARIES'] (0 do: [])
+  ok    B2 no bio says 'a new <club>' (0 do: [])
+
+GATE PASSED

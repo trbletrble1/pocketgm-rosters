@@ -83,7 +83,7 @@ def search_people(name: str, year: int | None = None, mode: str = "tokens", limi
 
 @server.tool()
 def get_club_season(league: str, year: int, club: str) -> dict:
-    """The roster of a club-season (league NFL, year 1950, club BA1 or 'Baltimore Colts'): each man with the stint claims that place him there and a four-state games reading; staff from the coaching stores. 404-style error if the club table holds no such club that year; an empty roster on a held club-season is a result with basis 'unknown'."""
+    """The roster of a club-season (league NFL, year 1950, club BA1 or 'Baltimore Colts'): each man with the stint claims that place him there and a four-state games reading; staff from the coaching stores; non-coaching staff (club_staff_role: trainers, managers, presidents, as printed) listed apart under non_coaching_staff, naming no person. 404-style error if the club table holds no such club that year; an empty roster on a held club-season is a result with basis 'unknown'."""
     return _run(Q.club_season, league, year, club)
 
 
