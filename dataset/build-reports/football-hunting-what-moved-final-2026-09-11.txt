@@ -1,0 +1,98 @@
+snapshot now: {}
+BIOS: {'bio text unchanged': 158, 'bio text changed': 23, 'status 404 -> 200': 18, 'served bios containing a DOC: code': 0, 'served bios reading IND as a league': 19}
+   P_002682
+      BEFORE: Dick Abrell played one season of professional football, 1920, for the Dayton Triangles in the APFA. He died on May 5, 1973, in Livingston, NJ.
+      AFTER:  Dick Abrell's career crossed leagues: IND with the Dayton Triangles (1919); the NFL with a new Dayton Triangles (1920). He died on May 5, 1973, in Livingston, NJ.
+   P_002683
+      BEFORE: In 1921, playing for the Dayton Triangles, Frank Bacon scored 36 points — only five men in the APFA scored more that season. He played six seasons: for the Dayton Triangles from 1920 to 1925 and the Akron Pros in 1923. He was a United States Army veteran.
+      AFTER:  In 1921, playing for the Dayton Triangles, Frank Bacon scored 36 points — only five men in the APFA scored more that season. He played seven seasons: for the Dayton Triangles in 1919, the Dayton Triangles from 1920 to 1925 and the Akron Pros in 1923. He was a United States Army veteran.
+   P_002685
+      BEFORE: Bill Clark's career was two games with the Dayton Triangles in 1920.
+      AFTER:  Bill Clark moved between leagues: IND with the Dayton Triangles (1919); the NFL with a new Dayton Triangles (1920).
+   P_002686
+      BEFORE: Harry Cutler's career was the 1920 season with the Dayton Triangles. He died on April 24, 1964, in Dayton, OH.
+      AFTER:  Harry Cutler's career crossed leagues: IND with the Dayton Triangles (1919); the NFL with a new Dayton Triangles (1920). He died on April 24, 1964, in Dayton, OH.
+   P_002688
+      BEFORE: Larry Dellinger played four seasons for the Dayton Triangles of the APFA, from 1920 to 1923. He died on February 18, 1954, in Dayton, OH.
+      AFTER:  Larry Dellinger's career crossed leagues: IND with the Dayton Triangles (1919); the NFL with a new Dayton Triangles (1920–23). He died on February 18, 1954, in Dayton, OH.
+   P_002690
+      BEFORE: Starting with the Dayton Triangles in 1920, Harold Fenner played ten seasons through 1930. His clubs were the Dayton Triangles in 1920–27 and 1929 and the Portsmouth Spartans in 1930. He did not play in 1928.
+      AFTER:  Starting with the Dayton Triangles in 1919, Harold Fenner played eleven seasons through 1930. He moved on to the Dayton Triangles in 1920–27 and 1929 and the Portsmouth Spartans in 1930. He did not play in 1928.
+   P_002694
+      BEFORE: Hobby Kinderdine played ten seasons, every one of them for the Dayton Triangles, from 1920 to 1929.
+      AFTER:  Hobby Kinderdine's career ran eleven seasons, 1919 to 1929, beginning with the Dayton Triangles. He moved on to the Dayton Triangles from 1920 to 1929.
+   P_002696
+      BEFORE: Al Mahrt spent three seasons with the Dayton Triangles, of the APFA, from 1920 to 1922. He served in the United States Marine Corps.
+      AFTER:  Al Mahrt moved between leagues: IND with the Dayton Triangles (1919); the NFL with a new Dayton Triangles (1920–22). He served in the United States Marine Corps.
+   P_002697
+      BEFORE: Lou Partlow played nine seasons in the APFA, 1920 to 1929, starting with the Dayton Triangles. His clubs were the Dayton Triangles in 1920–27 and 1929 and the Cleveland Indians in 1923. He did not play in 1928. In all he scored 24 points over three seasons. He died on April 14, 1981, in Burbank, CA.
+      AFTER:  Lou Partlow's career ran ten seasons, 1919 to 1929, beginning with the Dayton Triangles. He moved on to the Dayton Triangles in 1920–27 and 1929 and the Cleveland Indians in 1923. He did not play in 1928. In all he scored 24 points over three seasons. He died on April 14, 1981, in Burbank, CA.
+   P_002698
+      BEFORE: Dave Reese spent four seasons with the Dayton Triangles, of the APFA, from 1920 to 1923. He was a United States Army veteran.
+      AFTER:  Dave Reese moved between leagues: IND with the Dayton Triangles (1919); the NFL with a new Dayton Triangles (1920–23). He was a United States Army veteran.
+   P_002699
+      BEFORE: George Roudebush spent two seasons with the Dayton Triangles, of the APFA, from 1920 to 1921. He died on February 29, 1992, in Chardon, OH.
+      AFTER:  George Roudebush moved between leagues: IND with the Dayton Triangles (1919); the NFL with a new Dayton Triangles (1920–21). He died on February 29, 1992, in Chardon, OH.
+   P_002703
+      BEFORE: Earl Stoecklein played two professional games, both for the Dayton Triangles in 1920. He was a United States Army veteran.
+      AFTER:  Earl Stoecklein's career crossed leagues: IND with the Dayton Triangles (1919); the NFL with a new Dayton Triangles (1920). He was a United States Army veteran.
+   P_002704
+      BEFORE: Dutch Thiele spent four seasons with the Dayton Triangles, of the APFA, from 1920 to 1923.
+      AFTER:  Dutch Thiele moved between leagues: IND with the Dayton Triangles (1919); the NFL with a new Dayton Triangles (1920–23).
+   P_002705
+      BEFORE: Glenn Tidd spent his whole career with the Dayton Triangles: five seasons, 1920 to 1924. He served in the United States National Guard.
+      AFTER:  Glenn Tidd moved between leagues: IND with the Dayton Triangles (1919); the NFL with a new Dayton Triangles (1920–24). He served in the United States National Guard.
+   P_002707
+      BEFORE: Charlie Winston spent a single season, 1920, with the Dayton Triangles. He died on November 11, 1944, in Chicago, IL.
+      AFTER:  Charlie Winston's career crossed leagues: IND with the Dayton Triangles (1919); the NFL with a new Dayton Triangles (1920). He died on November 11, 1944, in Chicago, IL.
+   P_014296
+      BEFORE: Starting with the Kansas City Blues (later the Cowboys) in 1924, Steve Owen played ten seasons through 1934. From there he went to the Cleveland Bulldogs in 1925 and the New York Giants in 1926–31 and 1933–34. He did not play in 1932. He came back as Head Coach of the New York Giants from 1931 to 1953. He spent another three seasons as an assistant and was a head coach at four other clubs too. He died on May 17, 1964, in Oneida, NY.
+      AFTER:  Steve Owen played nine seasons, beginning with the Kansas City Blues (later the Cowboys) in 1924, and was Head Coach of the New York Giants from 1931 to 1953. He spent another three seasons as an assistant and was a head coach at four other clubs too. From there he went to the Cleveland Bulldogs in 1925 and the New York Giants in 1926–31 and 1933. He did not play in 1932. He died on May 17, 1964, in Oneida, NY.
+   P_014386
+      BEFORE: Potsy Clark played one season, beginning with the Portsmouth Spartans in 1932, and was Head Coach of the Brooklyn Dodgers from 1937 to 1939. He was a head coach at three other clubs too. He died on November 8, 1972.
+      AFTER:  Potsy Clark coached ten seasons, 1931 to 1940, and was Head Coach of the Brooklyn Dodgers from 1937 to 1939. He coached for four clubs in all. He held the same job at the Portsmouth Spartans, the Detroit Lions and the Detroit Lions. He died on November 8, 1972.
+   P_015766
+      BEFORE: Ebby DeWeese's career, three seasons in the NFL from 1927, began with the Dayton Triangles. He moved on to the Portsmouth Spartans in 1930. He did not play in 1929. He died on July 18, 1942, in Alexandersville, OH.
+      AFTER:  Ebby DeWeese moved between leagues: the NFL with the Dayton Triangles (1927–28) and the Portsmouth Spartans (1930); IND with a new Portsmouth Spartans (1929). He died on July 18, 1942, in Alexandersville, OH.
+   P_015823
+      BEFORE: Emil Mayer played two seasons in the NFL, 1927 to 1930, starting with the Pottsville Maroons. He moved on to the Portsmouth Spartans in 1930. He was out of the game from 1928 to 1929. He was a United States Army veteran.
+      AFTER:  Emil Mayer's career crossed leagues: the NFL with the Pottsville Maroons (1927) and the Portsmouth Spartans (1930); IND with a new Portsmouth Spartans (1929). He did not play in 1928. He was a United States Army veteran.
+   P_016041
+      BEFORE: Buck Weaver moved between leagues: IND with the DOC:POR-IND (1929); the NFL with the Chicago Cardinals (1930) and the Portsmouth Spartans (1930).
+      AFTER:  Buck Weaver moved between leagues: IND with the Portsmouth Spartans (1929); the NFL with the Chicago Cardinals (1930) and a new Portsmouth Spartans (1930).
+   P_016110
+      BEFORE: In 1930, playing for the Portsmouth Spartans, Chuck Bennett scored 42 points — only eight men in the NFL scored more that season. Over four seasons he played for three clubs: the DOC:POR-IND, the Portsmouth Spartans and the Chicago Cardinals. He did not play in 1932. He died on June 9, 1973, in LaGrange, IL.
+      AFTER:  In 1930, playing for the Portsmouth Spartans, Chuck Bennett scored 42 points — only eight men in the NFL scored more that season. Over four seasons he played for two clubs: the Portsmouth Spartans and the Chicago Cardinals. He did not play in 1932. He died on June 9, 1973, in LaGrange, IL.
+   P_016111
+      BEFORE: Chuck Braidwood's career crossed leagues: IND with the DOC:POR-IND (1929); the NFL with the Portsmouth Spartans (1930) and three other clubs through 1933. He died on January 8, 1945, in Biak Island.
+      AFTER:  Chuck Braidwood's career crossed leagues: IND with the Portsmouth Spartans (1929); the NFL with a new Portsmouth Spartans (1930) and three other clubs through 1933. He died on January 8, 1945, in Biak Island.
+   P_016117
+      BEFORE: Dud Harris spent a single season, 1930, with the Portsmouth Spartans. He died on February 13, 1989, in Palm Springs, CA.
+      AFTER:  Dud Harris's career crossed leagues: IND with the Portsmouth Spartans (1929); the NFL with a new Portsmouth Spartans (1930). He died on February 13, 1989, in Palm Springs, CA.
+   P_054670: status 404 -> 200  Albers's career was the 1919 season with the Dayton Triangles.
+   P_054671: status 404 -> 200  Houser's career was the 1919 season with the Dayton Triangles.
+   P_054672: status 404 -> 200  Paul Armil spent a single season, 1929, with the Portsmouth Spartans.
+   P_054673: status 404 -> 200  Whity Fyock spent a single season, 1929, with the Portsmouth Spartans.
+   P_054674: status 404 -> 200  Roy Whitt's career was the 1929 season with the Portsmouth Spartans.
+   P_054675: status 404 -> 200  Roy Estese spent a single season, 1929, with the Portsmouth Spartans.
+   P_054676: status 404 -> 200  Hank Weber spent a single season, 1929, with the Portsmouth Spartans.
+   P_054677: status 404 -> 200  Bob Jessen spent a single season, 1929, with the Portsmouth Spartans.
+   P_054678: status 404 -> 200  Puss Meyers spent a single season, 1929, with the Portsmouth Spartans.
+   P_054679: status 404 -> 200  George Lyons spent a single season, 1929, with the Portsmouth Spartans.
+   P_054680: status 404 -> 200  Mack McDermott spent a single season, 1929, with the Portsmouth Spartans.
+   P_054681: status 404 -> 200  Julian's career was the 1924 season with the Pottsville Maroons.
+   P_054682: status 404 -> 200  Hudnek's career was the 1924 season with the Pottsville Maroons.
+   P_054683: status 404 -> 200  Tribit spent a single season, 1924, with the Pottsville Maroons.
+   P_054684: status 404 -> 200  Potter played one season of professional football, 1924, for the Pottsville Maroons in IND.
+   P_054685: status 404 -> 200  Emmanuel spent a single season, 1924, with the Pottsville Maroons.
+   P_054686: status 404 -> 200  Nemzek played one season of professional football, 1924, for the Pottsville Maroons in IND.
+   P_054687: status 404 -> 200  Brunner spent a single season, 1924, with the Pottsville Maroons.
+CLUB-SEASONS:
+   IND|1919|DOC:DAY-IND: 404 {'n_members': None, 'n_staff': None} -> 200 {'n_members': 17, 'n_staff': 0}
+   IND|1924|DOC:POT-IND: 404 {'n_members': None, 'n_staff': None} -> 200 {'n_members': 7, 'n_staff': 0}
+   IND|1929|DOC:POR-IND: 404 {'n_members': None, 'n_staff': None} -> 200 {'n_members': 15, 'n_staff': 0}
+   NFL|1923|CAN: 200 {'n_members': 20, 'n_staff': 1} -> 200 {'n_members': 20, 'n_staff': 1}
+   NFL|1934|NYG: 200 {'n_members': 28, 'n_staff': 1} -> 200 {'n_members': 28, 'n_staff': 1}
+   APFA|1920|AKR: 200 {'n_members': 23, 'n_staff': 1} -> 200 {'n_members': 23, 'n_staff': 1}
+   NFL|1922|RAC: 200 {'n_members': 28, 'n_staff': 3} -> 200 {'n_members': 28, 'n_staff': 3}
+   APFA|1920|DAY: 200 {'n_members': 26, 'n_staff': 2} -> 200 {'n_members': 26, 'n_staff': 2}
