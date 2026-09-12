@@ -759,6 +759,136 @@ def write_xlsx(rows, path):
     return len(body)
 
 
+# ------------------------------------------------------------------------ the hunting list
+# ONE SHEET RYAN WILL ACTUALLY USE (Ryan, 2026-09-12). The 798-row list is every measured gap, and he has said it
+# is overwhelming and mostly things he would not go looking for: most of it is a held club-season missing a
+# weight or an age. This keeps only where a DOCUMENT WOULD CHANGE WHO THE ARCHIVE KNOWS -- never what field it
+# holds -- read off the same row list, so it regenerates with the rest and is typed by nobody:
+#   nobody held      a club-season the table holds with no man on it; an off-the-table club with none; a
+#                    season outside the span
+#   almost nobody    fewer than FEWER_THAN men held -- see the constant
+#   boundary season  a club the table holds only because a DOCUMENT named it (origin document_only): a season
+#                    played outside any league the archive holds -- Frankford 1899-1906 and 1922-23, the
+#                    Gunners 1931-33, Dayton 1919, Pottsville 1924, Portsmouth 1929
+#   surname only     a man held by his surname alone
+# Every other row comes off, and so does every row that is not a hunt: if it is not a hunt it is not listed.
+HUNT_LIST_COLUMNS = ["what it is", "year", "club", "men held", "what a find would add", "newspaper", "date", "link"]
+# FEWER THAN A STARTING SIDE. Chosen 2026-09-12 on the measurement, not guessed: held thin club-seasons run from
+# 7 men to 93, median 48; the decade medians are 22 (1920s), 27 (1930s), 30 (1940s). Below eleven the archive
+# cannot name a starting side, which is plainly incomplete -- 1924 Pottsville (7), 1926 Gilberton (9). The next
+# rows up hold 15-19 men in the 1920s, a small squad of the era, not a missing one. "Half the decade median"
+# was tried alongside and picks the same two rows.
+FEWER_THAN = 11
+BEST_CITATIONS = 3
+
+
+def _document_only_clubs():
+    t = json.load(open(os.path.join(BASE, "build", "clubs.json")))
+    return {c["id"] for c in t["clubs"] if c.get("origin") == "document_only"}
+
+
+def _clean_club(text):
+    """A man's club-seasons without the bracketed measurement keys, which mean nothing to a man browsing listings."""
+    s = re.sub(r"\s*\[[^\]]+\]", "", str(text or ""))
+    s = re.sub(r"\s*—\s*\*\*the club table cannot name this club\*\*:[^;]*", "", s)
+    return s.strip()
+
+
+def _citations_by_club_season():
+    """Every newspaper citation the sweep's report holds, by (club id, year): both wikis, as published."""
+    import glob
+    out = collections.defaultdict(list)
+    for pat in ("*-wikipedia-newspaper-citations-all.csv", "*-fandom-newspaper-citations-all.csv"):
+        fs = sorted(glob.glob(os.path.join(REPORTS, pat)))
+        if not fs:
+            raise SystemExit(f"REFUSING: no {pat} in {REPORTS}. The hunting list carries each row's links from it.")
+        for c in csv.DictReader(open(fs[-1], newline="")):
+            out[(c["club_id"], int(c["year"]))].append(c)
+    return out
+
+
+def _best(cites, n=BEST_CITATIONS):
+    """The best few citations and how many more. A citation both wikis carry is counted once (same URL, or the
+    same paper, date, page and headline). BEST means: a page named first -- that is a find, not a search -- then
+    a free link, then any link, then none. Within a rank the report's own order is kept."""
+    seen, uniq = set(), []
+    for c in cites:
+        k = c["url"] or ((c["paper"] or "").lower(), c["date"], (c["page"] or "").lower(), (c["headline"] or "")[:40].lower())
+        if k in seen: continue
+        seen.add(k); uniq.append(c)
+    def rank(c):
+        lk = c["link_kind"] or ""
+        link = (0 if c["url"] and "free" in lk else 1 if c["url"] and "subscription" not in lk and "defunct" not in lk
+                else 2 if c["url"] else 3)
+        return (0 if c["page"] else 1, link)
+    uniq.sort(key=rank)
+    return uniq[:n], max(0, len(uniq) - n)
+
+
+def hunting_list(rows):
+    """The rows of the one-sheet hunting list, in the order to read them."""
+    doc_only = _document_only_clubs(); cites = _citations_by_club_season()
+    out = []
+    for r in rows:
+        if r.get("hunt") != "yes":
+            continue
+        try: m = int(r["men_held"])
+        except (TypeError, ValueError): m = None
+        ids = {c for c, _ in (r.get("pairs") or [])}
+        if r["kind"] in ("empty", "outside the span") or (r["kind"] == "off the table" and not m):
+            what, add, order = "nobody held", "the whole squad", 0
+        elif r["kind"] in ("thin", "off the table") and m is not None and m < FEWER_THAN:
+            what, add, order = "almost nobody held", "the rest of the squad", 1
+        elif r["kind"] in ("thin", "no coach") and ids & doc_only:
+            what, add, order = "boundary season", "the rest of the squad, in a season outside any league the archive holds", 2
+        elif r["kind"] == "a name":
+            what, add, order = f"surname only: {r.get('name')}", "his forename", 3
+        else:
+            continue                       # a weight, an age, a college, a position, a coach: not a hunt
+        best, more = _best([c for p in (r.get("pairs") or []) for c in cites.get(p, [])])
+        yrs = sorted({str(y) for _, y in (r.get("pairs") or [])} | {k.split("|")[1].lstrip("y") for k in (r.get("keys") or [])})
+        out.append({
+            "order": order,
+            "sort": (order, (sorted(r.get("keys") or []), str(r.get("name"))) if order == 3 else (str(r["year"]), str(r["club"]))),
+            "what it is": what,
+            "year": str(r["year"]) if str(r["year"] or "").isdigit() else ", ".join(yrs),
+            "club": _clean_club(r["club"]) if order == 3 else str(r["club"]),
+            "men held": "" if order == 3 or m is None else m,
+            "what a find would add": add,
+            "newspaper": "\n".join(f"{c['paper'] or '(paper not named)'}" + (f", p. {c['page']}" if c["page"] else "")
+                                   for c in best) + (f"\n+{more} more" if more else ""),
+            "date": "\n".join(c["date"] or "no date" for c in best),
+            "link": "\n".join(c["url"] or "(no link)" for c in best),
+            "first_url": next((c["url"] for c in best if c["url"]), None)})
+    out.sort(key=lambda x: x["sort"])
+    return out
+
+
+def write_hunting_list(items, path):
+    """ONE sheet, the eight columns, a row per hunt. No bands to decode, no marker: a row that is not a hunt is
+    not here. The best citations sit in the row -- the first link clickable -- so nothing needs a second file."""
+    from openpyxl import Workbook
+    from openpyxl.styles import Font, PatternFill, Alignment
+    from openpyxl.utils import get_column_letter
+    wb = Workbook(); ws = wb.active; ws.title = "Hunting list"
+    ws.append(HUNT_LIST_COLUMNS)
+    for c in ws[1]:
+        c.font = Font(bold=True, color="FFFFFF"); c.fill = PatternFill("solid", fgColor="333333")
+    ws.freeze_panes = "A2"
+    for it in items:
+        ws.append([it[h] for h in HUNT_LIST_COLUMNS])
+        row = ws[ws.max_row]
+        for c in row: c.alignment = Alignment(wrap_text=True, vertical="top")
+        if it["first_url"]:
+            cell = row[HUNT_LIST_COLUMNS.index("link")]
+            cell.hyperlink = it["first_url"]; cell.font = Font(color="0563C1", underline="single")
+    ws.auto_filter.ref = f"A1:{get_column_letter(len(HUNT_LIST_COLUMNS))}{len(items) + 1}"
+    for h, w in zip(HUNT_LIST_COLUMNS, (30, 10, 42, 9, 34, 38, 18, 60)):
+        ws.column_dimensions[get_column_letter(HUNT_LIST_COLUMNS.index(h) + 1)].width = w
+    wb.save(path)
+    return len(items)
+
+
 # --------------------------------------------------------------------------- moved
 def what_moved():
     """What changed, and why. Rewritten 2026-09-09: the version that diffed only against
@@ -1221,3 +1351,8 @@ if __name__ == "__main__":
     n = write_xlsx(ROWS, x)
     print(f"  {'what-to-look-for.xlsx':32s} {os.path.getsize(x):>7,} bytes  "
           f"{n:>4} rows, 3 sheets")
+    hl = os.path.join(OUT, "hunting-list.xlsx")
+    items = hunting_list(ROWS)
+    n = write_hunting_list(items, hl)
+    by = collections.Counter(it["what it is"].split(":")[0] for it in items)
+    print(f"  {'hunting-list.xlsx':32s} {os.path.getsize(hl):>7,} bytes  {n:>4} rows, 1 sheet -- {dict(by)}")

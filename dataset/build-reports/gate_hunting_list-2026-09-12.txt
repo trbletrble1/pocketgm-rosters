@@ -1,0 +1,10 @@
+writer: /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/write_hunting_docs.py
+writing into scratch: /private/tmp/claude-501/-Users-ryannecci-Documents/1c62e2cc-ea82-4674-9eb4-f52610a56ae4/scratchpad/fh/gate-hunting-list-c8daqdhn/Dropbox/Football Archive/docs (the real documents are not touched)
+  hunting-list.xlsx                 16,798 bytes   237 rows, 1 sheet -- {'nobody held': 19, 'almost nobody held': 4, 'boundary season': 11, 'surname only': 203}
+  ok    L1 exactly one sheet (['Hunting list'])
+  ok    L2 exactly the eight columns, in order (['what it is', 'year', 'club', 'men held', 'what a find would add', 'newspaper', 'date', 'link'])
+  ok    L3 every row is one of the four hunts (237 rows; 0 not: [])
+  ok    L4 no missing-field row: 'almost nobody' rows under 11 men (0 not: []); 'not a hunt' on 0 rows
+  ok    L5 every cited row carries its link in the row (0 do not: []), first link clickable (0 not: [])
+
+GATE PASSED

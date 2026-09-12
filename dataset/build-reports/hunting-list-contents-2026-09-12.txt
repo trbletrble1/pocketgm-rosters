@@ -1,0 +1,55 @@
+TOTAL ROWS: 237 {'nobody held': 19, 'almost nobody held': 4, 'boundary season': 11, 'surname only': 203}
+rows carrying at least one citation: 9 | with a clickable link: 9
+
+== nobody held
+   1926  Los Angeles Angels                     men   0 | 
+   1926  Newark Blues                           men   0 | 
+   1926  Oakland Oaks                           men   0 | 
+   1926  San Francisco Tigers                   men   0 | 
+   1927  Bethlehem Bears                        men   0 | 
+   1927  Newark Blues                           men   0 | 
+   1931  Charleston Trojans                     men   0 | 
+   1949  Brooklyn Dodgers                       men   0 | 
+   2025  Arlington Renegades                    men   0 | 
+   2025  Birmingham Stallions                   men   0 | 
+   2025  DC Defenders                           men   0 | 
+   2025  Houston Roughnecks                     men   0 | 
+   2025  Memphis Showboats                      men   0 | 
+   2025  Michigan Panthers                      men   0 | 
+   2025  San Antonio Brahmas                    men   0 | 
+   2025  St. Louis Battlehawks                  men   0 | 
+   2026  Birmingham Stallions                   men   0 | 
+   2026  DC Defenders                           men   0 | 
+   2026  St. Louis Battlehawks                  men   0 | 
+
+== almost nobody held
+   1924  Pottsville Maroons                     men   7 | Allentown Morning Call, p. 14
+   1926  BKN                                    men   5 | 
+   1926  Gilberton Catamounts                   men   9 | 
+   1926  LA                                     men   5 | 
+
+== boundary season
+   1899  Frankford Yellow Jackets               men  17 | 
+   1900  Frankford Yellow Jackets               men  19 | 
+   1903  Frankford Yellow Jackets               men  17 | 
+   1906  Frankford Yellow Jackets               men  17 | 
+   1919  Dayton Triangles                       men  17 | 
+   1922  Frankford Yellow Jackets               men  34 | 
+   1923  Frankford Yellow Jackets               men  23 | 
+   1929  Portsmouth Spartans                    men  15 | 
+   1931  St. Louis Gunners                      men  33 | 
+   1932  St. Louis Gunners                      men  20 | 
+   1933  St. Louis Gunners                      men  31 | 
+
+== surname only: 203 men; first few:
+   surname only: Bottles        1936       1936 Mount Vernon Cardinals (AFA)
+   surname only: Henry          1936       1936 Stapeton Buffaloes (AFA)
+   surname only: Kristal        1937       1937 Brooklyn Bushwicks (AFA)
+   surname only: Savage         1937       1937 Brooklyn Bushwicks (AFA); 1937 Mount Vernon C
+   surname only: Abrams         1937       1937 Brooklyn Eagles (AFA)
+   surname only: DeMayo         1937       1937 Newark Tornadoes (AFA)
+
+NEXT CUT, not taken: one row per club-season for the surname-only men -> 89 rows; the list would be 123
+OR: modern club-seasons holding nobody (1990 on) -- a website, not a listing: 11 ['2025 Arlington Renegades', '2025 Birmingham Stallions', '2025 DC Defenders', '2025 Houston Roughnecks', '2025 Memphis Showboats', '2025 Michigan Panthers', '2025 San Antonio Brahmas', '2025 St. Louis Battlehawks', '2026 Birmingham Stallions', '2026 DC Defenders', '2026 St. Louis Battlehawks']
+
+POTTSVILLE ROW: {'what it is': 'almost nobody held', 'year': '1924', 'club': 'Pottsville Maroons', 'men held': 7, 'what a find would add': 'the rest of the squad', 'newspaper': 'Allentown Morning Call, p. 14\nShenandoah Evening Herald, p. 7\nPottsville Republican, p. 8\n+18 more', 'date': 'Sept. 22, 1924\nSept. 22, 1924\nSept. 22, 1924', 'link': 'https://www.newspapers.com/article/the-morning-call-pottsville-wins-its-ope/175811939/\nhttps://www.newspapers.com/article/republican-and-herald-coaldale-and-potts/175811783/\nhttps://www.newspapers.com/article/pottsville-republican-pottsvilles-stron/175811719/'}

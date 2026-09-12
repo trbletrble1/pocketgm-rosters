@@ -1,0 +1,54 @@
+all rows 798 | hunt rows 466
+hunt rows by kind: {'empty': 18, 'off the table': 3, 'thin': 241, 'no coach': 1, 'a name': 203}
+NOT hunt rows by kind: {'thin': 332}
+thin: n=241 men held min 7 median 48 max 93 | <=5: 0  <11: 2  <15: 2  <20: 23
+off the table: n=3 men held min 0 median 5 max 5 | <=5: 3  <11: 3  <15: 3  <20: 3
+no coach: n=1 men held min 56 median 56 max 56 | <=5: 0  <11: 0  <15: 0  <20: 0
+empty: n=18 men held min 0 median 0.0 max 0 | <=5: 18  <11: 18  <15: 18  <20: 18
+median men held on a thin club-season, by decade: {1890: (17, 1), 1900: (17, 3), 1910: (17, 1), 1920: (22.0, 182), 1930: (27.0, 80), 1940: (30.0, 58), 1950: (19.5, 6), 1960: (45.0, 102), 1970: (63, 21), 1980: (66.5, 42), 2000: (60.5, 12), 2010: (64, 21), 2020: (65.5, 44)}
+
+thin/off-table hunt rows under 11 men: 5
+   off the table 1949  Brooklyn Dodgers                         men   0  | no club-season at all: a source names the club, the club table refuses
+   off the table 1926  BKN                                      men   5  | 5 men held from statistics lines alone; no club-season and no name: th
+   off the table 1926  LA                                       men   5  | 5 men held from statistics lines alone; no club-season and no name: th
+   thin          1926  Gilberton Catamounts                     men   9  | 9 men, 36 facts missing — age 9, weight 9, college 9, position 9; no m
+   thin          1924  Pottsville Maroons                       men   7  | 7 men, 28 facts missing — age 7, weight 7, college 7, position 7; no m
+
+surname-only men (hunt): 203 on 84 distinct club-season keys; top: [('EFL|1926|PFA:BET', 15), ('AFL|1944|PFA:OAK', 11), ('IND|1931|DOC:SLG-IND', 11), ('MWFL|1936|PFA:SPR', 9), ('EFL|1926|PFA:GIL', 8), ('AFL|1944|PFA:AFL:SD', 7), ('IND|1924|DOC:POT-IND', 7), ('PCFL|1943|PFA:LAB', 7)]
+rows with a citation link (any): 84
+
+THIN HUNT ROWS UNDER 20 MEN, against half their decade's median
+   out 1900 Frankford Yellow Jackets                men  19  decade median    17  half   8.5
+   out 1899 Frankford Yellow Jackets                men  17  decade median    17  half   8.5
+   out 1903 Frankford Yellow Jackets                men  17  decade median    17  half   8.5
+   out 1906 Frankford Yellow Jackets                men  17  decade median    17  half   8.5
+   out 1926 Bethlehem Bears                  EFL    men  16  decade median  22.0  half  11.0
+   out 1929 Portsmouth Spartans                     men  15  decade median  22.0  half  11.0
+   IN  1926 Gilberton Catamounts             EFL    men   9  decade median  22.0  half  11.0
+   out 1919 Dayton Triangles                        men  17  decade median    17  half   8.5
+   IN  1924 Pottsville Maroons                      men   7  decade median  22.0  half  11.0
+   out 1921 Minneapolis Marines              APFA   men  16  decade median  22.0  half  11.0
+   out 1921 Cincinnati Celts                 APFA   men  19  decade median  22.0  half  11.0
+   out 1923 Minneapolis Marines              NFL    men  18  decade median  22.0  half  11.0
+   out 1922 Chicago Cardinals                NFL    men  18  decade median  22.0  half  11.0
+   out 1924 Minneapolis Marines              NFL    men  18  decade median  22.0  half  11.0
+   out 1923 St. Louis All-Stars              NFL    men  19  decade median  22.0  half  11.0
+   out 1921 Chicago Staleys                  APFA   men  18  decade median  22.0  half  11.0
+   out 1922 Chicago Bears                    NFL    men  19  decade median  22.0  half  11.0
+   out 1923 Chicago Bears                    NFL    men  19  decade median  22.0  half  11.0
+   out 1925 Kansas City Cowboys              NFL    men  19  decade median  22.0  half  11.0
+   out 1926 Los Angeles Buccaneers           NFL    men  18  decade median  22.0  half  11.0
+   out 1925 Detroit Panthers                 NFL    men  18  decade median  22.0  half  11.0
+   out 1926 Chicago Bears                    NFL    men  19  decade median  22.0  half  11.0
+   out 1928 Detroit Wolverines               NFL    men  19  decade median  22.0  half  11.0
+under half their decade's median: 2
+
+BOUNDARY rows (IND league token, or outside the span):
+boundary club-season rows: 0 | surname-only men on boundary seasons: 24
+
+-all citation sample: {'year': '1920', 'club': 'Akron Pros', 'club_id': 'club-akron-pros-1920', 'wikipedia_page': '1920 Akron Pros season', 'section': 'Offseason', 'paper': 'The New York Times', 'date': 'September 19, 1920', 'page': '', 'link_kind': 'NYT archive (subscription)', 'url': 'https://timesmachine.nytimes.com/timesmachine/1920/09/19/113313269.pdf', 'headline': 'Thorpe Made President'}
+link kinds with a url: [("a newspaper's own website", 4479), ('newspapers.com clipping (viewable free)', 2842), ('Google News Archive (free)', 1231), ('NYT archive (subscription)', 79), ('Chicago Tribune archive (defunct link)', 40), ('archive.org item (free)', 28), ('newspaperarchive.com (subscription)', 16), ('ProQuest archiver (subscription)', 13)]
+citations with no url: 1564 of 10316
+
+PROPOSED LIST, rows by category: {'nobody / off the table': 21, 'almost nobody': 2, 'surname only (one row per man)': 203} | total 226
+surname-only men would be 84 club-season rows if grouped
