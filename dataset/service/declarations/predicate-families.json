@@ -29,10 +29,23 @@
    "kind": "value",
    "predicates": [
     "pfa.height",
-    "guide.HEIGHT"
+    "guide.HEIGHT",
+    "neft.roster.height",
+    "pfa.roster.height"
    ],
    "reading": "src/readings.py height",
-   "ruled": "Ryan, 2026-09-07"
+   "ruled": "Ryan, 2026-09-07",
+   "_season_heights_added_2026_09_12": "Ryan: 'Heights can probably share one family -- but measure that before declaring it.' Measured first: Neft's season height differs from PFA's career height for 108 of 1,212 men (8.9%), against 1,199 of 2,092 (57.3%) for weight -- a man's height is one fact with compiler noise, his weight two. Declared. THE YEAR KEY DOES THE REST: build_contested keys a season-scoped claim on its year and a person-scoped one on '', so a season height never contests a career height in the table; it contests only another season height for that man in that year."
+  },
+  "weight_season": {
+   "kind": "value",
+   "predicates": [
+    "neft.roster.weight"
+   ],
+   "reading": "src/readings.py weight_season -- the weight reader, registered under this family's name",
+   "ruled": "Ryan, 2026-09-12: a family for season weights, and not the career one.",
+   "_pfa_roster_weight_is_NOT_here": "PFA's roster weight is scoped to the stint but does not behave as a season figure: it changes between seasons for 50 of 2,486 men (2.0%), where Neft's changes for 233 of 539 (43.2%), and it matches PFA's career weight 98% of the time. It is the career value printed on each roster page. In this family it would set Neft's season figure against a career figure wherever both print a season -- the 1930s onward -- which is the fabrication the ruling forbids. Left out, measured, for Ryan.",
+   "_career_weight_is_NOT_here": "pfa.weight, weight, guide.WEIGHT: a career value. Ruled out by name."
   },
   "weight": {
    "kind": "value",

@@ -2529,3 +2529,24 @@ leagues' clubs is not a split club-season (1926 `BKN`), and a club lawfully play
 one year (Regina, CFL and WIFU). It makes the
 repository a slow, public, size-limited backup for 8.6 GB it was never meant to hold, and it
 gives the feeling of a backup without the fact of one.
+
+## A reference work ingested narrowly: Neft, passes 1 and 2 (2026-09-12)
+
+Ryan ruled that *Pro Football: The Early Years* be ingested narrowly: the facts it adds, the men it names that the archive doesn't place, and its disagreements held but not chased. It stays a reference work cited to the page.
+
+**Two readers per page, and a fact only where both agree.** A reading error in an ingest becomes a claim. Where the readers differ, the line is listed and never resolved: 130 lines in pass 1, 117 in pass 2. The readings are not committed, because they would republish the book (`docs/NEFT_READER_BRIEFS.md`).
+
+**Ryan's rulings, 2026-09-12:**
+- **`neft.move_as_printed`.** It holds the move as printed ("from & to ChiT") and asserts nothing about order, date or the other club. "As printed" is the whole promise.
+- **A surname unique on the club a printed move names places a man.** The book names the club, so this is stronger evidence than the adjacent-season rule. The two-men refusal carries over (gate N6).
+- **A family for season weights, not the career one.** `weight_season` holds `neft.roster.weight`. It leaves out every career weight, and also `pfa.roster.weight`, which is PFA's career value printed on each roster page: 2.0% season-to-season change, against Neft's 43.2%. Season heights share the `height` family, because they differ from career heights only 8.9% of the time, against weight's 57%.
+
+**Refusals the passes found, each gated:**
+- **A full name printed twice on one club is two men.** The 1926 Brooklyn Lions print two Earl Brittons, and the exact-name tier had joined both to one person. Both lines now refuse.
+- **A join the book contradicts is refused.** This covers a surname join, or an adjacent-season placement, onto a man the book prints by his full name on another club that season with no move between the two. Examples: Will against Hunk Anderson, 1923; O'Connor against Dan O'Connor, 1920. Pass 1 refused seven. **From 1933 the check cannot fire**, because Neft prints each man once, on the club he played for most. The zero in pass 2 is a limit of the source, not an absence of merges.
+- **A header naming two clubs is Neft's combined club, and is held, not placed.** The opening-city fallback had silently resolved 1934's "Cincinnati Reds — St. Louis Gunners" as Cincinnati (gate N8).
+- **Neft's colleges sit outside the college family.** Filed as `college`, his abbreviations made at least 91 fabricated contests. They are `neft.college_as_printed` until Ryan rules a reading (gate N7). Five notation folds would reach 114 claims, and two further folds are rulings in their own right.
+
+**The year key makes a season figure unable to contest a career figure,** whatever family either sits in. The real risk is a career figure filed on a season-scoped claim, which is what `pfa.roster.weight` is. `src/gate_season_families.py` checks that no contested row mixes scopes or seasons.
+
+*My own number was wrong on the way.* I reported 1,290 weight "disagreements" for pass 1 as if the model would record them. They came from my ingest comparing Neft's season figure with PFA's career one; the contested table cannot record that comparison.

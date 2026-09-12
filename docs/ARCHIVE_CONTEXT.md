@@ -420,6 +420,40 @@ hunt" for exactly this reason.
 
 Ken Crippen named the AAFC reconstruction team too: Pete Palmer, Ken Pullis, Gary Selby. Original AAFC scoresheets survive with Palmer, Crippen and Joe Horrigan, incomplete.
 
+### Where Neft stands (12 September 2026)
+
+*Pro Football: The Early Years* (1978) is **ingested narrowly, by Ryan's ruling**. It is still a reference work cited to the page and never parsed wholesale. Each page was read twice from the image, by two readers working apart, and a fact is claimed only where both read the same value.
+
+**The two passes, both published and served:**
+
+| pass | seasons | store | claims | facts the archive lacked | per 100 lines | men placed where the archive had no stint |
+|---|---|---|---|---|---|---|
+| 1 | 1920–29 | `neft-early-years-1978-1920s` | 9,042 | 583 | 15.9 | 27 |
+| 2 | 1930–39 | `neft-early-years-1978-1930s` | 9,277 | 507 | 17.8 | 4 |
+
+- **The rate falls through the 1930s,** from 20.7 facts per 100 lines in 1930 to 13.1 in 1939. The facts are heights and weights. The archive already held a college for almost every 1930s man.
+- **Pass 3 (1940–45) and pass 4 (1946–59) are costed and not run. Ryan is holding them.**
+  - Pass 3 is the rest of the 1933–45 layout, about 19–24 roster pages read twice, and the 1933–45 register is already read.
+  - Pass 4: a probe of one 1955 page found 10.9 facts per 100 and one man held nowhere. The pass would be 80–95 pages.
+
+**How the facts are held:**
+- Moves: `neft.move_as_printed`, the words as printed.
+- Season weight and height: `neft.roster.weight` (in the family `weight_season`, which leaves out every career weight and `pfa.roster.weight`) and `neft.roster.height` (in `height`).
+- Colleges: `neft.college_as_printed`, outside the college family.
+- The details are in `src/ingest_neft_1920s.py`, `docs/NEFT_READER_BRIEFS.md` and the Dropbox reports of 2026-09-12.
+
+**What pass 2 could not check. Do not read it as an absence.** Pass 1 refused seven surname joins the book contradicts, each a man Neft prints by his full name on another club that season, where the archive had merged two men. Will against Hunk Anderson, 1923, is one. Pass 2 found none. The reason is the source, not the archive: from 1933 Neft prints each man once, on the club he played for most, so the second line the check needs almost never exists. **The check cannot fire in the 1933–59 layout. That is a limit of the source, not evidence that the archive has no such merges from 1933 on.**
+
+**Not ruled, and left alone: the college folds.**
+- Across both passes, 596 Neft colleges read differently from the archive's.
+- **Notation folds:** five would reach 114 of them: abbreviations, initials, parenthesised states, hyphens, and the "&" forms.
+- **Rulings in their own right:** two more.
+  - A missing qualifier: "Georgetown" against "Georgetown (DC)", 56 claims.
+  - A school's second name: "Carlisle" against "Carlisle Indian", 11 claims.
+- **Until Ryan rules, they stay as `neft.college_as_printed`.**
+
+**Also held for Ryan:** `pfa.roster.weight`. It is filed per season, but behaves as PFA's career value: it changes between seasons for 0 of 12 men where it meets Neft in the 1930s, and for 2.0% of men overall. It stays out of `weight_season` until he rules.
+
 ---
 
 ## 7. People and correspondence

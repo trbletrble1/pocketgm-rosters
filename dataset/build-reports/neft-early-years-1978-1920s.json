@@ -1,0 +1,4170 @@
+{
+ "written": "2026-09-12",
+ "counts": {
+  "claims": 9042,
+  "by_predicate": {
+   "neft.roster_as_printed": 3378,
+   "neft.roster.height": 1468,
+   "neft.roster.weight": 2608,
+   "neft.move_as_printed": 367,
+   "register entries both readers agree on": 1878,
+   "register: not joined to one man this pass placed": 236,
+   "neft.college_as_printed": 1221
+  },
+  "leads": 107,
+  "candidates": 132,
+  "refusals": 35,
+  "held_back": 17,
+  "reader_disagreements": 130,
+  "clubs_unresolved": 0,
+  "by_season": {
+   "1920": {
+    "lines both readers agree on": 305,
+    "reader disagreements": 6,
+    "joined on the club-season": 267,
+    "height: agrees": 67,
+    "weight: agrees": 68,
+    "weight: DISAGREES, both held": 84,
+    "weight: the archive lacks": 29,
+    "height: the archive lacks": 6,
+    "height: DISAGREES, both held": 8,
+    "held out: a merge question": 5,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 15,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 13,
+    "refused": 4,
+    "MEN: placed on a club-season the archive did not hold him on": 1,
+    "MEN placed via named_in_the_printed_move": 1,
+    "college: agrees": 116,
+    "college: DISAGREES, both held": 43,
+    "college: 'none' printed (counted, not claimed)": 38,
+    "college: the archive lacks": 13
+   },
+   "1921": {
+    "lines both readers agree on": 381,
+    "reader disagreements": 9,
+    "joined on the club-season": 347,
+    "height: agrees": 87,
+    "weight: agrees": 75,
+    "weight: DISAGREES, both held": 95,
+    "height: the archive lacks": 8,
+    "weight: the archive lacks": 30,
+    "height: DISAGREES, both held": 12,
+    "held out: a merge question": 1,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 8,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 19,
+    "refused": 2,
+    "MEN: placed on a club-season the archive did not hold him on": 4,
+    "MEN placed via the_clubs_adjacent_season": 3,
+    "MEN placed via named_in_the_printed_move": 1,
+    "college: 'none' printed (counted, not claimed)": 16,
+    "college: agrees": 74,
+    "college: DISAGREES, both held": 32,
+    "college: the archive lacks": 12
+   },
+   "1922": {
+    "lines both readers agree on": 408,
+    "reader disagreements": 15,
+    "joined on the club-season": 360,
+    "weight: DISAGREES, both held": 124,
+    "height: agrees": 102,
+    "weight: agrees": 64,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 18,
+    "height: DISAGREES, both held": 11,
+    "height: the archive lacks": 12,
+    "weight: the archive lacks": 35,
+    "held out: a merge question": 1,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 21,
+    "refused": 3,
+    "MEN: placed on a club-season the archive did not hold him on": 5,
+    "MEN placed via the_clubs_adjacent_season": 4,
+    "MEN placed via named_in_the_printed_move": 1,
+    "college: agrees": 73,
+    "college: 'none' printed (counted, not claimed)": 10,
+    "college: the archive lacks": 15,
+    "college: DISAGREES, both held": 38
+   },
+   "1923": {
+    "lines both readers agree on": 411,
+    "reader disagreements": 3,
+    "joined on the club-season": 368,
+    "height: agrees": 100,
+    "weight: DISAGREES, both held": 138,
+    "height: DISAGREES, both held": 9,
+    "weight: agrees": 74,
+    "weight: the archive lacks": 38,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 12,
+    "height: the archive lacks": 14,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 21,
+    "held out: a merge question": 1,
+    "refused": 7,
+    "MEN: placed on a club-season the archive did not hold him on": 2,
+    "MEN placed via named_in_the_printed_move": 1,
+    "MEN placed via the_clubs_adjacent_season": 1,
+    "college: agrees": 86,
+    "college: the archive lacks": 9,
+    "college: DISAGREES, both held": 44,
+    "college: 'none' printed (counted, not claimed)": 8
+   },
+   "1924": {
+    "lines both readers agree on": 394,
+    "reader disagreements": 15,
+    "MEN: placed on a club-season the archive did not hold him on": 13,
+    "MEN placed via named_in_the_printed_move": 11,
+    "weight: DISAGREES, both held": 131,
+    "joined on the club-season": 347,
+    "height: the archive lacks": 14,
+    "weight: the archive lacks": 32,
+    "height: agrees": 101,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 13,
+    "weight: agrees": 99,
+    "height: DISAGREES, both held": 10,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 13,
+    "held out: a merge question": 3,
+    "refused": 5,
+    "MEN placed via the_clubs_adjacent_season": 2,
+    "college: agrees": 67,
+    "college: DISAGREES, both held": 28,
+    "college: 'none' printed (counted, not claimed)": 3,
+    "college: the archive lacks": 4
+   },
+   "1925": {
+    "lines both readers agree on": 450,
+    "reader disagreements": 30,
+    "joined on the club-season": 423,
+    "height: DISAGREES, both held": 14,
+    "weight: DISAGREES, both held": 167,
+    "weight: agrees": 149,
+    "height: agrees": 164,
+    "weight: the archive lacks": 49,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 8,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 13,
+    "height: the archive lacks": 17,
+    "held out: a merge question": 3,
+    "MEN: placed on a club-season the archive did not hold him on": 1,
+    "MEN placed via named_in_the_printed_move": 1,
+    "refused": 2,
+    "college: agrees": 100,
+    "college: the archive lacks": 6,
+    "college: DISAGREES, both held": 40,
+    "college: 'none' printed (counted, not claimed)": 11
+   },
+   "1926": {
+    "lines both readers agree on": 525,
+    "reader disagreements": 16,
+    "joined on the club-season": 483,
+    "height: agrees": 171,
+    "weight: DISAGREES, both held": 160,
+    "weight: agrees": 196,
+    "height: the archive lacks": 29,
+    "weight: the archive lacks": 60,
+    "height: DISAGREES, both held": 9,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 21,
+    "held out: a merge question": 1,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 12,
+    "refused": 8,
+    "college: DISAGREES, both held": 52,
+    "college: agrees": 132,
+    "college: the archive lacks": 12,
+    "college: 'none' printed (counted, not claimed)": 11
+   },
+   "1927": {
+    "lines both readers agree on": 298,
+    "reader disagreements": 1,
+    "joined on the club-season": 280,
+    "height: agrees": 153,
+    "weight: DISAGREES, both held": 140,
+    "weight: the archive lacks": 27,
+    "height: DISAGREES, both held": 16,
+    "weight: agrees": 95,
+    "height: the archive lacks": 13,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 10,
+    "refused": 4,
+    "MEN: placed on a club-season the archive did not hold him on": 1,
+    "MEN placed via the_clubs_adjacent_season": 1,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 2,
+    "held out: a merge question": 1,
+    "college: agrees": 63,
+    "college: DISAGREES, both held": 17,
+    "college: 'none' printed (counted, not claimed)": 3,
+    "college: the archive lacks": 1
+   },
+   "1928": {
+    "lines both readers agree on": 218,
+    "reader disagreements": 5,
+    "joined on the club-season": 210,
+    "height: agrees": 127,
+    "weight: DISAGREES, both held": 118,
+    "height: the archive lacks": 14,
+    "weight: the archive lacks": 23,
+    "weight: agrees": 61,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 4,
+    "height: DISAGREES, both held": 10,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 4,
+    "college: agrees": 36,
+    "college: DISAGREES, both held": 12,
+    "college: the archive lacks": 2,
+    "college: 'none' printed (counted, not claimed)": 3
+   },
+   "1929": {
+    "lines both readers agree on": 279,
+    "reader disagreements": 3,
+    "joined on the club-season": 266,
+    "height: agrees": 135,
+    "weight: agrees": 81,
+    "weight: DISAGREES, both held": 132,
+    "height: DISAGREES, both held": 12,
+    "height: the archive lacks": 23,
+    "weight: the archive lacks": 34,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 7,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 5,
+    "held out: a merge question": 1,
+    "college: agrees": 61,
+    "college: DISAGREES, both held": 31,
+    "college: the archive lacks": 2,
+    "college: 'none' printed (counted, not claimed)": 4
+   }
+  }
+ },
+ "leads": [
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Kyle McWherter",
+   "club_as_printed": "DECATUR STALEYS",
+   "club_id": "club-decatur-staleys-1920",
+   "season": 1920,
+   "printed_page": 16,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mountain",
+   "club_as_printed": "CANTON BULLDOGS",
+   "club_id": "club-canton-bulldogs-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Tom Whalen",
+   "club_as_printed": "CANTON BULLDOGS",
+   "club_id": "club-canton-bulldogs-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Jock Mumgavin",
+   "club_as_printed": "CHICAGO TIGERS",
+   "club_id": "club-chicago-tigers-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Earl Houser",
+   "club_as_printed": "DAYTON TRIANGLES",
+   "club_id": "club-dayton-triangles-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "T-E",
+    "hgt": null,
+    "wgt": "190",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Barleycorn",
+   "club_as_printed": "DETROIT HERALDS",
+   "club_id": "club-detroit-heralds-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "C",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Shanley",
+   "club_as_printed": "DETROIT HERALDS",
+   "club_id": "club-detroit-heralds-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Sherman",
+   "club_as_printed": "DETROIT HERALDS",
+   "club_id": "club-detroit-heralds-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Smiley",
+   "club_as_printed": "DETROIT HERALDS",
+   "club_id": "club-detroit-heralds-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Smith",
+   "club_as_printed": "DETROIT HERALDS",
+   "club_id": "club-detroit-heralds-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Oscar Kuehner",
+   "club_as_printed": "COLUMBUS PANHANDLES",
+   "club_id": "club-columbus-panhandles-1920",
+   "season": 1920,
+   "printed_page": 18,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "John Barsha",
+   "club_as_printed": "HAMMOND PROS",
+   "club_id": "club-hammond-pros-1920",
+   "season": 1920,
+   "printed_page": 18,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": [
+    "John Barsha (P_002830): club-rochester-jeffersons-1920"
+   ]
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "M. Cole",
+   "club_as_printed": "HAMMOND PROS",
+   "club_id": "club-hammond-pros-1920",
+   "season": 1920,
+   "printed_page": 18,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Charlie May",
+   "club_as_printed": "CANTON BULLDOGS",
+   "club_id": "club-canton-bulldogs-1920",
+   "season": 1921,
+   "printed_page": 20,
+   "fields_both_readers_agree_on": {
+    "hgt": "5'8\"",
+    "wgt": "143",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Gus DeMoe",
+   "club_as_printed": "GREEN BAY PACKERS",
+   "club_id": "club-green-bay-packers-1921",
+   "season": 1921,
+   "printed_page": 20,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Shriner",
+   "club_as_printed": "CINCINNATI CELTS",
+   "club_id": "club-cincinnati-celts-1921",
+   "season": 1921,
+   "printed_page": 21,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Tom Whalen",
+   "club_as_printed": "CLEVELAND INDIANS",
+   "club_id": "club-cleveland-tigers-1920",
+   "season": 1921,
+   "printed_page": 21,
+   "fields_both_readers_agree_on": {
+    "pos": "E-C",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Oscar Kuehner",
+   "club_as_printed": "COLUMBUS PANHANDLES",
+   "club_id": "club-columbus-panhandles-1920",
+   "season": 1921,
+   "printed_page": 21,
+   "fields_both_readers_agree_on": {
+    "pos": "T-G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Tubby Rosenberger",
+   "club_as_printed": "EVANSVILLE CRIMSON GIANTS",
+   "club_id": "club-evansville-crimson-giants-1921",
+   "season": 1921,
+   "printed_page": 21,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Larry Green",
+   "club_as_printed": "HAMMOND PROS",
+   "club_id": "club-hammond-pros-1920",
+   "season": 1921,
+   "printed_page": 21,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Sheepy Rudeen",
+   "club_as_printed": "MINNEAPOLIS MARINES",
+   "club_id": "club-minneapolis-marines-1921",
+   "season": 1921,
+   "printed_page": 21,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Shiverick",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1922,
+   "printed_page": 24,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Dick Rauch",
+   "club_as_printed": "TOLEDO MAROONS",
+   "club_id": "club-toledo-maroons-1922",
+   "season": 1922,
+   "printed_page": 24,
+   "fields_both_readers_agree_on": {
+    "pos": "G-T-WB",
+    "hgt": "5'9\"",
+    "wgt": "178",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Walt LeJeune",
+   "club_as_printed": "AKRON PROS",
+   "club_id": "club-akron-pros-1920",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "G-WB-FB",
+    "hgt": "6'",
+    "wgt": "210",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "M. Cole",
+   "club_as_printed": "HAMMOND PROS",
+   "club_id": "club-hammond-pros-1920",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Murphy",
+   "club_as_printed": "HAMMOND PROS",
+   "club_id": "club-hammond-pros-1920",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Lou Lensing",
+   "club_as_printed": "LOUISVILLE BRECKS",
+   "club_id": "club-louisville-brecks-1921",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Bert Bisbee",
+   "club_as_printed": "MILWAUKEE BADGERS",
+   "club_id": "club-milwaukee-badgers-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Corcoran",
+   "club_as_printed": "MILWAUKEE BADGERS",
+   "club_id": "club-milwaukee-badgers-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Howie Pugh",
+   "club_as_printed": "MILWAUKEE BADGERS",
+   "club_id": "club-milwaukee-badgers-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Ron Cullen",
+   "club_as_printed": "MILWAUKEE BADGERS",
+   "club_id": "club-milwaukee-badgers-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Thomas",
+   "club_as_printed": "MILWAUKEE BADGERS",
+   "club_id": "club-milwaukee-badgers-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Big Bear",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Eagle Feather",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": "220",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Laughing Gas",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Red Fang",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "C",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Running Deer",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "WB-FB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Stilwell Sanooke",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "E-WB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "War Eagle",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "T-G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "White Cloud",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Ralph Hanricus",
+   "club_as_printed": "ROCHESTER JEFFERSONS",
+   "club_id": "club-rochester-jeffersons-1920",
+   "season": 1922,
+   "printed_page": 25,
+   "fields_both_readers_agree_on": {
+    "pos": "TB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Steve Rourke",
+   "club_as_printed": "EVANSVILLE CRIMSON GIANTS",
+   "club_id": "club-evansville-crimson-giants-1921",
+   "season": 1922,
+   "printed_page": 26,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Byron McMahon",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1923,
+   "printed_page": 28,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": "200",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "John Haven",
+   "club_as_printed": "DULUTH KELLEYS",
+   "club_id": "club-duluth-kelleys-1923",
+   "season": 1923,
+   "printed_page": 28,
+   "fields_both_readers_agree_on": {
+    "pos": "E-G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mickey McDonnell",
+   "club_as_printed": "DULUTH KELLEYS",
+   "club_id": "club-duluth-kelleys-1923",
+   "season": 1923,
+   "printed_page": 28,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": "5'8\"",
+    "wgt": "150",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Gillie Ward",
+   "club_as_printed": "DAYTON TRIANGLES",
+   "club_id": "club-dayton-triangles-1920",
+   "season": 1923,
+   "printed_page": 29,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": "6'1\"",
+    "wgt": "190",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Long",
+   "club_as_printed": "RACINE LEGION",
+   "club_id": "club-racine-legion-1922",
+   "season": 1923,
+   "printed_page": 29,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Lyle Burton",
+   "club_as_printed": "ROCK ISLANDS INDEPENDENTS",
+   "club_id": "club-rock-island-independents-1920",
+   "season": 1923,
+   "printed_page": 29,
+   "fields_both_readers_agree_on": {
+    "pos": "G-T-FB",
+    "hgt": null,
+    "wgt": "195",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Lee Wycoff",
+   "club_as_printed": "ST. LOUIS ALL-STARS",
+   "club_id": "club-st-louis-all-stars-1923",
+   "season": 1923,
+   "printed_page": 29,
+   "fields_both_readers_agree_on": {
+    "pos": "WB-FB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Moran",
+   "club_as_printed": "ST. LOUIS ALL-STARS",
+   "club_id": "club-st-louis-all-stars-1923",
+   "season": 1923,
+   "printed_page": 29,
+   "fields_both_readers_agree_on": {
+    "pos": "BB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Walt LeJeune",
+   "club_as_printed": "AKRON PROS",
+   "club_id": "club-akron-pros-1920",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "G-C",
+    "hgt": "6'",
+    "wgt": "220",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Arrowhead",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Bemus Pierce",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Big Bear",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "T-E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Black Bear",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Deadeye",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Eagle Feather",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": "220",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Gray Horse",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "WB-G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mason",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Red Fang",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Red Fox",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "BB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Running Deer",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Tomahawk",
+   "club_as_printed": "OORANG INDIANS (Marion, Ohio)",
+   "club_id": "club-oorang-indians-1922",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "WB-FB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Glen Greenwood",
+   "club_as_printed": "CHICAGO BEARS",
+   "club_id": "club-decatur-staleys-1920",
+   "season": 1924,
+   "printed_page": 32,
+   "fields_both_readers_agree_on": {
+    "pos": "HB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Harry Englund",
+   "club_as_printed": "CHICAGO BEARS",
+   "club_id": "club-decatur-staleys-1920",
+   "season": 1924,
+   "printed_page": 32,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mickey McDonnell",
+   "club_as_printed": "DULUTH KELLEYS",
+   "club_id": "club-duluth-kelleys-1923",
+   "season": 1924,
+   "printed_page": 32,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": "5'8\"",
+    "wgt": "150",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Tom Milton",
+   "club_as_printed": "GREEN BAY PACKERS",
+   "club_id": "club-green-bay-packers-1921",
+   "season": 1924,
+   "printed_page": 32,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "O'Reilly",
+   "club_as_printed": "RACINE LEGION",
+   "club_id": "club-racine-legion-1922",
+   "season": 1924,
+   "printed_page": 32,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Jim Ryan",
+   "club_as_printed": "ROCK ISLAND INDEPENDENTS",
+   "club_id": "club-rock-island-independents-1920",
+   "season": 1924,
+   "printed_page": 32,
+   "fields_both_readers_agree_on": {
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Ralph Wiedich",
+   "club_as_printed": "KANSAS CITY COWBOYS",
+   "club_id": "club-kansas-city-blues-1924",
+   "season": 1924,
+   "printed_page": 33,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Walters",
+   "club_as_printed": "KENOSHA MAROONS",
+   "club_id": "club-kenosha-maroons-1924",
+   "season": 1924,
+   "printed_page": 33,
+   "fields_both_readers_agree_on": {
+    "pos": "TB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Ward Meese",
+   "club_as_printed": "KENOSHA MAROONS",
+   "club_id": "club-kenosha-maroons-1924",
+   "season": 1924,
+   "printed_page": 33,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": [
+    "Ward Meese (P_014940): club-hammond-pros-1920"
+   ]
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Walt LeJeune",
+   "club_as_printed": "MILWAUKEE BADGERS",
+   "club_id": "club-milwaukee-badgers-1922",
+   "season": 1924,
+   "printed_page": 33,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": "6'",
+    "wgt": "230",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Hooley",
+   "club_as_printed": "MINNEAPOLIS MARINES",
+   "club_id": "club-minneapolis-marines-1921",
+   "season": 1924,
+   "printed_page": 34,
+   "fields_both_readers_agree_on": {
+    "pos": "C-E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "E.P. Bolgeneau",
+   "club_as_printed": "ROCHESTER JEFFERSONS",
+   "club_id": "club-rochester-jeffersons-1920",
+   "season": 1924,
+   "printed_page": 34,
+   "fields_both_readers_agree_on": {
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Les Perlman",
+   "club_as_printed": "ROCHESTER JEFFERSONS",
+   "club_id": "club-rochester-jeffersons-1920",
+   "season": 1924,
+   "printed_page": 34,
+   "fields_both_readers_agree_on": {
+    "pos": "T-G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mickey McDonnell",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1925,
+   "printed_page": 36,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": "5'8\"",
+    "wgt": "150",
+    "move_as_printed": "from DUL, to HAM",
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Tom Meyers",
+   "club_as_printed": "NEW YORK GIANTS",
+   "club_id": "club-new-york-giants-1925",
+   "season": 1925,
+   "printed_page": 36,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Frank Neihaus",
+   "club_as_printed": "AKRON PROS",
+   "club_id": "club-akron-pros-1920",
+   "season": 1925,
+   "printed_page": 37,
+   "fields_both_readers_agree_on": {
+    "pos": "WB-BB",
+    "hgt": null,
+    "wgt": "170",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Charlie Van Dyne",
+   "club_as_printed": "BUFFALO BISONS",
+   "club_id": "club-buffalo-all-americans-1920",
+   "season": 1925,
+   "printed_page": 38,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": "6'1\"",
+    "wgt": "194",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mickey McDonnell",
+   "club_as_printed": "DULUTH KELLEYS",
+   "club_id": "club-duluth-kelleys-1923",
+   "season": 1925,
+   "printed_page": 38,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": "5'8\"",
+    "wgt": "150",
+    "move_as_printed": "to ChiC",
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Walters",
+   "club_as_printed": "HAMMOND PROS",
+   "club_id": "club-hammond-pros-1920",
+   "season": 1925,
+   "printed_page": 38,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Abbott",
+   "club_as_printed": "MILWAUKEE BADGERS",
+   "club_id": "club-milwaukee-badgers-1922",
+   "season": 1925,
+   "printed_page": 38,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Westey",
+   "club_as_printed": "MILWAUKEE BADGERS",
+   "club_id": "club-milwaukee-badgers-1922",
+   "season": 1925,
+   "printed_page": 38,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Jack MacAuliffe",
+   "club_as_printed": "GREEN BAY PACKERS",
+   "club_id": "club-green-bay-packers-1921",
+   "season": 1926,
+   "printed_page": 41,
+   "fields_both_readers_agree_on": {
+    "pos": "HB-TB",
+    "hgt": null,
+    "wgt": "155",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Walt LeJeune",
+   "club_as_printed": "GREEN BAY PACKERS",
+   "club_id": "club-green-bay-packers-1921",
+   "season": 1926,
+   "printed_page": 41,
+   "fields_both_readers_agree_on": {
+    "pos": "G-C-T",
+    "hgt": "6'",
+    "wgt": "242",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Joe Westoupal",
+   "club_as_printed": "KANSAS CITY COWBOYS",
+   "club_id": "club-kansas-city-blues-1924",
+   "season": 1926,
+   "printed_page": 41,
+   "fields_both_readers_agree_on": {
+    "pos": "C",
+    "hgt": "6'3\"",
+    "wgt": "200",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Stan Koholinski",
+   "club_as_printed": "BROOKLYN LIONS",
+   "club_id": "club-brooklyn-lions-1926",
+   "season": 1926,
+   "printed_page": 42,
+   "fields_both_readers_agree_on": {
+    "pos": "C",
+    "hgt": null,
+    "wgt": "170",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Paxton",
+   "club_as_printed": "BUFFALO RANGERS",
+   "club_id": "club-buffalo-all-americans-1920",
+   "season": 1926,
+   "printed_page": 42,
+   "fields_both_readers_agree_on": {
+    "pos": "TB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Bill Kellogg",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1926,
+   "printed_page": 42,
+   "fields_both_readers_agree_on": {
+    "pos": "FB-TB",
+    "hgt": null,
+    "wgt": "180",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mickey McDonnell",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1926,
+   "printed_page": 42,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": "5'8\"",
+    "wgt": "155",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Bill Cobb",
+   "club_as_printed": "DULUTH ESKIMOS",
+   "club_id": "club-duluth-kelleys-1923",
+   "season": 1926,
+   "printed_page": 42,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Sayforth",
+   "club_as_printed": "PROVIDENCE STEAM ROLLER",
+   "club_id": "club-providence-steam-roller-1925",
+   "season": 1926,
+   "printed_page": 42,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Running Wolf",
+   "club_as_printed": "AKRON PROS",
+   "club_id": "club-akron-pros-1920",
+   "season": 1926,
+   "printed_page": 43,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Benn",
+   "club_as_printed": "HAMMOND PROS",
+   "club_id": "club-hammond-pros-1920",
+   "season": 1926,
+   "printed_page": 43,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": "165",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Snipe Seidenbecker",
+   "club_as_printed": "HAMMOND PROS",
+   "club_id": "club-hammond-pros-1920",
+   "season": 1926,
+   "printed_page": 43,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Ken Hauser",
+   "club_as_printed": "BUFFALO BISONS",
+   "club_id": "club-buffalo-all-americans-1920",
+   "season": 1927,
+   "printed_page": 47,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": "218",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mickey McDonnell",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1927,
+   "printed_page": 47,
+   "fields_both_readers_agree_on": {
+    "pos": "WB-TB",
+    "hgt": "5'8\"",
+    "wgt": "160",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Joe Westoupal",
+   "club_as_printed": "DETROIT WOLVERINES",
+   "club_id": "club-detroit-wolverines-1928",
+   "season": 1928,
+   "printed_page": 49,
+   "fields_both_readers_agree_on": {
+    "pos": "C",
+    "hgt": "6'3\"",
+    "wgt": "210",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Kolina",
+   "club_as_printed": "CHICAGO BEARS",
+   "club_id": "club-decatur-staleys-1920",
+   "season": 1928,
+   "printed_page": 50,
+   "fields_both_readers_agree_on": {
+    "pos": "T-G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mickey McDonnell",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1928,
+   "printed_page": 50,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": "5'8\"",
+    "wgt": "160",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Joe McClain",
+   "club_as_printed": "NEW YORK YANKEES",
+   "club_id": "club-new-york-yankees-1926",
+   "season": 1928,
+   "printed_page": 50,
+   "fields_both_readers_agree_on": {
+    "pos": "G-T",
+    "hgt": "6'",
+    "wgt": "200",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mickey McDonnell",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1929,
+   "printed_page": 53,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": "5'8\"",
+    "wgt": "165",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Joe Westoupal",
+   "club_as_printed": "NEW YORK GIANTS",
+   "club_id": "club-new-york-giants-1925",
+   "season": 1929,
+   "printed_page": 53,
+   "fields_both_readers_agree_on": {
+    "pos": "C",
+    "hgt": "6'3\"",
+    "wgt": "200",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Chief Big Twig",
+   "club_as_printed": "BUFFALO BISONS",
+   "club_id": "club-buffalo-all-americans-1920",
+   "season": 1929,
+   "printed_page": 54,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": "5'11\"",
+    "wgt": "225",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Ulysses Coumier",
+   "club_as_printed": "BUFFALO BISONS",
+   "club_id": "club-buffalo-all-americans-1920",
+   "season": 1929,
+   "printed_page": 54,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": "5'10\"",
+    "wgt": "195",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Guase",
+   "club_as_printed": "MINNEAPOLIS REDJACKETS",
+   "club_id": "club-minneapolis-red-jackets-1929",
+   "season": 1929,
+   "printed_page": 54,
+   "fields_both_readers_agree_on": {
+    "pos": "C-G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  }
+ ],
+ "refusals": [
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Gil Falcon",
+   "club_as_printed": "CHICAGO TIGERS",
+   "club_id": "club-chicago-tigers-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": "215",
+    "move_as_printed": "to & from HAM",
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 2 men of surname 'falcon' on the club-season (['P_002602', 'P_002603']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "O'Connor",
+   "club_as_printed": "CLEVELAND TIGERS",
+   "club_id": "club-cleveland-tigers-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "REFUSED: the club's adjacent season names Dan O'Connor (P_002587), but this book prints him on ['club-canton-bulldogs-1920'] that same season with no move to this club"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Jones",
+   "club_as_printed": "DETROIT HERALDS",
+   "club_id": "club-detroit-heralds-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "REFUSED: the document prints the surname 'jones' 2 times; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Marchall Jones",
+   "club_as_printed": "DETROIT HERALDS",
+   "club_id": "club-detroit-heralds-1920",
+   "season": 1920,
+   "printed_page": 17,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": null,
+    "wgt": "165",
+    "move_as_printed": "from HAM",
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the document prints the surname 'jones' 2 times; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Jones",
+   "club_as_printed": "CLEVELAND INDIANS",
+   "club_id": "club-cleveland-tigers-1920",
+   "season": 1921,
+   "printed_page": 21,
+   "fields_both_readers_agree_on": {
+    "pos": "TB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": "from HAM",
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "REFUSED on the club the printed move names -- club-hammond-pros-1920: REFUSED: 2 men of surname 'jones' on the club-season (['P_002722', 'P_002995']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Jones",
+   "club_as_printed": "HAMMOND PROS",
+   "club_id": "club-hammond-pros-1920",
+   "season": 1921,
+   "printed_page": 21,
+   "fields_both_readers_agree_on": {
+    "pos": "TB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": "to CLE",
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "REFUSED: 2 men of surname 'jones' on the club-season (['P_002722', 'P_002995']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "George Johnson",
+   "club_as_printed": "RACINE LEGION",
+   "club_id": "club-racine-legion-1922",
+   "season": 1922,
+   "printed_page": 24,
+   "fields_both_readers_agree_on": {
+    "pos": "TB-WB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the surname joins Jerry Johnson (P_003060), but this book prints him by his full name on ['club-rock-island-independents-1920'] that same season, this line prints 'George Johnson', and no move links the two"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Abe Fishman",
+   "club_as_printed": "EVANSVILLE CRIMSON GIANTS",
+   "club_id": "club-evansville-crimson-giants-1921",
+   "season": 1922,
+   "printed_page": 26,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED on the club's adjacent season -- 1921: REFUSED: the document prints the surname 'fishman' 2 times; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Alex Fishman",
+   "club_as_printed": "EVANSVILLE CRIMSON GIANTS",
+   "club_id": "club-evansville-crimson-giants-1921",
+   "season": 1922,
+   "printed_page": 26,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED on the club's adjacent season -- 1921: REFUSED: the document prints the surname 'fishman' 2 times; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Gene Partlow",
+   "club_as_printed": "CLEVELAND INDIANS",
+   "club_id": "club-cleveland-indians-1923",
+   "season": 1923,
+   "printed_page": 28,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the surname joins Lou Partlow (P_002697), but this book prints him by his full name on ['club-dayton-triangles-1920'] that same season, this line prints 'Gene Partlow', and no move links the two"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Will Anderson",
+   "club_as_printed": "CLEVELAND INDIANS",
+   "club_id": "club-cleveland-indians-1923",
+   "season": 1923,
+   "printed_page": 28,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": "175",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the surname joins Hunk Anderson (P_014305), but this book prints him by his full name on ['club-decatur-staleys-1920'] that same season, this line prints 'Will Anderson', and no move links the two"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "George Kinderdine",
+   "club_as_printed": "DAYTON TRIANGLES",
+   "club_id": "club-dayton-triangles-1920",
+   "season": 1923,
+   "printed_page": 29,
+   "fields_both_readers_agree_on": {
+    "pos": "C",
+    "hgt": "5'11\"",
+    "wgt": "180",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 2 men of surname 'kinderdine' on the club-season (['P_002694', 'P_015071']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Smith",
+   "club_as_printed": "HAMMOND PROS",
+   "club_id": "club-hammond-pros-1920",
+   "season": 1923,
+   "printed_page": 29,
+   "fields_both_readers_agree_on": {
+    "pos": "G-E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "REFUSED: the surname joins Wilfred Smith (P_002797), but this book prints him by his full name on ['club-chicago-cardinals-1920'] that same season, this line prints 'Smith', and no move links the two"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Earl Smith",
+   "club_as_printed": "ROCK ISLANDS INDEPENDENTS",
+   "club_id": "club-rock-island-independents-1920",
+   "season": 1923,
+   "printed_page": 29,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the surname joins Hank Smith (P_002852), but this book prints him by his full name on ['club-rochester-jeffersons-1920'] that same season, this line prints 'Earl Smith', and no move links the two"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Salem Ford",
+   "club_as_printed": "LOUISVILLE BRECKS",
+   "club_id": "club-louisville-brecks-1921",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the book prints the name 'Salem Ford' 2 times on this club-season; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Salem Ford",
+   "club_as_printed": "LOUISVILLE BRECKS",
+   "club_id": "club-louisville-brecks-1921",
+   "season": 1923,
+   "printed_page": 30,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the book prints the name 'Salem Ford' 2 times on this club-season; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Fred Thompson",
+   "club_as_printed": "ROCK ISLAND INDEPENDENTS",
+   "club_id": "club-rock-island-independents-1920",
+   "season": 1924,
+   "printed_page": 32,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the document prints the surname 'thompson' 2 times; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Lyle Burton",
+   "club_as_printed": "ROCK ISLAND INDEPENDENTS",
+   "club_id": "club-rock-island-independents-1920",
+   "season": 1924,
+   "printed_page": 32,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": "195",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the club's adjacent season names Lyle Burton (P_015250), but this book prints him on ['club-hammond-pros-1920'] that same season with no move to this club"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "George Kinderdine",
+   "club_as_printed": "DAYTON TRIANGLES",
+   "club_id": "club-dayton-triangles-1920",
+   "season": 1924,
+   "printed_page": 33,
+   "fields_both_readers_agree_on": {
+    "pos": "C",
+    "hgt": "5'11\"",
+    "wgt": "180",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 3 men of surname 'kinderdine' on the club-season (['P_002694', 'P_015071', 'P_015220']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Jim Kinderdine",
+   "club_as_printed": "DAYTON TRIANGLES",
+   "club_id": "club-dayton-triangles-1920",
+   "season": 1924,
+   "printed_page": 33,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 3 men of surname 'kinderdine' on the club-season (['P_002694', 'P_015071', 'P_015220']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Charlie Hill",
+   "club_as_printed": "KANSAS CITY COWBOYS",
+   "club_id": "club-kansas-city-blues-1924",
+   "season": 1924,
+   "printed_page": 33,
+   "fields_both_readers_agree_on": {
+    "pos": "FB-TB",
+    "hgt": "6'",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 2 men of surname 'hill' on the club-season (['P_015168', 'P_015257']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "George Kinderdine",
+   "club_as_printed": "DAYTON TRIANGLES",
+   "club_id": "club-dayton-triangles-1920",
+   "season": 1925,
+   "printed_page": 38,
+   "fields_both_readers_agree_on": {
+    "pos": "C",
+    "hgt": "5'11\"",
+    "wgt": "180",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 2 men of surname 'kinderdine' on the club-season (['P_002694', 'P_015071']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "John Mahrt",
+   "club_as_printed": "DAYTON TRIANGLES",
+   "club_id": "club-dayton-triangles-1920",
+   "season": 1925,
+   "printed_page": 38,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 2 men of surname 'mahrt' on the club-season (['P_015221', 'P_015371']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Earl Britton",
+   "club_as_printed": "BROOKLYN LIONS",
+   "club_id": "club-brooklyn-lions-1926",
+   "season": 1926,
+   "printed_page": 42,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": "6'3\"",
+    "wgt": "200",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": "*",
+    "surname_only": false
+   },
+   "why": "REFUSED: the book prints the name 'Earl Britton' 2 times on this club-season; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Earl Britton",
+   "club_as_printed": "BROOKLYN LIONS",
+   "club_id": "club-brooklyn-lions-1926",
+   "season": 1926,
+   "printed_page": 42,
+   "fields_both_readers_agree_on": {
+    "pos": "FB-TB-WB",
+    "hgt": "5'10\"",
+    "wgt": "185",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the book prints the name 'Earl Britton' 2 times on this club-season; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Lou Feist",
+   "club_as_printed": "BUFFALO RANGERS",
+   "club_id": "club-buffalo-all-americans-1920",
+   "season": 1926,
+   "printed_page": 42,
+   "fields_both_readers_agree_on": {
+    "pos": "E-T",
+    "hgt": "6'",
+    "wgt": "194",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the book prints the name 'Lou Feist' 2 times on this club-season; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Lou Feist",
+   "club_as_printed": "BUFFALO RANGERS",
+   "club_id": "club-buffalo-all-americans-1920",
+   "season": 1926,
+   "printed_page": 42,
+   "fields_both_readers_agree_on": {
+    "pos": "E-WB",
+    "hgt": null,
+    "wgt": "200",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the book prints the name 'Lou Feist' 2 times on this club-season; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Phil Murphy",
+   "club_as_printed": "DULUTH ESKIMOS",
+   "club_id": "club-duluth-kelleys-1923",
+   "season": 1926,
+   "printed_page": 42,
+   "fields_both_readers_agree_on": {
+    "pos": "C",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the surname joins Jim Murphy (P_015580), but this book prints him by his full name on ['club-racine-tornadoes-1926'] that same season, this line prints 'Phil Murphy', and no move links the two"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Chief Big Twig",
+   "club_as_printed": "AKRON PROS",
+   "club_id": "club-akron-pros-1920",
+   "season": 1926,
+   "printed_page": 43,
+   "fields_both_readers_agree_on": {
+    "pos": "G-E-C",
+    "hgt": "5'11\"",
+    "wgt": "227",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the document prints the surname 'twig' 2 times; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Joe Little Twig",
+   "club_as_printed": "AKRON PROS",
+   "club_id": "club-akron-pros-1920",
+   "season": 1926,
+   "printed_page": 43,
+   "fields_both_readers_agree_on": {
+    "pos": "E",
+    "hgt": null,
+    "wgt": "180",
+    "move_as_printed": "from CAN",
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the document prints the surname 'twig' 2 times; one held man cannot be both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Bill Butler",
+   "club_as_printed": "HAMMOND PROS",
+   "club_id": "club-hammond-pros-1920",
+   "season": 1926,
+   "printed_page": 43,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: the surname joins Sol Butler (P_015090), but this book prints him by his full name on ['club-canton-bulldogs-1920'] that same season, this line prints 'Bill Butler', and no move links the two"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Ed Weir",
+   "club_as_printed": "FRANKFORD YELLOW JACKETS",
+   "club_id": "club-frankford-yellow-jackets-1924",
+   "season": 1927,
+   "printed_page": 46,
+   "fields_both_readers_agree_on": {
+    "pos": "T-E",
+    "hgt": "5'10\"",
+    "wgt": "192",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 4 men of surname 'weir' on the club-season (['P_014812', 'P_015793', 'P_047035']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Hap Moran",
+   "club_as_printed": "FRANKFORD YELLOW JACKETS",
+   "club_id": "club-frankford-yellow-jackets-1924",
+   "season": 1927,
+   "printed_page": 46,
+   "fields_both_readers_agree_on": {
+    "pos": "TB",
+    "hgt": "6'1\"",
+    "wgt": "190",
+    "move_as_printed": "to ChiC",
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 3 men of surname 'moran' on the club-season (['P_014623', 'P_015590', 'P_047034']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Les Young",
+   "club_as_printed": "PROVIDENCE STEAM ROLLER",
+   "club_id": "club-providence-steam-roller-1925",
+   "season": 1927,
+   "printed_page": 46,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": "6'1\"",
+    "wgt": "190",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 2 men of surname 'young' on the club-season (['P_015474', 'P_015833']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Zern Joseph",
+   "club_as_printed": "DAYTON TRIANGLES",
+   "club_id": "club-dayton-triangles-1920",
+   "season": 1927,
+   "printed_page": 47,
+   "fields_both_readers_agree_on": {
+    "pos": "E-C",
+    "hgt": "6'2\"",
+    "wgt": "170",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 2 men of surname 'joseph' on the club-season (['P_015369', 'P_015768']) -- a second man refuses both"
+  }
+ ],
+ "held_back": [
+  {
+   "person": "P_002555",
+   "why": "Butch Spagna -- beside Joe Spagna",
+   "name_as_printed": "Joe Spagna",
+   "club_id": "club-buffalo-all-americans-1920",
+   "season": 1920,
+   "printed_page": 16
+  },
+  {
+   "person": "P_002620",
+   "why": "Bill Clark -- two 1920 records",
+   "name_as_printed": "Bill Clark",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1920,
+   "printed_page": 17
+  },
+  {
+   "person": "P_002623",
+   "why": "Dick Egan -- two records, 1924 Kenosha and Dayton",
+   "name_as_printed": "Dick Egan",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1920,
+   "printed_page": 17
+  },
+  {
+   "person": "P_002555",
+   "why": "Butch Spagna -- beside Joe Spagna",
+   "name_as_printed": "Joe Spagna",
+   "club_id": "club-cleveland-tigers-1920",
+   "season": 1920,
+   "printed_page": 17
+  },
+  {
+   "person": "P_002685",
+   "why": "Bill Clark -- the second 1920 record",
+   "name_as_printed": "Bill Clark",
+   "club_id": "club-dayton-triangles-1920",
+   "season": 1920,
+   "printed_page": 17
+  },
+  {
+   "person": "P_002555",
+   "why": "Butch Spagna -- beside Joe Spagna",
+   "name_as_printed": "Joe Spagna",
+   "club_id": "club-buffalo-all-americans-1920",
+   "season": 1921,
+   "printed_page": 20
+  },
+  {
+   "person": "P_002623",
+   "why": "Dick Egan -- two records, 1924 Kenosha and Dayton",
+   "name_as_printed": "Dick Egan",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1922,
+   "printed_page": 24
+  },
+  {
+   "person": "P_002623",
+   "why": "Dick Egan -- two records, 1924 Kenosha and Dayton",
+   "name_as_printed": "Dick Egan",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1923,
+   "printed_page": 28
+  },
+  {
+   "person": "P_002555",
+   "why": "Butch Spagna -- beside Joe Spagna",
+   "name_as_printed": "Joe Spagna",
+   "club_id": "club-frankford-yellow-jackets-1924",
+   "season": 1924,
+   "printed_page": 32
+  },
+  {
+   "person": "P_015218",
+   "why": "Dick Egan -- the second record",
+   "name_as_printed": "Dick Egan",
+   "club_id": "club-dayton-triangles-1920",
+   "season": 1924,
+   "printed_page": 33
+  },
+  {
+   "person": "P_002623",
+   "why": "Dick Egan -- two records, 1924 Kenosha and Dayton",
+   "name_as_printed": "Dick Egan",
+   "club_id": "club-kenosha-maroons-1924",
+   "season": 1924,
+   "printed_page": 33
+  },
+  {
+   "person": "P_002555",
+   "why": "Butch Spagna -- beside Joe Spagna",
+   "name_as_printed": "Joe Spagna",
+   "club_id": "club-frankford-yellow-jackets-1924",
+   "season": 1925,
+   "printed_page": 37
+  },
+  {
+   "person": "P_045336",
+   "why": "Walt LeJeune -- beside Walt Jean",
+   "name_as_printed": "Walt LeJeune",
+   "club_id": "club-frankford-yellow-jackets-1924",
+   "season": 1925,
+   "printed_page": 37
+  },
+  {
+   "person": "P_045336",
+   "why": "Walt LeJeune -- beside Walt Jean",
+   "name_as_printed": "Walt LeJeune",
+   "club_id": "club-green-bay-packers-1921",
+   "season": 1925,
+   "printed_page": 37
+  },
+  {
+   "person": "P_015589",
+   "why": "Walter Mahan -- beside Walter Mahanq",
+   "name_as_printed": "Red Mahan",
+   "club_id": "club-frankford-yellow-jackets-1924",
+   "season": 1926,
+   "printed_page": 41
+  },
+  {
+   "person": "P_045336",
+   "why": "Walt LeJeune -- beside Walt Jean",
+   "name_as_printed": "Walt LeJeune",
+   "club_id": "club-pottsville-maroons-1925",
+   "season": 1927,
+   "printed_page": 47
+  },
+  {
+   "person": "P_015972",
+   "why": "Babe Lyon -- beside George Lyon (1934 St. Louis)",
+   "name_as_printed": "George Lyon",
+   "club_id": "club-new-york-giants-1925",
+   "season": 1929,
+   "printed_page": 53
+  }
+ ],
+ "reader_disagreements": [
+  {
+   "pdf": 18,
+   "club_as_printed": "BUFFALO ALL AMERICANS",
+   "name_as_printed": "Heinie Miller",
+   "what": "pos marked uncertain",
+   "A": "E",
+   "B": "E"
+  },
+  {
+   "pdf": 18,
+   "club_as_printed": "ROCK ISLAND INDEPENDENTS",
+   "name_as_printed": "Fred Denfield",
+   "what": "hgt marked uncertain",
+   "A": "5'9\"",
+   "B": null
+  },
+  {
+   "pdf": 19,
+   "club_as_printed": "CHICAGO CARDINALS",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Arnie McInerney"
+  },
+  {
+   "pdf": 19,
+   "club_as_printed": "CHICAGO CARDINALS",
+   "name_as_printed": "Schultz",
+   "what": "pos marked uncertain",
+   "A": "FB",
+   "B": "FB"
+  },
+  {
+   "pdf": 19,
+   "club_as_printed": "CLEVELAND TIGERS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Harry Baujan",
+   "column": "Regulars",
+   "n": 2
+  },
+  {
+   "pdf": 19,
+   "club_as_printed": "CLEVELAND TIGERS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Harry Baujen",
+   "column": "Regulars",
+   "n": 2
+  },
+  {
+   "pdf": 22,
+   "club_as_printed": "CANTON BULLDOGS",
+   "name_as_printed": "Charlie May",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 22,
+   "club_as_printed": "CANTON BULLDOGS",
+   "name_as_printed": "Fido Kempton",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 22,
+   "club_as_printed": "CHICAGO CARDINALS",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Arnie McInerney"
+  },
+  {
+   "pdf": 22,
+   "club_as_printed": "CHICAGO CARDINALS",
+   "name_as_printed": "Charlie Knight",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 22,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "name_as_printed": "Jim Cook",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 22,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "name_as_printed": "Nate Abrams",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 22,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "name_as_printed": "Tubby Howard",
+   "what": "hgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 24,
+   "club_as_printed": "LOUISVILLE BRECKS",
+   "name_as_printed": "R. Lewis",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 24,
+   "club_as_printed": "MUNCIE FLYERS",
+   "name_as_printed": "MacMurray",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 26,
+   "club_as_printed": "CANTON BULLDOGS",
+   "name_as_printed": "Johnny McQuade",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 26,
+   "club_as_printed": "CHICAGO BEARS",
+   "name_as_printed": "Pard Pearce",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 26,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "name_as_printed": "Cub Buck",
+   "what": "wgt read differently",
+   "A": "235",
+   "B": "236"
+  },
+  {
+   "pdf": 26,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "name_as_printed": "Tubby Howard",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 26,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "name_as_printed": "Walt Dunnigan",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 26,
+   "club_as_printed": "ROCK ISLAND INDEPENDENTS",
+   "name_as_printed": "Jug Earpe",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 26,
+   "club_as_printed": "ROCK ISLAND INDEPENDENTS",
+   "name_as_printed": "Obe Wenig",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 27,
+   "club_as_printed": "HAMMOND PROS",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Lloyd Cearing"
+  },
+  {
+   "pdf": 27,
+   "club_as_printed": "LOUISVILLE BRECKS",
+   "name_as_printed": "Bill Netherton",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 27,
+   "club_as_printed": "ROCHESTER JEFFERSONS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Frank Matteo",
+   "column": "Regulars",
+   "n": 3
+  },
+  {
+   "pdf": 27,
+   "club_as_printed": "ROCHESTER JEFFERSONS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Frank Metteo",
+   "column": "Regulars",
+   "n": 3
+  },
+  {
+   "pdf": 27,
+   "club_as_printed": "ROCHESTER JEFFERSONS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Larry Weltman",
+   "column": "Regulars",
+   "n": 8
+  },
+  {
+   "pdf": 27,
+   "club_as_printed": "ROCHESTER JEFFERSONS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Larry Weltmen",
+   "column": "Regulars",
+   "n": 8
+  },
+  {
+   "pdf": 28,
+   "club_as_printed": "COLUMBUS PANHANDLES",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Morris Glassman",
+   "column": "Regulars",
+   "n": 2
+  },
+  {
+   "pdf": 28,
+   "club_as_printed": "COLUMBUS PANHANDLES",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Morris Glessman",
+   "column": "Regulars",
+   "n": 2
+  },
+  {
+   "pdf": 30,
+   "club_as_printed": "CHICAGO CARDINALS",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Arnie McInerney"
+  },
+  {
+   "pdf": 31,
+   "club_as_printed": "BUFFALO ALL AMERICANS",
+   "name_as_printed": "Fred Foster",
+   "what": "wgt read differently",
+   "A": "186",
+   "B": "185"
+  },
+  {
+   "pdf": 31,
+   "club_as_printed": "ST. LOUIS ALL-STARS",
+   "name_as_printed": "Dick King",
+   "what": "hgt read differently",
+   "A": "6'8\"",
+   "B": "5'8\""
+  },
+  {
+   "pdf": 34,
+   "club_as_printed": "ROCK ISLAND INDEPENDENTS",
+   "name_as_printed": "Jim Ryan",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "AKRON PROS",
+   "name_as_printed": "Dick Stahlman",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": "205"
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "AKRON PROS",
+   "name_as_printed": "Walt Sechrist",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "COLUMBUS TIGERS",
+   "name_as_printed": "Wilkie Moody",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "DAYTON TRIANGLES",
+   "name_as_printed": "Dick Faust",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "KANSAS CITY COWBOYS",
+   "name_as_printed": "Charlie Hill",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "KENOSHA MAROONS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "George Dahigren",
+   "column": "Regulars",
+   "n": 6
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "KENOSHA MAROONS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "George Dahlgren",
+   "column": "Regulars",
+   "n": 6
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "KENOSHA MAROONS",
+   "name_as_printed": "Bill Hurst",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": "180"
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "KENOSHA MAROONS",
+   "name_as_printed": "Dick Stahlman",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": "205"
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "KENOSHA MAROONS",
+   "name_as_printed": "George Seasholtz",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": "185"
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "KENOSHA MAROONS",
+   "name_as_printed": "Lou Usher",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": "245"
+  },
+  {
+   "pdf": 35,
+   "club_as_printed": "MILWAUKEE BADGERS",
+   "name_as_printed": "Lou Usher",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": "245"
+  },
+  {
+   "pdf": 36,
+   "club_as_printed": "ROCHESTER JEFFERSONS",
+   "name_as_printed": "E.P. Bolgeneau",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 36,
+   "club_as_printed": "ROCHESTER JEFFERSONS",
+   "name_as_printed": "Shag Sheard",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 38,
+   "club_as_printed": "NEW YORK GIANTS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Earl Pottaiger",
+   "column": "Substitutes",
+   "n": 25
+  },
+  {
+   "pdf": 38,
+   "club_as_printed": "NEW YORK GIANTS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Earl Potteiger",
+   "column": "Substitutes",
+   "n": 25
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "AKRON PROS",
+   "name_as_printed": "Fred Bissell",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "AKRON PROS",
+   "name_as_printed": "Fritz Henry",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "CANTON BULLDOGS",
+   "name_as_printed": "Rip Kyle",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "CHICAGO BEARS",
+   "name_as_printed": "Dutch Sternaman",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": "180"
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "CHICAGO BEARS",
+   "name_as_printed": "Earl Britton",
+   "what": "pos marked uncertain",
+   "A": "FB",
+   "B": "FB"
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "CHICAGO BEARS",
+   "name_as_printed": "John Bryan",
+   "what": "pos marked uncertain",
+   "A": "HB",
+   "B": "HB"
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "CHICAGO BEARS",
+   "name_as_printed": "John Mohardt",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "FRANKFORD YELLOW JACKETS",
+   "name_as_printed": "Art Harms",
+   "what": "wgt marked uncertain",
+   "A": "200",
+   "B": "200"
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "FRANKFORD YELLOW JACKETS",
+   "name_as_printed": "Harry Seidelson",
+   "what": "wgt marked uncertain",
+   "A": "200",
+   "B": "200"
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "FRANKFORD YELLOW JACKETS",
+   "name_as_printed": "Jug Earpe",
+   "what": "hgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "FRANKFORD YELLOW JACKETS",
+   "name_as_printed": "Lou Smythe",
+   "what": "wgt marked uncertain",
+   "A": "205",
+   "B": "205"
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "name_as_printed": "Cub Buck",
+   "what": "hgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "name_as_printed": "Jug Earpe",
+   "what": "hgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "PROVIDENCE STEAM ROLLER",
+   "name_as_printed": "Ira McIntosh",
+   "what": "pos marked uncertain",
+   "A": "WB",
+   "B": "WB"
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "PROVIDENCE STEAM ROLLER",
+   "name_as_printed": "Speed Braney",
+   "what": "pos marked uncertain",
+   "A": "B",
+   "B": "B"
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "PROVIDENCE STEAM ROLLER",
+   "name_as_printed": "Speed Braney",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": "188"
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "PROVIDENCE STEAM ROLLER",
+   "name_as_printed": "Stafford Connor",
+   "what": "pos marked uncertain",
+   "A": "FB",
+   "B": "FB"
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "ROCK ISLAND INDEPENDENTS",
+   "name_as_printed": "Buck Gavin",
+   "what": "pos marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "ROCK ISLAND INDEPENDENTS",
+   "name_as_printed": "Buck Gavin",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 39,
+   "club_as_printed": "ROCK ISLAND INDEPENDENTS",
+   "name_as_printed": "Dutch Hendrian",
+   "what": "pos marked uncertain",
+   "A": "WB",
+   "B": "WB"
+  },
+  {
+   "pdf": 40,
+   "what": "a club block one reader has and the other does not (or names differently)",
+   "club_as_printed": "KANSAS CITY COWBOWS",
+   "reader": "B",
+   "men": 18
+  },
+  {
+   "pdf": 40,
+   "what": "a club block one reader has and the other does not (or names differently)",
+   "club_as_printed": "KANSAS CITY COWBOYS",
+   "reader": "A",
+   "men": 18
+  },
+  {
+   "pdf": 40,
+   "club_as_printed": "BUFFALO BISONS",
+   "name_as_printed": "Joe Kennedy",
+   "what": "hgt read differently",
+   "A": "5'8\"",
+   "B": "5'9\""
+  },
+  {
+   "pdf": 40,
+   "club_as_printed": "CLEVELAND BULLDOGS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Phil Brannon",
+   "column": "Substitutes",
+   "n": 26
+  },
+  {
+   "pdf": 40,
+   "club_as_printed": "CLEVELAND BULLDOGS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Phil Brennan",
+   "column": "Substitutes",
+   "n": 26
+  },
+  {
+   "pdf": 40,
+   "club_as_printed": "HAMMOND PROS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Ed Carman",
+   "column": "Regulars",
+   "n": 3
+  },
+  {
+   "pdf": 40,
+   "club_as_printed": "HAMMOND PROS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Ed Carmen",
+   "column": "Regulars",
+   "n": 3
+  },
+  {
+   "pdf": 40,
+   "club_as_printed": "HAMMOND PROS",
+   "name_as_printed": "George Dahlgren",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": "200"
+  },
+  {
+   "pdf": 43,
+   "club_as_printed": "LOS ANGELES BUCCANEERS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "John Thurman",
+   "column": "Regulars",
+   "n": 3
+  },
+  {
+   "pdf": 43,
+   "club_as_printed": "LOS ANGELES BUCCANEERS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "John Thurmen",
+   "column": "Regulars",
+   "n": 3
+  },
+  {
+   "pdf": 43,
+   "club_as_printed": "NEW YORK GIANTS",
+   "name_as_printed": "Art Carney",
+   "what": "hgt marked uncertain",
+   "A": "6'1\"",
+   "B": "6'1\""
+  },
+  {
+   "pdf": 44,
+   "club_as_printed": "BROOKLYN LIONS",
+   "name_as_printed": "Red Howard",
+   "what": "wgt read differently",
+   "A": "182",
+   "B": "192"
+  },
+  {
+   "pdf": 44,
+   "club_as_printed": "DETROIT PANTHERS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Norm Harvey",
+   "column": "Substitutes",
+   "n": 14
+  },
+  {
+   "pdf": 44,
+   "club_as_printed": "DETROIT PANTHERS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Norm Hervey",
+   "column": "Substitutes",
+   "n": 14
+  },
+  {
+   "pdf": 44,
+   "club_as_printed": "HARTFORD BLUES",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Ed Barnikow",
+   "column": "Substitutes",
+   "n": 35
+  },
+  {
+   "pdf": 44,
+   "club_as_printed": "HARTFORD BLUES",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Ed Bernikow",
+   "column": "Substitutes",
+   "n": 35
+  },
+  {
+   "pdf": 44,
+   "club_as_printed": "HARTFORD BLUES",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Rocky Segretta",
+   "column": "Substitutes",
+   "n": 26
+  },
+  {
+   "pdf": 44,
+   "club_as_printed": "HARTFORD BLUES",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Rocky Segrette",
+   "column": "Substitutes",
+   "n": 26
+  },
+  {
+   "pdf": 44,
+   "club_as_printed": "HARTFORD BLUES",
+   "name_as_printed": "Ed Keenan",
+   "what": "wgt marked uncertain",
+   "A": "320",
+   "B": "320"
+  },
+  {
+   "pdf": 44,
+   "club_as_printed": "PROVIDENCE STEAM ROLLER",
+   "name_as_printed": "Fred Graham",
+   "what": "move_as_printed read differently",
+   "A": null,
+   "B": "from FRA"
+  },
+  {
+   "pdf": 45,
+   "club_as_printed": "RACINE TORNADOES",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Graham Kernwain",
+   "column": "Regulars",
+   "n": 9
+  },
+  {
+   "pdf": 45,
+   "club_as_printed": "RACINE TORNADOES",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Graham Kernwein",
+   "column": "Regulars",
+   "n": 9
+  },
+  {
+   "pdf": 45,
+   "club_as_printed": "RACINE TORNADOES",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Wally McIllwain",
+   "column": "Regulars",
+   "n": 10
+  },
+  {
+   "pdf": 45,
+   "club_as_printed": "RACINE TORNADOES",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Wally McIlwain",
+   "column": "Regulars",
+   "n": 10
+  },
+  {
+   "pdf": 48,
+   "club_as_printed": "FRANKFORD YELLOW JACKETS",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Cliff Marker"
+  },
+  {
+   "pdf": 51,
+   "club_as_printed": "DETROIT WOLVERINES",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Ernie Nick"
+  },
+  {
+   "pdf": 52,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "name_as_printed": "Dutch Webber",
+   "what": "wgt read differently",
+   "A": "190",
+   "B": "180"
+  },
+  {
+   "pdf": 52,
+   "club_as_printed": "NEW YORK GIANTS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Bart Bloodgood",
+   "column": "Substitutes",
+   "n": 19
+  },
+  {
+   "pdf": 52,
+   "club_as_printed": "NEW YORK GIANTS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Bert Bloodgood",
+   "column": "Substitutes",
+   "n": 19
+  },
+  {
+   "pdf": 52,
+   "club_as_printed": "NEW YORK GIANTS",
+   "name_as_printed": "Al Nesser",
+   "what": "wgt read differently",
+   "A": "192",
+   "B": "182"
+  },
+  {
+   "pdf": 55,
+   "club_as_printed": "FRANKFORD YELLOW JACKETS",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Wally Diehl"
+  },
+  {
+   "pdf": 55,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "name_as_printed": "Bo Molenda",
+   "what": "pos marked uncertain",
+   "A": "FB",
+   "B": "FB"
+  },
+  {
+   "pdf": 55,
+   "club_as_printed": "ORANGE TORNADOES",
+   "name_as_printed": "Ted Mitchell",
+   "what": "hgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 67,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Bomar, Lynn",
+   "teams_as_printed": "25-26NYG"
+  },
+  {
+   "pdf": 67,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Bomer, Lynn",
+   "teams_as_printed": "25-26NYG"
+  },
+  {
+   "pdf": 67,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Bloodgood, Bert",
+   "A": "Nebraska",
+   "B": null
+  },
+  {
+   "pdf": 68,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Dally, Dilly",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 69,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Gentry, Weldon",
+   "A": "Oklahome",
+   "B": "Oklahoma"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": null,
+   "teams_as_printed": "26Bkn 27NYG"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Harvay, Norm",
+   "teams_as_printed": "25Buf 26Det 27Buf 27NYY 28-29Prov"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Harvey, Norm",
+   "teams_as_printed": "25Buf 26Det 27Buf 27NYY 28-29Prov"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Howard, Red",
+   "teams_as_printed": "26Bkn 27NYG"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Hughes, Danny",
+   "teams_as_printed": "25Pott"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Hughes, Denny",
+   "teams_as_printed": "25Pott"
+  },
+  {
+   "pdf": 71,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Jordan, Frank",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 71,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Kinderdine, George",
+   "A": null,
+   "B": "none"
+  },
+  {
+   "pdf": 71,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Kinderdine, Walt",
+   "A": null,
+   "B": "none"
+  },
+  {
+   "pdf": 71,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Knight, Charlie",
+   "A": null,
+   "B": "none"
+  },
+  {
+   "pdf": 72,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "McWherter, Kyle",
+   "teams_as_printed": "20Dec"
+  },
+  {
+   "pdf": 72,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "McWhorter, Kyle",
+   "teams_as_printed": "20Dec"
+  },
+  {
+   "pdf": 72,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Method, Russ (Cuss)",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 72,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Mills, Tom",
+   "A": "none",
+   "B": "none"
+  },
+  {
+   "pdf": 73,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Murtagh, Mickey",
+   "A": "Georgetwon",
+   "B": "Georgetwon"
+  },
+  {
+   "pdf": 73,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Passuello, Bill",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 74,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Rooney, Bill",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 75,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Vaughn, Bill",
+   "teams_as_printed": "26Buf"
+  },
+  {
+   "pdf": 75,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Vaughn, Bill",
+   "teams_as_printed": "28Buf"
+  },
+  {
+   "pdf": 76,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Woods, Garry",
+   "teams_as_printed": "26Col"
+  },
+  {
+   "pdf": 76,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Woods, Gerry",
+   "teams_as_printed": "26Col"
+  },
+  {
+   "pdf": 76,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Wilson, Shorty",
+   "A": null,
+   "B": null
+  }
+ ],
+ "clubs_the_table_cannot_name": []
+}

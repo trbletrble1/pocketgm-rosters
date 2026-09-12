@@ -1,0 +1,1596 @@
+{
+ "written": "2026-09-12",
+ "counts": {
+  "claims": 9277,
+  "by_predicate": {
+   "neft.roster_as_printed": 2747,
+   "neft.roster.weight": 2699,
+   "neft.roster.height": 2544,
+   "neft.move_as_printed": 215,
+   "register entries both readers agree on": 3521,
+   "register: an entry the earlier pass reaches, left to it": 1658,
+   "neft.college_as_printed": 1072,
+   "register: not joined to one man this pass placed": 58
+  },
+  "leads": 23,
+  "candidates": 41,
+  "refusals": 2,
+  "held_back": 3,
+  "reader_disagreements": 117,
+  "clubs_unresolved": 1,
+  "by_season": {
+   "1930": {
+    "lines both readers agree on": 343,
+    "reader disagreements": 6,
+    "joined on the club-season": 325,
+    "weight: agrees": 111,
+    "height: agrees": 185,
+    "weight: DISAGREES, both held": 155,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 8,
+    "height: the archive lacks": 28,
+    "weight: the archive lacks": 43,
+    "height: DISAGREES, both held": 17,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 8,
+    "MEN: placed on a club-season the archive did not hold him on": 1,
+    "MEN placed via named_in_the_printed_move": 1,
+    "held out: a merge question": 1,
+    "college: DISAGREES, both held": 50,
+    "college: agrees": 121,
+    "college: 'none' printed (counted, not claimed)": 1
+   },
+   "1931": {
+    "lines both readers agree on": 285,
+    "reader disagreements": 2,
+    "joined on the club-season": 273,
+    "height: agrees": 172,
+    "weight: DISAGREES, both held": 154,
+    "weight: agrees": 76,
+    "height: the archive lacks": 22,
+    "weight: the archive lacks": 34,
+    "height: DISAGREES, both held": 17,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 5,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 6,
+    "held out: a merge question": 1,
+    "college: DISAGREES, both held": 29,
+    "college: agrees": 69
+   },
+   "1932": {
+    "lines both readers agree on": 229,
+    "reader disagreements": 8,
+    "joined on the club-season": 223,
+    "height: DISAGREES, both held": 15,
+    "weight: agrees": 58,
+    "height: agrees": 171,
+    "weight: DISAGREES, both held": 135,
+    "height: the archive lacks": 25,
+    "weight: the archive lacks": 27,
+    "held out: a merge question": 1,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 2,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 3,
+    "college: agrees": 51,
+    "college: DISAGREES, both held": 20,
+    "college: the archive lacks": 1,
+    "college: 'none' printed (counted, not claimed)": 1
+   },
+   "1933": {
+    "lines both readers agree on": 272,
+    "reader disagreements": 14,
+    "joined on the club-season": 268,
+    "height: agrees": 210,
+    "weight: DISAGREES, both held": 131,
+    "height: DISAGREES, both held": 16,
+    "weight: agrees": 94,
+    "height: the archive lacks": 25,
+    "weight: the archive lacks": 29,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 2,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 2,
+    "college: agrees": 88,
+    "college: DISAGREES, both held": 20,
+    "college: 'none' printed (counted, not claimed)": 3,
+    "college: the archive lacks": 1
+   },
+   "1934": {
+    "lines both readers agree on": 264,
+    "reader disagreements": 3,
+    "lines on a club the table cannot name": 29,
+    "joined on the club-season": 232,
+    "height: agrees": 186,
+    "weight: agrees": 70,
+    "height: DISAGREES, both held": 15,
+    "weight: DISAGREES, both held": 134,
+    "height: the archive lacks": 24,
+    "weight: the archive lacks": 24,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 3,
+    "college: agrees": 71,
+    "college: DISAGREES, both held": 22,
+    "college: 'none' printed (counted, not claimed)": 2
+   },
+   "1935": {
+    "lines both readers agree on": 257,
+    "reader disagreements": 2,
+    "joined on the club-season": 254,
+    "height: agrees": 208,
+    "weight: DISAGREES, both held": 167,
+    "height: DISAGREES, both held": 23,
+    "weight: agrees": 65,
+    "height: the archive lacks": 22,
+    "weight: the archive lacks": 22,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 3,
+    "college: DISAGREES, both held": 19,
+    "college: agrees": 79,
+    "college: 'none' printed (counted, not claimed)": 1
+   },
+   "1936": {
+    "lines both readers agree on": 250,
+    "reader disagreements": 7,
+    "joined on the club-season": 245,
+    "height: agrees": 204,
+    "weight: DISAGREES, both held": 156,
+    "height: DISAGREES, both held": 24,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 3,
+    "weight: agrees": 72,
+    "height: the archive lacks": 18,
+    "weight: the archive lacks": 18,
+    "MEN: placed on a club-season the archive did not hold him on": 1,
+    "MEN placed via the_clubs_adjacent_season": 1,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 1,
+    "college: agrees": 51,
+    "college: DISAGREES, both held": 22
+   },
+   "1937": {
+    "lines both readers agree on": 293,
+    "reader disagreements": 3,
+    "joined on the club-season": 289,
+    "height: agrees": 239,
+    "weight: DISAGREES, both held": 164,
+    "weight: agrees": 103,
+    "height: the archive lacks": 24,
+    "weight: the archive lacks": 24,
+    "height: DISAGREES, both held": 23,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 2,
+    "MEN: placed on a club-season the archive did not hold him on": 2,
+    "MEN placed via the_clubs_adjacent_season": 2,
+    "college: agrees": 103,
+    "college: DISAGREES, both held": 22
+   },
+   "1938": {
+    "lines both readers agree on": 317,
+    "reader disagreements": 2,
+    "joined on the club-season": 310,
+    "height: agrees": 258,
+    "weight: DISAGREES, both held": 178,
+    "weight: agrees": 105,
+    "height: DISAGREES, both held": 24,
+    "height: the archive lacks": 26,
+    "weight: the archive lacks": 26,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 4,
+    "refused": 2,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 1,
+    "college: agrees": 93,
+    "college: DISAGREES, both held": 20,
+    "college: 'none' printed (counted, not claimed)": 1
+   },
+   "1939": {
+    "lines both readers agree on": 335,
+    "reader disagreements": 3,
+    "joined on the club-season": 324,
+    "weight: DISAGREES, both held": 203,
+    "height: agrees": 275,
+    "weight: agrees": 99,
+    "LEADS: named by Neft, placed nowhere, no counterpart": 2,
+    "CANDIDATES: a spelling beside a held man, joined to nobody": 9,
+    "height: the archive lacks": 22,
+    "weight: the archive lacks": 22,
+    "height: DISAGREES, both held": 26,
+    "college: DISAGREES, both held": 31,
+    "college: agrees": 89
+   }
+  }
+ },
+ "leads": [
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Gilroy",
+   "club_as_printed": "NEW YORK GIANTS",
+   "club_id": "club-new-york-giants-1925",
+   "season": 1930,
+   "printed_page": 56,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Joe Westoupal",
+   "club_as_printed": "NEW YORK GIANTS",
+   "club_id": "club-new-york-giants-1925",
+   "season": 1930,
+   "printed_page": 56,
+   "fields_both_readers_agree_on": {
+    "pos": "C",
+    "hgt": "6'3\"",
+    "wgt": "200",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mickey McDonnell",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1930,
+   "printed_page": 57,
+   "fields_both_readers_agree_on": {
+    "pos": "WB",
+    "hgt": "5'8\"",
+    "wgt": "175",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "John Schultz",
+   "club_as_printed": "FRANKFORD YELLOW JACKETS",
+   "club_id": "club-frankford-yellow-jackets-1924",
+   "season": 1930,
+   "printed_page": 57,
+   "fields_both_readers_agree_on": {
+    "pos": "WB-FB",
+    "hgt": "6'1\"",
+    "wgt": "189",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Chief McClain",
+   "club_as_printed": "PORTSMOUTH SPARTANS",
+   "club_id": "club-portsmouth-spartans-1930",
+   "season": 1930,
+   "printed_page": 57,
+   "fields_both_readers_agree_on": {
+    "pos": "FB-BB",
+    "hgt": "6'3\"",
+    "wgt": "230",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Dryden",
+   "club_as_printed": "STATEN ISLAND STAPLETONS",
+   "club_id": "club-staten-island-stapletons-1929",
+   "season": 1930,
+   "printed_page": 57,
+   "fields_both_readers_agree_on": {
+    "pos": "TB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": true
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Ken Hauser",
+   "club_as_printed": "NEWARK TORNADOES",
+   "club_id": "club-orange-tornadoes-1929",
+   "season": 1930,
+   "printed_page": 58,
+   "fields_both_readers_agree_on": {
+    "pos": "FB-BB",
+    "hgt": null,
+    "wgt": "220",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Les Horton",
+   "club_as_printed": "NEWARK TORNADOES",
+   "club_id": "club-orange-tornadoes-1929",
+   "season": 1930,
+   "printed_page": 58,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Les Malloy",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1931,
+   "printed_page": 60,
+   "fields_both_readers_agree_on": {
+    "pos": "BB-WB",
+    "hgt": "6'",
+    "wgt": "200",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Chief McClain",
+   "club_as_printed": "PORTSMOUTH SPARTANS",
+   "club_id": "club-portsmouth-spartans-1930",
+   "season": 1931,
+   "printed_page": 60,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": "6'3\"",
+    "wgt": "220",
+    "move_as_printed": "to SI",
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Chief McClain",
+   "club_as_printed": "STATEN ISLAND STAPLETONS",
+   "club_id": "club-staten-island-stapletons-1929",
+   "season": 1931,
+   "printed_page": 60,
+   "fields_both_readers_agree_on": {
+    "pos": "FB",
+    "hgt": "6'3\"",
+    "wgt": "200",
+    "move_as_printed": "from PORT",
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Lou Grodon",
+   "club_as_printed": "BROOKLYN DODGERS",
+   "club_id": "club-brooklyn-dodgers-1930",
+   "season": 1931,
+   "printed_page": 61,
+   "fields_both_readers_agree_on": {
+    "pos": "T-E-G",
+    "hgt": "6'5\"",
+    "wgt": "220",
+    "move_as_printed": "from ChiC",
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Mickey McDonnell",
+   "club_as_printed": "FRANKFORD YELLOW JACKETS",
+   "club_id": "club-frankford-yellow-jackets-1924",
+   "season": 1931,
+   "printed_page": 61,
+   "fields_both_readers_agree_on": {
+    "pos": "BB-WB",
+    "hgt": "5'8\"",
+    "wgt": "170",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Les Malloy",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1932,
+   "printed_page": 63,
+   "fields_both_readers_agree_on": {
+    "pos": "BB-WB",
+    "hgt": "6'",
+    "wgt": "200",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Maury Rodenger",
+   "club_as_printed": "PORTSMOUTH SPARTANS",
+   "club_id": "club-portsmouth-spartans-1930",
+   "season": 1932,
+   "printed_page": 63,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": "5'10\"",
+    "wgt": "205",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Tom Whalen",
+   "club_as_printed": "PITTSBURGH PIRATES",
+   "club_id": "club-pittsburgh-pirates-1933",
+   "season": 1933,
+   "printed_page": 78,
+   "fields_both_readers_agree_on": {
+    "pos": "BB-DB",
+    "hgt": null,
+    "wgt": null,
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Les Malloy",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1933,
+   "printed_page": 81,
+   "fields_both_readers_agree_on": {
+    "pos": "BB-DB",
+    "hgt": "6'",
+    "wgt": "200",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Al Lind",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1936,
+   "printed_page": 92,
+   "fields_both_readers_agree_on": {
+    "pos": "C-LB",
+    "hgt": "5'10\"",
+    "wgt": "185",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Dick Bassi",
+   "club_as_printed": "WASHINGTON REDSKINS",
+   "club_id": "club-boston-braves-1932",
+   "season": 1937,
+   "printed_page": 94,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": "5'11\"",
+    "wgt": "210",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "John Morrow",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1937,
+   "printed_page": 96,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": "5'11\"",
+    "wgt": "230",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "John Morrow",
+   "club_as_printed": "CHICAGO CARDINALS",
+   "club_id": "club-chicago-cardinals-1920",
+   "season": 1938,
+   "printed_page": 100,
+   "fields_both_readers_agree_on": {
+    "pos": "G",
+    "hgt": "5'11\"",
+    "wgt": "230",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Dick Falk",
+   "club_as_printed": "BROOKLYN DODGERS",
+   "club_id": "club-brooklyn-dodgers-1930",
+   "season": 1939,
+   "printed_page": 102,
+   "fields_both_readers_agree_on": {
+    "pos": "FB-DB",
+    "hgt": "6'",
+    "wgt": "200",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Ralph Neihaus",
+   "club_as_printed": "CLEVELAND RAMS",
+   "club_id": "club-cleveland-rams-1937",
+   "season": 1939,
+   "printed_page": 104,
+   "fields_both_readers_agree_on": {
+    "pos": "T",
+    "hgt": "6'4\"",
+    "wgt": "220",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "not on the club-season, not named by a printed move, not on the club's adjacent season",
+   "kind": "lead",
+   "the_archive_holds_this_exact_name_that_season_on": []
+  }
+ ],
+ "refusals": [
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Red Krause",
+   "club_as_printed": "WASHINGTON REDSKINS",
+   "club_id": "club-boston-braves-1932",
+   "season": 1938,
+   "printed_page": 98,
+   "fields_both_readers_agree_on": {
+    "pos": "C-LB",
+    "hgt": "6'1\"",
+    "wgt": "216",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 2 men of surname 'krause' on the club-season (['P_016380', 'P_016674']) -- a second man refuses both"
+  },
+  {
+   "IS_NOT_A_PERSON": true,
+   "name_as_printed": "Moose Mulleneaux",
+   "club_as_printed": "GREEN BAY PACKERS",
+   "club_id": "club-green-bay-packers-1921",
+   "season": 1938,
+   "printed_page": 101,
+   "fields_both_readers_agree_on": {
+    "pos": "OE-DE",
+    "hgt": "6'3\"",
+    "wgt": "210",
+    "move_as_printed": null,
+    "note_as_printed": null,
+    "mark_as_printed": null,
+    "surname_only": false
+   },
+   "why": "REFUSED: 2 men of surname 'mulleneaux' on the club-season (['P_016302', 'P_016914']) -- a second man refuses both"
+  }
+ ],
+ "held_back": [
+  {
+   "person": "P_015972",
+   "why": "Babe Lyon -- beside George Lyon (1934 St. Louis)",
+   "name_as_printed": "George Lyon",
+   "club_id": "club-portsmouth-spartans-1930",
+   "season": 1930,
+   "printed_page": 57
+  },
+  {
+   "person": "P_015972",
+   "why": "Babe Lyon -- beside George Lyon (1934 St. Louis)",
+   "name_as_printed": "George Lyon",
+   "club_id": "club-cleveland-indians-1931",
+   "season": 1931,
+   "printed_page": 61
+  },
+  {
+   "person": "P_015972",
+   "why": "Babe Lyon -- beside George Lyon (1934 St. Louis)",
+   "name_as_printed": "George Lyon",
+   "club_id": "club-brooklyn-dodgers-1930",
+   "season": 1932,
+   "printed_page": 63
+  }
+ ],
+ "reader_disagreements": [
+  {
+   "pdf": 59,
+   "club_as_printed": "BROOKLYN DODGERS",
+   "name_as_printed": "Ben Greenberg",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 59,
+   "club_as_printed": "BROOKLYN DODGERS",
+   "name_as_printed": "Harold Stotsberry",
+   "what": "hgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 59,
+   "club_as_printed": "MINNEAPOLIS REDJACKETS",
+   "name_as_printed": "Ted Nemzek",
+   "what": "hgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 59,
+   "club_as_printed": "PROVIDENCE STEAM ROLLER",
+   "name_as_printed": "Herb Eschbach",
+   "what": "hgt marked uncertain",
+   "A": "6'",
+   "B": "6\""
+  },
+  {
+   "pdf": 59,
+   "club_as_printed": "PROVIDENCE STEAM ROLLER",
+   "name_as_printed": "Perry Jackson",
+   "what": "pos marked uncertain",
+   "A": "T",
+   "B": "T"
+  },
+  {
+   "pdf": 60,
+   "club_as_printed": "NEWARK TORNADOES",
+   "name_as_printed": "Don Smith",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 62,
+   "club_as_printed": "CHICAGO BEARS",
+   "name_as_printed": "George Trafton",
+   "what": "wgt marked uncertain",
+   "A": 232,
+   "B": 232
+  },
+  {
+   "pdf": 62,
+   "club_as_printed": "PROVIDENCE STEAM ROLLER",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Royce Goodgread"
+  },
+  {
+   "pdf": 65,
+   "club_as_printed": "CHICAGO BEARS",
+   "name_as_printed": "Gil Bergerson",
+   "what": "hgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 65,
+   "club_as_printed": "CHICAGO BEARS",
+   "name_as_printed": "Jim Pederson",
+   "what": "hgt marked uncertain",
+   "A": "5'9\"",
+   "B": null
+  },
+  {
+   "pdf": 65,
+   "club_as_printed": "CHICAGO CARDINALS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Dack Shelley",
+   "column": null,
+   "n": 27
+  },
+  {
+   "pdf": 65,
+   "club_as_printed": "CHICAGO CARDINALS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Deck Shelley",
+   "column": null,
+   "n": 27
+  },
+  {
+   "pdf": 65,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Dack Shelley",
+   "column": null,
+   "n": 27
+  },
+  {
+   "pdf": 65,
+   "club_as_printed": "GREEN BAY PACKERS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Deck Shelley",
+   "column": null,
+   "n": 27
+  },
+  {
+   "pdf": 66,
+   "club_as_printed": "STATEN ISLAND STAPLETONS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Leo Raskowski",
+   "column": null,
+   "n": 4
+  },
+  {
+   "pdf": 66,
+   "club_as_printed": "STATEN ISLAND STAPLETONS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Leo Reskowski",
+   "column": null,
+   "n": 4
+  },
+  {
+   "pdf": 80,
+   "club_as_printed": "BROOKLYN DODGERS",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Harold Elv"
+  },
+  {
+   "pdf": 80,
+   "club_as_printed": "PHILADELPHIA EAGLES",
+   "name_as_printed": "Jim Zyntell",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 81,
+   "club_as_printed": "BROOKLYN DODGERS",
+   "name_as_printed": "Les Peterson",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 81,
+   "club_as_printed": "BROOKLYN DODGERS",
+   "name_as_printed": "Paul Riblett",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 81,
+   "club_as_printed": "BROOKLYN DODGERS",
+   "name_as_printed": "Van Rayburn",
+   "what": "wgt marked uncertain",
+   "A": "180",
+   "B": "180"
+  },
+  {
+   "pdf": 81,
+   "club_as_printed": "NEW YORK GIANTS",
+   "name_as_printed": "Kink Richards",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 81,
+   "club_as_printed": "NEW YORK GIANTS",
+   "name_as_printed": "Tiny Feather",
+   "what": "wgt marked uncertain",
+   "A": "200",
+   "B": "200"
+  },
+  {
+   "pdf": 81,
+   "club_as_printed": "PHILADELPHIA EAGLES",
+   "name_as_printed": "Ev Rowan",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 81,
+   "club_as_printed": "PHILADELPHIA EAGLES",
+   "name_as_printed": "Reb Russell",
+   "what": "move_as_printed read differently",
+   "A": "from NY, WB-DB",
+   "B": "from NY,WB-DB"
+  },
+  {
+   "pdf": 81,
+   "club_as_printed": "PHILADELPHIA EAGLES",
+   "name_as_printed": "Red Davis",
+   "what": "move_as_printed read differently",
+   "A": "from PORT, OE-DE",
+   "B": "from PORT,OE-DE"
+  },
+  {
+   "pdf": 81,
+   "club_as_printed": "PHILADELPHIA EAGLES",
+   "name_as_printed": "Rick Lackman",
+   "what": "wgt read differently",
+   "A": "186",
+   "B": "185"
+  },
+  {
+   "pdf": 81,
+   "club_as_printed": "PITTSBURGH PIRATES",
+   "name_as_printed": "Mose Kelsch",
+   "what": "wgt marked uncertain",
+   "A": "225",
+   "B": "225"
+  },
+  {
+   "pdf": 81,
+   "club_as_printed": "PITTSBURGH PIRATES",
+   "name_as_printed": "Paul Moss",
+   "what": "wgt marked uncertain",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 82,
+   "club_as_printed": "CHICAGO CARDINALS",
+   "name_as_printed": "Gil Bergerson",
+   "what": "hgt marked uncertain",
+   "A": "6'6\"",
+   "B": "6'6\""
+  },
+  {
+   "pdf": 84,
+   "club_as_printed": "NEW YORK GIANTS",
+   "name_as_printed": "Bill Owen",
+   "what": "hgt marked uncertain",
+   "A": "6'",
+   "B": "6'"
+  },
+  {
+   "pdf": 86,
+   "what": "a club block one reader has and the other does not (or names differently)",
+   "club_as_printed": "CINCINNATI REDS 0-8-0 Algy Clark \u2014 ST. LOUIS GUNNERS 1-2-0 Mike Palm",
+   "reader": "A",
+   "men": 23
+  },
+  {
+   "pdf": 86,
+   "what": "a club block one reader has and the other does not (or names differently)",
+   "club_as_printed": "CINCINNATI REDS \u2014 ST. LOUIS GUNNERS",
+   "reader": "B",
+   "men": 23
+  },
+  {
+   "pdf": 90,
+   "club_as_printed": "CHICAGO CARDINALS",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Bree Cupoletti"
+  },
+  {
+   "pdf": 91,
+   "club_as_printed": "DETROIT LIONS",
+   "name_as_printed": "Ace Gutowsky",
+   "what": "hgt marked uncertain",
+   "A": "5'11'",
+   "B": "5'11'"
+  },
+  {
+   "pdf": 92,
+   "club_as_printed": "BROOKLYN DODGERS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Carl Heidt",
+   "column": null,
+   "n": 6
+  },
+  {
+   "pdf": 92,
+   "club_as_printed": "BROOKLYN DODGERS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Carl Heldt",
+   "column": null,
+   "n": 6
+  },
+  {
+   "pdf": 94,
+   "club_as_printed": "CHICAGO BEARS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Dookie Miller",
+   "column": null,
+   "n": 2
+  },
+  {
+   "pdf": 94,
+   "club_as_printed": "CHICAGO BEARS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Ookie Miller",
+   "column": null,
+   "n": 2
+  },
+  {
+   "pdf": 95,
+   "club_as_printed": "CHICAGO CARDINALS",
+   "name_as_printed": "George Grosvenor",
+   "what": "move_as_printed marked uncertain",
+   "A": "from CHIB, HB-DB",
+   "B": "from CHIB, HB-DB"
+  },
+  {
+   "pdf": 95,
+   "club_as_printed": "DETROIT LIONS",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Dutch Clark"
+  },
+  {
+   "pdf": 95,
+   "club_as_printed": "DETROIT LIONS",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Ernie Caddel"
+  },
+  {
+   "pdf": 96,
+   "club_as_printed": "WASHINGTON REDSKINS",
+   "name_as_printed": "Les Olsson",
+   "what": "hgt marked uncertain",
+   "A": "6'",
+   "B": "6'"
+  },
+  {
+   "pdf": 97,
+   "club_as_printed": "NEW YORK GIANTS",
+   "name_as_printed": "Tony Sarausky",
+   "what": "hgt marked uncertain",
+   "A": "5'11'",
+   "B": null
+  },
+  {
+   "pdf": 97,
+   "club_as_printed": "PITTSBURGH PIRATES",
+   "what": "a name a reader marked uncertain",
+   "name_as_printed": "Mac Cara"
+  },
+  {
+   "pdf": 101,
+   "club_as_printed": "PITTSBURGH PIRATES",
+   "name_as_printed": "Bill Davidson",
+   "what": "pos read differently",
+   "A": "HB-DE-DB",
+   "B": "HB-OE-DB"
+  },
+  {
+   "pdf": 103,
+   "club_as_printed": "CHICAGO CARDINALS",
+   "name_as_printed": "Ev Fisher",
+   "what": "hgt marked uncertain",
+   "A": "5'11'",
+   "B": "5'11\""
+  },
+  {
+   "pdf": 104,
+   "club_as_printed": "BROOKLYN DODGERS",
+   "name_as_printed": "Alec Shellogg",
+   "what": "hgt marked uncertain",
+   "A": "6",
+   "B": "6'"
+  },
+  {
+   "pdf": 104,
+   "club_as_printed": "NEW YORK GIANTS",
+   "what": "a name one reader read and the other did not",
+   "reader": "A",
+   "name_as_printed": "Tarzan White",
+   "column": null,
+   "n": 13
+  },
+  {
+   "pdf": 104,
+   "club_as_printed": "NEW YORK GIANTS",
+   "what": "a name one reader read and the other did not",
+   "reader": "B",
+   "name_as_printed": "Terzan White",
+   "column": null,
+   "n": 13
+  },
+  {
+   "pdf": 67,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Bomar, Lynn",
+   "teams_as_printed": "25-26NYG"
+  },
+  {
+   "pdf": 67,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Bomer, Lynn",
+   "teams_as_printed": "25-26NYG"
+  },
+  {
+   "pdf": 67,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Bloodgood, Bert",
+   "A": "Nebraska",
+   "B": null
+  },
+  {
+   "pdf": 68,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Dally, Dilly",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 69,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Gentry, Weldon",
+   "A": "Oklahome",
+   "B": "Oklahoma"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": null,
+   "teams_as_printed": "26Bkn 27NYG"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Harvay, Norm",
+   "teams_as_printed": "25Buf 26Det 27Buf 27NYY 28-29Prov"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Harvey, Norm",
+   "teams_as_printed": "25Buf 26Det 27Buf 27NYY 28-29Prov"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Howard, Red",
+   "teams_as_printed": "26Bkn 27NYG"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Hughes, Danny",
+   "teams_as_printed": "25Pott"
+  },
+  {
+   "pdf": 70,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Hughes, Denny",
+   "teams_as_printed": "25Pott"
+  },
+  {
+   "pdf": 71,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Jordan, Frank",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 71,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Kinderdine, George",
+   "A": null,
+   "B": "none"
+  },
+  {
+   "pdf": 71,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Kinderdine, Walt",
+   "A": null,
+   "B": "none"
+  },
+  {
+   "pdf": 71,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Knight, Charlie",
+   "A": null,
+   "B": "none"
+  },
+  {
+   "pdf": 72,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "McWherter, Kyle",
+   "teams_as_printed": "20Dec"
+  },
+  {
+   "pdf": 72,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "McWhorter, Kyle",
+   "teams_as_printed": "20Dec"
+  },
+  {
+   "pdf": 72,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Method, Russ (Cuss)",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 72,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Mills, Tom",
+   "A": "none",
+   "B": "none"
+  },
+  {
+   "pdf": 73,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Murtagh, Mickey",
+   "A": "Georgetwon",
+   "B": "Georgetwon"
+  },
+  {
+   "pdf": 73,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Passuello, Bill",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 74,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Rooney, Bill",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 75,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Vaughn, Bill",
+   "teams_as_printed": "26Buf"
+  },
+  {
+   "pdf": 75,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Vaughn, Bill",
+   "teams_as_printed": "28Buf"
+  },
+  {
+   "pdf": 76,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Woods, Garry",
+   "teams_as_printed": "26Col"
+  },
+  {
+   "pdf": 76,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Woods, Gerry",
+   "teams_as_printed": "26Col"
+  },
+  {
+   "pdf": 76,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Wilson, Shorty",
+   "A": null,
+   "B": null
+  },
+  {
+   "pdf": 138,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Aguirre, Joe",
+   "teams_as_printed": "41,43-45Was 46-49LA-AA 50 CFL"
+  },
+  {
+   "pdf": 138,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Aquirre, Joe",
+   "teams_as_printed": "41,43-45Was 46-49LA-AA 50 CFL"
+  },
+  {
+   "pdf": 140,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Gauer, Charlie",
+   "teams_as_printed": "43P-P 44-45Phi"
+  },
+  {
+   "pdf": 140,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Geuer, Charlie",
+   "teams_as_printed": "43P-P 44-45Phi"
+  },
+  {
+   "pdf": 140,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Graham, Al (Pup)",
+   "teams_as_printed": "25-29Day 30Prov 30Port 31Prov 32-35ChiC"
+  },
+  {
+   "pdf": 140,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Graham, Al (Pup)",
+   "teams_as_printed": "25-29Day 30Prov 30Port 31Prov 32-38ChiC"
+  },
+  {
+   "pdf": 141,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Heater, Red",
+   "teams_as_printed": "40Bkn"
+  },
+  {
+   "pdf": 141,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Heikkenen, Ralph",
+   "teams_as_printed": "38Bkn"
+  },
+  {
+   "pdf": 141,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Heikkenen, Ralph",
+   "teams_as_printed": "39Bkn"
+  },
+  {
+   "pdf": 141,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Hester, Red",
+   "teams_as_printed": "40Bkn"
+  },
+  {
+   "pdf": 141,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Kisseli, Adolph",
+   "teams_as_printed": "42ChiB 43-45MS"
+  },
+  {
+   "pdf": 141,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Kissell, Adolph",
+   "teams_as_printed": "42ChiB 43-45MS"
+  },
+  {
+   "pdf": 141,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Koken, Mike",
+   "teams_as_printed": "23ChiC"
+  },
+  {
+   "pdf": 141,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Koken, Mike",
+   "teams_as_printed": "33ChiC"
+  },
+  {
+   "pdf": 143,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Petrilas, Bill",
+   "A": "none",
+   "B": null
+  },
+  {
+   "pdf": 144,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Pugh, Marion",
+   "teams_as_printed": "41NYG 42-44MS 45NYG 46MiaAA"
+  },
+  {
+   "pdf": 144,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Pugh, Marion",
+   "teams_as_printed": "4INYG 42-44MS 45NYG 46MiaAA"
+  },
+  {
+   "pdf": 144,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Rajkovich, Pete",
+   "teams_as_printed": "34Pit"
+  },
+  {
+   "pdf": 144,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Rejkovich, Pete",
+   "teams_as_printed": "34Pit"
+  },
+  {
+   "pdf": 144,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Ribar, Frank",
+   "teams_as_printed": "43Was 44-45MS"
+  },
+  {
+   "pdf": 144,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Ribble Dave (Tex, Babe)",
+   "teams_as_printed": "32Port 33ChiC 34-35Pit 36-37AFL"
+  },
+  {
+   "pdf": 144,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Ribble, Dave (Tex, Babe)",
+   "teams_as_printed": "32Port 33ChiC 34-35Pit 36-37AFL"
+  },
+  {
+   "pdf": 144,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Riber, Frank",
+   "teams_as_printed": "43Was 44-45MS"
+  },
+  {
+   "pdf": 145,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Stackpool, Jack",
+   "teams_as_printed": "42Phi 43-45MS"
+  },
+  {
+   "pdf": 145,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Steckpool, Jack",
+   "teams_as_printed": "42Phi 43-45MS"
+  },
+  {
+   "pdf": 145,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Supulski, Len",
+   "teams_as_printed": "42Phi 43-44MS"
+  },
+  {
+   "pdf": 145,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Supulski, Len",
+   "teams_as_printed": "42Phi 43-44MS-killed in action"
+  },
+  {
+   "pdf": 145,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Vanzo, Fred (Chopper)",
+   "teams_as_printed": "38-41Det 41ChiC 42-45MS"
+  },
+  {
+   "pdf": 145,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Venzo, Fred (Chopper)",
+   "teams_as_printed": "38-41Det 41ChiC 42-45MS"
+  },
+  {
+   "pdf": 145,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Vodicka, Joe",
+   "teams_as_printed": "43ChiB 44MS 45ChiB 45ChiC"
+  },
+  {
+   "pdf": 145,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Vodicka, Joe",
+   "teams_as_printed": "43ChiB 44MS 45ChiC"
+  },
+  {
+   "pdf": 145,
+   "what": "college read differently or marked uncertain",
+   "name_as_printed": "Stephens, Johnny",
+   "A": "Marshall",
+   "B": null
+  },
+  {
+   "pdf": 146,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Wemple, Don",
+   "teams_as_printed": "41Bkn 42-44MS"
+  },
+  {
+   "pdf": 146,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Wemple, Don",
+   "teams_as_printed": "41Bkn 42-44MS\u2014killed in action"
+  },
+  {
+   "pdf": 146,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Wetterlund, Chet",
+   "teams_as_printed": "42Det 43-44MS"
+  },
+  {
+   "pdf": 146,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Wetterlund, Chet",
+   "teams_as_printed": "42Det 43-44MS\u2014killed in action"
+  },
+  {
+   "pdf": 146,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Workman, Blake (Shariff)",
+   "teams_as_printed": "33Cin 34C-S"
+  },
+  {
+   "pdf": 146,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Workman, Blake (Sheriff)",
+   "teams_as_printed": "33Cin 34C-S"
+  },
+  {
+   "pdf": 146,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "A",
+   "name_as_printed": "Young, Waddy",
+   "teams_as_printed": "39-40Bkn 41-44MS"
+  },
+  {
+   "pdf": 146,
+   "what": "a register entry one reader has and the other does not (name or team-by-year read differently)",
+   "reader": "B",
+   "name_as_printed": "Young, Waddy",
+   "teams_as_printed": "39-40Bkn 41-44MS\u2014killed in action"
+  }
+ ],
+ "clubs_the_table_cannot_name": [
+  {
+   "pdf": [
+    87
+   ],
+   "club_as_printed": "CINCINNATI REDS \u2013 ST. LOUIS GUNNERS",
+   "season": 1934,
+   "why": "refused: the header names 2 clubs in one roster (CINCINNATI REDS / ST. LOUIS GUNNERS) -- Neft's combined club, held and not placed on either (Ryan, 2026-09-11)",
+   "men": 29
+  }
+ ]
+}

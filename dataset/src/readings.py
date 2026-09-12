@@ -490,7 +490,10 @@ def snap_counts(v):
 # on its own worked example -- the gate catching a two-name mismatch a second time.
 READERS = {"game": game, "playoff_snap_counts": snap_counts, "height": height, "weight": weight, "birth_date": birth_date, "draft": draft,
            "college": college, "birth_place": place, "death_place": place,
-           "position": position}
+           "position": position,
+           # weight_season: the SAME reader under the season family's name (Ryan, 2026-09-12). Without it every season
+           # weight would read as unreadable, and '195' against '195 lbs' would be recorded as a disagreement.
+           "weight_season": weight}
 
 
 def read(field, value):

@@ -92,6 +92,18 @@
    "refused_by_example": [],
    "why_refused": "All 189 printed weights read; the 37 distinct forms are already bare integers. '180.' with a trailing point is NOT accepted -- no weight in the corpus carries one, and loosening a reader for a form that does not occur is how a reader starts guessing."
   },
+  "weight_season": {
+   "reads_to": "pounds as a bare integer string -- the weight reader, registered under the season family's name",
+   "same_reader_as": "weight",
+   "ruled": "Ryan, 2026-09-12: a family for season weights, not the career one.",
+   "accepted_forms_by_example": [
+    "210",
+    "195",
+    "195 lbs"
+   ],
+   "refused_by_example": [],
+   "why_refused": "As weight."
+  },
   "birth_date": {
    "reads_to": "YYYY-MM-DD",
    "accepted_forms_by_example": [
