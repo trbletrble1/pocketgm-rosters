@@ -53,6 +53,8 @@ MINE = ("football-hunting", "football-hunting-ind")
 # a man held on a club-season only through these is its staff, not its playing roster.
 STAFF = frozenset(json.load(open(os.path.join(BASE, "declarations", "coaching-seasons.json")))
                   ["staff_predicates"]["predicates"])
+# The kinds club_season.attribute_as_printed may carry, READ from the ruling (declarations/club-season-attributes.json).
+ATTR_KINDS = frozenset(json.load(open(os.path.join(BASE, "declarations", "club-season-attributes.json")))["kinds"])
 PROM = os.path.join(BASE, "build", "player-promotions.json")
 FOLDER = "Dropbox: Football Archive/docs/Football Hunting"
 
@@ -83,6 +85,15 @@ PREDICATE_DEFINITIONS = {
                       "is not in the eleven) and not a substitution (none is printed). It places no "
                       "one on a club-season.",
     },
+}
+
+PREDICATE_DEFINITIONS["club_season.attribute_as_printed"] = {
+    "definition": "something a contemporary document says about a club-season that is NOT a person -- a mascot, "
+                  "the club's colours, a sponsor, the club's venue for the season -- held as printed, with a kind "
+                  "from the declared list.",
+    "refuses": "a person; a league's rule (that is the league-season's); anything about a single game; "
+               "programme advertising; any reading beyond the words printed.",
+    "ruled_by": "Ryan, 2026-09-11. declarations/club-season-attributes.json.",
 }
 
 # ---------------------------------------------------------------- documents, as read
@@ -117,6 +128,7 @@ DOCS = {
  "canton-1922": dict(file="1922 Canton Bulldogs.webp", kind="photo", club_id="club-canton-bulldogs-1920",
    code="CAN", league="NFL", year=1922, printed="The CANTON BULLDOGS 1922",
    rights="montage of 1922 -- public domain by date",
+   attributes=[("mascot", "TWO BITS", "Two Bits", "the centre of the oval montage, printed beneath a photograph of the dog")],
    names=[(n, r, "oval montage") for n, r in [("Robb", None), ("Sacksteder", None), ("Kendricks", None),
      ("Elliott", None), ("Roberts", None), ("Waldsmith", None), ("McQuade", None), ("Smyth", None),
      ("Murrah", None), ("Speck", None), ("Carroll", None), ("Bowser", None), ("Taylor", None),
@@ -125,6 +137,7 @@ DOCS = {
  "canton-1923": dict(file="1923 Canton Bulldogs.webp", kind="photo", club_id="club-canton-bulldogs-1920",
    code="CAN", league="NFL", year=1923, printed="CANTON BULL DOGS World's Professional Champions 1923",
    rights="photograph of 1923 -- public domain by date",
+   attributes=[("mascot", "TWO BITS", "Two Bits", "printed above the caption rows; the dog sits in the front row")],
    names=rows("Top Row", [("Oscar Hendrian", None), ("Harry Robb", None), ("Ben Jones", None),
      ("Louis Smythe", None), ("Cecil Griggs", None), ("Wallace Elliott", None), ("Walcott Roberts", None)]) +
      rows("Middle Row", [("Elmer Carroll", None), ("Wilbur Henry", None), ("Robert Osborne", "Capt."),
@@ -533,6 +546,18 @@ def main(write=False):
         claim("held", sr, ["document", d["file"]], "programme.caption_verbatim",
               {"club_as_printed": d["printed"], "names": [f"{nm}{', ' + r if r else ''}" for nm, r, _ in d["names"]]},
               stated, attr)
+        # club_season.attribute_as_printed (Ryan, 2026-09-11): Two Bits is the dog, named in the caption. He is
+        # an attribute of the club-season -- two entries, one per season printed -- and never a person.
+        for kind, text, name, where in d.get("attributes", []):
+            if kind not in ATTR_KINDS:
+                raise SystemExit(f"{key}: attribute kind {kind!r} is not declared in club-season-attributes.json; "
+                                 "a kind is added by a ruling, not by an ingest")
+            claim("held", sr, cs, "club_season.attribute_as_printed",
+                  {"kind": kind, "text_as_printed": text, "name_as_printed": name, "where_on_the_page": where,
+                   "club_as_printed": d["printed"],
+                   "_definition": PREDICATE_DEFINITIONS["club_season.attribute_as_printed"]["definition"],
+                   "_not_a_person": "an attribute of the club-season; it names no person and joins no one"},
+                  stated, attr)
 
     # ------------------------------------------------ the three opened club-seasons
     def opened(key, club, year, entries, evidence_kind, sr, stated, attr, printed, claim_for):

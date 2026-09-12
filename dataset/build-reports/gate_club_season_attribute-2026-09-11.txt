@@ -1,0 +1,7 @@
+club_season.attribute_as_printed claims: 2; declared kinds: ['colours', 'mascot', 'sponsor', 'venue']
+  ok    A1 every entry is on a club-season subject (0 not: [])
+  ok    A2 every kind is declared (0 not: [])
+  ok    A3 no entry names a person (0 do: [])
+  ok    A4 every entry is served in its club-season view (0 not: [])
+
+GATE PASSED

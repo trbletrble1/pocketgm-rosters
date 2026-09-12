@@ -1,0 +1,20 @@
+{
+ "_what": "club_season.attribute_as_printed -- something a contemporary document says about a club-season that is NOT a person: a mascot, the club's colours, a sponsor, the club's venue for the season. Ruled by Ryan, 2026-09-11, on the proposal of the same day.",
+ "_kept_apart_from_club_staff_role": "club_staff_role holds PEOPLE in non-coaching roles. This holds things that are not people. The two never share a claim.",
+ "kinds": [
+  "mascot",
+  "colours",
+  "sponsor",
+  "venue"
+ ],
+ "_kinds_note": "Read by src/ingest_football_hunting.py and src/gate_club_season_attribute.py. A kind not on this list is REFUSED by default; the list is widened only by a ruling.",
+ "_holds": "The words exactly as printed (text_as_printed), the kind, the name where the thing is named, where on the page, and who printed it. One claim per document per attribute: Two Bits in both Canton photographs is two claims, 1922 and 1923, each citing its own caption.",
+ "_refuses": {
+  "a_person": "Nothing about a person. A named human goes to the person route or to club_staff_role. Two Bits is never a person.",
+  "a_league_rule": "A league's rule belongs to the league's season, not a club's. Bethlehem's twenty-man limit stays on the league_season subject where it is held.",
+  "a_single_game": "Nothing about a single game. A game's venue, uniform or colours stay on the game subject.",
+  "programme_advertising": "No programme advertising. An advertisement is a fact about the programme, not about the club.",
+  "interpretation": "No reading more into the words than they say. 'Under Richfield Colors' stays as printed and does not become 'sponsor'."
+ },
+ "_gate": "src/gate_club_season_attribute.py: every entry is on a club_season subject, names no person, carries a declared kind, and is served in its club-season view."
+}

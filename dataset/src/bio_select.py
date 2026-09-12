@@ -812,6 +812,19 @@ def close_facts(T, g, p):
     return out
 
 
+def closing(cl):
+    """-> the close facts to write, in order. DEATH CLOSES THE BIO (Ryan, 2026-09-11): where a man has both
+    a service record and a death, death comes last; military service is a career fact and belongs before
+    it. Before this, the first candidate won and military was ranked above death, so a man whose service
+    record became visible lost his death from the prose. Nothing is dropped: both are written, in order.
+    A guide's prose, first by ruling, is untouched."""
+    if not cl: return []
+    if cl[0]["kind"] == "military":
+        d = next((c for c in cl if c["kind"] == "death"), None)
+        if d: return [cl[0], d]
+    return [cl[0]]
+
+
 # ------------------------------------------------------------------ the panel
 def _add(V, field, value, source, **extra):
     """The printed value is what is stored. A reading, where one can be made
@@ -937,9 +950,9 @@ def select(T, g):
                               total=tot["total"], seasons_with=tot["seasons_with"]))
     # ---- close: first that exists. A guide's prose is first in close_facts, by ruling.
     cl = close_facts(T, g, p)
-    if cl: facts.append(cl[0])
+    facts.extend(closing(cl))
     return {"id": g, "name": p["name"], "facts": facts, "lead_kind": lead["kind"],
-            "close_kind": (cl[0]["kind"] if cl else None), "vitals": vitals(T, g, p)}
+            "close_kind": (closing(cl)[-1]["kind"] if cl else None), "vitals": vitals(T, g, p)}
 
 
 def coaching_only_bio(T, g, p, c):
@@ -976,9 +989,9 @@ def coaching_only_bio(T, g, p, c):
                         shape=(best["kind"] if best else None),
                         coached=[(s["year"], s["club"]) for s in cc["seasons"]])]
     cl = close_facts(T, g, p)
-    if cl: facts.append(cl[0])
+    facts.extend(closing(cl))
     return {"id": g, "name": p["name"], "facts": facts, "lead_kind": lead["kind"],
-            "close_kind": (cl[0]["kind"] if cl else None), "vitals": vitals(T, g, p),
+            "close_kind": (closing(cl)[-1]["kind"] if cl else None), "vitals": vitals(T, g, p),
             "coaching_only": True}
 
 

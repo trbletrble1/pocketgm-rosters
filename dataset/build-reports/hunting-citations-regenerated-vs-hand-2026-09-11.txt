@@ -1,0 +1,5 @@
+regenerated rows 798; hand-document rows 780; hand rows no longer in the list: 29
+   423  ('hunt', 'in both', 'cells IDENTICAL')
+    43  ('hunt', 'row not in the 10 Sept documents', "not in the sweep's per-row report")
+   328  ('not a hunt', 'in both', "now says: not in the sweep's per-row report")
+     4  ('not a hunt', 'row not in the 10 Sept documents', "not in the sweep's per-row report")

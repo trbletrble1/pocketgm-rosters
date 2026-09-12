@@ -1,0 +1,26 @@
+OTHER P_015983 
+  B: Ernie Hambacher's career was the 1929 season with the Orange Tornadoes. He served in the United States Merchant Marine Service. 
+  A: Ernie Hambacher's career was the 1929 season with the Orange Tornadoes. He served in the United States Merchant Marine Service. He died on September 3, 1990, in St. Petersburg, FL.
+OTHER P_016373 
+  B: In 1935, playing for the Green Bay Packers, Bob Monnett completed 31 passes for 354 yards — only three men in the NFL completed more that season. He died on August 2, 1978, in Galion, OH. 
+  A: In 1935, playing for the Green Bay Packers, Bob Monnett ran for 336 yards and 1 touchdowns — only six men in the NFL ran for more that season. He died on August 2, 1978, in Galion, OH.
+OTHER P_017173 
+  B: Elbie Schultz played eight seasons in the NFL, 1940 to 1947, starting with the Philadelphia Eagles. He went on to five more clubs: the Pittsburgh Steelers, the Philadelphia Eagles/Pittsburgh Steelers, the Chi/Pit Cards/Steelers, the Cleveland Rams and the Los Angeles Rams. He served in the United States Merchant Marine Service. 
+  A: Elbie Schultz played eight seasons in the NFL, 1940 to 1947, starting with the Philadelphia Eagles. He went on to five more clubs: the Pittsburgh Steelers, the Philadelphia Eagles/Pittsburgh Steelers, the Chi/Pit Cards/Steelers, the Cleveland Rams and the Los Angeles Rams. He served in the United States Merchant Marine Service. He died on May 20, 2002, in Arcata, CA.
+OTHER P_018014 
+  B: Bobby Layne scored 99 points for the Detroit Lions in 1956; only one man in the NFL scored more that season. Over fifteen seasons he played for four clubs: the Chicago Bears, the New York Bulldogs, the Detroit Lions and the Pittsburgh Steelers. He later coached, as Assistant Coach of the Pittsburgh Steelers from 1964 to 1965. In all he completed 1,814 passes over sixteen seasons. He served in the United States Merchant Marine Service. 
+  A: Bobby Layne scored 99 points for the Detroit Lions in 1956; only one man in the NFL scored more that season. Over fifteen seasons he played for four clubs: the Chicago Bears, the New York Bulldogs, the Detroit Lions and the Pittsburgh Steelers. He later coached, as Assistant Coach of the Pittsburgh Steelers from 1964 to 1965. In all he completed 1,814 passes over sixteen seasons. He served in the United States Merchant Marine Service. He died on December 1, 1986, in Lubbock, TX.
+bios: 50056 {'unchanged': 46993, 'military kept, death now closes': 3059, 'OTHER': 4}
+bios that LOST a closing sentence they had: 0 []
+
+P_000484
+  BEFORE: Neal Adams moved between leagues: the NFL with the New York Giants (1942–45); the AAFC with the Brooklyn Dodgers (1946) and the Dodgers (1946–47). Over four seasons he caught 43 passes. He was a United States Army veteran.
+  AFTER:  Neal Adams moved between leagues: the NFL with the New York Giants (1942–45); the AAFC with the Brooklyn Dodgers (1946) and the Dodgers (1946–47). Over four seasons he caught 43 passes. He was a United States Army veteran. He died on October 27, 1998, in Sand Springs, OK.
+
+P_000487
+  BEFORE: John Billman played two seasons in the AAFC, 1946 to 1947, starting with the Brooklyn Dodgers. From there he went to the Chicago Rockets in 1947. He served in the United States Navy.
+  AFTER:  John Billman played two seasons in the AAFC, 1946 to 1947, starting with the Brooklyn Dodgers. From there he went to the Chicago Rockets in 1947. He served in the United States Navy. He died on 3/16/2012, in Plymouth, MN.
+
+P_000489
+  BEFORE: In 1948, playing for the Brooklyn Dodgers, Mickey Colmer ran for 704 yards and 6 touchdowns — only six men in the AAFC ran for more that season. Over five seasons he played for three clubs: the Los Angeles Bulldogs, the Brooklyn Dodgers and the New York Yankees. He was a United States Army veteran.
+  AFTER:  In 1948, playing for the Brooklyn Dodgers, Mickey Colmer ran for 704 yards and 6 touchdowns — only six men in the AAFC ran for more that season. Over five seasons he played for three clubs: the Los Angeles Bulldogs, the Brooklyn Dodgers and the New York Yankees. He was a United States Army veteran. He died on 7/20/2000, in Manhattan Beach, CA.

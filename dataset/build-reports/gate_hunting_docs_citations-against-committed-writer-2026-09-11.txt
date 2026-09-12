@@ -1,0 +1,8 @@
+writer: /private/tmp/claude-501/-Users-ryannecci-Documents/1c62e2cc-ea82-4674-9eb4-f52610a56ae4/scratchpad/fh/headtree/dataset/src/write_hunting_docs.py
+writing into scratch: /private/tmp/claude-501/-Users-ryannecci-Documents/1c62e2cc-ea82-4674-9eb4-f52610a56ae4/scratchpad/fh/gate-hunting-docs-g3g7qwcj/Dropbox/Football Archive/docs (the real documents are not touched)
+  FAIL  H1 the CSV header carries the citation columns (missing: ['written_up', 'newspaper_citations', 'cited_with_page', 'papers', 'links'])
+  FAIL  H2 the spreadsheet header carries the citation columns (missing: ['written_up', 'newspaper_citations', 'cited_with_page', 'papers', 'links'])
+  FAIL  H3 the markdown table header carries its four citation columns (missing: ['written up', 'newspaper citations (with a page)', 'papers', 'links'])
+  FAIL  H4 every row carries a written_up value -- there is no written_up column at all
+
+GATE FAILED (4)

@@ -14,7 +14,7 @@ that says what a page looks like.
 
   python3 src/write_hunting_docs.py
 """
-import os, sys, csv, json, collections, datetime
+import os, re, sys, csv, json, collections, datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__)); BASE = os.path.join(HERE, "..")
 DOCS = os.path.expanduser("~/Dropbox/Football Archive/docs")
@@ -445,16 +445,117 @@ TYPOS = [
 ]
 
 
+# ------------------------------------------------------------------ newspaper citations
+# FIVE COLUMNS FROM THE SWEEP'S OWN REPORT (Ryan, 2026-09-11). Another session added them to the three
+# documents by hand, and this script -- which regenerates all three -- did not know them, so the next run
+# would have dropped them in silence: a field going stale because the data around it changed, the fourth
+# shape in the precedents. They are READ from the report the sweep published (reports/*-wikipedia-
+# newspaper-citations*.csv and *-fandom-newspaper-citations-all.csv), never re-derived from its working
+# files, and they ride on the ONE row list, so the markdown, the CSV and the spreadsheet cannot disagree.
+# Gate: src/gate_hunting_docs_citations.py.
+REPORTS = os.path.expanduser("~/Dropbox/Football Archive/reports")
+CITE_COLUMNS = ["written_up", "newspaper_citations", "cited_with_page", "papers", "links"]
+# A ROW THE REPORT DOES NOT COVER SAYS SO. The sweep's per-row report covers the HUNT rows only; for the
+# others it holds a page's existence only where the page cites a paper. Printing "nobody" for them would
+# assert what the report does not say. Measured 2026-09-11: 447 of 447 hunt rows reproduce the hand-added
+# values exactly; 333 non-hunt rows are not in the per-row report at all.
+NOT_IN_REPORT = "not in the sweep's per-row report"
+WRITTEN_UP = ("both", "Wikipedia", "fandom", "nobody", "not joined to one club-season", NOT_IN_REPORT)
+
+
+def _sweep_files():
+    import glob
+    per = sorted(glob.glob(os.path.join(REPORTS, "*-wikipedia-newspaper-citations.csv")))
+    if not per:
+        raise SystemExit(f"REFUSING: no newspaper-citation sweep report in {REPORTS}. The citation columns "
+                         "cannot be written, and writing the documents without them would drop them in silence.")
+    date = os.path.basename(per[-1])[:10]
+    f = {k: os.path.join(REPORTS, f"{date}-{k}.csv") for k in
+         ("wikipedia-newspaper-citations", "wikipedia-newspaper-citations-all", "fandom-newspaper-citations-all")}
+    missing = [p for p in f.values() if not os.path.exists(p)]
+    if missing: raise SystemExit(f"REFUSING: the {date} sweep report is incomplete: {missing}")
+    return date, f
+
+
+_MON = {m: i for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov dec".split(), 1)}
+
+
+def _day(d):
+    """A calendar-day reading of a printed date, for de-duplication only; the strings are not changed."""
+    d = (d or "").lower()
+    m = re.search(r"(\d{4})-(\d\d)-(\d\d)", d)
+    if m: return (int(m[1]), int(m[2]), int(m[3]))
+    m = re.search(r"([a-z]{3})[a-z]*\.?\s+(\d{1,2}),?\s+(\d{4})", d)
+    if m and m[1] in _MON: return (int(m[3]), _MON[m[1]], int(m[2]))
+    m = re.search(r"(\d{1,2})\s+([a-z]{3})[a-z]*\.?,?\s+(\d{4})", d)
+    if m and m[2] in _MON: return (int(m[3]), _MON[m[2]], int(m[1]))
+    return d
+
+
+def _summarise(keys, cites, wp, fd):
+    """The sweep's own rules, as its report states them: a citation both wikis carry counts ONCE (paper,
+    calendar day, page, headline -- the printed strings left alone); 'with a page' means the paper AND the
+    page are named; links are free, paid, both, or no working link."""
+    seen, cs = set(), []
+    for k in keys:
+        for r in cites.get(k, []):
+            key = (re.sub(r"^the ", "", re.sub(r"[^a-z ]", "", (r["paper"] or "").lower())).strip(), _day(r["date"]),
+                   (r["page"] or "").lower().replace(" ", ""), (r["headline"] or "")[:40].lower())
+            if key in seen: continue
+            seen.add(key); cs.append(r)
+    written = "both" if wp and fd else "Wikipedia" if wp else "fandom" if fd else "nobody"
+    if written == "nobody":
+        return dict(written_up="nobody", newspaper_citations="", cited_with_page="", papers="", links="")
+    papers = []
+    for r in cs:
+        p = (r["paper"] or "").strip(" ,.;") or "(paper not named)"
+        if p not in papers: papers.append(p)
+    t = {"paid" if "subscription" in r["link_kind"] else "free" if "free" in r["link_kind"] else "none" for r in cs}
+    links = ("" if not cs else "free and paid" if {"free", "paid"} <= t else "free" if "free" in t
+             else "paid" if "paid" in t else "no working link")
+    return dict(written_up=written, newspaper_citations=str(len(cs)),
+                cited_with_page=str(sum(1 for r in cs if r["page"] and r["paper"] and not r["paper"].startswith("("))),
+                papers="; ".join(papers), links=links)
+
+
+def attach_citations(rows):
+    """Give every row its five citation cells, joined on what the row IS -- kind, year, name, club and league
+    exactly as the CSV prints them -- and NEVER on rank, which moves every time the list is regenerated."""
+    date, f = _sweep_files()
+    per = {(r["kind"], r["year"], r["name"], r["club"], r["league"]): r
+           for r in csv.DictReader(open(f["wikipedia-newspaper-citations"], newline=""))}
+    cites = collections.defaultdict(list)
+    for k in ("wikipedia-newspaper-citations-all", "fandom-newspaper-citations-all"):
+        for r in csv.DictReader(open(f[k], newline="")):
+            cites[(r["club_id"], int(r["year"]))].append(r)
+    blank = dict(newspaper_citations="", cited_with_page="", papers="", links="")
+    for r in rows:
+        p = per.get((r["kind"], _cell(r["year"]), _cell(r.get("name")), _cell(r["club"]), _cell(r["league"])))
+        if p is None:
+            r["cite"] = dict(written_up=NOT_IN_REPORT, **blank); continue
+        ids = [x for x in p["club_id"].split(";") if x]
+        if not ids:
+            r["cite"] = dict(written_up="not joined to one club-season", **blank); continue
+        yrs = ([int(r["year"])] if str(r["year"] or "").isdigit() else
+               sorted({int(y) for y in re.findall(r"\[[A-Z0-9]+\|(\d{4})\|", str(r["club"]))}))
+        r["cite"] = _summarise([(i, y) for i in ids for y in yrs], cites,
+                               p["wikipedia_page"] not in ("", "NONE", "several club-seasons"),
+                               p["fandom_page"] == "yes")
+    for r in rows: r["cite_report"] = date
+    return date
+
+
 def csv_rows(rows):
-    """The same rows, same order, as the ten declared columns. `None` becomes an EMPTY
-    cell and never `0` or `n/a`."""
+    """The same rows, same order, as the declared columns -- the five citation columns included, from the
+    same row list. `None` becomes an EMPTY cell and never `0` or `n/a`."""
+    if rows and "cite" not in rows[0]: attach_citations(rows)
     out = [["rank", "hunt", "adds", "kind", "year", "name", "club", "league", "men_held",
-            "facts_missing", "missing_breakdown", "what_would_fix_it"]]
+            "facts_missing", "missing_breakdown", "what_would_fix_it"] + CITE_COLUMNS]
     for i, r in enumerate(rows, 1):
         out.append([i, r.get("hunt", "yes"), r["adds"], r["kind"],
                     _cell(r["year"]), _cell(r.get("name")), _cell(r["club"]),
                     _cell(r["league"]), _cell(r["men_held"]), _cell(r["facts_missing"]),
-                    _cell(r["missing_breakdown"]), r["fix"]])
+                    _cell(r["missing_breakdown"]), r["fix"]] + [r["cite"][c] for c in CITE_COLUMNS])
     return out
 
 
@@ -534,6 +635,20 @@ START_HERE = [
           "table cannot name the club, and those cannot be given a row."),
     ("b", "Anything after 1959 for box scores, and the whole 2010s and 2020s for game "
           "logs -- those arrive by ingest, not by hunting."),
+    ("", ""),
+    ("h", "Newspaper citations -- the five columns at the right"),
+    ("b", "They say whether someone has already named a newspaper account of the club-season, from the "
+          "Wikipedia and fandom season pages, READ from the newspaper-citation sweep report in reports/. "
+          "They are a map, not material: nothing here is held by the archive."),
+    ("b", "FILTER `cited_with_page` TO ABOVE 0 to see the rows where a paper, a date and a page are already "
+          "named. Then the job is \"open this one\", not \"go find a document\"."),
+    ("b", "`written_up` = nobody, with the other cells EMPTY: neither wiki has a page for that season. The "
+          "empty cell is the finding. `newspaper_citations` = 0: a page exists and cites no paper."),
+    ("b", "`written_up` = not in the sweep's per-row report: the sweep reported the hunt rows only, so for "
+          "this row it cannot say -- which is not the same as nobody."),
+    ("b", "`links`: free = Google News, Chronicling America, a newspapers.com CLIPPING, archive.org, a fan-site "
+          "transcription. paid = ProQuest, the NYT archive, newspaperarchive.com, a newspapers.com page image. "
+          "no working link = no link, a dead archive, or a paper's own website."),
 ]
 
 
@@ -574,8 +689,10 @@ def write_xlsx(rows, path):
 
     i_adds = header.index("adds"); i_fix = header.index("what_would_fix_it")
     edge = Side(style="thick", color=NOT_A_HUNT)
+    i_counts = [header.index(c) for c in ("newspaper_citations", "cited_with_page") if c in header]
     for r in body:
-        ws.append(["" if v == "" else v for v in r])
+        # the two citation counts are NUMBERS, so "filter cited_with_page above 0" works; empty stays empty
+        ws.append([("" if v == "" else int(v) if j in i_counts else v) for j, v in enumerate(r)])
         row = ws[ws.max_row]
         band = _band_of(r[i_adds])
         if band:
@@ -604,7 +721,8 @@ def write_xlsx(rows, path):
                   "figure is not a zero.").font = Font(italic=True, size=9)
     widths = {"rank": 6, "adds": 16, "kind": 15, "year": 6, "name": 20, "club": 30,
               "league": 8, "men_held": 10, "facts_missing": 13,
-              "missing_breakdown": 40, "what_would_fix_it": 90}
+              "missing_breakdown": 40, "what_would_fix_it": 90,
+              "written_up": 12, "newspaper_citations": 11, "cited_with_page": 11, "papers": 60, "links": 15}
     for j, h in enumerate(header, 1):
         ws.column_dimensions[get_column_letter(j)].width = widths.get(h, 14)
 
@@ -768,10 +886,28 @@ def short(rows=None):
       "measurement never asked the question — it is not a zero.** A man missing a "
       "forename is not missing a counted fact, and a club-season the club table cannot "
       "place was never walked by the instrument that counts facts.\n")
-    w("| # | one document adds | kind | the gap | what is held | what would fix it |")
-    w("|---:|---|---|---|---|---|")
+    if rows and "cite" not in rows[0]: attach_citations(rows)
+    rep = rows[0].get("cite_report", "") if rows else ""
+    w(f"> **Newspaper citations — the four columns at the right**, read from the {rep} newspaper-citation "
+      "sweep report (Wikipedia and fandom season pages). The number in brackets is how many name the paper "
+      "**and the page**: where it is above 0, the job is *open this one*, not *go find a document*. "
+      "**`nobody` with the rest empty means neither wiki has a page for that season — that empty cell is the "
+      "finding.** `0` means a page exists and cites no paper. **`not in the sweep's per-row report` means the "
+      "sweep did not report that row — it reported the hunt rows only — which is not the same as nobody.** "
+      "*free* = Google News, Chronicling America, or a newspapers.com clipping; *paid* = ProQuest, the NYT "
+      "archive, newspaperarchive.com, a newspapers.com page image.\n")
+    w("| # | one document adds | kind | the gap | what is held | what would fix it | written up | "
+      "newspaper citations (with a page) | papers | links |")
+    w("|---:|---|---|---|---|---|---|---:|---|---|")
+
+    def short_papers(s, n=4):
+        ps = [p for p in s.split("; ") if p]
+        return ("; ".join(ps[:n]) + (f" +{len(ps) - n} more" if len(ps) > n else "")).replace("|", "/")
     for i, r in enumerate(rows, 1):
-        w(f'| {i} | **{r["adds"]}** | {r["kind"]} | {r["gap"]} | {r["note"]} | {r["fix"]} |')
+        c = r["cite"]
+        cnt = "" if c["newspaper_citations"] == "" else f'{c["newspaper_citations"]} ({c["cited_with_page"]})'
+        w(f'| {i} | **{r["adds"]}** | {r["kind"]} | {r["gap"]} | {r["note"]} | {r["fix"]} | '
+          f'{c["written_up"]} | {cnt} | {short_papers(c["papers"])} | {c["links"]} |')
     w("")
     w(_note())
     w("---\n")
@@ -1051,13 +1187,15 @@ if __name__ == "__main__":
     # SAME list object, so they cannot disagree about what is on it or in what order.
     # Building the CSV from a second call to ranked_rows() would be cheap and would also
     # be a second answer to the same question.
+    OUT = sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv else DOCS
     ROWS = ranked_rows()
+    attach_citations(ROWS)                       # ONCE, on the one row list all three renderings read
     for name, body in (("where-the-archive-is-thin.md", full()),
                        ("what-to-look-for.md", short(ROWS))):
-        p = os.path.join(DOCS, name)
+        p = os.path.join(OUT, name)
         open(p, "w").write(body)
         print(f"  {name:32s} {len(body):>7,} bytes  {body.count(chr(10))+1:>4} lines")
-    p = os.path.join(DOCS, "what-to-look-for.csv")
+    p = os.path.join(OUT, "what-to-look-for.csv")
     # QUOTE_MINIMAL with the default dialect: a field holding a comma or a quote is
     # quoted, and csv.reader round-trips it. lineterminator is pinned so the file does
     # not change shape between platforms.
@@ -1065,7 +1203,7 @@ if __name__ == "__main__":
         csv.writer(fh, lineterminator="\n").writerows(csv_rows(ROWS))
     print(f"  {'what-to-look-for.csv':32s} {os.path.getsize(p):>7,} bytes  "
           f"{len(ROWS):>4} rows + a header")
-    x = os.path.join(DOCS, "what-to-look-for.xlsx")
+    x = os.path.join(OUT, "what-to-look-for.xlsx")
     n = write_xlsx(ROWS, x)
     print(f"  {'what-to-look-for.xlsx':32s} {os.path.getsize(x):>7,} bytes  "
           f"{n:>4} rows, 3 sheets")

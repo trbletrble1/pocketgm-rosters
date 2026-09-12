@@ -1,0 +1,9 @@
+writer: /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/write_hunting_docs.py
+writing into scratch: /private/tmp/claude-501/-Users-ryannecci-Documents/1c62e2cc-ea82-4674-9eb4-f52610a56ae4/scratchpad/fh/gate-hunting-docs-ee0mjgk5/Dropbox/Football Archive/docs (the real documents are not touched)
+  ok    H1 the CSV header carries the citation columns (missing: [])
+  ok    H2 the spreadsheet header carries the citation columns (missing: [])
+  ok    H3 the markdown table header carries its four citation columns (missing: [])
+  ok    H4 every row carries a written_up value from the vocabulary (798 rows; 0 not: [])
+  ok    H5 the three renderings agree: CSV 798 rows, spreadsheet 798, markdown 798; 0 rows whose citation cells differ between CSV and spreadsheet []
+
+GATE PASSED

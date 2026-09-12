@@ -2140,6 +2140,28 @@ from the one-game sentence. Measuring only the bios I meant to change would have
 
 ---
 
+## A column added by hand to a generated document is a column the generator will drop
+
+**2026-09-11.** Another session added five newspaper-citation columns to the three hunting documents
+by hand. `write_hunting_docs.py` regenerates all three and did not know them: the next run would have
+removed them without a word — the fourth way a field goes quiet, *stale because the data around it
+changed*. The writer now reads them from the sweep's published report and carries them on the one row
+list; `gate_hunting_docs_citations.py` runs a writer into a scratch HOME and fails if any rendering
+lacks them. **Run against the committed writer first, it failed H1–H4.**
+
+**And reading the report, not the working files, showed what the report does not carry.** It covers
+the hunt rows only: 423 of the hunt rows regenerate with the hand values exactly, cell for cell, and
+**328 non-hunt rows cannot** — the report holds a page's existence only where the page cites a paper.
+Those rows now say *not in the sweep's per-row report* rather than a guessed `nobody`. The honest fix is
+upstream, a per-row report for every row, not a second derivation here.
+
+**Also, the same evening: a spread operator overwrote a fact.** The club-season view built each attribute
+as `{"kind": "mascot", …, **claim_view(r)}`; the claim's own `kind` (*observed*) came last and won, so
+Two Bits was served as kind "observed". Gate A4 caught it — held is not served, and served wrong is not
+served either.
+
+---
+
 ## A trainer is a fact about the club-season
 
 **Ruling, 11 September 2026 (Ryan).** `club_staff_role` holds trainer, manager,

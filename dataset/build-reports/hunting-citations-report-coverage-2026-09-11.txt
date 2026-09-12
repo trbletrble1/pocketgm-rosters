@@ -1,0 +1,19 @@
+per-row report rows joined to a docs row by identity: 447 of 447
+   447  ('hunt', 'per-row report', 'agrees')
+   202  ('not a hunt', 'NOT DERIVABLE: not in the per-row report and no citation in the -all report')
+   114  ('not a hunt', '-all report only', 'DIFFERS')
+    17  ('not a hunt', '-all report only', 'agrees')
+
+== not derivable 202
+    ('18', 'thin', '1963', 'Syracuse Stormers', 'nobody')
+    ('19', 'thin', '1964', 'Joliet Chargers', 'nobody')
+    ('20', 'thin', '1944', 'San Francisco Clippers', 'nobody')
+    ('21', 'thin', '1944', 'Oakland Hornets', 'nobody')
+    ('22', 'thin', '1944', 'San Diego Gunners', 'nobody')
+
+== ('not a hunt', '-all report only') 114
+    ('106', 'Rochester Jeffersons', {'written_up': ('both', 'Wikipedia')})
+    ('126', 'Hammond Pros', {'written_up': ('both', 'Wikipedia')})
+    ('139', 'Louisville Brecks', {'written_up': ('both', 'Wikipedia')})
+    ('151', 'Columbus Panhandles', {'written_up': ('both', 'Wikipedia')})
+    ('152', 'Rochester Jeffersons', {'written_up': ('both', 'Wikipedia')})

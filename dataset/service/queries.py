@@ -388,10 +388,25 @@ def club_season(conn, league, year, club):
             non_coaching.append({"name_as_printed": v.get("name_as_printed"), "role_as_printed": v.get("role_as_printed"),
                                  "person": None, "_not_a_person": v.get("_not_a_person"),
                                  **({"note": v["_note"]} if v.get("_note") else {}), **claim_view(r)})
+    # WHAT A DOCUMENT SAYS ABOUT THE CLUB-SEASON THAT IS NOT A PERSON (Ryan, 2026-09-11) -- a mascot, colours,
+    # a sponsor, a venue -- held as printed with its declared kind. Its own list: never members, never staff.
+    attrs = []
+    for r in conn.execute("SELECT * FROM claim WHERE scope='club_season' AND predicate='club_season.attribute_as_printed' "
+                          "AND subject LIKE ?", (f'%"{y}"%',)):
+        s = json.loads(r["subject"])
+        if str(s[-2]) == str(y) and s[-1] in codes:
+            v = json.loads(r["value"])
+            # THE CLAIM'S OWN `kind` (observed / derived) IS KEPT UNDER ITS OWN NAME. Spread last, it overwrote the
+            # attribute's kind and Two Bits was served as kind "observed" -- gate A4 caught it.
+            cv = claim_view(r); cv["claim_kind"] = cv.pop("kind", None)
+            attrs.append({**cv, "kind": v.get("kind"), "text_as_printed": v.get("text_as_printed"),
+                          "name_as_printed": v.get("name_as_printed"), "where_on_the_page": v.get("where_on_the_page"),
+                          "person": None})
     out = {"league": league, "year": y, "club": {"requested": club, "club_id": cid, "resolved_via": via, "name_that_year": club_name_for(conn, cid, y),
                                                   "code_that_year": (archive_clubs().code_for(cid, y) if cid in archive_clubs().by_id else None)},
            "names_that_season": names, "members": roster, "staff": staff, "n_members": len(roster), "n_staff": len(staff),
-           "non_coaching_staff": non_coaching, "n_non_coaching_staff": len(non_coaching)}
+           "non_coaching_staff": non_coaching, "n_non_coaching_staff": len(non_coaching),
+           "attributes_as_printed": attrs}
     if other: out["other_leagues_at_this_club_that_year"] = other
     if not roster:
         out["basis"] = "unknown"

@@ -1,0 +1,25 @@
+club-seasons in scope               619
+  EMPTY (no roster member)           18
+  with men but NO coach/staff       141
+  THIN (men held, facts not)        573   missing facts 9,901
+     by field: {'age': 3303, 'weight': 4884, 'college': 1323, 'position': 391}
+  NO ROSTER SOURCE                   13
+  OFF THE TABLE (no club-season)      3   of which hold men 2 (10 men)
+  people with a surname only        203
+
+top 12 thin club-seasons by COUNT of missing facts:
+    130 missing   67 men  UFL|1964|PFA:JOL  Joliet Chargers                {'college': 4, 'age': 63, 'weight': 63}
+    127 missing   59 men  UFL|1963|PFA:SYR  Syracuse Stormers              {'age': 57, 'weight': 57, 'college': 13}
+    114 missing   55 men  AFL|1944|PFA:SF   San Francisco Clippers         {'age': 51, 'weight': 51, 'college': 11, 'position': 1}
+    108 missing   44 men  AFL|1944|PFA:OAK  Oakland Hornets                {'age': 44, 'weight': 44, 'college': 15, 'position': 5}
+    101 missing   43 men  AFL|1944|PFA:AFL:SD San Diego Gunners              {'age': 43, 'weight': 43, 'position': 6, 'college': 9}
+     99 missing   52 men  UFL|1964|PFA:TOL  Toledo Tornadoes               {'age': 47, 'weight': 47, 'college': 3, 'position': 2}
+     95 missing   33 men  |1931|DOC:SLG-IND St. Louis Gunners              {'position': 33, 'age': 32, 'weight': 16, 'college': 14}
+     95 missing   44 men  AFL|1944|PFA:LAM  Los Angeles Mustangs           {'age': 42, 'weight': 42, 'college': 10, 'position': 1}
+     86 missing   34 men  |1922|DOC:FYJ-IND Frankford Yellow Jackets       {'position': 27, 'weight': 24, 'age': 22, 'college': 13}
+     82 missing   34 men  AFL|1939|PFA:KEN  Kenosha Cardinals              {'age': 34, 'weight': 34, 'college': 14}
+     80 missing   34 men  AFL|1939|PFA:DAY  Dayton Bombers                 {'age': 34, 'weight': 34, 'college': 11, 'position': 1}
+     77 missing   44 men  UFL|1964|PFA:QUE  Quebec Rifles                  {'age': 37, 'weight': 37, 'college': 3}
+
+-> /Users/ryannecci/Documents/pocketgm-rosters-clone/dataset/src/../build-reports/thin-archive.json
+exit 0
