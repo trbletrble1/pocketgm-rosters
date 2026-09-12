@@ -1,0 +1,7 @@
+promotions: 7740   from a team photograph: 23
+  ok    T1 every team-photograph promotion is on a club-season the archive holds (0: [])
+  ok    T2 every team-photograph promotion carries the club the caption printed (0: [])
+  ok    T3 no team-photograph person carries a roster_membership claim (0: [])
+  ok    T4 no promotion cites an evidence kind that is still refused (0: [])
+
+GATE PASSED

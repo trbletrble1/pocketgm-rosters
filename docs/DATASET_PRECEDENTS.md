@@ -2097,6 +2097,18 @@ boundary, and it refuses the Nessers at Columbus, the Horweens at the Cardinals 
 Robbs at Canton without anyone naming them. What it cannot see is brothers one per season
 — Steve and Bill Owen at Kansas City, 1925 and 1926 — which is the residual 1%.
 
+**Two defects of mine, both found only after publishing, both the archive's own lessons
+again.** First: the join roster read the *league token*, and PFA's coaching seasons carry
+`NFL`, so the photographs captioned "Steve Owen, Coach" (1934 Giants) and "'Potsy' Clark,
+Coach" (1932 Spartans) joined both men as **players** — the 1934 Giants were served with 29
+members instead of 28. The roster is now the playing roster, read by predicate from the
+declared staff list (`a coaching season has one shape`: read the predicate, never the
+league). My first measurement of the defect made the same mistake and reported zero.
+Second: once the promoted men were published, the ingest found them in the read model as
+"an exact name held elsewhere" and "a namesake nearby" — themselves — and nine of eighteen
+fell back to candidates (`a decider that reads its own output`). The store's loss record
+caught that before any rebuild, with 11 claims lost for no stated reason.
+
 ---
 
 ## A trainer is a fact about the club-season

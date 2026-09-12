@@ -1,0 +1,9 @@
+surname-tier claims: 194   club_staff_role claims: 12
+  ok    S1 every surname join is unique on its club-season (194 checked; 0 bad: [])
+  ok    S2 no source record joins two printed names to one man by surname (0: [])
+  FAIL  S3 every joined man is on the club-season his claim says it was joined on (249 checked; 2 bad: ['football-hunting: \'"Potsy" Clark\' -> P_014386, who is not on club-portsmouth-spartans-1930 1932', "football-hunting: 'Steve Owen' -> P_014296, who is not on club-new-york-giants-1925 1934"])
+  ok    S4 every opened-season join is on the neighbouring season it names (21 checked; 0 bad: [])
+  ok    C1 every club_staff_role claim is about a club-season and names no person (0: [])
+  ok    C2 no store writing club_staff_role also writes role_title ([])
+
+GATE FAILED (1)

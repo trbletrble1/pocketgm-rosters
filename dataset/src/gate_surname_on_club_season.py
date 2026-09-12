@@ -32,6 +32,11 @@ sys.path.insert(0, os.path.join(BASE, "service"))
 import paths
 from clubs import Clubs
 
+# The PLAYING roster is counted by PREDICATE, read from the declaration -- a man held on a club-season only
+# through staff predicates is its staff. Counting by league token let two caption coaches pass as players.
+STAFF = sorted(json.load(open(os.path.join(BASE, "declarations", "coaching-seasons.json")))
+               ["staff_predicates"]["predicates"])
+NOT_STAFF = f"and predicate not in ({','.join('?' * len(STAFF))})"
 TIER = "surname_unique_on_the_club_season"
 ADJ = "surname_unique_on_the_adjacent_season"     # Ryan, 2026-09-11: the club does the work, not the calendar
 FAILS = []
@@ -100,7 +105,7 @@ def main(extra=()):
         if cid is None:
             bad.append(f"{st}: {v.get('name_as_printed')} -- the club-season cannot be read from the claim"); continue
         on = {p for (p,) in db.execute("select distinct person from claim where scope='stint' and club_id=? and year=? "
-                                       "and store != ? and person is not null", (cid, int(year), st))}
+                                       f"and store != ? and person is not null {NOT_STAFF}", (cid, int(year), st, *STAFF))}
         k = sur(v.get("name_as_printed"))
         holders = [p for p in on if any(sur(n) == k for n in names[p])]
         checked += 1
@@ -117,7 +122,8 @@ def main(extra=()):
         k = (cid, int(year), st)
         if k not in cache:
             cache[k] = {p for (p,) in db.execute("select distinct person from claim where scope='stint' and club_id=? "
-                                                 "and year=? and store != ? and person is not null", k)}
+                                                 f"and year=? and store != ? and person is not null {NOT_STAFF}",
+                                                 (*k, *STAFF))}
         return cache[k]
     ON = {"exact_full_name_on_the_club_season", TIER}
     off, off_nb, n3, n4 = [], [], 0, 0

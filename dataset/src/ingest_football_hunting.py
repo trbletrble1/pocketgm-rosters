@@ -49,6 +49,10 @@ import paths
 OUT = os.path.join(BASE, "build", "football-hunting.json")
 OUT_IND = os.path.join(BASE, "build", "football-hunting-ind.json")
 MINE = ("football-hunting", "football-hunting-ind")
+# The staff predicates, READ from the declaration that rules them (declarations/coaching-seasons.json):
+# a man held on a club-season only through these is its staff, not its playing roster.
+STAFF = frozenset(json.load(open(os.path.join(BASE, "declarations", "coaching-seasons.json")))
+                  ["staff_predicates"]["predicates"])
 PROM = os.path.join(BASE, "build", "player-promotions.json")
 FOLDER = "Dropbox: Football Archive/docs/Football Hunting"
 
@@ -349,18 +353,25 @@ class RM:
             for n in ns:
                 s = surname(n)
                 if s: self.by_sur[s].add(p)
-    def surname_near(self, s, year, band):
-        """Held men of surname `s` with a season within `band` years of `year`, anywhere."""
+    def surname_near(self, s, year, band, exclude=()):
+        """Held men of surname `s` with a season within `band` years of `year`, anywhere -- leaving out
+        `exclude`, the men this route itself promoted."""
         out = set()
         for p in self.by_sur.get(s, ()):
+            if p in exclude: continue
             a, b = self.years.get(p, (None, None))
             if a is not None and a - band <= year <= (b or a) + band:
                 out.add(self.index_name.get(p))
         return sorted(out - {None})
     def roster(self, club_id, year):
+        """The PLAYING roster. A man held on the club-season only through staff predicates -- a coach -- is
+        not on it. Read by PREDICATE, never by league token: PFA's coaching seasons carry `NFL`, and reading
+        the token is how the photo of 'Steve Owen, Coach' joined him as a 1934 Giants player, and '"Potsy"
+        Clark, Coach' as a 1932 Spartan (found 2026-09-11 after publishing; withdrawn)."""
+        ph = ",".join("?" * len(STAFF))
         q = ("select distinct person from claim where scope='stint' and club_id=? and year=? "
-             "and store not in (?,?) and person is not null")
-        return {p for (p,) in self.c.execute(q, (club_id, year, *MINE))}
+             f"and store not in (?,?) and person is not null and predicate not in ({ph})")
+        return {p for (p,) in self.c.execute(q, (club_id, year, *MINE, *sorted(STAFF)))}
 
 
 def join(printed, roster, rm, printed_surnames):
@@ -411,6 +422,17 @@ MISATTACHED = {("football-hunting#pfa-bill-coleman", "P_002554"):
                "carried over from the previous section -- and moved to P_045339, the one Coleman held (2026-09-11)"}
 
 
+# WITHDRAWN, AND SAID SO. Two coaches named in captions were joined as PLAYERS on club-seasons where every
+# other store holds them only as staff; the join roster now excludes staff-only men.
+WITHDRAWN = {
+    ("football-hunting#portsmouth-1932", "P_014386"):
+        "withdrawn: '\"Potsy\" Clark, Coach' was joined as a 1932 Spartans PLAYER; every other store holds him on "
+        "that club-season only as its coach. The join roster now excludes staff-only men (2026-09-11)",
+    ("football-hunting#programme-1935-01-20-kezar", "P_014296"):
+        "withdrawn: 'Steve Owen, Coach' was joined as a 1934 Giants PLAYER; every other store holds him on that "
+        "club-season only as its coach. The join roster now excludes staff-only men (2026-09-11)"}
+
+
 def _plain(v):
     return {k: x for k, x in v.items() if not str(k).startswith("_")} if isinstance(v, dict) else v
 
@@ -428,6 +450,8 @@ def _restated(claims):
         who = s[1] if len(s) > 1 else None
         if (old.get("source_record"), who) in MISATTACHED:
             return (MISATTACHED[(old["source_record"], who)], {})
+        if (old.get("source_record"), who) in WITHDRAWN:
+            return (WITHDRAWN[(old["source_record"], who)], {})
         k = (json.dumps(s), old.get("predicate"), json.dumps(_plain(old.get("value")), sort_keys=True),
              old.get("source_record"))
         return (RESTATED, {}) if k in keys else None
@@ -524,7 +548,11 @@ def main(write=False):
             lead_id = f"lead-fh-{key}-{i:02d}"
             if role in STAFF_ROLES:
                 staff("ind", sr, ["club_season", "IND", str(year), code], nm, role, printed, stated, attr); continue
-            full = " ".join(toks(nm)); held_full = rm.by_full.get(full, set()) if len(toks(nm)) > 1 else set()
+            # NOT ITS OWN OUTPUT. Once published, the men this route promoted are in the read model, and they
+            # were being found as "an exact name held elsewhere" or "a namesake nearby" -- themselves. Nine of
+            # the eighteen fell back to candidates on the next write; the store's loss record caught it.
+            own = set(promoted.values())
+            full = " ".join(toks(nm)); held_full = (rm.by_full.get(full, set()) - own) if len(toks(nm)) > 1 else set()
             if len(held_full) == 1 and next(iter(held_full)) in nb:
                 pid = next(iter(held_full)); opened_n["a_exact_name_on_the_neighbouring_season"] += 1
                 claim_for(pid, nm, role, where, "exact_full_name_held_once_and_on_the_neighbouring_season",
@@ -561,7 +589,7 @@ def main(write=False):
                     ev += f"; NOTE: the printed forename '{f_}' agrees with none of the held forms {sorted(rm.names[pid])[:3]}"
                 claim_for(pid, nm, role, where, "surname_unique_on_the_adjacent_season", ev)
                 continue
-            near = rm.surname_near(surname(nm), year, 2) if forename(nm) is None else []
+            near = rm.surname_near(surname(nm), year, 2, exclude=own) if forename(nm) is None else []
             if role in COACH_ROLES or nb_sur.get(surname(nm)) or held_full or near:
                 opened_n["b_candidate"] += 1
                 why = ("a coach named in a caption is a coaching question, not a player promotion" if role in COACH_ROLES

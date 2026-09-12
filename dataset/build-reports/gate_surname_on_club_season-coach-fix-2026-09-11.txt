@@ -1,0 +1,9 @@
+surname-tier claims: 197   club_staff_role claims: 12
+  ok    S1 every surname join is unique on its club-season (197 checked; 0 bad: [])
+  ok    S2 no source record joins two printed names to one man by surname (0: [])
+  ok    S3 every joined man is on the club-season his claim says it was joined on (250 checked; 0 bad: [])
+  ok    S4 every opened-season join is on the neighbouring season it names (21 checked; 0 bad: [])
+  ok    C1 every club_staff_role claim is about a club-season and names no person (0: [])
+  ok    C2 no store writing club_staff_role also writes role_title ([])
+
+GATE PASSED
