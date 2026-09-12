@@ -1,0 +1,30 @@
+rows 798 | the text join lost, the new join fills: 21 | the new join loses: 0 | both fill but differ: 0 | both mark 'not in the report': 26
+filled, by kind: {'thin': 6, 'a name': 15}
+joined on: {'club-season': 575, 'printed text (no club-season)': 3, None: 26, 'the man and his season keys': 194}
+still marked, by kind: {'empty': 11, 'thin': 6, 'a name': 9}
+   marked: empty 2025 Arlington Renegades 
+   marked: empty 2025 Birmingham Stallions 
+   marked: empty 2025 DC Defenders 
+   marked: empty 2025 Houston Roughnecks 
+   marked: empty 2025 Memphis Showboats 
+   marked: empty 2025 Michigan Panthers 
+   marked: empty 2025 San Antonio Brahmas 
+   marked: empty 2025 St. Louis Battlehawks 
+   marked: empty 2026 Birmingham Stallions 
+   marked: empty 2026 DC Defenders 
+   marked: empty 2026 St. Louis Battlehawks 
+   marked: thin 1929 Portsmouth Spartans 
+   marked: thin 1919 Dayton Triangles 
+   marked: thin 1968 New York Jets 
+   marked: thin 1966 Kansas City Chiefs 
+   marked: thin 1967 Oakland Raiders 
+   marked: thin 1969 Kansas City Chiefs 
+   marked: a name 1919 IND|1919|DOC:DAY-IND — **the club table cannot name thi Albers
+   marked: a name 1924 IND|1924|DOC:POT-IND — **the club table cannot name thi Brunner
+   marked: a name 1924 IND|1924|DOC:POT-IND — **the club table cannot name thi Emmanuel
+   marked: a name 1919 IND|1919|DOC:DAY-IND — **the club table cannot name thi Houser
+   marked: a name 1924 IND|1924|DOC:POT-IND — **the club table cannot name thi Hudnek
+   marked: a name 1924 IND|1924|DOC:POT-IND — **the club table cannot name thi Julian
+   marked: a name 1924 IND|1924|DOC:POT-IND — **the club table cannot name thi Nemzek
+   marked: a name 1924 IND|1924|DOC:POT-IND — **the club table cannot name thi Potter
+   marked: a name 1924 IND|1924|DOC:POT-IND — **the club table cannot name thi Tribit

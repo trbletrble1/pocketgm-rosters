@@ -1,0 +1,12 @@
+writer: /private/tmp/claude-501/-Users-ryannecci-Documents/1c62e2cc-ea82-4674-9eb4-f52610a56ae4/scratchpad/fh/headtree/dataset/src/write_hunting_docs.py
+report: 2026-09-12-wikipedia-newspaper-citations.csv (780 rows)
+writing into scratch: /private/tmp/claude-501/-Users-ryannecci-Documents/1c62e2cc-ea82-4674-9eb4-f52610a56ae4/scratchpad/fh/gate-hunting-docs-pw__ho1k/Dropbox/Football Archive/docs (the real documents are not touched)
+  ok    H1 the CSV header carries the citation columns (missing: [])
+  ok    H2 the spreadsheet header carries the citation columns (missing: [])
+  ok    H3 the markdown table header carries its four citation columns (missing: [])
+  ok    H4 every row carries a written_up value the report uses, or the marker (798 rows; 0 not: [])
+  ok    H5 the three renderings agree: CSV 798 rows, spreadsheet 798, markdown 798; 0 rows whose citation cells differ between CSV and spreadsheet []
+  FAIL  H6 every row whose club-seasons are a report row carries that row's values (0 such rows; 0 do not: [])
+         1924 Pottsville: kind 'thin', club-seasons None, written_up not in the sweep's per-row report, citations  ( with a page), joined on None
+
+GATE FAILED (1)

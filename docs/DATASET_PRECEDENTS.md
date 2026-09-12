@@ -2155,6 +2155,20 @@ the hunt rows only: 423 of the hunt rows regenerate with the hand values exactly
 Those rows now say *not in the sweep's per-row report* rather than a guessed `nobody`. The honest fix is
 upstream, a per-row report for every row, not a second derivation here.
 
+**And the join has to be on what a row is about, not on how it is printed (2026-09-12).** The first version
+joined each row to the report by its printed text. A regeneration changes that text: 1924 Pottsville went from
+"outside the span" to a held club-season in a day and lost its 21 page-numbered citations; **21 rows the sweep
+did see** would have lost theirs. Rows now join on the club-season — (club id, year) — and a man's row on
+**the man and his season keys**. Three things went wrong on the way, each found by comparing the two writers
+row by row rather than by trusting the gate that shared their logic:
+
+* **A zip of two lists kept in different orders.** The report lists a man's club ids in an order of its own;
+  pairing them with the printed years set Martin's Bulldogs in 1944. Nothing is paired now.
+* **A club-season resolved that the table refuses.** 1926 `BKN` and `LA` are each carried by two clubs;
+  resolving them picked one and borrowed its citations. Off-the-table rows stay unplaced.
+* **A key is not a man.** A dozen men share the one 1944 San Diego Gunners key, each with his own report row;
+  keyed on the season alone they all took Adams's. Gate H7 — no report row feeds two rows — found it.
+
 **Also, the same evening: a spread operator overwrote a fact.** The club-season view built each attribute
 as `{"kind": "mascot", …, **claim_view(r)}`; the claim's own `kind` (*observed*) came last and won, so
 Two Bits was served as kind "observed". Gate A4 caught it — held is not served, and served wrong is not

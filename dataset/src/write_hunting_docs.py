@@ -287,7 +287,7 @@ def ranked_rows():
 
     def put(key, band, tie, adds, kind, fix, note="", year=None, club=None, league=None,
             men_held=None, facts_missing=None, missing_breakdown=None, gap=None, name=None,
-            hunt="yes"):
+            hunt="yes", pairs=None, keys=None):
         # `hunt` IS A VALUE, NOT SOMETHING TO INFER FROM THE SENTENCE. Ruled 2026-09-10:
         # Ryan filters to the rows that are actually a hunt and ignores the rest, and
         # reading prose to work that out is not filtering.
@@ -296,7 +296,8 @@ def ranked_rows():
                      "league": league, "men_held": men_held,
                      "facts_missing": facts_missing,
                      "missing_breakdown": missing_breakdown,
-                     "gap": gap if gap is not None else club_season_gap(year, club, league)}
+                     "gap": gap if gap is not None else club_season_gap(year, club, league),
+                     "pairs": pairs, "keys": keys}
 
     def club_season_gap(year, club, league):
         """AN EMPTY LEAGUE PRINTS NOTHING, not `()`. measure_thin_archive writes `""` for
@@ -424,7 +425,35 @@ def ranked_rows():
             # APFA|1920|DE1 rather than about Gates. `name` is empty on every other kind,
             # because a club-season is not a person.
             name=x["name"],
-            gap=f'**{x["name"]}** — {club_text}')
+            gap=f'**{x["name"]}** — {club_text}',
+            # THE SEASON KEYS ARE THIS ROW'S IDENTITY for the citation join -- `PCFL|1943|PFA:SD`, the keys the
+            # measurement itself uses, printed in brackets in the club text. Not the printed names, which move,
+            # and not a pairing of ids with years, which the report lists in an order of its own (2026-09-12).
+            keys=list(keys),
+            # EACH CLUB-SEASON AS THE MEASUREMENT NAMES IT -- its own club with its own year. Never every
+            # club paired with every year (2026-09-12: that was right only by accident).
+            pairs=[(c["club_id"], int(c["year"])) for c in (x.get("club_seasons_named") or [])
+                   if c.get("named") and c.get("club_id") and str(c.get("year", "")).isdigit()])
+
+    # THE CLUB-SEASON EACH ROW IS ABOUT, as (club id, year). The citation columns join on this and not on
+    # the printed club text, which changes when the list regenerates -- 1924 Pottsville went from "outside
+    # the span" to a held club-season in one day, and a text join lost its 21 citations (2026-09-12).
+    from clubs import Clubs
+    C_ = Clubs()
+    for key, r in rows.items():
+        if r.get("pairs") is not None: continue
+        hit = None
+        try:
+            # AN "OFF THE TABLE" ROW IS NEVER RESOLVED. The club table refuses it by definition -- 1926 `BKN` and
+            # `LA` are each carried by two clubs -- and resolving it anyway picked one of them and handed this row
+            # that club's citations. It stays unplaced and joins on its printed identity.
+            if key[0] == "cs":
+                hit = C_.resolve(key[3], int(key[2]), key[1] or None, source="season_key")
+            elif key[0] == "out":
+                hit = C_.resolve(key[1], int(key[2]))
+        except Exception:
+            hit = None
+        r["pairs"] = [(hit[0], int(key[2]))] if hit else []
 
     return sorted(rows.values(), key=lambda r: (r["band"], r["tie"], r["gap"]))
 
@@ -449,99 +478,84 @@ TYPOS = [
 # FIVE COLUMNS FROM THE SWEEP'S OWN REPORT (Ryan, 2026-09-11). Another session added them to the three
 # documents by hand, and this script -- which regenerates all three -- did not know them, so the next run
 # would have dropped them in silence: a field going stale because the data around it changed, the fourth
-# shape in the precedents. They are READ from the report the sweep published (reports/*-wikipedia-
-# newspaper-citations*.csv and *-fandom-newspaper-citations-all.csv), never re-derived from its working
-# files, and they ride on the ONE row list, so the markdown, the CSV and the spreadsheet cannot disagree.
+# shape in the precedents. They are READ from the per-row report the sweep published
+# (reports/<date>-wikipedia-newspaper-citations.csv), never re-derived, joined on the CLUB-SEASON a row is
+# about, and they ride on the ONE row list, so the markdown, the CSV and the spreadsheet cannot disagree.
 # Gate: src/gate_hunting_docs_citations.py.
 REPORTS = os.path.expanduser("~/Dropbox/Football Archive/reports")
 CITE_COLUMNS = ["written_up", "newspaper_citations", "cited_with_page", "papers", "links"]
-# A ROW THE REPORT DOES NOT COVER SAYS SO. The sweep's per-row report covers the HUNT rows only; for the
-# others it holds a page's existence only where the page cites a paper. Printing "nobody" for them would
-# assert what the report does not say. Measured 2026-09-11: 447 of 447 hunt rows reproduce the hand-added
-# values exactly; 333 non-hunt rows are not in the per-row report at all.
+# A ROW THE REPORT DOES NOT HOLD SAYS SO -- a row added since the sweep, say -- rather than looking like
+# "nobody". Since 2026-09-12 the sweep's per-row report covers all 780 rows of the list it swept and carries
+# the five values itself, so they are READ from it; nothing here counts, de-duplicates or classifies.
 NOT_IN_REPORT = "not in the sweep's per-row report"
-WRITTEN_UP = ("both", "Wikipedia", "fandom", "nobody", "not joined to one club-season", NOT_IN_REPORT)
 
 
-def _sweep_files():
+def _sweep_file():
+    """The newest per-row report, refused unless it carries the five columns and the club-season it joins on."""
     import glob
     per = sorted(glob.glob(os.path.join(REPORTS, "*-wikipedia-newspaper-citations.csv")))
     if not per:
         raise SystemExit(f"REFUSING: no newspaper-citation sweep report in {REPORTS}. The citation columns "
                          "cannot be written, and writing the documents without them would drop them in silence.")
-    date = os.path.basename(per[-1])[:10]
-    f = {k: os.path.join(REPORTS, f"{date}-{k}.csv") for k in
-         ("wikipedia-newspaper-citations", "wikipedia-newspaper-citations-all", "fandom-newspaper-citations-all")}
-    missing = [p for p in f.values() if not os.path.exists(p)]
-    if missing: raise SystemExit(f"REFUSING: the {date} sweep report is incomplete: {missing}")
-    return date, f
+    p = per[-1]
+    head = next(csv.reader(open(p, newline="")))
+    missing = [c for c in CITE_COLUMNS + ["club_id", "year", "club"] if c not in head]
+    if missing:
+        raise SystemExit(f"REFUSING: {os.path.basename(p)} does not carry {missing}; the writer reads the five "
+                         "values from the sweep's per-row report and will not re-derive them.")
+    return os.path.basename(p)[:10], p
 
 
-_MON = {m: i for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov dec".split(), 1)}
+_KEY = re.compile(r"\[([^\]|]+\|\d{4}\|[^\]]+)\]")
 
 
-def _day(d):
-    """A calendar-day reading of a printed date, for de-duplication only; the strings are not changed."""
-    d = (d or "").lower()
-    m = re.search(r"(\d{4})-(\d\d)-(\d\d)", d)
-    if m: return (int(m[1]), int(m[2]), int(m[3]))
-    m = re.search(r"([a-z]{3})[a-z]*\.?\s+(\d{1,2}),?\s+(\d{4})", d)
-    if m and m[1] in _MON: return (int(m[3]), _MON[m[1]], int(m[2]))
-    m = re.search(r"(\d{1,2})\s+([a-z]{3})[a-z]*\.?,?\s+(\d{4})", d)
-    if m and m[2] in _MON: return (int(m[3]), _MON[m[2]], int(m[1]))
-    return d
+def _report_keys(r):
+    """The season keys a report row prints in brackets -- a man on several club-seasons -- or None."""
+    ks = frozenset(_KEY.findall(r.get("club") or ""))
+    return ks or None
 
 
-def _summarise(keys, cites, wp, fd):
-    """The sweep's own rules, as its report states them: a citation both wikis carry counts ONCE (paper,
-    calendar day, page, headline -- the printed strings left alone); 'with a page' means the paper AND the
-    page are named; links are free, paid, both, or no working link."""
-    seen, cs = set(), []
-    for k in keys:
-        for r in cites.get(k, []):
-            key = (re.sub(r"^the ", "", re.sub(r"[^a-z ]", "", (r["paper"] or "").lower())).strip(), _day(r["date"]),
-                   (r["page"] or "").lower().replace(" ", ""), (r["headline"] or "")[:40].lower())
-            if key in seen: continue
-            seen.add(key); cs.append(r)
-    written = "both" if wp and fd else "Wikipedia" if wp else "fandom" if fd else "nobody"
-    if written == "nobody":
-        return dict(written_up="nobody", newspaper_citations="", cited_with_page="", papers="", links="")
-    papers = []
-    for r in cs:
-        p = (r["paper"] or "").strip(" ,.;") or "(paper not named)"
-        if p not in papers: papers.append(p)
-    t = {"paid" if "subscription" in r["link_kind"] else "free" if "free" in r["link_kind"] else "none" for r in cs}
-    links = ("" if not cs else "free and paid" if {"free", "paid"} <= t else "free" if "free" in t
-             else "paid" if "paid" in t else "no working link")
-    return dict(written_up=written, newspaper_citations=str(len(cs)),
-                cited_with_page=str(sum(1 for r in cs if r["page"] and r["paper"] and not r["paper"].startswith("("))),
-                papers="; ".join(papers), links=links)
+def _report_pairs(r):
+    """A report row naming ONE club-season, as (club id, year); None otherwise. A row naming several is joined
+    on its season keys instead: the report lists a man's club ids in an order of its own, so pairing them
+    with the printed years set Martin's Bulldogs in 1944 -- never every club with every year, and never a zip."""
+    ids = [x for x in (r.get("club_id") or "").split(";") if x]
+    if len(ids) == 1 and str(r.get("year") or "").isdigit():
+        return frozenset({(ids[0], int(r["year"]))})
+    return None
 
 
 def attach_citations(rows):
     """Give every row its five citation cells, joined on what the row IS -- kind, year, name, club and league
     exactly as the CSV prints them -- and NEVER on rank, which moves every time the list is regenerated."""
-    date, f = _sweep_files()
-    per = {(r["kind"], r["year"], r["name"], r["club"], r["league"]): r
-           for r in csv.DictReader(open(f["wikipedia-newspaper-citations"], newline=""))}
-    cites = collections.defaultdict(list)
-    for k in ("wikipedia-newspaper-citations-all", "fandom-newspaper-citations-all"):
-        for r in csv.DictReader(open(f[k], newline="")):
-            cites[(r["club_id"], int(r["year"]))].append(r)
+    date, p = _sweep_file()
+    by_keys, by_pairs, by_text = {}, {}, {}
+    for rep in csv.DictReader(open(p, newline="")):
+        ks = _report_keys(rep)
+        # THE MAN AND HIS SEASON KEYS. Keys alone are not a man: Adams, Brown, Halloran and a dozen more are
+        # each on the one 1944 San Diego Gunners key, each with his own report row (gate H7, 2026-09-12).
+        if ks: by_keys.setdefault((rep["name"], ks), rep)
+        else:
+            k = _report_pairs(rep)
+            if k: by_pairs.setdefault(k, rep)
+        by_text[(rep["kind"], rep["year"], rep["name"], rep["club"], rep["league"])] = rep
     blank = dict(newspaper_citations="", cited_with_page="", papers="", links="")
     for r in rows:
-        p = per.get((r["kind"], _cell(r["year"]), _cell(r.get("name")), _cell(r["club"]), _cell(r["league"])))
-        if p is None:
-            r["cite"] = dict(written_up=NOT_IN_REPORT, **blank); continue
-        ids = [x for x in p["club_id"].split(";") if x]
-        if not ids:
-            r["cite"] = dict(written_up="not joined to one club-season", **blank); continue
-        yrs = ([int(r["year"])] if str(r["year"] or "").isdigit() else
-               sorted({int(y) for y in re.findall(r"\[[A-Z0-9]+\|(\d{4})\|", str(r["club"]))}))
-        r["cite"] = _summarise([(i, y) for i in ids for y in yrs], cites,
-                               p["wikipedia_page"] not in ("", "NONE", "several club-seasons"),
-                               p["fandom_page"] == "yes")
-    for r in rows: r["cite_report"] = date
+        k = frozenset(r.get("pairs") or [])
+        if r.get("keys"):
+            # A MAN ON ONE OR MORE CLUB-SEASONS: the set of season keys he is listed under decides.
+            rep, how = by_keys.get((_cell(r.get("name")), frozenset(r["keys"]))), "the man and his season keys"
+        elif k:
+            # THE CLUB-SEASON DECIDES. A row the club table can place is found by what it is about, never by
+            # how its club is printed this time.
+            rep, how = by_pairs.get(k), "club-season"
+        else:
+            # ONLY a row the club table cannot place falls back to its printed identity.
+            rep, how = by_text.get((r["kind"], _cell(r["year"]), _cell(r.get("name")), _cell(r["club"]),
+                                    _cell(r["league"]))), "printed text (no club-season)"
+        r["cite"] = {c: rep[c] for c in CITE_COLUMNS} if rep else dict(written_up=NOT_IN_REPORT, **blank)
+        r["cite_join"] = how if rep else None
+        r["cite_report"] = date
     return date
 
 
@@ -644,8 +658,8 @@ START_HERE = [
           "named. Then the job is \"open this one\", not \"go find a document\"."),
     ("b", "`written_up` = nobody, with the other cells EMPTY: neither wiki has a page for that season. The "
           "empty cell is the finding. `newspaper_citations` = 0: a page exists and cites no paper."),
-    ("b", "`written_up` = not in the sweep's per-row report: the sweep reported the hunt rows only, so for "
-          "this row it cannot say -- which is not the same as nobody."),
+    ("b", "`written_up` = not in the sweep's per-row report: the sweep's report does not hold this row -- "
+          "one added since the sweep ran, say -- so it cannot say, which is not the same as nobody."),
     ("b", "`links`: free = Google News, Chronicling America, a newspapers.com CLIPPING, archive.org, a fan-site "
           "transcription. paid = ProQuest, the NYT archive, newspaperarchive.com, a newspapers.com page image. "
           "no working link = no link, a dead archive, or a paper's own website."),
@@ -893,7 +907,7 @@ def short(rows=None):
       "**and the page**: where it is above 0, the job is *open this one*, not *go find a document*. "
       "**`nobody` with the rest empty means neither wiki has a page for that season — that empty cell is the "
       "finding.** `0` means a page exists and cites no paper. **`not in the sweep's per-row report` means the "
-      "sweep did not report that row — it reported the hunt rows only — which is not the same as nobody.** "
+      "sweep's report does not hold that row — one added since the sweep ran — which is not the same as nobody.** "
       "*free* = Google News, Chronicling America, or a newspapers.com clipping; *paid* = ProQuest, the NYT "
       "archive, newspaperarchive.com, a newspapers.com page image.\n")
     w("| # | one document adds | kind | the gap | what is held | what would fix it | written up | "

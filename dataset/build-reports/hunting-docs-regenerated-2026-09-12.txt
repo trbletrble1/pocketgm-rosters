@@ -1,0 +1,8 @@
+rows: before 780 -> after 798
+POTTSVILLE (CSV): [('149', 'thin', '1924', 'Pottsville Maroons', 'both', '21', '21', 'free')]
+POTTSVILLE (markdown): ['both  |  21 (21)  |  Allentown Morning Call; Shenandoah Evening Herald; Pottsville Republican; Wilkes-Barre Evening News +6 more  |  free']
+POTTSVILLE (spreadsheet): {'written_up': 'both', 'newspaper_citations': 21, 'cited_with_page': 21, 'links': 'free'}
+written_up: {'nobody': 358, 'not joined to one club-season': 3, "not in the sweep's per-row report": 26, 'both': 325, 'Wikipedia': 68, 'fandom': 18}
+rows naming a paper AND a page (cited_with_page > 0): 180 | of them hunt rows: 66
+OFF THE TABLE 1926 BKN -> not joined to one club-season
+OFF THE TABLE 1926 LA -> not joined to one club-season
