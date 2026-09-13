@@ -58,6 +58,10 @@ def _roster_kinds():
 # kind with its own conditions, so that widening it later means changing this rule
 # rather than quietly reclassifying a photograph as a roster.
 TEAM_PHOTOGRAPH = "team_photograph"
+# A MAN NAMED IN A ROLE AT A CLUB (Ryan, 2026-09-13). Its own kind with its own
+# conditions, read from the declaration: not a roster, and never recorded as one --
+# the decision holds `staff_seasons`, not `playing_seasons`.
+STAFF = json.load(open(DECL))["staff_role_evidence"]
 NOT_A_ROSTER = {
     "boxscore_lineup": "a boxscore-derived membership is already a playing season; a lead "
                        "from one means the man did NOT resolve, which is an identity "
@@ -115,7 +119,8 @@ def load_leads():
         except Exception: continue
         if not isinstance(d, dict): continue
         for L in (d.get("leads") or []):
-            if isinstance(L, dict) and L.get("category", "").startswith("player_lead"):
+            if isinstance(L, dict) and (L.get("category", "").startswith("player_lead")
+                                        or L.get("category") == STAFF["lead_category"]):
                 yield st, L
 
 
@@ -153,6 +158,15 @@ def qualify(lead, held):
     if ev in NOT_A_ROSTER:
         return False, f"not a roster -- {NOT_A_ROSTER[ev]}"
     photo = ev == TEAM_PHOTOGRAPH
+    if ev == STAFF["evidence_kind"]:
+        on = lead.get("places_on") or {}
+        cs = on.get("club_season")
+        if not cs or not held(cs):
+            return False, f"a role at {cs!r}, which the archive does not hold as a club-season"
+        if not str(lead.get("role_as_printed") or "").strip():
+            return False, "a staff lead that prints no role: a name without a role is not covered (Ryan, 2026-09-13)"
+        return True, (f"named as {lead['role_as_printed']!r} at {cs}, a club-season the archive holds: "
+                      "a role at a club (Ryan, 2026-09-13)")
     if not photo and ev not in _roster_kinds():
         return False, (f"evidence kind {ev!r} is not declared as a roster. A lead shape "
                        "this route does not know is refused, not promoted.")
@@ -289,7 +303,29 @@ def main(write=False):
         if not ok:
             refused.append(row); continue
         held_n = roster_held(st, L)
-        if REFUSE_SURNAME_ONLY and forename_unknown(nm) and held_n:
+        is_staff = L.get("evidence_kind") == STAFF["evidence_kind"]
+        if is_staff:
+            parts = str((L.get("places_on") or {}).get("club_season") or "").split("|")
+            if len(norm(nm).split()) < 2:
+                refused.append({**row, "why": "a staff lead that is a bare surname: a surname is not a man "
+                                              "(Ryan, 2026-09-13). He stays a lead."}); continue
+            if forename_unknown(nm):
+                sur = norm(nm).split()[-1]
+                clash = [p for p in ROSTER.get((parts[1], parts[2]) if len(parts) == 3 else (), set())
+                         if norm((IDX.get(p) or {}).get("name") or "").split()[-1:] == [sur]]
+                if clash:
+                    refused.append({**row, "why": f"a staff lead whose forename is an initial, on a club-season "
+                                                  f"whose roster holds a man of the surname ({clash[:2]}): he may "
+                                                  "be that man. He stays a lead."}); continue
+            k_ = f"{nm}|{L['places_on']['club_season']}"
+            if len(byname.get(norm(nm), [])) > 1:
+                ambiguous.append({**row, "held_candidates": byname[norm(nm)],
+                                  "why": "REFUSED: more than one held person carries this exact name; a staff "
+                                         "line cannot choose between them."}); continue
+            if len(byname.get(norm(nm), [])) == 1 and k_ not in STAFF["not_the_namesake"]:
+                refused.append({**row, "why": "an identity question: one held person carries this exact name, "
+                                              "on another club-season. Not joined, not minted."}); continue
+        elif REFUSE_SURNAME_ONLY and forename_unknown(nm) and held_n:
             refused_surname_only.add((st, L.get("lead_id")))
             refused.append({**row, "why": (
                 f"a lead with no forename, on a club-season that already holds a roster of "
@@ -299,9 +335,9 @@ def main(write=False):
         # The scope keys that used to sit here are gone on purpose -- a scope key is how a
         # standing rule quietly becomes a queue again, and the queue only grows.
         k = norm(nm)
-        if len(byname.get(k, [])) == 1:
+        if len(byname.get(k, [])) == 1 and not is_staff:
             refused.append({**row, "why": "already held: one person carries this exact name"}); continue
-        if len(byname.get(k, [])) > 1:
+        if len(byname.get(k, [])) > 1 and not is_staff:
             code = L.get("pfa_code") or (L.get("roster_line") or {}).get("pfa_code")
             on = L.get("places_on") or {}
             verdict = new_by_code(code, byname[k], on.get("year"), HOLD, HELD_CODES, years, W)
@@ -358,12 +394,14 @@ def main(write=False):
                   "club": (L["places_on"].get("club_season") or "||").split("|")[-1],
                   "club_as_printed": L["places_on"].get("club_as_printed")}
         if existing:
-            existing["playing_seasons"].append(season); continue
+            existing["staff_seasons" if is_staff else "playing_seasons"].append(season); continue
         prom.append({
-            "person_id": pid, "name": nm, "source": f"{st}-player-lead",
+            "person_id": pid, "name": nm, "source": f"{st}-{'staff' if is_staff else 'player'}-lead",
             "entered_by": "promotion_from_lead",
             "_not_a_lesser_class": "an honest record of how he entered, not a lower tier",
-            "playing_seasons": [season],
+            "playing_seasons": [] if is_staff else [season],
+            **({"staff_seasons": [season], "role_as_printed": L.get("role_as_printed"),
+                "_a_role_is_a_worked_season": STAFF["_kitchens_restated"]} if is_staff else {}),
             "identified_by": {"name_as_printed": nm,
                               "club_as_printed": L["places_on"].get("club_as_printed"),
                               "lists": [L.get("source_record")]},

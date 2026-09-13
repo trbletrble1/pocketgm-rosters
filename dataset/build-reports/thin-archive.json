@@ -165,7 +165,7 @@
    "year": "1899",
    "code": "DOC:FYJ-EARLY",
    "name": "Frankford Yellow Jackets",
-   "men": 17,
+   "men": 15,
    "coach_or_staff": false
   },
   {
@@ -1714,24 +1714,6 @@
   },
   {
    "league": "",
-   "year": "1899",
-   "code": "DOC:FYJ-EARLY",
-   "name": "Frankford Yellow Jackets",
-   "men": 17,
-   "coach_or_staff": false,
-   "missing_facts": 68,
-   "of_possible": 68,
-   "share": 1.0,
-   "by_field": {
-    "age": 17,
-    "weight": 17,
-    "college": 17,
-    "position": 17
-   },
-   "held_season_scoped": {}
-  },
-  {
-   "league": "",
    "year": "1903",
    "code": "DOC:FYJ-EARLY",
    "name": "Frankford Yellow Jackets",
@@ -2188,6 +2170,24 @@
     "age": 26,
     "weight": 26
    }
+  },
+  {
+   "league": "",
+   "year": "1899",
+   "code": "DOC:FYJ-EARLY",
+   "name": "Frankford Yellow Jackets",
+   "men": 15,
+   "coach_or_staff": false,
+   "missing_facts": 60,
+   "of_possible": 60,
+   "share": 1.0,
+   "by_field": {
+    "age": 15,
+    "weight": 15,
+    "college": 15,
+    "position": 15
+   },
+   "held_season_scoped": {}
   },
   {
    "league": "AFL",
@@ -3508,11 +3508,11 @@
    "year": "1920",
    "code": "HAM",
    "name": "Hammond Pros",
-   "men": 28,
+   "men": 29,
    "coach_or_staff": true,
    "missing_facts": 34,
-   "of_possible": 112,
-   "share": 0.304,
+   "of_possible": 116,
+   "share": 0.293,
    "by_field": {
     "college": 16,
     "weight": 11,
@@ -3920,6 +3920,24 @@
    }
   },
   {
+   "league": "APFA",
+   "year": "1921",
+   "code": "COL",
+   "name": "Columbus Panhandles",
+   "men": 23,
+   "coach_or_staff": true,
+   "missing_facts": 23,
+   "of_possible": 92,
+   "share": 0.25,
+   "by_field": {
+    "age": 1,
+    "weight": 2,
+    "college": 18,
+    "position": 2
+   },
+   "held_season_scoped": {}
+  },
+  {
    "league": "AFL",
    "year": "1939",
    "code": "PFA:LA",
@@ -4108,6 +4126,23 @@
   },
   {
    "league": "NFL",
+   "year": "1922",
+   "code": "EVA",
+   "name": "Evansville Crimson Giants",
+   "men": 27,
+   "coach_or_staff": true,
+   "missing_facts": 18,
+   "of_possible": 108,
+   "share": 0.167,
+   "by_field": {
+    "weight": 9,
+    "college": 7,
+    "position": 2
+   },
+   "held_season_scoped": {}
+  },
+  {
+   "league": "NFL",
    "year": "1923",
    "code": "ROC",
    "name": "Rochester Jeffersons",
@@ -4242,22 +4277,6 @@
   {
    "league": "APFA",
    "year": "1921",
-   "code": "COL",
-   "name": "Columbus Panhandles",
-   "men": 20,
-   "coach_or_staff": true,
-   "missing_facts": 17,
-   "of_possible": 80,
-   "share": 0.212,
-   "by_field": {
-    "college": 16,
-    "weight": 1
-   },
-   "held_season_scoped": {}
-  },
-  {
-   "league": "APFA",
-   "year": "1921",
    "code": "WA1",
    "name": "Washington Senators",
    "men": 29,
@@ -4383,22 +4402,6 @@
     "weight": 6,
     "age": 2,
     "college": 8
-   },
-   "held_season_scoped": {}
-  },
-  {
-   "league": "NFL",
-   "year": "1922",
-   "code": "EVA",
-   "name": "Evansville Crimson Giants",
-   "men": 22,
-   "coach_or_staff": true,
-   "missing_facts": 16,
-   "of_possible": 88,
-   "share": 0.182,
-   "by_field": {
-    "weight": 9,
-    "college": 7
    },
    "held_season_scoped": {}
   },
@@ -4616,9 +4619,26 @@
    "of_possible": 80,
    "share": 0.175,
    "by_field": {
+    "college": 5,
     "age": 3,
+    "weight": 6
+   },
+   "held_season_scoped": {}
+  },
+  {
+   "league": "NFL",
+   "year": "1924",
+   "code": "KEN",
+   "name": "Kenosha Maroons",
+   "men": 31,
+   "coach_or_staff": true,
+   "missing_facts": 14,
+   "of_possible": 124,
+   "share": 0.113,
+   "by_field": {
+    "age": 2,
     "weight": 6,
-    "college": 5
+    "college": 6
    },
    "held_season_scoped": {}
   },
@@ -4820,6 +4840,24 @@
   },
   {
    "league": "NFL",
+   "year": "1924",
+   "code": "MI1",
+   "name": "Minneapolis Marines",
+   "men": 19,
+   "coach_or_staff": true,
+   "missing_facts": 13,
+   "of_possible": 76,
+   "share": 0.171,
+   "by_field": {
+    "college": 6,
+    "weight": 5,
+    "age": 1,
+    "position": 1
+   },
+   "held_season_scoped": {}
+  },
+  {
+   "league": "NFL",
    "year": "1925",
    "code": "HAM",
    "name": "Hammond Pros",
@@ -4936,6 +4974,24 @@
   {
    "league": "APFA",
    "year": "1921",
+   "code": "DE1",
+   "name": "Detroit Tigers",
+   "men": 22,
+   "coach_or_staff": true,
+   "missing_facts": 11,
+   "of_possible": 88,
+   "share": 0.125,
+   "by_field": {
+    "weight": 6,
+    "college": 3,
+    "age": 1,
+    "position": 1
+   },
+   "held_season_scoped": {}
+  },
+  {
+   "league": "APFA",
+   "year": "1921",
    "code": "HAM",
    "name": "Hammond Pros",
    "men": 26,
@@ -5003,6 +5059,24 @@
   {
    "league": "NFL",
    "year": "1924",
+   "code": "COL",
+   "name": "Columbus Tigers",
+   "men": 20,
+   "coach_or_staff": true,
+   "missing_facts": 11,
+   "of_possible": 80,
+   "share": 0.138,
+   "by_field": {
+    "weight": 2,
+    "college": 7,
+    "position": 1,
+    "age": 1
+   },
+   "held_season_scoped": {}
+  },
+  {
+   "league": "NFL",
+   "year": "1924",
    "code": "DAY",
    "name": "Dayton Triangles",
    "men": 21,
@@ -5014,23 +5088,6 @@
     "weight": 4,
     "college": 6,
     "age": 1
-   },
-   "held_season_scoped": {}
-  },
-  {
-   "league": "NFL",
-   "year": "1924",
-   "code": "KEN",
-   "name": "Kenosha Maroons",
-   "men": 21,
-   "coach_or_staff": true,
-   "missing_facts": 11,
-   "of_possible": 84,
-   "share": 0.131,
-   "by_field": {
-    "age": 2,
-    "weight": 5,
-    "college": 4
    },
    "held_season_scoped": {}
   },
@@ -5137,11 +5194,11 @@
    "year": "1930",
    "code": "BRO",
    "name": "Brooklyn Dodgers",
-   "men": 33,
+   "men": 34,
    "coach_or_staff": true,
    "missing_facts": 11,
-   "of_possible": 132,
-   "share": 0.083,
+   "of_possible": 136,
+   "share": 0.081,
    "by_field": {
     "weight": 10,
     "college": 1
@@ -5273,6 +5330,23 @@
    "by_field": {
     "weight": 7,
     "college": 3
+   },
+   "held_season_scoped": {}
+  },
+  {
+   "league": "NFL",
+   "year": "1923",
+   "code": "RAC",
+   "name": "Racine Legion",
+   "men": 25,
+   "coach_or_staff": true,
+   "missing_facts": 10,
+   "of_possible": 100,
+   "share": 0.1,
+   "by_field": {
+    "college": 6,
+    "position": 1,
+    "weight": 3
    },
    "held_season_scoped": {}
   },
@@ -5445,23 +5519,6 @@
   {
    "league": "APFA",
    "year": "1921",
-   "code": "DE1",
-   "name": "Detroit Tigers",
-   "men": 21,
-   "coach_or_staff": true,
-   "missing_facts": 9,
-   "of_possible": 84,
-   "share": 0.107,
-   "by_field": {
-    "weight": 5,
-    "college": 3,
-    "age": 1
-   },
-   "held_season_scoped": {}
-  },
-  {
-   "league": "APFA",
-   "year": "1921",
    "code": "RI",
    "name": "Rock Island Independents",
    "men": 27,
@@ -5554,57 +5611,8 @@
    "share": 0.113,
    "by_field": {
     "weight": 4,
-    "college": 4,
-    "age": 1
-   },
-   "held_season_scoped": {}
-  },
-  {
-   "league": "NFL",
-   "year": "1923",
-   "code": "RAC",
-   "name": "Racine Legion",
-   "men": 24,
-   "coach_or_staff": true,
-   "missing_facts": 9,
-   "of_possible": 96,
-   "share": 0.094,
-   "by_field": {
-    "college": 6,
-    "weight": 3
-   },
-   "held_season_scoped": {}
-  },
-  {
-   "league": "NFL",
-   "year": "1924",
-   "code": "COL",
-   "name": "Columbus Tigers",
-   "men": 19,
-   "coach_or_staff": true,
-   "missing_facts": 9,
-   "of_possible": 76,
-   "share": 0.118,
-   "by_field": {
-    "weight": 2,
-    "college": 6,
-    "age": 1
-   },
-   "held_season_scoped": {}
-  },
-  {
-   "league": "NFL",
-   "year": "1924",
-   "code": "MI1",
-   "name": "Minneapolis Marines",
-   "men": 18,
-   "coach_or_staff": true,
-   "missing_facts": 9,
-   "of_possible": 72,
-   "share": 0.125,
-   "by_field": {
-    "college": 5,
-    "weight": 4
+    "age": 1,
+    "college": 4
    },
    "held_season_scoped": {}
   },
@@ -6180,6 +6188,23 @@
   },
   {
    "league": "NFL",
+   "year": "1925",
+   "code": "GB",
+   "name": "Green Bay Packers",
+   "men": 19,
+   "coach_or_staff": true,
+   "missing_facts": 7,
+   "of_possible": 76,
+   "share": 0.092,
+   "by_field": {
+    "weight": 5,
+    "age": 1,
+    "position": 1
+   },
+   "held_season_scoped": {}
+  },
+  {
+   "league": "NFL",
    "year": "1926",
    "code": "BU1",
    "name": "Buffalo Rangers",
@@ -6547,11 +6572,11 @@
    "year": "1923",
    "code": "GB",
    "name": "Green Bay Packers",
-   "men": 17,
+   "men": 18,
    "coach_or_staff": true,
    "missing_facts": 6,
-   "of_possible": 68,
-   "share": 0.088,
+   "of_possible": 72,
+   "share": 0.083,
    "by_field": {
     "weight": 4,
     "college": 1,
@@ -7052,6 +7077,22 @@
   {
    "league": "NFL",
    "year": "1924",
+   "code": "CHI",
+   "name": "Chicago Bears",
+   "men": 21,
+   "coach_or_staff": true,
+   "missing_facts": 5,
+   "of_possible": 84,
+   "share": 0.06,
+   "by_field": {
+    "weight": 4,
+    "college": 1
+   },
+   "held_season_scoped": {}
+  },
+  {
+   "league": "NFL",
+   "year": "1924",
    "code": "GB",
    "name": "Green Bay Packers",
    "men": 18,
@@ -7204,9 +7245,9 @@
    "of_possible": 176,
    "share": 0.028,
    "by_field": {
-    "college": 2,
+    "age": 1,
     "weight": 2,
-    "age": 1
+    "college": 2
    },
    "held_season_scoped": {}
   },
@@ -7711,36 +7752,6 @@
    "by_field": {
     "weight": 2,
     "college": 2
-   },
-   "held_season_scoped": {}
-  },
-  {
-   "league": "NFL",
-   "year": "1924",
-   "code": "CHI",
-   "name": "Chicago Bears",
-   "men": 20,
-   "coach_or_staff": true,
-   "missing_facts": 4,
-   "of_possible": 80,
-   "share": 0.05,
-   "by_field": {
-    "weight": 4
-   },
-   "held_season_scoped": {}
-  },
-  {
-   "league": "NFL",
-   "year": "1925",
-   "code": "GB",
-   "name": "Green Bay Packers",
-   "men": 18,
-   "coach_or_staff": true,
-   "missing_facts": 4,
-   "of_possible": 72,
-   "share": 0.056,
-   "by_field": {
-    "weight": 4
    },
    "held_season_scoped": {}
   },
@@ -8660,8 +8671,8 @@
    "of_possible": 72,
    "share": 0.042,
    "by_field": {
-    "weight": 1,
-    "college": 2
+    "college": 2,
+    "weight": 1
    },
    "held_season_scoped": {}
   },
@@ -8685,11 +8696,11 @@
    "year": "1927",
    "code": "NYG",
    "name": "New York Giants",
-   "men": 26,
+   "men": 27,
    "coach_or_staff": true,
    "missing_facts": 3,
-   "of_possible": 104,
-   "share": 0.029,
+   "of_possible": 108,
+   "share": 0.028,
    "by_field": {
     "college": 1,
     "weight": 2
@@ -10852,7 +10863,7 @@
    "year": "1899",
    "code": "DOC:FYJ-EARLY",
    "name": "Frankford Yellow Jackets",
-   "men": 17,
+   "men": 15,
    "coach_or_staff": false,
    "why": "no man on this club-season carries a jersey, a games figure or a position, so no source ever gave a roster row"
   },
@@ -14873,12 +14884,12 @@
   "off_the_table_with_men": 2,
   "off_the_table_men": 10,
   "nameless": 203,
-  "missing_facts_total": 9901,
+  "missing_facts_total": 9917,
   "by_field": {
-   "age": 3303,
-   "weight": 4884,
-   "college": 1323,
-   "position": 391
+   "age": 3304,
+   "weight": 4887,
+   "college": 1328,
+   "position": 398
   }
  }
 }

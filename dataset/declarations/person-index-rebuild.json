@@ -43029,6 +43029,17 @@
    "ruling": "Ryan, 2026-09-11: read a playoff row's club from its link and full name; AA 1936-41 is the AFA.",
    "_the_block_is_deleted": "P3 forgives nothing by default again. This records that it once forgave exactly these pairs, on this evidence, on this ruling."
   },
+  "2026-09-12-frankford-managers": {
+   "count": 2,
+   "pairs": [
+    {"person": "P_046966", "key": "IND|1899|DOC:FYJ-EARLY"},
+    {"person": "P_046967", "key": "IND|1899|DOC:FYJ-EARLY"}
+   ],
+   "why": "Clarence E. Swope and Edward S. Gilmore are printed on the 1899 Frankford roster page as Manager. Their playing stints were withdrawn and the lines filed as club_staff_role on the club-season. Their records are KEPT, each through a person-scoped fyjbook.staff_role_as_printed claim from the same line, and each now holds no season.",
+   "ruling": "Ryan, 2026-09-12 (Two): 'They're printed as Manager. Keep the person records rather than retiring them -- a man who managed a club is a person in the archive, same as a coach.'",
+   "verified_no_loss": "The two stores were compared claim by claim with their backups (build-reports/frankford-book*-store.before-2026-09-12.json): the only claims lost are these two men's fyjbook.roster_as_printed and fyjbook.position, 4 in all; leads (12), surname candidates (179) and fuller names (142) are unchanged, and no join tier changed. The rebuild's P3 passed with exactly these pairs excused, and both records remain in the index.",
+   "_the_block_is_deleted": "P3 forgives nothing by default again."
+  },
   "2026-09-11-1934-exception": {
    "count": 6,
    "pairs": [
@@ -43103,6 +43114,6 @@
   "_enabled": false,
   "_what": "EXACT (person, season key) pairs P3 may see disappear on the next rebuild, and only while _enabled is true.",
   "pairs": [],
-  "_last_used": "2026-09-11-1934-exception -- see p3_transitions_completed."
+  "_last_used": "2026-09-12-frankford-managers -- see p3_transitions_completed."
  }
 }

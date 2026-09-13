@@ -13,7 +13,8 @@
 
  "_what_is_read": {
   "roster pages 1922-1931": "full name including the nickname, jersey number (1924 on), position and college, exactly as printed.",
-  "roster pages 1899, 1900, 1903, 1906": "name and position only; no college and no jersey number. 1899 prints two Managers among its entries and they are filed as staff, not players.",
+  "roster pages 1899, 1900, 1903, 1906": "name and position only; no college and no jersey number. 1899 prints two Managers among its entries and they are filed as staff, not players -- see `staff_printed_among_players`. (This line said so from 2026-09-09 and the ingest did not do it until 2026-09-12: both went in as playing stints.)",
+  "the front-office page": "see `front_office_page`.",
   "roster pages 1912-1921": "one to three names each. Read and recorded; they place almost nobody.",
   "schedule pages": "date, opponent as printed, and result. An ASTERISK on the opponent marks a league game; its absence marks a non-league one, and that is the site's own convention, not a reading of ours."
  },
@@ -27,5 +28,26 @@
  "_names_are_added_beside_what_is_held": "The site prints the full formal name with the nickname inside where the archive holds the short form -- `Doc Elliott` against `Wallace \"Doc\" Elliott`, `Bull Lowe` against `George \"Bull\" Lowe`. These become `fyjbook.name_as_printed` claims BESIDE what is held, never replacements. The archive does not choose between two things a source printed and both stay searchable, which is why the predicate is declared a name predicate in service/declarations/classification.json.",
  "_a_typo_the_site_carries": "`George“Bull” Lowe` is printed with no space before the opening quote, the same class of defect as `BillColeman` on Fenton's 1926 Quakers page. It is held as printed and not repaired.",
  "_opponent_strings_are_not_consistent": "`Holmesburg A.C.` and `Holmesburg`, `Conshohocken A.C.` and `Conshohocken`, `Thomas A.C. (Bethlehem)` and `Thomas A.C. of Bethlehem`, and several cells carry a venue inside the opponent -- `Union Club of Phoenixville (at Philadelphia Ball Park)`. They are held AS PRINTED. NO CLUB IS CREATED from any of them in this pass and every one is listed as a candidate for CLUBS_NAMED_BY_A_DOCUMENT.",
- "_nobody_is_promoted": "A man the archive does not hold is written as a LEAD with its evidence. Admitting a person is its own act with its own route, and it is Ryan's."
+ "staff_printed_among_players": {
+  "_ruled": "Ryan, 2026-09-12 (Two): 'They're printed as Manager.' A roster line whose position cell is one of these roles is a club_staff_role on the club-season, not a playing stint.",
+  "roles": ["Manager"],
+  "_the_man_is_kept": "Ryan, 2026-09-12: 'Keep the person records rather than retiring them -- a man who managed a club is a person in the archive, same as a coach, and retiring a record to tidy up is worse than one with no season.' Clarence E. Swope (P_046966) and Edward S. Gilmore (P_046967) were promoted from these lines on 2026-09-09 as players. Each keeps his record through a person-scoped `fyjbook.staff_role_as_printed` claim from the same line, joined on this ingest's own promotion (the exact printed name on the exact club-season), and holds no season. The club_staff_role claim itself names no person, as ruling Four requires.",
+  "_a_blank_is_a_blank": "Ryan, 2026-09-12 (Four): a roster line with an empty position cell is held as printed. C.E. Swope on the 1900 page is one, although the front-office page names him manager for 1900."
+ },
+ "front_office_page": {
+  "_ruled": "Ryan, 2026-09-12 (Three): ingest it. Hold Riddell as captain-or-coach rather than choosing -- the heading says 'Captains/Coaches' and does not distinguish, so neither does the archive. Its contradictions with the roster pages are two assertions, not an error to fix: Purnell is a quarterback on one page and the manager on another.",
+  "page": "https://frankfordyellowjacketsbook.com/the-yellow-jackets/front-office/ (cached as the-yellow-jackets_front-office.html, fetched 2026-09-09)",
+  "headings": {
+   "Presidents of the Frankford Athletic Association": "club_staff_role",
+   "Captains/Coaches of the Football Team of Frankford A.A.": "fyjbook.captain_or_coach_as_printed",
+   "Managers of the Football Team of Frankford A.A.": "club_staff_role"
+  },
+  "prose_headings": ["Frankford Athletic Association"],
+  "_a_heading_not_listed_is_refused": "the ingest stops on a heading that is in neither `headings` nor `prose_headings`, rather than guessing a predicate for it. A prose heading is read by nobody.",
+  "_every_claim_is_about_the_club_season": "Each line is filed on the club-season of each year it prints, naming no person and joining no one. The role is the heading, held exactly as printed; the line is held whole, so 'Coach George Johnson / Captain \"Bob\" Remmey' keeps both words it prints.",
+  "_captain_or_coach_is_not_a_coaching_season": "`fyjbook.captain_or_coach_as_printed` is not `role_title` and is not a staff predicate in declarations/coaching-seasons.json, so it never makes a coaching season. It is served in the club-season view under its own list.",
+  "_a_year_with_no_club_season": "A line for a year the club table holds no club-season for (1901, 1902, 1904, 1905 are dark; 1907-1921 are not held) is listed in the store as NOT PLACED with its reason. No club-season is opened for it.",
+  "_the_presidents_head_the_association": "The heading names the Frankford Athletic Association, which ran baseball as well. The role is held as that heading says, on the football club-season, and does not claim more."
+ },
+ "_nobody_is_promoted":"A man the archive does not hold is written as a LEAD with its evidence. Admitting a person is its own act with its own route, and it is Ryan's."
 }

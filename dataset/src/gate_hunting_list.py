@@ -80,6 +80,11 @@ def main():
     raw = [r[ix["club"]].value for r in body if re.search(r"\|\d{4}\|", str(r[ix["club"]].value or ""))]
     check(not twice and not raw, f"L7 no club-season on two rows ({len(twice)}: {list(twice)[:3]}); "
                                  f"no raw measurement key shown as a club ({len(raw)}: {raw[:3]})")
+    # L8 (Ryan, 2026-09-12) -- A BOUNDARY SEASON IMPLIES NO KNOWN GAP. Its squad is what a document or a
+    # reconstruction names; nobody knows how many more there were. "The rest of the squad" says somebody does.
+    rest = [(r[ix["year"]].value, r[ix["club"]].value) for r in body
+            if r[ix["what it is"]].value == "boundary season" and "rest of the squad" in str(r[ix["what a find would add"]].value or "")]
+    check(not rest, f"L8 no boundary-season row claims a known gap ('the rest of the squad': {len(rest)}: {rest[:3]})")
     print("\nGATE PASSED" if not FAILS else f"\nGATE FAILED ({len(FAILS)})")
     return 1 if FAILS else 0
 

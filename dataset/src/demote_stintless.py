@@ -4,6 +4,14 @@ Ryan's ruling, following Gus Kitchens: a man documented in a staff listing with 
 record of working a season is a LEAD, not a person. The archive's line is a career,
 not a listing.
 
+RESTATED, NOT OVERTURNED (Ryan, 2026-09-13). The person rule widened that day: a person
+is someone a document names in a role at a club. A manager who ran a club for a season
+worked that season -- a role at a club IS a worked season -- so the two rulings agree.
+What this step guards against is a name in a listing with no role and no club, and the
+widened rule still excludes exactly that, because it requires both. Ryan reconciled the
+two; neither was overturned. This step acts on promoted COACHES who hold no coaching
+season, and nothing about that changed.
+
 The promotions recorded their evidence and an undo, so this reverses from what is
 stored -- nothing is re-derived. Every field the promotion held is carried into the
 lead, so a later promotion stays a ruling rather than a re-fetch.
@@ -46,7 +54,10 @@ def main(write=True):
             "pfa_code": p.get("pfa_code"),
             "IS_NOT_A_PERSON": True,
             "_ruling": "a man documented in a listing with no record of working a "
-                       "season is a lead; the archive's line is a career, not a listing",
+                       "season is a lead; the archive's line is a career, not a listing. "
+                       "Restated 2026-09-13: a role at a club for a season is a worked season, "
+                       "so a man a document names in a role at a club is a person; a name in "
+                       "a listing with no role and no club is not (Ryan reconciled the two).",
             "was_person_id": pid,
             "identified_by": p["identified_by"],
             "no_archive_match_evidence": p["no_archive_match_evidence"],

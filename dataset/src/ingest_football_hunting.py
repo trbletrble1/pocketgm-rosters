@@ -43,6 +43,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 BASE = os.path.join(HERE, "..")
 import index_io as IO
 from readings import person_name
+import staff_people as SP
 sys.path.insert(0, os.path.join(BASE, "service"))
 import paths
 
@@ -504,13 +505,35 @@ def main(write=False):
             v.setdefault("_joined_on", dict(cur))
         S[which]["claims"].append(c); n[pred] += 1
 
-    def staff(which, sr, cs_subj, name, role, club_printed, stated_by, attr, note=None):
+    STAFF_PROM = SP.promoted_staff("football-hunting")
+
+    def staff(which, sr, cs_subj, name, role, club_printed, stated_by, attr, note=None, roster=()):
         v = {"name_as_printed": name, "role_as_printed": role, "club_as_printed": club_printed,
              "_definition": PREDICATE_DEFINITIONS["club_staff_role"]["definition"],
              "_not_a_person": "names no person and joins no one; the archive may hold a namesake and "
                               "that is not this man"}
         if note: v["_note"] = note
         claim(which, sr, cs_subj, "club_staff_role", v, stated_by, attr)
+        # THE MAN, UNDER THE PERSON RULE (Ryan, 2026-09-13). The claim above stays on the club-season and
+        # names nobody. The one staff join (staff_people.join) looks for him on this club-season's roster;
+        # failing that, a staff promotion of an earlier run; failing that, he is a staff lead.
+        lg, yr, code = cs_subj[1], int(cs_subj[2]), cs_subj[3]
+        tier, pid, ev = SP.join(name, [(p, sorted(rm.names[p])) for p in roster])
+        if not pid and STAFF_PROM.get((SP._pn(name), yr, code)):
+            pid, tier, ev = STAFF_PROM[(SP._pn(name), yr, code)], SP.PROMOTED_TIER, "promoted from this line's staff lead"
+        if pid:
+            claim("held", sr_of("held", sr.split("#", 1)[1], S[which]["srecs"][sr]["description"],
+                                S[which]["srecs"][sr]["rights"], S[which]["srecs"][sr]["locator"]),
+                  ["person", pid], "caption.staff_role_as_printed",
+                  {"name_as_printed": name, "role_as_printed": role, "year": yr, "club_code": code, "league": lg,
+                   "club_as_printed": club_printed, **({"_note": note} if note else {})},
+                  stated_by, attr, _joined_on=tier, _join_evidence=ev, _ruled=SP.DECL["_ruled"])
+            n["staff line on a person"] += 1
+        else:
+            S[which]["leads"].append(SP.lead(f"lead-fh-staff-{yr}-{code}-{re.sub(r'[^a-z]+', '-', SP._pn(name)).strip('-')}",
+                                             name, role, club_printed, f"{lg}|{yr}|{code}", yr, S[which]["srecs"][sr]["source_id"],
+                                             sr, ev))
+            n["staff lead"] += 1
 
     # ------------------------------------------------ captions on held club-seasons
     for key, d in DOCS.items():
@@ -526,7 +549,8 @@ def main(write=False):
             if role in STAFF_ROLES:
                 note = ("a 'TRAINERS' heading sits over the column of Nos. 16, 21 and 22; whether it labels "
                         "these three men is NOT established from the page" if role == "TRAINERS?" else None)
-                staff("held", sr, cs, nm, "TRAINERS" if role == "TRAINERS?" else role, d["printed"], stated, attr, note)
+                staff("held", sr, cs, nm, "TRAINERS" if role == "TRAINERS?" else role, d["printed"], stated, attr, note,
+                      roster=roster)
                 if role != "TRAINERS?": continue
             tier, pid, ev = join(nm, roster, rm, sn)
             if pid and role != "TRAINERS?":
@@ -572,7 +596,8 @@ def main(write=False):
         for i, (nm, role, where) in enumerate(entries, 1):
             lead_id = f"lead-fh-{key}-{i:02d}"
             if role in STAFF_ROLES:
-                staff("ind", sr, ["club_season", "IND", str(year), code], nm, role, printed, stated, attr); continue
+                staff("ind", sr, ["club_season", "IND", str(year), code], nm, role, printed, stated, attr,
+                      roster=rm.roster(o["club_id"], year)); continue
             # NOT ITS OWN OUTPUT. Once published, the men this route promoted are in the read model, and they
             # were being found as "an exact name held elsewhere" or "a namesake nearby" -- themselves. Nine of
             # the eighteen fell back to candidates on the next write; the store's loss record caught it.
@@ -811,8 +836,7 @@ def main(write=False):
         if role in STAFF_ROLES:
             staff("held", sr, ["club_season", "NFL", "1934", "NYG"], nm, role,
                   "NEW YORK GIANTS 1934-1935 WORLD'S FOOTBALL CHAMPIONS", stated, attr,
-                  "the archive holds no Mara as a person; named here as the club's president and joined to no one. "
-                  + K["season_note"] + " " + K["copies"])
+                  "named here as the club's president. " + K["season_note"] + " " + K["copies"], roster=roster)
             continue
         tier, pid, ev = join(nm, roster, rm, sn_ph)
         if not pid:

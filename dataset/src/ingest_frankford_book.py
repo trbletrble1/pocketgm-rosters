@@ -63,6 +63,63 @@ ONLY_SOURCE = ("THE ONLY SOURCE IN EXISTENCE FOR THIS CLUB-SEASON. No other sour
 RECON = ("the authors' own compilation. Their rosters index states it: 'This is our attempt to "
          "piece together the players who appeared in at least one game for each of the Frankford "
          "Yellow Jackets seasons 1899-1931.' Not a transcription of one club document.")
+DECL = json.load(open(os.path.join(BASE, "declarations", "frankford-book.json")))
+# A ROSTER LINE PRINTED AS STAFF IS STAFF (Ryan, 2026-09-12). The declaration said so from
+# 2026-09-09 and this file never read it: Swope and Gilmore went in as playing stints.
+STAFF_PRINTED = frozenset(DECL["staff_printed_among_players"]["roles"])
+FO = DECL["front_office_page"]
+PROMOTED_TIER = ("this ingest's own lead, promoted by promote_players.py -- the exact printed "
+                 "name on the exact club-season")
+from ingest_football_hunting import PREDICATE_DEFINITIONS as _HUNT_PREDS
+import staff_people as SP
+STAFF_DEF = _HUNT_PREDS["club_staff_role"]["definition"]
+NOT_A_PERSON = ("names no person and joins no one; the archive may hold a namesake and that is "
+                "not this man")
+CAPTAIN_OR_COACH_DEF = ("printed under the front-office page's heading 'Captains/Coaches of the "
+                        "Football Team of Frankford A.A.', which does not say which of the two a "
+                        "man was. Held as captain-or-coach, never as a coaching season (Ryan, "
+                        "2026-09-12).")
+
+
+def cs_subject(y):
+    code = KEY[y][0]
+    return ["club_season", "NFL" if code == "FYJ" else "IND", str(y), code]
+
+
+def years_in(s):
+    out = []
+    for a, b in re.findall(r"\b(1[89]\d\d)(?:\s*-\s*(1[89]\d\d))?\b", s):
+        out += list(range(int(a), int(b or a) + 1))
+    return sorted(set(out))
+
+
+def front_office():
+    """-> [(heading, line_as_printed, name_part, years_part, [years])] from the cached page.
+    Each list is one <p> under an <h4>, one line per <br>. A heading the declaration does
+    not name stops the run."""
+    s = open(os.path.join(SITE, "the-yellow-jackets_front-office.html"), encoding="utf-8",
+             errors="replace").read()
+    m = re.search(r"(?is)<main.*?</main>", s) or re.search(r"(?is)<article.*?</article>", s)
+    s = m.group(0) if m else s
+    parts = re.split(r"(?is)<h4[^>]*>(.*?)</h4>", s)
+    out = []
+    for heading, body in zip(parts[1::2], parts[2::2]):
+        h = flat(heading)
+        if h in FO["prose_headings"]: continue
+        if h not in FO["headings"]:
+            raise SystemExit(f"REFUSING: the front-office page has a heading the declaration does "
+                             f"not name: {h!r}")
+        p = re.search(r"(?is)<p[^>]*>(.*?)</p>", body)
+        for raw in re.split(r"(?i)<br\s*/?>", p.group(1) if p else ""):
+            line = flat(raw)
+            if not line: continue
+            mm = re.match(r"^(.*?)\s+[–-]\s+(.*)$", line)
+            if not mm or not years_in(mm.group(2)):
+                raise SystemExit(f"REFUSING: a front-office line with no name-dash-years shape: {line!r}")
+            out.append((h, line, mm.group(1).strip(), mm.group(2).strip(), years_in(mm.group(2))))
+    return out
+
+
 HSF = ("Historical Society of Frankford -- Howard Barnes's 1985 scrapbook of newspaper articles "
        "and game results, and Frankford Athletic Association documents and photographs. Named by "
        "the authors on the site, not by this ingest.")
@@ -123,11 +180,35 @@ def schedules():
     return out
 
 
-def held(conn):
-    """What the archive holds on Frankford, per year: exact names and surnames."""
+def held(conn, own=frozenset()):
+    """What the archive holds on Frankford, per year: exact names and surnames.
+
+    `own` is the men promote_players minted from THIS ingest's leads. Their names reach
+    person_name through promotion-names, the name each decision recorded -- which is this
+    ingest's own printed line coming back. Measured 2026-09-12: a re-run relabelled 202
+    placements from "this ingest's own lead" to "exact name on the club-season", as if the
+    archive had held the man before this source. So their promotion names are not read."""
     ex = collections.defaultdict(dict); sur = collections.defaultdict(lambda: collections.defaultdict(set))
     for pid, y in conn.execute("""select distinct person, year from claim
             where club_str in ('FYJ','DOC:FYJ-IND','DOC:FYJ-EARLY') and person is not null"""):
+        if pid in own:
+            # nothing but this site and its own promotion names him: the base state holds no
+            # name for him, so there is nothing to join on. promoted() places him.
+            others = conn.execute("select 1 from person_name where person=? and store not like "
+                                  "'frankford-book%' and store != 'promotion-names' limit 1", (pid,)).fetchone()
+            if not others: continue
+        # THE NAME A PROMOTION DECISION RECORDED, read from the decision and not from
+        # promotion-names. Measured 2026-09-12: promotion-names writes a decision's name only
+        # for a man no other store names -- and this ingest's own fuller names ARE another
+        # store. So "Mellow" (P_045327, promoted from Fenton's 1922 page) left promotion-names
+        # because this file had named him "David Mellow"; the next run could no longer find
+        # him, dropped the fuller name, and would have found him again the run after. Nine
+        # men flipped between candidate and lead, seven names came and went. The decision
+        # store does not read this ingest, so the loop is cut here.
+        if pid in DECIDED and pid not in own:
+            n_ = norm(DECIDED[pid])
+            if n_:
+                ex[y].setdefault(n_, pid); sur[y][n_.split()[-1]].add(pid)
         # A DECIDER MUST NOT READ ITS OWN OUTPUT. The published model now holds this
         # ingest's own 142 fyjbook.name_as_printed claims, so on a second run every man
         # it had given a fuller name to matched EXACTLY -- surname candidates fell from
@@ -144,6 +225,21 @@ def held(conn):
     for pid, in conn.execute("select distinct person from person_name"):
         pass
     return ex, sur
+
+
+def _decided_names():
+    """person_id -> the name its promotion decision recorded, players and coaches."""
+    out = {}
+    for f in ("player-promotions.json", "coach-promotions.json"):
+        p = os.path.join(BASE, "build", f)
+        if not os.path.exists(p):
+            raise SystemExit(f"REFUSING: build/{f} is absent; the join reads decision names from it")
+        for d in json.load(open(p)).get("promotions") or []:
+            if d.get("person_id") and d.get("name"): out[d["person_id"]] = d["name"]
+    return out
+
+
+DECIDED = _decided_names()
 
 
 def longest_held(conn, pid):
@@ -184,13 +280,24 @@ def promoted():
 
 def main(write=False):
     conn = sqlite3.connect(f"file:{paths.READ_MODEL}?mode=ro", uri=True)
-    ex, sur = held(conn)
     PROM = promoted()
+    ex, sur = held(conn, frozenset(PROM.values()))
+    STAFF_PROM = SP.promoted_staff("frankford-book")
+    # THE CLUB-SEASON'S ROSTER for the staff join, read from the person index: who the
+    # archive holds on it. A staff man holds no season, so a staff claim never changes it.
+    _idx = json.load(open(os.path.join(BASE, "build-reports", "person-index.json")))
+    _ros = collections.defaultdict(list)
+    for _p, _r in _idx.items():
+        if _p == "_clubs" or not isinstance(_r, dict): continue
+        for _k in (_r.get("seasons") or {}):
+            _ros[_k].append((_p, [_r.get("name")]))
+    ROSTER_OF = lambda key: _ros.get(key, [])
     R, S = rosters(), schedules()
     n = collections.Counter()
     out = {"frankford-book": [], "frankford-book-ind": []}
     srs = {"frankford-book": {}, "frankford-book-ind": {}}
     leads, candidates, opponents, refused = [], [], collections.Counter(), []
+    staff_not_placed, staff_kept = [], []
 
     def rec(store, locator):
         sr = f"{SRC_ID}#{locator}"
@@ -217,6 +324,36 @@ def main(write=False):
                    "club_as_printed": "Frankford Yellow Jackets", "year": y,
                    "page": f"https://frankfordyellowjacketsbook.com/{y}-roster/"}
             nm = norm(printed)
+            if pos in STAFF_PRINTED:
+                # CLUB_STAFF_ROLE ON THE CLUB-SEASON, naming no person (ruling Four). The man
+                # this line promoted keeps his record through a person-scoped claim from the
+                # same line (Ryan, 2026-09-12) -- joined on this ingest's own promotion, which
+                # is the exact printed name on the exact club-season, not a new join.
+                n["staff_printed_among_players"] += 1
+                if y not in KEY:
+                    staff_not_placed.append({**row, "why": "the archive holds no club-season for this year"})
+                    continue
+                code, key, store = KEY[y]
+                only = {"_the_only_source_in_existence": ONLY_SOURCE} if code == "DOC:FYJ-EARLY" else None
+                out[store].append({**base(sr, None, only), "subject": cs_subject(y),
+                                   "predicate": "club_staff_role",
+                                   "value": {"name_as_printed": printed, "role_as_printed": pos,
+                                             "club_as_printed": "Frankford Yellow Jackets",
+                                             "page": row["page"], "_definition": STAFF_DEF,
+                                             "_not_a_person": NOT_A_PERSON},
+                                   "_ruled": "Ryan, 2026-09-12: printed as Manager, so staff, not a player."})
+                pid = PROM.get((nm, y, code)) or ex.get(y, {}).get(nm)
+                if pid:
+                    nsr = rec("frankford-book", loc)
+                    out["frankford-book"].append({
+                        **base(nsr, PROMOTED_TIER if PROM.get((nm, y, code)) else "exact name on the club-season", only),
+                        "subject": ["person", pid], "predicate": "fyjbook.staff_role_as_printed",
+                        "value": {"name_as_printed": printed, "role_as_printed": pos, "year": y, "club_code": code,
+                                  "club_as_printed": "Frankford Yellow Jackets", "page": row["page"]},
+                        "_why_a_person_claim": DECL["staff_printed_among_players"]["_the_man_is_kept"]})
+                    staff_kept.append({"person": pid, "name_as_printed": printed, "year": y, "role_as_printed": pos})
+                    n["staff_person_kept"] += 1
+                continue
             pid = ex.get(y, {}).get(nm)
             tier = "exact name on the club-season"
             if not pid and y in KEY:
@@ -331,6 +468,80 @@ def main(write=False):
                 "_no_club_is_created": "Ryan's ruling, 2026-09-09: report the opponent, create "
                                        "nothing. The string is held as printed."})
 
+    # ------------------------------------------------------------------ the front office
+    # Ryan, 2026-09-12 (Three). Each line on each year it prints, on that club-season, naming
+    # no person. A year with no club-season is listed, never opened.
+    fo_placed, fo_not_placed, fo_pairs = 0, [], 0
+    for heading, line, who, yrs_printed, yrs in front_office():
+        pred = FO["headings"][heading]
+        body = re.search(r"\bof (?:the )?(.*)$", heading)
+        for y in yrs:
+            fo_pairs += 1
+            if y not in KEY:
+                fo_not_placed.append({"heading_as_printed": heading, "line_as_printed": line, "year": y,
+                                      "why": ("the year is dark in the club table: no document names the club that year"
+                                              if y in (1901, 1902, 1904, 1905) else
+                                              "the club table holds no club-season for this year")})
+                continue
+            store = KEY[y][2]
+            fsr = rec(store, "front-office")
+            only = {"_the_only_source_in_existence": ONLY_SOURCE} if KEY[y][0] == "DOC:FYJ-EARLY" else None
+            v = {"name_as_printed": who, "role_as_printed": heading, "line_as_printed": line,
+                 "years_as_printed": yrs_printed, "club_as_printed": body.group(1) if body else None,
+                 "page": "https://frankfordyellowjacketsbook.com/the-yellow-jackets/front-office/"}
+            if pred == "club_staff_role":
+                v.update({"_definition": STAFF_DEF, "_not_a_person": NOT_A_PERSON})
+            else:
+                v.update({"_definition": CAPTAIN_OR_COACH_DEF, "_not_a_person": NOT_A_PERSON})
+            out[store].append({**base(fsr, None, only), "subject": cs_subject(y),
+                               "predicate": pred, "value": v})
+            fo_placed += 1; n[f"front office: {pred}"] += 1
+            if pred != "club_staff_role": continue
+            # THE MAN, UNDER THE PERSON RULE (Ryan, 2026-09-13). The club-season claim above names
+            # nobody; this finds him, in order: his own promotion on this exact club-season, the one
+            # staff join (staff_people.join) against the club-season's roster, a staff promotion of
+            # an earlier run -- or a staff lead for promote_players to decide.
+            code = KEY[y][0]; nm = norm(who)
+            pid, tier = PROM.get((nm, y, code)), PROMOTED_TIER
+            ev = "this site's own promotion of the same printed name on the same club-season"
+            if not pid:
+                tier, pid, ev = SP.join(who, ROSTER_OF(INDEX_KEY[y]))
+            if not pid and STAFF_PROM.get((SP._pn(who), y, code)):
+                pid, tier, ev = STAFF_PROM[(SP._pn(who), y, code)], SP.PROMOTED_TIER, "promoted from this line's staff lead"
+            if pid:
+                psr = rec("frankford-book", "front-office")
+                out["frankford-book"].append({
+                    **base(psr, tier, only), "subject": ["person", pid], "predicate": "fyjbook.staff_role_as_printed",
+                    "value": {"name_as_printed": who, "role_as_printed": heading, "year": y, "club_code": code,
+                              "club_as_printed": v["club_as_printed"], "line_as_printed": line, "page": v["page"]},
+                    "_join_evidence": ev, "_ruled": SP.DECL["_ruled"]})
+                n["front office: staff line on a person"] += 1
+            else:
+                leads.append(SP.lead(f"lead-fyjbook-staff-{y}-{re.sub(r'[^a-z]+', '-', nm).strip('-')}", who, heading,
+                                     v["club_as_printed"], INDEX_KEY[y], y, SRC_ID, fsr, ev))
+                n["front office: staff lead"] += 1
+    n["front office: (line, year) placed"] = fo_placed
+    n["front office: (line, year) not placed"] = len(fo_not_placed)
+
+    # TWO PAGES, HELD NOT RESOLVED. A man printed on a roster page and on the front-office
+    # page -- by forename and surname, a middle initial ignored. A LIST FOR THE REPORT, NOT A
+    # JOIN: nothing here places anyone or links a person to a role.
+    two_pages = []
+    fo_lines = front_office()
+    for y in sorted(R):
+        hdr, rows = R[y]; gi = {c: i for i, c in enumerate(hdr)}
+        for r in rows:
+            printed = r[gi["Name"]].strip() if "Name" in gi and len(r) > gi["Name"] else ""
+            t = [w for w in norm(printed).split() if w not in ("jr", "sr")]
+            if len(t) < 2 or len(t[0]) < 2: continue
+            pat = re.compile(rf"\b{t[0]}\b(?: [a-z]\b)? {t[-1]}\b")
+            for heading, line, who, _, yrs in fo_lines:
+                if pat.search(norm(who)):
+                    two_pages.append({"roster_page": f"{y}-roster", "name_on_roster": printed,
+                                      "position_on_roster": (r[gi["Position"]] if "Position" in gi and len(r) > gi["Position"] else None) or None,
+                                      "front_office_heading": heading, "front_office_line": line,
+                                      "front_office_years": yrs, "same_year": y in yrs})
+
     # ------------------------------------------------------------------ the stores
     reports = {}
     for store in ("frankford-book", "frankford-book-ind"):
@@ -347,6 +558,10 @@ def main(write=False):
             d["surname_candidates_NOT_PLACED"] = candidates
             d["non_league_opponents_NOT_CREATED"] = [
                 {"name_as_printed": k, "games": v} for k, v in opponents.most_common()]
+            d["staff_printed_among_players"] = {"kept_as_people": staff_kept, "NOT_PLACED": staff_not_placed}
+            d["front_office_lines_by_year"] = fo_pairs
+            d["front_office_NOT_PLACED"] = fo_not_placed
+            d["two_pages_held_not_resolved"] = two_pages
         reports[store] = d
 
     print("FRANKFORD BOOK   (%s)" % ("WRITE" if write else "dry run"))

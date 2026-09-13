@@ -388,6 +388,18 @@ def club_season(conn, league, year, club):
             non_coaching.append({"name_as_printed": v.get("name_as_printed"), "role_as_printed": v.get("role_as_printed"),
                                  "person": None, "_not_a_person": v.get("_not_a_person"),
                                  **({"note": v["_note"]} if v.get("_note") else {}), **claim_view(r)})
+    # CAPTAIN-OR-COACH, AS PRINTED (Ryan, 2026-09-12). The Frankford front-office page lists "Captains/Coaches"
+    # under one heading that does not say which a man was, so the archive does not either. Its own list: never
+    # `staff`, which a coaching season fills, and never `non_coaching_staff`, which would decide he did not coach.
+    captain_or_coach = []
+    for r in conn.execute("SELECT * FROM claim WHERE scope='club_season' AND predicate='fyjbook.captain_or_coach_as_printed' "
+                          "AND subject LIKE ?", (f'%"{y}"%',)):
+        s = json.loads(r["subject"])
+        if str(s[-2]) == str(y) and s[-1] in codes:
+            v = json.loads(r["value"])
+            captain_or_coach.append({"name_as_printed": v.get("name_as_printed"), "heading_as_printed": v.get("role_as_printed"),
+                                     "line_as_printed": v.get("line_as_printed"), "person": None,
+                                     "_not_a_person": v.get("_not_a_person"), **claim_view(r)})
     # WHAT A DOCUMENT SAYS ABOUT THE CLUB-SEASON THAT IS NOT A PERSON (Ryan, 2026-09-11) -- a mascot, colours,
     # a sponsor, a venue -- held as printed with its declared kind. Its own list: never members, never staff.
     attrs = []
@@ -406,6 +418,7 @@ def club_season(conn, league, year, club):
                                                   "code_that_year": (archive_clubs().code_for(cid, y) if cid in archive_clubs().by_id else None)},
            "names_that_season": names, "members": roster, "staff": staff, "n_members": len(roster), "n_staff": len(staff),
            "non_coaching_staff": non_coaching, "n_non_coaching_staff": len(non_coaching),
+           "captain_or_coach_as_printed": captain_or_coach,
            "attributes_as_printed": attrs}
     if other: out["other_leagues_at_this_club_that_year"] = other
     if not roster:

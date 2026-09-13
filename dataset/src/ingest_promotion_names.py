@@ -74,7 +74,10 @@ def main(write=False):
             # only thing standing between the rebuild and P3: he vanishes from the index
             # while still holding a claim. Five did exactly that, two of them named
             # `special teams` and `john sandusky offense`, which are not names at all.
-            if not (d.get("coaching_seasons") or d.get("playing_seasons")):
+            # A STAFF SEASON COUNTS (Ryan, 2026-09-13): a manager who ran a club for a season
+            # worked that season. Without it a promoted manager got no name claim and could not
+            # be found by his own name -- the 1,794 problem again.
+            if not (d.get("coaching_seasons") or d.get("playing_seasons") or d.get("staff_seasons")):
                 n["stintless -- the chain demotes him, so no name is written"] += 1; continue
             ref = (d.get("reversible") or {}).get("lead_ref") or d.get("source") or pid
             sr = f"{sid}#{ref}"

@@ -1,12 +1,12 @@
 {
  "applier": "apply_player_promotions",
- "decided": 7740,
+ "decided": 7753,
  "tally": {
-  "applied": 7740
+  "applied": 7753
  },
  "reasons": {},
- "expected": 7740,
- "moved": 7740,
+ "expected": 7753,
+ "moved": 7753,
  "run": "write",
  "outcomes": [
   {
@@ -61923,6 +61923,110 @@
   },
   {
    "decision": "P_054687",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054688",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054689",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054690",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054691",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054692",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054693",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054694",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054695",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054696",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054697",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054698",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054699",
+   "outcome": "applied",
+   "expected": 1,
+   "moved": 1,
+   "reason": null,
+   "legitimate": true
+  },
+  {
+   "decision": "P_054700",
    "outcome": "applied",
    "expected": 1,
    "moved": 1,

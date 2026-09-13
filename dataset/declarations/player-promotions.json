@@ -1,10 +1,26 @@
 {
  "_what": "How a player lead becomes a person.",
  "_ruled": "Ryan, 2026-09-08: if a man qualifies under the standing rule he IS promoted. No batch approval. The rule has already answered, and making him approve each batch turns a rule into a queue -- and the queue only grows as documents come in.",
- "_the_rule": "A person is someone who PLAYED, COACHED OR OFFICIATED at least one season. A player named on a ROSTER for a club-season the archive HOLDS qualifies. So does a man named in the caption to a TEAM PHOTOGRAPH, under the conditions in `_team_photograph_ruling` -- and under those conditions only.",
+ "_the_rule": "A person is someone a DOCUMENT NAMES IN A ROLE AT A CLUB -- playing, coaching, officiating, managing, owning, training (Ryan, 2026-09-13; until then 'someone who PLAYED, COACHED OR OFFICIATED at least one season'). A player named on a ROSTER for a club-season the archive HOLDS qualifies. So does a man named in the caption to a TEAM PHOTOGRAPH, under the conditions in `_team_photograph_ruling` -- and under those conditions only. So does a man a document names in a non-playing role at a club-season the archive holds, under `staff_role_evidence`. Still excluded: broadcasters, reporters, fans, and men named in prose without a role.",
+ "staff_role_evidence": {
+  "_ruled": "Ryan, 2026-09-13: the person rule widens as measured (reports/2026-09-13-who-counts-as-a-person-measured.md). The test is the role and the document, not the field.",
+  "_kitchens_restated": "The Gus Kitchens ruling stands, restated: a name in a listing with no role and no club is a lead. A manager who ran a club for a season worked that season, so a role at a club is a worked season. Ryan reconciled the two rulings; neither was overturned.",
+  "evidence_kind": "club_staff_role",
+  "lead_category": "staff_lead",
+  "person_predicates": ["fyjbook.staff_role_as_printed", "caption.staff_role_as_printed"],
+  "_person_predicates_what": "the person-scoped claim that says which club-season a man held a role at. The club_staff_role claim stays on the club-season and names no person (ruling Four); this is the second claim, on his record. Neither is a coaching season: none of these is in declarations/coaching-seasons.json staff_predicates.",
+  "join": "A staff line joins a held man only on the club-season it names: his exact name on that club-season's roster; otherwise a surname unique on that roster whose first forename does not contradict (an initial agrees with a name it begins). Two men of the surname refuse. This is the 2026-09-11 surname rule, applied to a staff line. Anything else is a lead.",
+  "forename": "A bare surname is refused: a surname is not a man. A name whose forename promote_players.forename_unknown() reads as unknown (a SINGLE initial, 'D. Carey') is promoted with that flag, but only where no man on that club-season's roster shares the surname -- the collision refuse_forename_unknown_on_a_held_roster guards against is checked, not assumed. Two or more initials ('R.E. Hay', 'H.S. Royal') are read as a forename by that function, as they already are for 53 promoted players (C.E. Swope, J.W. Smith); that inconsistency predates this ruling and is reported, not changed here.",
+  "exact_name_held_elsewhere": "A lead whose exact name one held person carries is refused as an identity question, as for a player -- UNLESS a ruling already says he is not that man; those are listed in `not_the_namesake`.",
+  "not_the_namesake": {
+   "Herman Smith|NFL|1923|CAN": "Ryan, 2026-09-11: 'Herman Smith the trainer is not P_008811 Herman Smith (1994-2003).'"
+  },
+  "decision_shape": "a staff promotion records `staff_seasons` and an empty `playing_seasons`, and its index entry says _entered_as_a_player false."
+ },
  "_what_still_comes_to_ryan": "What the rule REFUSES or flags as AMBIGUOUS. A man named only in a transaction or a camp list; a lead whose evidence kind the route does not know; and a name more than one held person carries. Those are judgements the rule cannot make and they are reported, never promoted. A team photograph WAS on this list until 2026-09-08 and is now ruled -- see `_team_photograph_ruling`.",
  "_no_scope_key": "There was an in_scope_stores / in_scope_club_seasons pair here and it is deliberately gone. A scope key is how a standing rule quietly becomes a queue again.",
  "_refuse_by_default": "An evidence kind this route does not know is refused, not promoted. A new lead shape is not a roster until somebody says it is.",
+ "_a_manager_is_kept_as_a_person": "Ryan, 2026-09-12: 'a man who managed a club is a person in the archive, same as a coach, and retiring a record to tidy up is worse than one with no season.' Clarence E. Swope (P_046966) and Edward S. Gilmore (P_046967) were promoted on 2026-09-09 from the 1899 Frankford roster page, which prints them as Manager. Their lines are now club_staff_role (declarations/frankford-book.json, `staff_printed_among_players`); the two promotions stand and each man keeps his record through a person-scoped claim from the same line, with no season. The decisions are NOT rewritten: `playing_seasons` still records the season each was promoted on, and `_entered_as_a_player` says how he entered, which is history. WHAT THIS DOES NOT DECIDE: whether other men the archive holds only as club_staff_role (the trainers and managers on the 2026-09-11 photographs, held as naming no person) become people. That is not ruled here.",
  "_team_photograph_ruling": {
   "_ruled": "Ryan, 2026-09-08.",
   "_the_property": [

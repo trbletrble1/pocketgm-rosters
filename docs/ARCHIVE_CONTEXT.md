@@ -550,9 +550,9 @@ Also untried: Cleveland Public Library press photographs, Ohio Memory, Temple's 
 
 ## 9. Rulings already made
 
-- **Coaches are people.** Officials are people. On-field game participants is the line; it does not extend to trainers, owners or broadcasters.
+- **A person is someone a document names in a role at a club** — playing, coaching, officiating, managing, owning, training (Ryan, 2026-09-13). The test is the role and the document, not the field. **Still excluded:** broadcasters, reporters, fans, and men named in prose without a role. *Until 2026-09-13 the rule was "played, coached or officiated at least one season", on-field participants only, excluding trainers, owners and broadcasters; it was widened once the archive held staff roles as facts and the evidence proved to be the same either way — a contemporary document naming a man in a role at a club.*
+- **The Gus Kitchens ruling stands, restated (Ryan, 2026-09-13).** A name in a listing with no role at a club is a lead, not a person: the archive's line is a career, not a listing. A manager who ran a club for a season worked that season, so a role at a club is a worked season and the two rulings do not conflict. **Ryan reconciled them; neither was overturned.** What Kitchens guards against — a name in a listing with no role and no club — is still excluded, because the person rule requires both.
 - **Players who never played stay leads.** A coach with no career is missing a career; a player with no career signed a contract and got cut.
-- **A person is someone who played, coached, or officiated at least one season.**
 - **Merged clubs are their own clubs** — Card-Pitt, Phil-Pitt, Brooklyn-Boston, and the 1934 Cincinnati Reds distinct from the St. Louis Gunners.
 - **A club's own media guide naming a man as its coach documents that he worked that season.** Absence from a different source is not evidence against.
 - **Roster membership is a claim per source with its definition recorded.** The definition rides on the predicate, not the value.
@@ -925,6 +925,28 @@ register is ingested.*
 6. Media guides as the fourth roster-membership source.
 7. The eBay programme lineup pages — 48 of 55 carry one.
 8. ~~Crippen's AAFC register~~ — **ingested 8 September**, 5,974 claims and 446 leads.
+
+**The next piece of work, recorded 13 September and NOT STARTED: who ran a club, and a league.**
+Ryan's aim is that a club-season or a league can be asked about and answer with who ran it, not only
+who played. The person rule of 13 September (§9) is **not** what gets him there. It lets a man named in
+a role at a club become a person, but the archive holds almost no such men: 35 `club_staff_role`
+lines naming 25 men, from 1899 to 1934, on about 19 club-seasons, almost all of them Frankford. The
+rule made 13 of them people, and that is the whole of what it could do with what is held.
+- **The source is unread.** 1,748 of the 1,803 media guides carry a front-office section — every
+  guide from the 1960s on, about half of those from the 1940s and 1950s — and nobody has read one.
+  In a sample, a guide names 3 (1947 Giants: John V. Mara, President-Treasurer; Wellington T. Mara,
+  Vice President-Secretary; Tim Mara, Founder) to 81 (2000 Lions) people in titled roles. The OCR is
+  uneven and the dot-leader layout ("President . . . . Philip H. Iselin") needs its own reader.
+- **Also unread:** the owner and president fields of Wikipedia season infoboxes (the general manager
+  is read, for 469 non-NFL club-seasons, but held in a report block, not as claims); the NFL's own
+  season articles are not cached.
+- **Not in any source read so far:** owners in the 1920s (neither PFA nor Neft prints them), and any
+  league officer — Joe Carr, Carl Storck as league president, Bert Bell as commissioner.
+- **What it will need besides a reader:** the staff join across seasons (Royal is manager 1909-31;
+  George C. Gilmore is a player in 1899-1900 and the manager in 1906), a subject for a league officer
+  (`league_season` holds only roster limits), and a dated span on the club for ownership, which passes
+  by sale and inheritance and is not a season role. Report:
+  `reports/2026-09-13-who-counts-as-a-person-measured.md`.
 
 **And the thing the whole archive is for:** the website. One search box, a page assembled from claims at read time. The service and the bio endpoint are its spine and already exist. The design question — what a page shows, and what it does with a disagreement — is Ryan's and unmade.
 

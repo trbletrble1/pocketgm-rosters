@@ -889,7 +889,10 @@ def hunting_list(rows):
         elif r["kind"] in ("thin", "off the table") and m is not None and m < FEWER_THAN:
             what, add, order = "almost nobody held", "the rest of the squad", 1
         elif r["kind"] in ("thin", "no coach") and ids & doc_only:
-            what, add, order = "boundary season", "the rest of the squad, in a season outside any league the archive holds", 2
+            # NO KNOWN GAP (Ryan, 2026-09-12). A boundary season's squad is what a document or a reconstruction
+            # names -- Frankford 1899-1906 is the authors' attempt to piece together who played -- and nobody knows
+            # how many more there were. "The rest of the squad" said somebody did.
+            what, add, order = "boundary season", "more of the squad, if any survives, in a season outside any league the archive holds", 2
         else:
             continue                       # a weight, an age, a college, a position, a coach: not a hunt
         best, more = _best([c for p in (r.get("pairs") or []) for c in cites.get(p, [])])

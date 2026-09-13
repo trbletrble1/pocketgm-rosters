@@ -2550,3 +2550,19 @@ Ryan ruled that *Pro Football: The Early Years* be ingested narrowly: the facts 
 **The year key makes a season figure unable to contest a career figure,** whatever family either sits in. The real risk is a career figure filed on a season-scoped claim, which is what `pfa.roster.weight` is. `src/gate_season_families.py` checks that no contested row mixes scopes or seasons.
 
 *My own number was wrong on the way.* I reported 1,290 weight "disagreements" for pass 1 as if the model would record them. They came from my ingest comparing Neft's season figure with PFA's career one; the contested table cannot record that comparison.
+
+## Who counts as a person: widened, and Kitchens reconciled (2026-09-13)
+
+**The rule.** A person is someone a document names in a role at a club — playing, coaching, officiating, managing, owning, training. The test is the role and the document, not the field. Still excluded: broadcasters, reporters, fans, and men named in prose without a role. Until then the line was on-field participants, drawn to stop the archive filling with anyone near a club; it moved once staff roles were held as facts and the evidence turned out to be the same either way.
+
+**Gus Kitchens stands, restated — reconciled, not overturned.** A manager who ran a club for a season worked that season, so a role at a club *is* a worked season. What Kitchens guards against, a name in a listing with no role and no club, is still excluded, because the new rule needs both. The wording in `demote_stintless.py`, its leads' `_ruling`, `ARCHIVE_CONTEXT.md` §9 and `declarations/player-promotions.json` says so, so the two do not read as a contradiction.
+
+**How it is applied, in one implementation (`src/staff_people.py`).**
+- The `club_staff_role` claim stays on the club-season and names no person (ruling Four).
+- A second, person-scoped claim (`fyjbook.staff_role_as_printed`, `caption.staff_role_as_printed`) says which club-season a man held a role at. Neither is a coaching predicate, so a role never becomes a coaching season or a playing one.
+- A staff line joins a held man only on the club-season it names: exact name on the roster, or a surname unique on it with an agreeing first forename. Anything else is a `staff_lead`, which `promote_players` decides.
+- A promoted staff man's decision records `staff_seasons` and no playing season, and his index entry says `_entered_as_a_player: false`.
+- A bare surname is refused. An exact name held by one man elsewhere is an identity question, unless a ruling already says he is not that man (Herman Smith, the Canton trainer).
+- Gate: `src/gate_staff_people.py`, S1–S5. S1 failed on all 34 staff lines before the change.
+
+**What it gave, and what it did not.** It gave 13 new people and put 4 staff lines on men already held (Purnell and C.E. Swope among them). It refused 8 bare surnames and left George C. Gilmore as an identity question. **It does not answer who ran a club or a league**, because the sources that say so are unread: 1,748 of 1,803 media guides carry a front-office section. That is recorded in `ARCHIVE_CONTEXT.md` §13 as the next piece of work, not started.

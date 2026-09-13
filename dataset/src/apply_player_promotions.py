@@ -47,7 +47,8 @@ def collect(prom):
                     "promotion_ref": p["reversible"]["lead_ref"],
                     "forename_unknown": bool(p.get("forename_unknown")),
                     "source_record": p["source_record"],
-                    "playing_seasons": p["playing_seasons"]}
+                    "playing_seasons": p["playing_seasons"],
+                    "staff_seasons": p.get("staff_seasons") or []}
     return per
 
 
@@ -78,7 +79,11 @@ def apply(idx, per, account=None):
                 n["name_kept_from_archive"] += 1
         rec["entered_by"] = rec.get("entered_by") or e["entered_by"]
         rec["promotion_ref"] = e["promotion_ref"]
-        rec["_entered_as_a_player"] = True
+        # A MAN PROMOTED FROM A STAFF LINE DID NOT ENTER AS A PLAYER (Ryan, 2026-09-13). The flag
+        # also seeds promote_players' prior ids by name, so a manager must not carry it.
+        rec["_entered_as_a_player"] = bool(e["playing_seasons"])
+        if e["staff_seasons"]:
+            rec["_entered_as_staff"] = True
         if e["forename_unknown"]:
             rec["forename_unknown"] = True
             n["forename_unknown"] += 1
