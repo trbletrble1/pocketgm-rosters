@@ -11,6 +11,10 @@ import paths, dates, families, classification
 # See service/classification.py for why, and for the two files that keep their own
 # `stats-` test because they ask a different question.
 STAFF_PREDICATES = classification.staff_predicates()
+# The person-scoped claims that say which club-season a man held a non-coaching role at (Ryan, 2026-09-13).
+# READ from the declaration that rules them, never typed here.
+STAFF_PERSON_PREDICATES = tuple(json.load(open(os.path.join(paths.DATASET, "declarations", "player-promotions.json")))
+                                ["staff_role_evidence"]["person_predicates"])
 NAME_PREDICATES = classification.name_predicates()
 STATISTIC_STORES = classification.statistic_stores()
 
@@ -380,14 +384,45 @@ def club_season(conn, league, year, club):
     # into `staff`, because a trainer is not a coach and that distinction is why the predicate is separate.
     codes = {r2["code"] for r2 in conn.execute("SELECT code FROM club_code WHERE club_id=?", (cid,))} | {club}
     non_coaching = []
+    # THE PAGE LINKS TO THE PERSON; THE CLAIM STILL NAMES NOBODY (Ryan, 2026-09-13). Ruling Four is about the
+    # claim, and it stands. The link is derived here, at read time, from the man's OWN person-scoped staff claim
+    # for the same line -- same printed name, year, club code and source -- and labelled derived. One match
+    # links; none says why; two is refused. Nothing is stored.
+    links = {}
+    for r2 in conn.execute(f"SELECT person, value, source_id, extra, id, predicate FROM claim WHERE scope='person' AND "
+                           f"predicate IN ({','.join('?' * len(STAFF_PERSON_PREDICATES))})", tuple(STAFF_PERSON_PREDICATES)):
+        v2 = json.loads(r2["value"])
+        if isinstance(v2, dict) and str(v2.get("year")) == str(y) and v2.get("club_code") in codes:
+            links.setdefault((norm(v2.get("name_as_printed") or ""), v2.get("club_code"), r2["source_id"]), {})[r2["person"]] = r2
     for r in conn.execute("SELECT * FROM claim WHERE scope='club_season' AND predicate='club_staff_role' AND subject LIKE ?",
                           (f'%"{y}"%',)):
         s = json.loads(r["subject"])
         if str(s[-2]) == str(y) and s[-1] in codes:
             v = json.loads(r["value"])
-            non_coaching.append({"name_as_printed": v.get("name_as_printed"), "role_as_printed": v.get("role_as_printed"),
-                                 "person": None, "_not_a_person": v.get("_not_a_person"),
-                                 **({"note": v["_note"]} if v.get("_note") else {}), **claim_view(r)})
+            # THE LINE'S NOTE GOES IN AFTER claim_view, UNDER ITS OWN NAME. It was `note`, set first, and the claim's
+            # own `note` (None) spread in after it overwrote it: no staff note was ever served. Gate S7.
+            e = {"name_as_printed": v.get("name_as_printed"), "role_as_printed": v.get("role_as_printed"), **claim_view(r)}
+            if v.get("_note"): e["note_on_the_line"] = v["_note"]
+            found = links.get((norm(v.get("name_as_printed") or ""), s[-1], r["source_id"]), {})
+            if len(found) == 1:
+                pid, pr = next(iter(found.items())); ex = json.loads(pr["extra"] or "{}")
+                e.update({"person": pid, "person_basis": "derived",
+                          "person_via": {"claim": pr["id"], "predicate": pr["predicate"],
+                                         "joined_on": ex.get("_joined_on"), "join_evidence": ex.get("_join_evidence")},
+                          "_the_claim_names_no_person": "the club_staff_role claim names no person and joins no one "
+                              "(ruling Four). This link is derived at read time from the man's own staff claim for the "
+                              "same line (Ryan, 2026-09-13)."})
+            elif len(found) > 1:
+                e.update({"person": None, "_not_a_person": v.get("_not_a_person"),
+                          "person_why": f"refused: {len(found)} people carry a staff claim for this line ({sorted(found)}); "
+                                        "the page does not choose"})
+            else:
+                bare = len(norm(v.get("name_as_printed") or "").split()) < 2
+                e.update({"person": None, "_not_a_person": v.get("_not_a_person"),
+                          "person_why": ("a bare surname: a surname is not a man, so nobody was made or joined (Ryan, 2026-09-13)"
+                                         if bare else "no person carries a staff claim for this line: it is held as a staff "
+                                         "lead, neither joined to a man on this club-season nor promoted")})
+            non_coaching.append(e)
     # CAPTAIN-OR-COACH, AS PRINTED (Ryan, 2026-09-12). The Frankford front-office page lists "Captains/Coaches"
     # under one heading that does not say which a man was, so the archive does not either. Its own list: never
     # `staff`, which a coaching season fills, and never `non_coaching_staff`, which would decide he did not coach.
@@ -397,8 +432,13 @@ def club_season(conn, league, year, club):
         s = json.loads(r["subject"])
         if str(s[-2]) == str(y) and s[-1] in codes:
             v = json.loads(r["value"])
+            # NOT LINKED, ON PURPOSE (2026-09-13). A captain-or-coach line is held whole, and several print two or
+            # more men in one line ("Bull Behman, George Gibson"). No person carries a claim for any of them, so a
+            # link would be a new join made by the page. It links nobody rather than half-do it.
             captain_or_coach.append({"name_as_printed": v.get("name_as_printed"), "heading_as_printed": v.get("role_as_printed"),
                                      "line_as_printed": v.get("line_as_printed"), "person": None,
+                                     "person_why": "not linked: a captain-or-coach line is held whole as printed, several "
+                                                   "name two or more men, and no person carries a claim for it",
                                      "_not_a_person": v.get("_not_a_person"), **claim_view(r)})
     # WHAT A DOCUMENT SAYS ABOUT THE CLUB-SEASON THAT IS NOT A PERSON (Ryan, 2026-09-11) -- a mascot, colours,
     # a sponsor, a venue -- held as printed with its declared kind. Its own list: never members, never staff.

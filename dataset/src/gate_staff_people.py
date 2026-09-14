@@ -94,6 +94,48 @@ def main():
     bad5 = [p["person_id"] for p in staffp if p["person_id"] not in named or p["person_id"] not in holding]
     check(not bad5, f"S5 every staff promotion holds his staff claim and a name claim ({len(bad5)} do not: {bad5[:4]})")
 
+    # S6 -- THE PAGE LINKS TO THE PERSON (Ryan, 2026-09-13). Every staff entry in a club-season view
+    # links to the ONE person whose own staff claim matches it on printed name, year, club code and source,
+    # or carries `person_why`. The expected link is recomputed here from the STORES, not from the view.
+    import sqlite3
+    sys.path.insert(0, os.path.join(BASE, "service"))
+    import paths, queries as Q
+    model = sys.argv[sys.argv.index("--model") + 1] if "--model" in sys.argv else paths.READ_MODEL
+    qc = sqlite3.connect(f"file:{model}?mode=ro", uri=True); qc.row_factory = sqlite3.Row
+    want = {}
+    for _, c in pclaims:
+        v = c["value"]
+        want.setdefault((pn(v["name_as_printed"]), int(v["year"]), v.get("club_code"), c.get("source_id")), set()).add(c["subject"][1])
+    missing, wrong, no_reason, unnoted, checked, seen = [], [], [], [], 0, set()
+    for f in sorted(glob.glob(os.path.join(BASE, "build", "*.json"))):
+        try: d = json.load(open(f))
+        except Exception: continue
+        if not isinstance(d, dict) or not isinstance(d.get("claims"), list): continue
+        for c in d["claims"]:
+            if c.get("predicate") != "club_staff_role": continue
+            s, v = c["subject"], c["value"]
+            key = (pn(v["name_as_printed"]), int(s[2]), s[3], c.get("source_id"))
+            if (key, v.get("role_as_printed")) in seen: continue
+            seen.add((key, v.get("role_as_printed"))); checked += 1
+            view = Q.club_season(qc, s[1], int(s[2]), s[3])
+            e = next((x for x in view["non_coaching_staff"] if x.get("name_as_printed") == v["name_as_printed"]
+                      and x.get("role_as_printed") == v.get("role_as_printed")), None)
+            exp = want.get(key, set())
+            if e is None: missing.append(key); continue
+            # THE LINE'S NOTE IS SERVED. It was set as `note` and then overwritten by the claim's own `note`
+            # (None) spread in after it, so no staff note was ever served -- the class gate A4 caught for `kind`.
+            if v.get("_note") and e.get("note_on_the_line") != v["_note"]:
+                unnoted.append((v["name_as_printed"], s[2]))
+            if len(exp) == 1:
+                if e.get("person") != next(iter(exp)): wrong.append((v["name_as_printed"], s[2], e.get("person")))
+            elif e.get("person") is not None or not e.get("person_why"):
+                no_reason.append((v["name_as_printed"], s[2]))
+    check(not missing and not wrong and not no_reason,
+          f"S6 every staff entry on a club-season page links to its one person or says why not ({checked} entries; "
+          f"{len(wrong)} not linked to the person their line is on: {wrong[:3]}; {len(no_reason)} unlinked with no reason: "
+          f"{no_reason[:3]}; {len(missing)} not served)")
+    check(not unnoted, f"S7 every staff entry whose line carries a note serves it ({len(unnoted)} do not: {unnoted[:4]})")
+
     print("\nSTAFF PEOPLE GATE:", "pass" if not FAILS else f"{len(FAILS)} FAILURE(S)")
     return 1 if FAILS else 0
 
