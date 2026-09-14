@@ -7,7 +7,7 @@
   "club_as_printed": 19,
   "restored_cfl1945": 60,
   "merged_into": 93,
-  "guide_prose": 9351
+  "guide_prose": 9554
  },
  "chain": [
   "apply_club_keys.py",

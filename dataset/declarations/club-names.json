@@ -1,0 +1,25 @@
+{
+ "_what": "What src/ingest_club_names.py reads to write build/club-names.json: a club-season's name as its source prints it. Every claim in that store is written by that script from the pages named here, and src/gate_club_names.py fails on any claim it would not write.",
+ "_ruled": "Ryan, 2026-09-13: RS-G3 -- nothing is missing, so register what is there, correct the two wrong locators, and move the writing of the 414 hand-appended claims into code.",
+ "_history": "Until 2026-09-13 the ingest read only statscrew/sweep. 414 claims were appended to the store BY HAND on 6 and 7 September -- 404 Arena names, eight 1926 AFL clubs and 1934 Cincinnati -- citing records nobody registered, and a re-run would have dropped all 414 in silence.",
+ "statscrew_caches": ["statscrew/sweep", "statscrew/build1950"],
+ "_statscrew_caches_why": "sweep holds 3,252 roster pages; build1950 is fetch_statscrew.py's own default cache and holds the 404 Arena League roster pages sweep does not (measured: no other build1950 roster page is missing from sweep). A page present in both is read once, from the first folder listed.",
+ "statscrew_league": "The league of a club-season is StatsCrew's OWN: the league page (L_<LEAGUE>_<YEAR>.html) whose team list links that roster page. Measured 2026-09-13: it reproduces the stored league for 3,638 of 3,656 claims, lists no roster under two leagues, and gives a league for the 18 stored as '?'. It REPLACES a rule that took the first word of whichever build store held the club-season, which by September was reading `pfa-`, `coaches-` and `neft-` store names as leagues and would have relabelled 2,339 club-seasons on a re-run.",
+ "pfa_source_declaration": "declarations/pfa.json",
+ "pfa_locator": "PFA's own name for the page: the canonical URL the cached page records for itself (<link rel=canonical>), which is at the site root -- '1926aflwil.html', not '1926afl/1926aflpc.html'. The old locators were built by an ingest: a '1926afl/' folder PFA does not use, and for the Wildcats a file name made from the archive's club code.",
+ "pfa_club_pages": [
+  {"cached": "pfa/1926aflbkn.html", "club_season": ["club_season", "AFL", "1926", "AFLBKN"]},
+  {"cached": "pfa/1926aflbos.html", "club_season": ["club_season", "AFL", "1926", "AFLBOS"]},
+  {"cached": "pfa/1926aflchi.html", "club_season": ["club_season", "AFL", "1926", "AFLCHI"]},
+  {"cached": "pfa/1926aflcle.html", "club_season": ["club_season", "AFL", "1926", "AFLCLE"]},
+  {"cached": "pfa/1926aflnew.html", "club_season": ["club_season", "AFL", "1926", "AFLNEW"]},
+  {"cached": "pfa/1926aflnyy.html", "club_season": ["club_season", "AFL", "1926", "AFLNYY"]},
+  {"cached": "pfa/1926aflphi.html", "club_season": ["club_season", "AFL", "1926", "AFLPHI"]},
+  {"cached": "pfa/1926aflri.html", "club_season": ["club_season", "AFL", "1926", "AFLRI"]},
+  {"cached": "pfa/1926aflwil.html", "club_season": ["club_season", "AFL", "1926", "AFLPC"],
+   "_note": "PFA names this page 1926aflwil.html; the archive's club code is AFLPC (club table: club-wilson-s-wildcats-1926). The code stays the archive's; the locator is PFA's. On disk since 4 September -- never a 404."},
+  {"cached": "pfa-team-seasons/1934nflcin.html", "club_season": ["club_season", "NFL", "1934", "CIN"],
+   "_note": "The club page, which prints the name. It replaces 'nflboxscores1/1934-CIN', ingest_cin1934.py's label for its box-score bundle, which is not a page."}
+ ],
+ "_documentation_only": {"_what": "prose", "_ruled": "prose", "_history": "prose", "_statscrew_caches_why": "prose", "statscrew_league": "prose; the rule the code implements", "pfa_locator": "prose; the rule the code implements"}
+}

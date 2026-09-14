@@ -2260,18 +2260,6 @@
    "top_level_keys": "list"
   },
   {
-   "store": "guide-pre1950-delimited",
-   "bytes": 2302759,
-   "top_level_keys": [
-    "age_conflict_clustering",
-    "dropped_runs",
-    "generated",
-    "not_parsed_families",
-    "runs",
-    "scope"
-   ]
-  },
-  {
    "store": "guide-prose-corpus-leads",
    "bytes": 254005489,
    "top_level_keys": [

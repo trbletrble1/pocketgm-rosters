@@ -6,6 +6,15 @@
   "high_school": "STAYS OUT, ruled 2026-09-07 by Ryan, with the reason recorded so nobody reopens it quietly: 'Central' and 'Central (Detroit, MI)' cannot be settled by a fold, and that shape is most of the 1,350 literal disagreements. Adding it would either invent agreement or record disagreements the archive cannot judge. It comes back when there is a real rule, not before.",
   "playoff_snap_counts": "NOT A FAMILY, 2026-09-10, and the reason is measured rather than argued. Declaring it produced 2,086 contested rows and every one was false: a man's snap counts in different postseasons are not competing claims about one fact. The contested table is keyed on (person, family) and this predicate is per season and per club. See declarations/readings.json DELIBERATELY_UNREAD."
  },
+ "stores_outside_families": {
+  "_what": "A store whose claims are served OUTSIDE named families even where their predicate belongs to one. Such a claim is its own family of one and gets no date reading: served under its printed label, beside the other sources, contesting nothing. Read by service/families.py outside(), applied in build_read_model.py.",
+  "guide-pre1950-delimited": {
+   "families": ["birth_date", "college", "height", "weight"],
+   "ruled": "Ryan, 2026-09-14: serve with the guide labels outside those four families.",
+   "why": "Measured 2026-09-13 on a candidate that read them in: 171 new contested rows, most fabricated -- birth dates that are the same day printed inside place or prose and unreadable, college notation ('University of Minnesota' against 'Minnesota'), a guide's one-year weight set against a career weight, unreadable heights -- and RS-G1 red on 64 unreadable dates. Each family comes in as its reading is measured clean; birth_date first, by a date format declared for this source.",
+   "not_the_1948_dons_guide": "guide-lad-1948 carries the same printed labels (guide.BORN, guide.HEIGHT, guide.WEIGHT, the two college labels) and stays in the families. The ruling is about this store."
+  }
+ },
  "families": {
   "birth_date": {
    "kind": "date",

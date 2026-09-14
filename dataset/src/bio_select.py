@@ -378,16 +378,17 @@ class Tables:
                 s_ = c.get("subject"); pid = s_[1] if isinstance(s_, list) and len(s_) > 1 else None
                 if pid: self.draft[pid].append((src, c.get("value")))
         self.guide = collections.defaultdict(dict); self.notes = {}
+        # THE NORMAL SHAPE since 2026-09-13: top-level claims, each guide's title and year from
+        # `sources`. It nested them under runs -> guides until Ryan's RS-G5 ruling.
         d = json.load(open(required("build", "guide-pre1950-delimited.json")))
-        for r in d["runs"].values():
-            for gd in r["guides"].values():
-                title = gd["source"]["name"]; year = gd["source"]["places_on"]["year"]
-                for c in gd["claims"]:
-                    pid = c["subject"][1]; pred = c["predicate"]
-                    if pred.startswith("guide.NOTES"):
-                        self.notes.setdefault(pid, {"text": c["value"], "guide": title, "year": year})
-                    else:
-                        self.guide[pid].setdefault(pred.replace("guide.", ""), c["value"])
+        src = d["sources"]
+        for c in d["claims"]:
+            s = src[c["source_id"]]; title = s["name"]; year = s["places_on"]["year"]
+            pid = c["subject"][1]; pred = c["predicate"]
+            if pred.startswith("guide.NOTES"):
+                self.notes.setdefault(pid, {"text": c["value"], "guide": title, "year": year})
+            else:
+                self.guide[pid].setdefault(pred.replace("guide.", ""), c["value"])
 
 
 # ------------------------------------------------------------------ per-person facts

@@ -1,35 +1,47 @@
 {
-  "_what_this_is": "Why build/guide-pre1950-delimited.json is NOT in the read model, why the read service's G5 fails on it, and why that failure is correct and must not be cleared.",
+  "_what_this_is": "The rulings behind build/guide-pre1950-delimited.json: how its printed labels are read, what is held out, and why the file is now a store in the read model. Until 2026-09-13 this file explained why it was NOT one; that record is kept below as history.",
 
-  "THE_RED_IS_CORRECT": {
+  "COVERED_BY_THE_GENERAL_LABEL_RULING": {
+    "ruled_by": "Ryan, 2026-09-13",
+    "ruling": "The general label ruling (declarations/readings.json RULING: a printed label may be mapped to a field; map only the unambiguous; leave the rest as printed and count it) covers this file. The 7 September red was waiting on 'a ruling on label to field mapping for this file's vocabulary', and that ruling has been made.",
+    "the_mapped_labels": "The labels readings.json LABELS maps (665 claims: height, weight, birth date, hometown, college, high school in their printed spellings) are read into their fields at read time, with the printed string kept.",
+    "the_rest": "Every other label -- 876 person labels and 11 OCR-damaged ones (guide.Aye, guide.A ge, Cracral Information and the like) -- stays exactly as printed and is counted in the file's labels_left_as_printed.",
+    "the_shape": "Rewritten into the normal store shape, in its writer (src/ingest_guide_delimited.py), not taught to the reader: a reader that looks for nested claims would start reading any report that happens to carry them, which is the silent failure RS-G5 exists to catch. The claims sit at the top level beside a source_records table; each guide's source declaration is carried in `sources`."
+  },
+
+  "derived_birth_year_range": {
+    "ruled_by": "Ryan, 2026-09-13",
+    "ruling": "The 74 derived birth-year ranges stay, as a derived READING. The printed age stays as the claim; the range sits beside it, on that claim, as `_derived_birth_year_range` -- labelled derived, naming the age it came from and the guide's year -- and it is never a claim from the source. Same shape as same_day for dates, and the same rule the context document states: a check, never a correction.",
+    "was": "a claim of its own, predicate derived.BIRTH_YEAR_RANGE, kind derived."
+  },
+
+  "held_out_labels": {
+    "_ruled": "Ryan, 2026-09-13: they stay out, as proposed. Listed in the file's held_out with the person, the value and the reason; never claimed.",
+    "a club statistic or heading, not a fact about the man": ["SCORING", "Most Points", "Total Points", "Total Points by Opponents", "Total Yards Gained", "Most Attempts", "Most Yards Gained On Passes", "Most Touchdown Passes", "Longest Passes", "Most Passes Caught", "Most Touchdown Passes Received", "Most Yards Catching Passes", "Most Yards One Interception", "Total First Downs", "Longest Punt", "Longest Punt Return", "Total Field Goals", "Longest Field Goal", "Total Extra Points", "Most Consecutive Extra Points", "GIANTS vs. PORTSMOUTH"],
+    "a prose fragment the parser read as a label": ["Two children. Home", "Married. One child. Home", "This quartet of aportacasters", "Los Angeles", "San Francisco"]
+  },
+
+  "_history_THE_RED_WAS_CORRECT_2026_09_07": {
     "ruled_by": "Ryan, 2026-09-07",
-    "what_fails": "The read service's G5 (`every build file accounted for`) fails on build/guide-pre1950-delimited.json: 1,653 claims over 238 people from 32 guides, none of them in the read model.",
-    "leave_it_failing": "Do not declare it away and do not ingest it to clear it. An unexplained red gets fixed by someone in a hurry; this file exists so the red is explained and the hurry has somewhere to stop.",
-    "what_would_clear_it_honestly": "A ruling from Ryan on label to field mapping for this file's vocabulary -- not an ingest, and not an entry in the read service's build-files.json."
-  },
-
-  "WHY_NOT_INGESTED": {
-    "not_superseded_by_the_corpus": "guide-prose-corpus covers the same documents -- all 32 have a same-club, same-year counterpart -- but extracts only guide.prose_block and guide.vitals_as_printed, and yields 38 claims from pre-1950 guides against this file's 1,653 over 238 people. The pre-1950 house style is a label:value table, not prose, which is why the delimited parser exists at all. Declaring this file away as superseded would quietly drop about 1,600 claims.",
-    "not_ingestable_as_it_stands": "Every guide in it carries `_labels_are_not_normalised`: 'Labels are kept exactly as printed. Mapping them to modern field names is a ruling, not a parsing step.' That ruling has been made only in part -- see declarations/readings.json LABELS, which maps the six unambiguous fields the bio panel consumes. The rest of the 80+ predicate vocabulary is unmapped by ruling, including OCR damage (guide.Aye, guide.A ge, guide.Cracral Information, guide.Prafessional Record, guide.Hionors) and section headings and club statistics that are not person facts at all (guide.GIANTS vs. PORTSMOUTH, guide.Total Yards Gained, guide.Longest Punt). Ingesting that vocabulary would put OCR noise into the read model wearing a store's authority."
-  },
-
-  "THE_NESTED_SHAPE_IS_A_ONE_OFF": {
-    "fact": "This is the ONLY file in the build tree whose claims are nested. Fetching swept all 1,146 build files: every other store either presents a top-level `claims` list or is not a claim store at all.",
-    "why_state_it_positively": "build_read_model.py reads a top-level `claims` list and skipped anything else in silence, so the obvious worry is a second silent store waiting on the same axis. There is not one. The sweep is what makes that a fact rather than an assumption, and it means the read service's G5 has exactly one outstanding case, not an unknown number.",
-    "shape": "runs[<club_run>].guides[<year>].claims[] -- grouped by club run and year because the parse is per guide edition and a run shares a house style."
+    "what_failed": "The read service's G5 failed on this file: 1,653 claims over 238 people from 32 guides, none of them in the read model.",
+    "leave_it_failing": "Do not declare it away and do not ingest it to clear it. An unexplained red gets fixed by someone in a hurry; this file existed so the red was explained and the hurry had somewhere to stop.",
+    "what_would_clear_it_honestly": "A ruling from Ryan on label to field mapping for this file's vocabulary -- not an ingest, and not an entry in the read service's build-files.json. CLEARED 2026-09-13 by exactly that: see COVERED_BY_THE_GENERAL_LABEL_RULING.",
+    "not_superseded_by_the_corpus": "guide-prose-corpus covers the same documents but extracts only guide.prose_block and guide.vitals_as_printed -- 38 claims from pre-1950 guides against this file's 1,653. Declaring this file away as superseded would have dropped about 1,600 claims.",
+    "the_nested_shape_was_a_one_off": "Fetching's sweep of all 1,146 build files (2026-09-07) found this the only file holding claims below the top level. Since 2026-09-13 there is none."
   },
 
   "WHAT_THE_BIOS_TAKE_FROM_IT": {
-    "read_by": "src/bio_select.py, as a required input via required('build','guide-pre1950-delimited.json')",
+    "read_by": "src/bio_select.py, as a required input via required('build','guide-pre1950-delimited.json') -- the top-level claims since 2026-09-13, with each guide's title and year from `sources`.",
     "fields": "The six labels mapped in declarations/readings.json (height, weight, birth_date_as_printed, hometown, college, high_school), plus guide.NOTES* for the bio close and guide.SERVICE RECORD / guide.MARITAL STATUS.",
-    "the_panel_is_honest_about_it": "Every panel value names its source, so a guide value is labelled 'guide' and sits beside the archive's own. Of the 139 people carrying a guide height or weight, the number for whom the archive holds nothing is one -- Martin Wendell, whose printed height is '5’10!2,”' and unreadable. The bios are not asserting facts the archive lacks; what the archive cannot do is serve the evidence behind the guide half of each pair, which is what the read service's G5 is measuring."
+    "the_panel_is_honest_about_it": "Every panel value names its source, so a guide value is labelled 'guide' and sits beside the archive's own."
   },
 
   "_documentation_only": {
     "_what_this_is": "prose",
-    "THE_RED_IS_CORRECT": "prose addressed to whoever finds the red gate and reaches for a fix",
-    "WHY_NOT_INGESTED": "prose",
-    "THE_NESTED_SHAPE_IS_A_ONE_OFF": "prose; the sweep behind it is Fetching's, recorded here so the fact travels with the red",
+    "COVERED_BY_THE_GENERAL_LABEL_RULING": "prose; the ruling the rewrite implements",
+    "derived_birth_year_range": "prose; the ruling the writer and gate_guide_delimited G2 implement",
+    "held_out_labels": "READ by src/ingest_guide_delimited.py; gate_guide_delimited G9 keeps its own copy on purpose",
+    "_history_THE_RED_WAS_CORRECT_2026_09_07": "prose, kept as history",
     "WHAT_THE_BIOS_TAKE_FROM_IT": "prose; the mapped labels themselves are declared and read in declarations/readings.json"
   }
 }

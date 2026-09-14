@@ -785,8 +785,8 @@ claims have no merge layer to undo.
 | **nflverse disagreement report** | 1,079 people marked `"ruling": "UNRESOLVED - both held"`; **1,021 hold no second claim.** The value exists only in the report. PFA does it correctly on identical ground. Needs a ruling, and a gate comparing every store's disagreement report against its own claims. |
 | ~~Draft representations~~ | **FIXED 8 September.** The reading is a dict carrying league, kind and numbering, and the fabricated disagreements are gone: RS-G6 reports 0 false disagreements across seven families. The 2,068 draft contests that remain are real. |
 | ~~51 guide heights~~ | **FIXED.** The height reading folds them; 3 height contests remain and RS-G6 confirms none is false. |
-| **RS-G3** | 414 `club-names` claims name source records that were never registered. Published with `--force`, WARNING on every response. **No exception list — it should stay uncomfortable.** |
-| **RS-G5** | `guide-pre1950-delimited.json` nests its 1,653 claims under `runs.<club>.guides.<year>.claims` and has no top-level `claims` key, so the read model cannot see it. Correctly red, correctly not declared away — the corpus yields 38 pre-1950 claims against its 1,653. Fetching swept all 1,146 build files: **it is the only instance.** |
+| ~~RS-G3~~ | **FIXED 13–14 September (Ryan).** The 414 `club-names` claims had been appended by hand, citing records nobody registered; every page was on disk. Now written by `src/ingest_club_names.py` from `declarations/club-names.json` — the 404 Arena pages in `statscrew/build1950`, each club-season's league from StatsCrew's own league pages, PFA's canonical page names — and gated by `src/gate_club_names.py`: a claim no ingest writes fails. The same work found the ingest would have relabelled 2,339 club-seasons with fabricated leagues on a re-run. |
+| ~~RS-G5~~ | **FIXED 13–14 September (Ryan).** `guide-pre1950-delimited.json` rewritten into the normal store shape in its writer, not the reader; 32 records registered; the 74 birth-year ranges now derived readings on their age claims; 27 club statistics and prose fragments held out. Its labels are served OUTSIDE the birth_date, college, height and weight families (`stores_outside_families`), because in them they made 171 contested rows, most fabricated, and 64 unreadable dates. |
 | **Sampling gates** | `gate_guide_prose_corpus` samples 25 of 1,838 guides by default then prints "every property holds". `gate_pfa2` and `gate_anachronism` can exit 0 having checked nothing. Four more silently no-op a check. |
 | `gate_merged_clubs` M4 | Fails on `PIT\|1943`, held. |
 | `gate_club_keys` G7 = 1 | `assistants.json` holds a stint whose club is a guide *title*. |
@@ -832,9 +832,9 @@ unless `--force` is given, in which case every response says so.
 |---|---|
 | RS-G1 | an unreadable date fails, unless `dates-as-printed.json` carries it |
 | RS-G2 | an unresolved person fails, unless its store is declared known-unresolvable |
-| RS-G3 | a claim naming a source record its store does not hold. **RED: 414**, `club-names`. No exception list — it should stay uncomfortable |
+| RS-G3 | a claim naming a source record its store does not hold. **0 since 14 September** (was 414, `club-names`). No exception list |
 | RS-G4 | the people here reconcile with the people in the index. 43,562 both sides |
-| RS-G5 | every file in `build/` is a store in the model or is explained. **RED: 1**, `guide-pre1950-delimited.json`, which nests its 1,653 claims where the reader cannot see them. Correctly red and correctly not declared away |
+| RS-G5 | every file in `build/` is a store in the model or is explained. **0 since 14 September** (was 1, `guide-pre1950-delimited.json`, rewritten into the normal shape) |
 | RS-G6 | no FALSE disagreement — seven families, 0 false |
 | RS-G7 | *(new, 8 Sept)* every league token is a league the club table holds, or one declared a non-competition. Caught a `PFA` token I fabricated myself, on 32,406 claims |
 | RS-G8 | *(new, 9 Sept)* **classification is declared, not read off a name.** Statistics stores, staff predicates, name predicates and the surname-first reading, each re-derived from the claims and failing in BOTH directions. The statistics half checks a PARTITION rather than deriving the vocabulary from the declaration it is checking — the first version passed on an empty declaration |
@@ -855,9 +855,10 @@ no place in the read model.
 | `service/gate_retention.py` | the previous published model is kept. Six properties proved on **real publishes**, not asserted. Property 0 reads the model actually being served, which is the only one a fixture cannot fake — and it caught this code's own bug |
 | `service/gate_selftest.py` | **every read-model gate must FAIL when its invariant is broken.** Not ceremony: a gate that has only ever passed has not been tested. It caught its own fixture the day `staff_predicates` moved to the archive's declarations |
 
-**Two standing reds, and they are not neglect.** RS-G3 (414) and RS-G5 (1) are each a
-real thing the archive has chosen to hold rather than declare away, and the service says
-so on every response.
+**No standing red since 14 September.** RS-G3 (414) and RS-G5 (1) were held rather than
+declared away from 7 September, and every publish needed `--force`. Both were fixed at the
+source by Ryan's rulings of 13–14 September, and the model now publishes with every gate
+green. A red from here is a regression: find its cause, do not reach for `--force`.
 
 ## 12b. What is still open, plainly
 

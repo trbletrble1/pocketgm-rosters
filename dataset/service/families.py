@@ -33,5 +33,12 @@ def kind_of(family):
     return get()["families"].get(family, {}).get("kind", "value")
 
 
+def outside(store, family):
+    """True where a store's claims are declared OUTSIDE a family (predicate-families.json
+    `stores_outside_families`). Such a claim is its own family of one and gets no date
+    reading, so it is served under its printed label and contests nothing."""
+    return family in ((get()["raw"].get("stores_outside_families") or {}).get(store) or {}).get("families", ())
+
+
 def date_predicates():
     return {p for f, spec in get()["families"].items() if spec.get("kind") == "date" for p in spec["predicates"]}

@@ -82,7 +82,8 @@
  },
  "_deliberately_not_declared": {
   "guide-pre1950-delimited": {
-   "status": "RS-G5 fails on this file ON PURPOSE. The red is correct and MUST NOT be cleared.",
+   "status_since_2026_09_13": "NO LONGER NEEDED. Ryan ruled on 2026-09-13 that the general label ruling covers this file, and the file was rewritten into the normal store shape in its writer, so it is a store in the read model and RS-G5 has nothing to explain. The entry is kept as history, not as a declaration; see dataset/declarations/guide-pre1950-delimited.json.",
+   "status": "(until 2026-09-13) RS-G5 fails on this file ON PURPOSE. The red is correct and MUST NOT be cleared.",
    "the_ruling_is_not_here": "dataset/declarations/guide-pre1950-delimited.json",
    "why_it_is_not_here": "Parsing owns that file and wrote the ruling into it: the 38-against-1,653 measurement, the unmapped-label vocabulary, and Fetching's sweep recording it as the only nested-claims file in all 1,146 build files. Restating any of that here would make two places able to say different things about one ruling - the defect this service spent 2026-09-07 removing twice (RS-G5's own copy of the reader's test; a duplicate readings.py that took the bio endpoint down). Read theirs.",
    "what_this_gate_adds": "only that the file is not a store in the read model and is not declared away here. The reason it is not declared away lives with Parsing.",

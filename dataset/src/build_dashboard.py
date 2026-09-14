@@ -105,27 +105,15 @@ def field_sets(per):
         out.append((label, s))
 
     # --- claim stores ---
-    def find_claims(d, depth=0):
-        """Claim lists, wherever they sit. A store is not always a flat
-        {"claims": [...]}: guide-pre1950-delimited.json nests them
-        runs -> guides -> claims, and a scanner that only checks the top level
-        skips the whole file. That is worse than an unmapped predicate, because
-        an unmapped predicate at least reaches the unmapped report -- a file
-        never opened as a store reaches nothing and looks exactly like a file
-        with no claims in it."""
-        if depth > 4 or not isinstance(d, dict):
-            return []
-        out = []
-        if isinstance(d.get("claims"), list):
-            out.extend(d["claims"])
-        for v in d.values():
-            if isinstance(v, dict):
-                out.extend(find_claims(v, depth + 1))
-            elif isinstance(v, list):
-                for x in v:
-                    if isinstance(x, dict):
-                        out.extend(find_claims(x, depth + 1))
-        return out
+    def find_claims(d):
+        """The top-level claims list, and nothing below it.
+
+        This used to search every depth, because guide-pre1950-delimited.json nested its
+        claims under runs -> guides. Since 2026-09-13 that file is a normal store (Ryan's
+        RS-G5 ruling), and a scanner that goes looking for nested `claims` keys would start
+        counting any report that happens to carry one -- the silent failure RS-G5 exists
+        to catch, turned round. A store with nested claims is now a fault, not a shape."""
+        return d["claims"] if isinstance(d, dict) and isinstance(d.get("claims"), list) else []
 
     stores, skipped = {}, []
     for f in sorted(glob.glob(os.path.join(BASE, "build", "*.json"))):

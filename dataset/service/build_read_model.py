@@ -423,6 +423,10 @@ def build(dst, force=False, fast=False, prev=None):
                 yr = season_year(s[2])
                 lg = league if league else LT.from_season_key(s[2], REAL_LEAGUES)
             pred = c.get("predicate"); famname = fam["of"].get(pred, pred)
+            # A STORE DECLARED OUTSIDE A FAMILY keeps its predicate as a family of one and gets no
+            # date reading (predicate-families.json stores_outside_families; Ryan, 2026-09-14).
+            outside = famname != pred and families.outside(st, famname)
+            if outside: famname = pred
             val = c.get("value"); kind = c.get("kind")
             sr = c.get("source_record")
             sr_in = None if table is None else int(sr in table)
@@ -434,7 +438,7 @@ def build(dst, force=False, fast=False, prev=None):
                          c.get("source_id"), sr, sr_in, c.get("stated_by"), json.dumps(c.get("attribution") or []),
                          kind, json.dumps(c.get("observed_at")), observed_year(c.get("observed_at")), c.get("note"),
                          json.dumps(extra) if extra else None))
-            if pred in date_preds and kind != "absent":
+            if pred in date_preds and kind != "absent" and not outside:
                 # THE SOURCE IS PASSED. A source that has DECLARED its numeric date
                 # order, with the measurement behind it, is read in that order; every
                 # other source still refuses a bare numeric date. Ruled 2026-09-08.

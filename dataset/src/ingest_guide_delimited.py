@@ -159,9 +159,19 @@ def roundtrip_ok(notes,src_lines,a,b):
     return True
 
 def assert_no_derived_dates(claims):
-    bad=[c for c in claims if c["predicate"].startswith("derived.BIRTH_YEAR_RANGE")
-         and not re.fullmatch(r"\d{4}-\d{4}",str(c["value"]))]
+    bad=[c for c in claims if c.get("_derived_birth_year_range")
+         and not re.fullmatch(r"\d{4}-\d{4}",str(c["_derived_birth_year_range"]["value"]))]
     if bad: raise AssertionError(f"a derived range acquired date detail: {bad[:2]}")
+    derived=[c for c in claims if c["predicate"].startswith("derived.") or c.get("kind")=="derived"]
+    if derived: raise AssertionError(f"a derived value became a claim: {derived[:1]}")
+
+# HELD OUT, NOT CLAIMED (Ryan, 2026-09-13): club statistics and headings that are not about the man,
+# and prose fragments read as labels. Declared in declarations/guide-pre1950-delimited.json.
+_GD=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"..","declarations",
+                                "guide-pre1950-delimited.json")))
+HELD_OUT={lab:why for why,labs in _GD["held_out_labels"].items() if not why.startswith("_") for lab in labs}
+_RD=json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),"..","declarations","readings.json")))
+MAPPED={"guide."+l for labs in _RD["LABELS"].values() for l in labs}
 
 CATEGORIES=["resolved_written","unmatched_no_candidate","name_variant_candidate",
             "roster_conflict","merged_dropped","nonplayer_span_dropped"]
@@ -213,8 +223,19 @@ def run_guide(runkey,spec,fn,year,title,sid):
             if age and 15<age<50:
                 age_n+=1
                 lo,hi=birth_range(age,year)
-                claims.append(make_claim(sr,src_id,club,title,pid,"","%d-%d"%(lo,hi),year,
-                    kind="derived",pred="derived.BIRTH_YEAR_RANGE"))
+                # THE RANGE IS A READING OF THE PRINTED AGE, NEVER A CLAIM FROM THE SOURCE
+                # (Ryan, 2026-09-13). The guide printed an age; the two birth years it allows
+                # sit beside that age, labelled derived and naming it -- the same shape as
+                # same_day for dates. It was a claim of its own, derived.BIRTH_YEAR_RANGE.
+                ac=next((c for c in reversed(claims) if c["subject"][1]==pid and c["predicate"]==predicate(k)),None)
+                if ac is None:
+                    raise AssertionError(f"{src_id}: an age was read for {nm} and no age claim carries it")
+                ac["_derived_birth_year_range"]={"value":"%d-%d"%(lo,hi),"derived":True,
+                    "from_age_as_printed":str(raw),"age_label_as_printed":k,"as_of_guide_year":year,
+                    "recipe":"birth_range(age, guide year): a guide goes to press before the season, so a "
+                             "printed age allows two birth years, never one",
+                    "_a_check_never_a_correction":"the printed age is the claim; this range is the archive's "
+                             "reading of it and is never a claim from the source"}
                 rng_n+=1
                 hy,hraw=held_birth_year(pid)
                 if hy is None: nodate+=1
@@ -250,7 +271,11 @@ def run_guide(runkey,spec,fn,year,title,sid):
         cats["nonplayer_span_dropped"].append((rec.get("name_as_printed"),
             "0 anchors in span -- the header matched something that is not a player entry."))
     assert_no_derived_dates(claims)
-    return {"source":{"source_id":src_id,"name":title,"acquisition":"held",
+    held=[{"person":c["subject"][1],"label_as_printed":c["predicate"][len("guide."):],"value":c["value"],
+           "why":HELD_OUT[c["predicate"][len("guide."):]]} for c in claims
+          if c["predicate"].startswith("guide.") and c["predicate"][len("guide."):] in HELD_OUT]
+    claims=[c for c in claims if not (c["predicate"].startswith("guide.") and c["predicate"][len("guide."):] in HELD_OUT)]
+    return {"held_out":held,"source":{"source_id":src_id,"name":title,"acquisition":"held",
               "stated_by":club,"archive_item":sid,
               "places_on":{"league":league,"year":year,"club":club},
               "club_run":runkey,"run_note":spec["note"],
@@ -320,11 +345,36 @@ def main():
         "not_a_correction":"No age is altered, no held date is preferred, no man is resolved. "
             "The cluster is evidence about the guide and is left for a ruling.",
         "by_guide":by_guide}
-    json.dump(allout,open(os.path.join(OUT,"guide-pre1950-delimited.json"),"w"),indent=1)
-    return allout
+    # THE NORMAL SHAPE (Ryan, 2026-09-13: rewrite the file, not the reader). The claims go to the
+    # top level beside a registered source_records table, so the model reads this file like every
+    # other store; the per-guide parse record -- leads, categories, reconciliation, age checks --
+    # stays under runs, and each guide's source declaration moves to `sources`.
+    claims,srecs,sources,held=[],{},{},[]
+    for rk,r in allout["runs"].items():
+        for y,g in r["guides"].items():
+            src=g.pop("source"); sid=src["source_id"]; sources[sid]=src; g["source_id"]=sid
+            gc=g.pop("claims"); gh=g.pop("held_out")
+            for c in gc:
+                srecs[c["source_record"]]={"source_id":c["source_id"],"locator":c["source_record"].split("#",1)[1]}
+            g["n_claims"]=len(gc); g["n_held_out"]=len(gh)
+            claims+=gc; held+=[dict(h,guide=sid) for h in gh]
+    out={"claims":claims,"source_records":srecs,"sources":sources,
+         "labels_left_as_printed":dict(collections.Counter(c["predicate"] for c in claims
+                                        if c["predicate"].startswith("guide.") and c["predicate"] not in MAPPED)),
+         "_labels":"Under the general label ruling (declarations/readings.json RULING): the labels readings.json "
+                   "LABELS maps are read into their fields at read time, with the printed string kept; every "
+                   "other label stays as printed and is counted in labels_left_as_printed.",
+         "held_out":held,
+         **{k:v for k,v in allout.items() if k!="runs"},"runs":allout["runs"]}
+    return out
 
 if __name__=="__main__":
     o=main()
-    tc=sum(len(g["claims"]) for r in o["runs"].values() for g in r["guides"].values())
-    tl=sum(len(g["leads"]) for r in o["runs"].values() for g in r["guides"].values())
-    print("claims",tc,"leads",tl)
+    print("claims",len(o["claims"]),"records",len(o["source_records"]),"sources",len(o["sources"]),
+          "held out",len(o["held_out"]),"derived ranges",sum(1 for c in o["claims"] if c.get("_derived_birth_year_range")),
+          "leads",sum(len(g["leads"]) for r in o["runs"].values() for g in r["guides"].values()))
+    if "--write" in sys.argv:
+        json.dump(o,open(os.path.join(OUT,"guide-pre1950-delimited.json"),"w"),indent=1)
+        print("wrote build/guide-pre1950-delimited.json")
+    else:
+        print("(dry run; pass --write)")

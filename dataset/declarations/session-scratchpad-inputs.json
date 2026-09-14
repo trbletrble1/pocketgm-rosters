@@ -50,15 +50,6 @@
       "owner": "Fetching"
     },
     {
-      "script": "ingest_afl1926.py",
-      "line": 29,
-      "file": "scratchpad/",
-      "session": "8d717785",
-      "preserved": true,
-      "read": "loud",
-      "owner": "Fetching"
-    },
-    {
       "script": "ingest_arena.py",
       "line": 49,
       "file": "/tmp/arena_rosters.json",
@@ -150,6 +141,10 @@
     }
   ],
   "CLOSED": [
+    {
+      "script": "ingest_afl1926.py",
+      "note": "closed 2026-09-13 (Ryan's RS-G3 ruling). It read four things from the 8d717785 scratchpad: afl26_rosters.json, pfa_code2pid.json, pfa2fetch.get/canonical and ingest_pfa. None was repointed at the carried-over copy. The CLUB LIST is declared in declarations/club-names.json (the nine PFA club pages, each with the archive's club code). The CODE MAP is pfa_codes.holders() read from the published model with this store excluded, plus PFA's own code on the officials record (pfa.role) -- which reproduces all 100 men the old map held, Louie Kolls included, and now also resolves mane00200 (P_047157, placed since by pfa-club-rosters). PAGES are read from the PFA caches on disk and never fetched; canonical() is pfa2fetch's rule, copied. ingest_pfa already resolved to src/. The rebuilt store differs from its predecessor only in PFA's own locators, the Wildcats' roster read from its page (1926aflwil.html, never a 404), and mane00200 held."
+    },
     {
       "script": "bio_select.py",
       "note": "closed 2026-09-07 by Parsing. SCRATCH deleted; the five load-bearing inputs now resolve under build/ through required(), which raises SystemExit when one is missing. The three bio prints reprint identical to the 2026-09-06 baseline. It must never reappear in OUTSTANDING."
